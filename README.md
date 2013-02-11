@@ -11,6 +11,5 @@ For the benchmarks, malware apps released by DRAPA are not allowed to put here, 
 
 Also there are transformed IRs from the available apks included for easy testing.
 
-
 4. Makefile available soon.. (gimme a break:)
 
