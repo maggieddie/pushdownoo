@@ -1,0 +1,43 @@
+(class (attrs ) org/apache/ogt/http/impl/cookie/DateUtils$DateFormatHolder$1
+ (super java/lang/ThreadLocal)
+ (source "DateUtils.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/cookie/DateUtils$DateFormatHolder$1])
+  (line 216)
+  (invoke-direct {v0} java/lang/ThreadLocal/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs protected ) initialValue()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/ref/SoftReference"  "<"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/text/SimpleDateFormat;"  ">;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/cookie/DateUtils$DateFormatHolder$1])
+  (line 1)
+  (invoke-virtual {v1} org/apache/ogt/http/impl/cookie/DateUtils$DateFormatHolder$1/initialValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) initialValue()[object java/lang/ref/SoftReference]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/ref/SoftReference"  "<"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/text/SimpleDateFormat;"  ">;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/cookie/DateUtils$DateFormatHolder$1])
+  (line 220)
+  (new-instance v0 java/lang/ref/SoftReference)
+  (line 221)
+  (new-instance v1 java/util/HashMap)
+  (invoke-direct {v1} java/util/HashMap/<init> )
+  (line 220)
+  (invoke-direct {v0 v1} java/lang/ref/SoftReference/<init> [object java/lang/Object] )
+  (return-object v0)
+)
+
+)

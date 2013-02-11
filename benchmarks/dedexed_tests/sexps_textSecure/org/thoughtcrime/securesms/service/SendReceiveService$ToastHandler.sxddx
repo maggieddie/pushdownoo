@@ -1,0 +1,48 @@
+(class (attrs public ) org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler
+ (super android/os/Handler)
+ (source "SendReceiveService.java")
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/service/SendReceiveService] )
+
+(method (attrs public ) <init>([object org/thoughtcrime/securesms/service/SendReceiveService] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/service/SendReceiveService])
+  (line 203)
+  (iput-object v1 v0 org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler.this$0 [object org/thoughtcrime/securesms/service/SendReceiveService])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 5)
+  ; this: v3 ([object org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler])
+  ; parameter[0] : v4 ([object android/os/Message])
+  (line 211)
+  (iget-object v1 v3 org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler.this$0 [object org/thoughtcrime/securesms/service/SendReceiveService])
+  (iget-object v0 v4 android/os/Message.obj [object java/lang/Object])
+  (check-cast v0 [object java/lang/String])
+  (const/4 v2 1)
+  (invoke-static {v1 v0 v2} android/widget/Toast/makeText [object android/content/Context] [object java/lang/CharSequence] int )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/widget/Toast/show )
+  (line 212)
+  (return-void )
+)
+
+(method (attrs public ) makeToast([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 205)
+  (invoke-virtual {v1} org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler/obtainMessage )
+  (move-result-object v0)
+  (line 206)
+  (iput-object v2 v0 android/os/Message.obj [object java/lang/Object])
+  (line 207)
+  (invoke-virtual {v1 v0} org/thoughtcrime/securesms/service/SendReceiveService$ToastHandler/sendMessage [object android/os/Message] )
+  (line 208)
+  (return-void )
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener
+ (super java/lang/Object)
+ (source "ScrollDetector.java")
+
+
+(method (attrs public abstract ) onScroll([object org/anddev/andengine/input/touch/detector/ScrollDetector] [object org/anddev/andengine/input/touch/TouchEvent] float float )void
+)
+
+)

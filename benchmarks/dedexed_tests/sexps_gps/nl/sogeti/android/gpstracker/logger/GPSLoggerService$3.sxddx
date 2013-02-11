@@ -1,0 +1,157 @@
+(class (attrs ) nl/sogeti/android/gpstracker/logger/GPSLoggerService$3
+ (super nl/sogeti/android/gpstracker/logger/IGPSLoggerServiceRemote$Stub)
+ (source "GPSLoggerService.java")
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/logger/GPSLoggerService] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (line 1379)
+  (invoke-direct {v0} nl/sogeti/android/gpstracker/logger/IGPSLoggerServiceRemote$Stub/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getLastWaypoint()[object android/location/Location]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1426)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/getLastWaypoint )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getTrackedDistance()float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1431)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/getTrackedDistance )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isMediaPrepared()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1416)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/isMediaPrepared )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) loggingState()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1383)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/access$13 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) pauseLogging()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1394)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/pauseLogging )
+  (line 1395)
+  (return-void )
+)
+
+(method (attrs public ) resumeLogging()long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1399)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/resumeLogging )
+  (line 1400)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/access$15 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService] )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) startLogging()long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1388)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/startLogging )
+  (line 1389)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/access$14 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService] )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) stopLogging()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  (line 1405)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService/stopLogging )
+  (line 1406)
+  (return-void )
+)
+
+(method (attrs public ) storeDerivedDataSource([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 1421)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0 v2} nl/sogeti/android/gpstracker/logger/GPSLoggerService/storeDerivedDataSource [object java/lang/String] )
+  (line 1422)
+  (return-void )
+)
+
+(method (attrs public ) storeMediaUri([object android/net/Uri] )[object android/net/Uri]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$3])
+  ; parameter[0] : v2 ([object android/net/Uri])
+  (line 1410)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$3.this$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService])
+  (invoke-virtual {v0 v2} nl/sogeti/android/gpstracker/logger/GPSLoggerService/storeMediaUri [object android/net/Uri] )
+  (line 1411)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

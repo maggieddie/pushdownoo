@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/anddev/andengine/audio/IAudioManager
+ (super java/lang/Object)
+ (source "IAudioManager.java")
+
+
+(method (attrs public abstract ) add([object org/anddev/andengine/audio/IAudioEntity] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+)
+
+(method (attrs public abstract ) getMasterVolume()float
+)
+
+(method (attrs public abstract ) releaseAll()void
+)
+
+(method (attrs public abstract ) setMasterVolume(float )void
+)
+
+)

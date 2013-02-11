@@ -1,0 +1,58 @@
+(class (attrs public ) org/bouncycastle2/jce/MultiCertStoreParameters
+ (super java/lang/Object)
+ (source "MultiCertStoreParameters.java")
+ (implements java/security/cert/CertStoreParameters)
+
+ (field (attrs private ) certStores [object java/util/Collection] )
+ (field (attrs private ) searchAllStores boolean )
+
+(method (attrs public ) <init>([object java/util/Collection] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/jce/MultiCertStoreParameters])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 19)
+  (const/4 v0 1)
+  (invoke-direct {v1 v2 v0} org/bouncycastle2/jce/MultiCertStoreParameters/<init> [object java/util/Collection] boolean )
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/util/Collection] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/jce/MultiCertStoreParameters])
+  ; parameter[0] : v1 ([object java/util/Collection])
+  ; parameter[1] : v2 (boolean)
+  (line 31)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 33)
+  (iput-object v1 v0 org/bouncycastle2/jce/MultiCertStoreParameters.certStores [object java/util/Collection])
+  (line 34)
+  (iput-boolean v2 v0 org/bouncycastle2/jce/MultiCertStoreParameters.searchAllStores boolean)
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) clone()[object java/lang/Object]
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/jce/MultiCertStoreParameters])
+  (line 49)
+  (return-object v0)
+)
+
+(method (attrs public ) getCertStores()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/MultiCertStoreParameters])
+  (line 39)
+  (iget-object v0 v1 org/bouncycastle2/jce/MultiCertStoreParameters.certStores [object java/util/Collection])
+  (return-object v0)
+)
+
+(method (attrs public ) getSearchAllStores()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/MultiCertStoreParameters])
+  (line 44)
+  (iget-boolean v0 v1 org/bouncycastle2/jce/MultiCertStoreParameters.searchAllStores boolean)
+  (return v0)
+)
+
+)

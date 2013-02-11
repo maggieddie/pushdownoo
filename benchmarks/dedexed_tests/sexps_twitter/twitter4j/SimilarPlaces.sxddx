@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) twitter4j/SimilarPlaces
+ (super java/lang/Object)
+ (source "SimilarPlaces.java")
+ (implements twitter4j/ResponseList)
+
+
+(method (attrs public abstract ) getToken()[object java/lang/String]
+)
+
+)

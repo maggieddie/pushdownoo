@@ -1,0 +1,18 @@
+(class (attrs public final ) com/todo/todo/R$anim
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) fade_in int 2130968576); 0x7f040000 )
+ (field (attrs public static final ) fade_out int 2130968577); 0x7f040001 )
+ (field (attrs public static final ) list_slide_left int 2130968578); 0x7f040002 )
+ (field (attrs public static final ) slide_left int 2130968579); 0x7f040003 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$anim])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

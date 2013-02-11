@@ -1,0 +1,54 @@
+(class (attrs public ) net/sourceforge/pmd/util/designer/DFAGraphRule
+ (super net/sourceforge/pmd/AbstractRule)
+ (source "DFAGraphRule.java")
+
+ (field (attrs private ) constructors [object java/util/List] )
+ (field (attrs private ) methods [object java/util/List] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/sourceforge/pmd/util/designer/DFAGraphRule])
+  (line 14)
+  (invoke-direct {v0} net/sourceforge/pmd/AbstractRule/<init> )
+  (line 15)
+  (invoke-super {v0} net/sourceforge/pmd/AbstractRule/setUsesDFA )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) getConstructors()[object java/util/List]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/designer/DFAGraphRule])
+  (line 23)
+  (iget-object v0 v1 net/sourceforge/pmd/util/designer/DFAGraphRule.constructors [object java/util/List])
+  (return-object v0)
+)
+
+(method (attrs public ) getMethods()[object java/util/List]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/designer/DFAGraphRule])
+  (line 19)
+  (iget-object v0 v1 net/sourceforge/pmd/util/designer/DFAGraphRule.methods [object java/util/List])
+  (return-object v0)
+)
+
+(method (attrs public ) visit([object net/sourceforge/pmd/ast/ASTCompilationUnit] [object java/lang/Object] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object net/sourceforge/pmd/util/designer/DFAGraphRule])
+  ; parameter[0] : v2 ([object net/sourceforge/pmd/ast/ASTCompilationUnit])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 27)
+  (const-class v0 net/sourceforge/pmd/ast/ASTMethodDeclaration)
+  (invoke-virtual {v2 v0} net/sourceforge/pmd/ast/ASTCompilationUnit/findChildrenOfType [object java/lang/Class] )
+  (move-result-object v0)
+  (iput-object v0 v1 net/sourceforge/pmd/util/designer/DFAGraphRule.methods [object java/util/List])
+  (line 28)
+  (const-class v0 net/sourceforge/pmd/ast/ASTMethodDeclaration)
+  (invoke-virtual {v2 v0} net/sourceforge/pmd/ast/ASTCompilationUnit/findChildrenOfType [object java/lang/Class] )
+  (move-result-object v0)
+  (iput-object v0 v1 net/sourceforge/pmd/util/designer/DFAGraphRule.constructors [object java/util/List])
+  (line 29)
+  (return-object v3)
+)
+
+)

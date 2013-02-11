@@ -1,0 +1,60 @@
+(class (attrs public ) org/apache/ogt/http/impl/io/HttpTransportMetricsImpl
+ (super java/lang/Object)
+ (source "HttpTransportMetricsImpl.java")
+ (implements org/apache/ogt/http/io/HttpTransportMetrics)
+
+ (field (attrs private ) bytesTransferred long )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/io/HttpTransportMetricsImpl])
+  (line 42)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 39)
+  (const-wide/16 v0 0)
+  (iput-wide v0 v2 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) getBytesTransferred()long
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/io/HttpTransportMetricsImpl])
+  (line 46)
+  (iget-wide v0 v2 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (return-wide v0)
+)
+
+(method (attrs public ) incrementBytesTransferred(long )void
+  (limit registers 5)
+  ; this: v2 ([object org/apache/ogt/http/impl/io/HttpTransportMetricsImpl])
+  ; parameter[0] : v3 (long)
+  (line 54)
+  (iget-wide v0 v2 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (add-long/2addr v0 v3)
+  (iput-wide v0 v2 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (line 55)
+  (return-void )
+)
+
+(method (attrs public ) reset()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/io/HttpTransportMetricsImpl])
+  (line 58)
+  (const-wide/16 v0 0)
+  (iput-wide v0 v2 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (line 59)
+  (return-void )
+)
+
+(method (attrs public ) setBytesTransferred(long )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/io/HttpTransportMetricsImpl])
+  ; parameter[0] : v1 (long)
+  (line 50)
+  (iput-wide v1 v0 org/apache/ogt/http/impl/io/HttpTransportMetricsImpl.bytesTransferred long)
+  (line 51)
+  (return-void )
+)
+
+)

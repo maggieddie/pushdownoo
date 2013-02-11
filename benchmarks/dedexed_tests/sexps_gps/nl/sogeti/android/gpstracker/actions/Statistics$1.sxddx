@@ -1,0 +1,36 @@
+(class (attrs ) nl/sogeti/android/gpstracker/actions/Statistics$1
+ (super android/database/ContentObserver)
+ (source "Statistics.java")
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/actions/Statistics] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/actions/Statistics] [object android/os/Handler] )void
+  (limit registers 3)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/actions/Statistics$1])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/actions/Statistics])
+  ; parameter[1] : v2 ([object android/os/Handler])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/actions/Statistics$1.this$0 [object nl/sogeti/android/gpstracker/actions/Statistics])
+  (line 110)
+  (invoke-direct {v0 v2} android/database/ContentObserver/<init> [object android/os/Handler] )
+  (return-void )
+ )
+
+(method (attrs public ) onChange(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/actions/Statistics$1])
+  ; parameter[0] : v2 (boolean)
+  (line 116)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/actions/Statistics$1.this$0 [object nl/sogeti/android/gpstracker/actions/Statistics])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/actions/Statistics/access$0 [object nl/sogeti/android/gpstracker/actions/Statistics] )
+  (move-result v0)
+  (if-nez v0 l801de)
+  (line 118)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/actions/Statistics$1.this$0 [object nl/sogeti/android/gpstracker/actions/Statistics])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/actions/Statistics/access$1 [object nl/sogeti/android/gpstracker/actions/Statistics] )
+  (label l801de)
+  (line 120)
+  (return-void )
+)
+
+)

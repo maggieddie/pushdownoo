@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/osmdroid/api/IMapView
+ (super java/lang/Object)
+ (source "IMapView.java")
+
+
+(method (attrs public abstract ) getController()[object org/osmdroid/api/IMapController]
+)
+
+(method (attrs public abstract ) getLatitudeSpan()int
+)
+
+(method (attrs public abstract ) getLongitudeSpan()int
+)
+
+(method (attrs public abstract ) getMapCenter()[object org/osmdroid/api/IGeoPoint]
+)
+
+(method (attrs public abstract ) getMaxZoomLevel()int
+)
+
+(method (attrs public abstract ) getProjection()[object org/osmdroid/api/IProjection]
+)
+
+(method (attrs public abstract ) getZoomLevel()int
+)
+
+(method (attrs public abstract ) setBackgroundColor(int )void
+)
+
+)

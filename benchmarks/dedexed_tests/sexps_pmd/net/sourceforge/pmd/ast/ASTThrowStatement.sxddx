@@ -1,0 +1,57 @@
+(class (attrs public ) net/sourceforge/pmd/ast/ASTThrowStatement
+ (super net/sourceforge/pmd/ast/SimpleJavaNode)
+ (source "ASTThrowStatement.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTThrowStatement])
+  ; parameter[0] : v1 (int)
+  (line 7)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/SimpleJavaNode/<init> int )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object net/sourceforge/pmd/ast/JavaParser] int )void
+  (limit registers 3)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTThrowStatement])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/ast/JavaParser])
+  ; parameter[1] : v2 (int)
+  (line 11)
+  (invoke-direct {v0 v1 v2} net/sourceforge/pmd/ast/SimpleJavaNode/<init> [object net/sourceforge/pmd/ast/JavaParser] int )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public final ) getFirstClassOrInterfaceTypeImage()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object net/sourceforge/pmd/ast/ASTThrowStatement])
+  (line 34)
+  (const-class v1 net/sourceforge/pmd/ast/ASTClassOrInterfaceType)
+  (invoke-virtual {v2 v1} net/sourceforge/pmd/ast/ASTThrowStatement/getFirstChildOfType [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object net/sourceforge/pmd/ast/ASTClassOrInterfaceType])
+  (line 35)
+  (if-nez v0 l24c24)
+  (const/4 v1 0)
+  (label l24c22)
+  (return-object v1)
+  (label l24c24)
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/ASTClassOrInterfaceType/getImage )
+  (move-result-object v1)
+  (goto l24c22)
+)
+
+(method (attrs public ) jjtAccept([object net/sourceforge/pmd/ast/JavaParserVisitor] [object java/lang/Object] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTThrowStatement])
+  ; parameter[0] : v2 ([object net/sourceforge/pmd/ast/JavaParserVisitor])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 19)
+  (invoke-interface {v2 v1 v3} net/sourceforge/pmd/ast/JavaParserVisitor/visit [object net/sourceforge/pmd/ast/ASTThrowStatement] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

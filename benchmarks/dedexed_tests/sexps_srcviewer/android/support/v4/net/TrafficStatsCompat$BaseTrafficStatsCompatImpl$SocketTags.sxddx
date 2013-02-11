@@ -1,0 +1,27 @@
+(class (attrs ) android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags
+ (super java/lang/Object)
+ (source "TrafficStatsCompat.java")
+
+ (field (attrs public ) statsTag int )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags])
+  (line 41)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 42)
+  (const/4 v0 15)
+  (iput v0 v1 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags.statsTag int)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/support/v4/net/TrafficStatsCompat$1] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags])
+  ; parameter[0] : v1 ([object android/support/v4/net/TrafficStatsCompat$1])
+  (line 41)
+  (invoke-direct {v0} android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags/<init> )
+  (return-void )
+ )
+
+)

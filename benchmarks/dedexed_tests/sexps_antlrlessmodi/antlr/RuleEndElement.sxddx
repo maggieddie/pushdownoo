@@ -1,0 +1,43 @@
+(class (attrs ) antlr/RuleEndElement
+ (super antlr/BlockEndElement)
+ (source "RuleEndElement.java")
+
+ (field (attrs protected ) cache [array [object antlr/Lookahead]] )
+ (field (attrs protected ) noFOLLOW boolean )
+
+(method (attrs public ) <init>([object antlr/Grammar] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/RuleEndElement])
+  ; parameter[0] : v2 ([object antlr/Grammar])
+  (line 21)
+  (invoke-direct {v1 v2} antlr/BlockEndElement/<init> [object antlr/Grammar] )
+  (line 22)
+  (iget v0 v2 antlr/Grammar.maxk int)
+  (add-int/lit8 v0 v0 1)
+  (new-array v0 v0 [array [object antlr/Lookahead]])
+  (iput-object v0 v1 antlr/RuleEndElement.cache [array [object antlr/Lookahead]])
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs public ) look(int )[object antlr/Lookahead]
+  (limit registers 3)
+  ; this: v1 ([object antlr/RuleEndElement])
+  ; parameter[0] : v2 (int)
+  (line 26)
+  (iget-object v0 v1 antlr/RuleEndElement.grammar [object antlr/Grammar])
+  (iget-object v0 v0 antlr/Grammar.theLLkAnalyzer [object antlr/LLkGrammarAnalyzer])
+  (invoke-interface {v0 v2 v1} antlr/LLkGrammarAnalyzer/look int [object antlr/RuleEndElement] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/RuleEndElement])
+  (line 31)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+)

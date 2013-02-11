@@ -1,0 +1,26 @@
+(class (attrs public ) oauth/signpost/exception/OAuthMessageSignerException
+ (super oauth/signpost/exception/OAuthException)
+ (source "OAuthMessageSignerException.java")
+
+
+(method (attrs public ) <init>([object java/lang/Exception] )void
+  (limit registers 2)
+  ; this: v0 ([object oauth/signpost/exception/OAuthMessageSignerException])
+  ; parameter[0] : v1 ([object java/lang/Exception])
+  (line 25)
+  (invoke-direct {v0 v1} oauth/signpost/exception/OAuthException/<init> [object java/lang/Throwable] )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object oauth/signpost/exception/OAuthMessageSignerException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 21)
+  (invoke-direct {v0 v1} oauth/signpost/exception/OAuthException/<init> [object java/lang/String] )
+  (line 22)
+  (return-void )
+ )
+
+)

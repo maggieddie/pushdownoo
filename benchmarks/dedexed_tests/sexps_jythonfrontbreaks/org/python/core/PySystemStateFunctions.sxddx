@@ -1,0 +1,84 @@
+(class (attrs ) org/python/core/PySystemStateFunctions
+ (super org/python/core/PyBuiltinFunctionSet)
+ (source "PySystemState.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int int int )void
+  (limit registers 12)
+  ; this: v7 ([object org/python/core/PySystemStateFunctions])
+  ; parameter[0] : v8 ([object java/lang/String])
+  ; parameter[1] : v9 (int)
+  ; parameter[2] : v10 (int)
+  ; parameter[3] : v11 (int)
+  (line 750)
+  (const/4 v5 0)
+  (const/4 v6 0)
+  (move-object v0 v7)
+  (move-object v1 v8)
+  (move v2 v9)
+  (move v3 v10)
+  (move v4 v11)
+  (invoke-direct/range {v0 .. v6} org/python/core/PyBuiltinFunctionSet/<init> [object java/lang/String] int int int boolean [object java/lang/String] )
+  (line 751)
+  (return-void )
+ )
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v1 ([object org/python/core/PySystemStateFunctions])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  (line 754)
+  (iget v0 v1 org/python/core/PySystemStateFunctions.index int)
+  (packed-switch v0 10
+    ps8d48c_8d49e ; case 10
+    ps8d48c_default) ; default
+  (label ps8d48c_default)
+  (line 759)
+  (const/4 v0 1)
+  (invoke-virtual {v1 v0} org/python/core/PySystemStateFunctions/argCountError int )
+  (move-result-object v0)
+  (throw v0)
+  (label ps8d48c_8d49e)
+  (line 756)
+  (invoke-static {v2} org/python/core/PySystemState/displayhook [object org/python/core/PyObject] )
+  (line 757)
+  (sget-object v0 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v0)
+  (line 754)
+  (label l8d4aa)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) __call__([object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v1 ([object org/python/core/PySystemStateFunctions])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  ; parameter[1] : v3 ([object org/python/core/PyObject])
+  ; parameter[2] : v4 ([object org/python/core/PyObject])
+  (line 763)
+  (iget v0 v1 org/python/core/PySystemStateFunctions.index int)
+  (packed-switch v0 30
+    ps8d4cc_8d4de ; case 30
+    ps8d4cc_default) ; default
+  (label ps8d4cc_default)
+  (line 768)
+  (const/4 v0 3)
+  (invoke-virtual {v1 v0} org/python/core/PySystemStateFunctions/argCountError int )
+  (move-result-object v0)
+  (throw v0)
+  (label ps8d4cc_8d4de)
+  (line 765)
+  (invoke-static {v2 v3 v4} org/python/core/PySystemState/excepthook [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 766)
+  (sget-object v0 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v0)
+  (line 763)
+  (label l8d4ea)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

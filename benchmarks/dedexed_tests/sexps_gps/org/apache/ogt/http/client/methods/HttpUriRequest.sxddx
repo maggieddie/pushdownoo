@@ -1,0 +1,22 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/methods/HttpUriRequest
+ (super java/lang/Object)
+ (source "HttpUriRequest.java")
+ (implements org/apache/ogt/http/HttpRequest)
+
+
+(method (attrs public abstract ) abort()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/UnsupportedOperationException])
+  )
+)
+
+(method (attrs public abstract ) getMethod()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getURI()[object java/net/URI]
+)
+
+(method (attrs public abstract ) isAborted()boolean
+)
+
+)

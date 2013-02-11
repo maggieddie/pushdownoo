@@ -1,0 +1,30 @@
+(class (attrs public ) org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState
+ (super java/lang/Object)
+ (source "CharacterCalculator.java")
+
+ (field (attrs public ) charactersRemaining int )
+ (field (attrs public ) maxMessageSize int )
+ (field (attrs public ) messagesSpent int )
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/util/CharacterCalculator] )
+
+(method (attrs public ) <init>([object org/thoughtcrime/securesms/util/CharacterCalculator] int int int )void
+  (limit registers 5)
+  ; this: v0 ([object org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/util/CharacterCalculator])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 48)
+  (iput-object v1 v0 org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState.this$0 [object org/thoughtcrime/securesms/util/CharacterCalculator])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 49)
+  (iput v2 v0 org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState.messagesSpent int)
+  (line 50)
+  (iput v3 v0 org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState.charactersRemaining int)
+  (line 51)
+  (iput v4 v0 org/thoughtcrime/securesms/util/CharacterCalculator$CharacterState.maxMessageSize int)
+  (line 52)
+  (return-void )
+ )
+
+)

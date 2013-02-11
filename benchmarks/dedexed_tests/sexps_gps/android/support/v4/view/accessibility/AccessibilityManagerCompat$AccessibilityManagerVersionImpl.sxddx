@@ -1,0 +1,30 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerVersionImpl
+ (super java/lang/Object)
+ (source "AccessibilityManagerCompat.java")
+
+
+(method (attrs public abstract ) addAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )boolean
+)
+
+(method (attrs public abstract ) getEnabledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  "I)"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getInstalledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  ")"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) isTouchExplorationEnabled([object android/view/accessibility/AccessibilityManager] )boolean
+)
+
+(method (attrs public abstract ) newAccessiblityStateChangeListener([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) removeAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )boolean
+)
+
+)

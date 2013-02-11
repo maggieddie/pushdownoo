@@ -1,0 +1,28 @@
+(class (attrs ) org/bouncycastle2/x509/ExtCertificateEncodingException
+ (super java/security/cert/CertificateEncodingException)
+ (source "ExtCertificateEncodingException.java")
+
+ (field (attrs ) cause [object java/lang/Throwable] )
+
+(method (attrs ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/x509/ExtCertificateEncodingException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 12)
+  (invoke-direct {v0 v1} java/security/cert/CertificateEncodingException/<init> [object java/lang/String] )
+  (line 13)
+  (iput-object v2 v0 org/bouncycastle2/x509/ExtCertificateEncodingException.cause [object java/lang/Throwable])
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/x509/ExtCertificateEncodingException])
+  (line 18)
+  (iget-object v0 v1 org/bouncycastle2/x509/ExtCertificateEncodingException.cause [object java/lang/Throwable])
+  (return-object v0)
+)
+
+)

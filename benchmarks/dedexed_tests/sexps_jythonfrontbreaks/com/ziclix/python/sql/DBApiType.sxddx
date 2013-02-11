@@ -1,0 +1,37 @@
+(class (attrs public final ) com/ziclix/python/sql/DBApiType
+ (super org/python/core/PyInteger)
+ (source "DBApiType.java")
+
+ (field (attrs public static ) __class__ [object org/python/core/PyClass] )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/ziclix/python/sql/DBApiType])
+  ; parameter[0] : v1 (int)
+  (line 36)
+  (invoke-direct {v0 v1} org/python/core/PyInteger/<init> int )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Integer] )void
+  (limit registers 3)
+  ; this: v1 ([object com/ziclix/python/sql/DBApiType])
+  ; parameter[0] : v2 ([object java/lang/Integer])
+  (line 45)
+  (invoke-virtual {v2} java/lang/Integer/intValue )
+  (move-result v0)
+  (invoke-direct {v1 v0} org/python/core/PyInteger/<init> int )
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs protected ) getPyClass()[object org/python/core/PyClass]
+  (limit registers 2)
+  ; this: v1 ([object com/ziclix/python/sql/DBApiType])
+  (line 54)
+  (sget-object v0 com/ziclix/python/sql/DBApiType.__class__ [object org/python/core/PyClass])
+  (return-object v0)
+)
+
+)

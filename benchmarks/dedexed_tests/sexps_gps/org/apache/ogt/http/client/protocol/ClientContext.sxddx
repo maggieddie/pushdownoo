@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/protocol/ClientContext
+ (super java/lang/Object)
+ (source "ClientContext.java")
+
+ (field (attrs public static final ) AUTHSCHEME_REGISTRY [object java/lang/String] "http.authscheme-registry" )
+ (field (attrs public static final ) AUTH_CACHE [object java/lang/String] "http.auth.auth-cache" )
+ (field (attrs public static final ) AUTH_SCHEME_PREF [object java/lang/String] "http.auth.scheme-pref" )
+ (field (attrs public static final ) COOKIESPEC_REGISTRY [object java/lang/String] "http.cookiespec-registry" )
+ (field (attrs public static final ) COOKIE_ORIGIN [object java/lang/String] "http.cookie-origin" )
+ (field (attrs public static final ) COOKIE_SPEC [object java/lang/String] "http.cookie-spec" )
+ (field (attrs public static final ) COOKIE_STORE [object java/lang/String] "http.cookie-store" )
+ (field (attrs public static final ) CREDS_PROVIDER [object java/lang/String] "http.auth.credentials-provider" )
+ (field (attrs public static final ) PROXY_AUTH_STATE [object java/lang/String] "http.auth.proxy-scope" )
+ (field (attrs public static final ) SCHEME_REGISTRY [object java/lang/String] "http.scheme-registry" )
+ (field (attrs public static final ) TARGET_AUTH_STATE [object java/lang/String] "http.auth.target-scope" )
+ (field (attrs public static final ) USER_TOKEN [object java/lang/String] "http.user-token" )
+
+)

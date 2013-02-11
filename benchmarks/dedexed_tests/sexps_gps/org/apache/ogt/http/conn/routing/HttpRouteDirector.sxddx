@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/routing/HttpRouteDirector
+ (super java/lang/Object)
+ (source "HttpRouteDirector.java")
+
+ (field (attrs public static final ) COMPLETE int 0); 0x0 )
+ (field (attrs public static final ) CONNECT_PROXY int 2); 0x2 )
+ (field (attrs public static final ) CONNECT_TARGET int 1); 0x1 )
+ (field (attrs public static final ) LAYER_PROTOCOL int 5); 0x5 )
+ (field (attrs public static final ) TUNNEL_PROXY int 4); 0x4 )
+ (field (attrs public static final ) TUNNEL_TARGET int 3); 0x3 )
+ (field (attrs public static final ) UNREACHABLE int -1); 0xffffffff )
+
+(method (attrs public abstract ) nextStep([object org/apache/ogt/http/conn/routing/RouteInfo] [object org/apache/ogt/http/conn/routing/RouteInfo] )int
+)
+
+)

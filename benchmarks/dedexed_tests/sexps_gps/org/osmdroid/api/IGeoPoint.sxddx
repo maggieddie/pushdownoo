@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/osmdroid/api/IGeoPoint
+ (super java/lang/Object)
+ (source "IGeoPoint.java")
+
+
+(method (attrs public abstract ) getLatitudeE6()int
+)
+
+(method (attrs public abstract ) getLongitudeE6()int
+)
+
+)

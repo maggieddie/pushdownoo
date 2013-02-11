@@ -1,0 +1,39 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/tilesource/ITileSource
+ (super java/lang/Object)
+ (source "ITileSource.java")
+
+
+(method (attrs public abstract ) getDrawable([object java/io/InputStream] )[object android/graphics/drawable/Drawable]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException])
+  )
+)
+
+(method (attrs public abstract ) getDrawable([object java/lang/String] )[object android/graphics/drawable/Drawable]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException])
+  )
+)
+
+(method (attrs public abstract ) getMaximumZoomLevel()int
+)
+
+(method (attrs public abstract ) getMinimumZoomLevel()int
+)
+
+(method (attrs public abstract ) getTileRelativeFilenameString([object org/osmdroid/tileprovider/MapTile] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTileSizePixels()int
+)
+
+(method (attrs public abstract ) localizedName([object org/osmdroid/ResourceProxy] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) name()[object java/lang/String]
+)
+
+(method (attrs public abstract ) ordinal()int
+)
+
+)

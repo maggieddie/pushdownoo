@@ -1,0 +1,40 @@
+(class (attrs ) com/todo/todo/KTodo$30
+ (super java/lang/Object)
+ (source "KTodo.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object com/todo/todo/KTodo] )
+ (field (attrs private final ) val$msg [object java/lang/String] )
+
+(method (attrs ) <init>([object com/todo/todo/KTodo] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/todo/todo/KTodo$30])
+  ; parameter[0] : v1 ([object com/todo/todo/KTodo])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/KTodo$30.this$0 [object com/todo/todo/KTodo])
+  (iput-object v2 v0 com/todo/todo/KTodo$30.val$msg [object java/lang/String])
+  (line 897)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/todo/todo/KTodo$30])
+  (line 899)
+  (new-instance v0 android/app/AlertDialog$Builder)
+  (iget-object v1 v2 com/todo/todo/KTodo$30.this$0 [object com/todo/todo/KTodo])
+  (invoke-direct {v0 v1} android/app/AlertDialog$Builder/<init> [object android/content/Context] )
+  (const v1 2131296288) ; 0x7f090020)
+  (invoke-virtual {v0 v1} android/app/AlertDialog$Builder/setTitle int )
+  (move-result-object v0)
+  (iget-object v1 v2 com/todo/todo/KTodo$30.val$msg [object java/lang/String])
+  (invoke-virtual {v0 v1} android/app/AlertDialog$Builder/setMessage [object java/lang/CharSequence] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/AlertDialog$Builder/show )
+  (line 900)
+  (return-void )
+)
+
+)

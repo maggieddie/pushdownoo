@@ -1,0 +1,65 @@
+(class (attrs ) org/python/core/PyList$1exposed___imul__
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyList.java")
+
+ (field (attrs private ) self [object org/python/core/PyList] )
+
+(method (attrs ) <init>([object org/python/core/PyList] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyList$1exposed___imul__])
+  ; parameter[0] : v1 ([object org/python/core/PyList])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 856)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 857)
+  (iput-object v1 v0 org/python/core/PyList$1exposed___imul__.self [object org/python/core/PyList])
+  (line 858)
+  (return-void )
+ )
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v1 ([object org/python/core/PyList$1exposed___imul__])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  (line 865)
+  (iget-object v0 v1 org/python/core/PyList$1exposed___imul__.self [object org/python/core/PyList])
+  (invoke-virtual {v0 v2} org/python/core/PyList/list___imul__ [object org/python/core/PyObject] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyList$1exposed___imul__])
+  (line 852)
+  (iget-object v0 v1 org/python/core/PyList$1exposed___imul__.self [object org/python/core/PyList])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v2 ([object org/python/core/PyList$1exposed___imul__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  ; parameter[1] : v4 ([object org/python/core/PyObject])
+  (line 869)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/core/PyList])
+  (line 870)
+  (invoke-virtual {v0 v4} org/python/core/PyList/list___imul__ [object org/python/core/PyObject] )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyList$1exposed___imul__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 861)
+  (new-instance v0 org/python/core/PyList$1exposed___imul__)
+  (check-cast v3 [object org/python/core/PyList])
+  (iget-object v1 v2 org/python/core/PyList$1exposed___imul__.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyList$1exposed___imul__/<init> [object org/python/core/PyList] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

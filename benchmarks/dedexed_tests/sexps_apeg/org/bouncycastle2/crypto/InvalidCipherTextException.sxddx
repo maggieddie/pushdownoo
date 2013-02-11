@@ -1,0 +1,25 @@
+(class (attrs public ) org/bouncycastle2/crypto/InvalidCipherTextException
+ (super org/bouncycastle2/crypto/CryptoException)
+ (source "InvalidCipherTextException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/crypto/InvalidCipherTextException])
+  (line 13)
+  (invoke-direct {v0} org/bouncycastle2/crypto/CryptoException/<init> )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/crypto/InvalidCipherTextException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 25)
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/CryptoException/<init> [object java/lang/String] )
+  (line 26)
+  (return-void )
+ )
+
+)

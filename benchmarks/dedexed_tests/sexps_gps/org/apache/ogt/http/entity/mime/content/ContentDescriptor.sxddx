@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/apache/ogt/http/entity/mime/content/ContentDescriptor
+ (super java/lang/Object)
+ (source "ContentDescriptor.java")
+
+
+(method (attrs public abstract ) getCharset()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getContentLength()long
+)
+
+(method (attrs public abstract ) getMediaType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getMimeType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSubType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTransferEncoding()[object java/lang/String]
+)
+
+)

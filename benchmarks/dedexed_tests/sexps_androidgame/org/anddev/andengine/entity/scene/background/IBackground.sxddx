@@ -1,0 +1,29 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/scene/background/IBackground
+ (super java/lang/Object)
+ (source "IBackground.java")
+ (implements org/anddev/andengine/opengl/IDrawable)
+ (implements org/anddev/andengine/engine/handler/IUpdateHandler)
+
+
+(method (attrs public abstract ) addBackgroundModifier([object org/anddev/andengine/util/modifier/IModifier] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/util/modifier/IModifier"  "<"  "Lorg/anddev/andengine/entity/scene/background/IBackground;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) clearBackgroundModifiers()void
+)
+
+(method (attrs public abstract ) removeBackgroundModifier([object org/anddev/andengine/util/modifier/IModifier] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/util/modifier/IModifier"  "<"  "Lorg/anddev/andengine/entity/scene/background/IBackground;"  ">;)Z")
+  )
+)
+
+(method (attrs public abstract ) setColor(float float float )void
+)
+
+(method (attrs public abstract ) setColor(float float float float )void
+)
+
+)

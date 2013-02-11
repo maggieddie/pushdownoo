@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/UnsupportedHttpVersionException
+ (super org/apache/ogt/http/ProtocolException)
+ (source "UnsupportedHttpVersionException.java")
+
+ (field (attrs private static final ) serialVersionUID long -33718341); 0xfdfd7fbb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/UnsupportedHttpVersionException])
+  (line 46)
+  (invoke-direct {v0} org/apache/ogt/http/ProtocolException/<init> )
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/UnsupportedHttpVersionException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 55)
+  (invoke-direct {v0 v1} org/apache/ogt/http/ProtocolException/<init> [object java/lang/String] )
+  (line 56)
+  (return-void )
+ )
+
+)

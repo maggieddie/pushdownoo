@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) twitter4j/internal/async/Dispatcher
+ (super java/lang/Object)
+ (source "Dispatcher.java")
+
+
+(method (attrs public abstract ) invokeLater([object java/lang/Runnable] )void
+)
+
+(method (attrs public abstract ) shutdown()void
+)
+
+)

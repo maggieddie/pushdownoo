@@ -1,0 +1,37 @@
+(class (attrs public ) org/swiftp/Account
+ (super java/lang/Object)
+ (source "Account.java")
+
+ (field (attrs protected ) username [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/swiftp/Account])
+  (line 22)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (const/4 v0 0)
+  (iput-object v0 v1 org/swiftp/Account.username [object java/lang/String])
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public ) getUsername()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/swiftp/Account])
+  (line 26)
+  (iget-object v0 v1 org/swiftp/Account.username [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) setUsername([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/swiftp/Account])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 30)
+  (iput-object v1 v0 org/swiftp/Account.username [object java/lang/String])
+  (line 31)
+  (return-void )
+)
+
+)

@@ -1,0 +1,49 @@
+(class (attrs public ) org/slf4j/impl/StaticMarkerBinder
+ (super java/lang/Object)
+ (source "StaticMarkerBinder.java")
+ (implements org/slf4j/spi/MarkerFactoryBinder)
+
+ (field (attrs public static final ) SINGLETON [object org/slf4j/impl/StaticMarkerBinder] )
+ (field (attrs private final ) markerFactory [object org/slf4j/IMarkerFactory] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 48)
+  (new-instance v0 org/slf4j/impl/StaticMarkerBinder)
+  (invoke-direct {v0} org/slf4j/impl/StaticMarkerBinder/<init> )
+  (sput-object v0 org/slf4j/impl/StaticMarkerBinder.SINGLETON [object org/slf4j/impl/StaticMarkerBinder])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticMarkerBinder])
+  (line 53)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 50)
+  (new-instance v0 org/slf4j/helpers/BasicMarkerFactory)
+  (invoke-direct {v0} org/slf4j/helpers/BasicMarkerFactory/<init> )
+  (iput-object v0 v1 org/slf4j/impl/StaticMarkerBinder.markerFactory [object org/slf4j/IMarkerFactory])
+  (line 54)
+  (return-void )
+ )
+
+(method (attrs public ) getMarkerFactory()[object org/slf4j/IMarkerFactory]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticMarkerBinder])
+  (line 62)
+  (iget-object v0 v1 org/slf4j/impl/StaticMarkerBinder.markerFactory [object org/slf4j/IMarkerFactory])
+  (return-object v0)
+)
+
+(method (attrs public ) getMarkerFactoryClassStr()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticMarkerBinder])
+  (line 71)
+  (const-class v0 org/slf4j/helpers/BasicMarkerFactory)
+  (invoke-virtual {v0} java/lang/Class/getName )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

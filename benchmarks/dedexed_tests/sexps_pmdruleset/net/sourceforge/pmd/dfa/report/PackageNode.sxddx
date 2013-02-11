@@ -1,0 +1,49 @@
+(class (attrs public ) net/sourceforge/pmd/dfa/report/PackageNode
+ (super net/sourceforge/pmd/dfa/report/AbstractReportNode)
+ (source "PackageNode.java")
+
+ (field (attrs private ) packageName [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/dfa/report/PackageNode])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 7)
+  (invoke-direct {v0} net/sourceforge/pmd/dfa/report/AbstractReportNode/<init> )
+  (line 8)
+  (iput-object v1 v0 net/sourceforge/pmd/dfa/report/PackageNode.packageName [object java/lang/String])
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) equalsNode([object net/sourceforge/pmd/dfa/report/AbstractReportNode] )boolean
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/dfa/report/PackageNode])
+  ; parameter[0] : v3 ([object net/sourceforge/pmd/dfa/report/AbstractReportNode])
+  (line 16)
+  (instance-of v0 v3 net/sourceforge/pmd/dfa/report/PackageNode)
+  (if-nez v0 l4dc38)
+  (line 17)
+  (const/4 v0 0)
+  (label l4dc36)
+  (line 20)
+  (return v0)
+  (label l4dc38)
+  (check-cast v3 [object net/sourceforge/pmd/dfa/report/PackageNode])
+  (invoke-virtual {v3} net/sourceforge/pmd/dfa/report/PackageNode/getPackageName )
+  (move-result-object v0)
+  (iget-object v1 v2 net/sourceforge/pmd/dfa/report/PackageNode.packageName [object java/lang/String])
+  (invoke-virtual {v0 v1} java/lang/String/equals [object java/lang/Object] )
+  (move-result v0)
+  (goto l4dc36)
+)
+
+(method (attrs public ) getPackageName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/dfa/report/PackageNode])
+  (line 12)
+  (iget-object v0 v1 net/sourceforge/pmd/dfa/report/PackageNode.packageName [object java/lang/String])
+  (return-object v0)
+)
+
+)

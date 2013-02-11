@@ -1,0 +1,19 @@
+(interface (attrs abstract ) com/mapquest/android/maps/ProjectionX
+ (super java/lang/Object)
+ (source "ProjectionX.java")
+ (implements com/mapquest/android/maps/Projection)
+
+
+(method (attrs public abstract ) calculateZoomLevel([object com/mapquest/android/maps/BoundingBox] )int
+)
+
+(method (attrs public abstract ) calculateZoomLevel([object com/mapquest/android/maps/BoundingBox] int int )int
+)
+
+(method (attrs public abstract ) getScaleFactor(int )int
+)
+
+(method (attrs public abstract ) getScreenFromGlobal([object android/graphics/Point] )[object android/graphics/Point]
+)
+
+)

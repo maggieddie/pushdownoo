@@ -1,0 +1,68 @@
+(class (attrs public ) net/sourceforge/pmd/RuleContext
+ (super java/lang/Object)
+ (source "RuleContext.java")
+
+ (field (attrs private ) report [object net/sourceforge/pmd/Report] )
+ (field (attrs private ) sourceCodeFilename [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/RuleContext])
+  (line 8)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 10)
+  (new-instance v0 net/sourceforge/pmd/Report)
+  (invoke-direct {v0} net/sourceforge/pmd/Report/<init> )
+  (iput-object v0 v1 net/sourceforge/pmd/RuleContext.report [object net/sourceforge/pmd/Report])
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) excludeLines([object java/util/Set] )void
+  (limit registers 3)
+  ; this: v1 ([object net/sourceforge/pmd/RuleContext])
+  ; parameter[0] : v2 ([object java/util/Set])
+  (line 30)
+  (iget-object v0 v1 net/sourceforge/pmd/RuleContext.report [object net/sourceforge/pmd/Report])
+  (invoke-virtual {v0 v2} net/sourceforge/pmd/Report/exclude [object java/util/Set] )
+  (line 31)
+  (return-void )
+)
+
+(method (attrs public ) getReport()[object net/sourceforge/pmd/Report]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/RuleContext])
+  (line 14)
+  (iget-object v0 v1 net/sourceforge/pmd/RuleContext.report [object net/sourceforge/pmd/Report])
+  (return-object v0)
+)
+
+(method (attrs public ) getSourceCodeFilename()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/RuleContext])
+  (line 22)
+  (iget-object v0 v1 net/sourceforge/pmd/RuleContext.sourceCodeFilename [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) setReport([object net/sourceforge/pmd/Report] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/RuleContext])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/Report])
+  (line 18)
+  (iput-object v1 v0 net/sourceforge/pmd/RuleContext.report [object net/sourceforge/pmd/Report])
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) setSourceCodeFilename([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/RuleContext])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 26)
+  (iput-object v1 v0 net/sourceforge/pmd/RuleContext.sourceCodeFilename [object java/lang/String])
+  (line 27)
+  (return-void )
+)
+
+)

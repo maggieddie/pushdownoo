@@ -1,0 +1,152 @@
+(class (attrs public ) ws/com/google/android/mms/pdu/ReadOrigInd
+ (super ws/com/google/android/mms/pdu/GenericPdu)
+ (source "ReadOrigInd.java")
+
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object ws/com/google/android/mms/InvalidHeaderValueException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 32)
+  (invoke-direct {v1} ws/com/google/android/mms/pdu/GenericPdu/<init> )
+  (line 33)
+  (const/16 v0 136)
+  (invoke-virtual {v1 v0} ws/com/google/android/mms/pdu/ReadOrigInd/setMessageType int )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object ws/com/google/android/mms/pdu/PduHeaders] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object ws/com/google/android/mms/InvalidHeaderValueException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v1 ([object ws/com/google/android/mms/pdu/PduHeaders])
+  (line 42)
+  (invoke-direct {v0 v1} ws/com/google/android/mms/pdu/GenericPdu/<init> [object ws/com/google/android/mms/pdu/PduHeaders] )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) getDate()long
+  (limit registers 3)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 51)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 133)
+  (invoke-virtual {v0 v1} ws/com/google/android/mms/pdu/PduHeaders/getLongInteger int )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) getFrom()[object ws/com/google/android/mms/pdu/EncodedStringValue]
+  (limit registers 3)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 71)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 137)
+  (invoke-virtual {v0 v1} ws/com/google/android/mms/pdu/PduHeaders/getEncodedStringValue int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getMessageId()[array byte]
+  (limit registers 3)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 90)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 139)
+  (invoke-virtual {v0 v1} ws/com/google/android/mms/pdu/PduHeaders/getTextString int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getReadStatus()int
+  (limit registers 3)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 109)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 155)
+  (invoke-virtual {v0 v1} ws/com/google/android/mms/pdu/PduHeaders/getOctet int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getTo()[array [object ws/com/google/android/mms/pdu/EncodedStringValue]]
+  (limit registers 3)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  (line 128)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 151)
+  (invoke-virtual {v0 v1} ws/com/google/android/mms/pdu/PduHeaders/getEncodedStringValues int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) setDate(long )void
+  (limit registers 5)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v3 (long)
+  (line 60)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 133)
+  (invoke-virtual {v0 v3 v4 v1} ws/com/google/android/mms/pdu/PduHeaders/setLongInteger long int )
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) setFrom([object ws/com/google/android/mms/pdu/EncodedStringValue] )void
+  (limit registers 4)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v3 ([object ws/com/google/android/mms/pdu/EncodedStringValue])
+  (line 81)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 137)
+  (invoke-virtual {v0 v3 v1} ws/com/google/android/mms/pdu/PduHeaders/setEncodedStringValue [object ws/com/google/android/mms/pdu/EncodedStringValue] int )
+  (line 82)
+  (return-void )
+)
+
+(method (attrs public ) setMessageId([array byte] )void
+  (limit registers 4)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v3 ([array byte])
+  (line 100)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 139)
+  (invoke-virtual {v0 v3 v1} ws/com/google/android/mms/pdu/PduHeaders/setTextString [array byte] int )
+  (line 101)
+  (return-void )
+)
+
+(method (attrs public ) setReadStatus(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object ws/com/google/android/mms/InvalidHeaderValueException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v3 (int)
+  (line 119)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 155)
+  (invoke-virtual {v0 v3 v1} ws/com/google/android/mms/pdu/PduHeaders/setOctet int int )
+  (line 120)
+  (return-void )
+)
+
+(method (attrs public ) setTo([array [object ws/com/google/android/mms/pdu/EncodedStringValue]] )void
+  (limit registers 4)
+  ; this: v2 ([object ws/com/google/android/mms/pdu/ReadOrigInd])
+  ; parameter[0] : v3 ([array [object ws/com/google/android/mms/pdu/EncodedStringValue]])
+  (line 138)
+  (iget-object v0 v2 ws/com/google/android/mms/pdu/ReadOrigInd.mPduHeaders [object ws/com/google/android/mms/pdu/PduHeaders])
+  (const/16 v1 151)
+  (invoke-virtual {v0 v3 v1} ws/com/google/android/mms/pdu/PduHeaders/setEncodedStringValues [array [object ws/com/google/android/mms/pdu/EncodedStringValue]] int )
+  (line 139)
+  (return-void )
+)
+
+)

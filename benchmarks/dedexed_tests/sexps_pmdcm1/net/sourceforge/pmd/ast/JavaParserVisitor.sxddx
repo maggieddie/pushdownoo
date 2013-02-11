@@ -1,0 +1,333 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/ast/JavaParserVisitor
+ (super java/lang/Object)
+ (source "JavaParserVisitor.java")
+
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAdditiveExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAllocationExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAndExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAnnotation] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAnnotationTypeBody] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAnnotationTypeDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAnnotationTypeMemberDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTArgumentList] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTArguments] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTArrayDimsAndInits] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTArrayInitializer] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAssertStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTAssignmentOperator] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTBlock] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTBlockStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTBooleanLiteral] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTBreakStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTCastExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTCastLookahead] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTCatchStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTClassOrInterfaceBody] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTClassOrInterfaceBodyDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTClassOrInterfaceDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTClassOrInterfaceType] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTCompilationUnit] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTConditionalAndExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTConditionalExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTConditionalOrExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTConstructorDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTContinueStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTDefaultValue] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTDoStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTEmptyStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTEnumBody] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTEnumConstant] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTEnumDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTEqualityExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTExclusiveOrExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTExplicitConstructorInvocation] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTExtendsList] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTFieldDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTFinallyStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTForInit] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTForStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTForUpdate] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTFormalParameter] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTFormalParameters] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTIfStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTImplementsList] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTImportDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTInclusiveOrExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTInitializer] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTInstanceOfExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTLabeledStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTLiteral] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTLocalVariableDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMarkerAnnotation] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMemberSelector] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMemberValue] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMemberValueArrayInitializer] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMemberValuePair] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMemberValuePairs] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMethodDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMethodDeclarator] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTMultiplicativeExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTName] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTNameList] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTNormalAnnotation] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTNullLiteral] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPackageDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPostfixExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPreDecrementExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPreIncrementExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPrimaryExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPrimaryPrefix] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPrimarySuffix] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTPrimitiveType] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTRSIGNEDSHIFT] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTRUNSIGNEDSHIFT] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTReferenceType] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTRelationalExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTResultType] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTReturnStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTShiftExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTSingleMemberAnnotation] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTStatementExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTStatementExpressionList] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTSwitchLabel] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTSwitchStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTSynchronizedStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTThrowStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTryStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTType] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeArgument] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeArguments] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeBound] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeDeclaration] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeParameter] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTTypeParameters] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTUnaryExpression] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTUnaryExpressionNotPlusMinus] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTVariableDeclarator] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTVariableDeclaratorId] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTVariableInitializer] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTWhileStatement] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/ASTWildcardBounds] [object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) visit([object net/sourceforge/pmd/ast/SimpleJavaNode] [object java/lang/Object] )[object java/lang/Object]
+)
+
+)

@@ -1,0 +1,30 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEIESCipher$ECIES
+ (super org/bouncycastle2/jce/provider/JCEIESCipher)
+ (source "JCEIESCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 6)
+  ; this: v5 ([object org/bouncycastle2/jce/provider/JCEIESCipher$ECIES])
+  (line 381)
+  (new-instance v0 org/bouncycastle2/crypto/engines/IESEngine)
+  (line 382)
+  (new-instance v1 org/bouncycastle2/crypto/agreement/ECDHBasicAgreement)
+  (invoke-direct {v1} org/bouncycastle2/crypto/agreement/ECDHBasicAgreement/<init> )
+  (line 383)
+  (new-instance v2 org/bouncycastle2/crypto/generators/KDF2BytesGenerator)
+  (new-instance v3 org/bouncycastle2/crypto/digests/SHA1Digest)
+  (invoke-direct {v3} org/bouncycastle2/crypto/digests/SHA1Digest/<init> )
+  (invoke-direct {v2 v3} org/bouncycastle2/crypto/generators/KDF2BytesGenerator/<init> [object org/bouncycastle2/crypto/Digest] )
+  (line 384)
+  (new-instance v3 org/bouncycastle2/crypto/macs/HMac)
+  (new-instance v4 org/bouncycastle2/crypto/digests/SHA1Digest)
+  (invoke-direct {v4} org/bouncycastle2/crypto/digests/SHA1Digest/<init> )
+  (invoke-direct {v3 v4} org/bouncycastle2/crypto/macs/HMac/<init> [object org/bouncycastle2/crypto/Digest] )
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle2/crypto/engines/IESEngine/<init> [object org/bouncycastle2/crypto/BasicAgreement] [object org/bouncycastle2/crypto/DerivationFunction] [object org/bouncycastle2/crypto/Mac] )
+  (invoke-direct {v5 v0} org/bouncycastle2/jce/provider/JCEIESCipher/<init> [object org/bouncycastle2/crypto/engines/IESEngine] )
+  (line 385)
+  (return-void )
+ )
+
+)

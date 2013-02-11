@@ -1,0 +1,35 @@
+(class (attrs public ) net/sourceforge/pmd/parsers/Java15Parser
+ (super java/lang/Object)
+ (source "Java15Parser.java")
+ (implements net/sourceforge/pmd/parsers/Parser)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/sourceforge/pmd/parsers/Java15Parser])
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) parse([object java/io/Reader] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object net/sourceforge/pmd/ast/ParseException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/parsers/Java15Parser])
+  ; parameter[0] : v3 ([object java/io/Reader])
+  (line 17)
+  (new-instance v0 net/sourceforge/pmd/ast/JavaParser)
+  (new-instance v1 net/sourceforge/pmd/ast/JavaCharStream)
+  (invoke-direct {v1 v3} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/Reader] )
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/JavaParser/<init> [object net/sourceforge/pmd/ast/CharStream] )
+  (line 18)
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/JavaParser/setJDK15 )
+  (line 19)
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/JavaParser/CompilationUnit )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+)

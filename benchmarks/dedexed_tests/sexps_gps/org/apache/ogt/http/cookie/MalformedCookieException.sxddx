@@ -1,0 +1,37 @@
+(class (attrs public ) org/apache/ogt/http/cookie/MalformedCookieException
+ (super org/apache/ogt/http/ProtocolException)
+ (source "MalformedCookieException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1074270209); 0xbff7efff )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/cookie/MalformedCookieException])
+  (line 50)
+  (invoke-direct {v0} org/apache/ogt/http/ProtocolException/<init> )
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/cookie/MalformedCookieException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 59)
+  (invoke-direct {v0 v1} org/apache/ogt/http/ProtocolException/<init> [object java/lang/String] )
+  (line 60)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/cookie/MalformedCookieException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 70)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/ProtocolException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 71)
+  (return-void )
+ )
+
+)

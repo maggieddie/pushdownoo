@@ -1,0 +1,133 @@
+(class (attrs ) twitter4j/StreamingReadTimeoutConfiguration
+ (super java/lang/Object)
+ (source "TwitterStream.java")
+ (implements twitter4j/internal/http/HttpClientWrapperConfiguration)
+
+ (field (attrs ) nestedConf [object twitter4j/conf/Configuration] )
+
+(method (attrs ) <init>([object twitter4j/conf/Configuration] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  ; parameter[0] : v1 ([object twitter4j/conf/Configuration])
+  (line 789)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 790)
+  (iput-object v1 v0 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (line 791)
+  (return-void )
+ )
+
+(method (attrs public ) getHttpConnectionTimeout()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 810)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpConnectionTimeout )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpDefaultMaxPerRoute()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 831)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpDefaultMaxPerRoute )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpMaxTotalConnections()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 827)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpMaxTotalConnections )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpProxyHost()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 794)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpProxyHost )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getHttpProxyPassword()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 806)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpProxyPassword )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getHttpProxyPort()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 798)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpProxyPort )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpProxyUser()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 802)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpProxyUser )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getHttpReadTimeout()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 815)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpStreamingReadTimeout )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpRetryCount()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 819)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpRetryCount )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getHttpRetryIntervalSeconds()int
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 823)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getHttpRetryIntervalSeconds )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getRequestHeaders()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/StreamingReadTimeoutConfiguration])
+  (line 835)
+  (iget-object v0 v1 twitter4j/StreamingReadTimeoutConfiguration.nestedConf [object twitter4j/conf/Configuration])
+  (invoke-interface {v0} twitter4j/conf/Configuration/getRequestHeaders )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

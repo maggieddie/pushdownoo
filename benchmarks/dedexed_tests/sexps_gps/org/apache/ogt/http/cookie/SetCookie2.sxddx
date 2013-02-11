@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/SetCookie2
+ (super java/lang/Object)
+ (source "SetCookie2.java")
+ (implements org/apache/ogt/http/cookie/SetCookie)
+
+
+(method (attrs public abstract ) setCommentURL([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setDiscard(boolean )void
+)
+
+(method (attrs public abstract ) setPorts([array int] )void
+)
+
+)

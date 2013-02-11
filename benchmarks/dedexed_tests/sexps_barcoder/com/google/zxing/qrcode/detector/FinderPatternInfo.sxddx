@@ -1,0 +1,46 @@
+(class (attrs public final ) com/google/zxing/qrcode/detector/FinderPatternInfo
+ (super java/lang/Object)
+
+ (field (attrs private final ) bottomLeft [object com/google/zxing/qrcode/detector/FinderPattern] )
+ (field (attrs private final ) topLeft [object com/google/zxing/qrcode/detector/FinderPattern] )
+ (field (attrs private final ) topRight [object com/google/zxing/qrcode/detector/FinderPattern] )
+
+(method (attrs public ) <init>([array [object com/google/zxing/qrcode/detector/FinderPattern]] )void
+  (limit registers 3)
+  ; this: v1 ([object com/google/zxing/qrcode/detector/FinderPatternInfo])
+  ; parameter[0] : v2 ([array [object com/google/zxing/qrcode/detector/FinderPattern]])
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (const/4 v0 0)
+  (aget-object v0 v2 v0)
+  (iput-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.bottomLeft [object com/google/zxing/qrcode/detector/FinderPattern])
+  (const/4 v0 1)
+  (aget-object v0 v2 v0)
+  (iput-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.topLeft [object com/google/zxing/qrcode/detector/FinderPattern])
+  (const/4 v0 2)
+  (aget-object v0 v2 v0)
+  (iput-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.topRight [object com/google/zxing/qrcode/detector/FinderPattern])
+  (return-void )
+ )
+
+(method (attrs public final ) getBottomLeft()[object com/google/zxing/qrcode/detector/FinderPattern]
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/detector/FinderPatternInfo])
+  (iget-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.bottomLeft [object com/google/zxing/qrcode/detector/FinderPattern])
+  (return-object v0)
+)
+
+(method (attrs public final ) getTopLeft()[object com/google/zxing/qrcode/detector/FinderPattern]
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/detector/FinderPatternInfo])
+  (iget-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.topLeft [object com/google/zxing/qrcode/detector/FinderPattern])
+  (return-object v0)
+)
+
+(method (attrs public final ) getTopRight()[object com/google/zxing/qrcode/detector/FinderPattern]
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/detector/FinderPatternInfo])
+  (iget-object v0 v1 com/google/zxing/qrcode/detector/FinderPatternInfo.topRight [object com/google/zxing/qrcode/detector/FinderPattern])
+  (return-object v0)
+)
+
+)

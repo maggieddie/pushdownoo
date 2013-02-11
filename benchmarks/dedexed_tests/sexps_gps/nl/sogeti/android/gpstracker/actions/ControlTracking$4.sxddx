@@ -1,0 +1,36 @@
+(class (attrs ) nl/sogeti/android/gpstracker/actions/ControlTracking$4
+ (super java/lang/Object)
+ (source "ControlTracking.java")
+ (implements android/content/DialogInterface$OnDismissListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/actions/ControlTracking] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/actions/ControlTracking] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/actions/ControlTracking$4])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/actions/ControlTracking])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/actions/ControlTracking$4.this$0 [object nl/sogeti/android/gpstracker/actions/ControlTracking])
+  (line 203)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onDismiss([object android/content/DialogInterface] )void
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/actions/ControlTracking$4])
+  ; parameter[0] : v2 ([object android/content/DialogInterface])
+  (line 207)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/actions/ControlTracking$4.this$0 [object nl/sogeti/android/gpstracker/actions/ControlTracking])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/actions/ControlTracking/access$1 [object nl/sogeti/android/gpstracker/actions/ControlTracking] )
+  (move-result v0)
+  (if-nez v0 l7c8d6)
+  (line 209)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/actions/ControlTracking$4.this$0 [object nl/sogeti/android/gpstracker/actions/ControlTracking])
+  (invoke-virtual {v0} nl/sogeti/android/gpstracker/actions/ControlTracking/finish )
+  (label l7c8d6)
+  (line 211)
+  (return-void )
+)
+
+)

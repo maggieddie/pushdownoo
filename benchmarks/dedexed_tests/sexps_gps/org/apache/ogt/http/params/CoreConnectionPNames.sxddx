@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/params/CoreConnectionPNames
+ (super java/lang/Object)
+ (source "CoreConnectionPNames.java")
+
+ (field (attrs public static final ) CONNECTION_TIMEOUT [object java/lang/String] "http.connection.timeout" )
+ (field (attrs public static final ) MAX_HEADER_COUNT [object java/lang/String] "http.connection.max-header-count" )
+ (field (attrs public static final ) MAX_LINE_LENGTH [object java/lang/String] "http.connection.max-line-length" )
+ (field (attrs public static final ) MIN_CHUNK_LIMIT [object java/lang/String] "http.connection.min-chunk-limit" )
+ (field (attrs public static final ) SOCKET_BUFFER_SIZE [object java/lang/String] "http.socket.buffer-size" )
+ (field (attrs public static final ) SO_LINGER [object java/lang/String] "http.socket.linger" )
+ (field (attrs public static final ) SO_REUSEADDR [object java/lang/String] "http.socket.reuseaddr" )
+ (field (attrs public static final ) SO_TIMEOUT [object java/lang/String] "http.socket.timeout" )
+ (field (attrs public static final ) STALE_CONNECTION_CHECK [object java/lang/String] "http.connection.stalecheck" )
+ (field (attrs public static final ) TCP_NODELAY [object java/lang/String] "http.tcp.nodelay" )
+
+)

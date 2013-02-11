@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/bouncycastle2/util/Selector
+ (super java/lang/Object)
+ (source "Selector.java")
+ (implements java/lang/Cloneable)
+
+
+(method (attrs public abstract ) clone()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) match([object java/lang/Object] )boolean
+)
+
+)

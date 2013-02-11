@@ -1,0 +1,62 @@
+(class (attrs ) com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener
+ (super android/os/Handler)
+ (source "ThreadBasedTileDownloader.java")
+
+ (field (attrs final ) this$0 [object com/mapquest/android/maps/ThreadBasedTileDownloader] )
+
+(method (attrs private ) <init>([object com/mapquest/android/maps/ThreadBasedTileDownloader] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/ThreadBasedTileDownloader])
+  (line 100)
+  (iput-object v1 v0 com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener.this$0 [object com/mapquest/android/maps/ThreadBasedTileDownloader])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/mapquest/android/maps/ThreadBasedTileDownloader] [object com/mapquest/android/maps/ThreadBasedTileDownloader$1] )void
+  (limit registers 3)
+  ; this: v0 ([object com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/ThreadBasedTileDownloader])
+  ; parameter[1] : v2 ([object com/mapquest/android/maps/ThreadBasedTileDownloader$1])
+  (line 100)
+  (invoke-direct {v0 v1} com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener/<init> [object com/mapquest/android/maps/ThreadBasedTileDownloader] )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 4)
+  ; this: v2 ([object com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener])
+  ; parameter[0] : v3 ([object android/os/Message])
+  (line 104)
+  (iget v0 v3 android/os/Message.what int)
+  (packed-switch v0 61
+    ps77328_77336 ; case 61
+    ps77328_77344 ; case 62
+    ps77328_default) ; default
+  (label l7732e)
+  (label ps77328_default)
+  (line 112)
+  (invoke-super {v2 v3} android/os/Handler/handleMessage [object android/os/Message] )
+  (line 113)
+  (return-void )
+  (label ps77328_77336)
+  (line 106)
+  (iget-object v0 v2 com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener.this$0 [object com/mapquest/android/maps/ThreadBasedTileDownloader])
+  (const/4 v1 1)
+  (invoke-static {v0 v1} com/mapquest/android/maps/ThreadBasedTileDownloader/access$102 [object com/mapquest/android/maps/ThreadBasedTileDownloader] boolean )
+  (goto l7732e)
+  (label ps77328_77344)
+  (line 109)
+  (iget-object v0 v2 com/mapquest/android/maps/ThreadBasedTileDownloader$NetworkListener.this$0 [object com/mapquest/android/maps/ThreadBasedTileDownloader])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/mapquest/android/maps/ThreadBasedTileDownloader/access$102 [object com/mapquest/android/maps/ThreadBasedTileDownloader] boolean )
+  (goto l7732e)
+  (line 104)
+  (label l77352)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

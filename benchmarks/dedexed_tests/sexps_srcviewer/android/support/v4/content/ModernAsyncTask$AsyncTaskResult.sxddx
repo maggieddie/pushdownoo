@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/content/ModernAsyncTask$AsyncTaskResult
+ (super java/lang/Object)
+ (source "ModernAsyncTask.java")
+
+ (field (attrs final ) mData [array [object java/lang/Object]] )
+ (field (attrs final ) mTask [object android/support/v4/content/ModernAsyncTask] )
+
+(method (attrs ) <init>([object android/support/v4/content/ModernAsyncTask] [array [object java/lang/Object]] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/content/ModernAsyncTask;"  "[TData;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/content/ModernAsyncTask$AsyncTaskResult])
+  ; parameter[0] : v1 ([object android/support/v4/content/ModernAsyncTask])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 492)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 493)
+  (iput-object v1 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.mTask [object android/support/v4/content/ModernAsyncTask])
+  (line 494)
+  (iput-object v2 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.mData [array [object java/lang/Object]])
+  (line 495)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,17 @@
+(class (attrs public ) org/apache/ogt/http/TruncatedChunkException
+ (super org/apache/ogt/http/MalformedChunkCodingException)
+ (source "TruncatedChunkException.java")
+
+ (field (attrs private static final ) serialVersionUID long -72057592142332419); 0x70fc7dfd )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/TruncatedChunkException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 45)
+  (invoke-direct {v0 v1} org/apache/ogt/http/MalformedChunkCodingException/<init> [object java/lang/String] )
+  (line 46)
+  (return-void )
+ )
+
+)

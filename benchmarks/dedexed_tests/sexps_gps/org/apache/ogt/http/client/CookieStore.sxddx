@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/CookieStore
+ (super java/lang/Object)
+ (source "CookieStore.java")
+
+
+(method (attrs public abstract ) addCookie([object org/apache/ogt/http/cookie/Cookie] )void
+)
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) clearExpired([object java/util/Date] )boolean
+)
+
+(method (attrs public abstract ) getCookies()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/cookie/Cookie;"  ">;")
+  )
+)
+
+)

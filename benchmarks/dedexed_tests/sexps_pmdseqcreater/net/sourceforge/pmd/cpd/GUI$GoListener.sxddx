@@ -1,0 +1,51 @@
+(class (attrs ) net/sourceforge/pmd/cpd/GUI$GoListener
+ (super java/lang/Object)
+ (source "GUI.java")
+ (implements java/awt/event/ActionListener)
+
+ (field (attrs final ) this$0 [object net/sourceforge/pmd/cpd/GUI] )
+
+(method (attrs private ) <init>([object net/sourceforge/pmd/cpd/GUI] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/cpd/GUI$GoListener])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/cpd/GUI])
+  (line 28)
+  (iput-object v1 v0 net/sourceforge/pmd/cpd/GUI$GoListener.this$0 [object net/sourceforge/pmd/cpd/GUI])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object net/sourceforge/pmd/cpd/GUI] [object net/sourceforge/pmd/cpd/GUI$GoListener] )void
+  (limit registers 3)
+  ; this: v0 ([object net/sourceforge/pmd/cpd/GUI$GoListener])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/cpd/GUI])
+  ; parameter[1] : v2 ([object net/sourceforge/pmd/cpd/GUI$GoListener])
+  (line 28)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/cpd/GUI$GoListener/<init> [object net/sourceforge/pmd/cpd/GUI] )
+  (return-void )
+ )
+
+(method (attrs static ) access$1([object net/sourceforge/pmd/cpd/GUI$GoListener] )[object net/sourceforge/pmd/cpd/GUI]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/cpd/GUI$GoListener])
+  (line 28)
+  (iget-object v0 v1 net/sourceforge/pmd/cpd/GUI$GoListener.this$0 [object net/sourceforge/pmd/cpd/GUI])
+  (return-object v0)
+ )
+
+(method (attrs public ) actionPerformed([object java/awt/event/ActionEvent] )void
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/cpd/GUI$GoListener])
+  ; parameter[0] : v3 ([object java/awt/event/ActionEvent])
+  (line 30)
+  (new-instance v0 java/lang/Thread)
+  (new-instance v1 net/sourceforge/pmd/cpd/GUI$GoListener$1)
+  (invoke-direct {v1 v2} net/sourceforge/pmd/cpd/GUI$GoListener$1/<init> [object net/sourceforge/pmd/cpd/GUI$GoListener] )
+  (invoke-direct {v0 v1} java/lang/Thread/<init> [object java/lang/Runnable] )
+  (line 39)
+  (invoke-virtual {v0} java/lang/Thread/start )
+  (line 40)
+  (return-void )
+)
+
+)

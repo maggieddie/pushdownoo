@@ -1,0 +1,42 @@
+(class (attrs public ) android/support/v4/view/ViewPager$LayoutParams
+ (super android/view/ViewGroup$LayoutParams)
+ (source "ViewPager.java")
+
+ (field (attrs public ) gravity int )
+ (field (attrs public ) isDecor boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/view/ViewPager$LayoutParams])
+  (const/4 v0 15)
+  (line 2086)
+  (invoke-direct {v1 v0 v0} android/view/ViewGroup$LayoutParams/<init> int int )
+  (line 2087)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] )void
+  (limit registers 6)
+  ; this: v3 ([object android/support/v4/view/ViewPager$LayoutParams])
+  ; parameter[0] : v4 ([object android/content/Context])
+  ; parameter[1] : v5 ([object android/util/AttributeSet])
+  (const/4 v2 0)
+  (line 2090)
+  (invoke-direct {v3 v4 v5} android/view/ViewGroup$LayoutParams/<init> [object android/content/Context] [object android/util/AttributeSet] )
+  (line 2092)
+  (invoke-static {} android/support/v4/view/ViewPager/access$100 )
+  (nop )
+  (move-result-object v1)
+  (invoke-virtual {v4 v5 v1} android/content/Context/obtainStyledAttributes [object android/util/AttributeSet] [array int] )
+  (move-result-object v0)
+  (line 2093)
+  (invoke-virtual {v0 v2 v2} android/content/res/TypedArray/getInteger int int )
+  (move-result v1)
+  (iput v1 v3 android/support/v4/view/ViewPager$LayoutParams.gravity int)
+  (line 2094)
+  (invoke-virtual {v0} android/content/res/TypedArray/recycle )
+  (line 2095)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/ECPointEncoder
+ (super java/lang/Object)
+ (source "ECPointEncoder.java")
+
+
+(method (attrs public abstract ) setPointFormat([object java/lang/String] )void
+)
+
+)

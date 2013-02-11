@@ -1,0 +1,35 @@
+(class (attrs ) antlr/debug/misc/ASTFrame$1
+ (super java/awt/event/WindowAdapter)
+ (source "ASTFrame.java")
+
+ (field (attrs final ) this$0 [object antlr/debug/misc/ASTFrame] )
+
+(method (attrs ) <init>([object antlr/debug/misc/ASTFrame] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/misc/ASTFrame$1])
+  ; parameter[0] : v1 ([object antlr/debug/misc/ASTFrame])
+  (line 1)
+  (iput-object v1 v0 antlr/debug/misc/ASTFrame$1.this$0 [object antlr/debug/misc/ASTFrame])
+  (line 46)
+  (invoke-direct {v0} java/awt/event/WindowAdapter/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) windowClosing([object java/awt/event/WindowEvent] )void
+  (limit registers 4)
+  ; this: v2 ([object antlr/debug/misc/ASTFrame$1])
+  ; parameter[0] : v3 ([object java/awt/event/WindowEvent])
+  (line 48)
+  (invoke-virtual {v3} java/awt/event/WindowEvent/getSource )
+  (move-result-object v0)
+  (check-cast v0 [object java/awt/Frame])
+  (line 49)
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} java/awt/Frame/setVisible boolean )
+  (line 50)
+  (invoke-virtual {v0} java/awt/Frame/dispose )
+  (line 52)
+  (return-void )
+)
+
+)

@@ -1,0 +1,20 @@
+(class (attrs ) antlr/collections/impl/LLCell
+ (super java/lang/Object)
+ (source "LLCell.java")
+
+ (field (attrs ) data [object java/lang/Object] )
+ (field (attrs ) next [object antlr/collections/impl/LLCell] )
+
+(method (attrs public ) <init>([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/collections/impl/LLCell])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 22)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 23)
+  (iput-object v1 v0 antlr/collections/impl/LLCell.data [object java/lang/Object])
+  (line 24)
+  (return-void )
+ )
+
+)

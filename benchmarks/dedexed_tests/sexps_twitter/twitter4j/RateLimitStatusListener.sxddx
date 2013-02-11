@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) twitter4j/RateLimitStatusListener
+ (super java/lang/Object)
+ (source "RateLimitStatusListener.java")
+
+
+(method (attrs public abstract ) onRateLimitReached([object twitter4j/RateLimitStatusEvent] )void
+)
+
+(method (attrs public abstract ) onRateLimitStatus([object twitter4j/RateLimitStatusEvent] )void
+)
+
+)

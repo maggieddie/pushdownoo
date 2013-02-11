@@ -1,0 +1,39 @@
+(interface (attrs abstract ) com/mapquest/android/maps/TileFactory
+ (super java/lang/Object)
+ (source "TileFactory.java")
+
+
+(method (attrs public abstract ) buildTile(int int int [object com/mapquest/android/maps/TileType] )[object com/mapquest/android/maps/Tile]
+)
+
+(method (attrs public abstract ) buildTile([object com/mapquest/android/maps/GeoPoint] int [object com/mapquest/android/maps/TileType] )[object com/mapquest/android/maps/Tile]
+)
+
+(method (attrs public abstract ) buildTile([object com/mapquest/android/maps/Tile] int [object com/mapquest/android/maps/TileType] )[object com/mapquest/android/maps/Tile]
+)
+
+(method (attrs public abstract ) getMapProvider()[object com/mapquest/android/maps/MapProvider]
+)
+
+(method (attrs public abstract ) getMaxZoomLevel()int
+)
+
+(method (attrs public abstract ) getMinZoomLevel()int
+)
+
+(method (attrs public abstract ) getProjection()[object com/mapquest/android/maps/Projection]
+)
+
+(method (attrs public abstract ) getTileSize()int
+)
+
+(method (attrs public abstract ) getTileType()[object com/mapquest/android/maps/TileType]
+)
+
+(method (attrs public abstract ) isSupportedTileType([object com/mapquest/android/maps/TileType] )boolean
+)
+
+(method (attrs public abstract ) setType([object com/mapquest/android/maps/TileType] )void
+)
+
+)

@@ -1,0 +1,42 @@
+(class (attrs public ) org/apache/ogt/http/impl/io/HttpRequestWriter
+ (super org/apache/ogt/http/impl/io/AbstractMessageWriter)
+ (source "HttpRequestWriter.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/io/SessionOutputBuffer] [object org/apache/ogt/http/message/LineFormatter] [object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/ogt/http/impl/io/HttpRequestWriter])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/io/SessionOutputBuffer])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/message/LineFormatter])
+  ; parameter[2] : v3 ([object org/apache/ogt/http/params/HttpParams])
+  (line 49)
+  (invoke-direct {v0 v1 v2 v3} org/apache/ogt/http/impl/io/AbstractMessageWriter/<init> [object org/apache/ogt/http/io/SessionOutputBuffer] [object org/apache/ogt/http/message/LineFormatter] [object org/apache/ogt/http/params/HttpParams] )
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs protected ) writeHeadLine([object org/apache/ogt/http/HttpMessage] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v3 ([object org/apache/ogt/http/impl/io/HttpRequestWriter])
+  ; parameter[0] : v4 ([object org/apache/ogt/http/HttpMessage])
+  (line 55)
+  (iget-object v0 v3 org/apache/ogt/http/impl/io/HttpRequestWriter.lineFormatter [object org/apache/ogt/http/message/LineFormatter])
+  (iget-object v1 v3 org/apache/ogt/http/impl/io/HttpRequestWriter.lineBuf [object org/apache/ogt/http/util/CharArrayBuffer])
+  (line 56)
+  (check-cast v4 [object org/apache/ogt/http/HttpRequest])
+  (invoke-interface {v4} org/apache/ogt/http/HttpRequest/getRequestLine )
+  (move-result-object v2)
+  (line 55)
+  (invoke-interface {v0 v1 v2} org/apache/ogt/http/message/LineFormatter/formatRequestLine [object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/RequestLine] )
+  (line 57)
+  (iget-object v0 v3 org/apache/ogt/http/impl/io/HttpRequestWriter.sessionBuffer [object org/apache/ogt/http/io/SessionOutputBuffer])
+  (iget-object v1 v3 org/apache/ogt/http/impl/io/HttpRequestWriter.lineBuf [object org/apache/ogt/http/util/CharArrayBuffer])
+  (invoke-interface {v0 v1} org/apache/ogt/http/io/SessionOutputBuffer/writeLine [object org/apache/ogt/http/util/CharArrayBuffer] )
+  (line 58)
+  (return-void )
+)
+
+)

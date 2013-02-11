@@ -1,0 +1,49 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters
+ (super org/bouncycastle2/crypto/KeyGenerationParameters)
+ (source "ElGamalKeyGenerationParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle2/crypto/params/ElGamalParameters] )
+
+(method (attrs public ) <init>([object java/security/SecureRandom] [object org/bouncycastle2/crypto/params/ElGamalParameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters])
+  ; parameter[0] : v2 ([object java/security/SecureRandom])
+  ; parameter[1] : v3 ([object org/bouncycastle2/crypto/params/ElGamalParameters])
+  (line 16)
+  (invoke-static {v3} org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters/getStrength [object org/bouncycastle2/crypto/params/ElGamalParameters] )
+  (move-result v0)
+  (invoke-direct {v1 v2 v0} org/bouncycastle2/crypto/KeyGenerationParameters/<init> [object java/security/SecureRandom] int )
+  (line 18)
+  (iput-object v3 v1 org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters.params [object org/bouncycastle2/crypto/params/ElGamalParameters])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs static ) getStrength([object org/bouncycastle2/crypto/params/ElGamalParameters] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/bouncycastle2/crypto/params/ElGamalParameters])
+  (line 28)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/ElGamalParameters/getL )
+  (move-result v0)
+  (if-eqz v0 l119ea6)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/ElGamalParameters/getL )
+  (move-result v0)
+  (label l119ea4)
+  (return v0)
+  (label l119ea6)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/ElGamalParameters/getP )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/math/BigInteger/bitLength )
+  (move-result v0)
+  (goto l119ea4)
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle2/crypto/params/ElGamalParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters])
+  (line 23)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/ElGamalKeyGenerationParameters.params [object org/bouncycastle2/crypto/params/ElGamalParameters])
+  (return-object v0)
+)
+
+)

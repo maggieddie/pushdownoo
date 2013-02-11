@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/osmdroid/contributor/util/constants/OpenStreetMapContributorConstants
+ (super java/lang/Object)
+ (source "OpenStreetMapContributorConstants.java")
+
+ (field (attrs public static final ) MINDIAGONALMETERS_FOR_OSM_CONTRIBUTION int 300); 0x12c )
+ (field (attrs public static final ) MINGEOPOINTS_FOR_OSM_CONTRIBUTION int 100); 0x64 )
+ (field (attrs public static final ) NOT_SET int -2147483648); 0x80000000 )
+ (field (attrs public static final ) OSM_CREATOR_INFO [object java/lang/String] "AndNav - http://www.andnav.org - Android Navigation System" )
+ (field (attrs public static final ) OSM_PASSWORD [object java/lang/String] "PUT_YOUR_PASSWORD_HERE" )
+ (field (attrs public static final ) OSM_USERNAME [object java/lang/String] "PUT_YOUR_USERNAME_HERE" )
+
+)

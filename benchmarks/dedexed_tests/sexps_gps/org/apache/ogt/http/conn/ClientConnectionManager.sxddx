@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ClientConnectionManager
+ (super java/lang/Object)
+ (source "ClientConnectionManager.java")
+
+
+(method (attrs public abstract ) closeExpiredConnections()void
+)
+
+(method (attrs public abstract ) closeIdleConnections(long [object java/util/concurrent/TimeUnit] )void
+)
+
+(method (attrs public abstract ) getSchemeRegistry()[object org/apache/ogt/http/conn/scheme/SchemeRegistry]
+)
+
+(method (attrs public abstract ) releaseConnection([object org/apache/ogt/http/conn/ManagedClientConnection] long [object java/util/concurrent/TimeUnit] )void
+)
+
+(method (attrs public abstract ) requestConnection([object org/apache/ogt/http/conn/routing/HttpRoute] [object java/lang/Object] )[object org/apache/ogt/http/conn/ClientConnectionRequest]
+)
+
+(method (attrs public abstract ) shutdown()void
+)
+
+)

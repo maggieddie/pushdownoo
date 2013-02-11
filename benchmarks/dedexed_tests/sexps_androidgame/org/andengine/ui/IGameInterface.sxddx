@@ -1,0 +1,54 @@
+(interface (attrs public abstract ) org/andengine/ui/IGameInterface
+ (super java/lang/Object)
+ (source "IGameInterface.java")
+
+
+(method (attrs public abstract ) onCreateEngine([object org/andengine/engine/options/EngineOptions] )[object org/andengine/engine/Engine]
+)
+
+(method (attrs public abstract ) onCreateEngineOptions()[object org/andengine/engine/options/EngineOptions]
+)
+
+(method (attrs public abstract ) onCreateResources([object org/andengine/ui/IGameInterface$OnCreateResourcesCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) onCreateScene([object org/andengine/ui/IGameInterface$OnCreateSceneCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) onDestroyResources()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) onGameCreated()void
+)
+
+(method (attrs public abstract ) onGameDestroyed()void
+)
+
+(method (attrs public abstract ) onPauseGame()void
+)
+
+(method (attrs public abstract ) onPopulateScene([object org/andengine/entity/scene/Scene] [object org/andengine/ui/IGameInterface$OnPopulateSceneCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) onReloadResources()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) onResumeGame()void
+)
+
+)

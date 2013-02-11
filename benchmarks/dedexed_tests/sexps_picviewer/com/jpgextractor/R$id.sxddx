@@ -1,0 +1,17 @@
+(class (attrs public final ) com/jpgextractor/R$id
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) jpg_extractor_share_btn int 2131165185); 0x7f070001 )
+ (field (attrs public static final ) jpg_extractor_take_pic_btn int 2131165184); 0x7f070000 )
+ (field (attrs public static final ) menu_settings int 2131165186); 0x7f070002 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/jpgextractor/R$id])
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

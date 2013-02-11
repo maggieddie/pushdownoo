@@ -1,0 +1,37 @@
+(class (attrs ) net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper
+ (super java/lang/Object)
+ (source "DFAPanel.java")
+
+ (field (attrs private ) node [object net/sourceforge/pmd/ast/ASTMethodDeclaration] )
+
+(method (attrs public ) <init>([object net/sourceforge/pmd/ast/ASTMethodDeclaration] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/ast/ASTMethodDeclaration])
+  (line 139)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 140)
+  (iput-object v1 v0 net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper.node [object net/sourceforge/pmd/ast/ASTMethodDeclaration])
+  (line 141)
+  (return-void )
+ )
+
+(method (attrs public ) getNode()[object net/sourceforge/pmd/ast/ASTMethodDeclaration]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper])
+  (line 144)
+  (iget-object v0 v1 net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper.node [object net/sourceforge/pmd/ast/ASTMethodDeclaration])
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper])
+  (line 148)
+  (iget-object v0 v1 net/sourceforge/pmd/util/designer/DFAPanel$ElementWrapper.node [object net/sourceforge/pmd/ast/ASTMethodDeclaration])
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/ASTMethodDeclaration/getMethodName )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

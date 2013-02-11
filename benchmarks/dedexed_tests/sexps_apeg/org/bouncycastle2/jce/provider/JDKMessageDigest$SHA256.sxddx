@@ -1,0 +1,38 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256
+ (super org/bouncycastle2/jce/provider/JDKMessageDigest)
+ (source "JDKMessageDigest.java")
+ (implements java/lang/Cloneable)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256])
+  (line 96)
+  (new-instance v0 org/bouncycastle2/crypto/digests/SHA256Digest)
+  (invoke-direct {v0} org/bouncycastle2/crypto/digests/SHA256Digest/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/JDKMessageDigest/<init> [object org/bouncycastle2/crypto/Digest] )
+  (line 97)
+  (return-void )
+ )
+
+(method (attrs public ) clone()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/CloneNotSupportedException])
+  )
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256])
+  (line 102)
+  (invoke-super {v3} org/bouncycastle2/jce/provider/JDKMessageDigest/clone )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256])
+  (line 103)
+  (new-instance v2 org/bouncycastle2/crypto/digests/SHA256Digest)
+  (iget-object v1 v3 org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256.digest [object org/bouncycastle2/crypto/Digest])
+  (check-cast v1 [object org/bouncycastle2/crypto/digests/SHA256Digest])
+  (invoke-direct {v2 v1} org/bouncycastle2/crypto/digests/SHA256Digest/<init> [object org/bouncycastle2/crypto/digests/SHA256Digest] )
+  (iput-object v2 v0 org/bouncycastle2/jce/provider/JDKMessageDigest$SHA256.digest [object org/bouncycastle2/crypto/Digest])
+  (line 105)
+  (return-object v0)
+)
+
+)

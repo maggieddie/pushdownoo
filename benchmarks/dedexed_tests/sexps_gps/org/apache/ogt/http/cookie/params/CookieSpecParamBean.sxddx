@@ -1,0 +1,43 @@
+(class (attrs public ) org/apache/ogt/http/cookie/params/CookieSpecParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "CookieSpecParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/cookie/params/CookieSpecParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 48)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) setDatePatterns([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/cookie/params/CookieSpecParamBean])
+  ; parameter[0] : v3 ([object java/util/Collection])
+  (line 52)
+  (iget-object v0 v2 org/apache/ogt/http/cookie/params/CookieSpecParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.cookie-datepatterns")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 53)
+  (return-void )
+)
+
+(method (attrs public ) setSingleHeader(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/cookie/params/CookieSpecParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 56)
+  (iget-object v0 v2 org/apache/ogt/http/cookie/params/CookieSpecParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.single-cookie-header")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setBooleanParameter [object java/lang/String] boolean )
+  (line 57)
+  (return-void )
+)
+
+)

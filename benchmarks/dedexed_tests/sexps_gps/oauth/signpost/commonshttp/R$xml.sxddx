@@ -1,0 +1,16 @@
+(class (attrs public final ) oauth/signpost/commonshttp/R$xml
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) control_appwidget_info int 2131034112); 0x7f050000 )
+ (field (attrs public static final ) searchable int 2131034113); 0x7f050001 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object oauth/signpost/commonshttp/R$xml])
+  (line 610)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

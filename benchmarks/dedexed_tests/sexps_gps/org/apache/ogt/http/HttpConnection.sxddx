@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpConnection
+ (super java/lang/Object)
+ (source "HttpConnection.java")
+
+
+(method (attrs public abstract ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getMetrics()[object org/apache/ogt/http/HttpConnectionMetrics]
+)
+
+(method (attrs public abstract ) getSocketTimeout()int
+)
+
+(method (attrs public abstract ) isOpen()boolean
+)
+
+(method (attrs public abstract ) isStale()boolean
+)
+
+(method (attrs public abstract ) setSocketTimeout(int )void
+)
+
+(method (attrs public abstract ) shutdown()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

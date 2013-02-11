@@ -1,0 +1,96 @@
+(class (attrs ) org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom
+ (super java/security/SecureRandom)
+ (source "RSATest.java")
+
+ (field (attrs ) seed [array byte] )
+ (field (attrs final ) this$0 [object org/bouncycastle2/jce/provider/test/RSATest] )
+
+(method (attrs private ) <init>([object org/bouncycastle2/jce/provider/test/RSATest] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom])
+  ; parameter[0] : v2 ([object org/bouncycastle2/jce/provider/test/RSATest])
+  (line 54)
+  (iput-object v2 v1 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.this$0 [object org/bouncycastle2/jce/provider/test/RSATest])
+  (invoke-direct {v1} java/security/SecureRandom/<init> )
+  (line 57)
+  (const/16 v0 20)
+  (new-array v0 v0 [array byte])
+  (fill-array-data v0 l176048)
+  (line 61)
+  (iput-object v0 v1 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (return-void )
+  (line 57)
+  (label l176046)
+  (data-array
+    0x00 0x00
+  )
+  (label l176048)
+  (data-array
+    (0xAA) ; #0
+    (0xFD) ; #1
+    (0x12) ; #2
+    (0xF6) ; #3
+    (0x59) ; #4
+    (0xCA) ; #5
+    (0xE6) ; #6
+    (0x34) ; #7
+    (0x89) ; #8
+    (0xB4) ; #9
+    (0x79) ; #10
+    (0xE5) ; #11
+    (0x07) ; #12
+    (0x6D) ; #13
+    (0xDE) ; #14
+    (0xC2) ; #15
+    (0xF0) ; #16
+    (0x6C) ; #17
+    (0xB5) ; #18
+    (0x8F) ; #19
+  )
+ )
+
+(method (attrs ) <init>([object org/bouncycastle2/jce/provider/test/RSATest] [object org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom])
+  ; parameter[0] : v1 ([object org/bouncycastle2/jce/provider/test/RSATest])
+  ; parameter[1] : v2 ([object org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom])
+  (line 54)
+  (invoke-direct {v0 v1} org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom/<init> [object org/bouncycastle2/jce/provider/test/RSATest] )
+  (return-void )
+ )
+
+(method (attrs public ) nextBytes([array byte] )void
+  (limit registers 6)
+  ; this: v4 ([object org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom])
+  ; parameter[0] : v5 ([array byte])
+  (const/4 v3 0)
+  (line 67)
+  (const/4 v0 0)
+  (label l176090)
+  (line 69)
+  (iget-object v1 v4 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (array-length v1 v1)
+  (add-int/2addr v1 v0)
+  (array-length v2 v5)
+  (if-lt v1 v2 l1760ae)
+  (line 75)
+  (iget-object v1 v4 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (array-length v2 v5)
+  (sub-int/2addr v2 v0)
+  (invoke-static {v1 v3 v5 v0 v2} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 76)
+  (return-void )
+  (label l1760ae)
+  (line 71)
+  (iget-object v1 v4 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (iget-object v2 v4 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (array-length v2 v2)
+  (invoke-static {v1 v3 v5 v0 v2} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 72)
+  (iget-object v1 v4 org/bouncycastle2/jce/provider/test/RSATest$FixedSecureRandom.seed [array byte])
+  (array-length v1 v1)
+  (add-int/2addr v0 v1)
+  (goto l176090)
+)
+
+)

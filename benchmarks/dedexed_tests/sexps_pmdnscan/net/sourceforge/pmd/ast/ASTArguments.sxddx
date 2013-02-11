@@ -1,0 +1,57 @@
+(class (attrs public ) net/sourceforge/pmd/ast/ASTArguments
+ (super net/sourceforge/pmd/ast/SimpleJavaNode)
+ (source "ASTArguments.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTArguments])
+  ; parameter[0] : v1 (int)
+  (line 7)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/SimpleJavaNode/<init> int )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object net/sourceforge/pmd/ast/JavaParser] int )void
+  (limit registers 3)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTArguments])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/ast/JavaParser])
+  ; parameter[1] : v2 (int)
+  (line 11)
+  (invoke-direct {v0 v1 v2} net/sourceforge/pmd/ast/SimpleJavaNode/<init> [object net/sourceforge/pmd/ast/JavaParser] int )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) getArgumentCount()int
+  (limit registers 3)
+  ; this: v2 ([object net/sourceforge/pmd/ast/ASTArguments])
+  (const/4 v0 0)
+  (line 16)
+  (invoke-virtual {v2} net/sourceforge/pmd/ast/ASTArguments/jjtGetNumChildren )
+  (move-result v1)
+  (if-nez v1 l21930)
+  (label l2192e)
+  (line 19)
+  (return v0)
+  (label l21930)
+  (invoke-virtual {v2 v0} net/sourceforge/pmd/ast/ASTArguments/jjtGetChild int )
+  (move-result-object v0)
+  (invoke-interface {v0} net/sourceforge/pmd/ast/Node/jjtGetNumChildren )
+  (move-result v0)
+  (goto l2192e)
+)
+
+(method (attrs public ) jjtAccept([object net/sourceforge/pmd/ast/JavaParserVisitor] [object java/lang/Object] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTArguments])
+  ; parameter[0] : v2 ([object net/sourceforge/pmd/ast/JavaParserVisitor])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 26)
+  (invoke-interface {v2 v1 v3} net/sourceforge/pmd/ast/JavaParserVisitor/visit [object net/sourceforge/pmd/ast/ASTArguments] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

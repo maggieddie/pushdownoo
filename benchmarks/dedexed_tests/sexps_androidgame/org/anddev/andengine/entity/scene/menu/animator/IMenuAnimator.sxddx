@@ -1,0 +1,29 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/scene/menu/animator/IMenuAnimator
+ (super java/lang/Object)
+ (source "IMenuAnimator.java")
+
+ (field (attrs public static final ) DEFAULT [object org/anddev/andengine/entity/scene/menu/animator/IMenuAnimator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 19)
+  (new-instance v0 org/anddev/andengine/entity/scene/menu/animator/AlphaMenuAnimator)
+  (invoke-direct {v0} org/anddev/andengine/entity/scene/menu/animator/AlphaMenuAnimator/<init> )
+  (sput-object v0 org/anddev/andengine/entity/scene/menu/animator/IMenuAnimator.DEFAULT [object org/anddev/andengine/entity/scene/menu/animator/IMenuAnimator])
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public abstract ) buildAnimations([object java/util/ArrayList] float float )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/ArrayList"  "<"  "Lorg/anddev/andengine/entity/scene/menu/item/IMenuItem;"  ">;FF)V")
+  )
+)
+
+(method (attrs public abstract ) prepareAnimations([object java/util/ArrayList] float float )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/ArrayList"  "<"  "Lorg/anddev/andengine/entity/scene/menu/item/IMenuItem;"  ">;FF)V")
+  )
+)
+
+)

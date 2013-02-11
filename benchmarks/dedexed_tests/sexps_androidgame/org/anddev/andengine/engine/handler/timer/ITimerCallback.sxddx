@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/engine/handler/timer/ITimerCallback
+ (super java/lang/Object)
+ (source "ITimerCallback.java")
+
+
+(method (attrs public abstract ) onTimePassed([object org/anddev/andengine/engine/handler/timer/TimerHandler] )void
+)
+
+)

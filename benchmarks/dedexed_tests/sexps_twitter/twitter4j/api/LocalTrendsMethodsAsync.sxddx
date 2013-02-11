@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) twitter4j/api/LocalTrendsMethodsAsync
+ (super java/lang/Object)
+ (source "LocalTrendsMethodsAsync.java")
+
+
+(method (attrs public abstract ) getAvailableTrends()void
+)
+
+(method (attrs public abstract ) getAvailableTrends([object twitter4j/GeoLocation] )void
+)
+
+(method (attrs public abstract ) getLocationTrends(int )void
+)
+
+)

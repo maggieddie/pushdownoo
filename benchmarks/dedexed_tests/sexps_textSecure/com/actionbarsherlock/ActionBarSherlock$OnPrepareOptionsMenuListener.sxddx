@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/ActionBarSherlock$OnPrepareOptionsMenuListener
+ (super java/lang/Object)
+ (source "ActionBarSherlock.java")
+
+
+(method (attrs public abstract ) onPrepareOptionsMenu([object com/actionbarsherlock/view/Menu] )boolean
+)
+
+)

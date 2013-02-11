@@ -1,0 +1,50 @@
+(class (attrs public ) org/apache/ogt/http/client/methods/HttpTrace
+ (super org/apache/ogt/http/client/methods/HttpRequestBase)
+ (source "HttpTrace.java")
+
+ (field (attrs public static final ) METHOD_NAME [object java/lang/String] "TRACE" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/client/methods/HttpTrace])
+  (line 58)
+  (invoke-direct {v0} org/apache/ogt/http/client/methods/HttpRequestBase/<init> )
+  (line 59)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/client/methods/HttpTrace])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 70)
+  (invoke-direct {v1} org/apache/ogt/http/client/methods/HttpRequestBase/<init> )
+  (line 71)
+  (invoke-static {v2} java/net/URI/create [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v1 v0} org/apache/ogt/http/client/methods/HttpTrace/setURI [object java/net/URI] )
+  (line 72)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/net/URI] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/methods/HttpTrace])
+  ; parameter[0] : v1 ([object java/net/URI])
+  (line 62)
+  (invoke-direct {v0} org/apache/ogt/http/client/methods/HttpRequestBase/<init> )
+  (line 63)
+  (invoke-virtual {v0 v1} org/apache/ogt/http/client/methods/HttpTrace/setURI [object java/net/URI] )
+  (line 64)
+  (return-void )
+ )
+
+(method (attrs public ) getMethod()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/client/methods/HttpTrace])
+  (line 76)
+  (const-string v0 "TRACE")
+  (return-object v0)
+)
+
+)

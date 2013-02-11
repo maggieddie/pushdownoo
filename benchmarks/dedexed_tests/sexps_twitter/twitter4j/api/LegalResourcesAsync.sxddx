@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) twitter4j/api/LegalResourcesAsync
+ (super java/lang/Object)
+ (source "LegalResourcesAsync.java")
+
+
+(method (attrs public abstract ) getPrivacyPolicy()void
+)
+
+(method (attrs public abstract ) getTermsOfService()void
+)
+
+)

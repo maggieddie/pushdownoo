@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/gpl/rpg/AndorsTrail/view/ShopItemContainerAdapter$OnContainerItemClickedListener
+ (super java/lang/Object)
+ (source "ShopItemContainerAdapter.java")
+
+
+(method (attrs public abstract ) onItemActionClicked(int [object com/gpl/rpg/AndorsTrail/model/item/ItemType] boolean )void
+)
+
+(method (attrs public abstract ) onItemInfoClicked(int [object com/gpl/rpg/AndorsTrail/model/item/ItemType] boolean )void
+)
+
+)

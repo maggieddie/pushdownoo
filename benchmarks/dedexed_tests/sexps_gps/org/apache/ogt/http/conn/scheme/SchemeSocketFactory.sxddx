@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/scheme/SchemeSocketFactory
+ (super java/lang/Object)
+ (source "SchemeSocketFactory.java")
+
+
+(method (attrs public abstract ) connectSocket([object java/net/Socket] [object java/net/InetSocketAddress] [object java/net/InetSocketAddress] [object org/apache/ogt/http/params/HttpParams] )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/net/UnknownHostException]  [object org/apache/ogt/http/conn/ConnectTimeoutException])
+  )
+)
+
+(method (attrs public abstract ) createSocket([object org/apache/ogt/http/params/HttpParams] )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) isSecure([object java/net/Socket] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+)
+
+)

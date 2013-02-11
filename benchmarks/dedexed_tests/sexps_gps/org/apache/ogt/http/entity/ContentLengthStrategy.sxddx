@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) org/apache/ogt/http/entity/ContentLengthStrategy
+ (super java/lang/Object)
+ (source "ContentLengthStrategy.java")
+
+ (field (attrs public static final ) CHUNKED int -2); 0xfffffffe )
+ (field (attrs public static final ) IDENTITY int -1); 0xffffffff )
+
+(method (attrs public abstract ) determineLength([object org/apache/ogt/http/HttpMessage] )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/HttpException])
+  )
+)
+
+)

@@ -1,0 +1,41 @@
+(class (attrs public ) org/bouncycastle2/asn1/x509/CRLNumber
+ (super org/bouncycastle2/asn1/DERInteger)
+ (source "CRLNumber.java")
+
+
+(method (attrs public ) <init>([object java/math/BigInteger] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/asn1/x509/CRLNumber])
+  ; parameter[0] : v1 ([object java/math/BigInteger])
+  (line 20)
+  (invoke-direct {v0 v1} org/bouncycastle2/asn1/DERInteger/<init> [object java/math/BigInteger] )
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) getCRLNumber()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/x509/CRLNumber])
+  (line 25)
+  (invoke-virtual {v1} org/bouncycastle2/asn1/x509/CRLNumber/getPositiveValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/asn1/x509/CRLNumber])
+  (line 30)
+  (new-instance v0 java/lang/StringBuilder)
+  (const-string v1 "CRLNumber: ")
+  (invoke-direct {v0 v1} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (invoke-virtual {v2} org/bouncycastle2/asn1/x509/CRLNumber/getCRLNumber )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/Object] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

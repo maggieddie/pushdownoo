@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/andengine/entity/scene/menu/item/IMenuItem
+ (super java/lang/Object)
+ (source "IMenuItem.java")
+ (implements org/andengine/entity/shape/IAreaShape)
+
+
+(method (attrs public abstract ) getID()int
+)
+
+(method (attrs public abstract ) onSelected()void
+)
+
+(method (attrs public abstract ) onUnselected()void
+)
+
+)

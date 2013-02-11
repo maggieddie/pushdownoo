@@ -1,0 +1,66 @@
+(class (attrs public ) org/andengine/opengl/vbo/LowMemoryVertexBufferObject
+ (super org/andengine/opengl/vbo/VertexBufferObject)
+ (source "LowMemoryVertexBufferObject.java")
+
+ (field (attrs protected final ) mFloatBuffer [object java/nio/FloatBuffer] )
+
+(method (attrs public ) <init>([object org/andengine/opengl/vbo/VertexBufferObjectManager] int [object org/andengine/opengl/vbo/DrawType] boolean [object org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributes] )void
+  (limit registers 7)
+  ; this: v1 ([object org/andengine/opengl/vbo/LowMemoryVertexBufferObject])
+  ; parameter[0] : v2 ([object org/andengine/opengl/vbo/VertexBufferObjectManager])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object org/andengine/opengl/vbo/DrawType])
+  ; parameter[3] : v5 (boolean)
+  ; parameter[4] : v6 ([object org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributes])
+  (line 41)
+  (invoke-direct/range {v1 .. v6} org/andengine/opengl/vbo/VertexBufferObject/<init> [object org/andengine/opengl/vbo/VertexBufferObjectManager] int [object org/andengine/opengl/vbo/DrawType] boolean [object org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributes] )
+  (line 43)
+  (iget-object v0 v1 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mByteBuffer [object java/nio/ByteBuffer])
+  (invoke-virtual {v0} java/nio/ByteBuffer/asFloatBuffer )
+  (move-result-object v0)
+  (iput-object v0 v1 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mFloatBuffer [object java/nio/FloatBuffer])
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) getFloatBuffer()[object java/nio/FloatBuffer]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/vbo/LowMemoryVertexBufferObject])
+  (line 51)
+  (iget-object v0 v1 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mFloatBuffer [object java/nio/FloatBuffer])
+  (return-object v0)
+)
+
+(method (attrs public ) getHeapMemoryByteSize()int
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/vbo/LowMemoryVertexBufferObject])
+  (line 56)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getNativeHeapMemoryByteSize()int
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/vbo/LowMemoryVertexBufferObject])
+  (line 61)
+  (invoke-virtual {v1} org/andengine/opengl/vbo/LowMemoryVertexBufferObject/getByteCapacity )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected ) onBufferData()void
+  (limit registers 5)
+  ; this: v4 ([object org/andengine/opengl/vbo/LowMemoryVertexBufferObject])
+  (line 70)
+  (const v0 34962) ; 0x8892)
+  (iget-object v1 v4 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mByteBuffer [object java/nio/ByteBuffer])
+  (invoke-virtual {v1} java/nio/ByteBuffer/limit )
+  (move-result v1)
+  (iget-object v2 v4 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mByteBuffer [object java/nio/ByteBuffer])
+  (iget v3 v4 org/andengine/opengl/vbo/LowMemoryVertexBufferObject.mUsage int)
+  (invoke-static {v0 v1 v2 v3} android/opengl/GLES20/glBufferData int int [object java/nio/Buffer] int )
+  (line 71)
+  (return-void )
+)
+
+)

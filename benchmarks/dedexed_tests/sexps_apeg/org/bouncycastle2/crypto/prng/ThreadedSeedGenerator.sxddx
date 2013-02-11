@@ -1,0 +1,29 @@
+(class (attrs public ) org/bouncycastle2/crypto/prng/ThreadedSeedGenerator
+ (super java/lang/Object)
+ (source "ThreadedSeedGenerator.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/crypto/prng/ThreadedSeedGenerator])
+  (line 9)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) generateSeed(int boolean )[array byte]
+  (limit registers 5)
+  ; this: v2 ([object org/bouncycastle2/crypto/prng/ThreadedSeedGenerator])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (boolean)
+  (line 91)
+  (new-instance v0 org/bouncycastle2/crypto/prng/ThreadedSeedGenerator$SeedGenerator)
+  (const/4 v1 0)
+  (invoke-direct {v0 v2 v1} org/bouncycastle2/crypto/prng/ThreadedSeedGenerator$SeedGenerator/<init> [object org/bouncycastle2/crypto/prng/ThreadedSeedGenerator] [object org/bouncycastle2/crypto/prng/ThreadedSeedGenerator$SeedGenerator] )
+  (line 93)
+  (invoke-virtual {v0 v3 v4} org/bouncycastle2/crypto/prng/ThreadedSeedGenerator$SeedGenerator/generateSeed int boolean )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+)

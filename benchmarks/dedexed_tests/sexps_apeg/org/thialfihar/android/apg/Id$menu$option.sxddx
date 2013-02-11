@@ -1,0 +1,25 @@
+(class (attrs public final ) org/thialfihar/android/apg/Id$menu$option
+ (super java/lang/Object)
+ (source "Id.java")
+
+ (field (attrs public static final ) about int 554106883); 0x21070003 )
+ (field (attrs public static final ) create int 554106882); 0x21070002 )
+ (field (attrs public static final ) export_keys int 554106887); 0x21070007 )
+ (field (attrs public static final ) help int 554106896); 0x21070010 )
+ (field (attrs public static final ) import_keys int 554106886); 0x21070006 )
+ (field (attrs public static final ) key_server int 554106897); 0x21070011 )
+ (field (attrs public static final ) manage_public_keys int 554106884); 0x21070004 )
+ (field (attrs public static final ) manage_secret_keys int 554106885); 0x21070005 )
+ (field (attrs public static final ) new_pass_phrase int 554106881); 0x21070001 )
+ (field (attrs public static final ) preferences int 554106888); 0x21070008 )
+ (field (attrs public static final ) search int 554106889); 0x21070009 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thialfihar/android/apg/Id$menu$option])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

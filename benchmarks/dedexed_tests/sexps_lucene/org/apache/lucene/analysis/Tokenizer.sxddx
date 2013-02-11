@@ -1,0 +1,40 @@
+(class (attrs public abstract ) org/apache/lucene/analysis/Tokenizer
+ (super org/apache/lucene/analysis/TokenStream)
+ (source "Tokenizer.java")
+
+ (field (attrs protected ) input [object java/io/Reader] )
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/lucene/analysis/Tokenizer])
+  (line 32)
+  (invoke-direct {v0} org/apache/lucene/analysis/TokenStream/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/io/Reader] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/analysis/Tokenizer])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  (line 35)
+  (invoke-direct {v0} org/apache/lucene/analysis/TokenStream/<init> )
+  (line 36)
+  (iput-object v1 v0 org/apache/lucene/analysis/Tokenizer.input [object java/io/Reader])
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/apache/lucene/analysis/Tokenizer])
+  (line 41)
+  (iget-object v0 v1 org/apache/lucene/analysis/Tokenizer.input [object java/io/Reader])
+  (invoke-virtual {v0} java/io/Reader/close )
+  (line 42)
+  (return-void )
+)
+
+)

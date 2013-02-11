@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HeaderElementIterator
+ (super java/lang/Object)
+ (source "HeaderElementIterator.java")
+ (implements java/util/Iterator)
+
+
+(method (attrs public abstract ) hasNext()boolean
+)
+
+(method (attrs public abstract ) nextElement()[object org/apache/ogt/http/HeaderElement]
+)
+
+)

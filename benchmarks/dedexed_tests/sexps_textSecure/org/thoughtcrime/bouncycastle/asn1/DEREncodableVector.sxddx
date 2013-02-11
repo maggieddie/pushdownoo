@@ -1,0 +1,53 @@
+(class (attrs public ) org/thoughtcrime/bouncycastle/asn1/DEREncodableVector
+ (super java/lang/Object)
+ (source "DEREncodableVector.java")
+
+ (field (attrs ) v [object java/util/Vector] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/bouncycastle/asn1/DEREncodableVector])
+  (line 17)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 12)
+  (new-instance v0 java/util/Vector)
+  (invoke-direct {v0} java/util/Vector/<init> )
+  (iput-object v0 v1 org/thoughtcrime/bouncycastle/asn1/DEREncodableVector.v [object java/util/Vector])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) add([object org/thoughtcrime/bouncycastle/asn1/DEREncodable] )void
+  (limit registers 3)
+  ; this: v1 ([object org/thoughtcrime/bouncycastle/asn1/DEREncodableVector])
+  ; parameter[0] : v2 ([object org/thoughtcrime/bouncycastle/asn1/DEREncodable])
+  (line 25)
+  (iget-object v0 v1 org/thoughtcrime/bouncycastle/asn1/DEREncodableVector.v [object java/util/Vector])
+  (invoke-virtual {v0 v2} java/util/Vector/addElement [object java/lang/Object] )
+  (line 26)
+  (return-void )
+)
+
+(method (attrs public ) get(int )[object org/thoughtcrime/bouncycastle/asn1/DEREncodable]
+  (limit registers 3)
+  ; this: v1 ([object org/thoughtcrime/bouncycastle/asn1/DEREncodableVector])
+  ; parameter[0] : v2 (int)
+  (line 31)
+  (iget-object v0 v1 org/thoughtcrime/bouncycastle/asn1/DEREncodableVector.v [object java/util/Vector])
+  (invoke-virtual {v0 v2} java/util/Vector/elementAt int )
+  (move-result-object v0)
+  (check-cast v0 [object org/thoughtcrime/bouncycastle/asn1/DEREncodable])
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/bouncycastle/asn1/DEREncodableVector])
+  (line 36)
+  (iget-object v0 v1 org/thoughtcrime/bouncycastle/asn1/DEREncodableVector.v [object java/util/Vector])
+  (invoke-virtual {v0} java/util/Vector/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

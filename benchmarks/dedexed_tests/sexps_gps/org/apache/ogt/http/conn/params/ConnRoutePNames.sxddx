@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/params/ConnRoutePNames
+ (super java/lang/Object)
+ (source "ConnRoutePNames.java")
+
+ (field (attrs public static final ) DEFAULT_PROXY [object java/lang/String] "http.route.default-proxy" )
+ (field (attrs public static final ) FORCED_ROUTE [object java/lang/String] "http.route.forced-route" )
+ (field (attrs public static final ) LOCAL_ADDRESS [object java/lang/String] "http.route.local-address" )
+
+)

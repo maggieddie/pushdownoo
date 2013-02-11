@@ -1,0 +1,38 @@
+(class (attrs ) org/thoughtcrime/securesms/ConversationListActivity$6
+ (super android/content/BroadcastReceiver)
+ (source "ConversationListActivity.java")
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/ConversationListActivity] )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/ConversationListActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/ConversationListActivity$6])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/ConversationListActivity])
+  (line 1)
+  (iput-object v1 v0 org/thoughtcrime/securesms/ConversationListActivity$6.this$0 [object org/thoughtcrime/securesms/ConversationListActivity])
+  (line 286)
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object org/thoughtcrime/securesms/ConversationListActivity$6])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 289)
+  (const-string v0 "ConversationListActivity")
+  (const-string v1 "Got a key broadcast...")
+  (invoke-static {v0 v1} android/util/Log/w [object java/lang/String] [object java/lang/String] )
+  (line 290)
+  (iget-object v1 v2 org/thoughtcrime/securesms/ConversationListActivity$6.this$0 [object org/thoughtcrime/securesms/ConversationListActivity])
+  (const-string v0 "master_secret")
+  (invoke-virtual {v4 v0} android/content/Intent/getParcelableExtra [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (invoke-static {v1 v0} org/thoughtcrime/securesms/ConversationListActivity/access$0 [object org/thoughtcrime/securesms/ConversationListActivity] [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+  (line 291)
+  (return-void )
+)
+
+)

@@ -1,0 +1,150 @@
+(class (attrs public ) twitter4j/UserStreamAdapter
+ (super twitter4j/StatusAdapter)
+ (source "UserStreamAdapter.java")
+ (implements twitter4j/UserStreamListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  (line 33)
+  (invoke-direct {v0} twitter4j/StatusAdapter/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onBlock([object twitter4j/User] [object twitter4j/User] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  (line 71)
+  (return-void )
+)
+
+(method (attrs public ) onDeletionNotice(long int )void
+  (limit registers 4)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 (long)
+  ; parameter[1] : v3 (int)
+  (line 35)
+  (return-void )
+)
+
+(method (attrs public ) onDirectMessage([object twitter4j/DirectMessage] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/DirectMessage])
+  (line 53)
+  (return-void )
+)
+
+(method (attrs public ) onException([object java/lang/Exception] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object java/lang/Exception])
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) onFavorite([object twitter4j/User] [object twitter4j/User] [object twitter4j/Status] )void
+  (limit registers 4)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  ; parameter[2] : v3 ([object twitter4j/Status])
+  (line 41)
+  (return-void )
+)
+
+(method (attrs public ) onFollow([object twitter4j/User] [object twitter4j/User] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  (line 44)
+  (return-void )
+)
+
+(method (attrs public ) onFriendList([array int] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([array int])
+  (line 38)
+  (return-void )
+)
+
+(method (attrs public ) onRetweet([object twitter4j/User] [object twitter4j/User] [object twitter4j/Status] )void
+  (limit registers 4)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  ; parameter[2] : v3 ([object twitter4j/Status])
+  (line 50)
+  (return-void )
+)
+
+(method (attrs public ) onUnblock([object twitter4j/User] [object twitter4j/User] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  (line 74)
+  (return-void )
+)
+
+(method (attrs public ) onUnfavorite([object twitter4j/User] [object twitter4j/User] [object twitter4j/Status] )void
+  (limit registers 4)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  ; parameter[2] : v3 ([object twitter4j/Status])
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) onUserListCreation([object twitter4j/User] [object twitter4j/UserList] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/UserList])
+  (line 59)
+  (return-void )
+)
+
+(method (attrs public ) onUserListDeletion([object twitter4j/User] [object twitter4j/UserList] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/UserList])
+  (line 65)
+  (return-void )
+)
+
+(method (attrs public ) onUserListSubscription([object twitter4j/User] [object twitter4j/User] [object twitter4j/UserList] )void
+  (limit registers 4)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/User])
+  ; parameter[2] : v3 ([object twitter4j/UserList])
+  (line 56)
+  (return-void )
+)
+
+(method (attrs public ) onUserListUpdate([object twitter4j/User] [object twitter4j/UserList] )void
+  (limit registers 3)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  ; parameter[1] : v2 ([object twitter4j/UserList])
+  (line 62)
+  (return-void )
+)
+
+(method (attrs public ) onUserProfileUpdate([object twitter4j/User] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/UserStreamAdapter])
+  ; parameter[0] : v1 ([object twitter4j/User])
+  (line 68)
+  (return-void )
+)
+
+)

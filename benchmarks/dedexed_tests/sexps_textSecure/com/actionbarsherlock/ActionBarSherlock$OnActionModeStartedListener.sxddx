@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/ActionBarSherlock$OnActionModeStartedListener
+ (super java/lang/Object)
+ (source "ActionBarSherlock.java")
+
+
+(method (attrs public abstract ) onActionModeStarted([object com/actionbarsherlock/view/ActionMode] )void
+)
+
+)

@@ -1,0 +1,20 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/SEED$CBC
+ (super org/bouncycastle2/jce/provider/JCEBlockCipher)
+ (source "SEED.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/symmetric/SEED$CBC])
+  (line 39)
+  (new-instance v0 org/bouncycastle2/crypto/modes/CBCBlockCipher)
+  (new-instance v1 org/bouncycastle2/crypto/engines/SEEDEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/SEEDEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/modes/CBCBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (const/16 v1 128)
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/jce/provider/JCEBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] int )
+  (line 40)
+  (return-void )
+ )
+
+)

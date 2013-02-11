@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/HttpExpectationVerifier
+ (super java/lang/Object)
+ (source "HttpExpectationVerifier.java")
+
+
+(method (attrs public abstract ) verify([object org/apache/ogt/http/HttpRequest] [object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/HttpException])
+  )
+)
+
+)

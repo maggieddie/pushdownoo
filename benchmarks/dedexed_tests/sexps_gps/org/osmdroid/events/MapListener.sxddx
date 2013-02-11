@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/osmdroid/events/MapListener
+ (super java/lang/Object)
+ (source "MapListener.java")
+
+
+(method (attrs public abstract ) onScroll([object org/osmdroid/events/ScrollEvent] )boolean
+)
+
+(method (attrs public abstract ) onZoom([object org/osmdroid/events/ZoomEvent] )boolean
+)
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public final ) com/todo/todo/R$drawable
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ball int 2130837504); 0x7f020000 )
+ (field (attrs public static final ) ball_drawable int 2130837505); 0x7f020001 )
+ (field (attrs public static final ) ic_menu_mark int 2130837506); 0x7f020002 )
+ (field (attrs public static final ) ic_menu_my_calendar int 2130837507); 0x7f020003 )
+ (field (attrs public static final ) icon int 2130837508); 0x7f020004 )
+ (field (attrs public static final ) icon_small int 2130837509); 0x7f020005 )
+ (field (attrs public static final ) line int 2130837510); 0x7f020006 )
+ (field (attrs public static final ) settings int 2130837511); 0x7f020007 )
+ (field (attrs public static final ) widget_bg int 2130837512); 0x7f020008 )
+ (field (attrs public static final ) widget_bg_normal int 2130837513); 0x7f020009 )
+ (field (attrs public static final ) widget_bg_pressed int 2130837514); 0x7f02000a )
+ (field (attrs public static final ) widget_bg_selected int 2130837515); 0x7f02000b )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$drawable])
+  (line 280)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

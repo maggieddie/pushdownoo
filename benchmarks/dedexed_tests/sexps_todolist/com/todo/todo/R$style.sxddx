@@ -1,0 +1,23 @@
+(class (attrs public final ) com/todo/todo/R$style
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) MyTheme int 2131361800); 0x7f0a0008 )
+ (field (attrs public static final ) MyWindowTitleBackground int 2131361799); 0x7f0a0007 )
+ (field (attrs public static final ) Text int 2131361793); 0x7f0a0001 )
+ (field (attrs public static final ) Text_Widget int 2131361794); 0x7f0a0002 )
+ (field (attrs public static final ) Text_Widget_Item int 2131361797); 0x7f0a0005 )
+ (field (attrs public static final ) Text_Widget_Item_Compressed int 2131361798); 0x7f0a0006 )
+ (field (attrs public static final ) Text_Widget_Loading int 2131361795); 0x7f0a0003 )
+ (field (attrs public static final ) Text_Widget_Tag int 2131361796); 0x7f0a0004 )
+ (field (attrs public static final ) WidgetBackground int 2131361792); 0x7f0a0000 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$style])
+  (line 512)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

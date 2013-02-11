@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/thoughtcrime/securesms/ApplicationExportManager$ApplicationExportListener
+ (super java/lang/Object)
+ (source "ApplicationExportManager.java")
+
+
+(method (attrs public abstract ) onPrepareForImport()void
+)
+
+)

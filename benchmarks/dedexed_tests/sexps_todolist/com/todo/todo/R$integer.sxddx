@@ -1,0 +1,25 @@
+(class (attrs public final ) com/todo/todo/R$integer
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) COLOR_BLACK int 2131230720); 0x7f080000 )
+ (field (attrs public static final ) due_date_color int 2131230727); 0x7f080007 )
+ (field (attrs public static final ) expired_due_date int 2131230729); 0x7f080009 )
+ (field (attrs public static final ) prio_0 int 2131230721); 0x7f080001 )
+ (field (attrs public static final ) prio_1 int 2131230722); 0x7f080002 )
+ (field (attrs public static final ) prio_2 int 2131230723); 0x7f080003 )
+ (field (attrs public static final ) prio_3 int 2131230724); 0x7f080004 )
+ (field (attrs public static final ) prio_4 int 2131230725); 0x7f080005 )
+ (field (attrs public static final ) prio_5 int 2131230726); 0x7f080006 )
+ (field (attrs public static final ) progress_100 int 2131230730); 0x7f08000a )
+ (field (attrs public static final ) today_due_date int 2131230728); 0x7f080008 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$integer])
+  (line 367)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,52 @@
+(class (attrs public ) org/bouncycastle/crypto/params/ParametersWithRandom
+ (super java/lang/Object)
+ (source "ParametersWithRandom.java")
+ (implements org/bouncycastle/crypto/CipherParameters)
+
+ (field (attrs private ) parameters [object org/bouncycastle/crypto/CipherParameters] )
+ (field (attrs private ) random [object java/security/SecureRandom] )
+
+(method (attrs public ) <init>([object org/bouncycastle/crypto/CipherParameters] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ParametersWithRandom])
+  ; parameter[0] : v2 ([object org/bouncycastle/crypto/CipherParameters])
+  (line 24)
+  (new-instance v0 java/security/SecureRandom)
+  (invoke-direct {v0} java/security/SecureRandom/<init> )
+  (invoke-direct {v1 v2 v0} org/bouncycastle/crypto/params/ParametersWithRandom/<init> [object org/bouncycastle/crypto/CipherParameters] [object java/security/SecureRandom] )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/bouncycastle/crypto/CipherParameters] [object java/security/SecureRandom] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle/crypto/params/ParametersWithRandom])
+  ; parameter[0] : v1 ([object org/bouncycastle/crypto/CipherParameters])
+  ; parameter[1] : v2 ([object java/security/SecureRandom])
+  (line 13)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 17)
+  (iput-object v2 v0 org/bouncycastle/crypto/params/ParametersWithRandom.random [object java/security/SecureRandom])
+  (line 18)
+  (iput-object v1 v0 org/bouncycastle/crypto/params/ParametersWithRandom.parameters [object org/bouncycastle/crypto/CipherParameters])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle/crypto/CipherParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ParametersWithRandom])
+  (line 34)
+  (iget-object v0 v1 org/bouncycastle/crypto/params/ParametersWithRandom.parameters [object org/bouncycastle/crypto/CipherParameters])
+  (return-object v0)
+)
+
+(method (attrs public ) getRandom()[object java/security/SecureRandom]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ParametersWithRandom])
+  (line 29)
+  (iget-object v0 v1 org/bouncycastle/crypto/params/ParametersWithRandom.random [object java/security/SecureRandom])
+  (return-object v0)
+)
+
+)

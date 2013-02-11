@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ssl/TrustStrategy
+ (super java/lang/Object)
+ (source "TrustStrategy.java")
+
+
+(method (attrs public abstract ) isTrusted([array [object java/security/cert/X509Certificate]] [object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateException])
+  )
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/modules/IFilesystemCache
+ (super java/lang/Object)
+ (source "IFilesystemCache.java")
+
+
+(method (attrs public abstract ) saveFile([object org/osmdroid/tileprovider/tilesource/ITileSource] [object org/osmdroid/tileprovider/MapTile] [object java/io/InputStream] )boolean
+)
+
+)

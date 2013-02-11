@@ -1,0 +1,213 @@
+(interface (attrs public abstract ) twitter4j/api/TimelineMethods
+ (super java/lang/Object)
+ (source "TimelineMethods.java")
+
+
+(method (attrs public abstract ) getFriendsTimeline()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsTimeline([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getHomeTimeline()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getHomeTimeline([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getMentions()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getMentions([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getPublicTimeline()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedByMe()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedByMe([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedByUser(int [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedByUser([object java/lang/String] [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedToMe()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedToMe([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedToUser(int [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetedToUser([object java/lang/String] [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetsOfMe()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRetweetsOfMe([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline(int )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline(int [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline([object java/lang/String] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline([object java/lang/String] [object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getUserTimeline([object twitter4j/Paging] )[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/Paging;"  ")"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

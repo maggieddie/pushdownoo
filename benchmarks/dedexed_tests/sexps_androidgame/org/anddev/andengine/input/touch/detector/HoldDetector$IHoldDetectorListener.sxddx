@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/anddev/andengine/input/touch/detector/HoldDetector$IHoldDetectorListener
+ (super java/lang/Object)
+ (source "HoldDetector.java")
+
+
+(method (attrs public abstract ) onHold([object org/anddev/andengine/input/touch/detector/HoldDetector] long float float )void
+)
+
+(method (attrs public abstract ) onHoldFinished([object org/anddev/andengine/input/touch/detector/HoldDetector] long float float )void
+)
+
+)

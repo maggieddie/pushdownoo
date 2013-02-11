@@ -1,0 +1,82 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl
+ (super java/lang/Object)
+ (source "AccessibilityManagerCompat.java")
+ (implements android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerVersionImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  (line 47)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) addAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v3 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat])
+  (line 55)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getEnabledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  "I)"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v3 (int)
+  (line 65)
+  (invoke-static {} java/util/Collections/emptyList )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getInstalledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  ")"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityManager])
+  (line 70)
+  (invoke-static {} java/util/Collections/emptyList )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isTouchExplorationEnabled([object android/view/accessibility/AccessibilityManager] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityManager])
+  (line 74)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) newAccessiblityStateChangeListener([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat])
+  (line 50)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) removeAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerStubImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v3 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat])
+  (line 60)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

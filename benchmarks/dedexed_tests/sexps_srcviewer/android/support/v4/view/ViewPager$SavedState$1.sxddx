@@ -1,0 +1,56 @@
+(class (attrs final ) android/support/v4/view/ViewPager$SavedState$1
+ (super java/lang/Object)
+ (source "ViewPager.java")
+ (implements android/support/v4/os/ParcelableCompatCreatorCallbacks)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewPager$SavedState$1])
+  (line 1044)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] [object java/lang/ClassLoader] )[object android/support/v4/view/ViewPager$SavedState]
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewPager$SavedState$1])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 1047)
+  (new-instance v0 android/support/v4/view/ViewPager$SavedState)
+  (invoke-direct {v0 v2 v3} android/support/v4/view/ViewPager$SavedState/<init> [object android/os/Parcel] [object java/lang/ClassLoader] )
+  (return-object v0)
+)
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] [object java/lang/ClassLoader] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewPager$SavedState$1])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 1044)
+  (invoke-virtual {v1 v2 v3} android/support/v4/view/ViewPager$SavedState$1/createFromParcel [object android/os/Parcel] [object java/lang/ClassLoader] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object android/support/v4/view/ViewPager$SavedState]]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewPager$SavedState$1])
+  ; parameter[0] : v2 (int)
+  (line 1051)
+  (new-array v0 v2 [array [object android/support/v4/view/ViewPager$SavedState]])
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewPager$SavedState$1])
+  ; parameter[0] : v2 (int)
+  (line 1044)
+  (invoke-virtual {v1 v2} android/support/v4/view/ViewPager$SavedState$1/newArray int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

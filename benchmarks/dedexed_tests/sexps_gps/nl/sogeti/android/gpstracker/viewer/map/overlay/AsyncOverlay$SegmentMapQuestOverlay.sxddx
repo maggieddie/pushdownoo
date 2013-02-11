@@ -1,0 +1,62 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay
+ (super com/mapquest/android/maps/Overlay)
+ (source "AsyncOverlay.java")
+
+ (field (attrs ) mSegmentOverlay [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay] )
+
+(method (attrs public ) <init>([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay])
+  (line 257)
+  (invoke-direct {v0} com/mapquest/android/maps/Overlay/<init> )
+  (line 258)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay.mSegmentOverlay [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay])
+  (line 259)
+  (return-void )
+ )
+
+(method (attrs public ) draw([object android/graphics/Canvas] [object com/mapquest/android/maps/MapView] boolean )void
+  (limit registers 5)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay])
+  ; parameter[0] : v2 ([object android/graphics/Canvas])
+  ; parameter[1] : v3 ([object com/mapquest/android/maps/MapView])
+  ; parameter[2] : v4 (boolean)
+  (line 276)
+  (if-nez v4 l9c1e2)
+  (line 278)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay.mSegmentOverlay [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay])
+  (invoke-static {v0 v2} nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay/access$12 [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay] [object android/graphics/Canvas] )
+  (label l9c1e2)
+  (line 280)
+  (return-void )
+)
+
+(method (attrs public ) getSegmentOverlay()[object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay]
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay])
+  (line 263)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay.mSegmentOverlay [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay])
+  (return-object v0)
+)
+
+(method (attrs public ) onTap([object com/mapquest/android/maps/GeoPoint] [object com/mapquest/android/maps/MapView] )boolean
+  (limit registers 6)
+  ; this: v3 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay])
+  ; parameter[0] : v4 ([object com/mapquest/android/maps/GeoPoint])
+  ; parameter[1] : v5 ([object com/mapquest/android/maps/MapView])
+  (line 269)
+  (new-instance v0 com/google/android/maps/GeoPoint)
+  (invoke-virtual {v4} com/mapquest/android/maps/GeoPoint/getLatitudeE6 )
+  (move-result v1)
+  (invoke-virtual {v4} com/mapquest/android/maps/GeoPoint/getLongitudeE6 )
+  (move-result v2)
+  (invoke-direct {v0 v1 v2} com/google/android/maps/GeoPoint/<init> int int )
+  (line 270)
+  (iget-object v1 v3 nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay$SegmentMapQuestOverlay.mSegmentOverlay [object nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay])
+  (invoke-virtual {v1 v0} nl/sogeti/android/gpstracker/viewer/map/overlay/AsyncOverlay/commonOnTap [object com/google/android/maps/GeoPoint] )
+  (move-result v1)
+  (return v1)
+)
+
+)

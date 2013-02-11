@@ -1,0 +1,33 @@
+(class (attrs ) org/python/modules/struct$BEUnsignedShortFormatDef
+ (super org/python/modules/struct$BEShortFormatDef)
+ (source "struct.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/modules/struct$BEUnsignedShortFormatDef])
+  (line 603)
+  (invoke-direct {v0} org/python/modules/struct$BEShortFormatDef/<init> )
+  (return-void )
+ )
+
+(method (attrs ) unpack([object org/python/modules/struct$ByteStream] )[object java/lang/Object]
+  (limit registers 5)
+  ; this: v3 ([object org/python/modules/struct$BEUnsignedShortFormatDef])
+  ; parameter[0] : v4 ([object org/python/modules/struct$ByteStream])
+  (line 605)
+  (invoke-virtual {v4} org/python/modules/struct$ByteStream/readByte )
+  (move-result v1)
+  (shl-int/lit8 v1 v1 8)
+  (line 606)
+  (invoke-virtual {v4} org/python/modules/struct$ByteStream/readByte )
+  (move-result v2)
+  (line 605)
+  (or-int v0 v1 v2)
+  (line 607)
+  (invoke-static {v0} org/python/core/Py/newInteger int )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+)

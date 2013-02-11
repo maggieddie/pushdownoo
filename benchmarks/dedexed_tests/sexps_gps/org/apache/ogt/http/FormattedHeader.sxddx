@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/apache/ogt/http/FormattedHeader
+ (super java/lang/Object)
+ (source "FormattedHeader.java")
+ (implements org/apache/ogt/http/Header)
+
+
+(method (attrs public abstract ) getBuffer()[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) getValuePos()int
+)
+
+)

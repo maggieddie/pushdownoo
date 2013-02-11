@@ -1,0 +1,26 @@
+(class (attrs ) org/python/modules/struct$UnsignedByteFormatDef
+ (super org/python/modules/struct$ByteFormatDef)
+ (source "struct.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/modules/struct$UnsignedByteFormatDef])
+  (line 555)
+  (invoke-direct {v0} org/python/modules/struct$ByteFormatDef/<init> )
+  (return-void )
+ )
+
+(method (attrs ) unpack([object org/python/modules/struct$ByteStream] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object org/python/modules/struct$UnsignedByteFormatDef])
+  ; parameter[0] : v2 ([object org/python/modules/struct$ByteStream])
+  (line 557)
+  (invoke-virtual {v2} org/python/modules/struct$ByteStream/readByte )
+  (move-result v0)
+  (invoke-static {v0} org/python/core/Py/newInteger int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

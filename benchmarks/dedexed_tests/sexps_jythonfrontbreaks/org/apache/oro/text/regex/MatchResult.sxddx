@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/apache/oro/text/regex/MatchResult
+ (super java/lang/Object)
+ (source "MatchResult.java")
+
+
+(method (attrs public abstract ) begin(int )int
+)
+
+(method (attrs public abstract ) beginOffset(int )int
+)
+
+(method (attrs public abstract ) end(int )int
+)
+
+(method (attrs public abstract ) endOffset(int )int
+)
+
+(method (attrs public abstract ) group(int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) groups()int
+)
+
+(method (attrs public abstract ) length()int
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+)

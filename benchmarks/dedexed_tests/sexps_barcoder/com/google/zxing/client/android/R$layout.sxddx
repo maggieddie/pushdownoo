@@ -1,0 +1,20 @@
+(class (attrs public final ) com/google/zxing/client/android/R$layout
+ (super java/lang/Object)
+
+ (field (attrs private static ) bookmark_picker_list_item int 2130903040); 0x7f030000 )
+ (field (attrs private static ) capture int 2130903041); 0x7f030001 )
+ (field (attrs private static ) encode int 2130903042); 0x7f030002 )
+ (field (attrs private static ) help int 2130903043); 0x7f030003 )
+ (field (attrs private static ) search_book_contents int 2130903044); 0x7f030004 )
+ (field (attrs private static ) search_book_contents_header int 2130903045); 0x7f030005 )
+ (field (attrs private static ) search_book_contents_list_item int 2130903046); 0x7f030006 )
+ (field (attrs private static ) share int 2130903047); 0x7f030007 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/client/android/R$layout])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

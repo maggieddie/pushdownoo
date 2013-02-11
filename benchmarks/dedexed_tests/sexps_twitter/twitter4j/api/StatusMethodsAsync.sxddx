@@ -1,0 +1,45 @@
+(interface (attrs public abstract ) twitter4j/api/StatusMethodsAsync
+ (super java/lang/Object)
+ (source "StatusMethodsAsync.java")
+
+
+(method (attrs public abstract ) destroyStatus(long )void
+)
+
+(method (attrs public abstract ) getRetweetedBy(long )void
+)
+
+(method (attrs public abstract ) getRetweetedBy(long [object twitter4j/Paging] )void
+)
+
+(method (attrs public abstract ) getRetweetedByIDs(long )void
+)
+
+(method (attrs public abstract ) getRetweetedByIDs(long [object twitter4j/Paging] )void
+)
+
+(method (attrs public abstract ) getRetweets(long )void
+)
+
+(method (attrs public abstract ) retweetStatus(long )void
+)
+
+(method (attrs public abstract ) showStatus(long )void
+)
+
+(method (attrs public abstract ) updateStatus([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) updateStatus([object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) updateStatus([object java/lang/String] long [object twitter4j/GeoLocation] )void
+)
+
+(method (attrs public abstract ) updateStatus([object java/lang/String] [object twitter4j/GeoLocation] )void
+)
+
+(method (attrs public abstract ) updateStatus([object twitter4j/StatusUpdate] )void
+)
+
+)

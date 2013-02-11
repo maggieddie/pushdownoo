@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/metalev/multitouch/controller/MultiTouchController$MultiTouchObjectCanvas
+ (super java/lang/Object)
+ (source "MultiTouchController.java")
+
+
+(method (attrs public abstract ) getDraggableObjectAtPoint([object org/metalev/multitouch/controller/MultiTouchController$PointInfo] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/metalev/multitouch/controller/MultiTouchController$PointInfo;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) getPositionAndScale([object java/lang/Object] [object org/metalev/multitouch/controller/MultiTouchController$PositionAndScale] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lorg/metalev/multitouch/controller/MultiTouchController$PositionAndScale;"  ")V")
+  )
+)
+
+(method (attrs public abstract ) selectObject([object java/lang/Object] [object org/metalev/multitouch/controller/MultiTouchController$PointInfo] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lorg/metalev/multitouch/controller/MultiTouchController$PointInfo;"  ")V")
+  )
+)
+
+(method (attrs public abstract ) setPositionAndScale([object java/lang/Object] [object org/metalev/multitouch/controller/MultiTouchController$PositionAndScale] [object org/metalev/multitouch/controller/MultiTouchController$PointInfo] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lorg/metalev/multitouch/controller/MultiTouchController$PositionAndScale;"  "Lorg/metalev/multitouch/controller/MultiTouchController$PointInfo;"  ")Z")
+  )
+)
+
+)

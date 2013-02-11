@@ -1,0 +1,9 @@
+(interface (attrs abstract ) org/bouncycastle2/math/ec/ECMultiplier
+ (super java/lang/Object)
+ (source "ECMultiplier.java")
+
+
+(method (attrs public abstract ) multiply([object org/bouncycastle2/math/ec/ECPoint] [object java/math/BigInteger] [object org/bouncycastle2/math/ec/PreCompInfo] )[object org/bouncycastle2/math/ec/ECPoint]
+)
+
+)

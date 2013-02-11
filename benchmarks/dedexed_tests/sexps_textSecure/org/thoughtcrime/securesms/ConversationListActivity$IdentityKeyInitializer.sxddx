@@ -1,0 +1,41 @@
+(class (attrs ) org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer
+ (super java/lang/Object)
+ (source "ConversationListActivity.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/ConversationListActivity] )
+
+(method (attrs private ) <init>([object org/thoughtcrime/securesms/ConversationListActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/ConversationListActivity])
+  (line 379)
+  (iput-object v1 v0 org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer.this$0 [object org/thoughtcrime/securesms/ConversationListActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/ConversationListActivity] [object org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer] )void
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/ConversationListActivity])
+  ; parameter[1] : v2 ([object org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer])
+  (line 379)
+  (invoke-direct {v0 v1} org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer/<init> [object org/thoughtcrime/securesms/ConversationListActivity] )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer])
+  (line 381)
+  (iget-object v0 v2 org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer.this$0 [object org/thoughtcrime/securesms/ConversationListActivity])
+  (iget-object v1 v2 org/thoughtcrime/securesms/ConversationListActivity$IdentityKeyInitializer.this$0 [object org/thoughtcrime/securesms/ConversationListActivity])
+  (invoke-static {v1} org/thoughtcrime/securesms/ConversationListActivity/access$3 [object org/thoughtcrime/securesms/ConversationListActivity] )
+  (move-result-object v1)
+  (invoke-static {v0 v1} org/thoughtcrime/securesms/crypto/IdentityKeyUtil/generateIdentityKeys [object android/content/Context] [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+  (line 382)
+  (return-void )
+)
+
+)

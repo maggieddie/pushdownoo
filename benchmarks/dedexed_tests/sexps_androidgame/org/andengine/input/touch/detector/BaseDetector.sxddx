@@ -1,0 +1,73 @@
+(class (attrs public abstract ) org/andengine/input/touch/detector/BaseDetector
+ (super java/lang/Object)
+ (source "BaseDetector.java")
+ (implements org/andengine/entity/scene/IOnSceneTouchListener)
+
+ (field (attrs private ) mEnabled boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/input/touch/detector/BaseDetector])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 org/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) isEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/input/touch/detector/BaseDetector])
+  (line 34)
+  (iget-boolean v0 v1 org/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (return v0)
+)
+
+(method (attrs protected abstract ) onManagedTouchEvent([object org/andengine/input/touch/TouchEvent] )boolean
+)
+
+(method (attrs public ) onSceneTouchEvent([object org/andengine/entity/scene/Scene] [object org/andengine/input/touch/TouchEvent] )boolean
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v2 ([object org/andengine/entity/scene/Scene])
+  ; parameter[1] : v3 ([object org/andengine/input/touch/TouchEvent])
+  (line 51)
+  (invoke-virtual {v1 v3} org/andengine/input/touch/detector/BaseDetector/onTouchEvent [object org/andengine/input/touch/TouchEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public final ) onTouchEvent([object org/andengine/input/touch/TouchEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v2 ([object org/andengine/input/touch/TouchEvent])
+  (line 55)
+  (iget-boolean v0 v1 org/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (if-eqz v0 l822d6)
+  (line 56)
+  (invoke-virtual {v1 v2} org/andengine/input/touch/detector/BaseDetector/onManagedTouchEvent [object org/andengine/input/touch/TouchEvent] )
+  (move-result v0)
+  (label l822d4)
+  (line 58)
+  (return v0)
+  (label l822d6)
+  (const/4 v0 0)
+  (goto l822d4)
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+(method (attrs public ) setEnabled(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v1 (boolean)
+  (line 38)
+  (iput-boolean v1 v0 org/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (line 39)
+  (return-void )
+)
+
+)

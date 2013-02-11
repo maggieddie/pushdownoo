@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/CookieAttributeHandler
+ (super java/lang/Object)
+ (source "CookieAttributeHandler.java")
+
+
+(method (attrs public abstract ) match([object org/apache/ogt/http/cookie/Cookie] [object org/apache/ogt/http/cookie/CookieOrigin] )boolean
+)
+
+(method (attrs public abstract ) parse([object org/apache/ogt/http/cookie/SetCookie] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/cookie/MalformedCookieException])
+  )
+)
+
+(method (attrs public abstract ) validate([object org/apache/ogt/http/cookie/Cookie] [object org/apache/ogt/http/cookie/CookieOrigin] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/cookie/MalformedCookieException])
+  )
+)
+
+)

@@ -1,0 +1,38 @@
+(class (attrs public ) org/bouncycastle2/openssl/EncryptionException
+ (super java/io/IOException)
+ (source "EncryptionException.java")
+
+ (field (attrs private ) cause [object java/lang/Throwable] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/openssl/EncryptionException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 12)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/openssl/EncryptionException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 17)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 18)
+  (iput-object v2 v0 org/bouncycastle2/openssl/EncryptionException.cause [object java/lang/Throwable])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/openssl/EncryptionException])
+  (line 23)
+  (iget-object v0 v1 org/bouncycastle2/openssl/EncryptionException.cause [object java/lang/Throwable])
+  (return-object v0)
+)
+
+)

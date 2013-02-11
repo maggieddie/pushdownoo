@@ -1,0 +1,132 @@
+(class (attrs public ) org/bouncycastle2/i18n/ErrorBundle
+ (super org/bouncycastle2/i18n/MessageBundle)
+ (source "ErrorBundle.java")
+
+ (field (attrs public static final ) DETAIL_ENTRY [object java/lang/String] "details" )
+ (field (attrs public static final ) SUMMARY_ENTRY [object java/lang/String] "summary" )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 29)
+  (invoke-direct {v0 v1 v2} org/bouncycastle2/i18n/MessageBundle/<init> [object java/lang/String] [object java/lang/String] )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 43)
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle2/i18n/MessageBundle/<init> [object java/lang/String] [object java/lang/String] [object java/lang/String] )
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object java/lang/String] [array [object java/lang/Object]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException])
+  )
+  (limit registers 5)
+  ; this: v0 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 ([object java/lang/String])
+  ; parameter[3] : v4 ([array [object java/lang/Object]])
+  (line 71)
+  (invoke-direct {v0 v1 v2 v3 v4} org/bouncycastle2/i18n/MessageBundle/<init> [object java/lang/String] [object java/lang/String] [object java/lang/String] [array [object java/lang/Object]] )
+  (line 72)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [array [object java/lang/Object]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 ([array [object java/lang/Object]])
+  (line 56)
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle2/i18n/MessageBundle/<init> [object java/lang/String] [object java/lang/String] [array [object java/lang/Object]] )
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs public ) getDetail([object java/util/Locale] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/i18n/MissingEntryException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v3 ([object java/util/Locale])
+  (line 117)
+  (const-string v0 "details")
+  (invoke-static {} java/util/TimeZone/getDefault )
+  (nop )
+  (move-result-object v1)
+  (invoke-virtual {v2 v0 v3 v1} org/bouncycastle2/i18n/ErrorBundle/getEntry [object java/lang/String] [object java/util/Locale] [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getDetail([object java/util/Locale] [object java/util/TimeZone] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/i18n/MissingEntryException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v2 ([object java/util/Locale])
+  ; parameter[1] : v3 ([object java/util/TimeZone])
+  (line 106)
+  (const-string v0 "details")
+  (invoke-virtual {v1 v0 v2 v3} org/bouncycastle2/i18n/ErrorBundle/getEntry [object java/lang/String] [object java/util/Locale] [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSummary([object java/util/Locale] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/i18n/MissingEntryException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v3 ([object java/util/Locale])
+  (line 94)
+  (const-string v0 "summary")
+  (invoke-static {} java/util/TimeZone/getDefault )
+  (nop )
+  (move-result-object v1)
+  (invoke-virtual {v2 v0 v3 v1} org/bouncycastle2/i18n/ErrorBundle/getEntry [object java/lang/String] [object java/util/Locale] [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSummary([object java/util/Locale] [object java/util/TimeZone] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/i18n/MissingEntryException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/i18n/ErrorBundle])
+  ; parameter[0] : v2 ([object java/util/Locale])
+  ; parameter[1] : v3 ([object java/util/TimeZone])
+  (line 83)
+  (const-string v0 "summary")
+  (invoke-virtual {v1 v0 v2 v3} org/bouncycastle2/i18n/ErrorBundle/getEntry [object java/lang/String] [object java/util/Locale] [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

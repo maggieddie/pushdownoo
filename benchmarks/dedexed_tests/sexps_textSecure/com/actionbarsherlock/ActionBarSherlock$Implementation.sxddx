@@ -1,0 +1,15 @@
+(interface (attrs public abstract annotation ) com/actionbarsherlock/ActionBarSherlock$Implementation
+ (super java/lang/Object)
+ (source "ActionBarSherlock.java")
+ (implements java/lang/annotation/Annotation)
+
+ (field (attrs public static final ) DEFAULT_API int -1); 0xffffffff )
+ (field (attrs public static final ) DEFAULT_DPI int -1); 0xffffffff )
+
+(method (attrs public abstract ) api()int
+)
+
+(method (attrs public abstract ) dpi()int
+)
+
+)

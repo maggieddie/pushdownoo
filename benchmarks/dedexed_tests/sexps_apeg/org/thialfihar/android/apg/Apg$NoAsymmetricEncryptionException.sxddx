@@ -1,0 +1,16 @@
+(class (attrs public ) org/thialfihar/android/apg/Apg$NoAsymmetricEncryptionException
+ (super java/lang/Exception)
+ (source "Apg.java")
+
+ (field (attrs static final ) serialVersionUID long 309801979); 0x127733fb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thialfihar/android/apg/Apg$NoAsymmetricEncryptionException])
+  (line 221)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 222)
+  (return-void )
+ )
+
+)

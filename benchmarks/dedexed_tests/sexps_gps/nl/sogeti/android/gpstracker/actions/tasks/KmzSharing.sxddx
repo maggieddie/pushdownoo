@@ -1,0 +1,38 @@
+(class (attrs public ) nl/sogeti/android/gpstracker/actions/tasks/KmzSharing
+ (super nl/sogeti/android/gpstracker/actions/tasks/KmzCreator)
+ (source "KmzSharing.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] [object android/net/Uri] [object java/lang/String] [object nl/sogeti/android/gpstracker/actions/utils/ProgressListener] )void
+  (limit registers 5)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/actions/tasks/KmzSharing])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object android/net/Uri])
+  ; parameter[2] : v3 ([object java/lang/String])
+  ; parameter[3] : v4 ([object nl/sogeti/android/gpstracker/actions/utils/ProgressListener])
+  (line 48)
+  (invoke-direct {v0 v1 v2 v3 v4} nl/sogeti/android/gpstracker/actions/tasks/KmzCreator/<init> [object android/content/Context] [object android/net/Uri] [object java/lang/String] [object nl/sogeti/android/gpstracker/actions/utils/ProgressListener] )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs protected ) onPostExecute([object android/net/Uri] )void
+  (limit registers 5)
+  ; this: v3 ([object nl/sogeti/android/gpstracker/actions/tasks/KmzSharing])
+  ; parameter[0] : v4 ([object android/net/Uri])
+  (line 54)
+  (invoke-super {v3 v4} nl/sogeti/android/gpstracker/actions/tasks/KmzCreator/onPostExecute [object android/net/Uri] )
+  (line 55)
+  (iget-object v0 v3 nl/sogeti/android/gpstracker/actions/tasks/KmzSharing.mContext [object android/content/Context])
+  (iget-object v1 v3 nl/sogeti/android/gpstracker/actions/tasks/KmzSharing.mContext [object android/content/Context])
+  (const v2 2131165316) ; 0x7f070084)
+  (invoke-virtual {v1 v2} android/content/Context/getString int )
+  (move-result-object v1)
+  (invoke-virtual {v3} nl/sogeti/android/gpstracker/actions/tasks/KmzSharing/getContentType )
+  (move-result-object v2)
+  (invoke-static {v0 v4 v1 v2} nl/sogeti/android/gpstracker/actions/ShareTrack/sendFile [object android/content/Context] [object android/net/Uri] [object java/lang/String] [object java/lang/String] )
+  (line 56)
+  (return-void )
+)
+
+)

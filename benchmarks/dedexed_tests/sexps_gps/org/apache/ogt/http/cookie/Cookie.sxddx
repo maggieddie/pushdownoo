@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/Cookie
+ (super java/lang/Object)
+ (source "Cookie.java")
+
+
+(method (attrs public abstract ) getComment()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getCommentURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getDomain()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getExpiryDate()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPath()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPorts()[array int]
+)
+
+(method (attrs public abstract ) getValue()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getVersion()int
+)
+
+(method (attrs public abstract ) isExpired([object java/util/Date] )boolean
+)
+
+(method (attrs public abstract ) isPersistent()boolean
+)
+
+(method (attrs public abstract ) isSecure()boolean
+)
+
+)

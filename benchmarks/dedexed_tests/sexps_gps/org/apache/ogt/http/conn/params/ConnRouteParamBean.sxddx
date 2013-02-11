@@ -1,0 +1,52 @@
+(class (attrs public ) org/apache/ogt/http/conn/params/ConnRouteParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "ConnRouteParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 50)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public ) setDefaultProxy([object org/apache/ogt/http/HttpHost] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/HttpHost])
+  (line 55)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnRouteParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.route.default-proxy")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 56)
+  (return-void )
+)
+
+(method (attrs public ) setForcedRoute([object org/apache/ogt/http/conn/routing/HttpRoute] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 65)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnRouteParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.route.forced-route")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) setLocalAddress([object java/net/InetAddress] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object java/net/InetAddress])
+  (line 60)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnRouteParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.route.local-address")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 61)
+  (return-void )
+)
+
+)

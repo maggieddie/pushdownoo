@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/MalformedChunkCodingException
+ (super java/io/IOException)
+ (source "MalformedChunkCodingException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1107509281); 0xbdfcbfdf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/MalformedChunkCodingException])
+  (line 45)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/MalformedChunkCodingException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 54)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 55)
+  (return-void )
+ )
+
+)

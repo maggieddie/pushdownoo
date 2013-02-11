@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/params/ConnManagerPNames
+ (super java/lang/Object)
+ (source "ConnManagerPNames.java")
+
+ (field (attrs public static final ) MAX_CONNECTIONS_PER_ROUTE [object java/lang/String] "http.conn-manager.max-per-route" )
+ (field (attrs public static final ) MAX_TOTAL_CONNECTIONS [object java/lang/String] "http.conn-manager.max-total" )
+ (field (attrs public static final ) TIMEOUT [object java/lang/String] "http.conn-manager.timeout" )
+
+)

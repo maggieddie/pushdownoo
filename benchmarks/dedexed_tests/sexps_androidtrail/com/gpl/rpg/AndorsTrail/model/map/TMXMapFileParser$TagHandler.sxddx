@@ -1,0 +1,12 @@
+(interface (attrs abstract ) com/gpl/rpg/AndorsTrail/model/map/TMXMapFileParser$TagHandler
+ (super java/lang/Object)
+ (source "TMXMapFileParser.java")
+
+
+(method (attrs public abstract ) handleTag([object android/content/res/XmlResourceParser] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xmlpull/v1/XmlPullParserException]  [object java/io/IOException])
+  )
+)
+
+)

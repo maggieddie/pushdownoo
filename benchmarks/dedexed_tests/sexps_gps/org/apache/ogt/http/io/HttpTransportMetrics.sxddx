@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/io/HttpTransportMetrics
+ (super java/lang/Object)
+ (source "HttpTransportMetrics.java")
+
+
+(method (attrs public abstract ) getBytesTransferred()long
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+)

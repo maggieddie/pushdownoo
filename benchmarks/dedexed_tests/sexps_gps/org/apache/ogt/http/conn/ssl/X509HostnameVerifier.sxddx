@@ -1,0 +1,25 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ssl/X509HostnameVerifier
+ (super java/lang/Object)
+ (source "X509HostnameVerifier.java")
+ (implements javax/net/ssl/HostnameVerifier)
+
+
+(method (attrs public abstract ) verify([object java/lang/String] [object java/security/cert/X509Certificate] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/net/ssl/SSLException])
+  )
+)
+
+(method (attrs public abstract ) verify([object java/lang/String] [object javax/net/ssl/SSLSocket] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/net/ssl/SSLException])
+  )
+)
+
+(method (attrs public abstract ) verify([object java/lang/String] [array [object java/lang/String]] [array [object java/lang/String]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/net/ssl/SSLException])
+  )
+)
+
+)

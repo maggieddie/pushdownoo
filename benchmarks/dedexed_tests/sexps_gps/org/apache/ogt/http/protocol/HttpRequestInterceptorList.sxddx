@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/HttpRequestInterceptorList
+ (super java/lang/Object)
+ (source "HttpRequestInterceptorList.java")
+
+
+(method (attrs public abstract ) addRequestInterceptor([object org/apache/ogt/http/HttpRequestInterceptor] )void
+)
+
+(method (attrs public abstract ) addRequestInterceptor([object org/apache/ogt/http/HttpRequestInterceptor] int )void
+)
+
+(method (attrs public abstract ) clearRequestInterceptors()void
+)
+
+(method (attrs public abstract ) getRequestInterceptor(int )[object org/apache/ogt/http/HttpRequestInterceptor]
+)
+
+(method (attrs public abstract ) getRequestInterceptorCount()int
+)
+
+(method (attrs public abstract ) removeRequestInterceptorByClass([object java/lang/Class] )void
+)
+
+(method (attrs public abstract ) setInterceptors([object java/util/List] )void
+)
+
+)

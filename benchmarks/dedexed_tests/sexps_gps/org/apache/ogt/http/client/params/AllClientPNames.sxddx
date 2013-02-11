@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/params/AllClientPNames
+ (super java/lang/Object)
+ (source "AllClientPNames.java")
+ (implements org/apache/ogt/http/params/CoreConnectionPNames)
+ (implements org/apache/ogt/http/params/CoreProtocolPNames)
+ (implements org/apache/ogt/http/client/params/ClientPNames)
+ (implements org/apache/ogt/http/auth/params/AuthPNames)
+ (implements org/apache/ogt/http/cookie/params/CookieSpecPNames)
+ (implements org/apache/ogt/http/conn/params/ConnConnectionPNames)
+ (implements org/apache/ogt/http/conn/params/ConnManagerPNames)
+ (implements org/apache/ogt/http/conn/params/ConnRoutePNames)
+
+
+)

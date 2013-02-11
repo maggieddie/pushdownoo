@@ -1,0 +1,85 @@
+(class (attrs abstract ) antlr/GrammarElement
+ (super java/lang/Object)
+ (source "GrammarElement.java")
+
+ (field (attrs public static final ) AUTO_GEN_BANG int 3); 0x3 )
+ (field (attrs public static final ) AUTO_GEN_CARET int 2); 0x2 )
+ (field (attrs public static final ) AUTO_GEN_NONE int 1); 0x1 )
+ (field (attrs protected ) column int )
+ (field (attrs protected ) grammar [object antlr/Grammar] )
+ (field (attrs protected ) line int )
+
+(method (attrs public ) <init>([object antlr/Grammar] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/GrammarElement])
+  ; parameter[0] : v2 ([object antlr/Grammar])
+  (const/4 v0 15)
+  (line 34)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 35)
+  (iput-object v2 v1 antlr/GrammarElement.grammar [object antlr/Grammar])
+  (line 36)
+  (iput v0 v1 antlr/GrammarElement.line int)
+  (line 37)
+  (iput v0 v1 antlr/GrammarElement.column int)
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object antlr/Grammar] [object antlr/Token] )void
+  (limit registers 4)
+  ; this: v1 ([object antlr/GrammarElement])
+  ; parameter[0] : v2 ([object antlr/Grammar])
+  ; parameter[1] : v3 ([object antlr/Token])
+  (line 40)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 41)
+  (iput-object v2 v1 antlr/GrammarElement.grammar [object antlr/Grammar])
+  (line 42)
+  (invoke-virtual {v3} antlr/Token/getLine )
+  (move-result v0)
+  (iput v0 v1 antlr/GrammarElement.line int)
+  (line 43)
+  (invoke-virtual {v3} antlr/Token/getColumn )
+  (move-result v0)
+  (iput v0 v1 antlr/GrammarElement.column int)
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) generate()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/GrammarElement])
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) getColumn()int
+  (limit registers 2)
+  ; this: v1 ([object antlr/GrammarElement])
+  (line 54)
+  (iget v0 v1 antlr/GrammarElement.column int)
+  (return v0)
+)
+
+(method (attrs public ) getLine()int
+  (limit registers 2)
+  ; this: v1 ([object antlr/GrammarElement])
+  (line 50)
+  (iget v0 v1 antlr/GrammarElement.line int)
+  (return v0)
+)
+
+(method (attrs public ) look(int )[object antlr/Lookahead]
+  (limit registers 3)
+  ; this: v1 ([object antlr/GrammarElement])
+  ; parameter[0] : v2 (int)
+  (line 58)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+)

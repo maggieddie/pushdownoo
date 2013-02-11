@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/admob/android/ads/h
+ (super java/lang/Object)
+ (source "AdMobConnectorListener.java")
+
+
+(method (attrs public abstract ) a([object com/admob/android/ads/r] )void
+)
+
+(method (attrs public abstract ) a([object com/admob/android/ads/r] [object java/lang/Exception] )void
+)
+
+)

@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) antlr/collections/Enumerator
+ (super java/lang/Object)
+ (source "Enumerator.java")
+
+
+(method (attrs public abstract ) cursor()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) next()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) valid()boolean
+)
+
+)

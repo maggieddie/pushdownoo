@@ -1,0 +1,48 @@
+(class (attrs public ) org/anddev/andengine/entity/scene/background/EntityBackground
+ (super org/anddev/andengine/entity/scene/background/ColorBackground)
+ (source "EntityBackground.java")
+
+ (field (attrs protected ) mEntity [object org/anddev/andengine/entity/IEntity] )
+
+(method (attrs public ) <init>(float float float [object org/anddev/andengine/entity/IEntity] )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/anddev/andengine/entity/IEntity])
+  (line 35)
+  (invoke-direct {v0 v1 v2 v3} org/anddev/andengine/entity/scene/background/ColorBackground/<init> float float float )
+  (line 36)
+  (iput-object v4 v0 org/anddev/andengine/entity/scene/background/EntityBackground.mEntity [object org/anddev/andengine/entity/IEntity])
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/anddev/andengine/entity/IEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/IEntity])
+  (line 30)
+  (invoke-direct {v0} org/anddev/andengine/entity/scene/background/ColorBackground/<init> )
+  (line 31)
+  (iput-object v1 v0 org/anddev/andengine/entity/scene/background/EntityBackground.mEntity [object org/anddev/andengine/entity/IEntity])
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) onDraw([object javax/microedition/khronos/opengles/GL10] [object org/anddev/andengine/engine/camera/Camera] )void
+  (limit registers 4)
+  ; this: v1 ([object org/anddev/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v2 ([object javax/microedition/khronos/opengles/GL10])
+  ; parameter[1] : v3 ([object org/anddev/andengine/engine/camera/Camera])
+  (line 49)
+  (invoke-super {v1 v2 v3} org/anddev/andengine/entity/scene/background/ColorBackground/onDraw [object javax/microedition/khronos/opengles/GL10] [object org/anddev/andengine/engine/camera/Camera] )
+  (line 50)
+  (iget-object v0 v1 org/anddev/andengine/entity/scene/background/EntityBackground.mEntity [object org/anddev/andengine/entity/IEntity])
+  (invoke-interface {v0 v2 v3} org/anddev/andengine/entity/IEntity/onDraw [object javax/microedition/khronos/opengles/GL10] [object org/anddev/andengine/engine/camera/Camera] )
+  (line 51)
+  (return-void )
+)
+
+)

@@ -1,0 +1,14 @@
+(class (attrs public abstract ) org/python/parser/ast/sliceType
+ (super org/python/parser/SimpleNode)
+ (source "sliceType.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/parser/ast/sliceType])
+  (line 5)
+  (invoke-direct {v0} org/python/parser/SimpleNode/<init> )
+  (return-void )
+ )
+
+)

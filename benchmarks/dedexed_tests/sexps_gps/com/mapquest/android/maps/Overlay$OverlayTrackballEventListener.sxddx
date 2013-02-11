@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/Overlay$OverlayTrackballEventListener
+ (super java/lang/Object)
+ (source "Overlay.java")
+
+
+(method (attrs public abstract ) onTrackballEvent([object android/view/MotionEvent] [object com/mapquest/android/maps/MapView] )void
+)
+
+)

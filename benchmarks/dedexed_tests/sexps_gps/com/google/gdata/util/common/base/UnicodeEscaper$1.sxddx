@@ -1,0 +1,33 @@
+(class (attrs ) com/google/gdata/util/common/base/UnicodeEscaper$1
+ (super java/lang/ThreadLocal)
+ (source "UnicodeEscaper.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/gdata/util/common/base/UnicodeEscaper$1])
+  (line 454)
+  (invoke-direct {v0} java/lang/ThreadLocal/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs protected ) initialValue()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/gdata/util/common/base/UnicodeEscaper$1])
+  (line 1)
+  (invoke-virtual {v1} com/google/gdata/util/common/base/UnicodeEscaper$1/initialValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) initialValue()[array char]
+  (limit registers 2)
+  ; this: v1 ([object com/google/gdata/util/common/base/UnicodeEscaper$1])
+  (line 457)
+  (const/16 v0 1024)
+  (new-array v0 v0 [array char])
+  (return-object v0)
+)
+
+)

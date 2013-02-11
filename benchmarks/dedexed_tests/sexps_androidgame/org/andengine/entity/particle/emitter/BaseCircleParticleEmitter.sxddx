@@ -1,0 +1,98 @@
+(class (attrs public abstract ) org/andengine/entity/particle/emitter/BaseCircleParticleEmitter
+ (super org/andengine/entity/particle/emitter/BaseParticleEmitter)
+ (source "BaseCircleParticleEmitter.java")
+
+ (field (attrs protected ) mRadiusX float )
+ (field (attrs protected ) mRadiusY float )
+
+(method (attrs public ) <init>(float float float )void
+  (limit registers 4)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  (line 28)
+  (invoke-direct {v0 v1 v2 v3 v3} org/andengine/entity/particle/emitter/BaseCircleParticleEmitter/<init> float float float float )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float float )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  (line 32)
+  (invoke-direct {v0 v1 v2} org/andengine/entity/particle/emitter/BaseParticleEmitter/<init> float float )
+  (line 33)
+  (invoke-virtual {v0 v3} org/andengine/entity/particle/emitter/BaseCircleParticleEmitter/setRadiusX float )
+  (line 34)
+  (invoke-virtual {v0 v4} org/andengine/entity/particle/emitter/BaseCircleParticleEmitter/setRadiusY float )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) getRadiusX()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  (line 42)
+  (iget v0 v1 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusX float)
+  (return v0)
+)
+
+(method (attrs public ) getRadiusY()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  (line 50)
+  (iget v0 v1 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusY float)
+  (return v0)
+)
+
+(method (attrs public ) setRadius(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  (line 58)
+  (iput v1 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusX float)
+  (line 59)
+  (iput v1 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusY float)
+  (line 60)
+  (return-void )
+)
+
+(method (attrs public ) setRadius(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 63)
+  (iput v1 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusX float)
+  (line 64)
+  (iput v2 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusY float)
+  (line 65)
+  (return-void )
+)
+
+(method (attrs public ) setRadiusX(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  (line 46)
+  (iput v1 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusX float)
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) setRadiusY(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/BaseCircleParticleEmitter])
+  ; parameter[0] : v1 (float)
+  (line 54)
+  (iput v1 v0 org/andengine/entity/particle/emitter/BaseCircleParticleEmitter.mRadiusY float)
+  (line 55)
+  (return-void )
+)
+
+)

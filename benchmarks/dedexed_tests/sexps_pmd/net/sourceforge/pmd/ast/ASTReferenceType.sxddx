@@ -1,0 +1,73 @@
+(class (attrs public ) net/sourceforge/pmd/ast/ASTReferenceType
+ (super net/sourceforge/pmd/ast/SimpleJavaNode)
+ (source "ASTReferenceType.java")
+ (implements net/sourceforge/pmd/ast/Dimensionable)
+
+ (field (attrs private ) arrayDepth int )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  ; parameter[0] : v1 (int)
+  (line 7)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/SimpleJavaNode/<init> int )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object net/sourceforge/pmd/ast/JavaParser] int )void
+  (limit registers 3)
+  ; this: v0 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/ast/JavaParser])
+  ; parameter[1] : v2 (int)
+  (line 11)
+  (invoke-direct {v0 v1 v2} net/sourceforge/pmd/ast/SimpleJavaNode/<init> [object net/sourceforge/pmd/ast/JavaParser] int )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) bumpArrayDepth()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  (line 25)
+  (iget v0 v1 net/sourceforge/pmd/ast/ASTReferenceType.arrayDepth int)
+  (add-int/lit8 v0 v0 1)
+  (iput v0 v1 net/sourceforge/pmd/ast/ASTReferenceType.arrayDepth int)
+  (line 26)
+  (return-void )
+)
+
+(method (attrs public ) getArrayDepth()int
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  (line 29)
+  (iget v0 v1 net/sourceforge/pmd/ast/ASTReferenceType.arrayDepth int)
+  (return v0)
+)
+
+(method (attrs public ) isArray()boolean
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  (line 33)
+  (iget v0 v1 net/sourceforge/pmd/ast/ASTReferenceType.arrayDepth int)
+  (if-lez v0 l247d4)
+  (const/4 v0 1)
+  (label l247d2)
+  (return v0)
+  (label l247d4)
+  (const/4 v0 0)
+  (goto l247d2)
+)
+
+(method (attrs public ) jjtAccept([object net/sourceforge/pmd/ast/JavaParserVisitor] [object java/lang/Object] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object net/sourceforge/pmd/ast/ASTReferenceType])
+  ; parameter[0] : v2 ([object net/sourceforge/pmd/ast/JavaParserVisitor])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 19)
+  (invoke-interface {v2 v1 v3} net/sourceforge/pmd/ast/JavaParserVisitor/visit [object net/sourceforge/pmd/ast/ASTReferenceType] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

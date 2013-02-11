@@ -1,0 +1,25 @@
+(class (attrs final ) com/google/zxing/client/android/HelpActivity$2
+ (super java/lang/Object)
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs private ) this$0 [object com/google/zxing/client/android/HelpActivity] )
+
+(method (attrs ) <init>([object com/google/zxing/client/android/HelpActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/zxing/client/android/HelpActivity$2])
+  ; parameter[0] : v1 ([object com/google/zxing/client/android/HelpActivity])
+  (iput-object v1 v0 com/google/zxing/client/android/HelpActivity$2.this$0 [object com/google/zxing/client/android/HelpActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/google/zxing/client/android/HelpActivity$2])
+  ; parameter[0] : v2 ([object android/view/View])
+  (iget-object v0 v1 com/google/zxing/client/android/HelpActivity$2.this$0 [object com/google/zxing/client/android/HelpActivity])
+  (invoke-virtual {v0} com/google/zxing/client/android/HelpActivity/finish )
+  (return-void )
+)
+
+)

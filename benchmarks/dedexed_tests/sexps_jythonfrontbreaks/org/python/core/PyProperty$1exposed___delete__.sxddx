@@ -1,0 +1,67 @@
+(class (attrs ) org/python/core/PyProperty$1exposed___delete__
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyProperty.java")
+
+ (field (attrs private ) self [object org/python/core/PyProperty] )
+
+(method (attrs ) <init>([object org/python/core/PyProperty] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyProperty$1exposed___delete__])
+  ; parameter[0] : v1 ([object org/python/core/PyProperty])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 105)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 106)
+  (iput-object v1 v0 org/python/core/PyProperty$1exposed___delete__.self [object org/python/core/PyProperty])
+  (line 107)
+  (return-void )
+ )
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v1 ([object org/python/core/PyProperty$1exposed___delete__])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  (line 114)
+  (iget-object v0 v1 org/python/core/PyProperty$1exposed___delete__.self [object org/python/core/PyProperty])
+  (invoke-virtual {v0 v2} org/python/core/PyProperty/property___delete__ [object org/python/core/PyObject] )
+  (line 115)
+  (sget-object v0 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyProperty$1exposed___delete__])
+  (line 101)
+  (iget-object v0 v1 org/python/core/PyProperty$1exposed___delete__.self [object org/python/core/PyProperty])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v2 ([object org/python/core/PyProperty$1exposed___delete__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  ; parameter[1] : v4 ([object org/python/core/PyObject])
+  (line 119)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/core/PyProperty])
+  (line 120)
+  (invoke-virtual {v0 v4} org/python/core/PyProperty/property___delete__ [object org/python/core/PyObject] )
+  (line 121)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyProperty$1exposed___delete__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 110)
+  (new-instance v0 org/python/core/PyProperty$1exposed___delete__)
+  (check-cast v3 [object org/python/core/PyProperty])
+  (iget-object v1 v2 org/python/core/PyProperty$1exposed___delete__.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyProperty$1exposed___delete__/<init> [object org/python/core/PyProperty] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

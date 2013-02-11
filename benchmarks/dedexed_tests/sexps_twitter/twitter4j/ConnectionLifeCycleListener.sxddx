@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) twitter4j/ConnectionLifeCycleListener
+ (super java/lang/Object)
+ (source "ConnectionLifeCycleListener.java")
+
+
+(method (attrs public abstract ) onCleanUp()void
+)
+
+(method (attrs public abstract ) onConnect()void
+)
+
+(method (attrs public abstract ) onDisconnect()void
+)
+
+)

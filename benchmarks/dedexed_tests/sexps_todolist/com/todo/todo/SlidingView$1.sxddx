@@ -1,0 +1,42 @@
+(class (attrs ) com/todo/todo/SlidingView$1
+ (super java/lang/Object)
+ (source "SlidingView.java")
+ (implements android/view/ViewTreeObserver$OnGlobalLayoutListener)
+
+ (field (attrs final ) this$0 [object com/todo/todo/SlidingView] )
+
+(method (attrs ) <init>([object com/todo/todo/SlidingView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/todo/todo/SlidingView$1])
+  ; parameter[0] : v1 ([object com/todo/todo/SlidingView])
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/SlidingView$1.this$0 [object com/todo/todo/SlidingView])
+  (line 21)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onGlobalLayout()void
+  (limit registers 4)
+  ; this: v3 ([object com/todo/todo/SlidingView$1])
+  (const/4 v2 0)
+  (line 23)
+  (iget-object v0 v3 com/todo/todo/SlidingView$1.this$0 [object com/todo/todo/SlidingView])
+  (invoke-static {v0} com/todo/todo/SlidingView/access$0 [object com/todo/todo/SlidingView] )
+  (move-result v0)
+  (if-eqz v0 l10636)
+  (line 24)
+  (iget-object v0 v3 com/todo/todo/SlidingView$1.this$0 [object com/todo/todo/SlidingView])
+  (invoke-static {v0 v2} com/todo/todo/SlidingView/access$1 [object com/todo/todo/SlidingView] boolean )
+  (line 25)
+  (iget-object v0 v3 com/todo/todo/SlidingView$1.this$0 [object com/todo/todo/SlidingView])
+  (iget-object v1 v3 com/todo/todo/SlidingView$1.this$0 [object com/todo/todo/SlidingView])
+  (invoke-virtual {v1} com/todo/todo/SlidingView/getWidth )
+  (move-result v1)
+  (invoke-virtual {v0 v1 v2} com/todo/todo/SlidingView/scrollTo int int )
+  (label l10636)
+  (line 27)
+  (return-void )
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/thoughtcrime/securesms/crypto/SerializableKey
+ (super java/lang/Object)
+ (source "SerializableKey.java")
+
+
+(method (attrs public abstract ) serialize()[array byte]
+)
+
+)

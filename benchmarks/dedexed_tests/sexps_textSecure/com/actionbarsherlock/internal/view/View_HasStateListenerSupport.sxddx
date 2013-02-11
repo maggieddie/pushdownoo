@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/view/View_HasStateListenerSupport
+ (super java/lang/Object)
+ (source "View_HasStateListenerSupport.java")
+
+
+(method (attrs public abstract ) addOnAttachStateChangeListener([object com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener] )void
+)
+
+(method (attrs public abstract ) removeOnAttachStateChangeListener([object com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener] )void
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) twitter4j/api/ListSubscribersMethodsAsync
+ (super java/lang/Object)
+ (source "ListSubscribersMethodsAsync.java")
+
+
+(method (attrs public abstract ) checkUserListSubscription([object java/lang/String] int int )void
+)
+
+(method (attrs public abstract ) getUserListSubscribers([object java/lang/String] int long )void
+)
+
+(method (attrs public abstract ) subscribeUserList([object java/lang/String] int )void
+)
+
+(method (attrs public abstract ) unsubscribeUserList([object java/lang/String] int )void
+)
+
+)

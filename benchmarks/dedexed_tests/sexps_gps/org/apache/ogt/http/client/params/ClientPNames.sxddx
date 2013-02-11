@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/params/ClientPNames
+ (super java/lang/Object)
+ (source "ClientPNames.java")
+
+ (field (attrs public static final ) ALLOW_CIRCULAR_REDIRECTS [object java/lang/String] "http.protocol.allow-circular-redirects" )
+ (field (attrs public static final ) CONNECTION_MANAGER_FACTORY [object java/lang/String] "http.connection-manager.factory-object" )
+ (field (attrs public static final ) CONNECTION_MANAGER_FACTORY_CLASS_NAME [object java/lang/String] "http.connection-manager.factory-class-name" )
+ (field (attrs public static final ) COOKIE_POLICY [object java/lang/String] "http.protocol.cookie-policy" )
+ (field (attrs public static final ) DEFAULT_HEADERS [object java/lang/String] "http.default-headers" )
+ (field (attrs public static final ) DEFAULT_HOST [object java/lang/String] "http.default-host" )
+ (field (attrs public static final ) HANDLE_AUTHENTICATION [object java/lang/String] "http.protocol.handle-authentication" )
+ (field (attrs public static final ) HANDLE_REDIRECTS [object java/lang/String] "http.protocol.handle-redirects" )
+ (field (attrs public static final ) MAX_REDIRECTS [object java/lang/String] "http.protocol.max-redirects" )
+ (field (attrs public static final ) REJECT_RELATIVE_REDIRECT [object java/lang/String] "http.protocol.reject-relative-redirect" )
+ (field (attrs public static final ) VIRTUAL_HOST [object java/lang/String] "http.virtual-host" )
+
+)

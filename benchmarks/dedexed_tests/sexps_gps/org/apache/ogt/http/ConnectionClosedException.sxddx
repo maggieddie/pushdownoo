@@ -1,0 +1,17 @@
+(class (attrs public ) org/apache/ogt/http/ConnectionClosedException
+ (super java/io/IOException)
+ (source "ConnectionClosedException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1268120267); 0x4b95facb )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/ConnectionClosedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 47)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 48)
+  (return-void )
+ )
+
+)

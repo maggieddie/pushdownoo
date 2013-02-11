@@ -1,0 +1,15 @@
+(class (attrs public ) org/thialfihar/android/apg/KeyServer$InsufficientQuery
+ (super java/lang/Exception)
+ (source "KeyServer.java")
+
+ (field (attrs private static final ) serialVersionUID long -168968269); 0xf5edbfb3 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thialfihar/android/apg/KeyServer$InsufficientQuery])
+  (line 18)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (return-void )
+ )
+
+)

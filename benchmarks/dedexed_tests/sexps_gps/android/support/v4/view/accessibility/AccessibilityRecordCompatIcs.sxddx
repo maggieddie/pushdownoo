@@ -1,0 +1,444 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityRecordCompatIcs
+ (super java/lang/Object)
+ (source "AccessibilityRecordCompatIcs.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompatIcs])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getAddedCount([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 39)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getAddedCount )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getBeforeText([object java/lang/Object] )[object java/lang/CharSequence]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 43)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getBeforeText )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getClassName([object java/lang/Object] )[object java/lang/CharSequence]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 47)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getClassName )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getContentDescription([object java/lang/Object] )[object java/lang/CharSequence]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 51)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getContentDescription )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getCurrentItemIndex([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 55)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getCurrentItemIndex )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getFromIndex([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 59)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getFromIndex )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getItemCount([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 63)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getItemCount )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getParcelableData([object java/lang/Object] )[object android/os/Parcelable]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 76)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getParcelableData )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getRemovedCount([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 80)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getRemovedCount )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getScrollX([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 84)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getScrollX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getScrollY([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 88)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getScrollY )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getSource([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 92)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getSource )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getText([object java/lang/Object] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/List"  "<"  "Ljava/lang/CharSequence;"  ">;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 96)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getText )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getToIndex([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 100)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getToIndex )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getWindowId([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 104)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/getWindowId )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isChecked([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 108)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/isChecked )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isEnabled([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 112)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/isEnabled )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isFullScreen([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 116)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/isFullScreen )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isPassword([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 120)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/isPassword )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isScrollable([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 124)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityRecord/isScrollable )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) obtain()[object java/lang/Object]
+  (limit registers 1)
+  (line 31)
+  (invoke-static {} android/view/accessibility/AccessibilityRecord/obtain )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) obtain([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 35)
+  (check-cast v1 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-static {v1} android/view/accessibility/AccessibilityRecord/obtain [object android/view/accessibility/AccessibilityRecord] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) recycle([object java/lang/Object] )void
+  (limit registers 1)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  (line 128)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0} android/view/accessibility/AccessibilityRecord/recycle )
+  (line 129)
+  (return-void )
+ )
+
+(method (attrs public static ) setAddedCount([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 132)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setAddedCount int )
+  (line 133)
+  (return-void )
+ )
+
+(method (attrs public static ) setBeforeText([object java/lang/Object] [object java/lang/CharSequence] )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object java/lang/CharSequence])
+  (line 136)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setBeforeText [object java/lang/CharSequence] )
+  (line 137)
+  (return-void )
+ )
+
+(method (attrs public static ) setChecked([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 140)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setChecked boolean )
+  (line 141)
+  (return-void )
+ )
+
+(method (attrs public static ) setClassName([object java/lang/Object] [object java/lang/CharSequence] )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object java/lang/CharSequence])
+  (line 144)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setClassName [object java/lang/CharSequence] )
+  (line 145)
+  (return-void )
+ )
+
+(method (attrs public static ) setContentDescription([object java/lang/Object] [object java/lang/CharSequence] )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object java/lang/CharSequence])
+  (line 148)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setContentDescription [object java/lang/CharSequence] )
+  (line 149)
+  (return-void )
+ )
+
+(method (attrs public static ) setCurrentItemIndex([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 152)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setCurrentItemIndex int )
+  (line 153)
+  (return-void )
+ )
+
+(method (attrs public static ) setEnabled([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 156)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setEnabled boolean )
+  (line 157)
+  (return-void )
+ )
+
+(method (attrs public static ) setFromIndex([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 160)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setFromIndex int )
+  (line 161)
+  (return-void )
+ )
+
+(method (attrs public static ) setFullScreen([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 164)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setFullScreen boolean )
+  (line 165)
+  (return-void )
+ )
+
+(method (attrs public static ) setItemCount([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 168)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setItemCount int )
+  (line 169)
+  (return-void )
+ )
+
+(method (attrs public static ) setParcelableData([object java/lang/Object] [object android/os/Parcelable] )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object android/os/Parcelable])
+  (line 181)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setParcelableData [object android/os/Parcelable] )
+  (line 182)
+  (return-void )
+ )
+
+(method (attrs public static ) setPassword([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 185)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setPassword boolean )
+  (line 186)
+  (return-void )
+ )
+
+(method (attrs public static ) setRemovedCount([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 189)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setRemovedCount int )
+  (line 190)
+  (return-void )
+ )
+
+(method (attrs public static ) setScrollX([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 193)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setScrollX int )
+  (line 194)
+  (return-void )
+ )
+
+(method (attrs public static ) setScrollY([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 197)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setScrollY int )
+  (line 198)
+  (return-void )
+ )
+
+(method (attrs public static ) setScrollable([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 201)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setScrollable boolean )
+  (line 202)
+  (return-void )
+ )
+
+(method (attrs public static ) setSource([object java/lang/Object] [object android/view/View] )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object android/view/View])
+  (line 205)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setSource [object android/view/View] )
+  (line 206)
+  (return-void )
+ )
+
+(method (attrs public static ) setToIndex([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 209)
+  (check-cast v0 [object android/view/accessibility/AccessibilityRecord])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityRecord/setToIndex int )
+  (line 210)
+  (return-void )
+ )
+
+)

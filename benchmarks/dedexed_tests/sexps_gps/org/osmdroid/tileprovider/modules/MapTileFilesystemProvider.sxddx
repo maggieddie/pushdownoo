@@ -1,0 +1,159 @@
+(class (attrs public ) org/osmdroid/tileprovider/modules/MapTileFilesystemProvider
+ (super org/osmdroid/tileprovider/modules/MapTileFileStorageProviderBase)
+ (source "MapTileFilesystemProvider.java")
+
+ (field (attrs private static final ) logger [object org/slf4j/Logger] )
+ (field (attrs private final ) mMaximumCachedFileAge long )
+ (field (attrs private ) mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 31)
+  (const-class v0 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider)
+  (invoke-static {v0} org/slf4j/LoggerFactory/getLogger [object java/lang/Class] )
+  (move-result-object v0)
+  (sput-object v0 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.logger [object org/slf4j/Logger])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/IRegisterReceiver] )void
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  ; parameter[0] : v2 ([object org/osmdroid/tileprovider/IRegisterReceiver])
+  (line 46)
+  (sget-object v0 org/osmdroid/tileprovider/tilesource/TileSourceFactory.DEFAULT_TILE_SOURCE [object org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase])
+  (invoke-direct {v1 v2 v0} org/osmdroid/tileprovider/modules/MapTileFilesystemProvider/<init> [object org/osmdroid/tileprovider/IRegisterReceiver] [object org/osmdroid/tileprovider/tilesource/ITileSource] )
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/IRegisterReceiver] [object org/osmdroid/tileprovider/tilesource/ITileSource] )void
+  (limit registers 5)
+  ; this: v2 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  ; parameter[0] : v3 ([object org/osmdroid/tileprovider/IRegisterReceiver])
+  ; parameter[1] : v4 ([object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (line 51)
+  (const-wide/32 v0 604800000) ; 0x240c8400)
+  (invoke-direct {v2 v3 v4 v0 v1} org/osmdroid/tileprovider/modules/MapTileFilesystemProvider/<init> [object org/osmdroid/tileprovider/IRegisterReceiver] [object org/osmdroid/tileprovider/tilesource/ITileSource] long )
+  (line 52)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/IRegisterReceiver] [object org/osmdroid/tileprovider/tilesource/ITileSource] long )void
+  (limit registers 7)
+  ; this: v2 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  ; parameter[0] : v3 ([object org/osmdroid/tileprovider/IRegisterReceiver])
+  ; parameter[1] : v4 ([object org/osmdroid/tileprovider/tilesource/ITileSource])
+  ; parameter[2] : v5 (long)
+  (line 62)
+  (const/16 v0 8)
+  (const/16 v1 40)
+  (invoke-direct {v2 v3 v0 v1} org/osmdroid/tileprovider/modules/MapTileFileStorageProviderBase/<init> [object org/osmdroid/tileprovider/IRegisterReceiver] int int )
+  (line 64)
+  (iput-object v4 v2 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (line 66)
+  (iput-wide v5 v2 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mMaximumCachedFileAge long)
+  (line 67)
+  (return-void )
+ )
+
+(method (attrs static ) access$100([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider] )[object org/osmdroid/tileprovider/tilesource/ITileSource]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 25)
+  (iget-object v0 v1 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (return-object v0)
+ )
+
+(method (attrs static ) access$200([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 25)
+  (iget-wide v0 v2 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mMaximumCachedFileAge long)
+  (return-wide v0)
+ )
+
+(method (attrs static ) access$300()[object org/slf4j/Logger]
+  (limit registers 1)
+  (line 25)
+  (sget-object v0 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.logger [object org/slf4j/Logger])
+  (return-object v0)
+ )
+
+(method (attrs public ) getMaximumZoomLevel()int
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 104)
+  (iget-object v0 v1 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (if-eqz v0 ld1286)
+  (iget-object v0 v1 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (invoke-interface {v0} org/osmdroid/tileprovider/tilesource/ITileSource/getMaximumZoomLevel )
+  (move-result v0)
+  (label ld1284)
+  (return v0)
+  (label ld1286)
+  (const/16 v0 22)
+  (goto ld1284)
+)
+
+(method (attrs public ) getMinimumZoomLevel()int
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 99)
+  (iget-object v0 v1 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (if-eqz v0 ld12b2)
+  (iget-object v0 v1 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (invoke-interface {v0} org/osmdroid/tileprovider/tilesource/ITileSource/getMinimumZoomLevel )
+  (move-result v0)
+  (label ld12b0)
+  (return v0)
+  (label ld12b2)
+  (const/4 v0 0)
+  (goto ld12b0)
+)
+
+(method (attrs protected ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 84)
+  (const-string v0 "File System Cache Provider")
+  (return-object v0)
+)
+
+(method (attrs protected ) getThreadGroupName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 89)
+  (const-string v0 "filesystem")
+  (return-object v0)
+)
+
+(method (attrs protected ) getTileLoader()[object java/lang/Runnable]
+  (limit registers 3)
+  ; this: v2 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 94)
+  (new-instance v0 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider$TileLoader)
+  (const/4 v1 0)
+  (invoke-direct {v0 v2 v1} org/osmdroid/tileprovider/modules/MapTileFilesystemProvider$TileLoader/<init> [object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider] [object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider$1] )
+  (return-object v0)
+)
+
+(method (attrs public ) getUsesDataConnection()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  (line 79)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) setTileSource([object org/osmdroid/tileprovider/tilesource/ITileSource] )void
+  (limit registers 2)
+  ; this: v0 ([object org/osmdroid/tileprovider/modules/MapTileFilesystemProvider])
+  ; parameter[0] : v1 ([object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (line 109)
+  (iput-object v1 v0 org/osmdroid/tileprovider/modules/MapTileFilesystemProvider.mTileSource [object org/osmdroid/tileprovider/tilesource/ITileSource])
+  (line 110)
+  (return-void )
+)
+
+)

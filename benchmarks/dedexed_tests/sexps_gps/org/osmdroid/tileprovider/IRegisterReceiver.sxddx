@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/IRegisterReceiver
+ (super java/lang/Object)
+ (source "IRegisterReceiver.java")
+
+
+(method (attrs public abstract ) registerReceiver([object android/content/BroadcastReceiver] [object android/content/IntentFilter] )[object android/content/Intent]
+)
+
+(method (attrs public abstract ) unregisterReceiver([object android/content/BroadcastReceiver] )void
+)
+
+)

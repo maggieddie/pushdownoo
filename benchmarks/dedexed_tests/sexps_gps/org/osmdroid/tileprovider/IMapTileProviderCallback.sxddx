@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/IMapTileProviderCallback
+ (super java/lang/Object)
+ (source "IMapTileProviderCallback.java")
+
+
+(method (attrs public abstract ) mapTileRequestCompleted([object org/osmdroid/tileprovider/MapTileRequestState] [object android/graphics/drawable/Drawable] )void
+)
+
+(method (attrs public abstract ) mapTileRequestFailed([object org/osmdroid/tileprovider/MapTileRequestState] )void
+)
+
+(method (attrs public abstract ) useDataConnection()boolean
+)
+
+)

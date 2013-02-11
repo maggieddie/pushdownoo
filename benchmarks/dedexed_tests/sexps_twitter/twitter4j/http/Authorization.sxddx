@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) twitter4j/http/Authorization
+ (super java/lang/Object)
+ (source "Authorization.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getAuthorizationHeader([object twitter4j/internal/http/HttpRequest] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) isEnabled()boolean
+)
+
+)

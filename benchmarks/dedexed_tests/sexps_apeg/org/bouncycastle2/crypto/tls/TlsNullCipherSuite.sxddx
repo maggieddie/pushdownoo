@@ -1,0 +1,68 @@
+(class (attrs public ) org/bouncycastle2/crypto/tls/TlsNullCipherSuite
+ (super org/bouncycastle2/crypto/tls/TlsCipherSuite)
+ (source "TlsNullCipherSuite.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/crypto/tls/TlsNullCipherSuite])
+  (line 6)
+  (invoke-direct {v0} org/bouncycastle2/crypto/tls/TlsCipherSuite/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) decodeCiphertext(short [array byte] int int [object org/bouncycastle2/crypto/tls/TlsProtocolHandler] )[array byte]
+  (limit registers 8)
+  ; this: v2 ([object org/bouncycastle2/crypto/tls/TlsNullCipherSuite])
+  ; parameter[0] : v3 (short)
+  ; parameter[1] : v4 ([array byte])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  ; parameter[4] : v7 ([object org/bouncycastle2/crypto/tls/TlsProtocolHandler])
+  (line 23)
+  (new-array v0 v6 [array byte])
+  (line 24)
+  (const/4 v1 0)
+  (invoke-static {v4 v5 v0 v1 v6} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 25)
+  (return-object v0)
+)
+
+(method (attrs protected ) encodePlaintext(short [array byte] int int )[array byte]
+  (limit registers 7)
+  ; this: v2 ([object org/bouncycastle2/crypto/tls/TlsNullCipherSuite])
+  ; parameter[0] : v3 (short)
+  ; parameter[1] : v4 ([array byte])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 16)
+  (new-array v0 v6 [array byte])
+  (line 17)
+  (const/4 v1 0)
+  (invoke-static {v4 v5 v0 v1 v6} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 18)
+  (return-object v0)
+)
+
+(method (attrs protected ) getKeyExchangeAlgorithm()short
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/tls/TlsNullCipherSuite])
+  (line 30)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs protected ) init([array byte] [array byte] [array byte] )void
+  (limit registers 6)
+  ; this: v2 ([object org/bouncycastle2/crypto/tls/TlsNullCipherSuite])
+  ; parameter[0] : v3 ([array byte])
+  ; parameter[1] : v4 ([array byte])
+  ; parameter[2] : v5 ([array byte])
+  (line 11)
+  (new-instance v0 org/bouncycastle2/crypto/tls/TlsRuntimeException)
+  (const-string v1 "Sorry, init of TLS_NULL_WITH_NULL_NULL is forbidden")
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/tls/TlsRuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

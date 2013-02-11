@@ -1,0 +1,64 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/MQVPrivateParameters
+ (super java/lang/Object)
+ (source "MQVPrivateParameters.java")
+ (implements org/bouncycastle2/crypto/CipherParameters)
+
+ (field (attrs private ) ephemeralPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] )
+ (field (attrs private ) ephemeralPublicKey [object org/bouncycastle2/crypto/params/ECPublicKeyParameters] )
+ (field (attrs private ) staticPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/MQVPrivateParameters])
+  ; parameter[0] : v2 ([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  ; parameter[1] : v3 ([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  (line 16)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} org/bouncycastle2/crypto/params/MQVPrivateParameters/<init> [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] [object org/bouncycastle2/crypto/params/ECPublicKeyParameters] )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters] [object org/bouncycastle2/crypto/params/ECPublicKeyParameters] )void
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle2/crypto/params/MQVPrivateParameters])
+  ; parameter[0] : v1 ([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  ; parameter[1] : v2 ([object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  ; parameter[2] : v3 ([object org/bouncycastle2/crypto/params/ECPublicKeyParameters])
+  (line 19)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 24)
+  (iput-object v1 v0 org/bouncycastle2/crypto/params/MQVPrivateParameters.staticPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  (line 25)
+  (iput-object v2 v0 org/bouncycastle2/crypto/params/MQVPrivateParameters.ephemeralPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  (line 26)
+  (iput-object v3 v0 org/bouncycastle2/crypto/params/MQVPrivateParameters.ephemeralPublicKey [object org/bouncycastle2/crypto/params/ECPublicKeyParameters])
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) getEphemeralPrivateKey()[object org/bouncycastle2/crypto/params/ECPrivateKeyParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/MQVPrivateParameters])
+  (line 36)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/MQVPrivateParameters.ephemeralPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  (return-object v0)
+)
+
+(method (attrs public ) getEphemeralPublicKey()[object org/bouncycastle2/crypto/params/ECPublicKeyParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/MQVPrivateParameters])
+  (line 41)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/MQVPrivateParameters.ephemeralPublicKey [object org/bouncycastle2/crypto/params/ECPublicKeyParameters])
+  (return-object v0)
+)
+
+(method (attrs public ) getStaticPrivateKey()[object org/bouncycastle2/crypto/params/ECPrivateKeyParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/MQVPrivateParameters])
+  (line 31)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/MQVPrivateParameters.staticPrivateKey [object org/bouncycastle2/crypto/params/ECPrivateKeyParameters])
+  (return-object v0)
+)
+
+)

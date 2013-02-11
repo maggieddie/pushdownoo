@@ -1,0 +1,18 @@
+(class (attrs public ) org/andengine/engine/Engine$EngineDestroyedException
+ (super java/lang/InterruptedException)
+ (source "Engine.java")
+
+ (field (attrs private static final ) serialVersionUID long -1074935560); 0xbfedc8f8 )
+ (field (attrs final ) this$0 [object org/andengine/engine/Engine] )
+
+(method (attrs public ) <init>([object org/andengine/engine/Engine] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/Engine$EngineDestroyedException])
+  ; parameter[0] : v1 ([object org/andengine/engine/Engine])
+  (line 840)
+  (iput-object v1 v0 org/andengine/engine/Engine$EngineDestroyedException.this$0 [object org/andengine/engine/Engine])
+  (invoke-direct {v0} java/lang/InterruptedException/<init> )
+  (return-void )
+ )
+
+)

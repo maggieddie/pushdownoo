@@ -1,0 +1,16 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/AES$KeyGen128
+ (super org/bouncycastle2/jce/provider/symmetric/AES$KeyGen)
+ (source "AES.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/symmetric/AES$KeyGen128])
+  (line 103)
+  (const/16 v0 128)
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/symmetric/AES$KeyGen/<init> int )
+  (line 104)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) twitter4j/api/GeoMethodsAsync
+ (super java/lang/Object)
+ (source "GeoMethodsAsync.java")
+
+
+(method (attrs public abstract ) createPlace([object java/lang/String] [object java/lang/String] [object java/lang/String] [object twitter4j/GeoLocation] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) getGeoDetails([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) getNearbyPlaces([object twitter4j/GeoQuery] )void
+)
+
+(method (attrs public abstract ) getSimilarPlaces([object twitter4j/GeoLocation] [object java/lang/String] [object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) reverseGeoCode([object twitter4j/GeoQuery] )void
+)
+
+(method (attrs public abstract ) searchPlaces([object twitter4j/GeoQuery] )void
+)
+
+)

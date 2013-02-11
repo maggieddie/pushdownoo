@@ -1,0 +1,49 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/DHKeyGenerationParameters
+ (super org/bouncycastle2/crypto/KeyGenerationParameters)
+ (source "DHKeyGenerationParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle2/crypto/params/DHParameters] )
+
+(method (attrs public ) <init>([object java/security/SecureRandom] [object org/bouncycastle2/crypto/params/DHParameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/DHKeyGenerationParameters])
+  ; parameter[0] : v2 ([object java/security/SecureRandom])
+  ; parameter[1] : v3 ([object org/bouncycastle2/crypto/params/DHParameters])
+  (line 16)
+  (invoke-static {v3} org/bouncycastle2/crypto/params/DHKeyGenerationParameters/getStrength [object org/bouncycastle2/crypto/params/DHParameters] )
+  (move-result v0)
+  (invoke-direct {v1 v2 v0} org/bouncycastle2/crypto/KeyGenerationParameters/<init> [object java/security/SecureRandom] int )
+  (line 18)
+  (iput-object v3 v1 org/bouncycastle2/crypto/params/DHKeyGenerationParameters.params [object org/bouncycastle2/crypto/params/DHParameters])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs static ) getStrength([object org/bouncycastle2/crypto/params/DHParameters] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/bouncycastle2/crypto/params/DHParameters])
+  (line 28)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/DHParameters/getL )
+  (move-result v0)
+  (if-eqz v0 l11939a)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/DHParameters/getL )
+  (move-result v0)
+  (label l119398)
+  (return v0)
+  (label l11939a)
+  (invoke-virtual {v1} org/bouncycastle2/crypto/params/DHParameters/getP )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/math/BigInteger/bitLength )
+  (move-result v0)
+  (goto l119398)
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle2/crypto/params/DHParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/DHKeyGenerationParameters])
+  (line 23)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/DHKeyGenerationParameters.params [object org/bouncycastle2/crypto/params/DHParameters])
+  (return-object v0)
+)
+
+)

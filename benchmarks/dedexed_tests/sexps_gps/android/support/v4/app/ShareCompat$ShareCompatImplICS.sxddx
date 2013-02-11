@@ -1,0 +1,30 @@
+(class (attrs ) android/support/v4/app/ShareCompat$ShareCompatImplICS
+ (super java/lang/Object)
+ (source "ShareCompat.java")
+ (implements android/support/v4/app/ShareCompat$ShareCompatImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/ShareCompat$ShareCompatImplICS])
+  (line 87)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) configureMenuItem([object android/view/MenuItem] [object android/support/v4/app/ShareCompat$IntentBuilder] )void
+  (limit registers 5)
+  ; this: v2 ([object android/support/v4/app/ShareCompat$ShareCompatImplICS])
+  ; parameter[0] : v3 ([object android/view/MenuItem])
+  ; parameter[1] : v4 ([object android/support/v4/app/ShareCompat$IntentBuilder])
+  (line 89)
+  (invoke-virtual {v4} android/support/v4/app/ShareCompat$IntentBuilder/getActivity )
+  (move-result-object v0)
+  (invoke-virtual {v4} android/support/v4/app/ShareCompat$IntentBuilder/getIntent )
+  (move-result-object v1)
+  (invoke-static {v3 v0 v1} android/support/v4/app/ShareCompatICS/configureMenuItem [object android/view/MenuItem] [object android/app/Activity] [object android/content/Intent] )
+  (line 91)
+  (return-void )
+)
+
+)

@@ -1,0 +1,78 @@
+(class (attrs ) org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem
+ (super java/lang/Object)
+ (source "MmsDownloader.java")
+
+ (field (attrs private ) contentLocation [object java/lang/String] )
+ (field (attrs private ) masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+ (field (attrs private ) messageId long )
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/service/MmsDownloader] )
+ (field (attrs private ) threadId long )
+ (field (attrs private ) transactionId [array byte] )
+
+(method (attrs public ) <init>([object org/thoughtcrime/securesms/service/MmsDownloader] long long [object java/lang/String] [array byte] [object org/thoughtcrime/securesms/crypto/MasterSecret] )void
+  (limit registers 9)
+  ; this: v0 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/service/MmsDownloader])
+  ; parameter[1] : v2 (long)
+  ; parameter[2] : v4 (long)
+  ; parameter[3] : v6 ([object java/lang/String])
+  ; parameter[4] : v7 ([array byte])
+  ; parameter[5] : v8 ([object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (line 145)
+  (iput-object v1 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.this$0 [object org/thoughtcrime/securesms/service/MmsDownloader])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 146)
+  (iput-wide v4 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.threadId long)
+  (line 147)
+  (iput-wide v2 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.messageId long)
+  (line 148)
+  (iput-object v6 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.contentLocation [object java/lang/String])
+  (line 149)
+  (iput-object v8 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (line 150)
+  (iput-object v7 v0 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.transactionId [array byte])
+  (line 151)
+  (return-void )
+ )
+
+(method (attrs public ) getContentLocation()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  (line 162)
+  (iget-object v0 v1 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.contentLocation [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) getMasterSecret()[object org/thoughtcrime/securesms/crypto/MasterSecret]
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  (line 170)
+  (iget-object v0 v1 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (return-object v0)
+)
+
+(method (attrs public ) getMessageId()long
+  (limit registers 3)
+  ; this: v2 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  (line 158)
+  (iget-wide v0 v2 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.messageId long)
+  (return-wide v0)
+)
+
+(method (attrs public ) getThreadId()long
+  (limit registers 3)
+  ; this: v2 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  (line 154)
+  (iget-wide v0 v2 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.threadId long)
+  (return-wide v0)
+)
+
+(method (attrs public ) getTransactionId()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem])
+  (line 166)
+  (iget-object v0 v1 org/thoughtcrime/securesms/service/MmsDownloader$DownloadItem.transactionId [array byte])
+  (return-object v0)
+)
+
+)

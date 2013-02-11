@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/ExecutionContext
+ (super java/lang/Object)
+ (source "ExecutionContext.java")
+
+ (field (attrs public static final ) HTTP_CONNECTION [object java/lang/String] "http.connection" )
+ (field (attrs public static final ) HTTP_PROXY_HOST [object java/lang/String] "http.proxy_host" )
+ (field (attrs public static final ) HTTP_REQUEST [object java/lang/String] "http.request" )
+ (field (attrs public static final ) HTTP_REQ_SENT [object java/lang/String] "http.request_sent" )
+ (field (attrs public static final ) HTTP_RESPONSE [object java/lang/String] "http.response" )
+ (field (attrs public static final ) HTTP_TARGET_HOST [object java/lang/String] "http.target_host" )
+
+)

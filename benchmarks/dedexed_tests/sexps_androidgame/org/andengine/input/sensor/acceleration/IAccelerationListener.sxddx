@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/input/sensor/acceleration/IAccelerationListener
+ (super java/lang/Object)
+ (source "IAccelerationListener.java")
+
+
+(method (attrs public abstract ) onAccelerationAccuracyChanged([object org/andengine/input/sensor/acceleration/AccelerationData] )void
+)
+
+(method (attrs public abstract ) onAccelerationChanged([object org/andengine/input/sensor/acceleration/AccelerationData] )void
+)
+
+)

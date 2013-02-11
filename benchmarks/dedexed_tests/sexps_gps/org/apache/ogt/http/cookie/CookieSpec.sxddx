@@ -1,0 +1,36 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/CookieSpec
+ (super java/lang/Object)
+ (source "CookieSpec.java")
+
+
+(method (attrs public abstract ) formatCookies([object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/cookie/Cookie;"  ">;)"  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/Header;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getVersion()int
+)
+
+(method (attrs public abstract ) getVersionHeader()[object org/apache/ogt/http/Header]
+)
+
+(method (attrs public abstract ) match([object org/apache/ogt/http/cookie/Cookie] [object org/apache/ogt/http/cookie/CookieOrigin] )boolean
+)
+
+(method (attrs public abstract ) parse([object org/apache/ogt/http/Header] [object org/apache/ogt/http/cookie/CookieOrigin] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/ogt/http/Header;"  "Lorg/apache/ogt/http/cookie/CookieOrigin;"  ")"  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/cookie/Cookie;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/cookie/MalformedCookieException])
+  )
+)
+
+(method (attrs public abstract ) validate([object org/apache/ogt/http/cookie/Cookie] [object org/apache/ogt/http/cookie/CookieOrigin] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/cookie/MalformedCookieException])
+  )
+)
+
+)

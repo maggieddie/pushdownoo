@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/path/ITiledMap
+ (super java/lang/Object)
+ (source "ITiledMap.java")
+
+
+(method (attrs public abstract ) getStepCost([object java/lang/Object] int int int int )float
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;IIII)F")
+  )
+)
+
+(method (attrs public abstract ) getTileColumns()int
+)
+
+(method (attrs public abstract ) getTileRows()int
+)
+
+(method (attrs public abstract ) isTileBlocked([object java/lang/Object] int int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;II)Z")
+  )
+)
+
+(method (attrs public abstract ) onTileVisitedByPathFinder(int int )void
+)
+
+)

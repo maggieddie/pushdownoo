@@ -1,0 +1,31 @@
+(class (attrs ) org/python/parser/ExtraArg
+ (super org/python/parser/SimpleNode)
+ (source "TreeBuilder.java")
+
+ (field (attrs public ) id int )
+ (field (attrs public ) name [object java/lang/String] )
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/parser/ExtraArg])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 566)
+  (invoke-direct {v0} org/python/parser/SimpleNode/<init> )
+  (line 567)
+  (iput-object v1 v0 org/python/parser/ExtraArg.name [object java/lang/String])
+  (line 568)
+  (iput v2 v0 org/python/parser/ExtraArg.id int)
+  (line 569)
+  (return-void )
+ )
+
+(method (attrs public ) getId()int
+  (limit registers 2)
+  ; this: v1 ([object org/python/parser/ExtraArg])
+  (line 571)
+  (iget v0 v1 org/python/parser/ExtraArg.id int)
+  (return v0)
+)
+
+)

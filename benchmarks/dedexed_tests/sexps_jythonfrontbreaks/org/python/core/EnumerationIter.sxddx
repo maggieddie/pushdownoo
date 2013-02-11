@@ -1,0 +1,41 @@
+(class (attrs ) org/python/core/EnumerationIter
+ (super org/python/core/CollectionIter)
+ (source "CollectionIter.java")
+
+ (field (attrs private ) proxy [object java/util/Enumeration] )
+
+(method (attrs public ) <init>([object java/util/Enumeration] )void
+  (limit registers 2)
+  ; this: v0 ([object org/python/core/EnumerationIter])
+  ; parameter[0] : v1 ([object java/util/Enumeration])
+  (line 33)
+  (invoke-direct {v0} org/python/core/CollectionIter/<init> )
+  (line 34)
+  (iput-object v1 v0 org/python/core/EnumerationIter.proxy [object java/util/Enumeration])
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) __iternext__()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/EnumerationIter])
+  (line 38)
+  (iget-object v0 v1 org/python/core/EnumerationIter.proxy [object java/util/Enumeration])
+  (invoke-interface {v0} java/util/Enumeration/hasMoreElements )
+  (move-result v0)
+  (if-nez v0 l55938)
+  (line 39)
+  (const/4 v0 0)
+  (label l55936)
+  (line 40)
+  (return-object v0)
+  (label l55938)
+  (iget-object v0 v1 org/python/core/EnumerationIter.proxy [object java/util/Enumeration])
+  (invoke-interface {v0} java/util/Enumeration/nextElement )
+  (move-result-object v0)
+  (invoke-static {v0} org/python/core/Py/java2py [object java/lang/Object] )
+  (move-result-object v0)
+  (goto l55936)
+)
+
+)

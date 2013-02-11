@@ -1,0 +1,38 @@
+(class (attrs public ) org/apache/ogt/http/conn/ssl/BrowserCompatHostnameVerifier
+ (super org/apache/ogt/http/conn/ssl/AbstractVerifier)
+ (source "BrowserCompatHostnameVerifier.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/conn/ssl/BrowserCompatHostnameVerifier])
+  (line 48)
+  (invoke-direct {v0} org/apache/ogt/http/conn/ssl/AbstractVerifier/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/conn/ssl/BrowserCompatHostnameVerifier])
+  (line 59)
+  (const-string v0 "BROWSER_COMPATIBLE")
+  (return-object v0)
+)
+
+(method (attrs public final ) verify([object java/lang/String] [array [object java/lang/String]] [array [object java/lang/String]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/net/ssl/SSLException])
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/apache/ogt/http/conn/ssl/BrowserCompatHostnameVerifier])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([array [object java/lang/String]])
+  ; parameter[2] : v4 ([array [object java/lang/String]])
+  (line 54)
+  (const/4 v0 0)
+  (invoke-virtual {v1 v2 v3 v4 v0} org/apache/ogt/http/conn/ssl/BrowserCompatHostnameVerifier/verify [object java/lang/String] [array [object java/lang/String]] [array [object java/lang/String]] boolean )
+  (line 55)
+  (return-void )
+)
+
+)

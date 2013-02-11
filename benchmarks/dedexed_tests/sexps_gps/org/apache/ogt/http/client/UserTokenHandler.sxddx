@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/UserTokenHandler
+ (super java/lang/Object)
+ (source "UserTokenHandler.java")
+
+
+(method (attrs public abstract ) getUserToken([object org/apache/ogt/http/protocol/HttpContext] )[object java/lang/Object]
+)
+
+)

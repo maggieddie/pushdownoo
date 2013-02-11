@@ -1,0 +1,56 @@
+(class (attrs public ) org/andengine/engine/options/SoundOptions
+ (super java/lang/Object)
+ (source "SoundOptions.java")
+
+ (field (attrs private ) mMaxSimultaneousStreams int )
+ (field (attrs private ) mNeedsSound boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/SoundOptions])
+  (line 11)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 21)
+  (const/4 v0 5)
+  (iput v0 v1 org/andengine/engine/options/SoundOptions.mMaxSimultaneousStreams int)
+  (line 11)
+  (return-void )
+ )
+
+(method (attrs public ) getMaxSimultaneousStreams()int
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/SoundOptions])
+  (line 41)
+  (iget v0 v1 org/andengine/engine/options/SoundOptions.mMaxSimultaneousStreams int)
+  (return v0)
+)
+
+(method (attrs public ) needsSound()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/SoundOptions])
+  (line 32)
+  (iget-boolean v0 v1 org/andengine/engine/options/SoundOptions.mNeedsSound boolean)
+  (return v0)
+)
+
+(method (attrs public ) setMaxSimultaneousStreams(int )[object org/andengine/engine/options/SoundOptions]
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/options/SoundOptions])
+  ; parameter[0] : v1 (int)
+  (line 45)
+  (iput v1 v0 org/andengine/engine/options/SoundOptions.mMaxSimultaneousStreams int)
+  (line 46)
+  (return-object v0)
+)
+
+(method (attrs public ) setNeedsSound(boolean )[object org/andengine/engine/options/SoundOptions]
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/options/SoundOptions])
+  ; parameter[0] : v1 (boolean)
+  (line 36)
+  (iput-boolean v1 v0 org/andengine/engine/options/SoundOptions.mNeedsSound boolean)
+  (line 37)
+  (return-object v0)
+)
+
+)

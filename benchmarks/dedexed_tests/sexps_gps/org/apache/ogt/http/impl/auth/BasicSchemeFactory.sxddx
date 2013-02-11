@@ -1,0 +1,25 @@
+(class (attrs public ) org/apache/ogt/http/impl/auth/BasicSchemeFactory
+ (super java/lang/Object)
+ (source "BasicSchemeFactory.java")
+ (implements org/apache/ogt/http/auth/AuthSchemeFactory)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/auth/BasicSchemeFactory])
+  (line 43)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) newInstance([object org/apache/ogt/http/params/HttpParams] )[object org/apache/ogt/http/auth/AuthScheme]
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/impl/auth/BasicSchemeFactory])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/params/HttpParams])
+  (line 46)
+  (new-instance v0 org/apache/ogt/http/impl/auth/BasicScheme)
+  (invoke-direct {v0} org/apache/ogt/http/impl/auth/BasicScheme/<init> )
+  (return-object v0)
+)
+
+)

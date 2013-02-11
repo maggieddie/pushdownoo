@@ -1,0 +1,19 @@
+(class (attrs public final ) org/apac/android/butane/R$drawable
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ackd int 2130837504); 0x7f020000 )
+ (field (attrs public static final ) app_icon int 2130837505); 0x7f020001 )
+ (field (attrs public static final ) bar_icon int 2130837506); 0x7f020002 )
+ (field (attrs public static final ) nackd int 2130837507); 0x7f020003 )
+ (field (attrs public static final ) no_response int 2130837508); 0x7f020004 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apac/android/butane/R$drawable])
+  (line 26)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/conn/ConnectTimeoutException
+ (super java/io/InterruptedIOException)
+ (source "ConnectTimeoutException.java")
+
+ (field (attrs private static final ) serialVersionUID long -13124245); 0xff37bd6b )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/conn/ConnectTimeoutException])
+  (line 50)
+  (invoke-direct {v0} java/io/InterruptedIOException/<init> )
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/conn/ConnectTimeoutException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 59)
+  (invoke-direct {v0 v1} java/io/InterruptedIOException/<init> [object java/lang/String] )
+  (line 60)
+  (return-void )
+ )
+
+)

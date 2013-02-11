@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/widget/ActivityChooserModel$OnChooseActivityListener
+ (super java/lang/Object)
+ (source "ActivityChooserModel.java")
+
+
+(method (attrs public abstract ) onChooseActivity([object com/actionbarsherlock/widget/ActivityChooserModel] [object android/content/Intent] )boolean
+)
+
+)

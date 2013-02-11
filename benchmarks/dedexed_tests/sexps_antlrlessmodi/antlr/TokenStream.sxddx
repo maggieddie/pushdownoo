@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) antlr/TokenStream
+ (super java/lang/Object)
+ (source "TokenStream.java")
+
+
+(method (attrs public abstract ) nextToken()[object antlr/Token]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object antlr/TokenStreamException])
+  )
+)
+
+)

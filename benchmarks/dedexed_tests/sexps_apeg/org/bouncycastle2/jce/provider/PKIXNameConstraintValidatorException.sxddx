@@ -1,0 +1,16 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/PKIXNameConstraintValidatorException
+ (super java/lang/Exception)
+ (source "PKIXNameConstraintValidatorException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/PKIXNameConstraintValidatorException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 8)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 9)
+  (return-void )
+ )
+
+)

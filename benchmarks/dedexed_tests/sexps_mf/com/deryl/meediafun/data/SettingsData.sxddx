@@ -1,0 +1,53 @@
+(class (attrs public ) com/deryl/meediafun/data/SettingsData
+ (super java/lang/Object)
+ (source "SettingsData.java")
+
+ (field (attrs private static ) instance [object com/deryl/meediafun/data/SettingsData] )
+ (field (attrs private ) netEnabled [object java/lang/Boolean] )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/deryl/meediafun/data/SettingsData])
+  (line 9)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 10)
+  (sget-object v0 java/lang/Boolean.FALSE [object java/lang/Boolean])
+  (invoke-virtual {v1 v0} com/deryl/meediafun/data/SettingsData/setNetEnabled [object java/lang/Boolean] )
+  (line 11)
+  (return-void )
+ )
+
+(method (attrs public static ) getInstance()[object com/deryl/meediafun/data/SettingsData]
+  (limit registers 1)
+  (line 14)
+  (sget-object v0 com/deryl/meediafun/data/SettingsData.instance [object com/deryl/meediafun/data/SettingsData])
+  (if-nez v0 l3f082)
+  (line 15)
+  (new-instance v0 com/deryl/meediafun/data/SettingsData)
+  (invoke-direct {v0} com/deryl/meediafun/data/SettingsData/<init> )
+  (sput-object v0 com/deryl/meediafun/data/SettingsData.instance [object com/deryl/meediafun/data/SettingsData])
+  (label l3f082)
+  (line 17)
+  (sget-object v0 com/deryl/meediafun/data/SettingsData.instance [object com/deryl/meediafun/data/SettingsData])
+  (return-object v0)
+ )
+
+(method (attrs public ) getNetEnabled()[object java/lang/Boolean]
+  (limit registers 2)
+  ; this: v1 ([object com/deryl/meediafun/data/SettingsData])
+  (line 21)
+  (iget-object v0 v1 com/deryl/meediafun/data/SettingsData.netEnabled [object java/lang/Boolean])
+  (return-object v0)
+)
+
+(method (attrs public ) setNetEnabled([object java/lang/Boolean] )void
+  (limit registers 2)
+  ; this: v0 ([object com/deryl/meediafun/data/SettingsData])
+  ; parameter[0] : v1 ([object java/lang/Boolean])
+  (line 25)
+  (iput-object v1 v0 com/deryl/meediafun/data/SettingsData.netEnabled [object java/lang/Boolean])
+  (line 26)
+  (return-void )
+)
+
+)

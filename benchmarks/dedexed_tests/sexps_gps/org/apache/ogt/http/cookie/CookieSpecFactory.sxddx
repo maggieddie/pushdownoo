@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/CookieSpecFactory
+ (super java/lang/Object)
+ (source "CookieSpecFactory.java")
+
+
+(method (attrs public abstract ) newInstance([object org/apache/ogt/http/params/HttpParams] )[object org/apache/ogt/http/cookie/CookieSpec]
+)
+
+)

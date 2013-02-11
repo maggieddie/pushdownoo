@@ -1,0 +1,67 @@
+(class (attrs ) org/python/modules/sets/PyImmutableSet$1exposed___repr__
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyImmutableSet.java")
+
+ (field (attrs private ) self [object org/python/modules/sets/PyImmutableSet] )
+
+(method (attrs ) <init>([object org/python/modules/sets/PyImmutableSet] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/modules/sets/PyImmutableSet$1exposed___repr__])
+  ; parameter[0] : v1 ([object org/python/modules/sets/PyImmutableSet])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 710)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 711)
+  (iput-object v1 v0 org/python/modules/sets/PyImmutableSet$1exposed___repr__.self [object org/python/modules/sets/PyImmutableSet])
+  (line 712)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v2 ([object org/python/modules/sets/PyImmutableSet$1exposed___repr__])
+  (line 719)
+  (new-instance v0 org/python/core/PyString)
+  (iget-object v1 v2 org/python/modules/sets/PyImmutableSet$1exposed___repr__.self [object org/python/modules/sets/PyImmutableSet])
+  (invoke-virtual {v1} org/python/modules/sets/PyImmutableSet/baseset_toString )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} org/python/core/PyString/<init> [object java/lang/String] )
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/modules/sets/PyImmutableSet$1exposed___repr__])
+  (line 706)
+  (iget-object v0 v1 org/python/modules/sets/PyImmutableSet$1exposed___repr__.self [object org/python/modules/sets/PyImmutableSet])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v3 ([object org/python/modules/sets/PyImmutableSet$1exposed___repr__])
+  ; parameter[0] : v4 ([object org/python/core/PyObject])
+  (line 723)
+  (move-object v0 v4)
+  (check-cast v0 [object org/python/modules/sets/PyImmutableSet])
+  (line 724)
+  (new-instance v1 org/python/core/PyString)
+  (invoke-virtual {v0} org/python/modules/sets/PyImmutableSet/baseset_toString )
+  (move-result-object v2)
+  (invoke-direct {v1 v2} org/python/core/PyString/<init> [object java/lang/String] )
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/modules/sets/PyImmutableSet$1exposed___repr__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 715)
+  (new-instance v0 org/python/modules/sets/PyImmutableSet$1exposed___repr__)
+  (check-cast v3 [object org/python/modules/sets/PyImmutableSet])
+  (iget-object v1 v2 org/python/modules/sets/PyImmutableSet$1exposed___repr__.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/modules/sets/PyImmutableSet$1exposed___repr__/<init> [object org/python/modules/sets/PyImmutableSet] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

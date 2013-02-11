@@ -1,0 +1,38 @@
+(class (attrs ) org/apache/lucene/search/MultiSearcher$1
+ (super org/apache/lucene/search/HitCollector)
+ (source "MultiSearcher.java")
+
+ (field (attrs final ) this$0 [object org/apache/lucene/search/MultiSearcher] )
+ (field (attrs private final ) val$results [object org/apache/lucene/search/HitCollector] )
+ (field (attrs private final ) val$start int )
+
+(method (attrs ) <init>([object org/apache/lucene/search/MultiSearcher] [object org/apache/lucene/search/HitCollector] int )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/lucene/search/MultiSearcher$1])
+  ; parameter[0] : v1 ([object org/apache/lucene/search/MultiSearcher])
+  ; parameter[1] : v2 ([object org/apache/lucene/search/HitCollector])
+  ; parameter[2] : v3 (int)
+  (line 1)
+  (iput-object v1 v0 org/apache/lucene/search/MultiSearcher$1.this$0 [object org/apache/lucene/search/MultiSearcher])
+  (iput-object v2 v0 org/apache/lucene/search/MultiSearcher$1.val$results [object org/apache/lucene/search/HitCollector])
+  (iput v3 v0 org/apache/lucene/search/MultiSearcher$1.val$start int)
+  (line 254)
+  (invoke-direct {v0} org/apache/lucene/search/HitCollector/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) collect(int float )void
+  (limit registers 5)
+  ; this: v2 ([object org/apache/lucene/search/MultiSearcher$1])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (float)
+  (line 256)
+  (iget-object v0 v2 org/apache/lucene/search/MultiSearcher$1.val$results [object org/apache/lucene/search/HitCollector])
+  (iget v1 v2 org/apache/lucene/search/MultiSearcher$1.val$start int)
+  (add-int/2addr v1 v3)
+  (invoke-virtual {v0 v1 v4} org/apache/lucene/search/HitCollector/collect int float )
+  (line 257)
+  (return-void )
+)
+
+)

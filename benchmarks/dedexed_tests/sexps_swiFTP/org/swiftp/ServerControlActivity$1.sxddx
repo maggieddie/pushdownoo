@@ -1,0 +1,52 @@
+(class (attrs ) org/swiftp/ServerControlActivity$1
+ (super android/os/Handler)
+ (source "ServerControlActivity.java")
+
+ (field (attrs final ) this$0 [object org/swiftp/ServerControlActivity] )
+
+(method (attrs ) <init>([object org/swiftp/ServerControlActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/swiftp/ServerControlActivity$1])
+  ; parameter[0] : v1 ([object org/swiftp/ServerControlActivity])
+  (line 1)
+  (iput-object v1 v0 org/swiftp/ServerControlActivity$1.this$0 [object org/swiftp/ServerControlActivity])
+  (line 83)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object org/swiftp/ServerControlActivity$1])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 85)
+  (iget v0 v2 android/os/Message.what int)
+  (packed-switch v0 0
+    psb15c_b164 ; case 0
+    psb15c_b178 ; case 1
+    psb15c_default) ; default
+  (label lb162)
+  (label psb15c_default)
+  (line 94)
+  (return-void )
+  (label psb15c_b164)
+  (line 88)
+  (const/4 v0 0)
+  (invoke-virtual {v1 v0} org/swiftp/ServerControlActivity$1/removeMessages int )
+  (line 89)
+  (iget-object v0 v1 org/swiftp/ServerControlActivity$1.this$0 [object org/swiftp/ServerControlActivity])
+  (invoke-virtual {v0} org/swiftp/ServerControlActivity/updateUi )
+  (goto lb162)
+  (label psb15c_b178)
+  (line 92)
+  (const/4 v0 1)
+  (invoke-virtual {v1 v0} org/swiftp/ServerControlActivity$1/removeMessages int )
+  (goto lb162)
+  (line 85)
+  (label lb182)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

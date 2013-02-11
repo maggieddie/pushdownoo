@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/util/algorithm/path/ICostFunction
+ (super java/lang/Object)
+ (source "ICostFunction.java")
+
+
+(method (attrs public abstract ) getCost([object org/andengine/util/algorithm/path/IPathFinderMap] int int int int [object java/lang/Object] )float
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/algorithm/path/IPathFinderMap"  "<TT;>;IIIITT;)F")
+  )
+)
+
+)

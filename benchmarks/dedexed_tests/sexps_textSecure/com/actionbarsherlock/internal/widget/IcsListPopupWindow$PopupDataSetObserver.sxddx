@@ -1,0 +1,53 @@
+(class (attrs ) com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver
+ (super android/database/DataSetObserver)
+ (source "IcsListPopupWindow.java")
+
+ (field (attrs final ) this$0 [object com/actionbarsherlock/internal/widget/IcsListPopupWindow] )
+
+(method (attrs private ) <init>([object com/actionbarsherlock/internal/widget/IcsListPopupWindow] )void
+  (limit registers 2)
+  ; this: v0 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver])
+  ; parameter[0] : v1 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  (line 582)
+  (iput-object v1 v0 com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver.this$0 [object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  (invoke-direct {v0} android/database/DataSetObserver/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/actionbarsherlock/internal/widget/IcsListPopupWindow] [object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver] )void
+  (limit registers 3)
+  ; this: v0 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver])
+  ; parameter[0] : v1 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  ; parameter[1] : v2 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver])
+  (line 582)
+  (invoke-direct {v0 v1} com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver/<init> [object com/actionbarsherlock/internal/widget/IcsListPopupWindow] )
+  (return-void )
+ )
+
+(method (attrs public ) onChanged()void
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver])
+  (line 585)
+  (iget-object v0 v1 com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver.this$0 [object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  (invoke-virtual {v0} com/actionbarsherlock/internal/widget/IcsListPopupWindow/isShowing )
+  (move-result v0)
+  (if-eqz v0 l771a2)
+  (line 587)
+  (iget-object v0 v1 com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver.this$0 [object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  (invoke-virtual {v0} com/actionbarsherlock/internal/widget/IcsListPopupWindow/show )
+  (label l771a2)
+  (line 589)
+  (return-void )
+)
+
+(method (attrs public ) onInvalidated()void
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver])
+  (line 593)
+  (iget-object v0 v1 com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver.this$0 [object com/actionbarsherlock/internal/widget/IcsListPopupWindow])
+  (invoke-virtual {v0} com/actionbarsherlock/internal/widget/IcsListPopupWindow/dismiss )
+  (line 594)
+  (return-void )
+)
+
+)

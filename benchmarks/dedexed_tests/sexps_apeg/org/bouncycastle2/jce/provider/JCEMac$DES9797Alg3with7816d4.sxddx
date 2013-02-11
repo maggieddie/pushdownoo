@@ -1,0 +1,21 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$DES9797Alg3with7816d4
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle2/jce/provider/JCEMac$DES9797Alg3with7816d4])
+  (line 326)
+  (new-instance v0 org/bouncycastle2/crypto/macs/ISO9797Alg3Mac)
+  (new-instance v1 org/bouncycastle2/crypto/engines/DESEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/DESEngine/<init> )
+  (new-instance v2 org/bouncycastle2/crypto/paddings/ISO7816d4Padding)
+  (invoke-direct {v2} org/bouncycastle2/crypto/paddings/ISO7816d4Padding/<init> )
+  (invoke-direct {v0 v1 v2} org/bouncycastle2/crypto/macs/ISO9797Alg3Mac/<init> [object org/bouncycastle2/crypto/BlockCipher] [object org/bouncycastle2/crypto/paddings/BlockCipherPadding] )
+  (invoke-direct {v3 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 327)
+  (return-void )
+ )
+
+)

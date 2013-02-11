@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/view/menu/MenuBuilder$Callback
+ (super java/lang/Object)
+ (source "MenuBuilder.java")
+
+
+(method (attrs public abstract ) onMenuItemSelected([object com/actionbarsherlock/internal/view/menu/MenuBuilder] [object com/actionbarsherlock/view/MenuItem] )boolean
+)
+
+(method (attrs public abstract ) onMenuModeChange([object com/actionbarsherlock/internal/view/menu/MenuBuilder] )void
+)
+
+)

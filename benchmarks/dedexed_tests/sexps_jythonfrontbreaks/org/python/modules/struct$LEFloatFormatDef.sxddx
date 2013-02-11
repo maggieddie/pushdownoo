@@ -1,0 +1,46 @@
+(class (attrs ) org/python/modules/struct$LEFloatFormatDef
+ (super org/python/modules/struct$FormatDef)
+ (source "struct.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/modules/struct$LEFloatFormatDef])
+  (line 745)
+  (invoke-direct {v0} org/python/modules/struct$FormatDef/<init> )
+  (return-void )
+ )
+
+(method (attrs ) pack([object org/python/modules/struct$ByteStream] [object org/python/core/PyObject] )void
+  (limit registers 6)
+  ; this: v3 ([object org/python/modules/struct$LEFloatFormatDef])
+  ; parameter[0] : v4 ([object org/python/modules/struct$ByteStream])
+  ; parameter[1] : v5 ([object org/python/core/PyObject])
+  (line 747)
+  (invoke-virtual {v3 v5} org/python/modules/struct$LEFloatFormatDef/get_float [object org/python/core/PyObject] )
+  (move-result-wide v1)
+  (double-to-float v1 v1)
+  (invoke-static {v1} java/lang/Float/floatToIntBits float )
+  (move-result v0)
+  (line 748)
+  (invoke-virtual {v3 v4 v0} org/python/modules/struct$LEFloatFormatDef/LEwriteInt [object org/python/modules/struct$ByteStream] int )
+  (line 749)
+  (return-void )
+)
+
+(method (attrs ) unpack([object org/python/modules/struct$ByteStream] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v2 ([object org/python/modules/struct$LEFloatFormatDef])
+  ; parameter[0] : v3 ([object org/python/modules/struct$ByteStream])
+  (line 752)
+  (invoke-virtual {v2 v3} org/python/modules/struct$LEFloatFormatDef/LEreadInt [object org/python/modules/struct$ByteStream] )
+  (move-result v0)
+  (line 753)
+  (invoke-static {v0} java/lang/Float/intBitsToFloat int )
+  (move-result v1)
+  (invoke-static {v1} org/python/core/Py/newFloat float )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+)

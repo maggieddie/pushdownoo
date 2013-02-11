@@ -1,0 +1,31 @@
+(class (attrs public abstract ) org/andengine/opengl/texture/region/BaseTextureRegion
+ (super java/lang/Object)
+ (source "BaseTextureRegion.java")
+ (implements org/andengine/opengl/texture/region/ITextureRegion)
+
+ (field (attrs protected final ) mTexture [object org/andengine/opengl/texture/ITexture] )
+
+(method (attrs public ) <init>([object org/andengine/opengl/texture/ITexture] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/texture/region/BaseTextureRegion])
+  ; parameter[0] : v1 ([object org/andengine/opengl/texture/ITexture])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 28)
+  (iput-object v1 v0 org/andengine/opengl/texture/region/BaseTextureRegion.mTexture [object org/andengine/opengl/texture/ITexture])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public abstract ) deepCopy()[object org/andengine/opengl/texture/region/ITextureRegion]
+)
+
+(method (attrs public ) getTexture()[object org/andengine/opengl/texture/ITexture]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/texture/region/BaseTextureRegion])
+  (line 44)
+  (iget-object v0 v1 org/andengine/opengl/texture/region/BaseTextureRegion.mTexture [object org/andengine/opengl/texture/ITexture])
+  (return-object v0)
+)
+
+)

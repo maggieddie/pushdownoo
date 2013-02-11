@@ -1,0 +1,45 @@
+(interface (attrs public abstract ) org/apache/ogt/http/io/SessionOutputBuffer
+ (super java/lang/Object)
+ (source "SessionOutputBuffer.java")
+
+
+(method (attrs public abstract ) flush()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getMetrics()[object org/apache/ogt/http/io/HttpTransportMetrics]
+)
+
+(method (attrs public abstract ) write(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) write([array byte] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) write([array byte] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) writeLine([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) writeLine([object org/apache/ogt/http/util/CharArrayBuffer] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

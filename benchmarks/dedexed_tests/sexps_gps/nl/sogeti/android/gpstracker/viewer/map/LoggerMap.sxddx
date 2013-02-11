@@ -1,0 +1,114 @@
+(interface (attrs public abstract ) nl/sogeti/android/gpstracker/viewer/map/LoggerMap
+ (super java/lang/Object)
+ (source "LoggerMap.java")
+
+
+(method (attrs public abstract ) addOverlay([object nl/sogeti/android/gpstracker/viewer/map/overlay/OverlayProvider] )void
+)
+
+(method (attrs public abstract ) animateTo([object com/google/android/maps/GeoPoint] )void
+)
+
+(method (attrs public abstract ) clearAnimation()void
+)
+
+(method (attrs public abstract ) clearOverlays()void
+)
+
+(method (attrs public abstract ) disableCompass()void
+)
+
+(method (attrs public abstract ) disableMyLocation()void
+)
+
+(method (attrs public abstract ) enableCompass()void
+)
+
+(method (attrs public abstract ) enableMyLocation()void
+)
+
+(method (attrs public abstract ) executePostponedActions()void
+)
+
+(method (attrs public abstract ) fromPixels(int int )[object com/google/android/maps/GeoPoint]
+)
+
+(method (attrs public abstract ) getActivity()[object android/app/Activity]
+)
+
+(method (attrs public abstract ) getAltitideTextView()[object android/widget/TextView]
+)
+
+(method (attrs public abstract ) getDataSourceId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getDistanceTextView()[object android/widget/TextView]
+)
+
+(method (attrs public abstract ) getDrawingCache()[object android/graphics/Bitmap]
+)
+
+(method (attrs public abstract ) getMapCenter()[object com/google/android/maps/GeoPoint]
+)
+
+(method (attrs public abstract ) getMaxZoomLevel()int
+)
+
+(method (attrs public abstract ) getScaleIndicatorView()[object nl/sogeti/android/gpstracker/util/SlidingIndicatorView]
+)
+
+(method (attrs public abstract ) getSpeedTextView()[object android/widget/TextView]
+)
+
+(method (attrs public abstract ) getSpeedTextViews()[array [object android/widget/TextView]]
+)
+
+(method (attrs public abstract ) getZoomLevel()int
+)
+
+(method (attrs public abstract ) hasProjection()boolean
+)
+
+(method (attrs public abstract ) isNearScreenEdge([object com/google/android/maps/GeoPoint] )boolean
+)
+
+(method (attrs public abstract ) isOutsideScreen([object com/google/android/maps/GeoPoint] )boolean
+)
+
+(method (attrs public abstract ) metersToEquatorPixels(float )float
+)
+
+(method (attrs public abstract ) onLayerCheckedChanged(int boolean )void
+)
+
+(method (attrs public abstract ) onSharedPreferenceChanged([object android/content/SharedPreferences] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) postInvalidate()void
+)
+
+(method (attrs public abstract ) setCenter([object com/google/android/maps/GeoPoint] )void
+)
+
+(method (attrs public abstract ) setDrawingCacheEnabled(boolean )void
+)
+
+(method (attrs public abstract ) setZoom(int )void
+)
+
+(method (attrs public abstract ) showMediaDialog([object android/widget/BaseAdapter] )void
+)
+
+(method (attrs public abstract ) toPixels([object com/google/android/maps/GeoPoint] [object android/graphics/Point] )void
+)
+
+(method (attrs public abstract ) updateOverlays()void
+)
+
+(method (attrs public abstract ) zoomIn()boolean
+)
+
+(method (attrs public abstract ) zoomOut()boolean
+)
+
+)

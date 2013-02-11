@@ -1,0 +1,39 @@
+(class (attrs ) org/python/modules/struct$BEIntFormatDef
+ (super org/python/modules/struct$FormatDef)
+ (source "struct.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/modules/struct$BEIntFormatDef])
+  (line 638)
+  (invoke-direct {v0} org/python/modules/struct$FormatDef/<init> )
+  (return-void )
+ )
+
+(method (attrs ) pack([object org/python/modules/struct$ByteStream] [object org/python/core/PyObject] )void
+  (limit registers 4)
+  ; this: v1 ([object org/python/modules/struct$BEIntFormatDef])
+  ; parameter[0] : v2 ([object org/python/modules/struct$ByteStream])
+  ; parameter[1] : v3 ([object org/python/core/PyObject])
+  (line 640)
+  (invoke-virtual {v1 v3} org/python/modules/struct$BEIntFormatDef/get_int [object org/python/core/PyObject] )
+  (move-result v0)
+  (invoke-virtual {v1 v2 v0} org/python/modules/struct$BEIntFormatDef/BEwriteInt [object org/python/modules/struct$ByteStream] int )
+  (line 641)
+  (return-void )
+)
+
+(method (attrs ) unpack([object org/python/modules/struct$ByteStream] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object org/python/modules/struct$BEIntFormatDef])
+  ; parameter[0] : v2 ([object org/python/modules/struct$ByteStream])
+  (line 644)
+  (invoke-virtual {v1 v2} org/python/modules/struct$BEIntFormatDef/BEreadInt [object org/python/modules/struct$ByteStream] )
+  (move-result v0)
+  (invoke-static {v0} org/python/core/Py/newInteger int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

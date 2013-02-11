@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) org/python/compiler/ScopeConstants
+ (super java/lang/Object)
+ (source "ScopeConstants.java")
+
+ (field (attrs public static final ) BOUND int 1); 0x1 )
+ (field (attrs public static final ) CELL int 16); 0x10 )
+ (field (attrs public static final ) CLASSSCOPE int 2); 0x2 )
+ (field (attrs public static final ) CLASS_GLOBAL int 64); 0x40 )
+ (field (attrs public static final ) FREE int 32); 0x20 )
+ (field (attrs public static final ) FROM_PARAM int 8); 0x8 )
+ (field (attrs public static final ) FUNCSCOPE int 1); 0x1 )
+ (field (attrs public static final ) GLOBAL int 66); 0x42 )
+ (field (attrs public static final ) NGLOBAL int 2); 0x2 )
+ (field (attrs public static final ) PARAM int 4); 0x4 )
+ (field (attrs public static final ) TOPSCOPE int )
+
+)

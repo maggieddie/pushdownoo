@@ -1,0 +1,48 @@
+(interface (attrs public abstract ) org/python/parser/CharStream
+ (super java/lang/Object)
+ (source "CharStream.java")
+
+
+(method (attrs public abstract ) BeginToken()char
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) Done()void
+)
+
+(method (attrs public abstract ) GetImage()[object java/lang/String]
+)
+
+(method (attrs public abstract ) GetSuffix(int )[array char]
+)
+
+(method (attrs public abstract ) backup(int )void
+)
+
+(method (attrs public abstract ) getBeginColumn()int
+)
+
+(method (attrs public abstract ) getBeginLine()int
+)
+
+(method (attrs public abstract ) getColumn()int
+)
+
+(method (attrs public abstract ) getEndColumn()int
+)
+
+(method (attrs public abstract ) getEndLine()int
+)
+
+(method (attrs public abstract ) getLine()int
+)
+
+(method (attrs public abstract ) readChar()char
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

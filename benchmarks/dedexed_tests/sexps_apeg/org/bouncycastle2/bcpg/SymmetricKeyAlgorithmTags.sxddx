@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) org/bouncycastle2/bcpg/SymmetricKeyAlgorithmTags
+ (super java/lang/Object)
+ (source "SymmetricKeyAlgorithmTags.java")
+
+ (field (attrs public static final ) AES_128 int 7); 0x7 )
+ (field (attrs public static final ) AES_192 int 8); 0x8 )
+ (field (attrs public static final ) AES_256 int 9); 0x9 )
+ (field (attrs public static final ) BLOWFISH int 4); 0x4 )
+ (field (attrs public static final ) CAST5 int 3); 0x3 )
+ (field (attrs public static final ) DES int 6); 0x6 )
+ (field (attrs public static final ) IDEA int 1); 0x1 )
+ (field (attrs public static final ) NULL int 0); 0x0 )
+ (field (attrs public static final ) SAFER int 5); 0x5 )
+ (field (attrs public static final ) TRIPLE_DES int 2); 0x2 )
+ (field (attrs public static final ) TWOFISH int 10); 0xa )
+
+)

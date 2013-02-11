@@ -1,0 +1,82 @@
+(class (attrs public ) org/apache/ogt/http/params/HttpConnectionParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "HttpConnectionParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 40)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) setConnectionTimeout(int )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (int)
+  (line 60)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setConnectionTimeout [object org/apache/ogt/http/params/HttpParams] int )
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) setLinger(int )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (int)
+  (line 56)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setLinger [object org/apache/ogt/http/params/HttpParams] int )
+  (line 57)
+  (return-void )
+)
+
+(method (attrs public ) setSoTimeout(int )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (int)
+  (line 44)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setSoTimeout [object org/apache/ogt/http/params/HttpParams] int )
+  (line 45)
+  (return-void )
+)
+
+(method (attrs public ) setSocketBufferSize(int )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (int)
+  (line 52)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setSocketBufferSize [object org/apache/ogt/http/params/HttpParams] int )
+  (line 53)
+  (return-void )
+)
+
+(method (attrs public ) setStaleCheckingEnabled(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (boolean)
+  (line 64)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setStaleCheckingEnabled [object org/apache/ogt/http/params/HttpParams] boolean )
+  (line 65)
+  (return-void )
+)
+
+(method (attrs public ) setTcpNoDelay(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpConnectionParamBean])
+  ; parameter[0] : v2 (boolean)
+  (line 48)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpConnectionParams/setTcpNoDelay [object org/apache/ogt/http/params/HttpParams] boolean )
+  (line 49)
+  (return-void )
+)
+
+)

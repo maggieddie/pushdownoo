@@ -1,0 +1,50 @@
+(class (attrs ) org/thoughtcrime/securesms/util/Base64$1
+ (super java/io/ObjectInputStream)
+ (source "Base64.java")
+
+ (field (attrs private final ) val$loader [object java/lang/ClassLoader] )
+
+(method (attrs ) <init>([object java/io/InputStream] [object java/lang/ClassLoader] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/StreamCorruptedException]  [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/securesms/util/Base64$1])
+  ; parameter[0] : v1 ([object java/io/InputStream])
+  ; parameter[1] : v2 ([object java/lang/ClassLoader])
+  (line 1)
+  (iput-object v2 v0 org/thoughtcrime/securesms/util/Base64$1.val$loader [object java/lang/ClassLoader])
+  (line 1391)
+  (invoke-direct {v0 v1} java/io/ObjectInputStream/<init> [object java/io/InputStream] )
+  (return-void )
+ )
+
+(method (attrs public ) resolveClass([object java/io/ObjectStreamClass] )[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/io/ObjectStreamClass;"  ")"  "Ljava/lang/Class"  "<*>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/lang/ClassNotFoundException])
+  )
+  (limit registers 6)
+  ; this: v4 ([object org/thoughtcrime/securesms/util/Base64$1])
+  ; parameter[0] : v5 ([object java/io/ObjectStreamClass])
+  (line 1395)
+  (invoke-virtual {v5} java/io/ObjectStreamClass/getName )
+  (move-result-object v1)
+  (const/4 v2 0)
+  (iget-object v3 v4 org/thoughtcrime/securesms/util/Base64$1.val$loader [object java/lang/ClassLoader])
+  (invoke-static {v1 v2 v3} java/lang/Class/forName [object java/lang/String] boolean [object java/lang/ClassLoader] )
+  (move-result-object v0)
+  (label lad31a)
+  (line 1396)
+  (if-nez v0 lad326)
+  (line 1397)
+  (invoke-super {v4 v5} java/io/ObjectInputStream/resolveClass [object java/io/ObjectStreamClass] )
+  (move-result-object v0)
+  (label lad326)
+  (line 1399)
+  (return-object v0)
+)
+
+)

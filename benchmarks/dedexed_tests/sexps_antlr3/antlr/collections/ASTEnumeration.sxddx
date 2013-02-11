@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) antlr/collections/ASTEnumeration
+ (super java/lang/Object)
+ (source "ASTEnumeration.java")
+
+
+(method (attrs public abstract ) hasMoreNodes()boolean
+)
+
+(method (attrs public abstract ) nextNode()[object antlr/collections/AST]
+)
+
+)

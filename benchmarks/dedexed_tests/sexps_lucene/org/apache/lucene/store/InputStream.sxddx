@@ -1,0 +1,23 @@
+(class (attrs public abstract ) org/apache/lucene/store/InputStream
+ (super org/apache/lucene/store/BufferedIndexInput)
+ (source "InputStream.java")
+
+ (field (attrs protected ) length long )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/lucene/store/InputStream])
+  (line 20)
+  (invoke-direct {v0} org/apache/lucene/store/BufferedIndexInput/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) length()long
+  (limit registers 3)
+  ; this: v2 ([object org/apache/lucene/store/InputStream])
+  (line 25)
+  (iget-wide v0 v2 org/apache/lucene/store/InputStream.length long)
+  (return-wide v0)
+)
+
+)

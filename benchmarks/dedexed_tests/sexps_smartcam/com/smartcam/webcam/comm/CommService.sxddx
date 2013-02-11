@@ -1,0 +1,58 @@
+(class (attrs public ) com/smartcam/webcam/comm/CommService
+ (super android/app/Service)
+ (source "CommService.java")
+
+ (field (attrs private ) mBinder [object com/smartcam/webcam/comm/ICommService$Stub] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/smartcam/webcam/comm/CommService])
+  (line 8)
+  (invoke-direct {v1} android/app/Service/<init> )
+  (line 11)
+  (new-instance v0 com/smartcam/webcam/comm/CommService$1)
+  (invoke-direct {v0 v1} com/smartcam/webcam/comm/CommService$1/<init> [object com/smartcam/webcam/comm/CommService] )
+  (iput-object v0 v1 com/smartcam/webcam/comm/CommService.mBinder [object com/smartcam/webcam/comm/ICommService$Stub])
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) onBind([object android/content/Intent] )[object android/os/IBinder]
+  (limit registers 3)
+  ; this: v1 ([object com/smartcam/webcam/comm/CommService])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 47)
+  (iget-object v0 v1 com/smartcam/webcam/comm/CommService.mBinder [object com/smartcam/webcam/comm/ICommService$Stub])
+  (return-object v0)
+)
+
+(method (attrs public ) onCreate()void
+  (limit registers 1)
+  ; this: v0 ([object com/smartcam/webcam/comm/CommService])
+  (line 41)
+  (invoke-super {v0} android/app/Service/onCreate )
+  (line 42)
+  (return-void )
+)
+
+(method (attrs public ) onDestroy()void
+  (limit registers 1)
+  ; this: v0 ([object com/smartcam/webcam/comm/CommService])
+  (line 29)
+  (invoke-super {v0} android/app/Service/onDestroy )
+  (line 30)
+  (return-void )
+)
+
+(method (attrs public ) onStart([object android/content/Intent] int )void
+  (limit registers 3)
+  ; this: v0 ([object com/smartcam/webcam/comm/CommService])
+  ; parameter[0] : v1 ([object android/content/Intent])
+  ; parameter[1] : v2 (int)
+  (line 35)
+  (invoke-super {v0 v1 v2} android/app/Service/onStart [object android/content/Intent] int )
+  (line 36)
+  (return-void )
+)
+
+)

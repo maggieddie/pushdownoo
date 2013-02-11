@@ -1,0 +1,7 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/params/ConnConnectionPNames
+ (super java/lang/Object)
+ (source "ConnConnectionPNames.java")
+
+ (field (attrs public static final ) MAX_STATUS_LINE_GARBAGE [object java/lang/String] "http.connection.max-status-line-garbage" )
+
+)

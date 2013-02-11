@@ -1,0 +1,35 @@
+(class (attrs ) com/actionbarsherlock/internal/app/ActionBarImpl$2
+ (super com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter)
+ (source "ActionBarImpl.java")
+
+ (field (attrs final ) this$0 [object com/actionbarsherlock/internal/app/ActionBarImpl] )
+
+(method (attrs ) <init>([object com/actionbarsherlock/internal/app/ActionBarImpl] )void
+  (limit registers 2)
+  ; this: v0 ([object com/actionbarsherlock/internal/app/ActionBarImpl$2])
+  ; parameter[0] : v1 ([object com/actionbarsherlock/internal/app/ActionBarImpl])
+  (line 1)
+  (iput-object v1 v0 com/actionbarsherlock/internal/app/ActionBarImpl$2.this$0 [object com/actionbarsherlock/internal/app/ActionBarImpl])
+  (line 127)
+  (invoke-direct {v0} com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onAnimationEnd([object com/actionbarsherlock/internal/nineoldandroids/animation/Animator] )void
+  (limit registers 4)
+  ; this: v2 ([object com/actionbarsherlock/internal/app/ActionBarImpl$2])
+  ; parameter[0] : v3 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Animator])
+  (line 130)
+  (iget-object v0 v2 com/actionbarsherlock/internal/app/ActionBarImpl$2.this$0 [object com/actionbarsherlock/internal/app/ActionBarImpl])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/actionbarsherlock/internal/app/ActionBarImpl/access$4 [object com/actionbarsherlock/internal/app/ActionBarImpl] [object com/actionbarsherlock/internal/nineoldandroids/animation/Animator] )
+  (line 131)
+  (iget-object v0 v2 com/actionbarsherlock/internal/app/ActionBarImpl$2.this$0 [object com/actionbarsherlock/internal/app/ActionBarImpl])
+  (invoke-static {v0} com/actionbarsherlock/internal/app/ActionBarImpl/access$1 [object com/actionbarsherlock/internal/app/ActionBarImpl] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/actionbarsherlock/internal/widget/ActionBarContainer/requestLayout )
+  (line 132)
+  (return-void )
+)
+
+)

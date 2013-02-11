@@ -1,0 +1,37 @@
+(class (attrs ) org/andengine/util/ActivityUtils$1$1
+ (super java/lang/Object)
+ (source "ActivityUtils.java")
+ (implements android/content/DialogInterface$OnCancelListener)
+
+ (field (attrs final ) this$1 [object org/andengine/util/ActivityUtils$1] )
+ (field (attrs private final ) val$pExceptionCallback [object org/andengine/util/call/Callback] )
+
+(method (attrs ) <init>([object org/andengine/util/ActivityUtils$1] [object org/andengine/util/call/Callback] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/util/ActivityUtils$1$1])
+  ; parameter[0] : v1 ([object org/andengine/util/ActivityUtils$1])
+  ; parameter[1] : v2 ([object org/andengine/util/call/Callback])
+  (line 1)
+  (iput-object v1 v0 org/andengine/util/ActivityUtils$1$1.this$1 [object org/andengine/util/ActivityUtils$1])
+  (iput-object v2 v0 org/andengine/util/ActivityUtils$1$1.val$pExceptionCallback [object org/andengine/util/call/Callback])
+  (line 111)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCancel([object android/content/DialogInterface] )void
+  (limit registers 4)
+  ; this: v2 ([object org/andengine/util/ActivityUtils$1$1])
+  ; parameter[0] : v3 ([object android/content/DialogInterface])
+  (line 114)
+  (iget-object v0 v2 org/andengine/util/ActivityUtils$1$1.val$pExceptionCallback [object org/andengine/util/call/Callback])
+  (new-instance v1 org/andengine/ui/activity/BaseActivity$CancelledException)
+  (invoke-direct {v1} org/andengine/ui/activity/BaseActivity$CancelledException/<init> )
+  (invoke-interface {v0 v1} org/andengine/util/call/Callback/onCallback [object java/lang/Object] )
+  (line 115)
+  (invoke-interface {v3} android/content/DialogInterface/dismiss )
+  (line 116)
+  (return-void )
+)
+
+)

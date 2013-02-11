@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/modules/IArchiveFile
+ (super java/lang/Object)
+ (source "IArchiveFile.java")
+
+
+(method (attrs public abstract ) getInputStream([object org/osmdroid/tileprovider/tilesource/ITileSource] [object org/osmdroid/tileprovider/MapTile] )[object java/io/InputStream]
+)
+
+)

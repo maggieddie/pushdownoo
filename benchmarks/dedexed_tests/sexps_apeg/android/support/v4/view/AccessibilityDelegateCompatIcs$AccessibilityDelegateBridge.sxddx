@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) android/support/v4/view/AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge
+ (super java/lang/Object)
+ (source "AccessibilityDelegateCompatIcs.java")
+
+
+(method (attrs public abstract ) dispatchPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityNodeInfo([object android/view/View] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) onRequestSendAccessibilityEvent([object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+)
+
+(method (attrs public abstract ) sendAccessibilityEvent([object android/view/View] int )void
+)
+
+(method (attrs public abstract ) sendAccessibilityEventUnchecked([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public abstract ) net/sourceforge/pmd/renderers/AbstractRenderer
+ (super java/lang/Object)
+ (source "AbstractRenderer.java")
+ (implements net/sourceforge/pmd/renderers/Renderer)
+
+ (field (attrs protected ) showSuppressedViolations boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/renderers/AbstractRenderer])
+  (line 5)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 7)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 net/sourceforge/pmd/renderers/AbstractRenderer.showSuppressedViolations boolean)
+  (line 5)
+  (return-void )
+ )
+
+(method (attrs public abstract ) render([object net/sourceforge/pmd/Report] )[object java/lang/String]
+)
+
+(method (attrs public ) showSuppressedViolations(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/renderers/AbstractRenderer])
+  ; parameter[0] : v1 (boolean)
+  (line 10)
+  (iput-boolean v1 v0 net/sourceforge/pmd/renderers/AbstractRenderer.showSuppressedViolations boolean)
+  (line 11)
+  (return-void )
+)
+
+)

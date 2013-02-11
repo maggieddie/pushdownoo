@@ -1,0 +1,15 @@
+(class (attrs public final ) org/bouncycastle2/jce/provider/symmetric/IDEA
+ (super java/lang/Object)
+ (source "IDEA.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/symmetric/IDEA])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+)

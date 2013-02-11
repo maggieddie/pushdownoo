@@ -1,0 +1,51 @@
+(class (attrs public ) org/bouncycastle2/bcpg/PublicSubkeyPacket
+ (super org/bouncycastle2/bcpg/PublicKeyPacket)
+ (source "PublicSubkeyPacket.java")
+
+
+(method (attrs public ) <init>(int [object java/util/Date] [object org/bouncycastle2/bcpg/BCPGKey] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle2/bcpg/PublicSubkeyPacket])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/util/Date])
+  ; parameter[2] : v3 ([object org/bouncycastle2/bcpg/BCPGKey])
+  (line 31)
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle2/bcpg/PublicKeyPacket/<init> int [object java/util/Date] [object org/bouncycastle2/bcpg/BCPGKey] )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/bouncycastle2/bcpg/BCPGInputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/bcpg/PublicSubkeyPacket])
+  ; parameter[0] : v1 ([object org/bouncycastle2/bcpg/BCPGInputStream])
+  (line 16)
+  (invoke-direct {v0 v1} org/bouncycastle2/bcpg/PublicKeyPacket/<init> [object org/bouncycastle2/bcpg/BCPGInputStream] )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) encode([object org/bouncycastle2/bcpg/BCPGOutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v3 ([object org/bouncycastle2/bcpg/PublicSubkeyPacket])
+  ; parameter[0] : v4 ([object org/bouncycastle2/bcpg/BCPGOutputStream])
+  (line 38)
+  (const/16 v0 14)
+  (invoke-virtual {v3} org/bouncycastle2/bcpg/PublicSubkeyPacket/getEncodedContents )
+  (move-result-object v1)
+  (const/4 v2 1)
+  (invoke-virtual {v4 v0 v1 v2} org/bouncycastle2/bcpg/BCPGOutputStream/writePacket int [array byte] boolean )
+  (line 39)
+  (return-void )
+)
+
+)

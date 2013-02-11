@@ -1,0 +1,39 @@
+(class (attrs public ) net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem
+ (super javax/swing/JMenuItem)
+ (source "XPathFragmentAddingItem.java")
+ (implements java/awt/event/ActionListener)
+
+ (field (attrs private ) fragment [object java/lang/String] )
+ (field (attrs private ) model [object net/sourceforge/pmd/util/viewer/model/ViewerModel] )
+
+(method (attrs public ) <init>([object java/lang/String] [object net/sourceforge/pmd/util/viewer/model/ViewerModel] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v0 ([object net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object net/sourceforge/pmd/util/viewer/model/ViewerModel])
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 30)
+  (invoke-direct {v0 v1} javax/swing/JMenuItem/<init> [object java/lang/String] )
+  (line 31)
+  (iput-object v2 v0 net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem.model [object net/sourceforge/pmd/util/viewer/model/ViewerModel])
+  (line 32)
+  (iput-object v3 v0 net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem.fragment [object java/lang/String])
+  (line 33)
+  (invoke-virtual {v0 v0} net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem/addActionListener [object java/awt/event/ActionListener] )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) actionPerformed([object java/awt/event/ActionEvent] )void
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem])
+  ; parameter[0] : v3 ([object java/awt/event/ActionEvent])
+  (line 40)
+  (iget-object v0 v2 net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem.model [object net/sourceforge/pmd/util/viewer/model/ViewerModel])
+  (iget-object v1 v2 net/sourceforge/pmd/util/viewer/gui/menu/XPathFragmentAddingItem.fragment [object java/lang/String])
+  (invoke-virtual {v0 v1 v2} net/sourceforge/pmd/util/viewer/model/ViewerModel/appendToXPathExpression [object java/lang/String] [object java/lang/Object] )
+  (line 41)
+  (return-void )
+)
+
+)

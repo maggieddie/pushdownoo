@@ -1,0 +1,33 @@
+(class (attrs public final ) org/darpa/smsreminder/R$string
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) app_name int 2131034113); 0x7f050001 )
+ (field (attrs public static final ) cancel_button int 2131034125); 0x7f05000d )
+ (field (attrs public static final ) date_time int 2131034123); 0x7f05000b )
+ (field (attrs public static final ) hello int 2131034112); 0x7f050000 )
+ (field (attrs public static final ) hello_world int 2131034118); 0x7f050006 )
+ (field (attrs public static final ) menu_settings int 2131034119); 0x7f050007 )
+ (field (attrs public static final ) message int 2131034124); 0x7f05000c )
+ (field (attrs public static final ) message_label int 2131034115); 0x7f050003 )
+ (field (attrs public static final ) phone_number int 2131034122); 0x7f05000a )
+ (field (attrs public static final ) phone_number_label int 2131034114); 0x7f050002 )
+ (field (attrs public static final ) position int 2131034126); 0x7f05000e )
+ (field (attrs public static final ) repeat_label int 2131034128); 0x7f050010 )
+ (field (attrs public static final ) repeat_time_label int 2131034129); 0x7f050011 )
+ (field (attrs public static final ) save int 2131034130); 0x7f050012 )
+ (field (attrs public static final ) send_button_label int 2131034116); 0x7f050004 )
+ (field (attrs public static final ) title_activity_alarm_details int 2131034121); 0x7f050009 )
+ (field (attrs public static final ) title_activity_alarm_viewer int 2131034120); 0x7f050008 )
+ (field (attrs public static final ) title_activity_settings int 2131034127); 0x7f05000f )
+ (field (attrs public static final ) view_alarms_label int 2131034117); 0x7f050005 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/darpa/smsreminder/R$string])
+  (line 54)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

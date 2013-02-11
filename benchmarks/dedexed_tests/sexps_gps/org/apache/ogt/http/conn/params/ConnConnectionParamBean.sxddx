@@ -1,0 +1,28 @@
+(class (attrs public ) org/apache/ogt/http/conn/params/ConnConnectionParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "ConnConnectionParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/conn/params/ConnConnectionParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 46)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) setMaxStatusLineGarbage(int )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnConnectionParamBean])
+  ; parameter[0] : v3 (int)
+  (line 53)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnConnectionParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.connection.max-status-line-garbage")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setIntParameter [object java/lang/String] int )
+  (line 54)
+  (return-void )
+)
+
+)

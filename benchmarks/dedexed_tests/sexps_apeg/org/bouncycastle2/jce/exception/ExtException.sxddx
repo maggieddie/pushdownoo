@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/bouncycastle2/jce/exception/ExtException
+ (super java/lang/Object)
+ (source "ExtException.java")
+
+
+(method (attrs public abstract ) getCause()[object java/lang/Throwable]
+)
+
+)

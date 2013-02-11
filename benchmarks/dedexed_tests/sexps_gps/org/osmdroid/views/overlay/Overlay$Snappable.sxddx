@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/osmdroid/views/overlay/Overlay$Snappable
+ (super java/lang/Object)
+ (source "Overlay.java")
+
+
+(method (attrs public abstract ) onSnapToItem(int int [object android/graphics/Point] [object org/osmdroid/api/IMapView] )boolean
+)
+
+)

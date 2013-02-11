@@ -1,0 +1,82 @@
+(class (attrs public ) org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest
+ (super org/apache/ogt/http/message/BasicHttpRequest)
+ (source "BasicHttpEntityEnclosingRequest.java")
+ (implements org/apache/ogt/http/HttpEntityEnclosingRequest)
+
+ (field (attrs private ) entity [object org/apache/ogt/http/HttpEntity] )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 48)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/message/BasicHttpRequest/<init> [object java/lang/String] [object java/lang/String] )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object org/apache/ogt/http/ProtocolVersion] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 ([object org/apache/ogt/http/ProtocolVersion])
+  (line 53)
+  (invoke-direct {v0 v1 v2 v3} org/apache/ogt/http/message/BasicHttpRequest/<init> [object java/lang/String] [object java/lang/String] [object org/apache/ogt/http/ProtocolVersion] )
+  (line 54)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/RequestLine] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/RequestLine])
+  (line 57)
+  (invoke-direct {v0 v1} org/apache/ogt/http/message/BasicHttpRequest/<init> [object org/apache/ogt/http/RequestLine] )
+  (line 58)
+  (return-void )
+ )
+
+(method (attrs public ) expectContinue()boolean
+  (limit registers 4)
+  ; this: v3 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  (line 69)
+  (const-string v1 "Expect")
+  (invoke-virtual {v3 v1} org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest/getFirstHeader [object java/lang/String] )
+  (move-result-object v0)
+  (line 70)
+  (if-eqz v0 lc4170)
+  (const-string v1 "100-continue")
+  (invoke-interface {v0} org/apache/ogt/http/Header/getValue )
+  (move-result-object v2)
+  (invoke-virtual {v1 v2} java/lang/String/equalsIgnoreCase [object java/lang/String] )
+  (move-result v1)
+  (if-eqz v1 lc4170)
+  (const/4 v1 1)
+  (label lc416e)
+  (return v1)
+  (label lc4170)
+  (const/4 v1 0)
+  (goto lc416e)
+)
+
+(method (attrs public ) getEntity()[object org/apache/ogt/http/HttpEntity]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  (line 61)
+  (iget-object v0 v1 org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest.entity [object org/apache/ogt/http/HttpEntity])
+  (return-object v0)
+)
+
+(method (attrs public ) setEntity([object org/apache/ogt/http/HttpEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/HttpEntity])
+  (line 65)
+  (iput-object v1 v0 org/apache/ogt/http/message/BasicHttpEntityEnclosingRequest.entity [object org/apache/ogt/http/HttpEntity])
+  (line 66)
+  (return-void )
+)
+
+)

@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) twitter4j/HashtagEntity
+ (super java/lang/Object)
+ (source "HashtagEntity.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getEnd()int
+)
+
+(method (attrs public abstract ) getStart()int
+)
+
+(method (attrs public abstract ) getText()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/osmdroid/tileprovider/modules/INetworkAvailablityCheck
+ (super java/lang/Object)
+ (source "INetworkAvailablityCheck.java")
+
+
+(method (attrs public abstract ) getCellularDataNetworkAvailable()boolean
+)
+
+(method (attrs public abstract ) getNetworkAvailable()boolean
+)
+
+(method (attrs public abstract ) getRouteToPathExists(int )boolean
+)
+
+(method (attrs public abstract ) getWiFiNetworkAvailable()boolean
+)
+
+)

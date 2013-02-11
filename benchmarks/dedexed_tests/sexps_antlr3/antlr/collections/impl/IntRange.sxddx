@@ -1,0 +1,43 @@
+(class (attrs public ) antlr/collections/impl/IntRange
+ (super java/lang/Object)
+ (source "IntRange.java")
+
+ (field (attrs ) begin int )
+ (field (attrs ) end int )
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/collections/impl/IntRange])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 15)
+  (iput v1 v0 antlr/collections/impl/IntRange.begin int)
+  (line 16)
+  (iput v2 v0 antlr/collections/impl/IntRange.end int)
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object antlr/collections/impl/IntRange])
+  (line 20)
+  (new-instance v0 java/lang/StringBuilder)
+  (iget v1 v2 antlr/collections/impl/IntRange.begin int)
+  (invoke-static {v1} java/lang/String/valueOf int )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (const-string v1 "..")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (iget v1 v2 antlr/collections/impl/IntRange.end int)
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append int )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

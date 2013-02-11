@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/entity/mime/content/ContentBody
+ (super java/lang/Object)
+ (source "ContentBody.java")
+ (implements org/apache/ogt/http/entity/mime/content/ContentDescriptor)
+
+
+(method (attrs public abstract ) getFilename()[object java/lang/String]
+)
+
+(method (attrs public abstract ) writeTo([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

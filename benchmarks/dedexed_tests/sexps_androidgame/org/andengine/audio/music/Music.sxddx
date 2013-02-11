@@ -1,0 +1,258 @@
+(class (attrs public ) org/andengine/audio/music/Music
+ (super org/andengine/audio/BaseAudioEntity)
+ (source "Music.java")
+
+ (field (attrs private ) mMediaPlayer [object android/media/MediaPlayer] )
+
+(method (attrs ) <init>([object org/andengine/audio/music/MusicManager] [object android/media/MediaPlayer] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v1 ([object org/andengine/audio/music/MusicManager])
+  ; parameter[1] : v2 ([object android/media/MediaPlayer])
+  (line 32)
+  (invoke-direct {v0 v1} org/andengine/audio/BaseAudioEntity/<init> [object org/andengine/audio/IAudioManager] )
+  (line 34)
+  (iput-object v2 v0 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs protected ) getAudioManager()[object org/andengine/audio/IAudioManager]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/getAudioManager )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) getAudioManager()[object org/andengine/audio/music/MusicManager]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 59)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/getAudioManager )
+  (move-result-object v0)
+  (check-cast v0 [object org/andengine/audio/music/MusicManager])
+  (return-object v0)
+)
+
+(method (attrs public ) getMediaPlayer()[object android/media/MediaPlayer]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 48)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/assertNotReleased )
+  (line 50)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (return-object v0)
+)
+
+(method (attrs public ) isPlaying()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 42)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/assertNotReleased )
+  (line 44)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/isPlaying )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onMasterVolumeChanged(float )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v3 (float)
+  (line 115)
+  (iget v0 v2 org/andengine/audio/music/Music.mLeftVolume float)
+  (iget v1 v2 org/andengine/audio/music/Music.mRightVolume float)
+  (invoke-virtual {v2 v0 v1} org/andengine/audio/music/Music/setVolume float float )
+  (line 116)
+  (return-void )
+)
+
+(method (attrs public ) pause()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 90)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/pause )
+  (line 92)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/pause )
+  (line 93)
+  (return-void )
+)
+
+(method (attrs public ) play()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 69)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/play )
+  (line 71)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/start )
+  (line 72)
+  (return-void )
+)
+
+(method (attrs public ) release()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 120)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/assertNotReleased )
+  (line 122)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/release )
+  (line 123)
+  (const/4 v0 0)
+  (iput-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (line 125)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/getAudioManager )
+  (move-result-object v0)
+  (invoke-virtual {v0 v1} org/andengine/audio/music/MusicManager/remove [object org/andengine/audio/IAudioEntity] )
+  (line 127)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/release )
+  (line 128)
+  (return-void )
+)
+
+(method (attrs public ) resume()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 83)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/resume )
+  (line 85)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/start )
+  (line 86)
+  (return-void )
+)
+
+(method (attrs public ) seekTo(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v2 (int)
+  (line 135)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/assertNotReleased )
+  (line 137)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0 v2} android/media/MediaPlayer/seekTo int )
+  (line 138)
+  (return-void )
+)
+
+(method (attrs public ) setLooping(boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v2 (boolean)
+  (line 97)
+  (invoke-super {v1 v2} org/andengine/audio/BaseAudioEntity/setLooping boolean )
+  (line 99)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0 v2} android/media/MediaPlayer/setLooping boolean )
+  (line 100)
+  (return-void )
+)
+
+(method (attrs public ) setOnCompletionListener([object android/media/MediaPlayer$OnCompletionListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v2 ([object android/media/MediaPlayer$OnCompletionListener])
+  (line 141)
+  (invoke-virtual {v1} org/andengine/audio/music/Music/assertNotReleased )
+  (line 143)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0 v2} android/media/MediaPlayer/setOnCompletionListener [object android/media/MediaPlayer$OnCompletionListener] )
+  (line 144)
+  (return-void )
+)
+
+(method (attrs public ) setVolume(float float )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 7)
+  ; this: v4 ([object org/andengine/audio/music/Music])
+  ; parameter[0] : v5 (float)
+  ; parameter[1] : v6 (float)
+  (line 104)
+  (invoke-super {v4 v5 v6} org/andengine/audio/BaseAudioEntity/setVolume float float )
+  (line 106)
+  (invoke-virtual {v4} org/andengine/audio/music/Music/getAudioManager )
+  (move-result-object v3)
+  (invoke-virtual {v3} org/andengine/audio/music/MusicManager/getMasterVolume )
+  (move-result v2)
+  (line 107)
+  (mul-float v0 v5 v2)
+  (line 108)
+  (mul-float v1 v6 v2)
+  (line 110)
+  (iget-object v3 v4 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v3 v0 v1} android/media/MediaPlayer/setVolume float float )
+  (line 111)
+  (return-void )
+)
+
+(method (attrs public ) stop()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 76)
+  (invoke-super {v1} org/andengine/audio/BaseAudioEntity/stop )
+  (line 78)
+  (iget-object v0 v1 org/andengine/audio/music/Music.mMediaPlayer [object android/media/MediaPlayer])
+  (invoke-virtual {v0} android/media/MediaPlayer/stop )
+  (line 79)
+  (return-void )
+)
+
+(method (attrs protected ) throwOnReleased()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/audio/music/exception/MusicReleasedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/audio/music/Music])
+  (line 64)
+  (new-instance v0 org/andengine/audio/music/exception/MusicReleasedException)
+  (invoke-direct {v0} org/andengine/audio/music/exception/MusicReleasedException/<init> )
+  (throw v0)
+)
+
+)

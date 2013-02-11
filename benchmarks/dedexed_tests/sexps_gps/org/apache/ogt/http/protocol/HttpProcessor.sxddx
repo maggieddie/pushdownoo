@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/HttpProcessor
+ (super java/lang/Object)
+ (source "HttpProcessor.java")
+ (implements org/apache/ogt/http/HttpRequestInterceptor)
+ (implements org/apache/ogt/http/HttpResponseInterceptor)
+
+
+)

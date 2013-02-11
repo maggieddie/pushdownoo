@@ -1,0 +1,32 @@
+(class (attrs public ) orgg/ucomb/AndroidFopActivity
+ (super android/app/Activity)
+ (source "AndroidFopActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object orgg/ucomb/AndroidFopActivity])
+  (line 7)
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCreate([object android/os/Bundle] )void
+  (limit registers 4)
+  ; this: v2 ([object orgg/ucomb/AndroidFopActivity])
+  ; parameter[0] : v3 ([object android/os/Bundle])
+  (line 11)
+  (invoke-super {v2 v3} android/app/Activity/onCreate [object android/os/Bundle] )
+  (line 12)
+  (const/high16 v1 32515)
+  (invoke-virtual {v2 v1} orgg/ucomb/AndroidFopActivity/setContentView int )
+  (line 13)
+  (const/4 v1 1)
+  (new-array v0 v1 [array [object java/lang/String]])
+  (line 14)
+  (invoke-static {v0} org/apache/fop/apps/Fop/main [array [object java/lang/String]] )
+  (line 15)
+  (return-void )
+)
+
+)

@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/bouncycastle2/ocsp/CertificateStatus
+ (super java/lang/Object)
+ (source "CertificateStatus.java")
+
+ (field (attrs public static final ) GOOD [object org/bouncycastle2/ocsp/CertificateStatus] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 5)
+  (const/4 v0 0)
+  (sput-object v0 org/bouncycastle2/ocsp/CertificateStatus.GOOD [object org/bouncycastle2/ocsp/CertificateStatus])
+  (line 3)
+  (return-void )
+ )
+
+)

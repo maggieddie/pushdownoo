@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) nl/sogeti/android/gpstracker/viewer/map/overlay/OverlayProvider
+ (super java/lang/Object)
+ (source "OverlayProvider.java")
+
+
+(method (attrs public abstract ) getGoogleOverlay()[object com/google/android/maps/Overlay]
+)
+
+(method (attrs public abstract ) getMapQuestOverlay()[object com/mapquest/android/maps/Overlay]
+)
+
+(method (attrs public abstract ) getOSMOverlay()[object org/osmdroid/views/overlay/Overlay]
+)
+
+)

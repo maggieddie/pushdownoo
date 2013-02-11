@@ -1,0 +1,37 @@
+(class (attrs ) org/andengine/input/touch/controller/BaseTouchController$1
+ (super org/andengine/util/adt/pool/RunnablePoolUpdateHandler)
+ (source "BaseTouchController.java")
+
+ (field (attrs final ) this$0 [object org/andengine/input/touch/controller/BaseTouchController] )
+
+(method (attrs ) <init>([object org/andengine/input/touch/controller/BaseTouchController] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/input/touch/controller/BaseTouchController$1])
+  ; parameter[0] : v1 ([object org/andengine/input/touch/controller/BaseTouchController])
+  (line 1)
+  (iput-object v1 v0 org/andengine/input/touch/controller/BaseTouchController$1.this$0 [object org/andengine/input/touch/controller/BaseTouchController])
+  (line 27)
+  (invoke-direct {v0} org/andengine/util/adt/pool/RunnablePoolUpdateHandler/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object org/andengine/input/touch/controller/BaseTouchController$TouchEventRunnablePoolItem]
+  (limit registers 3)
+  ; this: v2 ([object org/andengine/input/touch/controller/BaseTouchController$1])
+  (line 30)
+  (new-instance v0 org/andengine/input/touch/controller/BaseTouchController$TouchEventRunnablePoolItem)
+  (iget-object v1 v2 org/andengine/input/touch/controller/BaseTouchController$1.this$0 [object org/andengine/input/touch/controller/BaseTouchController])
+  (invoke-direct {v0 v1} org/andengine/input/touch/controller/BaseTouchController$TouchEventRunnablePoolItem/<init> [object org/andengine/input/touch/controller/BaseTouchController] )
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/andengine/util/adt/pool/RunnablePoolItem]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/input/touch/controller/BaseTouchController$1])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/input/touch/controller/BaseTouchController$1/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

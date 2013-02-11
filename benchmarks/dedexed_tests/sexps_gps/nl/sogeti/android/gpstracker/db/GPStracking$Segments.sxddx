@@ -1,0 +1,19 @@
+(class (attrs public final ) nl/sogeti/android/gpstracker/db/GPStracking$Segments
+ (super nl/sogeti/android/gpstracker/db/GPStracking$SegmentsColumns)
+ (source "GPStracking.java")
+ (implements android/provider/BaseColumns)
+
+ (field (attrs public static final ) CONTENT_ITEM_TYPE [object java/lang/String] "vnd.android.cursor.item/vnd.nl.sogeti.android.segment" )
+ (field (attrs public static final ) CONTENT_TYPE [object java/lang/String] "vnd.android.cursor.dir/vnd.nl.sogeti.android.segment" )
+ (field (attrs static final ) CREATE_STATMENT [object java/lang/String] "CREATE TABLE segments( _id INTEGER PRIMARY KEY AUTOINCREMENT, track INTEGER NOT NULL);" )
+ (field (attrs public static final ) TABLE [object java/lang/String] "segments" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/db/GPStracking$Segments])
+  (line 81)
+  (invoke-direct {v0} nl/sogeti/android/gpstracker/db/GPStracking$SegmentsColumns/<init> )
+  (return-void )
+ )
+
+)

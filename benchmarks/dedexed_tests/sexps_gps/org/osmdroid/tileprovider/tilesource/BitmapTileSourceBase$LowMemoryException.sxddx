@@ -1,0 +1,34 @@
+(class (attrs public final ) org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException
+ (super java/lang/Exception)
+ (source "BitmapTileSourceBase.java")
+
+ (field (attrs private static final ) serialVersionUID long -361981538); 0xea6c999e )
+ (field (attrs final ) this$0 [object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase] )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException])
+  ; parameter[0] : v1 ([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 145)
+  (iput-object v1 v0 org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException.this$0 [object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase])
+  (line 146)
+  (invoke-direct {v0 v2} java/lang/Exception/<init> [object java/lang/String] )
+  (line 147)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException])
+  ; parameter[0] : v1 ([object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 149)
+  (iput-object v1 v0 org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase$LowMemoryException.this$0 [object org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase])
+  (line 150)
+  (invoke-direct {v0 v2} java/lang/Exception/<init> [object java/lang/Throwable] )
+  (line 151)
+  (return-void )
+ )
+
+)

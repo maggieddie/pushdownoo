@@ -1,0 +1,66 @@
+(class (attrs public ) org/bouncycastle2/asn1/cms/CompressedDataParser
+ (super java/lang/Object)
+ (source "CompressedDataParser.java")
+
+ (field (attrs private ) _compressionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier] )
+ (field (attrs private ) _encapContentInfo [object org/bouncycastle2/asn1/cms/ContentInfoParser] )
+ (field (attrs private ) _version [object org/bouncycastle2/asn1/DERInteger] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/asn1/ASN1SequenceParser] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle2/asn1/cms/CompressedDataParser])
+  ; parameter[0] : v3 ([object org/bouncycastle2/asn1/ASN1SequenceParser])
+  (line 25)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 29)
+  (invoke-interface {v3} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/asn1/DERInteger])
+  (iput-object v0 v2 org/bouncycastle2/asn1/cms/CompressedDataParser._version [object org/bouncycastle2/asn1/DERInteger])
+  (line 30)
+  (invoke-interface {v3} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (invoke-interface {v0} org/bouncycastle2/asn1/DEREncodable/getDERObject )
+  (move-result-object v0)
+  (invoke-static {v0} org/bouncycastle2/asn1/x509/AlgorithmIdentifier/getInstance [object java/lang/Object] )
+  (move-result-object v0)
+  (iput-object v0 v2 org/bouncycastle2/asn1/cms/CompressedDataParser._compressionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier])
+  (line 31)
+  (new-instance v1 org/bouncycastle2/asn1/cms/ContentInfoParser)
+  (invoke-interface {v3} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/asn1/ASN1SequenceParser])
+  (invoke-direct {v1 v0} org/bouncycastle2/asn1/cms/ContentInfoParser/<init> [object org/bouncycastle2/asn1/ASN1SequenceParser] )
+  (iput-object v1 v2 org/bouncycastle2/asn1/cms/CompressedDataParser._encapContentInfo [object org/bouncycastle2/asn1/cms/ContentInfoParser])
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) getCompressionAlgorithmIdentifier()[object org/bouncycastle2/asn1/x509/AlgorithmIdentifier]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/CompressedDataParser])
+  (line 41)
+  (iget-object v0 v1 org/bouncycastle2/asn1/cms/CompressedDataParser._compressionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier])
+  (return-object v0)
+)
+
+(method (attrs public ) getEncapContentInfo()[object org/bouncycastle2/asn1/cms/ContentInfoParser]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/CompressedDataParser])
+  (line 46)
+  (iget-object v0 v1 org/bouncycastle2/asn1/cms/CompressedDataParser._encapContentInfo [object org/bouncycastle2/asn1/cms/ContentInfoParser])
+  (return-object v0)
+)
+
+(method (attrs public ) getVersion()[object org/bouncycastle2/asn1/DERInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/CompressedDataParser])
+  (line 36)
+  (iget-object v0 v1 org/bouncycastle2/asn1/cms/CompressedDataParser._version [object org/bouncycastle2/asn1/DERInteger])
+  (return-object v0)
+)
+
+)

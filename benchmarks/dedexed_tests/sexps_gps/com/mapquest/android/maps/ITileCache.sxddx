@@ -1,0 +1,27 @@
+(interface (attrs abstract ) com/mapquest/android/maps/ITileCache
+ (super java/lang/Object)
+ (source "ITileCache.java")
+
+
+(method (attrs public abstract ) addTile([object com/mapquest/android/maps/Tile] )void
+)
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) contains([object com/mapquest/android/maps/Tile] )boolean
+)
+
+(method (attrs public abstract ) destroy()void
+)
+
+(method (attrs public abstract ) getTile([object com/mapquest/android/maps/Tile] )[object com/mapquest/android/maps/Tile]
+)
+
+(method (attrs public abstract ) removeTile([object com/mapquest/android/maps/Tile] )void
+)
+
+(method (attrs public abstract ) size()int
+)
+
+)

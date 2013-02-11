@@ -1,0 +1,70 @@
+(class (attrs ) com/mapquest/android/maps/TrafficManager$TrafficOverlay
+ (super com/mapquest/android/maps/DrawableOverlay)
+ (source "TrafficManager.java")
+
+ (field (attrs private ) minZoomLevel int )
+ (field (attrs final ) this$0 [object com/mapquest/android/maps/TrafficManager] )
+
+(method (attrs private ) <init>([object com/mapquest/android/maps/TrafficManager] )void
+  (limit registers 3)
+  ; this: v1 ([object com/mapquest/android/maps/TrafficManager$TrafficOverlay])
+  ; parameter[0] : v2 ([object com/mapquest/android/maps/TrafficManager])
+  (line 280)
+  (iput-object v2 v1 com/mapquest/android/maps/TrafficManager$TrafficOverlay.this$0 [object com/mapquest/android/maps/TrafficManager])
+  (invoke-direct {v1} com/mapquest/android/maps/DrawableOverlay/<init> )
+  (line 282)
+  (const/4 v0 15)
+  (iput v0 v1 com/mapquest/android/maps/TrafficManager$TrafficOverlay.minZoomLevel int)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/mapquest/android/maps/TrafficManager] [object com/mapquest/android/maps/TrafficManager$1] )void
+  (limit registers 3)
+  ; this: v0 ([object com/mapquest/android/maps/TrafficManager$TrafficOverlay])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/TrafficManager])
+  ; parameter[1] : v2 ([object com/mapquest/android/maps/TrafficManager$1])
+  (line 280)
+  (invoke-direct {v0 v1} com/mapquest/android/maps/TrafficManager$TrafficOverlay/<init> [object com/mapquest/android/maps/TrafficManager] )
+  (return-void )
+ )
+
+(method (attrs public ) draw([object android/graphics/Canvas] [object com/mapquest/android/maps/MapView] boolean )void
+  (limit registers 6)
+  ; this: v2 ([object com/mapquest/android/maps/TrafficManager$TrafficOverlay])
+  ; parameter[0] : v3 ([object android/graphics/Canvas])
+  ; parameter[1] : v4 ([object com/mapquest/android/maps/MapView])
+  ; parameter[2] : v5 (boolean)
+  (line 293)
+  (iget v0 v2 com/mapquest/android/maps/TrafficManager$TrafficOverlay.minZoomLevel int)
+  (const/4 v1 15)
+  (if-eq v0 v1 l79f40)
+  (invoke-virtual {v4} com/mapquest/android/maps/MapView/getZoomLevel )
+  (move-result v0)
+  (iget v1 v2 com/mapquest/android/maps/TrafficManager$TrafficOverlay.minZoomLevel int)
+  (if-lt v0 v1 l79f40)
+  (line 294)
+  (invoke-super {v2 v3 v4 v5} com/mapquest/android/maps/DrawableOverlay/draw [object android/graphics/Canvas] [object com/mapquest/android/maps/MapView] boolean )
+  (label l79f40)
+  (line 296)
+  (return-void )
+)
+
+(method (attrs public ) getMinZoomLevel()int
+  (limit registers 2)
+  ; this: v1 ([object com/mapquest/android/maps/TrafficManager$TrafficOverlay])
+  (line 284)
+  (iget v0 v1 com/mapquest/android/maps/TrafficManager$TrafficOverlay.minZoomLevel int)
+  (return v0)
+)
+
+(method (attrs public ) setMinZoomLevel(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/TrafficManager$TrafficOverlay])
+  ; parameter[0] : v1 (int)
+  (line 288)
+  (iput v1 v0 com/mapquest/android/maps/TrafficManager$TrafficOverlay.minZoomLevel int)
+  (line 289)
+  (return-void )
+)
+
+)

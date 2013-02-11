@@ -1,0 +1,31 @@
+(class (attrs public final ) nl/sogeti/android/gpstracker/db/GPStracking$Tracks
+ (super nl/sogeti/android/gpstracker/db/GPStracking$TracksColumns)
+ (source "GPStracking.java")
+ (implements android/provider/BaseColumns)
+
+ (field (attrs public static final ) CONTENT_ITEM_TYPE [object java/lang/String] "vnd.android.cursor.item/vnd.nl.sogeti.android.track" )
+ (field (attrs public static final ) CONTENT_TYPE [object java/lang/String] "vnd.android.cursor.dir/vnd.nl.sogeti.android.track" )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs static final ) CREATE_STATEMENT [object java/lang/String] "CREATE TABLE tracks( _id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, creationtime INTEGER NOT NULL);" )
+ (field (attrs public static final ) TABLE [object java/lang/String] "tracks" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 65)
+  (const-string v0 "content://nl.sogeti.android.gpstracker/tracks")
+  (invoke-static {v0} android/net/Uri/parse [object java/lang/String] )
+  (move-result-object v0)
+  (sput-object v0 nl/sogeti/android/gpstracker/db/GPStracking$Tracks.CONTENT_URI [object android/net/Uri])
+  (line 58)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/db/GPStracking$Tracks])
+  (line 58)
+  (invoke-direct {v0} nl/sogeti/android/gpstracker/db/GPStracking$TracksColumns/<init> )
+  (return-void )
+ )
+
+)

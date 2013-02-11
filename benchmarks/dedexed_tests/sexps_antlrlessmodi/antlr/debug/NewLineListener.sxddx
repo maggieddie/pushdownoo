@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) antlr/debug/NewLineListener
+ (super java/lang/Object)
+ (source "NewLineListener.java")
+ (implements antlr/debug/ListenerBase)
+
+
+(method (attrs public abstract ) hitNewLine([object antlr/debug/NewLineEvent] )void
+)
+
+)

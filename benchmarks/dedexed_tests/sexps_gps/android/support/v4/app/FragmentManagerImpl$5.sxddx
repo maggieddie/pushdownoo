@@ -1,0 +1,61 @@
+(class (attrs ) android/support/v4/app/FragmentManagerImpl$5
+ (super java/lang/Object)
+ (source "FragmentManager.java")
+ (implements android/view/animation/Animation$AnimationListener)
+
+ (field (attrs final ) this$0 [object android/support/v4/app/FragmentManagerImpl] )
+ (field (attrs final ) val$fragment [object android/support/v4/app/Fragment] )
+
+(method (attrs ) <init>([object android/support/v4/app/FragmentManagerImpl] [object android/support/v4/app/Fragment] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/app/FragmentManagerImpl$5])
+  ; parameter[0] : v1 ([object android/support/v4/app/FragmentManagerImpl])
+  ; parameter[1] : v2 ([object android/support/v4/app/Fragment])
+  (line 980)
+  (iput-object v1 v0 android/support/v4/app/FragmentManagerImpl$5.this$0 [object android/support/v4/app/FragmentManagerImpl])
+  (iput-object v2 v0 android/support/v4/app/FragmentManagerImpl$5.val$fragment [object android/support/v4/app/Fragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onAnimationEnd([object android/view/animation/Animation] )void
+  (limit registers 6)
+  ; this: v4 ([object android/support/v4/app/FragmentManagerImpl$5])
+  ; parameter[0] : v5 ([object android/view/animation/Animation])
+  (const/4 v3 0)
+  (line 983)
+  (iget-object v0 v4 android/support/v4/app/FragmentManagerImpl$5.val$fragment [object android/support/v4/app/Fragment])
+  (iget-object v0 v0 android/support/v4/app/Fragment.mAnimatingAway [object android/view/View])
+  (if-eqz v0 l4d48a)
+  (line 984)
+  (iget-object v0 v4 android/support/v4/app/FragmentManagerImpl$5.val$fragment [object android/support/v4/app/Fragment])
+  (const/4 v1 0)
+  (iput-object v1 v0 android/support/v4/app/Fragment.mAnimatingAway [object android/view/View])
+  (line 985)
+  (iget-object v0 v4 android/support/v4/app/FragmentManagerImpl$5.this$0 [object android/support/v4/app/FragmentManagerImpl])
+  (iget-object v1 v4 android/support/v4/app/FragmentManagerImpl$5.val$fragment [object android/support/v4/app/Fragment])
+  (iget-object v2 v4 android/support/v4/app/FragmentManagerImpl$5.val$fragment [object android/support/v4/app/Fragment])
+  (iget v2 v2 android/support/v4/app/Fragment.mStateAfterAnimating int)
+  (invoke-virtual {v0 v1 v2 v3 v3} android/support/v4/app/FragmentManagerImpl/moveToState [object android/support/v4/app/Fragment] int int int )
+  (label l4d48a)
+  (line 988)
+  (return-void )
+)
+
+(method (attrs public ) onAnimationRepeat([object android/view/animation/Animation] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/FragmentManagerImpl$5])
+  ; parameter[0] : v1 ([object android/view/animation/Animation])
+  (line 991)
+  (return-void )
+)
+
+(method (attrs public ) onAnimationStart([object android/view/animation/Animation] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/FragmentManagerImpl$5])
+  ; parameter[0] : v1 ([object android/view/animation/Animation])
+  (line 994)
+  (return-void )
+)
+
+)

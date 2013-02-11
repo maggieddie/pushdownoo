@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/python/core/PyProxy
+ (super java/lang/Object)
+ (source "PyProxy.java")
+
+
+(method (attrs public abstract ) __initProxy__([array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) _getPyInstance()[object org/python/core/PyInstance]
+)
+
+(method (attrs public abstract ) _getPySystemState()[object org/python/core/PySystemState]
+)
+
+(method (attrs public abstract ) _setPyInstance([object org/python/core/PyInstance] )void
+)
+
+(method (attrs public abstract ) _setPySystemState([object org/python/core/PySystemState] )void
+)
+
+)

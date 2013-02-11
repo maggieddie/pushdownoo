@@ -1,0 +1,80 @@
+(class (attrs ) org/python/modules/MD5Functions
+ (super org/python/core/PyBuiltinFunctionSet)
+ (source "MD5Module.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] int int int )void
+  (limit registers 12)
+  ; this: v7 ([object org/python/modules/MD5Functions])
+  ; parameter[0] : v8 ([object java/lang/String])
+  ; parameter[1] : v9 (int)
+  ; parameter[2] : v10 (int)
+  ; parameter[3] : v11 (int)
+  (line 19)
+  (const/4 v5 0)
+  (const/4 v6 0)
+  (move-object v0 v7)
+  (move-object v1 v8)
+  (move v2 v9)
+  (move v3 v10)
+  (move v4 v11)
+  (invoke-direct/range {v0 .. v6} org/python/core/PyBuiltinFunctionSet/<init> [object java/lang/String] int int int boolean [object java/lang/String] )
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v2 ([object org/python/modules/MD5Functions])
+  (line 23)
+  (iget v0 v2 org/python/modules/MD5Functions.index int)
+  (packed-switch v0 0
+    ps9eb54_9eb66 ; case 0
+    ps9eb54_default) ; default
+  (label ps9eb54_default)
+  (line 27)
+  (const/4 v0 0)
+  (invoke-virtual {v2 v0} org/python/modules/MD5Functions/argCountError int )
+  (move-result-object v0)
+  (throw v0)
+  (label ps9eb54_9eb66)
+  (line 25)
+  (new-instance v0 org/python/modules/MD5Object)
+  (const-string v1 "")
+  (invoke-direct {v0 v1} org/python/modules/MD5Object/<init> [object java/lang/String] )
+  (return-object v0)
+  (line 23)
+  (label l9eb76)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v1 ([object org/python/modules/MD5Functions])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  (line 32)
+  (iget v0 v1 org/python/modules/MD5Functions.index int)
+  (packed-switch v0 0
+    ps9eb98_9ebaa ; case 0
+    ps9eb98_default) ; default
+  (label ps9eb98_default)
+  (line 36)
+  (const/4 v0 1)
+  (invoke-virtual {v1 v0} org/python/modules/MD5Functions/argCountError int )
+  (move-result-object v0)
+  (throw v0)
+  (label ps9eb98_9ebaa)
+  (line 34)
+  (new-instance v0 org/python/modules/MD5Object)
+  (invoke-direct {v0 v2} org/python/modules/MD5Object/<init> [object org/python/core/PyObject] )
+  (return-object v0)
+  (line 32)
+  (label l9ebb6)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

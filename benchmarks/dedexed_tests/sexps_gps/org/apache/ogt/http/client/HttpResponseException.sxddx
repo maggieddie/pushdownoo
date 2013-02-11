@@ -1,0 +1,29 @@
+(class (attrs public ) org/apache/ogt/http/client/HttpResponseException
+ (super org/apache/ogt/http/client/ClientProtocolException)
+ (source "HttpResponseException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1100220429); 0xbe6bf7f3 )
+ (field (attrs private final ) statusCode int )
+
+(method (attrs public ) <init>(int [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/client/HttpResponseException])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 44)
+  (invoke-direct {v0 v2} org/apache/ogt/http/client/ClientProtocolException/<init> [object java/lang/String] )
+  (line 45)
+  (iput v1 v0 org/apache/ogt/http/client/HttpResponseException.statusCode int)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) getStatusCode()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/client/HttpResponseException])
+  (line 49)
+  (iget v0 v1 org/apache/ogt/http/client/HttpResponseException.statusCode int)
+  (return v0)
+)
+
+)

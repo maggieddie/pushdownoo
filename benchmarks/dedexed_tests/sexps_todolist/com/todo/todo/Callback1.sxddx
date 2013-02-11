@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/todo/todo/Callback1
+ (super java/lang/Object)
+ (source "Callback1.java")
+
+
+(method (attrs public abstract ) call([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)TK;")
+  )
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/actionbarsherlock/view/ActionMode$Callback
+ (super java/lang/Object)
+ (source "ActionMode.java")
+
+
+(method (attrs public abstract ) onActionItemClicked([object com/actionbarsherlock/view/ActionMode] [object com/actionbarsherlock/view/MenuItem] )boolean
+)
+
+(method (attrs public abstract ) onCreateActionMode([object com/actionbarsherlock/view/ActionMode] [object com/actionbarsherlock/view/Menu] )boolean
+)
+
+(method (attrs public abstract ) onDestroyActionMode([object com/actionbarsherlock/view/ActionMode] )void
+)
+
+(method (attrs public abstract ) onPrepareActionMode([object com/actionbarsherlock/view/ActionMode] [object com/actionbarsherlock/view/Menu] )boolean
+)
+
+)

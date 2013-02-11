@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) nl/sogeti/android/gpstracker/actions/utils/ProgressListener
+ (super java/lang/Object)
+ (source "ProgressListener.java")
+
+
+(method (attrs public abstract ) finished([object android/net/Uri] )void
+)
+
+(method (attrs public abstract ) setIndeterminate(boolean )void
+)
+
+(method (attrs public abstract ) setProgress(int )void
+)
+
+(method (attrs public abstract ) showError([object java/lang/String] [object java/lang/String] [object java/lang/Exception] )void
+)
+
+(method (attrs public abstract ) started()void
+)
+
+)

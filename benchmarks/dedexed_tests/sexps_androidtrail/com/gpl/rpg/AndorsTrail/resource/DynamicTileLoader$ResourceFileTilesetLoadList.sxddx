@@ -1,0 +1,24 @@
+(class (attrs final ) com/gpl/rpg/AndorsTrail/resource/DynamicTileLoader$ResourceFileTilesetLoadList
+ (super java/lang/Object)
+ (source "DynamicTileLoader.java")
+
+ (field (attrs public final ) tileIDsToLoadPerLocalID [object android/util/SparseIntArray] )
+ (field (attrs public final ) tileset [object com/gpl/rpg/AndorsTrail/resource/tiles/ResourceFileTileset] )
+
+(method (attrs public ) <init>([object com/gpl/rpg/AndorsTrail/resource/tiles/ResourceFileTileset] )void
+  (limit registers 3)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/resource/DynamicTileLoader$ResourceFileTilesetLoadList])
+  ; parameter[0] : v2 ([object com/gpl/rpg/AndorsTrail/resource/tiles/ResourceFileTileset])
+  (line 24)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (new-instance v0 android/util/SparseIntArray)
+  (invoke-direct {v0} android/util/SparseIntArray/<init> )
+  (iput-object v0 v1 com/gpl/rpg/AndorsTrail/resource/DynamicTileLoader$ResourceFileTilesetLoadList.tileIDsToLoadPerLocalID [object android/util/SparseIntArray])
+  (line 25)
+  (iput-object v2 v1 com/gpl/rpg/AndorsTrail/resource/DynamicTileLoader$ResourceFileTilesetLoadList.tileset [object com/gpl/rpg/AndorsTrail/resource/tiles/ResourceFileTileset])
+  (line 26)
+  (return-void )
+ )
+
+)

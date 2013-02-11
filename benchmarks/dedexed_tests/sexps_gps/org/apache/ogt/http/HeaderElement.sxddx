@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HeaderElement
+ (super java/lang/Object)
+ (source "HeaderElement.java")
+
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getParameter(int )[object org/apache/ogt/http/NameValuePair]
+)
+
+(method (attrs public abstract ) getParameterByName([object java/lang/String] )[object org/apache/ogt/http/NameValuePair]
+)
+
+(method (attrs public abstract ) getParameterCount()int
+)
+
+(method (attrs public abstract ) getParameters()[array [object org/apache/ogt/http/NameValuePair]]
+)
+
+(method (attrs public abstract ) getValue()[object java/lang/String]
+)
+
+)

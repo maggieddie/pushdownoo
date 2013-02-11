@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/osmdroid/util/constants/GeoConstants
+ (super java/lang/Object)
+ (source "GeoConstants.java")
+
+ (field (attrs public static final ) EQUATORCIRCUMFENCE int 40075016); 0x2637f08 )
+ (field (attrs public static final ) FEET_PER_METER double 3.2808399 )
+ (field (attrs public static final ) METERS_PER_NAUTICAL_MILE double 1852.0 )
+ (field (attrs public static final ) METERS_PER_STATUTE_MILE double 1609.344 )
+ (field (attrs public static final ) RADIUS_EARTH_METERS int 6378137); 0x615299 )
+
+)

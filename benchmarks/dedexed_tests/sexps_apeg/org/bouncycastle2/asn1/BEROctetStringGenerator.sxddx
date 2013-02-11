@@ -1,0 +1,61 @@
+(class (attrs public ) org/bouncycastle2/asn1/BEROctetStringGenerator
+ (super org/bouncycastle2/asn1/BERGenerator)
+ (source "BEROctetStringGenerator.java")
+
+
+(method (attrs public ) <init>([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/asn1/BEROctetStringGenerator])
+  ; parameter[0] : v2 ([object java/io/OutputStream])
+  (line 12)
+  (invoke-direct {v1 v2} org/bouncycastle2/asn1/BERGenerator/<init> [object java/io/OutputStream] )
+  (line 14)
+  (const/16 v0 36)
+  (invoke-virtual {v1 v0} org/bouncycastle2/asn1/BEROctetStringGenerator/writeBERHeader int )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/OutputStream] int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/bouncycastle2/asn1/BEROctetStringGenerator])
+  ; parameter[0] : v2 ([object java/io/OutputStream])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (boolean)
+  (line 23)
+  (invoke-direct {v1 v2 v3 v4} org/bouncycastle2/asn1/BERGenerator/<init> [object java/io/OutputStream] int boolean )
+  (line 25)
+  (const/16 v0 36)
+  (invoke-virtual {v1 v0} org/bouncycastle2/asn1/BEROctetStringGenerator/writeBERHeader int )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) getOctetOutputStream()[object java/io/OutputStream]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/BEROctetStringGenerator])
+  (line 30)
+  (const/16 v0 1000)
+  (new-array v0 v0 [array byte])
+  (invoke-virtual {v1 v0} org/bouncycastle2/asn1/BEROctetStringGenerator/getOctetOutputStream [array byte] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getOctetOutputStream([array byte] )[object java/io/OutputStream]
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/asn1/BEROctetStringGenerator])
+  ; parameter[0] : v2 ([array byte])
+  (line 36)
+  (new-instance v0 org/bouncycastle2/asn1/BEROctetStringGenerator$BufferedBEROctetStream)
+  (invoke-direct {v0 v1 v2} org/bouncycastle2/asn1/BEROctetStringGenerator$BufferedBEROctetStream/<init> [object org/bouncycastle2/asn1/BEROctetStringGenerator] [array byte] )
+  (return-object v0)
+)
+
+)

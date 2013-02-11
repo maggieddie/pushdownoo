@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/params/CookieSpecPNames
+ (super java/lang/Object)
+ (source "CookieSpecPNames.java")
+
+ (field (attrs public static final ) DATE_PATTERNS [object java/lang/String] "http.protocol.cookie-datepatterns" )
+ (field (attrs public static final ) SINGLE_COOKIE_HEADER [object java/lang/String] "http.protocol.single-cookie-header" )
+
+)

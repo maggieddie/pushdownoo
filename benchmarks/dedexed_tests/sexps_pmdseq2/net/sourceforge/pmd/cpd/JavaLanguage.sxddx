@@ -1,0 +1,59 @@
+(class (attrs public ) net/sourceforge/pmd/cpd/JavaLanguage
+ (super java/lang/Object)
+ (source "JavaLanguage.java")
+ (implements net/sourceforge/pmd/cpd/Language)
+
+ (field (attrs private ) sourceFileSelector [object net/sourceforge/pmd/SourceFileSelector] )
+ (field (attrs private ) tokenizer [object net/sourceforge/pmd/cpd/JavaTokenizer] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/cpd/JavaLanguage])
+  (line 18)
+  (new-instance v0 java/util/Properties)
+  (invoke-direct {v0} java/util/Properties/<init> )
+  (invoke-direct {v1 v0} net/sourceforge/pmd/cpd/JavaLanguage/<init> [object java/util/Properties] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/util/Properties] )void
+  (limit registers 3)
+  ; this: v1 ([object net/sourceforge/pmd/cpd/JavaLanguage])
+  ; parameter[0] : v2 ([object java/util/Properties])
+  (line 21)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 22)
+  (new-instance v0 net/sourceforge/pmd/cpd/JavaTokenizer)
+  (invoke-direct {v0} net/sourceforge/pmd/cpd/JavaTokenizer/<init> )
+  (iput-object v0 v1 net/sourceforge/pmd/cpd/JavaLanguage.tokenizer [object net/sourceforge/pmd/cpd/JavaTokenizer])
+  (line 23)
+  (iget-object v0 v1 net/sourceforge/pmd/cpd/JavaLanguage.tokenizer [object net/sourceforge/pmd/cpd/JavaTokenizer])
+  (invoke-virtual {v0 v2} net/sourceforge/pmd/cpd/JavaTokenizer/setProperties [object java/util/Properties] )
+  (line 24)
+  (new-instance v0 net/sourceforge/pmd/SourceFileSelector)
+  (invoke-direct {v0} net/sourceforge/pmd/SourceFileSelector/<init> )
+  (iput-object v0 v1 net/sourceforge/pmd/cpd/JavaLanguage.sourceFileSelector [object net/sourceforge/pmd/SourceFileSelector])
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) getFileFilter()[object java/io/FilenameFilter]
+  (limit registers 3)
+  ; this: v2 ([object net/sourceforge/pmd/cpd/JavaLanguage])
+  (line 32)
+  (new-instance v0 net/sourceforge/pmd/cpd/SourceFileOrDirectoryFilter)
+  (iget-object v1 v2 net/sourceforge/pmd/cpd/JavaLanguage.sourceFileSelector [object net/sourceforge/pmd/SourceFileSelector])
+  (invoke-direct {v0 v1} net/sourceforge/pmd/cpd/SourceFileOrDirectoryFilter/<init> [object net/sourceforge/pmd/SourceFileSelector] )
+  (return-object v0)
+)
+
+(method (attrs public ) getTokenizer()[object net/sourceforge/pmd/cpd/Tokenizer]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/cpd/JavaLanguage])
+  (line 28)
+  (iget-object v0 v1 net/sourceforge/pmd/cpd/JavaLanguage.tokenizer [object net/sourceforge/pmd/cpd/JavaTokenizer])
+  (return-object v0)
+)
+
+)

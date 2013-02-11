@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpEntityEnclosingRequest
+ (super java/lang/Object)
+ (source "HttpEntityEnclosingRequest.java")
+ (implements org/apache/ogt/http/HttpRequest)
+
+
+(method (attrs public abstract ) expectContinue()boolean
+)
+
+(method (attrs public abstract ) getEntity()[object org/apache/ogt/http/HttpEntity]
+)
+
+(method (attrs public abstract ) setEntity([object org/apache/ogt/http/HttpEntity] )void
+)
+
+)

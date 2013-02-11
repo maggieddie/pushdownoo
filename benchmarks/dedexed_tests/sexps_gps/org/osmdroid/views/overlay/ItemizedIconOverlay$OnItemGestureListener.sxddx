@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/osmdroid/views/overlay/ItemizedIconOverlay$OnItemGestureListener
+ (super java/lang/Object)
+ (source "ItemizedIconOverlay.java")
+
+
+(method (attrs public abstract ) onItemLongPress(int [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(ITT;)Z")
+  )
+)
+
+(method (attrs public abstract ) onItemSingleTapUp(int [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(ITT;)Z")
+  )
+)
+
+)

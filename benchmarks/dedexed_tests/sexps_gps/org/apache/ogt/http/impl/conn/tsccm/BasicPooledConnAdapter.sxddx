@@ -1,0 +1,46 @@
+(class (attrs public ) org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter
+ (super org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter)
+ (source "BasicPooledConnAdapter.java")
+
+
+(method (attrs protected ) <init>([object org/apache/ogt/http/impl/conn/tsccm/ThreadSafeClientConnManager] [object org/apache/ogt/http/impl/conn/AbstractPoolEntry] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/impl/conn/tsccm/ThreadSafeClientConnManager])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/impl/conn/AbstractPoolEntry])
+  (line 50)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter/<init> [object org/apache/ogt/http/conn/ClientConnectionManager] [object org/apache/ogt/http/impl/conn/AbstractPoolEntry] )
+  (line 51)
+  (invoke-virtual {v0} org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter/markReusable )
+  (line 52)
+  (return-void )
+ )
+
+(method (attrs protected ) detach()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter])
+  (line 69)
+  (invoke-super {v0} org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter/detach )
+  (line 70)
+  (return-void )
+)
+
+(method (attrs protected ) getManager()[object org/apache/ogt/http/conn/ClientConnectionManager]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter])
+  (line 57)
+  (invoke-super {v1} org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter/getManager )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) getPoolEntry()[object org/apache/ogt/http/impl/conn/AbstractPoolEntry]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPooledConnAdapter])
+  (line 63)
+  (invoke-super {v1} org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter/getPoolEntry )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

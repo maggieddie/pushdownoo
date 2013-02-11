@@ -1,0 +1,60 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/HttpClient
+ (super java/lang/Object)
+ (source "HttpClient.java")
+
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/HttpRequest] [object org/apache/ogt/http/client/ResponseHandler] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/HttpRequest] [object org/apache/ogt/http/client/ResponseHandler] [object org/apache/ogt/http/protocol/HttpContext] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/client/methods/HttpUriRequest] [object org/apache/ogt/http/client/ResponseHandler] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/client/methods/HttpUriRequest] [object org/apache/ogt/http/client/ResponseHandler] [object org/apache/ogt/http/protocol/HttpContext] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/HttpRequest] )[object org/apache/ogt/http/HttpResponse]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/HttpRequest] [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/HttpResponse]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/client/methods/HttpUriRequest] )[object org/apache/ogt/http/HttpResponse]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) execute([object org/apache/ogt/http/client/methods/HttpUriRequest] [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/HttpResponse]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/client/ClientProtocolException])
+  )
+)
+
+(method (attrs public abstract ) getConnectionManager()[object org/apache/ogt/http/conn/ClientConnectionManager]
+)
+
+(method (attrs public abstract ) getParams()[object org/apache/ogt/http/params/HttpParams]
+)
+
+)

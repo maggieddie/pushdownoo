@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/HttpContext
+ (super java/lang/Object)
+ (source "HttpContext.java")
+
+ (field (attrs public static final ) RESERVED_PREFIX [object java/lang/String] "http." )
+
+(method (attrs public abstract ) getAttribute([object java/lang/String] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) removeAttribute([object java/lang/String] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) setAttribute([object java/lang/String] [object java/lang/Object] )void
+)
+
+)

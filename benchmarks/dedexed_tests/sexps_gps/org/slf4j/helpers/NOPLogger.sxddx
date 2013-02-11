@@ -1,0 +1,299 @@
+(class (attrs public ) org/slf4j/helpers/NOPLogger
+ (super org/slf4j/helpers/MarkerIgnoringBase)
+ (source "NOPLogger.java")
+
+ (field (attrs public static final ) NOP_LOGGER [object org/slf4j/helpers/NOPLogger] null )
+ (field (attrs private static final ) serialVersionUID long -118065425); 0xf8f676ef )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 52)
+  (new-instance v0 org/slf4j/helpers/NOPLogger)
+  (invoke-direct {v0} org/slf4j/helpers/NOPLogger/<init> )
+  (sput-object v0 org/slf4j/helpers/NOPLogger.NOP_LOGGER [object org/slf4j/helpers/NOPLogger])
+  (return-void )
+ )
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  (line 58)
+  (invoke-direct {v0} org/slf4j/helpers/MarkerIgnoringBase/<init> )
+  (line 59)
+  (return-void )
+ )
+
+(method (attrs public final ) debug([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 112)
+  (return-void )
+)
+
+(method (attrs public final ) debug([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 117)
+  (return-void )
+)
+
+(method (attrs public final ) debug([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 122)
+  (return-void )
+)
+
+(method (attrs public final ) debug([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 134)
+  (return-void )
+)
+
+(method (attrs public final ) debug([object java/lang/String] [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 127)
+  (return-void )
+)
+
+(method (attrs public final ) error([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 216)
+  (return-void )
+)
+
+(method (attrs public final ) error([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 221)
+  (return-void )
+)
+
+(method (attrs public final ) error([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 226)
+  (return-void )
+)
+
+(method (attrs public final ) error([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 237)
+  (return-void )
+)
+
+(method (attrs public final ) error([object java/lang/String] [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 231)
+  (return-void )
+)
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 65)
+  (const-string v0 "NOP")
+  (return-object v0)
+)
+
+(method (attrs public final ) info([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 149)
+  (return-void )
+)
+
+(method (attrs public final ) info([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 154)
+  (return-void )
+)
+
+(method (attrs public final ) info([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 159)
+  (return-void )
+)
+
+(method (attrs public final ) info([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 170)
+  (return-void )
+)
+
+(method (attrs public final ) info([object java/lang/String] [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 164)
+  (return-void )
+)
+
+(method (attrs public final ) isDebugEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 106)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public final ) isErrorEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 210)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public final ) isInfoEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 142)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public final ) isTraceEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 73)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public final ) isWarnEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/NOPLogger])
+  (line 178)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public final ) trace([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 79)
+  (return-void )
+)
+
+(method (attrs public final ) trace([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 84)
+  (return-void )
+)
+
+(method (attrs public final ) trace([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 89)
+  (return-void )
+)
+
+(method (attrs public final ) trace([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 99)
+  (return-void )
+)
+
+(method (attrs public final ) trace([object java/lang/String] [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 94)
+  (return-void )
+)
+
+(method (attrs public final ) warn([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 184)
+  (return-void )
+)
+
+(method (attrs public final ) warn([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 189)
+  (return-void )
+)
+
+(method (attrs public final ) warn([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 194)
+  (return-void )
+)
+
+(method (attrs public final ) warn([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 205)
+  (return-void )
+)
+
+(method (attrs public final ) warn([object java/lang/String] [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object org/slf4j/helpers/NOPLogger])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 199)
+  (return-void )
+)
+
+)

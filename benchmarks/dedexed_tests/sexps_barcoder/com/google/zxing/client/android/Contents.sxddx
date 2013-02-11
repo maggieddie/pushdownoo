@@ -1,0 +1,43 @@
+(class (attrs public final ) com/google/zxing/client/android/Contents
+ (super java/lang/Object)
+
+ (field (attrs public static final ) EMAIL_KEYS [array [object java/lang/String]] null )
+ (field (attrs public static final ) PHONE_KEYS [array [object java/lang/String]] null )
+ (field (attrs private static final ) SECONDARY_EMAIL [object java/lang/String] "secondary_email" )
+ (field (attrs private static final ) SECONDARY_PHONE [object java/lang/String] "secondary_phone" )
+ (field (attrs private static final ) TERTIARY_EMAIL [object java/lang/String] "tertiary_email" )
+ (field (attrs private static final ) TERTIARY_PHONE [object java/lang/String] "tertiary_phone" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 6)
+  (const/4 v5 3)
+  (const/4 v4 2)
+  (const/4 v3 1)
+  (const/4 v2 0)
+  (new-array v0 v5 [array [object java/lang/String]])
+  (const-string v1 "phone")
+  (aput-object v1 v0 v2)
+  (const-string v1 "secondary_phone")
+  (aput-object v1 v0 v3)
+  (const-string v1 "tertiary_phone")
+  (aput-object v1 v0 v4)
+  (sput-object v0 com/google/zxing/client/android/Contents.PHONE_KEYS [array [object java/lang/String]])
+  (new-array v0 v5 [array [object java/lang/String]])
+  (const-string v1 "email")
+  (aput-object v1 v0 v2)
+  (const-string v1 "secondary_email")
+  (aput-object v1 v0 v3)
+  (const-string v1 "tertiary_email")
+  (aput-object v1 v0 v4)
+  (sput-object v0 com/google/zxing/client/android/Contents.EMAIL_KEYS [array [object java/lang/String]])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/client/android/Contents])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,57 @@
+(interface (attrs abstract ) android/support/v4/view/ViewCompat$ViewCompatImpl
+ (super java/lang/Object)
+ (source "ViewCompat.java")
+
+
+(method (attrs public abstract ) canScrollHorizontally([object android/view/View] int )boolean
+)
+
+(method (attrs public abstract ) canScrollVertically([object android/view/View] int )boolean
+)
+
+(method (attrs public abstract ) getAccessibilityNodeProvider([object android/view/View] )[object android/support/v4/view/accessibility/AccessibilityNodeProviderCompat]
+)
+
+(method (attrs public abstract ) getImportantForAccessibility([object android/view/View] )int
+)
+
+(method (attrs public abstract ) getOverScrollMode([object android/view/View] )int
+)
+
+(method (attrs public abstract ) hasTransientState([object android/view/View] )boolean
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityNodeInfo([object android/view/View] [object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat] )void
+)
+
+(method (attrs public abstract ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) postInvalidateOnAnimation([object android/view/View] )void
+)
+
+(method (attrs public abstract ) postInvalidateOnAnimation([object android/view/View] int int int int )void
+)
+
+(method (attrs public abstract ) postOnAnimation([object android/view/View] [object java/lang/Runnable] )void
+)
+
+(method (attrs public abstract ) postOnAnimationDelayed([object android/view/View] [object java/lang/Runnable] long )void
+)
+
+(method (attrs public abstract ) setAccessibilityDelegate([object android/view/View] [object android/support/v4/view/AccessibilityDelegateCompat] )void
+)
+
+(method (attrs public abstract ) setHasTransientState([object android/view/View] boolean )void
+)
+
+(method (attrs public abstract ) setImportantForAccessibility([object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setOverScrollMode([object android/view/View] int )void
+)
+
+)

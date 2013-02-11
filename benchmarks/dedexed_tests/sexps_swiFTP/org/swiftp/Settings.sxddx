@@ -1,0 +1,139 @@
+(class (attrs public ) org/swiftp/Settings
+ (super java/lang/Object)
+ (source "Settings.java")
+
+ (field (attrs protected static ) allowOverwrite boolean )
+ (field (attrs protected static ) dataChunkSize int )
+ (field (attrs protected static ) inputBufferSize int )
+ (field (attrs protected static ) serverLogScrollBack int )
+ (field (attrs protected static ) sessionMonitorScrollBack int )
+ (field (attrs protected static ) uiLogLevel int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (const/16 v1 10)
+  (line 25)
+  (const/16 v0 256)
+  (sput v0 org/swiftp/Settings.inputBufferSize int)
+  (line 26)
+  (const/4 v0 0)
+  (sput-boolean v0 org/swiftp/Settings.allowOverwrite boolean)
+  (line 27)
+  (const/16 v0 8192)
+  (sput v0 org/swiftp/Settings.dataChunkSize int)
+  (line 28)
+  (sput v1 org/swiftp/Settings.sessionMonitorScrollBack int)
+  (line 29)
+  (sput v1 org/swiftp/Settings.serverLogScrollBack int)
+  (line 30)
+  (const/4 v0 4)
+  (sput v0 org/swiftp/Settings.uiLogLevel int)
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/swiftp/Settings])
+  (line 24)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getDataChunkSize()int
+  (limit registers 1)
+  (line 57)
+  (sget v0 org/swiftp/Settings.dataChunkSize int)
+  (return v0)
+ )
+
+(method (attrs public static ) getInputBufferSize()int
+  (limit registers 1)
+  (line 41)
+  (sget v0 org/swiftp/Settings.inputBufferSize int)
+  (return v0)
+ )
+
+(method (attrs public static ) getServerLogScrollBack()int
+  (limit registers 1)
+  (line 75)
+  (sget v0 org/swiftp/Settings.serverLogScrollBack int)
+  (return v0)
+ )
+
+(method (attrs public static ) getSessionMonitorScrollBack()int
+  (limit registers 1)
+  (line 65)
+  (sget v0 org/swiftp/Settings.sessionMonitorScrollBack int)
+  (return v0)
+ )
+
+(method (attrs public static ) getUiLogLevel()int
+  (limit registers 1)
+  (line 33)
+  (sget v0 org/swiftp/Settings.uiLogLevel int)
+  (return v0)
+ )
+
+(method (attrs public static ) isAllowOverwrite()boolean
+  (limit registers 1)
+  (line 49)
+  (sget-boolean v0 org/swiftp/Settings.allowOverwrite boolean)
+  (return v0)
+ )
+
+(method (attrs public static ) setAllowOverwrite(boolean )void
+  (limit registers 1)
+  ; parameter[0] : v0 (boolean)
+  (line 53)
+  (sput-boolean v0 org/swiftp/Settings.allowOverwrite boolean)
+  (line 54)
+  (return-void )
+ )
+
+(method (attrs public static ) setDataChunkSize(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 61)
+  (sput v0 org/swiftp/Settings.dataChunkSize int)
+  (line 62)
+  (return-void )
+ )
+
+(method (attrs public static ) setInputBufferSize(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 45)
+  (sput v0 org/swiftp/Settings.inputBufferSize int)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public static ) setLogScrollBack(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 79)
+  (sput v0 org/swiftp/Settings.serverLogScrollBack int)
+  (line 80)
+  (return-void )
+ )
+
+(method (attrs public static ) setSessionMonitorScrollBack(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 71)
+  (sput v0 org/swiftp/Settings.sessionMonitorScrollBack int)
+  (line 72)
+  (return-void )
+ )
+
+(method (attrs public static ) setUiLogLevel(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 37)
+  (sput v0 org/swiftp/Settings.uiLogLevel int)
+  (line 38)
+  (return-void )
+ )
+
+)

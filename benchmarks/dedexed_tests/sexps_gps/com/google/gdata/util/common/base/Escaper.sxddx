@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/google/gdata/util/common/base/Escaper
+ (super java/lang/Object)
+ (source "Escaper.java")
+
+
+(method (attrs public abstract ) escape([object java/lang/Appendable] )[object java/lang/Appendable]
+)
+
+(method (attrs public abstract ) escape([object java/lang/String] )[object java/lang/String]
+)
+
+)

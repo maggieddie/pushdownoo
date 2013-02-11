@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/SM
+ (super java/lang/Object)
+ (source "SM.java")
+
+ (field (attrs public static final ) COOKIE [object java/lang/String] "Cookie" )
+ (field (attrs public static final ) COOKIE2 [object java/lang/String] "Cookie2" )
+ (field (attrs public static final ) SET_COOKIE [object java/lang/String] "Set-Cookie" )
+ (field (attrs public static final ) SET_COOKIE2 [object java/lang/String] "Set-Cookie2" )
+
+)

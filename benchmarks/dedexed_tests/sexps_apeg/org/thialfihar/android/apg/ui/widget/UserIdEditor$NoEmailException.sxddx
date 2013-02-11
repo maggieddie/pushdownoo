@@ -1,0 +1,17 @@
+(class (attrs public ) org/thialfihar/android/apg/ui/widget/UserIdEditor$NoEmailException
+ (super java/lang/Exception)
+ (source "UserIdEditor.java")
+
+ (field (attrs static final ) serialVersionUID long 309801980); 0x127733fc )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thialfihar/android/apg/ui/widget/UserIdEditor$NoEmailException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 59)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 60)
+  (return-void )
+ )
+
+)

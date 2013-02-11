@@ -1,0 +1,66 @@
+(class (attrs public abstract ) com/actionbarsherlock/app/ActionBar$Tab
+ (super java/lang/Object)
+ (source "ActionBar.java")
+
+ (field (attrs public static final ) INVALID_POSITION int -1); 0xffffffff )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/actionbarsherlock/app/ActionBar$Tab])
+  (line 706)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) getContentDescription()[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getCustomView()[object android/view/View]
+)
+
+(method (attrs public abstract ) getIcon()[object android/graphics/drawable/Drawable]
+)
+
+(method (attrs public abstract ) getPosition()int
+)
+
+(method (attrs public abstract ) getTag()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getText()[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) select()void
+)
+
+(method (attrs public abstract ) setContentDescription(int )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setContentDescription([object java/lang/CharSequence] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setCustomView(int )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setCustomView([object android/view/View] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setIcon(int )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setIcon([object android/graphics/drawable/Drawable] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setTabListener([object com/actionbarsherlock/app/ActionBar$TabListener] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setTag([object java/lang/Object] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setText(int )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+(method (attrs public abstract ) setText([object java/lang/CharSequence] )[object com/actionbarsherlock/app/ActionBar$Tab]
+)
+
+)

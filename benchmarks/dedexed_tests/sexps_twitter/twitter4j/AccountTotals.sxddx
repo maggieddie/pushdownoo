@@ -1,0 +1,20 @@
+(interface (attrs public abstract ) twitter4j/AccountTotals
+ (super java/lang/Object)
+ (source "AccountTotals.java")
+ (implements twitter4j/TwitterResponse)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getFavorites()int
+)
+
+(method (attrs public abstract ) getFollowers()int
+)
+
+(method (attrs public abstract ) getFriends()int
+)
+
+(method (attrs public abstract ) getUpdates()int
+)
+
+)

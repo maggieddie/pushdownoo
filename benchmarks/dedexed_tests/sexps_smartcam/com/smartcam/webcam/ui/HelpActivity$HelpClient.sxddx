@@ -1,0 +1,48 @@
+(class (attrs final ) com/smartcam/webcam/ui/HelpActivity$HelpClient
+ (super android/webkit/WebViewClient)
+ (source "HelpActivity.java")
+
+ (field (attrs final ) this$0 [object com/smartcam/webcam/ui/HelpActivity] )
+
+(method (attrs private ) <init>([object com/smartcam/webcam/ui/HelpActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/smartcam/webcam/ui/HelpActivity$HelpClient])
+  ; parameter[0] : v1 ([object com/smartcam/webcam/ui/HelpActivity])
+  (line 72)
+  (iput-object v1 v0 com/smartcam/webcam/ui/HelpActivity$HelpClient.this$0 [object com/smartcam/webcam/ui/HelpActivity])
+  (invoke-direct {v0} android/webkit/WebViewClient/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/smartcam/webcam/ui/HelpActivity] [object com/smartcam/webcam/ui/HelpActivity$HelpClient] )void
+  (limit registers 3)
+  ; this: v0 ([object com/smartcam/webcam/ui/HelpActivity$HelpClient])
+  ; parameter[0] : v1 ([object com/smartcam/webcam/ui/HelpActivity])
+  ; parameter[1] : v2 ([object com/smartcam/webcam/ui/HelpActivity$HelpClient])
+  (line 72)
+  (invoke-direct {v0 v1} com/smartcam/webcam/ui/HelpActivity$HelpClient/<init> [object com/smartcam/webcam/ui/HelpActivity] )
+  (return-void )
+ )
+
+(method (attrs public ) onPageFinished([object android/webkit/WebView] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object com/smartcam/webcam/ui/HelpActivity$HelpClient])
+  ; parameter[0] : v3 ([object android/webkit/WebView])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 77)
+  (iget-object v0 v2 com/smartcam/webcam/ui/HelpActivity$HelpClient.this$0 [object com/smartcam/webcam/ui/HelpActivity])
+  (invoke-virtual {v3} android/webkit/WebView/getTitle )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} com/smartcam/webcam/ui/HelpActivity/setTitle [object java/lang/CharSequence] )
+  (line 78)
+  (iget-object v0 v2 com/smartcam/webcam/ui/HelpActivity$HelpClient.this$0 [object com/smartcam/webcam/ui/HelpActivity])
+  (invoke-static {v0} com/smartcam/webcam/ui/HelpActivity/access$1 [object com/smartcam/webcam/ui/HelpActivity] )
+  (move-result-object v0)
+  (invoke-virtual {v3} android/webkit/WebView/canGoBack )
+  (move-result v1)
+  (invoke-virtual {v0 v1} android/widget/Button/setEnabled boolean )
+  (line 79)
+  (return-void )
+)
+
+)

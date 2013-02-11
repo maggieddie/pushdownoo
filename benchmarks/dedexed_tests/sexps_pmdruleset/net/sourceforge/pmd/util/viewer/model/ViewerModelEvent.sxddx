@@ -1,0 +1,67 @@
+(class (attrs public ) net/sourceforge/pmd/util/viewer/model/ViewerModelEvent
+ (super java/lang/Object)
+ (source "ViewerModelEvent.java")
+
+ (field (attrs public static final ) CODE_RECOMPILED int 1); 0x1 )
+ (field (attrs public static final ) NODE_SELECTED int 2); 0x2 )
+ (field (attrs public static final ) PATH_EXPRESSION_APPENDED int 3); 0x3 )
+ (field (attrs public static final ) PATH_EXPRESSION_EVALUATED int 4); 0x4 )
+ (field (attrs private ) parameter [object java/lang/Object] )
+ (field (attrs private ) reason int )
+ (field (attrs private ) source [object java/lang/Object] )
+
+(method (attrs public ) <init>([object java/lang/Object] int )void
+  (limit registers 4)
+  ; this: v1 ([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 45)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} net/sourceforge/pmd/util/viewer/model/ViewerModelEvent/<init> [object java/lang/Object] int [object java/lang/Object] )
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Object] int [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 55)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 56)
+  (iput-object v1 v0 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.source [object java/lang/Object])
+  (line 57)
+  (iput v2 v0 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.reason int)
+  (line 58)
+  (iput-object v3 v0 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.parameter [object java/lang/Object])
+  (line 59)
+  (return-void )
+ )
+
+(method (attrs public ) getParameter()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent])
+  (line 70)
+  (iget-object v0 v1 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.parameter [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) getReason()int
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent])
+  (line 62)
+  (iget v0 v1 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.reason int)
+  (return v0)
+)
+
+(method (attrs public ) getSource()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent])
+  (line 66)
+  (iget-object v0 v1 net/sourceforge/pmd/util/viewer/model/ViewerModelEvent.source [object java/lang/Object])
+  (return-object v0)
+)
+
+)

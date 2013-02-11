@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/io/EofSensor
+ (super java/lang/Object)
+ (source "EofSensor.java")
+
+
+(method (attrs public abstract ) isEof()boolean
+)
+
+)

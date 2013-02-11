@@ -1,0 +1,42 @@
+(class (attrs public ) net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader
+ (super net/sourceforge/pmd/cpd/SourceCode$CodeLoader)
+ (source "SourceCode.java")
+
+ (field (attrs private ) file [object java/io/File] )
+
+(method (attrs public ) <init>([object java/io/File] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader])
+  ; parameter[0] : v1 ([object java/io/File])
+  (line 64)
+  (invoke-direct {v0} net/sourceforge/pmd/cpd/SourceCode$CodeLoader/<init> )
+  (line 65)
+  (iput-object v1 v0 net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader.file [object java/io/File])
+  (line 66)
+  (return-void )
+ )
+
+(method (attrs public ) getFileName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader])
+  (line 73)
+  (iget-object v0 v1 net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader.file [object java/io/File])
+  (invoke-virtual {v0} java/io/File/getAbsolutePath )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getReader()[object java/io/Reader]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v2 ([object net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader])
+  (line 69)
+  (new-instance v0 java/io/FileReader)
+  (iget-object v1 v2 net/sourceforge/pmd/cpd/SourceCode$FileCodeLoader.file [object java/io/File])
+  (invoke-direct {v0 v1} java/io/FileReader/<init> [object java/io/File] )
+  (return-object v0)
+)
+
+)

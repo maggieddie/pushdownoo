@@ -1,0 +1,28 @@
+(class (attrs public ) org/bouncycastle2/jce/spec/ECPublicKeySpec
+ (super org/bouncycastle2/jce/spec/ECKeySpec)
+ (source "ECPublicKeySpec.java")
+
+ (field (attrs private ) q [object org/bouncycastle2/math/ec/ECPoint] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/math/ec/ECPoint] [object org/bouncycastle2/jce/spec/ECParameterSpec] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/jce/spec/ECPublicKeySpec])
+  ; parameter[0] : v1 ([object org/bouncycastle2/math/ec/ECPoint])
+  ; parameter[1] : v2 ([object org/bouncycastle2/jce/spec/ECParameterSpec])
+  (line 23)
+  (invoke-direct {v0 v2} org/bouncycastle2/jce/spec/ECKeySpec/<init> [object org/bouncycastle2/jce/spec/ECParameterSpec] )
+  (line 25)
+  (iput-object v1 v0 org/bouncycastle2/jce/spec/ECPublicKeySpec.q [object org/bouncycastle2/math/ec/ECPoint])
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) getQ()[object org/bouncycastle2/math/ec/ECPoint]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/spec/ECPublicKeySpec])
+  (line 33)
+  (iget-object v0 v1 org/bouncycastle2/jce/spec/ECPublicKeySpec.q [object org/bouncycastle2/math/ec/ECPoint])
+  (return-object v0)
+)
+
+)

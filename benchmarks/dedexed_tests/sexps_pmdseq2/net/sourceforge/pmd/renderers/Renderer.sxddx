@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/renderers/Renderer
+ (super java/lang/Object)
+ (source "Renderer.java")
+
+
+(method (attrs public abstract ) render([object net/sourceforge/pmd/Report] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) showSuppressedViolations(boolean )void
+)
+
+)

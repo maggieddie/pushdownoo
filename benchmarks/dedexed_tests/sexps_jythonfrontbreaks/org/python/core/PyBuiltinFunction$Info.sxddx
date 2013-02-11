@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/python/core/PyBuiltinFunction$Info
+ (super java/lang/Object)
+ (source "PyBuiltinFunction.java")
+
+
+(method (attrs public abstract ) getMaxargs()int
+)
+
+(method (attrs public abstract ) getMinargs()int
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) unexpectedCall(int boolean )[object org/python/core/PyException]
+)
+
+)

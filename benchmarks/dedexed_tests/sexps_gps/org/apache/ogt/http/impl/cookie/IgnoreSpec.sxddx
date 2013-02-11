@@ -1,0 +1,62 @@
+(class (attrs public ) org/apache/ogt/http/impl/cookie/IgnoreSpec
+ (super org/apache/ogt/http/impl/cookie/CookieSpecBase)
+ (source "IgnoreSpec.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/cookie/IgnoreSpec])
+  (line 45)
+  (invoke-direct {v0} org/apache/ogt/http/impl/cookie/CookieSpecBase/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) formatCookies([object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/cookie/Cookie;"  ">;)"  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/Header;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/impl/cookie/IgnoreSpec])
+  ; parameter[0] : v2 ([object java/util/List])
+  (line 57)
+  (invoke-static {} java/util/Collections/emptyList )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getVersion()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/cookie/IgnoreSpec])
+  (line 48)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getVersionHeader()[object org/apache/ogt/http/Header]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/cookie/IgnoreSpec])
+  (line 61)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) parse([object org/apache/ogt/http/Header] [object org/apache/ogt/http/cookie/CookieOrigin] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/ogt/http/Header;"  "Lorg/apache/ogt/http/cookie/CookieOrigin;"  ")"  "Ljava/util/List"  "<"  "Lorg/apache/ogt/http/cookie/Cookie;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/cookie/MalformedCookieException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object org/apache/ogt/http/impl/cookie/IgnoreSpec])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/Header])
+  ; parameter[1] : v3 ([object org/apache/ogt/http/cookie/CookieOrigin])
+  (line 53)
+  (invoke-static {} java/util/Collections/emptyList )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

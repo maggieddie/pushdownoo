@@ -1,0 +1,29 @@
+(class (attrs public ) org/andengine/opengl/shader/source/StringShaderSource
+ (super java/lang/Object)
+ (source "StringShaderSource.java")
+ (implements org/andengine/opengl/shader/source/IShaderSource)
+
+ (field (attrs private final ) mShaderSource [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/shader/source/StringShaderSource])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 26)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 27)
+  (iput-object v1 v0 org/andengine/opengl/shader/source/StringShaderSource.mShaderSource [object java/lang/String])
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getShaderSource([object org/andengine/opengl/util/GLState] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/opengl/shader/source/StringShaderSource])
+  ; parameter[0] : v2 ([object org/andengine/opengl/util/GLState])
+  (line 40)
+  (iget-object v0 v1 org/andengine/opengl/shader/source/StringShaderSource.mShaderSource [object java/lang/String])
+  (return-object v0)
+)
+
+)

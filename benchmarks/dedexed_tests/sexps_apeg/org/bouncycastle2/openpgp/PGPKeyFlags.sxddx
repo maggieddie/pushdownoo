@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/bouncycastle2/openpgp/PGPKeyFlags
+ (super java/lang/Object)
+ (source "PGPKeyFlags.java")
+
+ (field (attrs public static final ) CAN_CERTIFY int 1); 0x1 )
+ (field (attrs public static final ) CAN_ENCRYPT_COMMS int 4); 0x4 )
+ (field (attrs public static final ) CAN_ENCRYPT_STORAGE int 8); 0x8 )
+ (field (attrs public static final ) CAN_SIGN int 2); 0x2 )
+ (field (attrs public static final ) MAYBE_SHARED int 128); 0x80 )
+ (field (attrs public static final ) MAYBE_SPLIT int 16); 0x10 )
+
+)

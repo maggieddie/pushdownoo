@@ -1,0 +1,27 @@
+(class (attrs public abstract ) org/apache/ogt/http/params/HttpAbstractParamBean
+ (super java/lang/Object)
+ (source "HttpAbstractParamBean.java")
+
+ (field (attrs protected final ) params [object org/apache/ogt/http/params/HttpParams] )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/params/HttpAbstractParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/params/HttpParams])
+  (line 37)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 38)
+  (if-nez v3 la3b66)
+  (line 39)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "HTTP parameters may not be null")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label la3b66)
+  (line 40)
+  (iput-object v3 v2 org/apache/ogt/http/params/HttpAbstractParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (line 41)
+  (return-void )
+ )
+
+)

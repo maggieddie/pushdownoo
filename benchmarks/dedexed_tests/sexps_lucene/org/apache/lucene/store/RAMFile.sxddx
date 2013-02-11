@@ -1,0 +1,27 @@
+(class (attrs ) org/apache/lucene/store/RAMFile
+ (super java/lang/Object)
+ (source "RAMFile.java")
+
+ (field (attrs ) buffers [object java/util/Vector] )
+ (field (attrs ) lastModified long )
+ (field (attrs ) length long )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/lucene/store/RAMFile])
+  (line 21)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 22)
+  (new-instance v0 java/util/Vector)
+  (invoke-direct {v0} java/util/Vector/<init> )
+  (iput-object v0 v2 org/apache/lucene/store/RAMFile.buffers [object java/util/Vector])
+  (line 24)
+  (invoke-static {} java/lang/System/currentTimeMillis )
+  (nop )
+  (move-result-wide v0)
+  (iput-wide v0 v2 org/apache/lucene/store/RAMFile.lastModified long)
+  (line 21)
+  (return-void )
+ )
+
+)

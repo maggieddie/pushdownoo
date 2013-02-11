@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/osmdroid/views/util/constants/MathConstants
+ (super java/lang/Object)
+ (source "MathConstants.java")
+
+ (field (attrs public static final ) DEG2RAD float 0.017453292 )
+ (field (attrs public static final ) PI float 3.1415927 )
+ (field (attrs public static final ) PI_2 float 1.5707964 )
+ (field (attrs public static final ) PI_4 float 0.7853982 )
+ (field (attrs public static final ) RAD2DEG float 57.29578 )
+
+)

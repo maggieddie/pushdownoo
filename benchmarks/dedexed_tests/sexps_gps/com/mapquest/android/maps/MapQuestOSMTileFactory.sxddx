@@ -1,0 +1,61 @@
+(class (attrs ) com/mapquest/android/maps/MapQuestOSMTileFactory
+ (super com/mapquest/android/maps/OSMTileFactory)
+ (source "MapQuestOSMTileFactory.java")
+
+ (field (attrs private static final ) URL [object java/lang/String] "http://otile1.mqcdn.com/tiles/1.0.0/osm/" )
+ (field (attrs private static final ) URL_SAT [object java/lang/String] "http://oatile1.mqcdn.com/naip/" )
+
+(method (attrs public ) <init>([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/MapQuestOSMTileFactory])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 11)
+  (invoke-direct {v0 v1} com/mapquest/android/maps/OSMTileFactory/<init> [object com/mapquest/android/maps/MapView] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs protected ) getProvider()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/mapquest/android/maps/MapQuestOSMTileFactory])
+  (line 25)
+  (const-string v0 "mqosm")
+  (return-object v0)
+)
+
+(method (attrs protected ) getURL([object com/mapquest/android/maps/TileType] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/mapquest/android/maps/MapQuestOSMTileFactory])
+  ; parameter[0] : v2 ([object com/mapquest/android/maps/TileType])
+  (line 16)
+  (sget-object v0 com/mapquest/android/maps/TileType.MAP [object com/mapquest/android/maps/TileType])
+  (if-ne v2 v0 l6a652)
+  (line 17)
+  (const-string v0 "http://otile1.mqcdn.com/tiles/1.0.0/osm/")
+  (label l6a650)
+  (line 19)
+  (return-object v0)
+  (label l6a652)
+  (const-string v0 "http://oatile1.mqcdn.com/naip/")
+  (goto l6a650)
+)
+
+(method (attrs public ) isSupportedTileType([object com/mapquest/android/maps/TileType] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/mapquest/android/maps/MapQuestOSMTileFactory])
+  ; parameter[0] : v2 ([object com/mapquest/android/maps/TileType])
+  (line 30)
+  (sget-object v0 com/mapquest/android/maps/TileType.MAP [object com/mapquest/android/maps/TileType])
+  (if-eq v2 v0 l6a678)
+  (sget-object v0 com/mapquest/android/maps/TileType.SAT [object com/mapquest/android/maps/TileType])
+  (if-ne v2 v0 l6a67c)
+  (label l6a678)
+  (const/4 v0 1)
+  (label l6a67a)
+  (return v0)
+  (label l6a67c)
+  (const/4 v0 0)
+  (goto l6a67a)
+)
+
+)

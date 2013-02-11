@@ -1,0 +1,21 @@
+(class (attrs public ) org/ucomb/tests/Child1
+ (super org/ucomb/tests/Parent)
+ (source "Child1.java")
+
+ (field (attrs ) childVal int )
+
+(method (attrs public ) <init>(int int int )void
+  (limit registers 4)
+  ; this: v0 ([object org/ucomb/tests/Child1])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 8)
+  (invoke-direct {v0 v2 v3} org/ucomb/tests/Parent/<init> int int )
+  (line 9)
+  (iput v1 v0 org/ucomb/tests/Child1.childVal int)
+  (line 10)
+  (return-void )
+ )
+
+)

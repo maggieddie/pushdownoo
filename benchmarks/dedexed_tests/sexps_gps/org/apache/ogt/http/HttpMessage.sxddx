@@ -1,0 +1,57 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpMessage
+ (super java/lang/Object)
+ (source "HttpMessage.java")
+
+
+(method (attrs public abstract ) addHeader([object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) addHeader([object org/apache/ogt/http/Header] )void
+)
+
+(method (attrs public abstract ) containsHeader([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) getAllHeaders()[array [object org/apache/ogt/http/Header]]
+)
+
+(method (attrs public abstract ) getFirstHeader([object java/lang/String] )[object org/apache/ogt/http/Header]
+)
+
+(method (attrs public abstract ) getHeaders([object java/lang/String] )[array [object org/apache/ogt/http/Header]]
+)
+
+(method (attrs public abstract ) getLastHeader([object java/lang/String] )[object org/apache/ogt/http/Header]
+)
+
+(method (attrs public abstract ) getParams()[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) getProtocolVersion()[object org/apache/ogt/http/ProtocolVersion]
+)
+
+(method (attrs public abstract ) headerIterator()[object org/apache/ogt/http/HeaderIterator]
+)
+
+(method (attrs public abstract ) headerIterator([object java/lang/String] )[object org/apache/ogt/http/HeaderIterator]
+)
+
+(method (attrs public abstract ) removeHeader([object org/apache/ogt/http/Header] )void
+)
+
+(method (attrs public abstract ) removeHeaders([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setHeader([object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setHeader([object org/apache/ogt/http/Header] )void
+)
+
+(method (attrs public abstract ) setHeaders([array [object org/apache/ogt/http/Header]] )void
+)
+
+(method (attrs public abstract ) setParams([object org/apache/ogt/http/params/HttpParams] )void
+)
+
+)

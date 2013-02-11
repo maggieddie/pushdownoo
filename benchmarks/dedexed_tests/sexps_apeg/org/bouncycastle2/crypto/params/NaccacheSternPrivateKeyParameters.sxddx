@@ -1,0 +1,43 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters
+ (super org/bouncycastle2/crypto/params/NaccacheSternKeyParameters)
+ (source "NaccacheSternPrivateKeyParameters.java")
+
+ (field (attrs private ) phi_n [object java/math/BigInteger] )
+ (field (attrs private ) smallPrimes [object java/util/Vector] )
+
+(method (attrs public ) <init>([object java/math/BigInteger] [object java/math/BigInteger] int [object java/util/Vector] [object java/math/BigInteger] )void
+  (limit registers 7)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters])
+  ; parameter[0] : v2 ([object java/math/BigInteger])
+  ; parameter[1] : v3 ([object java/math/BigInteger])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object java/util/Vector])
+  ; parameter[4] : v6 ([object java/math/BigInteger])
+  (line 36)
+  (const/4 v0 1)
+  (invoke-direct {v1 v0 v2 v3 v4} org/bouncycastle2/crypto/params/NaccacheSternKeyParameters/<init> boolean [object java/math/BigInteger] [object java/math/BigInteger] int )
+  (line 37)
+  (iput-object v5 v1 org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters.smallPrimes [object java/util/Vector])
+  (line 38)
+  (iput-object v6 v1 org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters.phi_n [object java/math/BigInteger])
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs public ) getPhi_n()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters])
+  (line 43)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters.phi_n [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getSmallPrimes()[object java/util/Vector]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters])
+  (line 48)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/NaccacheSternPrivateKeyParameters.smallPrimes [object java/util/Vector])
+  (return-object v0)
+)
+
+)

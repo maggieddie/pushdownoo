@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/slf4j/spi/LoggerFactoryBinder
+ (super java/lang/Object)
+ (source "LoggerFactoryBinder.java")
+
+
+(method (attrs public abstract ) getLoggerFactory()[object org/slf4j/ILoggerFactory]
+)
+
+(method (attrs public abstract ) getLoggerFactoryClassStr()[object java/lang/String]
+)
+
+)

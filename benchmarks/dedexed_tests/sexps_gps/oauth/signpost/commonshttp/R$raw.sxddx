@@ -1,0 +1,21 @@
+(class (attrs public final ) oauth/signpost/commonshttp/R$raw
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) conversion_from_meter int 2131230721); 0x7f080001 )
+ (field (attrs public static final ) conversion_from_meter_to_height int 2131230722); 0x7f080002 )
+ (field (attrs public static final ) conversion_from_meter_to_nauticmile int 2131230724); 0x7f080004 )
+ (field (attrs public static final ) conversion_from_mps int 2131230720); 0x7f080000 )
+ (field (attrs public static final ) conversion_from_mps_to_acres_hour int 2131230725); 0x7f080005 )
+ (field (attrs public static final ) conversion_from_mps_to_hectare_hour int 2131230726); 0x7f080006 )
+ (field (attrs public static final ) conversion_from_mps_to_knot int 2131230723); 0x7f080003 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object oauth/signpost/commonshttp/R$raw])
+  (line 203)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

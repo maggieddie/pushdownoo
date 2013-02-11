@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/apache/ogt/http/message/HeaderValueParser
+ (super java/lang/Object)
+ (source "HeaderValueParser.java")
+
+
+(method (attrs public abstract ) parseElements([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[array [object org/apache/ogt/http/HeaderElement]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseHeaderElement([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[object org/apache/ogt/http/HeaderElement]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseNameValuePair([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[object org/apache/ogt/http/NameValuePair]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseParameters([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[array [object org/apache/ogt/http/NameValuePair]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+)

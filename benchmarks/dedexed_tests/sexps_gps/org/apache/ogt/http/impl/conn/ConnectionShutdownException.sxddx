@@ -1,0 +1,16 @@
+(class (attrs public ) org/apache/ogt/http/impl/conn/ConnectionShutdownException
+ (super java/lang/IllegalStateException)
+ (source "ConnectionShutdownException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1509419473); 0x59f7e9d1 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/conn/ConnectionShutdownException])
+  (line 47)
+  (invoke-direct {v0} java/lang/IllegalStateException/<init> )
+  (line 48)
+  (return-void )
+ )
+
+)

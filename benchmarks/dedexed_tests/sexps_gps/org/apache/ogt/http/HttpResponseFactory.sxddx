@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpResponseFactory
+ (super java/lang/Object)
+ (source "HttpResponseFactory.java")
+
+
+(method (attrs public abstract ) newHttpResponse([object org/apache/ogt/http/ProtocolVersion] int [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/HttpResponse]
+)
+
+(method (attrs public abstract ) newHttpResponse([object org/apache/ogt/http/StatusLine] [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/HttpResponse]
+)
+
+)

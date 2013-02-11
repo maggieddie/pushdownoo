@@ -1,0 +1,48 @@
+(class (attrs public ) org/apache/ogt/http/client/entity/GzipDecompressingEntity
+ (super org/apache/ogt/http/client/entity/DecompressingEntity)
+ (source "GzipDecompressingEntity.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/HttpEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/entity/GzipDecompressingEntity])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/HttpEntity])
+  (line 51)
+  (invoke-direct {v0 v1} org/apache/ogt/http/client/entity/DecompressingEntity/<init> [object org/apache/ogt/http/HttpEntity] )
+  (line 52)
+  (return-void )
+ )
+
+(method (attrs public ) getContent()[object java/io/InputStream]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/lang/IllegalStateException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/client/entity/GzipDecompressingEntity])
+  (line 61)
+  (iget-object v1 v2 org/apache/ogt/http/client/entity/GzipDecompressingEntity.wrappedEntity [object org/apache/ogt/http/HttpEntity])
+  (invoke-interface {v1} org/apache/ogt/http/HttpEntity/getContent )
+  (move-result-object v0)
+  (line 63)
+  (new-instance v1 java/util/zip/GZIPInputStream)
+  (invoke-direct {v1 v0} java/util/zip/GZIPInputStream/<init> [object java/io/InputStream] )
+  (return-object v1)
+)
+
+(method (attrs public ) getContentEncoding()[object org/apache/ogt/http/Header]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/client/entity/GzipDecompressingEntity])
+  (line 73)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getContentLength()long
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/client/entity/GzipDecompressingEntity])
+  (line 83)
+  (const-wide/16 v0 65535)
+  (return-wide v0)
+)
+
+)

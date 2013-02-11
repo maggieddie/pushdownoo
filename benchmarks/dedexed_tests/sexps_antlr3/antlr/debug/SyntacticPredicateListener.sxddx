@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) antlr/debug/SyntacticPredicateListener
+ (super java/lang/Object)
+ (source "SyntacticPredicateListener.java")
+ (implements antlr/debug/ListenerBase)
+
+
+(method (attrs public abstract ) syntacticPredicateFailed([object antlr/debug/SyntacticPredicateEvent] )void
+)
+
+(method (attrs public abstract ) syntacticPredicateStarted([object antlr/debug/SyntacticPredicateEvent] )void
+)
+
+(method (attrs public abstract ) syntacticPredicateSucceeded([object antlr/debug/SyntacticPredicateEvent] )void
+)
+
+)

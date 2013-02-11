@@ -1,0 +1,20 @@
+(interface (attrs public abstract ) twitter4j/PagableResponseList
+ (super java/lang/Object)
+ (source "PagableResponseList.java")
+ (implements twitter4j/ResponseList)
+ (implements twitter4j/CursorSupport)
+
+
+(method (attrs public abstract ) getNextCursor()long
+)
+
+(method (attrs public abstract ) getPreviousCursor()long
+)
+
+(method (attrs public abstract ) hasNext()boolean
+)
+
+(method (attrs public abstract ) hasPrevious()boolean
+)
+
+)

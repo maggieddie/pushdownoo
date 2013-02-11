@@ -1,0 +1,17 @@
+(class (attrs public ) org/thoughtcrime/bouncycastle/asn1/BERApplicationSpecific
+ (super org/thoughtcrime/bouncycastle/asn1/DERApplicationSpecific)
+ (source "BERApplicationSpecific.java")
+
+
+(method (attrs public ) <init>(int [object org/thoughtcrime/bouncycastle/asn1/ASN1EncodableVector] )void
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/bouncycastle/asn1/BERApplicationSpecific])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object org/thoughtcrime/bouncycastle/asn1/ASN1EncodableVector])
+  (line 8)
+  (invoke-direct {v0 v1 v2} org/thoughtcrime/bouncycastle/asn1/DERApplicationSpecific/<init> int [object org/thoughtcrime/bouncycastle/asn1/ASN1EncodableVector] )
+  (line 9)
+  (return-void )
+ )
+
+)

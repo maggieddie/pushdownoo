@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/cpd/Renderer
+ (super java/lang/Object)
+ (source "Renderer.java")
+
+
+(method (attrs public abstract ) render([object java/util/Iterator] )[object java/lang/String]
+)
+
+)

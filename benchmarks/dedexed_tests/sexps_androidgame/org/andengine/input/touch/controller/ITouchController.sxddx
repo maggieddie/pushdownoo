@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/andengine/input/touch/controller/ITouchController
+ (super java/lang/Object)
+ (source "ITouchController.java")
+ (implements org/andengine/engine/handler/IUpdateHandler)
+
+
+(method (attrs public abstract ) onHandleMotionEvent([object android/view/MotionEvent] )void
+)
+
+(method (attrs public abstract ) setTouchEventCallback([object org/andengine/input/touch/controller/ITouchEventCallback] )void
+)
+
+)

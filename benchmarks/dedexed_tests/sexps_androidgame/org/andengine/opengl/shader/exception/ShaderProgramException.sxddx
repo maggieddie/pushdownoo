@@ -1,0 +1,28 @@
+(class (attrs public ) org/andengine/opengl/shader/exception/ShaderProgramException
+ (super org/andengine/util/exception/AndEngineRuntimeException)
+ (source "ShaderProgramException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1660911613); 0x62ff7ffd )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/shader/exception/ShaderProgramException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 27)
+  (invoke-direct {v0 v1} org/andengine/util/exception/AndEngineRuntimeException/<init> [object java/lang/String] )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object org/andengine/opengl/shader/exception/ShaderProgramException] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/opengl/shader/exception/ShaderProgramException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object org/andengine/opengl/shader/exception/ShaderProgramException])
+  (line 31)
+  (invoke-direct {v0 v1 v2} org/andengine/util/exception/AndEngineRuntimeException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 32)
+  (return-void )
+ )
+
+)

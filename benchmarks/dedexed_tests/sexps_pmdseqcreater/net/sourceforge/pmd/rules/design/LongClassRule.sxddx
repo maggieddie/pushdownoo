@@ -1,0 +1,16 @@
+(class (attrs public ) net/sourceforge/pmd/rules/design/LongClassRule
+ (super net/sourceforge/pmd/rules/design/ExcessiveLengthRule)
+ (source "LongClassRule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/design/LongClassRule])
+  (line 15)
+  (const-class v0 net/sourceforge/pmd/ast/ASTClassOrInterfaceDeclaration)
+  (invoke-direct {v1 v0} net/sourceforge/pmd/rules/design/ExcessiveLengthRule/<init> [object java/lang/Class] )
+  (line 16)
+  (return-void )
+ )
+
+)

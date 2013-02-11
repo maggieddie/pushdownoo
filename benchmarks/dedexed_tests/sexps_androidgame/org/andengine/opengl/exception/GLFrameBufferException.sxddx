@@ -1,0 +1,28 @@
+(class (attrs public ) org/andengine/opengl/exception/GLFrameBufferException
+ (super org/andengine/opengl/exception/GLException)
+ (source "GLFrameBufferException.java")
+
+ (field (attrs private static final ) serialVersionUID long -195362948); 0xf45aff7c )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/exception/GLFrameBufferException])
+  ; parameter[0] : v1 (int)
+  (line 26)
+  (invoke-direct {v0 v1} org/andengine/opengl/exception/GLException/<init> int )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/opengl/exception/GLFrameBufferException])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 30)
+  (invoke-direct {v0 v1 v2} org/andengine/opengl/exception/GLException/<init> int [object java/lang/String] )
+  (line 31)
+  (return-void )
+ )
+
+)

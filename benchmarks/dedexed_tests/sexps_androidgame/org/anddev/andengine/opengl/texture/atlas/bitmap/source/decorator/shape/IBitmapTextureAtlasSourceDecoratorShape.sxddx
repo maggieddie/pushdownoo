@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape
+ (super java/lang/Object)
+ (source "IBitmapTextureAtlasSourceDecoratorShape.java")
+
+
+(method (attrs public abstract ) onDecorateBitmap([object android/graphics/Canvas] [object android/graphics/Paint] [object org/anddev/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions] )void
+)
+
+)

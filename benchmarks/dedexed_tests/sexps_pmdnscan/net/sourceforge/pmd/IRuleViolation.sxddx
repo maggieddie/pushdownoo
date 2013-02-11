@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/IRuleViolation
+ (super java/lang/Object)
+ (source "IRuleViolation.java")
+
+
+(method (attrs public abstract ) getBeginColumn()int
+)
+
+(method (attrs public abstract ) getBeginLine()int
+)
+
+(method (attrs public abstract ) getClassName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getDescription()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getEndColumn()int
+)
+
+(method (attrs public abstract ) getEndLine()int
+)
+
+(method (attrs public abstract ) getFilename()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getMethodName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPackageName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getRule()[object net/sourceforge/pmd/Rule]
+)
+
+(method (attrs public abstract ) getVariableName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) isSuppressed()boolean
+)
+
+)

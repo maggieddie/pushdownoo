@@ -1,0 +1,72 @@
+(class (attrs public ) org/bouncycastle2/crypto/io/MacInputStream
+ (super java/io/FilterInputStream)
+ (source "MacInputStream.java")
+
+ (field (attrs protected ) mac [object org/bouncycastle2/crypto/Mac] )
+
+(method (attrs public ) <init>([object java/io/InputStream] [object org/bouncycastle2/crypto/Mac] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/crypto/io/MacInputStream])
+  ; parameter[0] : v1 ([object java/io/InputStream])
+  ; parameter[1] : v2 ([object org/bouncycastle2/crypto/Mac])
+  (line 18)
+  (invoke-direct {v0 v1} java/io/FilterInputStream/<init> [object java/io/InputStream] )
+  (line 19)
+  (iput-object v2 v0 org/bouncycastle2/crypto/io/MacInputStream.mac [object org/bouncycastle2/crypto/Mac])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) getMac()[object org/bouncycastle2/crypto/Mac]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/io/MacInputStream])
+  (line 50)
+  (iget-object v0 v1 org/bouncycastle2/crypto/io/MacInputStream.mac [object org/bouncycastle2/crypto/Mac])
+  (return-object v0)
+)
+
+(method (attrs public ) read()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle2/crypto/io/MacInputStream])
+  (line 25)
+  (iget-object v1 v3 org/bouncycastle2/crypto/io/MacInputStream.in [object java/io/InputStream])
+  (invoke-virtual {v1} java/io/InputStream/read )
+  (move-result v0)
+  (line 27)
+  (if-ltz v0 l111b1c)
+  (line 29)
+  (iget-object v1 v3 org/bouncycastle2/crypto/io/MacInputStream.mac [object org/bouncycastle2/crypto/Mac])
+  (int-to-byte v2 v0)
+  (invoke-interface {v1 v2} org/bouncycastle2/crypto/Mac/update byte )
+  (label l111b1c)
+  (line 31)
+  (return v0)
+)
+
+(method (attrs public ) read([array byte] int int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 6)
+  ; this: v2 ([object org/bouncycastle2/crypto/io/MacInputStream])
+  ; parameter[0] : v3 ([array byte])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 40)
+  (iget-object v1 v2 org/bouncycastle2/crypto/io/MacInputStream.in [object java/io/InputStream])
+  (invoke-virtual {v1 v3 v4 v5} java/io/InputStream/read [array byte] int int )
+  (move-result v0)
+  (line 41)
+  (if-ltz v0 l111b4a)
+  (line 43)
+  (iget-object v1 v2 org/bouncycastle2/crypto/io/MacInputStream.mac [object org/bouncycastle2/crypto/Mac])
+  (invoke-interface {v1 v3 v4 v0} org/bouncycastle2/crypto/Mac/update [array byte] int int )
+  (label l111b4a)
+  (line 45)
+  (return v0)
+)
+
+)

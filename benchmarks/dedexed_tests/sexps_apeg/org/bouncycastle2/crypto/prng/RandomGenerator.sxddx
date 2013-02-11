@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/bouncycastle2/crypto/prng/RandomGenerator
+ (super java/lang/Object)
+ (source "RandomGenerator.java")
+
+
+(method (attrs public abstract ) addSeedMaterial(long )void
+)
+
+(method (attrs public abstract ) addSeedMaterial([array byte] )void
+)
+
+(method (attrs public abstract ) nextBytes([array byte] )void
+)
+
+(method (attrs public abstract ) nextBytes([array byte] int int )void
+)
+
+)

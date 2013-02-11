@@ -1,0 +1,30 @@
+(interface (attrs abstract ) android/support/v4/widget/EdgeEffectCompat$EdgeEffectImpl
+ (super java/lang/Object)
+ (source "EdgeEffectCompat.java")
+
+
+(method (attrs public abstract ) draw([object java/lang/Object] [object android/graphics/Canvas] )boolean
+)
+
+(method (attrs public abstract ) finish([object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) isFinished([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) newEdgeEffect([object android/content/Context] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) onAbsorb([object java/lang/Object] int )boolean
+)
+
+(method (attrs public abstract ) onPull([object java/lang/Object] float )boolean
+)
+
+(method (attrs public abstract ) onRelease([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) setSize([object java/lang/Object] int int )void
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/util/algorithm/path/astar/IAStarHeuristic
+ (super java/lang/Object)
+ (source "IAStarHeuristic.java")
+
+
+(method (attrs public abstract ) getExpectedRestCost([object org/andengine/util/algorithm/path/IPathFinderMap] [object java/lang/Object] int int int int )float
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/algorithm/path/IPathFinderMap"  "<TT;>;TT;IIII)F")
+  )
+)
+
+)

@@ -1,0 +1,126 @@
+(class (attrs public ) org/andengine/entity/ZIndexSorter
+ (super org/andengine/util/algorithm/sort/InsertionSorter)
+ (source "ZIndexSorter.java")
+
+ (field (attrs private static ) INSTANCE [object org/andengine/entity/ZIndexSorter] )
+ (field (attrs private final ) mZIndexComparator [object java/util/Comparator] )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  (line 38)
+  (invoke-direct {v1} org/andengine/util/algorithm/sort/InsertionSorter/<init> )
+  (line 27)
+  (new-instance v0 org/andengine/entity/ZIndexSorter$1)
+  (invoke-direct {v0 v1} org/andengine/entity/ZIndexSorter$1/<init> [object org/andengine/entity/ZIndexSorter] )
+  (iput-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public static ) getInstance()[object org/andengine/entity/ZIndexSorter]
+  (limit registers 1)
+  (line 43)
+  (sget-object v0 org/andengine/entity/ZIndexSorter.INSTANCE [object org/andengine/entity/ZIndexSorter])
+  (if-nez v0 l98aba)
+  (line 44)
+  (new-instance v0 org/andengine/entity/ZIndexSorter)
+  (invoke-direct {v0} org/andengine/entity/ZIndexSorter/<init> )
+  (sput-object v0 org/andengine/entity/ZIndexSorter.INSTANCE [object org/andengine/entity/ZIndexSorter])
+  (label l98aba)
+  (line 46)
+  (sget-object v0 org/andengine/entity/ZIndexSorter.INSTANCE [object org/andengine/entity/ZIndexSorter])
+  (return-object v0)
+ )
+
+(method (attrs public ) sort([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([object java/util/List])
+  (line 70)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v0} org/andengine/entity/ZIndexSorter/sort [object java/util/List] [object java/util/Comparator] )
+  (line 71)
+  (return-void )
+)
+
+(method (attrs public ) sort([object java/util/List] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([object java/util/List])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 74)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v3 v4 v0} org/andengine/entity/ZIndexSorter/sort [object java/util/List] int int [object java/util/Comparator] )
+  (line 75)
+  (return-void )
+)
+
+(method (attrs public ) sort([object org/andengine/util/adt/list/IList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([object org/andengine/util/adt/list/IList])
+  (line 78)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v0} org/andengine/entity/ZIndexSorter/sort [object org/andengine/util/adt/list/IList] [object java/util/Comparator] )
+  (line 79)
+  (return-void )
+)
+
+(method (attrs public ) sort([object org/andengine/util/adt/list/IList] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([object org/andengine/util/adt/list/IList])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 82)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v3 v4 v0} org/andengine/entity/ZIndexSorter/sort [object org/andengine/util/adt/list/IList] int int [object java/util/Comparator] )
+  (line 83)
+  (return-void )
+)
+
+(method (attrs public ) sort([array [object org/andengine/entity/IEntity]] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([array [object org/andengine/entity/IEntity]])
+  (line 62)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v0} org/andengine/entity/ZIndexSorter/sort [array [object java/lang/Object]] [object java/util/Comparator] )
+  (line 63)
+  (return-void )
+)
+
+(method (attrs public ) sort([array [object org/andengine/entity/IEntity]] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/list/IList"  "<"  "Lorg/andengine/entity/IEntity;"  ">;II)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/entity/ZIndexSorter])
+  ; parameter[0] : v2 ([array [object org/andengine/entity/IEntity]])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 66)
+  (iget-object v0 v1 org/andengine/entity/ZIndexSorter.mZIndexComparator [object java/util/Comparator])
+  (invoke-virtual {v1 v2 v3 v4 v0} org/andengine/entity/ZIndexSorter/sort [array [object java/lang/Object]] int int [object java/util/Comparator] )
+  (line 67)
+  (return-void )
+)
+
+)

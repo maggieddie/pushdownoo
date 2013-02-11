@@ -1,0 +1,25 @@
+(class (attrs ) org/python/core/SoftIInternalTables$Ref
+ (super java/lang/ref/SoftReference)
+ (source "SoftIInternalTables.java")
+
+ (field (attrs ) key [object java/lang/Object] )
+ (field (attrs ) type short )
+
+(method (attrs ) <init>(short [object java/lang/Object] [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )void
+  (limit registers 5)
+  ; this: v0 ([object org/python/core/SoftIInternalTables$Ref])
+  ; parameter[0] : v1 (short)
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  ; parameter[3] : v4 ([object java/lang/ref/ReferenceQueue])
+  (line 15)
+  (invoke-direct {v0 v3 v4} java/lang/ref/SoftReference/<init> [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )
+  (line 16)
+  (iput-short v1 v0 org/python/core/SoftIInternalTables$Ref.type short)
+  (line 17)
+  (iput-object v2 v0 org/python/core/SoftIInternalTables$Ref.key [object java/lang/Object])
+  (line 18)
+  (return-void )
+ )
+
+)

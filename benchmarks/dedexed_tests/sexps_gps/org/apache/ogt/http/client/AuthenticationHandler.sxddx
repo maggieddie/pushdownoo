@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/AuthenticationHandler
+ (super java/lang/Object)
+ (source "AuthenticationHandler.java")
+
+
+(method (attrs public abstract ) getChallenges([object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/ogt/http/HttpResponse;"  "Lorg/apache/ogt/http/protocol/HttpContext;"  ")"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Lorg/apache/ogt/http/Header;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/auth/MalformedChallengeException])
+  )
+)
+
+(method (attrs public abstract ) isAuthenticationRequested([object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )boolean
+)
+
+(method (attrs public abstract ) selectScheme([object java/util/Map] [object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/auth/AuthScheme]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Lorg/apache/ogt/http/Header;"  ">;"  "Lorg/apache/ogt/http/HttpResponse;"  "Lorg/apache/ogt/http/protocol/HttpContext;"  ")"  "Lorg/apache/ogt/http/auth/AuthScheme;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/auth/AuthenticationException])
+  )
+)
+
+)

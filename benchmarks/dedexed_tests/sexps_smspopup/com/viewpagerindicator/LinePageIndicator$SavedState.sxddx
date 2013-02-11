@@ -1,0 +1,66 @@
+(class (attrs ) com/viewpagerindicator/LinePageIndicator$SavedState
+ (super android/view/View$BaseSavedState)
+ (source "LinePageIndicator.java")
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+ (field (attrs ) currentPage int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 436)
+  (new-instance v0 com/viewpagerindicator/LinePageIndicator$SavedState$1)
+  (invoke-direct {v0} com/viewpagerindicator/LinePageIndicator$SavedState$1/<init> )
+  (sput-object v0 com/viewpagerindicator/LinePageIndicator$SavedState.CREATOR [object android/os/Parcelable$Creator])
+  (line 417)
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object android/os/Parcel] )void
+  (limit registers 3)
+  ; this: v1 ([object com/viewpagerindicator/LinePageIndicator$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 425)
+  (invoke-direct {v1 v2} android/view/View$BaseSavedState/<init> [object android/os/Parcel] )
+  (line 426)
+  (invoke-virtual {v2} android/os/Parcel/readInt )
+  (move-result v0)
+  (iput v0 v1 com/viewpagerindicator/LinePageIndicator$SavedState.currentPage int)
+  (line 427)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/os/Parcel] [object com/viewpagerindicator/LinePageIndicator$SavedState] )void
+  (limit registers 3)
+  ; this: v0 ([object com/viewpagerindicator/LinePageIndicator$SavedState])
+  ; parameter[0] : v1 ([object android/os/Parcel])
+  ; parameter[1] : v2 ([object com/viewpagerindicator/LinePageIndicator$SavedState])
+  (line 424)
+  (invoke-direct {v0 v1} com/viewpagerindicator/LinePageIndicator$SavedState/<init> [object android/os/Parcel] )
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/os/Parcelable] )void
+  (limit registers 2)
+  ; this: v0 ([object com/viewpagerindicator/LinePageIndicator$SavedState])
+  ; parameter[0] : v1 ([object android/os/Parcelable])
+  (line 421)
+  (invoke-direct {v0 v1} android/view/View$BaseSavedState/<init> [object android/os/Parcelable] )
+  (line 422)
+  (return-void )
+ )
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/viewpagerindicator/LinePageIndicator$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 (int)
+  (line 431)
+  (invoke-super {v1 v2 v3} android/view/View$BaseSavedState/writeToParcel [object android/os/Parcel] int )
+  (line 432)
+  (iget v0 v1 com/viewpagerindicator/LinePageIndicator$SavedState.currentPage int)
+  (invoke-virtual {v2 v0} android/os/Parcel/writeInt int )
+  (line 433)
+  (return-void )
+)
+
+)

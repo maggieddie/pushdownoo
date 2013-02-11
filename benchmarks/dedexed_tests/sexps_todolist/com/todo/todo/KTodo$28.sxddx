@@ -1,0 +1,37 @@
+(class (attrs ) com/todo/todo/KTodo$28
+ (super java/lang/Object)
+ (source "KTodo.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/todo/todo/KTodo] )
+ (field (attrs private final ) val$cb [object com/todo/todo/Callback1] )
+
+(method (attrs ) <init>([object com/todo/todo/KTodo] [object com/todo/todo/Callback1] )void
+  (limit registers 3)
+  ; this: v0 ([object com/todo/todo/KTodo$28])
+  ; parameter[0] : v1 ([object com/todo/todo/KTodo])
+  ; parameter[1] : v2 ([object com/todo/todo/Callback1])
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/KTodo$28.this$0 [object com/todo/todo/KTodo])
+  (iput-object v2 v0 com/todo/todo/KTodo$28.val$cb [object com/todo/todo/Callback1])
+  (line 854)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 5)
+  ; this: v2 ([object com/todo/todo/KTodo$28])
+  ; parameter[0] : v3 ([object android/content/DialogInterface])
+  ; parameter[1] : v4 (int)
+  (line 856)
+  (iget-object v0 v2 com/todo/todo/KTodo$28.val$cb [object com/todo/todo/Callback1])
+  (add-int/lit8 v1 v4 1)
+  (invoke-static {v1} java/lang/Integer/valueOf int )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} com/todo/todo/Callback1/call [object java/lang/Object] )
+  (line 857)
+  (return-void )
+)
+
+)

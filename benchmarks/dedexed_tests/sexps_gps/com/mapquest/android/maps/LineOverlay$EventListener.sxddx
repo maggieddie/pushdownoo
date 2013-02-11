@@ -1,0 +1,112 @@
+(class (attrs ) com/mapquest/android/maps/LineOverlay$EventListener
+ (super java/lang/Object)
+ (source "LineOverlay.java")
+ (implements com/mapquest/android/maps/MapView$MapViewEventListener)
+
+ (field (attrs final ) this$0 [object com/mapquest/android/maps/LineOverlay] )
+
+(method (attrs private ) <init>([object com/mapquest/android/maps/LineOverlay] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/LineOverlay])
+  (line 515)
+  (iput-object v1 v0 com/mapquest/android/maps/LineOverlay$EventListener.this$0 [object com/mapquest/android/maps/LineOverlay])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/mapquest/android/maps/LineOverlay] [object com/mapquest/android/maps/LineOverlay$1] )void
+  (limit registers 3)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/LineOverlay])
+  ; parameter[1] : v2 ([object com/mapquest/android/maps/LineOverlay$1])
+  (line 515)
+  (invoke-direct {v0 v1} com/mapquest/android/maps/LineOverlay$EventListener/<init> [object com/mapquest/android/maps/LineOverlay] )
+  (return-void )
+ )
+
+(method (attrs public ) longTouch([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 520)
+  (return-void )
+)
+
+(method (attrs public ) mapLoaded([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 558)
+  (return-void )
+)
+
+(method (attrs public ) move([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 525)
+  (return-void )
+)
+
+(method (attrs public ) moveEnd([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 530)
+  (return-void )
+)
+
+(method (attrs public ) moveStart([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 535)
+  (return-void )
+)
+
+(method (attrs public ) touch([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 540)
+  (return-void )
+)
+
+(method (attrs public ) zoomEnd([object com/mapquest/android/maps/MapView] )void
+  (limit registers 6)
+  ; this: v4 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v5 ([object com/mapquest/android/maps/MapView])
+  (line 544)
+  (iget-object v0 v4 com/mapquest/android/maps/LineOverlay$EventListener.this$0 [object com/mapquest/android/maps/LineOverlay])
+  (invoke-static {v0} com/mapquest/android/maps/LineOverlay/access$200 [object com/mapquest/android/maps/LineOverlay] )
+  (move-result v0)
+  (if-eqz v0 l68632)
+  (line 545)
+  (iget-object v0 v4 com/mapquest/android/maps/LineOverlay$EventListener.this$0 [object com/mapquest/android/maps/LineOverlay])
+  (invoke-static {v0} com/mapquest/android/maps/LineOverlay/access$300 [object com/mapquest/android/maps/LineOverlay] )
+  (move-result-object v0)
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} com/mapquest/android/maps/LineOverlay$SimplifierHandler/removeMessages int )
+  (line 546)
+  (new-instance v0 com/mapquest/android/maps/LineOverlay$Simplifier)
+  (iget-object v1 v4 com/mapquest/android/maps/LineOverlay$EventListener.this$0 [object com/mapquest/android/maps/LineOverlay])
+  (invoke-virtual {v5} com/mapquest/android/maps/MapView/getProjection )
+  (move-result-object v2)
+  (const/4 v3 0)
+  (invoke-direct {v0 v1 v2 v3} com/mapquest/android/maps/LineOverlay$Simplifier/<init> [object com/mapquest/android/maps/LineOverlay] [object com/mapquest/android/maps/Projection] [object com/mapquest/android/maps/LineOverlay$1] )
+  (invoke-virtual {v5 v0} com/mapquest/android/maps/MapView/post [object java/lang/Runnable] )
+  (label l68632)
+  (line 548)
+  (return-void )
+)
+
+(method (attrs public ) zoomStart([object com/mapquest/android/maps/MapView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/mapquest/android/maps/LineOverlay$EventListener])
+  ; parameter[0] : v1 ([object com/mapquest/android/maps/MapView])
+  (line 553)
+  (return-void )
+)
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) org/andengine/util/adt/bounds/IIntBounds
+ (super java/lang/Object)
+ (source "IIntBounds.java")
+ (implements org/andengine/util/adt/bounds/IBounds)
+
+
+(method (attrs public abstract ) getXMax()int
+)
+
+(method (attrs public abstract ) getXMin()int
+)
+
+(method (attrs public abstract ) getYMax()int
+)
+
+(method (attrs public abstract ) getYMin()int
+)
+
+)

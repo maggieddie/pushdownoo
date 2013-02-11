@@ -1,0 +1,32 @@
+(class (attrs ) twitter4j/ProfileImageImpl
+ (super twitter4j/TwitterResponseImpl)
+ (source "ProfileImageImpl.java")
+ (implements twitter4j/ProfileImage)
+
+ (field (attrs private static final ) serialVersionUID long -537145425); 0xdffbcfaf )
+ (field (attrs private ) url [object java/lang/String] )
+
+(method (attrs ) <init>([object twitter4j/internal/http/HttpResponse] )void
+  (limit registers 3)
+  ; this: v1 ([object twitter4j/ProfileImageImpl])
+  ; parameter[0] : v2 ([object twitter4j/internal/http/HttpResponse])
+  (line 40)
+  (invoke-direct {v1 v2} twitter4j/TwitterResponseImpl/<init> [object twitter4j/internal/http/HttpResponse] )
+  (line 41)
+  (const-string v0 "Location")
+  (invoke-virtual {v2 v0} twitter4j/internal/http/HttpResponse/getResponseHeader [object java/lang/String] )
+  (move-result-object v0)
+  (iput-object v0 v1 twitter4j/ProfileImageImpl.url [object java/lang/String])
+  (line 42)
+  (return-void )
+ )
+
+(method (attrs public ) getURL()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/ProfileImageImpl])
+  (line 45)
+  (iget-object v0 v1 twitter4j/ProfileImageImpl.url [object java/lang/String])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,147 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordImpl
+ (super java/lang/Object)
+ (source "AccessibilityRecordCompat.java")
+
+
+(method (attrs public abstract ) getAddedCount([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getBeforeText([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getClassName([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getContentDescription([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getCurrentItemIndex([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getFromIndex([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getItemCount([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getMaxScrollX([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getMaxScrollY([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getParcelableData([object java/lang/Object] )[object android/os/Parcelable]
+)
+
+(method (attrs public abstract ) getRemovedCount([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getScrollX([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getScrollY([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getSource([object java/lang/Object] )[object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat]
+)
+
+(method (attrs public abstract ) getText([object java/lang/Object] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/List"  "<"  "Ljava/lang/CharSequence;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getToIndex([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getWindowId([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) isChecked([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isEnabled([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isFullScreen([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isPassword([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isScrollable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) obtain()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) obtain([object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) recycle([object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) setAddedCount([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setBeforeText([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setChecked([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setClassName([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setContentDescription([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setCurrentItemIndex([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setEnabled([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setFromIndex([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setFullScreen([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setItemCount([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setMaxScrollX([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setMaxScrollY([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setParcelableData([object java/lang/Object] [object android/os/Parcelable] )void
+)
+
+(method (attrs public abstract ) setPassword([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setRemovedCount([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setScrollX([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setScrollY([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setScrollable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setSource([object java/lang/Object] [object android/view/View] )void
+)
+
+(method (attrs public abstract ) setSource([object java/lang/Object] [object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setToIndex([object java/lang/Object] int )void
+)
+
+)

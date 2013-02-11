@@ -1,0 +1,60 @@
+(class (attrs ) android/support/v4/app/FragmentActivity$1
+ (super android/os/Handler)
+ (source "FragmentActivity.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/app/FragmentActivity] )
+
+(method (attrs ) <init>([object android/support/v4/app/FragmentActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/FragmentActivity$1])
+  ; parameter[0] : v1 ([object android/support/v4/app/FragmentActivity])
+  (line 79)
+  (iput-object v1 v0 android/support/v4/app/FragmentActivity$1.this$0 [object android/support/v4/app/FragmentActivity])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/app/FragmentActivity$1])
+  ; parameter[0] : v3 ([object android/os/Message])
+  (line 82)
+  (iget v0 v3 android/os/Message.what int)
+  (packed-switch v0 1
+    ps4c488_4c496 ; case 1
+    ps4c488_4c4b0 ; case 2
+    ps4c488_default) ; default
+  (label ps4c488_default)
+  (line 93)
+  (invoke-super {v2 v3} android/os/Handler/handleMessage [object android/os/Message] )
+  (label l4c494)
+  (line 95)
+  (return-void )
+  (label ps4c488_4c496)
+  (line 84)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.this$0 [object android/support/v4/app/FragmentActivity])
+  (iget-boolean v0 v0 android/support/v4/app/FragmentActivity.mStopped boolean)
+  (if-eqz v0 l4c494)
+  (line 85)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.this$0 [object android/support/v4/app/FragmentActivity])
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} android/support/v4/app/FragmentActivity/doReallyStop boolean )
+  (goto l4c494)
+  (label ps4c488_4c4b0)
+  (line 89)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.this$0 [object android/support/v4/app/FragmentActivity])
+  (iget-object v0 v0 android/support/v4/app/FragmentActivity.mFragments [object android/support/v4/app/FragmentManagerImpl])
+  (invoke-virtual {v0} android/support/v4/app/FragmentManagerImpl/dispatchResume )
+  (line 90)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.this$0 [object android/support/v4/app/FragmentActivity])
+  (iget-object v0 v0 android/support/v4/app/FragmentActivity.mFragments [object android/support/v4/app/FragmentManagerImpl])
+  (invoke-virtual {v0} android/support/v4/app/FragmentManagerImpl/execPendingActions )
+  (goto l4c494)
+  (line 82)
+  (label l4c4ce)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/modifier/IEntityModifier
+ (super java/lang/Object)
+ (source "IEntityModifier.java")
+ (implements org/anddev/andengine/util/modifier/IModifier)
+
+
+(method (attrs public abstract ) deepCopy()[object org/anddev/andengine/entity/modifier/IEntityModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/anddev/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+)
+
+)

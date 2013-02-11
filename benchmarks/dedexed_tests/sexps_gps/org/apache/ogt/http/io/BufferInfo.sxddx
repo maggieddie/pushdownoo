@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/ogt/http/io/BufferInfo
+ (super java/lang/Object)
+ (source "BufferInfo.java")
+
+
+(method (attrs public abstract ) available()int
+)
+
+(method (attrs public abstract ) capacity()int
+)
+
+(method (attrs public abstract ) length()int
+)
+
+)

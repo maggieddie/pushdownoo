@@ -1,0 +1,46 @@
+(class (attrs public ) org/anddev/andengine/entity/util/FrameCounter
+ (super java/lang/Object)
+ (source "FrameCounter.java")
+ (implements org/anddev/andengine/engine/handler/IUpdateHandler)
+
+ (field (attrs private ) mFrames int )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/entity/util/FrameCounter])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getFrames()int
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/util/FrameCounter])
+  (line 32)
+  (iget v0 v1 org/anddev/andengine/entity/util/FrameCounter.mFrames int)
+  (return v0)
+)
+
+(method (attrs public ) onUpdate(float )void
+  (limit registers 3)
+  ; this: v1 ([object org/anddev/andengine/entity/util/FrameCounter])
+  ; parameter[0] : v2 (float)
+  (line 41)
+  (iget v0 v1 org/anddev/andengine/entity/util/FrameCounter.mFrames int)
+  (add-int/lit8 v0 v0 1)
+  (iput v0 v1 org/anddev/andengine/entity/util/FrameCounter.mFrames int)
+  (line 42)
+  (return-void )
+)
+
+(method (attrs public ) reset()void
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/util/FrameCounter])
+  (line 46)
+  (const/4 v0 0)
+  (iput v0 v1 org/anddev/andengine/entity/util/FrameCounter.mFrames int)
+  (line 47)
+  (return-void )
+)
+
+)

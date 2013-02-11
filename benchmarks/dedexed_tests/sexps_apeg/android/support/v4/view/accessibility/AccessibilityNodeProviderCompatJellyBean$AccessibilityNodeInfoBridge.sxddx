@@ -1,0 +1,18 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge
+ (super java/lang/Object)
+ (source "AccessibilityNodeProviderCompatJellyBean.java")
+
+
+(method (attrs public abstract ) createAccessibilityNodeInfo(int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) findAccessibilityNodeInfosByText([object java/lang/String] int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "I)"  "Ljava/util/List"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) performAction(int int [object android/os/Bundle] )boolean
+)
+
+)

@@ -1,0 +1,47 @@
+(interface (attrs public abstract ) twitter4j/Place
+ (super java/lang/Object)
+ (source "Place.java")
+ (implements java/lang/Comparable)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getBoundingBoxCoordinates()[array [array [object twitter4j/GeoLocation]]]
+)
+
+(method (attrs public abstract ) getBoundingBoxType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getContainedWithIn()[array [object twitter4j/Place]]
+)
+
+(method (attrs public abstract ) getCountry()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getCountryCode()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getFullName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getGeometryCoordinates()[array [array [object twitter4j/GeoLocation]]]
+)
+
+(method (attrs public abstract ) getGeometryType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPlaceType()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStreetAddress()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getURL()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/widget/ActivityChooserModel$ActivitySorter
+ (super java/lang/Object)
+ (source "ActivityChooserModel.java")
+
+
+(method (attrs public abstract ) sort([object android/content/Intent] [object java/util/List] [object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/content/Intent;"  "Ljava/util/List"  "<"  "Lcom/actionbarsherlock/widget/ActivityChooserModel$ActivityResolveInfo;"  ">;"  "Ljava/util/List"  "<"  "Lcom/actionbarsherlock/widget/ActivityChooserModel$HistoricalRecord;"  ">;)V")
+  )
+)
+
+)

@@ -1,0 +1,68 @@
+(class (attrs ) antlr/ZeroOrMoreBlock
+ (super antlr/BlockWithImpliedExitPath)
+ (source "ZeroOrMoreBlock.java")
+
+
+(method (attrs public ) <init>([object antlr/Grammar] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ZeroOrMoreBlock])
+  ; parameter[0] : v1 ([object antlr/Grammar])
+  (line 13)
+  (invoke-direct {v0 v1} antlr/BlockWithImpliedExitPath/<init> [object antlr/Grammar] )
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object antlr/Grammar] [object antlr/Token] )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/ZeroOrMoreBlock])
+  ; parameter[0] : v1 ([object antlr/Grammar])
+  ; parameter[1] : v2 ([object antlr/Token])
+  (line 17)
+  (invoke-direct {v0 v1 v2} antlr/BlockWithImpliedExitPath/<init> [object antlr/Grammar] [object antlr/Token] )
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) generate()void
+  (limit registers 2)
+  ; this: v1 ([object antlr/ZeroOrMoreBlock])
+  (line 21)
+  (iget-object v0 v1 antlr/ZeroOrMoreBlock.grammar [object antlr/Grammar])
+  (iget-object v0 v0 antlr/Grammar.generator [object antlr/CodeGenerator])
+  (invoke-virtual {v0 v1} antlr/CodeGenerator/gen [object antlr/ZeroOrMoreBlock] )
+  (line 22)
+  (return-void )
+)
+
+(method (attrs public ) look(int )[object antlr/Lookahead]
+  (limit registers 3)
+  ; this: v1 ([object antlr/ZeroOrMoreBlock])
+  ; parameter[0] : v2 (int)
+  (line 25)
+  (iget-object v0 v1 antlr/ZeroOrMoreBlock.grammar [object antlr/Grammar])
+  (iget-object v0 v0 antlr/Grammar.theLLkAnalyzer [object antlr/LLkGrammarAnalyzer])
+  (invoke-interface {v0 v2 v1} antlr/LLkGrammarAnalyzer/look int [object antlr/ZeroOrMoreBlock] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object antlr/ZeroOrMoreBlock])
+  (line 29)
+  (new-instance v0 java/lang/StringBuilder)
+  (invoke-super {v2} antlr/BlockWithImpliedExitPath/toString )
+  (move-result-object v1)
+  (invoke-static {v1} java/lang/String/valueOf [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (const-string v1 "*")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,41 @@
+(class (attrs final ) com/google/zxing/qrcode/decoder/DataMask$DataMask111
+ (super com/google/zxing/qrcode/decoder/DataMask)
+
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/decoder/DataMask$DataMask111])
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} com/google/zxing/qrcode/decoder/DataMask$DataMask111/<init> byte )
+  (return-void )
+ )
+
+(method (attrs private ) <init>(byte )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/zxing/qrcode/decoder/DataMask$DataMask111])
+  ; parameter[0] : v1 (byte)
+  (invoke-direct {v0} com/google/zxing/qrcode/decoder/DataMask/<init> )
+  (return-void )
+ )
+
+(method (attrs final ) isMasked(int int )boolean
+  (limit registers 5)
+  ; this: v2 ([object com/google/zxing/qrcode/decoder/DataMask$DataMask111])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (add-int v0 v3 v4)
+  (and-int/lit8 v0 v0 1)
+  (mul-int v1 v3 v4)
+  (rem-int/lit8 v1 v1 3)
+  (add-int/2addr v0 v1)
+  (and-int/lit8 v0 v0 1)
+  (if-nez v0 l311f2)
+  (const/4 v0 1)
+  (label l311f0)
+  (return v0)
+  (label l311f2)
+  (const/4 v0 0)
+  (goto l311f0)
+)
+
+)

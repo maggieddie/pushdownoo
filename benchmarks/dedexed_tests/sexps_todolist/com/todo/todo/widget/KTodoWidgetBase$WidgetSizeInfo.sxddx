@@ -1,0 +1,50 @@
+(class (attrs ) com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo
+ (super java/lang/Object)
+ (source "KTodoWidgetBase.java")
+
+ (field (attrs private final ) layout int )
+ (field (attrs private final ) numLines int )
+
+(method (attrs private ) <init>(int int )void
+  (limit registers 3)
+  ; this: v0 ([object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 260)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 261)
+  (iput v1 v0 com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo.layout int)
+  (line 262)
+  (iput v2 v0 com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo.numLines int)
+  (line 263)
+  (return-void )
+ )
+
+(method (attrs ) <init>(int int [object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo] )void
+  (limit registers 4)
+  ; this: v0 ([object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo])
+  (line 260)
+  (invoke-direct {v0 v1 v2} com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo/<init> int int )
+  (return-void )
+ )
+
+(method (attrs public ) getLayout()int
+  (limit registers 2)
+  ; this: v1 ([object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo])
+  (line 270)
+  (iget v0 v1 com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo.layout int)
+  (return v0)
+)
+
+(method (attrs public ) getNumLines()int
+  (limit registers 2)
+  ; this: v1 ([object com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo])
+  (line 266)
+  (iget v0 v1 com/todo/todo/widget/KTodoWidgetBase$WidgetSizeInfo.numLines int)
+  (return v0)
+)
+
+)

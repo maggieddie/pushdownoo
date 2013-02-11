@@ -1,0 +1,35 @@
+(class (attrs ) org/thoughtcrime/securesms/mms/ImageSlide$1
+ (super java/util/LinkedHashMap)
+ (source "ImageSlide.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thoughtcrime/securesms/mms/ImageSlide$1])
+  (line 42)
+  (invoke-direct {v0} java/util/LinkedHashMap/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs protected ) removeEldestEntry([object java/util/Map$Entry] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<"  "Landroid/net/Uri;"  "Ljava/lang/ref/SoftReference"  "<"  "Landroid/graphics/Bitmap;"  ">;>;)Z")
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/thoughtcrime/securesms/mms/ImageSlide$1])
+  ; parameter[0] : v3 ([object java/util/Map$Entry])
+  (line 45)
+  (invoke-virtual {v2} org/thoughtcrime/securesms/mms/ImageSlide$1/size )
+  (move-result v0)
+  (const/16 v1 10)
+  (if-le v0 v1 la53a4)
+  (const/4 v0 1)
+  (label la53a2)
+  (return v0)
+  (label la53a4)
+  (const/4 v0 0)
+  (goto la53a2)
+)
+
+)

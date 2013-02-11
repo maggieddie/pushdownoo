@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/andengine/entity/particle/modifier/IParticleModifier
+ (super java/lang/Object)
+ (source "IParticleModifier.java")
+ (implements org/andengine/entity/particle/initializer/IParticleInitializer)
+
+
+(method (attrs public abstract ) onUpdateParticle([object org/andengine/entity/particle/Particle] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/entity/particle/Particle"  "<TT;>;)V")
+  )
+)
+
+)

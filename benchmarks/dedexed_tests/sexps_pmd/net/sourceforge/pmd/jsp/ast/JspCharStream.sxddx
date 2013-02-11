@@ -1,0 +1,77 @@
+(class (attrs public ) net/sourceforge/pmd/jsp/ast/JspCharStream
+ (super net/sourceforge/pmd/ast/JavaCharStream)
+ (source "JspCharStream.java")
+ (implements net/sourceforge/pmd/jsp/ast/CharStream)
+
+
+(method (attrs public ) <init>([object java/io/InputStream] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/InputStream])
+  (line 21)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/InputStream] )
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/InputStream] int int )void
+  (limit registers 4)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/InputStream])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 16)
+  (invoke-direct {v0 v1 v2 v3} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/InputStream] int int )
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/InputStream] int int int )void
+  (limit registers 5)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/InputStream])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 11)
+  (invoke-direct {v0 v1 v2 v3 v4} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/InputStream] int int int )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/Reader] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  (line 36)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/Reader] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/Reader] int int )void
+  (limit registers 4)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 31)
+  (invoke-direct {v0 v1 v2 v3} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/Reader] int int )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/Reader] int int int )void
+  (limit registers 5)
+  ; this: v0 ([object net/sourceforge/pmd/jsp/ast/JspCharStream])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 26)
+  (invoke-direct {v0 v1 v2 v3 v4} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/Reader] int int int )
+  (line 28)
+  (return-void )
+ )
+
+)

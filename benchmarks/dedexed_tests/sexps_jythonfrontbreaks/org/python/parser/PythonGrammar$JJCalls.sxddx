@@ -1,0 +1,18 @@
+(class (attrs final ) org/python/parser/PythonGrammar$JJCalls
+ (super java/lang/Object)
+ (source "PythonGrammar.java")
+
+ (field (attrs ) arg int )
+ (field (attrs ) first [object org/python/parser/Token] )
+ (field (attrs ) gen int )
+ (field (attrs ) next [object org/python/parser/PythonGrammar$JJCalls] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/parser/PythonGrammar$JJCalls])
+  (line 7080)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/osmdroid/views/util/constants/MapViewConstants
+ (super java/lang/Object)
+ (source "MapViewConstants.java")
+
+ (field (attrs public static final ) ANIMATION_DURATION_DEFAULT int 1000); 0x3e8 )
+ (field (attrs public static final ) ANIMATION_DURATION_LONG int 2000); 0x7d0 )
+ (field (attrs public static final ) ANIMATION_DURATION_SHORT int 500); 0x1f4 )
+ (field (attrs public static final ) ANIMATION_SMOOTHNESS_DEFAULT int 10); 0xa )
+ (field (attrs public static final ) ANIMATION_SMOOTHNESS_HIGH int 20); 0x14 )
+ (field (attrs public static final ) ANIMATION_SMOOTHNESS_LOW int 4); 0x4 )
+ (field (attrs public static final ) DEBUGMODE boolean false )
+ (field (attrs public static final ) MAXIMUM_ZOOMLEVEL int 22); 0x16 )
+ (field (attrs public static final ) MINIMUM_ZOOMLEVEL int 0); 0x0 )
+ (field (attrs public static final ) NOT_SET int -2147483648); 0x80000000 )
+
+)

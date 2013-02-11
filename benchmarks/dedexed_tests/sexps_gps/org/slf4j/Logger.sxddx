@@ -1,0 +1,190 @@
+(interface (attrs public abstract ) org/slf4j/Logger
+ (super java/lang/Object)
+ (source "Logger.java")
+
+ (field (attrs public static final ) ROOT_LOGGER_NAME [object java/lang/String] "ROOT" )
+
+(method (attrs public abstract ) debug([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) debug([object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) debug([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) debug([object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) debug([object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) debug([object org/slf4j/Marker] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) debug([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) debug([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) debug([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) debug([object org/slf4j/Marker] [object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) error([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) error([object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) error([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) error([object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) error([object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) error([object org/slf4j/Marker] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) error([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) error([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) error([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) error([object org/slf4j/Marker] [object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) info([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) info([object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) info([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) info([object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) info([object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) info([object org/slf4j/Marker] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) info([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) info([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) info([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) info([object org/slf4j/Marker] [object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) isDebugEnabled()boolean
+)
+
+(method (attrs public abstract ) isDebugEnabled([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) isErrorEnabled()boolean
+)
+
+(method (attrs public abstract ) isErrorEnabled([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) isInfoEnabled()boolean
+)
+
+(method (attrs public abstract ) isInfoEnabled([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) isTraceEnabled()boolean
+)
+
+(method (attrs public abstract ) isTraceEnabled([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) isWarnEnabled()boolean
+)
+
+(method (attrs public abstract ) isWarnEnabled([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) trace([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) trace([object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) trace([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) trace([object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) trace([object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) trace([object org/slf4j/Marker] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) trace([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) trace([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) trace([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) trace([object org/slf4j/Marker] [object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) warn([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) warn([object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) warn([object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) warn([object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) warn([object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) warn([object org/slf4j/Marker] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) warn([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) warn([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) warn([object org/slf4j/Marker] [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) warn([object org/slf4j/Marker] [object java/lang/String] [array [object java/lang/Object]] )void
+)
+
+)

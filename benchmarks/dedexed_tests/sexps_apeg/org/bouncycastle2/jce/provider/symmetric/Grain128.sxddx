@@ -1,0 +1,15 @@
+(class (attrs public final ) org/bouncycastle2/jce/provider/symmetric/Grain128
+ (super java/lang/Object)
+ (source "Grain128.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/symmetric/Grain128])
+  (line 10)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 12)
+  (return-void )
+ )
+
+)

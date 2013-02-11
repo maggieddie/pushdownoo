@@ -1,0 +1,15 @@
+(class (attrs public ) org/andengine/audio/sound/exception/SoundReleasedException
+ (super org/andengine/audio/sound/exception/SoundException)
+ (source "SoundReleasedException.java")
+
+ (field (attrs private static final ) serialVersionUID long -286871367); 0xeee6b0b9 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/audio/sound/exception/SoundReleasedException])
+  (line 9)
+  (invoke-direct {v0} org/andengine/audio/sound/exception/SoundException/<init> )
+  (return-void )
+ )
+
+)

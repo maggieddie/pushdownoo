@@ -1,0 +1,46 @@
+(class (attrs ) org/apache/lucene/index/IndexWriter$4
+ (super org/apache/lucene/store/Lock$With)
+ (source "IndexWriter.java")
+
+ (field (attrs final ) this$0 [object org/apache/lucene/index/IndexWriter] )
+ (field (attrs private final ) val$segmentsToDelete [object java/util/Vector] )
+
+(method (attrs ) <init>([object org/apache/lucene/index/IndexWriter] [object org/apache/lucene/store/Lock] long [object java/util/Vector] )void
+  (limit registers 6)
+  ; this: v0 ([object org/apache/lucene/index/IndexWriter$4])
+  ; parameter[0] : v1 ([object org/apache/lucene/index/IndexWriter])
+  ; parameter[1] : v2 ([object org/apache/lucene/store/Lock])
+  ; parameter[2] : v3 (long)
+  ; parameter[3] : v5 ([object java/util/Vector])
+  (line 1)
+  (iput-object v1 v0 org/apache/lucene/index/IndexWriter$4.this$0 [object org/apache/lucene/index/IndexWriter])
+  (iput-object v5 v0 org/apache/lucene/index/IndexWriter$4.val$segmentsToDelete [object java/util/Vector])
+  (line 696)
+  (invoke-direct {v0 v2 v3 v4} org/apache/lucene/store/Lock$With/<init> [object org/apache/lucene/store/Lock] long )
+  (return-void )
+ )
+
+(method (attrs public ) doBody()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/lucene/index/IndexWriter$4])
+  (line 698)
+  (iget-object v0 v2 org/apache/lucene/index/IndexWriter$4.this$0 [object org/apache/lucene/index/IndexWriter])
+  (invoke-static {v0} org/apache/lucene/index/IndexWriter/access$0 [object org/apache/lucene/index/IndexWriter] )
+  (move-result-object v0)
+  (iget-object v1 v2 org/apache/lucene/index/IndexWriter$4.this$0 [object org/apache/lucene/index/IndexWriter])
+  (invoke-static {v1} org/apache/lucene/index/IndexWriter/access$1 [object org/apache/lucene/index/IndexWriter] )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} org/apache/lucene/index/SegmentInfos/write [object org/apache/lucene/store/Directory] )
+  (line 699)
+  (iget-object v0 v2 org/apache/lucene/index/IndexWriter$4.this$0 [object org/apache/lucene/index/IndexWriter])
+  (iget-object v1 v2 org/apache/lucene/index/IndexWriter$4.val$segmentsToDelete [object java/util/Vector])
+  (invoke-static {v0 v1} org/apache/lucene/index/IndexWriter/access$2 [object org/apache/lucene/index/IndexWriter] [object java/util/Vector] )
+  (line 700)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

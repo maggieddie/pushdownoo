@@ -1,0 +1,38 @@
+(class (attrs public ) antlr/collections/impl/ASTArray
+ (super java/lang/Object)
+ (source "ASTArray.java")
+
+ (field (attrs public ) array [array [object antlr/collections/AST]] )
+ (field (attrs public ) size int )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/collections/impl/ASTArray])
+  ; parameter[0] : v2 (int)
+  (line 22)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (const/4 v0 0)
+  (iput v0 v1 antlr/collections/impl/ASTArray.size int)
+  (line 23)
+  (new-array v0 v2 [array [object antlr/collections/AST]])
+  (iput-object v0 v1 antlr/collections/impl/ASTArray.array [array [object antlr/collections/AST]])
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) add([object antlr/collections/AST] )[object antlr/collections/impl/ASTArray]
+  (limit registers 5)
+  ; this: v3 ([object antlr/collections/impl/ASTArray])
+  ; parameter[0] : v4 ([object antlr/collections/AST])
+  (line 27)
+  (iget-object v0 v3 antlr/collections/impl/ASTArray.array [array [object antlr/collections/AST]])
+  (iget v1 v3 antlr/collections/impl/ASTArray.size int)
+  (add-int/lit8 v2 v1 1)
+  (iput v2 v3 antlr/collections/impl/ASTArray.size int)
+  (aput-object v4 v0 v1)
+  (line 28)
+  (return-object v3)
+)
+
+)

@@ -1,0 +1,16 @@
+(class (attrs public ) org/bouncycastle2/util/io/StreamOverflowException
+ (super java/io/IOException)
+ (source "StreamOverflowException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/util/io/StreamOverflowException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 10)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 11)
+  (return-void )
+ )
+
+)

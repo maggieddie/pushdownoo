@@ -1,0 +1,34 @@
+(class (attrs ) com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3
+ (super java/lang/Object)
+ (source "StartScreenActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity] )
+
+(method (attrs ) <init>([object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3])
+  ; parameter[0] : v1 ([object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity])
+  (line 1)
+  (iput-object v1 v0 com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3.this$0 [object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity])
+  (line 75)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 6)
+  ; this: v4 ([object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3])
+  ; parameter[0] : v5 ([object android/view/View])
+  (line 78)
+  (iget-object v0 v4 com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3.this$0 [object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity])
+  (new-instance v1 android/content/Intent)
+  (iget-object v2 v4 com/gpl/rpg/AndorsTrail/activity/StartScreenActivity$3.this$0 [object com/gpl/rpg/AndorsTrail/activity/StartScreenActivity])
+  (const-class v3 com/gpl/rpg/AndorsTrail/activity/AboutActivity)
+  (invoke-direct {v1 v2 v3} android/content/Intent/<init> [object android/content/Context] [object java/lang/Class] )
+  (invoke-virtual {v0 v1} com/gpl/rpg/AndorsTrail/activity/StartScreenActivity/startActivity [object android/content/Intent] )
+  (line 79)
+  (return-void )
+)
+
+)

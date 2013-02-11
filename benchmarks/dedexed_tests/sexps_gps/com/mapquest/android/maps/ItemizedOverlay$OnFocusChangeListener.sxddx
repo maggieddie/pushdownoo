@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/ItemizedOverlay$OnFocusChangeListener
+ (super java/lang/Object)
+ (source "ItemizedOverlay.java")
+
+
+(method (attrs public abstract ) onFocusChanged([object com/mapquest/android/maps/ItemizedOverlay] [object com/mapquest/android/maps/OverlayItem] )void
+)
+
+)

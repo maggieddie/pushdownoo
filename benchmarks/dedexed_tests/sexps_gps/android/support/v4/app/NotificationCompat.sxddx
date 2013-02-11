@@ -1,0 +1,45 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+
+ (field (attrs public static final ) FLAG_HIGH_PRIORITY int 128); 0x80 )
+ (field (attrs private static final ) IMPL [object android/support/v4/app/NotificationCompat$NotificationCompatImpl] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 64)
+  (sget v0 android/os/Build$VERSION.SDK_INT int)
+  (const/16 v1 11)
+  (if-lt v0 v1 l53e78)
+  (line 65)
+  (new-instance v0 android/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb/<init> )
+  (sput-object v0 android/support/v4/app/NotificationCompat.IMPL [object android/support/v4/app/NotificationCompat$NotificationCompatImpl])
+  (label l53e76)
+  (line 69)
+  (return-void )
+  (label l53e78)
+  (line 67)
+  (new-instance v0 android/support/v4/app/NotificationCompat$NotificationCompatImplBase)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$NotificationCompatImplBase/<init> )
+  (sput-object v0 android/support/v4/app/NotificationCompat.IMPL [object android/support/v4/app/NotificationCompat$NotificationCompatImpl])
+  (goto l53e76)
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat])
+  (line 29)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 75)
+  (return-void )
+ )
+
+(method (attrs static ) access$000()[object android/support/v4/app/NotificationCompat$NotificationCompatImpl]
+  (limit registers 1)
+  (line 29)
+  (sget-object v0 android/support/v4/app/NotificationCompat.IMPL [object android/support/v4/app/NotificationCompat$NotificationCompatImpl])
+  (return-object v0)
+ )
+
+)

@@ -1,0 +1,47 @@
+(class (attrs public ) net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler
+ (super java/lang/Object)
+ (source "JspTypeHandler.java")
+ (implements net/sourceforge/pmd/sourcetypehandlers/SourceTypeHandler)
+
+ (field (attrs ) dummyVisitor [object net/sourceforge/pmd/sourcetypehandlers/DummyVisitorStarter] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler])
+  (line 15)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 16)
+  (new-instance v0 net/sourceforge/pmd/sourcetypehandlers/DummyVisitorStarter)
+  (invoke-direct {v0} net/sourceforge/pmd/sourcetypehandlers/DummyVisitorStarter/<init> )
+  (iput-object v0 v1 net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler.dummyVisitor [object net/sourceforge/pmd/sourcetypehandlers/DummyVisitorStarter])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getDataFlowFacade()[object net/sourceforge/pmd/sourcetypehandlers/VisitorStarter]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler])
+  (line 28)
+  (iget-object v0 v1 net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler.dummyVisitor [object net/sourceforge/pmd/sourcetypehandlers/DummyVisitorStarter])
+  (return-object v0)
+)
+
+(method (attrs public ) getParser()[object net/sourceforge/pmd/parsers/Parser]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler])
+  (line 19)
+  (new-instance v0 net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler$1)
+  (invoke-direct {v0 v1} net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler$1/<init> [object net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler] )
+  (return-object v0)
+)
+
+(method (attrs public ) getSymbolFacade()[object net/sourceforge/pmd/sourcetypehandlers/VisitorStarter]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler])
+  (line 32)
+  (new-instance v0 net/sourceforge/pmd/symboltable/JspSymbolFacade)
+  (invoke-direct {v0} net/sourceforge/pmd/symboltable/JspSymbolFacade/<init> )
+  (return-object v0)
+)
+
+)

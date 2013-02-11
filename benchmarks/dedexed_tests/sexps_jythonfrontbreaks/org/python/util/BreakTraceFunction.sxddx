@@ -1,0 +1,71 @@
+(class (attrs ) org/python/util/BreakTraceFunction
+ (super org/python/core/TraceFunction)
+ (source "InteractiveInterpreter.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/util/BreakTraceFunction])
+  (line 127)
+  (invoke-direct {v0} org/python/core/TraceFunction/<init> )
+  (return-void )
+ )
+
+(method (attrs private ) doBreak()void
+  (limit registers 3)
+  ; this: v2 ([object org/python/util/BreakTraceFunction])
+  (line 129)
+  (new-instance v0 java/lang/Error)
+  (const-string v1 "Python interrupt")
+  (invoke-direct {v0 v1} java/lang/Error/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) traceCall([object org/python/core/PyFrame] )[object org/python/core/TraceFunction]
+  (limit registers 3)
+  ; this: v1 ([object org/python/util/BreakTraceFunction])
+  ; parameter[0] : v2 ([object org/python/core/PyFrame])
+  (line 134)
+  (invoke-direct {v1} org/python/util/BreakTraceFunction/doBreak )
+  (line 135)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) traceException([object org/python/core/PyFrame] [object org/python/core/PyException] )[object org/python/core/TraceFunction]
+  (limit registers 4)
+  ; this: v1 ([object org/python/util/BreakTraceFunction])
+  ; parameter[0] : v2 ([object org/python/core/PyFrame])
+  ; parameter[1] : v3 ([object org/python/core/PyException])
+  (line 149)
+  (invoke-direct {v1} org/python/util/BreakTraceFunction/doBreak )
+  (line 150)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) traceLine([object org/python/core/PyFrame] int )[object org/python/core/TraceFunction]
+  (limit registers 4)
+  ; this: v1 ([object org/python/util/BreakTraceFunction])
+  ; parameter[0] : v2 ([object org/python/core/PyFrame])
+  ; parameter[1] : v3 (int)
+  (line 144)
+  (invoke-direct {v1} org/python/util/BreakTraceFunction/doBreak )
+  (line 145)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) traceReturn([object org/python/core/PyFrame] [object org/python/core/PyObject] )[object org/python/core/TraceFunction]
+  (limit registers 4)
+  ; this: v1 ([object org/python/util/BreakTraceFunction])
+  ; parameter[0] : v2 ([object org/python/core/PyFrame])
+  ; parameter[1] : v3 ([object org/python/core/PyObject])
+  (line 139)
+  (invoke-direct {v1} org/python/util/BreakTraceFunction/doBreak )
+  (line 140)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

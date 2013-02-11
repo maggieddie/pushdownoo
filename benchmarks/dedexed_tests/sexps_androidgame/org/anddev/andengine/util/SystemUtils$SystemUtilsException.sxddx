@@ -1,0 +1,26 @@
+(class (attrs public ) org/anddev/andengine/util/SystemUtils$SystemUtilsException
+ (super java/lang/Exception)
+ (source "SystemUtils.java")
+
+ (field (attrs private static final ) serialVersionUID long -546316300); 0xdf6fdff4 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/SystemUtils$SystemUtilsException])
+  (line 227)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 229)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/util/SystemUtils$SystemUtilsException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 232)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/Throwable] )
+  (line 233)
+  (return-void )
+ )
+
+)

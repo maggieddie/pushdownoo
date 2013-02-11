@@ -1,0 +1,18 @@
+(interface (attrs abstract ) android/support/v4/app/NavUtils$NavUtilsImpl
+ (super java/lang/Object)
+ (source "NavUtils.java")
+
+
+(method (attrs public abstract ) getParentActivityIntent([object android/app/Activity] )[object android/content/Intent]
+)
+
+(method (attrs public abstract ) getParentActivityName([object android/content/Context] [object android/content/pm/ActivityInfo] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) navigateUpTo([object android/app/Activity] [object android/content/Intent] )void
+)
+
+(method (attrs public abstract ) shouldUpRecreateTask([object android/app/Activity] [object android/content/Intent] )boolean
+)
+
+)

@@ -1,0 +1,86 @@
+(class (attrs ) antlr/TreeSpecifierNode
+ (super java/lang/Object)
+ (source "TreeSpecifierNode.java")
+
+ (field (attrs private ) firstChild [object antlr/TreeSpecifierNode] )
+ (field (attrs private ) nextSibling [object antlr/TreeSpecifierNode] )
+ (field (attrs private ) parent [object antlr/TreeSpecifierNode] )
+ (field (attrs private ) tok [object antlr/Token] )
+
+(method (attrs ) <init>([object antlr/Token] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  ; parameter[0] : v2 ([object antlr/Token])
+  (const/4 v0 0)
+  (line 17)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 11)
+  (iput-object v0 v1 antlr/TreeSpecifierNode.parent [object antlr/TreeSpecifierNode])
+  (line 12)
+  (iput-object v0 v1 antlr/TreeSpecifierNode.firstChild [object antlr/TreeSpecifierNode])
+  (line 13)
+  (iput-object v0 v1 antlr/TreeSpecifierNode.nextSibling [object antlr/TreeSpecifierNode])
+  (line 18)
+  (iput-object v2 v1 antlr/TreeSpecifierNode.tok [object antlr/Token])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) getFirstChild()[object antlr/TreeSpecifierNode]
+  (limit registers 2)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  (line 22)
+  (iget-object v0 v1 antlr/TreeSpecifierNode.firstChild [object antlr/TreeSpecifierNode])
+  (return-object v0)
+)
+
+(method (attrs public ) getNextSibling()[object antlr/TreeSpecifierNode]
+  (limit registers 2)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  (line 26)
+  (iget-object v0 v1 antlr/TreeSpecifierNode.nextSibling [object antlr/TreeSpecifierNode])
+  (return-object v0)
+)
+
+(method (attrs public ) getParent()[object antlr/TreeSpecifierNode]
+  (limit registers 2)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  (line 31)
+  (iget-object v0 v1 antlr/TreeSpecifierNode.parent [object antlr/TreeSpecifierNode])
+  (return-object v0)
+)
+
+(method (attrs public ) getToken()[object antlr/Token]
+  (limit registers 2)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  (line 35)
+  (iget-object v0 v1 antlr/TreeSpecifierNode.tok [object antlr/Token])
+  (return-object v0)
+)
+
+(method (attrs public ) setFirstChild([object antlr/TreeSpecifierNode] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/TreeSpecifierNode])
+  ; parameter[0] : v1 ([object antlr/TreeSpecifierNode])
+  (line 39)
+  (iput-object v1 v0 antlr/TreeSpecifierNode.firstChild [object antlr/TreeSpecifierNode])
+  (line 40)
+  (iput-object v0 v1 antlr/TreeSpecifierNode.parent [object antlr/TreeSpecifierNode])
+  (line 41)
+  (return-void )
+)
+
+(method (attrs public ) setNextSibling([object antlr/TreeSpecifierNode] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/TreeSpecifierNode])
+  ; parameter[0] : v2 ([object antlr/TreeSpecifierNode])
+  (line 45)
+  (iput-object v2 v1 antlr/TreeSpecifierNode.nextSibling [object antlr/TreeSpecifierNode])
+  (line 46)
+  (iget-object v0 v1 antlr/TreeSpecifierNode.parent [object antlr/TreeSpecifierNode])
+  (iput-object v0 v2 antlr/TreeSpecifierNode.parent [object antlr/TreeSpecifierNode])
+  (line 47)
+  (return-void )
+)
+
+)

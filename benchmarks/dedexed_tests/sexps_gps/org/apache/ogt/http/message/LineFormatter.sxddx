@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/message/LineFormatter
+ (super java/lang/Object)
+ (source "LineFormatter.java")
+
+
+(method (attrs public abstract ) appendProtocolVersion([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/ProtocolVersion] )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatHeader([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/Header] )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatRequestLine([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/RequestLine] )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatStatusLine([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/StatusLine] )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+)

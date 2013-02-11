@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/routing/HttpRoutePlanner
+ (super java/lang/Object)
+ (source "HttpRoutePlanner.java")
+
+
+(method (attrs public abstract ) determineRoute([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/HttpRequest] [object org/apache/ogt/http/protocol/HttpContext] )[object org/apache/ogt/http/conn/routing/HttpRoute]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/HttpException])
+  )
+)
+
+)

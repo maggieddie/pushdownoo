@@ -1,0 +1,70 @@
+(class (attrs final ) com/google/zxing/client/android/EncodeActivity$2
+ (super android/os/Handler)
+
+ (field (attrs private ) this$0 [object com/google/zxing/client/android/EncodeActivity] )
+
+(method (attrs ) <init>([object com/google/zxing/client/android/EncodeActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/zxing/client/android/EncodeActivity$2])
+  ; parameter[0] : v1 ([object com/google/zxing/client/android/EncodeActivity])
+  (iput-object v1 v0 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) handleMessage([object android/os/Message] )void
+  (limit registers 6)
+  ; this: v4 ([object com/google/zxing/client/android/EncodeActivity$2])
+  ; parameter[0] : v5 ([object android/os/Message])
+  (const/4 v3 0)
+  (iget v0 v5 android/os/Message.what int)
+  (packed-switch v0 2131165188
+    psf462_f4e6 ; case 2131165188
+    psf462_f46a ; case 2131165189
+    psf462_default) ; default
+  (label lf468)
+  (label psf462_default)
+  (return-void )
+  (label psf462_f46a)
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-static {v0} com/google/zxing/client/android/EncodeActivity/access$200 [object com/google/zxing/client/android/EncodeActivity] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/ProgressDialog/dismiss )
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-static {v0 v3} com/google/zxing/client/android/EncodeActivity/access$202 [object com/google/zxing/client/android/EncodeActivity] [object android/app/ProgressDialog] )
+  (iget-object v0 v5 android/os/Message.obj [object java/lang/Object])
+  (check-cast v0 [object android/graphics/Bitmap])
+  (iget-object v1 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (const v2 2131165209) ; 0x7f070019)
+  (invoke-virtual {v1 v2} com/google/zxing/client/android/EncodeActivity/findViewById int )
+  (move-result-object v1)
+  (check-cast v1 [object android/widget/ImageView])
+  (invoke-virtual {v1 v0} android/widget/ImageView/setImageBitmap [object android/graphics/Bitmap] )
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (const v1 2131165204) ; 0x7f070014)
+  (invoke-virtual {v0 v1} com/google/zxing/client/android/EncodeActivity/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (iget-object v1 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-static {v1} com/google/zxing/client/android/EncodeActivity/access$100 [object com/google/zxing/client/android/EncodeActivity] )
+  (move-result-object v1)
+  (invoke-virtual {v1} com/google/zxing/client/android/QRCodeEncoder/getDisplayContents )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} android/widget/TextView/setText [object java/lang/CharSequence] )
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-static {v0 v3} com/google/zxing/client/android/EncodeActivity/access$102 [object com/google/zxing/client/android/EncodeActivity] [object com/google/zxing/client/android/QRCodeEncoder] )
+  (goto lf468)
+  (label psf462_f4e6)
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (const v1 2131230762) ; 0x7f08002a)
+  (invoke-static {v0 v1} com/google/zxing/client/android/EncodeActivity/access$400 [object com/google/zxing/client/android/EncodeActivity] int )
+  (iget-object v0 v4 com/google/zxing/client/android/EncodeActivity$2.this$0 [object com/google/zxing/client/android/EncodeActivity])
+  (invoke-static {v0 v3} com/google/zxing/client/android/EncodeActivity/access$102 [object com/google/zxing/client/android/EncodeActivity] [object com/google/zxing/client/android/QRCodeEncoder] )
+  (goto lf468)
+  (label lf502)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

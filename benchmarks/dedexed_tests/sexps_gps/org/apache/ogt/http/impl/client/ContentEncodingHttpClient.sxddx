@@ -1,0 +1,56 @@
+(class (attrs public ) org/apache/ogt/http/impl/client/ContentEncodingHttpClient
+ (super org/apache/ogt/http/impl/client/DefaultHttpClient)
+ (source "ContentEncodingHttpClient.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/client/ContentEncodingHttpClient])
+  (line 66)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} org/apache/ogt/http/impl/client/ContentEncodingHttpClient/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 67)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/conn/ClientConnectionManager] [object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/client/ContentEncodingHttpClient])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/conn/ClientConnectionManager])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/params/HttpParams])
+  (line 52)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/impl/client/DefaultHttpClient/<init> [object org/apache/ogt/http/conn/ClientConnectionManager] [object org/apache/ogt/http/params/HttpParams] )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/impl/client/ContentEncodingHttpClient])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/params/HttpParams])
+  (line 59)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0 v2} org/apache/ogt/http/impl/client/ContentEncodingHttpClient/<init> [object org/apache/ogt/http/conn/ClientConnectionManager] [object org/apache/ogt/http/params/HttpParams] )
+  (line 60)
+  (return-void )
+ )
+
+(method (attrs protected ) createHttpProcessor()[object org/apache/ogt/http/protocol/BasicHttpProcessor]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/client/ContentEncodingHttpClient])
+  (line 74)
+  (invoke-super {v2} org/apache/ogt/http/impl/client/DefaultHttpClient/createHttpProcessor )
+  (move-result-object v0)
+  (line 76)
+  (new-instance v1 org/apache/ogt/http/client/protocol/RequestAcceptEncoding)
+  (invoke-direct {v1} org/apache/ogt/http/client/protocol/RequestAcceptEncoding/<init> )
+  (invoke-virtual {v0 v1} org/apache/ogt/http/protocol/BasicHttpProcessor/addRequestInterceptor [object org/apache/ogt/http/HttpRequestInterceptor] )
+  (line 77)
+  (new-instance v1 org/apache/ogt/http/client/protocol/ResponseContentEncoding)
+  (invoke-direct {v1} org/apache/ogt/http/client/protocol/ResponseContentEncoding/<init> )
+  (invoke-virtual {v0 v1} org/apache/ogt/http/protocol/BasicHttpProcessor/addResponseInterceptor [object org/apache/ogt/http/HttpResponseInterceptor] )
+  (line 79)
+  (return-object v0)
+)
+
+)

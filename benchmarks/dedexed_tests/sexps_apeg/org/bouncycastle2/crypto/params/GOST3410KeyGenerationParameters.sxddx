@@ -1,0 +1,33 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/GOST3410KeyGenerationParameters
+ (super org/bouncycastle2/crypto/KeyGenerationParameters)
+ (source "GOST3410KeyGenerationParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle2/crypto/params/GOST3410Parameters] )
+
+(method (attrs public ) <init>([object java/security/SecureRandom] [object org/bouncycastle2/crypto/params/GOST3410Parameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/GOST3410KeyGenerationParameters])
+  ; parameter[0] : v2 ([object java/security/SecureRandom])
+  ; parameter[1] : v3 ([object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (line 16)
+  (invoke-virtual {v3} org/bouncycastle2/crypto/params/GOST3410Parameters/getP )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/math/BigInteger/bitLength )
+  (move-result v0)
+  (add-int/lit8 v0 v0 255)
+  (invoke-direct {v1 v2 v0} org/bouncycastle2/crypto/KeyGenerationParameters/<init> [object java/security/SecureRandom] int )
+  (line 18)
+  (iput-object v3 v1 org/bouncycastle2/crypto/params/GOST3410KeyGenerationParameters.params [object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle2/crypto/params/GOST3410Parameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/GOST3410KeyGenerationParameters])
+  (line 23)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/GOST3410KeyGenerationParameters.params [object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (return-object v0)
+)
+
+)

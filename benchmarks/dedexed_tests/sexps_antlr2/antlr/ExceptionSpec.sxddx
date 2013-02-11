@@ -1,0 +1,35 @@
+(class (attrs ) antlr/ExceptionSpec
+ (super java/lang/Object)
+ (source "ExceptionSpec.java")
+
+ (field (attrs protected ) handlers [object antlr/collections/impl/Vector] )
+ (field (attrs protected ) label [object antlr/Token] )
+
+(method (attrs public ) <init>([object antlr/Token] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/ExceptionSpec])
+  ; parameter[0] : v2 ([object antlr/Token])
+  (line 21)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 22)
+  (iput-object v2 v1 antlr/ExceptionSpec.label [object antlr/Token])
+  (line 23)
+  (new-instance v0 antlr/collections/impl/Vector)
+  (invoke-direct {v0} antlr/collections/impl/Vector/<init> )
+  (iput-object v0 v1 antlr/ExceptionSpec.handlers [object antlr/collections/impl/Vector])
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) addHandler([object antlr/ExceptionHandler] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/ExceptionSpec])
+  ; parameter[0] : v2 ([object antlr/ExceptionHandler])
+  (line 27)
+  (iget-object v0 v1 antlr/ExceptionSpec.handlers [object antlr/collections/impl/Vector])
+  (invoke-virtual {v0 v2} antlr/collections/impl/Vector/appendElement [object java/lang/Object] )
+  (line 28)
+  (return-void )
+)
+
+)

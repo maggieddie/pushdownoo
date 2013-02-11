@@ -1,0 +1,26 @@
+(interface (attrs public abstract ) twitter4j/RelatedResults
+ (super java/lang/Object)
+ (source "RelatedResults.java")
+ (implements twitter4j/TwitterResponse)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getTweetsFromUser()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getTweetsWithConversation()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getTweetsWithReply()[object twitter4j/ResponseList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;")
+  )
+)
+
+)

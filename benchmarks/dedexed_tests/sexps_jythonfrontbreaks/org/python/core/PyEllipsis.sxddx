@@ -1,0 +1,16 @@
+(class (attrs public ) org/python/core/PyEllipsis
+ (super org/python/core/PySingleton)
+ (source "PyEllipsis.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyEllipsis])
+  (line 10)
+  (const-string v0 "Ellipsis")
+  (invoke-direct {v1 v0} org/python/core/PySingleton/<init> [object java/lang/String] )
+  (line 11)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public abstract ) android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat
+ (super java/lang/Object)
+ (source "AccessibilityManagerCompat.java")
+
+ (field (attrs final ) mListener [object java/lang/Object] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat])
+  (line 195)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 196)
+  (invoke-static {} android/support/v4/view/accessibility/AccessibilityManagerCompat/access$000 )
+  (nop )
+  (move-result-object v0)
+  (invoke-interface {v0 v1} android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityManagerVersionImpl/newAccessiblityStateChangeListener [object android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat] )
+  (move-result-object v0)
+  (iput-object v0 v1 android/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat.mListener [object java/lang/Object])
+  (line 197)
+  (return-void )
+ )
+
+(method (attrs public abstract ) onAccessibilityStateChanged(boolean )void
+)
+
+)

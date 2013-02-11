@@ -1,0 +1,34 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$2
+ (super java/lang/Object)
+ (source "ApplicationPreferenceActivity.java")
+ (implements android/preference/Preference$OnPreferenceChangeListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$2])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$2.this$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity])
+  (line 91)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreferenceChange([object android/preference/Preference] [object java/lang/Object] )boolean
+  (limit registers 5)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$2])
+  ; parameter[0] : v3 ([object android/preference/Preference])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 95)
+  (const-string v0 "\\d{1,4}([,\\.]\\d+)?")
+  (line 96)
+  (invoke-virtual {v4} java/lang/Object/toString )
+  (move-result-object v1)
+  (invoke-static {v0 v1} java/util/regex/Pattern/matches [object java/lang/String] [object java/lang/CharSequence] )
+  (move-result v1)
+  (return v1)
+)
+
+)

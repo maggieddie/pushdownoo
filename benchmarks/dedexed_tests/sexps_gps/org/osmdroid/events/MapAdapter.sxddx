@@ -1,0 +1,33 @@
+(class (attrs public abstract ) org/osmdroid/events/MapAdapter
+ (super java/lang/Object)
+ (source "MapAdapter.java")
+ (implements org/osmdroid/events/MapListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/osmdroid/events/MapAdapter])
+  (line 9)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onScroll([object org/osmdroid/events/ScrollEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/events/MapAdapter])
+  ; parameter[0] : v2 ([object org/osmdroid/events/ScrollEvent])
+  (line 13)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) onZoom([object org/osmdroid/events/ZoomEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/events/MapAdapter])
+  ; parameter[0] : v2 ([object org/osmdroid/events/ZoomEvent])
+  (line 19)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

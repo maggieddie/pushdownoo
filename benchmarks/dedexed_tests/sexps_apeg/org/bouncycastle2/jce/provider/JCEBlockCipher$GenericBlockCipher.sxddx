@@ -1,0 +1,45 @@
+(interface (attrs abstract ) org/bouncycastle2/jce/provider/JCEBlockCipher$GenericBlockCipher
+ (super java/lang/Object)
+ (source "JCEBlockCipher.java")
+
+
+(method (attrs public abstract ) doFinal([array byte] int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalStateException]  [object org/bouncycastle2/crypto/InvalidCipherTextException])
+  )
+)
+
+(method (attrs public abstract ) getAlgorithmName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOutputSize(int )int
+)
+
+(method (attrs public abstract ) getUnderlyingCipher()[object org/bouncycastle2/crypto/BlockCipher]
+)
+
+(method (attrs public abstract ) getUpdateOutputSize(int )int
+)
+
+(method (attrs public abstract ) init(boolean [object org/bouncycastle2/crypto/CipherParameters] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+)
+
+(method (attrs public abstract ) processByte(byte [array byte] int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/crypto/DataLengthException])
+  )
+)
+
+(method (attrs public abstract ) processBytes([array byte] int int [array byte] int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle2/crypto/DataLengthException])
+  )
+)
+
+(method (attrs public abstract ) wrapOnNoPadding()boolean
+)
+
+)

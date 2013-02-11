@@ -1,0 +1,40 @@
+(class (attrs ) com/gpl/rpg/AndorsTrail/Dialogs$1
+ (super java/lang/Object)
+ (source "Dialogs.java")
+ (implements android/content/DialogInterface$OnDismissListener)
+
+ (field (attrs private final ) val$context [object com/gpl/rpg/AndorsTrail/context/ViewContext] )
+ (field (attrs private final ) val$onDismiss [object android/content/DialogInterface$OnDismissListener] )
+
+(method (attrs ) <init>([object android/content/DialogInterface$OnDismissListener] [object com/gpl/rpg/AndorsTrail/context/ViewContext] )void
+  (limit registers 3)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/Dialogs$1])
+  ; parameter[0] : v1 ([object android/content/DialogInterface$OnDismissListener])
+  ; parameter[1] : v2 ([object com/gpl/rpg/AndorsTrail/context/ViewContext])
+  (line 1)
+  (iput-object v1 v0 com/gpl/rpg/AndorsTrail/Dialogs$1.val$onDismiss [object android/content/DialogInterface$OnDismissListener])
+  (iput-object v2 v0 com/gpl/rpg/AndorsTrail/Dialogs$1.val$context [object com/gpl/rpg/AndorsTrail/context/ViewContext])
+  (line 59)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onDismiss([object android/content/DialogInterface] )void
+  (limit registers 3)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/Dialogs$1])
+  ; parameter[0] : v2 ([object android/content/DialogInterface])
+  (line 62)
+  (iget-object v0 v1 com/gpl/rpg/AndorsTrail/Dialogs$1.val$onDismiss [object android/content/DialogInterface$OnDismissListener])
+  (if-eqz v0 l12ade)
+  (iget-object v0 v1 com/gpl/rpg/AndorsTrail/Dialogs$1.val$onDismiss [object android/content/DialogInterface$OnDismissListener])
+  (invoke-interface {v0 v2} android/content/DialogInterface$OnDismissListener/onDismiss [object android/content/DialogInterface] )
+  (label l12ade)
+  (line 63)
+  (iget-object v0 v1 com/gpl/rpg/AndorsTrail/Dialogs$1.val$context [object com/gpl/rpg/AndorsTrail/context/ViewContext])
+  (iget-object v0 v0 com/gpl/rpg/AndorsTrail/context/ViewContext.gameRoundController [object com/gpl/rpg/AndorsTrail/controller/GameRoundController])
+  (invoke-virtual {v0} com/gpl/rpg/AndorsTrail/controller/GameRoundController/resume )
+  (line 64)
+  (return-void )
+)
+
+)

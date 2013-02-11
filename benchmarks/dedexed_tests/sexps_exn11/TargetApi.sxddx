@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) android/annotation/TargetApi
+ (super java/lang/Object)
+ (source "TargetApi.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()int
+)
+
+)

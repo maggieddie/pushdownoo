@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/ogt/http/RequestLine
+ (super java/lang/Object)
+ (source "RequestLine.java")
+
+
+(method (attrs public abstract ) getMethod()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProtocolVersion()[object org/apache/ogt/http/ProtocolVersion]
+)
+
+(method (attrs public abstract ) getUri()[object java/lang/String]
+)
+
+)

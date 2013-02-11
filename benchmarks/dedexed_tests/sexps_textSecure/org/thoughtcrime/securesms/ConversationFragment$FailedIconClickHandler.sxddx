@@ -1,0 +1,48 @@
+(class (attrs ) org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler
+ (super android/os/Handler)
+ (source "ConversationFragment.java")
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/ConversationFragment] )
+
+(method (attrs private ) <init>([object org/thoughtcrime/securesms/ConversationFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/ConversationFragment])
+  (line 181)
+  (iput-object v1 v0 org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler.this$0 [object org/thoughtcrime/securesms/ConversationFragment])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/ConversationFragment] [object org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler] )void
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/ConversationFragment])
+  ; parameter[1] : v2 ([object org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler])
+  (line 181)
+  (invoke-direct {v0 v1} org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler/<init> [object org/thoughtcrime/securesms/ConversationFragment] )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 4)
+  ; this: v2 ([object org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler])
+  ; parameter[0] : v3 ([object android/os/Message])
+  (line 184)
+  (iget-object v0 v2 org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler.this$0 [object org/thoughtcrime/securesms/ConversationFragment])
+  (invoke-static {v0} org/thoughtcrime/securesms/ConversationFragment/access$1 [object org/thoughtcrime/securesms/ConversationFragment] )
+  (move-result-object v0)
+  (if-eqz v0 l8fe22)
+  (line 185)
+  (iget-object v0 v2 org/thoughtcrime/securesms/ConversationFragment$FailedIconClickHandler.this$0 [object org/thoughtcrime/securesms/ConversationFragment])
+  (invoke-static {v0} org/thoughtcrime/securesms/ConversationFragment/access$1 [object org/thoughtcrime/securesms/ConversationFragment] )
+  (move-result-object v1)
+  (iget-object v0 v3 android/os/Message.obj [object java/lang/Object])
+  (check-cast v0 [object java/lang/String])
+  (invoke-interface {v1 v0} org/thoughtcrime/securesms/ConversationFragment$ConversationFragmentListener/setComposeText [object java/lang/String] )
+  (label l8fe22)
+  (line 187)
+  (return-void )
+)
+
+)

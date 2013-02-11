@@ -1,0 +1,46 @@
+(class (attrs public ) org/bouncycastle2/i18n/LocaleString
+ (super org/bouncycastle2/i18n/LocalizedMessage)
+ (source "LocaleString.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException]  [object java/io/UnsupportedEncodingException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/i18n/LocaleString])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 11)
+  (invoke-direct {v0 v1 v2} org/bouncycastle2/i18n/LocalizedMessage/<init> [object java/lang/String] [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/NullPointerException]  [object java/io/UnsupportedEncodingException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle2/i18n/LocaleString])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 16)
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle2/i18n/LocalizedMessage/<init> [object java/lang/String] [object java/lang/String] [object java/lang/String] )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) getLocaleString([object java/util/Locale] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/i18n/LocaleString])
+  ; parameter[0] : v2 ([object java/util/Locale])
+  (const/4 v0 0)
+  (line 21)
+  (invoke-virtual {v1 v0 v2 v0} org/bouncycastle2/i18n/LocaleString/getEntry [object java/lang/String] [object java/util/Locale] [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

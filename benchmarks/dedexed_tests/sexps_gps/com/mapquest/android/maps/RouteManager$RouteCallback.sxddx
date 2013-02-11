@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/RouteManager$RouteCallback
+ (super java/lang/Object)
+ (source "RouteManager.java")
+
+
+(method (attrs public abstract ) onError([object com/mapquest/android/maps/RouteResponse] )void
+)
+
+(method (attrs public abstract ) onSuccess([object com/mapquest/android/maps/RouteResponse] )void
+)
+
+)

@@ -1,0 +1,72 @@
+(class (attrs ) org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener
+ (super java/lang/Object)
+ (source "PassphraseTimeoutPreference.java")
+ (implements android/widget/AdapterView$OnItemSelectedListener)
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] )
+
+(method (attrs private ) <init>([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference])
+  (line 102)
+  (iput-object v1 v0 org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener.this$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener] )void
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference])
+  ; parameter[1] : v2 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener])
+  (line 102)
+  (invoke-direct {v0 v1} org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener/<init> [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] )
+  (return-void )
+ )
+
+(method (attrs public ) onItemSelected([object android/widget/AdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+  (limit registers 8)
+  ; this: v2 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener])
+  ; parameter[0] : v3 ([object android/widget/AdapterView])
+  ; parameter[1] : v4 ([object android/view/View])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (long)
+  (line 104)
+  (const-wide/16 v0 0)
+  (cmp-long v0 v6 v0)
+  (if-nez v0 la719c)
+  (line 105)
+  (iget-object v0 v2 org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener.this$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference])
+  (invoke-static {v0} org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference/access$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] )
+  (move-result-object v0)
+  (const/16 v1 60)
+  (invoke-virtual {v0 v1} android/widget/SeekBar/setMax int )
+  (label la719a)
+  (line 109)
+  (return-void )
+  (label la719c)
+  (line 107)
+  (iget-object v0 v2 org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener.this$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference])
+  (invoke-static {v0} org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference/access$0 [object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference] )
+  (move-result-object v0)
+  (const/16 v1 24)
+  (invoke-virtual {v0 v1} android/widget/SeekBar/setMax int )
+  (goto la719a)
+)
+
+(method (attrs public ) onNothingSelected([object android/widget/AdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/preferences/PassphraseTimeoutPreference$ScaleSelectedListener])
+  ; parameter[0] : v1 ([object android/widget/AdapterView])
+  (line 112)
+  (return-void )
+)
+
+)

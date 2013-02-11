@@ -1,0 +1,47 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO
+ (super java/lang/Object)
+ (source "SegmentRendering.java")
+
+ (field (attrs public ) radius float )
+ (field (attrs public ) speed long )
+ (field (attrs public ) time long )
+ (field (attrs public ) x int )
+ (field (attrs public ) y int )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO])
+  (line 1349)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO])
+  (line 1349)
+  (invoke-direct {v0} nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) distanceTo([object android/graphics/Point] )int
+  (limit registers 5)
+  ; this: v3 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO])
+  ; parameter[0] : v4 ([object android/graphics/Point])
+  (line 1359)
+  (iget v0 v4 android/graphics/Point.x int)
+  (iget v1 v3 nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO.x int)
+  (sub-int/2addr v0 v1)
+  (invoke-static {v0} java/lang/Math/abs int )
+  (move-result v0)
+  (iget v1 v4 android/graphics/Point.y int)
+  (iget v2 v3 nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$DotVO.y int)
+  (sub-int/2addr v1 v2)
+  (invoke-static {v1} java/lang/Math/abs int )
+  (move-result v1)
+  (add-int/2addr v0 v1)
+  (return v0)
+)
+
+)

@@ -1,0 +1,142 @@
+(class (attrs public ) org/andengine/entity/scene/background/modifier/LoopBackgroundModifier
+ (super org/andengine/util/modifier/LoopModifier)
+ (source "LoopBackgroundModifier.java")
+ (implements org/andengine/entity/scene/background/modifier/IBackgroundModifier)
+
+
+(method (attrs public ) <init>([object org/andengine/entity/scene/background/modifier/IBackgroundModifier] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier])
+  (line 27)
+  (invoke-direct {v0 v1} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/IModifier] )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/scene/background/modifier/IBackgroundModifier] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier])
+  ; parameter[1] : v2 (int)
+  (line 31)
+  (invoke-direct {v0 v1 v2} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/IModifier] int )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/scene/background/modifier/IBackgroundModifier] int [object org/andengine/entity/scene/background/modifier/IBackgroundModifier$IBackgroundModifierListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier$IBackgroundModifierListener])
+  (line 39)
+  (invoke-direct {v0 v1 v2 v3} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/IModifier] int [object org/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/scene/background/modifier/IBackgroundModifier] int [object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier$ILoopBackgroundModifierListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v2 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier$ILoopBackgroundModifierListener])
+  (line 35)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v4 v0} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/IModifier] int [object org/andengine/util/modifier/LoopModifier$ILoopModifierListener] [object org/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/scene/background/modifier/IBackgroundModifier] int [object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier$ILoopBackgroundModifierListener] [object org/andengine/entity/scene/background/modifier/IBackgroundModifier$IBackgroundModifierListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier$ILoopBackgroundModifierListener])
+  ; parameter[3] : v4 ([object org/andengine/entity/scene/background/modifier/IBackgroundModifier$IBackgroundModifierListener])
+  (line 43)
+  (invoke-direct {v0 v1 v2 v3 v4} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/IModifier] int [object org/andengine/util/modifier/LoopModifier$ILoopModifierListener] [object org/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  (line 47)
+  (invoke-direct {v0 v1} org/andengine/util/modifier/LoopModifier/<init> [object org/andengine/util/modifier/LoopModifier] )
+  (line 48)
+  (return-void )
+ )
+
+(method (attrs public ) deepCopy()[object org/andengine/entity/scene/background/modifier/IBackgroundModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/scene/background/modifier/LoopBackgroundModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  (line 52)
+  (new-instance v0 org/andengine/entity/scene/background/modifier/LoopBackgroundModifier)
+  (invoke-direct {v0 v1} org/andengine/entity/scene/background/modifier/LoopBackgroundModifier/<init> [object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier] )
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/util/modifier/IModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/scene/background/modifier/LoopBackgroundModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/util/modifier/LoopModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/scene/background/modifier/LoopBackgroundModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/scene/background/modifier/LoopBackgroundModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

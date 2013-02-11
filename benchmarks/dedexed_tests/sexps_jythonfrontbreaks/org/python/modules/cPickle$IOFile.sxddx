@@ -1,0 +1,21 @@
+(interface (attrs abstract ) org/python/modules/cPickle$IOFile
+ (super java/lang/Object)
+ (source "cPickle.java")
+
+
+(method (attrs public abstract ) flush()void
+)
+
+(method (attrs public abstract ) read(int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) readlineNoNl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) write(char )void
+)
+
+(method (attrs public abstract ) write([object java/lang/String] )void
+)
+
+)

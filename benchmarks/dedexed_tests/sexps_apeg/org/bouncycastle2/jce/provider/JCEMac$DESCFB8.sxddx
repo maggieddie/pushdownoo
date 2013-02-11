@@ -1,0 +1,19 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$DESCFB8
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JCEMac$DESCFB8])
+  (line 241)
+  (new-instance v0 org/bouncycastle2/crypto/macs/CFBBlockCipherMac)
+  (new-instance v1 org/bouncycastle2/crypto/engines/DESEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/DESEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/macs/CFBBlockCipherMac/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (invoke-direct {v2 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 242)
+  (return-void )
+ )
+
+)

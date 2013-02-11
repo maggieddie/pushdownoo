@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/particle/emitter/IParticleEmitter
+ (super java/lang/Object)
+ (source "IParticleEmitter.java")
+ (implements org/anddev/andengine/engine/handler/IUpdateHandler)
+
+
+(method (attrs public abstract ) getPositionOffset([array float] )void
+)
+
+)

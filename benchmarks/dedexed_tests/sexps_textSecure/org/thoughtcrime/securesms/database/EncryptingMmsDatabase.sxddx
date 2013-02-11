@@ -1,0 +1,32 @@
+(class (attrs public ) org/thoughtcrime/securesms/database/EncryptingMmsDatabase
+ (super org/thoughtcrime/securesms/database/MmsDatabase)
+ (source "EncryptingMmsDatabase.java")
+
+ (field (attrs private final ) masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/database/sqlite/SQLiteOpenHelper] [object org/thoughtcrime/securesms/crypto/MasterSecret] )void
+  (limit registers 4)
+  ; this: v0 ([object org/thoughtcrime/securesms/database/EncryptingMmsDatabase])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object android/database/sqlite/SQLiteOpenHelper])
+  ; parameter[2] : v3 ([object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (line 29)
+  (invoke-direct {v0 v1 v2} org/thoughtcrime/securesms/database/MmsDatabase/<init> [object android/content/Context] [object android/database/sqlite/SQLiteOpenHelper] )
+  (line 30)
+  (iput-object v3 v0 org/thoughtcrime/securesms/database/EncryptingMmsDatabase.masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs protected ) getPartDatabase()[object org/thoughtcrime/securesms/database/PartDatabase]
+  (limit registers 3)
+  ; this: v2 ([object org/thoughtcrime/securesms/database/EncryptingMmsDatabase])
+  (line 35)
+  (iget-object v0 v2 org/thoughtcrime/securesms/database/EncryptingMmsDatabase.context [object android/content/Context])
+  (iget-object v1 v2 org/thoughtcrime/securesms/database/EncryptingMmsDatabase.masterSecret [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (invoke-static {v0 v1} org/thoughtcrime/securesms/database/DatabaseFactory/getEncryptingPartDatabase [object android/content/Context] [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

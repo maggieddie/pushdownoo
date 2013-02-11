@@ -1,0 +1,23 @@
+(class (attrs public final ) com/gpl/rpg/AndorsTrail/model/item/ItemTraits_OnEquip
+ (super com/gpl/rpg/AndorsTrail/model/ability/traits/AbilityModifierTraits)
+ (source "ItemTraits_OnEquip.java")
+
+ (field (attrs public final ) addedConditions [array [object com/gpl/rpg/AndorsTrail/model/ability/ActorConditionEffect]] )
+
+(method (attrs public ) <init>(int int int [object com/gpl/rpg/AndorsTrail/model/CombatTraits] [array [object com/gpl/rpg/AndorsTrail/model/ability/ActorConditionEffect]] )void
+  (limit registers 6)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/model/item/ItemTraits_OnEquip])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 ([object com/gpl/rpg/AndorsTrail/model/CombatTraits])
+  ; parameter[4] : v5 ([array [object com/gpl/rpg/AndorsTrail/model/ability/ActorConditionEffect]])
+  (line 11)
+  (invoke-direct {v0 v1 v2 v3 v4} com/gpl/rpg/AndorsTrail/model/ability/traits/AbilityModifierTraits/<init> int int int [object com/gpl/rpg/AndorsTrail/model/CombatTraits] )
+  (line 12)
+  (iput-object v5 v0 com/gpl/rpg/AndorsTrail/model/item/ItemTraits_OnEquip.addedConditions [array [object com/gpl/rpg/AndorsTrail/model/ability/ActorConditionEffect]])
+  (line 13)
+  (return-void )
+ )
+
+)

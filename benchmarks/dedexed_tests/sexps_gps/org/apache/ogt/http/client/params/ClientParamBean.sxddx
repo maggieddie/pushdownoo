@@ -1,0 +1,153 @@
+(class (attrs public ) org/apache/ogt/http/client/params/ClientParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "ClientParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 51)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 52)
+  (return-void )
+ )
+
+(method (attrs public ) setAllowCircularRedirects(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 76)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.allow-circular-redirects")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setBooleanParameter [object java/lang/String] boolean )
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) setConnectionManagerFactory([object org/apache/ogt/http/conn/ClientConnectionManagerFactory] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/conn/ClientConnectionManagerFactory])
+  (line 60)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.connection-manager.factory-object")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) setConnectionManagerFactoryClassName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 55)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.connection-manager.factory-class-name")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 56)
+  (return-void )
+)
+
+(method (attrs public ) setCookiePolicy([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 84)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.cookie-policy")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 85)
+  (return-void )
+)
+
+(method (attrs public ) setDefaultHeaders([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Lorg/apache/ogt/http/Header;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object java/util/Collection])
+  (line 92)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.default-headers")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 93)
+  (return-void )
+)
+
+(method (attrs public ) setDefaultHost([object org/apache/ogt/http/HttpHost] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/HttpHost])
+  (line 96)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.default-host")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 97)
+  (return-void )
+)
+
+(method (attrs public ) setHandleAuthentication(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 80)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.handle-authentication")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setBooleanParameter [object java/lang/String] boolean )
+  (line 81)
+  (return-void )
+)
+
+(method (attrs public ) setHandleRedirects(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 64)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.handle-redirects")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setBooleanParameter [object java/lang/String] boolean )
+  (line 65)
+  (return-void )
+)
+
+(method (attrs public ) setMaxRedirects(int )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 (int)
+  (line 72)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.max-redirects")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setIntParameter [object java/lang/String] int )
+  (line 73)
+  (return-void )
+)
+
+(method (attrs public ) setRejectRelativeRedirect(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 68)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.protocol.reject-relative-redirect")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setBooleanParameter [object java/lang/String] boolean )
+  (line 69)
+  (return-void )
+)
+
+(method (attrs public ) setVirtualHost([object org/apache/ogt/http/HttpHost] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/client/params/ClientParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/HttpHost])
+  (line 88)
+  (iget-object v0 v2 org/apache/ogt/http/client/params/ClientParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.virtual-host")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 89)
+  (return-void )
+)
+
+)

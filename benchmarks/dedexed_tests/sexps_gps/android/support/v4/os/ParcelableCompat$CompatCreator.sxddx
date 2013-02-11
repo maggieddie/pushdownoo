@@ -1,0 +1,52 @@
+(class (attrs ) android/support/v4/os/ParcelableCompat$CompatCreator
+ (super java/lang/Object)
+ (source "ParcelableCompat.java")
+ (implements android/os/Parcelable$Creator)
+
+ (field (attrs final ) mCallbacks [object android/support/v4/os/ParcelableCompatCreatorCallbacks] )
+
+(method (attrs public ) <init>([object android/support/v4/os/ParcelableCompatCreatorCallbacks] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks"  "<TT;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/os/ParcelableCompat$CompatCreator])
+  ; parameter[0] : v1 ([object android/support/v4/os/ParcelableCompatCreatorCallbacks])
+  (line 45)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 46)
+  (iput-object v1 v0 android/support/v4/os/ParcelableCompat$CompatCreator.mCallbacks [object android/support/v4/os/ParcelableCompatCreatorCallbacks])
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Parcel;"  ")TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/os/ParcelableCompat$CompatCreator])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 51)
+  (iget-object v0 v2 android/support/v4/os/ParcelableCompat$CompatCreator.mCallbacks [object android/support/v4/os/ParcelableCompatCreatorCallbacks])
+  (const/4 v1 0)
+  (invoke-interface {v0 v3 v1} android/support/v4/os/ParcelableCompatCreatorCallbacks/createFromParcel [object android/os/Parcel] [object java/lang/ClassLoader] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/os/ParcelableCompat$CompatCreator])
+  ; parameter[0] : v2 (int)
+  (line 56)
+  (iget-object v0 v1 android/support/v4/os/ParcelableCompat$CompatCreator.mCallbacks [object android/support/v4/os/ParcelableCompatCreatorCallbacks])
+  (invoke-interface {v0 v2} android/support/v4/os/ParcelableCompatCreatorCallbacks/newArray int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

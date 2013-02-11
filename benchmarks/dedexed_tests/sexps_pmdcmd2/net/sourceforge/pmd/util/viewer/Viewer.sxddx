@@ -1,0 +1,27 @@
+(class (attrs public ) net/sourceforge/pmd/util/viewer/Viewer
+ (super java/lang/Object)
+ (source "Viewer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/sourceforge/pmd/util/viewer/Viewer])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) main([array [object java/lang/String]] )void
+  (limit registers 2)
+  ; parameter[0] : v1 ([array [object java/lang/String]])
+  (line 14)
+  (invoke-static {} net/sourceforge/pmd/jaxen/MatchesFunction/registerSelfInSimpleContext )
+  (nop )
+  (line 15)
+  (new-instance v0 net/sourceforge/pmd/util/viewer/gui/MainFrame)
+  (invoke-direct {v0} net/sourceforge/pmd/util/viewer/gui/MainFrame/<init> )
+  (line 16)
+  (return-void )
+ )
+
+)

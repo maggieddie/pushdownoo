@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/bouncycastle2/bcpg/CompressionAlgorithmTags
+ (super java/lang/Object)
+ (source "CompressionAlgorithmTags.java")
+
+ (field (attrs public static final ) BZIP2 int 3); 0x3 )
+ (field (attrs public static final ) UNCOMPRESSED int 0); 0x0 )
+ (field (attrs public static final ) ZIP int 1); 0x1 )
+ (field (attrs public static final ) ZLIB int 2); 0x2 )
+
+)

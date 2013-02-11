@@ -1,0 +1,18 @@
+(class (attrs public final ) com/google/zxing/client/android/Contents$Type
+ (super java/lang/Object)
+
+ (field (attrs private static ) CONTACT [object java/lang/String] "CONTACT_TYPE" )
+ (field (attrs private static ) EMAIL [object java/lang/String] "EMAIL_TYPE" )
+ (field (attrs private static ) LOCATION [object java/lang/String] "LOCATION_TYPE" )
+ (field (attrs private static ) PHONE [object java/lang/String] "PHONE_TYPE" )
+ (field (attrs private static ) SMS [object java/lang/String] "SMS_TYPE" )
+ (field (attrs private static ) TEXT [object java/lang/String] "TEXT_TYPE" )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/client/android/Contents$Type])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

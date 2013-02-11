@@ -1,0 +1,37 @@
+(class (attrs public ) org/apache/ogt/http/client/CircularRedirectException
+ (super org/apache/ogt/http/client/RedirectException)
+ (source "CircularRedirectException.java")
+
+ (field (attrs private static final ) serialVersionUID long -19276065); 0xfed9dedf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/client/CircularRedirectException])
+  (line 46)
+  (invoke-direct {v0} org/apache/ogt/http/client/RedirectException/<init> )
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/CircularRedirectException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 55)
+  (invoke-direct {v0 v1} org/apache/ogt/http/client/RedirectException/<init> [object java/lang/String] )
+  (line 56)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/client/CircularRedirectException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 66)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/client/RedirectException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 67)
+  (return-void )
+ )
+
+)

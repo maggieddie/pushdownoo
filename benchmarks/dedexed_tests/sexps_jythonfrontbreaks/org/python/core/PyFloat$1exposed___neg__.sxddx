@@ -1,0 +1,63 @@
+(class (attrs ) org/python/core/PyFloat$1exposed___neg__
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyFloat.java")
+
+ (field (attrs private ) self [object org/python/core/PyFloat] )
+
+(method (attrs ) <init>([object org/python/core/PyFloat] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyFloat$1exposed___neg__])
+  ; parameter[0] : v1 ([object org/python/core/PyFloat])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 138)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 139)
+  (iput-object v1 v0 org/python/core/PyFloat$1exposed___neg__.self [object org/python/core/PyFloat])
+  (line 140)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyFloat$1exposed___neg__])
+  (line 147)
+  (iget-object v0 v1 org/python/core/PyFloat$1exposed___neg__.self [object org/python/core/PyFloat])
+  (invoke-virtual {v0} org/python/core/PyFloat/float___neg__ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyFloat$1exposed___neg__])
+  (line 134)
+  (iget-object v0 v1 org/python/core/PyFloat$1exposed___neg__.self [object org/python/core/PyFloat])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyFloat$1exposed___neg__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 151)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/core/PyFloat])
+  (line 152)
+  (invoke-virtual {v0} org/python/core/PyFloat/float___neg__ )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyFloat$1exposed___neg__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 143)
+  (new-instance v0 org/python/core/PyFloat$1exposed___neg__)
+  (check-cast v3 [object org/python/core/PyFloat])
+  (iget-object v1 v2 org/python/core/PyFloat$1exposed___neg__.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyFloat$1exposed___neg__/<init> [object org/python/core/PyFloat] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

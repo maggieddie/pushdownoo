@@ -1,0 +1,57 @@
+(class (attrs final ) com/google/zxing/datamatrix/decoder/Version$ECB
+ (super java/lang/Object)
+
+ (field (attrs private final ) count int )
+ (field (attrs private final ) dataCodewords int )
+
+(method (attrs ) <init>(int int )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/zxing/datamatrix/decoder/Version$ECB/<init> int int byte )
+  (return-void )
+ )
+
+(method (attrs private ) <init>(int int byte )void
+  (limit registers 4)
+  ; this: v0 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (byte)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (iput v1 v0 com/google/zxing/datamatrix/decoder/Version$ECB.count int)
+  (iput v2 v0 com/google/zxing/datamatrix/decoder/Version$ECB.dataCodewords int)
+  (return-void )
+ )
+
+(method (attrs static ) access$200([object com/google/zxing/datamatrix/decoder/Version$ECB] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  (iget v0 v1 com/google/zxing/datamatrix/decoder/Version$ECB.count int)
+  (return v0)
+ )
+
+(method (attrs static ) access$300([object com/google/zxing/datamatrix/decoder/Version$ECB] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  (iget v0 v1 com/google/zxing/datamatrix/decoder/Version$ECB.dataCodewords int)
+  (return v0)
+ )
+
+(method (attrs final ) getCount()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  (iget v0 v1 com/google/zxing/datamatrix/decoder/Version$ECB.count int)
+  (return v0)
+)
+
+(method (attrs final ) getDataCodewords()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/datamatrix/decoder/Version$ECB])
+  (iget v0 v1 com/google/zxing/datamatrix/decoder/Version$ECB.dataCodewords int)
+  (return v0)
+)
+
+)

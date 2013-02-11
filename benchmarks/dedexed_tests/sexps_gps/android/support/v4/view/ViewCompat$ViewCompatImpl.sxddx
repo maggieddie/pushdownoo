@@ -1,0 +1,30 @@
+(interface (attrs abstract ) android/support/v4/view/ViewCompat$ViewCompatImpl
+ (super java/lang/Object)
+ (source "ViewCompat.java")
+
+
+(method (attrs public abstract ) canScrollHorizontally([object android/view/View] int )boolean
+)
+
+(method (attrs public abstract ) canScrollVertically([object android/view/View] int )boolean
+)
+
+(method (attrs public abstract ) getOverScrollMode([object android/view/View] )int
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) onInitializeAccessibilityNodeInfo([object android/view/View] [object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat] )void
+)
+
+(method (attrs public abstract ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+)
+
+(method (attrs public abstract ) setAccessibilityDelegate([object android/view/View] [object android/support/v4/view/AccessibilityDelegateCompat] )void
+)
+
+(method (attrs public abstract ) setOverScrollMode([object android/view/View] int )void
+)
+
+)

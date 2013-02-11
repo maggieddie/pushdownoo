@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/NameValuePair
+ (super java/lang/Object)
+ (source "NameValuePair.java")
+
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getValue()[object java/lang/String]
+)
+
+)

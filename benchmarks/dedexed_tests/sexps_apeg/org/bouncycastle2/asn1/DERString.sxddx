@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/bouncycastle2/asn1/DERString
+ (super java/lang/Object)
+ (source "DERString.java")
+
+
+(method (attrs public abstract ) getString()[object java/lang/String]
+)
+
+)

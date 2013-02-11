@@ -1,0 +1,19 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JDKDSASigner$dsa224
+ (super org/bouncycastle2/jce/provider/JDKDSASigner)
+ (source "JDKDSASigner.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JDKDSASigner$dsa224])
+  (line 240)
+  (new-instance v0 org/bouncycastle2/crypto/digests/SHA224Digest)
+  (invoke-direct {v0} org/bouncycastle2/crypto/digests/SHA224Digest/<init> )
+  (new-instance v1 org/bouncycastle2/crypto/signers/DSASigner)
+  (invoke-direct {v1} org/bouncycastle2/crypto/signers/DSASigner/<init> )
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/jce/provider/JDKDSASigner/<init> [object org/bouncycastle2/crypto/Digest] [object org/bouncycastle2/crypto/DSA] )
+  (line 241)
+  (return-void )
+ )
+
+)

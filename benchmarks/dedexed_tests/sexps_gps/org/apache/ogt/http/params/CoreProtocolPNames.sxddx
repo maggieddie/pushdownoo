@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) org/apache/ogt/http/params/CoreProtocolPNames
+ (super java/lang/Object)
+ (source "CoreProtocolPNames.java")
+
+ (field (attrs public static final ) HTTP_CONTENT_CHARSET [object java/lang/String] "http.protocol.content-charset" )
+ (field (attrs public static final ) HTTP_ELEMENT_CHARSET [object java/lang/String] "http.protocol.element-charset" )
+ (field (attrs public static final ) ORIGIN_SERVER [object java/lang/String] "http.origin-server" )
+ (field (attrs public static final ) PROTOCOL_VERSION [object java/lang/String] "http.protocol.version" )
+ (field (attrs public static final ) STRICT_TRANSFER_ENCODING [object java/lang/String] "http.protocol.strict-transfer-encoding" )
+ (field (attrs public static final ) USER_AGENT [object java/lang/String] "http.useragent" )
+ (field (attrs public static final ) USE_EXPECT_CONTINUE [object java/lang/String] "http.protocol.expect-continue" )
+ (field (attrs public static final ) WAIT_FOR_CONTINUE [object java/lang/String] "http.protocol.wait-for-continue" )
+
+)

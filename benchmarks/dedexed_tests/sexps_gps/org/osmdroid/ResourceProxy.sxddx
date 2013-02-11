@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/osmdroid/ResourceProxy
+ (super java/lang/Object)
+ (source "ResourceProxy.java")
+
+
+(method (attrs public abstract ) getBitmap([object org/osmdroid/ResourceProxy$bitmap] )[object android/graphics/Bitmap]
+)
+
+(method (attrs public abstract ) getDisplayMetricsDensity()float
+)
+
+(method (attrs public abstract ) getDrawable([object org/osmdroid/ResourceProxy$bitmap] )[object android/graphics/drawable/Drawable]
+)
+
+(method (attrs public abstract ) getString([object org/osmdroid/ResourceProxy$string] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getString([object org/osmdroid/ResourceProxy$string] [array [object java/lang/Object]] )[object java/lang/String]
+)
+
+)

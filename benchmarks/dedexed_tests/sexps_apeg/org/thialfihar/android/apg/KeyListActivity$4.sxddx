@@ -1,0 +1,52 @@
+(class (attrs ) org/thialfihar/android/apg/KeyListActivity$4
+ (super java/lang/Object)
+ (source "KeyListActivity.java")
+ (implements org/thialfihar/android/apg/FileDialog$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/thialfihar/android/apg/KeyListActivity] )
+
+(method (attrs ) <init>([object org/thialfihar/android/apg/KeyListActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thialfihar/android/apg/KeyListActivity$4])
+  ; parameter[0] : v1 ([object org/thialfihar/android/apg/KeyListActivity])
+  (line 1)
+  (iput-object v1 v0 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (line 233)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCancelClick()void
+  (limit registers 3)
+  ; this: v2 ([object org/thialfihar/android/apg/KeyListActivity$4])
+  (line 242)
+  (iget-object v0 v2 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (const v1 554106889) ; 0x21070009)
+  (invoke-virtual {v0 v1} org/thialfihar/android/apg/KeyListActivity/removeDialog int )
+  (line 243)
+  (return-void )
+)
+
+(method (attrs public ) onOkClick([object java/lang/String] boolean )void
+  (limit registers 5)
+  ; this: v2 ([object org/thialfihar/android/apg/KeyListActivity$4])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (boolean)
+  (line 235)
+  (iget-object v0 v2 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (const v1 554106889) ; 0x21070009)
+  (invoke-virtual {v0 v1} org/thialfihar/android/apg/KeyListActivity/removeDialog int )
+  (line 236)
+  (iget-object v0 v2 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (iput-boolean v4 v0 org/thialfihar/android/apg/KeyListActivity.mDeleteAfterImport boolean)
+  (line 237)
+  (iget-object v0 v2 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (iput-object v3 v0 org/thialfihar/android/apg/KeyListActivity.mImportFilename [object java/lang/String])
+  (line 238)
+  (iget-object v0 v2 org/thialfihar/android/apg/KeyListActivity$4.this$0 [object org/thialfihar/android/apg/KeyListActivity])
+  (invoke-virtual {v0} org/thialfihar/android/apg/KeyListActivity/importKeys )
+  (line 239)
+  (return-void )
+)
+
+)

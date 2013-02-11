@@ -1,0 +1,19 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$OldSHA384
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JCEMac$OldSHA384])
+  (line 431)
+  (new-instance v0 org/bouncycastle2/crypto/macs/OldHMac)
+  (new-instance v1 org/bouncycastle2/crypto/digests/SHA384Digest)
+  (invoke-direct {v1} org/bouncycastle2/crypto/digests/SHA384Digest/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/macs/OldHMac/<init> [object org/bouncycastle2/crypto/Digest] )
+  (invoke-direct {v2 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 432)
+  (return-void )
+ )
+
+)

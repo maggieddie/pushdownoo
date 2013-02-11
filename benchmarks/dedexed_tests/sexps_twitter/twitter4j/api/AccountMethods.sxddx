@@ -1,0 +1,60 @@
+(interface (attrs public abstract ) twitter4j/api/AccountMethods
+ (super java/lang/Object)
+ (source "AccountMethods.java")
+
+
+(method (attrs public abstract ) getAccountSettings()[object twitter4j/AccountSettings]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getAccountTotals()[object twitter4j/AccountTotals]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getRateLimitStatus()[object twitter4j/RateLimitStatus]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) updateProfile([object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) updateProfile([object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) updateProfileBackgroundImage([object java/io/File] boolean )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) updateProfileColors([object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) updateProfileImage([object java/io/File] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) verifyCredentials()[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

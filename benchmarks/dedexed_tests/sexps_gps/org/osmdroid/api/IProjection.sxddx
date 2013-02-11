@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/osmdroid/api/IProjection
+ (super java/lang/Object)
+ (source "IProjection.java")
+
+
+(method (attrs public abstract ) fromPixels(int int )[object org/osmdroid/api/IGeoPoint]
+)
+
+(method (attrs public abstract ) metersToEquatorPixels(float )float
+)
+
+(method (attrs public abstract ) toPixels([object org/osmdroid/api/IGeoPoint] [object android/graphics/Point] )[object android/graphics/Point]
+)
+
+)

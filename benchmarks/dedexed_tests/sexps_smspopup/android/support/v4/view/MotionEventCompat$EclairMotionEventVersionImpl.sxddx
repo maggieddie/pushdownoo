@@ -1,0 +1,59 @@
+(class (attrs ) android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl
+ (super java/lang/Object)
+ (source "MotionEventCompat.java")
+ (implements android/support/v4/view/MotionEventCompat$MotionEventVersionImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl])
+  (line 75)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) findPointerIndex([object android/view/MotionEvent] int )int
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  ; parameter[1] : v3 (int)
+  (line 78)
+  (invoke-static {v2 v3} android/support/v4/view/MotionEventCompatEclair/findPointerIndex [object android/view/MotionEvent] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getPointerId([object android/view/MotionEvent] int )int
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  ; parameter[1] : v3 (int)
+  (line 82)
+  (invoke-static {v2 v3} android/support/v4/view/MotionEventCompatEclair/getPointerId [object android/view/MotionEvent] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getX([object android/view/MotionEvent] int )float
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  ; parameter[1] : v3 (int)
+  (line 86)
+  (invoke-static {v2 v3} android/support/v4/view/MotionEventCompatEclair/getX [object android/view/MotionEvent] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getY([object android/view/MotionEvent] int )float
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  ; parameter[1] : v3 (int)
+  (line 90)
+  (invoke-static {v2 v3} android/support/v4/view/MotionEventCompatEclair/getY [object android/view/MotionEvent] int )
+  (move-result v0)
+  (return v0)
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/osmdroid/views/overlay/ItemizedOverlayControlView$ItemizedOverlayControlViewListener
+ (super java/lang/Object)
+ (source "ItemizedOverlayControlView.java")
+
+
+(method (attrs public abstract ) onCenter()void
+)
+
+(method (attrs public abstract ) onNavTo()void
+)
+
+(method (attrs public abstract ) onNext()void
+)
+
+(method (attrs public abstract ) onPrevious()void
+)
+
+)

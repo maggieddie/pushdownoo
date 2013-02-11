@@ -1,0 +1,51 @@
+(class (attrs public ) org/andengine/input/touch/detector/SurfaceScrollDetector
+ (super org/andengine/input/touch/detector/ScrollDetector)
+ (source "SurfaceScrollDetector.java")
+
+
+(method (attrs public ) <init>(float [object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/input/touch/detector/SurfaceScrollDetector])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener])
+  (line 26)
+  (invoke-direct {v0 v1 v2} org/andengine/input/touch/detector/ScrollDetector/<init> float [object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener] )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/input/touch/detector/SurfaceScrollDetector])
+  ; parameter[0] : v1 ([object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener])
+  (line 30)
+  (invoke-direct {v0 v1} org/andengine/input/touch/detector/ScrollDetector/<init> [object org/andengine/input/touch/detector/ScrollDetector$IScrollDetectorListener] )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs protected ) getX([object org/andengine/input/touch/TouchEvent] )float
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/input/touch/detector/SurfaceScrollDetector])
+  ; parameter[0] : v2 ([object org/andengine/input/touch/TouchEvent])
+  (line 43)
+  (invoke-virtual {v2} org/andengine/input/touch/TouchEvent/getMotionEvent )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/view/MotionEvent/getX )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected ) getY([object org/andengine/input/touch/TouchEvent] )float
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/input/touch/detector/SurfaceScrollDetector])
+  ; parameter[0] : v2 ([object org/andengine/input/touch/TouchEvent])
+  (line 48)
+  (invoke-virtual {v2} org/andengine/input/touch/TouchEvent/getMotionEvent )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/view/MotionEvent/getY )
+  (move-result v0)
+  (return v0)
+)
+
+)

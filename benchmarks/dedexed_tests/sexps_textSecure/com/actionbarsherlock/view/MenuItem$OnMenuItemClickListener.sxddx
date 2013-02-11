@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/view/MenuItem$OnMenuItemClickListener
+ (super java/lang/Object)
+ (source "MenuItem.java")
+
+
+(method (attrs public abstract ) onMenuItemClick([object com/actionbarsherlock/view/MenuItem] )boolean
+)
+
+)

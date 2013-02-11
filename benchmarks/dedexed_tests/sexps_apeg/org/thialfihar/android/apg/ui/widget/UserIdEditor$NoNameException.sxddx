@@ -1,0 +1,17 @@
+(class (attrs public ) org/thialfihar/android/apg/ui/widget/UserIdEditor$NoNameException
+ (super java/lang/Exception)
+ (source "UserIdEditor.java")
+
+ (field (attrs static final ) serialVersionUID long 309801979); 0x127733fb )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thialfihar/android/apg/ui/widget/UserIdEditor$NoNameException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 51)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 52)
+  (return-void )
+ )
+
+)

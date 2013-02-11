@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) org/anddev/andengine/ui/IGameInterface
+ (super java/lang/Object)
+ (source "IGameInterface.java")
+
+
+(method (attrs public abstract ) onLoadComplete()void
+)
+
+(method (attrs public abstract ) onLoadEngine()[object org/anddev/andengine/engine/Engine]
+)
+
+(method (attrs public abstract ) onLoadResources()void
+)
+
+(method (attrs public abstract ) onLoadScene()[object org/anddev/andengine/entity/scene/Scene]
+)
+
+(method (attrs public abstract ) onPauseGame()void
+)
+
+(method (attrs public abstract ) onResumeGame()void
+)
+
+(method (attrs public abstract ) onUnloadResources()void
+)
+
+)

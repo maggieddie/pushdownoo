@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/view/CollapsibleActionView
+ (super java/lang/Object)
+ (source "CollapsibleActionView.java")
+
+
+(method (attrs public abstract ) onActionViewCollapsed()void
+)
+
+(method (attrs public abstract ) onActionViewExpanded()void
+)
+
+)

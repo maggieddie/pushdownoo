@@ -1,0 +1,70 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$InboxStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) mTexts [object java/util/ArrayList] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  (line 716)
+  (invoke-direct {v1} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 714)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 android/support/v4/app/NotificationCompat$InboxStyle.mTexts [object java/util/ArrayList])
+  (line 717)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/support/v4/app/NotificationCompat$Builder] )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  ; parameter[0] : v2 ([object android/support/v4/app/NotificationCompat$Builder])
+  (line 719)
+  (invoke-direct {v1} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 714)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 android/support/v4/app/NotificationCompat$InboxStyle.mTexts [object java/util/ArrayList])
+  (line 720)
+  (invoke-virtual {v1 v2} android/support/v4/app/NotificationCompat$InboxStyle/setBuilder [object android/support/v4/app/NotificationCompat$Builder] )
+  (line 721)
+  (return-void )
+ )
+
+(method (attrs public ) addLine([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$InboxStyle]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 742)
+  (iget-object v0 v1 android/support/v4/app/NotificationCompat$InboxStyle.mTexts [object java/util/ArrayList])
+  (invoke-virtual {v0 v2} java/util/ArrayList/add [object java/lang/Object] )
+  (line 743)
+  (return-object v1)
+)
+
+(method (attrs public ) setBigContentTitle([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$InboxStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 728)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$InboxStyle.mBigContentTitle [object java/lang/CharSequence])
+  (line 729)
+  (return-object v0)
+)
+
+(method (attrs public ) setSummaryText([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$InboxStyle]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 736)
+  (iput-object v2 v1 android/support/v4/app/NotificationCompat$InboxStyle.mSummaryText [object java/lang/CharSequence])
+  (line 737)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 android/support/v4/app/NotificationCompat$InboxStyle.mSummaryTextSet boolean)
+  (line 738)
+  (return-object v1)
+)
+
+)

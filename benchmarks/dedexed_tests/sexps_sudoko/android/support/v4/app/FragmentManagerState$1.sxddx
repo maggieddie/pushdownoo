@@ -1,0 +1,54 @@
+(class (attrs final ) android/support/v4/app/FragmentManagerState$1
+ (super java/lang/Object)
+ (source "FragmentManager.java")
+ (implements android/os/Parcelable$Creator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/FragmentManagerState$1])
+  (line 363)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object android/support/v4/app/FragmentManagerState]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/FragmentManagerState$1])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 365)
+  (new-instance v0 android/support/v4/app/FragmentManagerState)
+  (invoke-direct {v0 v2} android/support/v4/app/FragmentManagerState/<init> [object android/os/Parcel] )
+  (return-object v0)
+)
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/FragmentManagerState$1])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 363)
+  (invoke-virtual {v1 v2} android/support/v4/app/FragmentManagerState$1/createFromParcel [object android/os/Parcel] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object android/support/v4/app/FragmentManagerState]]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/FragmentManagerState$1])
+  ; parameter[0] : v2 (int)
+  (line 369)
+  (new-array v0 v2 [array [object android/support/v4/app/FragmentManagerState]])
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/FragmentManagerState$1])
+  ; parameter[0] : v2 (int)
+  (line 363)
+  (invoke-virtual {v1 v2} android/support/v4/app/FragmentManagerState$1/newArray int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

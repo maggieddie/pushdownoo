@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/andengine/util/adt/trie/ITrie
+ (super java/lang/Object)
+ (source "ITrie.java")
+
+
+(method (attrs public abstract ) add([object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) add([object java/lang/CharSequence] int int )void
+)
+
+(method (attrs public abstract ) contains([object java/lang/CharSequence] )boolean
+)
+
+(method (attrs public abstract ) contains([object java/lang/CharSequence] int int )boolean
+)
+
+)

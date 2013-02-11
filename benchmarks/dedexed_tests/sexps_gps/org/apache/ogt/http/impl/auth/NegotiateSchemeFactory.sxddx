@@ -1,0 +1,74 @@
+(class (attrs public ) org/apache/ogt/http/impl/auth/NegotiateSchemeFactory
+ (super java/lang/Object)
+ (source "NegotiateSchemeFactory.java")
+ (implements org/apache/ogt/http/auth/AuthSchemeFactory)
+
+ (field (attrs private final ) spengoGenerator [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] )
+ (field (attrs private final ) stripPort boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  (line 57)
+  (const/4 v0 0)
+  (const/4 v1 0)
+  (invoke-direct {v2 v0 v1} org/apache/ogt/http/impl/auth/NegotiateSchemeFactory/<init> [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] boolean )
+  (line 58)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator])
+  (line 53)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v0} org/apache/ogt/http/impl/auth/NegotiateSchemeFactory/<init> [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] boolean )
+  (line 54)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator])
+  ; parameter[1] : v2 (boolean)
+  (line 47)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 48)
+  (iput-object v1 v0 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.spengoGenerator [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator])
+  (line 49)
+  (iput-boolean v2 v0 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.stripPort boolean)
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs public ) getSpengoGenerator()[object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  (line 69)
+  (iget-object v0 v1 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.spengoGenerator [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator])
+  (return-object v0)
+)
+
+(method (attrs public ) isStripPort()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  (line 65)
+  (iget-boolean v0 v1 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.stripPort boolean)
+  (return v0)
+)
+
+(method (attrs public ) newInstance([object org/apache/ogt/http/params/HttpParams] )[object org/apache/ogt/http/auth/AuthScheme]
+  (limit registers 5)
+  ; this: v3 ([object org/apache/ogt/http/impl/auth/NegotiateSchemeFactory])
+  ; parameter[0] : v4 ([object org/apache/ogt/http/params/HttpParams])
+  (line 61)
+  (new-instance v0 org/apache/ogt/http/impl/auth/NegotiateScheme)
+  (iget-object v1 v3 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.spengoGenerator [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator])
+  (iget-boolean v2 v3 org/apache/ogt/http/impl/auth/NegotiateSchemeFactory.stripPort boolean)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/impl/auth/NegotiateScheme/<init> [object org/apache/ogt/http/impl/auth/SpnegoTokenGenerator] boolean )
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,22 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/Noekeon$AlgParams
+ (super org/bouncycastle2/jce/provider/JDKAlgorithmParameters$IVAlgorithmParameters)
+ (source "Noekeon.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/symmetric/Noekeon$AlgParams])
+  (line 78)
+  (invoke-direct {v0} org/bouncycastle2/jce/provider/JDKAlgorithmParameters$IVAlgorithmParameters/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) engineToString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/symmetric/Noekeon$AlgParams])
+  (line 83)
+  (const-string v0 "Noekeon IV")
+  (return-object v0)
+)
+
+)

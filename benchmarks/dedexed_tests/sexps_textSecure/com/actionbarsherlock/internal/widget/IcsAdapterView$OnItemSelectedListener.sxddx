@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/widget/IcsAdapterView$OnItemSelectedListener
+ (super java/lang/Object)
+ (source "IcsAdapterView.java")
+
+
+(method (attrs public abstract ) onItemSelected([object com/actionbarsherlock/internal/widget/IcsAdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/actionbarsherlock/internal/widget/IcsAdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+)
+
+(method (attrs public abstract ) onNothingSelected([object com/actionbarsherlock/internal/widget/IcsAdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/actionbarsherlock/internal/widget/IcsAdapterView"  "<*>;)V")
+  )
+)
+
+)

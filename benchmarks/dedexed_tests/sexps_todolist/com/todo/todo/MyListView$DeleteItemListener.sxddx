@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/todo/todo/MyListView$DeleteItemListener
+ (super java/lang/Object)
+ (source "MyListView.java")
+
+
+(method (attrs public abstract ) deleteItem(long )void
+)
+
+)

@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/osmdroid/api/IMapController
+ (super java/lang/Object)
+ (source "IMapController.java")
+
+
+(method (attrs public abstract ) animateTo([object org/osmdroid/api/IGeoPoint] )void
+)
+
+(method (attrs public abstract ) setCenter([object org/osmdroid/api/IGeoPoint] )void
+)
+
+(method (attrs public abstract ) setZoom(int )int
+)
+
+(method (attrs public abstract ) zoomIn()boolean
+)
+
+(method (attrs public abstract ) zoomInFixing(int int )boolean
+)
+
+(method (attrs public abstract ) zoomOut()boolean
+)
+
+(method (attrs public abstract ) zoomOutFixing(int int )boolean
+)
+
+(method (attrs public abstract ) zoomToSpan(int int )void
+)
+
+)

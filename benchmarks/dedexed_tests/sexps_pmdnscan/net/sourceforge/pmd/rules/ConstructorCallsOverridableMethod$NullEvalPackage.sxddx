@@ -1,0 +1,30 @@
+(class (attrs final ) net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage
+ (super net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$EvalPackage)
+ (source "ConstructorCallsOverridableMethod.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage])
+  (line 507)
+  (invoke-direct {v1} net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$EvalPackage/<init> )
+  (line 508)
+  (const-string v0 "")
+  (iput-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage.m_ClassName [object java/lang/String])
+  (line 509)
+  (sget-object v0 java/util/Collections.EMPTY_LIST [object java/util/List])
+  (iput-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage.calledMethods [object java/util/List])
+  (line 510)
+  (sget-object v0 java/util/Collections.EMPTY_MAP [object java/util/Map])
+  (iput-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage.allMethodsOfClass [object java/util/Map])
+  (line 511)
+  (sget-object v0 java/util/Collections.EMPTY_LIST [object java/util/List])
+  (iput-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage.calledConstructors [object java/util/List])
+  (line 512)
+  (sget-object v0 java/util/Collections.EMPTY_MAP [object java/util/Map])
+  (iput-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$NullEvalPackage.allPrivateConstructorsOfClass [object java/util/Map])
+  (line 513)
+  (return-void )
+ )
+
+)

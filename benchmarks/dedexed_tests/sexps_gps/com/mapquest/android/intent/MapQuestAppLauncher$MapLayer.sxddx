@@ -1,0 +1,73 @@
+(class (attrs public final ) com/mapquest/android/intent/MapQuestAppLauncher$MapLayer
+ (super java/lang/Enum)
+ (source "MapQuestAppLauncher.java")
+
+ (field (attrs private static final ) $VALUES [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]] )
+ (field (attrs public static final ) TRAFFIC [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer] )
+ (field (attrs private ) value [object java/lang/String] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 4)
+  (const/4 v3 0)
+  (line 59)
+  (new-instance v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer)
+  (const-string v1 "TRAFFIC")
+  (const-string v2 "traffic")
+  (invoke-direct {v0 v1 v3 v2} com/mapquest/android/intent/MapQuestAppLauncher$MapLayer/<init> [object java/lang/String] int [object java/lang/String] )
+  (sput-object v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.TRAFFIC [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer])
+  (line 58)
+  (const/4 v0 1)
+  (new-array v0 v0 [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]])
+  (sget-object v1 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.TRAFFIC [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer])
+  (aput-object v1 v0 v3)
+  (sput-object v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.$VALUES [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]])
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object java/lang/String] int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 63)
+  (invoke-direct {v0 v1 v2} java/lang/Enum/<init> [object java/lang/String] int )
+  (line 64)
+  (iput-object v3 v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.value [object java/lang/String])
+  (line 65)
+  (return-void )
+ )
+
+(method (attrs public static ) valueOf([object java/lang/String] )[object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 58)
+  (const-class v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer)
+  (invoke-static {v0 v1} java/lang/Enum/valueOf [object java/lang/Class] [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer])
+  (return-object v0)
+ )
+
+(method (attrs public static ) values()[array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]]
+  (limit registers 1)
+  (line 58)
+  (sget-object v0 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.$VALUES [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]])
+  (invoke-virtual {v0} [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]]/clone )
+  (move-result-object v0)
+  (check-cast v0 [array [object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer]])
+  (return-object v0)
+ )
+
+(method (attrs public ) value()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/mapquest/android/intent/MapQuestAppLauncher$MapLayer])
+  (line 68)
+  (iget-object v0 v1 com/mapquest/android/intent/MapQuestAppLauncher$MapLayer.value [object java/lang/String])
+  (return-object v0)
+)
+
+)

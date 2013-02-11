@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/ReasonPhraseCatalog
+ (super java/lang/Object)
+ (source "ReasonPhraseCatalog.java")
+
+
+(method (attrs public abstract ) getReason(int [object java/util/Locale] )[object java/lang/String]
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs ) com/todo/todo/KTodo$27
+ (super java/lang/Object)
+ (source "KTodo.java")
+ (implements android/content/DialogInterface$OnCancelListener)
+
+ (field (attrs final ) this$0 [object com/todo/todo/KTodo] )
+ (field (attrs private final ) val$cursor [object android/database/Cursor] )
+
+(method (attrs ) <init>([object com/todo/todo/KTodo] [object android/database/Cursor] )void
+  (limit registers 3)
+  ; this: v0 ([object com/todo/todo/KTodo$27])
+  ; parameter[0] : v1 ([object com/todo/todo/KTodo])
+  ; parameter[1] : v2 ([object android/database/Cursor])
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/KTodo$27.this$0 [object com/todo/todo/KTodo])
+  (iput-object v2 v0 com/todo/todo/KTodo$27.val$cursor [object android/database/Cursor])
+  (line 840)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCancel([object android/content/DialogInterface] )void
+  (limit registers 3)
+  ; this: v1 ([object com/todo/todo/KTodo$27])
+  ; parameter[0] : v2 ([object android/content/DialogInterface])
+  (line 842)
+  (iget-object v0 v1 com/todo/todo/KTodo$27.val$cursor [object android/database/Cursor])
+  (invoke-interface {v0} android/database/Cursor/close )
+  (line 843)
+  (return-void )
+)
+
+)

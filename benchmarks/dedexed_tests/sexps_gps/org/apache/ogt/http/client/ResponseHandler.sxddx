@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/ResponseHandler
+ (super java/lang/Object)
+ (source "ResponseHandler.java")
+
+
+(method (attrs public abstract ) handleResponse([object org/apache/ogt/http/HttpResponse] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/ogt/http/HttpResponse;"  ")TT;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/client/ClientProtocolException]  [object java/io/IOException])
+  )
+)
+
+)

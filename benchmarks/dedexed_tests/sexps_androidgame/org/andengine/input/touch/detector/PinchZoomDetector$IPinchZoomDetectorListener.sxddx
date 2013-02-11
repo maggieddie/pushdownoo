@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/andengine/input/touch/detector/PinchZoomDetector$IPinchZoomDetectorListener
+ (super java/lang/Object)
+ (source "PinchZoomDetector.java")
+
+
+(method (attrs public abstract ) onPinchZoom([object org/andengine/input/touch/detector/PinchZoomDetector] [object org/andengine/input/touch/TouchEvent] float )void
+)
+
+(method (attrs public abstract ) onPinchZoomFinished([object org/andengine/input/touch/detector/PinchZoomDetector] [object org/andengine/input/touch/TouchEvent] float )void
+)
+
+(method (attrs public abstract ) onPinchZoomStarted([object org/andengine/input/touch/detector/PinchZoomDetector] [object org/andengine/input/touch/TouchEvent] )void
+)
+
+)

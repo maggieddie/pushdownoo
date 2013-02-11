@@ -1,0 +1,39 @@
+(interface (attrs public abstract ) org/andengine/util/adt/list/IFloatList
+ (super java/lang/Object)
+ (source "IFloatList.java")
+
+
+(method (attrs public abstract ) add(float )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ArrayIndexOutOfBoundsException])
+  )
+)
+
+(method (attrs public abstract ) add(int float )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ArrayIndexOutOfBoundsException])
+  )
+)
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) get(int )float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ArrayIndexOutOfBoundsException])
+  )
+)
+
+(method (attrs public abstract ) isEmpty()boolean
+)
+
+(method (attrs public abstract ) remove(int )float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ArrayIndexOutOfBoundsException])
+  )
+)
+
+(method (attrs public abstract ) size()int
+)
+
+)

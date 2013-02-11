@@ -1,0 +1,24 @@
+(interface (attrs abstract ) com/mapquest/android/maps/TileDownloader
+ (super java/lang/Object)
+ (source "TileDownloader.java")
+
+
+(method (attrs public abstract ) beginQueue()void
+)
+
+(method (attrs public abstract ) clearQueue()void
+)
+
+(method (attrs public abstract ) destroy()void
+)
+
+(method (attrs public abstract ) endQueue()void
+)
+
+(method (attrs public abstract ) finishedDownload([object com/mapquest/android/maps/Tile] )void
+)
+
+(method (attrs public abstract ) queueTile([object com/mapquest/android/maps/Tile] )void
+)
+
+)

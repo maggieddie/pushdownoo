@@ -1,0 +1,49 @@
+(class (attrs public ) net/sourceforge/pmd/dfa/report/ClassNode
+ (super net/sourceforge/pmd/dfa/report/AbstractReportNode)
+ (source "ClassNode.java")
+
+ (field (attrs private ) className [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/dfa/report/ClassNode])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 8)
+  (invoke-direct {v0} net/sourceforge/pmd/dfa/report/AbstractReportNode/<init> )
+  (line 9)
+  (iput-object v1 v0 net/sourceforge/pmd/dfa/report/ClassNode.className [object java/lang/String])
+  (line 10)
+  (return-void )
+ )
+
+(method (attrs public ) equalsNode([object net/sourceforge/pmd/dfa/report/AbstractReportNode] )boolean
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/dfa/report/ClassNode])
+  ; parameter[0] : v3 ([object net/sourceforge/pmd/dfa/report/AbstractReportNode])
+  (line 17)
+  (instance-of v0 v3 net/sourceforge/pmd/dfa/report/ClassNode)
+  (if-nez v0 l4dd54)
+  (line 18)
+  (const/4 v0 0)
+  (label l4dd52)
+  (line 20)
+  (return v0)
+  (label l4dd54)
+  (check-cast v3 [object net/sourceforge/pmd/dfa/report/ClassNode])
+  (invoke-virtual {v3} net/sourceforge/pmd/dfa/report/ClassNode/getClassName )
+  (move-result-object v0)
+  (iget-object v1 v2 net/sourceforge/pmd/dfa/report/ClassNode.className [object java/lang/String])
+  (invoke-virtual {v0 v1} java/lang/String/equals [object java/lang/Object] )
+  (move-result v0)
+  (goto l4dd52)
+)
+
+(method (attrs public ) getClassName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/dfa/report/ClassNode])
+  (line 13)
+  (iget-object v0 v1 net/sourceforge/pmd/dfa/report/ClassNode.className [object java/lang/String])
+  (return-object v0)
+)
+
+)

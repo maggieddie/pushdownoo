@@ -1,0 +1,47 @@
+(class (attrs ) org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver
+ (super android/content/BroadcastReceiver)
+ (source "PartProvider.java")
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/providers/PartProvider] )
+
+(method (attrs private ) <init>([object org/thoughtcrime/securesms/providers/PartProvider] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/providers/PartProvider])
+  (line 165)
+  (iput-object v1 v0 org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver.this$0 [object org/thoughtcrime/securesms/providers/PartProvider])
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/providers/PartProvider] [object org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver] )void
+  (limit registers 3)
+  ; this: v0 ([object org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/providers/PartProvider])
+  ; parameter[1] : v2 ([object org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver])
+  (line 165)
+  (invoke-direct {v0 v1} org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver/<init> [object org/thoughtcrime/securesms/providers/PartProvider] )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 168)
+  (const-string v0 "SendReceiveService")
+  (const-string v1 "Got a MasterSecret broadcast...")
+  (invoke-static {v0 v1} android/util/Log/w [object java/lang/String] [object java/lang/String] )
+  (line 169)
+  (iget-object v1 v2 org/thoughtcrime/securesms/providers/PartProvider$NewKeyReceiver.this$0 [object org/thoughtcrime/securesms/providers/PartProvider])
+  (const-string v0 "master_secret")
+  (invoke-virtual {v4 v0} android/content/Intent/getParcelableExtra [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object org/thoughtcrime/securesms/crypto/MasterSecret])
+  (invoke-static {v1 v0} org/thoughtcrime/securesms/providers/PartProvider/access$0 [object org/thoughtcrime/securesms/providers/PartProvider] [object org/thoughtcrime/securesms/crypto/MasterSecret] )
+  (line 170)
+  (return-void )
+)
+
+)

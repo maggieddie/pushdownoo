@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/osmdroid/views/overlay/IOverlayMenuProvider
+ (super java/lang/Object)
+ (source "IOverlayMenuProvider.java")
+
+
+(method (attrs public abstract ) isOptionsMenuEnabled()boolean
+)
+
+(method (attrs public abstract ) onCreateOptionsMenu([object android/view/Menu] int [object org/osmdroid/views/MapView] )boolean
+)
+
+(method (attrs public abstract ) onOptionsItemSelected([object android/view/MenuItem] int [object org/osmdroid/views/MapView] )boolean
+)
+
+(method (attrs public abstract ) onPrepareOptionsMenu([object android/view/Menu] int [object org/osmdroid/views/MapView] )boolean
+)
+
+(method (attrs public abstract ) setOptionsMenuEnabled(boolean )void
+)
+
+)

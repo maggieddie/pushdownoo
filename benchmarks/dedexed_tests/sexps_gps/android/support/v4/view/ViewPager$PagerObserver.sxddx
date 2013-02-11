@@ -1,0 +1,47 @@
+(class (attrs ) android/support/v4/view/ViewPager$PagerObserver
+ (super android/database/DataSetObserver)
+ (source "ViewPager.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/view/ViewPager] )
+
+(method (attrs private ) <init>([object android/support/v4/view/ViewPager] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/view/ViewPager$PagerObserver])
+  ; parameter[0] : v1 ([object android/support/v4/view/ViewPager])
+  (line 2057)
+  (iput-object v1 v0 android/support/v4/view/ViewPager$PagerObserver.this$0 [object android/support/v4/view/ViewPager])
+  (invoke-direct {v0} android/database/DataSetObserver/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/support/v4/view/ViewPager] [object android/support/v4/view/ViewPager$1] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewPager$PagerObserver])
+  ; parameter[0] : v1 ([object android/support/v4/view/ViewPager])
+  ; parameter[1] : v2 ([object android/support/v4/view/ViewPager$1])
+  (line 2057)
+  (invoke-direct {v0 v1} android/support/v4/view/ViewPager$PagerObserver/<init> [object android/support/v4/view/ViewPager] )
+  (return-void )
+ )
+
+(method (attrs public ) onChanged()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/view/ViewPager$PagerObserver])
+  (line 2060)
+  (iget-object v0 v1 android/support/v4/view/ViewPager$PagerObserver.this$0 [object android/support/v4/view/ViewPager])
+  (invoke-virtual {v0} android/support/v4/view/ViewPager/dataSetChanged )
+  (line 2061)
+  (return-void )
+)
+
+(method (attrs public ) onInvalidated()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/view/ViewPager$PagerObserver])
+  (line 2064)
+  (iget-object v0 v1 android/support/v4/view/ViewPager$PagerObserver.this$0 [object android/support/v4/view/ViewPager])
+  (invoke-virtual {v0} android/support/v4/view/ViewPager/dataSetChanged )
+  (line 2065)
+  (return-void )
+)
+
+)

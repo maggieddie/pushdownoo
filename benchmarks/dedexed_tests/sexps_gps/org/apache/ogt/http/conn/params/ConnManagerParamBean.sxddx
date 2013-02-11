@@ -1,0 +1,56 @@
+(class (attrs public ) org/apache/ogt/http/conn/params/ConnManagerParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "ConnManagerParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/conn/params/ConnManagerParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 47)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 48)
+  (return-void )
+ )
+
+(method (attrs public ) setConnectionsPerRoute([object org/apache/ogt/http/conn/params/ConnPerRouteBean] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnManagerParamBean])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/conn/params/ConnPerRouteBean])
+  (line 63)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnManagerParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.conn-manager.max-per-route")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setParameter [object java/lang/String] [object java/lang/Object] )
+  (line 64)
+  (return-void )
+)
+
+(method (attrs public ) setMaxTotalConnections(int )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnManagerParamBean])
+  ; parameter[0] : v3 (int)
+  (line 57)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnManagerParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.conn-manager.max-total")
+  (invoke-interface {v0 v1 v3} org/apache/ogt/http/params/HttpParams/setIntParameter [object java/lang/String] int )
+  (line 58)
+  (return-void )
+)
+
+(method (attrs public ) setTimeout(long )void
+  (limit registers 5)
+  ; this: v2 ([object org/apache/ogt/http/conn/params/ConnManagerParamBean])
+  ; parameter[0] : v3 (long)
+  (line 51)
+  (iget-object v0 v2 org/apache/ogt/http/conn/params/ConnManagerParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (const-string v1 "http.conn-manager.timeout")
+  (invoke-interface {v0 v1 v3 v4} org/apache/ogt/http/params/HttpParams/setLongParameter [object java/lang/String] long )
+  (line 52)
+  (return-void )
+)
+
+)

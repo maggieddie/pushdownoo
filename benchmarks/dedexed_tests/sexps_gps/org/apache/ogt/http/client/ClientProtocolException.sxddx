@@ -1,0 +1,51 @@
+(class (attrs public ) org/apache/ogt/http/client/ClientProtocolException
+ (super java/io/IOException)
+ (source "ClientProtocolException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1233195289); 0xb67eeee7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/client/ClientProtocolException])
+  (line 44)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/ClientProtocolException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 48)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/client/ClientProtocolException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 56)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 57)
+  (invoke-virtual {v0 v2} org/apache/ogt/http/client/ClientProtocolException/initCause [object java/lang/Throwable] )
+  (line 58)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/client/ClientProtocolException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 51)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 52)
+  (invoke-virtual {v0 v1} org/apache/ogt/http/client/ClientProtocolException/initCause [object java/lang/Throwable] )
+  (line 53)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/anddev/andengine/opengl/texture/ITexture$ITextureStateListener
+ (super java/lang/Object)
+ (source "ITexture.java")
+
+
+(method (attrs public abstract ) onLoadedToHardware([object org/anddev/andengine/opengl/texture/ITexture] )void
+)
+
+(method (attrs public abstract ) onUnloadedFromHardware([object org/anddev/andengine/opengl/texture/ITexture] )void
+)
+
+)

@@ -1,0 +1,14 @@
+(class (attrs public ) org/python/parser/ParseError
+ (super java/lang/Exception)
+ (source "ParseError.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/parser/ParseError])
+  (line 4)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (return-void )
+ )
+
+)

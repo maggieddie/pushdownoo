@@ -1,0 +1,40 @@
+(class (attrs public ) org/slf4j/helpers/SubstituteLoggerFactory
+ (super java/lang/Object)
+ (source "SubstituteLoggerFactory.java")
+ (implements org/slf4j/ILoggerFactory)
+
+ (field (attrs final ) loggerNameList [object java/util/List] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/SubstituteLoggerFactory])
+  (line 53)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 56)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 org/slf4j/helpers/SubstituteLoggerFactory.loggerNameList [object java/util/List])
+  (return-void )
+ )
+
+(method (attrs public ) getLogger([object java/lang/String] )[object org/slf4j/Logger]
+  (limit registers 3)
+  ; this: v1 ([object org/slf4j/helpers/SubstituteLoggerFactory])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 59)
+  (iget-object v0 v1 org/slf4j/helpers/SubstituteLoggerFactory.loggerNameList [object java/util/List])
+  (invoke-interface {v0 v2} java/util/List/add [object java/lang/Object] )
+  (line 60)
+  (sget-object v0 org/slf4j/helpers/NOPLogger.NOP_LOGGER [object org/slf4j/helpers/NOPLogger])
+  (return-object v0)
+)
+
+(method (attrs public ) getLoggerNameList()[object java/util/List]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/helpers/SubstituteLoggerFactory])
+  (line 64)
+  (iget-object v0 v1 org/slf4j/helpers/SubstituteLoggerFactory.loggerNameList [object java/util/List])
+  (return-object v0)
+)
+
+)

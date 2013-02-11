@@ -1,0 +1,30 @@
+(class (attrs ) org/thialfihar/android/apg/ui/widget/SectionView$3
+ (super java/lang/Object)
+ (source "SectionView.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/thialfihar/android/apg/ui/widget/SectionView] )
+
+(method (attrs ) <init>([object org/thialfihar/android/apg/ui/widget/SectionView] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thialfihar/android/apg/ui/widget/SectionView$3])
+  ; parameter[0] : v1 ([object org/thialfihar/android/apg/ui/widget/SectionView])
+  (line 1)
+  (iput-object v1 v0 org/thialfihar/android/apg/ui/widget/SectionView$3.this$0 [object org/thialfihar/android/apg/ui/widget/SectionView])
+  (line 230)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 3)
+  ; this: v0 ([object org/thialfihar/android/apg/ui/widget/SectionView$3])
+  ; parameter[0] : v1 ([object android/content/DialogInterface])
+  ; parameter[1] : v2 (int)
+  (line 232)
+  (invoke-interface {v1} android/content/DialogInterface/dismiss )
+  (line 233)
+  (return-void )
+)
+
+)

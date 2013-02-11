@@ -1,0 +1,39 @@
+(interface (attrs public abstract ) org/apache/oro/text/regex/PatternMatcher
+ (super java/lang/Object)
+ (source "PatternMatcher.java")
+
+
+(method (attrs public abstract ) contains([object java/lang/String] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) contains([object org/apache/oro/text/regex/PatternMatcherInput] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) contains([array char] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) getMatch()[object org/apache/oro/text/regex/MatchResult]
+)
+
+(method (attrs public abstract ) matches([object java/lang/String] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matches([object org/apache/oro/text/regex/PatternMatcherInput] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matches([array char] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matchesPrefix([object java/lang/String] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matchesPrefix([object org/apache/oro/text/regex/PatternMatcherInput] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matchesPrefix([array char] [object org/apache/oro/text/regex/Pattern] )boolean
+)
+
+(method (attrs public abstract ) matchesPrefix([array char] [object org/apache/oro/text/regex/Pattern] int )boolean
+)
+
+)

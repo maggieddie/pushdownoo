@@ -1,0 +1,19 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$Tiger
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JCEMac$Tiger])
+  (line 491)
+  (new-instance v0 org/bouncycastle2/crypto/macs/HMac)
+  (new-instance v1 org/bouncycastle2/crypto/digests/TigerDigest)
+  (invoke-direct {v1} org/bouncycastle2/crypto/digests/TigerDigest/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/macs/HMac/<init> [object org/bouncycastle2/crypto/Digest] )
+  (invoke-direct {v2 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 492)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) org/osmdroid/views/overlay/ItemizedOverlayControlView$4
+ (super java/lang/Object)
+ (source "ItemizedOverlayControlView.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/osmdroid/views/overlay/ItemizedOverlayControlView] )
+
+(method (attrs ) <init>([object org/osmdroid/views/overlay/ItemizedOverlayControlView] )void
+  (limit registers 2)
+  ; this: v0 ([object org/osmdroid/views/overlay/ItemizedOverlayControlView$4])
+  ; parameter[0] : v1 ([object org/osmdroid/views/overlay/ItemizedOverlayControlView])
+  (line 126)
+  (iput-object v1 v0 org/osmdroid/views/overlay/ItemizedOverlayControlView$4.this$0 [object org/osmdroid/views/overlay/ItemizedOverlayControlView])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/views/overlay/ItemizedOverlayControlView$4])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 129)
+  (iget-object v0 v1 org/osmdroid/views/overlay/ItemizedOverlayControlView$4.this$0 [object org/osmdroid/views/overlay/ItemizedOverlayControlView])
+  (iget-object v0 v0 org/osmdroid/views/overlay/ItemizedOverlayControlView.mLis [object org/osmdroid/views/overlay/ItemizedOverlayControlView$ItemizedOverlayControlViewListener])
+  (if-eqz v0 ld886e)
+  (line 130)
+  (iget-object v0 v1 org/osmdroid/views/overlay/ItemizedOverlayControlView$4.this$0 [object org/osmdroid/views/overlay/ItemizedOverlayControlView])
+  (iget-object v0 v0 org/osmdroid/views/overlay/ItemizedOverlayControlView.mLis [object org/osmdroid/views/overlay/ItemizedOverlayControlView$ItemizedOverlayControlViewListener])
+  (invoke-interface {v0} org/osmdroid/views/overlay/ItemizedOverlayControlView$ItemizedOverlayControlViewListener/onNavTo )
+  (label ld886e)
+  (line 131)
+  (return-void )
+)
+
+)

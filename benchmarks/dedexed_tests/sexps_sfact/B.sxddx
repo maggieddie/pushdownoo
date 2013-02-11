@@ -1,0 +1,59 @@
+(class (attrs public ) org/ucomb/B
+ (super java/lang/Object)
+ (source "B.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/ucomb/B])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) fact2(int )int
+  (limit registers 2)
+  ; parameter[0] : v1 (int)
+  (line 10)
+  (const/4 v0 1)
+  (if-ne v1 v0 l544)
+  (label l542)
+  (line 13)
+  (return v1)
+  (label l544)
+  (add-int/lit8 v0 v1 255)
+  (invoke-static {v0} org/ucomb/B/fact2 int )
+  (move-result v0)
+  (mul-int/2addr v1 v0)
+  (goto l542)
+ )
+
+(method (attrs public ) bar([object org/ucomb/A] )void
+  (limit registers 2)
+  ; this: v0 ([object org/ucomb/B])
+  ; parameter[0] : v1 ([object org/ucomb/A])
+  (line 6)
+  (invoke-virtual {v1} org/ucomb/A/foo )
+  (line 7)
+  (return-void )
+)
+
+(method (attrs public ) fact(int )int
+  (limit registers 3)
+  ; this: v1 ([object org/ucomb/B])
+  ; parameter[0] : v2 (int)
+  (line 17)
+  (const/4 v0 1)
+  (if-ne v2 v0 l584)
+  (label l582)
+  (line 20)
+  (return v2)
+  (label l584)
+  (add-int/lit8 v0 v2 255)
+  (invoke-virtual {v1 v0} org/ucomb/B/fact int )
+  (move-result v0)
+  (mul-int/2addr v2 v0)
+  (goto l582)
+)
+
+)

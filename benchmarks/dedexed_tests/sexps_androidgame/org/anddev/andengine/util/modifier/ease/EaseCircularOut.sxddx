@@ -1,0 +1,58 @@
+(class (attrs public ) org/anddev/andengine/util/modifier/ease/EaseCircularOut
+ (super java/lang/Object)
+ (source "EaseCircularOut.java")
+ (implements org/anddev/andengine/util/modifier/ease/IEaseFunction)
+
+ (field (attrs private static ) INSTANCE [object org/anddev/andengine/util/modifier/ease/EaseCircularOut] )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/modifier/ease/EaseCircularOut])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public static ) getInstance()[object org/anddev/andengine/util/modifier/ease/EaseCircularOut]
+  (limit registers 1)
+  (line 33)
+  (sget-object v0 org/anddev/andengine/util/modifier/ease/EaseCircularOut.INSTANCE [object org/anddev/andengine/util/modifier/ease/EaseCircularOut])
+  (if-nez v0 l7d13a)
+  (line 34)
+  (new-instance v0 org/anddev/andengine/util/modifier/ease/EaseCircularOut)
+  (invoke-direct {v0} org/anddev/andengine/util/modifier/ease/EaseCircularOut/<init> )
+  (sput-object v0 org/anddev/andengine/util/modifier/ease/EaseCircularOut.INSTANCE [object org/anddev/andengine/util/modifier/ease/EaseCircularOut])
+  (label l7d13a)
+  (line 36)
+  (sget-object v0 org/anddev/andengine/util/modifier/ease/EaseCircularOut.INSTANCE [object org/anddev/andengine/util/modifier/ease/EaseCircularOut])
+  (return-object v0)
+ )
+
+(method (attrs public static ) getValue(float )float
+  (limit registers 4)
+  ; parameter[0] : v3 (float)
+  (const/high16 v2 16256)
+  (line 57)
+  (sub-float v0 v3 v2)
+  (line 58)
+  (mul-float v1 v0 v0)
+  (sub-float v1 v2 v1)
+  (invoke-static {v1} android/util/FloatMath/sqrt float )
+  (move-result v1)
+  (return v1)
+ )
+
+(method (attrs public ) getPercentage(float float )float
+  (limit registers 4)
+  ; this: v1 ([object org/anddev/andengine/util/modifier/ease/EaseCircularOut])
+  ; parameter[0] : v2 (float)
+  ; parameter[1] : v3 (float)
+  (line 49)
+  (div-float v0 v2 v3)
+  (invoke-static {v0} org/anddev/andengine/util/modifier/ease/EaseCircularOut/getValue float )
+  (move-result v0)
+  (return v0)
+)
+
+)

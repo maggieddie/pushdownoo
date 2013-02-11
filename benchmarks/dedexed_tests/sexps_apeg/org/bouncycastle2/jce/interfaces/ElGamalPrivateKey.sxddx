@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/ElGamalPrivateKey
+ (super java/lang/Object)
+ (source "ElGamalPrivateKey.java")
+ (implements org/bouncycastle2/jce/interfaces/ElGamalKey)
+ (implements java/security/PrivateKey)
+
+
+(method (attrs public abstract ) getX()[object java/math/BigInteger]
+)
+
+)

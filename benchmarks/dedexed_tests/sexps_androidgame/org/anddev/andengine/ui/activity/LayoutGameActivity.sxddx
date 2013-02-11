@@ -1,0 +1,46 @@
+(class (attrs public abstract ) org/anddev/andengine/ui/activity/LayoutGameActivity
+ (super org/anddev/andengine/ui/activity/BaseGameActivity)
+ (source "LayoutGameActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/ui/activity/LayoutGameActivity])
+  (line 12)
+  (invoke-direct {v0} org/anddev/andengine/ui/activity/BaseGameActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) getLayoutID()int
+)
+
+(method (attrs protected abstract ) getRenderSurfaceViewID()int
+)
+
+(method (attrs protected ) onSetContentView()void
+  (limit registers 3)
+  ; this: v2 ([object org/anddev/andengine/ui/activity/LayoutGameActivity])
+  (line 38)
+  (invoke-virtual {v2} org/anddev/andengine/ui/activity/LayoutGameActivity/getLayoutID )
+  (move-result v0)
+  (invoke-super {v2 v0} org/anddev/andengine/ui/activity/BaseGameActivity/setContentView int )
+  (line 40)
+  (invoke-virtual {v2} org/anddev/andengine/ui/activity/LayoutGameActivity/getRenderSurfaceViewID )
+  (move-result v0)
+  (invoke-virtual {v2 v0} org/anddev/andengine/ui/activity/LayoutGameActivity/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object org/anddev/andengine/opengl/view/RenderSurfaceView])
+  (iput-object v0 v2 org/anddev/andengine/ui/activity/LayoutGameActivity.mRenderSurfaceView [object org/anddev/andengine/opengl/view/RenderSurfaceView])
+  (line 42)
+  (iget-object v0 v2 org/anddev/andengine/ui/activity/LayoutGameActivity.mRenderSurfaceView [object org/anddev/andengine/opengl/view/RenderSurfaceView])
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} org/anddev/andengine/opengl/view/RenderSurfaceView/setEGLConfigChooser boolean )
+  (line 43)
+  (iget-object v0 v2 org/anddev/andengine/ui/activity/LayoutGameActivity.mRenderSurfaceView [object org/anddev/andengine/opengl/view/RenderSurfaceView])
+  (iget-object v1 v2 org/anddev/andengine/ui/activity/LayoutGameActivity.mEngine [object org/anddev/andengine/engine/Engine])
+  (invoke-virtual {v0 v1} org/anddev/andengine/opengl/view/RenderSurfaceView/setRenderer [object org/anddev/andengine/engine/Engine] )
+  (line 44)
+  (return-void )
+)
+
+)

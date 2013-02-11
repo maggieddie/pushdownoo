@@ -1,0 +1,59 @@
+(interface (attrs public abstract ) oauth/signpost/OAuthProvider
+ (super java/lang/Object)
+ (source "OAuthProvider.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getAccessTokenEndpointUrl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getAuthorizationWebsiteUrl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getRequestHeaders()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+(method (attrs public abstract ) getRequestTokenEndpointUrl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getResponseParameters()[object oauth/signpost/http/HttpParameters]
+)
+
+(method (attrs public abstract ) isOAuth10a()boolean
+)
+
+(method (attrs public abstract ) removeListener([object oauth/signpost/OAuthProviderListener] )void
+)
+
+(method (attrs public abstract ) retrieveAccessToken([object oauth/signpost/OAuthConsumer] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object oauth/signpost/exception/OAuthMessageSignerException]  [object oauth/signpost/exception/OAuthNotAuthorizedException]  [object oauth/signpost/exception/OAuthExpectationFailedException]  [object oauth/signpost/exception/OAuthCommunicationException])
+  )
+)
+
+(method (attrs public abstract ) retrieveRequestToken([object oauth/signpost/OAuthConsumer] [object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object oauth/signpost/exception/OAuthMessageSignerException]  [object oauth/signpost/exception/OAuthNotAuthorizedException]  [object oauth/signpost/exception/OAuthExpectationFailedException]  [object oauth/signpost/exception/OAuthCommunicationException])
+  )
+)
+
+(method (attrs public abstract ) setListener([object oauth/signpost/OAuthProviderListener] )void
+)
+
+(method (attrs public abstract ) setOAuth10a(boolean )void
+)
+
+(method (attrs public abstract ) setRequestHeader([object java/lang/String] [object java/lang/String] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+(method (attrs public abstract ) setResponseParameters([object oauth/signpost/http/HttpParameters] )void
+)
+
+)

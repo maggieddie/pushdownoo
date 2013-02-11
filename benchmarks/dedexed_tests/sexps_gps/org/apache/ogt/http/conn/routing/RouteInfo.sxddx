@@ -1,0 +1,36 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/routing/RouteInfo
+ (super java/lang/Object)
+ (source "RouteInfo.java")
+
+
+(method (attrs public abstract ) getHopCount()int
+)
+
+(method (attrs public abstract ) getHopTarget(int )[object org/apache/ogt/http/HttpHost]
+)
+
+(method (attrs public abstract ) getLayerType()[object org/apache/ogt/http/conn/routing/RouteInfo$LayerType]
+)
+
+(method (attrs public abstract ) getLocalAddress()[object java/net/InetAddress]
+)
+
+(method (attrs public abstract ) getProxyHost()[object org/apache/ogt/http/HttpHost]
+)
+
+(method (attrs public abstract ) getTargetHost()[object org/apache/ogt/http/HttpHost]
+)
+
+(method (attrs public abstract ) getTunnelType()[object org/apache/ogt/http/conn/routing/RouteInfo$TunnelType]
+)
+
+(method (attrs public abstract ) isLayered()boolean
+)
+
+(method (attrs public abstract ) isSecure()boolean
+)
+
+(method (attrs public abstract ) isTunnelled()boolean
+)
+
+)

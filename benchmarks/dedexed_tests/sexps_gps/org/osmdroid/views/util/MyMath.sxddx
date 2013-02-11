@@ -1,0 +1,41 @@
+(class (attrs public ) org/osmdroid/views/util/MyMath
+ (super java/lang/Object)
+ (source "MyMath.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/osmdroid/views/util/MyMath])
+  (line 25)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public static ) getNextSquareNumberAbove(float )int
+  (limit registers 5)
+  ; parameter[0] : v4 (float)
+  (line 57)
+  (const/4 v2 0)
+  (line 58)
+  (const/4 v0 1)
+  (line 59)
+  (const/4 v1 1)
+  (label ldd3ea)
+  (line 61)
+  (int-to-float v3 v0)
+  (cmpl-float v3 v3 v4)
+  (if-lez v3 ldd3f6)
+  (line 62)
+  (return v2)
+  (label ldd3f6)
+  (line 64)
+  (move v2 v1)
+  (line 65)
+  (mul-int/lit8 v0 v0 2)
+  (line 66)
+  (add-int/lit8 v1 v1 1)
+  (goto ldd3ea)
+ )
+
+)

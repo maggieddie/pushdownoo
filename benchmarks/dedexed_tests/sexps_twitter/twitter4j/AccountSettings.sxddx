@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) twitter4j/AccountSettings
+ (super java/lang/Object)
+ (source "AccountSettings.java")
+ (implements twitter4j/TwitterResponse)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getSleepEndTime()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSleepStartTime()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTrendLocations()[array [object twitter4j/Location]]
+)
+
+(method (attrs public abstract ) isGeoEnabled()boolean
+)
+
+(method (attrs public abstract ) isSleepTimeEnabled()boolean
+)
+
+)

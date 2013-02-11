@@ -1,0 +1,24 @@
+(class (attrs ) org/python/core/InternalTables1$TableProvid1
+ (super java/util/Hashtable)
+ (source "InternalTables1.java")
+ (implements org/python/core/InternalTables1$Table)
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/core/InternalTables1$TableProvid1])
+  (line 17)
+  (invoke-direct {v0} java/util/Hashtable/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/python/core/InternalTables1$TableProvid1] )void
+  (limit registers 2)
+  ; this: v0 ([object org/python/core/InternalTables1$TableProvid1])
+  ; parameter[0] : v1 ([object org/python/core/InternalTables1$TableProvid1])
+  (line 17)
+  (invoke-direct {v0} org/python/core/InternalTables1$TableProvid1/<init> )
+  (return-void )
+ )
+
+)

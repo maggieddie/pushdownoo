@@ -1,0 +1,23 @@
+(class (attrs public ) orgg/ucomb/AnotherCls
+ (super java/lang/Object)
+ (source "AnotherCls.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object orgg/ucomb/AnotherCls])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) foo()int
+  (limit registers 2)
+  ; this: v1 ([object orgg/ucomb/AnotherCls])
+  (line 6)
+  (const/16 v0 10)
+  (line 7)
+  (return v0)
+)
+
+)

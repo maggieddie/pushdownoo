@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/Header
+ (super java/lang/Object)
+ (source "Header.java")
+
+
+(method (attrs public abstract ) getElements()[array [object org/apache/ogt/http/HeaderElement]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getValue()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,23 @@
+(class (attrs public final ) com/gpl/rpg/AndorsTrail/model/map/TMXMapFileParser$TMXObjectGroup
+ (super java/lang/Object)
+ (source "TMXMapFileParser.java")
+
+ (field (attrs public ) height int )
+ (field (attrs public ) name [object java/lang/String] )
+ (field (attrs public ) objects [object java/util/ArrayList] )
+ (field (attrs public ) width int )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/model/map/TMXMapFileParser$TMXObjectGroup])
+  (line 288)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 292)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 com/gpl/rpg/AndorsTrail/model/map/TMXMapFileParser$TMXObjectGroup.objects [object java/util/ArrayList])
+  (line 288)
+  (return-void )
+ )
+
+)

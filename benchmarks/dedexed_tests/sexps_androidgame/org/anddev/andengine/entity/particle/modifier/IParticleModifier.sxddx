@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/particle/modifier/IParticleModifier
+ (super java/lang/Object)
+ (source "IParticleModifier.java")
+ (implements org/anddev/andengine/entity/particle/initializer/IParticleInitializer)
+
+
+(method (attrs public abstract ) onUpdateParticle([object org/anddev/andengine/entity/particle/Particle] )void
+)
+
+)

@@ -1,0 +1,31 @@
+(class (attrs ) nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread$1
+ (super android/os/Handler)
+ (source "GPSLoggerService.java")
+
+ (field (attrs final ) this$1 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread$1])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread$1.this$1 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread])
+  (line 297)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread$1])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 302)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread$1.this$1 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread/access$0 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService$GPSLoggerServiceThread] )
+  (move-result-object v0)
+  (invoke-static {v0 v2} nl/sogeti/android/gpstracker/logger/GPSLoggerService/access$22 [object nl/sogeti/android/gpstracker/logger/GPSLoggerService] [object android/os/Message] )
+  (line 303)
+  (return-void )
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/bouncycastle2/util/test/Test
+ (super java/lang/Object)
+ (source "Test.java")
+
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) perform()[object org/bouncycastle2/util/test/TestResult]
+)
+
+)

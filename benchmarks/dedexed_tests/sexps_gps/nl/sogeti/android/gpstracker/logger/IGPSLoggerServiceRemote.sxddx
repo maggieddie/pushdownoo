@@ -1,0 +1,67 @@
+(interface (attrs public abstract ) nl/sogeti/android/gpstracker/logger/IGPSLoggerServiceRemote
+ (super java/lang/Object)
+ (source "IGPSLoggerServiceRemote.java")
+ (implements android/os/IInterface)
+
+
+(method (attrs public abstract ) getLastWaypoint()[object android/location/Location]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) getTrackedDistance()float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) isMediaPrepared()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) loggingState()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) pauseLogging()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) resumeLogging()long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) startLogging()long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) stopLogging()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) storeDerivedDataSource([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) storeMediaUri([object android/net/Uri] )[object android/net/Uri]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+)

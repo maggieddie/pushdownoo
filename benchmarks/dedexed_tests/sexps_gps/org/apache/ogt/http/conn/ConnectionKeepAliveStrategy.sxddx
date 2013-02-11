@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ConnectionKeepAliveStrategy
+ (super java/lang/Object)
+ (source "ConnectionKeepAliveStrategy.java")
+
+
+(method (attrs public abstract ) getKeepAliveDuration([object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )long
+)
+
+)

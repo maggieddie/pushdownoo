@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/protocol/HttpRequestHandlerResolver
+ (super java/lang/Object)
+ (source "HttpRequestHandlerResolver.java")
+
+
+(method (attrs public abstract ) lookup([object java/lang/String] )[object org/apache/ogt/http/protocol/HttpRequestHandler]
+)
+
+)

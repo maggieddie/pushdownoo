@@ -1,0 +1,17 @@
+(class (attrs public ) nl/sogeti/android/gpstracker/db/GPStracking$SegmentsColumns
+ (super java/lang/Object)
+ (source "GPStracking.java")
+
+ (field (attrs public static final ) TRACK [object java/lang/String] "track" )
+ (field (attrs static final ) TRACK_TYPE [object java/lang/String] "INTEGER NOT NULL" )
+ (field (attrs static final ) _ID_TYPE [object java/lang/String] "INTEGER PRIMARY KEY AUTOINCREMENT" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/db/GPStracking$SegmentsColumns])
+  (line 228)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

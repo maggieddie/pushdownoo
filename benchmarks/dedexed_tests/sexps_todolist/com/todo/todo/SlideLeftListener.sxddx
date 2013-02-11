@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/todo/todo/SlideLeftListener
+ (super java/lang/Object)
+ (source "SlideLeftListener.java")
+
+
+(method (attrs public abstract ) onSlideBack()void
+)
+
+(method (attrs public abstract ) slideLeftStarted(long )void
+)
+
+)

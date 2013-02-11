@@ -1,0 +1,29 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$2
+ (super java/lang/Object)
+ (source "SegmentRendering.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$2])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$2.this$0 [object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering])
+  (line 163)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$2])
+  (line 167)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering$2.this$0 [object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering/access$0 [object nl/sogeti/android/gpstracker/viewer/map/overlay/SegmentRendering] )
+  (line 168)
+  (return-void )
+)
+
+)

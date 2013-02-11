@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) twitter4j/StatusListener
+ (super java/lang/Object)
+ (source "StatusListener.java")
+ (implements twitter4j/StreamListener)
+
+
+(method (attrs public abstract ) onDeletionNotice([object twitter4j/StatusDeletionNotice] )void
+)
+
+(method (attrs public abstract ) onScrubGeo(int long )void
+)
+
+(method (attrs public abstract ) onStatus([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) onTrackLimitationNotice(int )void
+)
+
+)

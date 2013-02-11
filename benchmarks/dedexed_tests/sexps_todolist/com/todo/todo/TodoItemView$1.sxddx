@@ -1,0 +1,51 @@
+(class (attrs ) com/todo/todo/TodoItemView$1
+ (super com/todo/todo/DelegatingDrawable)
+ (source "TodoItemView.java")
+
+ (field (attrs final ) this$0 [object com/todo/todo/TodoItemView] )
+ (field (attrs private final ) val$checkmarkWidthExtra int )
+
+(method (attrs ) <init>([object com/todo/todo/TodoItemView] [object android/graphics/drawable/Drawable] int )void
+  (limit registers 4)
+  ; this: v0 ([object com/todo/todo/TodoItemView$1])
+  ; parameter[0] : v1 ([object com/todo/todo/TodoItemView])
+  ; parameter[1] : v2 ([object android/graphics/drawable/Drawable])
+  ; parameter[2] : v3 (int)
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/TodoItemView$1.this$0 [object com/todo/todo/TodoItemView])
+  (iput v3 v0 com/todo/todo/TodoItemView$1.val$checkmarkWidthExtra int)
+  (line 149)
+  (invoke-direct {v0 v2} com/todo/todo/DelegatingDrawable/<init> [object android/graphics/drawable/Drawable] )
+  (return-void )
+ )
+
+(method (attrs public ) getIntrinsicWidth()int
+  (limit registers 3)
+  ; this: v2 ([object com/todo/todo/TodoItemView$1])
+  (line 152)
+  (iget-object v0 v2 com/todo/todo/TodoItemView$1.this$0 [object com/todo/todo/TodoItemView])
+  (invoke-static {v0} com/todo/todo/TodoItemView/access$0 [object com/todo/todo/TodoItemView] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/graphics/drawable/Drawable/getIntrinsicWidth )
+  (move-result v0)
+  (iget v1 v2 com/todo/todo/TodoItemView$1.val$checkmarkWidthExtra int)
+  (add-int/2addr v0 v1)
+  (return v0)
+)
+
+(method (attrs public ) setBounds(int int int int )void
+  (limit registers 6)
+  ; this: v1 ([object com/todo/todo/TodoItemView$1])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (int)
+  (line 157)
+  (iget v0 v1 com/todo/todo/TodoItemView$1.val$checkmarkWidthExtra int)
+  (add-int/2addr v0 v2)
+  (invoke-super {v1 v0 v3 v4 v5} com/todo/todo/DelegatingDrawable/setBounds int int int int )
+  (line 158)
+  (return-void )
+)
+
+)

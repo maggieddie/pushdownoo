@@ -1,0 +1,24 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/BrokenJCEBlockCipher$OldPBEWithSHAAndDES3Key
+ (super org/bouncycastle2/jce/provider/BrokenJCEBlockCipher)
+ (source "BrokenJCEBlockCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 7)
+  ; this: v6 ([object org/bouncycastle2/jce/provider/BrokenJCEBlockCipher$OldPBEWithSHAAndDES3Key])
+  (line 593)
+  (new-instance v1 org/bouncycastle2/crypto/modes/CBCBlockCipher)
+  (new-instance v0 org/bouncycastle2/crypto/engines/DESedeEngine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/DESedeEngine/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/crypto/modes/CBCBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (const/4 v2 3)
+  (const/4 v3 1)
+  (const/16 v4 192)
+  (const/16 v5 64)
+  (move-object v0 v6)
+  (invoke-direct/range {v0 .. v5} org/bouncycastle2/jce/provider/BrokenJCEBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] int int int int )
+  (line 594)
+  (return-void )
+ )
+
+)

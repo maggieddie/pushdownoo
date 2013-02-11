@@ -1,0 +1,43 @@
+(class (attrs public ) org/osmdroid/tileprovider/util/SimpleRegisterReceiver
+ (super java/lang/Object)
+ (source "SimpleRegisterReceiver.java")
+ (implements org/osmdroid/tileprovider/IRegisterReceiver)
+
+ (field (attrs private final ) mContext [object android/content/Context] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object org/osmdroid/tileprovider/util/SimpleRegisterReceiver])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 15)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 16)
+  (iput-object v1 v0 org/osmdroid/tileprovider/util/SimpleRegisterReceiver.mContext [object android/content/Context])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) registerReceiver([object android/content/BroadcastReceiver] [object android/content/IntentFilter] )[object android/content/Intent]
+  (limit registers 4)
+  ; this: v1 ([object org/osmdroid/tileprovider/util/SimpleRegisterReceiver])
+  ; parameter[0] : v2 ([object android/content/BroadcastReceiver])
+  ; parameter[1] : v3 ([object android/content/IntentFilter])
+  (line 21)
+  (iget-object v0 v1 org/osmdroid/tileprovider/util/SimpleRegisterReceiver.mContext [object android/content/Context])
+  (invoke-virtual {v0 v2 v3} android/content/Context/registerReceiver [object android/content/BroadcastReceiver] [object android/content/IntentFilter] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) unregisterReceiver([object android/content/BroadcastReceiver] )void
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/tileprovider/util/SimpleRegisterReceiver])
+  ; parameter[0] : v2 ([object android/content/BroadcastReceiver])
+  (line 26)
+  (iget-object v0 v1 org/osmdroid/tileprovider/util/SimpleRegisterReceiver.mContext [object android/content/Context])
+  (invoke-virtual {v0 v2} android/content/Context/unregisterReceiver [object android/content/BroadcastReceiver] )
+  (line 27)
+  (return-void )
+)
+
+)

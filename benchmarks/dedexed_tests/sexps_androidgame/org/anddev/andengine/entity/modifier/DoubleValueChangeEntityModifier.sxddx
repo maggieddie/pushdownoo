@@ -1,0 +1,42 @@
+(class (attrs public abstract ) org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier
+ (super org/anddev/andengine/util/modifier/BaseDoubleValueChangeModifier)
+ (source "DoubleValueChangeEntityModifier.java")
+ (implements org/anddev/andengine/entity/modifier/IEntityModifier)
+
+
+(method (attrs public ) <init>(float float float )void
+  (limit registers 4)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  (line 26)
+  (invoke-direct {v0 v1 v2 v3} org/anddev/andengine/util/modifier/BaseDoubleValueChangeModifier/<init> float float float )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float [object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  (line 30)
+  (invoke-direct {v0 v1 v2 v3 v4} org/anddev/andengine/util/modifier/BaseDoubleValueChangeModifier/<init> float float float [object org/anddev/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/modifier/DoubleValueChangeEntityModifier])
+  (line 34)
+  (invoke-direct {v0 v1} org/anddev/andengine/util/modifier/BaseDoubleValueChangeModifier/<init> [object org/anddev/andengine/util/modifier/BaseDoubleValueChangeModifier] )
+  (line 35)
+  (return-void )
+ )
+
+)

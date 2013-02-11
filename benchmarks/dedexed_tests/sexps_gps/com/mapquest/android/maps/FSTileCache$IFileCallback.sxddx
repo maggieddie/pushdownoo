@@ -1,0 +1,9 @@
+(interface (attrs abstract ) com/mapquest/android/maps/FSTileCache$IFileCallback
+ (super java/lang/Object)
+ (source "FSTileCache.java")
+
+
+(method (attrs public abstract ) process([object java/io/File] )void
+)
+
+)

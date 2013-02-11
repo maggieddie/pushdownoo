@@ -1,0 +1,22 @@
+(class (attrs public ) org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig
+ (super org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig)
+ (source "CatmullRomSplineMoveModifier.java")
+
+ (field (attrs private static final ) CARDINALSPLINE_CATMULLROM_TENSION int )
+ (field (attrs final ) this$0 [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier] )
+
+(method (attrs public ) <init>([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig])
+  ; parameter[0] : v2 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  ; parameter[1] : v3 (int)
+  (line 71)
+  (iput-object v2 v1 org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig.this$0 [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  (line 72)
+  (const/4 v0 0)
+  (invoke-direct {v1 v3 v0} org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig/<init> int float )
+  (line 73)
+  (return-void )
+ )
+
+)

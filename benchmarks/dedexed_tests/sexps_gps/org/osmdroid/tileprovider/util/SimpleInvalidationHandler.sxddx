@@ -1,0 +1,40 @@
+(class (attrs public ) org/osmdroid/tileprovider/util/SimpleInvalidationHandler
+ (super android/os/Handler)
+ (source "SimpleInvalidationHandler.java")
+
+ (field (attrs private final ) mView [object android/view/View] )
+
+(method (attrs public ) <init>([object android/view/View] )void
+  (limit registers 2)
+  ; this: v0 ([object org/osmdroid/tileprovider/util/SimpleInvalidationHandler])
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 13)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (line 14)
+  (iput-object v1 v0 org/osmdroid/tileprovider/util/SimpleInvalidationHandler.mView [object android/view/View])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object org/osmdroid/tileprovider/util/SimpleInvalidationHandler])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 19)
+  (iget v0 v2 android/os/Message.what int)
+  (packed-switch v0 0
+    psd2b18_d2b20 ; case 0
+    psd2b18_default) ; default
+  (label ld2b1e)
+  (label psd2b18_default)
+  (line 24)
+  (return-void )
+  (label psd2b18_d2b20)
+  (line 21)
+  (iget-object v0 v1 org/osmdroid/tileprovider/util/SimpleInvalidationHandler.mView [object android/view/View])
+  (invoke-virtual {v0} android/view/View/invalidate )
+  (goto ld2b1e)
+  (line 19)
+)
+
+)

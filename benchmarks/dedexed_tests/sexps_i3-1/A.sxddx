@@ -1,0 +1,39 @@
+(class (attrs public ) org/ucomb/A
+ (super java/lang/Object)
+ (source "A.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/ucomb/A])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) bar([object org/ucomb/I] [object org/ucomb/I] )void
+  (limit registers 5)
+  ; this: v2 ([object org/ucomb/A])
+  ; parameter[0] : v3 ([object org/ucomb/I])
+  ; parameter[1] : v4 ([object org/ucomb/I])
+  (line 6)
+  (instance-of v1 v3 org/ucomb/B)
+  (if-eqz v1 l584)
+  (line 7)
+  (invoke-interface {v3} org/ucomb/I/foo )
+  (label l572)
+  (line 12)
+  (new-instance v0 org/ucomb/B)
+  (invoke-direct {v0} org/ucomb/B/<init> )
+  (label l57c)
+  (line 13)
+  (invoke-interface {v0} org/ucomb/I/foo )
+  (line 14)
+  (return-void )
+  (label l584)
+  (line 10)
+  (invoke-interface {v4} org/ucomb/I/foo )
+  (goto l572)
+)
+
+)

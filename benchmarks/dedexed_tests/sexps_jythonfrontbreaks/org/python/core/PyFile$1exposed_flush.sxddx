@@ -1,0 +1,65 @@
+(class (attrs ) org/python/core/PyFile$1exposed_flush
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyFile.java")
+
+ (field (attrs private ) self [object org/python/core/PyFile] )
+
+(method (attrs ) <init>([object org/python/core/PyFile] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyFile$1exposed_flush])
+  ; parameter[0] : v1 ([object org/python/core/PyFile])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 825)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 826)
+  (iput-object v1 v0 org/python/core/PyFile$1exposed_flush.self [object org/python/core/PyFile])
+  (line 827)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyFile$1exposed_flush])
+  (line 834)
+  (iget-object v0 v1 org/python/core/PyFile$1exposed_flush.self [object org/python/core/PyFile])
+  (invoke-virtual {v0} org/python/core/PyFile/file_flush )
+  (line 835)
+  (sget-object v0 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyFile$1exposed_flush])
+  (line 821)
+  (iget-object v0 v1 org/python/core/PyFile$1exposed_flush.self [object org/python/core/PyFile])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyFile$1exposed_flush])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 839)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/core/PyFile])
+  (line 840)
+  (invoke-virtual {v0} org/python/core/PyFile/file_flush )
+  (line 841)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyFile$1exposed_flush])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 830)
+  (new-instance v0 org/python/core/PyFile$1exposed_flush)
+  (check-cast v3 [object org/python/core/PyFile])
+  (iget-object v1 v2 org/python/core/PyFile$1exposed_flush.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyFile$1exposed_flush/<init> [object org/python/core/PyFile] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

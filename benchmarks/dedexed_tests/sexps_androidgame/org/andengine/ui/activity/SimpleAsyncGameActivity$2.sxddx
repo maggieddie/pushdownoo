@@ -1,0 +1,49 @@
+(class (attrs ) org/andengine/ui/activity/SimpleAsyncGameActivity$2
+ (super java/lang/Object)
+ (source "SimpleAsyncGameActivity.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object org/andengine/ui/activity/SimpleAsyncGameActivity] )
+ (field (attrs private final ) val$pOnCreateSceneCallback [object org/andengine/ui/IGameInterface$OnCreateSceneCallback] )
+
+(method (attrs ) <init>([object org/andengine/ui/activity/SimpleAsyncGameActivity] [object org/andengine/ui/IGameInterface$OnCreateSceneCallback] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/ui/activity/SimpleAsyncGameActivity$2])
+  ; parameter[0] : v1 ([object org/andengine/ui/activity/SimpleAsyncGameActivity])
+  ; parameter[1] : v2 ([object org/andengine/ui/IGameInterface$OnCreateSceneCallback])
+  (line 1)
+  (iput-object v1 v0 org/andengine/ui/activity/SimpleAsyncGameActivity$2.this$0 [object org/andengine/ui/activity/SimpleAsyncGameActivity])
+  (iput-object v2 v0 org/andengine/ui/activity/SimpleAsyncGameActivity$2.val$pOnCreateSceneCallback [object org/andengine/ui/IGameInterface$OnCreateSceneCallback])
+  (line 68)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) access$0([object org/andengine/ui/activity/SimpleAsyncGameActivity$2] )[object org/andengine/ui/activity/SimpleAsyncGameActivity]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/andengine/ui/activity/SimpleAsyncGameActivity$2])
+  (line 68)
+  (iget-object v0 v1 org/andengine/ui/activity/SimpleAsyncGameActivity$2.this$0 [object org/andengine/ui/activity/SimpleAsyncGameActivity])
+  (return-object v0)
+ )
+
+(method (attrs public ) run()void
+  (limit registers 6)
+  ; this: v5 ([object org/andengine/ui/activity/SimpleAsyncGameActivity$2])
+  (line 71)
+  (iget-object v0 v5 org/andengine/ui/activity/SimpleAsyncGameActivity$2.this$0 [object org/andengine/ui/activity/SimpleAsyncGameActivity])
+  (const-string v1 "Loading Scene...")
+  (const v2 17301581) ; 0x108004d)
+  (new-instance v3 org/andengine/ui/activity/SimpleAsyncGameActivity$2$1)
+  (iget-object v4 v5 org/andengine/ui/activity/SimpleAsyncGameActivity$2.val$pOnCreateSceneCallback [object org/andengine/ui/IGameInterface$OnCreateSceneCallback])
+  (invoke-direct {v3 v5 v4} org/andengine/ui/activity/SimpleAsyncGameActivity$2$1/<init> [object org/andengine/ui/activity/SimpleAsyncGameActivity$2] [object org/andengine/ui/IGameInterface$OnCreateSceneCallback] )
+  (line 82)
+  (new-instance v4 org/andengine/ui/activity/SimpleAsyncGameActivity$2$2)
+  (invoke-direct {v4 v5} org/andengine/ui/activity/SimpleAsyncGameActivity$2$2/<init> [object org/andengine/ui/activity/SimpleAsyncGameActivity$2] )
+  (line 71)
+  (invoke-static {v0 v1 v2 v3 v4} org/andengine/util/ActivityUtils/doProgressAsync [object android/content/Context] [object java/lang/CharSequence] int [object org/andengine/util/progress/ProgressCallable] [object org/andengine/util/call/Callback] )
+  (line 88)
+  (return-void )
+)
+
+)

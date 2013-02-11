@@ -1,0 +1,85 @@
+(class (attrs public ) antlr/debug/InputBufferReporter
+ (super java/lang/Object)
+ (source "InputBufferReporter.java")
+ (implements antlr/debug/InputBufferListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/debug/InputBufferReporter])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) doneParsing([object antlr/debug/TraceEvent] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v1 ([object antlr/debug/TraceEvent])
+  (line 9)
+  (return-void )
+)
+
+(method (attrs public ) inputBufferChanged([object antlr/debug/InputBufferEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v2 ([object antlr/debug/InputBufferEvent])
+  (line 12)
+  (sget-object v0 java/lang/System.out [object java/io/PrintStream])
+  (invoke-virtual {v0 v2} java/io/PrintStream/println [object java/lang/Object] )
+  (line 13)
+  (return-void )
+)
+
+(method (attrs public ) inputBufferConsume([object antlr/debug/InputBufferEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v2 ([object antlr/debug/InputBufferEvent])
+  (line 18)
+  (sget-object v0 java/lang/System.out [object java/io/PrintStream])
+  (invoke-virtual {v0 v2} java/io/PrintStream/println [object java/lang/Object] )
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) inputBufferLA([object antlr/debug/InputBufferEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v2 ([object antlr/debug/InputBufferEvent])
+  (line 24)
+  (sget-object v0 java/lang/System.out [object java/io/PrintStream])
+  (invoke-virtual {v0 v2} java/io/PrintStream/println [object java/lang/Object] )
+  (line 25)
+  (return-void )
+)
+
+(method (attrs public ) inputBufferMark([object antlr/debug/InputBufferEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v2 ([object antlr/debug/InputBufferEvent])
+  (line 27)
+  (sget-object v0 java/lang/System.out [object java/io/PrintStream])
+  (invoke-virtual {v0 v2} java/io/PrintStream/println [object java/lang/Object] )
+  (line 28)
+  (return-void )
+)
+
+(method (attrs public ) inputBufferRewind([object antlr/debug/InputBufferEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/debug/InputBufferReporter])
+  ; parameter[0] : v2 ([object antlr/debug/InputBufferEvent])
+  (line 30)
+  (sget-object v0 java/lang/System.out [object java/io/PrintStream])
+  (invoke-virtual {v0 v2} java/io/PrintStream/println [object java/lang/Object] )
+  (line 31)
+  (return-void )
+)
+
+(method (attrs public ) refresh()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/debug/InputBufferReporter])
+  (line 36)
+  (return-void )
+)
+
+)

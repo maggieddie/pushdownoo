@@ -1,0 +1,22 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/asymmetric/ec/Signature$ecDSARipeMD160
+ (super org/bouncycastle2/jce/provider/asymmetric/ec/Signature)
+ (source "Signature.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 5)
+  ; this: v4 ([object org/bouncycastle2/jce/provider/asymmetric/ec/Signature$ecDSARipeMD160])
+  (line 167)
+  (new-instance v0 org/bouncycastle2/crypto/digests/RIPEMD160Digest)
+  (invoke-direct {v0} org/bouncycastle2/crypto/digests/RIPEMD160Digest/<init> )
+  (new-instance v1 org/bouncycastle2/crypto/signers/ECDSASigner)
+  (invoke-direct {v1} org/bouncycastle2/crypto/signers/ECDSASigner/<init> )
+  (new-instance v2 org/bouncycastle2/jce/provider/asymmetric/ec/Signature$StdDSAEncoder)
+  (const/4 v3 0)
+  (invoke-direct {v2 v3} org/bouncycastle2/jce/provider/asymmetric/ec/Signature$StdDSAEncoder/<init> [object org/bouncycastle2/jce/provider/asymmetric/ec/Signature$StdDSAEncoder] )
+  (invoke-direct {v4 v0 v1 v2} org/bouncycastle2/jce/provider/asymmetric/ec/Signature/<init> [object org/bouncycastle2/crypto/Digest] [object org/bouncycastle2/crypto/DSA] [object org/bouncycastle2/jce/provider/DSAEncoder] )
+  (line 168)
+  (return-void )
+ )
+
+)

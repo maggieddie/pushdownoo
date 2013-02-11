@@ -1,0 +1,48 @@
+(class (attrs ) nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1
+ (super android/os/AsyncTask)
+ (source "BreadcrumbsAdapter.java")
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1.this$0 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter])
+  (line 348)
+  (invoke-direct {v0} android/os/AsyncTask/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) doInBackground([array [object java/lang/Object]] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 1)
+  (check-cast v2 [array [object java/lang/Void]])
+  (invoke-virtual {v1 v2} nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1/doInBackground [array [object java/lang/Void]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) doInBackground([array [object java/lang/Void]] )[object java/lang/Void]
+  (limit registers 4)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1])
+  ; parameter[0] : v3 ([array [object java/lang/Void]])
+  (const/4 v1 0)
+  (line 353)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1.this$0 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter/access$0 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter] )
+  (move-result-object v0)
+  (invoke-virtual {v0} org/apache/ogt/http/impl/client/DefaultHttpClient/getConnectionManager )
+  (move-result-object v0)
+  (invoke-interface {v0} org/apache/ogt/http/conn/ClientConnectionManager/shutdown )
+  (line 354)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter$1.this$0 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter])
+  (invoke-static {v0 v1} nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter/access$1 [object nl/sogeti/android/gpstracker/adapter/BreadcrumbsAdapter] [object org/apache/ogt/http/impl/client/DefaultHttpClient] )
+  (line 355)
+  (return-object v1)
+)
+
+)

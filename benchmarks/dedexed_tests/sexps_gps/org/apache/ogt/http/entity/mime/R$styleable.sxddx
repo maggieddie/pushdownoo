@@ -1,0 +1,31 @@
+(class (attrs public final ) org/apache/ogt/http/entity/mime/R$styleable
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) gallery [array int] )
+ (field (attrs public static final ) gallery_android_galleryItemBackground int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (line 625)
+  (const/4 v0 1)
+  (new-array v0 v0 [array int])
+  (const/4 v1 0)
+  (line 626)
+  (const v2 16842828) ; 0x101004c)
+  (aput v2 v0 v1)
+  (line 625)
+  (sput-object v0 org/apache/ogt/http/entity/mime/R$styleable.gallery [array int])
+  (line 614)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/entity/mime/R$styleable])
+  (line 614)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

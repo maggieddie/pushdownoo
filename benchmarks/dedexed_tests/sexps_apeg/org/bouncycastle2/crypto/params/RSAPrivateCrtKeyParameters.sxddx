@@ -1,0 +1,90 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters
+ (super org/bouncycastle2/crypto/params/RSAKeyParameters)
+ (source "RSAPrivateCrtKeyParameters.java")
+
+ (field (attrs private ) dP [object java/math/BigInteger] )
+ (field (attrs private ) dQ [object java/math/BigInteger] )
+ (field (attrs private ) e [object java/math/BigInteger] )
+ (field (attrs private ) p [object java/math/BigInteger] )
+ (field (attrs private ) q [object java/math/BigInteger] )
+ (field (attrs private ) qInv [object java/math/BigInteger] )
+
+(method (attrs public ) <init>([object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] )void
+  (limit registers 10)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  ; parameter[0] : v2 ([object java/math/BigInteger])
+  ; parameter[1] : v3 ([object java/math/BigInteger])
+  ; parameter[2] : v4 ([object java/math/BigInteger])
+  ; parameter[3] : v5 ([object java/math/BigInteger])
+  ; parameter[4] : v6 ([object java/math/BigInteger])
+  ; parameter[5] : v7 ([object java/math/BigInteger])
+  ; parameter[6] : v8 ([object java/math/BigInteger])
+  ; parameter[7] : v9 ([object java/math/BigInteger])
+  (line 28)
+  (const/4 v0 1)
+  (invoke-direct {v1 v0 v2 v4} org/bouncycastle2/crypto/params/RSAKeyParameters/<init> boolean [object java/math/BigInteger] [object java/math/BigInteger] )
+  (line 30)
+  (iput-object v3 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.e [object java/math/BigInteger])
+  (line 31)
+  (iput-object v5 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.p [object java/math/BigInteger])
+  (line 32)
+  (iput-object v6 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.q [object java/math/BigInteger])
+  (line 33)
+  (iput-object v7 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.dP [object java/math/BigInteger])
+  (line 34)
+  (iput-object v8 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.dQ [object java/math/BigInteger])
+  (line 35)
+  (iput-object v9 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.qInv [object java/math/BigInteger])
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) getDP()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 55)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.dP [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getDQ()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 60)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.dQ [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getP()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 45)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.p [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getPublicExponent()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 40)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.e [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getQ()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 50)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.q [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getQInv()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters])
+  (line 65)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters.qInv [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

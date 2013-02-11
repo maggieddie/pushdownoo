@@ -1,0 +1,52 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/NaccacheSternKeyParameters
+ (super org/bouncycastle2/crypto/params/AsymmetricKeyParameter)
+ (source "NaccacheSternKeyParameters.java")
+
+ (field (attrs private ) g [object java/math/BigInteger] )
+ (field (attrs ) lowerSigmaBound int )
+ (field (attrs private ) n [object java/math/BigInteger] )
+
+(method (attrs public ) <init>(boolean [object java/math/BigInteger] [object java/math/BigInteger] int )void
+  (limit registers 5)
+  ; this: v0 ([object org/bouncycastle2/crypto/params/NaccacheSternKeyParameters])
+  ; parameter[0] : v1 (boolean)
+  ; parameter[1] : v2 ([object java/math/BigInteger])
+  ; parameter[2] : v3 ([object java/math/BigInteger])
+  ; parameter[3] : v4 (int)
+  (line 23)
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/params/AsymmetricKeyParameter/<init> boolean )
+  (line 24)
+  (iput-object v2 v0 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.g [object java/math/BigInteger])
+  (line 25)
+  (iput-object v3 v0 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.n [object java/math/BigInteger])
+  (line 26)
+  (iput v4 v0 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.lowerSigmaBound int)
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) getG()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternKeyParameters])
+  (line 34)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.g [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getLowerSigmaBound()int
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternKeyParameters])
+  (line 42)
+  (iget v0 v1 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.lowerSigmaBound int)
+  (return v0)
+)
+
+(method (attrs public ) getModulus()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/NaccacheSternKeyParameters])
+  (line 50)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/NaccacheSternKeyParameters.n [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

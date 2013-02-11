@@ -1,0 +1,35 @@
+(class (attrs ) com/todo/todo/EditTags$5
+ (super java/lang/Object)
+ (source "EditTags.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/todo/todo/EditTags] )
+ (field (attrs private final ) val$id long )
+
+(method (attrs ) <init>([object com/todo/todo/EditTags] long )void
+  (limit registers 4)
+  ; this: v0 ([object com/todo/todo/EditTags$5])
+  ; parameter[0] : v1 ([object com/todo/todo/EditTags])
+  ; parameter[1] : v2 (long)
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/EditTags$5.this$0 [object com/todo/todo/EditTags])
+  (iput-wide v2 v0 com/todo/todo/EditTags$5.val$id long)
+  (line 139)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 6)
+  ; this: v3 ([object com/todo/todo/EditTags$5])
+  ; parameter[0] : v4 ([object android/content/DialogInterface])
+  ; parameter[1] : v5 (int)
+  (line 141)
+  (iget-object v0 v3 com/todo/todo/EditTags$5.this$0 [object com/todo/todo/EditTags])
+  (iget-wide v1 v3 com/todo/todo/EditTags$5.val$id long)
+  (invoke-static {v0 v1 v2} com/todo/todo/EditTags/access$3 [object com/todo/todo/EditTags] long )
+  (line 142)
+  (return-void )
+)
+
+)

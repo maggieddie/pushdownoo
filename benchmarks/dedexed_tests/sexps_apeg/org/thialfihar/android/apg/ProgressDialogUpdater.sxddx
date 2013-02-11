@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/thialfihar/android/apg/ProgressDialogUpdater
+ (super java/lang/Object)
+ (source "ProgressDialogUpdater.java")
+
+
+(method (attrs public abstract ) setProgress(int int )void
+)
+
+(method (attrs public abstract ) setProgress(int int int )void
+)
+
+(method (attrs public abstract ) setProgress([object java/lang/String] int int )void
+)
+
+)

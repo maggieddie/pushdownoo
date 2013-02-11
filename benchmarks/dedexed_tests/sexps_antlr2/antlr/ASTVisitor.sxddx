@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) antlr/ASTVisitor
+ (super java/lang/Object)
+ (source "ASTVisitor.java")
+
+
+(method (attrs public abstract ) visit([object antlr/collections/AST] )void
+)
+
+)

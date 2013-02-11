@@ -1,0 +1,18 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEStreamCipher$VMPCKSA3
+ (super org/bouncycastle2/jce/provider/JCEStreamCipher)
+ (source "JCEStreamCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JCEStreamCipher$VMPCKSA3])
+  (line 589)
+  (new-instance v0 org/bouncycastle2/crypto/engines/VMPCKSA3Engine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/VMPCKSA3Engine/<init> )
+  (const/16 v1 16)
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/jce/provider/JCEStreamCipher/<init> [object org/bouncycastle2/crypto/StreamCipher] int )
+  (line 590)
+  (return-void )
+ )
+
+)

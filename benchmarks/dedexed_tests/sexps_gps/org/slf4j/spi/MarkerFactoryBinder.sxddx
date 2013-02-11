@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/slf4j/spi/MarkerFactoryBinder
+ (super java/lang/Object)
+ (source "MarkerFactoryBinder.java")
+
+
+(method (attrs public abstract ) getMarkerFactory()[object org/slf4j/IMarkerFactory]
+)
+
+(method (attrs public abstract ) getMarkerFactoryClassStr()[object java/lang/String]
+)
+
+)

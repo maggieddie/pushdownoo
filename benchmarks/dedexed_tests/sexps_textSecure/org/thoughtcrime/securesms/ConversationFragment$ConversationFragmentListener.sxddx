@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/thoughtcrime/securesms/ConversationFragment$ConversationFragmentListener
+ (super java/lang/Object)
+ (source "ConversationFragment.java")
+
+
+(method (attrs public abstract ) setComposeText([object java/lang/String] )void
+)
+
+)

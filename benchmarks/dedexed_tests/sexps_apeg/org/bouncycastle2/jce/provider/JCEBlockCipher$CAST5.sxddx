@@ -1,0 +1,17 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEBlockCipher$CAST5
+ (super org/bouncycastle2/jce/provider/JCEBlockCipher)
+ (source "JCEBlockCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/JCEBlockCipher$CAST5])
+  (line 1003)
+  (new-instance v0 org/bouncycastle2/crypto/engines/CAST5Engine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/CAST5Engine/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/JCEBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (line 1004)
+  (return-void )
+ )
+
+)

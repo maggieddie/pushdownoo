@@ -1,0 +1,20 @@
+(class (attrs ) org/thoughtcrime/securesms/contacts/RecipientsEditor$RecipientContextMenuInfo
+ (super java/lang/Object)
+ (source "RecipientsEditor.java")
+ (implements android/view/ContextMenu$ContextMenuInfo)
+
+ (field (attrs final ) recipient [object org/thoughtcrime/securesms/recipients/Recipient] )
+
+(method (attrs ) <init>([object org/thoughtcrime/securesms/recipients/Recipient] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/contacts/RecipientsEditor$RecipientContextMenuInfo])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/recipients/Recipient])
+  (line 423)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 424)
+  (iput-object v1 v0 org/thoughtcrime/securesms/contacts/RecipientsEditor$RecipientContextMenuInfo.recipient [object org/thoughtcrime/securesms/recipients/Recipient])
+  (line 425)
+  (return-void )
+ )
+
+)

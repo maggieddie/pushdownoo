@@ -1,0 +1,54 @@
+(class (attrs ) android/support/v4/net/ConnectivityManagerCompatHoneycombMR2
+ (super java/lang/Object)
+ (source "ConnectivityManagerCompatHoneycombMR2.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/net/ConnectivityManagerCompatHoneycombMR2])
+  (line 35)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) isActiveNetworkMetered([object android/net/ConnectivityManager] )boolean
+  (limit registers 4)
+  ; parameter[0] : v3 ([object android/net/ConnectivityManager])
+  (const/4 v2 1)
+  (line 37)
+  (invoke-virtual {v3} android/net/ConnectivityManager/getActiveNetworkInfo )
+  (move-result-object v0)
+  (line 38)
+  (if-nez v0 l211b0)
+  (label l211ae)
+  (label ps211b8_211ae)
+  (line 58)
+  (return v2)
+  (label l211b0)
+  (line 43)
+  (invoke-virtual {v0} android/net/NetworkInfo/getType )
+  (move-result v1)
+  (line 44)
+  (packed-switch v1 0
+    ps211b8_211ae ; case 0
+    ps211b8_211c0 ; case 1
+    ps211b8_211ae ; case 2
+    ps211b8_211ae ; case 3
+    ps211b8_211ae ; case 4
+    ps211b8_211ae ; case 5
+    ps211b8_211ae ; case 6
+    ps211b8_211c0 ; case 7
+    ps211b8_211be ; case 8
+    ps211b8_211c0 ; case 9
+    ps211b8_default) ; default
+  (label ps211b8_default)
+  (label ps211b8_211be)
+  (goto l211ae)
+  (label ps211b8_211c0)
+  (line 55)
+  (const/4 v2 0)
+  (goto l211ae)
+  (line 44)
+ )
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs abstract ) com/mapquest/android/maps/MapTouchEventHandler
+ (super java/lang/Object)
+ (source "MapTouchEventHandler.java")
+
+
+(method (attrs public abstract ) handleTouchEvent([object android/view/MotionEvent] )boolean
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/support/v4/content/Loader$OnLoadCompleteListener
+ (super java/lang/Object)
+ (source "Loader.java")
+
+
+(method (attrs public abstract ) onLoadComplete([object android/support/v4/content/Loader] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/content/Loader"  "<TD;>;TD;)V")
+  )
+)
+
+)

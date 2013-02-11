@@ -1,0 +1,294 @@
+(class (attrs ) com/ziclix/python/sql/ExtendedCursorFunc
+ (super org/python/core/PyBuiltinFunctionSet)
+ (source "PyExtendedCursor.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int int int [object java/lang/String] )void
+  (limit registers 13)
+  ; this: v7 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v8 ([object java/lang/String])
+  ; parameter[1] : v9 (int)
+  ; parameter[2] : v10 (int)
+  ; parameter[3] : v11 (int)
+  ; parameter[4] : v12 ([object java/lang/String])
+  (line 497)
+  (const/4 v5 1)
+  (move-object v0 v7)
+  (move-object v1 v8)
+  (move v2 v9)
+  (move v3 v10)
+  (move v4 v11)
+  (move-object v6 v12)
+  (invoke-direct/range {v0 .. v6} org/python/core/PyBuiltinFunctionSet/<init> [object java/lang/String] int int int boolean [object java/lang/String] )
+  (line 498)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/String] int int [object java/lang/String] )void
+  (limit registers 12)
+  ; this: v7 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v8 ([object java/lang/String])
+  ; parameter[1] : v9 (int)
+  ; parameter[2] : v10 (int)
+  ; parameter[3] : v11 ([object java/lang/String])
+  (line 493)
+  (const/4 v5 1)
+  (move-object v0 v7)
+  (move-object v1 v8)
+  (move v2 v9)
+  (move v3 v10)
+  (move v4 v10)
+  (move-object v6 v11)
+  (invoke-direct/range {v0 .. v6} org/python/core/PyBuiltinFunctionSet/<init> [object java/lang/String] int int int boolean [object java/lang/String] )
+  (line 494)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v2 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  (line 502)
+  (iget-object v0 v2 com/ziclix/python/sql/ExtendedCursorFunc.__self__ [object org/python/core/PyObject])
+  (check-cast v0 [object com/ziclix/python/sql/PyExtendedCursor])
+  (line 504)
+  (iget v1 v2 com/ziclix/python/sql/ExtendedCursorFunc.index int)
+  (packed-switch v1 107
+    ps37514_37526 ; case 107
+    ps37514_37536 ; case 108
+    ps37514_default) ; default
+  (label ps37514_default)
+  (line 517)
+  (const/4 v1 0)
+  (invoke-virtual {v2 v1} com/ziclix/python/sql/ExtendedCursorFunc/argCountError int )
+  (move-result-object v1)
+  (throw v1)
+  (label ps37514_37526)
+  (line 507)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (invoke-virtual {v0 v1} com/ziclix/python/sql/PyExtendedCursor/typeinfo [object org/python/core/PyObject] )
+  (line 509)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (label l37534)
+  (line 514)
+  (return-object v1)
+  (label ps37514_37536)
+  (line 512)
+  (invoke-virtual {v0} com/ziclix/python/sql/PyExtendedCursor/tabletypeinfo )
+  (line 514)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l37534)
+  (line 504)
+  (label l37542)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 4)
+  ; this: v2 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 523)
+  (iget-object v0 v2 com/ziclix/python/sql/ExtendedCursorFunc.__self__ [object org/python/core/PyObject])
+  (check-cast v0 [object com/ziclix/python/sql/PyExtendedCursor])
+  (line 525)
+  (iget v1 v2 com/ziclix/python/sql/ExtendedCursorFunc.index int)
+  (packed-switch v1 107
+    ps37570_37582 ; case 107
+    ps37570_default) ; default
+  (label ps37570_default)
+  (line 533)
+  (const/4 v1 1)
+  (invoke-virtual {v2 v1} com/ziclix/python/sql/ExtendedCursorFunc/argCountError int )
+  (move-result-object v1)
+  (throw v1)
+  (label ps37570_37582)
+  (line 528)
+  (invoke-virtual {v0 v3} com/ziclix/python/sql/PyExtendedCursor/typeinfo [object org/python/core/PyObject] )
+  (line 530)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (return-object v1)
+  (line 525)
+  (label l3758e)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) __call__([object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 6)
+  ; this: v2 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  ; parameter[1] : v4 ([object org/python/core/PyObject])
+  ; parameter[2] : v5 ([object org/python/core/PyObject])
+  (line 539)
+  (iget-object v0 v2 com/ziclix/python/sql/ExtendedCursorFunc.__self__ [object org/python/core/PyObject])
+  (check-cast v0 [object com/ziclix/python/sql/PyExtendedCursor])
+  (line 541)
+  (iget v1 v2 com/ziclix/python/sql/ExtendedCursorFunc.index int)
+  (packed-switch v1 102
+    ps375b8_375ca ; case 102
+    ps375b8_375be ; case 103
+    ps375b8_375d6 ; case 104
+    ps375b8_375be ; case 105
+    ps375b8_375be ; case 106
+    ps375b8_375be ; case 107
+    ps375b8_375be ; case 108
+    ps375b8_375e2 ; case 109
+    ps375b8_375ee ; case 110
+    ps375b8_default) ; default
+  (label ps375b8_default)
+  (label ps375b8_375be)
+  (line 564)
+  (const/4 v1 3)
+  (invoke-virtual {v2 v1} com/ziclix/python/sql/ExtendedCursorFunc/argCountError int )
+  (move-result-object v1)
+  (throw v1)
+  (label ps375b8_375ca)
+  (line 544)
+  (invoke-virtual {v0 v3 v4 v5} com/ziclix/python/sql/PyExtendedCursor/primarykeys [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 546)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (label l375d4)
+  (line 561)
+  (return-object v1)
+  (label ps375b8_375d6)
+  (line 549)
+  (invoke-virtual {v0 v3 v4 v5} com/ziclix/python/sql/PyExtendedCursor/procedures [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 551)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l375d4)
+  (label ps375b8_375e2)
+  (line 554)
+  (invoke-virtual {v0 v3 v4 v5} com/ziclix/python/sql/PyExtendedCursor/bestrow [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 556)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l375d4)
+  (label ps375b8_375ee)
+  (line 559)
+  (invoke-virtual {v0 v3 v4 v5} com/ziclix/python/sql/PyExtendedCursor/versioncolumns [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 561)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l375d4)
+  (line 541)
+  (label l375fa)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) __call__([object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 7)
+  ; this: v2 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  ; parameter[1] : v4 ([object org/python/core/PyObject])
+  ; parameter[2] : v5 ([object org/python/core/PyObject])
+  ; parameter[3] : v6 ([object org/python/core/PyObject])
+  (line 591)
+  (iget-object v0 v2 com/ziclix/python/sql/ExtendedCursorFunc.__self__ [object org/python/core/PyObject])
+  (check-cast v0 [object com/ziclix/python/sql/PyExtendedCursor])
+  (line 593)
+  (iget v1 v2 com/ziclix/python/sql/ExtendedCursorFunc.index int)
+  (packed-switch v1 100
+    ps37644_37656 ; case 100
+    ps37644_37662 ; case 101
+    ps37644_3764a ; case 102
+    ps37644_3764a ; case 103
+    ps37644_3764a ; case 104
+    ps37644_3766e ; case 105
+    ps37644_default) ; default
+  (label ps37644_default)
+  (label ps37644_3764a)
+  (line 611)
+  (const/4 v1 4)
+  (invoke-virtual {v2 v1} com/ziclix/python/sql/ExtendedCursorFunc/argCountError int )
+  (move-result-object v1)
+  (throw v1)
+  (label ps37644_37656)
+  (line 596)
+  (invoke-virtual {v0 v3 v4 v5 v6} com/ziclix/python/sql/PyExtendedCursor/tables [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 598)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (label l37660)
+  (line 608)
+  (return-object v1)
+  (label ps37644_37662)
+  (line 601)
+  (invoke-virtual {v0 v3 v4 v5 v6} com/ziclix/python/sql/PyExtendedCursor/columns [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 603)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l37660)
+  (label ps37644_3766e)
+  (line 606)
+  (invoke-virtual {v0 v3 v4 v5 v6} com/ziclix/python/sql/PyExtendedCursor/procedurecolumns [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 608)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l37660)
+  (line 593)
+  (label l3767a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) fancyCall([array [object org/python/core/PyObject]] )[object org/python/core/PyObject]
+  (limit registers 9)
+  ; this: v7 ([object com/ziclix/python/sql/ExtendedCursorFunc])
+  ; parameter[0] : v8 ([array [object org/python/core/PyObject]])
+  (const/4 v6 4)
+  (const/4 v5 3)
+  (const/4 v4 2)
+  (const/4 v3 1)
+  (const/4 v2 0)
+  (line 570)
+  (iget-object v0 v7 com/ziclix/python/sql/ExtendedCursorFunc.__self__ [object org/python/core/PyObject])
+  (check-cast v0 [object com/ziclix/python/sql/PyExtendedCursor])
+  (line 572)
+  (iget v1 v7 com/ziclix/python/sql/ExtendedCursorFunc.index int)
+  (packed-switch v1 103
+    ps376c2_376d4 ; case 103
+    ps376c2_376c8 ; case 104
+    ps376c2_376c8 ; case 105
+    ps376c2_376fa ; case 106
+    ps376c2_default) ; default
+  (label ps376c2_default)
+  (label ps376c2_376c8)
+  (line 585)
+  (array-length v1 v8)
+  (invoke-virtual {v7 v1} com/ziclix/python/sql/ExtendedCursorFunc/argCountError int )
+  (move-result-object v1)
+  (throw v1)
+  (label ps376c2_376d4)
+  (line 575)
+  (aget-object v1 v8 v2)
+  (aget-object v2 v8 v3)
+  (aget-object v3 v8 v4)
+  (aget-object v4 v8 v5)
+  (aget-object v5 v8 v6)
+  (const/4 v6 5)
+  (aget-object v6 v8 v6)
+  (invoke-virtual/range {v0 .. v6} com/ziclix/python/sql/PyExtendedCursor/foreignkeys [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 577)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (label l376f8)
+  (line 582)
+  (return-object v1)
+  (label ps376c2_376fa)
+  (line 580)
+  (aget-object v1 v8 v2)
+  (aget-object v2 v8 v3)
+  (aget-object v3 v8 v4)
+  (aget-object v4 v8 v5)
+  (aget-object v5 v8 v6)
+  (invoke-virtual/range {v0 .. v5} com/ziclix/python/sql/PyExtendedCursor/statistics [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] [object org/python/core/PyObject] )
+  (line 582)
+  (sget-object v1 org/python/core/Py.None [object org/python/core/PyObject])
+  (goto l376f8)
+  (line 572)
+  (label l3771a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

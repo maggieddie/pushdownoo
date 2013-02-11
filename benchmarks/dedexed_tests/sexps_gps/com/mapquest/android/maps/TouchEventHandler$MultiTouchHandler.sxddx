@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/TouchEventHandler$MultiTouchHandler
+ (super java/lang/Object)
+ (source "TouchEventHandler.java")
+
+
+(method (attrs public abstract ) onTouch([object android/view/MotionEvent] [object com/mapquest/android/maps/TouchEventHandler$SimpleMultiTouchDetector] [array [object android/graphics/PointF]] )boolean
+)
+
+(method (attrs public abstract ) onTouchEnd([object android/view/MotionEvent] [object com/mapquest/android/maps/TouchEventHandler$SimpleMultiTouchDetector] [array [object android/graphics/PointF]] )boolean
+)
+
+(method (attrs public abstract ) reset()boolean
+)
+
+)

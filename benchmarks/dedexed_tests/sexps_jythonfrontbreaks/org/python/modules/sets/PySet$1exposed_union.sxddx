@@ -1,0 +1,65 @@
+(class (attrs ) org/python/modules/sets/PySet$1exposed_union
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PySet.java")
+
+ (field (attrs private ) self [object org/python/modules/sets/PySet] )
+
+(method (attrs ) <init>([object org/python/modules/sets/PySet] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/modules/sets/PySet$1exposed_union])
+  ; parameter[0] : v1 ([object org/python/modules/sets/PySet])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 527)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 528)
+  (iput-object v1 v0 org/python/modules/sets/PySet$1exposed_union.self [object org/python/modules/sets/PySet])
+  (line 529)
+  (return-void )
+ )
+
+(method (attrs public ) __call__([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v1 ([object org/python/modules/sets/PySet$1exposed_union])
+  ; parameter[0] : v2 ([object org/python/core/PyObject])
+  (line 536)
+  (iget-object v0 v1 org/python/modules/sets/PySet$1exposed_union.self [object org/python/modules/sets/PySet])
+  (invoke-virtual {v0 v2} org/python/modules/sets/PySet/baseset_union [object org/python/core/PyObject] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/modules/sets/PySet$1exposed_union])
+  (line 523)
+  (iget-object v0 v1 org/python/modules/sets/PySet$1exposed_union.self [object org/python/modules/sets/PySet])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] [object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v2 ([object org/python/modules/sets/PySet$1exposed_union])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  ; parameter[1] : v4 ([object org/python/core/PyObject])
+  (line 540)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/modules/sets/PySet])
+  (line 541)
+  (invoke-virtual {v0 v4} org/python/modules/sets/PySet/baseset_union [object org/python/core/PyObject] )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/modules/sets/PySet$1exposed_union])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 532)
+  (new-instance v0 org/python/modules/sets/PySet$1exposed_union)
+  (check-cast v3 [object org/python/modules/sets/PySet])
+  (iget-object v1 v2 org/python/modules/sets/PySet$1exposed_union.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/modules/sets/PySet$1exposed_union/<init> [object org/python/modules/sets/PySet] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

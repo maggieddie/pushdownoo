@@ -1,0 +1,38 @@
+(class (attrs ) android/support/v4/app/FragmentActivity$FragmentTag
+ (super java/lang/Object)
+ (source "FragmentActivity.java")
+
+ (field (attrs public static final ) Fragment [array int] null )
+ (field (attrs public static final ) Fragment_id int 1); 0x1 )
+ (field (attrs public static final ) Fragment_name int 0); 0x0 )
+ (field (attrs public static final ) Fragment_tag int 2); 0x2 )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 123)
+  (const/4 v0 3)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l17088)
+  (sput-object v0 android/support/v4/app/FragmentActivity$FragmentTag.Fragment [array int])
+  (return-void )
+  (label l17086)
+  (data-array
+    0x00 0x00
+  )
+  (label l17088)
+  (data-array
+    (0x03 0x00 0x01 0x01) ; #0
+    (0xD0 0x00 0x01 0x01) ; #1
+    (0xD1 0x00 0x01 0x01) ; #2
+  )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/FragmentActivity$FragmentTag])
+  (line 122)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

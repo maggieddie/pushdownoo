@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpResponseInterceptor
+ (super java/lang/Object)
+ (source "HttpResponseInterceptor.java")
+
+
+(method (attrs public abstract ) process([object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/HttpException]  [object java/io/IOException])
+  )
+)
+
+)

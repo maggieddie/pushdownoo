@@ -1,0 +1,74 @@
+(class (attrs public ) antlr/CommonHiddenStreamToken
+ (super antlr/CommonToken)
+ (source "CommonHiddenStreamToken.java")
+
+ (field (attrs protected ) hiddenAfter [object antlr/CommonHiddenStreamToken] )
+ (field (attrs protected ) hiddenBefore [object antlr/CommonHiddenStreamToken] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/CommonHiddenStreamToken])
+  (line 15)
+  (invoke-direct {v0} antlr/CommonToken/<init> )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/CommonHiddenStreamToken])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 19)
+  (invoke-direct {v0 v1 v2} antlr/CommonToken/<init> int [object java/lang/String] )
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/CommonHiddenStreamToken])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 23)
+  (invoke-direct {v0 v1} antlr/CommonToken/<init> [object java/lang/String] )
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) getHiddenAfter()[object antlr/CommonHiddenStreamToken]
+  (limit registers 2)
+  ; this: v1 ([object antlr/CommonHiddenStreamToken])
+  (line 27)
+  (iget-object v0 v1 antlr/CommonHiddenStreamToken.hiddenAfter [object antlr/CommonHiddenStreamToken])
+  (return-object v0)
+)
+
+(method (attrs public ) getHiddenBefore()[object antlr/CommonHiddenStreamToken]
+  (limit registers 2)
+  ; this: v1 ([object antlr/CommonHiddenStreamToken])
+  (line 31)
+  (iget-object v0 v1 antlr/CommonHiddenStreamToken.hiddenBefore [object antlr/CommonHiddenStreamToken])
+  (return-object v0)
+)
+
+(method (attrs protected ) setHiddenAfter([object antlr/CommonHiddenStreamToken] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/CommonHiddenStreamToken])
+  ; parameter[0] : v1 ([object antlr/CommonHiddenStreamToken])
+  (line 35)
+  (iput-object v1 v0 antlr/CommonHiddenStreamToken.hiddenAfter [object antlr/CommonHiddenStreamToken])
+  (line 36)
+  (return-void )
+)
+
+(method (attrs protected ) setHiddenBefore([object antlr/CommonHiddenStreamToken] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/CommonHiddenStreamToken])
+  ; parameter[0] : v1 ([object antlr/CommonHiddenStreamToken])
+  (line 39)
+  (iput-object v1 v0 antlr/CommonHiddenStreamToken.hiddenBefore [object antlr/CommonHiddenStreamToken])
+  (line 40)
+  (return-void )
+)
+
+)

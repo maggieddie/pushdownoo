@@ -1,0 +1,60 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8
+ (super java/lang/Object)
+ (source "LoggerMapHelper.java")
+ (implements android/widget/RadioGroup$OnCheckedChangeListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 546)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCheckedChanged([object android/widget/RadioGroup] int )void
+  (limit registers 5)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8])
+  ; parameter[0] : v3 ([object android/widget/RadioGroup])
+  ; parameter[1] : v4 (int)
+  (const/4 v1 1)
+  (line 550)
+  (packed-switch v4 2131361830
+    ps97d5e_97d78 ; case 2131361830
+    ps97d5e_97d86 ; case 2131361831
+    ps97d5e_97d92 ; case 2131361832
+    ps97d5e_default) ; default
+  (label ps97d5e_default)
+  (line 562)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$1 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+  (move-result-object v0)
+  (invoke-interface {v0 v4 v1} nl/sogeti/android/gpstracker/viewer/map/LoggerMap/onLayerCheckedChanged int boolean )
+  (label l97d76)
+  (line 565)
+  (return-void )
+  (label ps97d5e_97d78)
+  (line 553)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$9 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] int )
+  (goto l97d76)
+  (label ps97d5e_97d86)
+  (line 556)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0 v1} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$9 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] int )
+  (goto l97d76)
+  (label ps97d5e_97d92)
+  (line 559)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$8.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (const/4 v1 2)
+  (invoke-static {v0 v1} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$9 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] int )
+  (goto l97d76)
+  (line 550)
+)
+
+)

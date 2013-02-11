@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/util/call/ParameterCallable
+ (super java/lang/Object)
+ (source "ParameterCallable.java")
+
+
+(method (attrs public abstract ) call([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+)
+
+)

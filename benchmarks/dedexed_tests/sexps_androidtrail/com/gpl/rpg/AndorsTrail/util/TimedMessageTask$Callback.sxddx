@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/gpl/rpg/AndorsTrail/util/TimedMessageTask$Callback
+ (super java/lang/Object)
+ (source "TimedMessageTask.java")
+
+
+(method (attrs public abstract ) onTick([object com/gpl/rpg/AndorsTrail/util/TimedMessageTask] )boolean
+)
+
+)

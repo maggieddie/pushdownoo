@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) twitter4j/api/ListMembersMethodsAsync
+ (super java/lang/Object)
+ (source "ListMembersMethodsAsync.java")
+
+
+(method (attrs public abstract ) addUserListMember(int int )void
+)
+
+(method (attrs public abstract ) addUserListMembers(int [array int] )void
+)
+
+(method (attrs public abstract ) addUserListMembers(int [array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) checkUserListMembership([object java/lang/String] int int )void
+)
+
+(method (attrs public abstract ) deleteUserListMember(int int )void
+)
+
+(method (attrs public abstract ) getUserListMembers([object java/lang/String] int long )void
+)
+
+)

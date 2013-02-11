@@ -1,0 +1,25 @@
+(class (attrs public ) org/apache/ogt/http/impl/conn/SingleClientConnManager$ConnAdapter
+ (super org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter)
+ (source "SingleClientConnManager.java")
+
+ (field (attrs final ) this$0 [object org/apache/ogt/http/impl/conn/SingleClientConnManager] )
+
+(method (attrs protected ) <init>([object org/apache/ogt/http/impl/conn/SingleClientConnManager] [object org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry] [object org/apache/ogt/http/conn/routing/HttpRoute] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager$ConnAdapter])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry])
+  ; parameter[2] : v3 ([object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 415)
+  (iput-object v1 v0 org/apache/ogt/http/impl/conn/SingleClientConnManager$ConnAdapter.this$0 [object org/apache/ogt/http/impl/conn/SingleClientConnManager])
+  (line 416)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/impl/conn/AbstractPooledConnAdapter/<init> [object org/apache/ogt/http/conn/ClientConnectionManager] [object org/apache/ogt/http/impl/conn/AbstractPoolEntry] )
+  (line 417)
+  (invoke-virtual {v0} org/apache/ogt/http/impl/conn/SingleClientConnManager$ConnAdapter/markReusable )
+  (line 418)
+  (iput-object v3 v2 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.route [object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 419)
+  (return-void )
+ )
+
+)

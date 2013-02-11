@@ -1,0 +1,16 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/asymmetric/ec/KeyPairGenerator$ECGOST3410
+ (super org/bouncycastle2/jce/provider/asymmetric/ec/KeyPairGenerator$EC)
+ (source "KeyPairGenerator.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/asymmetric/ec/KeyPairGenerator$ECGOST3410])
+  (line 287)
+  (const-string v0 "ECGOST3410")
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/asymmetric/ec/KeyPairGenerator$EC/<init> [object java/lang/String] )
+  (line 288)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,63 @@
+(class (attrs ) org/python/core/PyComplex$1exposed___abs__
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyComplex.java")
+
+ (field (attrs private ) self [object org/python/core/PyComplex] )
+
+(method (attrs ) <init>([object org/python/core/PyComplex] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyComplex$1exposed___abs__])
+  ; parameter[0] : v1 ([object org/python/core/PyComplex])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 29)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 30)
+  (iput-object v1 v0 org/python/core/PyComplex$1exposed___abs__.self [object org/python/core/PyComplex])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyComplex$1exposed___abs__])
+  (line 38)
+  (iget-object v0 v1 org/python/core/PyComplex$1exposed___abs__.self [object org/python/core/PyComplex])
+  (invoke-virtual {v0} org/python/core/PyComplex/complex___abs__ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyComplex$1exposed___abs__])
+  (line 25)
+  (iget-object v0 v1 org/python/core/PyComplex$1exposed___abs__.self [object org/python/core/PyComplex])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyComplex$1exposed___abs__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 42)
+  (move-object v0 v3)
+  (check-cast v0 [object org/python/core/PyComplex])
+  (line 43)
+  (invoke-virtual {v0} org/python/core/PyComplex/complex___abs__ )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyComplex$1exposed___abs__])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 34)
+  (new-instance v0 org/python/core/PyComplex$1exposed___abs__)
+  (check-cast v3 [object org/python/core/PyComplex])
+  (iget-object v1 v2 org/python/core/PyComplex$1exposed___abs__.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyComplex$1exposed___abs__/<init> [object org/python/core/PyComplex] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

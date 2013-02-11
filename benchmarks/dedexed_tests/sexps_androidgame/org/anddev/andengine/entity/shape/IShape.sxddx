@@ -1,0 +1,38 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/shape/IShape
+ (super java/lang/Object)
+ (source "IShape.java")
+ (implements org/anddev/andengine/entity/IEntity)
+ (implements org/anddev/andengine/entity/scene/Scene$ITouchArea)
+
+
+(method (attrs public abstract ) collidesWith([object org/anddev/andengine/entity/shape/IShape] )boolean
+)
+
+(method (attrs public abstract ) getBaseHeight()float
+)
+
+(method (attrs public abstract ) getBaseWidth()float
+)
+
+(method (attrs public abstract ) getHeight()float
+)
+
+(method (attrs public abstract ) getHeightScaled()float
+)
+
+(method (attrs public abstract ) getWidth()float
+)
+
+(method (attrs public abstract ) getWidthScaled()float
+)
+
+(method (attrs public abstract ) isCullingEnabled()boolean
+)
+
+(method (attrs public abstract ) setBlendFunction(int int )void
+)
+
+(method (attrs public abstract ) setCullingEnabled(boolean )void
+)
+
+)

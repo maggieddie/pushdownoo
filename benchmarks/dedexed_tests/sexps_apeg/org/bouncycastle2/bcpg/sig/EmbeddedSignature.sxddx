@@ -1,0 +1,18 @@
+(class (attrs public ) org/bouncycastle2/bcpg/sig/EmbeddedSignature
+ (super org/bouncycastle2/bcpg/SignatureSubpacket)
+ (source "EmbeddedSignature.java")
+
+
+(method (attrs public ) <init>(boolean [array byte] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/bcpg/sig/EmbeddedSignature])
+  ; parameter[0] : v2 (boolean)
+  ; parameter[1] : v3 ([array byte])
+  (line 16)
+  (const/16 v0 32)
+  (invoke-direct {v1 v0 v2 v3} org/bouncycastle2/bcpg/SignatureSubpacket/<init> int boolean [array byte] )
+  (line 17)
+  (return-void )
+ )
+
+)

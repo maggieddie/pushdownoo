@@ -1,0 +1,40 @@
+(class (attrs final ) android/support/v4/view/ViewPager$1
+ (super java/lang/Object)
+ (source "ViewPager.java")
+ (implements java/util/Comparator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewPager$1])
+  (line 100)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) compare([object android/support/v4/view/ViewPager$ItemInfo] [object android/support/v4/view/ViewPager$ItemInfo] )int
+  (limit registers 5)
+  ; this: v2 ([object android/support/v4/view/ViewPager$1])
+  ; parameter[0] : v3 ([object android/support/v4/view/ViewPager$ItemInfo])
+  ; parameter[1] : v4 ([object android/support/v4/view/ViewPager$ItemInfo])
+  (line 103)
+  (iget v0 v3 android/support/v4/view/ViewPager$ItemInfo.position int)
+  (iget v1 v4 android/support/v4/view/ViewPager$ItemInfo.position int)
+  (sub-int/2addr v0 v1)
+  (return v0)
+)
+
+(method (attrs public ) compare([object java/lang/Object] [object java/lang/Object] )int
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewPager$1])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 100)
+  (check-cast v2 [object android/support/v4/view/ViewPager$ItemInfo])
+  (check-cast v3 [object android/support/v4/view/ViewPager$ItemInfo])
+  (invoke-virtual {v1 v2 v3} android/support/v4/view/ViewPager$1/compare [object android/support/v4/view/ViewPager$ItemInfo] [object android/support/v4/view/ViewPager$ItemInfo] )
+  (move-result v0)
+  (return v0)
+)
+
+)

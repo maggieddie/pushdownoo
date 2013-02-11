@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/util/viewer/model/ViewerModelListener
+ (super java/lang/Object)
+ (source "ViewerModelListener.java")
+
+
+(method (attrs public abstract ) viewerModelChanged([object net/sourceforge/pmd/util/viewer/model/ViewerModelEvent] )void
+)
+
+)

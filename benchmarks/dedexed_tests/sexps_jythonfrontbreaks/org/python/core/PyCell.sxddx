@@ -1,0 +1,15 @@
+(class (attrs public ) org/python/core/PyCell
+ (super org/python/core/PyObject)
+ (source "PyCell.java")
+
+ (field (attrs public ) ob_ref [object org/python/core/PyObject] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/python/core/PyCell])
+  (line 4)
+  (invoke-direct {v0} org/python/core/PyObject/<init> )
+  (return-void )
+ )
+
+)

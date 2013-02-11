@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/io/HttpMessageWriter
+ (super java/lang/Object)
+ (source "HttpMessageWriter.java")
+
+
+(method (attrs public abstract ) write([object org/apache/ogt/http/HttpMessage] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object org/apache/ogt/http/HttpException])
+  )
+)
+
+)

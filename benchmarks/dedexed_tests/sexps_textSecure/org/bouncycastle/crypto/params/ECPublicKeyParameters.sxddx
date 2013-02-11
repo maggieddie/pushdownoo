@@ -1,0 +1,29 @@
+(class (attrs public ) org/bouncycastle/crypto/params/ECPublicKeyParameters
+ (super org/bouncycastle/crypto/params/ECKeyParameters)
+ (source "ECPublicKeyParameters.java")
+
+ (field (attrs ) Q [object org/bouncycastle/math/ec/ECPoint] )
+
+(method (attrs public ) <init>([object org/bouncycastle/math/ec/ECPoint] [object org/bouncycastle/crypto/params/ECDomainParameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ECPublicKeyParameters])
+  ; parameter[0] : v2 ([object org/bouncycastle/math/ec/ECPoint])
+  ; parameter[1] : v3 ([object org/bouncycastle/crypto/params/ECDomainParameters])
+  (line 14)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0 v3} org/bouncycastle/crypto/params/ECKeyParameters/<init> boolean [object org/bouncycastle/crypto/params/ECDomainParameters] )
+  (line 15)
+  (iput-object v2 v1 org/bouncycastle/crypto/params/ECPublicKeyParameters.Q [object org/bouncycastle/math/ec/ECPoint])
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) getQ()[object org/bouncycastle/math/ec/ECPoint]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ECPublicKeyParameters])
+  (line 20)
+  (iget-object v0 v1 org/bouncycastle/crypto/params/ECPublicKeyParameters.Q [object org/bouncycastle/math/ec/ECPoint])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/ogt/http/StatusLine
+ (super java/lang/Object)
+ (source "StatusLine.java")
+
+
+(method (attrs public abstract ) getProtocolVersion()[object org/apache/ogt/http/ProtocolVersion]
+)
+
+(method (attrs public abstract ) getReasonPhrase()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStatusCode()int
+)
+
+)

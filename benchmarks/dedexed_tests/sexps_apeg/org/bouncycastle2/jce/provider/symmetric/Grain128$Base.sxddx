@@ -1,0 +1,18 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/Grain128$Base
+ (super org/bouncycastle2/jce/provider/JCEStreamCipher)
+ (source "Grain128.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/symmetric/Grain128$Base])
+  (line 19)
+  (new-instance v0 org/bouncycastle2/crypto/engines/Grain128Engine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/Grain128Engine/<init> )
+  (const/16 v1 12)
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/jce/provider/JCEStreamCipher/<init> [object org/bouncycastle2/crypto/StreamCipher] int )
+  (line 20)
+  (return-void )
+ )
+
+)

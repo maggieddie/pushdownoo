@@ -1,0 +1,28 @@
+(class (attrs public final ) com/todo/todo/R$layout
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) alert_text_entry int 2130903040); 0x7f030000 )
+ (field (attrs public static final ) configure int 2130903041); 0x7f030001 )
+ (field (attrs public static final ) edit_tags int 2130903042); 0x7f030002 )
+ (field (attrs public static final ) file_row int 2130903043); 0x7f030003 )
+ (field (attrs public static final ) import_dialog int 2130903044); 0x7f030004 )
+ (field (attrs public static final ) main int 2130903045); 0x7f030005 )
+ (field (attrs public static final ) title int 2130903046); 0x7f030006 )
+ (field (attrs public static final ) todo_item int 2130903047); 0x7f030007 )
+ (field (attrs public static final ) widget_2x1 int 2130903048); 0x7f030008 )
+ (field (attrs public static final ) widget_2x2 int 2130903049); 0x7f030009 )
+ (field (attrs public static final ) widget_2x4 int 2130903050); 0x7f03000a )
+ (field (attrs public static final ) widget_4x2 int 2130903051); 0x7f03000b )
+ (field (attrs public static final ) widget_4x4 int 2130903052); 0x7f03000c )
+ (field (attrs public static final ) widget_loading int 2130903053); 0x7f03000d )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$layout])
+  (line 380)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

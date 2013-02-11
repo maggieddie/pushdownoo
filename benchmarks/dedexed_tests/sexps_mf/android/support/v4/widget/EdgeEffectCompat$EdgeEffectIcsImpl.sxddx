@@ -1,0 +1,100 @@
+(class (attrs ) android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl
+ (super java/lang/Object)
+ (source "EdgeEffectCompat.java")
+ (implements android/support/v4/widget/EdgeEffectCompat$EdgeEffectImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  (line 90)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) draw([object java/lang/Object] [object android/graphics/Canvas] )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/graphics/Canvas])
+  (line 120)
+  (invoke-static {v2 v3} android/support/v4/widget/EdgeEffectCompatIcs/draw [object java/lang/Object] [object android/graphics/Canvas] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) finish([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 104)
+  (invoke-static {v1} android/support/v4/widget/EdgeEffectCompatIcs/finish [object java/lang/Object] )
+  (line 105)
+  (return-void )
+)
+
+(method (attrs public ) isFinished([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 100)
+  (invoke-static {v2} android/support/v4/widget/EdgeEffectCompatIcs/isFinished [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) newEdgeEffect([object android/content/Context] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 92)
+  (invoke-static {v2} android/support/v4/widget/EdgeEffectCompatIcs/newEdgeEffect [object android/content/Context] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) onAbsorb([object java/lang/Object] int )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 116)
+  (invoke-static {v2 v3} android/support/v4/widget/EdgeEffectCompatIcs/onAbsorb [object java/lang/Object] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onPull([object java/lang/Object] float )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (float)
+  (line 108)
+  (invoke-static {v2 v3} android/support/v4/widget/EdgeEffectCompatIcs/onPull [object java/lang/Object] float )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onRelease([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 112)
+  (invoke-static {v2} android/support/v4/widget/EdgeEffectCompatIcs/onRelease [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) setSize([object java/lang/Object] int int )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 96)
+  (invoke-static {v1 v2 v3} android/support/v4/widget/EdgeEffectCompatIcs/setSize [object java/lang/Object] int int )
+  (line 97)
+  (return-void )
+)
+
+)

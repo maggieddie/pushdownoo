@@ -1,0 +1,124 @@
+(class (attrs public ) org/andengine/entity/modifier/SequenceEntityModifier
+ (super org/andengine/util/modifier/SequenceModifier)
+ (source "SequenceEntityModifier.java")
+ (implements org/andengine/entity/modifier/IEntityModifier)
+
+
+(method (attrs public ) <init>([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [array [object org/andengine/entity/modifier/IEntityModifier]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  ; parameter[1] : v2 ([array [object org/andengine/entity/modifier/IEntityModifier]])
+  (line 35)
+  (invoke-direct {v0 v1 v2} org/andengine/util/modifier/SequenceModifier/<init> [object org/andengine/util/modifier/IModifier$IModifierListener] [array [object org/andengine/util/modifier/IModifier]] )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/modifier/SequenceEntityModifier$ISubSequenceShapeModifierListener] [object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [array [object org/andengine/entity/modifier/IEntityModifier]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/modifier/SequenceEntityModifier$ISubSequenceShapeModifierListener])
+  ; parameter[1] : v2 ([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  ; parameter[2] : v3 ([array [object org/andengine/entity/modifier/IEntityModifier]])
+  (line 39)
+  (invoke-direct {v0 v1 v2 v3} org/andengine/util/modifier/SequenceModifier/<init> [object org/andengine/util/modifier/SequenceModifier$ISubSequenceModifierListener] [object org/andengine/util/modifier/IModifier$IModifierListener] [array [object org/andengine/util/modifier/IModifier]] )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/modifier/SequenceEntityModifier$ISubSequenceShapeModifierListener] [array [object org/andengine/entity/modifier/IEntityModifier]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/modifier/SequenceEntityModifier$ISubSequenceShapeModifierListener])
+  ; parameter[1] : v2 ([array [object org/andengine/entity/modifier/IEntityModifier]])
+  (line 31)
+  (invoke-direct {v0 v1 v2} org/andengine/util/modifier/SequenceModifier/<init> [object org/andengine/util/modifier/SequenceModifier$ISubSequenceModifierListener] [array [object org/andengine/util/modifier/IModifier]] )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object org/andengine/entity/modifier/SequenceEntityModifier] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  (line 43)
+  (invoke-direct {v0 v1} org/andengine/util/modifier/SequenceModifier/<init> [object org/andengine/util/modifier/SequenceModifier] )
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([array [object org/andengine/entity/modifier/IEntityModifier]] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  ; parameter[0] : v1 ([array [object org/andengine/entity/modifier/IEntityModifier]])
+  (line 27)
+  (invoke-direct {v0 v1} org/andengine/util/modifier/SequenceModifier/<init> [array [object org/andengine/util/modifier/IModifier]] )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) deepCopy()[object org/andengine/entity/modifier/IEntityModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/modifier/SequenceEntityModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/entity/modifier/SequenceEntityModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  (line 48)
+  (new-instance v0 org/andengine/entity/modifier/SequenceEntityModifier)
+  (invoke-direct {v0 v1} org/andengine/entity/modifier/SequenceEntityModifier/<init> [object org/andengine/entity/modifier/SequenceEntityModifier] )
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/util/modifier/IModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/modifier/SequenceEntityModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/util/modifier/SequenceModifier]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/modifier/SequenceEntityModifier])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/entity/modifier/SequenceEntityModifier/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

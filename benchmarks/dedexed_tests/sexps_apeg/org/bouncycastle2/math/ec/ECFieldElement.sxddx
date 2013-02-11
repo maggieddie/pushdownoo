@@ -1,0 +1,60 @@
+(class (attrs public abstract ) org/bouncycastle2/math/ec/ECFieldElement
+ (super java/lang/Object)
+ (source "ECFieldElement.java")
+ (implements org/bouncycastle2/math/ec/ECConstants)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/math/ec/ECFieldElement])
+  (line 6)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) add([object org/bouncycastle2/math/ec/ECFieldElement] )[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) divide([object org/bouncycastle2/math/ec/ECFieldElement] )[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) getFieldName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getFieldSize()int
+)
+
+(method (attrs public abstract ) invert()[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) multiply([object org/bouncycastle2/math/ec/ECFieldElement] )[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) negate()[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) sqrt()[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) square()[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) subtract([object org/bouncycastle2/math/ec/ECFieldElement] )[object org/bouncycastle2/math/ec/ECFieldElement]
+)
+
+(method (attrs public abstract ) toBigInteger()[object java/math/BigInteger]
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/math/ec/ECFieldElement])
+  (line 24)
+  (invoke-virtual {v2} org/bouncycastle2/math/ec/ECFieldElement/toBigInteger )
+  (move-result-object v0)
+  (const/4 v1 2)
+  (invoke-virtual {v0 v1} java/math/BigInteger/toString int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

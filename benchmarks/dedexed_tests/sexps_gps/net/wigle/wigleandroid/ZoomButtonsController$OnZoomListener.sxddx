@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) net/wigle/wigleandroid/ZoomButtonsController$OnZoomListener
+ (super java/lang/Object)
+ (source "ZoomButtonsController.java")
+
+
+(method (attrs public abstract ) onVisibilityChanged(boolean )void
+)
+
+(method (attrs public abstract ) onZoom(boolean )void
+)
+
+)

@@ -1,0 +1,71 @@
+(class (attrs ) org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper
+ (super org/apache/ogt/http/entity/HttpEntityWrapper)
+ (source "EntityEnclosingRequestWrapper.java")
+
+ (field (attrs final ) this$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper] )
+
+(method (attrs ) <init>([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper] [object org/apache/ogt/http/HttpEntity] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/HttpEntity])
+  (line 88)
+  (iput-object v1 v0 org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper.this$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper])
+  (line 89)
+  (invoke-direct {v0 v2} org/apache/ogt/http/entity/HttpEntityWrapper/<init> [object org/apache/ogt/http/HttpEntity] )
+  (line 90)
+  (return-void )
+ )
+
+(method (attrs public ) consumeContent()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper])
+  (line 95)
+  (iget-object v0 v2 org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper.this$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper])
+  (const/4 v1 1)
+  (invoke-static {v0 v1} org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper/access$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper] boolean )
+  (line 96)
+  (invoke-super {v2} org/apache/ogt/http/entity/HttpEntityWrapper/consumeContent )
+  (line 97)
+  (return-void )
+)
+
+(method (attrs public ) getContent()[object java/io/InputStream]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper])
+  (line 101)
+  (iget-object v0 v2 org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper.this$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper])
+  (const/4 v1 1)
+  (invoke-static {v0 v1} org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper/access$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper] boolean )
+  (line 102)
+  (invoke-super {v2} org/apache/ogt/http/entity/HttpEntityWrapper/getContent )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) writeTo([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper])
+  ; parameter[0] : v3 ([object java/io/OutputStream])
+  (line 107)
+  (iget-object v0 v2 org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper$EntityWrapper.this$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper])
+  (const/4 v1 1)
+  (invoke-static {v0 v1} org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper/access$0 [object org/apache/ogt/http/impl/client/EntityEnclosingRequestWrapper] boolean )
+  (line 108)
+  (invoke-super {v2 v3} org/apache/ogt/http/entity/HttpEntityWrapper/writeTo [object java/io/OutputStream] )
+  (line 109)
+  (return-void )
+)
+
+)

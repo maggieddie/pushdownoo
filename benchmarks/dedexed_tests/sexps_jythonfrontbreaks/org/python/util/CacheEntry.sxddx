@@ -1,0 +1,23 @@
+(class (attrs ) org/python/util/CacheEntry
+ (super java/lang/Object)
+ (source "PyServlet.java")
+
+ (field (attrs public ) date long )
+ (field (attrs public ) servlet [object javax/servlet/http/HttpServlet] )
+
+(method (attrs ) <init>([object javax/servlet/http/HttpServlet] long )void
+  (limit registers 4)
+  ; this: v0 ([object org/python/util/CacheEntry])
+  ; parameter[0] : v1 ([object javax/servlet/http/HttpServlet])
+  ; parameter[1] : v2 (long)
+  (line 227)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 228)
+  (iput-object v1 v0 org/python/util/CacheEntry.servlet [object javax/servlet/http/HttpServlet])
+  (line 229)
+  (iput-wide v2 v0 org/python/util/CacheEntry.date long)
+  (line 230)
+  (return-void )
+ )
+
+)

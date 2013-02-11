@@ -1,0 +1,54 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6
+ (super java/lang/Object)
+ (source "LoggerMapHelper.java")
+ (implements android/widget/AdapterView$OnItemSelectedListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 525)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onItemSelected([object android/widget/AdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+  (limit registers 8)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6])
+  ; parameter[0] : v3 ([object android/widget/AdapterView])
+  ; parameter[1] : v4 ([object android/view/View])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (long)
+  (line 529)
+  (iget-object v1 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-virtual {v3} android/widget/AdapterView/getSelectedItem )
+  (move-result-object v0)
+  (check-cast v0 [object android/net/Uri])
+  (invoke-static {v1 v0} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$7 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] [object android/net/Uri] )
+  (line 530)
+  (return-void )
+)
+
+(method (attrs public ) onNothingSelected([object android/widget/AdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6])
+  ; parameter[0] : v3 ([object android/widget/AdapterView])
+  (line 534)
+  (iget-object v0 v2 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$6.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$7 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] [object android/net/Uri] )
+  (line 535)
+  (return-void )
+)
+
+)

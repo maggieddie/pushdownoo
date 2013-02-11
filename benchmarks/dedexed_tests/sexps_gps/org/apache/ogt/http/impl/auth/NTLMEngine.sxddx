@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/impl/auth/NTLMEngine
+ (super java/lang/Object)
+ (source "NTLMEngine.java")
+
+
+(method (attrs public abstract ) generateType1Msg([object java/lang/String] [object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/impl/auth/NTLMEngineException])
+  )
+)
+
+(method (attrs public abstract ) generateType3Msg([object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/impl/auth/NTLMEngineException])
+  )
+)
+
+)

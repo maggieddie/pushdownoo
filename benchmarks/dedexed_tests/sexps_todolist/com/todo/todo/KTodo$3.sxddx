@@ -1,0 +1,37 @@
+(class (attrs ) com/todo/todo/KTodo$3
+ (super java/lang/Object)
+ (source "KTodo.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object com/todo/todo/KTodo] )
+ (field (attrs private final ) val$currentTag int )
+
+(method (attrs ) <init>([object com/todo/todo/KTodo] int )void
+  (limit registers 3)
+  ; this: v0 ([object com/todo/todo/KTodo$3])
+  ; parameter[0] : v1 ([object com/todo/todo/KTodo])
+  ; parameter[1] : v2 (int)
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/KTodo$3.this$0 [object com/todo/todo/KTodo])
+  (iput v2 v0 com/todo/todo/KTodo$3.val$currentTag int)
+  (line 174)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 4)
+  ; this: v3 ([object com/todo/todo/KTodo$3])
+  (line 176)
+  (iget-object v0 v3 com/todo/todo/KTodo$3.this$0 [object com/todo/todo/KTodo])
+  (iget v1 v3 com/todo/todo/KTodo$3.val$currentTag int)
+  (int-to-long v1 v1)
+  (invoke-static {v0 v1 v2} com/todo/todo/KTodo/access$7 [object com/todo/todo/KTodo] long )
+  (line 177)
+  (iget-object v0 v3 com/todo/todo/KTodo$3.this$0 [object com/todo/todo/KTodo])
+  (invoke-static {v0} com/todo/todo/KTodo/access$8 [object com/todo/todo/KTodo] )
+  (line 178)
+  (return-void )
+)
+
+)

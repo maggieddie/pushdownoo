@@ -1,0 +1,43 @@
+(class (attrs public ) org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntryRef
+ (super java/lang/ref/WeakReference)
+ (source "BasicPoolEntryRef.java")
+
+ (field (attrs private final ) route [object org/apache/ogt/http/conn/routing/HttpRoute] )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntry] [object java/lang/ref/ReferenceQueue] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/ogt/http/impl/conn/tsccm/BasicPoolEntry;"  "Ljava/lang/ref/ReferenceQueue"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntryRef])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntry])
+  ; parameter[1] : v4 ([object java/lang/ref/ReferenceQueue])
+  (line 61)
+  (invoke-direct {v2 v3 v4} java/lang/ref/WeakReference/<init> [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )
+  (line 62)
+  (if-nez v3 lba79e)
+  (line 63)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (line 64)
+  (const-string v1 "Pool entry must not be null.")
+  (line 63)
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label lba79e)
+  (line 66)
+  (invoke-virtual {v3} org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntry/getPlannedRoute )
+  (move-result-object v0)
+  (iput-object v0 v2 org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntryRef.route [object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 67)
+  (return-void )
+ )
+
+(method (attrs public final ) getRoute()[object org/apache/ogt/http/conn/routing/HttpRoute]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntryRef])
+  (line 77)
+  (iget-object v0 v1 org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntryRef.route [object org/apache/ogt/http/conn/routing/HttpRoute])
+  (return-object v0)
+)
+
+)

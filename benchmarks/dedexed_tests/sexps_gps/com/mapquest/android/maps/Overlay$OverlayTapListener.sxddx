@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/Overlay$OverlayTapListener
+ (super java/lang/Object)
+ (source "Overlay.java")
+
+
+(method (attrs public abstract ) onTap([object com/mapquest/android/maps/GeoPoint] [object com/mapquest/android/maps/MapView] )void
+)
+
+)

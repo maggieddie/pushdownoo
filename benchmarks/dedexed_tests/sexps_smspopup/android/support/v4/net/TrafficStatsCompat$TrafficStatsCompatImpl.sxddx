@@ -1,0 +1,33 @@
+(interface (attrs abstract ) android/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl
+ (super java/lang/Object)
+ (source "TrafficStatsCompat.java")
+
+
+(method (attrs public abstract ) clearThreadStatsTag()void
+)
+
+(method (attrs public abstract ) getThreadStatsTag()int
+)
+
+(method (attrs public abstract ) incrementOperationCount(int )void
+)
+
+(method (attrs public abstract ) incrementOperationCount(int int )void
+)
+
+(method (attrs public abstract ) setThreadStatsTag(int )void
+)
+
+(method (attrs public abstract ) tagSocket([object java/net/Socket] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+(method (attrs public abstract ) untagSocket([object java/net/Socket] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+)

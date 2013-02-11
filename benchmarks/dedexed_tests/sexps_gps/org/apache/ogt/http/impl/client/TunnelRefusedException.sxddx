@@ -1,0 +1,29 @@
+(class (attrs public ) org/apache/ogt/http/impl/client/TunnelRefusedException
+ (super org/apache/ogt/http/HttpException)
+ (source "TunnelRefusedException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1897599113); 0x8ee4ef77 )
+ (field (attrs private final ) response [object org/apache/ogt/http/HttpResponse] )
+
+(method (attrs public ) <init>([object java/lang/String] [object org/apache/ogt/http/HttpResponse] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/client/TunnelRefusedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/HttpResponse])
+  (line 48)
+  (invoke-direct {v0 v1} org/apache/ogt/http/HttpException/<init> [object java/lang/String] )
+  (line 49)
+  (iput-object v2 v0 org/apache/ogt/http/impl/client/TunnelRefusedException.response [object org/apache/ogt/http/HttpResponse])
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs public ) getResponse()[object org/apache/ogt/http/HttpResponse]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/client/TunnelRefusedException])
+  (line 53)
+  (iget-object v0 v1 org/apache/ogt/http/impl/client/TunnelRefusedException.response [object org/apache/ogt/http/HttpResponse])
+  (return-object v0)
+)
+
+)

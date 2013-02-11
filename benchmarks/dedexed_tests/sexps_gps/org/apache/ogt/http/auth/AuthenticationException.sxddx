@@ -1,0 +1,37 @@
+(class (attrs public ) org/apache/ogt/http/auth/AuthenticationException
+ (super org/apache/ogt/http/ProtocolException)
+ (source "AuthenticationException.java")
+
+ (field (attrs private static final ) serialVersionUID long -440926214); 0xe5b7fffa )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/auth/AuthenticationException])
+  (line 48)
+  (invoke-direct {v0} org/apache/ogt/http/ProtocolException/<init> )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/auth/AuthenticationException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 57)
+  (invoke-direct {v0 v1} org/apache/ogt/http/ProtocolException/<init> [object java/lang/String] )
+  (line 58)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/auth/AuthenticationException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 68)
+  (invoke-direct {v0 v1 v2} org/apache/ogt/http/ProtocolException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 69)
+  (return-void )
+ )
+
+)

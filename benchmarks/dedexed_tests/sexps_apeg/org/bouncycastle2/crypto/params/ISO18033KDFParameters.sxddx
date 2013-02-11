@@ -1,0 +1,28 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/ISO18033KDFParameters
+ (super java/lang/Object)
+ (source "ISO18033KDFParameters.java")
+ (implements org/bouncycastle2/crypto/DerivationParameters)
+
+ (field (attrs ) seed [array byte] )
+
+(method (attrs public ) <init>([array byte] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/crypto/params/ISO18033KDFParameters])
+  ; parameter[0] : v1 ([array byte])
+  (line 13)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 16)
+  (iput-object v1 v0 org/bouncycastle2/crypto/params/ISO18033KDFParameters.seed [array byte])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) getSeed()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/ISO18033KDFParameters])
+  (line 21)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/ISO18033KDFParameters.seed [array byte])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,44 @@
+(class (attrs ) org/anddev/andengine/util/pool/PoolUpdateHandler$2
+ (super org/anddev/andengine/util/pool/Pool)
+ (source "PoolUpdateHandler.java")
+
+ (field (attrs final ) this$0 [object org/anddev/andengine/util/pool/PoolUpdateHandler] )
+
+(method (attrs ) <init>([object org/anddev/andengine/util/pool/PoolUpdateHandler] int )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/util/pool/PoolUpdateHandler$2])
+  ; parameter[0] : v1 ([object org/anddev/andengine/util/pool/PoolUpdateHandler])
+  ; parameter[1] : v2 (int)
+  (line 1)
+  (iput-object v1 v0 org/anddev/andengine/util/pool/PoolUpdateHandler$2.this$0 [object org/anddev/andengine/util/pool/PoolUpdateHandler])
+  (line 43)
+  (invoke-direct {v0 v2} org/anddev/andengine/util/pool/Pool/<init> int )
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/util/pool/PoolUpdateHandler$2])
+  (line 1)
+  (invoke-virtual {v1} org/anddev/andengine/util/pool/PoolUpdateHandler$2/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/anddev/andengine/util/pool/PoolItem]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/util/pool/PoolUpdateHandler$2])
+  (line 46)
+  (iget-object v0 v1 org/anddev/andengine/util/pool/PoolUpdateHandler$2.this$0 [object org/anddev/andengine/util/pool/PoolUpdateHandler])
+  (invoke-virtual {v0} org/anddev/andengine/util/pool/PoolUpdateHandler/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

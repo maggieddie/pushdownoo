@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/app/ShareCompat$ShareCompatImpl
+ (super java/lang/Object)
+ (source "ShareCompat.java")
+
+
+(method (attrs public abstract ) configureMenuItem([object android/view/MenuItem] [object android/support/v4/app/ShareCompat$IntentBuilder] )void
+)
+
+)

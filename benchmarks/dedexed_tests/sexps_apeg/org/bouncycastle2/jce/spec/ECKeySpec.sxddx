@@ -1,0 +1,28 @@
+(class (attrs public ) org/bouncycastle2/jce/spec/ECKeySpec
+ (super java/lang/Object)
+ (source "ECKeySpec.java")
+ (implements java/security/spec/KeySpec)
+
+ (field (attrs private ) spec [object org/bouncycastle2/jce/spec/ECParameterSpec] )
+
+(method (attrs protected ) <init>([object org/bouncycastle2/jce/spec/ECParameterSpec] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/jce/spec/ECKeySpec])
+  ; parameter[0] : v1 ([object org/bouncycastle2/jce/spec/ECParameterSpec])
+  (line 13)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 16)
+  (iput-object v1 v0 org/bouncycastle2/jce/spec/ECKeySpec.spec [object org/bouncycastle2/jce/spec/ECParameterSpec])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) getParams()[object org/bouncycastle2/jce/spec/ECParameterSpec]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/spec/ECKeySpec])
+  (line 24)
+  (iget-object v0 v1 org/bouncycastle2/jce/spec/ECKeySpec.spec [object org/bouncycastle2/jce/spec/ECParameterSpec])
+  (return-object v0)
+)
+
+)

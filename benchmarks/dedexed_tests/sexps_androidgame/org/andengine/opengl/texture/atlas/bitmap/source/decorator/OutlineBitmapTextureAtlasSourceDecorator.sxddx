@@ -1,0 +1,82 @@
+(class (attrs public ) org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator
+ (super org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseShapeBitmapTextureAtlasSourceDecorator)
+ (source "OutlineBitmapTextureAtlasSourceDecorator.java")
+
+ (field (attrs protected final ) mOutlineColor int )
+
+(method (attrs public ) <init>([object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape] int )void
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  ; parameter[0] : v2 ([object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource])
+  ; parameter[1] : v3 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape])
+  ; parameter[2] : v4 (int)
+  (line 31)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v4 v0} org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator/<init> [object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape] int [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions] )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape] int [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions] )void
+  (limit registers 7)
+  ; this: v2 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  ; parameter[0] : v3 ([object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource])
+  ; parameter[1] : v4 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions])
+  (line 35)
+  (invoke-direct {v2 v3 v4 v6} org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseShapeBitmapTextureAtlasSourceDecorator/<init> [object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions] )
+  (line 36)
+  (iput v5 v2 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mOutlineColor int)
+  (line 38)
+  (iget-object v0 v2 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mPaint [object android/graphics/Paint])
+  (sget-object v1 android/graphics/Paint$Style.STROKE [object android/graphics/Paint$Style])
+  (invoke-virtual {v0 v1} android/graphics/Paint/setStyle [object android/graphics/Paint$Style] )
+  (line 39)
+  (iget-object v0 v2 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mPaint [object android/graphics/Paint])
+  (invoke-virtual {v0 v5} android/graphics/Paint/setColor int )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) deepCopy()[object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseShapeBitmapTextureAtlasSourceDecorator]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator]
+  (limit registers 6)
+  ; this: v5 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  (line 44)
+  (new-instance v0 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator)
+  (iget-object v1 v5 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mBitmapTextureAtlasSource [object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource])
+  (iget-object v2 v5 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mBitmapTextureAtlasSourceDecoratorShape [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape])
+  (iget v3 v5 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mOutlineColor int)
+  (iget-object v4 v5 org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator.mTextureAtlasSourceDecoratorOptions [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions])
+  (invoke-direct {v0 v1 v2 v3 v4} org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator/<init> [object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource] [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/shape/IBitmapTextureAtlasSourceDecoratorShape] int [object org/andengine/opengl/texture/atlas/bitmap/source/decorator/BaseBitmapTextureAtlasSourceDecorator$TextureAtlasSourceDecoratorOptions] )
+  (return-object v0)
+)
+
+(method (attrs public ) deepCopy()[object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/opengl/texture/atlas/bitmap/source/decorator/OutlineBitmapTextureAtlasSourceDecorator/deepCopy )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

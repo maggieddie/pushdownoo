@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/python/core/ucnhashAPI
+ (super java/lang/Object)
+ (source "ucnhashAPI.java")
+
+
+(method (attrs public abstract ) getCchMax()int
+)
+
+(method (attrs public abstract ) getValue([object java/lang/String] int int )int
+)
+
+)

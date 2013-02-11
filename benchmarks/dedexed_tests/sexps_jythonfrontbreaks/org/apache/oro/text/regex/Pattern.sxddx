@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/oro/text/regex/Pattern
+ (super java/lang/Object)
+ (source "Pattern.java")
+
+
+(method (attrs public abstract ) getOptions()int
+)
+
+(method (attrs public abstract ) getPattern()[object java/lang/String]
+)
+
+)

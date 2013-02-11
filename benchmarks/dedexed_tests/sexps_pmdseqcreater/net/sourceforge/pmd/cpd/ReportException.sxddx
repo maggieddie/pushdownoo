@@ -1,0 +1,16 @@
+(class (attrs public ) net/sourceforge/pmd/cpd/ReportException
+ (super java/lang/Exception)
+ (source "ReportException.java")
+
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/cpd/ReportException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 12)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 13)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,25 @@
+(class (attrs public ) org/thoughtcrime/securesms/service/ApplicationMigrationService$ApplicationMigrationBinder
+ (super android/os/Binder)
+ (source "ApplicationMigrationService.java")
+
+ (field (attrs final ) this$0 [object org/thoughtcrime/securesms/service/ApplicationMigrationService] )
+
+(method (attrs public ) <init>([object org/thoughtcrime/securesms/service/ApplicationMigrationService] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thoughtcrime/securesms/service/ApplicationMigrationService$ApplicationMigrationBinder])
+  ; parameter[0] : v1 ([object org/thoughtcrime/securesms/service/ApplicationMigrationService])
+  (line 115)
+  (iput-object v1 v0 org/thoughtcrime/securesms/service/ApplicationMigrationService$ApplicationMigrationBinder.this$0 [object org/thoughtcrime/securesms/service/ApplicationMigrationService])
+  (invoke-direct {v0} android/os/Binder/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getService()[object org/thoughtcrime/securesms/service/ApplicationMigrationService]
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/service/ApplicationMigrationService$ApplicationMigrationBinder])
+  (line 117)
+  (iget-object v0 v1 org/thoughtcrime/securesms/service/ApplicationMigrationService$ApplicationMigrationBinder.this$0 [object org/thoughtcrime/securesms/service/ApplicationMigrationService])
+  (return-object v0)
+)
+
+)

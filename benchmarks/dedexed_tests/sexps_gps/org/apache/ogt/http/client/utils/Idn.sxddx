@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/utils/Idn
+ (super java/lang/Object)
+ (source "Idn.java")
+
+
+(method (attrs public abstract ) toUnicode([object java/lang/String] )[object java/lang/String]
+)
+
+)

@@ -1,0 +1,39 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15
+ (super java/lang/Object)
+ (source "LoggerMapHelper.java")
+ (implements nl/sogeti/android/gpstracker/util/UnitsI18n$UnitsChangeListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (line 714)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onUnitsChange()void
+  (limit registers 4)
+  ; this: v3 ([object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15])
+  (const-wide/16 v1 0)
+  (line 718)
+  (iget-object v0 v3 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0 v1 v2} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$3 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] double )
+  (line 719)
+  (iget-object v0 v3 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0 v1 v2} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$5 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] double )
+  (line 720)
+  (iget-object v0 v3 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$24 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+  (line 721)
+  (iget-object v0 v3 nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper$15.this$0 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper])
+  (invoke-static {v0} nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper/access$4 [object nl/sogeti/android/gpstracker/viewer/map/LoggerMapHelper] )
+  (line 722)
+  (return-void )
+)
+
+)

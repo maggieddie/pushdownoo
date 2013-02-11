@@ -1,0 +1,20 @@
+(class (attrs public final ) com/todo/todo/R$xml
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) appwidget_2x1_info int 2131034112); 0x7f050000 )
+ (field (attrs public static final ) appwidget_2x2_info int 2131034113); 0x7f050001 )
+ (field (attrs public static final ) appwidget_2x4_info int 2131034114); 0x7f050002 )
+ (field (attrs public static final ) appwidget_4x2_info int 2131034115); 0x7f050003 )
+ (field (attrs public static final ) appwidget_4x4_info int 2131034116); 0x7f050004 )
+ (field (attrs public static final ) preferences int 2131034117); 0x7f050005 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/R$xml])
+  (line 523)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,19 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCERSACipher$ISO9796d1Padding
+ (super org/bouncycastle2/jce/provider/JCERSACipher)
+ (source "JCERSACipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/JCERSACipher$ISO9796d1Padding])
+  (line 578)
+  (new-instance v0 org/bouncycastle2/crypto/encodings/ISO9796d1Encoding)
+  (new-instance v1 org/bouncycastle2/crypto/engines/RSABlindedEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/RSABlindedEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/encodings/ISO9796d1Encoding/<init> [object org/bouncycastle2/crypto/AsymmetricBlockCipher] )
+  (invoke-direct {v2 v0} org/bouncycastle2/jce/provider/JCERSACipher/<init> [object org/bouncycastle2/crypto/AsymmetricBlockCipher] )
+  (line 579)
+  (return-void )
+ )
+
+)

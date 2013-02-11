@@ -1,0 +1,22 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/asymmetric/ec/KeyAgreement$DHwithSHA1KDF
+ (super org/bouncycastle2/jce/provider/asymmetric/ec/KeyAgreement)
+ (source "KeyAgreement.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 5)
+  ; this: v4 ([object org/bouncycastle2/jce/provider/asymmetric/ec/KeyAgreement$DHwithSHA1KDF])
+  (line 304)
+  (const-string v0 "ECDHwithSHA1KDF")
+  (new-instance v1 org/bouncycastle2/crypto/agreement/ECDHBasicAgreement)
+  (invoke-direct {v1} org/bouncycastle2/crypto/agreement/ECDHBasicAgreement/<init> )
+  (new-instance v2 org/bouncycastle2/crypto/agreement/kdf/ECDHKEKGenerator)
+  (new-instance v3 org/bouncycastle2/crypto/digests/SHA1Digest)
+  (invoke-direct {v3} org/bouncycastle2/crypto/digests/SHA1Digest/<init> )
+  (invoke-direct {v2 v3} org/bouncycastle2/crypto/agreement/kdf/ECDHKEKGenerator/<init> [object org/bouncycastle2/crypto/Digest] )
+  (invoke-direct {v4 v0 v1 v2} org/bouncycastle2/jce/provider/asymmetric/ec/KeyAgreement/<init> [object java/lang/String] [object org/bouncycastle2/crypto/BasicAgreement] [object org/bouncycastle2/crypto/DerivationFunction] )
+  (line 305)
+  (return-void )
+ )
+
+)

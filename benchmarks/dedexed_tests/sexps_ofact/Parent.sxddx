@@ -1,0 +1,29 @@
+(class (attrs ) com/android/demo/notepad3/Parent
+ (super java/lang/Object)
+ (source "TestParent.java")
+
+ (field (attrs static ) x int )
+ (field (attrs ) y int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 4)
+  (const/16 v0 100)
+  (sput v0 com/android/demo/notepad3/Parent.x int)
+  (line 3)
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/android/demo/notepad3/Parent])
+  (line 3)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 5)
+  (const/16 v0 1000)
+  (iput v0 v1 com/android/demo/notepad3/Parent.y int)
+  (line 3)
+  (return-void )
+ )
+
+)

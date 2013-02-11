@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/slf4j/spi/LocationAwareLogger
+ (super java/lang/Object)
+ (source "LocationAwareLogger.java")
+ (implements org/slf4j/Logger)
+
+ (field (attrs public static final ) DEBUG_INT int 10); 0xa )
+ (field (attrs public static final ) ERROR_INT int 40); 0x28 )
+ (field (attrs public static final ) INFO_INT int 20); 0x14 )
+ (field (attrs public static final ) TRACE_INT int 0); 0x0 )
+ (field (attrs public static final ) WARN_INT int 30); 0x1e )
+
+(method (attrs public abstract ) log([object org/slf4j/Marker] [object java/lang/String] int [object java/lang/String] [object java/lang/Throwable] )void
+)
+
+)

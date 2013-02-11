@@ -1,0 +1,911 @@
+(class (attrs final ) com/google/zxing/datamatrix/decoder/DecodedBitStreamParser
+ (super java/lang/Object)
+
+ (field (attrs private static final ) ANSIX12_ENCODE int 4); 0x4 )
+ (field (attrs private static final ) ASCII_ENCODE int 1); 0x1 )
+ (field (attrs private static final ) BASE256_ENCODE int 6); 0x6 )
+ (field (attrs private static final ) C40_BASIC_SET_CHARS [array char] null )
+ (field (attrs private static final ) C40_ENCODE int 2); 0x2 )
+ (field (attrs private static final ) C40_SHIFT2_SET_CHARS [array char] null )
+ (field (attrs private static final ) EDIFACT_ENCODE int 5); 0x5 )
+ (field (attrs private static final ) PAD_ENCODE int 0); 0x0 )
+ (field (attrs private static final ) TEXT_BASIC_SET_CHARS [array char] null )
+ (field (attrs private static final ) TEXT_ENCODE int 3); 0x3 )
+ (field (attrs private static final ) TEXT_SHIFT3_SET_CHARS [array char] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (const/16 v1 40)
+  (new-array v0 v1 [array char])
+  (fill-array-data v0 l1d91c)
+  (sput-object v0 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_BASIC_SET_CHARS [array char])
+  (const/16 v0 27)
+  (new-array v0 v0 [array char])
+  (fill-array-data v0 l1d974)
+  (sput-object v0 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_SHIFT2_SET_CHARS [array char])
+  (new-array v0 v1 [array char])
+  (fill-array-data v0 l1d9b4)
+  (sput-object v0 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_BASIC_SET_CHARS [array char])
+  (const/16 v0 32)
+  (new-array v0 v0 [array char])
+  (fill-array-data v0 l1da0c)
+  (sput-object v0 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_SHIFT3_SET_CHARS [array char])
+  (return-void )
+  (label l1d91a)
+  (data-array
+    0x00 0x00
+  )
+  (label l1d91c)
+  (data-array
+    (0x2A 0x00) ; #0
+    (0x2A 0x00) ; #1
+    (0x2A 0x00) ; #2
+    (0x20 0x00) ; #3
+    (0x30 0x00) ; #4
+    (0x31 0x00) ; #5
+    (0x32 0x00) ; #6
+    (0x33 0x00) ; #7
+    (0x34 0x00) ; #8
+    (0x35 0x00) ; #9
+    (0x36 0x00) ; #10
+    (0x37 0x00) ; #11
+    (0x38 0x00) ; #12
+    (0x39 0x00) ; #13
+    (0x41 0x00) ; #14
+    (0x42 0x00) ; #15
+    (0x43 0x00) ; #16
+    (0x44 0x00) ; #17
+    (0x45 0x00) ; #18
+    (0x46 0x00) ; #19
+    (0x47 0x00) ; #20
+    (0x48 0x00) ; #21
+    (0x49 0x00) ; #22
+    (0x4A 0x00) ; #23
+    (0x4B 0x00) ; #24
+    (0x4C 0x00) ; #25
+    (0x4D 0x00) ; #26
+    (0x4E 0x00) ; #27
+    (0x4F 0x00) ; #28
+    (0x50 0x00) ; #29
+    (0x51 0x00) ; #30
+    (0x52 0x00) ; #31
+    (0x53 0x00) ; #32
+    (0x54 0x00) ; #33
+    (0x55 0x00) ; #34
+    (0x56 0x00) ; #35
+    (0x57 0x00) ; #36
+    (0x58 0x00) ; #37
+    (0x59 0x00) ; #38
+    (0x5A 0x00) ; #39
+  )
+  (label l1d974)
+  (data-array
+    (0x21 0x00) ; #0
+    (0x22 0x00) ; #1
+    (0x23 0x00) ; #2
+    (0x24 0x00) ; #3
+    (0x25 0x00) ; #4
+    (0x26 0x00) ; #5
+    (0x27 0x00) ; #6
+    (0x28 0x00) ; #7
+    (0x29 0x00) ; #8
+    (0x2A 0x00) ; #9
+    (0x2B 0x00) ; #10
+    (0x2C 0x00) ; #11
+    (0x2D 0x00) ; #12
+    (0x2E 0x00) ; #13
+    (0x2F 0x00) ; #14
+    (0x3A 0x00) ; #15
+    (0x3B 0x00) ; #16
+    (0x3C 0x00) ; #17
+    (0x3D 0x00) ; #18
+    (0x3E 0x00) ; #19
+    (0x3F 0x00) ; #20
+    (0x40 0x00) ; #21
+    (0x5B 0x00) ; #22
+    (0x5C 0x00) ; #23
+    (0x5D 0x00) ; #24
+    (0x5E 0x00) ; #25
+    (0x5F 0x00) ; #26
+  )
+  (label l1d9b2)
+  (data-array
+    0x00 0x00
+  )
+  (label l1d9b4)
+  (data-array
+    (0x2A 0x00) ; #0
+    (0x2A 0x00) ; #1
+    (0x2A 0x00) ; #2
+    (0x20 0x00) ; #3
+    (0x30 0x00) ; #4
+    (0x31 0x00) ; #5
+    (0x32 0x00) ; #6
+    (0x33 0x00) ; #7
+    (0x34 0x00) ; #8
+    (0x35 0x00) ; #9
+    (0x36 0x00) ; #10
+    (0x37 0x00) ; #11
+    (0x38 0x00) ; #12
+    (0x39 0x00) ; #13
+    (0x61 0x00) ; #14
+    (0x62 0x00) ; #15
+    (0x63 0x00) ; #16
+    (0x64 0x00) ; #17
+    (0x65 0x00) ; #18
+    (0x66 0x00) ; #19
+    (0x67 0x00) ; #20
+    (0x68 0x00) ; #21
+    (0x69 0x00) ; #22
+    (0x6A 0x00) ; #23
+    (0x6B 0x00) ; #24
+    (0x6C 0x00) ; #25
+    (0x6D 0x00) ; #26
+    (0x6E 0x00) ; #27
+    (0x6F 0x00) ; #28
+    (0x70 0x00) ; #29
+    (0x71 0x00) ; #30
+    (0x72 0x00) ; #31
+    (0x73 0x00) ; #32
+    (0x74 0x00) ; #33
+    (0x75 0x00) ; #34
+    (0x76 0x00) ; #35
+    (0x77 0x00) ; #36
+    (0x78 0x00) ; #37
+    (0x79 0x00) ; #38
+    (0x7A 0x00) ; #39
+  )
+  (label l1da0c)
+  (data-array
+    (0x27 0x00) ; #0
+    (0x41 0x00) ; #1
+    (0x42 0x00) ; #2
+    (0x43 0x00) ; #3
+    (0x44 0x00) ; #4
+    (0x45 0x00) ; #5
+    (0x46 0x00) ; #6
+    (0x47 0x00) ; #7
+    (0x48 0x00) ; #8
+    (0x49 0x00) ; #9
+    (0x4A 0x00) ; #10
+    (0x4B 0x00) ; #11
+    (0x4C 0x00) ; #12
+    (0x4D 0x00) ; #13
+    (0x4E 0x00) ; #14
+    (0x4F 0x00) ; #15
+    (0x50 0x00) ; #16
+    (0x51 0x00) ; #17
+    (0x52 0x00) ; #18
+    (0x53 0x00) ; #19
+    (0x54 0x00) ; #20
+    (0x55 0x00) ; #21
+    (0x56 0x00) ; #22
+    (0x57 0x00) ; #23
+    (0x58 0x00) ; #24
+    (0x59 0x00) ; #25
+    (0x5A 0x00) ; #26
+    (0x7B 0x00) ; #27
+    (0x7C 0x00) ; #28
+    (0x7D 0x00) ; #29
+    (0x7E 0x00) ; #30
+    (0x7F 0x00) ; #31
+  )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/datamatrix/decoder/DecodedBitStreamParser])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) decode([array byte] )[object com/google/zxing/common/DecoderResult]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object com/google/zxing/ReaderException])
+  )
+  (limit registers 8)
+  ; parameter[0] : v7 ([array byte])
+  (const/4 v6 1)
+  (new-instance v0 com/google/zxing/common/BitSource)
+  (invoke-direct {v0 v7} com/google/zxing/common/BitSource/<init> [array byte] )
+  (new-instance v1 java/lang/StringBuffer)
+  (invoke-direct {v1} java/lang/StringBuffer/<init> )
+  (new-instance v2 java/lang/StringBuffer)
+  (const/4 v3 0)
+  (invoke-direct {v2 v3} java/lang/StringBuffer/<init> int )
+  (new-instance v3 java/util/Vector)
+  (invoke-direct {v3 v6} java/util/Vector/<init> int )
+  (move v4 v6)
+  (label l1daaa)
+  (if-ne v4 v6 l1db02)
+  (invoke-static {v0 v1 v2} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeAsciiSegment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] [object java/lang/StringBuffer] )
+  (move-result v4)
+  (label l1dab6)
+  (if-eqz v4 l1dac6)
+  (invoke-virtual {v0} com/google/zxing/common/BitSource/available )
+  (move-result v5)
+  (if-gtz v5 l1daaa)
+  (label l1dac6)
+  (invoke-virtual {v2} java/lang/StringBuffer/length )
+  (move-result v0)
+  (if-lez v0 l1dae0)
+  (invoke-virtual {v2} java/lang/StringBuffer/toString )
+  (move-result-object v0)
+  (invoke-virtual {v1 v0} java/lang/StringBuffer/append [object java/lang/String] )
+  (label l1dae0)
+  (new-instance v0 com/google/zxing/common/DecoderResult)
+  (invoke-virtual {v1} java/lang/StringBuffer/toString )
+  (move-result-object v1)
+  (invoke-virtual {v3} java/util/Vector/isEmpty )
+  (move-result v2)
+  (if-eqz v2 l1db3c)
+  (const/4 v2 0)
+  (label l1dafa)
+  (invoke-direct {v0 v7 v1 v2} com/google/zxing/common/DecoderResult/<init> [array byte] [object java/lang/String] [object java/util/Vector] )
+  (return-object v0)
+  (label l1db02)
+  (packed-switch v4 2
+    ps1db02_1db12 ; case 2
+    ps1db02_1db1c ; case 3
+    ps1db02_1db24 ; case 4
+    ps1db02_1db2c ; case 5
+    ps1db02_1db34 ; case 6
+    ps1db02_default) ; default
+  (label ps1db02_default)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label ps1db02_1db12)
+  (invoke-static {v0 v1} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeC40Segment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )
+  (label l1db18)
+  (move v4 v6)
+  (goto l1dab6)
+  (label ps1db02_1db1c)
+  (invoke-static {v0 v1} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeTextSegment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )
+  (goto l1db18)
+  (label ps1db02_1db24)
+  (invoke-static {v0 v1} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeAnsiX12Segment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )
+  (goto l1db18)
+  (label ps1db02_1db2c)
+  (invoke-static {v0 v1} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeEdifactSegment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )
+  (goto l1db18)
+  (label ps1db02_1db34)
+  (invoke-static {v0 v1 v3} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/decodeBase256Segment [object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] [object java/util/Vector] )
+  (goto l1db18)
+  (label l1db3c)
+  (move-object v2 v3)
+  (goto l1dafa)
+ )
+
+(method (attrs private static ) decodeAnsiX12Segment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object com/google/zxing/ReaderException])
+  )
+  (limit registers 8)
+  ; parameter[0] : v6 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v7 ([object java/lang/StringBuffer])
+  (const/16 v5 8)
+  (const/4 v4 3)
+  (new-array v0 v4 [array int])
+  (label l1db76)
+  (invoke-virtual {v6} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (if-ne v1 v5 l1db84)
+  (label l1db82)
+  (return-void )
+  (label l1db84)
+  (invoke-virtual {v6 v5} com/google/zxing/common/BitSource/readBits int )
+  (move-result v1)
+  (const/16 v2 254)
+  (if-eq v1 v2 l1db82)
+  (invoke-virtual {v6 v5} com/google/zxing/common/BitSource/readBits int )
+  (move-result v2)
+  (invoke-static {v1 v2 v0} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/parseTwoBytes int int [array int] )
+  (const/4 v1 0)
+  (label l1dba4)
+  (if-ge v1 v4 l1dc2a)
+  (aget v2 v0 v1)
+  (if-nez v2 l1dbc0)
+  (const/16 v2 13)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (label l1dbba)
+  (add-int/lit8 v1 v1 1)
+  (goto l1dba4)
+  (label l1dbc0)
+  (const/4 v3 1)
+  (if-ne v2 v3 l1dbd2)
+  (const/16 v2 42)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (goto l1dbba)
+  (label l1dbd2)
+  (const/4 v3 2)
+  (if-ne v2 v3 l1dbe4)
+  (const/16 v2 62)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (goto l1dbba)
+  (label l1dbe4)
+  (if-ne v2 v4 l1dbf4)
+  (const/16 v2 32)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (goto l1dbba)
+  (label l1dbf4)
+  (const/16 v3 14)
+  (if-ge v2 v3 l1dc0a)
+  (add-int/lit8 v2 v2 44)
+  (int-to-char v2 v2)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (goto l1dbba)
+  (label l1dc0a)
+  (const/16 v3 40)
+  (if-ge v2 v3 l1dc20)
+  (add-int/lit8 v2 v2 51)
+  (int-to-char v2 v2)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (goto l1dbba)
+  (label l1dc20)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label l1dc2a)
+  (invoke-virtual {v6} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (if-gtz v1 l1db76)
+  (goto l1db82)
+ )
+
+(method (attrs private static ) decodeAsciiSegment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] [object java/lang/StringBuffer] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object com/google/zxing/ReaderException])
+  )
+  (limit registers 9)
+  ; parameter[0] : v6 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v7 ([object java/lang/StringBuffer])
+  ; parameter[2] : v8 ([object java/lang/StringBuffer])
+  (const/4 v4 1)
+  (const/4 v3 0)
+  (const-string v5 "\u001E\u0004")
+  (move v0 v3)
+  (label l1dc52)
+  (const/16 v1 8)
+  (invoke-virtual {v6 v1} com/google/zxing/common/BitSource/readBits int )
+  (move-result v1)
+  (if-nez v1 l1dc6c)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label l1dc6c)
+  (const/16 v2 128)
+  (if-gt v1 v2 l1dc8e)
+  (if-eqz v0 l1dc8a)
+  (add-int/lit16 v0 v1 128)
+  (label l1dc7c)
+  (sub-int/2addr v0 v4)
+  (int-to-char v0 v0)
+  (invoke-virtual {v7 v0} java/lang/StringBuffer/append char )
+  (move v0 v4)
+  (label l1dc88)
+  (return v0)
+  (label l1dc8a)
+  (move v0 v1)
+  (goto l1dc7c)
+  (label l1dc8e)
+  (const/16 v2 129)
+  (if-ne v1 v2 l1dc9a)
+  (move v0 v3)
+  (goto l1dc88)
+  (label l1dc9a)
+  (const/16 v2 229)
+  (if-gt v1 v2 l1dcd0)
+  (const/16 v2 130)
+  (sub-int/2addr v1 v2)
+  (const/16 v2 10)
+  (if-ge v1 v2 l1dcba)
+  (const/16 v2 48)
+  (invoke-virtual {v7 v2} java/lang/StringBuffer/append char )
+  (label l1dcba)
+  (invoke-virtual {v7 v1} java/lang/StringBuffer/append int )
+  (label l1dcc0)
+  (invoke-virtual {v6} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (if-gtz v1 l1dc52)
+  (move v0 v4)
+  (goto l1dc88)
+  (label l1dcd0)
+  (const/16 v2 230)
+  (if-ne v1 v2 l1dcdc)
+  (const/4 v0 2)
+  (goto l1dc88)
+  (label l1dcdc)
+  (const/16 v2 231)
+  (if-ne v1 v2 l1dce8)
+  (const/4 v0 6)
+  (goto l1dc88)
+  (label l1dce8)
+  (const/16 v2 232)
+  (if-eq v1 v2 l1dcc0)
+  (const/16 v2 233)
+  (if-eq v1 v2 l1dcc0)
+  (const/16 v2 234)
+  (if-eq v1 v2 l1dcc0)
+  (const/16 v2 235)
+  (if-ne v1 v2 l1dd0c)
+  (move v0 v4)
+  (goto l1dcc0)
+  (label l1dd0c)
+  (const/16 v2 236)
+  (if-ne v1 v2 l1dd2a)
+  (const-string v1 "[)>\u001E05\u001D")
+  (invoke-virtual {v7 v1} java/lang/StringBuffer/append [object java/lang/String] )
+  (const-string v1 "\u001E\u0004")
+  (invoke-virtual {v8 v3 v5} java/lang/StringBuffer/insert int [object java/lang/String] )
+  (goto l1dcc0)
+  (label l1dd2a)
+  (const/16 v2 237)
+  (if-ne v1 v2 l1dd48)
+  (const-string v1 "[)>\u001E06\u001D")
+  (invoke-virtual {v7 v1} java/lang/StringBuffer/append [object java/lang/String] )
+  (const-string v1 "\u001E\u0004")
+  (invoke-virtual {v8 v3 v5} java/lang/StringBuffer/insert int [object java/lang/String] )
+  (goto l1dcc0)
+  (label l1dd48)
+  (const/16 v2 238)
+  (if-ne v1 v2 l1dd54)
+  (const/4 v0 4)
+  (goto l1dc88)
+  (label l1dd54)
+  (const/16 v2 239)
+  (if-ne v1 v2 l1dd60)
+  (const/4 v0 3)
+  (goto l1dc88)
+  (label l1dd60)
+  (const/16 v2 240)
+  (if-ne v1 v2 l1dd6c)
+  (const/4 v0 5)
+  (goto l1dc88)
+  (label l1dd6c)
+  (const/16 v2 241)
+  (if-eq v1 v2 l1dcc0)
+  (const/16 v2 242)
+  (if-lt v1 v2 l1dcc0)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+ )
+
+(method (attrs private static ) decodeBase256Segment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] [object java/util/Vector] )void
+  (limit registers 9)
+  ; parameter[0] : v6 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v7 ([object java/lang/StringBuffer])
+  ; parameter[2] : v8 ([object java/util/Vector])
+  (catch java/io/UnsupportedEncodingException from l1de0e to l1de22 using l1de24)
+  (const/16 v5 8)
+  (invoke-virtual {v6 v5} com/google/zxing/common/BitSource/readBits int )
+  (move-result v0)
+  (if-nez v0 l1dde4)
+  (invoke-virtual {v6} com/google/zxing/common/BitSource/available )
+  (move-result v0)
+  (div-int/lit8 v0 v0 8)
+  (label l1ddb4)
+  (new-array v1 v0 [array byte])
+  (const/4 v2 0)
+  (label l1ddba)
+  (if-ge v2 v0 l1de08)
+  (invoke-virtual {v6 v5} com/google/zxing/common/BitSource/readBits int )
+  (move-result v3)
+  (mul-int/lit16 v4 v2 149)
+  (rem-int/lit16 v4 v4 255)
+  (add-int/lit8 v4 v4 1)
+  (sub-int/2addr v3 v4)
+  (if-ltz v3 l1de02)
+  (label l1ddd8)
+  (int-to-byte v3 v3)
+  (aput-byte v3 v1 v2)
+  (add-int/lit8 v2 v2 1)
+  (goto l1ddba)
+  (label l1dde4)
+  (const/16 v1 250)
+  (if-lt v0 v1 l1ddb4)
+  (const/16 v1 249)
+  (sub-int/2addr v0 v1)
+  (mul-int/lit16 v0 v0 250)
+  (invoke-virtual {v6 v5} com/google/zxing/common/BitSource/readBits int )
+  (move-result v1)
+  (add-int/2addr v0 v1)
+  (goto l1ddb4)
+  (label l1de02)
+  (add-int/lit16 v3 v3 256)
+  (goto l1ddd8)
+  (label l1de08)
+  (invoke-virtual {v8 v1} java/util/Vector/addElement [object java/lang/Object] )
+  (label l1de0e)
+  (new-instance v0 java/lang/String)
+  (const-string v2 "ISO8859_1")
+  (invoke-direct {v0 v1 v2} java/lang/String/<init> [array byte] [object java/lang/String] )
+  (invoke-virtual {v7 v0} java/lang/StringBuffer/append [object java/lang/String] )
+  (label l1de22)
+  (return-void )
+  (label l1de24)
+  (move-exception v0)
+  (new-instance v1 java/lang/RuntimeException)
+  (new-instance v2 java/lang/StringBuffer)
+  (invoke-direct {v2} java/lang/StringBuffer/<init> )
+  (const-string v3 "Platform does not support required encoding: ")
+  (invoke-virtual {v2 v3} java/lang/StringBuffer/append [object java/lang/String] )
+  (move-result-object v2)
+  (invoke-virtual {v2 v0} java/lang/StringBuffer/append [object java/lang/Object] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuffer/toString )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v1)
+ )
+
+(method (attrs private static ) decodeC40Segment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object com/google/zxing/ReaderException])
+  )
+  (limit registers 12)
+  ; parameter[0] : v10 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v11 ([object java/lang/StringBuffer])
+  (const/16 v9 27)
+  (const/16 v8 8)
+  (const/4 v7 3)
+  (const/4 v6 0)
+  (new-array v0 v7 [array int])
+  (move v1 v6)
+  (label l1de8a)
+  (invoke-virtual {v10} com/google/zxing/common/BitSource/available )
+  (move-result v2)
+  (if-ne v2 v8 l1de98)
+  (label l1de96)
+  (return-void )
+  (label l1de98)
+  (invoke-virtual {v10 v8} com/google/zxing/common/BitSource/readBits int )
+  (move-result v2)
+  (const/16 v3 254)
+  (if-eq v2 v3 l1de96)
+  (invoke-virtual {v10 v8} com/google/zxing/common/BitSource/readBits int )
+  (move-result v3)
+  (invoke-static {v2 v3 v0} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/parseTwoBytes int int [array int] )
+  (move v2 v6)
+  (move v3 v1)
+  (move v1 v6)
+  (label l1debc)
+  (if-ge v1 v7 l1dfb2)
+  (aget v4 v0 v1)
+  (packed-switch v2 0
+    ps1dec4_1ded4 ; case 0
+    ps1dec4_1df0e ; case 1
+    ps1dec4_1df30 ; case 2
+    ps1dec4_1df8a ; case 3
+    ps1dec4_default) ; default
+  (label ps1dec4_default)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label ps1dec4_1ded4)
+  (if-ge v4 v7 l1dee2)
+  (add-int/lit8 v2 v4 1)
+  (label l1dedc)
+  (add-int/lit8 v1 v1 1)
+  (goto l1debc)
+  (label l1dee2)
+  (if-eqz v3 l1defe)
+  (sget-object v3 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_BASIC_SET_CHARS [array char])
+  (aget-char v3 v3 v4)
+  (add-int/lit16 v3 v3 128)
+  (int-to-char v3 v3)
+  (invoke-virtual {v11 v3} java/lang/StringBuffer/append char )
+  (move v3 v6)
+  (goto l1dedc)
+  (label l1defe)
+  (sget-object v5 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_BASIC_SET_CHARS [array char])
+  (aget-char v4 v5 v4)
+  (invoke-virtual {v11 v4} java/lang/StringBuffer/append char )
+  (goto l1dedc)
+  (label ps1dec4_1df0e)
+  (if-eqz v3 l1df26)
+  (add-int/lit16 v2 v4 128)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1df20)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1dedc)
+  (label l1df26)
+  (invoke-virtual {v11 v4} java/lang/StringBuffer/append int )
+  (move v2 v3)
+  (goto l1df20)
+  (label ps1dec4_1df30)
+  (if-ge v4 v9 l1df66)
+  (if-eqz v3 l1df54)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_SHIFT2_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (add-int/lit16 v2 v2 128)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1df4e)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1dedc)
+  (label l1df54)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_SHIFT2_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v3)
+  (goto l1df4e)
+  (label l1df66)
+  (if-ne v4 v9 l1df74)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label l1df74)
+  (const/16 v2 30)
+  (if-ne v4 v2 l1df80)
+  (const/4 v2 1)
+  (goto l1df4e)
+  (label l1df80)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label ps1dec4_1df8a)
+  (if-eqz v3 l1dfa2)
+  (add-int/lit16 v2 v4 224)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1df9c)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1dedc)
+  (label l1dfa2)
+  (add-int/lit8 v2 v4 96)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v3)
+  (goto l1df9c)
+  (label l1dfb2)
+  (invoke-virtual {v10} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (if-lez v1 l1de96)
+  (move v1 v3)
+  (goto/16 l1de8a)
+ )
+
+(method (attrs private static ) decodeEdifactSegment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )void
+  (limit registers 7)
+  ; parameter[0] : v5 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v6 ([object java/lang/StringBuffer])
+  (const/4 v4 0)
+  (move v0 v4)
+  (label l1dff0)
+  (invoke-virtual {v5} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (const/16 v2 16)
+  (if-gt v1 v2 l1e002)
+  (label l1e000)
+  (return-void )
+  (label l1e002)
+  (move v1 v0)
+  (move v0 v4)
+  (label l1e006)
+  (const/4 v2 4)
+  (if-ge v0 v2 l1e03c)
+  (const/4 v2 6)
+  (invoke-virtual {v5 v2} com/google/zxing/common/BitSource/readBits int )
+  (move-result v2)
+  (const/16 v3 11111)
+  (if-ne v2 v3 l1e020)
+  (const/4 v1 1)
+  (label l1e020)
+  (if-nez v1 l1e036)
+  (and-int/lit8 v3 v2 32)
+  (if-nez v3 l1e030)
+  (or-int/lit8 v2 v2 64)
+  (label l1e030)
+  (invoke-virtual {v6 v2} java/lang/StringBuffer/append int )
+  (label l1e036)
+  (add-int/lit8 v0 v0 1)
+  (goto l1e006)
+  (label l1e03c)
+  (if-nez v1 l1e000)
+  (invoke-virtual {v5} com/google/zxing/common/BitSource/available )
+  (move-result v0)
+  (if-lez v0 l1e000)
+  (move v0 v1)
+  (goto l1dff0)
+ )
+
+(method (attrs private static ) decodeTextSegment([object com/google/zxing/common/BitSource] [object java/lang/StringBuffer] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object com/google/zxing/ReaderException])
+  )
+  (limit registers 12)
+  ; parameter[0] : v10 ([object com/google/zxing/common/BitSource])
+  ; parameter[1] : v11 ([object java/lang/StringBuffer])
+  (const/16 v9 27)
+  (const/16 v8 8)
+  (const/4 v7 3)
+  (const/4 v6 0)
+  (new-array v0 v7 [array int])
+  (move v1 v6)
+  (label l1e072)
+  (invoke-virtual {v10} com/google/zxing/common/BitSource/available )
+  (move-result v2)
+  (if-ne v2 v8 l1e080)
+  (label l1e07e)
+  (return-void )
+  (label l1e080)
+  (invoke-virtual {v10 v8} com/google/zxing/common/BitSource/readBits int )
+  (move-result v2)
+  (const/16 v3 254)
+  (if-eq v2 v3 l1e07e)
+  (invoke-virtual {v10 v8} com/google/zxing/common/BitSource/readBits int )
+  (move-result v3)
+  (invoke-static {v2 v3 v0} com/google/zxing/datamatrix/decoder/DecodedBitStreamParser/parseTwoBytes int int [array int] )
+  (move v2 v6)
+  (move v3 v1)
+  (move v1 v6)
+  (label l1e0a4)
+  (if-ge v1 v7 l1e1a4)
+  (aget v4 v0 v1)
+  (packed-switch v2 0
+    ps1e0ac_1e0bc ; case 0
+    ps1e0ac_1e0f6 ; case 1
+    ps1e0ac_1e118 ; case 2
+    ps1e0ac_1e172 ; case 3
+    ps1e0ac_default) ; default
+  (label ps1e0ac_default)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label ps1e0ac_1e0bc)
+  (if-ge v4 v7 l1e0ca)
+  (add-int/lit8 v2 v4 1)
+  (label l1e0c4)
+  (add-int/lit8 v1 v1 1)
+  (goto l1e0a4)
+  (label l1e0ca)
+  (if-eqz v3 l1e0e6)
+  (sget-object v3 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_BASIC_SET_CHARS [array char])
+  (aget-char v3 v3 v4)
+  (add-int/lit16 v3 v3 128)
+  (int-to-char v3 v3)
+  (invoke-virtual {v11 v3} java/lang/StringBuffer/append char )
+  (move v3 v6)
+  (goto l1e0c4)
+  (label l1e0e6)
+  (sget-object v5 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_BASIC_SET_CHARS [array char])
+  (aget-char v4 v5 v4)
+  (invoke-virtual {v11 v4} java/lang/StringBuffer/append char )
+  (goto l1e0c4)
+  (label ps1e0ac_1e0f6)
+  (if-eqz v3 l1e10e)
+  (add-int/lit16 v2 v4 128)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1e108)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1e0c4)
+  (label l1e10e)
+  (invoke-virtual {v11 v4} java/lang/StringBuffer/append int )
+  (move v2 v3)
+  (goto l1e108)
+  (label ps1e0ac_1e118)
+  (if-ge v4 v9 l1e14e)
+  (if-eqz v3 l1e13c)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_SHIFT2_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (add-int/lit16 v2 v2 128)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1e136)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1e0c4)
+  (label l1e13c)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.C40_SHIFT2_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v3)
+  (goto l1e136)
+  (label l1e14e)
+  (if-ne v4 v9 l1e15c)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label l1e15c)
+  (const/16 v2 30)
+  (if-ne v4 v2 l1e168)
+  (const/4 v2 1)
+  (goto l1e136)
+  (label l1e168)
+  (invoke-static {} com/google/zxing/ReaderException/getInstance )
+  (nop )
+  (move-result-object v0)
+  (throw v0)
+  (label ps1e0ac_1e172)
+  (if-eqz v3 l1e192)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_SHIFT3_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (add-int/lit16 v2 v2 128)
+  (int-to-char v2 v2)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v6)
+  (label l1e18c)
+  (move v3 v2)
+  (move v2 v6)
+  (goto l1e0c4)
+  (label l1e192)
+  (sget-object v2 com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.TEXT_SHIFT3_SET_CHARS [array char])
+  (aget-char v2 v2 v4)
+  (invoke-virtual {v11 v2} java/lang/StringBuffer/append char )
+  (move v2 v3)
+  (goto l1e18c)
+  (label l1e1a4)
+  (invoke-virtual {v10} com/google/zxing/common/BitSource/available )
+  (move-result v1)
+  (if-lez v1 l1e07e)
+  (move v1 v3)
+  (goto/16 l1e072)
+  (label l1e1b6)
+  (data-array
+    0x00 0x00
+  )
+ )
+
+(method (attrs private static ) parseTwoBytes(int int [array int] )void
+  (limit registers 7)
+  ; parameter[0] : v4 (int)
+  ; parameter[1] : v5 (int)
+  ; parameter[2] : v6 ([array int])
+  (const/4 v3 1)
+  (shl-int/lit8 v0 v4 8)
+  (add-int/2addr v0 v5)
+  (sub-int/2addr v0 v3)
+  (div-int/lit16 v1 v0 1600)
+  (const/4 v2 0)
+  (aput v1 v6 v2)
+  (mul-int/lit16 v1 v1 1600)
+  (sub-int/2addr v0 v1)
+  (div-int/lit8 v1 v0 40)
+  (aput v1 v6 v3)
+  (const/4 v2 2)
+  (mul-int/lit8 v1 v1 40)
+  (sub-int/2addr v0 v1)
+  (aput v0 v6 v2)
+  (return-void )
+ )
+
+(method (attrs private static ) unrandomize255State(int int )byte
+  (limit registers 3)
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (mul-int/lit16 v0 v2 149)
+  (rem-int/lit16 v0 v0 255)
+  (add-int/lit8 v0 v0 1)
+  (sub-int v0 v1 v0)
+  (if-ltz v0 l1e238)
+  (label l1e234)
+  (int-to-byte v0 v0)
+  (return v0)
+  (label l1e238)
+  (add-int/lit16 v0 v0 256)
+  (goto l1e234)
+ )
+
+)

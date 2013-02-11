@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) twitter4j/StatusDeletionNotice
+ (super java/lang/Object)
+ (source "StatusDeletionNotice.java")
+ (implements java/lang/Comparable)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getStatusId()long
+)
+
+(method (attrs public abstract ) getUserId()int
+)
+
+)

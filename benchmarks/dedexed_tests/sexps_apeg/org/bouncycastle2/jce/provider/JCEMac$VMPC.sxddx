@@ -1,0 +1,17 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$VMPC
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/JCEMac$VMPC])
+  (line 229)
+  (new-instance v0 org/bouncycastle2/crypto/macs/VMPCMac)
+  (invoke-direct {v0} org/bouncycastle2/crypto/macs/VMPCMac/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 230)
+  (return-void )
+ )
+
+)

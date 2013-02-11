@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/cpd/CPDListener
+ (super java/lang/Object)
+ (source "CPDListener.java")
+
+ (field (attrs public static final ) DONE int 4); 0x4 )
+ (field (attrs public static final ) GROUPING int 3); 0x3 )
+ (field (attrs public static final ) HASH int 1); 0x1 )
+ (field (attrs public static final ) INIT int 0); 0x0 )
+ (field (attrs public static final ) MATCH int 2); 0x2 )
+
+(method (attrs public abstract ) addedFile(int [object java/io/File] )void
+)
+
+(method (attrs public abstract ) phaseUpdate(int )void
+)
+
+)

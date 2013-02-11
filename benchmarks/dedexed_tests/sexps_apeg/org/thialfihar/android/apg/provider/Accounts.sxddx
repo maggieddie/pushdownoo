@@ -1,0 +1,19 @@
+(class (attrs public ) org/thialfihar/android/apg/provider/Accounts
+ (super java/lang/Object)
+ (source "Accounts.java")
+ (implements android/provider/BaseColumns)
+
+ (field (attrs public static final ) NAME [object java/lang/String] "c_name" )
+ (field (attrs public static final ) NAME_type [object java/lang/String] "TEXT" )
+ (field (attrs public static final ) TABLE_NAME [object java/lang/String] "accounts" )
+ (field (attrs public static final ) _ID_type [object java/lang/String] "INTEGER PRIMARY KEY" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thialfihar/android/apg/provider/Accounts])
+  (line 21)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

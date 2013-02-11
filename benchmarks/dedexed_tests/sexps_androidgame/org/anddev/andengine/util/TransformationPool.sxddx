@@ -1,0 +1,47 @@
+(class (attrs public ) org/anddev/andengine/util/TransformationPool
+ (super java/lang/Object)
+ (source "TransformationPool.java")
+
+ (field (attrs private static final ) POOL [object org/anddev/andengine/util/pool/GenericPool] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 21)
+  (new-instance v0 org/anddev/andengine/util/TransformationPool$1)
+  (invoke-direct {v0} org/anddev/andengine/util/TransformationPool$1/<init> )
+  (sput-object v0 org/anddev/andengine/util/TransformationPool.POOL [object org/anddev/andengine/util/pool/GenericPool])
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/TransformationPool])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) obtain()[object org/anddev/andengine/util/Transformation]
+  (limit registers 1)
+  (line 41)
+  (sget-object v0 org/anddev/andengine/util/TransformationPool.POOL [object org/anddev/andengine/util/pool/GenericPool])
+  (invoke-virtual {v0} org/anddev/andengine/util/pool/GenericPool/obtainPoolItem )
+  (move-result-object v0)
+  (check-cast v0 [object org/anddev/andengine/util/Transformation])
+  (return-object v0)
+ )
+
+(method (attrs public static ) recycle([object org/anddev/andengine/util/Transformation] )void
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/anddev/andengine/util/Transformation])
+  (line 45)
+  (invoke-virtual {v1} org/anddev/andengine/util/Transformation/setToIdentity )
+  (line 46)
+  (sget-object v0 org/anddev/andengine/util/TransformationPool.POOL [object org/anddev/andengine/util/pool/GenericPool])
+  (invoke-virtual {v0 v1} org/anddev/andengine/util/pool/GenericPool/recyclePoolItem [object java/lang/Object] )
+  (line 47)
+  (return-void )
+ )
+
+)

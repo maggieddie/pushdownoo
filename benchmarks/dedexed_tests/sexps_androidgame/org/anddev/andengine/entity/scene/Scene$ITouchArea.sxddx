@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/scene/Scene$ITouchArea
+ (super java/lang/Object)
+ (source "Scene.java")
+
+
+(method (attrs public abstract ) contains(float float )boolean
+)
+
+(method (attrs public abstract ) convertLocalToSceneCoordinates(float float )[array float]
+)
+
+(method (attrs public abstract ) convertSceneToLocalCoordinates(float float )[array float]
+)
+
+(method (attrs public abstract ) onAreaTouched([object org/anddev/andengine/input/touch/TouchEvent] float float )boolean
+)
+
+)

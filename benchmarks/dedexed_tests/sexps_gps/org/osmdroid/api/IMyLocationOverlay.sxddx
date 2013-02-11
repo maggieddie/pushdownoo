@@ -1,0 +1,36 @@
+(interface (attrs public abstract ) org/osmdroid/api/IMyLocationOverlay
+ (super java/lang/Object)
+ (source "IMyLocationOverlay.java")
+
+
+(method (attrs public abstract ) disableCompass()void
+)
+
+(method (attrs public abstract ) disableMyLocation()void
+)
+
+(method (attrs public abstract ) enableCompass()boolean
+)
+
+(method (attrs public abstract ) enableMyLocation()boolean
+)
+
+(method (attrs public abstract ) getLastFix()[object android/location/Location]
+)
+
+(method (attrs public abstract ) getOrientation()float
+)
+
+(method (attrs public abstract ) isCompassEnabled()boolean
+)
+
+(method (attrs public abstract ) isMyLocationEnabled()boolean
+)
+
+(method (attrs public abstract ) onStatusChanged([object java/lang/String] int [object android/os/Bundle] )void
+)
+
+(method (attrs public abstract ) runOnFirstFix([object java/lang/Runnable] )boolean
+)
+
+)

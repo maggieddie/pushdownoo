@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/andengine/input/touch/controller/ITouchEventCallback
+ (super java/lang/Object)
+ (source "ITouchEventCallback.java")
+
+
+(method (attrs public abstract ) onTouchEvent([object org/andengine/input/touch/TouchEvent] )boolean
+)
+
+)

@@ -1,0 +1,31 @@
+(class (attrs public final ) nl/sogeti/android/gpstracker/db/GPStracking$Media
+ (super nl/sogeti/android/gpstracker/db/GPStracking$MediaColumns)
+ (source "GPStracking.java")
+ (implements android/provider/BaseColumns)
+
+ (field (attrs public static final ) CONTENT_ITEM_TYPE [object java/lang/String] "vnd.android.cursor.item/vnd.nl.sogeti.android.media" )
+ (field (attrs public static final ) CONTENT_TYPE [object java/lang/String] "vnd.android.cursor.dir/vnd.nl.sogeti.android.media" )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs static final ) CREATE_STATEMENT [object java/lang/String] "CREATE TABLE media( _id INTEGER PRIMARY KEY AUTOINCREMENT, track INTEGER NOT NULL, segment INTEGER NOT NULL, waypoint INTEGER NOT NULL, uri TEXT);" )
+ (field (attrs public static final ) TABLE [object java/lang/String] "media" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 177)
+  (const-string v0 "content://nl.sogeti.android.gpstracker/media")
+  (invoke-static {v0} android/net/Uri/parse [object java/lang/String] )
+  (move-result-object v0)
+  (sput-object v0 nl/sogeti/android/gpstracker/db/GPStracking$Media.CONTENT_URI [object android/net/Uri])
+  (line 160)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/db/GPStracking$Media])
+  (line 160)
+  (invoke-direct {v0} nl/sogeti/android/gpstracker/db/GPStracking$MediaColumns/<init> )
+  (return-void )
+ )
+
+)

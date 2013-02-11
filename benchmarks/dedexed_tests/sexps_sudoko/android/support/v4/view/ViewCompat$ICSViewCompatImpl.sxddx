@@ -1,0 +1,84 @@
+(class (attrs ) android/support/v4/view/ViewCompat$ICSViewCompatImpl
+ (super android/support/v4/view/ViewCompat$HCViewCompatImpl)
+ (source "ViewCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  (line 159)
+  (invoke-direct {v0} android/support/v4/view/ViewCompat$HCViewCompatImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) canScrollHorizontally([object android/view/View] int )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  (line 162)
+  (invoke-static {v2 v3} android/support/v4/view/ViewCompatICS/canScrollHorizontally [object android/view/View] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) canScrollVertically([object android/view/View] int )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  (line 166)
+  (invoke-static {v2 v3} android/support/v4/view/ViewCompatICS/canScrollVertically [object android/view/View] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  (line 174)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatICS/onInitializeAccessibilityEvent [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )
+  (line 175)
+  (return-void )
+)
+
+(method (attrs public ) onInitializeAccessibilityNodeInfo([object android/view/View] [object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat] )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 ([object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat])
+  (line 178)
+  (invoke-virtual {v3} android/support/v4/view/accessibility/AccessibilityNodeInfoCompat/getInfo )
+  (move-result-object v0)
+  (invoke-static {v2 v0} android/support/v4/view/ViewCompatICS/onInitializeAccessibilityNodeInfo [object android/view/View] [object java/lang/Object] )
+  (line 179)
+  (return-void )
+)
+
+(method (attrs public ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  (line 170)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatICS/onPopulateAccessibilityEvent [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )
+  (line 171)
+  (return-void )
+)
+
+(method (attrs public ) setAccessibilityDelegate([object android/view/View] [object android/support/v4/view/AccessibilityDelegateCompat] )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$ICSViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 ([object android/support/v4/view/AccessibilityDelegateCompat])
+  (line 182)
+  (invoke-virtual {v3} android/support/v4/view/AccessibilityDelegateCompat/getBridge )
+  (move-result-object v0)
+  (invoke-static {v2 v0} android/support/v4/view/ViewCompatICS/setAccessibilityDelegate [object android/view/View] [object java/lang/Object] )
+  (line 183)
+  (return-void )
+)
+
+)

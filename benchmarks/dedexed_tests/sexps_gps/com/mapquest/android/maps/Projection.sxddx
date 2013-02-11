@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/Projection
+ (super java/lang/Object)
+ (source "Projection.java")
+
+
+(method (attrs public abstract ) fromPixels(int int )[object com/mapquest/android/maps/GeoPoint]
+)
+
+(method (attrs public abstract ) metersToEquatorPixels(float )float
+)
+
+(method (attrs public abstract ) toPixels([object com/mapquest/android/maps/GeoPoint] [object android/graphics/Point] )[object android/graphics/Point]
+)
+
+)

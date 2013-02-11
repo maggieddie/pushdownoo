@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/impl/cookie/DateParseException
+ (super java/lang/Exception)
+ (source "DateParseException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1038016431); 0x3ddedfaf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/cookie/DateParseException])
+  (line 49)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/impl/cookie/DateParseException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 56)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 57)
+  (return-void )
+ )
+
+)

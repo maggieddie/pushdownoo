@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ConnectionReleaseTrigger
+ (super java/lang/Object)
+ (source "ConnectionReleaseTrigger.java")
+
+
+(method (attrs public abstract ) abortConnection()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) releaseConnection()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

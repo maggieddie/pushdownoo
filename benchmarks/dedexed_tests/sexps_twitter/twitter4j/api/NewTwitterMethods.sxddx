@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) twitter4j/api/NewTwitterMethods
+ (super java/lang/Object)
+ (source "NewTwitterMethods.java")
+
+
+(method (attrs public abstract ) getRelatedResults(long )[object twitter4j/RelatedResults]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

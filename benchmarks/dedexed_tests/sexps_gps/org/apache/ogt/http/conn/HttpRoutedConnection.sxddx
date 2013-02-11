@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/HttpRoutedConnection
+ (super java/lang/Object)
+ (source "HttpRoutedConnection.java")
+ (implements org/apache/ogt/http/HttpInetConnection)
+
+
+(method (attrs public abstract ) getRoute()[object org/apache/ogt/http/conn/routing/HttpRoute]
+)
+
+(method (attrs public abstract ) getSSLSession()[object javax/net/ssl/SSLSession]
+)
+
+(method (attrs public abstract ) isSecure()boolean
+)
+
+)

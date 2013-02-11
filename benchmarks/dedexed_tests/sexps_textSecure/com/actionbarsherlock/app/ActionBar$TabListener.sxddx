@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/actionbarsherlock/app/ActionBar$TabListener
+ (super java/lang/Object)
+ (source "ActionBar.java")
+
+
+(method (attrs public abstract ) onTabReselected([object com/actionbarsherlock/app/ActionBar$Tab] [object android/support/v4/app/FragmentTransaction] )void
+)
+
+(method (attrs public abstract ) onTabSelected([object com/actionbarsherlock/app/ActionBar$Tab] [object android/support/v4/app/FragmentTransaction] )void
+)
+
+(method (attrs public abstract ) onTabUnselected([object com/actionbarsherlock/app/ActionBar$Tab] [object android/support/v4/app/FragmentTransaction] )void
+)
+
+)

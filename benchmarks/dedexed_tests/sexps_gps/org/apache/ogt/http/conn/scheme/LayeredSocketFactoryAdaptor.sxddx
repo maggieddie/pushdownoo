@@ -1,0 +1,37 @@
+(class (attrs ) org/apache/ogt/http/conn/scheme/LayeredSocketFactoryAdaptor
+ (super org/apache/ogt/http/conn/scheme/SocketFactoryAdaptor)
+ (source "LayeredSocketFactoryAdaptor.java")
+ (implements org/apache/ogt/http/conn/scheme/LayeredSocketFactory)
+
+ (field (attrs private final ) factory [object org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory] )
+
+(method (attrs ) <init>([object org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/conn/scheme/LayeredSocketFactoryAdaptor])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory])
+  (line 40)
+  (invoke-direct {v0 v1} org/apache/ogt/http/conn/scheme/SocketFactoryAdaptor/<init> [object org/apache/ogt/http/conn/scheme/SchemeSocketFactory] )
+  (line 41)
+  (iput-object v1 v0 org/apache/ogt/http/conn/scheme/LayeredSocketFactoryAdaptor.factory [object org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory])
+  (line 42)
+  (return-void )
+ )
+
+(method (attrs public ) createSocket([object java/net/Socket] [object java/lang/String] int boolean )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/net/UnknownHostException])
+  )
+  (limit registers 6)
+  ; this: v1 ([object org/apache/ogt/http/conn/scheme/LayeredSocketFactoryAdaptor])
+  ; parameter[0] : v2 ([object java/net/Socket])
+  ; parameter[1] : v3 ([object java/lang/String])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (boolean)
+  (line 47)
+  (iget-object v0 v1 org/apache/ogt/http/conn/scheme/LayeredSocketFactoryAdaptor.factory [object org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory])
+  (invoke-interface {v0 v2 v3 v4 v5} org/apache/ogt/http/conn/scheme/LayeredSchemeSocketFactory/createLayeredSocket [object java/net/Socket] [object java/lang/String] int boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

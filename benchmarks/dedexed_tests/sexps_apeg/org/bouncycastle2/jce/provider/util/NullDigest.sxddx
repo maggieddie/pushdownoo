@@ -1,0 +1,93 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/util/NullDigest
+ (super java/lang/Object)
+ (source "NullDigest.java")
+ (implements org/bouncycastle2/crypto/Digest)
+
+ (field (attrs private ) bOut [object java/io/ByteArrayOutputStream] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  (line 8)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 11)
+  (new-instance v0 java/io/ByteArrayOutputStream)
+  (invoke-direct {v0} java/io/ByteArrayOutputStream/<init> )
+  (iput-object v0 v1 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) doFinal([array byte] int )int
+  (limit registers 6)
+  ; this: v3 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  ; parameter[0] : v4 ([array byte])
+  ; parameter[1] : v5 (int)
+  (line 35)
+  (iget-object v1 v3 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (invoke-virtual {v1} java/io/ByteArrayOutputStream/toByteArray )
+  (move-result-object v0)
+  (line 37)
+  (const/4 v1 0)
+  (array-length v2 v0)
+  (invoke-static {v0 v1 v4 v5 v2} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 39)
+  (invoke-virtual {v3} org/bouncycastle2/jce/provider/util/NullDigest/reset )
+  (line 41)
+  (array-length v1 v0)
+  (return v1)
+)
+
+(method (attrs public ) getAlgorithmName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  (line 15)
+  (const-string v0 "NULL")
+  (return-object v0)
+)
+
+(method (attrs public ) getDigestSize()int
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  (line 20)
+  (iget-object v0 v1 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (invoke-virtual {v0} java/io/ByteArrayOutputStream/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) reset()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  (line 46)
+  (iget-object v0 v1 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (invoke-virtual {v0} java/io/ByteArrayOutputStream/reset )
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) update(byte )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  ; parameter[0] : v2 (byte)
+  (line 25)
+  (iget-object v0 v1 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (invoke-virtual {v0 v2} java/io/ByteArrayOutputStream/write int )
+  (line 26)
+  (return-void )
+)
+
+(method (attrs public ) update([array byte] int int )void
+  (limit registers 5)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/util/NullDigest])
+  ; parameter[0] : v2 ([array byte])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 30)
+  (iget-object v0 v1 org/bouncycastle2/jce/provider/util/NullDigest.bOut [object java/io/ByteArrayOutputStream])
+  (invoke-virtual {v0 v2 v3 v4} java/io/ByteArrayOutputStream/write [array byte] int int )
+  (line 31)
+  (return-void )
+)
+
+)

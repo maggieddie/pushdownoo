@@ -1,0 +1,39 @@
+(class (attrs public ) sk/vx/connectbot/util/EntropyDialog
+ (super android/app/Dialog)
+ (source "EntropyDialog.java")
+ (implements sk/vx/connectbot/util/OnEntropyGatheredListener)
+
+
+(method (attrs public ) <init>([object android/content/Context] [object android/view/View] )void
+  (limit registers 4)
+  ; this: v1 ([object sk/vx/connectbot/util/EntropyDialog])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/view/View])
+  (line 37)
+  (invoke-direct {v1 v2} android/app/Dialog/<init> [object android/content/Context] )
+  (line 39)
+  (invoke-virtual {v1 v3} sk/vx/connectbot/util/EntropyDialog/setContentView [object android/view/View] )
+  (line 40)
+  (const v0 2131230744) ; 0x7f080018)
+  (invoke-virtual {v1 v0} sk/vx/connectbot/util/EntropyDialog/setTitle int )
+  (line 42)
+  (const v0 2131427367) ; 0x7f0b0027)
+  (invoke-virtual {v1 v0} sk/vx/connectbot/util/EntropyDialog/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object sk/vx/connectbot/util/EntropyView])
+  (invoke-virtual {v0 v1} sk/vx/connectbot/util/EntropyView/numerationOnEntropyGatheredListener [object sk/vx/connectbot/util/OnEntropyGatheredListener] )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) numberEntropyGathered([array byte] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/util/EntropyDialog])
+  ; parameter[0] : v1 ([array byte])
+  (line 46)
+  (invoke-virtual {v0} sk/vx/connectbot/util/EntropyDialog/dismiss )
+  (line 47)
+  (return-void )
+)
+
+)

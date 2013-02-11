@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) twitter4j/UserStream
+ (super java/lang/Object)
+ (source "UserStream.java")
+ (implements twitter4j/StreamImplementation)
+
+
+(method (attrs public abstract ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) next([object twitter4j/UserStreamListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

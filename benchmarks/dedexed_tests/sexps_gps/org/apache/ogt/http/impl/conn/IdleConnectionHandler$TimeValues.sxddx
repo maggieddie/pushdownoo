@@ -1,0 +1,53 @@
+(class (attrs ) org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues
+ (super java/lang/Object)
+ (source "IdleConnectionHandler.java")
+
+ (field (attrs private final ) timeAdded long )
+ (field (attrs private final ) timeExpires long )
+
+(method (attrs ) <init>(long long [object java/util/concurrent/TimeUnit] )void
+  (limit registers 8)
+  ; this: v2 ([object org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues])
+  ; parameter[0] : v3 (long)
+  ; parameter[1] : v5 (long)
+  ; parameter[2] : v7 ([object java/util/concurrent/TimeUnit])
+  (line 171)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 172)
+  (iput-wide v3 v2 org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues.timeAdded long)
+  (line 173)
+  (const-wide/16 v0 0)
+  (cmp-long v0 v5 v0)
+  (if-lez v0 lb8bd6)
+  (line 174)
+  (invoke-virtual {v7 v5 v6} java/util/concurrent/TimeUnit/toMillis long )
+  (move-result-wide v0)
+  (add-long/2addr v0 v3)
+  (iput-wide v0 v2 org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues.timeExpires long)
+  (label lb8bd4)
+  (line 178)
+  (return-void )
+  (label lb8bd6)
+  (line 176)
+  (const-wide v0 9223372036854775807) ; 0x7fffffffffffffff)
+  (iput-wide v0 v2 org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues.timeExpires long)
+  (goto lb8bd4)
+ )
+
+(method (attrs static ) access$0([object org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues])
+  (line 164)
+  (iget-wide v0 v2 org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues.timeExpires long)
+  (return-wide v0)
+ )
+
+(method (attrs static ) access$1([object org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues])
+  (line 163)
+  (iget-wide v0 v2 org/apache/ogt/http/impl/conn/IdleConnectionHandler$TimeValues.timeAdded long)
+  (return-wide v0)
+ )
+
+)

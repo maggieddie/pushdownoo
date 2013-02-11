@@ -1,0 +1,29 @@
+(class (attrs public final ) org/apache/ogt/http/R$array
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) mapprovider_choices int 2131099650); 0x7f060002 )
+ (field (attrs public static final ) mapprovider_values int 2131099659); 0x7f06000b )
+ (field (attrs public static final ) osmvisibility_choices int 2131099657); 0x7f060009 )
+ (field (attrs public static final ) osmvisibility_values int 2131099662); 0x7f06000e )
+ (field (attrs public static final ) precision_choices int 2131099649); 0x7f060001 )
+ (field (attrs public static final ) precision_values int 2131099658); 0x7f06000a )
+ (field (attrs public static final ) sharegpxtarget_choices int 2131099654); 0x7f060006 )
+ (field (attrs public static final ) sharekmztarget_choices int 2131099655); 0x7f060007 )
+ (field (attrs public static final ) sharetexttarget_choices int 2131099656); 0x7f060008 )
+ (field (attrs public static final ) sharetype_choices int 2131099653); 0x7f060005 )
+ (field (attrs public static final ) state_choices int 2131099648); 0x7f060000 )
+ (field (attrs public static final ) trackcoloring_choices int 2131099651); 0x7f060003 )
+ (field (attrs public static final ) trackcoloring_values int 2131099660); 0x7f06000c )
+ (field (attrs public static final ) units_choices int 2131099652); 0x7f060004 )
+ (field (attrs public static final ) units_values int 2131099661); 0x7f06000d )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/R$array])
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,83 @@
+(class (attrs public ) org/andengine/engine/options/AudioOptions
+ (super java/lang/Object)
+ (source "AudioOptions.java")
+
+ (field (attrs private ) mMusicOptions [object org/andengine/engine/options/MusicOptions] )
+ (field (attrs private ) mSoundOptions [object org/andengine/engine/options/SoundOptions] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  (line 9)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (new-instance v0 org/andengine/engine/options/SoundOptions)
+  (invoke-direct {v0} org/andengine/engine/options/SoundOptions/<init> )
+  (iput-object v0 v1 org/andengine/engine/options/AudioOptions.mSoundOptions [object org/andengine/engine/options/SoundOptions])
+  (line 19)
+  (new-instance v0 org/andengine/engine/options/MusicOptions)
+  (invoke-direct {v0} org/andengine/engine/options/MusicOptions/<init> )
+  (iput-object v0 v1 org/andengine/engine/options/AudioOptions.mMusicOptions [object org/andengine/engine/options/MusicOptions])
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) getMusicOptions()[object org/andengine/engine/options/MusicOptions]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  (line 34)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mMusicOptions [object org/andengine/engine/options/MusicOptions])
+  (return-object v0)
+)
+
+(method (attrs public ) getSoundOptions()[object org/andengine/engine/options/SoundOptions]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  (line 30)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mSoundOptions [object org/andengine/engine/options/SoundOptions])
+  (return-object v0)
+)
+
+(method (attrs public ) needsMusic()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  (line 47)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mMusicOptions [object org/andengine/engine/options/MusicOptions])
+  (invoke-virtual {v0} org/andengine/engine/options/MusicOptions/needsMusic )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) needsSound()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  (line 38)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mSoundOptions [object org/andengine/engine/options/SoundOptions])
+  (invoke-virtual {v0} org/andengine/engine/options/SoundOptions/needsSound )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) setNeedsMusic(boolean )[object org/andengine/engine/options/AudioOptions]
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  ; parameter[0] : v2 (boolean)
+  (line 51)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mMusicOptions [object org/andengine/engine/options/MusicOptions])
+  (invoke-virtual {v0 v2} org/andengine/engine/options/MusicOptions/setNeedsMusic boolean )
+  (line 52)
+  (return-object v1)
+)
+
+(method (attrs public ) setNeedsSound(boolean )[object org/andengine/engine/options/AudioOptions]
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/engine/options/AudioOptions])
+  ; parameter[0] : v2 (boolean)
+  (line 42)
+  (iget-object v0 v1 org/andengine/engine/options/AudioOptions.mSoundOptions [object org/andengine/engine/options/SoundOptions])
+  (invoke-virtual {v0 v2} org/andengine/engine/options/SoundOptions/setNeedsSound boolean )
+  (line 43)
+  (return-object v1)
+)
+
+)

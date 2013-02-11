@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs
+ (super android/support/v4/widget/ScrollerCompat)
+ (source "ScrollerCompat.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 34)
+  (invoke-direct {v0 v1} android/support/v4/widget/ScrollerCompat/<init> [object android/content/Context] )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) getCurrVelocity()float
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs])
+  (line 39)
+  (iget-object v0 v1 android/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs.mScroller [object android/widget/Scroller])
+  (invoke-static {v0} android/support/v4/widget/ScrollerCompatIcs/getCurrVelocity [object android/widget/Scroller] )
+  (move-result v0)
+  (return v0)
+)
+
+)

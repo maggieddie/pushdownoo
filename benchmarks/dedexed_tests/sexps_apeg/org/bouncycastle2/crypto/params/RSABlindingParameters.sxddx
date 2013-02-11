@@ -1,0 +1,49 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/RSABlindingParameters
+ (super java/lang/Object)
+ (source "RSABlindingParameters.java")
+ (implements org/bouncycastle2/crypto/CipherParameters)
+
+ (field (attrs private ) blindingFactor [object java/math/BigInteger] )
+ (field (attrs private ) publicKey [object org/bouncycastle2/crypto/params/RSAKeyParameters] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/crypto/params/RSAKeyParameters] [object java/math/BigInteger] )void
+  (limit registers 5)
+  ; this: v2 ([object org/bouncycastle2/crypto/params/RSABlindingParameters])
+  ; parameter[0] : v3 ([object org/bouncycastle2/crypto/params/RSAKeyParameters])
+  ; parameter[1] : v4 ([object java/math/BigInteger])
+  (line 13)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 17)
+  (instance-of v0 v3 org/bouncycastle2/crypto/params/RSAPrivateCrtKeyParameters)
+  (if-eqz v0 l11ac62)
+  (line 19)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "RSA parameters should be for a public key")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l11ac62)
+  (line 22)
+  (iput-object v3 v2 org/bouncycastle2/crypto/params/RSABlindingParameters.publicKey [object org/bouncycastle2/crypto/params/RSAKeyParameters])
+  (line 23)
+  (iput-object v4 v2 org/bouncycastle2/crypto/params/RSABlindingParameters.blindingFactor [object java/math/BigInteger])
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) getBlindingFactor()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSABlindingParameters])
+  (line 33)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSABlindingParameters.blindingFactor [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getPublicKey()[object org/bouncycastle2/crypto/params/RSAKeyParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/RSABlindingParameters])
+  (line 28)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/RSABlindingParameters.publicKey [object org/bouncycastle2/crypto/params/RSAKeyParameters])
+  (return-object v0)
+)
+
+)

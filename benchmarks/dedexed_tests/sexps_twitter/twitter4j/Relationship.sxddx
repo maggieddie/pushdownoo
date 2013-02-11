@@ -1,0 +1,38 @@
+(interface (attrs public abstract ) twitter4j/Relationship
+ (super java/lang/Object)
+ (source "Relationship.java")
+ (implements twitter4j/TwitterResponse)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getSourceUserId()int
+)
+
+(method (attrs public abstract ) getSourceUserScreenName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTargetUserId()int
+)
+
+(method (attrs public abstract ) getTargetUserScreenName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) isSourceBlockingTarget()boolean
+)
+
+(method (attrs public abstract ) isSourceFollowedByTarget()boolean
+)
+
+(method (attrs public abstract ) isSourceFollowingTarget()boolean
+)
+
+(method (attrs public abstract ) isSourceNotificationsEnabled()boolean
+)
+
+(method (attrs public abstract ) isTargetFollowedBySource()boolean
+)
+
+(method (attrs public abstract ) isTargetFollowingSource()boolean
+)
+
+)

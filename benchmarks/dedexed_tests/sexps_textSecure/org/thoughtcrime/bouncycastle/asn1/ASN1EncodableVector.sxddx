@@ -1,0 +1,15 @@
+(class (attrs public ) org/thoughtcrime/bouncycastle/asn1/ASN1EncodableVector
+ (super org/thoughtcrime/bouncycastle/asn1/DEREncodableVector)
+ (source "ASN1EncodableVector.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thoughtcrime/bouncycastle/asn1/ASN1EncodableVector])
+  (line 10)
+  (invoke-direct {v0} org/thoughtcrime/bouncycastle/asn1/DEREncodableVector/<init> )
+  (line 13)
+  (return-void )
+ )
+
+)

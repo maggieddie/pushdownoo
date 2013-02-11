@@ -1,0 +1,29 @@
+(class (attrs ) org/bouncycastle2/jce/ECKeyUtil$UnexpectedException
+ (super java/lang/RuntimeException)
+ (source "ECKeyUtil.java")
+
+ (field (attrs private ) cause [object java/lang/Throwable] )
+
+(method (attrs ) <init>([object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/jce/ECKeyUtil$UnexpectedException])
+  ; parameter[0] : v2 ([object java/lang/Throwable])
+  (line 220)
+  (invoke-virtual {v2} java/lang/Throwable/toString )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 222)
+  (iput-object v2 v1 org/bouncycastle2/jce/ECKeyUtil$UnexpectedException.cause [object java/lang/Throwable])
+  (line 223)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/ECKeyUtil$UnexpectedException])
+  (line 227)
+  (iget-object v0 v1 org/bouncycastle2/jce/ECKeyUtil$UnexpectedException.cause [object java/lang/Throwable])
+  (return-object v0)
+)
+
+)

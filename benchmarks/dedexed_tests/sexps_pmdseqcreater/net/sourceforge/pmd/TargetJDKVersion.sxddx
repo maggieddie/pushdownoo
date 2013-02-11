@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/TargetJDKVersion
+ (super java/lang/Object)
+ (source "TargetJDKVersion.java")
+
+
+(method (attrs public abstract ) createParser([object java/io/InputStream] )[object net/sourceforge/pmd/ast/JavaParser]
+)
+
+(method (attrs public abstract ) createParser([object java/io/Reader] )[object net/sourceforge/pmd/ast/JavaParser]
+)
+
+(method (attrs public abstract ) getVersionString()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,50 @@
+(class (attrs public ) org/osmdroid/contributor/GpxToPHPUploader
+ (super java/lang/Object)
+ (source "GpxToPHPUploader.java")
+
+ (field (attrs protected static final ) UPLOADSCRIPT_URL [object java/lang/String] "http://www.PLACEYOURDOMAINHERE.com/anyfolder/gpxuploader/upload.php" )
+ (field (attrs private static final ) logger [object org/slf4j/Logger] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 25)
+  (const-class v0 org/osmdroid/contributor/GpxToPHPUploader)
+  (invoke-static {v0} org/slf4j/LoggerFactory/getLogger [object java/lang/Class] )
+  (move-result-object v0)
+  (sput-object v0 org/osmdroid/contributor/GpxToPHPUploader.logger [object org/slf4j/Logger])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/osmdroid/contributor/GpxToPHPUploader])
+  (line 32)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs static ) access$000()[object org/slf4j/Logger]
+  (limit registers 1)
+  (line 23)
+  (sget-object v0 org/osmdroid/contributor/GpxToPHPUploader.logger [object org/slf4j/Logger])
+  (return-object v0)
+ )
+
+(method (attrs public static ) uploadAsync([object java/util/ArrayList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/ArrayList"  "<"  "Lorg/osmdroid/contributor/util/RecordedGeoPoint;"  ">;)V")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/util/ArrayList])
+  (line 36)
+  (new-instance v0 java/lang/Thread)
+  (new-instance v1 org/osmdroid/contributor/GpxToPHPUploader$1)
+  (invoke-direct {v1 v2} org/osmdroid/contributor/GpxToPHPUploader$1/<init> [object java/util/ArrayList] )
+  (invoke-direct {v0 v1} java/lang/Thread/<init> [object java/lang/Runnable] )
+  (invoke-virtual {v0} java/lang/Thread/start )
+  (line 81)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,21 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JDKDigestSignature$noneRSA
+ (super org/bouncycastle2/jce/provider/JDKDigestSignature)
+ (source "JDKDigestSignature.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle2/jce/provider/JDKDigestSignature$noneRSA])
+  (line 363)
+  (new-instance v0 org/bouncycastle2/jce/provider/util/NullDigest)
+  (invoke-direct {v0} org/bouncycastle2/jce/provider/util/NullDigest/<init> )
+  (new-instance v1 org/bouncycastle2/crypto/encodings/PKCS1Encoding)
+  (new-instance v2 org/bouncycastle2/crypto/engines/RSABlindedEngine)
+  (invoke-direct {v2} org/bouncycastle2/crypto/engines/RSABlindedEngine/<init> )
+  (invoke-direct {v1 v2} org/bouncycastle2/crypto/encodings/PKCS1Encoding/<init> [object org/bouncycastle2/crypto/AsymmetricBlockCipher] )
+  (invoke-direct {v3 v0 v1} org/bouncycastle2/jce/provider/JDKDigestSignature/<init> [object org/bouncycastle2/crypto/Digest] [object org/bouncycastle2/crypto/AsymmetricBlockCipher] )
+  (line 364)
+  (return-void )
+ )
+
+)

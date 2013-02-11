@@ -1,0 +1,59 @@
+(class (attrs ) sk/vx/connectbot/service/TerminalBridge$8
+ (super de/mud/terminal/vt320)
+ (source "TerminalBridge.java")
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/service/TerminalBridge] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/service/TerminalBridge] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/service/TerminalBridge])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/service/TerminalBridge$8.this$0 [object sk/vx/connectbot/service/TerminalBridge])
+  (line 950)
+  (invoke-direct {v0} de/mud/terminal/vt320/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) debug([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 960)
+  (return-void )
+)
+
+(method (attrs public ) sendTelnetCommand(byte )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 (byte)
+  (line 956)
+  (return-void )
+)
+
+(method (attrs public ) setWindowSize(int int )void
+  (limit registers 3)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 958)
+  (return-void )
+)
+
+(method (attrs public ) write(int )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 (int)
+  (line 954)
+  (return-void )
+)
+
+(method (attrs public ) write([array byte] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/service/TerminalBridge$8])
+  ; parameter[0] : v1 ([array byte])
+  (line 952)
+  (return-void )
+)
+
+)

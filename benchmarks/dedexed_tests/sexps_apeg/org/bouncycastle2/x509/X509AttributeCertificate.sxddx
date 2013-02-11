@@ -1,0 +1,61 @@
+(interface (attrs public abstract ) org/bouncycastle2/x509/X509AttributeCertificate
+ (super java/lang/Object)
+ (source "X509AttributeCertificate.java")
+ (implements java/security/cert/X509Extension)
+
+
+(method (attrs public abstract ) checkValidity()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateExpiredException]  [object java/security/cert/CertificateNotYetValidException])
+  )
+)
+
+(method (attrs public abstract ) checkValidity([object java/util/Date] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateExpiredException]  [object java/security/cert/CertificateNotYetValidException])
+  )
+)
+
+(method (attrs public abstract ) getAttributes()[array [object org/bouncycastle2/x509/X509Attribute]]
+)
+
+(method (attrs public abstract ) getAttributes([object java/lang/String] )[array [object org/bouncycastle2/x509/X509Attribute]]
+)
+
+(method (attrs public abstract ) getEncoded()[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getHolder()[object org/bouncycastle2/x509/AttributeCertificateHolder]
+)
+
+(method (attrs public abstract ) getIssuer()[object org/bouncycastle2/x509/AttributeCertificateIssuer]
+)
+
+(method (attrs public abstract ) getIssuerUniqueID()[array boolean]
+)
+
+(method (attrs public abstract ) getNotAfter()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getNotBefore()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getSerialNumber()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getSignature()[array byte]
+)
+
+(method (attrs public abstract ) getVersion()int
+)
+
+(method (attrs public abstract ) verify([object java/security/PublicKey] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateException]  [object java/security/NoSuchAlgorithmException]  [object java/security/InvalidKeyException]  [object java/security/NoSuchProviderException]  [object java/security/SignatureException])
+  )
+)
+
+)

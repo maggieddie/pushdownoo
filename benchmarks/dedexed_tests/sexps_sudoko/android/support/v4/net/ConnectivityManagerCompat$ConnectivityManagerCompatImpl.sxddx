@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/net/ConnectivityManagerCompat$ConnectivityManagerCompatImpl
+ (super java/lang/Object)
+ (source "ConnectivityManagerCompat.java")
+
+
+(method (attrs public abstract ) isActiveNetworkMetered([object android/net/ConnectivityManager] )boolean
+)
+
+)

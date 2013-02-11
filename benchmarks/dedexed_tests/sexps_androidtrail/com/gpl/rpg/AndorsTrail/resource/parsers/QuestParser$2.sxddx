@@ -1,0 +1,44 @@
+(class (attrs ) com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2
+ (super java/lang/Object)
+ (source "QuestParser.java")
+ (implements java/util/Comparator)
+
+ (field (attrs final ) this$0 [object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser] )
+
+(method (attrs ) <init>([object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser] )void
+  (limit registers 2)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2])
+  ; parameter[0] : v1 ([object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser])
+  (line 1)
+  (iput-object v1 v0 com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2.this$0 [object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) compare([object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry] [object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry] )int
+  (limit registers 5)
+  ; this: v2 ([object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2])
+  ; parameter[0] : v3 ([object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry])
+  ; parameter[1] : v4 ([object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry])
+  (line 31)
+  (iget v0 v3 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.progress int)
+  (iget v1 v4 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.progress int)
+  (sub-int/2addr v0 v1)
+  (return v0)
+)
+
+(method (attrs public ) compare([object java/lang/Object] [object java/lang/Object] )int
+  (limit registers 4)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 1)
+  (check-cast v2 [object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry])
+  (check-cast v3 [object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry])
+  (invoke-virtual {v1 v2 v3} com/gpl/rpg/AndorsTrail/resource/parsers/QuestParser$2/compare [object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry] [object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry] )
+  (move-result v0)
+  (return v0)
+)
+
+)

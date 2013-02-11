@@ -1,0 +1,30 @@
+(class (attrs ) org/bouncycastle2/jce/provider/BouncyCastleProvider$1
+ (super java/lang/Object)
+ (source "BouncyCastleProvider.java")
+ (implements java/security/PrivilegedAction)
+
+ (field (attrs final ) this$0 [object org/bouncycastle2/jce/provider/BouncyCastleProvider] )
+
+(method (attrs ) <init>([object org/bouncycastle2/jce/provider/BouncyCastleProvider] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/BouncyCastleProvider$1])
+  ; parameter[0] : v1 ([object org/bouncycastle2/jce/provider/BouncyCastleProvider])
+  (line 1)
+  (iput-object v1 v0 org/bouncycastle2/jce/provider/BouncyCastleProvider$1.this$0 [object org/bouncycastle2/jce/provider/BouncyCastleProvider])
+  (line 77)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/BouncyCastleProvider$1])
+  (line 81)
+  (iget-object v0 v1 org/bouncycastle2/jce/provider/BouncyCastleProvider$1.this$0 [object org/bouncycastle2/jce/provider/BouncyCastleProvider])
+  (invoke-static {v0} org/bouncycastle2/jce/provider/BouncyCastleProvider/access$0 [object org/bouncycastle2/jce/provider/BouncyCastleProvider] )
+  (line 82)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

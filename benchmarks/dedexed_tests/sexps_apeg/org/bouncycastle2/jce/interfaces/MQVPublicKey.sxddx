@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/MQVPublicKey
+ (super java/lang/Object)
+ (source "MQVPublicKey.java")
+ (implements java/security/PublicKey)
+
+
+(method (attrs public abstract ) getEphemeralKey()[object java/security/PublicKey]
+)
+
+(method (attrs public abstract ) getStaticKey()[object java/security/PublicKey]
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) twitter4j/api/LegalResources
+ (super java/lang/Object)
+ (source "LegalResources.java")
+
+
+(method (attrs public abstract ) getPrivacyPolicy()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getTermsOfService()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

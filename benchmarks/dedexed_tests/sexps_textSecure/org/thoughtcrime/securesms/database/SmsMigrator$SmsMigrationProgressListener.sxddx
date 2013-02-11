@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/thoughtcrime/securesms/database/SmsMigrator$SmsMigrationProgressListener
+ (super java/lang/Object)
+ (source "SmsMigrator.java")
+
+
+(method (attrs public abstract ) progressUpdate(int int )void
+)
+
+)

@@ -1,0 +1,32 @@
+(class (attrs public ) org/anddev/andengine/util/pool/EntityDetachRunnablePoolUpdateHandler
+ (super org/anddev/andengine/util/pool/RunnablePoolUpdateHandler)
+ (source "EntityDetachRunnablePoolUpdateHandler.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/pool/EntityDetachRunnablePoolUpdateHandler])
+  (line 10)
+  (invoke-direct {v0} org/anddev/andengine/util/pool/RunnablePoolUpdateHandler/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object org/anddev/andengine/util/pool/EntityDetachRunnablePoolItem]
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/util/pool/EntityDetachRunnablePoolUpdateHandler])
+  (line 33)
+  (new-instance v0 org/anddev/andengine/util/pool/EntityDetachRunnablePoolItem)
+  (invoke-direct {v0} org/anddev/andengine/util/pool/EntityDetachRunnablePoolItem/<init> )
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/anddev/andengine/util/pool/RunnablePoolItem]
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/util/pool/EntityDetachRunnablePoolUpdateHandler])
+  (line 1)
+  (invoke-virtual {v1} org/anddev/andengine/util/pool/EntityDetachRunnablePoolUpdateHandler/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

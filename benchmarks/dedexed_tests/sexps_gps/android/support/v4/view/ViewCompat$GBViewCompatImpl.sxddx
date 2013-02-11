@@ -1,0 +1,35 @@
+(class (attrs ) android/support/v4/view/ViewCompat$GBViewCompatImpl
+ (super android/support/v4/view/ViewCompat$BaseViewCompatImpl)
+ (source "ViewCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$GBViewCompatImpl])
+  (line 84)
+  (invoke-direct {v0} android/support/v4/view/ViewCompat$BaseViewCompatImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getOverScrollMode([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$GBViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 87)
+  (invoke-static {v2} android/support/v4/view/ViewCompatGingerbread/getOverScrollMode [object android/view/View] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) setOverScrollMode([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$GBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 91)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatGingerbread/setOverScrollMode [object android/view/View] int )
+  (line 92)
+  (return-void )
+)
+
+)

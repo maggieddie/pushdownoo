@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) org/bouncycastle2/bcpg/HashAlgorithmTags
+ (super java/lang/Object)
+ (source "HashAlgorithmTags.java")
+
+ (field (attrs public static final ) DOUBLE_SHA int 4); 0x4 )
+ (field (attrs public static final ) HAVAL_5_160 int 7); 0x7 )
+ (field (attrs public static final ) MD2 int 5); 0x5 )
+ (field (attrs public static final ) MD5 int 1); 0x1 )
+ (field (attrs public static final ) RIPEMD160 int 3); 0x3 )
+ (field (attrs public static final ) SHA1 int 2); 0x2 )
+ (field (attrs public static final ) SHA224 int 11); 0xb )
+ (field (attrs public static final ) SHA256 int 8); 0x8 )
+ (field (attrs public static final ) SHA384 int 9); 0x9 )
+ (field (attrs public static final ) SHA512 int 10); 0xa )
+ (field (attrs public static final ) TIGER_192 int 6); 0x6 )
+
+)

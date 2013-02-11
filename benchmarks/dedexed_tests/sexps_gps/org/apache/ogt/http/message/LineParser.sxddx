@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) org/apache/ogt/http/message/LineParser
+ (super java/lang/Object)
+ (source "LineParser.java")
+
+
+(method (attrs public abstract ) hasProtocolVersion([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )boolean
+)
+
+(method (attrs public abstract ) parseHeader([object org/apache/ogt/http/util/CharArrayBuffer] )[object org/apache/ogt/http/Header]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseProtocolVersion([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[object org/apache/ogt/http/ProtocolVersion]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseRequestLine([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[object org/apache/ogt/http/RequestLine]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+(method (attrs public abstract ) parseStatusLine([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/message/ParserCursor] )[object org/apache/ogt/http/StatusLine]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/ogt/http/ParseException])
+  )
+)
+
+)

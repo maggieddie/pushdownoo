@@ -1,0 +1,28 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/ECKeyParameters
+ (super org/bouncycastle2/crypto/params/AsymmetricKeyParameter)
+ (source "ECKeyParameters.java")
+
+ (field (attrs ) params [object org/bouncycastle2/crypto/params/ECDomainParameters] )
+
+(method (attrs protected ) <init>(boolean [object org/bouncycastle2/crypto/params/ECDomainParameters] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/crypto/params/ECKeyParameters])
+  ; parameter[0] : v1 (boolean)
+  ; parameter[1] : v2 ([object org/bouncycastle2/crypto/params/ECDomainParameters])
+  (line 12)
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/params/AsymmetricKeyParameter/<init> boolean )
+  (line 14)
+  (iput-object v2 v0 org/bouncycastle2/crypto/params/ECKeyParameters.params [object org/bouncycastle2/crypto/params/ECDomainParameters])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle2/crypto/params/ECDomainParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/ECKeyParameters])
+  (line 19)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/ECKeyParameters.params [object org/bouncycastle2/crypto/params/ECDomainParameters])
+  (return-object v0)
+)
+
+)

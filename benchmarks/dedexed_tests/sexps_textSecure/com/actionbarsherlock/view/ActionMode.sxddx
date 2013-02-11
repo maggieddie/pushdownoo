@@ -1,0 +1,77 @@
+(class (attrs public abstract ) com/actionbarsherlock/view/ActionMode
+ (super java/lang/Object)
+ (source "ActionMode.java")
+
+ (field (attrs private ) mTag [object java/lang/Object] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/actionbarsherlock/view/ActionMode])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) finish()void
+)
+
+(method (attrs public abstract ) getCustomView()[object android/view/View]
+)
+
+(method (attrs public abstract ) getMenu()[object com/actionbarsherlock/view/Menu]
+)
+
+(method (attrs public abstract ) getMenuInflater()[object com/actionbarsherlock/view/MenuInflater]
+)
+
+(method (attrs public abstract ) getSubtitle()[object java/lang/CharSequence]
+)
+
+(method (attrs public ) getTag()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/view/ActionMode])
+  (line 55)
+  (iget-object v0 v1 com/actionbarsherlock/view/ActionMode.mTag [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getTitle()[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) invalidate()void
+)
+
+(method (attrs public ) isUiFocusable()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/view/ActionMode])
+  (line 166)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public abstract ) setCustomView([object android/view/View] )void
+)
+
+(method (attrs public abstract ) setSubtitle(int )void
+)
+
+(method (attrs public abstract ) setSubtitle([object java/lang/CharSequence] )void
+)
+
+(method (attrs public ) setTag([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/actionbarsherlock/view/ActionMode])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 41)
+  (iput-object v1 v0 com/actionbarsherlock/view/ActionMode.mTag [object java/lang/Object])
+  (line 42)
+  (return-void )
+)
+
+(method (attrs public abstract ) setTitle(int )void
+)
+
+(method (attrs public abstract ) setTitle([object java/lang/CharSequence] )void
+)
+
+)

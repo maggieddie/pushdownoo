@@ -1,0 +1,33 @@
+(class (attrs public ) org/ucomb/TestGCSimActivity
+ (super android/app/Activity)
+ (source "TestGCSimActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/ucomb/TestGCSimActivity])
+  (line 6)
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCreate([object android/os/Bundle] )void
+  (limit registers 4)
+  ; this: v2 ([object org/ucomb/TestGCSimActivity])
+  ; parameter[0] : v3 ([object android/os/Bundle])
+  (line 10)
+  (invoke-super {v2 v3} android/app/Activity/onCreate [object android/os/Bundle] )
+  (line 11)
+  (const/high16 v1 32515)
+  (invoke-virtual {v2 v1} org/ucomb/TestGCSimActivity/setContentView int )
+  (line 16)
+  (new-instance v0 org/ucomb/B)
+  (invoke-direct {v0} org/ucomb/B/<init> )
+  (line 22)
+  (const/4 v1 5)
+  (invoke-virtual {v0 v1} org/ucomb/B/fact int )
+  (line 23)
+  (return-void )
+)
+
+)

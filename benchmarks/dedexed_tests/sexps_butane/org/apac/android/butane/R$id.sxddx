@@ -1,0 +1,32 @@
+(class (attrs public final ) org/apac/android/butane/R$id
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ack_status_spinner int 2131296270); 0x7f09000e )
+ (field (attrs public static final ) body int 2131296268); 0x7f09000c )
+ (field (attrs public static final ) cancel_button int 2131296272); 0x7f090010 )
+ (field (attrs public static final ) changelog_webview int 2131296257); 0x7f090001 )
+ (field (attrs public static final ) datestamp int 2131296262); 0x7f090006 )
+ (field (attrs public static final ) delete_button int 2131296273); 0x7f090011 )
+ (field (attrs public static final ) icon int 2131296256); 0x7f090000 )
+ (field (attrs public static final ) pick_noise int 2131296266); 0x7f09000a )
+ (field (attrs public static final ) resp_edit int 2131296267); 0x7f09000b )
+ (field (attrs public static final ) rlist int 2131296265); 0x7f090009 )
+ (field (attrs public static final ) save_button int 2131296271); 0x7f09000f )
+ (field (attrs public static final ) sender int 2131296261); 0x7f090005 )
+ (field (attrs public static final ) show_in_menu int 2131296269); 0x7f09000d )
+ (field (attrs public static final ) subject int 2131296258); 0x7f090002 )
+ (field (attrs public static final ) text int 2131296264); 0x7f090008 )
+ (field (attrs public static final ) view_body int 2131296263); 0x7f090007 )
+ (field (attrs public static final ) view_icon int 2131296259); 0x7f090003 )
+ (field (attrs public static final ) view_subject int 2131296260); 0x7f090004 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apac/android/butane/R$id])
+  (line 33)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

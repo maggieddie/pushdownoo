@@ -1,0 +1,29 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/DSAPrivateKeyParameters
+ (super org/bouncycastle2/crypto/params/DSAKeyParameters)
+ (source "DSAPrivateKeyParameters.java")
+
+ (field (attrs private ) x [object java/math/BigInteger] )
+
+(method (attrs public ) <init>([object java/math/BigInteger] [object org/bouncycastle2/crypto/params/DSAParameters] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/DSAPrivateKeyParameters])
+  ; parameter[0] : v2 ([object java/math/BigInteger])
+  ; parameter[1] : v3 ([object org/bouncycastle2/crypto/params/DSAParameters])
+  (line 14)
+  (const/4 v0 1)
+  (invoke-direct {v1 v0 v3} org/bouncycastle2/crypto/params/DSAKeyParameters/<init> boolean [object org/bouncycastle2/crypto/params/DSAParameters] )
+  (line 16)
+  (iput-object v2 v1 org/bouncycastle2/crypto/params/DSAPrivateKeyParameters.x [object java/math/BigInteger])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) getX()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/DSAPrivateKeyParameters])
+  (line 21)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/DSAPrivateKeyParameters.x [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

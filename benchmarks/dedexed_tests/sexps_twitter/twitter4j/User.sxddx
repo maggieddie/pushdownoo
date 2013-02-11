@@ -1,0 +1,132 @@
+(interface (attrs public abstract ) twitter4j/User
+ (super java/lang/Object)
+ (source "User.java")
+ (implements java/lang/Comparable)
+ (implements twitter4j/TwitterResponse)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getCreatedAt()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getDescription()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getFavouritesCount()int
+)
+
+(method (attrs public abstract ) getFollowersCount()int
+)
+
+(method (attrs public abstract ) getFriendsCount()int
+)
+
+(method (attrs public abstract ) getId()int
+)
+
+(method (attrs public abstract ) getLang()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getListedCount()int
+)
+
+(method (attrs public abstract ) getLocation()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileBackgroundColor()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileBackgroundImageUrl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileImageURL()[object java/net/URL]
+)
+
+(method (attrs public abstract ) getProfileLinkColor()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileSidebarBorderColor()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileSidebarFillColor()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProfileTextColor()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getScreenName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStatus()[object twitter4j/Status]
+)
+
+(method (attrs public abstract ) getStatusCreatedAt()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getStatusId()long
+)
+
+(method (attrs public abstract ) getStatusInReplyToScreenName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStatusInReplyToStatusId()long
+)
+
+(method (attrs public abstract ) getStatusInReplyToUserId()int
+)
+
+(method (attrs public abstract ) getStatusSource()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStatusText()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStatusesCount()int
+)
+
+(method (attrs public abstract ) getTimeZone()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getURL()[object java/net/URL]
+)
+
+(method (attrs public abstract ) getUtcOffset()int
+)
+
+(method (attrs public abstract ) isContributorsEnabled()boolean
+)
+
+(method (attrs public abstract ) isFollowRequestSent()boolean
+)
+
+(method (attrs public abstract ) isGeoEnabled()boolean
+)
+
+(method (attrs public abstract ) isProfileBackgroundTiled()boolean
+)
+
+(method (attrs public abstract ) isProfileUseBackgroundImage()boolean
+)
+
+(method (attrs public abstract ) isProtected()boolean
+)
+
+(method (attrs public abstract ) isShowAllInlineMedia()boolean
+)
+
+(method (attrs public abstract ) isStatusFavorited()boolean
+)
+
+(method (attrs public abstract ) isStatusTruncated()boolean
+)
+
+(method (attrs public abstract ) isTranslator()boolean
+)
+
+(method (attrs public abstract ) isVerified()boolean
+)
+
+)

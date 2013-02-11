@@ -1,0 +1,53 @@
+(class (attrs public ) org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier
+ (super java/lang/Object)
+ (source "OffCameraExpireModifier.java")
+ (implements org/anddev/andengine/entity/particle/modifier/IParticleModifier)
+
+ (field (attrs private final ) mCamera [object org/anddev/andengine/engine/camera/Camera] )
+
+(method (attrs public ) <init>([object org/anddev/andengine/engine/camera/Camera] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/engine/camera/Camera])
+  (line 29)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 30)
+  (iput-object v1 v0 org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier.mCamera [object org/anddev/andengine/engine/camera/Camera])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) getCamera()[object org/anddev/andengine/engine/camera/Camera]
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier])
+  (line 38)
+  (iget-object v0 v1 org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier.mCamera [object org/anddev/andengine/engine/camera/Camera])
+  (return-object v0)
+)
+
+(method (attrs public ) onInitializeParticle([object org/anddev/andengine/entity/particle/Particle] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/particle/Particle])
+  (line 48)
+  (return-void )
+)
+
+(method (attrs public ) onUpdateParticle([object org/anddev/andengine/entity/particle/Particle] )void
+  (limit registers 3)
+  ; this: v1 ([object org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier])
+  ; parameter[0] : v2 ([object org/anddev/andengine/entity/particle/Particle])
+  (line 52)
+  (iget-object v0 v1 org/anddev/andengine/entity/particle/modifier/OffCameraExpireModifier.mCamera [object org/anddev/andengine/engine/camera/Camera])
+  (invoke-virtual {v0 v2} org/anddev/andengine/engine/camera/Camera/isRectangularShapeVisible [object org/anddev/andengine/entity/shape/RectangularShape] )
+  (move-result v0)
+  (if-nez v0 l91b78)
+  (line 53)
+  (const/4 v0 1)
+  (invoke-virtual {v2 v0} org/anddev/andengine/entity/particle/Particle/setDead boolean )
+  (label l91b78)
+  (line 55)
+  (return-void )
+)
+
+)

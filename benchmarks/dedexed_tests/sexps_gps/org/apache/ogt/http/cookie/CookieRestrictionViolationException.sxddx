@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/cookie/CookieRestrictionViolationException
+ (super org/apache/ogt/http/cookie/MalformedCookieException)
+ (source "CookieRestrictionViolationException.java")
+
+ (field (attrs private static final ) serialVersionUID long -276830217); 0xef7fe7f7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/cookie/CookieRestrictionViolationException])
+  (line 48)
+  (invoke-direct {v0} org/apache/ogt/http/cookie/MalformedCookieException/<init> )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/cookie/CookieRestrictionViolationException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 58)
+  (invoke-direct {v0 v1} org/apache/ogt/http/cookie/MalformedCookieException/<init> [object java/lang/String] )
+  (line 59)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,32 @@
+(class (attrs public ) org/apache/ogt/http/conn/ssl/AllowAllHostnameVerifier
+ (super org/apache/ogt/http/conn/ssl/AbstractVerifier)
+ (source "AllowAllHostnameVerifier.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/conn/ssl/AllowAllHostnameVerifier])
+  (line 40)
+  (invoke-direct {v0} org/apache/ogt/http/conn/ssl/AbstractVerifier/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/conn/ssl/AllowAllHostnameVerifier])
+  (line 51)
+  (const-string v0 "ALLOW_ALL")
+  (return-object v0)
+)
+
+(method (attrs public final ) verify([object java/lang/String] [array [object java/lang/String]] [array [object java/lang/String]] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/ogt/http/conn/ssl/AllowAllHostnameVerifier])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([array [object java/lang/String]])
+  ; parameter[2] : v3 ([array [object java/lang/String]])
+  (line 47)
+  (return-void )
+)
+
+)

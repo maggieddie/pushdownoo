@@ -1,0 +1,29 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/Camellia$KeyGen
+ (super org/bouncycastle2/jce/provider/JCEKeyGenerator)
+ (source "Camellia.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/symmetric/Camellia$KeyGen])
+  (line 67)
+  (const/16 v0 256)
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/symmetric/Camellia$KeyGen/<init> int )
+  (line 68)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/symmetric/Camellia$KeyGen])
+  ; parameter[0] : v3 (int)
+  (line 72)
+  (const-string v0 "Camellia")
+  (new-instance v1 org/bouncycastle2/crypto/CipherKeyGenerator)
+  (invoke-direct {v1} org/bouncycastle2/crypto/CipherKeyGenerator/<init> )
+  (invoke-direct {v2 v0 v3 v1} org/bouncycastle2/jce/provider/JCEKeyGenerator/<init> [object java/lang/String] int [object org/bouncycastle2/crypto/CipherKeyGenerator] )
+  (line 73)
+  (return-void )
+ )
+
+)

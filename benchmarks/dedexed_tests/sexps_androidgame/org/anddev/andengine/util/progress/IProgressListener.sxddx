@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/progress/IProgressListener
+ (super java/lang/Object)
+ (source "IProgressListener.java")
+
+
+(method (attrs public abstract ) onProgressChanged(int )void
+)
+
+)

@@ -1,0 +1,27 @@
+(class (attrs public final ) com/gpl/rpg/AndorsTrail/activity/Preferences
+ (super android/preference/PreferenceActivity)
+ (source "Preferences.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/activity/Preferences])
+  (line 8)
+  (invoke-direct {v0} android/preference/PreferenceActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onCreate([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/activity/Preferences])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 11)
+  (invoke-super {v1 v2} android/preference/PreferenceActivity/onCreate [object android/os/Bundle] )
+  (line 12)
+  (const v0 2130968739) ; 0x7f0400a3)
+  (invoke-virtual {v1 v0} com/gpl/rpg/AndorsTrail/activity/Preferences/addPreferencesFromResource int )
+  (line 13)
+  (return-void )
+)
+
+)

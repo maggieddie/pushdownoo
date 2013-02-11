@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) org/andengine/util/adt/queue/ISortedQueue
+ (super java/lang/Object)
+ (source "ISortedQueue.java")
+ (implements org/andengine/util/adt/queue/IQueue)
+ (implements org/andengine/util/adt/list/ISortedList)
+
+
+)

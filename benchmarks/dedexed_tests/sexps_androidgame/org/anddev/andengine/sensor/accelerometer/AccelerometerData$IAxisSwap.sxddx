@@ -1,0 +1,9 @@
+(interface (attrs abstract ) org/anddev/andengine/sensor/accelerometer/AccelerometerData$IAxisSwap
+ (super java/lang/Object)
+ (source "AccelerometerData.java")
+
+
+(method (attrs public abstract ) swapAxis([array float] )void
+)
+
+)

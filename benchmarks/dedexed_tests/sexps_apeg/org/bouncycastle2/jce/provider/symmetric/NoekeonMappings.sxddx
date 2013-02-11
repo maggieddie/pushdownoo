@@ -1,0 +1,31 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/NoekeonMappings
+ (super java/util/HashMap)
+ (source "NoekeonMappings.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/symmetric/NoekeonMappings])
+  (line 8)
+  (invoke-direct {v2} java/util/HashMap/<init> )
+  (line 10)
+  (const-string v0 "AlgorithmParameters.NOEKEON")
+  (const-string v1 "org.bouncycastle2.jce.provider.symmetric.Noekeon$AlgParams")
+  (invoke-virtual {v2 v0 v1} org/bouncycastle2/jce/provider/symmetric/NoekeonMappings/put [object java/lang/Object] [object java/lang/Object] )
+  (line 12)
+  (const-string v0 "AlgorithmParameterGenerator.NOEKEON")
+  (const-string v1 "org.bouncycastle2.jce.provider.symmetric.Noekeon$AlgParamGen")
+  (invoke-virtual {v2 v0 v1} org/bouncycastle2/jce/provider/symmetric/NoekeonMappings/put [object java/lang/Object] [object java/lang/Object] )
+  (line 14)
+  (const-string v0 "Cipher.NOEKEON")
+  (const-string v1 "org.bouncycastle2.jce.provider.symmetric.Noekeon$ECB")
+  (invoke-virtual {v2 v0 v1} org/bouncycastle2/jce/provider/symmetric/NoekeonMappings/put [object java/lang/Object] [object java/lang/Object] )
+  (line 16)
+  (const-string v0 "KeyGenerator.NOEKEON")
+  (const-string v1 "org.bouncycastle2.jce.provider.symmetric.Noekeon$KeyGen")
+  (invoke-virtual {v2 v0 v1} org/bouncycastle2/jce/provider/symmetric/NoekeonMappings/put [object java/lang/Object] [object java/lang/Object] )
+  (line 17)
+  (return-void )
+ )
+
+)

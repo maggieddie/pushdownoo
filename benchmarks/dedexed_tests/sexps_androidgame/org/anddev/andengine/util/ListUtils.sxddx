@@ -1,0 +1,55 @@
+(class (attrs public ) org/anddev/andengine/util/ListUtils
+ (super java/lang/Object)
+ (source "ListUtils.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/ListUtils])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) toList([object java/lang/Object] )[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)"  "Ljava/util/ArrayList"  "<+TT;>;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 38)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (line 39)
+  (invoke-virtual {v0 v1} java/util/ArrayList/add [object java/lang/Object] )
+  (line 40)
+  (return-object v0)
+ )
+
+(method (attrs public static ) toList([array [object java/lang/Object]] )[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)"  "Ljava/util/ArrayList"  "<+TT;>;")
+  )
+  (limit registers 5)
+  ; parameter[0] : v4 ([array [object java/lang/Object]])
+  (line 44)
+  (new-instance v2 java/util/ArrayList)
+  (invoke-direct {v2} java/util/ArrayList/<init> )
+  (line 45)
+  (array-length v1 v4)
+  (line 46)
+  (const/4 v0 0)
+  (label l5b952)
+  (if-lt v0 v1 l5b958)
+  (line 49)
+  (return-object v2)
+  (label l5b958)
+  (line 47)
+  (aget-object v3 v4 v0)
+  (invoke-virtual {v2 v3} java/util/ArrayList/add [object java/lang/Object] )
+  (line 46)
+  (add-int/lit8 v0 v0 1)
+  (goto l5b952)
+ )
+
+)

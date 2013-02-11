@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/viewpagerindicator/IconPagerAdapter
+ (super java/lang/Object)
+ (source "IconPagerAdapter.java")
+
+
+(method (attrs public abstract ) getCount()int
+)
+
+(method (attrs public abstract ) getIconResId(int )int
+)
+
+)

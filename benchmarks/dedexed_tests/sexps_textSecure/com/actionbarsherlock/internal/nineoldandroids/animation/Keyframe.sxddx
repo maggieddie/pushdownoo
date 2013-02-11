@@ -1,0 +1,160 @@
+(class (attrs public abstract ) com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe
+ (super java/lang/Object)
+ (source "Keyframe.java")
+ (implements java/lang/Cloneable)
+
+ (field (attrs ) mFraction float )
+ (field (attrs ) mHasValue boolean )
+ (field (attrs private ) mInterpolator [object android/view/animation/Interpolator] )
+ (field (attrs ) mValueType [object java/lang/Class] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 39)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 55)
+  (const/4 v0 0)
+  (iput-object v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mInterpolator [object android/view/animation/Interpolator])
+  (line 62)
+  (const/4 v0 0)
+  (iput-boolean v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mHasValue boolean)
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs public static ) ofFloat(float )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 2)
+  ; parameter[0] : v1 (float)
+  (line 125)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$FloatKeyframe)
+  (invoke-direct {v0 v1} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$FloatKeyframe/<init> float )
+  (return-object v0)
+ )
+
+(method (attrs public static ) ofFloat(float float )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 3)
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 109)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$FloatKeyframe)
+  (invoke-direct {v0 v1 v2} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$FloatKeyframe/<init> float float )
+  (return-object v0)
+ )
+
+(method (attrs public static ) ofInt(float )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 2)
+  ; parameter[0] : v1 (float)
+  (line 93)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$IntKeyframe)
+  (invoke-direct {v0 v1} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$IntKeyframe/<init> float )
+  (return-object v0)
+ )
+
+(method (attrs public static ) ofInt(float int )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 3)
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (int)
+  (line 77)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$IntKeyframe)
+  (invoke-direct {v0 v1 v2} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$IntKeyframe/<init> float int )
+  (return-object v0)
+ )
+
+(method (attrs public static ) ofObject(float )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 3)
+  ; parameter[0] : v2 (float)
+  (line 157)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$ObjectKeyframe)
+  (const/4 v1 0)
+  (invoke-direct {v0 v2 v1} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$ObjectKeyframe/<init> float [object java/lang/Object] )
+  (return-object v0)
+ )
+
+(method (attrs public static ) ofObject(float [object java/lang/Object] )[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (limit registers 3)
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 141)
+  (new-instance v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$ObjectKeyframe)
+  (invoke-direct {v0 v1 v2} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$ObjectKeyframe/<init> float [object java/lang/Object] )
+  (return-object v0)
+ )
+
+(method (attrs public abstract ) clone()[object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/CloneNotSupportedException])
+  )
+)
+
+(method (attrs public ) clone()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/CloneNotSupportedException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 1)
+  (invoke-virtual {v1} com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe/clone )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getFraction()float
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 192)
+  (iget v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mFraction float)
+  (return v0)
+)
+
+(method (attrs public ) getInterpolator()[object android/view/animation/Interpolator]
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 212)
+  (iget-object v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mInterpolator [object android/view/animation/Interpolator])
+  (return-object v0)
+)
+
+(method (attrs public ) getType()[object java/lang/Class]
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 233)
+  (iget-object v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mValueType [object java/lang/Class])
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getValue()[object java/lang/Object]
+)
+
+(method (attrs public ) hasValue()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  (line 168)
+  (iget-boolean v0 v1 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mHasValue boolean)
+  (return v0)
+)
+
+(method (attrs public ) setFraction(float )void
+  (limit registers 2)
+  ; this: v0 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  ; parameter[0] : v1 (float)
+  (line 202)
+  (iput v1 v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mFraction float)
+  (line 203)
+  (return-void )
+)
+
+(method (attrs public ) setInterpolator([object android/view/animation/Interpolator] )void
+  (limit registers 2)
+  ; this: v0 ([object com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe])
+  ; parameter[0] : v1 ([object android/view/animation/Interpolator])
+  (line 222)
+  (iput-object v1 v0 com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.mInterpolator [object android/view/animation/Interpolator])
+  (line 223)
+  (return-void )
+)
+
+(method (attrs public abstract ) setValue([object java/lang/Object] )void
+)
+
+)

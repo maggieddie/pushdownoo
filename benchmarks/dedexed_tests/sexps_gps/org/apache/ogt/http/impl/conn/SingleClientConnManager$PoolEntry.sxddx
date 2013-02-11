@@ -1,0 +1,63 @@
+(class (attrs public ) org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry
+ (super org/apache/ogt/http/impl/conn/AbstractPoolEntry)
+ (source "SingleClientConnManager.java")
+
+ (field (attrs final ) this$0 [object org/apache/ogt/http/impl/conn/SingleClientConnManager] )
+
+(method (attrs protected ) <init>([object org/apache/ogt/http/impl/conn/SingleClientConnManager] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager])
+  (line 380)
+  (iput-object v3 v2 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.this$0 [object org/apache/ogt/http/impl/conn/SingleClientConnManager])
+  (line 381)
+  (iget-object v0 v3 org/apache/ogt/http/impl/conn/SingleClientConnManager.connOperator [object org/apache/ogt/http/conn/ClientConnectionOperator])
+  (const/4 v1 0)
+  (invoke-direct {v2 v0 v1} org/apache/ogt/http/impl/conn/AbstractPoolEntry/<init> [object org/apache/ogt/http/conn/ClientConnectionOperator] [object org/apache/ogt/http/conn/routing/HttpRoute] )
+  (line 382)
+  (return-void )
+ )
+
+(method (attrs protected ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry])
+  (line 388)
+  (invoke-virtual {v1} org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry/shutdownEntry )
+  (line 389)
+  (iget-object v0 v1 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.connection [object org/apache/ogt/http/conn/OperatedClientConnection])
+  (invoke-interface {v0} org/apache/ogt/http/conn/OperatedClientConnection/isOpen )
+  (move-result v0)
+  (if-eqz v0 lb98b0)
+  (line 390)
+  (iget-object v0 v1 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.connection [object org/apache/ogt/http/conn/OperatedClientConnection])
+  (invoke-interface {v0} org/apache/ogt/http/conn/OperatedClientConnection/close )
+  (label lb98b0)
+  (line 391)
+  (return-void )
+)
+
+(method (attrs protected ) shutdown()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry])
+  (line 397)
+  (invoke-virtual {v1} org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry/shutdownEntry )
+  (line 398)
+  (iget-object v0 v1 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.connection [object org/apache/ogt/http/conn/OperatedClientConnection])
+  (invoke-interface {v0} org/apache/ogt/http/conn/OperatedClientConnection/isOpen )
+  (move-result v0)
+  (if-eqz v0 lb98e4)
+  (line 399)
+  (iget-object v0 v1 org/apache/ogt/http/impl/conn/SingleClientConnManager$PoolEntry.connection [object org/apache/ogt/http/conn/OperatedClientConnection])
+  (invoke-interface {v0} org/apache/ogt/http/conn/OperatedClientConnection/shutdown )
+  (label lb98e4)
+  (line 400)
+  (return-void )
+)
+
+)

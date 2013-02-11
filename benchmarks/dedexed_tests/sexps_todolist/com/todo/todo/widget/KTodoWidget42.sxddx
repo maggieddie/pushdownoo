@@ -1,0 +1,14 @@
+(class (attrs public ) com/todo/todo/widget/KTodoWidget42
+ (super com/todo/todo/widget/KTodoWidgetBase)
+ (source "KTodoWidget42.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/todo/todo/widget/KTodoWidget42])
+  (line 3)
+  (invoke-direct {v0} com/todo/todo/widget/KTodoWidgetBase/<init> )
+  (return-void )
+ )
+
+)

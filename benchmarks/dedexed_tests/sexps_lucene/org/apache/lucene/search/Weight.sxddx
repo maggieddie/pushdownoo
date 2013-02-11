@@ -1,0 +1,34 @@
+(interface (attrs public abstract ) org/apache/lucene/search/Weight
+ (super java/lang/Object)
+ (source "Weight.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) explain([object org/apache/lucene/index/IndexReader] int )[object org/apache/lucene/search/Explanation]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getQuery()[object org/apache/lucene/search/Query]
+)
+
+(method (attrs public abstract ) getValue()float
+)
+
+(method (attrs public abstract ) normalize(float )void
+)
+
+(method (attrs public abstract ) scorer([object org/apache/lucene/index/IndexReader] )[object org/apache/lucene/search/Scorer]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) sumOfSquaredWeights()float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

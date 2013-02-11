@@ -1,0 +1,64 @@
+(class (attrs public ) org/slf4j/impl/StaticLoggerBinder
+ (super java/lang/Object)
+ (source "StaticLoggerBinder.java")
+ (implements org/slf4j/spi/LoggerFactoryBinder)
+
+ (field (attrs public static ) REQUESTED_API_VERSION [object java/lang/String] )
+ (field (attrs private static final ) SINGLETON [object org/slf4j/impl/StaticLoggerBinder] )
+ (field (attrs private static final ) loggerFactoryClassStr [object java/lang/String] )
+ (field (attrs private final ) loggerFactory [object org/slf4j/ILoggerFactory] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 47)
+  (new-instance v0 org/slf4j/impl/StaticLoggerBinder)
+  (invoke-direct {v0} org/slf4j/impl/StaticLoggerBinder/<init> )
+  (sput-object v0 org/slf4j/impl/StaticLoggerBinder.SINGLETON [object org/slf4j/impl/StaticLoggerBinder])
+  (line 64)
+  (const-string v0 "1.5.8")
+  (sput-object v0 org/slf4j/impl/StaticLoggerBinder.REQUESTED_API_VERSION [object java/lang/String])
+  (line 66)
+  (const-class v0 org/slf4j/impl/AndroidLoggerFactory)
+  (invoke-virtual {v0} java/lang/Class/getName )
+  (move-result-object v0)
+  (sput-object v0 org/slf4j/impl/StaticLoggerBinder.loggerFactoryClassStr [object java/lang/String])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticLoggerBinder])
+  (line 75)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 76)
+  (new-instance v0 org/slf4j/impl/AndroidLoggerFactory)
+  (invoke-direct {v0} org/slf4j/impl/AndroidLoggerFactory/<init> )
+  (iput-object v0 v1 org/slf4j/impl/StaticLoggerBinder.loggerFactory [object org/slf4j/ILoggerFactory])
+  (line 77)
+  (return-void )
+ )
+
+(method (attrs public static final ) getSingleton()[object org/slf4j/impl/StaticLoggerBinder]
+  (limit registers 1)
+  (line 56)
+  (sget-object v0 org/slf4j/impl/StaticLoggerBinder.SINGLETON [object org/slf4j/impl/StaticLoggerBinder])
+  (return-object v0)
+ )
+
+(method (attrs public ) getLoggerFactory()[object org/slf4j/ILoggerFactory]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticLoggerBinder])
+  (line 81)
+  (iget-object v0 v1 org/slf4j/impl/StaticLoggerBinder.loggerFactory [object org/slf4j/ILoggerFactory])
+  (return-object v0)
+)
+
+(method (attrs public ) getLoggerFactoryClassStr()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/slf4j/impl/StaticLoggerBinder])
+  (line 86)
+  (sget-object v0 org/slf4j/impl/StaticLoggerBinder.loggerFactoryClassStr [object java/lang/String])
+  (return-object v0)
+)
+
+)

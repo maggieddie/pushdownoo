@@ -1,0 +1,23 @@
+(class (attrs ) antlr/ExceptionHandler
+ (super java/lang/Object)
+ (source "ExceptionHandler.java")
+
+ (field (attrs protected ) action [object antlr/Token] )
+ (field (attrs protected ) exceptionTypeAndName [object antlr/Token] )
+
+(method (attrs public ) <init>([object antlr/Token] [object antlr/Token] )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/ExceptionHandler])
+  ; parameter[0] : v1 ([object antlr/Token])
+  ; parameter[1] : v2 ([object antlr/Token])
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 19)
+  (iput-object v1 v0 antlr/ExceptionHandler.exceptionTypeAndName [object antlr/Token])
+  (line 20)
+  (iput-object v2 v0 antlr/ExceptionHandler.action [object antlr/Token])
+  (line 21)
+  (return-void )
+ )
+
+)

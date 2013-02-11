@@ -1,0 +1,33 @@
+(class (attrs ) com/tdizz/snote/keyboardnotes/NoteEdit$1
+ (super java/lang/Object)
+ (source "NoteEdit.java")
+ (implements android/view/View$OnKeyListener)
+
+ (field (attrs final ) this$0 [object com/tdizz/snote/keyboardnotes/NoteEdit] )
+
+(method (attrs ) <init>([object com/tdizz/snote/keyboardnotes/NoteEdit] )void
+  (limit registers 2)
+  ; this: v0 ([object com/tdizz/snote/keyboardnotes/NoteEdit$1])
+  ; parameter[0] : v1 ([object com/tdizz/snote/keyboardnotes/NoteEdit])
+  (line 1)
+  (iput-object v1 v0 com/tdizz/snote/keyboardnotes/NoteEdit$1.this$0 [object com/tdizz/snote/keyboardnotes/NoteEdit])
+  (line 263)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onKey([object android/view/View] int [object android/view/KeyEvent] )boolean
+  (limit registers 5)
+  ; this: v1 ([object com/tdizz/snote/keyboardnotes/NoteEdit$1])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object android/view/KeyEvent])
+  (line 271)
+  (iget-object v0 v1 com/tdizz/snote/keyboardnotes/NoteEdit$1.this$0 [object com/tdizz/snote/keyboardnotes/NoteEdit])
+  (invoke-static {v0} com/tdizz/snote/keyboardnotes/NoteEdit/access$0 [object com/tdizz/snote/keyboardnotes/NoteEdit] )
+  (line 272)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

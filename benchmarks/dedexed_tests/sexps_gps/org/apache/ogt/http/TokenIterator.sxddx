@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/apache/ogt/http/TokenIterator
+ (super java/lang/Object)
+ (source "TokenIterator.java")
+ (implements java/util/Iterator)
+
+
+(method (attrs public abstract ) hasNext()boolean
+)
+
+(method (attrs public abstract ) nextToken()[object java/lang/String]
+)
+
+)

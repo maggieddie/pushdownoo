@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/ucomb/android/testinterface/Relatable
+ (super java/lang/Object)
+ (source "Relatable.java")
+
+ (field (attrs public static final ) I int 100); 0x64 )
+
+(method (attrs public abstract ) isLargerThan([object org/ucomb/android/testinterface/Relatable] )int
+)
+
+)

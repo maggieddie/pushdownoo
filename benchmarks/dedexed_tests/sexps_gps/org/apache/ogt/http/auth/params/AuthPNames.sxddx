@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/auth/params/AuthPNames
+ (super java/lang/Object)
+ (source "AuthPNames.java")
+
+ (field (attrs public static final ) CREDENTIAL_CHARSET [object java/lang/String] "http.auth.credential-charset" )
+ (field (attrs public static final ) PROXY_AUTH_PREF [object java/lang/String] "http.auth.proxy-scheme-pref" )
+ (field (attrs public static final ) TARGET_AUTH_PREF [object java/lang/String] "http.auth.target-scheme-pref" )
+
+)

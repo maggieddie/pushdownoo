@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/slf4j/ILoggerFactory
+ (super java/lang/Object)
+ (source "ILoggerFactory.java")
+
+
+(method (attrs public abstract ) getLogger([object java/lang/String] )[object org/slf4j/Logger]
+)
+
+)

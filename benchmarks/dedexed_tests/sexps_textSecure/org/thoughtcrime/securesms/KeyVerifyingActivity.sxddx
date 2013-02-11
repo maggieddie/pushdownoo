@@ -1,0 +1,78 @@
+(class (attrs public abstract ) org/thoughtcrime/securesms/KeyVerifyingActivity
+ (super org/thoughtcrime/securesms/KeyScanningActivity)
+ (source "KeyVerifyingActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/thoughtcrime/securesms/KeyVerifyingActivity])
+  (line 9)
+  (invoke-direct {v0} org/thoughtcrime/securesms/KeyScanningActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) handleVerified()void
+)
+
+(method (attrs protected ) onCreate([object android/os/Bundle] )void
+  (limit registers 4)
+  ; this: v2 ([object org/thoughtcrime/securesms/KeyVerifyingActivity])
+  ; parameter[0] : v3 ([object android/os/Bundle])
+  (line 13)
+  (invoke-super {v2 v3} org/thoughtcrime/securesms/KeyScanningActivity/onCreate [object android/os/Bundle] )
+  (line 14)
+  (invoke-virtual {v2} org/thoughtcrime/securesms/KeyVerifyingActivity/getSupportActionBar )
+  (move-result-object v0)
+  (const/4 v1 1)
+  (invoke-virtual {v0 v1} com/actionbarsherlock/app/ActionBar/setDisplayHomeAsUpEnabled boolean )
+  (line 15)
+  (return-void )
+)
+
+(method (attrs public ) onOptionsItemSelected([object com/actionbarsherlock/view/MenuItem] )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/thoughtcrime/securesms/KeyVerifyingActivity])
+  ; parameter[0] : v2 ([object com/actionbarsherlock/view/MenuItem])
+  (line 29)
+  (invoke-super {v1 v2} org/thoughtcrime/securesms/KeyScanningActivity/onOptionsItemSelected [object com/actionbarsherlock/view/MenuItem] )
+  (line 31)
+  (invoke-interface {v2} com/actionbarsherlock/view/MenuItem/getItemId )
+  (move-result v0)
+  (packed-switch v0 2131099802
+    ps934fe_93508 ; case 2131099802
+    ps934fe_default) ; default
+  (label ps934fe_default)
+  (line 35)
+  (const/4 v0 0)
+  (label l93506)
+  (return v0)
+  (label ps934fe_93508)
+  (line 32)
+  (invoke-virtual {v1} org/thoughtcrime/securesms/KeyVerifyingActivity/handleVerified )
+  (const/4 v0 1)
+  (goto l93506)
+  (line 31)
+  (label l93512)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) onPrepareOptionsMenu([object com/actionbarsherlock/view/Menu] )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/thoughtcrime/securesms/KeyVerifyingActivity])
+  ; parameter[0] : v3 ([object com/actionbarsherlock/view/Menu])
+  (line 19)
+  (invoke-super {v2 v3} org/thoughtcrime/securesms/KeyScanningActivity/onPrepareOptionsMenu [object com/actionbarsherlock/view/Menu] )
+  (line 21)
+  (invoke-virtual {v2} org/thoughtcrime/securesms/KeyVerifyingActivity/getSupportMenuInflater )
+  (move-result-object v0)
+  (line 22)
+  (const v1 2131623951) ; 0x7f0e000f)
+  (invoke-virtual {v0 v1 v3} com/actionbarsherlock/view/MenuInflater/inflate int [object com/actionbarsherlock/view/Menu] )
+  (line 24)
+  (const/4 v1 1)
+  (return v1)
+)
+
+)

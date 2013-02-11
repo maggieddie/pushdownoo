@@ -1,0 +1,17 @@
+(class (attrs public ) org/bouncycastle2/crypto/generators/KDF1BytesGenerator
+ (super org/bouncycastle2/crypto/generators/BaseKDFBytesGenerator)
+ (source "KDF1BytesGenerator.java")
+
+
+(method (attrs public ) <init>([object org/bouncycastle2/crypto/Digest] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/crypto/generators/KDF1BytesGenerator])
+  ; parameter[0] : v2 ([object org/bouncycastle2/crypto/Digest])
+  (line 21)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0 v2} org/bouncycastle2/crypto/generators/BaseKDFBytesGenerator/<init> int [object org/bouncycastle2/crypto/Digest] )
+  (line 22)
+  (return-void )
+ )
+
+)

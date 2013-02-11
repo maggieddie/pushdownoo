@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/client/AuthCache
+ (super java/lang/Object)
+ (source "AuthCache.java")
+
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) get([object org/apache/ogt/http/HttpHost] )[object org/apache/ogt/http/auth/AuthScheme]
+)
+
+(method (attrs public abstract ) put([object org/apache/ogt/http/HttpHost] [object org/apache/ogt/http/auth/AuthScheme] )void
+)
+
+(method (attrs public abstract ) remove([object org/apache/ogt/http/HttpHost] )void
+)
+
+)

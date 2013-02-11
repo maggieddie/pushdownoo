@@ -1,0 +1,16 @@
+(class (attrs public ) org/andengine/opengl/util/GLMatrixStack$GLMatrixStackUnderflowException
+ (super org/andengine/util/exception/AndEngineRuntimeException)
+ (source "GLMatrixStack.java")
+
+ (field (attrs private static final ) serialVersionUID long -742938634); 0xd3b7a7f6 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/opengl/util/GLMatrixStack$GLMatrixStackUnderflowException])
+  (line 191)
+  (invoke-direct {v0} org/andengine/util/exception/AndEngineRuntimeException/<init> )
+  (line 193)
+  (return-void )
+ )
+
+)

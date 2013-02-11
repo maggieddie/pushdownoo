@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/google/zxing/oned/UPCEANWriter
+ (super java/lang/Object)
+ (implements com/google/zxing/Writer)
+
+
+(method (attrs public abstract ) encode([object java/lang/String] )[array byte]
+)
+
+)

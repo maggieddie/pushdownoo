@@ -1,0 +1,39 @@
+(class (attrs ) org/bouncycastle2/x509/X509Util$Implementation
+ (super java/lang/Object)
+ (source "X509Util.java")
+
+ (field (attrs ) engine [object java/lang/Object] )
+ (field (attrs ) provider [object java/security/Provider] )
+
+(method (attrs ) <init>([object java/lang/Object] [object java/security/Provider] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/x509/X509Util$Implementation])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/security/Provider])
+  (line 284)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 288)
+  (iput-object v1 v0 org/bouncycastle2/x509/X509Util$Implementation.engine [object java/lang/Object])
+  (line 289)
+  (iput-object v2 v0 org/bouncycastle2/x509/X509Util$Implementation.provider [object java/security/Provider])
+  (line 290)
+  (return-void )
+ )
+
+(method (attrs ) getEngine()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/x509/X509Util$Implementation])
+  (line 294)
+  (iget-object v0 v1 org/bouncycastle2/x509/X509Util$Implementation.engine [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs ) getProvider()[object java/security/Provider]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/x509/X509Util$Implementation])
+  (line 299)
+  (iget-object v0 v1 org/bouncycastle2/x509/X509Util$Implementation.provider [object java/security/Provider])
+  (return-object v0)
+)
+
+)

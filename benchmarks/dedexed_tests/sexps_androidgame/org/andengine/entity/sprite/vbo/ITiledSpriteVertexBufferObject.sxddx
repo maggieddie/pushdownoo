@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) org/andengine/entity/sprite/vbo/ITiledSpriteVertexBufferObject
+ (super java/lang/Object)
+ (source "ITiledSpriteVertexBufferObject.java")
+ (implements org/andengine/entity/sprite/vbo/ISpriteVertexBufferObject)
+
+
+(method (attrs public abstract ) onUpdateColor([object org/andengine/entity/sprite/TiledSprite] )void
+)
+
+(method (attrs public abstract ) onUpdateTextureCoordinates([object org/andengine/entity/sprite/TiledSprite] )void
+)
+
+(method (attrs public abstract ) onUpdateVertices([object org/andengine/entity/sprite/TiledSprite] )void
+)
+
+)

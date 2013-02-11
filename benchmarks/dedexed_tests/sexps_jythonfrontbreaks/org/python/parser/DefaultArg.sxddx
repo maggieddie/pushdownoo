@@ -1,0 +1,23 @@
+(class (attrs ) org/python/parser/DefaultArg
+ (super org/python/parser/SimpleNode)
+ (source "TreeBuilder.java")
+
+ (field (attrs public ) parameter [object org/python/parser/ast/exprType] )
+ (field (attrs public ) value [object org/python/parser/ast/exprType] )
+
+(method (attrs ) <init>([object org/python/parser/ast/exprType] [object org/python/parser/ast/exprType] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/parser/DefaultArg])
+  ; parameter[0] : v1 ([object org/python/parser/ast/exprType])
+  ; parameter[1] : v2 ([object org/python/parser/ast/exprType])
+  (line 557)
+  (invoke-direct {v0} org/python/parser/SimpleNode/<init> )
+  (line 558)
+  (iput-object v1 v0 org/python/parser/DefaultArg.parameter [object org/python/parser/ast/exprType])
+  (line 559)
+  (iput-object v2 v0 org/python/parser/DefaultArg.value [object org/python/parser/ast/exprType])
+  (line 560)
+  (return-void )
+ )
+
+)

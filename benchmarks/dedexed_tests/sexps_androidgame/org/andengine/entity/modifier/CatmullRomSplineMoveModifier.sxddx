@@ -1,0 +1,54 @@
+(class (attrs public ) org/andengine/entity/modifier/CatmullRomSplineMoveModifier
+ (super org/andengine/entity/modifier/CardinalSplineMoveModifier)
+ (source "CatmullRomSplineMoveModifier.java")
+
+
+(method (attrs public ) <init>(float [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig])
+  (line 25)
+  (invoke-direct {v0 v1 v2} org/andengine/entity/modifier/CardinalSplineMoveModifier/<init> float [object org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig] )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig] [object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] )void
+  (limit registers 4)
+  ; this: v0 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig])
+  ; parameter[2] : v3 ([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  (line 33)
+  (invoke-direct {v0 v1 v2 v3} org/andengine/entity/modifier/CardinalSplineMoveModifier/<init> float [object org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig] [object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig] [object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [object org/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig])
+  ; parameter[2] : v3 ([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  ; parameter[3] : v4 ([object org/andengine/util/modifier/ease/IEaseFunction])
+  (line 37)
+  (invoke-direct {v0 v1 v2 v3 v4} org/andengine/entity/modifier/CardinalSplineMoveModifier/<init> float [object org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig] [object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [object org/andengine/util/modifier/ease/IEaseFunction] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float [object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig] [object org/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 4)
+  ; this: v0 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 ([object org/andengine/entity/modifier/CatmullRomSplineMoveModifier$CatmullRomMoveModifierConfig])
+  ; parameter[2] : v3 ([object org/andengine/util/modifier/ease/IEaseFunction])
+  (line 29)
+  (invoke-direct {v0 v1 v2 v3} org/andengine/entity/modifier/CardinalSplineMoveModifier/<init> float [object org/andengine/entity/modifier/CardinalSplineMoveModifier$CardinalSplineMoveModifierConfig] [object org/andengine/util/modifier/ease/IEaseFunction] )
+  (line 30)
+  (return-void )
+ )
+
+)

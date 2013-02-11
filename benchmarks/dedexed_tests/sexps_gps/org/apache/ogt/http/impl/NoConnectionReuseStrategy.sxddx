@@ -1,0 +1,41 @@
+(class (attrs public ) org/apache/ogt/http/impl/NoConnectionReuseStrategy
+ (super java/lang/Object)
+ (source "NoConnectionReuseStrategy.java")
+ (implements org/apache/ogt/http/ConnectionReuseStrategy)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/impl/NoConnectionReuseStrategy])
+  (line 39)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) keepAlive([object org/apache/ogt/http/HttpResponse] [object org/apache/ogt/http/protocol/HttpContext] )boolean
+  (limit registers 5)
+  ; this: v2 ([object org/apache/ogt/http/impl/NoConnectionReuseStrategy])
+  ; parameter[0] : v3 ([object org/apache/ogt/http/HttpResponse])
+  ; parameter[1] : v4 ([object org/apache/ogt/http/protocol/HttpContext])
+  (line 46)
+  (if-nez v3 lae85c)
+  (line 47)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "HTTP response may not be null")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label lae85c)
+  (line 49)
+  (if-nez v4 lae870)
+  (line 50)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "HTTP context may not be null")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label lae870)
+  (line 53)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

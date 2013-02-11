@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/ogt/http/impl/conn/tsccm/PoolEntryRequest
+ (super java/lang/Object)
+ (source "PoolEntryRequest.java")
+
+
+(method (attrs public abstract ) abortRequest()void
+)
+
+(method (attrs public abstract ) getPoolEntry(long [object java/util/concurrent/TimeUnit] )[object org/apache/ogt/http/impl/conn/tsccm/BasicPoolEntry]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/InterruptedException]  [object org/apache/ogt/http/conn/ConnectionPoolTimeoutException])
+  )
+)
+
+)

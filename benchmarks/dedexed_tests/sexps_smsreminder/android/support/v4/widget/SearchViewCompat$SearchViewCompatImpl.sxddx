@@ -1,0 +1,15 @@
+(interface (attrs abstract ) android/support/v4/widget/SearchViewCompat$SearchViewCompatImpl
+ (super java/lang/Object)
+ (source "SearchViewCompat.java")
+
+
+(method (attrs public abstract ) newOnQueryTextListener([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) newSearchView([object android/content/Context] )[object android/view/View]
+)
+
+(method (attrs public abstract ) setOnQueryTextListener([object java/lang/Object] [object java/lang/Object] )void
+)
+
+)

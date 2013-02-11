@@ -1,0 +1,40 @@
+(class (attrs public ) org/bouncycastle2/asn1/crmf/POPOPrivKey
+ (super org/bouncycastle2/asn1/ASN1Encodable)
+ (source "POPOPrivKey.java")
+ (implements org/bouncycastle2/asn1/ASN1Choice)
+
+ (field (attrs private ) obj [object org/bouncycastle2/asn1/DERObject] )
+
+(method (attrs private ) <init>([object org/bouncycastle2/asn1/DERObject] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/asn1/crmf/POPOPrivKey])
+  ; parameter[0] : v1 ([object org/bouncycastle2/asn1/DERObject])
+  (line 14)
+  (invoke-direct {v0} org/bouncycastle2/asn1/ASN1Encodable/<init> )
+  (line 16)
+  (iput-object v1 v0 org/bouncycastle2/asn1/crmf/POPOPrivKey.obj [object org/bouncycastle2/asn1/DERObject])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public static ) getInstance([object org/bouncycastle2/asn1/ASN1TaggedObject] boolean )[object org/bouncycastle2/asn1/ASN1Encodable]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/bouncycastle2/asn1/ASN1TaggedObject])
+  ; parameter[1] : v3 (boolean)
+  (line 21)
+  (new-instance v0 org/bouncycastle2/asn1/crmf/POPOPrivKey)
+  (invoke-virtual {v2} org/bouncycastle2/asn1/ASN1TaggedObject/getObject )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} org/bouncycastle2/asn1/crmf/POPOPrivKey/<init> [object org/bouncycastle2/asn1/DERObject] )
+  (return-object v0)
+ )
+
+(method (attrs public ) toASN1Object()[object org/bouncycastle2/asn1/DERObject]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/crmf/POPOPrivKey])
+  (line 39)
+  (iget-object v0 v1 org/bouncycastle2/asn1/crmf/POPOPrivKey.obj [object org/bouncycastle2/asn1/DERObject])
+  (return-object v0)
+)
+
+)

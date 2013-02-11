@@ -1,0 +1,44 @@
+(class (attrs ) com/todo/todo/KTodo$2
+ (super java/lang/Object)
+ (source "KTodo.java")
+ (implements com/todo/todo/SlideLeftListener)
+
+ (field (attrs final ) this$0 [object com/todo/todo/KTodo] )
+
+(method (attrs ) <init>([object com/todo/todo/KTodo] )void
+  (limit registers 2)
+  ; this: v0 ([object com/todo/todo/KTodo$2])
+  ; parameter[0] : v1 ([object com/todo/todo/KTodo])
+  (line 1)
+  (iput-object v1 v0 com/todo/todo/KTodo$2.this$0 [object com/todo/todo/KTodo])
+  (line 88)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onSlideBack()void
+  (limit registers 2)
+  ; this: v1 ([object com/todo/todo/KTodo$2])
+  (line 99)
+  (iget-object v0 v1 com/todo/todo/KTodo$2.this$0 [object com/todo/todo/KTodo])
+  (invoke-static {v0} com/todo/todo/KTodo/access$6 [object com/todo/todo/KTodo] )
+  (line 100)
+  (return-void )
+)
+
+(method (attrs public ) slideLeftStarted(long )void
+  (limit registers 5)
+  ; this: v2 ([object com/todo/todo/KTodo$2])
+  ; parameter[0] : v3 (long)
+  (line 90)
+  (iget-object v0 v2 com/todo/todo/KTodo$2.this$0 [object com/todo/todo/KTodo])
+  (invoke-static {v0 v3 v4} com/todo/todo/KTodo/access$4 [object com/todo/todo/KTodo] long )
+  (line 91)
+  (iget-object v0 v2 com/todo/todo/KTodo$2.this$0 [object com/todo/todo/KTodo])
+  (const/4 v1 1)
+  (invoke-static {v0 v1} com/todo/todo/KTodo/access$5 [object com/todo/todo/KTodo] boolean )
+  (line 94)
+  (return-void )
+)
+
+)

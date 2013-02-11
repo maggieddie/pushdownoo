@@ -1,0 +1,15 @@
+(interface (attrs abstract ) android/support/v4/view/KeyEventCompat$KeyEventVersionImpl
+ (super java/lang/Object)
+ (source "KeyEventCompat.java")
+
+
+(method (attrs public abstract ) metaStateHasModifiers(int int )boolean
+)
+
+(method (attrs public abstract ) metaStateHasNoModifiers(int )boolean
+)
+
+(method (attrs public abstract ) normalizeMetaState(int )int
+)
+
+)

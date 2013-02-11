@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/MapView$MapViewEventListener
+ (super java/lang/Object)
+ (source "MapView.java")
+
+
+(method (attrs public abstract ) longTouch([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) mapLoaded([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) move([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) moveEnd([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) moveStart([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) touch([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) zoomEnd([object com/mapquest/android/maps/MapView] )void
+)
+
+(method (attrs public abstract ) zoomStart([object com/mapquest/android/maps/MapView] )void
+)
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) org/apache/ogt/http/HttpInetConnection
+ (super java/lang/Object)
+ (source "HttpInetConnection.java")
+ (implements org/apache/ogt/http/HttpConnection)
+
+
+(method (attrs public abstract ) getLocalAddress()[object java/net/InetAddress]
+)
+
+(method (attrs public abstract ) getLocalPort()int
+)
+
+(method (attrs public abstract ) getRemoteAddress()[object java/net/InetAddress]
+)
+
+(method (attrs public abstract ) getRemotePort()int
+)
+
+)

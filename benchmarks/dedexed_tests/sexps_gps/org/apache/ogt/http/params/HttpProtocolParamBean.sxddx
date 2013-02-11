@@ -1,0 +1,71 @@
+(class (attrs public ) org/apache/ogt/http/params/HttpProtocolParamBean
+ (super org/apache/ogt/http/params/HttpAbstractParamBean)
+ (source "HttpProtocolParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/ogt/http/params/HttpParams] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/params/HttpParams])
+  (line 42)
+  (invoke-direct {v0 v1} org/apache/ogt/http/params/HttpAbstractParamBean/<init> [object org/apache/ogt/http/params/HttpParams] )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) setContentCharset([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 50)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpProtocolParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpProtocolParams/setContentCharset [object org/apache/ogt/http/params/HttpParams] [object java/lang/String] )
+  (line 51)
+  (return-void )
+)
+
+(method (attrs public ) setHttpElementCharset([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 46)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpProtocolParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpProtocolParams/setHttpElementCharset [object org/apache/ogt/http/params/HttpParams] [object java/lang/String] )
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) setUseExpectContinue(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v2 (boolean)
+  (line 62)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpProtocolParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpProtocolParams/setUseExpectContinue [object org/apache/ogt/http/params/HttpParams] boolean )
+  (line 63)
+  (return-void )
+)
+
+(method (attrs public ) setUserAgent([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 58)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpProtocolParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpProtocolParams/setUserAgent [object org/apache/ogt/http/params/HttpParams] [object java/lang/String] )
+  (line 59)
+  (return-void )
+)
+
+(method (attrs public ) setVersion([object org/apache/ogt/http/HttpVersion] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/HttpVersion])
+  (line 54)
+  (iget-object v0 v1 org/apache/ogt/http/params/HttpProtocolParamBean.params [object org/apache/ogt/http/params/HttpParams])
+  (invoke-static {v0 v2} org/apache/ogt/http/params/HttpProtocolParams/setVersion [object org/apache/ogt/http/params/HttpParams] [object org/apache/ogt/http/ProtocolVersion] )
+  (line 55)
+  (return-void )
+)
+
+)

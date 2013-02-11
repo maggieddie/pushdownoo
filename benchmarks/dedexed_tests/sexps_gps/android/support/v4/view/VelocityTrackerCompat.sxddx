@@ -1,0 +1,59 @@
+(class (attrs public ) android/support/v4/view/VelocityTrackerCompat
+ (super java/lang/Object)
+ (source "VelocityTrackerCompat.java")
+
+ (field (attrs static final ) IMPL [object android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 67)
+  (sget v0 android/os/Build$VERSION.SDK_INT int)
+  (const/16 v1 11)
+  (if-lt v0 v1 l59274)
+  (line 68)
+  (new-instance v0 android/support/v4/view/VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl)
+  (invoke-direct {v0} android/support/v4/view/VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl/<init> )
+  (sput-object v0 android/support/v4/view/VelocityTrackerCompat.IMPL [object android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl])
+  (label l59272)
+  (line 72)
+  (return-void )
+  (label l59274)
+  (line 70)
+  (new-instance v0 android/support/v4/view/VelocityTrackerCompat$BaseVelocityTrackerVersionImpl)
+  (invoke-direct {v0} android/support/v4/view/VelocityTrackerCompat$BaseVelocityTrackerVersionImpl/<init> )
+  (sput-object v0 android/support/v4/view/VelocityTrackerCompat.IMPL [object android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl])
+  (goto l59272)
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/VelocityTrackerCompat])
+  (line 25)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public static ) getXVelocity([object android/view/VelocityTracker] int )float
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/VelocityTracker])
+  ; parameter[1] : v2 (int)
+  (line 82)
+  (sget-object v0 android/support/v4/view/VelocityTrackerCompat.IMPL [object android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl])
+  (invoke-interface {v0 v1 v2} android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl/getXVelocity [object android/view/VelocityTracker] int )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getYVelocity([object android/view/VelocityTracker] int )float
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/VelocityTracker])
+  ; parameter[1] : v2 (int)
+  (line 91)
+  (sget-object v0 android/support/v4/view/VelocityTrackerCompat.IMPL [object android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl])
+  (invoke-interface {v0 v1 v2} android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl/getYVelocity [object android/view/VelocityTracker] int )
+  (move-result v0)
+  (return v0)
+ )
+
+)

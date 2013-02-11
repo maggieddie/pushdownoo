@@ -1,0 +1,17 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/AES$ECB
+ (super org/bouncycastle2/jce/provider/JCEBlockCipher)
+ (source "AES.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/symmetric/AES$ECB])
+  (line 35)
+  (new-instance v0 org/bouncycastle2/crypto/engines/AESFastEngine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/AESFastEngine/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/JCEBlockCipher/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (line 36)
+  (return-void )
+ )
+
+)

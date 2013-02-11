@@ -1,0 +1,28 @@
+(class (attrs public ) org/bouncycastle2/crypto/params/GOST3410KeyParameters
+ (super org/bouncycastle2/crypto/params/AsymmetricKeyParameter)
+ (source "GOST3410KeyParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle2/crypto/params/GOST3410Parameters] )
+
+(method (attrs public ) <init>(boolean [object org/bouncycastle2/crypto/params/GOST3410Parameters] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/crypto/params/GOST3410KeyParameters])
+  ; parameter[0] : v1 (boolean)
+  ; parameter[1] : v2 ([object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (line 12)
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/params/AsymmetricKeyParameter/<init> boolean )
+  (line 14)
+  (iput-object v2 v0 org/bouncycastle2/crypto/params/GOST3410KeyParameters.params [object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle2/crypto/params/GOST3410Parameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/crypto/params/GOST3410KeyParameters])
+  (line 19)
+  (iget-object v0 v1 org/bouncycastle2/crypto/params/GOST3410KeyParameters.params [object org/bouncycastle2/crypto/params/GOST3410Parameters])
+  (return-object v0)
+)
+
+)

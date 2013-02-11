@@ -1,0 +1,47 @@
+(class (attrs public ) org/andengine/util/exception/MethodNotSupportedException
+ (super org/andengine/util/exception/AndEngineRuntimeException)
+ (source "MethodNotSupportedException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1652555809); 0x9d7fffdf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/exception/MethodNotSupportedException])
+  (line 24)
+  (invoke-direct {v0} org/andengine/util/exception/AndEngineRuntimeException/<init> )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/exception/MethodNotSupportedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 29)
+  (invoke-direct {v0 v1} org/andengine/util/exception/AndEngineRuntimeException/<init> [object java/lang/String] )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/util/exception/MethodNotSupportedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 37)
+  (invoke-direct {v0 v1 v2} org/andengine/util/exception/AndEngineRuntimeException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/exception/MethodNotSupportedException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 33)
+  (invoke-direct {v0 v1} org/andengine/util/exception/AndEngineRuntimeException/<init> [object java/lang/Throwable] )
+  (line 34)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/apache/ogt/http/impl/conn/tsccm/RefQueueHandler
+ (super java/lang/Object)
+ (source "RefQueueHandler.java")
+
+
+(method (attrs public abstract ) handleReference([object java/lang/ref/Reference] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/ref/Reference"  "<*>;)V")
+  )
+)
+
+)

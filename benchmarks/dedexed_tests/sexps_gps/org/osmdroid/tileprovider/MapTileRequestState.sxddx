@@ -1,0 +1,81 @@
+(class (attrs public ) org/osmdroid/tileprovider/MapTileRequestState
+ (super java/lang/Object)
+ (source "MapTileRequestState.java")
+
+ (field (attrs private final ) mCallback [object org/osmdroid/tileprovider/IMapTileProviderCallback] )
+ (field (attrs private ) mCurrentProvider [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase] )
+ (field (attrs private final ) mMapTile [object org/osmdroid/tileprovider/MapTile] )
+ (field (attrs private final ) mProviderQueue [object java/util/Queue] )
+
+(method (attrs public ) <init>([object org/osmdroid/tileprovider/MapTile] [array [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase]] [object org/osmdroid/tileprovider/IMapTileProviderCallback] )void
+  (limit registers 5)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  ; parameter[0] : v2 ([object org/osmdroid/tileprovider/MapTile])
+  ; parameter[1] : v3 ([array [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase]])
+  ; parameter[2] : v4 ([object org/osmdroid/tileprovider/IMapTileProviderCallback])
+  (line 18)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 19)
+  (new-instance v0 java/util/LinkedList)
+  (invoke-direct {v0} java/util/LinkedList/<init> )
+  (iput-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mProviderQueue [object java/util/Queue])
+  (line 20)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mProviderQueue [object java/util/Queue])
+  (invoke-static {v0 v3} java/util/Collections/addAll [object java/util/Collection] [array [object java/lang/Object]] )
+  (line 21)
+  (iput-object v2 v1 org/osmdroid/tileprovider/MapTileRequestState.mMapTile [object org/osmdroid/tileprovider/MapTile])
+  (line 22)
+  (iput-object v4 v1 org/osmdroid/tileprovider/MapTileRequestState.mCallback [object org/osmdroid/tileprovider/IMapTileProviderCallback])
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs public ) getCallback()[object org/osmdroid/tileprovider/IMapTileProviderCallback]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  (line 30)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mCallback [object org/osmdroid/tileprovider/IMapTileProviderCallback])
+  (return-object v0)
+)
+
+(method (attrs public ) getCurrentProvider()[object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  (line 43)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mCurrentProvider [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase])
+  (return-object v0)
+)
+
+(method (attrs public ) getMapTile()[object org/osmdroid/tileprovider/MapTile]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  (line 26)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mMapTile [object org/osmdroid/tileprovider/MapTile])
+  (return-object v0)
+)
+
+(method (attrs public ) getNextProvider()[object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase]
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  (line 38)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mProviderQueue [object java/util/Queue])
+  (invoke-interface {v0} java/util/Queue/poll )
+  (move-result-object v0)
+  (check-cast v0 [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase])
+  (iput-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mCurrentProvider [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase])
+  (line 39)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mCurrentProvider [object org/osmdroid/tileprovider/modules/MapTileModuleProviderBase])
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/osmdroid/tileprovider/MapTileRequestState])
+  (line 34)
+  (iget-object v0 v1 org/osmdroid/tileprovider/MapTileRequestState.mProviderQueue [object java/util/Queue])
+  (invoke-interface {v0} java/util/Queue/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+)

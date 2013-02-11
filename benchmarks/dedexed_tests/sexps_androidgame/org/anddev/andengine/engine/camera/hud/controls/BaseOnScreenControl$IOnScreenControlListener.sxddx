@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/engine/camera/hud/controls/BaseOnScreenControl$IOnScreenControlListener
+ (super java/lang/Object)
+ (source "BaseOnScreenControl.java")
+
+
+(method (attrs public abstract ) onControlChange([object org/anddev/andengine/engine/camera/hud/controls/BaseOnScreenControl] float float )void
+)
+
+)

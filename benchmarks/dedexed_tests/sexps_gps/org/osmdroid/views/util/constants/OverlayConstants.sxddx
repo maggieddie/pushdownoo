@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/osmdroid/views/util/constants/OverlayConstants
+ (super java/lang/Object)
+ (source "OverlayConstants.java")
+
+ (field (attrs public static final ) DEBUGMODE boolean false )
+ (field (attrs public static final ) DEFAULT_ZOOMLEVEL_MINIMAP_DIFFERENCE int 3); 0x3 )
+ (field (attrs public static final ) NOT_SET int -2147483648); 0x80000000 )
+
+)

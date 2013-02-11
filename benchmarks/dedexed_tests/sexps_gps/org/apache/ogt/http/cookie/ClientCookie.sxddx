@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/ClientCookie
+ (super java/lang/Object)
+ (source "ClientCookie.java")
+ (implements org/apache/ogt/http/cookie/Cookie)
+
+ (field (attrs public static final ) COMMENTURL_ATTR [object java/lang/String] "commenturl" )
+ (field (attrs public static final ) COMMENT_ATTR [object java/lang/String] "comment" )
+ (field (attrs public static final ) DISCARD_ATTR [object java/lang/String] "discard" )
+ (field (attrs public static final ) DOMAIN_ATTR [object java/lang/String] "domain" )
+ (field (attrs public static final ) EXPIRES_ATTR [object java/lang/String] "expires" )
+ (field (attrs public static final ) MAX_AGE_ATTR [object java/lang/String] "max-age" )
+ (field (attrs public static final ) PATH_ATTR [object java/lang/String] "path" )
+ (field (attrs public static final ) PORT_ATTR [object java/lang/String] "port" )
+ (field (attrs public static final ) SECURE_ATTR [object java/lang/String] "secure" )
+ (field (attrs public static final ) VERSION_ATTR [object java/lang/String] "version" )
+
+(method (attrs public abstract ) containsAttribute([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) getAttribute([object java/lang/String] )[object java/lang/String]
+)
+
+)

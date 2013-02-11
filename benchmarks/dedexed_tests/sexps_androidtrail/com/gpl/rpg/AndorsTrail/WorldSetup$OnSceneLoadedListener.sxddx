@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/gpl/rpg/AndorsTrail/WorldSetup$OnSceneLoadedListener
+ (super java/lang/Object)
+ (source "WorldSetup.java")
+
+
+(method (attrs public abstract ) onSceneLoadFailed(int )void
+)
+
+(method (attrs public abstract ) onSceneLoaded()void
+)
+
+)

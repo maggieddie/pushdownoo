@@ -1,0 +1,17 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/SEED$Wrap
+ (super org/bouncycastle2/jce/provider/WrapCipherSpi)
+ (source "SEED.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/symmetric/SEED$Wrap])
+  (line 48)
+  (new-instance v0 org/bouncycastle2/crypto/engines/SEEDWrapEngine)
+  (invoke-direct {v0} org/bouncycastle2/crypto/engines/SEEDWrapEngine/<init> )
+  (invoke-direct {v1 v0} org/bouncycastle2/jce/provider/WrapCipherSpi/<init> [object org/bouncycastle2/crypto/Wrapper] )
+  (line 49)
+  (return-void )
+ )
+
+)

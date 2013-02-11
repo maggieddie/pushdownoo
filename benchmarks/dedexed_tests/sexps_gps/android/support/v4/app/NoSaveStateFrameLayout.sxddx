@@ -1,0 +1,70 @@
+(class (attrs ) android/support/v4/app/NoSaveStateFrameLayout
+ (super android/widget/FrameLayout)
+ (source "NoSaveStateFrameLayout.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NoSaveStateFrameLayout])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 45)
+  (invoke-direct {v0 v1} android/widget/FrameLayout/<init> [object android/content/Context] )
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs static ) wrap([object android/view/View] )[object android/view/ViewGroup]
+  (limit registers 6)
+  ; parameter[0] : v5 ([object android/view/View])
+  (const/4 v4 15)
+  (line 32)
+  (new-instance v2 android/support/v4/app/NoSaveStateFrameLayout)
+  (invoke-virtual {v5} android/view/View/getContext )
+  (move-result-object v3)
+  (invoke-direct {v2 v3} android/support/v4/app/NoSaveStateFrameLayout/<init> [object android/content/Context] )
+  (line 33)
+  (invoke-virtual {v5} android/view/View/getLayoutParams )
+  (move-result-object v0)
+  (line 34)
+  (if-eqz v0 l539ea)
+  (line 35)
+  (invoke-virtual {v2 v0} android/support/v4/app/NoSaveStateFrameLayout/setLayoutParams [object android/view/ViewGroup$LayoutParams] )
+  (label l539ea)
+  (line 37)
+  (new-instance v1 android/widget/FrameLayout$LayoutParams)
+  (invoke-direct {v1 v4 v4} android/widget/FrameLayout$LayoutParams/<init> int int )
+  (line 39)
+  (invoke-virtual {v5 v1} android/view/View/setLayoutParams [object android/view/ViewGroup$LayoutParams] )
+  (line 40)
+  (invoke-virtual {v2 v5} android/support/v4/app/NoSaveStateFrameLayout/addView [object android/view/View] )
+  (line 41)
+  (return-object v2)
+ )
+
+(method (attrs protected ) dispatchRestoreInstanceState([object android/util/SparseArray] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/util/SparseArray"  "<"  "Landroid/os/Parcelable;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NoSaveStateFrameLayout])
+  ; parameter[0] : v1 ([object android/util/SparseArray])
+  (line 61)
+  (invoke-virtual {v0 v1} android/support/v4/app/NoSaveStateFrameLayout/dispatchThawSelfOnly [object android/util/SparseArray] )
+  (line 62)
+  (return-void )
+)
+
+(method (attrs protected ) dispatchSaveInstanceState([object android/util/SparseArray] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/util/SparseArray"  "<"  "Landroid/os/Parcelable;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NoSaveStateFrameLayout])
+  ; parameter[0] : v1 ([object android/util/SparseArray])
+  (line 53)
+  (invoke-virtual {v0 v1} android/support/v4/app/NoSaveStateFrameLayout/dispatchFreezeSelfOnly [object android/util/SparseArray] )
+  (line 54)
+  (return-void )
+)
+
+)

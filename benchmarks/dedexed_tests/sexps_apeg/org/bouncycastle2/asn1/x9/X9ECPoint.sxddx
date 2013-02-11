@@ -1,0 +1,56 @@
+(class (attrs public ) org/bouncycastle2/asn1/x9/X9ECPoint
+ (super org/bouncycastle2/asn1/ASN1Encodable)
+ (source "X9ECPoint.java")
+
+ (field (attrs ) p [object org/bouncycastle2/math/ec/ECPoint] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/math/ec/ECCurve] [object org/bouncycastle2/asn1/ASN1OctetString] )void
+  (limit registers 4)
+  ; this: v1 ([object org/bouncycastle2/asn1/x9/X9ECPoint])
+  ; parameter[0] : v2 ([object org/bouncycastle2/math/ec/ECCurve])
+  ; parameter[1] : v3 ([object org/bouncycastle2/asn1/ASN1OctetString])
+  (line 24)
+  (invoke-direct {v1} org/bouncycastle2/asn1/ASN1Encodable/<init> )
+  (line 28)
+  (invoke-virtual {v3} org/bouncycastle2/asn1/ASN1OctetString/getOctets )
+  (move-result-object v0)
+  (invoke-virtual {v2 v0} org/bouncycastle2/math/ec/ECCurve/decodePoint [array byte] )
+  (move-result-object v0)
+  (iput-object v0 v1 org/bouncycastle2/asn1/x9/X9ECPoint.p [object org/bouncycastle2/math/ec/ECPoint])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/bouncycastle2/math/ec/ECPoint] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/asn1/x9/X9ECPoint])
+  ; parameter[0] : v1 ([object org/bouncycastle2/math/ec/ECPoint])
+  (line 18)
+  (invoke-direct {v0} org/bouncycastle2/asn1/ASN1Encodable/<init> )
+  (line 21)
+  (iput-object v1 v0 org/bouncycastle2/asn1/x9/X9ECPoint.p [object org/bouncycastle2/math/ec/ECPoint])
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public ) getPoint()[object org/bouncycastle2/math/ec/ECPoint]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/x9/X9ECPoint])
+  (line 33)
+  (iget-object v0 v1 org/bouncycastle2/asn1/x9/X9ECPoint.p [object org/bouncycastle2/math/ec/ECPoint])
+  (return-object v0)
+)
+
+(method (attrs public ) toASN1Object()[object org/bouncycastle2/asn1/DERObject]
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/asn1/x9/X9ECPoint])
+  (line 46)
+  (new-instance v0 org/bouncycastle2/asn1/DEROctetString)
+  (iget-object v1 v2 org/bouncycastle2/asn1/x9/X9ECPoint.p [object org/bouncycastle2/math/ec/ECPoint])
+  (invoke-virtual {v1} org/bouncycastle2/math/ec/ECPoint/getEncoded )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} org/bouncycastle2/asn1/DEROctetString/<init> [array byte] )
+  (return-object v0)
+)
+
+)

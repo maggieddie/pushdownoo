@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/andengine/entity/sprite/AnimatedSprite$IAnimationListener
+ (super java/lang/Object)
+ (source "AnimatedSprite.java")
+
+
+(method (attrs public abstract ) onAnimationFinished([object org/andengine/entity/sprite/AnimatedSprite] )void
+)
+
+(method (attrs public abstract ) onAnimationFrameChanged([object org/andengine/entity/sprite/AnimatedSprite] int int )void
+)
+
+(method (attrs public abstract ) onAnimationLoopFinished([object org/andengine/entity/sprite/AnimatedSprite] int int )void
+)
+
+(method (attrs public abstract ) onAnimationStarted([object org/andengine/entity/sprite/AnimatedSprite] int )void
+)
+
+)

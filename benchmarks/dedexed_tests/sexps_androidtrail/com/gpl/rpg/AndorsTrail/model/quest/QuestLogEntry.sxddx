@@ -1,0 +1,31 @@
+(class (attrs public final ) com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry
+ (super java/lang/Object)
+ (source "QuestLogEntry.java")
+
+ (field (attrs public final ) finishesQuest boolean )
+ (field (attrs public final ) logtext [object java/lang/String] )
+ (field (attrs public final ) progress int )
+ (field (attrs public final ) rewardExperience int )
+
+(method (attrs public ) <init>(int [object java/lang/String] int boolean )void
+  (limit registers 5)
+  ; this: v0 ([object com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (boolean)
+  (line 9)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 10)
+  (iput v1 v0 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.progress int)
+  (line 11)
+  (iput-object v2 v0 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.logtext [object java/lang/String])
+  (line 12)
+  (iput v3 v0 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.rewardExperience int)
+  (line 13)
+  (iput-boolean v4 v0 com/gpl/rpg/AndorsTrail/model/quest/QuestLogEntry.finishesQuest boolean)
+  (line 14)
+  (return-void )
+ )
+
+)

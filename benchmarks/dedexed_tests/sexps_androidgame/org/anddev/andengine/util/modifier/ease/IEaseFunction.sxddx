@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/modifier/ease/IEaseFunction
+ (super java/lang/Object)
+ (source "IEaseFunction.java")
+
+ (field (attrs public static final ) DEFAULT [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 16)
+  (invoke-static {} org/anddev/andengine/util/modifier/ease/EaseLinear/getInstance )
+  (nop )
+  (move-result-object v0)
+  (sput-object v0 org/anddev/andengine/util/modifier/ease/IEaseFunction.DEFAULT [object org/anddev/andengine/util/modifier/ease/IEaseFunction])
+  (line 11)
+  (return-void )
+ )
+
+(method (attrs public abstract ) getPercentage(float float )float
+)
+
+)

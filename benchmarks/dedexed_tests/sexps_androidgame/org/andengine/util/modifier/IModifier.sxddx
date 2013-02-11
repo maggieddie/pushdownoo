@@ -1,0 +1,62 @@
+(interface (attrs public abstract ) org/andengine/util/modifier/IModifier
+ (super java/lang/Object)
+ (source "IModifier.java")
+
+ (field (attrs public static final ) MODIFIER_COMPARATOR_DURATION_DESCENDING [object java/util/Comparator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 20)
+  (new-instance v0 org/andengine/util/modifier/IModifier$1)
+  (invoke-direct {v0} org/andengine/util/modifier/IModifier$1/<init> )
+  (sput-object v0 org/andengine/util/modifier/IModifier.MODIFIER_COMPARATOR_DURATION_DESCENDING [object java/util/Comparator])
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public abstract ) addModifierListener([object org/andengine/util/modifier/IModifier$IModifierListener] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/modifier/IModifier$IModifierListener"  "<TT;>;)V")
+  )
+)
+
+(method (attrs public abstract ) deepCopy()[object org/andengine/util/modifier/IModifier]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/modifier/IModifier"  "<TT;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  )
+)
+
+(method (attrs public abstract ) getDuration()float
+)
+
+(method (attrs public abstract ) getSecondsElapsed()float
+)
+
+(method (attrs public abstract ) isAutoUnregisterWhenFinished()boolean
+)
+
+(method (attrs public abstract ) isFinished()boolean
+)
+
+(method (attrs public abstract ) onUpdate(float [object java/lang/Object] )float
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(FTT;)F")
+  )
+)
+
+(method (attrs public abstract ) removeModifierListener([object org/andengine/util/modifier/IModifier$IModifierListener] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/modifier/IModifier$IModifierListener"  "<TT;>;)Z")
+  )
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+(method (attrs public abstract ) setAutoUnregisterWhenFinished(boolean )void
+)
+
+)

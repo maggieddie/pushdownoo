@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/gpl/rpg/AndorsTrail/resource/ResourceFileTokenizer$ResourceObjectParser
+ (super java/lang/Object)
+ (source "ResourceFileTokenizer.java")
+
+
+(method (attrs public abstract ) parseRow([array [object java/lang/String]] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(["  "Ljava/lang/String;"  ")TT;")
+  )
+)
+
+)

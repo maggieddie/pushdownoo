@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/ziclix/python/sql/pipe/Source
+ (super java/lang/Object)
+ (source "Source.java")
+
+
+(method (attrs public abstract ) end()void
+)
+
+(method (attrs public abstract ) next()[object org/python/core/PyObject]
+)
+
+(method (attrs public abstract ) start()void
+)
+
+)

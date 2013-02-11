@@ -1,0 +1,43 @@
+(class (attrs ) org/bouncycastle2/jce/provider/test/BlockCipherTest$1
+ (super java/lang/Object)
+ (source "BlockCipherTest.java")
+ (implements java/security/PublicKey)
+
+ (field (attrs final ) this$0 [object org/bouncycastle2/jce/provider/test/BlockCipherTest] )
+
+(method (attrs ) <init>([object org/bouncycastle2/jce/provider/test/BlockCipherTest] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/jce/provider/test/BlockCipherTest$1])
+  ; parameter[0] : v1 ([object org/bouncycastle2/jce/provider/test/BlockCipherTest])
+  (line 1)
+  (iput-object v1 v0 org/bouncycastle2/jce/provider/test/BlockCipherTest$1.this$0 [object org/bouncycastle2/jce/provider/test/BlockCipherTest])
+  (line 821)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getAlgorithm()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/test/BlockCipherTest$1])
+  (line 826)
+  (const-string v0 "STUB")
+  (return-object v0)
+)
+
+(method (attrs public ) getEncoded()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/test/BlockCipherTest$1])
+  (line 836)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getFormat()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/jce/provider/test/BlockCipherTest$1])
+  (line 831)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

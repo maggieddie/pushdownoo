@@ -1,0 +1,22 @@
+(class (attrs public ) android/support/v4/content/IntentCompat
+ (super java/lang/Object)
+ (source "IntentCompat.java")
+
+ (field (attrs public static final ) ACTION_EXTERNAL_APPLICATIONS_AVAILABLE [object java/lang/String] "android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" )
+ (field (attrs public static final ) ACTION_EXTERNAL_APPLICATIONS_UNAVAILABLE [object java/lang/String] "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" )
+ (field (attrs public static final ) EXTRA_CHANGED_PACKAGE_LIST [object java/lang/String] "android.intent.extra.changed_package_list" )
+ (field (attrs public static final ) EXTRA_CHANGED_UID_LIST [object java/lang/String] "android.intent.extra.changed_uid_list" )
+ (field (attrs public static final ) EXTRA_HTML_TEXT [object java/lang/String] "android.intent.extra.HTML_TEXT" )
+ (field (attrs public static final ) FLAG_ACTIVITY_CLEAR_TASK int 32768); 0x8000 )
+ (field (attrs public static final ) FLAG_ACTIVITY_TASK_ON_HOME int 16384); 0x4000 )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/content/IntentCompat])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 29)
+  (return-void )
+ )
+
+)

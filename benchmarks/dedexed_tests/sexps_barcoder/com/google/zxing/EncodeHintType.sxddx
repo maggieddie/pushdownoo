@@ -1,0 +1,25 @@
+(class (attrs public final ) com/google/zxing/EncodeHintType
+ (super java/lang/Object)
+
+ (field (attrs public static final ) CHARACTER_SET [object com/google/zxing/EncodeHintType] )
+ (field (attrs public static final ) ERROR_CORRECTION [object com/google/zxing/EncodeHintType] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (new-instance v0 com/google/zxing/EncodeHintType)
+  (invoke-direct {v0} com/google/zxing/EncodeHintType/<init> )
+  (sput-object v0 com/google/zxing/EncodeHintType.ERROR_CORRECTION [object com/google/zxing/EncodeHintType])
+  (new-instance v0 com/google/zxing/EncodeHintType)
+  (invoke-direct {v0} com/google/zxing/EncodeHintType/<init> )
+  (sput-object v0 com/google/zxing/EncodeHintType.CHARACTER_SET [object com/google/zxing/EncodeHintType])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/EncodeHintType])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

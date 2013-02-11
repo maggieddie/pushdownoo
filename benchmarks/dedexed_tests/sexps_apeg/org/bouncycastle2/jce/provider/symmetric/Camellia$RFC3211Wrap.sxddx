@@ -1,0 +1,20 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/symmetric/Camellia$RFC3211Wrap
+ (super org/bouncycastle2/jce/provider/WrapCipherSpi)
+ (source "Camellia.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/jce/provider/symmetric/Camellia$RFC3211Wrap])
+  (line 58)
+  (new-instance v0 org/bouncycastle2/crypto/engines/RFC3211WrapEngine)
+  (new-instance v1 org/bouncycastle2/crypto/engines/CamelliaEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/CamelliaEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/engines/RFC3211WrapEngine/<init> [object org/bouncycastle2/crypto/BlockCipher] )
+  (const/16 v1 16)
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/jce/provider/WrapCipherSpi/<init> [object org/bouncycastle2/crypto/Wrapper] int )
+  (line 59)
+  (return-void )
+ )
+
+)

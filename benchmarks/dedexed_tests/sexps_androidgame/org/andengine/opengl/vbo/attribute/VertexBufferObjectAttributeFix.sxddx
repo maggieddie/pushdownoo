@@ -1,0 +1,37 @@
+(class (attrs public ) org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix
+ (super org/andengine/opengl/vbo/attribute/VertexBufferObjectAttribute)
+ (source "VertexBufferObjectAttributeFix.java")
+
+
+(method (attrs public ) <init>(int [object java/lang/String] int int boolean int )void
+  (limit registers 7)
+  ; this: v0 ([object org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  ; parameter[4] : v5 (boolean)
+  ; parameter[5] : v6 (int)
+  (line 26)
+  (invoke-direct/range {v0 .. v6} org/andengine/opengl/vbo/attribute/VertexBufferObjectAttribute/<init> int [object java/lang/String] int int boolean int )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) glVertexAttribPointer(int )void
+  (limit registers 8)
+  ; this: v6 ([object org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix])
+  ; parameter[0] : v7 (int)
+  (line 39)
+  (iget v0 v6 org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix.mLocation int)
+  (iget v1 v6 org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix.mSize int)
+  (iget v2 v6 org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix.mType int)
+  (iget-boolean v3 v6 org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix.mNormalized boolean)
+  (iget v5 v6 org/andengine/opengl/vbo/attribute/VertexBufferObjectAttributeFix.mOffset int)
+  (move v4 v7)
+  (invoke-static/range {v0 .. v5} org/andengine/opengl/GLES20Fix/glVertexAttribPointer int int int boolean int int )
+  (line 40)
+  (return-void )
+)
+
+)

@@ -1,0 +1,63 @@
+(class (attrs public ) org/darpa/supersudoku/SolvePuzzle
+ (super android/app/Activity)
+ (source "SolvePuzzle.java")
+
+ (field (attrs ) board [object org/darpa/supersudoku/SudokuBoard] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/darpa/supersudoku/SolvePuzzle])
+  (line 7)
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCreate([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object org/darpa/supersudoku/SolvePuzzle])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 13)
+  (invoke-super {v1 v2} android/app/Activity/onCreate [object android/os/Bundle] )
+  (line 15)
+  (new-instance v0 org/darpa/supersudoku/SudokuBoard)
+  (invoke-direct {v0 v1} org/darpa/supersudoku/SudokuBoard/<init> [object android/content/Context] )
+  (iput-object v0 v1 org/darpa/supersudoku/SolvePuzzle.board [object org/darpa/supersudoku/SudokuBoard])
+  (line 16)
+  (iget-object v0 v1 org/darpa/supersudoku/SolvePuzzle.board [object org/darpa/supersudoku/SudokuBoard])
+  (invoke-virtual {v0} org/darpa/supersudoku/SudokuBoard/addSolveButton )
+  (line 17)
+  (iget-object v0 v1 org/darpa/supersudoku/SolvePuzzle.board [object org/darpa/supersudoku/SudokuBoard])
+  (invoke-virtual {v0} org/darpa/supersudoku/SudokuBoard/resumePrevious )
+  (line 18)
+  (iget-object v0 v1 org/darpa/supersudoku/SolvePuzzle.board [object org/darpa/supersudoku/SudokuBoard])
+  (invoke-virtual {v1 v0} org/darpa/supersudoku/SolvePuzzle/setContentView [object android/view/View] )
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) onCreateOptionsMenu([object android/view/Menu] )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/darpa/supersudoku/SolvePuzzle])
+  ; parameter[0] : v3 ([object android/view/Menu])
+  (line 28)
+  (invoke-virtual {v2} org/darpa/supersudoku/SolvePuzzle/getMenuInflater )
+  (move-result-object v0)
+  (const v1 2131165186) ; 0x7f070002)
+  (invoke-virtual {v0 v1 v3} android/view/MenuInflater/inflate int [object android/view/Menu] )
+  (line 29)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) setBoardValues([array [array [object java/lang/Integer]]] )void
+  (limit registers 3)
+  ; this: v1 ([object org/darpa/supersudoku/SolvePuzzle])
+  ; parameter[0] : v2 ([array [array [object java/lang/Integer]]])
+  (line 23)
+  (iget-object v0 v1 org/darpa/supersudoku/SolvePuzzle.board [object org/darpa/supersudoku/SudokuBoard])
+  (invoke-virtual {v0 v2} org/darpa/supersudoku/SudokuBoard/setValues [array [array [object java/lang/Integer]]] )
+  (line 24)
+  (return-void )
+)
+
+)

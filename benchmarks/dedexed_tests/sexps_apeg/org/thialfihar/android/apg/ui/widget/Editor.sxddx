@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/thialfihar/android/apg/ui/widget/Editor
+ (super java/lang/Object)
+ (source "Editor.java")
+
+
+(method (attrs public abstract ) setEditorListener([object org/thialfihar/android/apg/ui/widget/Editor$EditorListener] )void
+)
+
+)

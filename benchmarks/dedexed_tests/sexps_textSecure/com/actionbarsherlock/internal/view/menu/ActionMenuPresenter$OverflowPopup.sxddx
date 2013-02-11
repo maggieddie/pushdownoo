@@ -1,0 +1,43 @@
+(class (attrs ) com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup
+ (super com/actionbarsherlock/internal/view/menu/MenuPopupHelper)
+ (source "ActionMenuPresenter.java")
+
+ (field (attrs final ) this$0 [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter] )
+
+(method (attrs public ) <init>([object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter] [object android/content/Context] [object com/actionbarsherlock/internal/view/menu/MenuBuilder] [object android/view/View] boolean )void
+  (limit registers 7)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup])
+  ; parameter[0] : v2 ([object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter])
+  ; parameter[1] : v3 ([object android/content/Context])
+  ; parameter[2] : v4 ([object com/actionbarsherlock/internal/view/menu/MenuBuilder])
+  ; parameter[3] : v5 ([object android/view/View])
+  ; parameter[4] : v6 (boolean)
+  (line 639)
+  (iput-object v2 v1 com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup.this$0 [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter])
+  (line 640)
+  (invoke-direct {v1 v3 v4 v5 v6} com/actionbarsherlock/internal/view/menu/MenuPopupHelper/<init> [object android/content/Context] [object com/actionbarsherlock/internal/view/menu/MenuBuilder] [object android/view/View] boolean )
+  (line 641)
+  (iget-object v0 v2 com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.mPopupPresenterCallback [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$PopupPresenterCallback])
+  (invoke-virtual {v1 v0} com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup/setCallback [object com/actionbarsherlock/internal/view/menu/MenuPresenter$Callback] )
+  (line 642)
+  (return-void )
+ )
+
+(method (attrs public ) onDismiss()void
+  (limit registers 3)
+  ; this: v2 ([object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup])
+  (line 646)
+  (invoke-super {v2} com/actionbarsherlock/internal/view/menu/MenuPopupHelper/onDismiss )
+  (line 647)
+  (iget-object v0 v2 com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup.this$0 [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter])
+  (iget-object v0 v0 com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.mMenu [object com/actionbarsherlock/internal/view/menu/MenuBuilder])
+  (invoke-virtual {v0} com/actionbarsherlock/internal/view/menu/MenuBuilder/close )
+  (line 648)
+  (iget-object v0 v2 com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup.this$0 [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/actionbarsherlock/internal/view/menu/ActionMenuPresenter/access$0 [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter] [object com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup] )
+  (line 649)
+  (return-void )
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) antlr/StringLiteralSymbol
+ (super antlr/TokenSymbol)
+ (source "StringLiteralSymbol.java")
+
+ (field (attrs protected ) label [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/StringLiteralSymbol])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 15)
+  (invoke-direct {v0 v1} antlr/TokenSymbol/<init> [object java/lang/String] )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) getLabel()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/StringLiteralSymbol])
+  (line 19)
+  (iget-object v0 v1 antlr/StringLiteralSymbol.label [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) setLabel([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/StringLiteralSymbol])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 23)
+  (iput-object v1 v0 antlr/StringLiteralSymbol.label [object java/lang/String])
+  (line 24)
+  (return-void )
+)
+
+)

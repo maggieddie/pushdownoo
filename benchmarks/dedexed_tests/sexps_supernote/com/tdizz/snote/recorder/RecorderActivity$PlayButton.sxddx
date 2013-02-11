@@ -1,0 +1,43 @@
+(class (attrs ) com/tdizz/snote/recorder/RecorderActivity$PlayButton
+ (super android/widget/Button)
+ (source "RecorderActivity.java")
+
+ (field (attrs ) clicker [object android/view/View$OnClickListener] )
+ (field (attrs ) mStartPlaying boolean )
+ (field (attrs final ) this$0 [object com/tdizz/snote/recorder/RecorderActivity] )
+
+(method (attrs public ) <init>([object com/tdizz/snote/recorder/RecorderActivity] [object android/content/Context] )void
+  (limit registers 4)
+  ; this: v1 ([object com/tdizz/snote/recorder/RecorderActivity$PlayButton])
+  ; parameter[0] : v2 ([object com/tdizz/snote/recorder/RecorderActivity])
+  ; parameter[1] : v3 ([object android/content/Context])
+  (line 192)
+  (iput-object v2 v1 com/tdizz/snote/recorder/RecorderActivity$PlayButton.this$0 [object com/tdizz/snote/recorder/RecorderActivity])
+  (line 193)
+  (invoke-direct {v1 v3} android/widget/Button/<init> [object android/content/Context] )
+  (line 175)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 com/tdizz/snote/recorder/RecorderActivity$PlayButton.mStartPlaying boolean)
+  (line 177)
+  (new-instance v0 com/tdizz/snote/recorder/RecorderActivity$PlayButton$1)
+  (invoke-direct {v0 v1} com/tdizz/snote/recorder/RecorderActivity$PlayButton$1/<init> [object com/tdizz/snote/recorder/RecorderActivity$PlayButton] )
+  (iput-object v0 v1 com/tdizz/snote/recorder/RecorderActivity$PlayButton.clicker [object android/view/View$OnClickListener])
+  (line 194)
+  (const-string v0 "Start playing")
+  (invoke-virtual {v1 v0} com/tdizz/snote/recorder/RecorderActivity$PlayButton/setText [object java/lang/CharSequence] )
+  (line 195)
+  (iget-object v0 v1 com/tdizz/snote/recorder/RecorderActivity$PlayButton.clicker [object android/view/View$OnClickListener])
+  (invoke-virtual {v1 v0} com/tdizz/snote/recorder/RecorderActivity$PlayButton/setOnClickListener [object android/view/View$OnClickListener] )
+  (line 196)
+  (return-void )
+ )
+
+(method (attrs static ) access$0([object com/tdizz/snote/recorder/RecorderActivity$PlayButton] )[object com/tdizz/snote/recorder/RecorderActivity]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/tdizz/snote/recorder/RecorderActivity$PlayButton])
+  (line 174)
+  (iget-object v0 v1 com/tdizz/snote/recorder/RecorderActivity$PlayButton.this$0 [object com/tdizz/snote/recorder/RecorderActivity])
+  (return-object v0)
+ )
+
+)

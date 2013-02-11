@@ -1,0 +1,42 @@
+(class (attrs public abstract ) org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase
+ (super org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase)
+ (source "OnlineTileSourceBase.java")
+
+ (field (attrs private final ) mBaseUrls [array [object java/lang/String]] )
+
+(method (attrs public ) <init>([object java/lang/String] [object org/osmdroid/ResourceProxy$string] int int int [object java/lang/String] [array [object java/lang/String]] )void
+  (limit registers 8)
+  ; this: v0 ([object org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object org/osmdroid/ResourceProxy$string])
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  ; parameter[4] : v5 (int)
+  ; parameter[5] : v6 ([object java/lang/String])
+  ; parameter[6] : v7 ([array [object java/lang/String]])
+  (line 13)
+  (invoke-direct/range {v0 .. v6} org/osmdroid/tileprovider/tilesource/BitmapTileSourceBase/<init> [object java/lang/String] [object org/osmdroid/ResourceProxy$string] int int int [object java/lang/String] )
+  (line 15)
+  (iput-object v7 v0 org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase.mBaseUrls [array [object java/lang/String]])
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs protected ) getBaseUrl()[object java/lang/String]
+  (limit registers 4)
+  ; this: v3 ([object org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase])
+  (line 24)
+  (iget-object v0 v3 org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase.mBaseUrls [array [object java/lang/String]])
+  (iget-object v1 v3 org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase.random [object java/util/Random])
+  (iget-object v2 v3 org/osmdroid/tileprovider/tilesource/OnlineTileSourceBase.mBaseUrls [array [object java/lang/String]])
+  (array-length v2 v2)
+  (invoke-virtual {v1 v2} java/util/Random/nextInt int )
+  (move-result v1)
+  (aget-object v0 v0 v1)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getTileURLString([object org/osmdroid/tileprovider/MapTile] )[object java/lang/String]
+)
+
+)

@@ -1,0 +1,71 @@
+(class (attrs public ) org/bouncycastle2/asn1/cms/EncryptedContentInfoParser
+ (super java/lang/Object)
+ (source "EncryptedContentInfoParser.java")
+
+ (field (attrs private ) _contentEncryptionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier] )
+ (field (attrs private ) _contentType [object org/bouncycastle2/asn1/DERObjectIdentifier] )
+ (field (attrs private ) _encryptedContent [object org/bouncycastle2/asn1/ASN1TaggedObjectParser] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/asn1/ASN1SequenceParser] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/EncryptedContentInfoParser])
+  ; parameter[0] : v2 ([object org/bouncycastle2/asn1/ASN1SequenceParser])
+  (line 26)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 30)
+  (invoke-interface {v2} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/asn1/DERObjectIdentifier])
+  (iput-object v0 v1 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._contentType [object org/bouncycastle2/asn1/DERObjectIdentifier])
+  (line 31)
+  (invoke-interface {v2} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (invoke-interface {v0} org/bouncycastle2/asn1/DEREncodable/getDERObject )
+  (move-result-object v0)
+  (invoke-static {v0} org/bouncycastle2/asn1/x509/AlgorithmIdentifier/getInstance [object java/lang/Object] )
+  (move-result-object v0)
+  (iput-object v0 v1 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._contentEncryptionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier])
+  (line 32)
+  (invoke-interface {v2} org/bouncycastle2/asn1/ASN1SequenceParser/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/asn1/ASN1TaggedObjectParser])
+  (iput-object v0 v1 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._encryptedContent [object org/bouncycastle2/asn1/ASN1TaggedObjectParser])
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) getContentEncryptionAlgorithm()[object org/bouncycastle2/asn1/x509/AlgorithmIdentifier]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/EncryptedContentInfoParser])
+  (line 42)
+  (iget-object v0 v1 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._contentEncryptionAlgorithm [object org/bouncycastle2/asn1/x509/AlgorithmIdentifier])
+  (return-object v0)
+)
+
+(method (attrs public ) getContentType()[object org/bouncycastle2/asn1/DERObjectIdentifier]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/asn1/cms/EncryptedContentInfoParser])
+  (line 37)
+  (iget-object v0 v1 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._contentType [object org/bouncycastle2/asn1/DERObjectIdentifier])
+  (return-object v0)
+)
+
+(method (attrs public ) getEncryptedContent(int )[object org/bouncycastle2/asn1/DEREncodable]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle2/asn1/cms/EncryptedContentInfoParser])
+  ; parameter[0] : v3 (int)
+  (line 49)
+  (iget-object v0 v2 org/bouncycastle2/asn1/cms/EncryptedContentInfoParser._encryptedContent [object org/bouncycastle2/asn1/ASN1TaggedObjectParser])
+  (const/4 v1 0)
+  (invoke-interface {v0 v3 v1} org/bouncycastle2/asn1/ASN1TaggedObjectParser/getObjectParser int boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

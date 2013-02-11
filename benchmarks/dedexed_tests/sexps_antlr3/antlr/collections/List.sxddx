@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) antlr/collections/List
+ (super java/lang/Object)
+ (source "List.java")
+
+
+(method (attrs public abstract ) add([object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) append([object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) elementAt(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/NoSuchElementException])
+  )
+)
+
+(method (attrs public abstract ) elements()[object java/util/Enumeration]
+)
+
+(method (attrs public abstract ) includes([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) length()int
+)
+
+)

@@ -1,0 +1,48 @@
+(class (attrs public ) org/andengine/entity/scene/background/EntityBackground
+ (super org/andengine/entity/scene/background/Background)
+ (source "EntityBackground.java")
+
+ (field (attrs protected ) mEntity [object org/andengine/entity/IEntity] )
+
+(method (attrs public ) <init>(float float float [object org/andengine/entity/IEntity] )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/andengine/entity/IEntity])
+  (line 34)
+  (invoke-direct {v0 v1 v2 v3} org/andengine/entity/scene/background/Background/<init> float float float )
+  (line 35)
+  (iput-object v4 v0 org/andengine/entity/scene/background/EntityBackground.mEntity [object org/andengine/entity/IEntity])
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/IEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v1 ([object org/andengine/entity/IEntity])
+  (line 29)
+  (invoke-direct {v0} org/andengine/entity/scene/background/Background/<init> )
+  (line 30)
+  (iput-object v1 v0 org/andengine/entity/scene/background/EntityBackground.mEntity [object org/andengine/entity/IEntity])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) onDraw([object org/andengine/opengl/util/GLState] [object org/andengine/engine/camera/Camera] )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/entity/scene/background/EntityBackground])
+  ; parameter[0] : v2 ([object org/andengine/opengl/util/GLState])
+  ; parameter[1] : v3 ([object org/andengine/engine/camera/Camera])
+  (line 48)
+  (invoke-super {v1 v2 v3} org/andengine/entity/scene/background/Background/onDraw [object org/andengine/opengl/util/GLState] [object org/andengine/engine/camera/Camera] )
+  (line 50)
+  (iget-object v0 v1 org/andengine/entity/scene/background/EntityBackground.mEntity [object org/andengine/entity/IEntity])
+  (invoke-interface {v0 v2 v3} org/andengine/entity/IEntity/onDraw [object org/andengine/opengl/util/GLState] [object org/andengine/engine/camera/Camera] )
+  (line 51)
+  (return-void )
+)
+
+)

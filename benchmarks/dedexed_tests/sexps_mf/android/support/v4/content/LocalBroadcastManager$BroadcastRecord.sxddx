@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/content/LocalBroadcastManager$BroadcastRecord
+ (super java/lang/Object)
+ (source "LocalBroadcastManager.java")
+
+ (field (attrs final ) intent [object android/content/Intent] )
+ (field (attrs final ) receivers [object java/util/ArrayList] )
+
+(method (attrs ) <init>([object android/content/Intent] [object java/util/ArrayList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/content/Intent;"  "Ljava/util/ArrayList"  "<"  "Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/content/LocalBroadcastManager$BroadcastRecord])
+  ; parameter[0] : v1 ([object android/content/Intent])
+  ; parameter[1] : v2 ([object java/util/ArrayList])
+  (line 73)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 74)
+  (iput-object v1 v0 android/support/v4/content/LocalBroadcastManager$BroadcastRecord.intent [object android/content/Intent])
+  (line 75)
+  (iput-object v2 v0 android/support/v4/content/LocalBroadcastManager$BroadcastRecord.receivers [object java/util/ArrayList])
+  (line 76)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/ast/JavaNode
+ (super java/lang/Object)
+ (source "JavaNode.java")
+ (implements net/sourceforge/pmd/ast/Node)
+
+
+(method (attrs public abstract ) jjtAccept([object net/sourceforge/pmd/ast/JavaParserVisitor] [object java/lang/Object] )[object java/lang/Object]
+)
+
+)

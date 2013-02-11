@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/app/ActionBar$OnMenuVisibilityListener
+ (super java/lang/Object)
+ (source "ActionBar.java")
+
+
+(method (attrs public abstract ) onMenuVisibilityChanged(boolean )void
+)
+
+)

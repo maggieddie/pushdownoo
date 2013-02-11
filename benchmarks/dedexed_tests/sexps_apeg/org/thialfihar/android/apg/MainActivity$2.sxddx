@@ -1,0 +1,38 @@
+(class (attrs ) org/thialfihar/android/apg/MainActivity$2
+ (super java/lang/Object)
+ (source "MainActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/thialfihar/android/apg/MainActivity] )
+
+(method (attrs ) <init>([object org/thialfihar/android/apg/MainActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/thialfihar/android/apg/MainActivity$2])
+  ; parameter[0] : v1 ([object org/thialfihar/android/apg/MainActivity])
+  (line 1)
+  (iput-object v1 v0 org/thialfihar/android/apg/MainActivity$2.this$0 [object org/thialfihar/android/apg/MainActivity])
+  (line 77)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 5)
+  ; this: v3 ([object org/thialfihar/android/apg/MainActivity$2])
+  ; parameter[0] : v4 ([object android/view/View])
+  (line 79)
+  (new-instance v0 android/content/Intent)
+  (iget-object v1 v3 org/thialfihar/android/apg/MainActivity$2.this$0 [object org/thialfihar/android/apg/MainActivity])
+  (const-class v2 org/thialfihar/android/apg/DecryptActivity)
+  (invoke-direct {v0 v1 v2} android/content/Intent/<init> [object android/content/Context] [object java/lang/Class] )
+  (line 80)
+  (const-string v1 "org.thialfihar.android.apg.intent.DECRYPT")
+  (invoke-virtual {v0 v1} android/content/Intent/setAction [object java/lang/String] )
+  (line 81)
+  (iget-object v1 v3 org/thialfihar/android/apg/MainActivity$2.this$0 [object org/thialfihar/android/apg/MainActivity])
+  (invoke-virtual {v1 v0} org/thialfihar/android/apg/MainActivity/startActivity [object android/content/Intent] )
+  (line 82)
+  (return-void )
+)
+
+)

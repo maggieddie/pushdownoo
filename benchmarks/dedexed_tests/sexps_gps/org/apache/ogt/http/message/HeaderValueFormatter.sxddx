@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/apache/ogt/http/message/HeaderValueFormatter
+ (super java/lang/Object)
+ (source "HeaderValueFormatter.java")
+
+
+(method (attrs public abstract ) formatElements([object org/apache/ogt/http/util/CharArrayBuffer] [array [object org/apache/ogt/http/HeaderElement]] boolean )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatHeaderElement([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/HeaderElement] boolean )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatNameValuePair([object org/apache/ogt/http/util/CharArrayBuffer] [object org/apache/ogt/http/NameValuePair] boolean )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+(method (attrs public abstract ) formatParameters([object org/apache/ogt/http/util/CharArrayBuffer] [array [object org/apache/ogt/http/NameValuePair]] boolean )[object org/apache/ogt/http/util/CharArrayBuffer]
+)
+
+)

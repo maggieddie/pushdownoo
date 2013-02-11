@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/bouncycastle2/util/encoders/Encoder
+ (super java/lang/Object)
+ (source "Encoder.java")
+
+
+(method (attrs public abstract ) decode([object java/lang/String] [object java/io/OutputStream] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) decode([array byte] int int [object java/io/OutputStream] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) encode([array byte] int int [object java/io/OutputStream] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

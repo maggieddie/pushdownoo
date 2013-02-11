@@ -1,0 +1,53 @@
+(class (attrs public ) net/sourceforge/pmd/TargetJDK1_5
+ (super java/lang/Object)
+ (source "TargetJDK1_5.java")
+ (implements net/sourceforge/pmd/TargetJDKVersion)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/sourceforge/pmd/TargetJDK1_5])
+  (line 18)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) createParser([object java/io/InputStream] )[object net/sourceforge/pmd/ast/JavaParser]
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/TargetJDK1_5])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  (line 24)
+  (new-instance v0 net/sourceforge/pmd/ast/JavaParser)
+  (new-instance v1 net/sourceforge/pmd/ast/JavaCharStream)
+  (invoke-direct {v1 v3} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/InputStream] )
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/JavaParser/<init> [object net/sourceforge/pmd/ast/CharStream] )
+  (line 25)
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/JavaParser/setJDK15 )
+  (line 26)
+  (return-object v0)
+)
+
+(method (attrs public ) createParser([object java/io/Reader] )[object net/sourceforge/pmd/ast/JavaParser]
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/TargetJDK1_5])
+  ; parameter[0] : v3 ([object java/io/Reader])
+  (line 33)
+  (new-instance v0 net/sourceforge/pmd/ast/JavaParser)
+  (new-instance v1 net/sourceforge/pmd/ast/JavaCharStream)
+  (invoke-direct {v1 v3} net/sourceforge/pmd/ast/JavaCharStream/<init> [object java/io/Reader] )
+  (invoke-direct {v0 v1} net/sourceforge/pmd/ast/JavaParser/<init> [object net/sourceforge/pmd/ast/CharStream] )
+  (line 34)
+  (invoke-virtual {v0} net/sourceforge/pmd/ast/JavaParser/setJDK15 )
+  (line 35)
+  (return-object v0)
+)
+
+(method (attrs public ) getVersionString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/TargetJDK1_5])
+  (line 39)
+  (const-string v0 "1.5")
+  (return-object v0)
+)
+
+)

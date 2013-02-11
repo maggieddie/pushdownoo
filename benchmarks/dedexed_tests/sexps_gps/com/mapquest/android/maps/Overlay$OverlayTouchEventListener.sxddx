@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/mapquest/android/maps/Overlay$OverlayTouchEventListener
+ (super java/lang/Object)
+ (source "Overlay.java")
+
+
+(method (attrs public abstract ) onTouch([object android/view/MotionEvent] [object com/mapquest/android/maps/MapView] )void
+)
+
+)

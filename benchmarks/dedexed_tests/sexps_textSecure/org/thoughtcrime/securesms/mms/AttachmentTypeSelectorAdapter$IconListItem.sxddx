@@ -1,0 +1,51 @@
+(class (attrs public ) org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem
+ (super java/lang/Object)
+ (source "AttachmentTypeSelectorAdapter.java")
+
+ (field (attrs private final ) id int )
+ (field (attrs private final ) mResource int )
+ (field (attrs private final ) mTitle [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] int int )void
+  (limit registers 4)
+  ; this: v0 ([object org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 96)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 97)
+  (iput v2 v0 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.mResource int)
+  (line 98)
+  (iput-object v1 v0 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.mTitle [object java/lang/String])
+  (line 99)
+  (iput v3 v0 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.id int)
+  (line 100)
+  (return-void )
+ )
+
+(method (attrs public ) getCommand()int
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem])
+  (line 103)
+  (iget v0 v1 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.id int)
+  (return v0)
+)
+
+(method (attrs public ) getResource()int
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem])
+  (line 111)
+  (iget v0 v1 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.mResource int)
+  (return v0)
+)
+
+(method (attrs public ) getTitle()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem])
+  (line 107)
+  (iget-object v0 v1 org/thoughtcrime/securesms/mms/AttachmentTypeSelectorAdapter$IconListItem.mTitle [object java/lang/String])
+  (return-object v0)
+)
+
+)

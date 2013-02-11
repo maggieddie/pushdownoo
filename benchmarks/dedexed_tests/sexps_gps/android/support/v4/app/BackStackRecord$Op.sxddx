@@ -1,0 +1,23 @@
+(class (attrs final ) android/support/v4/app/BackStackRecord$Op
+ (super java/lang/Object)
+ (source "BackStackRecord.java")
+
+ (field (attrs ) cmd int )
+ (field (attrs ) enterAnim int )
+ (field (attrs ) exitAnim int )
+ (field (attrs ) fragment [object android/support/v4/app/Fragment] )
+ (field (attrs ) next [object android/support/v4/app/BackStackRecord$Op] )
+ (field (attrs ) popEnterAnim int )
+ (field (attrs ) popExitAnim int )
+ (field (attrs ) prev [object android/support/v4/app/BackStackRecord$Op] )
+ (field (attrs ) removed [object java/util/ArrayList] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/BackStackRecord$Op])
+  (line 179)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

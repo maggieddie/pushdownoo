@@ -1,0 +1,46 @@
+(class (attrs public ) org/bouncycastle2/ocsp/OCSPException
+ (super java/lang/Exception)
+ (source "OCSPException.java")
+
+ (field (attrs ) e [object java/lang/Exception] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle2/ocsp/OCSPException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 11)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Exception] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle2/ocsp/OCSPException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Exception])
+  (line 18)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 20)
+  (iput-object v2 v0 org/bouncycastle2/ocsp/OCSPException.e [object java/lang/Exception])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/ocsp/OCSPException])
+  (line 30)
+  (iget-object v0 v1 org/bouncycastle2/ocsp/OCSPException.e [object java/lang/Exception])
+  (return-object v0)
+)
+
+(method (attrs public ) getUnderlyingException()[object java/lang/Exception]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle2/ocsp/OCSPException])
+  (line 25)
+  (iget-object v0 v1 org/bouncycastle2/ocsp/OCSPException.e [object java/lang/Exception])
+  (return-object v0)
+)
+
+)

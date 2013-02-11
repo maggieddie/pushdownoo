@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) nl/sogeti/android/gpstracker/actions/utils/StatisticsDelegate
+ (super java/lang/Object)
+ (source "StatisticsDelegate.java")
+
+
+(method (attrs public abstract ) finishedCalculations([object nl/sogeti/android/gpstracker/actions/utils/StatisticsCalulator] )void
+)
+
+)

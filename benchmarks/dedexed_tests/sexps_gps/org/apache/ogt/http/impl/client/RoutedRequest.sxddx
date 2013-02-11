@@ -1,0 +1,39 @@
+(class (attrs public ) org/apache/ogt/http/impl/client/RoutedRequest
+ (super java/lang/Object)
+ (source "RoutedRequest.java")
+
+ (field (attrs protected final ) request [object org/apache/ogt/http/impl/client/RequestWrapper] )
+ (field (attrs protected final ) route [object org/apache/ogt/http/conn/routing/HttpRoute] )
+
+(method (attrs public ) <init>([object org/apache/ogt/http/impl/client/RequestWrapper] [object org/apache/ogt/http/conn/routing/HttpRoute] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/ogt/http/impl/client/RoutedRequest])
+  ; parameter[0] : v1 ([object org/apache/ogt/http/impl/client/RequestWrapper])
+  ; parameter[1] : v2 ([object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 52)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 53)
+  (iput-object v1 v0 org/apache/ogt/http/impl/client/RoutedRequest.request [object org/apache/ogt/http/impl/client/RequestWrapper])
+  (line 54)
+  (iput-object v2 v0 org/apache/ogt/http/impl/client/RoutedRequest.route [object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 55)
+  (return-void )
+ )
+
+(method (attrs public final ) getRequest()[object org/apache/ogt/http/impl/client/RequestWrapper]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/client/RoutedRequest])
+  (line 58)
+  (iget-object v0 v1 org/apache/ogt/http/impl/client/RoutedRequest.request [object org/apache/ogt/http/impl/client/RequestWrapper])
+  (return-object v0)
+)
+
+(method (attrs public final ) getRoute()[object org/apache/ogt/http/conn/routing/HttpRoute]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/ogt/http/impl/client/RoutedRequest])
+  (line 62)
+  (iget-object v0 v1 org/apache/ogt/http/impl/client/RoutedRequest.route [object org/apache/ogt/http/conn/routing/HttpRoute])
+  (return-object v0)
+)
+
+)

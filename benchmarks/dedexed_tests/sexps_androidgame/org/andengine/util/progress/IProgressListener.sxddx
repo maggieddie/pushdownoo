@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/andengine/util/progress/IProgressListener
+ (super java/lang/Object)
+ (source "IProgressListener.java")
+
+ (field (attrs public static final ) PROGRESS_MAX int 100); 0x64 )
+ (field (attrs public static final ) PROGRESS_MIN int )
+
+(method (attrs public abstract ) onProgressChanged(int )void
+)
+
+)

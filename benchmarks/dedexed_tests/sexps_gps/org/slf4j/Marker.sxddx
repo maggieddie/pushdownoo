@@ -1,0 +1,39 @@
+(interface (attrs public abstract ) org/slf4j/Marker
+ (super java/lang/Object)
+ (source "Marker.java")
+ (implements java/io/Serializable)
+
+ (field (attrs public static final ) ANY_MARKER [object java/lang/String] "*" )
+ (field (attrs public static final ) ANY_NON_NULL_MARKER [object java/lang/String] "+" )
+
+(method (attrs public abstract ) add([object org/slf4j/Marker] )void
+)
+
+(method (attrs public abstract ) contains([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) contains([object org/slf4j/Marker] )boolean
+)
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) hasChildren()boolean
+)
+
+(method (attrs public abstract ) hasReferences()boolean
+)
+
+(method (attrs public abstract ) hashCode()int
+)
+
+(method (attrs public abstract ) iterator()[object java/util/Iterator]
+)
+
+(method (attrs public abstract ) remove([object org/slf4j/Marker] )boolean
+)
+
+)

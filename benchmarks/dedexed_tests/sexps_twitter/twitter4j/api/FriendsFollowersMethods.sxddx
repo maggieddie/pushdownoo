@@ -1,0 +1,78 @@
+(interface (attrs public abstract ) twitter4j/api/FriendsFollowersMethods
+ (super java/lang/Object)
+ (source "FriendsFollowersMethods.java")
+
+
+(method (attrs public abstract ) getFollowersIDs()[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFollowersIDs(int )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFollowersIDs(int long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFollowersIDs(long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFollowersIDs([object java/lang/String] )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFollowersIDs([object java/lang/String] long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs()[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs(int )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs(int long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs(long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs([object java/lang/String] )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getFriendsIDs([object java/lang/String] long )[object twitter4j/IDs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

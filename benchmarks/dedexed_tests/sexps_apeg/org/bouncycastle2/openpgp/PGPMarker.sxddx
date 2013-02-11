@@ -1,0 +1,25 @@
+(class (attrs public ) org/bouncycastle2/openpgp/PGPMarker
+ (super java/lang/Object)
+ (source "PGPMarker.java")
+
+ (field (attrs private ) p [object org/bouncycastle2/bcpg/MarkerPacket] )
+
+(method (attrs public ) <init>([object org/bouncycastle2/bcpg/BCPGInputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle2/openpgp/PGPMarker])
+  ; parameter[0] : v2 ([object org/bouncycastle2/bcpg/BCPGInputStream])
+  (line 28)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 32)
+  (invoke-virtual {v2} org/bouncycastle2/bcpg/BCPGInputStream/readPacket )
+  (move-result-object v0)
+  (check-cast v0 [object org/bouncycastle2/bcpg/MarkerPacket])
+  (iput-object v0 v1 org/bouncycastle2/openpgp/PGPMarker.p [object org/bouncycastle2/bcpg/MarkerPacket])
+  (line 33)
+  (return-void )
+ )
+
+)

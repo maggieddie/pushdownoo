@@ -1,0 +1,28 @@
+(interface (attrs public abstract ) org/apache/ogt/http/cookie/SetCookie
+ (super java/lang/Object)
+ (source "SetCookie.java")
+ (implements org/apache/ogt/http/cookie/Cookie)
+
+
+(method (attrs public abstract ) setComment([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setDomain([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setExpiryDate([object java/util/Date] )void
+)
+
+(method (attrs public abstract ) setPath([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setSecure(boolean )void
+)
+
+(method (attrs public abstract ) setValue([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setVersion(int )void
+)
+
+)

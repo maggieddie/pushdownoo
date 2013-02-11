@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/ogt/http/conn/ClientConnectionManagerFactory
+ (super java/lang/Object)
+ (source "ClientConnectionManagerFactory.java")
+
+
+(method (attrs public abstract ) newInstance([object org/apache/ogt/http/params/HttpParams] [object org/apache/ogt/http/conn/scheme/SchemeRegistry] )[object org/apache/ogt/http/conn/ClientConnectionManager]
+)
+
+)

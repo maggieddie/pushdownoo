@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) antlr/debug/TraceListener
+ (super java/lang/Object)
+ (source "TraceListener.java")
+ (implements antlr/debug/ListenerBase)
+
+
+(method (attrs public abstract ) enterRule([object antlr/debug/TraceEvent] )void
+)
+
+(method (attrs public abstract ) exitRule([object antlr/debug/TraceEvent] )void
+)
+
+)

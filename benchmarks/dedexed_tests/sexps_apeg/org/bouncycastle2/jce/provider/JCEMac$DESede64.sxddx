@@ -1,0 +1,20 @@
+(class (attrs public ) org/bouncycastle2/jce/provider/JCEMac$DESede64
+ (super org/bouncycastle2/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle2/jce/provider/JCEMac$DESede64])
+  (line 302)
+  (new-instance v0 org/bouncycastle2/crypto/macs/CBCBlockCipherMac)
+  (new-instance v1 org/bouncycastle2/crypto/engines/DESedeEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/DESedeEngine/<init> )
+  (const/16 v2 64)
+  (invoke-direct {v0 v1 v2} org/bouncycastle2/crypto/macs/CBCBlockCipherMac/<init> [object org/bouncycastle2/crypto/BlockCipher] int )
+  (invoke-direct {v3 v0} org/bouncycastle2/jce/provider/JCEMac/<init> [object org/bouncycastle2/crypto/Mac] )
+  (line 303)
+  (return-void )
+ )
+
+)

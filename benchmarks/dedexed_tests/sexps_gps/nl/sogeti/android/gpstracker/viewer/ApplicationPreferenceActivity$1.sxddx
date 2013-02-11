@@ -1,0 +1,32 @@
+(class (attrs ) nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$1
+ (super java/lang/Object)
+ (source "ApplicationPreferenceActivity.java")
+ (implements android/preference/Preference$OnPreferenceChangeListener)
+
+ (field (attrs final ) this$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity] )
+
+(method (attrs ) <init>([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$1])
+  ; parameter[0] : v1 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity])
+  (line 1)
+  (iput-object v1 v0 nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$1.this$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity])
+  (line 83)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreferenceChange([object android/preference/Preference] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v1 ([object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$1])
+  ; parameter[0] : v2 ([object android/preference/Preference])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 87)
+  (iget-object v0 v1 nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity$1.this$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity])
+  (invoke-static {v0 v3} nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity/access$0 [object nl/sogeti/android/gpstracker/viewer/ApplicationPreferenceActivity] [object java/lang/Object] )
+  (line 88)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

@@ -1,0 +1,48 @@
+(interface (attrs public abstract ) org/apache/ogt/http/params/HttpParams
+ (super java/lang/Object)
+ (source "HttpParams.java")
+
+
+(method (attrs public abstract ) copy()[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) getBooleanParameter([object java/lang/String] boolean )boolean
+)
+
+(method (attrs public abstract ) getDoubleParameter([object java/lang/String] double )double
+)
+
+(method (attrs public abstract ) getIntParameter([object java/lang/String] int )int
+)
+
+(method (attrs public abstract ) getLongParameter([object java/lang/String] long )long
+)
+
+(method (attrs public abstract ) getParameter([object java/lang/String] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) isParameterFalse([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) isParameterTrue([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) removeParameter([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) setBooleanParameter([object java/lang/String] boolean )[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) setDoubleParameter([object java/lang/String] double )[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) setIntParameter([object java/lang/String] int )[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) setLongParameter([object java/lang/String] long )[object org/apache/ogt/http/params/HttpParams]
+)
+
+(method (attrs public abstract ) setParameter([object java/lang/String] [object java/lang/Object] )[object org/apache/ogt/http/params/HttpParams]
+)
+
+)

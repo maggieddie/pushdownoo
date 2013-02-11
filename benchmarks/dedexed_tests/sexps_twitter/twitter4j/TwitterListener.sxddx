@@ -1,0 +1,786 @@
+(interface (attrs public abstract ) twitter4j/TwitterListener
+ (super java/lang/Object)
+ (source "TwitterListener.java")
+
+ (field (attrs public static final ) ACCOUNT_SETTINGS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) ACCOUNT_TOTALS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) ADD_LIST_MEMBER [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) ADD_LIST_MEMBERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) ALL_USER_LISTS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) AVAILABLE_TRENDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) BLOCKING_USERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) BLOCKING_USERS_IDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CHECK_LIST_MEMBERSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CHECK_LIST_SUBSCRIPTION [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CREATE_BLOCK [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CREATE_FAVORITE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CREATE_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CREATE_PLACE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CREATE_USER_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) CURRENT_TRENDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DAILY_TRENDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DELETE_LIST_MEMBER [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DESTROY_BLOCK [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DESTROY_DIRECT_MESSAGE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DESTROY_FAVORITE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DESTROY_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DESTROY_STATUS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DIRECT_MESSAGES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DISABLE_NOTIFICATION [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) DSTROY_USER_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) ENABLE_NOTIFICATION [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) EXISTS_BLOCK [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) EXISTS_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FAVORITES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FOLLOWERS_IDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FOLLOWERS_STATUSES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FRIENDS_IDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FRIENDS_STATUSES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) FRIENDS_TIMELINE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) GEO_DETAILS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) HOME_TIMELINE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) INCOMING_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) LIST_MEMBERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) LIST_SUBSCRIBERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) LOCATION_TRENDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) LOOKUP_FRIENDSHIPS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) LOOKUP_USERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) MEMBER_SUGGESTIONS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) MENTIONS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) NEAR_BY_PLACES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) OUTGOING_FRIENDSHIPS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) PRIVACY_POLICY [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) PROFILE_IMAGE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) PUBLIC_TIMELINE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RATE_LIMIT_STATUS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RELATED_RESULT [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) REPORT_SPAM [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_BY [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_BY_IDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_BY_ME [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_BY_USER [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_TO_ME [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETED_TO_USER [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEETS_OF_ME [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) RETWEET_STATUS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) REVERSE_GEO_CODE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SEARCH [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SEARCH_PLACES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SEARCH_USERS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SEND_DIRECT_MESSAGE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SENT_DIRECT_MESSAGES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SHOW_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SHOW_STATUS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SHOW_USER [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SHOW_USER_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SIMILAR_PLACES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SUBSCRIBE_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) SUGGESTED_USER_CATEGORIES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) TERMS_OF_SERVICE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) TEST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) TRENDS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UNSUBSCRIBE_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_FRIENDSHIP [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_PROFILE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_PROFILE_BACKGROUND_IMAGE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_PROFILE_COLORS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_PROFILE_IMAGE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_STATUS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) UPDATE_USER_LIST [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_LISTS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_LIST_MEMBERSHIPS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_LIST_STATUSES [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_LIST_SUBSCRIPTIONS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_SUGGESTIONS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) USER_TIMELINE [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) VERIFY_CREDENTIALS [object twitter4j/TwitterMethod] )
+ (field (attrs public static final ) WEEKLY_TRENDS [object twitter4j/TwitterMethod] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 440)
+  (sget-object v0 twitter4j/TwitterMethod.SEARCH [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SEARCH [object twitter4j/TwitterMethod])
+  (line 442)
+  (sget-object v0 twitter4j/TwitterMethod.TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.TRENDS [object twitter4j/TwitterMethod])
+  (line 443)
+  (sget-object v0 twitter4j/TwitterMethod.CURRENT_TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CURRENT_TRENDS [object twitter4j/TwitterMethod])
+  (line 444)
+  (sget-object v0 twitter4j/TwitterMethod.DAILY_TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DAILY_TRENDS [object twitter4j/TwitterMethod])
+  (line 445)
+  (sget-object v0 twitter4j/TwitterMethod.WEEKLY_TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.WEEKLY_TRENDS [object twitter4j/TwitterMethod])
+  (line 448)
+  (sget-object v0 twitter4j/TwitterMethod.PUBLIC_TIMELINE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.PUBLIC_TIMELINE [object twitter4j/TwitterMethod])
+  (line 449)
+  (sget-object v0 twitter4j/TwitterMethod.HOME_TIMELINE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.HOME_TIMELINE [object twitter4j/TwitterMethod])
+  (line 450)
+  (sget-object v0 twitter4j/TwitterMethod.FRIENDS_TIMELINE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FRIENDS_TIMELINE [object twitter4j/TwitterMethod])
+  (line 451)
+  (sget-object v0 twitter4j/TwitterMethod.USER_TIMELINE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_TIMELINE [object twitter4j/TwitterMethod])
+  (line 452)
+  (sget-object v0 twitter4j/TwitterMethod.MENTIONS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.MENTIONS [object twitter4j/TwitterMethod])
+  (line 453)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_BY_ME [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_BY_ME [object twitter4j/TwitterMethod])
+  (line 454)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_TO_ME [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_TO_ME [object twitter4j/TwitterMethod])
+  (line 455)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETS_OF_ME [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETS_OF_ME [object twitter4j/TwitterMethod])
+  (line 456)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_BY_USER [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_BY_USER [object twitter4j/TwitterMethod])
+  (line 457)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_TO_USER [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_TO_USER [object twitter4j/TwitterMethod])
+  (line 460)
+  (sget-object v0 twitter4j/TwitterMethod.SHOW_STATUS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SHOW_STATUS [object twitter4j/TwitterMethod])
+  (line 461)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_STATUS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_STATUS [object twitter4j/TwitterMethod])
+  (line 462)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_STATUS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DESTROY_STATUS [object twitter4j/TwitterMethod])
+  (line 463)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEET_STATUS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEET_STATUS [object twitter4j/TwitterMethod])
+  (line 464)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETS [object twitter4j/TwitterMethod])
+  (line 465)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_BY [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_BY [object twitter4j/TwitterMethod])
+  (line 466)
+  (sget-object v0 twitter4j/TwitterMethod.RETWEETED_BY_IDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RETWEETED_BY_IDS [object twitter4j/TwitterMethod])
+  (line 470)
+  (sget-object v0 twitter4j/TwitterMethod.SHOW_USER [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SHOW_USER [object twitter4j/TwitterMethod])
+  (line 471)
+  (sget-object v0 twitter4j/TwitterMethod.LOOKUP_USERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.LOOKUP_USERS [object twitter4j/TwitterMethod])
+  (line 472)
+  (sget-object v0 twitter4j/TwitterMethod.SEARCH_USERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SEARCH_USERS [object twitter4j/TwitterMethod])
+  (line 473)
+  (sget-object v0 twitter4j/TwitterMethod.SUGGESTED_USER_CATEGORIES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SUGGESTED_USER_CATEGORIES [object twitter4j/TwitterMethod])
+  (line 474)
+  (sget-object v0 twitter4j/TwitterMethod.USER_SUGGESTIONS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_SUGGESTIONS [object twitter4j/TwitterMethod])
+  (line 475)
+  (sget-object v0 twitter4j/TwitterMethod.MEMBER_SUGGESTIONS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.MEMBER_SUGGESTIONS [object twitter4j/TwitterMethod])
+  (line 476)
+  (sget-object v0 twitter4j/TwitterMethod.PROFILE_IMAGE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.PROFILE_IMAGE [object twitter4j/TwitterMethod])
+  (line 477)
+  (sget-object v0 twitter4j/TwitterMethod.FRIENDS_STATUSES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FRIENDS_STATUSES [object twitter4j/TwitterMethod])
+  (line 478)
+  (sget-object v0 twitter4j/TwitterMethod.FOLLOWERS_STATUSES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FOLLOWERS_STATUSES [object twitter4j/TwitterMethod])
+  (line 481)
+  (sget-object v0 twitter4j/TwitterMethod.CREATE_USER_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CREATE_USER_LIST [object twitter4j/TwitterMethod])
+  (line 482)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_USER_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_USER_LIST [object twitter4j/TwitterMethod])
+  (line 483)
+  (sget-object v0 twitter4j/TwitterMethod.USER_LISTS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_LISTS [object twitter4j/TwitterMethod])
+  (line 484)
+  (sget-object v0 twitter4j/TwitterMethod.SHOW_USER_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SHOW_USER_LIST [object twitter4j/TwitterMethod])
+  (line 485)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_USER_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DSTROY_USER_LIST [object twitter4j/TwitterMethod])
+  (line 486)
+  (sget-object v0 twitter4j/TwitterMethod.USER_LIST_STATUSES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_LIST_STATUSES [object twitter4j/TwitterMethod])
+  (line 487)
+  (sget-object v0 twitter4j/TwitterMethod.USER_LIST_MEMBERSHIPS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_LIST_MEMBERSHIPS [object twitter4j/TwitterMethod])
+  (line 488)
+  (sget-object v0 twitter4j/TwitterMethod.USER_LIST_SUBSCRIPTIONS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.USER_LIST_SUBSCRIPTIONS [object twitter4j/TwitterMethod])
+  (line 489)
+  (sget-object v0 twitter4j/TwitterMethod.ALL_USER_LISTS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ALL_USER_LISTS [object twitter4j/TwitterMethod])
+  (line 492)
+  (sget-object v0 twitter4j/TwitterMethod.LIST_MEMBERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.LIST_MEMBERS [object twitter4j/TwitterMethod])
+  (line 493)
+  (sget-object v0 twitter4j/TwitterMethod.ADD_LIST_MEMBER [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ADD_LIST_MEMBER [object twitter4j/TwitterMethod])
+  (line 494)
+  (sget-object v0 twitter4j/TwitterMethod.ADD_LIST_MEMBERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ADD_LIST_MEMBERS [object twitter4j/TwitterMethod])
+  (line 495)
+  (sget-object v0 twitter4j/TwitterMethod.DELETE_LIST_MEMBER [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DELETE_LIST_MEMBER [object twitter4j/TwitterMethod])
+  (line 496)
+  (sget-object v0 twitter4j/TwitterMethod.CHECK_LIST_MEMBERSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CHECK_LIST_MEMBERSHIP [object twitter4j/TwitterMethod])
+  (line 499)
+  (sget-object v0 twitter4j/TwitterMethod.LIST_SUBSCRIBERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.LIST_SUBSCRIBERS [object twitter4j/TwitterMethod])
+  (line 500)
+  (sget-object v0 twitter4j/TwitterMethod.SUBSCRIBE_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SUBSCRIBE_LIST [object twitter4j/TwitterMethod])
+  (line 501)
+  (sget-object v0 twitter4j/TwitterMethod.UNSUBSCRIBE_LIST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UNSUBSCRIBE_LIST [object twitter4j/TwitterMethod])
+  (line 502)
+  (sget-object v0 twitter4j/TwitterMethod.CHECK_LIST_SUBSCRIPTION [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CHECK_LIST_SUBSCRIPTION [object twitter4j/TwitterMethod])
+  (line 505)
+  (sget-object v0 twitter4j/TwitterMethod.DIRECT_MESSAGES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DIRECT_MESSAGES [object twitter4j/TwitterMethod])
+  (line 506)
+  (sget-object v0 twitter4j/TwitterMethod.SENT_DIRECT_MESSAGES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SENT_DIRECT_MESSAGES [object twitter4j/TwitterMethod])
+  (line 507)
+  (sget-object v0 twitter4j/TwitterMethod.SEND_DIRECT_MESSAGE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SEND_DIRECT_MESSAGE [object twitter4j/TwitterMethod])
+  (line 508)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_DIRECT_MESSAGE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DESTROY_DIRECT_MESSAGE [object twitter4j/TwitterMethod])
+  (line 511)
+  (sget-object v0 twitter4j/TwitterMethod.CREATE_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CREATE_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 512)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DESTROY_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 513)
+  (sget-object v0 twitter4j/TwitterMethod.EXISTS_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.EXISTS_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 514)
+  (sget-object v0 twitter4j/TwitterMethod.SHOW_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SHOW_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 515)
+  (sget-object v0 twitter4j/TwitterMethod.INCOMING_FRIENDSHIPS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.INCOMING_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 516)
+  (sget-object v0 twitter4j/TwitterMethod.OUTGOING_FRIENDSHIPS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.OUTGOING_FRIENDSHIPS [object twitter4j/TwitterMethod])
+  (line 517)
+  (sget-object v0 twitter4j/TwitterMethod.LOOKUP_FRIENDSHIPS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.LOOKUP_FRIENDSHIPS [object twitter4j/TwitterMethod])
+  (line 518)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_FRIENDSHIP [object twitter4j/TwitterMethod])
+  (line 521)
+  (sget-object v0 twitter4j/TwitterMethod.FRIENDS_IDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FRIENDS_IDS [object twitter4j/TwitterMethod])
+  (line 522)
+  (sget-object v0 twitter4j/TwitterMethod.FOLLOWERS_IDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FOLLOWERS_IDS [object twitter4j/TwitterMethod])
+  (line 525)
+  (sget-object v0 twitter4j/TwitterMethod.VERIFY_CREDENTIALS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.VERIFY_CREDENTIALS [object twitter4j/TwitterMethod])
+  (line 526)
+  (sget-object v0 twitter4j/TwitterMethod.RATE_LIMIT_STATUS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RATE_LIMIT_STATUS [object twitter4j/TwitterMethod])
+  (line 527)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_PROFILE_COLORS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_PROFILE_COLORS [object twitter4j/TwitterMethod])
+  (line 528)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_PROFILE_IMAGE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_PROFILE_IMAGE [object twitter4j/TwitterMethod])
+  (line 529)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_PROFILE_BACKGROUND_IMAGE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_PROFILE_BACKGROUND_IMAGE [object twitter4j/TwitterMethod])
+  (line 530)
+  (sget-object v0 twitter4j/TwitterMethod.UPDATE_PROFILE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.UPDATE_PROFILE [object twitter4j/TwitterMethod])
+  (line 531)
+  (sget-object v0 twitter4j/TwitterMethod.ACCOUNT_TOTALS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ACCOUNT_TOTALS [object twitter4j/TwitterMethod])
+  (line 532)
+  (sget-object v0 twitter4j/TwitterMethod.ACCOUNT_SETTINGS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ACCOUNT_SETTINGS [object twitter4j/TwitterMethod])
+  (line 535)
+  (sget-object v0 twitter4j/TwitterMethod.FAVORITES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.FAVORITES [object twitter4j/TwitterMethod])
+  (line 536)
+  (sget-object v0 twitter4j/TwitterMethod.CREATE_FAVORITE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CREATE_FAVORITE [object twitter4j/TwitterMethod])
+  (line 537)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_FAVORITE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DESTROY_FAVORITE [object twitter4j/TwitterMethod])
+  (line 540)
+  (sget-object v0 twitter4j/TwitterMethod.ENABLE_NOTIFICATION [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.ENABLE_NOTIFICATION [object twitter4j/TwitterMethod])
+  (line 541)
+  (sget-object v0 twitter4j/TwitterMethod.DISABLE_NOTIFICATION [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DISABLE_NOTIFICATION [object twitter4j/TwitterMethod])
+  (line 544)
+  (sget-object v0 twitter4j/TwitterMethod.CREATE_BLOCK [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CREATE_BLOCK [object twitter4j/TwitterMethod])
+  (line 545)
+  (sget-object v0 twitter4j/TwitterMethod.DESTROY_BLOCK [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.DESTROY_BLOCK [object twitter4j/TwitterMethod])
+  (line 546)
+  (sget-object v0 twitter4j/TwitterMethod.EXISTS_BLOCK [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.EXISTS_BLOCK [object twitter4j/TwitterMethod])
+  (line 547)
+  (sget-object v0 twitter4j/TwitterMethod.BLOCKING_USERS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.BLOCKING_USERS [object twitter4j/TwitterMethod])
+  (line 548)
+  (sget-object v0 twitter4j/TwitterMethod.BLOCKING_USERS_IDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.BLOCKING_USERS_IDS [object twitter4j/TwitterMethod])
+  (line 551)
+  (sget-object v0 twitter4j/TwitterMethod.REPORT_SPAM [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.REPORT_SPAM [object twitter4j/TwitterMethod])
+  (line 560)
+  (sget-object v0 twitter4j/TwitterMethod.AVAILABLE_TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.AVAILABLE_TRENDS [object twitter4j/TwitterMethod])
+  (line 561)
+  (sget-object v0 twitter4j/TwitterMethod.LOCATION_TRENDS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.LOCATION_TRENDS [object twitter4j/TwitterMethod])
+  (line 564)
+  (sget-object v0 twitter4j/TwitterMethod.SEARCH_PLACES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SEARCH_PLACES [object twitter4j/TwitterMethod])
+  (line 565)
+  (sget-object v0 twitter4j/TwitterMethod.SIMILAR_PLACES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.SIMILAR_PLACES [object twitter4j/TwitterMethod])
+  (line 566)
+  (sget-object v0 twitter4j/TwitterMethod.NEAR_BY_PLACES [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.NEAR_BY_PLACES [object twitter4j/TwitterMethod])
+  (line 567)
+  (sget-object v0 twitter4j/TwitterMethod.REVERSE_GEO_CODE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.REVERSE_GEO_CODE [object twitter4j/TwitterMethod])
+  (line 568)
+  (sget-object v0 twitter4j/TwitterMethod.GEO_DETAILS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.GEO_DETAILS [object twitter4j/TwitterMethod])
+  (line 569)
+  (sget-object v0 twitter4j/TwitterMethod.CREATE_PLACE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.CREATE_PLACE [object twitter4j/TwitterMethod])
+  (line 572)
+  (sget-object v0 twitter4j/TwitterMethod.TERMS_OF_SERVICE [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.TERMS_OF_SERVICE [object twitter4j/TwitterMethod])
+  (line 573)
+  (sget-object v0 twitter4j/TwitterMethod.PRIVACY_POLICY [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.PRIVACY_POLICY [object twitter4j/TwitterMethod])
+  (line 576)
+  (sget-object v0 twitter4j/TwitterMethod.RELATED_RESULTS [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.RELATED_RESULT [object twitter4j/TwitterMethod])
+  (line 579)
+  (sget-object v0 twitter4j/TwitterMethod.TEST [object twitter4j/TwitterMethod])
+  (sput-object v0 twitter4j/TwitterListener.TEST [object twitter4j/TwitterMethod])
+  (return-void )
+ )
+
+(method (attrs public abstract ) addedUserListMember([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) addedUserListMembers([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) checkedUserListMembership([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) checkedUserListSubscription([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) createdBlock([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) createdFavorite([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) createdFriendship([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) createdPlace([object twitter4j/Place] )void
+)
+
+(method (attrs public abstract ) createdUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) deletedUserListMember([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) destroyedBlock([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) destroyedDirectMessage([object twitter4j/DirectMessage] )void
+)
+
+(method (attrs public abstract ) destroyedFavorite([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) destroyedFriendship([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) destroyedStatus([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) destroyedUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) disabledNotification([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) enabledNotification([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) gotAccountSettings([object twitter4j/AccountSettings] )void
+)
+
+(method (attrs public abstract ) gotAccountTotals([object twitter4j/AccountTotals] )void
+)
+
+(method (attrs public abstract ) gotAllUserLists([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/UserList;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotAvailableTrends([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Location;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotBlockingUsers([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotBlockingUsersIDs([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotCurrentTrends([object twitter4j/Trends] )void
+)
+
+(method (attrs public abstract ) gotDailyTrends([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Ltwitter4j/Trends;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotDirectMessage([object twitter4j/DirectMessage] )void
+)
+
+(method (attrs public abstract ) gotDirectMessages([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/DirectMessage;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotExistsBlock(boolean )void
+)
+
+(method (attrs public abstract ) gotExistsFriendship(boolean )void
+)
+
+(method (attrs public abstract ) gotFavorites([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotFollowersIDs([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotFollowersStatuses([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotFriendsIDs([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotFriendsStatuses([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotFriendsTimeline([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotGeoDetails([object twitter4j/Place] )void
+)
+
+(method (attrs public abstract ) gotHomeTimeline([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotIncomingFriendships([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotLocationTrends([object twitter4j/Trends] )void
+)
+
+(method (attrs public abstract ) gotMemberSuggestions([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotMentions([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotNearByPlaces([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Place;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotOutgoingFriendships([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotPrivacyPolicy([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) gotProfileImage([object twitter4j/ProfileImage] )void
+)
+
+(method (attrs public abstract ) gotPublicTimeline([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRateLimitStatus([object twitter4j/RateLimitStatus] )void
+)
+
+(method (attrs public abstract ) gotRelatedResults([object twitter4j/RelatedResults] )void
+)
+
+(method (attrs public abstract ) gotRetweetedBy([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweetedByIDs([object twitter4j/IDs] )void
+)
+
+(method (attrs public abstract ) gotRetweetedByMe([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweetedByUser([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweetedToMe([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweetedToUser([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweets([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotRetweetsOfMe([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotReverseGeoCode([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Place;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotSentDirectMessages([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/DirectMessage;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotShowFriendship([object twitter4j/Relationship] )void
+)
+
+(method (attrs public abstract ) gotShowStatus([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) gotShowUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) gotSimilarPlaces([object twitter4j/SimilarPlaces] )void
+)
+
+(method (attrs public abstract ) gotSuggestedUserCategories([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Category;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotTermsOfService([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) gotTrends([object twitter4j/Trends] )void
+)
+
+(method (attrs public abstract ) gotUserDetail([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) gotUserListMembers([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserListMemberships([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/UserList;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserListStatuses([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserListSubscribers([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserListSubscriptions([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/UserList;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserLists([object twitter4j/PagableResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/PagableResponseList"  "<"  "Ltwitter4j/UserList;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserSuggestions([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotUserTimeline([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Status;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) gotWeeklyTrends([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Ltwitter4j/Trends;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) lookedUpFriendships([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Friendship;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) lookedupUsers([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) onException([object twitter4j/TwitterException] [object twitter4j/TwitterMethod] )void
+)
+
+(method (attrs public abstract ) reportedSpam([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) retweetedStatus([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) searched([object twitter4j/QueryResult] )void
+)
+
+(method (attrs public abstract ) searchedPlaces([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/Place;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) searchedUser([object twitter4j/ResponseList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ltwitter4j/ResponseList"  "<"  "Ltwitter4j/User;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) sentDirectMessage([object twitter4j/DirectMessage] )void
+)
+
+(method (attrs public abstract ) subscribedUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) tested(boolean )void
+)
+
+(method (attrs public abstract ) unsubscribedUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) updatedFriendship([object twitter4j/Relationship] )void
+)
+
+(method (attrs public abstract ) updatedProfile([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) updatedProfileBackgroundImage([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) updatedProfileColors([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) updatedProfileImage([object twitter4j/User] )void
+)
+
+(method (attrs public abstract ) updatedStatus([object twitter4j/Status] )void
+)
+
+(method (attrs public abstract ) updatedUserList([object twitter4j/UserList] )void
+)
+
+(method (attrs public abstract ) verifiedCredentials([object twitter4j/User] )void
+)
+
+)

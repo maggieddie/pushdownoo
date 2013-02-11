@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) android/annotation/SuppressLint
+ (super java/lang/Object)
+ (source "SuppressLint.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object java/lang/String]]
+)
+
+)

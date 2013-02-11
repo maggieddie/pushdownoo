@@ -1,0 +1,25 @@
+(class (attrs ) org/apache/ogt/http/conn/params/ConnManagerParams$1
+ (super java/lang/Object)
+ (source "ConnManagerParams.java")
+ (implements org/apache/ogt/http/conn/params/ConnPerRoute)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/conn/params/ConnManagerParams$1])
+  (line 86)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) getMaxForRoute([object org/apache/ogt/http/conn/routing/HttpRoute] )int
+  (limit registers 3)
+  ; this: v1 ([object org/apache/ogt/http/conn/params/ConnManagerParams$1])
+  ; parameter[0] : v2 ([object org/apache/ogt/http/conn/routing/HttpRoute])
+  (line 89)
+  (const/4 v0 2)
+  (return v0)
+)
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public ) org/bouncycastle2/asn1/x509/X509Attributes
+ (super java/lang/Object)
+ (source "X509Attributes.java")
+
+ (field (attrs public static final ) RoleSyntax [object org/bouncycastle2/asn1/DERObjectIdentifier] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 7)
+  (new-instance v0 org/bouncycastle2/asn1/DERObjectIdentifier)
+  (const-string v1 "2.5.4.72")
+  (invoke-direct {v0 v1} org/bouncycastle2/asn1/DERObjectIdentifier/<init> [object java/lang/String] )
+  (sput-object v0 org/bouncycastle2/asn1/x509/X509Attributes.RoleSyntax [object org/bouncycastle2/asn1/DERObjectIdentifier])
+  (line 5)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle2/asn1/x509/X509Attributes])
+  (line 5)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) antlr/debug/ParserListener
+ (super java/lang/Object)
+ (source "ParserListener.java")
+ (implements antlr/debug/SemanticPredicateListener)
+ (implements antlr/debug/ParserMatchListener)
+ (implements antlr/debug/MessageListener)
+ (implements antlr/debug/ParserTokenListener)
+ (implements antlr/debug/TraceListener)
+ (implements antlr/debug/SyntacticPredicateListener)
+
+
+)

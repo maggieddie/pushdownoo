@@ -1,0 +1,35 @@
+(class (attrs ) android/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+ (implements android/support/v4/app/NotificationCompat$NotificationCompatImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb])
+  (line 55)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getNotification([object android/support/v4/app/NotificationCompat$Builder] )[object android/app/Notification]
+  (limit registers 12)
+  ; this: v10 ([object android/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb])
+  ; parameter[0] : v11 ([object android/support/v4/app/NotificationCompat$Builder])
+  (line 57)
+  (iget-object v0 v11 android/support/v4/app/NotificationCompat$Builder.mContext [object android/content/Context])
+  (iget-object v1 v11 android/support/v4/app/NotificationCompat$Builder.mNotification [object android/app/Notification])
+  (iget-object v2 v11 android/support/v4/app/NotificationCompat$Builder.mContentTitle [object java/lang/CharSequence])
+  (iget-object v3 v11 android/support/v4/app/NotificationCompat$Builder.mContentText [object java/lang/CharSequence])
+  (iget-object v4 v11 android/support/v4/app/NotificationCompat$Builder.mContentInfo [object java/lang/CharSequence])
+  (iget-object v5 v11 android/support/v4/app/NotificationCompat$Builder.mTickerView [object android/widget/RemoteViews])
+  (iget v6 v11 android/support/v4/app/NotificationCompat$Builder.mNumber int)
+  (iget-object v7 v11 android/support/v4/app/NotificationCompat$Builder.mContentIntent [object android/app/PendingIntent])
+  (iget-object v8 v11 android/support/v4/app/NotificationCompat$Builder.mFullScreenIntent [object android/app/PendingIntent])
+  (iget-object v9 v11 android/support/v4/app/NotificationCompat$Builder.mLargeIcon [object android/graphics/Bitmap])
+  (invoke-static/range {v0 .. v9} android/support/v4/app/NotificationCompatHoneycomb/add [object android/content/Context] [object android/app/Notification] [object java/lang/CharSequence] [object java/lang/CharSequence] [object java/lang/CharSequence] [object android/widget/RemoteViews] int [object android/app/PendingIntent] [object android/app/PendingIntent] [object android/graphics/Bitmap] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

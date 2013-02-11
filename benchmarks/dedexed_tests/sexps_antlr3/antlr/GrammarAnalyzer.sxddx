@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) antlr/GrammarAnalyzer
+ (super java/lang/Object)
+ (source "GrammarAnalyzer.java")
+
+ (field (attrs public static final ) LOOKAHEAD_DEPTH_INIT int -1); 0xffffffff )
+ (field (attrs public static final ) NONDETERMINISTIC int 2147483647); 0x7fffffff )
+
+)

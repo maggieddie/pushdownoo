@@ -1,0 +1,81 @@
+(interface (attrs public abstract ) org/andengine/opengl/texture/ITexture
+ (super java/lang/Object)
+ (source "ITexture.java")
+
+
+(method (attrs public abstract ) bind([object org/andengine/opengl/util/GLState] )void
+)
+
+(method (attrs public abstract ) bind([object org/andengine/opengl/util/GLState] int )void
+)
+
+(method (attrs public abstract ) getHardwareTextureID()int
+)
+
+(method (attrs public abstract ) getHeight()int
+)
+
+(method (attrs public abstract ) getPixelFormat()[object org/andengine/opengl/texture/PixelFormat]
+)
+
+(method (attrs public abstract ) getTextureOptions()[object org/andengine/opengl/texture/TextureOptions]
+)
+
+(method (attrs public abstract ) getTextureStateListener()[object org/andengine/opengl/texture/ITextureStateListener]
+)
+
+(method (attrs public abstract ) getWidth()int
+)
+
+(method (attrs public abstract ) hasTextureStateListener()boolean
+)
+
+(method (attrs public abstract ) isLoadedToHardware()boolean
+)
+
+(method (attrs public abstract ) isUpdateOnHardwareNeeded()boolean
+)
+
+(method (attrs public abstract ) load()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) load([object org/andengine/opengl/util/GLState] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) loadToHardware([object org/andengine/opengl/util/GLState] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) reloadToHardware([object org/andengine/opengl/util/GLState] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) setNotLoadedToHardware()void
+)
+
+(method (attrs public abstract ) setTextureStateListener([object org/andengine/opengl/texture/ITextureStateListener] )void
+)
+
+(method (attrs public abstract ) setUpdateOnHardwareNeeded(boolean )void
+)
+
+(method (attrs public abstract ) unload()void
+)
+
+(method (attrs public abstract ) unload([object org/andengine/opengl/util/GLState] )void
+)
+
+(method (attrs public abstract ) unloadFromHardware([object org/andengine/opengl/util/GLState] )void
+)
+
+)

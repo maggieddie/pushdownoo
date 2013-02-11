@@ -1,0 +1,71 @@
+(class (attrs public ) com/actionbarsherlock/internal/view/ActionProviderWrapper
+ (super android/view/ActionProvider)
+ (source "ActionProviderWrapper.java")
+
+ (field (attrs private final ) mProvider [object com/actionbarsherlock/view/ActionProvider] )
+
+(method (attrs public ) <init>([object com/actionbarsherlock/view/ActionProvider] )void
+  (limit registers 3)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  ; parameter[0] : v2 ([object com/actionbarsherlock/view/ActionProvider])
+  (line 12)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} android/view/ActionProvider/<init> [object android/content/Context] )
+  (line 13)
+  (iput-object v2 v1 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) hasSubMenu()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  (line 28)
+  (iget-object v0 v1 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (invoke-virtual {v0} com/actionbarsherlock/view/ActionProvider/hasSubMenu )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onCreateActionView()[object android/view/View]
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  (line 23)
+  (iget-object v0 v1 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (invoke-virtual {v0} com/actionbarsherlock/view/ActionProvider/onCreateActionView )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) onPerformDefaultAction()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  (line 33)
+  (iget-object v0 v1 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (invoke-virtual {v0} com/actionbarsherlock/view/ActionProvider/onPerformDefaultAction )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onPrepareSubMenu([object android/view/SubMenu] )void
+  (limit registers 4)
+  ; this: v2 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  ; parameter[0] : v3 ([object android/view/SubMenu])
+  (line 38)
+  (iget-object v0 v2 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (new-instance v1 com/actionbarsherlock/internal/view/menu/SubMenuWrapper)
+  (invoke-direct {v1 v3} com/actionbarsherlock/internal/view/menu/SubMenuWrapper/<init> [object android/view/SubMenu] )
+  (invoke-virtual {v0 v1} com/actionbarsherlock/view/ActionProvider/onPrepareSubMenu [object com/actionbarsherlock/view/SubMenu] )
+  (line 39)
+  (return-void )
+)
+
+(method (attrs public ) unwrap()[object com/actionbarsherlock/view/ActionProvider]
+  (limit registers 2)
+  ; this: v1 ([object com/actionbarsherlock/internal/view/ActionProviderWrapper])
+  (line 18)
+  (iget-object v0 v1 com/actionbarsherlock/internal/view/ActionProviderWrapper.mProvider [object com/actionbarsherlock/view/ActionProvider])
+  (return-object v0)
+)
+
+)

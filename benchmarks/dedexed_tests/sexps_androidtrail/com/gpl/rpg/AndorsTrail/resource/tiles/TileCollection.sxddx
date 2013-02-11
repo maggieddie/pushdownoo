@@ -1,0 +1,43 @@
+(class (attrs public ) com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection
+ (super java/lang/Object)
+ (source "TileCollection.java")
+
+ (field (attrs public final ) bitmaps [array [object android/graphics/Bitmap]] )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection])
+  ; parameter[0] : v2 (int)
+  (line 8)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 9)
+  (add-int/lit8 v0 v2 1)
+  (new-array v0 v0 [array [object android/graphics/Bitmap]])
+  (iput-object v0 v1 com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection.bitmaps [array [object android/graphics/Bitmap]])
+  (line 10)
+  (return-void )
+ )
+
+(method (attrs public ) getBitmap(int )[object android/graphics/Bitmap]
+  (limit registers 3)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection])
+  ; parameter[0] : v2 (int)
+  (line 13)
+  (iget-object v0 v1 com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection.bitmaps [array [object android/graphics/Bitmap]])
+  (aget-object v0 v0 v2)
+  (return-object v0)
+)
+
+(method (attrs public ) setBitmap(int [object android/graphics/Bitmap] )void
+  (limit registers 4)
+  ; this: v1 ([object com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/graphics/Bitmap])
+  (line 17)
+  (iget-object v0 v1 com/gpl/rpg/AndorsTrail/resource/tiles/TileCollection.bitmaps [array [object android/graphics/Bitmap]])
+  (aput-object v3 v0 v2)
+  (line 18)
+  (return-void )
+)
+
+)

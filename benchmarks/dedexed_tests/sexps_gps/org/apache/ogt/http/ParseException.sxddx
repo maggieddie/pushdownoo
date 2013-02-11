@@ -1,0 +1,26 @@
+(class (attrs public ) org/apache/ogt/http/ParseException
+ (super java/lang/RuntimeException)
+ (source "ParseException.java")
+
+ (field (attrs private static final ) serialVersionUID long -67179273); 0xfbfeecf7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/ogt/http/ParseException])
+  (line 49)
+  (invoke-direct {v0} java/lang/RuntimeException/<init> )
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/ogt/http/ParseException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 58)
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 59)
+  (return-void )
+ )
+
+)

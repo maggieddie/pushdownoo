@@ -1,0 +1,21 @@
+(class (attrs ) org/bouncycastle2/crypto/tls/TlsRSASigner
+ (super org/bouncycastle2/crypto/signers/GenericSigner)
+ (source "TlsRSASigner.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle2/crypto/tls/TlsRSASigner])
+  (line 12)
+  (new-instance v0 org/bouncycastle2/crypto/encodings/PKCS1Encoding)
+  (new-instance v1 org/bouncycastle2/crypto/engines/RSABlindedEngine)
+  (invoke-direct {v1} org/bouncycastle2/crypto/engines/RSABlindedEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle2/crypto/encodings/PKCS1Encoding/<init> [object org/bouncycastle2/crypto/AsymmetricBlockCipher] )
+  (new-instance v1 org/bouncycastle2/crypto/tls/CombinedHash)
+  (invoke-direct {v1} org/bouncycastle2/crypto/tls/CombinedHash/<init> )
+  (invoke-direct {v2 v0 v1} org/bouncycastle2/crypto/signers/GenericSigner/<init> [object org/bouncycastle2/crypto/AsymmetricBlockCipher] [object org/bouncycastle2/crypto/Digest] )
+  (line 13)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/python/core/Loader
+ (super java/lang/Object)
+ (source "Loader.java")
+
+
+(method (attrs public abstract ) addParent([object java/lang/ClassLoader] )void
+)
+
+(method (attrs public abstract ) loadClassFromBytes([object java/lang/String] [array byte] )[object java/lang/Class]
+)
+
+)

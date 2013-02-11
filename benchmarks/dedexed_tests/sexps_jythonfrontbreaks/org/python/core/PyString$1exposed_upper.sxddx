@@ -1,0 +1,67 @@
+(class (attrs ) org/python/core/PyString$1exposed_upper
+ (super org/python/core/PyBuiltinFunctionNarrow)
+ (source "PyString.java")
+
+ (field (attrs private ) self [object org/python/core/PyString] )
+
+(method (attrs ) <init>([object org/python/core/PyString] [object org/python/core/PyBuiltinFunction$Info] )void
+  (limit registers 3)
+  ; this: v0 ([object org/python/core/PyString$1exposed_upper])
+  ; parameter[0] : v1 ([object org/python/core/PyString])
+  ; parameter[1] : v2 ([object org/python/core/PyBuiltinFunction$Info])
+  (line 2544)
+  (invoke-direct {v0 v2} org/python/core/PyBuiltinFunctionNarrow/<init> [object org/python/core/PyBuiltinFunction$Info] )
+  (line 2545)
+  (iput-object v1 v0 org/python/core/PyString$1exposed_upper.self [object org/python/core/PyString])
+  (line 2546)
+  (return-void )
+ )
+
+(method (attrs public ) __call__()[object org/python/core/PyObject]
+  (limit registers 3)
+  ; this: v2 ([object org/python/core/PyString$1exposed_upper])
+  (line 2553)
+  (new-instance v0 org/python/core/PyString)
+  (iget-object v1 v2 org/python/core/PyString$1exposed_upper.self [object org/python/core/PyString])
+  (invoke-virtual {v1} org/python/core/PyString/str_upper )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} org/python/core/PyString/<init> [object java/lang/String] )
+  (return-object v0)
+)
+
+(method (attrs public ) getSelf()[object org/python/core/PyObject]
+  (limit registers 2)
+  ; this: v1 ([object org/python/core/PyString$1exposed_upper])
+  (line 2540)
+  (iget-object v0 v1 org/python/core/PyString$1exposed_upper.self [object org/python/core/PyString])
+  (return-object v0)
+)
+
+(method (attrs public ) inst_call([object org/python/core/PyObject] )[object org/python/core/PyObject]
+  (limit registers 5)
+  ; this: v3 ([object org/python/core/PyString$1exposed_upper])
+  ; parameter[0] : v4 ([object org/python/core/PyObject])
+  (line 2557)
+  (move-object v0 v4)
+  (check-cast v0 [object org/python/core/PyString])
+  (line 2558)
+  (new-instance v1 org/python/core/PyString)
+  (invoke-virtual {v0} org/python/core/PyString/str_upper )
+  (move-result-object v2)
+  (invoke-direct {v1 v2} org/python/core/PyString/<init> [object java/lang/String] )
+  (return-object v1)
+)
+
+(method (attrs public ) makeBound([object org/python/core/PyObject] )[object org/python/core/PyBuiltinFunction]
+  (limit registers 4)
+  ; this: v2 ([object org/python/core/PyString$1exposed_upper])
+  ; parameter[0] : v3 ([object org/python/core/PyObject])
+  (line 2549)
+  (new-instance v0 org/python/core/PyString$1exposed_upper)
+  (check-cast v3 [object org/python/core/PyString])
+  (iget-object v1 v2 org/python/core/PyString$1exposed_upper.info [object org/python/core/PyBuiltinFunction$Info])
+  (invoke-direct {v0 v3 v1} org/python/core/PyString$1exposed_upper/<init> [object org/python/core/PyString] [object org/python/core/PyBuiltinFunction$Info] )
+  (return-object v0)
+)
+
+)

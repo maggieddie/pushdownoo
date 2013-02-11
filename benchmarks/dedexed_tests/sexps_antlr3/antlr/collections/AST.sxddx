@@ -1,0 +1,75 @@
+(interface (attrs public abstract ) antlr/collections/AST
+ (super java/lang/Object)
+ (source "AST.java")
+
+
+(method (attrs public abstract ) addChild([object antlr/collections/AST] )void
+)
+
+(method (attrs public abstract ) equals([object antlr/collections/AST] )boolean
+)
+
+(method (attrs public abstract ) equalsList([object antlr/collections/AST] )boolean
+)
+
+(method (attrs public abstract ) equalsListPartial([object antlr/collections/AST] )boolean
+)
+
+(method (attrs public abstract ) equalsTree([object antlr/collections/AST] )boolean
+)
+
+(method (attrs public abstract ) equalsTreePartial([object antlr/collections/AST] )boolean
+)
+
+(method (attrs public abstract ) findAll([object antlr/collections/AST] )[object antlr/collections/ASTEnumeration]
+)
+
+(method (attrs public abstract ) findAllPartial([object antlr/collections/AST] )[object antlr/collections/ASTEnumeration]
+)
+
+(method (attrs public abstract ) getFirstChild()[object antlr/collections/AST]
+)
+
+(method (attrs public abstract ) getNextSibling()[object antlr/collections/AST]
+)
+
+(method (attrs public abstract ) getNumberOfChildren()int
+)
+
+(method (attrs public abstract ) getText()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getType()int
+)
+
+(method (attrs public abstract ) initialize(int [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) initialize([object antlr/Token] )void
+)
+
+(method (attrs public abstract ) initialize([object antlr/collections/AST] )void
+)
+
+(method (attrs public abstract ) setFirstChild([object antlr/collections/AST] )void
+)
+
+(method (attrs public abstract ) setNextSibling([object antlr/collections/AST] )void
+)
+
+(method (attrs public abstract ) setText([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setType(int )void
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+(method (attrs public abstract ) toStringList()[object java/lang/String]
+)
+
+(method (attrs public abstract ) toStringTree()[object java/lang/String]
+)
+
+)
