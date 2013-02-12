@@ -9,6 +9,9 @@ The pushdown exception-flow analysis of object-oriented languages.
   CRAPLE-LICENCE.txt
 
   benchmarks -- a set of Dalvik applications (or directly IRs for easy tests) to test the pushdown analyzer
+                Andorid applications released by DARPA can not be distributed online here. 
+                so only the apks ported from DaCapo and the apks downloaded from google code are available.
+                
 
   lib -- Scala SDK, and compiler
 
