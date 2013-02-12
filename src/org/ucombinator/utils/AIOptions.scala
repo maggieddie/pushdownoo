@@ -79,6 +79,11 @@ object AIOptions {
         opts.gc = true
         parse(rest, opts)
       }
+      
+      case "--lra" :: rest => {
+        opts.doLRA = true
+        parse(rest, opts)
+      }
 
       case "--gcDebug" :: rest => {
         opts.gcDebug = true

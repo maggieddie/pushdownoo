@@ -85,10 +85,10 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     //  buffer.append("Total amount of ThrowPointsto entries, and the mean: " +
      // throwPointsTo.totalCardi + " | " + Math.ceil(meanThrown) + "\n")
 
-    val (methCardies, meanObjs) = Statistics.totalAndMeanCallObjs
-    buffer.append("Total amount of invoking objects, and the mean: " +
+   // val (methCardies, meanObjs) = Statistics.totalAndMeanCallObjs
+   // buffer.append("Total amount of invoking objects, and the mean: " +
       // throwPointsTo.totalEntries + " | " + Math.ceil(meanThrown) + "\n")
-      methCardies + " | " + Math.ceil(meanObjs) + "\n")
+     // methCardies + " | " + Math.ceil(meanObjs) + "\n")
 
     val (cardiecs, meanec) = Statistics.totalAndAverageEclinks
     buffer.append(" E-C Links: " +

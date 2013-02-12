@@ -1,62 +1,461 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. -->
-<project basedir="." default="build" name="PDCFAForDalvik">
-    <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../../../Users/shuying/Documents/dev/eclipse_scala"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.6"/>
-    <property name="source" value="1.6"/>
-    <path id="Scala Library [2.9.2].libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}/configuration/org.eclipse.osgi/bundles/292/1/.cp/lib/scala-library.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/configuration/org.eclipse.osgi/bundles/292/1/.cp/lib/scala-dbc.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/configuration/org.eclipse.osgi/bundles/292/1/.cp/lib/scala-swing.jar"/>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ ~ CRAPL 2012.
+ ~ U Combinator, University of Utah
+ ~  
+ ~
+ ~ THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+ ~ APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+ ~ HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT
+ ~ WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT
+ ~ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ ~ A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
+ ~ PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE
+ ~ DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR
+ ~ CORRECTION.
+ ~
+ ~ IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+ ~ WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR
+ ~ CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,
+ ~ INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES
+ ~ ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT
+ ~ NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR
+ ~ LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM
+ ~ TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER
+ ~ PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ ~
+ ~ If you have questions or concerns about the CRAPL, or you need more
+ ~ information about this license, please contact:
+ ~
+ ~    Matthew Might
+ ~    http://matt.might.net/
+ -->
+
+<project name="pushdownoo" default="all">
+    
+    <tstamp>
+        <format property="current.year" pattern="yyyy"/>
+    </tstamp>
+    
+    <property name="jdk.home" value="${java.home}"/>
+    
+    <!-- Compiler options -->
+    
+    <property name="compiler.debug" value="on"/>
+    <property name="compiler.generate.no.warnings" value="off"/>
+    <property name="compiler.args" value=""/>
+    <property name="compiler.max.memory" value="1024m"/>
+    <patternset id="ignored.files">
+        <exclude name="**/CVS/**"/>
+        <exclude name="**/.DS_Store/**"/>
+        <exclude name="**/.svn/**"/>
+        <exclude name="**/.pyc/**"/>
+        <exclude name="**/.pyo/**"/>
+        <exclude name="**/*.pyc/**"/>
+        <exclude name="**/*.pyo/**"/>
+        <exclude name="**/.git/**"/>
+        <exclude name="**/_svn/**"/>
+    </patternset>
+    <patternset id="library.patterns">
+        <include name="*.zip"/>
+        <include name="*.war"/>
+        <include name="*.egg"/>
+        <include name="*.ear"/>
+        <include name="*.swc"/>
+        <include name="*.jar"/>
+    </patternset>
+    <patternset id="compiler.resources">
+        <include name="**/?*.properties"/>
+        <include name="**/?*.xml"/>
+        <include name="**/?*.gif"/>
+        <include name="**/?*.png"/>
+        <include name="**/?*.jpeg"/>
+        <include name="**/?*.jpg"/>
+        <include name="**/?*.html"/>
+        <include name="**/?*.dtd"/>
+        <include name="**/?*.tld"/>
+        <include name="**/?*.ftl"/>
+    </patternset>
+    
+    <!-- JDK definitions -->
+    
+    <property name="jdk.bin" value="${jdk.home}/bin"/>
+    <path id="jdk.classpath.1.6">
+        <!-- For Mac OS' Java SDK -->
+        <fileset dir="${jdk.home}">
+            <include name="../../1.6/Home/lib/deploy.jar"/>
+            <include name="../../1.6/Home/lib/dt.jar"/>
+            <include name="../../1.6/Home/lib/javaws.jar"/>
+            <include name="../../1.6/Home/lib/jce.jar"/>
+            <include name="../../1.6/Home/lib/plugin.jar"/>
+            <include name="../../1.6/Home/lib/sa-jdi.jar"/>
+            <include name="../../1.6/Home/../Classes/charsets.jar"/>
+            <include name="../../1.6/Home/../Classes/classes.jar"/>
+            <include name="../../1.6/Home/../Classes/dt.jar"/>
+            <include name="../../1.6/Home/../Classes/jce.jar"/>
+            <include name="../../1.6/Home/../Classes/jconsole.jar"/>
+            <include name="../../1.6/Home/../Classes/jsse.jar"/>
+            <include name="../../1.6/Home/../Classes/laf.jar"/>
+            <include name="../../1.6/Home/../Classes/ui.jar"/>
+            <include name="../../1.6/Home/lib/ext/apple_provider.jar"/>
+            <include name="../../1.6/Home/lib/ext/dnsns.jar"/>
+            <include name="../../1.6/Home/lib/ext/localedata.jar"/>
+            <include name="../../1.6/Home/lib/ext/sunjce_provider.jar"/>
+            <include name="../../1.6/Home/lib/ext/sunpkcs11.jar"/>
+        </fileset>
+        
+        <!-- For Linux and Windows' Java SDK -->
+        <fileset dir="${jdk.home}/lib">
+            <include name="**/*.jar"/>
+        </fileset>
     </path>
-    <path id="PDCFAForDalvik.classpath">
-        <pathelement location="bin"/>
-        <path refid="Scala Library [2.9.2].libraryclasspath"/>
-        <pathelement location="lib/scala-compiler-src.jar"/>
-        <pathelement location="lib/scala-compiler.jar"/>
+    
+      
+    
+    <!-- -->
+    <!-- Artifacts paths-->
+    
+    <property name="project.jdk.home" value="${jdk.home}"/>
+    <property name="project.jdk.bin" value="${jdk.bin}"/>
+    <property name="project.jdk.classpath" value="jdk.classpath.1.6"/>
+    
+
+    <property name="artifacts.temp.dir" value="${basedir}/artifactsTemp"/>
+    <property name="artifacts.final.dir" value="${basedir}/artifacts"/>
+    
+    <property name="benchmarks.dir" value="${basedir}/benchmarks/irs"/>
+    <property name="project.jar.name" value="PushdownOO_Exflow.jar"/>
+    <property name="project.jar.name.no.scala" value="PushdownOO_ExflowNoScala.jar"/>
+    
+    <!-- Project Libraries -->
+    
+    <path id="library.scala-sdk.classpath">
+        <pathelement location="${basedir}/lib/scala-compiler.jar"/>
+        <pathelement location="${basedir}/lib/scala-library.jar"/>
     </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
+    
+    <!-- ScalaTest Utility -->
+    <path id="library.scalatest.classpath">
+        <pathelement location="${basedir}/lib/scalatest-1.7.1.jar"/>
+    </path>
+    
+    <!-- Custom taskdefs XX-->
+    <property name="scalac.task.sdk" value="library.scala_sdk.classpath"/>
+    <taskdef resource="scala/tools/ant/antlib.xml">
+        <classpath refid="library.scala-sdk.classpath"/>
+    </taskdef>
+    
+    <!-- Module pushdownoo -->
+    <dirname property="module.pushdownexflow.basedir" file="${ant.file}"/>
+    
+    <property name="module.jdk.home.pushdownexflow" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.pushdownexflow" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.pushdownexflow" value="${project.jdk.classpath}"/>
+    
+    <property name="compiler.args.pushdownexflow" value="${compiler.args}"/>
+    
+    <property name="pushdownexflow.output.dir"
+            value="${module.pushdownexflow.basedir}/out/production/pushdownexflow"/>
+    <property name="pushdownexflow.testoutput.dir"
+            value="${module.pushdownexflow.basedir}/out/test/pushdownexflow"/>
+    
+    <path id="pushdownexflow.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+    
+    <path id="pushdownexflow.module.classpath">
+        <path refid="${module.jdk.classpath.pushdownexflow}"/>
+        <path refid="library.scala-sdk.classpath"/>
+        <path refid="library.scalatest.classpath"/>
+    </path>
+    
+    <path id="pushdownexflow.runtime.module.classpath">
+        <pathelement location="${pushdownexflow.output.dir}"/>
+        <pathelement location="${pushdownexflow.testoutput.dir}"/>
+        <path refid="library.scala-sdk.classpath"/>
+        <path refid="library.scalatest.classpath"/>
+    </path>
+    
+    <patternset id="excluded.from.module.pushdownexflow">
+        <patternset refid="ignored.files"/>
+    </patternset>
+    
+    <patternset id="excluded.from.compilation.pushdownexflow">
+        <patternset refid="excluded.from.module.pushdownexflow"/>
+    </patternset>
+    
+    <path id="pushdownexflow.module.sourcepath">
+        <dirset dir="${module.pushdownexflow.basedir}">
+            <include name="src"/>
+        </dirset>
+    </path>
+    
+    <path id="pushdownexflow.module.test.sourcepath">
+        <dirset dir="${module.pushdownexflow.basedir}">
+            <include name="test"/>
+        </dirset>
+    </path>
+
+    <!-- targets -->
+
+    <target name="compile"
+            depends="compile.module.pushdownexflow.production,compile.module.pushdownexflow.test"
+            description="Compile module pushdownexflow"/>
+    
+    <target name="compile.module.pushdownexflow.production"
+        description="Compile module pushdownexflow; production classes">
+        <mkdir dir="${pushdownexflow.output.dir}"/>
+        <scalac srcref="pushdownexflow.module.sourcepath"
+            destdir="${pushdownexflow.output.dir}"
+            scalacdebugging="true">
+            <classpath>
+                <path refid="pushdownexflow.module.classpath"/>
+                <pathelement location="${pushdownexflow.output.dir}"/>
+            </classpath>
+            <patternset refid="excluded.from.compilation.pushdownexflow"/>
+        </scalac>
+        <javac destdir="${pushdownexflow.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}"
+            memorymaximumsize="${compiler.max.memory}" fork="true"
+            executable="${module.jdk.bin.pushdownexflow}/javac">
+            <compilerarg line="${compiler.args.pushdownexflow}"/>
+            <bootclasspath refid="pushdownexflow.module.bootclasspath"/>
+            <classpath>
+                <pathelement location="${pushdownexflow.output.dir}"/>
+                <path refid="pushdownexflow.module.classpath"/>
+            </classpath>
+            <src refid="pushdownexflow.module.sourcepath"/>
+            <patternset refid="excluded.from.compilation.pushdownexflow"/>
+        </javac>
+        
+        <copy todir="${pushdownexflow.output.dir}">
+            <fileset dir="${module.pushdownexflow.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+        
+        <mkdir dir="${pushdownexflow.testoutput.dir}"/>
+        <scalac destdir="${pushdownexflow.testoutput.dir}">
+            <src refid="pushdownexflow.module.test.sourcepath"/>
+            <classpath>
+                <path refid="pushdownexflow.module.classpath"/>
+                <pathelement location="${pushdownexflow.output.dir}"/>
+            </classpath>
+            <patternset refid="excluded.from.compilation.pushdownexflow"/>
+        </scalac>
+        <javac destdir="${pushdownexflow.testoutput.dir}" debug="${compiler.debug}"
+            nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true"
+            executable="${module.jdk.bin.pushdownexflow}/javac">
+            <compilerarg line="${compiler.args.pushdownexflow}"/>
+            <bootclasspath refid="pushdownexflow.module.bootclasspath"/>
+            <classpath>
+                <pathelement location="${pushdownexflow.testoutput.dir}"/>
+                <path refid="pushdownexflow.module.classpath"/>
+                <pathelement location="${pushdownexflow.output.dir}"/>
+            </classpath>
+            <src refid="pushdownexflow.module.test.sourcepath"/>
+            <patternset refid="excluded.from.compilation.pushdownexflow"/>
+        </javac>
+    </target>
+    
+    <target name="compile.module.pushdownexflow.test" depends="compile.module.pushdownexflow.production"
+        description="compile module pushdownexflow; test classes" unless="skip.tests">
+        <mkdir dir="${pushdownexflow.testoutput.dir}"/>
+        
+        <copy todir="${pushdownexflow.testoutput.dir}">
+            <fileset dir="${module.pushdownexflow.basedir}/test">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
             </fileset>
         </copy>
     </target>
-    <target name="clean">
-        <delete dir="bin"/>
-     	<delete dir="graphs"/>
-    		<delete dir="statistics"/>
+    
+    <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
+        <classpath refid="library.scalatest.classpath"/>
+        <classpath refid="library.scala-sdk.classpath"/>
+        <classpath>
+            <pathelement location="${pushdownexflow.output.dir}"/>
+        </classpath>
+    </taskdef>
+    
+    <target name="clean.module.pushdownexflow" description="cleanup module">
+        <delete dir="${pushdownexflow.output.dir}"/>
+        <delete dir="${pushdownexflow.testoutput.dir}"/>
+        <delete dir="graphs"/>
+        <delete dir="statistics"/>
     </target>
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="PDCFAForDalvik.classpath"/>
-        </javac>
+    
+    <target name="clean" depends="clean.module.pushdownexflow" description="cleanup all"/>
+    
+    <target name="init.artifacts">
+        <mkdir dir="${artifacts.temp.dir}"/>
     </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+    
+    <target name="all" depends="clean, compile, zip.clean, jar"
+    description="build all and run tests"/>
+    
+    <!-- #################################################-->
+    <!-- Tests -->
+    <!-- #################################################-->
+    
+    <target name="run.tests" depends="compile.module.pushdownexflow.test">
+        <scalatest runpath="${pushdownexflow.testoutput.dir}"/>
+    </target>
+    
+    
+    <!-- #################################################-->
+    <!-- Zip project -->
+    <!-- #################################################-->
+    
+    <target name="zip.clean" description="zip project with no IDE-specific stuff">
+        <mkdir dir="${artifacts.final.dir}"/>
+        <copy todir="${artifacts.temp.dir}">
+            <fileset dir="${module.pushdownexflow.basedir}">
+                <include name="lib/*"/>
+                <include name="benchmarks/**/*.scm"/>
+                <include name="src/**/*.scala"/>
+                <include name="src/**/*.java"/>
+                <include name="test/**/*.scala"/>
+                <include name="test/**/*.java"/>
+                <include name="testdata/**/*.scm"/>
+                <include name="**/*.scm"/>
+                <include name="**/Makefile"/>
+                <include name="build.xml"/>
+                <include name="README"/>
+                <include name="CRAPL-LICENSE.txt"/>
+            </fileset>
         </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
+        
+        <zip destfile="${artifacts.final.dir}/pushdownexflow.zip" basedir="${artifacts.temp.dir}"/>
+        <delete dir="${artifacts.temp.dir}"/>
     </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
+    
+    <target name="zip.project" description="zip project">
+        <mkdir dir="${artifacts.final.dir}"/>
+        <copy todir="${artifacts.temp.dir}">
+            <fileset dir="${module.pushdownexflow.basedir}">
+                <include name="lib/*"/>
+                <include name="benchmarks/**/*.scm"/>
+                <include name="testdata/**/*.scm"/>
+                <include name="src/**/*.scala"/>
+                <include name="src/**/*.java"/>
+                <include name="test/**/*.scala"/>
+                <include name="test/**/*.java"/>
+                <include name="**/*.scm"/>
+                <include name="**/Makefile"/>
+                <include name="build.xml"/>
+                <include name="README"/>
+                <include name="CRAPL-LICENSE.txt"/>
+                <include name=".idea"/>
+                <include name="*.iml"/>
+                <include name=".classpath"/>
+                <include name=".project"/>
+                <!--<include name="*.eml"/>-->
+                <!--<include name="*.userlibraries"/>-->
+            </fileset>
+        </copy>
+        
+        <zip destfile="${artifacts.final.dir}/pushdownexflow-all.zip" basedir="${artifacts.temp.dir}"/>
+        <delete dir="${artifacts.temp.dir}"/>
     </target>
-</project>
+    
+    <!-- #################################################-->
+    <!-- Build project binaries for distribution -->
+    <!-- #################################################-->
+    
+    <target name="jar" >
+        <mkdir dir="${artifacts.final.dir}"/>
+        <jar destfile="${artifacts.final.dir}/${project.jar.name}" basedir="${pushdownexflow.output.dir}" includes="**/*.class" excludes="test/**">
+            <!-- Include Scala SDK -->
+            <zipfileset includes="**/*.class" src="lib/scala-library.jar"/>
+            <zipfileset includes="**/*.class" src="lib/scala-compiler.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="org.ucombinator.dalvik.cfa.cesk.RunAnalysis"/>
+            </manifest>
+        </jar>
+    </target>
+    
+    <target name="jar.no.scala" depends="compile">
+        <mkdir dir="${artifacts.final.dir}"/>
+        <jar destfile="${artifacts.final.dir}/${project.jar.name.no.scala}" basedir="${pushdownexflow.output.dir}" includes="**/*.class" excludes="test/**">
+            <manifest>
+                <attribute name="Main-Class" value="org.ucombinator.dalvik.cfa.cesk.RunAnalysis"/>
+            </manifest>
+        </jar>
+    </target>
+    
+    <!-- #################################################-->
+    <!-- Building Dyck State Graphs -->
+    <!-- #################################################-->
+    
+    <property name="cfa.runner" value="org.ucombinator.dalvik.cfa.cesk.RunAnalysis"/>
+    
+    <!-- Benchmark properties -->
+    <property name="arg.verbose" value="--verbose"/>
+    <property name="arg.dump.data" value="--dump-graph --simple-graph --dump-statistics"/>
+    <property name="arg.dummy" value="--dummy"/>
+    <property name="arg.1cfa" value="--k 1"/>
+    <property name="arg.gc" value="--gc"/>
+    
+    <!-- Benchmark files -->
+    <property name="eta.source" value="${benchmarks.dir}/eta.scm"/>
+    <property name="double-loop.source" value="${benchmarks.dir}/double-loop.scm"/>
+    <property name="kcfa-worst-case.source" value="${benchmarks.dir}/kcfa-worst-case.scm"/>
+    <property name="kcfa-even-worse.source" value="${benchmarks.dir}/kcfa-even-worse.scm"/>
+    <property name="midtgaard-icfp09.source" value="${benchmarks.dir}/midtgaard-icfp09.scm"/>
+    
+    
+    <!-- Double-loop example -->
+    <target name="build.graph.double-loop.0cfa">
+        <java classname="${cfa.runner}">
+            <arg line="${arg.verbose} ${arg.dump.data} ${double-loop.source}"/>
+            <classpath refid="pushdownexflow.runtime.module.classpath"/>
+        </java>
+    </target>
+    
+    <target name="build.graph.double-loop.0cfa.gc">
+        <java classname="${cfa.runner}">
+            <arg line="${arg.gc} ${arg.verbose} ${arg.dump.data} ${double-loop.source}"/>
+            <classpath refid="pushdownexflow.runtime.module.classpath"/>
+        </java>
+    </target>
+    
+    <target name="build.graph.double-loop.1cfa">
+        <java classname="${cfa.runner}">
+            <arg line="${arg.verbose} ${arg.dump.data} ${arg.1cfa} ${double-loop.source}"/>
+            <classpath refid="pushdownexflow.runtime.module.classpath"/>
+        </java>
+    </target>
+    
+    <target name="build.graph.double-loop.1cfa.gc">
+        <java classname="${cfa.runner}">
+            <arg line="${arg.gc} ${arg.verbose} ${arg.dump.data} ${arg.1cfa} ${double-loop.source}"/>
+            <classpath refid="pushdownexflow.runtime.module.classpath"/>
+        </java>
+    </target>
+    
+    <target name="graphs.double-loop"
+    depends="
+    build.graph.double-loop.0cfa,
+    build.graph.double-loop.0cfa.gc,
+    build.graph.double-loop.1cfa,
+    build.graph.double-loop.1cfa.gc"/>
+    
+    
+    <!-- All graphs -->
+    
+    <target name="build.graphs"
+        description="runs analysis and builds all DSG pictures"
+        depends="compile,
+        graphs.double-loop">
+    </target>
+</project>  
+    
+
+    
+
+
+
+
+
