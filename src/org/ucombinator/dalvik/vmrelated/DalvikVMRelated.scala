@@ -74,6 +74,23 @@ trait DalvikVMRelated {
      (deduplicateClsLines, entryMethLines)
   }
   
+  private def prioritizeAndroidEntries(extractedEns: List[(DalvikClassDef, List[EntryPoint]) ])
+  :List[(DalvikClassDef, List[EntryPoint])] =
+  {
+     val nonAndoridEns =
+       extractedEns filter {
+      case (clsDef, ens) => {
+        val className = clsDef.className
+        val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
+        //println("")
+        superClassStrs.contains("java/lang/Runnable")
+      }
+    }
+     val filteredAndroids = extractedEns -- nonAndoridEns
+     filteredAndroids ++ nonAndoridEns
+  }
+  
+  
   private  def extractRawEntryPoints : List[(DalvikClassDef, List[EntryPoint])]  = {
    
     val (classLines, entries) = parseInAndroidKnowledge
@@ -83,6 +100,7 @@ trait DalvikVMRelated {
         
         val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
         val compRes = classLines.toSet intersect superClassStrs.toSet
+       
        if(! compRes.isEmpty) { 
          // this is the framework's subclass
          // we are going to filter any override methods as entries
@@ -255,10 +273,11 @@ trait DalvikVMRelated {
   }
   
   private def getEntryPointStmts: List[(List[Stmt], List[Stmt])] ={
-    val listEns = extractRawEntryPoints  // getRawEntryPoints
-    
-     Debug.prntDebugInfo("Raw entry points:", listEns)
-     
+    val listEns2 = extractRawEntryPoints  // getRawEntryPoints
+   val listEns = prioritizeAndroidEntries(listEns2)
+     println("-----")
+     println("Prioritized Entryis")
+     listEns.foreach(println)
     if(listEns.isEmpty){
       Debug.prntDebugInfo("No cls + entry points found ", "")
       List()
@@ -278,10 +297,8 @@ trait DalvikVMRelated {
          initDefs.foreach(_.isEntryPoint = true)
         // println("start to order")
          val orderedEntries = orderEntries(ens)
-       //  orderedEntries.foreach(println)
          val allInitPaths = allInitWithfollowingEntries(initDefs, orderedEntries, clsDef.clsPath)
-         // getOneExecutionInitEntryPath(initDefs, ens)
-         
+      
          Debug.prntDebugInfo("the current class's init path is",allInitPaths )
          res ::: List(allInitPaths)
        }
