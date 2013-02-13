@@ -52,7 +52,7 @@ object RunAnalysis {
     """
     Usage (for a prebuilt jar with Scala SDK included):
 
-    java -jar GenericCFA.jar [--lang lang][--pdcfa | --kcfa] [--k k] [--gc] [--verbose] [--dump-graph] [--dump-statistics] [--simple-graph] [--interrupt-after n] [--help] filePath
+    java -jar  PushdownOO_Exflow.jar [--lang lang][--pdcfa | --kcfa] [--k k] [--gc] [--lra] [--verbose] [--dump-graph] [--dump-statistics] [--simple-graph] [--interrupt-after n] [--help] filePath
 
     where
 
