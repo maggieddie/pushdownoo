@@ -42,7 +42,7 @@ How to run:
 java -jar artifacts/PushdownOO_Exflow.jar  org.ucombinator.dalvik.cfa.cesk.RunAnalysis  [options] irFolderName
 
 e.g.
-java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr
+java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr2
 
 
 ----------------
