@@ -45,10 +45,11 @@ e.g.
 java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr
 
 
+----------------
 Additional note: 
 
 If you would like to generate the IRs from applications instead of the ones available in the benchmarks/dedexed_tests, 
 please use JDex2Sex which is also publically available on my account. 
 
-A script to chain all the lines will be available soon. 'gimme me a break! :)
+A script to chain all the tools will be available soon. 'gimme me a break! :)
 
