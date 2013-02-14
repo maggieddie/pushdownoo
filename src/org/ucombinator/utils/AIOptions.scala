@@ -15,11 +15,11 @@ class AIOptions {
   var dumpStatistics = true
   var simplifyGraph = false 
   var dummy = false
-  var gc = true
+  var gc = false
   var gcDebug = false
   var dumpGraph = false
   var lang = "dalvik"
-  var interrupt = true
+  var interrupt = false
   var interruptAfter = 30000
   var doLRA = false
   
