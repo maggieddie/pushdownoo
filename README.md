@@ -8,9 +8,9 @@ The pushdown exception-flow analysis of object-oriented languages.
 
   CRAPLE-LICENCE.txt
 
-  benchmarks -- a set of Dalvik applications (or directly IRs for easy tests) to test the pushdown analyzer
-                Andorid applications released by DARPA can not be distributed online here. 
-                so only the apks ported from DaCapo and the apks downloaded from google code are available.
+  benchmarks -- a set of Dalvik applications (or directly IRs for easy tests) to test the pushdown analyzer.
+                Andorid applications released by DARPA can not be distributed online,
+                so only the apks ported from DaCapo and the apks downloaded from google store/code are available.
                 
 
   lib -- Scala SDK, and compiler
@@ -42,7 +42,14 @@ How to run:
 java -jar artifacts/PushdownOO_Exflow.jar  org.ucombinator.dalvik.cfa.cesk.RunAnalysis  [options] irFolderName
 
 e.g.
-java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr
+java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr2
 
 
+----------------
+Additional note: 
+
+If you would like to generate the IRs from applications instead of the ones available in the benchmarks/dedexed_tests, 
+please use JDex2Sex which is also publically available on my account. 
+
+A script to chain all the tools will be available soon. 'gimme me a break! :)
 
