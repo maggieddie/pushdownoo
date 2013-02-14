@@ -35,15 +35,43 @@ ant compile       -- compile the project
 
 ant jar           -- build an executable jar and the jar will be in ./artifacts/
 
+or just the command:
+
+make compile
+
 ----------------------------------------------------------------------------------------------------------------------------
 
 How to run:
 
 java -jar artifacts/PushdownOO_Exflow.jar  org.ucombinator.dalvik.cfa.cesk.RunAnalysis  [options] irFolderName
 
-e.g.
-java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra benchmarks/dedexed_tests/sexps_antlr2
+e.g. java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis --gc --lra --interrupt-after 16000  benchmarks/dedexed_tests/sexps_lucene
 
+(for sas13 virutual images: running benchmarks available for distribution)
+
++ all:
+
+make run-available
+
++ antlr:
+
+make antlr-pd  or
+make antlr-pd-agc-lra
+
++ lucene:
+
+make lucene-pd or
+make lucene-pd-agc-lra
+
++ pmd:
+
+make pmd-pd
+make pmd-pd-agc-lra
+
++ SwiFTP:
+
+make swiFTP-pd
+make swiFTP-pd-agc-lra
 
 ----------------
 Additional note: 
