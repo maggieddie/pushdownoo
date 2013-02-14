@@ -70,7 +70,7 @@ trait DyckStateGraphMachinery extends StateSpace{
     def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore):
     (DSG, NewDSGHelper, SharedStore) = {
      // System.out.println("\n The DSG graph: ")
-        //dumpDSGGraph2(next)
+       // dumpDSGGraph2(next)
       if (!shouldProceed) {
         (next, helper,store)
       }else if (interrupt && next.edges.size > interruptAfter){

@@ -68,14 +68,14 @@ object RunAnalysis {
     --interrupt-after n    interrupts the analysis after n states computed (default = off)
     --help                 print this message
     --verbose              print additional information on the analysis and results
-    filePath               path to a file to be analysed
+    filePath               path to an IR folder to be analysed
     """)
 
   def main(args: Array[String]) {
 
     val opts = AIOptions.parse(args)
     
-   // val opts = setOptsForTest()
+    //val opts = setOptsForTest() 
 
     if (args.size == 0 || opts.help) {
       println(helpMessage)
@@ -139,7 +139,7 @@ object RunAnalysis {
   }
   private def setOptsForTest() : AIOptions = {
     val opts = new AIOptions()
-   opts.sexprDir = "./benchmarks/dedexed_tests/sexps_ucm"  
+   opts.sexprDir = "./benchmarks/dedexed_tests/sexps_lucene"  
    //Goal
     //opts.sexprDir = "./tests/sexps_mf"   
       opts
