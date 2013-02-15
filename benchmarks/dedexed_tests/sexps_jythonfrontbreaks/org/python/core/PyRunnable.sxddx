@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/python/core/PyRunnable
- (super java/lang/Object)
- (source "PyRunnable.java")
-
-
-(method (attrs public abstract ) getMain()[object org/python/core/PyCode]
-)
-
-)

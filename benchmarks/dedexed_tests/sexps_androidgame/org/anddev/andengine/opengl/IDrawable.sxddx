@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/opengl/IDrawable
- (super java/lang/Object)
- (source "IDrawable.java")
-
-
-(method (attrs public abstract ) onDraw([object javax/microedition/khronos/opengles/GL10] [object org/anddev/andengine/engine/camera/Camera] )void
-)
-
-)

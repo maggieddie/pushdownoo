@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/entity/sprite/AnimatedSprite$IAnimationListener
- (super java/lang/Object)
- (source "AnimatedSprite.java")
-
-
-(method (attrs public abstract ) onAnimationEnd([object org/anddev/andengine/entity/sprite/AnimatedSprite] )void
-)
-
-)

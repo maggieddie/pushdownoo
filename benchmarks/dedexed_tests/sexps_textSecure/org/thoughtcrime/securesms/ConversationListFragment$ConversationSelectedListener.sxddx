@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thoughtcrime/securesms/ConversationListFragment$ConversationSelectedListener
- (super java/lang/Object)
- (source "ConversationListFragment.java")
-
-
-(method (attrs public abstract ) onCreateConversation(long [object org/thoughtcrime/securesms/recipients/Recipients] )void
-)
-
-)

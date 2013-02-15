@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thoughtcrime/securesms/components/RecipientsPanel$RecipientsPanelChangedListener
- (super java/lang/Object)
- (source "RecipientsPanel.java")
-
-
-(method (attrs public abstract ) onRecipientsPanelUpdate([object org/thoughtcrime/securesms/recipients/Recipients] )void
-)
-
-)

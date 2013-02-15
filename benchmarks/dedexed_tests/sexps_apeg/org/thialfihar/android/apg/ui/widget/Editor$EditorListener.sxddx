@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thialfihar/android/apg/ui/widget/Editor$EditorListener
- (super java/lang/Object)
- (source "Editor.java")
-
-
-(method (attrs public abstract ) onDeleted([object org/thialfihar/android/apg/ui/widget/Editor] )void
-)
-
-)

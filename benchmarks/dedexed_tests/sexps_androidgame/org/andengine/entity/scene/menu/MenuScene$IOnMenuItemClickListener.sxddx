@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/andengine/entity/scene/menu/MenuScene$IOnMenuItemClickListener
- (super java/lang/Object)
- (source "MenuScene.java")
-
-
-(method (attrs public abstract ) onMenuItemClicked([object org/andengine/entity/scene/menu/MenuScene] [object org/andengine/entity/scene/menu/item/IMenuItem] float float )boolean
-)
-
-)

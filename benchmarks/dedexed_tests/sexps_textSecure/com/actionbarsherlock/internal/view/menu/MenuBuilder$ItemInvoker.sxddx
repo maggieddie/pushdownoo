@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/actionbarsherlock/internal/view/menu/MenuBuilder$ItemInvoker
- (super java/lang/Object)
- (source "MenuBuilder.java")
-
-
-(method (attrs public abstract ) invokeItem([object com/actionbarsherlock/internal/view/menu/MenuItemImpl] )boolean
-)
-
-)

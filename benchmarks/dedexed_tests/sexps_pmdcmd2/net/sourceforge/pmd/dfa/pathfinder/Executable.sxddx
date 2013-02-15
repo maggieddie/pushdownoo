@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) net/sourceforge/pmd/dfa/pathfinder/Executable
- (super java/lang/Object)
- (source "Executable.java")
-
-
-(method (attrs public abstract ) execute([object net/sourceforge/pmd/dfa/pathfinder/CurrentPath] )void
-)
-
-)

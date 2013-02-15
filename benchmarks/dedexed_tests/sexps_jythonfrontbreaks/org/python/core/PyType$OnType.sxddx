@@ -1,9 +1,0 @@
-(interface (attrs abstract ) org/python/core/PyType$OnType
- (super java/lang/Object)
- (source "PyType.java")
-
-
-(method (attrs public abstract ) onType([object org/python/core/PyType] )boolean
-)
-
-)

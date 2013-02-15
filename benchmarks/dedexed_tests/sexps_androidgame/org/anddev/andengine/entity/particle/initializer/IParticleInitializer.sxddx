@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/entity/particle/initializer/IParticleInitializer
- (super java/lang/Object)
- (source "IParticleInitializer.java")
-
-
-(method (attrs public abstract ) onInitializeParticle([object org/anddev/andengine/entity/particle/Particle] )void
-)
-
-)

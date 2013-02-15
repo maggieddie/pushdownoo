@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) twitter4j/internal/http/HttpResponseListener
- (super java/lang/Object)
- (source "HttpResponseListener.java")
-
-
-(method (attrs public abstract ) httpResponseReceived([object twitter4j/internal/http/HttpResponseEvent] )void
-)
-
-)

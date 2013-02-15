@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thoughtcrime/securesms/util/RedPhoneCallTypes
- (super java/lang/Object)
- (source "RedPhoneCallTypes.java")
-
- (field (attrs public static final ) INCOMING int 1023); 0x3ff )
- (field (attrs public static final ) MISSED int 1025); 0x401 )
- (field (attrs public static final ) OUTGOING int 1024); 0x400 )
-
-)

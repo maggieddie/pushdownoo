@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thoughtcrime/securesms/ApplicationMigrationManager$ApplicationMigrationListener
- (super java/lang/Object)
- (source "ApplicationMigrationManager.java")
-
-
-(method (attrs public abstract ) applicationMigrationComplete()void
-)
-
-)

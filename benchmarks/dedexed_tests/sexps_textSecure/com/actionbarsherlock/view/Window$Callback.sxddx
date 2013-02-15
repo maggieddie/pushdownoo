@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/actionbarsherlock/view/Window$Callback
- (super java/lang/Object)
- (source "Window.java")
-
-
-(method (attrs public abstract ) onMenuItemSelected(int [object com/actionbarsherlock/view/MenuItem] )boolean
-)
-
-)

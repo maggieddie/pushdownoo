@@ -1,9 +1,0 @@
-(interface (attrs abstract ) twitter4j/StreamListener
- (super java/lang/Object)
- (source "StreamListener.java")
-
-
-(method (attrs public abstract ) onException([object java/lang/Exception] )void
-)
-
-)

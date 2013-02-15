@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) net/sourceforge/pmd/util/viewer/gui/ActionCommands
- (super java/lang/Object)
- (source "ActionCommands.java")
-
- (field (attrs public static final ) COMPILE_ACTION [object java/lang/String] "Compile" )
- (field (attrs public static final ) EVALUATE_ACTION [object java/lang/String] "Evaluate" )
-
-)

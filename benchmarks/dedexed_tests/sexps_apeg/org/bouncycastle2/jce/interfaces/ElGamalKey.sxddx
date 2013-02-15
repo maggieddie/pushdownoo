@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/ElGamalKey
- (super java/lang/Object)
- (source "ElGamalKey.java")
-
-
-(method (attrs public abstract ) getParameters()[object org/bouncycastle2/jce/spec/ElGamalParameterSpec]
-)
-
-)

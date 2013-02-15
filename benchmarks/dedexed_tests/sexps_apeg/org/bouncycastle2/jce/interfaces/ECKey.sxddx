@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/ECKey
- (super java/lang/Object)
- (source "ECKey.java")
-
-
-(method (attrs public abstract ) getParameters()[object org/bouncycastle2/jce/spec/ECParameterSpec]
-)
-
-)

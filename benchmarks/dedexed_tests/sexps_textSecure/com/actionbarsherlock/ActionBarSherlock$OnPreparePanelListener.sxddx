@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/actionbarsherlock/ActionBarSherlock$OnPreparePanelListener
- (super java/lang/Object)
- (source "ActionBarSherlock.java")
-
-
-(method (attrs public abstract ) onPreparePanel(int [object android/view/View] [object com/actionbarsherlock/view/Menu] )boolean
-)
-
-)

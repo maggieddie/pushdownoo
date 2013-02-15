@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/thoughtcrime/bouncycastle/asn1/DEREncodable
- (super java/lang/Object)
- (source "DEREncodable.java")
-
-
-(method (attrs public abstract ) getDERObject()[object org/thoughtcrime/bouncycastle/asn1/DERObject]
-)
-
-)

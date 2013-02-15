@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/ziclix/python/sql/WarningListener
- (super java/lang/Object)
- (source "WarningListener.java")
-
-
-(method (attrs public abstract ) warning([object com/ziclix/python/sql/WarningEvent] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/actionbarsherlock/ActionBarSherlock$OnCreatePanelMenuListener
- (super java/lang/Object)
- (source "ActionBarSherlock.java")
-
-
-(method (attrs public abstract ) onCreatePanelMenu(int [object com/actionbarsherlock/view/Menu] )boolean
-)
-
-)

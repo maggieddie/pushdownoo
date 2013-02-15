@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/actionbarsherlock/ActionBarSherlock$OnMenuItemSelectedListener
- (super java/lang/Object)
- (source "ActionBarSherlock.java")
-
-
-(method (attrs public abstract ) onMenuItemSelected(int [object com/actionbarsherlock/view/MenuItem] )boolean
-)
-
-)

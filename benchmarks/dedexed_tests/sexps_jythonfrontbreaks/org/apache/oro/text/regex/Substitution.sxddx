@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/apache/oro/text/regex/Substitution
- (super java/lang/Object)
- (source "Substitution.java")
-
-
-(method (attrs public abstract ) appendSubstitution([object java/lang/StringBuffer] [object org/apache/oro/text/regex/MatchResult] int [object java/lang/String] [object org/apache/oro/text/regex/PatternMatcher] [object org/apache/oro/text/regex/Pattern] )void
-)
-
-)

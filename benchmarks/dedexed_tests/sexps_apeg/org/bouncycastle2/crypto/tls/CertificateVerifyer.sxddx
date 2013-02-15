@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/bouncycastle2/crypto/tls/CertificateVerifyer
- (super java/lang/Object)
- (source "CertificateVerifyer.java")
-
-
-(method (attrs public abstract ) isValid([array [object org/bouncycastle2/asn1/x509/X509CertificateStructure]] )boolean
-)
-
-)

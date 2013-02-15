@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) org/andengine/util/adt/queue/IUniqueQueue
- (super java/lang/Object)
- (source "IUniqueQueue.java")
- (implements org/andengine/util/adt/queue/IQueue)
- (implements org/andengine/util/adt/list/ISortedList)
-
-
-)

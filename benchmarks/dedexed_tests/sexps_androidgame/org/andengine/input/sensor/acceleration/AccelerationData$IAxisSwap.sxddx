@@ -1,9 +1,0 @@
-(interface (attrs abstract ) org/andengine/input/sensor/acceleration/AccelerationData$IAxisSwap
- (super java/lang/Object)
- (source "AccelerationData.java")
-
-
-(method (attrs public abstract ) swapAxis([array float] )void
-)
-
-)

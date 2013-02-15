@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/level/LevelLoader$IEntityLoader
- (super java/lang/Object)
- (source "LevelLoader.java")
-
-
-(method (attrs public abstract ) onLoadEntity([object java/lang/String] [object org/xml/sax/Attributes] )void
-)
-
-)

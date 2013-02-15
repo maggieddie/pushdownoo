@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/python/core/InitModule
- (super java/lang/Object)
- (source "InitModule.java")
-
-
-(method (attrs public abstract ) initModule([object org/python/core/PyObject] )void
-)
-
-)

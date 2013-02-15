@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) jxxload_help/JavaLoaderFactory
- (super java/lang/Object)
- (source "JavaLoaderFactory.java")
-
-
-(method (attrs public abstract ) makeLoader()[object java/lang/ClassLoader]
-)
-
-)

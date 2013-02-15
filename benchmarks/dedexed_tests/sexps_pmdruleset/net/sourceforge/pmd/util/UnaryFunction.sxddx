@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) net/sourceforge/pmd/util/UnaryFunction
- (super java/lang/Object)
- (source "UnaryFunction.java")
-
-
-(method (attrs public abstract ) applyTo([object java/lang/Object] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/bouncycastle2/jce/interfaces/GOST3410Key
- (super java/lang/Object)
- (source "GOST3410Key.java")
-
-
-(method (attrs public abstract ) getParameters()[object org/bouncycastle2/jce/interfaces/GOST3410Params]
-)
-
-)
