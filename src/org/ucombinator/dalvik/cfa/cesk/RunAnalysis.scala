@@ -44,7 +44,7 @@ import org.ucombinator.dalvik.vmrelated.APISpecs
 
 object RunAnalysis {
 
-  val version: String = "20130124"//"20121125"
+  val version: String = "20130124" 
   val versionString: String = "    Version " + version + "\n"
 
   val helpMessage = (" PushdownooExflow - a runner for Pushdown k-CFA with optional Abstract Garbage Collection \n" +
