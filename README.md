@@ -77,7 +77,10 @@ make swiFTP-pd-agc-lra
 Additional note: 
 
 If you would like to generate the IRs from applications instead of the ones available in the benchmarks/dedexed_tests, 
-please use JDex2Sex which is also publically available on my account. 
+please use "jdex2sex" which is also publically available on my account. 
+Instruction on how to generate IR is in jdex2sex project directory.
 
-A script to chain all the tools will be available soon. 'gimme me a break! :)
+The repo here will not be changed during review. 
+
+
 
