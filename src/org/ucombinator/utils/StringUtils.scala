@@ -68,6 +68,17 @@ object StringUtils {
     
   }
   
+  def containsSensitiveStrFrag (input: String) : Boolean = {
+	  input.contains("http://") ||
+	  input.contains("http:")
+	  input.contains("https://") ||
+	  input.contains("https:") ||
+	  input.contains(".o") || 
+	  input.contains(".dex") ||
+	  input.contains(".jar") ||
+	  input.contains(".cc")
+  }
+  
   def getArgsFromformals (sx: SExp, isRange: Boolean) : List[RegisterExp] ={
    
       val newRegs = trimLRPars(sx.toString())
@@ -186,6 +197,9 @@ object StringUtils {
   
   def getStringType : String = "java/lang/String"
   
+    def stmtContextInfo(clsPath: String, methodPath: String, lineNumber: Stmt)  = {
+    "@@@" + clsPath + "$$" + methodPath+ "::" + lineNumber
+  }
  
   	
 }

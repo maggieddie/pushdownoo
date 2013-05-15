@@ -7,6 +7,9 @@ import java.io.File
 import org.ucombinator.dalvik.syntax.SExp
 import org.ucombinator.utils.CommonUtils
 import org.ucombinator.dalvik.syntax.Stmt
+import org.ucombinator.playhelpers.AnalysisHelperThread
+
+import sys.process._
 
 object TestLRA extends LiveRegisterAnalysis{
 
@@ -35,7 +38,7 @@ object TestLRA extends LiveRegisterAnalysis{
   
    def main(args: Array[String]): Unit = {
     
-       parseDalvikSExprs
+   /*    parseDalvikSExprs
        
       val onstart = DalvikClassDef.lookupMethod("com/smartcam/webcam/ui/SmartCamActivity$1","com/smartcam/webcam/ui/SmartCamActivity$1/onClick",List("(object android/content/DialogInterface)", "int"), 1)
       val meth = onstart.head
@@ -44,10 +47,21 @@ object TestLRA extends LiveRegisterAnalysis{
       println("the methoboday is right?")
       lst.foreach(println)
       runLRAOnListSts(lst)
+        Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)*/
       
+      //  val graphZipCmd : String = "cd " +  "./public/apks/jpgnetnoloop-2065195456/jpgnetnoloop/graphs/" + " && " + "tar -zcvf graph.tar.gz ./* "
+       // val graphZipCmd : String = //"cd " +  "./public/apks/jpgnetnoloop-2065195456/jpgnetnoloop/graphs" +  " && " +  
+      // "tar -zcvf graph.tar.gz public/apks/jpgnetnoloop-2065195456/jpgnetnoloop/graphs/* "
+     
+     //val pycmd =   "/usr/bin/python ./pytar.py" + " " + "./public/apks/jpgnetnoloop-2065195456/jpgnetnoloop/graphs"
+     // pycmd !
       
+       val pycmd2 =   "/usr/bin/python ./pytar.py" + " " + "./public/apks/jpgnetnoloop1425510450/jpgnetnoloop" + " all.tar.gz"
+      pycmd2 !
       
-      Stmt.liveMap.foreach(println)
+      println("finished")
+      
+     
       
   }
 }

@@ -4,7 +4,8 @@ import org.ucombinator.dalvik.syntax._
 import scala.collection.immutable._
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.CommonUtils
-
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
+import scala.util.matching.Regex
 trait StateSpace {
   
   type :-> [T, S ] = Map[T,S]
@@ -17,6 +18,9 @@ trait StateSpace {
   
   // standard component for Dalvik
   type Store = Addr :-> Set[Value]
+  
+  // mainly SecurityValue
+  type PropertyStore = Addr :-> Set[Value]
   
   //conservative impl to inlcude time for states
   type Time 
@@ -63,15 +67,15 @@ trait StateSpace {
    * 2.  FieldAddr = ObjectPointer * FieldName
    * 3.  KontAddr = not Known yet ...
    ********************************************/
-  sealed abstract case class Addr //extends some Ordering 
+  sealed abstract  class Addr //extends some Ordering 
   
-  abstract case class OffsetAddr extends Addr {
+  abstract  class OffsetAddr extends Addr {
     def pointer : Pointer
     def offset : String
   
   }
   
-  case class KontAddr extends Addr
+   class KontAddr extends Addr
   case class RegAddr(fp: FramePointer, offs: String) extends OffsetAddr {
     def pointer = fp
     def offset = offs
@@ -106,12 +110,44 @@ trait StateSpace {
  * Abstract values
  */
   sealed abstract class Value
-  case class TrueValue extends Value
-  case class FalseValue extends Value
-  case object BoolTop extends Value
-  case class NullValue extends Value
   
-  case class VoidValue extends Value
+  /**
+   * Security values, exclusively in the security store
+   * a. clsP, methPath, lineNumber are context information 
+   *    of the security object
+   * b. secuOps: what operations
+   * c. sourceOrSink: 0 for source, 1 for sink, 2 for both
+   */
+  // I think this is wrong. 
+   // for the security values, the simple lattice there are only 8: 
+  /**
+   * 1. gps
+   * 2. sdcard
+   * 3. filesystem
+   * 4. picture
+   * 5. time
+   * 6. date
+   * 7. phone
+   * 8. sms
+   * 
+   * these form the flat lattice. of the abstract values.
+   */
+/*  case class SecurityValue(classPath: String,
+					  methPath: String, 
+					  lineNumber: Stmt,
+					  secuOps: String,
+					  sourceOrSink: Int) extends Value
+  */
+  
+  /**
+   * The rest defined values of other types
+   */
+  case class TrueValue() extends Value
+  case class FalseValue() extends Value
+  case object BoolTop extends Value
+  case class NullValue() extends Value
+  
+  case class VoidValue() extends Value
   
   /**
    * No sophisticated abstraction for int, float or double.
@@ -139,7 +175,7 @@ trait StateSpace {
   /**
    * FOr simplest string abstraction
    */
-  abstract case class AbstractStringLiteral extends Value
+  abstract  class AbstractStringLiteral extends Value
   case class StringLit(str: String) extends AbstractStringLiteral
   case object StringTop extends AbstractStringLiteral
   
@@ -156,6 +192,64 @@ trait StateSpace {
   // almost equal to the top of all values
   case object UnspecifiedVal extends Value
   
+  // no context information aded into hte abstract vvalues
+  case object Location extends Value
+  case object FileSystem extends Value
+  case object Sms extends Value
+  case object Phone extends Value
+  case object Picture extends Value
+  case object DeviceID extends Value
+  case object Network extends Value
+  case object TimeOrDate extends Value
+  case object SdCard extends Value
+  case object ExecutableStr extends Value
+  case object Display extends Value
+  case object Voice extends Value
+  case object ToBeDeTermined extends Value
+  case object Reflection extends Value
+  case object BrowserBookmark extends Value
+  case object BrowserHistory extends Value
+  case object DThread extends Value 
+  case object IPC extends Value
+  case object AMedia extends Value
+  case object ASerialID extends Value
+  case object AAccount extends Value
+  case object ASensor extends Value
+  case object AContact extends Value
+  case object ARandom extends Value
+  
+  def genTaintKindValueFromStmt(stmt: Stmt) : Set[Value] = {
+    val kindStrs = stmt.taintKind
+    
+    kindStrs.foldLeft(Set[Value]()) ((res, kindStr) => { 
+    kindStr match {
+      case "sdcard" => res ++ Set(SdCard)
+      case "filesystem" => res ++ Set(FileSystem)
+      case "location" => res ++ Set(Location)
+      case "phone" => res ++ Set(Phone)
+      case "picture" => res ++ Set(Picture)
+      case  "deviceid" => res ++ Set(DeviceID)
+      case "network" => res ++ Set(Network)
+      case "timeordate" => res ++ Set(TimeOrDate)
+      case "sms" => res ++ Set(Sms) 
+      case "executable" => res ++ Set(ExecutableStr)
+      case "display" => res ++ Set(Display)
+      case "voice"=> res ++ Set(Voice)
+      case "tobedetermined"=> res ++ Set(ToBeDeTermined)
+      case "reflection" => res ++ Set(Reflection)
+      case "browserbookmark"=> res ++ Set(BrowserBookmark)
+      case "browserhistory" => res ++ Set(BrowserHistory)
+      case "thread" => res ++ Set(DThread)
+      case "ipc" => res ++ Set(IPC)
+      case "contact" => res ++ Set(AContact)
+      case "sensor" => res ++ Set(ASensor)
+      case "account" => res ++ Set(AAccount)
+      case "media" => res ++ Set(AMedia)
+      case "serialid" => res ++ Set(ASerialID)
+      case "random" => res ++ Set(ARandom)
+    }
+     })
+  }
 
   /*********************
    * Framework related: 
@@ -195,20 +289,117 @@ trait StateSpace {
     }
   }
   
+   
+    // filter out or check to see whether there is any source or sink values recorded
+    def srcOrSinksSecurityValues(vals: Set[Value]) : Set[Value] = {
+     vals.filter((oneV) => {
+       oneV match {
+         /*case sv@SecurityValue(_, _, _, _, _) => {
+           val srcOrSinkVal = sv.sourceOrSink
+            srcOrSinkVal > 0*/
+         case Location  |
+         	  FileSystem | 
+         	  Sms | 
+         	  Phone | 
+         	  Picture | 
+         	  DeviceID | 
+         	  Network | 
+         	  TimeOrDate | 
+         	  SdCard |
+         	  Display |
+         	  Voice |
+         	  ToBeDeTermined |
+         	  Reflection |
+         	  BrowserBookmark |
+         	  BrowserHistory | DThread => {
+         	    true
+         	  }
+         case _ => false
+       }
+     })
+   }
+  
+  private def pStoreHasTaintVals(pst: PropertyStore) : Boolean = {
+    val allVals = pst.foldLeft(Set[Value]())((res: Set[Value], pair) => {
+      val vals : Set[Value] = pair._2
+      res ++ vals
+    })
+    val secuVals = srcOrSinksSecurityValues(allVals)
+    secuVals.toList.length > 0
+  }
+  
   /*********************************************************************************************
    * Configurations are split into contorl states and continuation frames.
    * so that PDA and kCFA can coexisit in one framework
    *********************************************************************************************/
    
-  abstract sealed class ControlState
+  abstract sealed class ControlState {
+    
+    def sourceOrSinkState : Boolean = {
+      this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {
+       
+          val sourceOrSink = ps.st.oldStyleSt.sourceOrSink 
+          sourceOrSink > 0 // || pStoreHasTaintVals(pst)
+        }
+        case _ => false
+      } 
+    }
+    
+    def taintKind: Set[String] ={
+       this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {
+       
+            ps.st.oldStyleSt.taintKind
+            // || pStoreHasTaintVals(pst)
+        }
+        case _ => Set("")
+      } 
+    }
+    
+      def matchRegex(regexR: Regex) : Boolean = {
+      this match {
+       case ps@PartialState(st, fp, s, pst, kptr, t) => { 
+    	    
+    	    // matching the statement string
+    	    // not precise
+    	    val matchArea = ps.st.oldStyleSt.toString.split("@@@").toList
+    	    if(regexR == null) false
+    	    else{
+    	      if(matchArea.isEmpty) false
+    	      else{
+    	    	regexR.pattern.matcher(matchArea(0)).matches()
+    	      }
+    	    }
+            // || pStoreHasTaintVals(pst)
+        }
+        case _ =>  false 
+    }
+      }
+    
+    def taintedState : Boolean = {
+      this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {  
+             pStoreHasTaintVals(pst)
+        }
+        case _ => false
+      } 
+    }
+    
+    def getCurSt: Option[StForEqual] = {
+     this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {  
+            Some(st)
+        }
+        case _ =>  None
+      } 
+    }
+  }
+ 
   
-  /**
-   * Life the old not rich st to the follwoing
-   */
-
-  
+ 
  // case class PartialState(st: Stmt, fp: FramePointer, s: Store, kptr: KAddr, t:Time) extends ControlState
-  case class PartialState(st: StForEqual, fp: FramePointer, s: Store, kptr: KAddr, t:Time) extends ControlState
+  case class PartialState(st: StForEqual, fp: FramePointer, s: Store, ps: PropertyStore, kptr: KAddr, t:Time) extends ControlState
   
   case class FinalState() extends ControlState
   case class ErrorState(s: Stmt, msg: String) extends ControlState
@@ -222,7 +413,7 @@ trait StateSpace {
    * @param s initial stmt
    * */
   
-  def initState(s: Stmt, methP: String): Conf
+  def initState(s: Stmt, methP: String, store:Store, pStore: PropertyStore): Conf
   
   /***
    *  Address and Allocations
@@ -231,18 +422,13 @@ trait StateSpace {
   // abstract member
   def k : Int
    
- //def alloc() : Addr
 
- 
-  
-
-  
   /******************************************************
    * Utility functions
    ******************************************************/
 
   def storeLookup(s: Store, a: Addr) : Set[Value] =
-  { Debug.prntDebugInfo("storeLookup: address: " , a)
+  {  
     s.get(a) match {
     case Some(x) => {
       Debug.prntDebugInfo("Found value " , x)
@@ -278,7 +464,50 @@ trait StateSpace {
       accum + ((a, newVals))
     })
   }
+  
+  /******
+   * OK... just for the sake of concept clarity, here is duplicated code for Property store
+   */
+   def pStoreLookup(s: PropertyStore, a: Addr) : Set[Value] =
+  {  
+    s.get(a) match {
+    case Some(x) => { 
+     //  println("PStore: NonEmoty Store"+ x)
+      x
+    }
+    case None => {
+    //  println("PStore: Empty set ", Set() )
+      Set()
+    }
+    //case None => throw new SemanticException("StoreLookUp Exception: No values found for address" + a.toString())
+  }
+  }
+  
+  
+  def pStoreUpdate(s: PropertyStore, pairs: List[(Addr, Set[Value])]) = {
+     
+      pairs.foldLeft(s)((accum, pair) => {
+      val (a, vs) = pair
+      val oldVals: Set[Value] = accum.getOrElse(a, Set())
+      val newVals: Set[Value] = oldVals ++ vs.filter(v => v != UnspecifiedVal)
+      Debug.prntDebugInfo("storeUpdate entry: ", (a, newVals))
+      accum + ((a, newVals))
+    })
+  }
+    
+    // tmp use of the strong updates
+   def pStoreStrongUpdate(s: PropertyStore, pairs: List[(Addr, Set[Value])]) = {
+     pairs.foldLeft(s)((accum, pair) => {
+      val (a, vs) = pair
+      val oldVals: Set[Value] = accum.getOrElse(a, Set())
+      // we dont care the original values in the store
+      val newVals: Set[Value] =  vs.filter(v => v != UnspecifiedVal)
+      Debug.prntDebugInfo("storeUpdate entry: ", (a, newVals))
+      accum + ((a, newVals))
+    })
+  }
       
+  /*******/
       
    def isMove(opCode: SName) : Boolean = {
       import CommonSSymbols._;
@@ -331,7 +560,16 @@ trait StateSpace {
   def getMonovariantStore(states: Set[ControlState]): Addr:-> Set[Value] = {
     
      val allRegularStores =  states.map {
-      case PartialState(_, _, s, _,_) => s
+      case PartialState(_, _, s, _,_,_) => s
+     }
+     val emptyMonovariantStore : Addr :-> Set[Value] = Map.empty
+    mergeStores(emptyMonovariantStore, allRegularStores.toList)
+  }
+  
+   def getMonovariantPStore(states: Set[ControlState]): Addr:-> Set[Value] = {
+    
+     val allRegularStores =  states.map {
+      case PartialState(_, _, _, pst,_,_) => pst
      }
      val emptyMonovariantStore : Addr :-> Set[Value] = Map.empty
     mergeStores(emptyMonovariantStore, allRegularStores.toList)
@@ -339,7 +577,7 @@ trait StateSpace {
   
       def filterRegisterStates (states: Set[ControlState]): Set[ControlState] = {
      states.filter({
-      case PartialState(_, _, _, _,_) => true
+      case PartialState(_, _, _, _,_,_) => true
       case _ => false
     })
    }

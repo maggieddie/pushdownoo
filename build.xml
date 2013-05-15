@@ -37,15 +37,13 @@
     <tstamp>
         <format property="current.year" pattern="yyyy"/>
     </tstamp>
-    
     <property name="jdk.home" value="${java.home}"/>
-    
     <!-- Compiler options -->
     
     <property name="compiler.debug" value="on"/>
     <property name="compiler.generate.no.warnings" value="off"/>
     <property name="compiler.args" value=""/>
-    <property name="compiler.max.memory" value="1024m"/>
+    <property name="compiler.max.memory" value="256m"/>
     <patternset id="ignored.files">
         <exclude name="**/CVS/**"/>
         <exclude name="**/.DS_Store/**"/>
@@ -133,6 +131,7 @@
     <path id="library.scala-sdk.classpath">
         <pathelement location="${basedir}/lib/scala-compiler.jar"/>
         <pathelement location="${basedir}/lib/scala-library.jar"/>
+	<pathelement location="${basedir}/lib/commons-lang3-3.1.jar"/>
     </path>
     
     <!-- ScalaTest Utility -->
@@ -282,8 +281,6 @@
     <target name="clean.module.pushdownexflow" description="cleanup module">
         <delete dir="${pushdownexflow.output.dir}"/>
         <delete dir="${pushdownexflow.testoutput.dir}"/>
-        <delete dir="graphs"/>
-        <delete dir="statistics"/>
     </target>
     
     <target name="clean" depends="clean.module.pushdownexflow" description="cleanup all"/>
@@ -370,6 +367,7 @@
             <!-- Include Scala SDK -->
             <zipfileset includes="**/*.class" src="lib/scala-library.jar"/>
             <zipfileset includes="**/*.class" src="lib/scala-compiler.jar"/>
+	    <zipfileset includes="**/*.class" src="lib/commons-lang3-3.1.jar"/>
             <manifest>
                 <attribute name="Main-Class" value="org.ucombinator.dalvik.cfa.cesk.RunAnalysis"/>
             </manifest>

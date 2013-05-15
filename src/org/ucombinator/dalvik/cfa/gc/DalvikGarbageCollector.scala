@@ -10,14 +10,18 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
    */
   def gc(c:ControlState, frames: Kont) : ControlState = c match {
     case ErrorState(_, _) | FinalState() => c
-    case PartialState(st, fp, store, kptr,  t) => {
+    case PartialState(st, fp, store, ps, kptr,  t) => {
       val livingAddrs = reachable(c, frames)
       
       
       val cleanStore = store.filter {
         case (a, _) => livingAddrs.contains(a)
       }
-      PartialState(st, fp, cleanStore, kptr, t)
+      
+      val cleanPStore = ps.filter {
+         case (a, _) => livingAddrs.contains(a)
+      }
+      PartialState(st, fp, cleanStore, cleanPStore, kptr, t)
     }
   }
   
@@ -27,7 +31,7 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
     
     c match{
       case ErrorState(_, _) | FinalState() => Set.empty
-      case PartialState(st, fp, store, kprt, t) => {
+      case PartialState(st, fp, store, ps, kprt, t) => {
         val res : Set[Addr] = collectAdjacentAddrs(rootAddresses, store)
           Debug.prntDebugInfo("reachable : ", res)
         

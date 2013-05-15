@@ -4,8 +4,9 @@ import scala.collection.immutable.{ Set => ImmSet, Map => ImmMap}
 import scala.collection.mutable.Map
 import org.ucombinator.utils.StringUtils
 import org.ucombinator.utils.CommonUtils
-
 import org.ucombinator.utils.Debug
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 
 
@@ -24,13 +25,13 @@ case class CharLitExp(sc: SChar) extends AExp {
   def cha = sc
 }
 
-case class VoidExp extends AExp {
+case class VoidExp() extends AExp {
 }
 
 //TODO
-case class ThisExp extends AExp{}
+case class ThisExp() extends AExp{}
 
-case class NullExp extends AExp{}
+case class NullExp() extends AExp{}
 
 case class RegisterExp(sv: SName) extends AExp {
   def regStr = sv.toString
@@ -47,10 +48,11 @@ case class AutomicOpExp(opStr: SName, aes: AExp*) extends AExp {
   def sopCode = opStr
   def ops = aes
   
-  override def toString = StringUtils.truncateIfLong("AutomicOpExp" + "(" + opStr + "," + aes, 100)
+  override def toString = 
+    StringUtils.truncateIfLong("AutomicOpExp" + "(" + opStr + "," + aes, 100)
 }
 
-case class InstanceofExp extends AExp
+case class InstanceofExp() extends AExp
 
 abstract sealed class FieldExp( fp : String, ft: String) extends AExp{
  // def objExp : AExp =  oe
@@ -103,23 +105,61 @@ abstract class Stmt  {
     Stmt.stmtMap += (label -> this)
   }
 */
+   
   def refRegsStrSet : Set[String]  
   def defRegsStrSet: Set[String]
+  
+  /**
+   * for security annotation parsed before feeding to analyzer
+   * self inspection of the accessible information to decide 
+   * whether the statement can be the source 
+   * or the sink operation
+   * 
+   * This can be done during analysis
+   * but it seems to be more clean doing here
+   * 
+   * 0 is clean, 1 for source, 2 for sink, 3 for both
+   * 
+   */
+  def sourceOrSink: Int
+  
+  def taintKind: Set[String]
+  
+  def getTaintKind(name: String) : Set[String] = {
+    DalInformationFlow.decideTaintKinds(name)
+  }
+  
+  
+  def decideInformationFlowType (clsNameOrAPI: String) : Int = {
+    DalInformationFlow.decideSourceOrSinkLevel(clsNameOrAPI)
+     /*val isSensitiveStringClsNameSource = DalInformationFlow.sources.map(_._1).contains(clsNameOrAPI)
+     // should not be sink, well, this can be the java/io/OutputStream object
+     
+     val isSensitiveStringClsNameSink = DalInformationFlow.sinks.map(_._1).contains(clsNameOrAPI)
+      
+     if(isSensitiveStringClsNameSource && isSensitiveStringClsNameSink)  3 //both
+     else if(isSensitiveStringClsNameSource == true && isSensitiveStringClsNameSink == false ) 1 //source
+     else if (isSensitiveStringClsNameSource == false && isSensitiveStringClsNameSink == true ) 2 //sink
+     else 0 //clean
+*/  }   
+  
 }
 
 object Stmt {
-   val stmtMap: Map[String, LabelStmt] = Map.empty
+  
+  // val stmtMap: Map[String, LabelStmt] = Map.empty
  // def register(label: String, lst: LabelStmt) {
   //  Stmt.stmtMap += (label -> lst)}
    
-  var liveMap : ImmMap[StForEqual, Set[String]] = ImmMap()
+  //var liveMap : ImmMap[StForEqual, Set[String]] = ImmMap()
   
-  def forLabel(label: String) = stmtMap.get(label)
+  def forLabel(label: String) = Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap.get(label)
   
-  def updateLabelWith(label: String, newLblSt : LabelStmt) = stmtMap(label)= newLblSt
+  def updateLabelWith(label: String, newLblSt : LabelStmt) = 
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap   +=  (label ->newLblSt)
 
   def extendLiveMap(newEntries: ImmMap[StForEqual, Set[String]]) {
-     liveMap = liveMap ++ newEntries
+     Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap ++ newEntries
    }
 }
 
@@ -132,7 +172,7 @@ case class LabelStmt(lbl: String, nxt: Stmt, lineStmt: Stmt, clsP : String, meth
   var clsPath = clsP
   
    def register(label: String) {
-    Stmt.stmtMap += (label -> this)}
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap += (label -> this)}
   //Stmt.register(lbl, this)
   
   override def toString() = "LabelStmt(" + lbl + "," +   ")" + lineNumber
@@ -142,6 +182,9 @@ case class LabelStmt(lbl: String, nxt: Stmt, lineStmt: Stmt, clsP : String, meth
   }
   
   def defRegsStrSet: Set[String] ={Set()}
+  
+  def sourceOrSink = 0
+  def taintKind = Set()
 }
 
 case class LineStmt(lnstr : String, nxt: Stmt, ln: Stmt, clsP : String, methP : String) extends Stmt  {
@@ -156,26 +199,32 @@ case class LineStmt(lnstr : String, nxt: Stmt, ln: Stmt, clsP : String, methP : 
   var clsPath = clsP
   
   def defRegsStrSet: Set[String] ={Set()}
+    
+    def sourceOrSink = 0
+    def taintKind = Set()
 }
 
 case class NopStmt(nxt: Stmt, ln: Stmt, clsP: String, methP: String) extends Stmt   {
-  var next = nxt
-  var lineNumber = ln
-  override def toString() = "NopStmt(" +  ")" + lineNumber
-  def refRegsStrSet: Set[String] = {
-    Set()
-  }
-    var methPath = methP
-  var clsPath = clsP
+	var next = nxt
+	var lineNumber = ln
+	override def toString() = "NopStmt(" +  ")" + lineNumber
+	def refRegsStrSet: Set[String] = {
+		Set()
+	}
+	var methPath = methP
+	var clsPath = clsP
 
-  def defRegsStrSet: Set[String] = { Set() }
+	def defRegsStrSet: Set[String] = { Set() }
+
+	def sourceOrSink = 0
+	def taintKind = Set()
 }
 
 case class GotoStmt(lbl: String, nxt: Stmt, ln: Stmt, clsPPath: String, methPPath: String) extends Stmt   {
   def label = lbl
   var next = nxt
   var lineNumber = ln
-  override def toString() = "GotoStmt(" + lbl + "," +  ")" + lineNumber
+  override def toString() = "GotoStmt(" + lbl + "," +  ")" +  StringUtils.stmtContextInfo(clsPPath, methPPath, lineNumber)
   def refRegsStrSet: Set[String] = {
     Set()
   }
@@ -183,6 +232,9 @@ case class GotoStmt(lbl: String, nxt: Stmt, ln: Stmt, clsPPath: String, methPPat
   var clsPath = clsPPath
 
   def defRegsStrSet: Set[String] = { Set() }
+    
+  def sourceOrSink = 0
+  def taintKind = Set[String]()
 }
 
 // 
@@ -203,6 +255,8 @@ case class GotoStmt(lbl: String, nxt: Stmt, ln: Stmt, clsPPath: String, methPPat
 
   def defRegsStrSet: Set[String] = { Set() }
 
+  def sourceOrSink = 0
+  def taintKind = Set()
 }
 
 
@@ -216,7 +270,7 @@ case class NewStmt(destReg: SName ,clsName: String, nxt: Stmt, ls: Stmt, clsP: S
   var clsPath = clsP
   var methPath = methP
   
-  override def toString() = "NewStmt(" + destReg + ","+ clsName + ","+  lineNumber+  ")" 
+  override def toString() = "NewStmt(" + destReg + ","+ clsName +  ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def getFieldStrs (clsName: String) : List[(String,String)] = {
     val clsDefO = DalvikClassDef.forName(clsName)
@@ -238,6 +292,16 @@ case class NewStmt(destReg: SName ,clsName: String, nxt: Stmt, ls: Stmt, clsP: S
    def defRegsStrSet: Set[String] ={
     Set(destReg.toString())
    }
+   
+   /**
+    * self-inspect the thing to new
+    */
+   
+   def sourceOrSink : Int ={
+     decideInformationFlowType(clsName)
+   }
+   
+   def taintKind =  getTaintKind(clsName)
 }
 
 case class IfStmt(condExp: AExp, sucLabel: String, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
@@ -247,7 +311,7 @@ case class IfStmt(condExp: AExp, sucLabel: String, nxt: Stmt, ls: Stmt, clsP: St
   def succLabel = sucLabel
     var clsPath = clsP
   var methPath = methP
-  override def toString() = "IfStmt(" + condExp + "," + sucLabel + "," + lineNumber + ")"
+  override def toString() = "IfStmt(" + condExp + "," + sucLabel  + ")" +    StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def refRegsStrSet: Set[String] = {
     condExp match {
@@ -265,6 +329,10 @@ case class IfStmt(condExp: AExp, sucLabel: String, nxt: Stmt, ls: Stmt, clsP: St
   def defRegsStrSet: Set[String] = {
     Set()
   }
+  
+  // nothing interesting here
+  def sourceOrSink  = 0
+   def taintKind = Set()
 }
 
 case class SwitchStmt(testExp: AExp, offset: String, lables: List[AExp],   nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
@@ -272,26 +340,44 @@ case class SwitchStmt(testExp: AExp, offset: String, lables: List[AExp],   nxt: 
   var lineNumber = ls
     var clsPath = clsP
   var methPath = methP
-  override def toString() = "Packed/SparseSwitch(" + testExp + "," + offset + ","  + lineNumber +")" 
+  override def toString() = "Packed/SparseSwitch(" + testExp + "," + offset +  ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   /**
    * with the label, nop and StmtNil Line stmt escaped and the one not escaped for convinience
    */
-  def getBranchStmts : (List[Stmt], List[Stmt]) = {
+ def getBranchStmts : (List[Stmt], List[Stmt]) = {
+	 
         val sExps = 
            lables filter ((lba) => {
         	   	lba match {
-        	   		case sle@StringLitExp(_) => true
+        	   		case sle@StringLitExp(_) => true 
             	 	case _ => false
           	 }
            })
+        
          val strExps = sExps map (_.asInstanceOf[StringLitExp])
          val labelStrs = strExps map (_.strLit)
-          Debug.prntDebugInfo(" the table ", Stmt.stmtMap)
-         val stmtOs = labelStrs.map ((ls) => {
+          Debug.prntDebugInfo(" the table ", Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap)
+         val stmtOs0 = labelStrs.map ((ls) => {
             
              Stmt.forLabel(ls)
          })
+         
+         
+         val stmtOs = lables.foldLeft(List[Option[Stmt]]())((res, lblAe) => {
+           lblAe match {
+             case sle@StringLitExp(_) =>  {
+               val resS = sle.strLit
+               Stmt.forLabel(resS) :: res
+             }
+             case re@RegisterExp(_) => {
+                Stmt.forLabel(re.regStr) :: res
+             }
+             case _ => res 
+           }
+         })
+         
+         
       val stmtS=  stmtOs filter ((os : Option[Stmt]) => { 
            os match {
            case Some(s) => true
@@ -312,6 +398,7 @@ case class SwitchStmt(testExp: AExp, offset: String, lables: List[AExp],   nxt: 
          })
         (stmtE, stmtNoE)
   }
+
   
    def refRegsStrSet : Set[String] = {
     testExp match {
@@ -324,6 +411,10 @@ case class SwitchStmt(testExp: AExp, offset: String, lables: List[AExp],   nxt: 
    def defRegsStrSet: Set[String] ={
     Set()
    }
+   
+    // nothing interesting here
+  def sourceOrSink  = 0
+  def taintKind = Set[String]()
 }
 
 case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: String, methP: String) extends Stmt {
@@ -334,9 +425,24 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
   
   def rhs = rhExp
   def lhs = lhReg
+  
+  
   override def toString = "AssignAExpStmt(" + 
-      lhReg + "," + rhExp  + ")" 
-       
+      lhReg + "," + rhExp  + ")" +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
+  
+  def isConstString : (Boolean, List[AExp]) = {
+      import CommonSSymbols._;
+    rhExp match {
+      case AutomicOpExp(opCode, aExps @ _*) => {
+        opCode match{
+          case SConstString => (true, aExps.toList)
+          case _ => (false, aExps.toList)
+        }
+      }
+      case _ => (false, List())
+    }
+  }
+   
 
   private def getSuitableRefStrsSet: Set[String] = {
     rhExp match {
@@ -359,6 +465,48 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
    def defRegsStrSet: Set[String] ={
      CommonUtils.getRegStrsFromAExp(lhReg)
    }
+   
+   /**
+    * the strings are from sensitive string configuration
+    * or some url
+    */
+   def sourceOrSink : Int = {
+     val (isConstStr, aExps) = isConstString
+    
+     if(isConstStr){
+        if (aExps.length == 1) {
+          aExps.head match { 
+            case se @ StringLitExp(_) => {
+             val   constStr = se.strLit
+             if(DalInformationFlow.isSensitiveStr(constStr))
+               1 
+               else 0
+            }
+            case _ => 0
+          }
+        }
+        else throw new Exception("@sourceOrSink@AssignmentStmt: string statement has more than aexp: " + this)
+     }
+     else 0
+   }
+   
+   
+   def taintKind  = {
+     val (isConstStr, aExps) = isConstString
+    
+     if(isConstStr){
+        if (aExps.length == 1) {
+          aExps.head match { 
+            case se @ StringLitExp(_) => {
+              DalInformationFlow.getTaintKindsForString(se.strLit)
+            }
+            case _ => Set[String]()
+          }
+        }
+        else throw new Exception("@sourceOrSink@AssignmentStmt: string statement has more than aexp: " + this)
+     }
+     else Set[String]()
+   }
 
 }
 
@@ -370,7 +518,7 @@ case class FieldAssignStmt(lhr: AExp, fe: AExp, nxt: Stmt, ls: Stmt , clsP: Stri
   var lineNumber = ls
     var clsPath = clsP
   var methPath = methP
-   override def toString = "FieldAssignStmt(" + lhr + "," + fe  +")" + ":" + lineNumber
+   override def toString = "FieldAssignStmt(" + lhr + "," + fe  +")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
 
   /* the reason that we can't write the applyFieldAssign here is that the front end does not know what types of the analyzer.
     * like the Store, FramePointer, or KAddr
@@ -439,9 +587,42 @@ case class FieldAssignStmt(lhr: AExp, fe: AExp, nxt: Stmt, ls: Stmt , clsP: Stri
           }
         }
       }
-    }
-  
+    } 
   }
+  
+  /**
+   * security related
+   */
+  
+   // nothing interesting here, for now
+  def sourceOrSink   = {
+    fe match {
+         case sfe @ StaticFieldExp(fp, ft) => {
+        lhr match { // sget
+          case re @ RegisterExp(_) => {
+             this.decideInformationFlowType(sfe.fp)
+          }
+          case _ => { throw new Exception("@refRegsStrSet: cant be anything else") }
+        }
+      }
+         case _ => 0
+     }
+  } 
+  
+ 
+  def taintKind = {
+     fe match {
+         case sfe @ StaticFieldExp(fp, ft) => {
+        lhr match { // sget
+          case re @ RegisterExp(_) => {
+             this.getTaintKind(sfe.fp)
+          }
+          case _ => { throw new Exception("@refRegsStrSet: cant be anything else") }
+        }
+      }
+         case _ => Set[String]()
+     }
+  }//Set[String]()
 }
 
 abstract sealed class AbstractInvokeStmt(methPathStr: String, argRA: List[AExp], tyStrs: List[String], clsP: String, methP: String) extends Stmt {
@@ -461,13 +642,22 @@ case class InvokeStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp
   var methPath = methP
   def objectAExp = objAExp
   override def toString = "InvokeStmt:" + methPathStr + "("+ argRegAExp + " , "+ objAExp + " , "+ 
-  tyStrs +  ")" + lineNumber
+  tyStrs +  ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def refRegsStrSet: Set[String] = {
     CommonUtils.getRegStrsListFromAExpList(objAExp :: argRegAExp)
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+  
+  
+  def sourceOrSink  = decideInformationFlowType(methPathStr)
+  def taintKind = {
+    
+    val res  = getTaintKind(methPathStr)
+   
+    res
+  }
 }
 
 case class InvokeSuperStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp, tyStrs: List[String], nxt: Stmt, ls:Stmt, clsP: String, methP: String)
@@ -477,13 +667,15 @@ case class InvokeSuperStmt(methPathStr: String, argRegAExp: List[AExp], objAExp:
       var clsPath = clsP
   var methPath = methP
   def objectAExp = objAExp
-  override def toString = "InvokeSuperStmt: " + methPathStr + "("+ argRegAExp + " , "+ objAExp + " , "+ tyStrs +   ")" + lineNumber
+  override def toString = "InvokeSuperStmt: " + methPathStr + "("+ argRegAExp + " , "+ objAExp + " , "+ tyStrs +   ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def refRegsStrSet: Set[String] = {
     CommonUtils.getRegStrsListFromAExpList(objAExp :: argRegAExp)
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+    def sourceOrSink  = decideInformationFlowType(methPathStr)
+    def taintKind = getTaintKind(methPathStr)
 }
 
 case class InvokeInterfaceStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp, tyStrs: List[String], nxt: Stmt, ls:Stmt, clsP: String, methP: String)
@@ -493,13 +685,15 @@ case class InvokeInterfaceStmt(methPathStr: String, argRegAExp: List[AExp], objA
       var clsPath = clsP
   var methPath = methP
   def objectAExp = objAExp
-  override def toString = "InvokeInterfaceStmt:"   + methPathStr + "("+ argRegAExp + " , "+ objAExp + " , "+ tyStrs +   ")" + lineNumber
+  override def toString = "InvokeInterfaceStmt:"   + methPathStr + "("+ argRegAExp + " , "+ objAExp + " , "+ tyStrs +   ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def refRegsStrSet: Set[String] = {
     CommonUtils.getRegStrsListFromAExpList(objAExp :: argRegAExp)
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+   def sourceOrSink  = decideInformationFlowType(methPathStr)
+   def taintKind = getTaintKind(methPathStr)
 }
 
 // invoke static
@@ -510,12 +704,14 @@ case class InvokeStaticStmt(methPathStr: String, argRegAExp: List[AExp], tyStrs:
   var lineNumber = ls
       var clsPath = clsP
   var methPath = methP
-   override def toString = "InvokeStaticStmt:"+ methPathStr + "(" + argRegAExp  +  " " +  tyStrs +   ")" + lineNumber
+   override def toString = "InvokeStaticStmt:"+ methPathStr + "(" + argRegAExp  +  " " +  tyStrs +   ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
    def refRegsStrSet: Set[String] = {
     CommonUtils.getRegStrsListFromAExpList( argRegAExp)
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+    def sourceOrSink  = decideInformationFlowType(methPathStr)
+    def taintKind = getTaintKind(methPathStr)
 }
 
 case class InvokeDirectStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp, tyStrs: List[String], nxt: Stmt, ls:Stmt, clsP: String, methP: String)
@@ -525,13 +721,16 @@ case class InvokeDirectStmt(methPathStr: String, argRegAExp: List[AExp], objAExp
       var clsPath = clsP
   var methPath = methP
   def objectAExp = objAExp
-  override def toString = "InvokeDirectStmt: " + methPathStr + " ( "+ objAExp  + " , "+ argRegAExp + ","+ tyStrs + ")" + lineNumber
+  override def toString = "InvokeDirectStmt: " + methPathStr + " ( "+ objAExp  + " , "+ argRegAExp + ","+ tyStrs + ")" + 
+   StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
    def refRegsStrSet: Set[String] = {
     CommonUtils.getRegStrsListFromAExpList(objAExp :: argRegAExp)   
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+   def sourceOrSink  = decideInformationFlowType(methPathStr)
+   def taintKind = getTaintKind(methPathStr)
 
 }
 
@@ -542,7 +741,7 @@ case class ReturnStmt(resultAe: AExp, nxt: Stmt, ls: Stmt, clsP: String, methP: 
   
       var clsPath = clsP
   var methPath = methP
-  override def toString = "Return:" + resultAe +  ")" + lineNumber
+  override def toString = "Return:" + resultAe +  ")"  +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
 
   def refRegsStrSet: Set[String] = {
     resultAe match {
@@ -555,6 +754,9 @@ case class ReturnStmt(resultAe: AExp, nxt: Stmt, ls: Stmt, clsP: String, methP: 
   }
 
   def defRegsStrSet: Set[String] = { Set("ret") }
+  
+  def sourceOrSink  = 0
+  def taintKind =  Set[String]()
 }
 
 // includes the object 
@@ -571,19 +773,21 @@ case class PushHandlerStmt(typeString: String, clsName: String, lbl: String, tim
       var clsPath = clsP
   var methPath = methP
   
-  override def toString =  "PushHandlerStmt(" + clsName+ "," +lbl+ "," +  ")" + lineNumber
+  override def toString =  "PushHandlerStmt(" + clsName+ "," +lbl+ "," +  ")" + StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
     def refRegsStrSet: Set[String] = {
     Set()
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+  def sourceOrSink  = 0
+   def taintKind =  Set[String]() 
 }
 
 case class PopHandlerStmt(exnType: String, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
   var next = nxt
   var lineNumber = ls
-  override def toString =  "PopHandlerStmt(" + exnType +  ")" + lineNumber
+  override def toString =  "PopHandlerStmt(" + exnType +  ")" + StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
       var clsPath = clsP
   var methPath = methP
@@ -593,12 +797,14 @@ case class PopHandlerStmt(exnType: String, nxt: Stmt, ls: Stmt, clsP: String, me
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+  def sourceOrSink  = 0
+   def taintKind =  Set[String]()
 }
 
 case class FaultInjectorStmt(exnHandlers: ExceptionHandlers, exnAnnos: List[String], nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
   var next = nxt
   var lineNumber = ls
-  override def toString = "FaultInjectorStmt: " +  " " + lineNumber
+  override def toString = "FaultInjectorStmt: " +  " " + StringUtils.stmtContextInfo(clsP, methP, lineNumber)
 
   def refRegsStrSet: Set[String] = {
     Set()
@@ -608,6 +814,8 @@ case class FaultInjectorStmt(exnHandlers: ExceptionHandlers, exnAnnos: List[Stri
   var methPath = methP
 
   def defRegsStrSet: Set[String] = { Set() }
+      def sourceOrSink  = 0
+       def taintKind =  Set[String]()
 
 }
 
@@ -616,7 +824,7 @@ case class ThrowStmt(exn: AExp, nxt: Stmt, ls: Stmt, clsP: String, methP: String
   var next = nxt
   var lineNumber = ls
   def exeption = exn
-  override def toString =  "ThrowStmt(" + exn  +  ")" + lineNumber
+  override def toString =  "ThrowStmt(" + exn  +  ")" + StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   
       var clsPath = clsP
@@ -626,6 +834,8 @@ case class ThrowStmt(exn: AExp, nxt: Stmt, ls: Stmt, clsP: String, methP: String
   }
  
   def defRegsStrSet: Set[String] = { Set("exn") }
+  def sourceOrSink  = 0
+   def taintKind =  Set[String]()
 }
 
 case class MoveExceptionStmt(nameReg: AExp, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
@@ -635,7 +845,7 @@ case class MoveExceptionStmt(nameReg: AExp, nxt: Stmt, ls: Stmt, clsP: String, m
   
       var clsPath = clsP
   var methPath = methP
-  override def toString =  "MoveExceptionStmt(" + nameReg  +  ")" + lineNumber
+  override def toString =  "MoveExceptionStmt(" + nameReg  +  ")" + StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   
   def refRegsStrSet: Set[String] = {
     Set("exn")
@@ -644,7 +854,8 @@ case class MoveExceptionStmt(nameReg: AExp, nxt: Stmt, ls: Stmt, clsP: String, m
   def defRegsStrSet: Set[String] = { 
     CommonUtils.getRegStrsFromAExp(nameReg)
   }
-  
+  def sourceOrSink  = 0
+   def taintKind =  Set[String]()
 }
 
 case class CatchStmt(typeStr: String, exnTy: String, fromLblStr: String, toLblStr: String, usingLblStr: String, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
@@ -656,12 +867,15 @@ case class CatchStmt(typeStr: String, exnTy: String, fromLblStr: String, toLblSt
   var lineNumber = ls
       var clsPath = clsP
   var methPath = methP
-  override def toString =  "CatchStmt(" + typeStr + ","+ exnTy + "," + fromLblStr  + "," + toLblStr  + ")" + lineNumber
+  override def toString =  "CatchStmt(" + typeStr + ","+ exnTy + "," + fromLblStr  + "," + toLblStr  + ")" + 
+  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
   def refRegsStrSet: Set[String] = {
     Set()
   }
 
   def defRegsStrSet: Set[String] = { Set() }
+  def sourceOrSink  = 0
+   def taintKind =  Set[String]()
 }
 
 case class CompactMethodIndex(methPath: String, argsTypes: List[String]) {
@@ -837,7 +1051,7 @@ case class DalvikClassDef(
   }
   
    def registerClass(clsName: String) {
-    DalvikClassDef.classTable += (clsName -> this)
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable += (clsName -> this)
   }
    
    /**
@@ -862,12 +1076,12 @@ case class DalvikClassDef(
 object DalvikClassDef {
 
   // easy access to the classes
-   val classTable: Map[String, DalvikClassDef] = Map.empty
+  // val classTable: Map[String, DalvikClassDef] = Map.empty
 
-  def forName(clsName: String)  = classTable.get(clsName)
+  def forName(clsName: String)  = Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.get(clsName)
   
   def getAllClassConstructors : List[MethodDef] = {
-     classTable.foldLeft(List[MethodDef]())((res, kv)=>{
+     Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[MethodDef]())((res, kv)=>{
         val curClsDef = kv._2
         curClsDef.getClassConstrctorMethDef ::: res
      })
@@ -885,7 +1099,7 @@ object DalvikClassDef {
        /**
         * we only search through the entire class table
         */
-     val values = classTable.values 
+     val values = Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.values 
      val res = values.filter((clsDef) => {
        val ifs = clsDef.interfaceNames
        if(ifs.contains(name)) true else false

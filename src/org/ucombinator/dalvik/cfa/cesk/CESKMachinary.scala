@@ -3,6 +3,9 @@ import org.ucombinator.dalvik.syntax._
 import org.ucombinator.utils.StringUtils
 import org.ucombinator.dalvik.vmrelated.DalvikVMRelated
 import org.ucombinator.utils.Debug
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
+import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.utils.CommonUtils.HeatPair
 
 
 /** 
@@ -149,6 +152,32 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     }
     
   }
+  
+   def isMoveResult(st: Stmt) : (Boolean, List[RegisterExp]) = {
+	   st match {
+	   case ass@AssignAExpStmt(lhReg, rhExp, nxt, ls, clsP, metP) => {
+	    val targetRegExp= 
+	     lhReg match {
+        case RegisterExp(sv) => {
+          lhReg.asInstanceOf[RegisterExp]
+        }
+        case _ => {
+          throw new SemanticException("ASsignAexpStmt: left hand side is not  RegisterExp" + lhReg.toString())
+        }
+      }
+		   rhExp match {
+		   case RegisterExp(sv) => { // should be move-result 
+			   val srcReg = rhExp.asInstanceOf[RegisterExp]
+			    (true, List(targetRegExp)) 
+		   }
+		   case _ => (false, List())
+		   }
+	   }
+	   case _ => (false,List()) 
+	   }
+   }
+   
+   
    
   def filterAbsObjValues(objs: Set[Value]) : Set[AbstractObjectValue] = {
      val vs = 
@@ -220,6 +249,18 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
       }
     }
   }
+   
+    def getRegExpStr(ae : AExp) : String = {
+                ae match {
+                  case re@RegisterExp(_) => {
+                    re.toString
+                  }
+                  case _ => {
+                    throw new Exception("@handleExternalLibCalls")
+                  }
+                }
+              }
+    
    /**
     * modifed to do strong udpate  along with the allocation site NewStmt
     */
@@ -234,6 +275,38 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     storeStrongUpdate(s,ps)
   }
   
+  def initObjectProperty(classPath: String, pst: PropertyStore, op: ObjectPointer, securityValues: Set[Value]) : PropertyStore ={
+     val fieldPathStrs = getFieldTypeStrs(classPath)
+    val fieldOffsets = fieldPathStrs.map {
+      case (path, ftype) => op.offset(path)
+    }
+    
+    val ps = fieldOffsets map ((_, securityValues))
+    //storeUpdate(s, ps) strong update
+    pStoreStrongUpdate(pst,ps)
+  }
+  
+  
+   def propagatePStore(pst: PropertyStore, strName: String, stForEqual: StForEqual,  targetAddrs: List[Addr ], strongUpdate: Boolean) : PropertyStore = {
+	   val sourceOrSinkLevel = stForEqual.oldStyleSt.sourceOrSink //DalInformationFlow.decideSourceOrSinkLevel(strName) 
+	    // println(strName + "sourceOrsink" + sourceOrSinkLevel)
+	   if(sourceOrSinkLevel>0) {
+	    // println(strName + "sourceOrsink" + sourceOrSinkLevel)
+		   //val securityValue = SecurityValue(stForEqual.clsPath, stForEqual.methPath, stForEqual.lineSt, strName, sourceOrSinkLevel)
+		   //val bindings = targetAddrs.map((_, Set(securityValue.asInstanceOf[Value])))
+	     val bindings = targetAddrs.map((_, genTaintKindValueFromStmt(stForEqual.oldStyleSt)))
+		   if(strongUpdate)
+		        pStoreStrongUpdate(pst, bindings) 
+		   else
+		     pStoreUpdate(pst, bindings) 
+	   }else{
+		   pst
+	   }
+
+   }
+  
+   
+              
  
    def canHaveEmptyContinuation(c: ControlState) = c match {
     case FinalState() => true
@@ -243,7 +316,7 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
      * when can the parital state have empty continuation?
      * Currnently NO?
      */
-    case PartialState(st, fp, store, kptr, t) => true
+    case PartialState(st, fp, store, ps, kptr, t) => true
     //  if isAtomic(ae) => true
     case _ => false
   }
@@ -252,6 +325,36 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     case FinalState() => true
     case _ => false
   }
+  
+  
+  def collectPerms(apiName: String) {
+    val gPermMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].permissionMap 
+      if(gPermMap.contains(apiName)){ 
+    	  val pp = gPermMap get apiName
+    	  pp match{
+    	  case Some(p) => { 
+    		  p.isAccessed = true 
+    		  Thread.currentThread().asInstanceOf[AnalysisHelperThread].permissionMap(apiName) = p 
+    	  }
+    	  //case None => gPermMap
+      }} 
+  } 
+  
+  
+   def updateHeatMap(st: StForEqual) {
+     
+     val curHeatMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].heatMap
+     if(curHeatMap.contains(st)) {
+       val curCountO = curHeatMap get st
+       val newHeatPair = curCountO match {
+         case Some(hp) => HeatPair(hp.cnt + 1)
+         case None =>  HeatPair(0)
+       } 
+       curHeatMap (st) = newHeatPair
+     }else {
+       curHeatMap (st) = HeatPair(0)
+     }
+   }
 
   class CESKException(s: String) extends SemanticException(s)
 }

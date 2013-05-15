@@ -11,6 +11,8 @@ import org.ucombinator.dalvik.vmrelated.APISpecs
 import org.ucombinator.dalvik.statistics.DalvikAnalysisStatistics
 import org.ucombinator.dalvik.syntax.NopStmt
 import org.ucombinator.dalvik.statistics.Statistics
+import org.ucombinator.playhelpers.AnalysisHelperThread
+ 
 
 abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
   with DalvikVMRelated
@@ -45,6 +47,11 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
   def interrupt = opts.interrupt
 
   def interruptAfter = opts.interruptAfter
+  
+  def timeInterrupt = opts.timeInterrupt
+  
+  def interruptAfterTime = opts.interruptAfterTime
+  
 
   /**
    * Pretty-print analysis type
@@ -62,6 +69,129 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     }
     val withGC = if (opts.gc) "-gc" else ""
     analysis + cfa + withGC
+  }
+  
+  def updateHeatMapPecentil {
+     val curHeatMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].heatMap
+     
+     val totalPairs= curHeatMap.values
+     var totalCount = 0
+     
+     totalPairs.foreach((hp) => {
+       totalCount +=  hp.cnt 
+     })
+     
+     curHeatMap.foreach({
+       case (k, v) => {
+         val cnt = v.cnt
+         val percent = Math.ceil((cnt.toDouble / totalCount.toDouble) * 100)
+         v.percentil = percent
+       }
+     })
+     
+  }
+  
+  private def getColor(p: Double) : String = {
+    if(p >= 0 && p <1) {
+      "#FFFFFF"
+    }else if(p>=1 && p < 2) {
+      "#FFF6FA"
+    } else if(p>=2 && p<3){
+      "FFEEF6"
+    } else if(p>=3 && p < 4){
+      "FFE5F2"
+    } else if(p >=4 && p < 10) {
+      "FFE4E1"
+    } else if(p>=10 && p <15) {
+      "FFCCE5"
+    } else if(p >= 15 && p <20 ) {
+    	"FFC3E1"
+    } else if(p>=20 && p < 30) {
+      "FFBBDD"
+    } else if(p>=30 && p < 40) {
+      "#FFB2D8"
+    } else if (p >=40 && p <50) {
+      "#FFAAD4"
+    } else if (p >= 50 && p < 60) {
+      "#FFA1D0"
+    } else if (p>= 60 && p <70) {
+      "#FF99CC"
+    } else if(p >=70 && p< 80) {
+       "#E68AB8"
+    } else if(p >= 80 && p < 90) {
+      "#B26B8F"
+    } else if(p>=90 && p < 100) {
+      "#995C7A"
+    } else "#CC0064"
+    
+  }
+  
+ 
+  
+  
+  
+  def dumpHeatMap(opts: AIOptions) {
+    
+    import java.io.File
+    import java.io.FileWriter
+    
+    val curHeatMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].heatMap 
+    // compute the percentage
+     updateHeatMapPecentil
+    
+    val buffer = new StringBuffer()
+    buffer.append("<html> <head> <title> Heat Map </title> </head> <h2> Abstract profiling: Heat Map </h2><body> <table>\n")
+     
+       buffer.append("<tr ><td bgcolor=")
+      buffer.append("#FFF6FA")
+        buffer.append(">")
+          buffer.append("<b>Context format: Statement@@@ClassName$$Methodname::LineNumber</b>")
+         buffer.append("</td> <td >")
+         buffer.append("Precentile")
+        buffer.append(" </td> </tr>")
+        buffer.append("</br>")
+        
+        
+    curHeatMap.foreach({
+      case (k,v) => {
+        buffer.append("<tr ><td bgcolor=")
+        val p = v.percentil
+        val color = getColor(p)
+        buffer.append(color)
+        buffer.append(">")
+        buffer.append(k)
+        buffer.append("</td> <td >")
+        buffer.append(p)
+        buffer.append(" </td> </tr>")
+      }
+    })
+    
+    buffer.append("</table></body></html>")
+    
+     val heatMapDirName = opts.permReportsDirName//opts.apkProjDir + File.separator + statisticsDirName
+   
+      val statDir = new Directory(new File(heatMapDirName))
+      if (!statDir.exists) {
+        statDir.createDirectory(force = true)
+        statDir.createFile(failIfExists = false)
+      }
+
+    
+      val path = opts.heatMapReportPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
+      val file = new File(path)
+      if (!file.exists()) {
+        file.createNewFile()
+      }
+      val writer = new FileWriter(file)
+
+      writer.write(buffer.toString)
+      writer.close()
+
+      println("HeatMap dumped into: " + path)
+
+      path
+    
+    
   }
 
   def dumpStatisticsNew(opts: AIOptions, stat: AnalysisStatistics): String = {
@@ -85,10 +215,10 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     //  buffer.append("Total amount of ThrowPointsto entries, and the mean: " +
      // throwPointsTo.totalCardi + " | " + Math.ceil(meanThrown) + "\n")
 
-   // val (methCardies, meanObjs) = Statistics.totalAndMeanCallObjs
-   // buffer.append("Total amount of invoking objects, and the mean: " +
+    val (methCardies, meanObjs) = Statistics.totalAndMeanCallObjs
+    buffer.append("Total amount of invoking objects, and the mean: " +
       // throwPointsTo.totalEntries + " | " + Math.ceil(meanThrown) + "\n")
-     // methCardies + " | " + Math.ceil(meanObjs) + "\n")
+      methCardies + " | " + Math.ceil(meanObjs) + "\n")
 
     val (cardiecs, meanec) = Statistics.totalAndAverageEclinks
     buffer.append(" E-C Links: " +
@@ -104,20 +234,21 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
       println(buffer.toString)
     }
 
-    if (opts.dumpStatistics) {
-      val statDir = new Directory(new File(statisticsDirName))
+    val stasticsDir = opts.statsDirName//opts.apkProjDir + File.separator + statisticsDirName
+    
+      val statDir = new Directory(new File(stasticsDir))
       if (!statDir.exists) {
         statDir.createDirectory(force = true)
         statDir.createFile(failIfExists = false)
-      }
+      
 
-      val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
+     /* val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
       val subfolder = new Directory(new File(subfolderPath))
       if (!subfolder.exists) {
         subfolder.createDirectory(force = true)
         subfolder.createFile(failIfExists = false)
-      }
-      val path = subfolderPath + File.separator + getStatisticsDumpFileName(opts)
+      }*/
+      val path = opts.statsPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
       val file = new File(path)
       if (!file.exists()) {
         file.createNewFile()
@@ -169,7 +300,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
         subfolder.createDirectory(force = true)
         subfolder.createFile(failIfExists = false)
       }
-      val path = subfolderPath + File.separator + getStatisticsDumpFileName(opts)
+      val path = subfolderPath + File.separator + CommonUtils.getStatisticsDumpFileName(opts)
       val file = new File(path)
       if (!file.exists()) {
         file.createNewFile()
@@ -195,8 +326,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
       // System.err.println("Input program in S-expression Form:")
       //  System.out.println(sexp)
       System.out.println("\n")
-    }
-
+    } 
 
     S2DParser(sexp);
 
@@ -233,11 +363,26 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
       System.out.println("\n")
     }
   }
-
+  
+   
+  def getListofInitEntries(opts: AIOptions) :  (List[Stmt], List[Stmt]) = {
+    
+      //parse in s-expressioned dalvik 
+     parseDalvikSExprs(opts)
+     
+     //all the init-ens pathss
+      getLinkedEntryPointHead(opts) 
+  }
+  
+  
+ /* *//**
+   * it is gonna starting from the stmt returned 
+   * the list of statements returned is for lra pass
+   *//*
   def getAndroidEntry4Test(opts: AIOptions): (String, Stmt, List[Stmt]) = {
-    /**
+    *//**
      * parse in s-expressioned dalvik
-     */
+     *//*
     parseDalvikSExprs(opts)
     //val entryMethodDef: List[MethodDef] = DalvikClassDef.lookupMethod("com/android/demo/notepad3/NoteEdit", "com/android/demo/notepad3/NoteEdit/factorial", List("int"), true)
     // val entryMethodDef: List[MethodDef] = 
@@ -247,19 +392,19 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     // Debug.prntDebugInfo(" the oncreate tentry",entryMethodDef.head.body)
     // linkClinitStmt(entryMethodDef.head.body)
 
-    /**
+    *//**
      * extract the entry point of the
-     */
+     *//*
     val (en, allIndividualInits) = getLinkedEntryPointHead
 
-    /**
+    *//**
      * get all class constructors
-     */
+     *//*
     //Debug.prntDebugInfo("entry point is", en)
     val (a, b) = stubClinit(en)
     //  Debug.prntDebugInfo("link", (a,b))
     (a, b, allIndividualInits)
-  }
+  }*/
 
   def stubClinit(entryStmt: Stmt): (String, Stmt) = {
 
@@ -274,6 +419,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
 
     val allLists = CommonUtils.flattenLinkedStmt(List())(nopSt)
 
+    println("sublinet")
     allLists.foreach(println)
     ("empty clint", nopSt)
   }

@@ -6,6 +6,8 @@ import org.ucombinator.dalvik.specialAPIs.RawStringLibsAI
 import org.ucombinator.dalvik.specialAPIs.ExternalLibCallsHandler
 import org.ucombinator.dalvik.exceptionhandling.ExceptionHandling
 import org.ucombinator.dalvik.statistics.Statistics
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 /**
  * Part of the logic from StackCESK is extracted to this trait
@@ -49,7 +51,12 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
       fp:FramePointer, 
       tyStrs: List[String],
       tp: Time,
-      s: Store, kptr: KAddr, t:Time, k:Kont) : Set[Conf] ={
+      s: Store, 
+      pst:PropertyStore,
+      kptr: KAddr, 
+      t:Time, 
+      k:Kont,
+      stForEqual: StForEqual) : Set[Conf] ={
     
    
         val possibleValues = atomEval(objAexp, fp, s)
@@ -57,21 +64,28 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
      
         // get the className from the method name is not sound actually for non-static
 
-        /**
-         * It is possible that the objVals are empty!
-         */
+        
           Statistics.recordCallObjs(buildStForEqual(ivkS), objVals.map(_.toString))
           
-        if (objVals.isEmpty) {
+           /**
+         * It is possible that the objVals are empty!
+         */
+         if (objVals.isEmpty) {
         
-          Set((PartialState(buildStForEqual(realN ), fp, s, kptr, tp), k))
-        } /**
+          Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k))
+        } 
+          
+        /**
        * if the object register found values, we should move on
        */ else {
           // the external library that we're actually dealing with
-          if (isExternalLibCalls(methPath)) {
-            handleExternalLibCalls(methPath, ivkS, argRegExps, objVals, ls, s, realN, fp, kptr, t, tp, k)
+          /*if (isExternalLibCalls(methPath)) {
+            handleExternalLibCalls(methPath, ivkS, argRegExps, objVals, ls, s, pst, realN, fp, kptr, t, tp, k,stForEqual )
+          } */
+         if (isExternalLibCalls(methPath)) {
+            handleExternalLibCalls(methPath, ivkS, argRegExps, List(objAexp), objVals, ls, s, pst, realN, fp, kptr, t, tp, k,stForEqual )
           } 
+        
             /**
           *  we just keep on analysing if the other external libraries that we're not actually interprete it.
           *  The following branch also includes the calls taht we can get its source
@@ -87,8 +101,10 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
               resolvedMethds match {
                 case Nil => {
                   // Continue -- fake successors
-                   
-                  stateSet + ((PartialState(buildStForEqual(realN ), fp, s, kptr, tp), k))
+                   if(methPath == "android/view/MenuItem/getItemId" && invokeType == "interface"){
+                     println("invoke-interface's next is" + realN)
+                   }
+                  stateSet + ((PartialState(buildStForEqual(realN), fp, s, pst, kptr, tp), k))
                 }
                 case hd :: tl => {
                   // if more than one method were resovled, we just use the head.
@@ -98,15 +114,14 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
                    * Here we're going to inject fault states if there are any, if the method declares throws exceptions
                    */
                   //println("current found method in invokeStmt:", hd.methodPath)
-                  val liveRegs = Stmt.liveMap.getOrElse(buildStForEqual(realN), Set())
-                   val injStates = getInjectStatesFromAnnotations( hd.localHandlers, hd.annotationExns, fp, s, k, t, ivkS, "", "", kptr, liveRegs)
+                  val liveRegs =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.getOrElse(buildStForEqual(realN), Set())
+                  // val injStates = getInjectStatesFromAnnotations( hd.localHandlers, hd.annotationExns, fp, s, k, t, ivkS, "", "", kptr, liveRegs)
                   /**
                    * We are returning normal states well as the injected states
                    */
                  
                   stateSet ++
-                    applyMethod(false, hd.body, hd.regsNum, Some(curObjVal), fp, s, k, argRegExps, List(), t, ivkS, realN, kptr) ++ 
-                  injStates
+                    applyMethod(stForEqual, false, hd.body, hd.regsNum, Some(curObjVal), fp, s, pst, k, List(objAexp), argRegExps, List(), t, ivkS, realN, kptr) //++  injStates
                 }
               }
             })
@@ -114,24 +129,61 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
         }
   }
  
-  def applyMethod(isEntryApply: Boolean, methBody: Stmt, regsNum: BigInt, ovO: Option[ObjectValue], fp: FramePointer, s: Store, k: Kont, argsRegExps: List[AExp], argsTopVal: List[Set[Value]], t: Time, st: Stmt, callerNxtSt: Stmt, kptr: KAddr): Set[Conf] = {
+ 
+  /**
+   * apply method will resolve the formal parameter registers for the call.
+   * it will  allocate the new framepointer
+   * form bindings between formal parameter registers and the argument values
+   * forms the continuation
+   * In addition, as the handleExternalLibcalls, for the security propataion
+   * it will propagate the property values of the arguments to the formal parameters.
+   * and refining the security value of the object that the method is invoked on.
+   * it will also bind the values of teh joined property values to the move-result target
+   * working around directly waiting the "ret" <- XXX, and "YYY" <- "ret"
+   */
+  def applyMethod(stForEqual: StForEqual, isEntryApply: Boolean, methBody: Stmt, regsNum: BigInt, ovO: Option[ObjectValue], fp: FramePointer, 
+		  		s: Store, pst: PropertyStore, k: Kont, objExps: List[AExp], argsRegExps: List[AExp], argsTopVal: List[Set[Value]], 
+		  		t: Time, st: Stmt, callerNxtSt: Stmt, kptr: KAddr): Set[Conf] = {
+    
     val tp = tick(List(st), t)
     val calleeBodyStmt = methBody
     val theNext = CommonUtils.findNextStmtNotLineOrLabel(calleeBodyStmt)
     Debug.prntDebugInfo("@apply method callee's: ", theNext)
     val newFP = fp.push(t, st)
     val funk = new FNKFrame(callerNxtSt, fp)
-    Debug.prntDebugInfo("@apply method caller's next: ", callerNxtSt)
-
+    Debug.prntDebugInfo("@apply method caller's next: ", callerNxtSt) 
+    
+    val argRegAddrs = argsRegExps.map((argExp) => {fp.offset(getRegExpStr(argExp))}) 
+    
+     val pstMoveResult=  propagateTaintPropertyForFunctionInvokeObjAndMoveResult(argRegAddrs, objExps, pst , st , callerNxtSt , stForEqual.clsPath,  stForEqual.methPath, stForEqual.lineSt,  fp )
+          // the property of the arguments are properagated too 
+     
+      val argExpStrs = argsRegExps map (getRegExpStr)
+      val argSecurityVals = argExpStrs.map((argRegStr) => {pStoreLookup(pst, fp.offset(argRegStr))}) 
+     
+      
     if (!isEntryApply) {
       val argVals = argsRegExps map (atomEval(_, fp, s))
+      
       val startingIndex = regsNum - argsRegExps.length
 
       val formalRegStrOffsets = List.range(startingIndex, regsNum) map (StringUtils.constrRegStr)
       val formalRegOffsetAddrs = formalRegStrOffsets map (newFP.offset(_))
-      val bindings = formalRegOffsetAddrs.zip(argVals)
-     
-      val newStore = storeUpdate(s, bindings)
+      val bindings = formalRegOffsetAddrs.zip(argVals) 
+      val newStore = storeUpdate(s, bindings) 
+   
+      val propertyBindings = formalRegOffsetAddrs.zip(argSecurityVals)
+      val newPStore = pStoreUpdate(pstMoveResult, propertyBindings)
+      
+      //to get the joined security values from property store  
+      // just in case objExps can be called from static invoke, which can be empty 
+      
+      val pv = 
+        if(objExps.isEmpty) // the it is from static invoke which does not have address
+        	Set[Value]()
+        else // then there gonna be one object AExp // the newly joined values of the obejct property value
+        	pStoreLookup(pstMoveResult, fp.offset(objExps.head.toString))
+      
       ovO match {
         case Some(ov) => {
           val thisRegum = startingIndex - 1
@@ -139,20 +191,36 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
           val thisRegStr = StringUtils.constrRegStr(thisRegum)
           val thisRegAddr = newFP.offset(thisRegStr)
           Debug.prntDebugInfo("the this reg offset is", thisRegAddr)
-          val newStore2 = storeUpdate(newStore, List((thisRegAddr, Set(ov))))
-          val newState = (PartialState(buildStForEqual(theNext ), newFP, newStore2, kptr, tp), funk :: k)
+          
+          
+          val newStore2 = storeStrongUpdate(newStore, List((thisRegAddr, Set(ov)))) //storeUpdate(newStore, List((thisRegAddr, Set(ov))))
+          //the property of the arguments are propagated to formal parameters
+          val newPStore2 = pStoreUpdate(newPStore, List((thisRegAddr, pv))) 
+          
+          val newState = (PartialState(buildStForEqual(theNext ), newFP, newStore2,   newPStore2,
+              kptr, tp), funk :: k)
           Set(newState)
         }
-        case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore, kptr, tp), funk :: k))
+        case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore,  newPStore, 
+            kptr, tp), funk :: k))
       }
 
-    } else {
+    } else { // if it is entry apply, maybe no need to propagate the security property
       val argVals = argsTopVal
       val startingIndex = regsNum - argVals.length
       val formalRegStrOffsets = List.range(startingIndex, regsNum) map (StringUtils.constrRegStr)
       val formalRegOffsetAddrs = formalRegStrOffsets map (newFP.offset(_))
       val bindings = formalRegOffsetAddrs.zip(argVals)
-      val newStore = storeUpdate(s, bindings)
+      val newStore = storeUpdate(s, bindings) 
+      
+      val propertyBindings = formalRegOffsetAddrs.zip(argSecurityVals)
+      val newPStore = pStoreUpdate(pstMoveResult, propertyBindings)
+       val pv = 
+        if(objExps.isEmpty) // the it is from static invoke which does not have address
+        	Set[Value]()
+        else // then there gonna be one object AExp // the newly joined values of the obejct property value
+        	pStoreLookup(pstMoveResult, fp.offset(objExps.head.toString))
+   
       ovO match {
         case Some(ov) => {
           val thisRegum = startingIndex - 1
@@ -161,10 +229,13 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
           val thisRegAddr = newFP.offset(thisRegStr)
           Debug.prntDebugInfo("the this reg offset is", thisRegAddr)
           val newStore2 = storeUpdate(newStore, List((thisRegAddr, Set(ov))))
-          val newState = (PartialState(buildStForEqual(theNext ), newFP, newStore2, kptr, tp), funk :: k)
+          val newPStore2 = pStoreUpdate(newPStore, List((thisRegAddr, pv)))
+          val newState = (PartialState(buildStForEqual(theNext ), newFP, newStore2,  newPStore2, 
+              kptr, tp), funk :: k)
           Set(newState)
         }
-        case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore, kptr, tp), funk :: k))
+        case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore,  newPStore, 
+            kptr, tp), funk :: k))
       }
     }
 
@@ -178,7 +249,9 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
    * which means that the val for all the numerical operations is condensed to NumTop
    *
    */
-  def applyAtomicOp(opCode: SName, opCodeType: String, lineNo: Stmt, destReg: RegisterExp, aExps: List[AExp], s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def applyAtomicOp(stForEqual: StForEqual, opCode: SName, opCodeType: String, lineNo: Stmt, destReg: RegisterExp, aExps: List[AExp], 
+		  			s: Store, 
+		  			pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
 
     Debug.prntDebugInfo("@Applyautomatic Sname:  " + opCode.toString() + ":destREgExp:" + destReg + "The destAddress is: ", fp.offset(destReg.regStr))
     opCodeType match {
@@ -195,7 +268,8 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
              }
           else NumTop
           val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), Set(absValue))))
-          val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k)
+          
+          val newState = (PartialState(buildStForEqual(nxt), fp, newStore, pst, kptr, tp), k)
           Set(newState)
         }
       case "check-cast" => {
@@ -203,25 +277,45 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
           aExps.head match {
             case se @ RegisterExp(_) => {
               val clsName = se.regStr
-              val castTypeStr = StringUtils.getTypeFromObjectWrapper(clsName)
+               val castTypeStr = StringUtils.getTypeFromObjectWrapper(clsName)
+               val newOP = ObjectPointer(tp, clsName, lineNo)
+              /**
+               * we don't know the class name is some kind of sensitve sources or not
+               */
+              val sourceOrSinkLevel = DalInformationFlow.decideSourceOrSinkLevel(castTypeStr)
+              val newPStore = 
+                if(sourceOrSinkLevel>0) {
+                 // val securityValue = SecurityValue(stForEqual.clsPath, stForEqual.methPath, stForEqual.lineSt, castTypeStr, sourceOrSinkLevel)
+                  val secuVals = genTaintKindValueFromStmt(stForEqual.oldStyleSt)
+                  val pst2 =  pStoreUpdate(pst, List((fp.offset(destReg.regStr), secuVals)))
+                   initObjectProperty(castTypeStr ,  pst2 ,
+                       newOP, secuVals)
+                }else{
+                  pst
+                }
+              
+             
               val noChange = DalvikClassDef.isInterface(castTypeStr)
+              
               if (noChange) {
                 // no change to the values we go on
-                Set((PartialState(buildStForEqual(nxt), fp, s, kptr, tp), k))
+                Set((PartialState(buildStForEqual(nxt), fp, s,  newPStore, 
+                    kptr, tp), k))
               } else { // should probably be a class name defined? or library class?
                 // we strong udpate to get new one usually the case do strong udpate
-                val newOP = ObjectPointer(tp, clsName, lineNo)
+                
                 val objVal = ObjectValue(newOP, clsName)
 
                 val newStore = storeStrongUpdate(s, List((fp.offset(destReg.regStr), Set(objVal))))
                 // initialize the fields of the currnet class and return new store?
                 val newStore2 = initObject(castTypeStr, newStore, newOP)
-                val newState = (PartialState(buildStForEqual(nxt), fp, newStore2, kptr, tp), k)
+                //field area is propagated with hte sources from the object
+              
+                val newState = (PartialState(buildStForEqual(nxt), fp, newStore2,  newPStore, 
+                    kptr, tp), k)
                 Set(newState)
                 // Set((PartialState(buildStForEqual(nxt ), fp, s, kptr, tp), k))
-              }
-              
-              
+              } 
            /*      val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), Set(absStr))))
           val newState = (PartialState(nxt, fp, newStore, kptr, tp), k)
           Set(newState)*/
@@ -245,9 +339,15 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
               val objPointer = ObjectPointer(tp,  StringUtils.getStringType, lineNo)
               val objVal = ObjectValue(objPointer, StringUtils.getStringType)
               val curStrAddr = objPointer.offset("value")
+              
               val newStore = storeStrongUpdate(s, List((fp.offset(destReg.regStr), Set(objVal))))
-              val newStore2 = storeStrongUpdate(newStore, List((curStrAddr, Set(absValue))))
-              Set((PartialState(buildStForEqual(nxt ), fp, newStore2, kptr, tp), k))
+              val newStore2 = storeStrongUpdate(newStore, List((curStrAddr, Set(absValue)))) 
+             //    println("the newPStore in const string")
+              val newPStore = propagatePStore(pst, se.strLit , stForEqual ,  List(fp.offset(destReg.regStr), curStrAddr), true )  
+            
+              
+              Set((PartialState(buildStForEqual(nxt ), fp, newStore2,  newPStore, 
+                  kptr, tp), k))
               
               /* val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), Set(absValue))))
           val newState = (PartialState(nxt, fp, newStore, kptr, tp), k)
@@ -282,8 +382,11 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
                val newStore = storeUpdate(s, List(
                    (fp.offset(destReg.regStr), Set(objValCls)), 
                    (clsFieldAddr, Set(objValStr)), 
-                   (strValueAddr, Set(absStr) )))
-               Set((PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k))
+                   (strValueAddr, Set(absStr)))) 
+                val newPStore = 
+                   propagatePStore(pst, se.regStr , stForEqual ,  List(fp.offset(destReg.regStr), clsFieldAddr,strValueAddr ) , false)  
+               Set((PartialState(buildStForEqual(nxt ), fp, newStore,   newPStore, 
+                   kptr, tp), k))
            /*      val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), Set(absStr))))
           val newState = (PartialState(nxt, fp, newStore, kptr, tp), k)
           Set(newState)*/
@@ -301,7 +404,7 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
   /**
    * move move/from16, move-wide, move-wide/16. move-wide/from16, move-object, move-object/from16, move-object/16
    */
-  def handleMove(destReg: RegisterExp, aExps: List[AExp], s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def handleMove(destReg: RegisterExp, aExps: List[AExp], s: Store, pst:PropertyStore,  nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
     val destAddr = fp.offset(destReg.regStr)
     assert(aExps.length == 1)
     val srcReg = aExps.head
@@ -311,13 +414,16 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
     }
     val newVal = storeLookup(s, fp.offset(srcRegExp.regStr))
     val newStore = storeUpdate(s, List((destAddr, newVal)))
-    Debug.prntDebugInfo("@Move What's in the store: ", newStore)
-    val newState = (PartialState(buildStForEqual(nxt) , fp, newStore, kptr, tp), k)
-    Debug.prntDebugInfo("@newState's store: ", newState._1.s)
+     
+    val newPVal = storeLookup(pst, fp.offset(srcRegExp.regStr))
+    val newPStore = pStoreUpdate(pst, List((destAddr, newPVal)))
+    
+    val newState = (PartialState(buildStForEqual(nxt) , fp, newStore,  newPStore, 
+        kptr, tp), k) 
     Set(newState)
   }
 
-  def handleAExpAssign(assignS: AssignAExpStmt, lhReg: AExp, rhExp: AExp, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def handleAExpAssign(sft: StForEqual, assignS: AssignAExpStmt, lhReg: AExp, rhExp: AExp, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
 
     val destReg =
       lhReg match {
@@ -330,12 +436,17 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
       }
     rhExp match {
       case RegisterExp(sv) => { // should be move-result
-        Debug.prntDebugInfo("@AssignAExpStmt:move-rsult? " + rhExp.toString(), assignS)
+       
 
         val srcReg = rhExp.asInstanceOf[RegisterExp]
-        val srcVal = atomEval(srcReg, fp, s)
-        val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), srcVal)))
-        val newState = (PartialState(buildStForEqual(realN ), fp, newStore, kptr, tp), k)
+        val srcVal = atomEval(srcReg, fp, s) 
+        val secuVals = pStoreLookup(pst, fp.offset(srcReg.toString))
+        val newStore = storeUpdate(s, List((fp.offset(destReg.regStr), srcVal))) 
+        val newPStore = pStoreUpdate(pst, List((fp.offset(destReg.regStr), secuVals)))
+        
+        
+        val newState = (PartialState(buildStForEqual(realN ), fp, newStore, newPStore, 
+            kptr, tp), k)
         Set(newState)
       }
 
@@ -343,15 +454,15 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
         if (isPrimitiveNumerical(opCode)) {
           Debug.prntDebugInfo("@AssignAExpStmt:Automic " + opCode.toString(), assignS)
           Debug.prntDebugInfo("Next is: ", assignS.next)
-          applyAtomicOp(opCode, "number", assignS.lineNumber, destReg, aExps.toList, s, realN, fp, kptr, tp, k)
+          applyAtomicOp(sft, opCode, "number", assignS.lineNumber, destReg, aExps.toList, s, pst, realN, fp, kptr, tp, k)
         } else if (isConstString(opCode)) {
-          applyAtomicOp(opCode, "string", assignS.lineNumber, destReg, aExps.toList, s, realN, fp, kptr, tp, k)
+          applyAtomicOp(sft, opCode, "string", assignS.lineNumber, destReg, aExps.toList, s, pst,realN, fp, kptr, tp, k)
         } else if (isConstClass(opCode)) {
-          applyAtomicOp(opCode, "class", assignS.lineNumber, destReg, aExps.toList, s, realN, fp, kptr, tp, k)
+          applyAtomicOp(sft, opCode, "class", assignS.lineNumber, destReg, aExps.toList, s, pst, realN, fp, kptr, tp, k)
         } else if(isCheckCast(opCode)){
-          applyAtomicOp(opCode, "check-cast", assignS.lineNumber, destReg, aExps.toList, s, realN, fp, kptr, tp, k)
+          applyAtomicOp(sft, opCode, "check-cast", assignS.lineNumber, destReg, aExps.toList, s, pst, realN, fp, kptr, tp, k)
         }else if (isMove(opCode)) {
-          handleMove(destReg, aExps.toList, s, realN, fp, kptr, tp, k)
+          handleMove(destReg, aExps.toList, s, pst , realN, fp, kptr, tp, k)
         } else {
           throw new SemanticException(" AutomicOpExp: not promitive numerical, not move, what is that->" + opCode.toString())
         }
@@ -365,38 +476,38 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
    * for packed/sparse-wtich do we need to add the next statement?
    */
 
-  def handleSwitch(pswS: SwitchStmt, lblStrs: List[AExp], nxt: Stmt, fp: FramePointer, s: Store, kptr: KAddr, t: Time, k: Kont): Set[Conf] = {
+  def handleSwitch(pswS: SwitchStmt, lblStrs: List[AExp], nxt: Stmt, fp: FramePointer, s: Store, pst: PropertyStore, kptr: KAddr, t: Time, k: Kont): Set[Conf] = {
     Debug.prntDebugInfo("the labels parse to handler: ", lblStrs)
 
     val (stmtSSE, stmtSSNoE) = pswS.getBranchStmts
 
     val  branches  = stmtSSE.foldLeft(Set[Conf]())((res, ss) => {
-      res ++ Set((PartialState(buildStForEqual(ss ), fp, s, kptr, t), k))
+      res ++ Set((PartialState(buildStForEqual(ss ), fp, s, pst, kptr, t), k))
     })
-    branches ++ Set((PartialState(buildStForEqual(nxt ), fp, s, kptr, t), k))
+    branches ++ Set((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, t), k))
   }
 
-  def handleFieldAssign(fieldS: FieldAssignStmt, s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def handleFieldAssign(fieldS: FieldAssignStmt, s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
     fieldS match {
       // igetfield
       case FieldAssignStmt(destReg: RegisterExp, fieldExp: NonStaticFieldExp, _, _, _,_) => {
         Debug.prntDebugInfo("@igetfield ", fieldS)
-        fieldAssignHandleHelperI(true, fieldExp, destReg, s, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperI(true, fieldExp, destReg, s, pst, nxt, fp, kptr, tp, k)
       }
       // iputfield
       case FieldAssignStmt(fieldExp: NonStaticFieldExp, srcReg: RegisterExp, _, _, _,_) => { 
     
-        fieldAssignHandleHelperI(false, fieldExp, srcReg, s, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperI(false, fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
       }
-      // Sgetfield
+      // Sgetfield 
       case FieldAssignStmt(destReg: RegisterExp, fieldExp: StaticFieldExp, _, _,_,_) => {
         Debug.prntDebugInfo("@Sgetfield ", fieldS)
-        fieldAssignHandleHelperS(true, fieldExp, destReg, s, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperS(true, fieldS , fieldExp, destReg, s, pst, nxt, fp, kptr, tp, k)
       }
       // Sputfield
       case FieldAssignStmt(fieldExp: StaticFieldExp, srcReg: RegisterExp, _, _, _,_) => {
         Debug.prntDebugInfo("@Sputfield ", fieldS)
-        fieldAssignHandleHelperS(false, fieldExp, srcReg, s, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperS(false, fieldS ,fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
       }
       case _ => {
         throw new SemanticException("the field assginment statement type error!" + fieldS.toString())
@@ -408,25 +519,35 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
    * the address for the static field is just the offset based on the framepoint
    * it has no object pointer, because static fields are just class fields.
    */
-  def fieldAssignHandleHelperS(isStaticGet: Boolean, fieldExp: StaticFieldExp, srcOrDestReg: RegisterExp, s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def fieldAssignHandleHelperS(isStaticGet: Boolean, fieldS: FieldAssignStmt, fieldExp: StaticFieldExp, srcOrDestReg: RegisterExp, s: Store, 
+      pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
 
     val staticFieldAddr = fp.offset(fieldExp.fp)
     val srcOrDestRegAddr = fp.offset(srcOrDestReg.regStr)
 
     if (isStaticGet) {
       val fieldVals = storeLookup(s, staticFieldAddr)
+      val fieldPropertyVals = pStoreLookup(pst, staticFieldAddr)
       Debug.prntDebugInfo("the  get from field", fieldVals)
       val newStore = storeUpdate(s, List((srcOrDestRegAddr, fieldVals)))
-      Debug.prntDebugInfo("the new entry to store", srcOrDestRegAddr + fieldVals.toString())
-      val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k)
+      val newPStore = 
+        // if it is a source or sink, we will record it in the taint store and be propagated
+      if(fieldS.sourceOrSink > 0) {
+        pStoreUpdate(pst, List((srcOrDestRegAddr, genTaintKindValueFromStmt(fieldS))))
+      }
+      else
+       pStoreUpdate(pst, List((srcOrDestRegAddr, fieldPropertyVals))) 
+       
+      val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, newPStore, 
+          kptr, tp), k)
       Set(newState)
     } else {
       val srcRegVals = storeLookup(s, srcOrDestRegAddr)
-      Debug.prntDebugInfo("the current store is: ", s)
-      Debug.prntDebugInfo("the source register", srcOrDestRegAddr)
+      val srcRegPropertyVals = pStoreLookup(pst, srcOrDestRegAddr)
       val newStore = storeUpdate(s, List((staticFieldAddr, srcRegVals)))
-      Debug.prntDebugInfo("newstore", newStore)
-      val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k)
+      val newPStore = pStoreUpdate(pst, List((staticFieldAddr, srcRegPropertyVals))) 
+      val newState = (PartialState(buildStForEqual(nxt ), fp, newStore,  newPStore,
+          kptr, tp), k)
       Set(newState)
     }
   }
@@ -445,7 +566,8 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
    * for iget and iput
    */
 
-  def fieldAssignHandleHelperI(isInstanceGet: Boolean, fieldExp: NonStaticFieldExp, srcOrDestReg: RegisterExp, s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def fieldAssignHandleHelperI(isInstanceGet: Boolean, fieldExp: NonStaticFieldExp, srcOrDestReg: RegisterExp, 
+      s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
     val objRegExp = fieldExp.objExp
     val fieldPath = fieldExp.fp
 
@@ -459,7 +581,7 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
     val objVals = filterObjValues(vals)
 
     if(objVals.isEmpty) {
-        Set ((PartialState(buildStForEqual(nxt ), fp, s, kptr, tp), k))
+        Set ((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, tp), k))
     } else {
     
     objVals.flatMap((objV: ObjectValue) => {
@@ -496,32 +618,44 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
 */
       val srcOrDestAddr = fp.offset(srcOrDestReg.regStr)
       val fieldAddr = objPointer.offset(fieldName)
+       val objectPropertyVals = pStoreLookup(pst, fp.offset(objRegE.regStr))
+       
       if (isInstanceGet) {
         val fieldVals = storeLookup(s, fieldAddr)
         val newStore = storeUpdate(s, List((srcOrDestAddr, fieldVals)))
-        Debug.prntDebugInfo("@updated store: ", newStore)
-        val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k)
-        Debug.prntDebugInfo("@newState's store: ", newState._1.s)
+        
+        // the joined values of the fields as well as the object addr will be propergated to the iget target
+        val fieldPropertyVals = pStoreLookup(pst, fieldAddr)
+       
+        
+        val joinedPropertyVals = fieldPropertyVals ++ objectPropertyVals
+        
+        val newPStore = pStoreUpdate(pst, List((srcOrDestAddr, joinedPropertyVals)))
+        
+        val newState = (PartialState(buildStForEqual(nxt ), fp, newStore,   newPStore, 
+            kptr, tp), k) 
         Set(newState)
-      } else {
+        
+      } else 
+      {
         val newValtoPut = storeLookup(s, srcOrDestAddr)
-        val newStore = storeUpdate(s, List((fieldAddr, newValtoPut)))
-        Debug.prntDebugInfo("@updated store: ", newStore)
-        val newState = (PartialState(buildStForEqual(nxt ), fp, newStore, kptr, tp), k)
-        Debug.prntDebugInfo("@newState's store: ", newState._1.s)
+        val newStore = storeUpdate(s, List((fieldAddr, newValtoPut))) 
+        
+        val newPropertyValToPut = pStoreLookup(pst, srcOrDestAddr)
+        
+        // will propagate the object and the register property vlaues into the fields
+        val joinedPropertyValss = newPropertyValToPut ++ objectPropertyVals
+        
+        val newPStore = pStoreUpdate(pst, List((fieldAddr, joinedPropertyValss)))
+            
+        val newState = (PartialState(buildStForEqual(nxt ), fp, newStore,  newPStore, 
+            kptr, tp), k) 
+        
         Set(newState)
       }
     })
     }
   }
   
-  
-  
-
-  
-  
-  
-  
-
  
 }

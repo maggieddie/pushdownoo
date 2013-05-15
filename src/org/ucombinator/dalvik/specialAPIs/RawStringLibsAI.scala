@@ -41,14 +41,14 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
    * and the return value will be bounded to all the the objVals. 
    * This sucks. the object pointers (values) for string will be many
    */
-  def handleStringBuilderAppend(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+  def handleStringBuilderAppend(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
   val objVals = filterStrBuilderObjVals(objValss)
    Debug.prntDebugInfo("the stringbuilder object values length is ", objVals.toList.length)
    val newStore = conservativeUpdateObjStore(s, objVals, Set(StringTop))
    val retAddr  = fp.offset("ret")
    // if we cast the object value to the parent type, what will happen?
    val newStore2 = storeUpdate(newStore, List((retAddr, objVals.map(_.asInstanceOf[Value]))))
-   Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore2, kptr, tp), k)))
+   Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore2, pst, kptr, tp), k)))
  }
  
  /**
@@ -56,7 +56,7 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
   * there is one argument, which is refering to the string object pointer
   * we will get the "value" of the objPointer, and extend the store for the (ret,fp)
   */
-  def handleStringValueof(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+  def handleStringValueof(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
    val strobjvals = filterStrObjVals(objVals)
     Debug.prntDebugInfo(" filtered String object length " + strobjvals.toList.length , strobjvals)
     
@@ -68,17 +68,17 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
     })
     
     val newStore = storeUpdate(s, List((fp.offset("ret"), newValues)))
-     Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, kptr, tp), k)))
+     Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
  }
  
-   def handleStringBuilderInit(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+   def handleStringBuilderInit(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
     val objVals = filterStrBuilderObjVals(objValss)
     val strBuilderOp = ObjectPointer(t, "java/lang/StringBuilder", ls)
     val arglen = argRegExps.length
     arglen match {
       case 0 => {
         val newStore = conservativeUpdateObjStore(s, objVals, Set(StringLit("")))
-        Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, kptr, tp), k)))
+        Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
       }
       case 1 => {
         val argRegExp = argRegExps.head
@@ -93,7 +93,7 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
 
         // wow. this gonna make all the object Pointer mapped by the objAExp map the "value" to the argVal
         val newStore = conservativeUpdateObjStore(s, objVals, argVals)
-        Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, kptr, tp), k)))
+        Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
       }
       case _ => {
         //Set(((PartialState(realN, fp, s, kptr, tp), k)))

@@ -1,6 +1,7 @@
 package org.ucombinator.dalvik.cfa.cesk
 
 import org.ucombinator.utils._
+import org.apache.commons.lang3.StringEscapeUtils 
 
 abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) with StateSpace with FancyOutput  {
 
@@ -14,7 +15,7 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
         }
       }
     } else state match {
-      case p@PartialState(s, fp, store, kptr, t) => {
+      case p@PartialState(s, fp, store, ps, kptr, t) => {
        map(state).toString()
       //  (StringUtils.truncateIfLong(s.toString, 100) ) //+
         /*  "\\n" + " CurFP = " + fp.meth +
@@ -25,7 +26,7 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
       case FinalState() => "Final(" + ")"
       case ErrorState(_, _) => "ErrorState"
     }
-    result
+    StringEscapeUtils.escapeJava(result)
   }
   
     def prettyPrintState2(state: ControlState, map: Map[ControlState, Int]): String = {
@@ -37,7 +38,7 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
         }
       }
     } else state match {
-      case p@PartialState(s, fp, store, kptr, t) => {
+      case p@PartialState(s, fp, store, ps, kptr, t) => {
          map(state).toString + "$" + 
          s.clsPath + "\\n" + s.methPath + "\\" + s.lineSt.toString
          
@@ -46,30 +47,39 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
       case FinalState() => "Final(" + ")"
       case ErrorState(_, _) => "ErrorState"
     }
-    result
+    StringEscapeUtils.escapeJava(result)
   }
   
   private def prettyPrintStore(store: Store) : String = {
+   StringEscapeUtils.escapeJava( 
     store.foldLeft("")((res, kv) => {
       val addr = kv._1
       val valSet = kv._2
+     
       res +
       "* Addr:          " + addr + 
       "<br>" + "* Abstract Values: " + 
-      "<br>" + "     " + valSet.foldLeft("")((res2, v) => res2 + v + "</br>")+ "<br>"
-      
+      "<br>" + "     " + valSet.foldLeft("")((res2, v) => res2 + v + "</br>")+ "<br>" 
     })
+    )
   }
   
   def genPrettyStateToHtml(st: ControlState, map: Map[ControlState, Int]) : String = {
     val result = 
       st match {
-      case p@PartialState(s, fp, store, kptr, t) => {
-        "<b>Program Insruction and Context: </b>" +  (StringUtils.truncateIfLong(s.toString, 1000))+
+      case p@PartialState(s, fp, store, pst, kptr, t) => {
+        
+         //println("empty valset?-----------" + pst.toString)
+        "<b>Program Insruction and Context: </b>" +  
+        (StringUtils.truncateIfLong(StringEscapeUtils.escapeJava(s.oldStyleSt.toString), 1000)) + 
+        //(StringUtils.truncateIfLong(s.toString, 1000))+
           "<br></br>" + "<b>Current Frame Pointer is: </b>" +  (StringUtils.truncateIfLong(fp.meth.toString + fp.t, 1000)) +
           "<br></br>" + "<b> Store Details: </b>" + 
           "<br></br>" +
           prettyPrintStore(store) +
+          "<br></br>" + "<b> Taint Store Details: </b>" + 
+          "<br></br>" +
+          prettyPrintStore(pst) +
           "<br></br>" + "<b> Time: </b>"+ 
            "<br></br>" + t.toString + 
           "<br></br>"
@@ -77,7 +87,7 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
       case FinalState() => "<br></br>"+ "Final(" + ")"
       case ErrorState(_, _) => "<br></br>" + "ErrorState"
     }
-    result
+    StringEscapeUtils.escapeJava(result)
   }
   
   

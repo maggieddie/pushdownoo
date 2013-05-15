@@ -36,7 +36,7 @@ trait DalvikAnalysisStatistics extends StateSpace with ExceptionHandling{
   
   private def filterThrownStates (states: Set[ControlState]) : Set[ControlState] ={
     states.filter ({
-      case PartialState(StForEqual(stmt, _, _,_,_), _, _, _, _ ) => {
+      case PartialState ( StForEqual(stmt, _, _,_,_ ),  _, _,_,_,_ ) => {
         isThrownSt(stmt)
       }
       case _ => false
@@ -61,7 +61,7 @@ trait DalvikAnalysisStatistics extends StateSpace with ExceptionHandling{
        sum + cardi})
       (monoStore.count(storeFilter), totalcardi)
   }
-  
+   
   
   def computePointsToStatistics (states: Set[ControlState]) : (VarPointsTo, ThrowPointsTo) = {
     val regularStates = filterRegisterStates(states)

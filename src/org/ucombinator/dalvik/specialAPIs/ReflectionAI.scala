@@ -17,7 +17,7 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
    * Note that all the string objects are join together
    * */
   
-  def handleClassGetName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+  def handleClassGetName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
     val classObjVals = filterClassObjVals(objVals)
     Debug.prntDebugInfo("the filtered class object is.length " + invokS.toString() , classObjVals.toList.length)
     
@@ -29,14 +29,14 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
     })
     
     val newStore = storeUpdate(s, List((fp.offset("ret"), resStrValues)))
-    Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, kptr, tp), k)))
+    Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
   }
   
   /**
    * this will generate a class object on the heap, with the name updated to string reference of the classname
    * the class object value will be placed on the ret 
    */
-  def handleClassForName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+  def handleClassForName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
      val classObjVals = filterClassObjVals(objVals)
      Debug.prntDebugInfo("the filtered class object is.length " + invokS.toString() , classObjVals.toList.length)
     
@@ -55,7 +55,7 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
          * I'm just do crude conversion here, 'cos it is safe
          */
         val newStore = storeUpdate(s, List((clsFieldAddr, strVals.map(_.asInstanceOf[Value]) ), (fp.offset("ret"), Set(objValCls))))
-          Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, kptr, tp), k)))
+          Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
      }
   }
   

@@ -242,7 +242,7 @@ case class SKeyword(val string: String) extends SExp with Ordered[SKeyword] {
 }
 
 
-abstract case class SSymbol(val string: String) extends SExp {
+abstract  class SSymbol(val string: String) extends SExp {
 }
 
 

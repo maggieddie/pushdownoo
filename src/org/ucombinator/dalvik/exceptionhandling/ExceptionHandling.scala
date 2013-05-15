@@ -41,6 +41,9 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    def defRegsStrSet: Set[String] ={
     Set("exn")
    }
+   
+   def sourceOrSink = 0
+    def taintKind =  Set[String]()
   }
   
   case class UncaughtExceptionStmt(uncaughtType: String, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
@@ -57,6 +60,8 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    def defRegsStrSet: Set[String] ={
     Set()
    }
+     def sourceOrSink = 0
+      def taintKind =  Set[String]()
   }
   
   
@@ -65,13 +70,14 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
       injThrownStmts:List[InjectThrownStmt], 
       fp: FramePointer, 
       s: Store, 
+      pst: PropertyStore,
       kptr: KAddr, 
       t:Time, 
       st: Stmt,
       k: Kont ) : Set[Conf] ={
     val tp = tick(List(st), t)
   injThrownStmts.foldLeft(Set[Conf]())((res, ist) => {
-    res ++ Set((PartialState(buildStForEqual(ist ), fp, s, kptr,tp), k))
+    res ++ Set((PartialState(buildStForEqual(ist ), fp, s, pst, kptr,tp), k))
   })   
  }
  
@@ -85,6 +91,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        annotationExnVals: List[String],
       fp: FramePointer, 
       s: Store, 
+      pst:PropertyStore,
       k: Kont, 
       t: Time, 
       st: Stmt, 
@@ -105,7 +112,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
     
     val injectRestTypeStrs: Set[String] = annotationExnVals.toSet //-- handlerMgr.getAllHandlerTypes.toSet
     //println("injected annotations value", injectRestTypeStrs.toList.length)
-   val genSts= genFaultStatesFromExnTypes(injectRestTypeStrs.toList, fp, s, k, t, st, clsP, methP, kptr, nextLiveRegs)
+   val genSts= genFaultStatesFromExnTypes(injectRestTypeStrs.toList, fp, s, pst, k, t, st, clsP, methP, kptr, nextLiveRegs)
   // println("the generated annotation states are of length: ", genSts.toList.length)
    genSts
    /* val injStmtLsts = injectRestTypeStrs.foldLeft(List[InjectThrownStmt]())((res, inTyStr) => {
@@ -127,6 +134,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        exnAnnos: List[String],
       fp: FramePointer, 
       s: Store, 
+      pst: PropertyStore,
       k: Kont, 
       t: Time, 
       st: Stmt, 
@@ -150,7 +158,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        val injStmt = InjectThrownStmt(Set(objVal), p._2, linNO, clsP, methP)
        res ::: List(injStmt)
     })
-    injectFaultStates(injStmtLsts, fp, s, kptr, t, st,k)
+    injectFaultStates(injStmtLsts, fp, s, pst, kptr, t, st,k)
   }
  
   //private  
@@ -160,14 +168,15 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
       // methDef: MethodDef, 
        fp: FramePointer, 
        s: Store, 
+       pst: PropertyStore,
        k: Kont,
        t: Time, 
        st: Stmt, 
           clsP: String, methP: String,
        kptr: KAddr, liveRegs: Set[String]): Set[Conf] = {
     //val tp = tick(List(st), t)
-    val restInjSts = getInjectStatesFromAnnotations(exnHandlers, exnAnnos, fp, s, k, t, st, clsP, methP,kptr, liveRegs)
-    val handlerBranchSts = getHandlerBranchStates(exnHandlers, exnAnnos, fp, s, k, t, st, kptr)
+    val restInjSts = getInjectStatesFromAnnotations(exnHandlers, exnAnnos, fp, s, pst, k, t, st, clsP, methP,kptr, liveRegs)
+    val handlerBranchSts = getHandlerBranchStates(exnHandlers, exnAnnos, fp, s, pst, k, t, st, kptr)
     restInjSts ++ handlerBranchSts
   }
    
@@ -175,6 +184,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        exnTypes: List[String],  
        fp: FramePointer, 
        s: Store, 
+       pst:PropertyStore,
        k: Kont,
        t: Time, 
        st: Stmt, 
@@ -207,23 +217,24 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
     
    }
     
-    injectFaultStates(injStmtLsts, fp, s, kptr, t, st, k)
+    injectFaultStates(injStmtLsts, fp, s,  pst,kptr, t, st, k)
    }
    
    def injectAPIFaultStates(
        exnTypes: List[String],
        fp: FramePointer, 
        s: Store, 
+       pst: PropertyStore,
        k: Kont,
        t: Time, 
        st: Stmt, 
           clsP: String, methP: String,
        kptr: KAddr, liveRegs: Set[String]): Set[Conf] = {
      // val tp = tick(List(st), t)
-      genFaultStatesFromExnTypes(exnTypes, fp, s, k, t, st, clsP, methP, kptr, liveRegs)
+      genFaultStatesFromExnTypes(exnTypes, fp, s,pst,  k, t, st, clsP, methP, kptr, liveRegs)
    }
      
-  def thrownUncaughtExnStates(objVals: Set[AbstractObjectValue], s: Store, fp: FramePointer, kptr: KAddr, t: Time ,clsP: String, methP: String, liveRegs:Set[String]): Set[Conf] = {
+  def thrownUncaughtExnStates(objVals: Set[AbstractObjectValue], s: Store, pst: PropertyStore, fp: FramePointer, kptr: KAddr, t: Time ,clsP: String, methP: String, liveRegs:Set[String]): Set[Conf] = {
      objVals.foldLeft(Set[Conf]())((res, objV)=>{
            val clsName = classTypeOfAbsObject(objV)
            val uc=UncaughtExceptionStmt(clsName, StmtNil, StmtNil, clsP, methP)
@@ -232,11 +243,11 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
             */
            Stmt.extendLiveMap(Map(buildStForEqual(uc)->liveRegs))
            
-          res ++ Set((PartialState(buildStForEqual(uc ), fp, s, kptr, t), Nil))
+          res ++ Set((PartialState(buildStForEqual(uc ), fp, s, pst, kptr, t), Nil))
         })
   }
    
-   def handleNormalThrownStmt(ps: PartialState, handlerType:String, handleExnType:String, lbl:String, ts: Stmt, objValues: Set[Value], s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, t: Time, k: Kont): Set[Conf] = {
+   def handleNormalThrownStmt(ps: PartialState, handlerType:String, handleExnType:String, lbl:String, ts: Stmt, objValues: Set[Value], s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, t: Time, k: Kont): Set[Conf] = {
 
      
     // dealWithAllPossibleExnValues(ts, objValues, s, fp, kptr, t, k)
@@ -244,7 +255,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
          val clsName = classTypeOfAbsObject(absV)
       res ++ //dealWithOnePossibleExnValue(ts, absV, s, fp, kptr, t, k,objValues)
       handleHandleFrame(ps, handlerType, handleExnType, lbl, clsName ,  Set(absV), 
-     k, fp, s, kptr, t, ts) 
+     k, fp, s, pst, kptr, t, ts) 
     })
    }
    
@@ -252,7 +263,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    * Deal with hte inject Stmt
    */
   
-   def handleInjectExnStmt(itS: InjectThrownStmt, s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
+   def handleInjectExnStmt(itS: InjectThrownStmt, s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
      val tp = tick(List(itS), t) 
      val lineS = itS.lineNumber
          /**
@@ -261,7 +272,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
           * if found any handler, then branches to it; otherwise, uncaught state will be forked
           */
          if(CommonUtils.isAnnoThrownLineStmt(lineS)) {
-           dealWithAllPossibleExnValues(itS, itS.exnValues.map(_.asInstanceOf[AbstractObjectValue]), s, fp, kptr, t, k, clsP, methP)
+           dealWithAllPossibleExnValues(itS, itS.exnValues.map(_.asInstanceOf[AbstractObjectValue]), s, pst, fp, kptr, t, k, clsP, methP)
          }
          /**
           * This is used to branch into all the catch handlers.
@@ -285,7 +296,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                val newNext = CommonUtils.findNextStmtNotLineOrLabel(mvS.next)
                //println("jumping to the caytch handler, after the move-exception, the newNext is ", newNext)
                val newStore = storeUpdate(s, List((destAddr,exnVals )))
-               Set((PartialState(buildStForEqual(newNext ), fp, newStore, kptr, tp), k))
+               Set((PartialState(buildStForEqual(newNext ), fp, newStore, pst, kptr, tp), k))
                
              }
              // this must come from normal throw's change to InjectThrown!
@@ -300,17 +311,17 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
   /**
    * To deal one Exception Value
    */
-  private def dealWithOnePossibleExnValue(ijt: Stmt, exnValue: Value, s: Store, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, allAbsVals:Set[Value], clsP:String, methP: String): Set[Conf] = {
+  private def dealWithOnePossibleExnValue(ijt: Stmt, exnValue: Value, s: Store, pst: PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, allAbsVals:Set[Value], clsP:String, methP: String): Set[Conf] = {
     val clsName = classTypeOfAbsObject(exnValue)
-    handleThrown(clsName, Set(exnValue), k, fp, s, kptr, t, ijt, allAbsVals,clsP, methP )
+    handleThrown(clsName, Set(exnValue), k, fp, s, pst, kptr, t, ijt, allAbsVals,clsP, methP )
   }
   
  
   
-   def dealWithAllPossibleExnValues(ijt: Stmt, allExnVals: Set[Value], s: Store,  fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
+   def dealWithAllPossibleExnValues(ijt: Stmt, allExnVals: Set[Value], s: Store, pst:PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
    
      allExnVals.foldLeft(Set[Conf]())((res, absV) => {
-      res ++ dealWithOnePossibleExnValue(ijt, absV, s, fp, kptr, t, k,allExnVals, clsP, methP)
+      res ++ dealWithOnePossibleExnValue(ijt, absV, s, pst, fp, kptr, t, k,allExnVals, clsP, methP)
     })
   }
   
@@ -330,7 +341,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    * Oh, along the way, it also pops out all the function kontinuation. if it is not found 
    *        
    */
- private def handleThrown(exnType: String,  exnValue: Set[Value], k: Kont, fp: FramePointer, s: Store, kptr: KAddr, t: Time, ijt: Stmt, allVals:Set[Value], clsP: String, methP: String) : Set[Conf] = {
+ private def handleThrown(exnType: String,  exnValue: Set[Value], k: Kont, fp: FramePointer, s: Store, pst:PropertyStore,  kptr: KAddr, t: Time, ijt: Stmt, allVals:Set[Value], clsP: String, methP: String) : Set[Conf] = {
    val tp = tick(List(ijt), t)
    k match {
      // There should be the one last function kontinuation on the stack we popped out all the handleframe.
@@ -339,7 +350,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        //hd match {
       //   case fnk@FNKFrame(st, fp) => {
        val uc = UncaughtExceptionStmt(exnType, StmtNil, StmtNil,clsP, methP)
-           Set((PartialState(buildStForEqual(uc ), fp, s, kptr, tp), Nil))
+           Set((PartialState(buildStForEqual(uc ), fp, s, pst, kptr, tp), Nil))
          //}
          /* case hf@HandleFrame(handlerType, handleExnType, lbl) => {
             println("sees the handler frame!!!", k)
@@ -363,7 +374,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                     val newStore = storeUpdate(s, List((fp.offset("exn"), exnValue)))
                   // One is the original injectthtown , the toher state is the finally
                 //   Set((PartialState(nxtN, fp, s, kptr, tp), tl)) ++ 
-                   Set((PartialState(buildStForEqual(realN ), fp, newStore, kptr, tp), tl)) // shoudl the finally get the rest kontinuation.I think so
+                   Set((PartialState(buildStForEqual(realN ), fp, newStore, pst, kptr, tp), tl)) // shoudl the finally get the rest kontinuation.I think so
                  }
                  case None => {throw new CESKException("the finally handler is not inthe label table in injectThrown statement inspectStack")}
                }
@@ -380,7 +391,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                    case Some(st) => {
                       val realN = CommonUtils.findNextStmtNotLineOrLabel(st)
                       val newStore = storeUpdate(s, List((fp.offset("exn"), exnValue)))
-                      Set((PartialState(buildStForEqual(realN), fp, newStore, kptr, tp), tl))
+                      Set((PartialState(buildStForEqual(realN), fp, newStore, pst, kptr, tp), tl))
                    }
                    case None =>  {throw new CESKException("the finally handler is not inthe label table in injectThrown statement inspectStack")}         
                  }
@@ -390,7 +401,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                else{
                
                    val nxtN = getProperStmt(ijt, allVals)
-                    Set((PartialState(buildStForEqual(nxtN ) , fp, s, kptr, tp), tl))
+                    Set((PartialState(buildStForEqual(nxtN ) , fp, s, pst, kptr, tp), tl))
                }
              }
            }
@@ -398,7 +409,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
          case fnk@FNKFrame(st, fp)  => { //just conitnue to pop.
            val nxtS = getProperStmt(ijt, allVals)
           // println(nxtS)
-           Set((PartialState(buildStForEqual(nxtS ) , fp, s, kptr, tp), tl))
+           Set((PartialState(buildStForEqual(nxtS ) , fp, s, pst, kptr, tp), tl))
          }
          
          
@@ -412,7 +423,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
  }
  
  def handleHandleFrame(ps: PartialState, handlerType:String, handleExnType:String, lbl:String, exnType: String,  exnValue: Set[Value], 
-     k: Kont, fp: FramePointer, s: Store, kptr: KAddr, t: Time, ijt: Stmt) : Set[Conf] = {
+     k: Kont, fp: FramePointer, s: Store, pst: PropertyStore, kptr: KAddr, t: Time, ijt: Stmt) : Set[Conf] = {
      val tp = tick(List(ijt), t)
     //  println(" gonna catch the type: ", exnType)
    handlerType match {
@@ -427,7 +438,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                     val newStore = storeUpdate(s, List((fp.offset("exn"), exnValue)))
                   // One is the original injectthtown , the toher state is the finally
                  //  Set((PartialState(nxtN, fp, s, kptr, tp), k)) ++ 
-                   Set((PartialState(buildStForEqual(realN ), fp, newStore, kptr, tp), k)) // shoudl the finally get the rest kontinuation.I think so
+                   Set((PartialState(buildStForEqual(realN ), fp, newStore, pst, kptr, tp), k)) // shoudl the finally get the rest kontinuation.I think so
                  }
                  case None => {throw new CESKException("the finally handler is not inthe label table in injectThrown statement inspectStack")}
                }
@@ -448,7 +459,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                       Statistics.recordEC(buildStForEqual(ijt),buildStForEqual(realN ) )
                       
                       val newStore = storeUpdate(s, List((fp.offset("exn"), exnValue)))
-                      Set((PartialState(buildStForEqual(realN ), fp, newStore, kptr, tp), k))
+                      Set((PartialState(buildStForEqual(realN ), fp, newStore, pst, kptr, tp), k))
                    }
                    case None =>  {throw new CESKException("the finally handler is not inthe label table in injectThrown statement inspectStack")}         
                  }
@@ -501,7 +512,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    *  
    *  TO BE DELTED
    */
-  def handle(objValues: Set[ObjectValue], s: Store, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
+  def handle(objValues: Set[ObjectValue], s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
 
     val curHandleFrames = filterHandleFrames(k)
     objValues.flatMap((objV: ObjectValue) => {
@@ -519,7 +530,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
           case Some(nextS) => CommonUtils.findNextStmtNotLineOrLabel(nextS)
           case None => throw new SemanticException("handle label not found in Label Table!" + sameTypeFrames.head.handlerLabel)
         }
-        val newState = (PartialState(buildStForEqual(actualNS ), fp, newStore, kptr, tp), k)
+        val newState = (PartialState(buildStForEqual(actualNS ), fp, newStore, pst, kptr, tp), k)
         Set(newState)
 
       } else if (!superTypeFrames.isEmpty) {
@@ -532,13 +543,13 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
           case Some(nextS) => CommonUtils.findNextStmtNotLineOrLabel(nextS)
           case None => throw new SemanticException("handle label not found in Label Table!" + sameTypeFrames.head.handlerLabel)
         }
-        val newState = (PartialState(buildStForEqual(actualNS ), fp, newStore, kptr, tp), k)
+        val newState = (PartialState(buildStForEqual(actualNS ), fp, newStore, pst, kptr, tp), k)
         Set(newState)
       } else {
         // if we don't find any exception type matched, 
         val nextSO = Stmt.forLabel(superTypeFrames.head.handlerLabel)
         val actualNS = CommonUtils.findNextStmtNotLineOrLabel(nxt)
-        Set((PartialState(buildStForEqual(actualNS ),fp, s, kptr, tp), k))
+        Set((PartialState(buildStForEqual(actualNS ),fp, s, pst, kptr, tp), k))
       }
     })
   }

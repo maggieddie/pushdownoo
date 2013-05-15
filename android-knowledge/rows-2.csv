@@ -1,0 +1,152 @@
+1,android.bluetooth.BluetoothSocket,java.io.OutputStream android.bluetooth.BluetoothSocket.getOutputStream(),FILE,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+2,android.content.Intent,android.content.Intent setData(android.net.Uri x),FILE,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+3,android.content.Intent,Intent(),FILE,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+4,android.content.Intent,"Intent(android.content.Context packageContext, java.lang.Class<?> cls)",FILE,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+5,android.content.Intent,Intent(android.content.Intent o),FILE,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+6,android.content.Intent,Intent(java.lang.String action),SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+7,android.content.Intent,"Intent(java.lang.String action, android.net.Uri uri)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+8,android.content.Intent,"Intent(java.lang.String action, android.net.Uri uri, android.content.Context packageContext, java.lang.Class<?> cls)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+9,android.net.http.AndroidHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+10,android.net.http.AndroidHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+11,android.net.http.AndroidHttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+12,android.net.http.AndroidHttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+13,android.net.http.AndroidHttpClient,org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request),SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+14,android.net.http.AndroidHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.protocol.HttpContext context)",BLUETOOTH,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+15,android.net.http.AndroidHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request)",BROWSER,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+16,android.net.http.AndroidHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.protocol.HttpContext context)",BROWSER,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+17,android.provider.Browser,"void android.provider.Browser.addSearchUrl(android.content.ContentResolver x, java.lang.String y)",BROWSER,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+18,android.provider.Browser,"void android.provider.Browser.saveBookmark(android.content.Context x, java.lang.String y, java.lang.String z)",INTENT,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+19,android.provider.Browser,"void android.provider.Browser.sendString(android.content.Context x, java.lang.String y)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+20,android.telephony.gsm.SmsManager,"void android.telephony.gsm.SmsManager.sendDataMessage(java.lang.String a, java.lang.String b, short c, byte[] d, android.app.PendingIntent e, Landroid.app.PendingIntent f)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+21,android.telephony.gsm.SmsManager,"void android.telephony.gsm.SmsManager.sendMultipartTextMessage(java.lang.String a, java.lang.String b, java.util.ArrayList c, java.util.ArrayList d, java.util.ArrayList e)",SMS,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+22,android.telephony.gsm.SmsManager,"void android.telephony.gsm.SmsManager.sendTextMessage(java.lang.String a, java.lang.String b, java.lang.String c, android.app.PendingIntent d, android.app.PendingIntent e)",INTERNET,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+23,android.telephony.gsm.SmsManager,"void android.telephony.SmsManager.sendDataMessage(java.lang.String a, java.lang.String b, short c, byte[] d, android.app.PendingIntent e, Landroid.app.PendingIntent f)",INTERNET,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+24,android.telephony.gsm.SmsManager Deprecated Class,SmsManager(),INTERNET,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+25,android.telephony.SmsManager,SmsManager(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+26,android.telephony.SmsManager,"void android.telephony.SmsManager.sendDataMessage(java.lang.String a, java.lang.String b, short c, byte[] d, android.app.PendingIntent e, Landroid.app.PendingIntent f)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+27,android.telephony.SmsManager,"void android.telephony.SmsManager.sendMultipartTextMessage(java.lang.String a, java.lang.String b, java.util.ArrayList c, java.util.ArrayList d, java.util.ArrayList e)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+28,android.telephony.SmsManager,"void android.telephony.SmsManager.sendTextMessage(java.lang.String a, java.lang.String b, java.lang.String c, android.app.PendingIntent d, android.app.PendingIntent e)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+29,android.telephony.SmsMessage,"android.telephony.SmsMessage.SubmitPdu android.telephony.SmsMessage.getSubmitPdu(java.lang.String a, java.lang.String b, java.lang.String c, boolean d)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+30,android.telephony.SmsMessage,"android.telephony.SmsMessage.SubmitPdu android.telephony.SmsMessage.getSubmitPdu(java.lang.String a, java.lang.String b, short c, byte[] d, boolean e)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+31,android.util.Log,"boolean isLoggable(java.lang.String tag, int level)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+32,android.util.Log,"int d(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+33,android.util.Log,"int d(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+34,android.util.Log,"int e(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+35,android.util.Log,"int e(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+36,android.util.Log,"int i(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+37,android.util.Log,"int i(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+38,android.util.Log,"int println(int priority, java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+39,android.util.Log,"int v(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+40,android.util.Log,"int v(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+41,android.util.Log,"int w(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+42,android.util.Log,"int w(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+43,android.util.Log,"int w(java.lang.String tag, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+44,android.util.Log,"int wtf(java.lang.String tag, java.lang.String msg)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+45,android.util.Log,"int wtf(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+46,android.util.Log,"int wtf(java.lang.String tag, java.lang.Throwable tr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+47,android.util.Log,java.lang.String getStackTraceString(java.lang.Throwable tr),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+48,android.util.Log,Log(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+49,android.webkit.WebSettings,void setBlockNetworkLoads(boolean flag),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+50,android.webkit.WebView,WebView(android.content.Context context),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+51,android.webkit.WebView,"WebView(android.content.Context context, android.util.AttributeSet attrs)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+52,android.webkit.WebView,"WebView(android.content.Context context, android.util.AttributeSet attrs, int defStyle)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+53,android.webkit.WebView,"WebView(android.content.Context context, android.util.AttributeSet attrs, int defStyle, boolean privateBrowsing)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+54,java.io.FileOutputStream,FileOutputStream(java.io.File file),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+55,java.io.FileOutputStream,"FileOutputStream(java.io.File file, boolean append)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+56,java.io.FileOutputStream,FileOutputStream(java.io.FileDescriptor fd),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+57,java.io.FileOutputStream,FileOutputStream(java.lang.String path),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+58,java.io.FileOutputStream,"FileOutputStream(java.lang.String path, boolean append)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+59,java.io.FileOutputStream,java.io.FileDescriptor getFD(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+60,java.io.FileOutputStream,java.nio.channels.FileChannel getChannel(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+61,java.io.FileOutputStream,void close(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+62,java.io.FileOutputStream,void finalize(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+63,java.io.FileOutputStream,"void write(byte[] buffer, int byteOffset, int byteCount)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+64,java.io.FileOutputStream,void write(int oneByte),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+65,java.io.FileWriter,FileWriter(java.io.File file),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+66,java.io.FileWriter,"FileWriter(java.io.File file, boolean append)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+67,java.io.FileWriter,FileWriter(java.io.FileDescriptor fd),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+68,java.io.FileWriter,FileWriter(java.lang.String filename),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+69,java.io.FileWriter,"FileWriter(java.lang.String filename, boolean append)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+70,java.io.RandomAccessFile,void java.io.RandomAccessFile.write(byte[] x),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+71,java.io.RandomAccessFile,"void java.io.RandomAccessFile.write(byte[] x, int y, int z)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+72,java.io.RandomAccessFile,void java.io.RandomAccessFile.writeByte(int x),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+73,java.io.RandomAccessFile,void java.io.RandomAccessFile.writeBytes(java.lang.String x),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+74,java.io.RandomAccessFile,void java.io.RandomAccessFile.writeChar(int x),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+75,java.io.RandomAccessFile,void java.io.RandomAccessFile.writeChars(java.lang.String x),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+76,java.net.DatagramSocket,DatagramSocket(),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+77,java.net.DatagramSocket,DatagramSocket(int aPort),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+78,java.net.DatagramSocket,"DatagramSocket(int aPort, java.net.InetAddress addr)",Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+79,java.net.DatagramSocket,DatagramSocket(java.net.DatagramSocketImpl socketImpl),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+80,java.net.DatagramSocket,DatagramSocket(java.net.SocketAddress localAddr),Internet,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+81,java.net.HttpURLConnection,HttpURLConnection(java.net.URL url),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+82,java.net.MulticastSocket,MulticastSocket(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+83,java.net.MulticastSocket,MulticastSocket(int port),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+84,java.net.MulticastSocket,MulticastSocket(java.net.SocketAddress localAddress),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+85,java.net.NetworkInterface,NetworkInterface(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+86,java.net.ServerSocket,ServerSocket(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+87,java.net.ServerSocket,ServerSocket(int port),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+88,java.net.ServerSocket,"ServerSocket(int port, int backlog)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+89,java.net.ServerSocket,"ServerSocket(int port, int backlog, java.net.InetAddress localAddress)",Sneaky Intent,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+90,java.net.ServerSocket,void bind(java.net.SocketAddress localAddr),Intent,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+91,java.net.ServerSocket,"void bind(java.net.SocketAddress localAddr, int backlog)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+92,java.net.Socket,Socket(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+93,java.net.Socket,"Socket(java.lang.String dstName, int dstPort)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+94,java.net.Socket,"Socket(java.lang.String dstName, int dstPort, java.net.InetAddress localAddress, int localPort)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+95,java.net.Socket,"Socket(java.lang.String hostName, int port, boolean streaming)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+96,java.net.Socket,"Socket(java.net.InetAddress addr, int port, boolean streaming)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+97,java.net.Socket,"Socket(java.net.InetAddress dstAddress, int dstPort)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+98,java.net.Socket,"Socket(java.net.InetAddress dstAddress, int dstPort, java.net.InetAddress localAddress, int localPort)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+99,java.net.Socket,Socket(java.net.Proxy proxy),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+100,java.net.Socket,Socket(java.net.SocketImpl impl),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+101,java.net.URLConnection,java.io.InputStream getInputStream(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+102,java.net.URLConnection,void connect(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+103,org.apache.commons.logging.Log,boolean isDebugEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+104,org.apache.commons.logging.Log,boolean isErrorEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+105,org.apache.commons.logging.Log,boolean isFatalEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+106,org.apache.commons.logging.Log,boolean isInfoEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+107,org.apache.commons.logging.Log,boolean isTraceEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+108,org.apache.commons.logging.Log,boolean isWarnEnabled(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+109,org.apache.commons.logging.Log,void debug(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+110,org.apache.commons.logging.Log,"void debug(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+111,org.apache.commons.logging.Log,void error(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+112,org.apache.commons.logging.Log,"void error(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+113,org.apache.commons.logging.Log,void fatal(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+114,org.apache.commons.logging.Log,"void fatal(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+115,org.apache.commons.logging.Log,void info(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+116,org.apache.commons.logging.Log,"void info(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+117,org.apache.commons.logging.Log,void trace(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+118,org.apache.commons.logging.Log,"void trace(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+119,org.apache.commons.logging.Log,void warn(java.lang.Object arg0),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+120,org.apache.commons.logging.Log,"void warn(java.lang.Object arg0, java.lang.Throwable arg1)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+121,org.apache.http.client.HttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+122,org.apache.http.client.HttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+123,org.apache.http.client.HttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+124,org.apache.http.client.HttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+125,org.apache.http.client.HttpClient,org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+126,org.apache.http.client.HttpClient,"org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+127,org.apache.http.client.HttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+128,org.apache.http.client.HttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+129,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+130,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+131,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest x, org.apache.http.client.ResponseHandler<? extends T> y)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+132,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.client.methods.HttpUriRequest x, org.apache.http.client.ResponseHandler<? extends T> y, org.apache.http.protocol.HttpContext z)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+133,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+134,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.client.ResponseHandler<? extends T> responseHandler, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+135,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.HttpHost w, org.apache.http.HttpRequest x, org.apache.http.client.ResponseHandler<? extends T> y, org.apache.http.protocol.HttpContext z)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+136,org.apache.http.impl.client.AbstractHttpClient,"<T> T execute(org.apache.http.HttpHost x, org.apache.http.HttpRequest y, org.apache.http.client.ResponseHandler<? extends T> z)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+137,org.apache.http.impl.client.AbstractHttpClient,org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+138,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest request, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+139,org.apache.http.impl.client.AbstractHttpClient,org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest x),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+140,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest x, org.apache.http.protocol.HttpContext y)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+141,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+142,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost target, org.apache.http.HttpRequest request, org.apache.http.protocol.HttpContext context)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+143,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost x, org.apache.http.HttpRequest y)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+144,org.apache.http.impl.client.AbstractHttpClient,"org.apache.http.HttpResponse execute(org.apache.http.HttpHost x, org.apache.http.HttpRequest y, org.apache.http.protocol.HttpContext z)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+145,org.apache.http.impl.client.DefaultHttpClient,DefaultHttpClient(),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+146,org.apache.http.impl.client.DefaultHttpClient,"DefaultHttpClient(org.apache.http.conn.ClientConnectionManager conman, org.apache.http.params.HttpParams params)",,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+147,org.apache.http.impl.client.DefaultHttpClient,DefaultHttpClient(org.apache.http.params.HttpParams params),,<NULL>,<NULL>,True,2013-01-16 22:30:39,<NULL>,2013-01-16 22:30:39,<NULL>
+148,org.apache.http.impl.client.AbstractHttpClient,org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest x),INTERNET,1,com.url.sourceviewer,True,2013-03-04 19:44:07,11,2013-03-04 19:44:07,11
+149,java.net.URL,java.net.URLConnection java.net.URL.openConnection() ,INTERNET,1,mostwanted,True,2013-03-04 19:44:07,11,2013-03-04 19:44:07,11
+150,java.io.DataOutputStream,void  writeBytes(java.lang.String x),WRITEOUT,1,mostwanted,True,2013-03-04 19:44:07,11,2013-03-04 19:44:07,11
+151,java.io.DataOutputStream,"void  write(byte[] x, int y, int z) ",WRITEOUT,1,mostwanted,True,2013-03-04 19:44:07,11,2013-03-04 19:44:07,11
+152,java.io.FileOutputStream,void java.io.FileOutputStream.write(byte[] x),WRITEOUT,1,smsbackup,True,2013-03-04 19:44:07,11,2013-03-04 19:44:07,11

@@ -40,6 +40,12 @@ import org.ucombinator.utils.AIOptions
 import org.ucombinator.dalvik.cfa.pdcfa.PDCFAAnalysisRunner
 import org.ucombinator.utils.AnalysisType
 import org.ucombinator.dalvik.vmrelated.APISpecs
+import org.ucombinator.dalvik.syntax.Stmt
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
+import org.ucombinator.dalvik.testdriver.TestScripts
+import org.ucombinator.utils.CommonUtils
+import org.ucombinator.playhelpers.PlayHelper
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 
 object RunAnalysis {
@@ -54,7 +60,7 @@ object RunAnalysis {
 
     java -jar  PushdownOO_Exflow.jar [--lang lang][--pdcfa | --kcfa] [--k k] [--gc] [--lra] [--verbose] [--dump-graph] [--dump-statistics] [--simple-graph] [--interrupt-after n] [--help] filePath
 
-    where
+    where   
 
     --lang l               Target language (default = dalvik)
     --pdcfa                run Pushdown k-CFA (run by default)
@@ -71,16 +77,21 @@ object RunAnalysis {
     filePath               path to an IR folder to be analysed
     """)
 
-  def main(args: Array[String]) {
-
-    val opts = AIOptions.parse(args)
+  def main(args: Array[String]) { 
     
-    //val opts = setOptsForTest() 
+    
+    
+      val at = new AnalysisHelperThread(args.drop(1))//fs,loc,pic,personal,ntw)
+            at.start()
+    
+  /* //val opts = AIOptions.parse(args)
+   
+    val opts = setOptsForTest() 
 
-    if (args.size == 0 || opts.help) {
-      println(helpMessage)
-      return
-    }
+   // if (args.size == 0 || opts.help) {
+   //   println(helpMessage)  
+  // return
+  //}
 
   
     if (opts.sexprDir == null) {
@@ -96,6 +107,21 @@ object RunAnalysis {
       processDalvik(opts)
     }
     //}
+    
+    // for each of the resinits, we run the runLRAOnListSts
+     def doPreAnalysis(initEns: List[Stmt], resInits: List[Stmt], runner: PDCFAAnalysisRunner) {
+    	println("start lra for inits...") 
+      
+    	runner.runLRAOnListSts(resInits) 
+    	
+    	println("lra on rest  inits...")
+    	
+    	initEns.foreach(runner.runLRAEntryBodies)
+     
+    	runner.runLRAOnAllMethods
+
+    	println("Done with LRA preanalysis!")
+    }
 
     def processDalvik(opts: AIOptions) {
 
@@ -110,39 +136,45 @@ object RunAnalysis {
         case AnalysisType.PDCFA => {
           val runner = new PDCFAAnalysisRunner(opts)
           
-          val (methpath, entry, allIndividualInits) = runner.getAndroidEntry4Test(opts)
+          val (initEns, allIndividualInits) = runner.getListofInitEntries(opts)
+          
+    
           
           if(opts.doLRA){
-             println("start lra inits")
-            runner.runLRAOnListSts(allIndividualInits)
-            println("finished")
-             /**
-           * we'll need to run the lra on the entries bodies
-           */
-            val  (methPath2, entry2 )  = runner.runLRAEntryBodies(entry)
+            // do lra
+             doPreAnalysis(initEns, allIndividualInits, runner)
             
-             runner.runLRAOnAllMethods
+             // parse in security related files
+             DalInformationFlow.parseInAndroidKnowledge  
              
-                println("Done with LRA preanalysis!")
-          APISpecs.readInReport
+             // read JVm report
+             APISpecs.readInReport 
+             
+             // starts to run Analysis
+             runner.runPDCFA(opts,  initEns)
           
-          runner.runPDCFA(opts, entry, methPath2)
-          
-          } else {
+          } else  // no lra, 
+          {
               APISpecs.readInReport
-              runner.runPDCFA(opts, entry, methpath)
+              runner.runPDCFA(opts, initEns)
+              
           }
         }
       }
-
-    }
+      System.exit(0)
+    }*/
   }
-  private def setOptsForTest() : AIOptions = {
+  private def setOptsForTest(): AIOptions = {
     val opts = new AIOptions()
-   opts.sexprDir = "./benchmarks/dedexed_tests/sexps_lucene"  
-   //Goal
+
+    val (irFolder, profolder) = TestScripts.parseInApk("./testapks/sanity.apk")
+
+    opts.sexprDir = irFolder //"./benchmarks/dedexed_tests/sexps_ucm"
+    //Goal
     //opts.sexprDir = "./tests/sexps_mf"   
-      opts
+    opts.apkProjDir = profolder
+
+    opts
   }
 
 }

@@ -23,18 +23,25 @@ class S2DParser {
       }
     }
     sx match {
-      case SClass :+: attrs
+      case SClass :+: attrs    
         :+: (clsName: SName)
         :+: supercons
         :+: source
         :+: fieldsAndMethods => {
+           val clsClsStr = clsName.toString()
+           // no parsing of the support lib 
+          if(clsClsStr.startsWith("android/support/v4")) {
+            None
+          }
+          else{
         val supSn = CommonUtils.TestSNRet(parseSuperOrSource(supercons))
         val (flds, meths, interfaceNames, interfaces) = parseClassBody(List(), List(), List(), Map.empty)(fieldsAndMethods.toList,  clsName.toString())
-        val clsClsStr = clsName.toString()
+       
         val dvcd = new DalvikClassDef(clsClsStr, supSn, flds, meths, interfaceNames, interfaces)
         dvcd.registerClass(clsClsStr)
        // Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))
         Some(dvcd)
+          }
       }
        case SInterface :+: attrs
         :+: (clsName: SName)
@@ -1194,7 +1201,8 @@ object S2DParser {
 
   def apply(sexps: List[SExp]): Option[DalvikClassDef] = {
     val p = new S2DParser
-    p.parseClassDef(sexps.first)
+    
+    p.parseClassDef(sexps.head)
   }
 }
 

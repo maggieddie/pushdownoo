@@ -6,6 +6,7 @@ import org.ucombinator.dalvik.parsing.S2DParser
 import org.ucombinator.utils.Debug
 import org.ucombinator.dalvik.syntax.CompactMethodIndex
 import org.ucombinator.utils.CommonUtils
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 object TestMain {
 
@@ -295,7 +296,7 @@ object TestMain {
           System.out.println("f12: " + f12)
                          val f13= f12.next
           System.out.println("f13: " + f13)
-          val lbTable = Stmt.stmtMap.values
+          val lbTable =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap.values
    
  }
  

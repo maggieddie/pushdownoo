@@ -1,7 +1,12 @@
 package org.ucombinator.utils
 import org.ucombinator.dalvik.syntax._
 import scala.util.Random
-
+import scala.tools.nsc.io.Directory
+import java.io.File
+import org.ucombinator.playhelpers.PlayHelper
+//import play.api.libs.json._
+import org.ucombinator.playhelpers.AnalysisHelperThread
+import models.PropertyCheckList
 
 
 
@@ -213,6 +218,244 @@ object CommonUtils {
       else st.toString + "$"+st.lineNumber + "$"+st.next
     
   }
+   
+    /**
+   * Get a fancy name dump files
+   * This will be modified to generate svg graph
+   */
+  def getGraphDumpFileName(opts: AIOptions): (String, String) = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "graph-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else ""
+    val dotFilePath = prefix + arity + cfa + gc + lrv + ".dot"
+    val svgFilePath = prefix + arity + cfa + gc + lrv + ".svg"
+    (dotFilePath, svgFilePath)
+  }
+  
+  def getGraphFolderFileNames(opts: AIOptions) : (String, String) = {
+    val (dfp, sfp) = getGraphDumpFileName(opts)
+     val graphFolderPath =  opts.graphDirName
+    val dotfilePath = graphFolderPath+ File.separator + dfp //CommonUtils.getGraphDumpFileName(opts)  
+    val svgFilePath = graphFolderPath+ File.separator + sfp
+    (dotfilePath, svgFilePath)
+  }
+  
+
+
+  def getStatisticsDumpFileName(opts: AIOptions): String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "stat-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + ".txt"
+  }
+  
+  def getReportName(opts: AIOptions): String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-least-permission" + ".txt"
+  }
+  
+  def getHeatReportName(opts: AIOptions) :String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-heat-map" + ".html"
+  }
+  
+   def getSecurityReportName(opts: AIOptions) :String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-security" + ".html"
+  }
+  
+  
+  
+  def getStatisticsDumpFolderFileName(opts: AIOptions) : String ={
+    opts.statsDirName + File.separator + getStatisticsDumpFileName(opts)
+  }
+  
+  def getReportDumpFolderFileName(opts: AIOptions) : String = {
+    opts.permReportsDirName + File.separator + getReportName(opts)
+  }
+  
+  def getHeatDumpFolderFileName(opts: AIOptions) : String = {
+     opts.permReportsDirName + File.separator + getHeatReportName(opts)
+  }
+  
+  def getSecurityDumpFolderFileName(opts: AIOptions) : String = {
+     opts.permReportsDirName + File.separator + getSecurityReportName(opts)
+  }
+  
+  // some utils to play
+  def getStaticResultLinks(k: Option[Int],
+    gcO: Option[String],
+    doStateCutOff: Option[String],
+    stateCutoff: Int,
+    doTimeCutoff: Option[String],
+    timeCutoff: Int,
+   // verbose: Option[String],
+    filePath: String, 
+    doRegex:Option[String],
+    regexStr: String,
+    doCheckList:Option[String],
+    pl: PropertyCheckList
+     /*fs:String,
+     loc:String,
+      pic:String,
+       dev:String,
+        ntw:String*/) : List[String] = {
+    
+     val lstParams = PlayHelper.parseParameters(k, gcO, doStateCutOff, stateCutoff, doTimeCutoff, timeCutoff, filePath,doRegex, regexStr, doCheckList,
+         pl)
+         //fs,loc,pic,dev,ntw)
+     
+  
+      val lst = filePath.split("/").toList
+      val plen = lst.length
+      
+     val apkProjDir = filePath.split("\\.apk").toList.head 
+   	var graphDirName: String = apkProjDir +  File.separator +  "graphs"
+   	var statsDirName: String = apkProjDir +  File.separator +  "statistics"
+   	var reportDirName : String= apkProjDir +  File.separator +  "reports"
+       val prefix = "graph-"
+    val arity =lstParams(0)
+    val gc_lra = if (lstParams(1) == "true") "-gc-lra" else ""
+      val svgfilePath = prefix + arity + "-pdcfa" + gc_lra + ".svg"
+   
+    val statfilePath = "stat-" + arity + "-pdcfa" + gc_lra + ".txt"
+    
+    val permReportFilePath = "report-" + arity + "-pdcfa" + gc_lra + "-least-permission" + ".txt"
+    
+    val heatMapReportFilePath = "report-" + arity + "-pdcfa" + gc_lra + "-heat-map" + ".html"
+     
+    val securityMapFilePath = "report-" + arity + "-pdcfa" + gc_lra + "-security" + ".html"
+    
+    val svgLink = graphDirName + File.separator + svgfilePath
+    val statLink = statsDirName + File.separator + statfilePath
+    val permReportPath = reportDirName +  File.separator + permReportFilePath
+    val heatMapPath = reportDirName + File.separator + heatMapReportFilePath
+    val secuPath = reportDirName + File.separator + securityMapFilePath
+    
+    println("*******" +statfilePath) 
+     println("&&&&&&" + svgLink)
+    List(statLink, permReportPath, secuPath , heatMapPath, svgLink)
+    
+  }
+   def addAssetsToPath (str: String) : String = {
+       val noPublic = str.split("/").toList.drop(2).foldLeft("")((res, s) => {res + s + "/"})
+       val noPublicSub = noPublic.substring(0, noPublic.length-1)
+      File.separator + "assets" + File.separator + noPublicSub
+    }
+   
+  /* def constrJsonResult(k: Option[Int],
+    gcO: Option[String],
+    doStateCutOff: Option[String],
+    stateCutoff: Int,
+    doTimeCutoff: Option[String],
+    timeCutoff: Int,
+    //verbose: Option[String],
+    filePath: String,
+    doRegex: Option[String],
+    regexStr: String,
+    doCheckList:Option[String],
+    pl: PropertyCheckList
+     fs:String,
+     loc:String,
+      pic:String,
+       dev:String,
+        ntw:String) : JsValue = {
+    
+     println("filePath from ::::::::::::::::::", filePath)
+     val resultList = getStaticResultLinks(k, gcO, doStateCutOff, stateCutoff, doTimeCutoff, timeCutoff, filePath, doRegex, regexStr,doCheckList, 
+         pl)
+         //fs,loc,pic,dev,ntw)
+    
+     println("%%%%%%%%%%%%%%%%%% result list",resultList)
+    	 val statsP = addAssetsToPath(resultList(0))
+    	   val permReportP = addAssetsToPath(resultList(1))
+    	 val securityP =  addAssetsToPath(resultList(2)) 
+    	 
+    	 val heatMapReport = addAssetsToPath(resultList(3))
+    	 val svgP = addAssetsToPath(resultList(4)) 
+    	 
+     
+    	 println("statics Paths Server: ", statsP)
+    	 println("graph Paths Server:", svgP)
+    	  println("perm report Paths Server3453534534:", permReportP)
+     
+    	 Json.toJson(
+    			 Seq(Json.toJson(
+    					 Map("link"->Json.toJson(statsP),  "type" -> Json.toJson("Analysis Statistics")) 
+    			 	),
+    			 	Json.toJson(
+    			 			Map("link"->Json.toJson(permReportP),  "type" -> Json.toJson(" Permission Report")) 
+    			 	)
+    			 	,
+    			 	Json.toJson(
+    			 			Map("link"->Json.toJson(securityP),  "type" -> Json.toJson(" Security Report in text")) 
+    			 	),
+    			 	Json.toJson(
+    			 			Map("link"->Json.toJson(heatMapReport),  "type" -> Json.toJson(" Heat Map")) 
+    			 	), 
+    			 	Json.toJson(
+    			 			Map("link"->Json.toJson(svgP),  "type" -> Json.toJson("Analysis State Graph")) 
+    			 	)
+    			 )
+    		 )
+   
+  }*/
+   
+   def parseProperties(str: String) : Set[String] ={
+     val l = str.length()
+     if(l!=0){
+        val subStr = str.substring(1,l)
+        if(subStr.isEmpty()){
+          Set[String]()
+        }else{
+           subStr.split("\\|").toList.toSet
+        }
+     }
+     else Set[String]()
+    
+   }
+   case class HeatPair(cnt : Int) {
+     var percentil = 0.0
+   }
+   
+  
+   
+      
+  
+  
+ 
+
    
     
    

@@ -9,6 +9,7 @@ import org.ucombinator.dalvik.syntax.FieldAssignStmt
 import org.ucombinator.dalvik.syntax.NonStaticFieldExp
 import org.ucombinator.dalvik.syntax.AssignAExpStmt
 import org.ucombinator.dalvik.syntax.AutomicOpExp
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 
 trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachinary with StmtForEqual {
@@ -17,7 +18,7 @@ trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachina
      
     val  addrsOfStateFP = c match {
        case ErrorState(_,_) | FinalState() => Set.empty
-       case ps@PartialState(StForEqual(stmt, nxss, lss, clsP, methP), curFP, store, kptr, t) => {
+       case ps@PartialState(StForEqual(stmt, nxss, lss, clsP, methP), curFP, store, pst, kptr, t) => {
          //getAddrsofCurFP(curFP, store)
          //turn to the following!!
          val curFPAddrs = getAddrsofCurFP(curFP, store)
@@ -32,7 +33,7 @@ trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachina
  
     val stackAddrs : Set[Addr] = c match {
        case ErrorState(_,_) | FinalState() => Set.empty
-       case PartialState(stmt, curFP, store, kptr, t) => {
+       case PartialState(stmt, curFP, store, ps, kptr, t) => {
           frames.foldLeft(Set[Addr]())((res: Set[Addr], f: Frame) => {
             val sf = getRootAddrsFromStack(f,store)
           
@@ -45,7 +46,7 @@ trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachina
    
     def filterLiveRegAddrs(st: StForEqual, addrs: Set[Addr]) : Set[Addr] = {
    //   val stStr = CommonUtils.constrDistinctStatementStr(st)
-      val liveRegs = Stmt.liveMap(st )
+      val liveRegs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap(st )
       
      /* st match {
         case StForEqual(fs@FieldAssignStmt(NonStaticFieldExp(_, _, _), rhExp, nxt, ls ,_,_), _, _,_,_) => {

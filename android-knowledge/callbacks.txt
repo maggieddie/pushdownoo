@@ -45,8 +45,6 @@ onProgressUpdate
 onPostExecute
 
 loadInBackground
-access$000
-access$1
 cancel
 doInBackground
 execute
@@ -62,7 +60,7 @@ onStartInputView
          
 
 onLongPress
-onKey
+
 
 preLoad       
 
@@ -355,7 +353,6 @@ onTouchEvent
 onSizeChanged
 
 onLayout
-run
 onAccountsUpdated
 
 delete
@@ -405,4 +402,6 @@ onDisplayHint
 onDragEvent
 onDraw
 onDrawScrollBars
+
+onHandleIntent
 

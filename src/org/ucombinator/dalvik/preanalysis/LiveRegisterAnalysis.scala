@@ -7,6 +7,7 @@ import scala.collection.mutable.{Map => MMap}
 import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.dalvik.cfa.cesk.StmtForEqual
 import org.ucombinator.dalvik.syntax.StmtNil
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
 
@@ -72,8 +73,8 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
      //  and so the sucessors' live variable is empty set.
       case StmtNil => {
       
-        val stStr = buildStForEqual(curS) // CommonUtils.constrDistinctStatementStr(st)
-        	 	val res = workMap(stStr)
+       // val stStr = buildStForEqual(curS) // CommonUtils.constrDistinctStatementStr(st)
+        	 	//val res = workMap(stStr) // 
         	 //res
          Set()
       }
@@ -82,6 +83,9 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
        // println ("suLLLL: ", curS)
         	 	val st = curS.next//allStmts(indexOfCur+1)
         	 //	println("the next in the normal case: ", st)
+        	 	
+        	 	if(st==StmtNil) Set()
+        	 	else {
         	 	val stStr = buildStForEqual(st) // CommonUtils.constrDistinctStatementStr(st)
        
         	 	//workMap.foreach(println)
@@ -89,6 +93,7 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
         //	 	println("-----")
         	 	//println("the returning succ is: " , res)
         	 	res
+        	 	}
          
       }
     }
@@ -139,6 +144,8 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
   def runLRA(linkedHeadSt: Stmt ) :   (String, Stmt) = {
     
     val stLinkedList = CommonUtils.flattenLinkedStmt(List())(linkedHeadSt)
+     
+    
     val initialLRAMap = initLiveSet(stLinkedList)
     
     val fixPoint = iterativeLRA(stLinkedList, initialLRAMap)
@@ -152,9 +159,7 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
   def runLRAOnListSts(lst: List[Stmt]) {
     val initialLRAMap = initLiveSet(lst)
    
-    val fixPoint = iterativeLRA(lst, initialLRAMap)
-    
-    
+    val fixPoint = iterativeLRA(lst, initialLRAMap) 
     Stmt.extendLiveMap( fixPoint)
     
   }
@@ -210,6 +215,7 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
   }
   
 
+  // for each chained entry points, we flatten and then run lra
   def runLRAEntryBodies (entrySt: Stmt )   :   (String, Stmt) = {
     
     val stLinkedList = CommonUtils.flattenLinkedStmt(List())(entrySt)
@@ -276,7 +282,7 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
    */
   
   def runLRAOnAllMethods {
-     DalvikClassDef.classTable.foreach {
+     Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foreach {
        case (k, classDef) => {
          val methList = classDef.methods
          val nonEntryMethods = methList filter (! _.isEntryPoint)

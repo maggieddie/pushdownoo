@@ -4,6 +4,8 @@ import org.ucombinator.utils.{CommonUtils, Debug}
 import org.ucombinator.utils.StringUtils
 import scala.util.Random
 import tools.nsc.io.File
+import org.ucombinator.utils.AIOptions
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 
 
@@ -20,7 +22,7 @@ trait DalvikVMRelated {
     var lineNumber = ln
     var clsPath = clsP
     var methPath = methP
-    override def toString = "EntryPointInvokeStmt: " +  entr.methodPath +"("+ objRegStr + " " + entr.argTypes + ")" 
+    override def toString = "EntryPointInvokeStmt: " +  entr.methodPath +"("+ objRegStr + " " + entr.argTypes + ")" +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
     
     //
     def refRegsStrSet : Set[String] = {
@@ -34,6 +36,9 @@ trait DalvikVMRelated {
     def defRegsStrSet: Set[String] = {
       Set()
     }
+    
+    def sourceOrSink = 0
+    def taintKind = Set[String]()
   }
   
   case class InitEntryPointStmt(methodPath: String, argsTypes: List[String], body: Stmt, regsNum: BigInt,nxt: Stmt, ln: Stmt, clsP: String, methP: String) extends Stmt {
@@ -61,49 +66,78 @@ trait DalvikVMRelated {
       val regsStrs = CommonUtils.getAllRegsStrFromRegNum(regsNum)
        regsStrs.toSet
     }
+    
+     def sourceOrSink = 0
+     def taintKind = Set[String]()
   } 
   
-  private def parseInAndroidKnowledge : (List[String], List[String]) = {
+  
+   def getDeclaredPerms(opts: AIOptions)  : List[String] = {
+	    val manifestFilePath = opts.apkProjDir + File.separator + "man_perms.txt" 
+     
+   
+     val permLines =  File(manifestFilePath).lines.toList.filter(_.trim() !=  "")
+     val deduplicateClsLines = permLines.toSet.toList 
+	   deduplicateClsLines
+	 }
+  
+  /**
+   * will get the entry points from:
+   * 1. from the implemented and overritten methods
+   * 2. from the ones parsed from layout xml files
+   */ 
+  
+  private def parseInAndroidKnowledge(opts: AIOptions) : (List[String], List[String], List[String]) = {
      val classPath  =  "android-knowledge" + File.separator + "classes.txt"
      val entryMethPath = "android-knowledge" + File.separator + "callbacks.txt"
+     val xmlMethNames = opts.apkProjDir + File.separator + "handlers.txt" 
      
+     println("the fxml d[ath: " +xmlMethNames)
      val classLines =  File(classPath).lines.toList.filter(_ != "")
      val deduplicateClsLines = classLines.toSet.toList
      val entryMethLines = File(entryMethPath).lines.toList.filter(_ != "")
      val dedupMethLines = entryMethLines.toSet.toList
-     (deduplicateClsLines, entryMethLines)
-  }
-  
-  private def prioritizeAndroidEntries(extractedEns: List[(DalvikClassDef, List[EntryPoint]) ])
-  :List[(DalvikClassDef, List[EntryPoint])] =
-  {
-     val nonAndoridEns =
-       extractedEns filter {
-      case (clsDef, ens) => {
-        val className = clsDef.className
-        val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
-        //println("")
-        superClassStrs.contains("java/lang/Runnable")
-      }
-    }
-     val filteredAndroids = extractedEns -- nonAndoridEns
-     filteredAndroids ++ nonAndoridEns
-  }
-  
-  
-  private  def extractRawEntryPoints : List[(DalvikClassDef, List[EntryPoint])]  = {
-   
-    val (classLines, entries) = parseInAndroidKnowledge
+     
+     //val f = "./testapks" + File.separator + "Kittey"  +  File.separator + "Kittey.apk"  
+     
+     val handlerEntryFile = File(xmlMethNames)
     
-    DalvikClassDef.classTable.foldLeft(List[(DalvikClassDef, List[EntryPoint])]()) {
+    // if(handlerEntryFile.exists){
+    //   println("the handler file exisits")
+       val deduplicateHandlerEntries = handlerEntryFile.lines.toList.filter(_ != "").toSet.toList
+       println("FOund entries from xmml file"+ deduplicateHandlerEntries)
+       
+     
+      Thread.currentThread().asInstanceOf[AnalysisHelperThread].declaredPerms = getDeclaredPerms(opts)
+      
+       (deduplicateClsLines, entryMethLines, deduplicateHandlerEntries)
+  }
+  
+  /**
+   * retutrns the a list of a tuple of class def and the its entry  points. 
+   * 
+   * for the sensitive classes, then filter out al lthe interited and implemented methods
+   * 
+   * for now we think the entries points specified in layout xml file is also in those entry points component classes
+   */
+  private  def extractRawEntryPoints(opts: AIOptions) : List[(DalvikClassDef, List[EntryPoint])]  = {
+   
+    val (classLines, entries, xmlEntries) = parseInAndroidKnowledge(opts)
+     
+    
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[(DalvikClassDef, List[EntryPoint])]()) {
       case (res, (className, clsDef) ) => {
         
+        val clsName2 = if(className.contains("$")) className.split("\\$").toList.head
+        else className 
+        
+        if(classLines.toSet.contains(clsName2)  || clsName2.startsWith("android/support/v4")) { // thsi says that the class is the based  
+          res
+        }else{
         val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
         val compRes = classLines.toSet intersect superClassStrs.toSet
-       
        if(! compRes.isEmpty) { 
-         // this is the framework's subclass
-         // we are going to filter any override methods as entries
+         
          
          val methDefList = clsDef.methods
          val methNameANdDefs = methDefList map ( (mdef) => {
@@ -112,11 +146,19 @@ trait DalvikVMRelated {
            (methName, mdef)
          })
         
+        
+         // we are going to filter any override methods as entries
          val filteredMethNameAndMDefs = methNameANdDefs filter {
            case (mn, mdef) => {
-             val res = entries.contains(mn) && 
+             val  relativeMethName =  StringUtils.getMethNameFromMethPath(mn)
+             
+             
+             val res = (entries.contains(mn) && 
              (!mdef.attrs.contains("abstract")) &&
-             (!mdef.attrs.contains("private")) 
+             (!mdef.attrs.contains("private")) ) || 
+             (xmlEntries.contains(relativeMethName) && 
+             (!mdef.attrs.contains("abstract")) &&
+             (!mdef.attrs.contains("private")) ) 
              
              // here is a convinient to set the entry point flag
              if(res) mdef.isEntryPoint = true else false
@@ -134,6 +176,7 @@ trait DalvikVMRelated {
          (clsDef, entryPointList) :: res
         
        } else res
+        }
       }
     }
   }
@@ -180,6 +223,8 @@ trait DalvikVMRelated {
    ens.map((en) => {EntryPointInvokeStmt(en, objRegStr, StmtNil, StmtNil, clP, en.methodPath)})
   }
   
+  //found the init with the maixnum number of arguments
+  // return it and the rest initentrypoints
   private def buildInitEntries(initDefs: List[MethodDef], clsPath:String) : (Stmt, List[Stmt]) = {
       val (maxInit, restI ) = findMaxArgsInit(initDefs)
        val methP = ""
@@ -217,20 +262,77 @@ trait DalvikVMRelated {
       })
 
       val id = initDefs(idex)
-      val restt = initDefs - id
+      val restt = initDefs diff List(id)
       (id, restt)
     }
   }
   
-  
+  // return the rest of the init entry ppints and the chained togethered init paths with its entrypoints
+  //  linked them together
   private def allInitWithfollowingEntries (initDefs: List[MethodDef], ens: List[EntryPoint], clsP:String) : (List[Stmt], List[Stmt]) = {
     val (hdInit, restInits) = buildInitEntries(initDefs,clsP)
     //randomly get one init and intialize the reg
     val initD = hdInit.asInstanceOf[InitEntryPointStmt]
     val thisRegExp = CommonUtils.getThisRegStr(initD.regsNum,initD.argsTypes.length)
      val entryStmts = buildEntryPointInvokeStmts(thisRegExp,ens, clsP)
-    (restInits, hdInit :: entryStmts)
+       val linkHeadO= 
+     CommonUtils.linkedListWrapper(List())(hdInit :: entryStmts) 
+     
+     val initPaths = 
+     linkHeadO match {
+      case Some(hi) => List(hi)
+      case None => List()
+    }
+     	 (restInits, initPaths)
   }
+  
+  
+  private def copeInitEntryStmt(ie: InitEntryPointStmt): InitEntryPointStmt = {
+      InitEntryPointStmt(ie.methodPath , ie.argsTypes , ie.body , ie.regsNum , ie.nxt , ie.ln , ie.clsP , ie.methP)
+  }
+  //eachInitEntryPairs, inddividual inits
+    private def allInitAndWithfollowingInitEntries (initDefs: List[MethodDef], ens: List[EntryPoint], clsP:String) : (List[Stmt], List[Stmt]) = {
+    val (hdInit, restInits) = buildInitEntries(initDefs,clsP)
+    //randomly get one init and intialize the reg
+    val initD = hdInit.asInstanceOf[InitEntryPointStmt]
+    val thisRegExp = CommonUtils.getThisRegStr(initD.regsNum,initD.argsTypes.length)
+     val entryStmts = buildEntryPointInvokeStmts(thisRegExp,ens, clsP)
+      
+   
+   
+   // init-entry, inii-tentry
+   val initCopies = entryStmts.map((en)=> {copeInitEntryStmt(initD)})
+   val initEnPairs = initCopies.zip(entryStmts)
+    /**
+     * just chain every init with single entry
+     * and then get all the init entry chian
+     */
+    val eachInitEntryPairs= 
+    initEnPairs.foldLeft(List[Stmt]())((res, inen) => {
+   
+       val linkHeadO= 
+    	   CommonUtils.linkedListWrapper(List())(inen._1 :: List(inen._2))  
+      
+     linkHeadO match {
+      case Some(hi) => res ::: List(hi)
+      case None => res
+      
+    }
+    }) 
+    
+       /* val linkHeadO= 
+    	   CommonUtils.linkedListWrapper(List())(initD ::  entryStmts)  
+      
+      val eachInitEntryPairs = 
+    
+      
+     linkHeadO match {
+      case Some(hi) =>  List(hi)
+      case None => List()
+    }*/
+     	 (eachInitEntryPairs, restInits)
+  }
+  
   
   /**
    * This can make you dead slow
@@ -257,7 +359,7 @@ trait DalvikVMRelated {
     val anyONCreates = ens.filter((en) => {
       en match {
         case esi@EntryPoint(methodPath ,  argTypes , body , regsNum  ) => {
-          println(methodPath)
+          
           esi.methodPath.contains("onCreate")
         }
         case _ => false
@@ -266,22 +368,22 @@ trait DalvikVMRelated {
     })
    
     val exactOnCreates = anyONCreates.filter(_.methodPath.endsWith("onCreate"))
-    val notExactOnCretae = anyONCreates -- exactOnCreates
-    val restElems = ens -- anyONCreates  
+    val notExactOnCretae = anyONCreates  diff exactOnCreates 
+    val restElems = ens  diff anyONCreates 
     exactOnCreates ::: notExactOnCretae ::: restElems
    
   }
   
-  private def getEntryPointStmts: List[(List[Stmt], List[Stmt])] ={
-    val listEns2 = extractRawEntryPoints  // getRawEntryPoints
-   val listEns = prioritizeAndroidEntries(listEns2)
-     println("-----")
-     println("Prioritized Entryis")
-     listEns.foreach(println)
+  private def getEntryPointStmts(opts: AIOptions): List[(List[Stmt], List[Stmt])] ={
+    
+    val listEns = extractRawEntryPoints(opts)  // getRawEntryPoints
+    
+     
     if(listEns.isEmpty){
       Debug.prntDebugInfo("No cls + entry points found ", "")
       List()
-    }else{
+    }else{ 
+      
      listEns.foldLeft(List[(List[Stmt], List[Stmt])]())((res, clsEns)=>{
        val (clsDef, ens) = clsEns
        if(ens.isEmpty){
@@ -290,16 +392,20 @@ trait DalvikVMRelated {
        }
        else {
          val initDefs = clsDef.getInitMethods
+         //println("initDefs:sdfdsfds=======")
+         //initDefs.foreach(println)
          if(initDefs.isEmpty) res 
          else{
          // here the init is also condiered part of entry points
          // so we set the flag in the entry init
          initDefs.foreach(_.isEntryPoint = true)
-        // println("start to order")
          val orderedEntries = orderEntries(ens)
-         val allInitPaths = allInitWithfollowingEntries(initDefs, orderedEntries, clsDef.clsPath)
-      
-         Debug.prntDebugInfo("the current class's init path is",allInitPaths )
+         orderedEntries.foreach(println)
+         val allInitPaths = allInitAndWithfollowingInitEntries(initDefs, orderedEntries, clsDef.clsPath)
+         // getOneExecutionInitEntryPath(initDefs, ens)
+        
+      //   val linkHeadO= 
+        //	 CommonUtils.linkedListWrapper(List())(allInitPaths) 
          res ::: List(allInitPaths)
        }
        }
@@ -307,15 +413,18 @@ trait DalvikVMRelated {
     }
   }
   
-  def getLinkedEntryPointHead: (Stmt, List[Stmt]) = {
-    val  entryPointStmts = getEntryPointStmts
+  // returns a list of 
+  // init entry path and the rest inits 
+  def getLinkedEntryPointHead(opts: AIOptions): (List[Stmt], List[Stmt]) = {
+    val  entryPointStmts = getEntryPointStmts(opts)
     
     val allIndividualInits = entryPointStmts.flatten{
-      case (inits, initEntrySts) => {
+      case (initEntrySts, inits) => {
         inits
       }
     }
     
+    // chained the initentry pointsstatemetn and its body statements
     val allInitsWithItsBodies = allIndividualInits.flatten {
       case ies@InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
         val inbd = ies.body
@@ -324,11 +433,21 @@ trait DalvikVMRelated {
       }
     }
     
+    // initEntries inlcude the initentrystmt and the entrypoints
+    // they are going to be as the starting point to be explored.
     val initEntries = entryPointStmts.flatten{
-      case (inits, initEntrySts) => initEntrySts
-    }
+      case (initEntrySts, inits ) => initEntrySts
+    } 
     
-    val linkHeadO= 
+  /*  println("To explore the entry:in get links INit----- " + initEntries.length )
+    initEntries.foreach( (entryStmt) => {
+     CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println)})
+    */
+     // here you are not going to link all the init entries.
+  //  (initEntries, allIndividualInits) 
+     (initEntries, allIndividualInits) 
+    
+   /* val linkHeadO= 
      CommonUtils.linkedListWrapper(List())(initEntries) 
     val linkHead = 
      linkHeadO match {
@@ -337,7 +456,7 @@ trait DalvikVMRelated {
     }
      val flatlist = CommonUtils.flattenLinkedStmt(List())(linkHead)
   
-   (linkHead, allInitsWithItsBodies)
+   (linkHead, allInitsWithItsBodies)*/
   }
   
  

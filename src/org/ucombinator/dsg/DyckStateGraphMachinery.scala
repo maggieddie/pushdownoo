@@ -6,6 +6,7 @@ import org.ucombinator.dalvik.syntax.Stmt
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.{StringUtils, AIOptions, FancyOutput}
 import tools.nsc.io.Directory
+import org.ucombinator.playhelpers.AnalysisHelperThread
 
 
 trait DyckStateGraphMachinery extends StateSpace{ 
@@ -24,9 +25,10 @@ trait DyckStateGraphMachinery extends StateSpace{
 
  // type SharedStore = Map[Addr, Set[AbsValue]]
  type SharedStore = Addr :-> Set[Value]
+  type PSharedStore = Addr :-> Set[Value]
  // def initState(e: Stmt, methP: String): (ControlState, Kont)
 
-  def step(q: ControlState, k: Kont, frames: Kont, store: SharedStore): Set[(StackAction[Frame], ControlState, SharedStore)]
+  def step(q: ControlState, k: Kont, frames: Kont, store: SharedStore, pStore: PSharedStore): Set[(StackAction[Frame], ControlState, SharedStore, PSharedStore)]
 
   // the following four, not sure about the real uage
   def mustHaveOnlyEmptyContinuation(s: ControlState): Boolean
@@ -58,22 +60,74 @@ trait DyckStateGraphMachinery extends StateSpace{
    */
   sealed case class DSG(nodes: Set[S], edges: Edges, s0: S)
 
-  /**
-   * Compute the leas-fixed point by Kleene iteration 
-   */
+  private def noEdgesExplored : Int = {
+   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges
+ }
   
+  private def timePassed(cutTime: Long)= {
+    cutTime - Thread.currentThread().asInstanceOf[AnalysisHelperThread].curThreadStartTime
+  }
+ 
+ private def noStatesExplored : Int = {
+   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates
+ }
+  
+ 
+ def evaluateDSG(e: Stmt, methP: String, store: Store, pStore: PropertyStore) : (DSG, SharedStore, PSharedStore) = {
+    val initial = initState(e, methP, store, pStore)
+   val initS = initial._1
+    //compute the LFP recursively: trap
+    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore, pStore:PSharedStore): 
+    (DSG, NewDSGHelper, SharedStore, PSharedStore) = {
+      
+       val curTime = (new java.util.Date()).getTime
+      
+     // System.out.println("\n The DSG graph: ")
+       // dumpDSGGraph2(next)
+      if (!shouldProceed) {
+        (next, helper,store, pStore)
+      }else if ((interrupt && (noEdgesExplored > interruptAfter || next.edges.size > interruptAfter)) || 
+          (timeInterrupt && timePassed(curTime) > interruptAfterTime) ){ //next.edges.size > interruptAfter){
+        println("no of edges explored: " + noEdgesExplored)
+         (next, helper, store, pStore) //ce
+      } else {
+        val (next2, helper2, goAgain, newToVisit, newStore, newPStore) 
+        = iterateDSG(next,helper, statesToVisit, store, pStore)
+        eval(next2, helper2, goAgain, newToVisit, newStore,newPStore)
+      }
+    }
+   
+     val firstDSG = DSG(Set(initS), Set(), initS)
+    val firstHelper = new NewDSGHelper
+    val (nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore) = iterateDSG(firstDSG, firstHelper, Set(initS), store, pStore)//Map.empty)
+    
+
+
+    val (resultDSG, _, newStore, newPStore) = eval(nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore)
+
+    (resultDSG, newStore, newPStore)
+ }
+ 
+  
+  /**
+   * Compute the least-fixed point by Kleene iteration 
+   *//* 
   def evaluateDSG(e: Stmt, methP: String) : (DSG, SharedStore) ={
     val initial = initState(e, methP)
     val initS = initial._1
-    
+  
     //compute the LFP recursively: trap
-    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore):
+    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore): 
     (DSG, NewDSGHelper, SharedStore) = {
+      
+        incNoEdges(next.edges.size)
+        incNoStates(next.nodes.size)
+        
      // System.out.println("\n The DSG graph: ")
        // dumpDSGGraph2(next)
       if (!shouldProceed) {
         (next, helper,store)
-      }else if (interrupt && next.edges.size > interruptAfter){
+      }else if (interrupt && noEdgesExplored > interruptAfter){ //next.edges.size > interruptAfter){
          (next, helper, store) //ce
       } else {
         val (next2, helper2, goAgain, newToVisit, newStore) 
@@ -90,24 +144,43 @@ trait DyckStateGraphMachinery extends StateSpace{
     val (resultDSG, _, newStore) = eval(nextDSG, nextHelper, hasNew, toVisit, firstStore)
 
     (resultDSG, newStore)
-  }
+  }*/
+ 
+ def unzip4Components(res: Set[(S, Edge, SharedStore, PSharedStore)] ): (Set[S], Set[Edge], Set[SharedStore], Set[PSharedStore]) = {
+   var states = Set[S]()
+   var edges = Set[Edge]()
+   var sharedStore = Set[SharedStore]()
+   var pSharedStore = Set[PSharedStore]()
+   
+   res.foreach((e) => {
+     val (s, edge, ss, pss) = e
+     states = states ++ Set(s)
+     edges = edges ++ Set(edge)
+     sharedStore = sharedStore ++ Set(ss)
+     pSharedStore = pSharedStore ++ Set(pss)
+   })
+   
+   (states, edges, sharedStore, pSharedStore) 
+   
+ }
   
    /**
    * Monotonic DSG iteration function
    * denoted as 'f' in the paper
    */
-  private def iterateDSG(dsg: DSG, helper: NewDSGHelper, toVisit: Set[S], store: SharedStore): (DSG, NewDSGHelper, Boolean, Set[S], SharedStore) = dsg match {
+  private def iterateDSG(dsg: DSG, helper: NewDSGHelper, toVisit: Set[S], store: SharedStore, pStore: PSharedStore): (DSG, NewDSGHelper, Boolean, Set[S], SharedStore, PSharedStore) = dsg match {
     case DSG(ss, ee, s0) => {
 
-      val newNodesEdgesStores: Set[(S, Edge, SharedStore)] = for {
+      val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = for {
         s <- toVisit
         
         kont <- helper.getRequiredKont(s, s0)
         possibleFrames = helper.getPossibleStackFrames(s)
-        (g, s1, littleStore) <- step(s, kont, possibleFrames, store)
-      } yield (s1, Edge(s, g, s1), littleStore)
+        (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore)
+      } yield (s1, Edge(s, g, s1), littleStore, littlePStore)
 
-      val (obtainedStates, obtainedEdges, obtainedStores) = newNodesEdgesStores.unzip3
+       
+      val (obtainedStates, obtainedEdges, obtainedStores, obtainedPStores) = unzip4Components(newNodesEdgesStores)
 
       // Transform switch edges to pairs of push/pop edges
       val noSwitchesEdges: Edges = if (canHaveSwitchFrames) processSwitchEdges(obtainedEdges) else obtainedEdges
@@ -125,9 +198,14 @@ trait DyckStateGraphMachinery extends StateSpace{
      
       val newStore: SharedStore = obtainedStores.foldLeft(store)(_ ++ _)
       
+      val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ ++ _)
+      
       // global widening
       val wideneningStore : SharedStore = getMonovariantStore(filterRegisterStates(ss))
       val joinedNewStore = mergeStores(newStore, List(wideneningStore))
+      
+        val wideneningPStore : PSharedStore = getMonovariantPStore(filterRegisterStates(ss))
+      val joinedNewPStore = mergeStores(newPStore, List(wideneningPStore))
      
       val newSEpsNext = newStates.flatMap(s => helper.getEpsNextStates(s))
       //println("NEW elspang "+ newSEpsNext.toList.length)
@@ -145,15 +223,20 @@ trait DyckStateGraphMachinery extends StateSpace{
       // E' = ...
       val ee1 = (ee ++ newEdges)
       
-      val cond1 = !newEdges.subsetOf(ee)
+      val cond1 = !newEdges.isEmpty //!newEdges.subsetOf(ee) 
     
-      val cond2 = (store != newStore)
+      val cond2 = (store !=   newStore)
+      
+      val cond3 = ! newToVisit.subsetOf(ss)
+      
+    //  val cond3  = (pStore !=  newPStore)
 
-      val shouldProceed = cond1 || cond2
+      val shouldProceed = cond1 || cond2 || cond3
 
-      println(progressPrefix + " " + ss1.size + "  " + ee1.size + " " + newSEpsNext.toList.length +" \n")
-     
-      (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, joinedNewStore )//newStore)
+     // println(progressPrefix + " " + ss1.size + "  " + ee1.size + " " + newSEpsNext.toList.length +" \n")
+      // println(progressPrefix + " " + noStatesExplored  + "  " + noEdgesExplored   + " " +
+      println( noEdgesExplored + " " + newSEpsNext.toList.length + " newV: "+ newToVisit.toList.length + " \n")
+      (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore )//newStore)
     }
   }
       
@@ -175,6 +258,7 @@ trait DyckStateGraphMachinery extends StateSpace{
      */
     private val predForPushFrame: MMap[(S, Frame), Nodes] = new MHashMap
     private val nonEpsPreds: MMap[S, Nodes] = new MHashMap
+    private val possibleStackFrames: MMap[S, Set[Frame]] = new MHashMap
 
     ////////////////// Public methods //////////////////
 
@@ -231,7 +315,8 @@ trait DyckStateGraphMachinery extends StateSpace{
      * Compute recursively all possible frames that can be
      * somewhere in the stack for a state 's'
      */
-    def getPossibleStackFrames(s: S): Kont = {
+    def getPossibleStackFrames(s: S): Kont = gets(possibleStackFrames, s).toList
+    /*{
       if (!shouldGC) {
         // We don't deed it if there is no --gc flag
         return Nil
@@ -265,7 +350,7 @@ trait DyckStateGraphMachinery extends StateSpace{
 
       iterate(toProcess)
       frames.toList
-    }
+    }*/
 
     def getEpsNextStates(s: S): Nodes = gets(epsSuccs, s)
 
@@ -273,6 +358,17 @@ trait DyckStateGraphMachinery extends StateSpace{
 
     private def getEpsPredStates(s: S): Nodes = gets(epsPreds, s)
 
+    def updatePossibleStackFrames(s: S) {
+      val possibleAsTop = gets(topFrames, s)
+      puts(possibleStackFrames, s, possibleAsTop)
+      // for all non-eps predecessors of s
+      for (spred <- gets(nonEpsPreds, s) ++ gets(epsPreds, s)) {
+        // see what are their possible stack-frames
+        val newPossibleStackFrames = gets(possibleStackFrames, spred)
+        // add them to possible stack frames of s
+        puts(possibleStackFrames, s, newPossibleStackFrames)
+      }
+    }
 
     /**
      * "Equalize" eps-predecessors & eps-successors
@@ -296,6 +392,9 @@ trait DyckStateGraphMachinery extends StateSpace{
           val predForPushForS1 = gets(predForPushFrame, (s1, f))
           puts(predForPushFrame, (s, f), predForPushForS1)
         }
+        
+        // Update introspective history for GC
+        updatePossibleStackFrames(s)
       }
     }
 
@@ -308,6 +407,7 @@ trait DyckStateGraphMachinery extends StateSpace{
         puts(topFrames, s, Set(f))
         puts(predForPushFrame, (s, f), Set(s1))
         puts(nonEpsPreds, s, Set(s1))
+        updatePossibleStackFrames(s)
       }
     }
 
@@ -401,11 +501,11 @@ trait DyckStateGraphMachinery extends StateSpace{
   
   import org.ucombinator.utils.StringUtils._
 
-  def dumpDSGGraph2( resultDSG: DSG): String = {
+  def dumpDSGGraph2( resultDSG: DSG ): String = {
 
     import java.io._
 
-    val graphs = new Directory(new File(graphsDirName))
+    val graphs = new Directory(new File( graphsDirName))
     if (!graphs.exists) {
       graphs.createDirectory(force = true)
       graphs.createFile(failIfExists = false)

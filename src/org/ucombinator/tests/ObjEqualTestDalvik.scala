@@ -63,7 +63,7 @@ object ObjEqualTest {
   
   }
   
-  case class KontAddr extends Addr
+  case class KontAddr() extends Addr
   case class RegAddr(fp: FramePointer, offs: String) extends OffsetAddr {
     def pointer = fp
     def offset = offs
