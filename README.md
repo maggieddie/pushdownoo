@@ -23,7 +23,9 @@ For converting to svg dyck state graph.
 	
 
 ## Run
-
+Still in `pdafordalvik` folder
+	
+	
 
 	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis [--k <number>] [--gc] [--lra] [--interrupt-after <number-of-states>] [--interrupt-after-time <number of minutes>] path/to/your/filename.apk
 	
