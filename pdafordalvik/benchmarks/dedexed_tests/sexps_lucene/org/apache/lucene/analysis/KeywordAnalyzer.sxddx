@@ -1,0 +1,25 @@
+(class (attrs public ) org/apache/lucene/analysis/KeywordAnalyzer
+ (super org/apache/lucene/analysis/Analyzer)
+ (source "KeywordAnalyzer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/lucene/analysis/KeywordAnalyzer])
+  (line 25)
+  (invoke-direct {v0} org/apache/lucene/analysis/Analyzer/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) tokenStream([object java/lang/String] [object java/io/Reader] )[object org/apache/lucene/analysis/TokenStream]
+  (limit registers 4)
+  ; this: v1 ([object org/apache/lucene/analysis/KeywordAnalyzer])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/io/Reader])
+  (line 28)
+  (new-instance v0 org/apache/lucene/analysis/KeywordTokenizer)
+  (invoke-direct {v0 v3} org/apache/lucene/analysis/KeywordTokenizer/<init> [object java/io/Reader] )
+  (return-object v0)
+)
+
+)

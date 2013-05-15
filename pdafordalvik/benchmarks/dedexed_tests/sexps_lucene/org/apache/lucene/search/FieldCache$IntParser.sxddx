@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/lucene/search/FieldCache$IntParser
+ (super java/lang/Object)
+ (source "FieldCache.java")
+
+
+(method (attrs public abstract ) parseInt([object java/lang/String] )int
+)
+
+)

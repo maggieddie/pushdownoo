@@ -1,0 +1,31 @@
+(interface (attrs public abstract ) org/apache/lucene/search/ScoreDocComparator
+ (super java/lang/Object)
+ (source "ScoreDocComparator.java")
+
+ (field (attrs public static final ) INDEXORDER [object org/apache/lucene/search/ScoreDocComparator] )
+ (field (attrs public static final ) RELEVANCE [object org/apache/lucene/search/ScoreDocComparator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 32)
+  (new-instance v0 org/apache/lucene/search/ScoreDocComparator$1)
+  (invoke-direct {v0} org/apache/lucene/search/ScoreDocComparator$1/<init> )
+  (sput-object v0 org/apache/lucene/search/ScoreDocComparator.RELEVANCE [object org/apache/lucene/search/ScoreDocComparator])
+  (line 48)
+  (new-instance v0 org/apache/lucene/search/ScoreDocComparator$2)
+  (invoke-direct {v0} org/apache/lucene/search/ScoreDocComparator$2/<init> )
+  (sput-object v0 org/apache/lucene/search/ScoreDocComparator.INDEXORDER [object org/apache/lucene/search/ScoreDocComparator])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public abstract ) compare([object org/apache/lucene/search/ScoreDoc] [object org/apache/lucene/search/ScoreDoc] )int
+)
+
+(method (attrs public abstract ) sortType()int
+)
+
+(method (attrs public abstract ) sortValue([object org/apache/lucene/search/ScoreDoc] )[object java/lang/Comparable]
+)
+
+)

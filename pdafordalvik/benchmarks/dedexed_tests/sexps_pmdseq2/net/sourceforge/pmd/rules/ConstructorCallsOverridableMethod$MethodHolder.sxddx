@@ -1,0 +1,65 @@
+(class (attrs final ) net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder
+ (super java/lang/Object)
+ (source "ConstructorCallsOverridableMethod.java")
+
+ (field (attrs private ) amd [object net/sourceforge/pmd/ast/ASTMethodDeclarator] )
+ (field (attrs private ) called [object java/lang/String] )
+ (field (attrs private ) dangerous boolean )
+
+(method (attrs public ) <init>([object net/sourceforge/pmd/ast/ASTMethodDeclarator] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  ; parameter[0] : v1 ([object net/sourceforge/pmd/ast/ASTMethodDeclarator])
+  (line 406)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 407)
+  (iput-object v1 v0 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.amd [object net/sourceforge/pmd/ast/ASTMethodDeclarator])
+  (line 408)
+  (return-void )
+ )
+
+(method (attrs public ) getASTMethodDeclarator()[object net/sourceforge/pmd/ast/ASTMethodDeclarator]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  (line 419)
+  (iget-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.amd [object net/sourceforge/pmd/ast/ASTMethodDeclarator])
+  (return-object v0)
+)
+
+(method (attrs public ) getCalled()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  (line 415)
+  (iget-object v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.called [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) isDangerous()boolean
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  (line 423)
+  (iget-boolean v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.dangerous boolean)
+  (return v0)
+)
+
+(method (attrs public ) setCalledMethod([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 411)
+  (iput-object v1 v0 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.called [object java/lang/String])
+  (line 412)
+  (return-void )
+)
+
+(method (attrs public ) setDangerous()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder])
+  (line 427)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 net/sourceforge/pmd/rules/ConstructorCallsOverridableMethod$MethodHolder.dangerous boolean)
+  (line 428)
+  (return-void )
+)
+
+)

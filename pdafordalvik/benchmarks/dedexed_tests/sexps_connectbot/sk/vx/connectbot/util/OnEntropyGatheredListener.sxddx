@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) sk/vx/connectbot/util/OnEntropyGatheredListener
+ (super java/lang/Object)
+ (source "OnEntropyGatheredListener.java")
+
+
+(method (attrs public abstract ) numberEntropyGathered([array byte] )void
+)
+
+)

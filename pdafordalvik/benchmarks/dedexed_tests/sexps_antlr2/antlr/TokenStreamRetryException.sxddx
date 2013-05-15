@@ -1,0 +1,15 @@
+(class (attrs public ) antlr/TokenStreamRetryException
+ (super antlr/TokenStreamException)
+ (source "TokenStreamRetryException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/TokenStreamRetryException])
+  (line 16)
+  (invoke-direct {v0} antlr/TokenStreamException/<init> )
+  (line 17)
+  (return-void )
+ )
+
+)

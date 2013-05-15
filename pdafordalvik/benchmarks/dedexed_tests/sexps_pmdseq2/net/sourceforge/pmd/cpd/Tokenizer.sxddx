@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/cpd/Tokenizer
+ (super java/lang/Object)
+ (source "Tokenizer.java")
+
+
+(method (attrs public abstract ) tokenize([object net/sourceforge/pmd/cpd/SourceCode] [object net/sourceforge/pmd/cpd/Tokens] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

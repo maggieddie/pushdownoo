@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) antlr/debug/ParserMatchListener
+ (super java/lang/Object)
+ (source "ParserMatchListener.java")
+ (implements antlr/debug/ListenerBase)
+
+
+(method (attrs public abstract ) parserMatch([object antlr/debug/ParserMatchEvent] )void
+)
+
+(method (attrs public abstract ) parserMatchNot([object antlr/debug/ParserMatchEvent] )void
+)
+
+(method (attrs public abstract ) parserMismatch([object antlr/debug/ParserMatchEvent] )void
+)
+
+(method (attrs public abstract ) parserMismatchNot([object antlr/debug/ParserMatchEvent] )void
+)
+
+)

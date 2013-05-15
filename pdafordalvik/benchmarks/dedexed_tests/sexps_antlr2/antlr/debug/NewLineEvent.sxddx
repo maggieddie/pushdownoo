@@ -1,0 +1,76 @@
+(class (attrs public ) antlr/debug/NewLineEvent
+ (super antlr/debug/Event)
+ (source "NewLineEvent.java")
+
+ (field (attrs private ) line int )
+
+(method (attrs public ) <init>([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/NewLineEvent])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 8)
+  (invoke-direct {v0 v1} antlr/debug/Event/<init> [object java/lang/Object] )
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Object] int )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/debug/NewLineEvent])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 11)
+  (invoke-direct {v0 v1} antlr/debug/Event/<init> [object java/lang/Object] )
+  (line 12)
+  (invoke-virtual {v0 v2} antlr/debug/NewLineEvent/setValues int )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) getLine()int
+  (limit registers 2)
+  ; this: v1 ([object antlr/debug/NewLineEvent])
+  (line 15)
+  (iget v0 v1 antlr/debug/NewLineEvent.line int)
+  (return v0)
+)
+
+(method (attrs ) setLine(int )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/NewLineEvent])
+  ; parameter[0] : v1 (int)
+  (line 18)
+  (iput v1 v0 antlr/debug/NewLineEvent.line int)
+  (line 19)
+  (return-void )
+)
+
+(method (attrs ) setValues(int )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/NewLineEvent])
+  ; parameter[0] : v1 (int)
+  (line 22)
+  (invoke-virtual {v0 v1} antlr/debug/NewLineEvent/setLine int )
+  (line 23)
+  (return-void )
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object antlr/debug/NewLineEvent])
+  (line 25)
+  (new-instance v0 java/lang/StringBuilder)
+  (const-string v1 "NewLineEvent [")
+  (invoke-direct {v0 v1} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (iget v1 v2 antlr/debug/NewLineEvent.line int)
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append int )
+  (move-result-object v0)
+  (const-string v1 "]")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

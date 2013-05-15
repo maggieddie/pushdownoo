@@ -1,0 +1,43 @@
+(class (attrs public final ) org/apache/lucene/analysis/LowerCaseFilter
+ (super org/apache/lucene/analysis/TokenFilter)
+ (source "LowerCaseFilter.java")
+
+
+(method (attrs public ) <init>([object org/apache/lucene/analysis/TokenStream] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/analysis/LowerCaseFilter])
+  ; parameter[0] : v1 ([object org/apache/lucene/analysis/TokenStream])
+  (line 28)
+  (invoke-direct {v0 v1} org/apache/lucene/analysis/TokenFilter/<init> [object org/apache/lucene/analysis/TokenStream] )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public final ) next()[object org/apache/lucene/analysis/Token]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/lucene/analysis/LowerCaseFilter])
+  (line 32)
+  (iget-object v1 v2 org/apache/lucene/analysis/LowerCaseFilter.input [object org/apache/lucene/analysis/TokenStream])
+  (invoke-virtual {v1} org/apache/lucene/analysis/TokenStream/next )
+  (move-result-object v0)
+  (label l10284)
+  (line 34)
+  (if-nez v0 l1028c)
+  (line 35)
+  (const/4 v0 0)
+  (label l1028a)
+  (line 39)
+  (return-object v0)
+  (label l1028c)
+  (line 37)
+  (iget-object v1 v0 org/apache/lucene/analysis/Token.termText [object java/lang/String])
+  (invoke-virtual {v1} java/lang/String/toLowerCase )
+  (move-result-object v1)
+  (iput-object v1 v0 org/apache/lucene/analysis/Token.termText [object java/lang/String])
+  (goto l1028a)
+)
+
+)

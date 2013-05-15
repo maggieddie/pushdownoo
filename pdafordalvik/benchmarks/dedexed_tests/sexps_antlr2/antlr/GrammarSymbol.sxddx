@@ -1,0 +1,46 @@
+(class (attrs abstract ) antlr/GrammarSymbol
+ (super java/lang/Object)
+ (source "GrammarSymbol.java")
+
+ (field (attrs protected ) id [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/GrammarSymbol])
+  (line 16)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/GrammarSymbol])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 19)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 20)
+  (iput-object v1 v0 antlr/GrammarSymbol.id [object java/lang/String])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) getId()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/GrammarSymbol])
+  (line 24)
+  (iget-object v0 v1 antlr/GrammarSymbol.id [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) setId([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/GrammarSymbol])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 28)
+  (iput-object v1 v0 antlr/GrammarSymbol.id [object java/lang/String])
+  (line 29)
+  (return-void )
+)
+
+)

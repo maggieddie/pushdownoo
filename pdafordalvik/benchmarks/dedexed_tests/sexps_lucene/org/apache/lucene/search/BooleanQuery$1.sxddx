@@ -1,0 +1,29 @@
+(class (attrs ) org/apache/lucene/search/BooleanQuery$1
+ (super org/apache/lucene/search/SimilarityDelegator)
+ (source "BooleanQuery.java")
+
+ (field (attrs final ) this$0 [object org/apache/lucene/search/BooleanQuery] )
+
+(method (attrs ) <init>([object org/apache/lucene/search/BooleanQuery] [object org/apache/lucene/search/Similarity] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/lucene/search/BooleanQuery$1])
+  ; parameter[0] : v1 ([object org/apache/lucene/search/BooleanQuery])
+  ; parameter[1] : v2 ([object org/apache/lucene/search/Similarity])
+  (line 1)
+  (iput-object v1 v0 org/apache/lucene/search/BooleanQuery$1.this$0 [object org/apache/lucene/search/BooleanQuery])
+  (line 101)
+  (invoke-direct {v0 v2} org/apache/lucene/search/SimilarityDelegator/<init> [object org/apache/lucene/search/Similarity] )
+  (return-void )
+ )
+
+(method (attrs public ) coord(int int )float
+  (limit registers 4)
+  ; this: v1 ([object org/apache/lucene/search/BooleanQuery$1])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 103)
+  (const/high16 v0 16256)
+  (return v0)
+)
+
+)

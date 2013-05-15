@@ -1,0 +1,32 @@
+(class (attrs public ) org/apache/lucene/analysis/WhitespaceTokenizer
+ (super org/apache/lucene/analysis/CharTokenizer)
+ (source "WhitespaceTokenizer.java")
+
+
+(method (attrs public ) <init>([object java/io/Reader] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/analysis/WhitespaceTokenizer])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  (line 27)
+  (invoke-direct {v0 v1} org/apache/lucene/analysis/CharTokenizer/<init> [object java/io/Reader] )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs protected ) isTokenChar(char )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/apache/lucene/analysis/WhitespaceTokenizer])
+  ; parameter[0] : v2 (char)
+  (line 33)
+  (invoke-static {v2} java/lang/Character/isWhitespace char )
+  (move-result v0)
+  (if-eqz v0 l11a30)
+  (const/4 v0 0)
+  (label l11a2e)
+  (return v0)
+  (label l11a30)
+  (const/4 v0 1)
+  (goto l11a2e)
+)
+
+)

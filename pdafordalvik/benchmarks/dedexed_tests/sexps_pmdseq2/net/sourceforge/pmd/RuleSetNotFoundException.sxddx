@@ -1,0 +1,16 @@
+(class (attrs public ) net/sourceforge/pmd/RuleSetNotFoundException
+ (super java/lang/Exception)
+ (source "RuleSetNotFoundException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/RuleSetNotFoundException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 8)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 9)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,34 @@
+(class (attrs ) sk/vx/connectbot/GeneratePubkeyActivity$3
+ (super android/os/Handler)
+ (source "GeneratePubkeyActivity.java")
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/GeneratePubkeyActivity] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/GeneratePubkeyActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/GeneratePubkeyActivity$3])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/GeneratePubkeyActivity])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/GeneratePubkeyActivity$3.this$0 [object sk/vx/connectbot/GeneratePubkeyActivity])
+  (line 189)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object sk/vx/connectbot/GeneratePubkeyActivity$3])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 192)
+  (iget-object v0 v1 sk/vx/connectbot/GeneratePubkeyActivity$3.this$0 [object sk/vx/connectbot/GeneratePubkeyActivity])
+  (invoke-static {v0} sk/vx/connectbot/GeneratePubkeyActivity/access$9 [object sk/vx/connectbot/GeneratePubkeyActivity] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/ProgressDialog/dismiss )
+  (line 193)
+  (iget-object v0 v1 sk/vx/connectbot/GeneratePubkeyActivity$3.this$0 [object sk/vx/connectbot/GeneratePubkeyActivity])
+  (invoke-virtual {v0} sk/vx/connectbot/GeneratePubkeyActivity/finish )
+  (line 194)
+  (return-void )
+)
+
+)

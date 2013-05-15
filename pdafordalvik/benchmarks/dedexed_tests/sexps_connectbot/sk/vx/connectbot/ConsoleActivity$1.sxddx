@@ -1,0 +1,41 @@
+(class (attrs ) sk/vx/connectbot/ConsoleActivity$1
+ (super android/os/Handler)
+ (source "ConsoleActivity.java")
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/ConsoleActivity] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/ConsoleActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/ConsoleActivity$1])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/ConsoleActivity])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/ConsoleActivity$1.this$0 [object sk/vx/connectbot/ConsoleActivity])
+  (line 92)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 5)
+  ; this: v3 ([object sk/vx/connectbot/ConsoleActivity$1])
+  ; parameter[0] : v4 ([object android/os/Message])
+  (line 95)
+  (const-string v1 "ConnectBot.ConsoleActivity")
+  (const-string v2 "Someone sending HANDLE_DISCONNECT to parentHandler")
+  (invoke-static {v1 v2} android/util/Log/d [object java/lang/String] [object java/lang/String] )
+  (line 99)
+  (iget-object v0 v4 android/os/Message.obj [object java/lang/Object])
+  (check-cast v0 [object sk/vx/connectbot/service/TerminalBridge])
+  (line 101)
+  (invoke-virtual {v0} sk/vx/connectbot/service/TerminalBridge/immaterialityExpectationDensity )
+  (move-result v1)
+  (if-eqz v1 l3a380)
+  (line 102)
+  (iget-object v1 v3 sk/vx/connectbot/ConsoleActivity$1.this$0 [object sk/vx/connectbot/ConsoleActivity])
+  (invoke-static {v1 v0} sk/vx/connectbot/ConsoleActivity/access$0 [object sk/vx/connectbot/ConsoleActivity] [object sk/vx/connectbot/service/TerminalBridge] )
+  (label l3a380)
+  (line 103)
+  (return-void )
+)
+
+)

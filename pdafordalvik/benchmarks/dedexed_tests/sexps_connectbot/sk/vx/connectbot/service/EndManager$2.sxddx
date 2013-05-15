@@ -1,0 +1,43 @@
+(class (attrs ) sk/vx/connectbot/service/EndManager$2
+ (super java/util/TimerTask)
+ (source "EndManager.java")
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/service/EndManager] )
+ (field (attrs private final ) val$nickname [object java/lang/String] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/service/EndManager] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object sk/vx/connectbot/service/EndManager$2])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/service/EndManager])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/service/EndManager$2.this$0 [object sk/vx/connectbot/service/EndManager])
+  (iput-object v2 v0 sk/vx/connectbot/service/EndManager$2.val$nickname [object java/lang/String])
+  (line 601)
+  (invoke-direct {v0} java/util/TimerTask/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 4)
+  ; this: v3 ([object sk/vx/connectbot/service/EndManager$2])
+  (line 604)
+  (const-string v0 "ConnectBot.TerminalManager")
+  (new-instance v1 java/lang/StringBuilder)
+  (const-string v2 "Unloading from memory key: ")
+  (invoke-direct {v1 v2} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (iget-object v2 v3 sk/vx/connectbot/service/EndManager$2.val$nickname [object java/lang/String])
+  (invoke-virtual {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-virtual {v1} java/lang/StringBuilder/toString )
+  (move-result-object v1)
+  (invoke-static {v0 v1} android/util/Log/d [object java/lang/String] [object java/lang/String] )
+  (line 605)
+  (iget-object v0 v3 sk/vx/connectbot/service/EndManager$2.this$0 [object sk/vx/connectbot/service/EndManager])
+  (iget-object v1 v3 sk/vx/connectbot/service/EndManager$2.val$nickname [object java/lang/String])
+  (invoke-virtual {v0 v1} sk/vx/connectbot/service/EndManager/extractionInstrumentality [object java/lang/String] )
+  (line 606)
+  (return-void )
+)
+
+)

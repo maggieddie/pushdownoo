@@ -1,0 +1,25 @@
+(class (attrs public ) antlr/ANTLRError
+ (super java/lang/Error)
+ (source "ANTLRError.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/ANTLRError])
+  (line 16)
+  (invoke-direct {v0} java/lang/Error/<init> )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ANTLRError])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 24)
+  (invoke-direct {v0 v1} java/lang/Error/<init> [object java/lang/String] )
+  (line 25)
+  (return-void )
+ )
+
+)

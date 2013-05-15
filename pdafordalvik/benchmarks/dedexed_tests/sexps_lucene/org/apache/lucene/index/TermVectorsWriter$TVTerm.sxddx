@@ -1,0 +1,36 @@
+(class (attrs ) org/apache/lucene/index/TermVectorsWriter$TVTerm
+ (super java/lang/Object)
+ (source "TermVectorsWriter.java")
+
+ (field (attrs ) freq int )
+ (field (attrs ) offsets [array [object org/apache/lucene/index/TermVectorOffsetInfo]] )
+ (field (attrs ) positions [array int] )
+ (field (attrs ) termText [object java/lang/String] )
+
+(method (attrs private ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/lucene/index/TermVectorsWriter$TVTerm])
+  (const/4 v1 0)
+  (line 365)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 367)
+  (const/4 v0 0)
+  (iput v0 v2 org/apache/lucene/index/TermVectorsWriter$TVTerm.freq int)
+  (line 368)
+  (iput-object v1 v2 org/apache/lucene/index/TermVectorsWriter$TVTerm.positions [array int])
+  (line 369)
+  (iput-object v1 v2 org/apache/lucene/index/TermVectorsWriter$TVTerm.offsets [array [object org/apache/lucene/index/TermVectorOffsetInfo]])
+  (line 365)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/apache/lucene/index/TermVectorsWriter$TVTerm] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/index/TermVectorsWriter$TVTerm])
+  ; parameter[0] : v1 ([object org/apache/lucene/index/TermVectorsWriter$TVTerm])
+  (line 365)
+  (invoke-direct {v0} org/apache/lucene/index/TermVectorsWriter$TVTerm/<init> )
+  (return-void )
+ )
+
+)

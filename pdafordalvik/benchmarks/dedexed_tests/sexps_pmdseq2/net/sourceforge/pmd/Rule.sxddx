@@ -1,0 +1,117 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/Rule
+ (super java/lang/Object)
+ (source "Rule.java")
+
+ (field (attrs public static final ) LOWEST_PRIORITY int 5); 0x5 )
+ (field (attrs public static final ) PRIORITIES [array [object java/lang/String]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (line 12)
+  (const/4 v0 5)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (const/4 v1 0)
+  (const-string v2 "High")
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (const-string v2 "Medium High")
+  (aput-object v2 v0 v1)
+  (const/4 v1 2)
+  (const-string v2 "Medium")
+  (aput-object v2 v0 v1)
+  (const/4 v1 3)
+  (const-string v2 "Medium Low")
+  (aput-object v2 v0 v1)
+  (const/4 v1 4)
+  (const-string v2 "Low")
+  (aput-object v2 v0 v1)
+  (sput-object v0 net/sourceforge/pmd/Rule.PRIORITIES [array [object java/lang/String]])
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public abstract ) addProperties([object java/util/Properties] )void
+)
+
+(method (attrs public abstract ) addProperty([object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) apply([object java/util/List] [object net/sourceforge/pmd/RuleContext] )void
+)
+
+(method (attrs public abstract ) getBooleanProperty([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) getDescription()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getDoubleProperty([object java/lang/String] )double
+)
+
+(method (attrs public abstract ) getExample()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getExternalInfoUrl()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getIntProperty([object java/lang/String] )int
+)
+
+(method (attrs public abstract ) getMessage()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPriority()int
+)
+
+(method (attrs public abstract ) getPriorityName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getProperties()[object java/util/Properties]
+)
+
+(method (attrs public abstract ) getRuleSetName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStringProperty([object java/lang/String] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) hasProperty([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) include()boolean
+)
+
+(method (attrs public abstract ) setDescription([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setExample([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setExternalInfoUrl([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setInclude(boolean )void
+)
+
+(method (attrs public abstract ) setMessage([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setName([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setPriority(int )void
+)
+
+(method (attrs public abstract ) setRuleSetName([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setUsesDFA()void
+)
+
+(method (attrs public abstract ) usesDFA()boolean
+)
+
+)

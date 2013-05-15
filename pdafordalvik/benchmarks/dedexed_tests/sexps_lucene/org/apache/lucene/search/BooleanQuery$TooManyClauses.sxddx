@@ -1,0 +1,14 @@
+(class (attrs public ) org/apache/lucene/search/BooleanQuery$TooManyClauses
+ (super java/lang/RuntimeException)
+ (source "BooleanQuery.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/lucene/search/BooleanQuery$TooManyClauses])
+  (line 43)
+  (invoke-direct {v0} java/lang/RuntimeException/<init> )
+  (return-void )
+ )
+
+)

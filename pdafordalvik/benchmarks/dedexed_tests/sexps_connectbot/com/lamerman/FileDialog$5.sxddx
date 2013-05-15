@@ -1,0 +1,30 @@
+(class (attrs ) com/lamerman/FileDialog$5
+ (super java/lang/Object)
+ (source "FileDialog.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/lamerman/FileDialog] )
+
+(method (attrs ) <init>([object com/lamerman/FileDialog] )void
+  (limit registers 2)
+  ; this: v0 ([object com/lamerman/FileDialog$5])
+  ; parameter[0] : v1 ([object com/lamerman/FileDialog])
+  (line 1)
+  (iput-object v1 v0 com/lamerman/FileDialog$5.this$0 [object com/lamerman/FileDialog])
+  (line 267)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/lamerman/FileDialog$5])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 270)
+  (iget-object v0 v1 com/lamerman/FileDialog$5.this$0 [object com/lamerman/FileDialog])
+  (invoke-static {v0 v2} com/lamerman/FileDialog/access$3 [object com/lamerman/FileDialog] [object android/view/View] )
+  (line 271)
+  (return-void )
+)
+
+)

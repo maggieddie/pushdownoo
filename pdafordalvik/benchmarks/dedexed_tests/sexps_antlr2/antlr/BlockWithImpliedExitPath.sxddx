@@ -1,0 +1,42 @@
+(class (attrs abstract ) antlr/BlockWithImpliedExitPath
+ (super antlr/AlternativeBlock)
+ (source "BlockWithImpliedExitPath.java")
+
+ (field (attrs protected ) exitCache [array [object antlr/Lookahead]] )
+ (field (attrs protected ) exitLookaheadDepth int )
+
+(method (attrs public ) <init>([object antlr/Grammar] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/BlockWithImpliedExitPath])
+  ; parameter[0] : v2 ([object antlr/Grammar])
+  (line 18)
+  (invoke-direct {v1 v2} antlr/AlternativeBlock/<init> [object antlr/Grammar] )
+  (line 15)
+  (iget-object v0 v1 antlr/BlockWithImpliedExitPath.grammar [object antlr/Grammar])
+  (iget v0 v0 antlr/Grammar.maxk int)
+  (add-int/lit8 v0 v0 1)
+  (new-array v0 v0 [array [object antlr/Lookahead]])
+  (iput-object v0 v1 antlr/BlockWithImpliedExitPath.exitCache [array [object antlr/Lookahead]])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object antlr/Grammar] [object antlr/Token] )void
+  (limit registers 4)
+  ; this: v1 ([object antlr/BlockWithImpliedExitPath])
+  ; parameter[0] : v2 ([object antlr/Grammar])
+  ; parameter[1] : v3 ([object antlr/Token])
+  (line 22)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} antlr/AlternativeBlock/<init> [object antlr/Grammar] [object antlr/Token] boolean )
+  (line 15)
+  (iget-object v0 v1 antlr/BlockWithImpliedExitPath.grammar [object antlr/Grammar])
+  (iget v0 v0 antlr/Grammar.maxk int)
+  (add-int/lit8 v0 v0 1)
+  (new-array v0 v0 [array [object antlr/Lookahead]])
+  (iput-object v0 v1 antlr/BlockWithImpliedExitPath.exitCache [array [object antlr/Lookahead]])
+  (line 23)
+  (return-void )
+ )
+
+)

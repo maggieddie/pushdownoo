@@ -1,0 +1,50 @@
+(class (attrs public ) com/trilead/ssh2/log/Fuel
+ (super java/lang/Object)
+ (source "Fuel.java")
+
+ (field (attrs public static ) conduct5 [object com/trilead/ssh2/DebugVelocity] )
+ (field (attrs public static ) physical6 boolean )
+ (field (attrs public static ) power boolean )
+ (field (attrs public static ) record [object com/trilead/ssh2/DebugVelocity] )
+ (field (attrs private ) arrangementNomenclature [object java/lang/String] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (const/4 v1 0)
+  (const/4 v0 0)
+  (line 23)
+  (sput-boolean v0 com/trilead/ssh2/log/Fuel.power boolean)
+  (line 24)
+  (sput-object v1 com/trilead/ssh2/log/Fuel.record [object com/trilead/ssh2/DebugVelocity])
+  (line 25)
+  (sput-boolean v0 com/trilead/ssh2/log/Fuel.physical6 boolean)
+  (line 33)
+  (sput-object v1 com/trilead/ssh2/log/Fuel.conduct5 [object com/trilead/ssh2/DebugVelocity])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Class] )void
+  (limit registers 3)
+  ; this: v1 ([object com/trilead/ssh2/log/Fuel])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 48)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 50)
+  (invoke-virtual {v2} java/lang/Class/getName )
+  (move-result-object v0)
+  (iput-object v0 v1 com/trilead/ssh2/log/Fuel.arrangementNomenclature [object java/lang/String])
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public static final ) getLogger([object java/lang/Class] )[object com/trilead/ssh2/log/Fuel]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Class])
+  (line 30)
+  (new-instance v0 com/trilead/ssh2/log/Fuel)
+  (invoke-direct {v0 v1} com/trilead/ssh2/log/Fuel/<init> [object java/lang/Class] )
+  (return-object v0)
+ )
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/ast/CanSuppressWarnings
+ (super java/lang/Object)
+ (source "CanSuppressWarnings.java")
+
+
+(method (attrs public abstract ) hasSuppressWarningsAnnotationFor([object net/sourceforge/pmd/Rule] )boolean
+)
+
+)

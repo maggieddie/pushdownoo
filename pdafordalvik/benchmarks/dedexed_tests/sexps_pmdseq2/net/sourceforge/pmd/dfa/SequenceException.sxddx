@@ -1,0 +1,26 @@
+(class (attrs public ) net/sourceforge/pmd/dfa/SequenceException
+ (super java/lang/Exception)
+ (source "SequenceException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/dfa/SequenceException])
+  (line 12)
+  (const-string v0 "Sequence error.")
+  (invoke-direct {v1 v0} java/lang/Exception/<init> [object java/lang/String] )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object net/sourceforge/pmd/dfa/SequenceException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 16)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 17)
+  (return-void )
+ )
+
+)

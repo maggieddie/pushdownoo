@@ -1,0 +1,53 @@
+(class (attrs ) org/swiftp/Util$MediaScannerNotifier
+ (super java/lang/Object)
+ (source "Util.java")
+ (implements android/media/MediaScannerConnection$MediaScannerConnectionClient)
+
+ (field (attrs private ) connection [object android/media/MediaScannerConnection] )
+ (field (attrs private ) path [object java/lang/String] )
+
+(method (attrs public ) <init>([object android/content/Context] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v1 ([object org/swiftp/Util$MediaScannerNotifier])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 147)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 148)
+  (iput-object v3 v1 org/swiftp/Util$MediaScannerNotifier.path [object java/lang/String])
+  (line 149)
+  (new-instance v0 android/media/MediaScannerConnection)
+  (invoke-direct {v0 v2 v1} android/media/MediaScannerConnection/<init> [object android/content/Context] [object android/media/MediaScannerConnection$MediaScannerConnectionClient] )
+  (iput-object v0 v1 org/swiftp/Util$MediaScannerNotifier.connection [object android/media/MediaScannerConnection])
+  (line 150)
+  (iget-object v0 v1 org/swiftp/Util$MediaScannerNotifier.connection [object android/media/MediaScannerConnection])
+  (invoke-virtual {v0} android/media/MediaScannerConnection/connect )
+  (line 151)
+  (return-void )
+ )
+
+(method (attrs public ) onMediaScannerConnected()void
+  (limit registers 4)
+  ; this: v3 ([object org/swiftp/Util$MediaScannerNotifier])
+  (line 154)
+  (iget-object v0 v3 org/swiftp/Util$MediaScannerNotifier.connection [object android/media/MediaScannerConnection])
+  (iget-object v1 v3 org/swiftp/Util$MediaScannerNotifier.path [object java/lang/String])
+  (const/4 v2 0)
+  (invoke-virtual {v0 v1 v2} android/media/MediaScannerConnection/scanFile [object java/lang/String] [object java/lang/String] )
+  (line 155)
+  (return-void )
+)
+
+(method (attrs public ) onScanCompleted([object java/lang/String] [object android/net/Uri] )void
+  (limit registers 4)
+  ; this: v1 ([object org/swiftp/Util$MediaScannerNotifier])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object android/net/Uri])
+  (line 158)
+  (iget-object v0 v1 org/swiftp/Util$MediaScannerNotifier.connection [object android/media/MediaScannerConnection])
+  (invoke-virtual {v0} android/media/MediaScannerConnection/disconnect )
+  (line 159)
+  (return-void )
+)
+
+)
