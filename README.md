@@ -1,5 +1,7 @@
 # Pushdown OO (Version extracted from APAC second delievery)
 
+This is just analytic engine without play framework. 
+
 ## Environment
 
 ### Scala 2.9.1 
