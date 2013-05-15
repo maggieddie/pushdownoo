@@ -1,0 +1,208 @@
+(class (attrs public ) antlr/ASTNULLType
+ (super java/lang/Object)
+ (source "ASTNULLType.java")
+ (implements antlr/collections/AST)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/ASTNULLType])
+  (line 15)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) addChild([object antlr/collections/AST] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object antlr/collections/AST])
+  (line 17)
+  (return-void )
+)
+
+(method (attrs public ) equals([object antlr/collections/AST] )boolean
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 20)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) equalsList([object antlr/collections/AST] )boolean
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 24)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) equalsListPartial([object antlr/collections/AST] )boolean
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 28)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) equalsTree([object antlr/collections/AST] )boolean
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 32)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) equalsTreePartial([object antlr/collections/AST] )boolean
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 36)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) findAll([object antlr/collections/AST] )[object antlr/collections/ASTEnumeration]
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 40)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) findAllPartial([object antlr/collections/AST] )[object antlr/collections/ASTEnumeration]
+  (limit registers 3)
+  ; this: v1 ([object antlr/ASTNULLType])
+  ; parameter[0] : v2 ([object antlr/collections/AST])
+  (line 44)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getFirstChild()[object antlr/collections/AST]
+  (limit registers 1)
+  ; this: v0 ([object antlr/ASTNULLType])
+  (line 48)
+  (return-object v0)
+)
+
+(method (attrs public ) getNextSibling()[object antlr/collections/AST]
+  (limit registers 1)
+  ; this: v0 ([object antlr/ASTNULLType])
+  (line 52)
+  (return-object v0)
+)
+
+(method (attrs public ) getNumberOfChildren()int
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 64)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getText()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 56)
+  (const-string v0 "<ASTNULL>")
+  (return-object v0)
+)
+
+(method (attrs public ) getType()int
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 60)
+  (const/4 v0 3)
+  (return v0)
+)
+
+(method (attrs public ) initialize(int [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 68)
+  (return-void )
+)
+
+(method (attrs public ) initialize([object antlr/Token] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object antlr/Token])
+  (line 74)
+  (return-void )
+)
+
+(method (attrs public ) initialize([object antlr/collections/AST] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object antlr/collections/AST])
+  (line 71)
+  (return-void )
+)
+
+(method (attrs public ) setFirstChild([object antlr/collections/AST] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object antlr/collections/AST])
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) setNextSibling([object antlr/collections/AST] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object antlr/collections/AST])
+  (line 80)
+  (return-void )
+)
+
+(method (attrs public ) setText([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 83)
+  (return-void )
+)
+
+(method (attrs public ) setType(int )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/ASTNULLType])
+  ; parameter[0] : v1 (int)
+  (line 86)
+  (return-void )
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 89)
+  (invoke-virtual {v1} antlr/ASTNULLType/getText )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toStringList()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 93)
+  (invoke-virtual {v1} antlr/ASTNULLType/getText )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toStringTree()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object antlr/ASTNULLType])
+  (line 97)
+  (invoke-virtual {v1} antlr/ASTNULLType/getText )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

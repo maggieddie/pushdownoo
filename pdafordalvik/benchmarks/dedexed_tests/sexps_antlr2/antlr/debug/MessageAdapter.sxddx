@@ -1,0 +1,46 @@
+(class (attrs public ) antlr/debug/MessageAdapter
+ (super java/lang/Object)
+ (source "MessageAdapter.java")
+ (implements antlr/debug/MessageListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/debug/MessageAdapter])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) doneParsing([object antlr/debug/TraceEvent] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/MessageAdapter])
+  ; parameter[0] : v1 ([object antlr/debug/TraceEvent])
+  (line 6)
+  (return-void )
+)
+
+(method (attrs public ) refresh()void
+  (limit registers 1)
+  ; this: v0 ([object antlr/debug/MessageAdapter])
+  (line 7)
+  (return-void )
+)
+
+(method (attrs public ) reportError([object antlr/debug/MessageEvent] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/MessageAdapter])
+  ; parameter[0] : v1 ([object antlr/debug/MessageEvent])
+  (line 8)
+  (return-void )
+)
+
+(method (attrs public ) reportWarning([object antlr/debug/MessageEvent] )void
+  (limit registers 2)
+  ; this: v0 ([object antlr/debug/MessageAdapter])
+  ; parameter[0] : v1 ([object antlr/debug/MessageEvent])
+  (line 9)
+  (return-void )
+)
+
+)

@@ -1,0 +1,29 @@
+(class (attrs ) sk/vx/connectbot/HostListActivity$2
+ (super android/os/Handler)
+ (source "HostListActivity.java")
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/HostListActivity] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/HostListActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/HostListActivity$2])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/HostListActivity])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/HostListActivity$2.this$0 [object sk/vx/connectbot/HostListActivity])
+  (line 146)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object sk/vx/connectbot/HostListActivity$2])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 149)
+  (iget-object v0 v1 sk/vx/connectbot/HostListActivity$2.this$0 [object sk/vx/connectbot/HostListActivity])
+  (invoke-virtual {v0} sk/vx/connectbot/HostListActivity/updateList )
+  (line 150)
+  (return-void )
+)
+
+)

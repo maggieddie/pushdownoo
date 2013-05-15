@@ -1,0 +1,76 @@
+t_source.id,t_source.f_class,t_source.f_methodname,t_source.f_extlabel,t_source.f_engagement,t_source.f_app,t_source.is_active,t_source.created_on,t_source.created_by,t_source.modified_on,t_source.modified_by
+1,android.accounts.AccountManager,android.accounts.Account[] getAccounts(),GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+2,android.accounts.AccountManager,android.accounts.Account[] getAccountsByType(java.lang.String type),GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+3,android.accounts.AccountManager,"android.accounts.AccountManagerFuture<android.accounts.Account[]> getAccountsByTypeAndFeatures(java.lang.String type, java.lang.String[] features, android.accounts.AccountManagerCallback<android.accounts.Account[]> callback, android.os.Handler handler)",GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+4,android.accounts.AccountManager,"android.accounts.AccountManagerFuture<android.os.Bundle> getAuthTokenByFeatures(java.lang.String accountType, java.lang.String authTokenType, java.lang.String[] features, android.app.Activity activity, android.os.Bundle addAccountOptions, android.os.Bundle getAuthTokenOptions, android.accounts.AccountManagerCallback<android.os.Bundle> callback, android.os.Handler handler)",GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+5,android.accounts.AccountManager,"android.accounts.AccountManagerFuture<java.lang.Boolean> hasFeatures(android.accounts.Account account, java.lang.String[] features, android.accounts.AccountManagerCallback<java.lang.Boolean> callback, android.os.Handler handler)",GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+6,android.accounts.AccountManager,"void addOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener listener, android.os.Handler handler, boolean updateImmediately)",GET_ACCOUNTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+7,android.app.ActivityManager,"java.util.List<android.app.ActivityManager.RecentTaskInfo> getRecentTasks(int maxNum, int flags)",GET_TASKS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+8,android.app.ActivityManager,java.util.List<android.app.ActivityManager.RunningTaskInfo> getRunningTasks(int maxNum),GET_TASKS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+9,android.content.ContentResolver,"android.database.Cursor query(android.net.Uri uri, java.lang.String[] projection, java.lang.String selection, java.lang.String[] selectionArgs, java.lang.String sortOrder)",READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+10,android.content.ContentResolver,"android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri uri, java.lang.String mode)",READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+11,android.content.ContentResolver,java.io.InputStream openInputStream(android.net.Uri uri),READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+12,android.content.ContentResolver,java.io.OutputStream openOutputStream(android.net.Uri uri),READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+13,android.content.ContentResolver,"java.io.OutputStream openOutputStream(android.net.Uri uri, java.lang.String mode)",READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+14,android.content.Intent,android.os.Bundle getExtras(),INTENT,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+15,android.hardware.Camera,android.hardware.Camera open(),CAMERA,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+16,android.hardware.Camera,android.hardware.Camera open(int cameraId),CAMERA,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+17,android.hardware.SensorEventListener,"void onAccuracyChanged(android.hardware.Sensor sensor, int accuracy)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+18,android.hardware.SensorEventListener,void onSensorChanged(android.hardware.SensorEvent event),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+19,android.hardware.SensorListener Deprecated,"void onAccuracyChanged(int sensor, int accuracy)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+20,android.hardware.SensorListener Deprecated,"void onSensorChanged(int sensor, float[] values)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+21,android.location.Location,double android.location.Location.getLatitude(),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+22,android.location.Location,double android.location.Location.getLongitude(),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+23,android.location.LocationListener,void android.location.LocationListener.onLocationChanged(android.location.Location x),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+24,android.location.LocationManager,android.location.Location android.location.LocationManager.getLastKnownLocation(java.lang.String x),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+25,android.location.LocationManager,android.location.LocationProvider getProvider(java.lang.String name),ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+26,android.location.LocationManager,boolean isProviderEnabled(java.lang.String provider),ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+27,android.location.LocationManager,"java.lang.String getBestProvider(android.location.Criteria criteria, boolean enabledOnly)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+28,android.location.LocationManager,"java.util.List<java.lang.String> getProviders(android.location.Criteria criteria, boolean enabledOnly)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+29,android.location.LocationManager,java.util.List<java.lang.String> getProviders(boolean enabledOnly),ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+30,android.location.LocationManager,"void requestLocationUpdates(java.lang.String provider, long minTime, float minDistance, android.app.PendingIntent intent)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+31,android.location.LocationManager,"void requestLocationUpdates(java.lang.String provider, long minTime, float minDistance, android.location.LocationListener listener)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+32,android.location.LocationManager,"void requestLocationUpdates(java.lang.String provider, long minTime, float minDistance, android.location.LocationListener listener, android.os.Looper looper)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+33,android.location.LocationManager,"void requestLocationUpdates(long minTime, float minDistance, android.location.Criteria criteria, android.app.PendingIntent intent)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+34,android.location.LocationManager,"void requestLocationUpdates(long minTime, float minDistance, android.location.Criteria criteria, android.app.PendingIntent intent)",ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+35,android.media.AudioRecord,"AudioRecord(int audioSource, int sampleRateInHz, int channelConfig, int audioFormat, int bufferSizeInBytes)",RECORD_AUDIO,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+36,android.media.MediaRecorder,void setAudioSource(int audio_source),RECORD_AUDIO,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+37,android.media.MediaRecorder,void setVideoSource(int video_source),CAMERA,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+38,android.os.DropBoxManager,"android.os.DropBoxManager.Entry getNextEntry(java.lang.String tag, long msec)",READ_LOGS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+39,android.speech.SpeechRecognizer,void cancel(),RECORD_AUDIO,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+40,android.speech.SpeechRecognizer,void startListening(android.content.Intent recognizerIntent),RECORD_AUDIO,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+41,android.speech.SpeechRecognizer,void stopListening(),RECORD_AUDIO,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+42,android.telephony.cdma.CdmaCellLocation,int android.telephony.cdma.CdmaCellLocation.getBaseStationId(),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+43,android.telephony.TelephonyManager,android.telephony.CellLocation android.telephony.TelephonyManager.getCellLocation(),GEOLOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+44,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getDeviceId(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+45,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getDeviceSoftwareVersion(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+46,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getLine1Number(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+47,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getNetworkCountryIso(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+48,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getSimSerialNumber(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+49,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getSubscriberId(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+50,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getVoiceMailNumber(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+51,android.telephony.TelephonyManager,java.lang.String getVoiceMailAlphaTag(),READ_PHONE_STATE,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+52,android.telephony.TelephonyManager,java.util.List<android.telephony.NeighboringCellInfo> getNeighboringCellInfo(),ACCESS_FINE_LOCATION__or__ACCESS_COARSE_LOCATION,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+53,android.telephony.TelephonyManager,private java.lang.String android.telephony.TelephonyManager.incomingCallNumber(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+54,android.view.OrientationListener Deprecated,"void onAccuracyChanged(int sensor, int accuracy)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+55,android.view.OrientationListener Deprecated,"void onSensorChanged(int sensor, float[] values)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+56,android.widget.QuickContactBadge,"void assignContactFromEmail(java.lang.String emailAddress, boolean lazyLookup)",READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+57,android.widget.QuickContactBadge,"void assignContactFromPhone(java.lang.String phoneNumber, boolean lazyLookup)",READ_CONTACTS,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+58,java.io.FileInputStream,FileInputStream(java.io.File file),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+59,java.io.FileInputStream,FileInputStream(java.io.FileDescriptor fd),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+60,java.io.FileInputStream,FileInputStream(java.lang.String path),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+61,java.io.FileInputStream,int available(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+62,java.io.FileInputStream,int read(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+63,java.io.FileInputStream,"int read(byte[] buffer, int byteOffset, int byteCount)",,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+64,java.io.FileInputStream,java.io.FileDescriptor getFD(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+65,java.io.FileInputStream,java.nio.channels.FileChannel getChannel(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+66,java.io.FileInputStream,long skip(long byteCount),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+67,java.io.FileInputStream,void close(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+68,java.io.FileInputStream,void finalize(),,<NULL>,<NULL>,True,2013-01-16 22:39:46,<NULL>,2013-01-16 22:39:46,<NULL>
+69,android.telephony.SmsMessage,SmsMessage.getMessageBody(),CONTENT,1,butane,True,2013-03-04 19:33:31,11,2013-03-04 19:33:31,11
+70,android.telephony.SmsMessage,SmsMessage.getOriginatingAddress(),CONTENT,1,butane,True,2013-03-04 19:33:31,11,2013-03-04 19:33:31,11
+71,android.location.Location,Location.getLatitude(),CONTENT,1,OpenGPSTracker,True,2013-03-04 19:33:31,11,2013-03-04 19:33:31,11
+72,android.location.Location,Location.getLongitude(),CONTENT,1,OpenGPSTracker,True,2013-03-04 19:33:31,11,2013-03-04 19:33:31,11
+73,android.telephony.TelephonyManager,java.lang.String android.telephony.TelephonyManager.getDeviceId(),READ_PHONE_STATE,1,com.url.sourceviewer,True,2013-03-04 19:43:22,11,2013-03-04 19:43:22,11
+74,java.io.File,java.io.File[] java.io.File.listFiles(),FILE,1,mostwanted,True,2013-03-04 19:43:22,11,2013-03-04 19:43:22,11
+75,android.database.Cursor,java.lang.String android.database.Cursor.getString(int x),CONTENT,1,smsbackup,True,2013-03-04 19:43:22,11,2013-03-04 19:43:22,11

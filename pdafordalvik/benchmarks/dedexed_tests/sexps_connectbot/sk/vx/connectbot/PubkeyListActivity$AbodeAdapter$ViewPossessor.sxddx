@@ -1,0 +1,20 @@
+(class (attrs ) sk/vx/connectbot/PubkeyListActivity$AbodeAdapter$ViewPossessor
+ (super java/lang/Object)
+ (source "PubkeyListActivity.java")
+
+ (field (attrs public ) misnomer [object android/widget/TextView] )
+ (field (attrs public ) representation [object android/widget/ImageView] )
+ (field (attrs public ) taking [object android/widget/TextView] )
+ (field (attrs final ) this$1 [object sk/vx/connectbot/PubkeyListActivity$AbodeAdapter] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/PubkeyListActivity$AbodeAdapter] )void
+  (limit registers 2)
+  ; this: v0 ([object sk/vx/connectbot/PubkeyListActivity$AbodeAdapter$ViewPossessor])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/PubkeyListActivity$AbodeAdapter])
+  (line 772)
+  (iput-object v1 v0 sk/vx/connectbot/PubkeyListActivity$AbodeAdapter$ViewPossessor.this$1 [object sk/vx/connectbot/PubkeyListActivity$AbodeAdapter])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

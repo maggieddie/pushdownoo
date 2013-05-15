@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/apache/lucene/index/TermFreqVector
+ (super java/lang/Object)
+ (source "TermFreqVector.java")
+
+
+(method (attrs public abstract ) getField()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTermFrequencies()[array int]
+)
+
+(method (attrs public abstract ) getTerms()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) indexOf([object java/lang/String] )int
+)
+
+(method (attrs public abstract ) indexesOf([array [object java/lang/String]] int int )[array int]
+)
+
+(method (attrs public abstract ) size()int
+)
+
+)

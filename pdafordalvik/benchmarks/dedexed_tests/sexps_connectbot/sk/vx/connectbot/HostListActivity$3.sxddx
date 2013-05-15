@@ -1,0 +1,39 @@
+(class (attrs ) sk/vx/connectbot/HostListActivity$3
+ (super java/lang/Object)
+ (source "HostListActivity.java")
+ (implements android/view/MenuItem$OnMenuItemClickListener)
+
+ (field (attrs final ) this$0 [object sk/vx/connectbot/HostListActivity] )
+ (field (attrs private final ) val$bridge [object sk/vx/connectbot/service/TerminalBridge] )
+
+(method (attrs ) <init>([object sk/vx/connectbot/HostListActivity] [object sk/vx/connectbot/service/TerminalBridge] )void
+  (limit registers 3)
+  ; this: v0 ([object sk/vx/connectbot/HostListActivity$3])
+  ; parameter[0] : v1 ([object sk/vx/connectbot/HostListActivity])
+  ; parameter[1] : v2 ([object sk/vx/connectbot/service/TerminalBridge])
+  (line 1)
+  (iput-object v1 v0 sk/vx/connectbot/HostListActivity$3.this$0 [object sk/vx/connectbot/HostListActivity])
+  (iput-object v2 v0 sk/vx/connectbot/HostListActivity$3.val$bridge [object sk/vx/connectbot/service/TerminalBridge])
+  (line 187)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onMenuItemClick([object android/view/MenuItem] )boolean
+  (limit registers 5)
+  ; this: v3 ([object sk/vx/connectbot/HostListActivity$3])
+  ; parameter[0] : v4 ([object android/view/MenuItem])
+  (const/4 v2 1)
+  (line 189)
+  (iget-object v0 v3 sk/vx/connectbot/HostListActivity$3.val$bridge [object sk/vx/connectbot/service/TerminalBridge])
+  (invoke-virtual {v0 v2} sk/vx/connectbot/service/TerminalBridge/hasteDiscontinuity boolean )
+  (line 190)
+  (iget-object v0 v3 sk/vx/connectbot/HostListActivity$3.this$0 [object sk/vx/connectbot/HostListActivity])
+  (iget-object v0 v0 sk/vx/connectbot/HostListActivity.updateHandler [object android/os/Handler])
+  (const/4 v1 15)
+  (invoke-virtual {v0 v1} android/os/Handler/sendEmptyMessage int )
+  (line 191)
+  (return v2)
+)
+
+)

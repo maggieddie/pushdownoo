@@ -1,0 +1,47 @@
+(class (attrs public ) net/sourceforge/pmd/symboltable/VariableUsageFinderFunction
+ (super java/lang/Object)
+ (source "VariableUsageFinderFunction.java")
+ (implements net/sourceforge/pmd/util/UnaryFunction)
+
+ (field (attrs private ) decls [object java/util/Map] )
+ (field (attrs private ) results [object java/util/Map] )
+
+(method (attrs public ) <init>([object java/util/Map] )void
+  (limit registers 3)
+  ; this: v1 ([object net/sourceforge/pmd/symboltable/VariableUsageFinderFunction])
+  ; parameter[0] : v2 ([object java/util/Map])
+  (line 16)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 13)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (iput-object v0 v1 net/sourceforge/pmd/symboltable/VariableUsageFinderFunction.results [object java/util/Map])
+  (line 17)
+  (iput-object v2 v1 net/sourceforge/pmd/symboltable/VariableUsageFinderFunction.decls [object java/util/Map])
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) applyTo([object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v2 ([object net/sourceforge/pmd/symboltable/VariableUsageFinderFunction])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 21)
+  (iget-object v0 v2 net/sourceforge/pmd/symboltable/VariableUsageFinderFunction.results [object java/util/Map])
+  (iget-object v1 v2 net/sourceforge/pmd/symboltable/VariableUsageFinderFunction.decls [object java/util/Map])
+  (invoke-interface {v1 v3} java/util/Map/get [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-interface {v0 v3 v1} java/util/Map/put [object java/lang/Object] [object java/lang/Object] )
+  (line 22)
+  (return-void )
+)
+
+(method (attrs public ) getUsed()[object java/util/Map]
+  (limit registers 2)
+  ; this: v1 ([object net/sourceforge/pmd/symboltable/VariableUsageFinderFunction])
+  (line 25)
+  (iget-object v0 v1 net/sourceforge/pmd/symboltable/VariableUsageFinderFunction.results [object java/util/Map])
+  (return-object v0)
+)
+
+)

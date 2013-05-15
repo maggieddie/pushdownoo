@@ -1,0 +1,218 @@
+(class (attrs public ) org/swiftp/Defaults
+ (super java/lang/Object)
+ (source "Defaults.java")
+
+ (field (attrs public static final ) REMOTE_PROXY_PORT int 2222); 0x8ae )
+ (field (attrs public static final ) SESSION_ENCODING [object java/lang/String] "UTF-8" )
+ (field (attrs public static final ) SO_TIMEOUT_MS int 30000); 0x7530 )
+ (field (attrs public static final ) STRING_ENCODING [object java/lang/String] "UTF-8" )
+ (field (attrs public static final ) acceptNet boolean false )
+ (field (attrs public static final ) acceptWifi boolean true )
+ (field (attrs public static final ) chrootDir [object java/lang/String] "/" )
+ (field (attrs protected static ) consoleLogLevel int 0); 0x0 )
+ (field (attrs protected static ) dataChunkSize int 0); 0x0 )
+ (field (attrs public static final ) do_mediascanner_notify boolean true )
+ (field (attrs protected static ) inputBufferSize int 0); 0x0 )
+ (field (attrs protected static ) portNumber int 0); 0x0 )
+ (field (attrs public static final ) release boolean true )
+ (field (attrs protected static ) serverLogScrollBack int 0); 0x0 )
+ (field (attrs protected static ) sessionMonitorScrollBack int 0); 0x0 )
+ (field (attrs protected static ) settingsMode int 0); 0x0 )
+ (field (attrs protected static ) settingsName [object java/lang/String] null )
+ (field (attrs public static final ) stayAwake boolean false )
+ (field (attrs public static final ) tcpConnectionBacklog int 5); 0x5 )
+ (field (attrs protected static ) uiLogLevel int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (const/16 v2 10)
+  (const/4 v1 4)
+  (line 26)
+  (const/16 v0 256)
+  (sput v0 org/swiftp/Defaults.inputBufferSize int)
+  (line 27)
+  (const/high16 v0 1)
+  (sput v0 org/swiftp/Defaults.dataChunkSize int)
+  (line 28)
+  (sput v2 org/swiftp/Defaults.sessionMonitorScrollBack int)
+  (line 29)
+  (sput v2 org/swiftp/Defaults.serverLogScrollBack int)
+  (line 30)
+  (sput v1 org/swiftp/Defaults.uiLogLevel int)
+  (line 31)
+  (sput v1 org/swiftp/Defaults.consoleLogLevel int)
+  (line 32)
+  (const-string v0 "SwiFTP")
+  (sput-object v0 org/swiftp/Defaults.settingsName [object java/lang/String])
+  (line 35)
+  (const/16 v0 2121)
+  (sput v0 org/swiftp/Defaults.portNumber int)
+  (line 100)
+  (const/4 v0 2)
+  (sput v0 org/swiftp/Defaults.settingsMode int)
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/swiftp/Defaults])
+  (line 25)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getConsoleLogLevel()int
+  (limit registers 1)
+  (line 145)
+  (sget v0 org/swiftp/Defaults.consoleLogLevel int)
+  (return v0)
+ )
+
+(method (attrs public static ) getDataChunkSize()int
+  (limit registers 1)
+  (line 119)
+  (sget v0 org/swiftp/Defaults.dataChunkSize int)
+  (return v0)
+ )
+
+(method (attrs public static ) getInputBufferSize()int
+  (limit registers 1)
+  (line 111)
+  (sget v0 org/swiftp/Defaults.inputBufferSize int)
+  (return v0)
+ )
+
+(method (attrs public static ) getPortNumber()int
+  (limit registers 1)
+  (line 73)
+  (sget v0 org/swiftp/Defaults.portNumber int)
+  (return v0)
+ )
+
+(method (attrs public static ) getServerLogScrollBack()int
+  (limit registers 1)
+  (line 137)
+  (sget v0 org/swiftp/Defaults.serverLogScrollBack int)
+  (return v0)
+ )
+
+(method (attrs public static ) getSessionMonitorScrollBack()int
+  (limit registers 1)
+  (line 127)
+  (sget v0 org/swiftp/Defaults.sessionMonitorScrollBack int)
+  (return v0)
+ )
+
+(method (attrs public static ) getSettingsMode()int
+  (limit registers 1)
+  (line 89)
+  (sget v0 org/swiftp/Defaults.settingsMode int)
+  (return v0)
+ )
+
+(method (attrs public static ) getSettingsName()[object java/lang/String]
+  (limit registers 1)
+  (line 81)
+  (sget-object v0 org/swiftp/Defaults.settingsName [object java/lang/String])
+  (return-object v0)
+ )
+
+(method (attrs public static ) getUiLogLevel()int
+  (limit registers 1)
+  (line 103)
+  (sget v0 org/swiftp/Defaults.uiLogLevel int)
+  (return v0)
+ )
+
+(method (attrs public static ) setConsoleLogLevel(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 149)
+  (sput v0 org/swiftp/Defaults.consoleLogLevel int)
+  (line 150)
+  (return-void )
+ )
+
+(method (attrs public static ) setDataChunkSize(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 123)
+  (sput v0 org/swiftp/Defaults.dataChunkSize int)
+  (line 124)
+  (return-void )
+ )
+
+(method (attrs public static ) setInputBufferSize(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 115)
+  (sput v0 org/swiftp/Defaults.inputBufferSize int)
+  (line 116)
+  (return-void )
+ )
+
+(method (attrs public static ) setLogScrollBack(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 141)
+  (sput v0 org/swiftp/Defaults.serverLogScrollBack int)
+  (line 142)
+  (return-void )
+ )
+
+(method (attrs public static ) setPortNumber(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 77)
+  (sput v0 org/swiftp/Defaults.portNumber int)
+  (line 78)
+  (return-void )
+ )
+
+(method (attrs public static ) setServerLogScrollBack(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 97)
+  (sput v0 org/swiftp/Defaults.serverLogScrollBack int)
+  (line 98)
+  (return-void )
+ )
+
+(method (attrs public static ) setSessionMonitorScrollBack(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 133)
+  (sput v0 org/swiftp/Defaults.sessionMonitorScrollBack int)
+  (line 134)
+  (return-void )
+ )
+
+(method (attrs public static ) setSettingsMode(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 93)
+  (sput v0 org/swiftp/Defaults.settingsMode int)
+  (line 94)
+  (return-void )
+ )
+
+(method (attrs public static ) setSettingsName([object java/lang/String] )void
+  (limit registers 1)
+  ; parameter[0] : v0 ([object java/lang/String])
+  (line 85)
+  (sput-object v0 org/swiftp/Defaults.settingsName [object java/lang/String])
+  (line 86)
+  (return-void )
+ )
+
+(method (attrs public static ) setUiLogLevel(int )void
+  (limit registers 1)
+  ; parameter[0] : v0 (int)
+  (line 107)
+  (sput v0 org/swiftp/Defaults.uiLogLevel int)
+  (line 108)
+  (return-void )
+ )
+
+)

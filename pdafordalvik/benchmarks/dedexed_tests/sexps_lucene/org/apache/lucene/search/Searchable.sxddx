@@ -1,0 +1,91 @@
+(interface (attrs public abstract ) org/apache/lucene/search/Searchable
+ (super java/lang/Object)
+ (source "Searchable.java")
+ (implements java/rmi/Remote)
+
+
+(method (attrs public abstract ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) doc(int )[object org/apache/lucene/document/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) docFreq([object org/apache/lucene/index/Term] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) docFreqs([array [object org/apache/lucene/index/Term]] )[array int]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) explain([object org/apache/lucene/search/Query] int )[object org/apache/lucene/search/Explanation]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) explain([object org/apache/lucene/search/Weight] int )[object org/apache/lucene/search/Explanation]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) maxDoc()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) rewrite([object org/apache/lucene/search/Query] )[object org/apache/lucene/search/Query]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Query] [object org/apache/lucene/search/Filter] int )[object org/apache/lucene/search/TopDocs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Weight] [object org/apache/lucene/search/Filter] int )[object org/apache/lucene/search/TopDocs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Query] [object org/apache/lucene/search/Filter] int [object org/apache/lucene/search/Sort] )[object org/apache/lucene/search/TopFieldDocs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Weight] [object org/apache/lucene/search/Filter] int [object org/apache/lucene/search/Sort] )[object org/apache/lucene/search/TopFieldDocs]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Query] [object org/apache/lucene/search/Filter] [object org/apache/lucene/search/HitCollector] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) search([object org/apache/lucene/search/Weight] [object org/apache/lucene/search/Filter] [object org/apache/lucene/search/HitCollector] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

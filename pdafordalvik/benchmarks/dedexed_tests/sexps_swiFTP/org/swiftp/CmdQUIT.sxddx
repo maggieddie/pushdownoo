@@ -1,0 +1,41 @@
+(class (attrs public ) org/swiftp/CmdQUIT
+ (super org/swiftp/FtpCmd)
+ (source "CmdQUIT.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs public static final ) message [object java/lang/String] "TEMPLATE!!" )
+
+(method (attrs public ) <init>([object org/swiftp/SessionThread] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v1 ([object org/swiftp/CmdQUIT])
+  ; parameter[0] : v2 ([object org/swiftp/SessionThread])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 28)
+  (const-class v0 org/swiftp/CmdQUIT)
+  (invoke-virtual {v0} java/lang/Class/toString )
+  (move-result-object v0)
+  (invoke-direct {v1 v2 v0} org/swiftp/FtpCmd/<init> [object org/swiftp/SessionThread] [object java/lang/String] )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 4)
+  ; this: v3 ([object org/swiftp/CmdQUIT])
+  (line 32)
+  (iget-object v0 v3 org/swiftp/CmdQUIT.myLog [object org/swiftp/MyLog])
+  (const/4 v1 3)
+  (const-string v2 "QUITting")
+  (invoke-virtual {v0 v1 v2} org/swiftp/MyLog/l int [object java/lang/String] )
+  (line 33)
+  (iget-object v0 v3 org/swiftp/CmdQUIT.sessionThread [object org/swiftp/SessionThread])
+  (const-string v1 "221 Goodbye\r\n")
+  (invoke-virtual {v0 v1} org/swiftp/SessionThread/writeString [object java/lang/String] )
+  (line 34)
+  (iget-object v0 v3 org/swiftp/CmdQUIT.sessionThread [object org/swiftp/SessionThread])
+  (invoke-virtual {v0} org/swiftp/SessionThread/closeSocket )
+  (line 35)
+  (return-void )
+)
+
+)

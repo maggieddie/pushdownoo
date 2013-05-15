@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/symboltable/Scope
+ (super java/lang/Object)
+ (source "Scope.java")
+
+
+(method (attrs public abstract ) addDeclaration([object net/sourceforge/pmd/symboltable/ClassNameDeclaration] )void
+)
+
+(method (attrs public abstract ) addDeclaration([object net/sourceforge/pmd/symboltable/MethodNameDeclaration] )void
+)
+
+(method (attrs public abstract ) addDeclaration([object net/sourceforge/pmd/symboltable/VariableNameDeclaration] )void
+)
+
+(method (attrs public abstract ) addVariableNameOccurrence([object net/sourceforge/pmd/symboltable/NameOccurrence] )[object net/sourceforge/pmd/symboltable/NameDeclaration]
+)
+
+(method (attrs public abstract ) contains([object net/sourceforge/pmd/symboltable/NameOccurrence] )boolean
+)
+
+(method (attrs public abstract ) getClassDeclarations()[object java/util/Map]
+)
+
+(method (attrs public abstract ) getEnclosingClassScope()[object net/sourceforge/pmd/symboltable/ClassScope]
+)
+
+(method (attrs public abstract ) getEnclosingMethodScope()[object net/sourceforge/pmd/symboltable/MethodScope]
+)
+
+(method (attrs public abstract ) getEnclosingSourceFileScope()[object net/sourceforge/pmd/symboltable/SourceFileScope]
+)
+
+(method (attrs public abstract ) getParent()[object net/sourceforge/pmd/symboltable/Scope]
+)
+
+(method (attrs public abstract ) getVariableDeclarations()[object java/util/Map]
+)
+
+(method (attrs public abstract ) setParent([object net/sourceforge/pmd/symboltable/Scope] )void
+)
+
+)

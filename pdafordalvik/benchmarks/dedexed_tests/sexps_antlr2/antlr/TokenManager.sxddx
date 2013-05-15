@@ -1,0 +1,54 @@
+(interface (attrs abstract ) antlr/TokenManager
+ (super java/lang/Object)
+ (source "TokenManager.java")
+
+
+(method (attrs public abstract ) clone()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) define([object antlr/TokenSymbol] )void
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTokenStringAt(int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTokenSymbol([object java/lang/String] )[object antlr/TokenSymbol]
+)
+
+(method (attrs public abstract ) getTokenSymbolAt(int )[object antlr/TokenSymbol]
+)
+
+(method (attrs public abstract ) getTokenSymbolElements()[object java/util/Enumeration]
+)
+
+(method (attrs public abstract ) getTokenSymbolKeys()[object java/util/Enumeration]
+)
+
+(method (attrs public abstract ) getVocabulary()[object antlr/collections/impl/Vector]
+)
+
+(method (attrs public abstract ) isReadOnly()boolean
+)
+
+(method (attrs public abstract ) mapToTokenSymbol([object java/lang/String] [object antlr/TokenSymbol] )void
+)
+
+(method (attrs public abstract ) maxTokenType()int
+)
+
+(method (attrs public abstract ) nextTokenType()int
+)
+
+(method (attrs public abstract ) setName([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setReadOnly(boolean )void
+)
+
+(method (attrs public abstract ) tokenDefined([object java/lang/String] )boolean
+)
+
+)

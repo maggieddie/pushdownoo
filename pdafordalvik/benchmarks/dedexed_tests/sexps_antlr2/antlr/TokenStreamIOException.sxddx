@@ -1,0 +1,21 @@
+(class (attrs public ) antlr/TokenStreamIOException
+ (super antlr/TokenStreamException)
+ (source "TokenStreamIOException.java")
+
+ (field (attrs public ) io [object java/io/IOException] )
+
+(method (attrs public ) <init>([object java/io/IOException] )void
+  (limit registers 3)
+  ; this: v1 ([object antlr/TokenStreamIOException])
+  ; parameter[0] : v2 ([object java/io/IOException])
+  (line 23)
+  (invoke-virtual {v2} java/io/IOException/getMessage )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} antlr/TokenStreamException/<init> [object java/lang/String] )
+  (line 24)
+  (iput-object v2 v1 antlr/TokenStreamIOException.io [object java/io/IOException])
+  (line 25)
+  (return-void )
+ )
+
+)

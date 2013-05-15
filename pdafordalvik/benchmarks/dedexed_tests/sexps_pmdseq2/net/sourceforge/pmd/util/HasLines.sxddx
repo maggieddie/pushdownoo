@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/util/HasLines
+ (super java/lang/Object)
+ (source "HasLines.java")
+
+
+(method (attrs public abstract ) getLine(int )[object java/lang/String]
+)
+
+)

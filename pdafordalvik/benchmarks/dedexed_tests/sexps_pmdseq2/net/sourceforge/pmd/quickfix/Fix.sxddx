@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) net/sourceforge/pmd/quickfix/Fix
+ (super java/lang/Object)
+ (source "Fix.java")
+
+
+(method (attrs public abstract ) fix([object java/lang/String] int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getLabel()[object java/lang/String]
+)
+
+)

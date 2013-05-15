@@ -1,0 +1,26 @@
+(class (attrs public final ) org/apache/lucene/analysis/LowerCaseTokenizer
+ (super org/apache/lucene/analysis/LetterTokenizer)
+ (source "LowerCaseTokenizer.java")
+
+
+(method (attrs public ) <init>([object java/io/Reader] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/analysis/LowerCaseTokenizer])
+  ; parameter[0] : v1 ([object java/io/Reader])
+  (line 34)
+  (invoke-direct {v0 v1} org/apache/lucene/analysis/LetterTokenizer/<init> [object java/io/Reader] )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs protected ) normalize(char )char
+  (limit registers 3)
+  ; this: v1 ([object org/apache/lucene/analysis/LowerCaseTokenizer])
+  ; parameter[0] : v2 (char)
+  (line 40)
+  (invoke-static {v2} java/lang/Character/toLowerCase char )
+  (move-result v0)
+  (return v0)
+)
+
+)

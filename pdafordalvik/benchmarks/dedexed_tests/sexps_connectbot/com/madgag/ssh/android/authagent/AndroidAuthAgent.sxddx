@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) com/madgag/ssh/android/authagent/AndroidAuthAgent
+ (super java/lang/Object)
+ (source "AndroidAuthAgent.java")
+ (implements android/os/IInterface)
+
+
+(method (attrs public abstract ) productionIdentities()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) writing([array byte] [array byte] )[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+)

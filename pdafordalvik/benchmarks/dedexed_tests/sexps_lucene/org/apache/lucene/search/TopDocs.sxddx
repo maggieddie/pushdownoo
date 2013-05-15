@@ -1,0 +1,46 @@
+(class (attrs public ) org/apache/lucene/search/TopDocs
+ (super java/lang/Object)
+ (source "TopDocs.java")
+ (implements java/io/Serializable)
+
+ (field (attrs private ) maxScore float )
+ (field (attrs public ) scoreDocs [array [object org/apache/lucene/search/ScoreDoc]] )
+ (field (attrs public ) totalHits int )
+
+(method (attrs ) <init>(int [array [object org/apache/lucene/search/ScoreDoc]] float )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/lucene/search/TopDocs])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([array [object org/apache/lucene/search/ScoreDoc]])
+  ; parameter[2] : v3 (float)
+  (line 42)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 43)
+  (iput v1 v0 org/apache/lucene/search/TopDocs.totalHits int)
+  (line 44)
+  (iput-object v2 v0 org/apache/lucene/search/TopDocs.scoreDocs [array [object org/apache/lucene/search/ScoreDoc]])
+  (line 45)
+  (iput v3 v0 org/apache/lucene/search/TopDocs.maxScore float)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) getMaxScore()float
+  (limit registers 2)
+  ; this: v1 ([object org/apache/lucene/search/TopDocs])
+  (line 33)
+  (iget v0 v1 org/apache/lucene/search/TopDocs.maxScore float)
+  (return v0)
+)
+
+(method (attrs public ) setMaxScore(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/lucene/search/TopDocs])
+  ; parameter[0] : v1 (float)
+  (line 38)
+  (iput v1 v0 org/apache/lucene/search/TopDocs.maxScore float)
+  (line 39)
+  (return-void )
+)
+
+)

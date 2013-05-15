@@ -1,0 +1,66 @@
+(interface (attrs public abstract ) org/apache/lucene/search/FieldCache
+ (super java/lang/Object)
+ (source "FieldCache.java")
+
+ (field (attrs public static final ) DEFAULT [object org/apache/lucene/search/FieldCache] null )
+ (field (attrs public static final ) STRING_INDEX int -1); 0xffffffff )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 73)
+  (new-instance v0 org/apache/lucene/search/FieldCacheImpl)
+  (invoke-direct {v0} org/apache/lucene/search/FieldCacheImpl/<init> )
+  (sput-object v0 org/apache/lucene/search/FieldCache.DEFAULT [object org/apache/lucene/search/FieldCache])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public abstract ) getAuto([object org/apache/lucene/index/IndexReader] [object java/lang/String] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getCustom([object org/apache/lucene/index/IndexReader] [object java/lang/String] [object org/apache/lucene/search/SortComparator] )[array [object java/lang/Comparable]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getFloats([object org/apache/lucene/index/IndexReader] [object java/lang/String] )[array float]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getFloats([object org/apache/lucene/index/IndexReader] [object java/lang/String] [object org/apache/lucene/search/FieldCache$FloatParser] )[array float]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getInts([object org/apache/lucene/index/IndexReader] [object java/lang/String] )[array int]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getInts([object org/apache/lucene/index/IndexReader] [object java/lang/String] [object org/apache/lucene/search/FieldCache$IntParser] )[array int]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getStringIndex([object org/apache/lucene/index/IndexReader] [object java/lang/String] )[object org/apache/lucene/search/FieldCache$StringIndex]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getStrings([object org/apache/lucene/index/IndexReader] [object java/lang/String] )[array [object java/lang/String]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)
