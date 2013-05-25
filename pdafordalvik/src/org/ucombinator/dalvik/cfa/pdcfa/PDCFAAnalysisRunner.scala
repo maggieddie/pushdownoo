@@ -50,6 +50,7 @@ import org.ucombinator.playhelpers.AnalysisHelperThread
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import scala.tools.nsc.io.Directory
 import scala.util.matching.Regex
+import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
 
 
 
@@ -61,7 +62,8 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
 										with DSGAnalysisRunner 
 										with FancyOutput 
 										with DalvikAnalysisStatistics 
-										with LiveRegisterAnalysis {
+										with LiveRegisterAnalysis 
+										with DalvikWideningConfiguration{
 
   type Term = Stmt
   

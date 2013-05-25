@@ -1,14 +1,16 @@
 package org.ucombinator.dalvik.cfa.cesk
 
 import org.ucombinator.dalvik.syntax._
-import scala.collection.immutable._
+ import scala.collection.immutable.{ Set => ImmSet, Map => ImmMap}
+//import scala.collection.immutable._
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.CommonUtils
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import scala.util.matching.Regex
-trait StateSpace {
+import org.ucombinator.playhelpers.AnalysisHelperThread
+trait StateSpace  {
   
-  type :-> [T, S ] = Map[T,S]
+  type :-> [T, S ] = ImmMap[T,S]
   // provided in particular impl
  // type Addr 
   // continuation addr
@@ -335,6 +337,60 @@ trait StateSpace {
    
   abstract sealed class ControlState {
     
+    // compare this state with another state based on partial orderness
+    
+    def isPartialState : Boolean = {
+     this match {
+      case ErrorState(_, _) | FinalState() => false
+      case PartialState(st, fp, store, ps, kptr,  t) => {
+         true
+      }
+    }
+    }
+     
+    def weakerThan(that: ControlState) : Boolean = {
+      if(this.isPartialState && that.isPartialState) {
+        this match {
+          case PartialState(st, fp, s, pst, kptr, t) => {
+            that match{
+              case PartialState(stt, fpt, st, pstt, kptrt, tt) => {
+                 (st == stt)  &&     
+                (fp == fpt) &&
+                partialOrderStoreCompare(s, st) &&
+                partialOrderStoreCompare(pst, pstt) &&
+                (kptr == kptrt) &&
+                (t == tt)
+               
+              }
+              case _ => false //not possible
+            }
+          }
+          case _ => {
+            false // not possible
+          }
+          }
+        } 
+      else false
+      } 
+    
+    // helper function that decide if a control is weaker than a set of (seen) states
+    def weakerThanAny(  seenStates: Set[ControlState]) : Boolean = {
+      val res = seenStates.filter(ss => {
+        this.weakerThan(ss)
+      })
+      ! res.isEmpty
+    }
+    
+    
+    def getStmtForEqual: Option[StForEqual] = {
+      this match {
+      case ErrorState(_, _) | FinalState() => None
+      case PartialState(st, fp, store, ps, kptr,  t) => {
+        Some(st)
+      }
+    }
+    }
+      
     def sourceOrSinkState : Boolean = {
       this match{
         case ps@PartialState(st, fp, s, pst, kptr, t) => {
@@ -394,6 +450,74 @@ trait StateSpace {
         case _ =>  None
       } 
     }
+    
+    def getCurStore: Store= {
+     this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {  
+            s
+        }
+        case _ =>  ImmMap.empty
+      } 
+    }
+    
+     def getCurPropertyStore: PropertyStore= {
+     this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {  
+            pst
+        }
+        case _ =>  ImmMap.empty
+      } 
+    }
+    
+    //for widening
+    def getCurFreq  : Int =  {
+    
+    val stqO  = this.getStmtForEqual
+    stqO match {
+      case None => 0
+      case Some(stq) => Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningCounterTbl(stq)
+    } 
+  }
+    def getCurWidenedStore : (Store,  PropertyStore) = {
+      val stqO  = this.getStmtForEqual
+    stqO match {
+      case None => (ImmMap.empty, ImmMap.empty)
+      case Some(stq) => {
+        val (s, ps) = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl(stq) 
+        (s.asInstanceOf[Store], ps.asInstanceOf[PropertyStore]) 
+      }
+    }
+  }
+    
+    def updateWideningFreqTbl {
+       val stqO  = this.getStmtForEqual
+    stqO match {
+      case None => 0
+      case Some(stq) => {
+        val gblFreQTbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningCounterTbl 
+        if(gblFreQTbl.contains(stq))
+         Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningCounterTbl  +=  (stq -> (gblFreQTbl(stq)+1) )
+        else
+          Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningCounterTbl  +=  (stq -> 0 )
+      }
+    } 
+    }
+ 
+    
+    def updateWideningStoreTbl(s: Store, ps: PropertyStore) {
+       val stqO  = this.getStmtForEqual
+    stqO match {
+      case None => 0 //doing nothing
+      case Some(stq) => {
+        val gblStoreTbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl 
+        if(gblStoreTbl.contains(stq))
+         Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl  +=  
+           (stq -> (s,ps))   
+        else 0
+          //Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl  +=  (stq -> 0 )
+      }
+    } 
+    }
   }
  
   
@@ -426,7 +550,27 @@ trait StateSpace {
   /******************************************************
    * Utility functions
    ******************************************************/
-
+// store compare
+  def partialOrderStoreCompare(s1: Store, s2: Store) : Boolean = {
+    val res = s1.map(kv => {
+      if(s2.contains(kv._1)){
+        val absV2 = s2.get(kv._1)
+         absV2 match {
+          case Some(vs) => {
+             kv._2 subsetOf vs // should call a function to compare the set of the orderness.
+          }
+          case None => {
+            false // not possible
+          }
+        }
+      }
+      else false
+    })
+    
+    val l = s1.size
+    val resL = res.size
+    l == resL
+  }
   def storeLookup(s: Store, a: Addr) : Set[Value] =
   {  
     s.get(a) match {
@@ -562,7 +706,7 @@ trait StateSpace {
      val allRegularStores =  states.map {
       case PartialState(_, _, s, _,_,_) => s
      }
-     val emptyMonovariantStore : Addr :-> Set[Value] = Map.empty
+     val emptyMonovariantStore : Addr :-> Set[Value] = ImmMap.empty
     mergeStores(emptyMonovariantStore, allRegularStores.toList)
   }
   
@@ -571,7 +715,7 @@ trait StateSpace {
      val allRegularStores =  states.map {
       case PartialState(_, _, _, pst,_,_) => pst
      }
-     val emptyMonovariantStore : Addr :-> Set[Value] = Map.empty
+     val emptyMonovariantStore : Addr :-> Set[Value] = ImmMap.empty
     mergeStores(emptyMonovariantStore, allRegularStores.toList)
   }
   
@@ -581,6 +725,22 @@ trait StateSpace {
       case _ => false
     })
    }
+      
+   def wideningState(oldS: ControlState, newStore: Store, newPropertyStore: PropertyStore): ControlState = {
+     oldS match{ 
+       case PartialState(st , fp , s , ps , kptr , t ) => PartialState(st , fp , newStore , newPropertyStore , kptr , t )
+       case _ => oldS
+     }
+   }
+   
+   // give a set of new states, filter out the ones that weaker than the seen set (which will be passed)
+   def getWeakerStates (possibleStates: Set[ControlState], seenStates: Set[ControlState]) : Set[ControlState] = {
+     possibleStates.filter(ps => {
+        ps.weakerThanAny(seenStates)
+     })
+   }
+   
+   
 
   class SemanticException(s: String) extends Exception(s)
 

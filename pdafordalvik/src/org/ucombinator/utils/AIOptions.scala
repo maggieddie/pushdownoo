@@ -24,6 +24,14 @@ class AIOptions {
   var dummy = false
   var gc = true
   var gcDebug = false
+  
+  // per point widening
+  var ppw: Boolean = false 
+  var ppwFrq : Int = 2
+  // aggresive cut off
+  var aco: Boolean  = false
+  
+  
   var dumpGraph = true
   var lang = "dalvik"
   var interrupt = false
@@ -142,6 +150,17 @@ object AIOptions {
         opts.doLRA = true
         parse(rest, opts)
       }
+       
+       case "--ppw" :: num:: rest => {
+         opts.ppw = true
+         opts.ppwFrq = Integer.parseInt(num)
+         parse(rest, opts)
+       } 
+       
+       case "--aco" ::  rest => {
+         opts.aco = true 
+         parse(rest, opts)
+       }
 
       case "--gcDebug" :: rest => {
         opts.gcDebug = true

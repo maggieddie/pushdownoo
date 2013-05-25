@@ -34,12 +34,37 @@ package org.ucombinator.dalvik.cfa.pdcfa
 import org.ucombinator.dalvik.cfa.cesk._
 import org.ucombinator.dsg._
 import org.ucombinator.utils.Debug
+import org.ucombinator.dalvik.cfa.widening.WideningConfiguration
 
 
 trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
-	self: StackCESKMachinary =>
+	self: StackCESKMachinary with WideningConfiguration=>
 	  
 	type Q = ControlState
+	
+	
+	/**
+	 * Decide the new state
+	 * Note that after ppw, there should be gc again
+	 */
+	
+	def decideNewState(q: Q, frames: List[Frame]) : Q = {
+	  if(shouldGC || perPointWidening){ 
+	      if(shouldGC){
+	    	   val gcQ =  gc(q, frames)
+	    	  if(perPointWidening){
+	    	    val gcNwq = widening(gcQ)
+	    	    gc(gcNwq, frames)
+	    	  }
+	    	  else gcQ
+	      } else if(perPointWidening)
+	          widening(q)
+	          else q 
+	  }
+	  else {
+	    q
+	  } 
+	}
 	
 	/**
    * Main iteration function of IPDS
@@ -52,8 +77,11 @@ trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
    */
 	
 	def stepIPDS(q: Q, k: List[Frame], frames: List[Frame]): Set[(StackAction[Frame], Q)] = {
-	 
-    val newQ: Q = (if (shouldGC) gc(q, frames) else q)
+	  
+	   q.updateWideningFreqTbl
+	   
+    val newQ: Q = decideNewState(q, frames)//(if (shouldGC) gc(q, frames) else q)
+    
      val confs = mnext(newQ, k)
    
     for {

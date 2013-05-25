@@ -7,10 +7,11 @@ import org.ucombinator.utils.Debug
 import org.ucombinator.utils.{StringUtils, AIOptions, FancyOutput}
 import tools.nsc.io.Directory
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.dalvik.cfa.widening.WideningConfiguration
 
 
 trait DyckStateGraphMachinery extends StateSpace{ 
-  self: GarbageCollectorTrait with FancyOutput =>
+  self: GarbageCollectorTrait with FancyOutput  with WideningConfiguration =>
 
   /**
    * Abstract componnents
@@ -164,6 +165,26 @@ trait DyckStateGraphMachinery extends StateSpace{
    
  }
   
+ // precond: weakerStates is subset of targetSet of possible Edges
+ private def filterWeakerEdges(weakerStates: Set[ControlState], possibleEdges: Edges) : Edges= {
+       possibleEdges.filter(pe => {
+      weakerStates.contains(pe.target)
+    })
+ }
+ 
+ private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges): (Set[ControlState],  Edges) = {
+   if(aggresiveCutOff) {
+     val weakerStates = getWeakerStates(newStates, ss)
+     val weakerEdges = filterWeakerEdges(weakerStates, newEdges)
+     val newNewStates = newStates -- weakerStates // we are not going to explore weaker states 
+     val newNewEdges = newEdges -- weakerEdges
+     (newStates, newNewEdges)
+   }
+   else {
+     (newStates, newEdges)
+   }
+ }
+ 
    /**
    * Monotonic DSG iteration function
    * denoted as 'f' in the paper
@@ -192,12 +213,12 @@ trait DyckStateGraphMachinery extends StateSpace{
         nodes ++ obtainedStates
       } else obtainedStates)
 
-      val newEdges = noSwitchesEdges -- ee
-
-      helper.update(newEdges)
-     
-      val newStore: SharedStore = obtainedStores.foldLeft(store)(_ ++ _)
+   //   val newEdges = noSwitchesEdges -- ee
+      val (newNewStates, newEdges1) = decideNewNodesEdgesToVisit(newStates, ss, noSwitchesEdges)
+      val newEdges = newEdges1 -- ee 
+      helper.update(newEdges) 
       
+      val newStore: SharedStore = obtainedStores.foldLeft(store)(_ ++ _) 
       val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ ++ _)
       
       // global widening
@@ -207,36 +228,32 @@ trait DyckStateGraphMachinery extends StateSpace{
         val wideneningPStore : PSharedStore = getMonovariantPStore(filterRegisterStates(ss))
       val joinedNewPStore = mergeStores(newPStore, List(wideneningPStore))
      
-      val newSEpsNext = newStates.flatMap(s => helper.getEpsNextStates(s))
+      //val newSEpsNext = newStates.flatMap(s => helper.getEpsNextStates(s))
       //println("NEW elspang "+ newSEpsNext.toList.length)
       val storeSS = getStoreSensitiveStates(ss)
   
-      val newToVisit = (newStates	
+      val newSEpsNext = newNewStates.flatMap(s => helper.getEpsNextStates(s))
+    	  val newToVisit = (newNewStates//newStates	
         // Lemma 1 (newEps)
         ++ newSEpsNext)
         // Lemma 2 (store-sensitive)
        // ++ storeSS) ////// NOTE: the store sensitive states are from the dyck state graph nodes. which has been explored before.
-
-      // S' = ...
-      val ss1: Nodes = ss ++ newStates + s0
-
+ // S' = ...
+        val ss1: Nodes = ss ++ newNewStates + //newStates + // we are not going to put the weaker states to the dyck state graph neither.
+        				s0 
       // E' = ...
       val ee1 = (ee ++ newEdges)
       
       val cond1 = !newEdges.isEmpty //!newEdges.subsetOf(ee) 
     
-      val cond2 = (store !=   newStore)
+      val cond2 = (store !=   newStore) 
       
-      val cond3 = ! newToVisit.subsetOf(ss)
+      val shouldProceed = cond1 || cond2 //|| cond3
+
       
-    //  val cond3  = (pStore !=  newPStore)
-
-      val shouldProceed = cond1 || cond2 || cond3
-
-     // println(progressPrefix + " " + ss1.size + "  " + ee1.size + " " + newSEpsNext.toList.length +" \n")
-      // println(progressPrefix + " " + noStatesExplored  + "  " + noEdgesExplored   + " " +
-      println( noEdgesExplored + " " + newSEpsNext.toList.length + " newV: "+ newToVisit.toList.length + " \n")
+      println( "DSG: Nodes explored" + noEdgesExplored + " EpsNextStates" + newSEpsNext.toList.length + " StatesToVisit: "+ newToVisit.toList.length + " \n")
       (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore )//newStore)
+        
     }
   }
       

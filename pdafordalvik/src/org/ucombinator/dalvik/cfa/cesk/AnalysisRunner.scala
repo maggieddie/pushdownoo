@@ -12,11 +12,13 @@ import org.ucombinator.dalvik.statistics.DalvikAnalysisStatistics
 import org.ucombinator.dalvik.syntax.NopStmt
 import org.ucombinator.dalvik.statistics.Statistics
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.dalvik.cfa.widening.WideningConfiguration
  
 
 abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
   with DalvikVMRelated
-  with DalvikAnalysisStatistics {
+  with DalvikAnalysisStatistics
+  with WideningConfiguration {
 
   type ControlState
 
@@ -39,6 +41,12 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
 
   def doLRA = opts.doLRA
 
+  def perPointWidening = opts.ppw
+  
+  def wideningFreq = opts.ppwFrq
+  
+  def aggresiveCutOff = opts.aco
+  
   def dumpDSG = opts.dumpGraph
 
   def printGCDebug = opts.gcDebug

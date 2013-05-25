@@ -11,13 +11,16 @@ import models.PermissionPair
 import scala.tools.nsc.io.File
 import org.ucombinator.utils.CommonUtils.HeatPair
 import models.PropertyCheckList
+import org.ucombinator.dalvik.cfa.cesk.StmtForEqual
+import org.ucombinator.dalvik.cfa.cesk.StateSpace
+import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
+import org.ucombinator.dalvik.cfa.widening.WideningHelperTrait
  
  
 
 // changed to support cmd line
-class AnalysisHelperThread (params: Array[String])extends Thread{ 
+class AnalysisHelperThread (params: Array[String]) extends Thread with WideningHelperTrait { 
   
-   
   // for information flow
   var sources: Set[(String, String)] = Set[(String, String)]()
   var sinks: Set[(String, String)] = Set[(String, String)]()
@@ -28,8 +31,10 @@ class AnalysisHelperThread (params: Array[String])extends Thread{
   var heatMap: scala.collection.mutable.Map[StForEqual, HeatPair] = scala.collection.mutable.Map[StForEqual, HeatPair]()
   // the meta information
   var classTable: Map[String, DalvikClassDef] = Map.empty
-
-  //
+ var ppwWideningCounterTbl:  Map[StForEqual, Int] = Map()
+   var ppwWideningStoreTbl:  Map[StForEqual, (StateSpace#Store, StateSpace#PropertyStore)] = Map[StForEqual, (StateSpace#Store, StateSpace#PropertyStore)]()
+  // var ppwWideningStoreTbl:  Map[StForEqual, ( Store,  PropertyStore)] = Map[StForEqual, ( Store,  PropertyStore)]()
+   //
   var stmtMap: Map[String, LabelStmt] = Map.empty
   // def register(label: String, lst: LabelStmt) {
   //  Stmt.stmtMap += (label -> lst)}
@@ -42,12 +47,16 @@ class AnalysisHelperThread (params: Array[String])extends Thread{
   
    var gopts: AIOptions = null
    
+    
    var declaredPerms : List[String] = List[String]()
 	override  def  run() {  
     
-        PlayHelper.doAnalysis(params)
+   PlayHelper.doAnalysis(params) 
+  
      //runner.runPDCFA(opts,  initEns) 
    }
+  
+  
   
 }
 /*class AnalysisHelperThread(k: Option[Int],
