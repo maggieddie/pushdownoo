@@ -1,0 +1,40 @@
+(class (attrs ) android/support/v4/app/FragmentManagerImpl$3
+ (super java/lang/Object)
+ (source "FragmentManager.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$0 [object android/support/v4/app/FragmentManagerImpl] )
+ (field (attrs final ) val$flags int )
+ (field (attrs final ) val$name [object java/lang/String] )
+
+(method (attrs ) <init>([object android/support/v4/app/FragmentManagerImpl] [object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/app/FragmentManagerImpl$3])
+  ; parameter[0] : v1 ([object android/support/v4/app/FragmentManagerImpl])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 (int)
+  (line 452)
+  (iput-object v1 v0 android/support/v4/app/FragmentManagerImpl$3.this$0 [object android/support/v4/app/FragmentManagerImpl])
+  (iput-object v2 v0 android/support/v4/app/FragmentManagerImpl$3.val$name [object java/lang/String])
+  (iput v3 v0 android/support/v4/app/FragmentManagerImpl$3.val$flags int)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 6)
+  ; this: v5 ([object android/support/v4/app/FragmentManagerImpl$3])
+  (line 454)
+  (iget-object v0 v5 android/support/v4/app/FragmentManagerImpl$3.this$0 [object android/support/v4/app/FragmentManagerImpl])
+  (iget-object v1 v5 android/support/v4/app/FragmentManagerImpl$3.this$0 [object android/support/v4/app/FragmentManagerImpl])
+  (iget-object v1 v1 android/support/v4/app/FragmentManagerImpl.mActivity [object android/support/v4/app/FragmentActivity])
+  (iget-object v1 v1 android/support/v4/app/FragmentActivity.mHandler [object android/os/Handler])
+  (iget-object v2 v5 android/support/v4/app/FragmentManagerImpl$3.val$name [object java/lang/String])
+  (const/4 v3 15)
+  (iget v4 v5 android/support/v4/app/FragmentManagerImpl$3.val$flags int)
+  (invoke-virtual {v0 v1 v2 v3 v4} android/support/v4/app/FragmentManagerImpl/popBackStackState [object android/os/Handler] [object java/lang/String] int int )
+  (line 455)
+  (return-void )
+)
+
+)

@@ -1,0 +1,21 @@
+(class (attrs public ) org/tomdroid/util/SearchSuggestionProvider
+ (super android/content/SearchRecentSuggestionsProvider)
+ (source "SearchSuggestionProvider.java")
+
+ (field (attrs public static final ) AUTHORITY [object java/lang/String] "org.tomdroid.util.SearchSuggestionProvider" )
+ (field (attrs public static final ) MODE int 1); 0x1 )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/tomdroid/util/SearchSuggestionProvider])
+  (line 32)
+  (invoke-direct {v2} android/content/SearchRecentSuggestionsProvider/<init> )
+  (line 33)
+  (const-string v0 "org.tomdroid.util.SearchSuggestionProvider")
+  (const/4 v1 1)
+  (invoke-virtual {v2 v0 v1} org/tomdroid/util/SearchSuggestionProvider/setupSuggestions [object java/lang/String] int )
+  (line 34)
+  (return-void )
+ )
+
+)

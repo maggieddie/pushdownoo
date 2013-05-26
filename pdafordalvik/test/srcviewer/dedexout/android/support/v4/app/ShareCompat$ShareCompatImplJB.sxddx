@@ -1,0 +1,33 @@
+(class (attrs ) android/support/v4/app/ShareCompat$ShareCompatImplJB
+ (super android/support/v4/app/ShareCompat$ShareCompatImplICS)
+ (source "ShareCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/ShareCompat$ShareCompatImplJB])
+  (line 137)
+  (invoke-direct {v0} android/support/v4/app/ShareCompat$ShareCompatImplICS/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) escapeHtml([object java/lang/CharSequence] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/ShareCompat$ShareCompatImplJB])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 139)
+  (invoke-static {v2} android/support/v4/app/ShareCompatJB/escapeHtml [object java/lang/CharSequence] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) shouldAddChooserIntent([object android/view/MenuItem] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/ShareCompat$ShareCompatImplJB])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 144)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

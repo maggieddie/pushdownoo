@@ -53,7 +53,9 @@ trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
 	      if(shouldGC){
 	    	   val gcQ =  gc(q, frames)
 	    	  if(perPointWidening){
+	    	    println("ppw is on--")
 	    	    val gcNwq = widening(gcQ)
+	    	    println("to gc after ppw--")
 	    	    gc(gcNwq, frames)
 	    	  }
 	    	  else gcQ
@@ -78,7 +80,7 @@ trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
 	
 	def stepIPDS(q: Q, k: List[Frame], frames: List[Frame]): Set[(StackAction[Frame], Q)] = {
 	  
-	   q.updateWideningFreqTbl
+	   q.updateWideningFreqTbl 
 	   
     val newQ: Q = decideNewState(q, frames)//(if (shouldGC) gc(q, frames) else q)
     

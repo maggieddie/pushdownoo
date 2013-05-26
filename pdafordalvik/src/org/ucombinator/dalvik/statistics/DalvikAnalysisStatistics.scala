@@ -24,7 +24,9 @@ trait DalvikAnalysisStatistics extends StateSpace with ExceptionHandling{
     throwPointsTo: ThrowPointsTo,
     numStates: Int,
     numEdges: Int,
-    truncated: Boolean)
+    truncated: Boolean,
+    totalEntrypoints: Int,
+    exploratedEntryPoints: Int)
    
   
   /* private def filterRegisterStates (states: Set[ControlState]): Set[ControlState] = {

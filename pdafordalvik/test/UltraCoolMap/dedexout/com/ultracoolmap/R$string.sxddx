@@ -1,0 +1,28 @@
+(class (attrs public final ) com/ultracoolmap/R$string
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) app_name int 2130968577); 0x7f040001 )
+ (field (attrs public static final ) blue_flag_file int 2130968589); 0x7f04000d )
+ (field (attrs public static final ) button_label int 2130968579); 0x7f040003 )
+ (field (attrs public static final ) directions_label int 2130968583); 0x7f040007 )
+ (field (attrs public static final ) flag1_label int 2130968581); 0x7f040005 )
+ (field (attrs public static final ) flag1_load_label int 2130968586); 0x7f04000a )
+ (field (attrs public static final ) flag1_save_label int 2130968584); 0x7f040008 )
+ (field (attrs public static final ) flag2_label int 2130968582); 0x7f040006 )
+ (field (attrs public static final ) flag2_load_label int 2130968587); 0x7f04000b )
+ (field (attrs public static final ) flag2_save_label int 2130968585); 0x7f040009 )
+ (field (attrs public static final ) hello int 2130968576); 0x7f040000 )
+ (field (attrs public static final ) maps_key int 2130968578); 0x7f040002 )
+ (field (attrs public static final ) red_flag_file int 2130968588); 0x7f04000c )
+ (field (attrs public static final ) update_label int 2130968580); 0x7f040004 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/ultracoolmap/R$string])
+  (line 32)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

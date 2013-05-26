@@ -38,6 +38,7 @@ class S2DParser {
         val (flds, meths, interfaceNames, interfaces) = parseClassBody(List(), List(), List(), Map.empty)(fieldsAndMethods.toList,  clsName.toString())
        
         val dvcd = new DalvikClassDef(clsClsStr, supSn, flds, meths, interfaceNames, interfaces)
+        println("cur class: " + clsClsStr + "super:"  + supSn)
         dvcd.registerClass(clsClsStr)
        // Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))
         Some(dvcd)

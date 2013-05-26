@@ -1,0 +1,32 @@
+(class (attrs ) org/tomdroid/ui/PreferencesActivity$8
+ (super java/lang/Object)
+ (source "PreferencesActivity.java")
+ (implements android/preference/Preference$OnPreferenceClickListener)
+
+ (field (attrs final ) this$0 [object org/tomdroid/ui/PreferencesActivity] )
+
+(method (attrs ) <init>([object org/tomdroid/ui/PreferencesActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/tomdroid/ui/PreferencesActivity$8])
+  ; parameter[0] : v1 ([object org/tomdroid/ui/PreferencesActivity])
+  (line 1)
+  (iput-object v1 v0 org/tomdroid/ui/PreferencesActivity$8.this$0 [object org/tomdroid/ui/PreferencesActivity])
+  (line 265)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreferenceClick([object android/preference/Preference] )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/tomdroid/ui/PreferencesActivity$8])
+  ; parameter[0] : v3 ([object android/preference/Preference])
+  (line 268)
+  (iget-object v0 v2 org/tomdroid/ui/PreferencesActivity$8.this$0 [object org/tomdroid/ui/PreferencesActivity])
+  (const/4 v1 2)
+  (invoke-virtual {v0 v1} org/tomdroid/ui/PreferencesActivity/showDialog int )
+  (line 269)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

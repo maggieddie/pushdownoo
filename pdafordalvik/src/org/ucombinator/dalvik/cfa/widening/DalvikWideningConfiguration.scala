@@ -10,9 +10,9 @@ trait DalvikWideningConfiguration extends StateSpace with WideningConfiguration{
      // widening starts
      if(st.getCurFreq > wideningFreq) {
        
-       val (curStore, curPs) = st.getCurWidenedStore
-       val widenedStore = mergeTwoStores(curStore, st.getCurStore)
-       val widenedPS = mergeTwoStores(curPs, st.getCurPropertyStore)
+       val (curWStore, curWPs) = st.getCurWidenedStore
+       val widenedStore = mergeTwoStores(curWStore, st.getCurStore)
+       val widenedPS = mergeTwoStores(curWPs, st.getCurPropertyStore)
        wideningState(st, widenedStore, widenedPS)
      }else 
        st

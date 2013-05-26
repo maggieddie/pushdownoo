@@ -204,13 +204,15 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
 
   def dumpStatisticsNew(opts: AIOptions, stat: AnalysisStatistics): String = {
     import java.io._
-    val AnalysisStatistics(analysisTime, varPointsTo, throwPointsTo, numStates, numEdges, truncated) = stat
+    val AnalysisStatistics(analysisTime, varPointsTo, throwPointsTo, numStates, numEdges, truncated, totalEns, exploredEns) = stat
     val buffer = new StringBuffer()
     val meanRegular = (varPointsTo.totalCardi.toDouble / varPointsTo.totalEntries).toDouble
     val meanThrown = (throwPointsTo.totalCardi.toDouble / throwPointsTo.totalEntries).toDouble
 
    
 
+    buffer.append("entry points: explored/total: " + totalEns + "/" + exploredEns + "\n")
+    
     buffer.append("Control states: " + numStates + "\n")
     buffer.append("Transitions / DSG edges: " + numEdges + "\n")
     buffer.append("Total amount of VarPointsto entries, and the mean: " +

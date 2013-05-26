@@ -173,14 +173,17 @@ trait DyckStateGraphMachinery extends StateSpace{
  }
  
  private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges): (Set[ControlState],  Edges) = {
+   println("--before aco ----" + newStates.size + " " + newEdges.size)
    if(aggresiveCutOff) {
      val weakerStates = getWeakerStates(newStates, ss)
      val weakerEdges = filterWeakerEdges(weakerStates, newEdges)
      val newNewStates = newStates -- weakerStates // we are not going to explore weaker states 
      val newNewEdges = newEdges -- weakerEdges
-     (newStates, newNewEdges)
+      println("--after aco ----" + newNewStates.size + " " + newNewEdges.size)
+     (newNewStates, newNewEdges)
    }
    else {
+      
      (newStates, newEdges)
    }
  }
@@ -244,14 +247,15 @@ trait DyckStateGraphMachinery extends StateSpace{
       // E' = ...
       val ee1 = (ee ++ newEdges)
       
-      val cond1 = !newEdges.isEmpty //!newEdges.subsetOf(ee) 
+      val cond1 = !newEdges.subsetOf(ee) // !newEdges.isEmpty //!newEdges.subsetOf(ee) 
     
-      val cond2 = (store !=   newStore) 
+      val cond2 =   ! partialOrderStoreCompare(newStore, store)//(store !=   newStore) 
+      val cond3 =   !partialOrderStoreCompare(newPStore, pStore)
       
-      val shouldProceed = cond1 || cond2 //|| cond3
+      val shouldProceed = cond1 || cond2 || cond3
 
       
-      println( "DSG: Nodes explored" + noEdgesExplored + " EpsNextStates" + newSEpsNext.toList.length + " StatesToVisit: "+ newToVisit.toList.length + " \n")
+      println( "DSG: Nodes explored " + noEdgesExplored + " EpsNextStates " + newSEpsNext.toList.length + " StatesToVisit: "+ newToVisit.toList.length + " \n")
       (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore )//newStore)
         
     }

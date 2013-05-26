@@ -68,6 +68,8 @@ object RunAnalysis {
     --k k                  "k-degree" of the analysis, by default k = 0, only k = 0,1 are supported so far
     --gc                   switch on abstract Garbage Collector (default = off)
     --lra  				   switch on live register analysis
+    --ppw n				   per-point widening
+    --aco 				   aggresive cut off based on approximation
     --dump-graph           dump Transition/Dyck State Graphs into a GraphViz file ./graphs/filename/graph-(analysis-type).gv
     --dump-statisitcs      dump analysis statistics into ./statistics/filename/stat-(analysis-type).txt
     --simple-graph         if the graph is dumped, distinct natural numbers are displayed on its nodes instead of actual configurations

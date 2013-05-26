@@ -1026,13 +1026,23 @@ case class DalvikClassDef(
   *  get all the literal supers of current class
   */
   def getSupersStr(res: List[String])(curClass: String) : List[String] = {
+    println("in getSupersStr: " + "curClas name: " + curClass) 
+    println("res: ")
+    res.foreach(println)
+    
       val curSuper = DalvikClassDef.getSuperOfCurCls(curClass)
     
+      println("after getSuperOfCurCls: " + curSuper)
+      
       val curSuperClsDefOpt = DalvikClassDef.forName(curSuper)
     curSuperClsDefOpt match{ // if not found, then also add the cursuper str
-      case None => curSuper :: res.reverse
+      case None => {
+        println("forName didn't find super: ", curSuper)
+        curClass :: res.reverse
+      }
       case Some(cscd) => {
         val nxtSuper = cscd.superName
+        println("forName found find super: ", nxtSuper)
         getSupersStr(curSuper :: res)(nxtSuper)
       }
     }

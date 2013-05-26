@@ -1,0 +1,25 @@
+(class (attrs ) android/support/v4/view/PagerTitleStrip$PagerTitleStripImplIcs
+ (super java/lang/Object)
+ (source "PagerTitleStrip.java")
+ (implements android/support/v4/view/PagerTitleStrip$PagerTitleStripImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/PagerTitleStrip$PagerTitleStripImplIcs])
+  (line 88)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) setSingleLineAllCaps([object android/widget/TextView] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/view/PagerTitleStrip$PagerTitleStripImplIcs])
+  ; parameter[0] : v1 ([object android/widget/TextView])
+  (line 90)
+  (invoke-static {v1} android/support/v4/view/PagerTitleStripIcs/setSingleLineAllCaps [object android/widget/TextView] )
+  (line 91)
+  (return-void )
+)
+
+)

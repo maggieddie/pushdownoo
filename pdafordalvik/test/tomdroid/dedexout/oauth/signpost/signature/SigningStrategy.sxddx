@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) oauth/signpost/signature/SigningStrategy
+ (super java/lang/Object)
+ (source "SigningStrategy.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) writeSignature([object java/lang/String] [object oauth/signpost/http/HttpRequest] [object oauth/signpost/http/HttpParameters] )[object java/lang/String]
+)
+
+)

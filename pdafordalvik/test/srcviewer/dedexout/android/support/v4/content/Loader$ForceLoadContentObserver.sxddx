@@ -1,0 +1,40 @@
+(class (attrs public final ) android/support/v4/content/Loader$ForceLoadContentObserver
+ (super android/database/ContentObserver)
+ (source "Loader.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/content/Loader] )
+
+(method (attrs public ) <init>([object android/support/v4/content/Loader] )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/Loader$ForceLoadContentObserver])
+  ; parameter[0] : v2 ([object android/support/v4/content/Loader])
+  (line 51)
+  (iput-object v2 v1 android/support/v4/content/Loader$ForceLoadContentObserver.this$0 [object android/support/v4/content/Loader])
+  (line 52)
+  (new-instance v0 android/os/Handler)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (invoke-direct {v1 v0} android/database/ContentObserver/<init> [object android/os/Handler] )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs public ) deliverSelfNotifications()boolean
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/content/Loader$ForceLoadContentObserver])
+  (line 57)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) onChange(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/Loader$ForceLoadContentObserver])
+  ; parameter[0] : v2 (boolean)
+  (line 62)
+  (iget-object v0 v1 android/support/v4/content/Loader$ForceLoadContentObserver.this$0 [object android/support/v4/content/Loader])
+  (invoke-virtual {v0} android/support/v4/content/Loader/onContentChanged )
+  (line 63)
+  (return-void )
+)
+
+)

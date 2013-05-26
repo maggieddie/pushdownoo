@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/tomdroid/sync/ServiceAuth
+ (super java/lang/Object)
+ (source "ServiceAuth.java")
+
+
+(method (attrs public abstract ) getAuthUri([object java/lang/String] [object android/os/Handler] )void
+)
+
+(method (attrs public abstract ) isConfigured()boolean
+)
+
+(method (attrs public abstract ) remoteAuthComplete([object android/net/Uri] [object android/os/Handler] )void
+)
+
+)

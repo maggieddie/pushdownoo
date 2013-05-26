@@ -351,16 +351,20 @@ trait StateSpace  {
     def weakerThan(that: ControlState) : Boolean = {
       if(this.isPartialState && that.isPartialState) {
         this match {
-          case PartialState(st, fp, s, pst, kptr, t) => {
+          case PartialState(stmt, fp, s, pst, kptr, t) => {
             that match{
-              case PartialState(stt, fpt, st, pstt, kptrt, tt) => {
-                 (st == stt)  &&     
-                (fp == fpt) &&
-                partialOrderStoreCompare(s, st) &&
-                partialOrderStoreCompare(pst, pstt) &&
-                (kptr == kptrt) &&
-                (t == tt)
+              case PartialState(stmti, fpt, st, pstt, kptrt, tt) => {
+               // println(stmt)
+               // println(stmti)
+                val cond1 =  (stmt == stmti)     
+                val cond2 = (fp == fpt)  
+                val cond3 = partialOrderStoreCompare(s, st)  
+                val cond4 = partialOrderStoreCompare(pst, pstt)  
+                val cond5 =   (kptr == kptrt)  
+                val cond6 = (t == tt)
                
+               // println(cond1.toString + " " + cond2.toString + " " + cond3.toString + " " + cond4.toString + " " + cond5.toString + " " + cond6.toString)
+                 cond1 && cond2 && cond3 && cond4 && cond5 && cond6
               }
               case _ => false //not possible
             }
@@ -483,8 +487,14 @@ trait StateSpace  {
     stqO match {
       case None => (ImmMap.empty, ImmMap.empty)
       case Some(stq) => {
+        val tbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl
+        if(tbl.contains(stq)) {
+        	//Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl.foreach(println)
         val (s, ps) = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl(stq) 
         (s.asInstanceOf[Store], ps.asInstanceOf[PropertyStore]) 
+        }else{
+          (ImmMap.empty, ImmMap.empty)
+        }
       }
     }
   }
@@ -513,7 +523,10 @@ trait StateSpace  {
         if(gblStoreTbl.contains(stq))
          Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl  +=  
            (stq -> (s,ps))   
-        else 0
+        else {
+         // Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl  +=  
+          // (stq -> (s,ps))
+        }
           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl  +=  (stq -> 0 )
       }
     } 
@@ -551,6 +564,7 @@ trait StateSpace  {
    * Utility functions
    ******************************************************/
 // store compare
+  // s1 <= s2?
   def partialOrderStoreCompare(s1: Store, s2: Store) : Boolean = {
     val res = s1.map(kv => {
       if(s2.contains(kv._1)){

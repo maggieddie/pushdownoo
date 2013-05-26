@@ -1,0 +1,24 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean
+ (super java/lang/Object)
+ (source "AccessibilityNodeProviderCompatJellyBean.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public static ) newAccessibilityNodeProviderBridge([object android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge])
+  (line 38)
+  (new-instance v0 android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$1)
+  (invoke-direct {v0 v1} android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$1/<init> [object android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge] )
+  (return-object v0)
+ )
+
+)

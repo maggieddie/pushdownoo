@@ -337,12 +337,12 @@ private def getEntryPointStmt(state: S) : Stmt = {
    * @param opts analysis options
    * @param list of linked lsit of initentrypoint -> entry-statement->entrypoints
    */
-  def runPDCFA(opts: AIOptions, entryStmts: List[Stmt] ) {
-    
-   
+  def runPDCFA(opts: AIOptions, entryStmts: List[Stmt] ) { 
     
     var inheirtedStore: SharedStore = Map.empty
     var inheirtedPStore: PSharedStore = Map.empty
+    
+    var exploredcCnt = 0
     
      println("All the entry points starts*****************")
     entryStmts.foreach((entryStmt) => 
@@ -356,7 +356,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
     val dsgs =
       entryStmts.foldLeft(List[DSG]())( (res, entryStmt) => {
        
-        println("--------- explore the entry" + entryStmt.next)
+        println("--------- explore the entry--------" + entryStmt.next)
         //CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println)
     	val (resultDSG, storee, pstoree) = evaluateDSG(entryStmt, entryStmt.methPath, inheirtedStore, inheirtedPStore) 
     	
@@ -367,7 +367,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
     
     	inheirtedStore = storee
     	inheirtedPStore = pstoree 
-    	
+    	exploredcCnt += 1
     	
     	resultDSG :: res
     }) 
@@ -414,8 +414,15 @@ private def getEntryPointStmt(state: S) : Stmt = {
     
     val (varPointsto, throwPointsto) = computePointsToStaticsForAllDsgs(dsgs)//computePointsToStatistics(resultDSG.nodes) // is this states?
  
-    val analysisStatistics = AnalysisStatistics(delta,  varPointsto, throwPointsto,   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates,  Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges, interrupted)
-    
+    val analysisStatistics = AnalysisStatistics(
+        delta,  
+    	varPointsto, 
+    	throwPointsto,   
+    	Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates,  Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges, 
+    	interrupted,
+    	entryStmts.length, 
+    	exploredcCnt)
+    println("explored entrypoints: " + exploredcCnt )
     dumpStatisticsNew(opts, analysisStatistics) 
     DalInformationFlow.dumpPermReport(opts)
     dumpHeatMap(opts)
@@ -427,6 +434,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
       println("Dyck State Graph dumped into " + path) 
     } 
     
+   
   
     
     

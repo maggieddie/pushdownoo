@@ -123,7 +123,8 @@ trait DalvikVMRelated {
   private  def extractRawEntryPoints(opts: AIOptions) : List[(DalvikClassDef, List[EntryPoint])]  = {
    
     val (classLines, entries, xmlEntries) = parseInAndroidKnowledge(opts)
-     
+   // println("CLASS-LINES: ")
+    // classLines.foreach(println)
     
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[(DalvikClassDef, List[EntryPoint])]()) {
       case (res, (className, clsDef) ) => {
@@ -131,46 +132,56 @@ trait DalvikVMRelated {
         val clsName2 = if(className.contains("$")) className.split("\\$").toList.head
         else className 
         
+        // filter
         if(classLines.toSet.contains(clsName2)  || clsName2.startsWith("android/support/v4")) { // thsi says that the class is the based  
+          //println("className: ", className)
+          //println("className2", clsName2)
           res
         }else{
         val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
+       // println("class Name: " + className + "supers: " + superClassStrs.length)
+       // println(superClassStrs)
         val compRes = classLines.toSet intersect superClassStrs.toSet
-       if(! compRes.isEmpty) { 
-         
-         
-         val methDefList = clsDef.methods
-         val methNameANdDefs = methDefList map ( (mdef) => {
-           val methName = StringUtils.getMethNameFromMethPath( mdef.methodPath)
-          
-           (methName, mdef)
-         })
+        if(! compRes.isEmpty) {  
+
+        	val methDefList = clsDef.methods
+        	val methNameANdDefs = methDefList map ( (mdef) => {
+        		val methName = StringUtils.getMethNameFromMethPath( mdef.methodPath) 
+        		(methName, mdef)
+        	})
         
         
          // we are going to filter any override methods as entries
          val filteredMethNameAndMDefs = methNameANdDefs filter {
            case (mn, mdef) => {
              val  relativeMethName =  StringUtils.getMethNameFromMethPath(mn)
-             
-             
+           //  println("method: " + "relative method name" + relativeMethName)
+          //   println(mdef.methodPath)
              val res = (entries.contains(mn) && 
              (!mdef.attrs.contains("abstract")) &&
              (!mdef.attrs.contains("private")) ) || 
              (xmlEntries.contains(relativeMethName) && 
              (!mdef.attrs.contains("abstract")) &&
              (!mdef.attrs.contains("private")) ) 
-             
+             println(res)
              // here is a convinient to set the entry point flag
              if(res) mdef.isEntryPoint = true else false
+             
              res
            }
          }
+        
          
          val entryPointList = filteredMethNameAndMDefs.foldLeft(List[EntryPoint]())((resi, p) => {
            val (mn, md ) = p
            //little tset
           
            EntryPoint(md.methodPath, md.argTypeList, md.body, md.regsNum) :: resi
+         })
+         
+         // println(" after filter out entry points are: ") 
+         entryPointList.foreach((en) => {
+           println(en.methodPath)
          })
          
          (clsDef, entryPointList) :: res

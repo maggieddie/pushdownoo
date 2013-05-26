@@ -1,0 +1,26 @@
+(class (attrs public ) difflib/DiffException
+ (super java/lang/Exception)
+ (source "DiffException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1); 0x1 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object difflib/DiffException])
+  (line 27)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object difflib/DiffException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 31)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 32)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,39 @@
+(class (attrs public ) oauth/signpost/exception/OAuthNotAuthorizedException
+ (super oauth/signpost/exception/OAuthException)
+ (source "OAuthNotAuthorizedException.java")
+
+ (field (attrs private static final ) ERROR [object java/lang/String] "Authorization failed (server replied with a 401). This can happen if the consumer key was not correct or the signatures did not match." )
+ (field (attrs private ) responseBody [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object oauth/signpost/exception/OAuthNotAuthorizedException])
+  (line 27)
+  (const-string v0 "Authorization failed (server replied with a 401). This can happen if the consumer key was not correct or the signatures did not match.")
+  (invoke-direct {v1 v0} oauth/signpost/exception/OAuthException/<init> [object java/lang/String] )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object oauth/signpost/exception/OAuthNotAuthorizedException])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 31)
+  (const-string v0 "Authorization failed (server replied with a 401). This can happen if the consumer key was not correct or the signatures did not match.")
+  (invoke-direct {v1 v0} oauth/signpost/exception/OAuthException/<init> [object java/lang/String] )
+  (line 32)
+  (iput-object v2 v1 oauth/signpost/exception/OAuthNotAuthorizedException.responseBody [object java/lang/String])
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) getResponseBody()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object oauth/signpost/exception/OAuthNotAuthorizedException])
+  (line 36)
+  (iget-object v0 v1 oauth/signpost/exception/OAuthNotAuthorizedException.responseBody [object java/lang/String])
+  (return-object v0)
+)
+
+)
