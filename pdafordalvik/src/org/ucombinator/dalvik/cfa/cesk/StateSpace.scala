@@ -77,7 +77,12 @@ trait StateSpace  {
   
   }
   
-   class KontAddr extends Addr
+  // kontinuation address.
+  case class KontAddr(t: Time, st: Stmt) extends Addr {
+    
+  }
+  
+  
   case class RegAddr(fp: FramePointer, offs: String) extends OffsetAddr {
     def pointer = fp
     def offset = offs

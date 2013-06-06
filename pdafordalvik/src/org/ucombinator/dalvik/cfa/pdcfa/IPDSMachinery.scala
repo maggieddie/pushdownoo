@@ -53,9 +53,9 @@ trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
 	      if(shouldGC){
 	    	   val gcQ =  gc(q, frames)
 	    	  if(perPointWidening){
-	    	    println("ppw is on--")
+	    	//    println("ppw is on--")
 	    	    val gcNwq = widening(gcQ)
-	    	    println("to gc after ppw--")
+	    	    //println("to gc after ppw--")
 	    	    gc(gcNwq, frames)
 	    	  }
 	    	  else gcQ

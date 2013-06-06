@@ -22,7 +22,7 @@ class AIOptions {
   var dumpStatistics = true
   var simplifyGraph = false
   var dummy = false
-  var gc = true
+  var gc = false
   var gcDebug = false
   
   // per point widening
@@ -39,7 +39,7 @@ class AIOptions {
 
   var timeInterrupt: Boolean = false
   var interruptAfterTime: Long = 900000
-  var doLRA = true 
+  var doLRA = false 
   var doRegex = false
   var regex: Regex = null
 
