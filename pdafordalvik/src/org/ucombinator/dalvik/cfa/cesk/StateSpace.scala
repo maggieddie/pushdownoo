@@ -359,15 +359,15 @@ trait StateSpace  {
           case PartialState(stmt, fp, s, pst, kptr, t) => {
             that match{
               case PartialState(stmti, fpt, st, pstt, kptrt, tt) => {
-               // println(stmt)
-               // println(stmti)
+               
                 val cond1 =  (stmt == stmti)     
                 val cond2 = (fp == fpt)  
                 val cond3 = partialOrderStoreCompare(s, st)  
                 val cond4 = partialOrderStoreCompare(pst, pstt)  
                 val cond5 =   (kptr == kptrt)  
                 val cond6 = (t == tt)
-               
+                //println(stmt)
+                //println(stmti)
                // println(cond1.toString + " " + cond2.toString + " " + cond3.toString + " " + cond4.toString + " " + cond5.toString + " " + cond6.toString)
                  cond1 && cond2 && cond3 && cond4 && cond5 && cond6
               }
@@ -504,6 +504,7 @@ trait StateSpace  {
     }
   }
     
+    // side effect the table
     def updateWideningFreqTbl {
        val stqO  = this.getStmtForEqual
     stqO match {

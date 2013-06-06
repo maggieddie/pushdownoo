@@ -25,4 +25,7 @@ trait WideningConfiguration  {
   
   def widening(st: ControlState) : ControlState  
   
+  
+  
+  
 }

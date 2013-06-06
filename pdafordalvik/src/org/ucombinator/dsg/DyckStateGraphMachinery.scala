@@ -191,23 +191,48 @@ trait DyckStateGraphMachinery extends StateSpace{
           ! spv.weakerThanAny(curStateEqualentStates)
        }) 
        
-       val possibleNewEdges = possibleEdges.filter(pe => {
-         ss1.contains(pe.target)
-       })
+        /**
+        * Between branches, which is proved to be in the equivalence class w.r.t stack net chance
+        * we cut off weaker states (refer to the partial order of control state)
+        */
+       val sss1 = getStrongerStatesWithin(ss1 )
        
+       val possibleNewEdges = possibleEdges.filter(pe => {
+         sss1.contains(pe.target)
+       })
        
        val ss2 = epsNextStates.filter((spv)=>{
          val curStateEqualentStates  = helper.getEpsPredStates(spv)
           ! spv.weakerThanAny(curStateEqualentStates)
-       }) 
+       })  
        
-       (ss1 ++ ss2, possibleNewEdges)
+       /**
+        * for epsilon next sucessors, also perform the filter
+        */
+       val sss2 = getStrongerStatesWithin(ss2 ) 
+       
+        println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
+       println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
+       (sss1 ++ sss2, possibleNewEdges)
+        
+      
+       
      }else{
     	 (statesPossibletoVisit ++epsNextStates, possibleEdges)
-     }  
-    
-     
+     } 
     }
+ 
+ private def getStrongerStatesWithin(allSuccessors: Set[ControlState]) : Set[ControlState] = {
+    
+   val  weakerStates = allSuccessors.filter(as => {
+     // not considering itself.
+     val restSs = allSuccessors - as
+     as.weakerThanAny(restSs)
+   })
+   
+   allSuccessors -- weakerStates
+   
+ }
  
  private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges): (Set[ControlState],  Edges) = {
    println("--before aco ----" + newStates.size + " " + newEdges.size)
@@ -224,6 +249,8 @@ trait DyckStateGraphMachinery extends StateSpace{
      (newStates, newEdges)
    }
  }
+ 
+ 
  
    /**
    * Monotonic DSG iteration function
