@@ -1009,7 +1009,7 @@ case class DalvikClassDef(
 
   // TODO: Test
   // TODO: get interfaces types too
-  //  here we only returns supers defined 
+  //  here we only returns supers in the meta information built 
   // 
   private def getSupers(res: List[DalvikClassDef])(curSuper: String): List[DalvikClassDef] = {
     val curSuperClsDefOpt = DalvikClassDef.forName(curSuper)
@@ -1023,26 +1023,26 @@ case class DalvikClassDef(
   }
   
  /**
-  *  get all the literal supers of current class
+  *  get all the literal supers of current class including the its own class
   */
   def getSupersStr(res: List[String])(curClass: String) : List[String] = {
-    println("in getSupersStr: " + "curClas name: " + curClass) 
-    println("res: ")
-    res.foreach(println)
+    //println("in getSupersStr: " + "curClas name: " + curClass) 
+   // println("res: ")
+   // res.foreach(println)
     
       val curSuper = DalvikClassDef.getSuperOfCurCls(curClass)
     
-      println("after getSuperOfCurCls: " + curSuper)
+      //println("after getSuperOfCurCls: " + curSuper)
       
       val curSuperClsDefOpt = DalvikClassDef.forName(curSuper)
     curSuperClsDefOpt match{ // if not found, then also add the cursuper str
       case None => {
-        println("forName didn't find super: ", curSuper)
-        curClass :: res.reverse
+        //println("forName didn't find super: ", curSuper)
+        List(curClass, curSuper) ::: res.reverse
       }
       case Some(cscd) => {
         val nxtSuper = cscd.superName
-        println("forName found find super: ", nxtSuper)
+       // println("forName found find super: ", nxtSuper)
         getSupersStr(curSuper :: res)(nxtSuper)
       }
     }

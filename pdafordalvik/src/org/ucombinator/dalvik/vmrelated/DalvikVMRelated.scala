@@ -92,18 +92,17 @@ trait DalvikVMRelated {
      val entryMethPath = "android-knowledge" + File.separator + "callbacks.txt"
      val xmlMethNames = opts.apkProjDir + File.separator + "handlers.txt" 
      
-     println("the fxml d[ath: " +xmlMethNames)
+   //  println("the fxml d[ath: " +xmlMethNames)
      val classLines =  File(classPath).lines.toList.filter(_ != "")
      val deduplicateClsLines = classLines.toSet.toList
      val entryMethLines = File(entryMethPath).lines.toList.filter(_ != "")
      val dedupMethLines = entryMethLines.toSet.toList
      
-     //val f = "./testapks" + File.separator + "Kittey"  +  File.separator + "Kittey.apk"  
+    
      
      val handlerEntryFile = File(xmlMethNames)
     
-    // if(handlerEntryFile.exists){
-    //   println("the handler file exisits")
+   
        val deduplicateHandlerEntries = handlerEntryFile.lines.toList.filter(_ != "").toSet.toList
        println("FOund entries from xmml file"+ deduplicateHandlerEntries)
        
@@ -139,7 +138,7 @@ trait DalvikVMRelated {
           res
         }else{
         val superClassStrs = clsDef.getSuperStrsIncludingInterfaces(List())(className)
-       // println("class Name: " + className + "supers: " + superClassStrs.length)
+        //println("class Name: " + className + "supers: " + superClassStrs)
        // println(superClassStrs)
         val compRes = classLines.toSet intersect superClassStrs.toSet
         if(! compRes.isEmpty) {  
@@ -389,7 +388,8 @@ trait DalvikVMRelated {
     
     val listEns = extractRawEntryPoints(opts)  // getRawEntryPoints
     
-     
+  
+    
     if(listEns.isEmpty){
       Debug.prntDebugInfo("No cls + entry points found ", "")
       List()
