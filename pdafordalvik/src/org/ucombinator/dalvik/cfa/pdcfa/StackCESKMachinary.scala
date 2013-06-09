@@ -394,8 +394,11 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
 
         val tp = tick(t, List(popHS))
-        Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), hf))
-        //Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k)) // exception analysis rule
+        println("POPHANDLER in CESK STEP")
+        println(popHS)
+        println("NEXT:", realN)
+        //Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), hf))
+        Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k)) // exception analysis rule
       }
       //case class PushHandlerStmt(clsName: String, lbl: String, nxt: Stmt, ls: Stmt) extends Stmt {
       case c @ (ps @ PartialState(st@StForEqual(pushHS @ PushHandlerStmt(typeStr, clsName, lbl, toFork, exnHandlers, exnAnnos, nxt, ls, clsP, metP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
@@ -409,9 +412,10 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val pushHandlerFrame = new HandleFrame(pushHS.typeString, pushHS.className, pushHS.label)
 
         val normalState = Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), pushHandlerFrame :: k))
-
-        Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp),  k)) //doing nothing
-      //  Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), pushHandlerFrame :: k)) // exception analysis rule
+        //println("PUSH in CESK STEP")
+       // println(pushHS)
+       // Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp),  k)) //doing nothing
+        Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), pushHandlerFrame :: k)) // exception analysis rule
       }
 
       //case class ReturnStmt(resultAe: AExp, nxt: Stmt, ls: Stmt) extends Stmt {
@@ -614,7 +618,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       }
       //for unhandled instructions, move forward to the next stmt
       case c @ (ps @ PartialState(stq@StForEqual(stmt, nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
-        //         println("@ unHandled!!!!!!: empty Nil K is "+ stmt + "\n", k)
+                 println("@ unHandled!!!!!!: empty Nil K is "+ stmt + "\n", k)
         updateHeatMap(stq)
         val tp = tick(t, List(stmt))
         // Debug.prntDebugInfo("current is:  ", stmt)

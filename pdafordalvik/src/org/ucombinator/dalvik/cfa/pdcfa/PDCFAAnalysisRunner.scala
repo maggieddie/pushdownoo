@@ -179,7 +179,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
            }
        
         buffer.append("</td> <td >")
-        buffer.append("Trigger( entry-points)")
+        buffer.append("Trigger(entry-points)")
         buffer.append(" </td> </tr>")
         }
     

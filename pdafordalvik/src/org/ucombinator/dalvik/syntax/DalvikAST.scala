@@ -125,6 +125,7 @@ abstract class Stmt  {
   
   def taintKind: Set[String]
   
+  // used by invoke class1!!
   def getTaintKind(name: String) : Set[String] = {
     DalInformationFlow.decideTaintKinds(name)
   }
@@ -459,7 +460,9 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
   
   
   def refRegsStrSet : Set[String] = {
-    getSuitableRefStrsSet
+    val res = getSuitableRefStrsSet
+   // println("ref register in Assi: " +  res  + " " + this)
+    res
   }
   
    def defRegsStrSet: Set[String] ={
@@ -473,7 +476,7 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
    def sourceOrSink : Int = {
      val (isConstStr, aExps) = isConstString
     
-     if(isConstStr){
+     if(isConstStr){ 
         if (aExps.length == 1) {
           aExps.head match { 
             case se @ StringLitExp(_) => {

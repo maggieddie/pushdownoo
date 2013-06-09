@@ -63,15 +63,17 @@ object DalInformationFlow {
 	
 	def isSensitiveStr(input: String) : Boolean = {
 	 
-	  val individuals =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.filter((recStr) => {
-	    
-	    input.contains(recStr._1)
+	  val individuals =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.filter((recStr) => { 
+	    input.contains(recStr._1)  
 	  })
+	  
 	  val strSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.map(_._1)
 	  val cond1 = strSs.contains(input) 
 	  val cond2 = !individuals.isEmpty 
 	  
-	  cond1 || cond2
+	 val res =  cond1 || cond2
+	 
+	 res
 	 
 	}
 	
@@ -79,7 +81,7 @@ object DalInformationFlow {
 	    val kindsFromSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.foldLeft(Set[String]())((res: Set[String], p) => {
 	    val str = p._1
 	    val kind = p._2
-	    if (input.contains(str))  
+	    if (input.contains(str) || str.contains(input))  
 	          res + kind 
 	          else res
 	  })
@@ -87,8 +89,7 @@ object DalInformationFlow {
 	  kindsFromSs
 	}
 	
-	def decideSourceOrSinkLevel(name: String): Int = {
-	 // println("sdfsfgsdlkhfjksdgjshkdadfsjdklssfkjdla;a")
+	def decideSourceOrSinkLevel(name: String): Int = { 
 	  val strsSources = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sources.map(_._1)
 	  val inSource = strsSources.contains(name)
 	  val individualSrcs =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].sources.filter((src) => {

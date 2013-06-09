@@ -143,6 +143,8 @@ object PlayHelper {
       runner.runLRAOnAllMethods
 
       println("Done with LRA preanalysis!")
+       Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)
+      
     }
 
     def processDalvik(opts: AIOptions) {

@@ -135,6 +135,9 @@ class S2DParser {
         val (handlerLst, rest3) = (getCatchHandlers(rest2, List()), rest2)
         val stmt = parseBodyMap(rest3, clsP, methName)//parseBodyTailRecursion(List(), rest)//parseBody(rest)
         val stmtTransformed = ParsingUtils.transFormBody(stmt, ExceptionHandlers(handlerLst), throwAnnotations, clsP, methName)
+        if(methName == "onHandleIntent") {
+        println("method: ") 
+        CommonUtils.flattenLinkedStmt(List())(stmt).foreach(println)}
         MethodDef(StringUtils.getDistinctMethodOrFieldPath(clsP,methName, "meth"), attrList, regLimit, formalTys, retTyStr, stmt, ExceptionHandlers(handlerLst), throwAnnotations)
       }
       //case other cases- let it fail

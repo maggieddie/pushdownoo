@@ -325,6 +325,31 @@ object ParsingUtils {
       }
     }
   }
+  
+  private def genSeriLnForPophandler(ln: Stmt, sn: Int) : LineStmt = {
+     ln.lineNumber match{
+       case LineStmt(lnstr  , nxt , ln , clsP  , methP ) => {
+         val newLnStr = lnstr + "-" + sn.toString()
+         LineStmt(newLnStr, nxt, ln, clsP, methP)
+       }
+       case _ => {
+         println(ln) 
+         throw new Exception("@genSeriLnForPopHandler: Not a LineStmt")}
+     }
+  }
+  private def setPopHandlerLn(pphs: List[Stmt], lnSt: Stmt) {
+    var serirNo = 0
+     
+    pphs.foreach(ph => {
+      if(lnSt == StmtNil || ph == StmtNil) {
+        
+      }else {
+     val newPopLn =  genSeriLnForPophandler(lnSt, serirNo) 
+        ph.lineNumber = newPopLn  
+        serirNo = serirNo + 1 }
+      
+    })
+  }
 
   def transFormBody(bd: Stmt, exnHandler: ExceptionHandlers, annot: List[String], clsP:  String, methP: String): Stmt = {
     bd match {
@@ -397,6 +422,11 @@ object ParsingUtils {
               val oldLast = pphts.last
               val secondLast = pphts(pphts.indexOf(oldLast) -1)
                Debug.prntDebugInfo("supposed to be a pop stmt " + stl + " " + oldLast, secondLast)
+               // newly added to set the pop handler's line number for distinguising june7
+              // secondLast.lineNumber = stl.lineNumber 
+               // should be stl's predecessor's linenumber actually
+               setPopHandlerLn(pphts, stl)
+               //
               secondLast.next = stl
                 Debug.prntDebugInfo("secondlast pop's next ",secondLast.next)
               flattendList = CommonUtils.flattenLinkedStmt(List())(bd)

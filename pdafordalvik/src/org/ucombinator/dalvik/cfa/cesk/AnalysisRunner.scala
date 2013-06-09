@@ -211,7 +211,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
 
    
 
-    buffer.append("entry points: explored/total: " + totalEns + "/" + exploredEns + "\n")
+    buffer.append("entry points: explored " +  exploredEns + "\n")
     
     buffer.append("Control states: " + numStates + "\n")
     buffer.append("Transitions / DSG edges: " + numEdges + "\n")

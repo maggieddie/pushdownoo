@@ -352,7 +352,25 @@ trait StateSpace  {
       }
     }
     }
-     
+    
+   def isPopHandlerState : Boolean = {
+    	 val curStO = this.getCurSt
+       curStO match {
+         case Some(st) => {
+           val oldStyleSt = st.oldStyleSt
+           oldStyleSt match {
+             case ps@PopHandlerStmt(exnType , nxt , ls , clsP , methP) => {
+               //println("got an pop handler control state", ps)
+               true
+             }
+             case _ => false
+           }
+         }
+         case None => false
+       }
+   }
+   
+   
     def weakerThan(that: ControlState) : Boolean = {
       if(this.isPartialState && that.isPartialState) {
         this match {

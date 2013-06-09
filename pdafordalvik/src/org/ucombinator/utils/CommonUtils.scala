@@ -194,7 +194,12 @@ object CommonUtils {
   
   def getRegStrsFromAExp(aexp: AExp) : Set[String]= {
    aexp match {
-      case ae@RegisterExp(_) => { Set(ae.regStr)}
+      case ae@RegisterExp(_) => { 
+        val str = ae.regStr
+        if(str.startsWith("v")){
+        	Set(ae.regStr)}
+        else Set()
+      }
       case _ => {throw new Exception(" exception from getRegStrsFromAExp: not a RegisterExp, Found:" + aexp.toString)}
     }
   }
