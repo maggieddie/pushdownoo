@@ -206,8 +206,8 @@ trait DyckStateGraphMachinery extends StateSpace{
    // filter out the pophandler states
    val pophandlerStates = filterOutPopHandlerStates(statesPossibletoVisit)
     
-   println("PopHandlers:")
-   pophandlerStates.foreach(pps => println(pps.getCurSt))
+  // println("PopHandlers:")
+  // pophandlerStates.foreach(pps => println(pps.getCurSt))
    
      val statesPossibletoVisit2 = statesPossibletoVisit -- pophandlerStates
      
@@ -248,8 +248,8 @@ trait DyckStateGraphMachinery extends StateSpace{
         */
        val sss2 = getStrongerStatesWithin(ss2 ) 
        
-     //   println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
-     //  println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
+        println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
+       println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
        
        val res1 = sss1 ++ sss2 ++ pophandlerStates ++ popEpsNextStates
       // println("After cutoff")
@@ -343,8 +343,8 @@ trait DyckStateGraphMachinery extends StateSpace{
       
         
         val (newToVisit, newEdges2) = getStatesIfAco(helper, newStates, newEdges,  epsNewNexts)
-         println("After cutoff")
-       filterOutPopHandlerStates(newToVisit).foreach(pps => println(pps.getCurSt))
+        // println("After cutoff")
+      // filterOutPopHandlerStates(newToVisit).foreach(pps => println(pps.getCurSt))
  
  // S' = ...
         val ss1: Nodes = ss  ++ newStates + 

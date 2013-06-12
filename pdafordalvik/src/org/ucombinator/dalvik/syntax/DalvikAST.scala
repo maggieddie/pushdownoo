@@ -176,7 +176,7 @@ case class LabelStmt(lbl: String, nxt: Stmt, lineStmt: Stmt, clsP : String, meth
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].stmtMap += (label -> this)}
   //Stmt.register(lbl, this)
   
-  override def toString() = "LabelStmt(" + lbl + "," +   ")" + lineNumber
+  override def toString() = "LabelStmt(" + lbl  +   ")" + lineNumber
   
   def refRegsStrSet : Set[String] = {
     Set()

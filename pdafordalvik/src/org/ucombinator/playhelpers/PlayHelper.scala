@@ -143,7 +143,7 @@ object PlayHelper {
       runner.runLRAOnAllMethods
 
       println("Done with LRA preanalysis!")
-       Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)
+    //   Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)
       
     }
 
@@ -238,6 +238,10 @@ object PlayHelper {
     if (gcStr == "true") {
       constrParams = constrParams ::: List("--gc", "--lra")
     }
+    
+    //default///
+    
+    constrParams = constrParams ::: List("--ppw", "2", "--aco")
 
     if (doStateCutoff == "true") {
       val ino = interruptStNo.toInt

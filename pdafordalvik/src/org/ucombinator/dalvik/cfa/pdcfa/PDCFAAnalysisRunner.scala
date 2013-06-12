@@ -51,7 +51,7 @@ import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import scala.tools.nsc.io.Directory
 import scala.util.matching.Regex
 import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
-
+import sys.process._
 
 
 class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts) 
@@ -426,6 +426,11 @@ private def getEntryPointStmt(state: S) : Stmt = {
     dumpStatisticsNew(opts, analysisStatistics) 
     DalInformationFlow.dumpPermReport(opts)
     dumpHeatMap(opts)
+    
+     val reportTar=   "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar.gz"
+       
+    reportTar !
+    
     if (opts.dumpGraph) {
       println()
       println("Writing Dyck State Graph")

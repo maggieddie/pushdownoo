@@ -332,7 +332,16 @@ object ParsingUtils {
          val newLnStr = lnstr + "-" + sn.toString()
          LineStmt(newLnStr, nxt, ln, clsP, methP)
        }
+       
+       // the reason is that if the statement follows a catch statement, 
+       // the line number will be StmtNil
+       //However, we still want to distinguish the the pophandler 
+       // so we have a new dummy line number for it. 
+       case StmtNil => {
+         LineStmt("-" + sn.toString(), StmtNil, StmtNil, ln.clsPath, ln.methPath)
+       }
        case _ => {
+         println("lnis")
          println(ln) 
          throw new Exception("@genSeriLnForPopHandler: Not a LineStmt")}
      }

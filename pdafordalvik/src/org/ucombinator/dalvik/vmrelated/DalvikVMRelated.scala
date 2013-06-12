@@ -104,7 +104,7 @@ trait DalvikVMRelated {
     
    
        val deduplicateHandlerEntries = handlerEntryFile.lines.toList.filter(_ != "").toSet.toList
-       println("FOund entries from xmml file"+ deduplicateHandlerEntries)
+       //println("FOund entries from xmml file"+ deduplicateHandlerEntries)
        
      
       Thread.currentThread().asInstanceOf[AnalysisHelperThread].declaredPerms = getDeclaredPerms(opts)
@@ -162,7 +162,7 @@ trait DalvikVMRelated {
              (xmlEntries.contains(relativeMethName) && 
              (!mdef.attrs.contains("abstract")) &&
              (!mdef.attrs.contains("private")) ) 
-             println(res)
+            // println(res)
              // here is a convinient to set the entry point flag
              if(res) mdef.isEntryPoint = true else false
              
@@ -179,9 +179,9 @@ trait DalvikVMRelated {
          })
          
          // println(" after filter out entry points are: ") 
-         entryPointList.foreach((en) => {
-           println(en.methodPath)
-         })
+        // entryPointList.foreach((en) => {
+        //   println(en.methodPath)
+       //  })
          
          (clsDef, entryPointList) :: res
         
@@ -411,7 +411,7 @@ trait DalvikVMRelated {
          // so we set the flag in the entry init
          initDefs.foreach(_.isEntryPoint = true)
          val orderedEntries = orderEntries(ens)
-         orderedEntries.foreach(println)
+         //orderedEntries.foreach(println)
          val allInitPaths = allInitAndWithfollowingInitEntries(initDefs, orderedEntries, clsDef.clsPath)
          // getOneExecutionInitEntryPath(initDefs, ens)
         

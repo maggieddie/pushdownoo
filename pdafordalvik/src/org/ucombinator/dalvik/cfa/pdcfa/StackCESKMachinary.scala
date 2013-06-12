@@ -394,9 +394,9 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
 
         val tp = tick(t, List(popHS))
-        println("POPHANDLER in CESK STEP")
-        println(popHS)
-        println("NEXT:", realN)
+        //println("POPHANDLER in CESK STEP")
+       // println(popHS)
+       // println("NEXT:", realN)
         //Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), hf))
         Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k)) // exception analysis rule
       }
@@ -618,7 +618,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       }
       //for unhandled instructions, move forward to the next stmt
       case c @ (ps @ PartialState(stq@StForEqual(stmt, nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
-                 println("@ unHandled!!!!!!: empty Nil K is "+ stmt + "\n", k)
+             //    println("@ unHandled!!!!!!: empty Nil K is "+ stmt + "\n", k)
         updateHeatMap(stq)
         val tp = tick(t, List(stmt))
         // Debug.prntDebugInfo("current is:  ", stmt)

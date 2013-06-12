@@ -54,7 +54,8 @@ def build_abspath_kind(cur_p, fnames, fil):
 def build_projdir_apkf_dict(abs_fnames):
     for absfp in abs_fnames:
         proj_nm, ext = os.path.splitext(absfp)
-        pd_dict[absfp] = proj_nm
+        proj_nm0 = proj_nm.replace(" ", "-")
+        pd_dict[absfp] = proj_nm0
 
 def toSVG(proj_dir):
     print "...Turn dot file to svg file!"
@@ -91,7 +92,14 @@ def run():
     print SEXP_OUT
     print APK_SRC
     
-    for cur_p, dir, fnames in os.walk(APK_SRC):
+    for cur_p0, dir, fnames0 in os.walk(APK_SRC):
+        print "fnames"
+        print fnames0
+
+        fnames = fnames0 #map(lambda(x):x.replace(" ", "-"), fnames0)
+        
+        print cur_p0
+        cur_p = cur_p0.replace(" ", "-")
         print cur_p
         fps = build_abspath(cur_p, fnames)
         

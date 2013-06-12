@@ -273,8 +273,8 @@ trait TransitionHandlers extends StateSpace with ExternalLibCallsHandler with Ex
           Set(newState)
         }
       case "check-cast" => {
-        println("checkCast!!!", stForEqual)
-        println("checkCAstNExt: ", nxt)
+      //  println("checkCast!!!", stForEqual)
+       // println("checkCAstNExt: ", nxt)
         if (aExps.length == 1) {
           aExps.head match {
             case se @ RegisterExp(_) => {

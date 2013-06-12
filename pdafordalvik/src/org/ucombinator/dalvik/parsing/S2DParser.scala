@@ -57,7 +57,8 @@ class S2DParser {
         dvcd.registerClass(clsClsStr)
         Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))*/
         None // Dont deal with INterface yet
-      } 
+      }
+       case _ => {None}
     }
   }
 
@@ -267,6 +268,8 @@ class S2DParser {
           }
           case StmtNil => setLineNumber(tl, hd, hd:: res)
           case _ => {
+            
+             
             hd.lineNumber = curLineS
             setLineNumber(tl, curLineS, hd :: res)
           }
@@ -284,7 +287,8 @@ class S2DParser {
       val lstS2 = CommonUtils.extractStmts(lstS)
 
       val lst = setLineNumber(lstS2, StmtNil, List())
-
+      println("after setlineNumber")
+      lst.foreach(println)
       val linkHeadO =
         CommonUtils.linkedListWrapper(List())(lst)
       val linkHead =

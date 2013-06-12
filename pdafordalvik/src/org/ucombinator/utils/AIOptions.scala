@@ -22,7 +22,7 @@ class AIOptions {
   var dumpStatistics = true
   var simplifyGraph = false
   var dummy = false
-  var gc = false
+  var gc = true
   var gcDebug = false
   
   // per point widening
@@ -64,11 +64,13 @@ object AIOptions {
   //var noOfStates = 0
   var debugInfo: Boolean = false
   
-   def parseInApk(filePath: String) : (String, String)  = {
-      println("filePath" + filePath)
+   def parseInApk(filePath0: String) : (String, String)  = {
+    println("filePath0", filePath0)
+    val filePath = filePath0.replace(" ", "-")
+    println("filePath", filePath)
       val lst = filePath.split("/").toList
       val plen = lst.length
-      println(plen)
+      println("LST", lst)
       
       /*val fileName = lst(plen-1)
         println(fileName)
@@ -80,8 +82,9 @@ object AIOptions {
       
       println("Project Name to Analyzer::::::::::::: "+ fileFoldnerName)
       
-      val pathToScript  = lst.dropRight(1).foldLeft("")((res, s) => {res + s + "/"})
-      
+      val pathToScript0  = lst.dropRight(1).foldLeft("")((res, s) => {res + s + "/"})
+      val pathToScript = pathToScript0.replace(" ", "-")
+      println("pathToScript", pathToScript)
      val getIRCmdStr = "/usr/bin/python ./getIR.py" + " " + pathToScript
     // val et: ExtractIRHelperThread = new ExtractIRHelperThread(getIRCmdStr)
     //  IRExtractHelper.parseThread = et
@@ -229,8 +232,9 @@ object AIOptions {
       }
 
       case fileName :: rest => {
-        
-         val (irFolder, profolder) = parseInApk(fileName) 
+         val fileName0 = fileName.replace(" ", "-")
+         println("fileName0", fileName0)
+         val (irFolder, profolder) = parseInApk(fileName0) 
          opts.sexprDir = irFolder  
       
          opts.apkProjDir = profolder 
