@@ -927,7 +927,8 @@ case class DalvikClassDef(
     methods: List[MethodDef], 
     interfaceNames: List[String],
     ivt: Map[CompactMethodIndex, MethodDef]) {
-
+  
+ 
   def className = clsPath.toString()
 
   def superName = superClsName.toString()
@@ -987,6 +988,12 @@ case class DalvikClassDef(
       res ++ clsDef.getInheritableFieldPathTypeStrs.toSet // to avoid duplicate?
     })
      getCurrentInstanceFields ::: allfields.toList
+  }
+  
+  def getAllStmts : List[Stmt] = {
+    methods.foldLeft(List[Stmt]())((res, md) => {
+      res ::: md.getFlattenedBodyStmts
+    })
   }
   
   def getCurrentInstanceFields: List[(String, String)] = {
@@ -1102,6 +1109,26 @@ case class DalvikClassDef(
    }
    override def toString = "\n\n"+ "CLASSNAME: "+ className + "\n" +superName + "\n" + "++ Field" + fields + "\n" + "++ Method: " + methods
 
+   
+   // risk ranking audits
+   var riskRank: Int = -1
+   
+   
+  //  def riskRank_=(n : Int )
+   // will compute trigger the computation top down, which is computed bottom up
+   def computeClassRisk : Int =   {
+     if(riskRank == -1){
+         methods.foldLeft(0)((sum, md) => {
+           md.riskRank = md.computeRiskRank
+           sum + md.riskRank})}
+     else 0
+   }
+   
+   def allTaintKinds : Set[String] = {
+     methods.foldLeft(Set[String]())((res, md) => {
+           res ++ md.getAllTaintKinds
+            })
+   }
 }
 
 /**
@@ -1385,6 +1412,31 @@ case class MethodDef(methPath: String, ats: List[String], rn: BigInt, atl: List[
   val retType = retT
   val body = bd
   var isEntryPoint: Boolean = false
+  
+  
+  var riskRank = -1
+  // def riskRank_=(n : Int )
+  
+  def computeRiskRank :Int = {
+    if(riskRank == -1) {
+      val stmts = CommonUtils.flattenLinkedStmt(List())(bd) 
+        stmts.foldLeft(0)((sum, s) => {
+        sum + s.riskRanking
+      })
+    }
+    else 0
+  }
+  
+  def getAllTaintKinds: Set[String] = {
+     val stmts = CommonUtils.flattenLinkedStmt(List())(bd) 
+      stmts.foldLeft(Set[String]())((res, s) => {
+        res ++ s.taintKind
+      })
+  }
+  
+  def getFlattenedBodyStmts: List[Stmt] = {
+        CommonUtils.flattenLinkedStmt(List())(bd) 
+  }
   
   override def toString = {
    val  stmts = CommonUtils.flattenLinkedStmt(List())(body) 

@@ -57,6 +57,9 @@ class AIOptions {
   var securityReportPath = ""  
   var riskRankingReportPath = ""
     
+    var clsRiskRankingReportPath = ""
+   var methRiskRankingReportPath = ""
+    
 }
 
 object AIOptions {

@@ -6,10 +6,10 @@ import org.ucombinator.utils.AnalysisType
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import org.ucombinator.dalvik.vmrelated.APISpecs
 import org.ucombinator.dalvik.testdriver.TestScripts
-//import play.api.libs.json._
 import java.io.File
 import org.ucombinator.utils.CommonUtils
 import models.PropertyCheckList
+import org.ucombinator.dalvik.preanalysis.RiskAnalysis
 
 object PlayHelper {
 
@@ -89,6 +89,8 @@ object PlayHelper {
       opts.heatMapReportPath = CommonUtils.getHeatDumpFolderFileName(opts)
       opts.securityReportPath = CommonUtils.getSecurityDumpFolderFileName(opts)
       opts.riskRankingReportPath = CommonUtils.getRiskRankingFolderFileName(opts)
+      opts.clsRiskRankingReportPath = CommonUtils.getClsRiskRankingFolderFileName(opts)
+      opts.methRiskRankingReportPath= CommonUtils.getMethRiskRankingFolderFileName(opts)
       opts
     
   }
@@ -173,6 +175,10 @@ object PlayHelper {
             // read JVm report
             APISpecs.readInReport
 
+            // preanalysis for the risk ranking happens before expensive analysis!!!
+            RiskAnalysis.computeAndSetOverallRisk
+            RiskAnalysis.dumpPreRiskRanking(opts) 
+            
             // starts to run Analysis
             runner.runPDCFA(opts, initEns)
             

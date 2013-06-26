@@ -519,7 +519,7 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
     
      dumpSecurityReport(opts,dsgs)
      
-     dumpRiskRanking(opts, dsgs)
+    // dumpRiskRanking(opts, dsgs)
 
     if (opts.verbose && opts.dumpGraph) {
       val path = getGraphParentFolder(opts)

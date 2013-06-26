@@ -311,6 +311,30 @@ object CommonUtils {
     val lrv = if(opts.doLRA) "-lra" else "" 
     prefix + arity + cfa + gc + lrv + "-riskranking" + ".html"
    }
+   
+   def getClsRiskRankingReportName(opts: AIOptions) : String = {
+     val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-riskranking-classes" + ".html"
+   }
+   
+   def getMethRiskRankingReportName(opts: AIOptions) : String = {
+     val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-riskranking-methods" + ".html"
+   }
   
   
   
@@ -332,6 +356,14 @@ object CommonUtils {
   
   def getRiskRankingFolderFileName(opts : AIOptions) : String = {
     opts.permReportsDirName + File.separator + getRiskRankingReportName(opts)
+  }
+  
+  def getClsRiskRankingFolderFileName(opts : AIOptions) : String = {
+    opts.permReportsDirName + File.separator + getClsRiskRankingReportName(opts)
+  }
+  
+  def getMethRiskRankingFolderFileName(opts : AIOptions) : String = {
+    opts.permReportsDirName + File.separator + getMethRiskRankingReportName(opts)
   }
   
   // some utils to play
