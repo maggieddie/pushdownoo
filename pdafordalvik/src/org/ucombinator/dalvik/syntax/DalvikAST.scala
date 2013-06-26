@@ -128,7 +128,28 @@ abstract class Stmt  {
   // used by invoke class1!!
   def getTaintKind(name: String) : Set[String] = {
     DalInformationFlow.decideTaintKinds(name)
-  }
+    }
+    
+    // in the 
+  def riskRanking: Int = {
+    	
+       val rrm = Thread.currentThread().asInstanceOf[AnalysisHelperThread].riskRankingMap 
+       var rankingSum = 0 
+       taintKind.foreach(e => {
+         val ro = rrm.get(e)
+         ro match {
+           case Some(n) => {
+             rankingSum = rankingSum + n
+           }
+           case _ => { 
+             
+           }
+         }
+         
+       })
+       rankingSum
+    }
+ 
   
   
   def decideInformationFlowType (clsNameOrAPI: String) : Int = {

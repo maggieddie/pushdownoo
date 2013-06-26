@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ScrollView android:layout_below="@id/title_container" style="@style/scrollview_container">
+        <LinearLayout style="@style/field_group_layout_container_with_padding">
+            <ImageView style="@style/ticket_header_image" />
+            <LinearLayout style="@style/tod_ticket_restriction_info">
+                <LinearLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" style="@style/ticket_sub_container">
+                    <TextView android:text="@string/NOODLES_TEXT_FULFILMENT_CAPTION" style="@style/field_group_title_horizontally_aligned" />
+                    <TextView android:id="@id/txtTicketFulfillment" style="@style/ticket_delivery_text" />
+                </LinearLayout>
+                <TextView android:id="@id/txtTicketDirection" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" style="@style/field_group_title_text" />
+                <TextView android:id="@id/txtTicketFulfillmentDetails" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:drawablePadding="@dimen/drawable_padding" style="@style/ticket_fulfillment_text" />
+                <RelativeLayout android:id="@id/layoutWarning" style="@style/ticket_warning_info">
+                    <ImageView android:id="@id/imgWarning" android:src="@drawable/warning_icon" android:layout_alignParentLeft="true" style="@style/field_image_item" />
+                    <TextView android:id="@id/txtTicketWarning" android:paddingLeft="@dimen/layout_padding" android:layout_toRightOf="@id/imgWarning" style="@style/ticket_fulfillment_text" />
+                </RelativeLayout>
+                <LinearLayout style="@style/field_group_layout_container_horizontal">
+                    <TextView android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:text="@string/NOODLES_TEXT_PICKUP_CODE_CAPTION" style="@style/field_group_title_wrap_text" />
+                    <TextView android:id="@id/txtTicketViewCTRCode" android:paddingLeft="@dimen/layout_padding" style="@style/field_item_label" />
+                </LinearLayout>
+                <LinearLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" style="@style/field_group_layout_container">
+                    <TextView android:text="@string/NOODLES_TEXT_TOD_MUSTBRING" android:singleLine="false" style="@style/field_group_title_text" />
+                    <TextView android:id="@id/txtTicketViewCardDetails" android:drawablePadding="@dimen/drawable_padding" style="@style/field_item_label" />
+                    <LinearLayout android:id="@id/layoutRailcardImages" style="@style/field_group_layout_container" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView style="@style/ccst_ticket_detail_bottom" />
+            <LinearLayout android:id="@id/layoutTicketViewOutboundInfo" style="@style/ticket_details_container">
+                <ImageView style="@style/ticket_header_image" />
+                <LinearLayout style="@style/ticket_container">
+                    <TextView android:id="@id/txtTicketViewOutboundDate" style="@style/ticket_date" />
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketOutboundOriginTime" style="@style/field_item_label" />
+                        <TextView android:id="@id/txtTicketOutboundOriginName" style="@style/ticket_station_name_origin" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketOutboundDestinationTime" style="@style/field_item_label" />
+                        <TextView android:id="@id/txtTicketOutboundDestinationName" style="@style/ticket_station_name_destination" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketOutboundFareName" style="@style/field_item_label" />
+                        <LinearLayout android:id="@id/layoutTicketOutboundFeatureImages" style="@style/ticket_feature_images" />
+                    </LinearLayout>
+                    <TextView android:id="@id/txtTicketOutboundFareBreakdown" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtOutboundJourneyCaption" style="@style/field_item_label" />
+                    <app.view.JourneyLegsView android:id="@id/ticketOutboundJourneyLegs" android:visibility="gone" style="@style/field_group_layout_container" />
+                    <Button android:id="@id/journeyManagerOutboundButton" android:text="@string/NOODLES_TEXT_JOURNEY_MANAGER_TOD_OUTBOUND_JOURNEY_BUTTON" style="@style/DeleteButton" />
+                    <TextView android:id="@id/txtTicketOutboundRestrictionText" style="@style/field_item_label" />
+                </LinearLayout>
+                <ImageView style="@style/ccst_ticket_detail_bottom" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/layoutTicketViewInboundInfo" android:visibility="gone" style="@style/ticket_details_container">
+                <ImageView style="@style/ticket_header_image" />
+                <LinearLayout style="@style/ticket_container">
+                    <TextView android:id="@id/txtTicketViewInboundDate" style="@style/ticket_date" />
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketInboundOriginTime" style="@style/field_item_label" />
+                        <TextView android:id="@id/txtTicketInboundOriginName" style="@style/ticket_station_name_origin" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketInboundDestinationTime" style="@style/field_item_label" />
+                        <TextView android:id="@id/txtTicketInboundDestinationName" style="@style/ticket_station_name_destination" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/ticket_sub_container">
+                        <TextView android:id="@id/txtTicketInboundFareName" style="@style/field_item_label" />
+                        <LinearLayout android:id="@id/layoutTicketInboundFeatureImages" style="@style/ticket_feature_images" />
+                    </LinearLayout>
+                    <TextView android:id="@id/txtTicketInboundFareBreakdown" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtInboundJourneyCaption" style="@style/field_item_label" />
+                    <app.view.JourneyLegsView android:id="@id/ticketInboundJourneyLegs" android:visibility="gone" style="@style/field_group_layout_container" />
+                    <Button android:id="@id/journeyManagerInboundButton" android:text="@string/NOODLES_TEXT_JOURNEY_MANAGER_TOD_INBOUND_JOURNEY_BUTTON" style="@style/DeleteButton" />
+                    <TextView android:id="@id/txtTicketInboundRestrictionText" style="@style/field_item_label" />
+                </LinearLayout>
+                <ImageView style="@style/ccst_ticket_detail_bottom" />
+            </LinearLayout>
+            <Button android:id="@id/deleteTicketButton" android:text="@string/NOODLES_TEXT_WALLET_DELETE_BUTTON" style="@style/DeleteButton" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageView android:id="@id/imgCornerImage" style="@style/ticket_tod_pick_me_image" />
+</RelativeLayout>

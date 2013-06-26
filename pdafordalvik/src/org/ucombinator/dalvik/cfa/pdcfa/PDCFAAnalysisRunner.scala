@@ -38,7 +38,7 @@ import org.ucombinator.dsg.DyckStateGraphMachinery
 import org.ucombinator.dalvik.cfa.cesk.DalvikCFARunner
 import org.ucombinator.dsg.DSGAnalysisRunner
 import org.ucombinator.dalvik.cfa.cesk.CFAStatistics
-import java.io.File
+
 import org.ucombinator.utils.CommonUtils
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.ParsingUtils
@@ -52,6 +52,8 @@ import scala.tools.nsc.io.Directory
 import scala.util.matching.Regex
 import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
 import sys.process._
+import java.io.File
+import java.io.FileWriter
 
 
 class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts) 
@@ -250,10 +252,138 @@ private def getEntryPointStmt(state: S) : Stmt = {
       } 
     }
  
- 
+
+def sortingRankings(rawNodes: List[S]) : List[S] = {
+  val rawNodes0 = rawNodes.filter((rn) => {
+    rn match {
+      case ErrorState(_,_) | FinalState() => {
+        false
+      }
+      case _ => true
+    }
+  })
+   val res = rawNodes0.sortBy  {
+     case ps@PartialState(StForEqual(stmt, nxss, lss, clsP, methP), curFP, store, pst, kptr, t) => {
+       - stmt.riskRanking
+   } }
+   // only preserve ranks > 0/// will it be expensive??
+   res.filter 
+   {
+     case ps@PartialState(StForEqual(stmt, nxss, lss, clsP, methP), curFP, store, pst, kptr, t) => {
+        stmt.riskRanking > 0
+   } }
+}
+  
+// flat is just whether or not to flatten all the nodes in dsgs.
+  def getSortedRankedStates(dsgs: List[DSG], flat: Boolean) : List[S] = {
+    if(flat) {
+      val rawNodes = 
+      dsgs.foldLeft(List[S]())((res, dsg)=> {
+        res ++ dsg.nodes
+      })
+       sortingRankings(rawNodes)
+    }
+    else{ //TODO
+      List()
+    }
+  }
+
+  def dumpRiskRanking(opts: AIOptions, dsgs: List[DSG]) { 
+    def colorColumn(cnt: Int, buffer: StringBuffer, value: String, colorStr: String) {
+
+      buffer.append("<td bgcolor=")
+
+      buffer.append(colorStr)
+      buffer.append(">")
+      buffer.append(value)
+      buffer.append("</td>") 
+    } 
+    
+    val reportedStateNodes = getSortedRankedStates(dsgs, true)
+
+    var buffer = new StringBuffer()
+
+    //title
+    buffer.append("<html> <head>  <center> <title> Risk ranking </title> </center> </head> <h2> Risk Ranking  </h2><body> <table>\n")
+    buffer.append("<tr ><td bgcolor=")
+    buffer.append("#FFF6FA")
+    buffer.append(">")
+    // headers
+    buffer.append("<b> Risk Ranking </b>")
+    buffer.append("</td> <td >")
+     buffer.append("<b> Categories </b>")
+    buffer.append("</td> <td >")
+    
+    buffer.append("<b> Class </b>")
+    buffer.append("</td> <td >")
+    // one column
+    buffer.append("<b> Method </b>")
+    buffer.append("</td> <td >")
+
+    buffer.append("<b> Line Number </b>")
+    buffer.append("</td> <td >")
+
+    buffer.append("<b> Statement </b>")
+    buffer.append(" </td> </tr>")
+    buffer.append("</br>")
+
+    var cnt = 0
+    //Just internating color
+    reportedStateNodes.foreach((stateNode) => {
+
+      val (clsName, methName, lnName) = stateNode.getSourceLocation
+      val stmtStr = stateNode.getStmtForEqual match {
+        case Some(st) => st.oldStyleSt.toString
+        case None => ""
+      }
+
+      val colorStr = if (cnt % 2 == 0) {
+        "FFFFFF" //white
+      } else "#E8E8E8" // grey
+
+        
+      buffer.append("<tr >")
+      colorColumn(cnt, buffer, stateNode.getRiskRanking.toString, colorStr)
+       colorColumn(cnt, buffer, StringUtils.getOneStringFromSetofString(stateNode.taintKind), colorStr)
+      colorColumn(cnt, buffer, clsName, colorStr)
+      colorColumn(cnt, buffer, methName, colorStr)
+      colorColumn(cnt, buffer, lnName, colorStr)
+      colorColumn(cnt, buffer, stmtStr, colorStr)
+      buffer.append("</tr>")
+
+      cnt = cnt + 1
+    })
+    buffer.append("</table></body></html>")
+
+    
+    // file
+    val reportDirName = opts.permReportsDirName //opts.apkProjDir + File.separator + statisticsDirName 
+ println("path is: ", reportDirName)
+    val secuDir = new Directory(new File(reportDirName))
+    if (!secuDir.exists) {
+      secuDir.createDirectory(force = true)
+      secuDir.createFile(failIfExists = false)
+    }
+
+      val path = opts.riskRankingReportPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
+     
+      
+      val file = new File(path)
+      if (!file.exists()) {
+        file.createNewFile()
+      }
+      val writer = new FileWriter(file)
+
+      writer.write(buffer.toString)
+      writer.close()
+
+      println("Risk Ranking report dumped to: " + path)
+      path
+     
+  }
+  
  def dumpSecurityReport(opts: AIOptions, dsgs: List[DSG]) {
-    import java.io.File
-    import java.io.FileWriter
+ 
     var buffer = new StringBuffer()
     
     buffer.append("<html> <head> <title> Security Report </title> </head> <h2> Security Report  </h2><body> <table>\n")
@@ -305,6 +435,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
 		  						 opts.regex,entryPointStmt1)   
         
        }}) 
+       
      val reportDirName = opts.permReportsDirName//opts.apkProjDir + File.separator + statisticsDirName
     
        buffer.append("</table></body></html>")
@@ -387,6 +518,8 @@ private def getEntryPointStmt(state: S) : Stmt = {
     }
     
      dumpSecurityReport(opts,dsgs)
+     
+     dumpRiskRanking(opts, dsgs)
 
     if (opts.verbose && opts.dumpGraph) {
       val path = getGraphParentFolder(opts)
@@ -426,6 +559,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
     dumpStatisticsNew(opts, analysisStatistics) 
     DalInformationFlow.dumpPermReport(opts)
     dumpHeatMap(opts)
+    
     
      val reportTar=   "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar.gz"
        

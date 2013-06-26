@@ -1,0 +1,30 @@
+(class (attrs ) twitter4j/TwitterStream$5
+ (super twitter4j/TwitterStream$StreamHandlingThread)
+ (source "TwitterStream.java")
+
+ (field (attrs private final ) this$0 [object twitter4j/TwitterStream] )
+
+(method (attrs ) <init>([object twitter4j/TwitterStream] )void
+  (limit registers 2)
+  ; this: v0 ([object twitter4j/TwitterStream$5])
+  ; parameter[0] : v1 ([object twitter4j/TwitterStream])
+  (line 236)
+  (iput-object v1 v0 twitter4j/TwitterStream$5.this$0 [object twitter4j/TwitterStream])
+  (invoke-direct {v0 v1} twitter4j/TwitterStream$StreamHandlingThread/<init> [object twitter4j/TwitterStream] )
+  (return-void )
+ )
+
+(method (attrs public ) getStream()[object twitter4j/StatusStream]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object twitter4j/TwitterStream$5])
+  (line 238)
+  (iget-object v0 v1 twitter4j/TwitterStream$5.this$0 [object twitter4j/TwitterStream])
+  (invoke-virtual {v0} twitter4j/TwitterStream/getSampleStream )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

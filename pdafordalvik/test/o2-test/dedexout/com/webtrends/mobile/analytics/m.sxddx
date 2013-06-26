@@ -1,0 +1,29 @@
+(class (attrs ) com/webtrends/mobile/analytics/m
+ (super java/lang/Object)
+
+ (field (attrs static final ) a [array int] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (catch java/lang/NoSuchFieldError from l9b5e6 to l9b5fc using l9b5fe)
+  (invoke-static {} com/webtrends/mobile/analytics/android/d/values )
+  (nop )
+  (move-result-object v0)
+  (array-length v0 v0)
+  (new-array v0 v0 [array int])
+  (sput-object v0 com/webtrends/mobile/analytics/m.a [array int])
+  (label l9b5e6)
+  (sget-object v0 com/webtrends/mobile/analytics/m.a [array int])
+  (sget-object v1 com/webtrends/mobile/analytics/android/d.f [object com/webtrends/mobile/analytics/android/d])
+  (invoke-virtual {v1} com/webtrends/mobile/analytics/android/d/ordinal )
+  (move-result v1)
+  (const/4 v2 1)
+  (aput v2 v0 v1)
+  (label l9b5fc)
+  (return-void )
+  (label l9b5fe)
+  (move-exception v0)
+  (goto l9b5fc)
+ )
+
+)

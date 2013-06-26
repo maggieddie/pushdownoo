@@ -1,0 +1,30 @@
+/* Rules that apply to all brands and all platforms */
+
+* {
+	font-family: Helvetica;
+}
+/* Android-specific CSS rules */
+
+.fulfilicon {
+	margin: 5px;
+}
+* {
+	font-family: Helvetica;
+	max-width 320px
+}
+
+body {
+	font-size: 14px;
+	color: #222222;
+	background-color: #ffffff;
+	background-image: url("back.png");
+	background-repeat: repeat;
+	height: 100%;
+}
+
+a {
+	color: #11519a;
+
+}
+
+span.question { font-style:italic; }

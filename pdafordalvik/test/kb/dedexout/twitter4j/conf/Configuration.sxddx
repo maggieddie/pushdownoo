@@ -1,0 +1,110 @@
+(interface (attrs public abstract ) twitter4j/conf/Configuration
+ (super java/lang/Object)
+ (source "Configuration.java")
+ (implements twitter4j/internal/http/HttpClientConfiguration)
+ (implements twitter4j/internal/http/HttpClientWrapperConfiguration)
+ (implements twitter4j/http/AuthorizationConfiguration)
+ (implements twitter4j/internal/async/DispatcherConfiguration)
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getClientURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getClientVersion()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getHttpConnectionTimeout()int
+)
+
+(method (attrs public abstract ) getHttpDefaultMaxPerRoute()int
+)
+
+(method (attrs public abstract ) getHttpMaxTotalConnections()int
+)
+
+(method (attrs public abstract ) getHttpProxyHost()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getHttpProxyPassword()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getHttpProxyPort()int
+)
+
+(method (attrs public abstract ) getHttpProxyUser()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getHttpReadTimeout()int
+)
+
+(method (attrs public abstract ) getHttpRetryCount()int
+)
+
+(method (attrs public abstract ) getHttpRetryIntervalSeconds()int
+)
+
+(method (attrs public abstract ) getHttpStreamingReadTimeout()int
+)
+
+(method (attrs public abstract ) getOAuthAccessToken()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthAccessTokenSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthAccessTokenURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthAuthenticationURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthAuthorizationURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthConsumerKey()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthConsumerSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthRequestTokenURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPassword()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getRequestHeaders()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getRestBaseURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSearchBaseURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSource()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getStreamBaseURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getUser()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getUserAgent()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getUserStreamBaseURL()[object java/lang/String]
+)
+
+(method (attrs public abstract ) isDalvik()boolean
+)
+
+(method (attrs public abstract ) isDebugEnabled()boolean
+)
+
+)

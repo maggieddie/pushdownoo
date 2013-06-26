@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) twitter4j/api/BlockMethodsAsync
+ (super java/lang/Object)
+ (source "BlockMethodsAsync.java")
+
+
+(method (attrs public abstract ) createBlock(int )void
+)
+
+(method (attrs public abstract ) createBlock([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) destroyBlock(int )void
+)
+
+(method (attrs public abstract ) destroyBlock([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) existsBlock(int )void
+)
+
+(method (attrs public abstract ) existsBlock([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) getBlockingUsers()void
+)
+
+(method (attrs public abstract ) getBlockingUsers(int )void
+)
+
+(method (attrs public abstract ) getBlockingUsersIDs()void
+)
+
+)

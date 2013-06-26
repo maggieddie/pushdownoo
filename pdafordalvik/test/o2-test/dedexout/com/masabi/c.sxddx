@@ -1,0 +1,26 @@
+(class (attrs public final ) com/masabi/c
+ (super java/lang/Object)
+ (source "SourceFile")
+
+ (field (attrs public static final ) home_screen_menu int 2131099651); 0x7f060003 )
+ (field (attrs public static final ) information_gridview_items int 2131099653); 0x7f060005 )
+ (field (attrs public static final ) information_screen int 2131099659); 0x7f06000b )
+ (field (attrs public static final ) journey_railcard int 2131099648); 0x7f060000 )
+ (field (attrs public static final ) o2_gridview_items int 2131099652); 0x7f060004 )
+ (field (attrs public static final ) other_travel_items int 2131099655); 0x7f060007 )
+ (field (attrs public static final ) repeat_journey_screen int 2131099657); 0x7f060009 )
+ (field (attrs public static final ) repeat_lsb_screen int 2131099658); 0x7f06000a )
+ (field (attrs public static final ) share_app_items int 2131099654); 0x7f060006 )
+ (field (attrs public static final ) social_network_items int 2131099656); 0x7f060008 )
+ (field (attrs public static final ) swipe_screen_order int 2131099650); 0x7f060002 )
+ (field (attrs public static final ) ticket_options int 2131099649); 0x7f060001 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/masabi/c])
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

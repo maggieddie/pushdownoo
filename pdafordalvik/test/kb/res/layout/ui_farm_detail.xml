@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_farm_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/farm_apply_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.659973dip" android:layout_marginTop="7.189972dip">
+        <ImageView android:layout_gravity="left" android:id="@id/profile_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="133.0dip" android:layout_marginTop="8.5dip" />
+        <ImageView android:id="@id/img_farm_main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_farm_title" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/TitleArea_Layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ui_farm_menu_title" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/farm_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="19.669983sp" android:textStyle="bold" android:textColor="@color/Font_Normal_Color" android:gravity="center_horizontal" android:id="@id/farm_main_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:text="농장별칭 " />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <Button android:id="@id/btn_Farm_Detail" android:background="@drawable/farm_detail_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="onFarmMenuClickListener" />
+            <Button android:id="@id/btn_Farm_Trans_List" android:background="@drawable/farm_trade_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="onFarmMenuClickListener" />
+        </LinearLayout>
+        <ScrollView android:scrollbarStyle="outsideInset" android:background="@drawable/bg_farm_detail" android:fadingEdge="none" android:layout_width="313.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.659973dip" android:layout_marginTop="9.5dip" android:layout_marginBottom="-9.5dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="313.0dip" android:layout_height="fill_parent" android:layout_marginLeft="6.659973dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="9.0dip">
+                    <ImageView android:layout_width="15.0dip" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/bullet_farm_1" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="운영레벨" android:maxLines="1" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/box_farm_review_lineicon" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_level_op" android:layout_width="35.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:maxLines="1" />
+                    <LinearLayout android:background="@drawable/bar_farm_detail_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="4.0dip">
+                        <ImageView android:id="@id/img_bar_farm_level_op_r" android:layout_width="25.329987dip" android:layout_height="wrap_content" android:src="@drawable/bar_farm_detail_level_r" android:scaleType="matrix" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="5.0dip">
+                    <ImageView android:layout_width="15.0dip" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/bullet_farm_1" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="추천레벨" android:maxLines="1" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/box_farm_review_lineicon" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_level_rec" android:layout_width="35.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:maxLines="1" />
+                    <LinearLayout android:background="@drawable/bar_farm_detail_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="4.0dip">
+                        <ImageView android:id="@id/img_bar_farm_level_rec_r" android:layout_width="25.329987dip" android:layout_height="wrap_content" android:src="@drawable/bar_farm_detail_level_r" android:scaleType="matrix" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="5.0dip">
+                    <ImageView android:layout_width="15.0dip" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/bullet_farm_1" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="적립레벨" android:maxLines="1" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/box_farm_review_lineicon" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_level_sav" android:layout_width="35.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:maxLines="1" />
+                    <LinearLayout android:background="@drawable/bar_farm_detail_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="4.0dip">
+                        <ImageView android:id="@id/img_bar_farm_level_sav_r" android:layout_width="25.329987dip" android:layout_height="wrap_content" android:src="@drawable/bar_farm_detail_level_r" android:scaleType="matrix" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/box_farm_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.659973dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="계좌번호" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Farm_Font_Color_d" android:id="@id/farm_accnt_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="신규일" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_accnt_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="만기일" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_accnt_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="잔액" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="추천번호" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_rec_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="현적용우대이율" android:maxLines="1" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/Farm_Font_Color_d" android:id="@id/farm_total_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:maxLines="1" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+                    <ImageView android:layout_width="8.0dip" android:layout_height="wrap_content" android:layout_marginTop="3.5dip" android:src="@drawable/arrow_farm_detail" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="우대이율내역" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="추천우대이율(최고0.3%)" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="-적용우대이율" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Farm_Font_Color_d" android:id="@id/farm_apply_rate_rec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/farm_detail_context_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:layout_marginTop="10.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="적립우대이율(최고0.2%)" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/farm_detail_context_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="적립횟수" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/farm_save_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/farm_detail_context_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="-적용우대이율" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/Farm_Font_Color_d" android:id="@id/farm_apply_rate_sav" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/bg_farm_detail_botton" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+                    <Button android:id="@id/btn_Farm_Cancel" android:background="@drawable/farm_expire_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="83.32999dip" android:layout_marginTop="10.0dip" android:onClick="onFarmMenuClickListener" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

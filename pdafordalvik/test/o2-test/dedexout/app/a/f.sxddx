@@ -1,0 +1,14 @@
+(class (attrs public ) app/a/f
+ (super com/masabi/app/ukrail/UKRailServiceRegistry)
+ (source "SourceFile")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object app/a/f])
+  (line 8)
+  (invoke-direct {v0} com/masabi/app/ukrail/UKRailServiceRegistry/<init> )
+  (return-void )
+ )
+
+)

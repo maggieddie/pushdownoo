@@ -1,0 +1,37 @@
+(class (attrs ) app/core/activity/cg
+ (super java/lang/Object)
+ (source "SourceFile")
+ (implements android/widget/AdapterView$OnItemClickListener)
+
+ (field (attrs final ) a [object app/core/activity/TimetableParallelSpinnersActivity] )
+
+(method (attrs ) <init>([object app/core/activity/TimetableParallelSpinnersActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object app/core/activity/cg])
+  ; parameter[0] : v1 ([object app/core/activity/TimetableParallelSpinnersActivity])
+  (line 763)
+  (iput-object v1 v0 app/core/activity/cg.a [object app/core/activity/TimetableParallelSpinnersActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onItemClick([object android/widget/AdapterView] [object android/view/View] int long )void
+  (limit registers 7)
+  ; this: v1 ([object app/core/activity/cg])
+  ; parameter[0] : v2 ([object android/widget/AdapterView])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (long)
+  (line 766)
+  (iget-object v0 v1 app/core/activity/cg.a [object app/core/activity/TimetableParallelSpinnersActivity])
+  (iget v0 v0 app/core/activity/TimetableParallelSpinnersActivity.D int)
+  (if-ne v4 v0 l627ca)
+  (line 767)
+  (iget-object v0 v1 app/core/activity/cg.a [object app/core/activity/TimetableParallelSpinnersActivity])
+  (invoke-virtual {v0} app/core/activity/TimetableParallelSpinnersActivity/p )
+  (label l627ca)
+  (line 768)
+  (return-void )
+)
+
+)

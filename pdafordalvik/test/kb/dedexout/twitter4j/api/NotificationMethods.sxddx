@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) twitter4j/api/NotificationMethods
+ (super java/lang/Object)
+ (source "NotificationMethods.java")
+
+
+(method (attrs public abstract ) disableNotification(int )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) disableNotification([object java/lang/String] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) enableNotification(int )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) enableNotification([object java/lang/String] )[object twitter4j/User]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

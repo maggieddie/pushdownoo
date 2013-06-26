@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) twitter4j/http/AuthorizationConfiguration
+ (super java/lang/Object)
+ (source "AuthorizationConfiguration.java")
+
+
+(method (attrs public abstract ) getOAuthAccessToken()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthAccessTokenSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthConsumerKey()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getOAuthConsumerSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPassword()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getUser()[object java/lang/String]
+)
+
+)

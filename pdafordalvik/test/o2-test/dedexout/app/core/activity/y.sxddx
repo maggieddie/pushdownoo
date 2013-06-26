@@ -1,0 +1,31 @@
+(class (attrs ) app/core/activity/y
+ (super java/lang/Object)
+ (source "SourceFile")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object app/core/activity/JourneyManagerWebViewActivity] )
+
+(method (attrs ) <init>([object app/core/activity/JourneyManagerWebViewActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object app/core/activity/y])
+  ; parameter[0] : v1 ([object app/core/activity/JourneyManagerWebViewActivity])
+  (line 37)
+  (iput-object v1 v0 app/core/activity/y.a [object app/core/activity/JourneyManagerWebViewActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object app/core/activity/y])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 41)
+  (iget-object v0 v1 app/core/activity/y.a [object app/core/activity/JourneyManagerWebViewActivity])
+  (invoke-static {v0} app/core/activity/JourneyManagerWebViewActivity/a [object app/core/activity/JourneyManagerWebViewActivity] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/webkit/WebView/reload )
+  (line 42)
+  (return-void )
+)
+
+)

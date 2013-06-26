@@ -1,0 +1,30 @@
+(class (attrs public ) app/dynamic_menu/view/viewproviders/ExpandHorizontallyProvider
+ (super app/view/b)
+ (source "SourceFile")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object app/dynamic_menu/view/viewproviders/ExpandHorizontallyProvider])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 11)
+  (invoke-direct {v0 v1} app/view/b/<init> [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/view/LayoutInflater] [object android/view/ViewGroup] )[object android/view/View]
+  (limit registers 5)
+  ; this: v2 ([object app/dynamic_menu/view/viewproviders/ExpandHorizontallyProvider])
+  ; parameter[0] : v3 ([object android/view/LayoutInflater])
+  ; parameter[1] : v4 ([object android/view/ViewGroup])
+  (line 16)
+  (new-instance v0 android/view/View)
+  (invoke-virtual {v3} android/view/LayoutInflater/getContext )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} android/view/View/<init> [object android/content/Context] )
+  (line 17)
+  (return-object v0)
+)
+
+)

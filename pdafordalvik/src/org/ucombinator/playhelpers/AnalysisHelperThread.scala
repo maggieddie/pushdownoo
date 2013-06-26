@@ -29,6 +29,8 @@ class AnalysisHelperThread (params: Array[String]) extends Thread with WideningH
   var permissionMap: scala.collection.mutable.Map[String, PermissionPair] = scala.collection.mutable.Map[String, PermissionPair]()
 
   var heatMap: scala.collection.mutable.Map[StForEqual, HeatPair] = scala.collection.mutable.Map[StForEqual, HeatPair]()
+  
+  var riskRankingMap: scala.collection.mutable.Map[String, Int] = scala.collection.mutable.Map[String, Int]()
   // the meta information
   var classTable: Map[String, DalvikClassDef] = Map.empty
  var ppwWideningCounterTbl:  Map[StForEqual, Int] = Map()

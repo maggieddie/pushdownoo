@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) twitter4j/api/NotificationMethodsAsync
+ (super java/lang/Object)
+ (source "NotificationMethodsAsync.java")
+
+
+(method (attrs public abstract ) disableNotification(int )void
+)
+
+(method (attrs public abstract ) disableNotification([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) enableNotification(int )void
+)
+
+(method (attrs public abstract ) enableNotification([object java/lang/String] )void
+)
+
+)

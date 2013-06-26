@@ -1,0 +1,39 @@
+(class (attrs public ) app/view/g
+ (super android/os/Handler)
+ (source "SourceFile")
+
+ (field (attrs final ) a [object app/view/f] )
+
+(method (attrs public ) <init>([object app/view/f] )void
+  (limit registers 2)
+  ; this: v0 ([object app/view/g])
+  ; parameter[0] : v1 ([object app/view/f])
+  (line 71)
+  (iput-object v1 v0 app/view/g.a [object app/view/f])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 6)
+  ; this: v4 ([object app/view/g])
+  ; parameter[0] : v5 ([object android/os/Message])
+  (line 74)
+  (iget-object v0 v4 app/view/g.a [object app/view/f])
+  (invoke-static {v0} app/view/f/a [object app/view/f] )
+  (move-result-object v0)
+  (invoke-virtual {v5} android/os/Message/getCallback )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} android/app/Activity/runOnUiThread [object java/lang/Runnable] )
+  (line 75)
+  (iget-object v0 v4 app/view/g.a [object app/view/f])
+  (iget-object v0 v0 app/view/f.a [object app/view/g])
+  (iget-object v1 v4 app/view/g.a [object app/view/f])
+  (iget-object v1 v1 app/view/f.b [object java/lang/Runnable])
+  (const-wide/16 v2 40)
+  (invoke-virtual {v0 v1 v2 v3} app/view/g/postDelayed [object java/lang/Runnable] long )
+  (line 76)
+  (return-void )
+)
+
+)

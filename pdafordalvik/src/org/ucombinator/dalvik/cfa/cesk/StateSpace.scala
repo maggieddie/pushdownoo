@@ -440,6 +440,26 @@ trait StateSpace  {
       } 
     }
     
+    def getRiskRanking: Int = { 
+         this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {
+        	st.oldStyleSt.riskRanking
+        }
+        case _ =>  0
+      } 
+    }
+    
+    // tempararily class name + method name and line number
+    def getSourceLocation : (String, String, String) = {
+       this match{
+        case ps@PartialState(st, fp, s, pst, kptr, t) => {
+        	(st.clsPath, st.methPath, st.lineSt.asInstanceOf[LineStmt].linenumber)
+        }
+        case _ =>  ("", "", "")
+      } 
+    }
+    
+    
       def matchRegex(regexR: Regex) : Boolean = {
       this match {
        case ps@PartialState(st, fp, s, pst, kptr, t) => { 

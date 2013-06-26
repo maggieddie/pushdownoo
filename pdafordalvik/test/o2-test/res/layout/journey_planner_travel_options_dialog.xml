@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/rounded_border_solid" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:layout_gravity="center_horizontal" android:id="@id/btnDialogClose" android:text="@string/NOODLES_TEXT_MODAL_DONE" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/ActionButton" />
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/layout_home_root" android:scrollbars="vertical" android:layout_above="@id/btnDialogClose" android:layout_alignParentTop="true" android:fadeScrollbars="false" style="@style/scrollview_container">
+        <LinearLayout android:id="@id/journey_planner_layout_container" android:padding="10.0dip" style="@style/field_group_layout_container">
+            <TextView android:id="@id/titlePromocodes" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_PROMO_CODE_SECTION_TITLE" style="@style/field_group_title_text" />
+            <RelativeLayout style="@style/field_group_layout_container">
+                <LinearLayout android:id="@id/journey_planner_promo_code_layout_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/promo_code_caption" android:layout_width="fill_parent" android:text="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_PROMO_CODE_CAPTION" android:drawablePadding="@dimen/drawable_padding" android:layout_weight="2.0" android:layout_alignRight="@id/promo_pin_caption" android:layout_alignParentLeft="true" style="@style/field_item_label_black" />
+                    <EditText android:id="@id/promo_code_value" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_marginLeft="10.0dip" android:hint="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_PROMO_CODE_HINT" android:drawableRight="@drawable/promo_icon" android:layout_weight="1.0" android:layout_toRightOf="@id/promo_code_caption" android:layout_alignParentRight="true" style="@style/journey_planner_station_name_edittext" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/journey_planner_promo_code_layout_container">
+                    <TextView android:id="@id/promo_pin_caption" android:visibility="gone" android:layout_width="fill_parent" android:text="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_PROMO_CODE_PIN_CAPTION" android:drawablePadding="@dimen/drawable_padding" android:layout_weight="2.0" android:layout_below="@id/promo_code_caption" android:layout_alignParentLeft="true" style="@style/field_item_label_black" />
+                    <EditText android:id="@id/promo_pin_code_value" android:focusableInTouchMode="true" android:visibility="gone" android:layout_marginLeft="10.0dip" android:hint="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_PROMO_CODE_PIN_HINT" android:height="0.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/promo_pin_caption" android:layout_below="@id/promo_code_caption" android:layout_alignParentRight="true" style="@style/journey_planner_station_name_edittext" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:layout_marginTop="10.0dip" android:text="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_RAILCARD_SECTION_TITLE" style="@style/field_group_title_text" />
+            <LinearLayout android:id="@id/layoutRailcardContainer" style="@style/field_group_layout_container" />
+            <TextView android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/NOODLES_TEXT_JOURNEY_PLANNER_OPTIONS_SCREEN_RAILCARD_SECTION_TITLE" style="@style/field_group_title_text" />
+            <RadioGroup android:id="@id/classRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+(class (attrs public ) orange/neo/adinapps/a/a/f
+ (super java/lang/Object)
+ (source "SourceFile")
+
+ (field (attrs private ) a int )
+ (field (attrs private ) b int )
+ (field (attrs private ) c float )
+ (field (attrs private ) d [object android/graphics/Typeface] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object orange/neo/adinapps/a/a/f])
+  (line 12)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 16)
+  (const/4 v0 0)
+  (iput v0 v1 orange/neo/adinapps/a/a/f.b int)
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) a()int
+  (limit registers 2)
+  ; this: v1 ([object orange/neo/adinapps/a/a/f])
+  (line 28)
+  (iget v0 v1 orange/neo/adinapps/a/a/f.a int)
+  (return v0)
+)
+
+(method (attrs public ) b()float
+  (limit registers 2)
+  ; this: v1 ([object orange/neo/adinapps/a/a/f])
+  (line 46)
+  (iget v0 v1 orange/neo/adinapps/a/a/f.c float)
+  (return v0)
+)
+
+(method (attrs public ) c()int
+  (limit registers 2)
+  ; this: v1 ([object orange/neo/adinapps/a/a/f])
+  (line 80)
+  (iget v0 v1 orange/neo/adinapps/a/a/f.b int)
+  (return v0)
+)
+
+(method (attrs public ) d()[object android/graphics/Typeface]
+  (limit registers 2)
+  ; this: v1 ([object orange/neo/adinapps/a/a/f])
+  (line 89)
+  (iget-object v0 v1 orange/neo/adinapps/a/a/f.d [object android/graphics/Typeface])
+  (return-object v0)
+)
+
+)

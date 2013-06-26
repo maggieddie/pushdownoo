@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) twitter4j/Category
+ (super java/lang/Object)
+ (source "Category.java")
+
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSlug()[object java/lang/String]
+)
+
+)

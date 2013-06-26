@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) twitter4j/api/TrendsMethodsAsync
+ (super java/lang/Object)
+ (source "TrendsMethodsAsync.java")
+
+
+(method (attrs public abstract ) getCurrentTrends()void
+)
+
+(method (attrs public abstract ) getCurrentTrends(boolean )void
+)
+
+(method (attrs public abstract ) getDailyTrends()void
+)
+
+(method (attrs public abstract ) getDailyTrends([object java/util/Date] boolean )void
+)
+
+(method (attrs public abstract ) getTrends()void
+)
+
+(method (attrs public abstract ) getWeeklyTrends()void
+)
+
+(method (attrs public abstract ) getWeeklyTrends([object java/util/Date] boolean )void
+)
+
+)

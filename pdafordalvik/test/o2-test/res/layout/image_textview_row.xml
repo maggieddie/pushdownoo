@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/journey_planner_rail_card_list_row"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgItem" style="@style/journey_planner_rail_card_image" />
+    <RadioButton android:gravity="right" android:id="@id/checkItem" android:layout_alignParentRight="true" style="@style/repeat_cvv_accept_checkbox" />
+    <TextView android:id="@id/txtItem" android:layout_toLeftOf="@id/checkItem" android:layout_toRightOf="@id/imgItem" style="@style/journey_planner_rail_card_name" />
+</RelativeLayout>

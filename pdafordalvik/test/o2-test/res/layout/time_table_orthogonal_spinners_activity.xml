@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_home_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <LinearLayout android:id="@id/advertBox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_alignParentBottom="true" style="@style/timetable_advert" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/advertBox" android:layout_below="@id/title_container">
+        <ImageView android:id="@id/imgBottomImage" style="@style/timetable_footer_image" />
+        <ImageView android:id="@id/txtTimetableHeader" style="@style/timetable_header_image" />
+        <LinearLayout android:id="@id/fareInfo" style="@style/timetable_single_spinner_fare_container">
+            <RelativeLayout android:id="@id/layoutJourneySelection" style="@style/timetable_fare_details_container">
+                <LinearLayout android:id="@id/layoutImageHolder" android:layout_alignParentRight="true" style="@style/field_image_item" />
+                <TextView android:id="@id/txtTimetableFareName" style="@style/timetable_fare_name_text" />
+            </RelativeLayout>
+            <TextView android:id="@id/txtTimetableFareRestrictions" style="@style/timetable_restriction_text" />
+            <RelativeLayout android:id="@id/fareGallery" style="@style/timetable_single_spinner_fare_gallery_container">
+                <ImageView style="@style/timetable_single_spinner_fare_gallery_background" />
+                <ImageView android:id="@id/overlayView" style="@style/timetable_single_spinner_fare_gallery_overlay" />
+                <Gallery android:id="@id/gallery" style="@style/timetable_single_spinner_fare_gallery" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/ticketInfo" style="@style/timetable_singe_spinner_wheelview_container">
+            <TextView android:id="@id/txtTimetableDate" style="@style/timetable_date" />
+            <com.masabi.widget.WheelView android:id="@id/listOfJourneys" android:background="@drawable/time_table_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <Button android:id="@id/journeyManagerButton" android:text="@string/NOODLES_TEXT_JOURNEY_MANAGER_SCREEN_TITLE" android:layout_alignParentLeft="true" style="@style/timetable_select_fare_button" />
+        <Button android:id="@id/btnTimetableFareSelect" style="@style/timetable_select_fare_button" />
+    </RelativeLayout>
+</RelativeLayout>

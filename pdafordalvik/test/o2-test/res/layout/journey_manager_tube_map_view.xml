@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ImageView android:id="@id/tube_map_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/tube_map" android:scaleType="matrix" android:layout_below="@id/title_container" />
+</RelativeLayout>

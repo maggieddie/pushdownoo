@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ListView android:id="@id/listPaymentOptions" android:layout_below="@id/title_container" style="@style/payment_option_listview" />
+</RelativeLayout>

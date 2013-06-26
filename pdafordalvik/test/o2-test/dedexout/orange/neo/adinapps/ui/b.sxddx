@@ -1,0 +1,31 @@
+(class (attrs ) orange/neo/adinapps/ui/b
+ (super java/lang/Object)
+ (source "SourceFile")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object orange/neo/adinapps/ui/ClassicAdvertising] )
+
+(method (attrs ) <init>([object orange/neo/adinapps/ui/ClassicAdvertising] )void
+  (limit registers 2)
+  ; this: v0 ([object orange/neo/adinapps/ui/b])
+  ; parameter[0] : v1 ([object orange/neo/adinapps/ui/ClassicAdvertising])
+  (line 1)
+  (iput-object v1 v0 orange/neo/adinapps/ui/b.a [object orange/neo/adinapps/ui/ClassicAdvertising])
+  (line 269)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object orange/neo/adinapps/ui/b])
+  (line 272)
+  (iget-object v0 v2 orange/neo/adinapps/ui/b.a [object orange/neo/adinapps/ui/ClassicAdvertising])
+  (iget-object v1 v2 orange/neo/adinapps/ui/b.a [object orange/neo/adinapps/ui/ClassicAdvertising])
+  (iget v1 v1 orange/neo/adinapps/ui/ClassicAdvertising.o int)
+  (invoke-virtual {v0 v1} orange/neo/adinapps/ui/ClassicAdvertising/setBackgroundColor int )
+  (line 273)
+  (return-void )
+)
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public ) com/webtrends/mobile/analytics/WebtrendsReferrerReceiver
+ (super android/content/BroadcastReceiver)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/webtrends/mobile/analytics/WebtrendsReferrerReceiver])
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object com/webtrends/mobile/analytics/WebtrendsReferrerReceiver])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (invoke-virtual {v4} android/content/Intent/getExtras )
+  (move-result-object v0)
+  (const-string v1 "referrer")
+  (invoke-virtual {v0 v1} android/os/Bundle/getString [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-static {v0 v3} com/webtrends/mobile/analytics/android/b/a [object java/lang/String] [object java/lang/Object] )
+  (return-void )
+)
+
+)

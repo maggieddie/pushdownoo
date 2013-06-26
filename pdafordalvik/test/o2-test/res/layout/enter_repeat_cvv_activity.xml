@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ScrollView android:id="@id/layout_home_root" android:layout_below="@id/title_container" style="@style/scrollview_container">
+        <LinearLayout style="@style/field_group_layout_container_with_padding">
+            <RelativeLayout android:id="@id/payment_instruments_password_holder" android:visibility="gone" style="@style/field_group_container_background_with_rounded_border">
+                <TextView android:gravity="center_horizontal" android:id="@id/o2PassTextLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_centerHorizontal="true" />
+                <EditText android:id="@id/o2_1stPassChar" android:layout_toLeftOf="@id/o2_2ndPassChar" android:layout_alignBottom="@id/o2_2ndPassChar" style="@style/card_details_pay_password_field" />
+                <EditText android:id="@id/o2_2ndPassChar" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/o2PassTextLabel" android:layout_centerHorizontal="true" style="@style/card_details_pay_password_field" />
+                <EditText android:id="@id/o2_3rdPassChar" android:layout_toRightOf="@id/o2_2ndPassChar" android:layout_alignBottom="@id/o2_2ndPassChar" style="@style/card_details_pay_password_field" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/cvvArea" android:layout_marginTop="10.0dip" style="@style/field_group_container_background_with_rounded_border">
+                <TextView android:id="@id/cardVerify" android:text="@string/NOODLES_TEXT_CVV_SECTION_TITLE" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/field_group_title_text" />
+                <ImageView android:id="@id/imgPaymentOptionCardType" android:layout_marginRight="5.0dip" android:layout_below="@id/cardVerify" style="@style/field_image_item" />
+                <TextView android:id="@id/txtCardNumber" android:layout_toRightOf="@id/imgPaymentOptionCardType" android:layout_below="@id/cardVerify" style="@style/field_image_item" />
+                <TextView android:gravity="center_vertical" android:id="@id/txtRepeatCVVText" android:text="@string/NOODLES_TEXT_CVV_CAPTION" android:layout_below="@id/txtCardNumber" android:layout_alignTop="@id/editTextRepeatCVVNumber" android:layout_alignBottom="@id/editTextRepeatCVVNumber" android:layout_alignParentLeft="true" style="@style/field_item_label" />
+                <ImageView android:id="@id/imgRepeatCardCVV" android:layout_margin="3.0dip" android:src="@drawable/card_cvv" android:scaleType="fitCenter" android:layout_below="@id/txtCardNumber" android:layout_alignTop="@id/editTextRepeatCVVNumber" android:layout_alignBottom="@id/editTextRepeatCVVNumber" android:layout_alignParentRight="true" style="@style/field_image_item" />
+                <EditText android:id="@id/editTextRepeatCVVNumber" android:layout_toLeftOf="@id/imgRepeatCardCVV" android:layout_below="@id/txtCardNumber" style="@style/repeat_cvv_edittext" />
+                <TextView android:textSize="12.0dip" android:gravity="center_horizontal" android:id="@id/o2PassTextLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/NOODLES_TEXT_CVV_FOOTER" android:layout_below="@id/txtRepeatCVVText" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <include android:id="@id/terms_and_conditions_container" layout="@layout/terms_and_conditions_layout" />
+            <Button android:id="@id/btnRepeatCVV_Continue" android:text="@string/NOODLES_TEXT_CONTINUE" style="@style/action_button_disabled_bydefault" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

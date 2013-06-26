@@ -81,7 +81,7 @@ object DalInformationFlow {
 	    val kindsFromSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.foldLeft(Set[String]())((res: Set[String], p) => {
 	    val str = p._1
 	    val kind = p._2
-	    if (input.contains(str) || str.contains(input))  
+	    if ((input.contains(str) || str.contains(input)) && input != "")  
 	          res + kind 
 	          else res
 	  })
@@ -118,6 +118,18 @@ object DalInformationFlow {
 	}
 	
 	
+    def parInRankingMap : scala.collection.mutable.Map[String, Int]  = {
+	    val riskRankingPath = "android-knowledge" + File.separator + "risk-rank-tmp.txt"
+	     val classLines =  File(riskRankingPath).lines.toList.filter(_.trim() !=  "" )
+     val deduplicateClsLines = classLines.toSet.toList
+     
+     deduplicateClsLines.foldLeft(Map[String, Int]())((res, line) => {
+       val splitted :List[String] = line.split("\\t+").toList
+       val key = splitted.head
+       val value = splitted(1).toInt
+       res + (key -> value)
+     })
+	}
 	
 	 private def parseInRawPermMap : scala.collection.mutable.Map[String, PermissionPair] = {
      val permMapFilePath  =  "android-knowledge" + File.separator + "permission-map.txt" 
@@ -257,36 +269,42 @@ object DalInformationFlow {
       path
     } else ""
   }
-	
-	 def parseInAndroidKnowledge   {
-		val srcPath  =  "android-knowledge" + File.separator + "sources.txt"
-		val sinkPath = "android-knowledge" + File.separator + "sinks.txt" 
-		val sstringPath = "android-knowledge" + File.separator + "sensitive-strings.txt"
-		
-		val sourcesLines =  File(srcPath).lines.toList.filter(_ != "")
-		Thread.currentThread().asInstanceOf[AnalysisHelperThread].sources =  sourcesLines.map((ps)=>{
-		  val pairStr = ps.split("\\s+").toList
-		  (pairStr(0), pairStr(1))
-		  
-		}).toSet  //sourcesLines.toSet 
-		 
-		val sinkLines = File(sinkPath).lines.toList.filter(_ != "")
-	    Thread.currentThread().asInstanceOf[AnalysisHelperThread].sinks = sinkLines.map((ps)=>{
-		  val pairStr = ps.split("\\s+").toList
-		  (pairStr(0), pairStr(1))
-		  
-		}).toSet 
-	    
-	    val ssLines = File(sstringPath).lines.toList.filter(_ != "")
-	    Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings = ssLines.map((ps)=>{
-		  val pairStr = ps.split("\\s+").toList
-		  (pairStr(0), pairStr(1))
-		  
-		}).toSet
-		
-		Thread.currentThread().asInstanceOf[AnalysisHelperThread].permissionMap = parseInRawPermMap 
-		
-		 
-      
-	}
+
+  def parseInAndroidKnowledge {
+    val srcPath = "android-knowledge" + File.separator + "sources.txt"
+    val sinkPath = "android-knowledge" + File.separator + "sinks.txt"
+    val sstringPath = "android-knowledge" + File.separator + "sensitive-strings.txt"
+
+  
+
+    // sources
+    val sourcesLines = File(srcPath).lines.toList.filter(_ != "")
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].sources = sourcesLines.map((ps) => {
+      val pairStr = ps.split("\\s+").toList
+      (pairStr(0), pairStr(1))
+
+    }).toSet //sourcesLines.toSet 
+
+    // sinks
+    val sinkLines = File(sinkPath).lines.toList.filter(_ != "")
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].sinks = sinkLines.map((ps) => {
+      val pairStr = ps.split("\\s+").toList
+      (pairStr(0), pairStr(1))
+
+    }).toSet
+
+    // sensitive string
+    val ssLines = File(sstringPath).lines.toList.filter(_ != "")
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings = ssLines.map((ps) => {
+      val pairStr = ps.split("\\s+").toList
+      (pairStr(0), pairStr(1))
+
+    }).toSet
+    // permission map
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].permissionMap = parseInRawPermMap
+    // ranking map
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].riskRankingMap = parInRankingMap
+     
+
+  }
 }

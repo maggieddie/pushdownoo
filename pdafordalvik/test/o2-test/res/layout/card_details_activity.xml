@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ScrollView android:id="@id/layout_home_root" android:layout_below="@id/title_container" style="@style/scrollview_container">
+        <LinearLayout style="@style/field_group_layout_container_with_padding">
+            <LinearLayout style="@style/card_details_field_group">
+                <TextView android:id="@id/txtCardDetails_NameOnCard" android:text="@string/NOODLES_TEXT_CARD_NAME_CAPTION" style="@style/field_item_label" />
+                <EditText android:id="@id/editTextCardDetails_NameOnCard" style="@style/field_item_value_full_width" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/NOODLES_TEXT_POSTCODE_CAPTION" style="@style/field_horizontally_aligned_item_label" />
+                    <EditText android:id="@id/editTextCardDetails_Postcode" style="@style/field_horizontally_aligned_item_value" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/txtCardDetailsContainer_HouseNumber" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/txtCardDetails_HouseNumber" android:text="@string/NOODLES_TEXT_HOUSE_NUMBER_CAPTION" style="@style/field_horizontally_aligned_item_label" />
+                    <EditText android:id="@id/editTextCardDetails_HouseNumber" style="@style/card_details_address_field_value" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/txtCardDetailsContainer_FlatNumber" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/txtCardDetails_FlatNumber" android:text="@string/NOODLES_TEXT_FLAT_NUMBER_CAPTION" style="@style/field_horizontally_aligned_item_label" />
+                    <EditText android:id="@id/editTextCardDetails_FlatNumber" style="@style/card_details_address_field_value" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/txtCardDetails_CardNumber" android:text="@string/NOODLES_TEXT_CARD_NUMBER_CAPTION" style="@style/field_item_label" />
+                    <LinearLayout android:id="@id/layoutCardDetails_PossibleCardType" style="@style/card_details_card_images_holder" />
+                </LinearLayout>
+                <EditText android:id="@id/editTextCardDetails_CardNumber" style="@style/card_details_card_number" />
+                <TextView android:textSize="18.0dip" android:id="@id/txtCardDetails_CardNumberRead" android:visibility="gone" style="@style/card_details_card_number" />
+                <LinearLayout android:id="@id/txtCardDetails_Start_Date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/txtCardDetails_Start_Month" android:text="@string/NOODLES_TEXT_CARD_START_DATE_CAPTION" style="@style/card_details_security_info_label" />
+                    <EditText android:id="@id/editTextCardDetails_StartMonth" android:nextFocusDown="@id/editTextCardDetails_StartYear" android:hint="@string/NOODLES_TEXT_MM" style="@style/card_details_security_info_date_value" />
+                    <TextView android:id="@id/txtCardDetails_Start_Year" android:text="@string/NOODLES_TEXT_DATE_SEPARATOR" style="@style/card_details_security_info_separator" />
+                    <EditText android:id="@id/editTextCardDetails_StartYear" android:hint="@string/NOODLES_TEXT_YY" style="@style/card_details_security_info_date_value" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/NOODLES_TEXT_CARD_END_DATE_CAPTION" style="@style/card_details_security_info_label" />
+                    <EditText android:id="@id/editTextCardDetails_ExpiryMonth" android:nextFocusDown="@id/editTextCardDetails_ExpiryYear" android:hint="@string/NOODLES_TEXT_MM" style="@style/card_details_security_info_date_value" />
+                    <TextView android:text="@string/NOODLES_TEXT_DATE_SEPARATOR" style="@style/card_details_security_info_separator" />
+                    <EditText android:id="@id/editTextCardDetails_ExpiryYear" android:hint="@string/NOODLES_TEXT_YY" style="@style/card_details_security_info_date_value" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/NOODLES_TEXT_CVV_CAPTION" style="@style/card_details_security_info_label" />
+                    <EditText android:id="@id/editTextCardDetails_CVV" style="@style/card_details_security_info_cvv_value" />
+                    <TextView style="@style/card_details_security_info_separator" />
+                    <ImageView android:layout_height="fill_parent" android:src="@drawable/card_cvv" android:scaleType="center" style="@style/card_details_security_info_cvv_image" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/txtCardDetailsContainer_IssueNumber" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/txtCardDetails_IssueNumber" android:text="@string/NOODLES_TEXT_ISSUE_NUMBER" style="@style/card_details_security_info_label" />
+                    <EditText android:id="@id/editTextCardDetails_IssueNumber" style="@style/card_details_security_info_date_value" />
+                    <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.5" />
+                </LinearLayout>
+                <include android:id="@id/nfc_container" layout="@layout/nfc_layout" />
+            </LinearLayout>
+            <include android:id="@id/terms_and_conditions_container" layout="@layout/terms_and_conditions_layout" />
+            <Button android:id="@id/btnCardDetails_Continue" android:text="@string/NOODLES_TEXT_CONTINUE" style="@style/action_button_disabled_bydefault" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+(interface (attrs public abstract ) twitter4j/RateLimitStatus
+ (super java/lang/Object)
+ (source "RateLimitStatus.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getHourlyLimit()int
+)
+
+(method (attrs public abstract ) getRemainingHits()int
+)
+
+(method (attrs public abstract ) getResetTime()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getResetTimeInSeconds()int
+)
+
+(method (attrs public abstract ) getSecondsUntilReset()int
+)
+
+)

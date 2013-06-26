@@ -1,0 +1,17 @@
+(class (attrs public ) com/dreamsecurity/dstoolkit/exception/RevokedCertException
+ (super java/lang/Exception)
+ (source "RevokedCertException.java")
+
+ (field (attrs private static final ) serialVersionUID long -571108012); 0xddf59554 )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/dreamsecurity/dstoolkit/exception/RevokedCertException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 20)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 21)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,26 @@
+(class (attrs final ) twitter4j/internal/logging/CommonsLoggingLoggerFactory
+ (super twitter4j/internal/logging/LoggerFactory)
+ (source "CommonsLoggingLoggerFactory.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object twitter4j/internal/logging/CommonsLoggingLoggerFactory])
+  (line 33)
+  (invoke-direct {v0} twitter4j/internal/logging/LoggerFactory/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getLogger([object java/lang/Class] )[object twitter4j/internal/logging/Logger]
+  (limit registers 4)
+  ; this: v2 ([object twitter4j/internal/logging/CommonsLoggingLoggerFactory])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 40)
+  (new-instance v0 twitter4j/internal/logging/CommonsLoggingLogger)
+  (invoke-static {v3} org/apache/commons/logging/LogFactory/getLog [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} twitter4j/internal/logging/CommonsLoggingLogger/<init> [object org/apache/commons/logging/Log] )
+  (return-object v0)
+)
+
+)

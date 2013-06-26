@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/layout_home_root" style="@style/scrollview_container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/field_group_layout_container_horizontal">
+        <RelativeLayout android:id="@id/tblInputContainer" android:layout_margin="10.0dip" android:layout_below="@id/title_container" style="@style/journey_planner_field_group">
+            <LinearLayout android:id="@id/layoutArriveDepart" android:padding="@dimen/layout_padding" style="@style/field_group_layout_container_horizontal">
+                <Button android:id="@id/btnLSB_Departing" android:background="@drawable/btn_segmented_left_pressed" android:text="@string/NOODLES_TEXT_STATIONBOARD_DEPARTURES" style="@style/station_board_arrive_depart_button" />
+                <Button android:id="@id/btnLSB_Arrival" android:background="@drawable/btn_segmented_right" android:text="@string/NOODLES_TEXT_STATIONBOARD_ARRIVALS" style="@style/station_board_arrive_depart_button" />
+                <Button android:id="@id/btnLSB_Clear" style="@style/station_board_clear_button" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/rowOneContainer" android:layout_below="@id/layoutArriveDepart" style="@style/station_board_vertical_item_label_container">
+                <TextView android:id="@id/txtLSB_StationLabel" android:text="@string/NOODLES_TEXT_STATIONBOARD_STATION_DEPARTURES" style="@style/station_board_vertical_item_label" />
+                <TextView android:id="@id/txtLSB_FilterLabel" android:text="@string/NOODLES_TEXT_STATIONBOARD_FILTER_DEPARTURES" style="@style/station_board_vertical_item_label" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/rowTwoContainer" android:layout_toRightOf="@id/rowOneContainer" android:layout_below="@id/layoutArriveDepart" style="@style/station_board_vertical_item_value_container">
+                <TextView android:id="@id/editLSB_StationName" android:editable="false" android:layout_toRightOf="@id/imgStationSwitcher" android:layout_alignParentTop="true" style="@style/journey_planner_station_name_edittext" />
+                <TextView android:id="@id/editLSB_FilterStation" android:hint="@string/NOODLES_TEXT_STATIONBOARD_FILTER_ARRIVALS_PLACEHOLDER" android:editable="false" android:layout_toRightOf="@id/imgStationSwitcher" android:layout_below="@id/originStationPicker" style="@style/journey_planner_station_name_edittext" />
+            </LinearLayout>
+            <Button android:id="@id/btnLSB_ViewTrain" android:text="@string/NOODLES_TEXT_STATIONBOARD_BUTTON_GET_BOARD" android:layout_below="@id/rowTwoContainer" style="@style/station_board_view_train_button" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/layoutHolder" android:layout_below="@id/tblInputContainer" style="@style/field_group_layout_container" />
+    </RelativeLayout>
+</ScrollView>

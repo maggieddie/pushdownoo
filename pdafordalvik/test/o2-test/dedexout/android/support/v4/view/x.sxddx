@@ -1,0 +1,37 @@
+(class (attrs ) android/support/v4/view/x
+ (super java/lang/Object)
+ (source "SourceFile")
+ (implements android/support/v4/view/i)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/x])
+  (line 51)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/view/VelocityTracker] int )float
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/x])
+  ; parameter[0] : v2 ([object android/view/VelocityTracker])
+  ; parameter[1] : v3 (int)
+  (line 54)
+  (invoke-static {v2 v3} android/support/v4/view/ab/a [object android/view/VelocityTracker] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object android/view/VelocityTracker] int )float
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/x])
+  ; parameter[0] : v2 ([object android/view/VelocityTracker])
+  ; parameter[1] : v3 (int)
+  (line 58)
+  (invoke-static {v2 v3} android/support/v4/view/ab/b [object android/view/VelocityTracker] int )
+  (move-result v0)
+  (return v0)
+)
+
+)

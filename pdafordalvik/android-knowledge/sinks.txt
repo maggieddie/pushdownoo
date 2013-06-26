@@ -89,7 +89,6 @@ android/telephony/SmsManager/sendMultipartTextMessage sms
 java/net/DatagramSocket network
 org/apache/http/impl/client/AbstractHttpClient network
 java/net/ServerSocket/bind network
-org/apache/http/client/HttpClient/execute network
 android/webkit/WebView network
 org/apache/http/impl/client/DefaultHttpClient/<init> network
 java/net/HttpURLConnection network
@@ -103,7 +102,10 @@ android/webkit/WebSettings/setBlockNetworkLoads network
 android/telephony/gsm/SmsManager/sendMultipartTextMessage sms
 java/io/FileWriter filesystem
 android/bluetooth/BluetoothSocket/getOutputStream network
+org/apache/http/client/methods/HttpGet network
+org/apache/http/client/methods/HttpGet/<init> network
 java/net/ServerSocket/ServerSocket network
 android/telephony/SmsMessage/getSubmitPdu sms
 android/telephony/SmsManager/<init> sms
 org/apache/commons/logging/Log/isTraceEnabled filesystem
+org/apache/http/client/methods/HttpUriRequest reflection

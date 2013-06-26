@@ -1,0 +1,17 @@
+(class (attrs public abstract ) com/masabi/app/a/a/e
+ (super java/lang/Object)
+ (source "SourceFile")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/masabi/app/a/a/e])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) a(int )[object java/lang/String]
+)
+
+)

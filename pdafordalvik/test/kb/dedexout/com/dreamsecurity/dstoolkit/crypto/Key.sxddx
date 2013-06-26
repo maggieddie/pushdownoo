@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/dreamsecurity/dstoolkit/crypto/Key
+ (super java/lang/Object)
+ (source "Key.java")
+
+
+(method (attrs public abstract ) getKey()[array byte]
+)
+
+(method (attrs public abstract ) getKeyAlg()[object java/lang/String]
+)
+
+)

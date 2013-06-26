@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) twitter4j/internal/http/HttpClient
+ (super java/lang/Object)
+ (source "HttpClient.java")
+
+
+(method (attrs public abstract ) request([object twitter4j/internal/http/HttpRequest] )[object twitter4j/internal/http/HttpResponse]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) shutdown()void
+)
+
+)

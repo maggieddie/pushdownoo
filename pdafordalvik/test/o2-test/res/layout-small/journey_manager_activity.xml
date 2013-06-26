@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_refresh_layout" />
+    <LinearLayout android:id="@id/layout_home_root" android:padding="0.0dip" android:layout_below="@id/title_container" style="@style/field_group_layout_container_with_padding">
+        <ScrollView android:id="@id/layout_journey_manager" android:scrollbars="none" style="@style/scrollview_container">
+            <LinearLayout android:padding="0.0dip" style="@style/field_group_layout_container_with_padding">
+                <include layout="@layout/journey_manager_glance" />
+                <include layout="@layout/journey_manager_overview" />
+                <include layout="@layout/journey_manager_tab_details" />
+                <app.view.journeymanager.JourneyManagerMenuView android:orientation="vertical" android:id="@id/journey_manager_menu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

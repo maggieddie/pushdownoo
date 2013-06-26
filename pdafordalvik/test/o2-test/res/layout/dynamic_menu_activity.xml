@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ToggleButton android:id="@id/toggle_o2_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="APPS LINKED" android:textOff="apps not linked" />
+    <app.dynamic_menu.view.titlebar.TitlePageIndicatorView android:id="@id/titlePageIndicator" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TitlePageIndicator" />
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

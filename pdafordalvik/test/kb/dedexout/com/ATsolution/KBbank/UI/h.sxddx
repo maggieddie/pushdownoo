@@ -1,0 +1,42 @@
+(class (attrs public final ) com/ATsolution/KBbank/UI/h
+ (super java/lang/Object)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/ATsolution/KBbank/UI/h])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) a([object android/content/Context] int )void
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 (int)
+  (invoke-virtual {v1 v2} android/content/Context/getString int )
+  (move-result-object v0)
+  (invoke-static {v1 v0} com/ATsolution/KBbank/UI/h/a [object android/content/Context] [object java/lang/String] )
+  (return-void )
+ )
+
+(method (attrs public static ) a([object android/content/Context] [object java/lang/String] )void
+  (limit registers 5)
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (new-instance v0 android/app/AlertDialog$Builder)
+  (invoke-direct {v0 v3} android/app/AlertDialog$Builder/<init> [object android/content/Context] )
+  (const v1 2131165198) ; 0x7f07000e)
+  (invoke-virtual {v0 v1} android/app/AlertDialog$Builder/setTitle int )
+  (move-result-object v0)
+  (invoke-virtual {v0 v4} android/app/AlertDialog$Builder/setMessage [object java/lang/CharSequence] )
+  (move-result-object v0)
+  (const v1 2131165192) ; 0x7f070008)
+  (new-instance v2 com/ATsolution/KBbank/UI/aq)
+  (invoke-direct {v2} com/ATsolution/KBbank/UI/aq/<init> )
+  (invoke-virtual {v0 v1 v2} android/app/AlertDialog$Builder/setPositiveButton int [object android/content/DialogInterface$OnClickListener] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/AlertDialog$Builder/show )
+  (return-void )
+ )
+
+)

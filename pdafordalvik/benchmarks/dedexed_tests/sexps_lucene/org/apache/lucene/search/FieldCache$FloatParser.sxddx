@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/apache/lucene/search/FieldCache$FloatParser
- (super java/lang/Object)
- (source "FieldCache.java")
-
-
-(method (attrs public abstract ) parseFloat([object java/lang/String] )float
-)
-
-)

@@ -1,0 +1,28 @@
+(class (attrs final ) com/flurry/android/aj
+ (super java/lang/Object)
+ (source "SourceFile")
+
+ (field (attrs ) a long )
+ (field (attrs ) b [object java/lang/String] )
+ (field (attrs ) c [object java/lang/String] )
+ (field (attrs ) d [object java/lang/String] )
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/flurry/android/aj])
+  (line 212)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} com/flurry/android/aj/<init> byte )
+  (return-void )
+ )
+
+(method (attrs private ) <init>(byte )void
+  (limit registers 2)
+  ; this: v0 ([object com/flurry/android/aj])
+  ; parameter[0] : v1 (byte)
+  (line 212)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

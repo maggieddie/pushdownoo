@@ -1,0 +1,29 @@
+(class (attrs ) app/dynamic_menu/view/viewproviders/q
+ (super java/lang/Object)
+ (source "SourceFile")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object app/dynamic_menu/view/viewproviders/TicketWalletViewProvider] )
+
+(method (attrs ) <init>([object app/dynamic_menu/view/viewproviders/TicketWalletViewProvider] )void
+  (limit registers 2)
+  ; this: v0 ([object app/dynamic_menu/view/viewproviders/q])
+  ; parameter[0] : v1 ([object app/dynamic_menu/view/viewproviders/TicketWalletViewProvider])
+  (line 42)
+  (iput-object v1 v0 app/dynamic_menu/view/viewproviders/q.a [object app/dynamic_menu/view/viewproviders/TicketWalletViewProvider])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object app/dynamic_menu/view/viewproviders/q])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 46)
+  (const v0 2131362107) ; 0x7f0a013b)
+  (invoke-static {v0} app/dynamic_menu/activity/DynamicMenuActivity/a int )
+  (line 47)
+  (return-void )
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public ) app/core/activity/PurchaseHistoryGroupActivity
+ (super app/core/activity/AbstractListScreenDefinitionActivity)
+ (source "SourceFile")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object app/core/activity/PurchaseHistoryGroupActivity])
+  (line 8)
+  (invoke-direct {v0} app/core/activity/AbstractListScreenDefinitionActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()int
+  (limit registers 2)
+  ; this: v1 ([object app/core/activity/PurchaseHistoryGroupActivity])
+  (line 17)
+  (const/4 v0 6)
+  (return v0)
+)
+
+(method (attrs protected ) a([object com/masabi/app/a/a/a/g] )void
+  (limit registers 3)
+  ; this: v1 ([object app/core/activity/PurchaseHistoryGroupActivity])
+  ; parameter[0] : v2 ([object com/masabi/app/a/a/a/g])
+  (line 12)
+  (sget-object v0 com/masabi/app/ukrail/UKRailServiceRegistry.purchaseHistoryManager [object com/masabi/app/ukrail/a/f])
+  (invoke-virtual {v0 v2} com/masabi/app/ukrail/a/f/b [object com/masabi/app/a/a/d] )
+  (line 13)
+  (return-void )
+)
+
+)

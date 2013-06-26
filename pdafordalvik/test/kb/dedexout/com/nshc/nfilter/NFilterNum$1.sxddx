@@ -1,0 +1,50 @@
+(class (attrs ) com/nshc/nfilter/NFilterNum$1
+ (super android/os/Handler)
+ (source "NFilterNum.java")
+
+ (field (attrs final ) this$0 [object com/nshc/nfilter/NFilterNum] )
+
+(method (attrs ) <init>([object com/nshc/nfilter/NFilterNum] )void
+  (limit registers 2)
+  ; this: v0 ([object com/nshc/nfilter/NFilterNum$1])
+  ; parameter[0] : v1 ([object com/nshc/nfilter/NFilterNum])
+  (line 1)
+  (iput-object v1 v0 com/nshc/nfilter/NFilterNum$1.this$0 [object com/nshc/nfilter/NFilterNum])
+  (line 698)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 5)
+  ; this: v3 ([object com/nshc/nfilter/NFilterNum$1])
+  ; parameter[0] : v4 ([object android/os/Message])
+  (line 701)
+  (iget v1 v4 android/os/Message.what int)
+  (packed-switch v1 0
+    ps6c190_6c198 ; case 0
+    ps6c190_default) ; default
+  (label l6c196)
+  (label ps6c190_default)
+  (line 707)
+  (return-void )
+  (label ps6c190_6c198)
+  (line 703)
+  (iget-object v1 v3 com/nshc/nfilter/NFilterNum$1.this$0 [object com/nshc/nfilter/NFilterNum])
+  (invoke-static {v1} com/nshc/nfilter/NFilterNum/access$0 [object com/nshc/nfilter/NFilterNum] )
+  (move-result v0)
+  (line 704)
+  (iget-object v1 v3 com/nshc/nfilter/NFilterNum$1.this$0 [object com/nshc/nfilter/NFilterNum])
+  (invoke-static {v1} com/nshc/nfilter/NFilterNum/access$1 [object com/nshc/nfilter/NFilterNum] )
+  (move-result-object v1)
+  (const/4 v2 0)
+  (invoke-virtual {v1 v2} android/os/Handler/sendEmptyMessage int )
+  (goto l6c196)
+  (line 701)
+  (label l6c1ba)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

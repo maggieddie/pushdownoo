@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_home_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_below="@id/title_container">
+        <TextView android:textSize="@dimen/text_size_small" android:textColor="@color/dark_text_color" android:id="@id/txtUpgradeMessage" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <Button android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/btnUpgrade" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:minWidth="150.0dip" android:text="@string/NOODLES_TEXT_UPDATE_BUTTON_SUBMIT" style="@style/DetourButton" />
+    </LinearLayout>
+</RelativeLayout>

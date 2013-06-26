@@ -299,6 +299,18 @@ object CommonUtils {
     val lrv = if(opts.doLRA) "-lra" else "" 
     prefix + arity + cfa + gc + lrv + "-security" + ".html"
   }
+   
+   def getRiskRankingReportName(opts: AIOptions) : String = {
+     val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val prefix = "report-"
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    prefix + arity + cfa + gc + lrv + "-riskranking" + ".html"
+   }
   
   
   
@@ -316,6 +328,10 @@ object CommonUtils {
   
   def getSecurityDumpFolderFileName(opts: AIOptions) : String = {
      opts.permReportsDirName + File.separator + getSecurityReportName(opts)
+  }
+  
+  def getRiskRankingFolderFileName(opts : AIOptions) : String = {
+    opts.permReportsDirName + File.separator + getRiskRankingReportName(opts)
   }
   
   // some utils to play

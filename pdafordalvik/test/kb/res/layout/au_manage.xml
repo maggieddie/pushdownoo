@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/threedepth_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/TitleArea_Layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/ui_twodepth_menu_title" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linear" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="12.0dip" android:layout_below="@id/TitleArea_Layout">
+        <include layout="@layout/au_table" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/linear" android:layout_centerInParent="true">
+        <Button android:id="@id/passchange" android:background="@drawable/au_pwchange_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.5dip" />
+        <Button android:id="@id/delau" android:background="@drawable/au_confirmdel_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.5dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/ui_twodepth_menu_bottom" />
+    </LinearLayout>
+</RelativeLayout>

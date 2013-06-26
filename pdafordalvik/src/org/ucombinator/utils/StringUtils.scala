@@ -200,6 +200,11 @@ object StringUtils {
     def stmtContextInfo(clsPath: String, methodPath: String, lineNumber: Stmt)  = {
     "@@@" + clsPath + "$$" + methodPath+ "::" + lineNumber
   }
+  
+  def getOneStringFromSetofString(strSet: Set[String]) : String = {
+    
+    strSet.foldLeft("")((str, s) => {str + s + " "}) 
+  }
  
   	
 }

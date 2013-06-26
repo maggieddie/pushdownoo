@@ -1,0 +1,548 @@
+body {
+	margin: 0;
+	padding: 25.33px 12px 22px 12px;
+	overflow: auto;
+	background:url('file:///android_asset/imgs/3depth_Bg_ptn.png') repeat-y ;
+}
+
+.bg_ListMid {
+	background:url('file:///android_asset/imgs/Box_ListEnter_CutMid.png') repeat-y;
+	width: 296px;
+}
+.bg_BoxListMid {
+	background:url('file:///android_asset/imgs/Box_Review_Pattern.png') repeat-y;
+	width: 296px;
+}
+.bg_inputBox {
+	background:url('file:///android_asset/imgs/InputBox.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxR {
+	background:url('file:///android_asset/imgs/InputBox_r.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxWonR {
+	background:url('file:///android_asset/imgs/InputBox_Won_r.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxMedium {
+	background:url('file:///android_asset/imgs/InputBox_Medium.png') no-repeat ;
+	width: 137px;
+	height: 38px;
+}
+.bg_inputBoxNum4 {
+	background:url('file:///android_asset/imgs/InputBox_All_Num4.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxFirstPwd {
+	background:url('file:///android_asset/imgs/InputBox_All_FirstPwd.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxNum3 {
+	background:url('file:///android_asset/imgs/InputBox_All_Num3.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxMonth {
+	background:url('file:///android_asset/imgs/InputBox_All_Month.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxWon {
+	background:url('file:///android_asset/imgs/InputBox_Won.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxTenThouWon {
+	background:url('file:///android_asset/imgs/InputBox_All_TenThouWon.png') no-repeat ;
+	width: 296px;
+	height: 38px;
+}
+.bg_detailMid {
+	background:url('file:///android_asset/imgs/Box_List_CutMid.png') repeat-y ;
+	width: 296px;
+	height: 30px;
+}
+.bg_security {
+	background:url('file:///android_asset/imgs/Box_Confim_All.png') repeat-y ;
+	width: 296px;
+	height: 101px;
+}
+.bg_securityOTP {
+	background:url('file:///android_asset/imgs/Box_ConfimOTP_All.png') repeat-y ;
+	width: 296px;
+	height: 99px;
+}
+.bg_selectBox {
+	background:url('file:///android_asset/imgs/InputEnterBox.png') repeat-y;
+	width: 296px;
+	height: 38px;
+}
+.bg_inputBoxCardNo {
+	background:url('file:///android_asset/imgs/InputBox_CardNo.png') no-repeat ;
+	width: 68px;
+	height: 38px;
+}
+
+td.list_title {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 13.33px; color:#3a2e29;
+	padding: 0 0 0 15px;
+}
+td.list_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 15px 0 15px;
+}
+td.list_content_L2 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 0 0 0 ;
+}
+td.list_content_L3 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 10px 0 10px ;
+}
+td.list_content_R {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 15px 0 15px;
+}
+td.list_content_R3 {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 10px 0 10px;
+}
+td.list_content_color_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#fb7000;
+	padding: 0 15px 0 15px;
+}
+td.list_content_color_R {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 16px; color:#fb7000;
+	padding: 0 15px 0 15px;
+}
+td.list_content_color2_R {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 16px; color:#e13601;
+	padding: 0 15px 0 15px;
+}
+td.list_nothing {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 15px 0 15px;
+}
+
+td.box_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 0 0 0;
+}
+td.box_content_R {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 15px 0 0;
+}
+td.box_content_color_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#fb7000;
+	padding: 0 0 0 0;
+}
+td.box_content_color_R {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#e13601;
+	padding: 0 0 0 0;
+}
+
+td.detail_title {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 13.33px; color:#3a2e29;
+	padding: 0 0 0 15px;
+}
+td.detail_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 0 15px 0 15px;
+}
+td.detail_content_color_R {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#e13601;
+	padding: 0 15px 0 15px;
+}
+td.detail_instruction {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 5px 15px 0 15px;
+}
+td.detail_instruction_color_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#fb7000;
+	padding: 5px 15px 0 15px;
+}
+td.detail_instruction_color_R {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#e13601;
+	padding: 5px 15px 0 15px;
+}
+td.detail_instruction_color_R2 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#e13601;
+	padding: 5px 15px 0 0;
+}
+td.detail_card_list_1 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 0 0 8px 20px;
+}
+td.detail_card_list_2 {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 0 0 8px 0;
+}
+td.detail_card_list_3 {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 0 20px 8px 0;
+}
+td.detail_card_list_bot {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 0 0 0 20px;
+}
+
+td.detail_step1_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 20px 18px 0 22px;
+}
+td.detail_step2_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 5px 18px 10px 22px;
+}
+td.detail_step3_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 10.66px; color:#6c655b;
+	padding: 5px 18px 0 22px;
+}
+td.detail_step3_s p {
+	text-indent:-25px; padding:0 0 0 25px; margin:0px; color:#6c655b; font-size:10.66x;
+}
+td.detail_step4_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 20px 18px 0 8px;
+}
+td.detail_step5_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 19px 18px 0 8px;
+}
+td.detail_step6_s {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 19px 18px 20px 8px;
+}
+
+td.detail_step0_u {
+	text-align: left;
+	font-family: bold; font-size: 15px; color:#3a2e29;
+	padding: 0 0 8px 15px;
+}
+
+td.detail_step1_u {
+	text-align:  left;
+	font-family: bold; font-size: 13px;
+	padding: 20px 18px 0 22px;
+}
+
+td.detail_step2_u {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 13px;
+	padding: 5px 18px 10px 45px;
+}
+
+td.detail_step3_u {
+	text-align:  left;
+	font-family: bold; font-size: 13px; 
+	padding: 0 18px 0 30px;
+}
+
+td.detail_step3_u_1 {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 13px; 
+	padding: 5px 18px 0 30px;
+}
+
+td.detail_step3_u_1 p
+{
+	text-indent:-12px; padding:0 0 5px 12px; margin:0px;
+}
+td.detail_step4_u {
+	text-align:  left;
+	font-family: bold; font-size: 13px;
+	padding: 0 18px 0 22px;
+}
+td.detail_step5_u {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; 
+	padding: 0 18px 0 52px;
+}
+td.detail_step6_u {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; 
+	padding: 5px 43px 5px 44px;
+}
+td.detail_step6_u p {
+	text-indent:-25px; padding:0 0 0 5px; margin:0px; color:#6c655b;font-size: 12px;  
+}
+td.detail_step7_u {
+	text-align:  left;
+	font-family: sans, AppleGothic; font-size: 12px; 
+	padding: 0 18px 0 34px;
+}
+td.detail_step7_u p
+{
+	text-indent:-12px; padding:0 0 0 12px; margin:0px;
+}
+
+td.ex_title {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#fb7000;
+	padding: 8px 0 15px 12px;
+}
+
+td.small_title {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 14.66px; color:#3a2e29;
+	padding: 0 0 8px 15px;
+}
+td.small_title2 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 14.66px; color:#3a2e29;
+	padding: 20px 0 8px 15px;
+}
+
+td.notice_title {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 14.66px; color:#3a2e29;
+	padding: 0 0 10px 12px;
+}
+td.notice_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 13.33px; color:#3a2e29;
+	padding: 10px 10px 0 12px;
+}
+td.note_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 14.66px; color:#e13601;
+	padding: 8px 0 8px 0;
+}
+
+td.input_txt_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	padding: 0 0 0 15px;
+}
+td.input_txt_L2 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	padding: 0 0 0 17px;
+}
+
+td.act_product_title_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 5px 0 5px 0;
+}
+td.act_product_title_C {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 5px 0 5px 0;
+}
+td.act_product_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 5px 5px 5px 5px;
+}
+td.act_product_content_C {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 5px 5px 5px 5px;
+}
+td.act_product_content_C1 {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 14.66px; color:#3a2e29;
+	padding: 5px 5px 5px 5px;
+}
+.act_product_title_C2 {
+	text-align: right;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 5px 5px 5px 5px;
+}
+
+td.act_clause_content_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 5px 5px 5px 5px;
+}
+.act_clause_note_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 16px; color:#3a2e29;
+	padding: 10px 5px 10px 0;
+}
+
+td.farm_notice_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 12px; color:#3a2e29;
+	padding: 5px 10px 5px 10px;
+}
+
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+input.input_box_L {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 270px; height: 35px;
+	border:0;
+	margin:0 15px 0 15px;
+	padding: 0 0 0 0;
+}
+input.input_box_tel_L1 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 150px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_tel_L2 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 80px; height: 35px;
+	border:0; margin:0 20px 0 5px;
+}
+input.input_box_date_L {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 105px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_sec_L {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 20px; color:#3a2e29;
+	width: 45px;
+	height: 25px;
+	border: 0;
+	margin: 0 0 2px 31px;
+}
+input.input_box_sec_R {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 20px; color:#3a2e29;
+	width: 45px;
+	height: 25px;
+	border: 0;
+	margin: 0 30px 2px 0;
+}
+input.input_box_sec_OTP {
+	text-align: center;
+	font-family: sans, AppleGothic; font-size: 20px; color:#3a2e29;
+	width: 120px;
+	height: 25px;
+	border: 0;
+	margin: 0 0 15px 0;
+}
+input.input_box_won {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 235px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_ten_thou_won {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 180px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_first_pwd {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 180px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_month {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 180px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_num4 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 180px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_num3 {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 180px; height: 35px;
+	border:0; margin:0 15px 0 15px;
+}
+input.input_box_transparent {
+	text-align: right;
+	background-color:transparent;
+	font-family: sans, AppleGothic; font-size: 13.33px; color:#3a2e29;
+	width: 150px;
+	border:0; margin:0 0px 5px 0px;
+}
+
+select.select_box2 {
+	font-family: sans, AppleGothic; font-size: 30px; color:#3a2e29;
+	width: 270px;
+}
+select.select_box {
+	background:url('file:///android_asset/imgs/InputEnterBox.png') repeat-y;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	border: none;
+	width: 296px; height: 38px;
+	padding: 0 0 0 10px;
+}
+input.input_box_cardNo {
+	text-align: left;
+	font-family: sans, AppleGothic; font-size: 18.66px; color:#3a2e29;
+	width: 59px; height: 32px;
+	border:0; margin:0 0px 0 3px;
+}
+
+.padding_top {
+	padding: 15px 0 0 0;
+}
+.btn_padding {
+	padding: 22px 0 0 0;
+}
+.btn_padding2 {
+	padding: 22px 0 0 0;
+}
+.sec_padding {
+	padding: 14.66px 0 0 0;
+}
+.list_padding {
+	padding: 13px 0 0 0;
+}
+.detail_padding {
+	padding: 10px 0 0 0;
+}
+.box_padding {
+	padding: 10px 0 0 0;
+}
+.paging_number {
+	text-align: center;
+	padding: 15px 0 0 0;
+}

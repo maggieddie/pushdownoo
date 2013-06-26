@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/info_dialog_bg" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip">
+        <TextView android:textSize="@dimen/text_size_large" android:textColor="@color/dark_text_color" android:gravity="center" android:id="@id/txtDialogTitle" android:padding="@dimen/layout_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Info" android:layout_alignParentTop="true" />
+        <ImageView android:gravity="fill_horizontal" android:id="@id/imgTitleDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:src="@android:drawable/divider_horizontal_dark" android:scaleType="fitXY" android:layout_below="@id/txtDialogTitle" />
+        <ListView android:id="@id/dialogListView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/imgTitleDivider" />
+    </RelativeLayout>
+</LinearLayout>

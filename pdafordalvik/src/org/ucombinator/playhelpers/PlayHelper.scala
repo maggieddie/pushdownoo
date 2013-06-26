@@ -88,6 +88,7 @@ object PlayHelper {
       opts.permReportPath  = CommonUtils.getReportDumpFolderFileName(opts)
       opts.heatMapReportPath = CommonUtils.getHeatDumpFolderFileName(opts)
       opts.securityReportPath = CommonUtils.getSecurityDumpFolderFileName(opts)
+      opts.riskRankingReportPath = CommonUtils.getRiskRankingFolderFileName(opts)
       opts
     
   }

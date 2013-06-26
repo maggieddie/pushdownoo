@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) orange/neo/adinapps/ui/w
+ (super java/lang/Object)
+ (source "SourceFile")
+
+
+(method (attrs public abstract ) setExpandedAlignment(int )void
+)
+
+(method (attrs public abstract ) setExpandedBackgroundColor(int )void
+)
+
+(method (attrs public abstract ) setExpandedImageResizable(boolean )void
+)
+
+(method (attrs public abstract ) setPrimaryAlignment(int )void
+)
+
+(method (attrs public abstract ) setPrimaryImageResizable(boolean )void
+)
+
+)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/threedepth_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/TitleArea_Layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/ui_twodepth_menu_title" />
+    </LinearLayout>
+    <ScrollView android:id="@id/scroll" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="52.0dip" android:layout_below="@id/TitleArea_Layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/scroll">
+                <include layout="@layout/ui_twodepth_menu_content" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="12.0dip" android:layout_below="@id/scroll">
+                    <include layout="@layout/au_fetch_frame" />
+                </LinearLayout>
+                <TextView android:textSize="14.669983sp" android:textStyle="bold" android:textColor="@color/Font_Normal_Color" android:id="@id/sub_tv4" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="승인번호" android:layout_below="@id/frame" />
+                <EditText android:textSize="18.659973sp" android:textColor="@color/Font_Normal_Color" android:gravity="center" android:id="@id/et0" android:background="@drawable/inputbox_service" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="5.0dip" android:text="" android:layout_below="@id/sub_tv4" />
+                <ImageView android:id="@id/bar0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/inputbox_confimbar" android:layout_toRightOf="@id/et0" android:layout_below="@id/sub_tv4" />
+                <EditText android:textSize="18.659973sp" android:textColor="@color/Font_Normal_Color" android:gravity="center" android:id="@id/et1" android:background="@drawable/inputbox_service" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/bar0" android:layout_below="@id/sub_tv4" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/bar1" android:background="@drawable/inputbox_confimbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_toRightOf="@id/et1" android:layout_below="@id/sub_tv4" />
+                <EditText android:textSize="18.659973sp" android:textColor="@color/Font_Normal_Color" android:gravity="center" android:id="@id/et2" android:background="@drawable/inputbox_service" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/bar1" android:layout_below="@id/sub_tv4" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/ui_twodepth_menu_bottom" />
+    </LinearLayout>
+</RelativeLayout>

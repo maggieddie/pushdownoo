@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) twitter4j/api/GeoMethodsAsync
+ (super java/lang/Object)
+ (source "GeoMethodsAsync.java")
+
+
+(method (attrs public abstract ) getGeoDetails([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) getNearbyPlaces([object twitter4j/GeoQuery] )void
+)
+
+(method (attrs public abstract ) reverseGeoCode([object twitter4j/GeoQuery] )void
+)
+
+)

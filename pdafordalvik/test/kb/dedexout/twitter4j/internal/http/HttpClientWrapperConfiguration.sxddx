@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) twitter4j/internal/http/HttpClientWrapperConfiguration
+ (super java/lang/Object)
+ (source "HttpClientWrapperConfiguration.java")
+ (implements twitter4j/internal/http/HttpClientConfiguration)
+
+
+(method (attrs public abstract ) getRequestHeaders()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+)

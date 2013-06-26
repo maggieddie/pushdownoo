@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) twitter4j/api/ListMethodsAsync
+ (super java/lang/Object)
+ (source "ListMethodsAsync.java")
+
+
+(method (attrs public abstract ) createUserList([object java/lang/String] boolean [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) destroyUserList(int )void
+)
+
+(method (attrs public abstract ) getUserListMemberships([object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) getUserListStatuses([object java/lang/String] int [object twitter4j/Paging] )void
+)
+
+(method (attrs public abstract ) getUserListSubscriptions([object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) getUserLists([object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) showUserList([object java/lang/String] int )void
+)
+
+(method (attrs public abstract ) updateUserList(int [object java/lang/String] boolean [object java/lang/String] )void
+)
+
+)

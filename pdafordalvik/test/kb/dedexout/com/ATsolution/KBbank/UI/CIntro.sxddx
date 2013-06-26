@@ -1,0 +1,51 @@
+(class (attrs public ) com/ATsolution/KBbank/UI/CIntro
+ (super android/app/Activity)
+
+ (field (attrs ) a [object android/graphics/drawable/AnimationDrawable] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/ATsolution/KBbank/UI/CIntro])
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCreate([object android/os/Bundle] )void
+  (limit registers 6)
+  ; this: v4 ([object com/ATsolution/KBbank/UI/CIntro])
+  ; parameter[0] : v5 ([object android/os/Bundle])
+  (invoke-super {v4 v5} android/app/Activity/onCreate [object android/os/Bundle] )
+  (const v0 2130903085) ; 0x7f03002d)
+  (invoke-virtual {v4 v0} com/ATsolution/KBbank/UI/CIntro/setContentView int )
+  (const v0 2131231264) ; 0x7f080220)
+  (invoke-virtual {v4 v0} com/ATsolution/KBbank/UI/CIntro/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/ImageView])
+  (const/high16 v1 32516)
+  (invoke-virtual {v0 v1} android/widget/ImageView/setBackgroundResource int )
+  (invoke-virtual {v0} android/widget/ImageView/getBackground )
+  (move-result-object v0)
+  (check-cast v0 [object android/graphics/drawable/AnimationDrawable])
+  (iput-object v0 v4 com/ATsolution/KBbank/UI/CIntro.a [object android/graphics/drawable/AnimationDrawable])
+  (new-instance v0 android/os/Handler)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (new-instance v1 com/ATsolution/KBbank/UI/bh)
+  (invoke-direct {v1 v4} com/ATsolution/KBbank/UI/bh/<init> [object com/ATsolution/KBbank/UI/CIntro] )
+  (const-wide/16 v2 3000)
+  (invoke-virtual {v0 v1 v2 v3} android/os/Handler/postDelayed [object java/lang/Runnable] long )
+  (invoke-static {} com/ATsolution/KBbank/c/a/a )
+  (nop )
+  (return-void )
+)
+
+(method (attrs public ) onWindowFocusChanged(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object com/ATsolution/KBbank/UI/CIntro])
+  ; parameter[0] : v2 (boolean)
+  (invoke-super {v1 v2} android/app/Activity/onWindowFocusChanged boolean )
+  (iget-object v0 v1 com/ATsolution/KBbank/UI/CIntro.a [object android/graphics/drawable/AnimationDrawable])
+  (invoke-virtual {v0} android/graphics/drawable/AnimationDrawable/start )
+  (return-void )
+)
+
+)

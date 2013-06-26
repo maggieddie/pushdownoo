@@ -1,0 +1,12 @@
+(interface (attrs abstract ) android/support/v4/view/i
+ (super java/lang/Object)
+ (source "SourceFile")
+
+
+(method (attrs public abstract ) a([object android/view/VelocityTracker] int )float
+)
+
+(method (attrs public abstract ) b([object android/view/VelocityTracker] int )float
+)
+
+)

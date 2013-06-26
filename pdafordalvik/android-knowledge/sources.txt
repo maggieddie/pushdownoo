@@ -83,3 +83,7 @@ android/location/LocationManager/getLastKnownLocation location
 android/content/ContentResolver/openFileDescriptor filesystem
 java/util/Random/<init> random
 java/util/Random random
+org/apache/http/client/methods/HttpGet network
+org/apache/http/client/methods/HttpGet/<init> network
+org/apache/http/HttpResponse/getEntity network
+org/apache/http/HttpEntity/getContent network

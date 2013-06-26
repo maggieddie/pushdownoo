@@ -135,7 +135,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
   }
   
  
-  
+ 
   
   
   def dumpHeatMap(opts: AIOptions) {

@@ -1,0 +1,33 @@
+(class (attrs ) app/core/activity/x
+ (super android/webkit/WebChromeClient)
+ (source "SourceFile")
+
+ (field (attrs final ) a [object app/core/activity/JourneyManagerWebViewActivity] )
+
+(method (attrs ) <init>([object app/core/activity/JourneyManagerWebViewActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object app/core/activity/x])
+  ; parameter[0] : v1 ([object app/core/activity/JourneyManagerWebViewActivity])
+  (line 27)
+  (iput-object v1 v0 app/core/activity/x.a [object app/core/activity/JourneyManagerWebViewActivity])
+  (invoke-direct {v0} android/webkit/WebChromeClient/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceivedTitle([object android/webkit/WebView] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object app/core/activity/x])
+  ; parameter[0] : v3 ([object android/webkit/WebView])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 30)
+  (iget-object v0 v2 app/core/activity/x.a [object app/core/activity/JourneyManagerWebViewActivity])
+  (const v1 2131165198) ; 0x7f07000e)
+  (invoke-virtual {v0 v1} app/core/activity/JourneyManagerWebViewActivity/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (invoke-virtual {v0 v4} android/widget/TextView/setText [object java/lang/CharSequence] )
+  (line 31)
+  (return-void )
+)
+
+)

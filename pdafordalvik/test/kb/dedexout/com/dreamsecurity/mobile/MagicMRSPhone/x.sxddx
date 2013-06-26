@@ -1,0 +1,13 @@
+(class (attrs public final ) com/dreamsecurity/mobile/MagicMRSPhone/x
+ (super java/lang/Exception)
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/dreamsecurity/mobile/MagicMRSPhone/x])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (return-void )
+ )
+
+)

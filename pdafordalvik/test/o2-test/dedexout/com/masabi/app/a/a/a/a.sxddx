@@ -1,0 +1,36 @@
+(class (attrs public ) com/masabi/app/a/a/a/a
+ (super com/masabi/app/a/a/a)
+ (source "SourceFile")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/masabi/app/a/a/a/a])
+  (line 8)
+  (invoke-direct {v0} com/masabi/app/a/a/a/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()long
+  (limit registers 3)
+  ; this: v2 ([object com/masabi/app/a/a/a/a])
+  (line 13)
+  (invoke-static {} java/lang/System/currentTimeMillis )
+  (nop )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) b()[object java/util/Calendar]
+  (limit registers 2)
+  ; this: v1 ([object com/masabi/app/a/a/a/a])
+  (line 20)
+  (invoke-static {} java/util/TimeZone/getDefault )
+  (nop )
+  (move-result-object v0)
+  (invoke-static {v0} java/util/Calendar/getInstance [object java/util/TimeZone] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

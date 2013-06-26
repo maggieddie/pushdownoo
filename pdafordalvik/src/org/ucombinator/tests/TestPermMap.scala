@@ -3,6 +3,7 @@ import tools.nsc.io.File
 import scala.util.matching.Regex
 import models.PermissionPair
 import scala.collection.mutable.Map
+import org.ucombinator.dalvik.informationflow.DalInformationFlow
 
 object TestPermMap {
 
@@ -59,6 +60,7 @@ object TestPermMap {
   }
     def main(args: Array[String]): Unit = {
        
-      parseInRawPermMap2.foreach(println)
+      //parseInRawPermMap2.foreach(println)
+      DalInformationFlow.parInRankingMap.foreach(println)
     }
 }

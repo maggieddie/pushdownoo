@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) twitter4j/api/SavedSearchesMethods
+ (super java/lang/Object)
+ (source "SavedSearchesMethods.java")
+
+
+(method (attrs public abstract ) createSavedSearch([object java/lang/String] )[object twitter4j/SavedSearch]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) destroySavedSearch(int )[object twitter4j/SavedSearch]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) getSavedSearches()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ltwitter4j/SavedSearch;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+(method (attrs public abstract ) showSavedSearch(int )[object twitter4j/SavedSearch]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object twitter4j/TwitterException])
+  )
+)
+
+)

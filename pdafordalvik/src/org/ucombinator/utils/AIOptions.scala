@@ -55,6 +55,7 @@ class AIOptions {
   var permReportPath = ""
   var heatMapReportPath = ""
   var securityReportPath = ""  
+  var riskRankingReportPath = ""
     
 }
 

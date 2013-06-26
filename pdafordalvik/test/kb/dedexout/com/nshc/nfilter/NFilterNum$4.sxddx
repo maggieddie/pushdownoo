@@ -1,0 +1,33 @@
+(class (attrs ) com/nshc/nfilter/NFilterNum$4
+ (super java/lang/Object)
+ (source "NFilterNum.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/nshc/nfilter/NFilterNum] )
+
+(method (attrs ) <init>([object com/nshc/nfilter/NFilterNum] )void
+  (limit registers 2)
+  ; this: v0 ([object com/nshc/nfilter/NFilterNum$4])
+  ; parameter[0] : v1 ([object com/nshc/nfilter/NFilterNum])
+  (line 1)
+  (iput-object v1 v0 com/nshc/nfilter/NFilterNum$4.this$0 [object com/nshc/nfilter/NFilterNum])
+  (line 441)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object com/nshc/nfilter/NFilterNum$4])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 443)
+  (iget-object v0 v2 com/nshc/nfilter/NFilterNum$4.this$0 [object com/nshc/nfilter/NFilterNum])
+  (iget-object v1 v2 com/nshc/nfilter/NFilterNum$4.this$0 [object com/nshc/nfilter/NFilterNum])
+  (invoke-static {v1} com/nshc/nfilter/NFilterNum/access$4 [object com/nshc/nfilter/NFilterNum] )
+  (move-result-object v1)
+  (invoke-static {v0 v1} com/nshc/nfilter/NFilterNum/access$5 [object com/nshc/nfilter/NFilterNum] [array int] )
+  (line 444)
+  (return-void )
+)
+
+)
