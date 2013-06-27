@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/paymentOptionRowContainer" android:layout_width="fill_parent" android:layout_height="@dimen/list_row_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/txtPaymentOptionTitle" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/payment_option_row_title" />
-    <ImageView android:id="@id/imgPaymentOptionCardType" android:padding="@dimen/drawable_padding" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/payment_option_row_card_image" />
-    <TextView android:id="@id/txtPaymentOptionsFee" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/payment_option_fee_text" />
-    <TextView android:id="@id/txtPaymentOptionsRowCardOption" android:layout_toLeftOf="@id/txtPaymentOptionsFee" android:layout_toRightOf="@id/imgPaymentOptionCardType" android:layout_centerVertical="true" style="@style/payment_option_fee_text" />
-</RelativeLayout>

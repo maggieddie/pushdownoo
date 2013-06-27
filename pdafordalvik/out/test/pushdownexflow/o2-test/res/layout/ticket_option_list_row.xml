@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/list_default" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/imgTicketOptionType" android:padding="@dimen/layout_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <LinearLayout android:layout_toRightOf="@id/imgTicketOptionType" android:layout_centerVertical="true" style="@style/field_group_layout_container">
-        <TextView android:id="@id/txtTicketOptionName" style="@style/field_item_label" />
-        <TextView android:id="@id/txtTicketOptionCostDetails" android:visibility="gone" style="@style/field_item_label_small_text" />
-    </LinearLayout>
-</RelativeLayout>

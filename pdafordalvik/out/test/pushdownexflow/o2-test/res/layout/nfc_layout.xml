@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/nfcArea" style="@style/repeat_cvv_nfc_container"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/nfcAvailable" android:text="@string/NOODLES_TEXT_NFC_TITLE" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/field_group_title_text" />
-    <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/nfcAvailable">
-        <ImageView android:layout_gravity="center" android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nfc" />
-        <TextView android:id="@id/textViewNFC" android:text="@string/NOODLES_TEXT_NFC_INSTRUCTIONS" style="@style/repeat_cvv_terms_and_condition_text" />
-    </LinearLayout>
-</RelativeLayout>

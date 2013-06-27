@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:background="@drawable/list_row_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/imageMenuItem" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ticket_wallet_list_row_image" />
-    <TextView android:id="@id/txtMenuItem" android:paddingLeft="@dimen/layout_padding" android:layout_toRightOf="@id/imageMenuItem" android:layout_centerVertical="true" style="@style/journey_planner_rail_card_name" />
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <fragment android:name="app.dynamic_menu.fragments.TicketWalletFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_container" />
-</LinearLayout>

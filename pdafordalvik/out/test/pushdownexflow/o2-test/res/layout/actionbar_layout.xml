@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/actionBarHolder" style="@style/titlebar"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/imgHome" android:onClick="clickHomeButton" style="@style/base_titlebar_homebutton" />
-    <TextView android:id="@id/txtTitleMessage" style="@style/titlebar_text" />
-</RelativeLayout>

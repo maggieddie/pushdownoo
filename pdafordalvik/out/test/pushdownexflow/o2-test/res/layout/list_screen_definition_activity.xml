@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/rootView" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
-    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_container">
-        <LinearLayout android:id="@id/listScreenDefinitionList" style="@style/list_screen_definition_list" />
-    </ScrollView>
-</RelativeLayout>

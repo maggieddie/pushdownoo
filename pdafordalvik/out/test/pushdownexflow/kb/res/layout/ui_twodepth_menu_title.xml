@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/title" android:layout_width="fill_parent" android:layout_height="43.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="23.329987sp" android:textColor="@color/Font_Normal_Color" android:gravity="center" android:id="@id/MenuText_Text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/CertificateCenter" android:maxLines="1" android:maxLength="8" android:layout_toLeftOf="@id/TwoDepth_Header_Right_Button" android:layout_toRightOf="@id/TwoDepth_Prev_Button" android:layout_centerInParent="true" />
-    <Button android:id="@id/TwoDepth_Prev_Button" android:background="@drawable/title_prev_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <Button android:id="@id/TwoDepth_Header_Right_Button" android:background="@drawable/title_option_btn" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</RelativeLayout>
