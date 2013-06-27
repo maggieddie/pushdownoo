@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/home_screen_block_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/txtBlockTitle" android:text="@string/NOODLES_TEXT_MAINMENU_TIMETABLE" style="@style/plan_journey_block_title" />
+    <ImageButton android:id="@id/btnAction" style="@style/dashboard_find_train" />
+</RelativeLayout>

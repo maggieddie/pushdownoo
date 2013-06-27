@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/journey_overview_tab" android:layout_width="fill_parent" android:layout_height="@dimen/journey_manager_tab_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/dark_text_color" android:gravity="left" android:id="@id/journey_manager_station_name" android:background="@drawable/journey_manager_station_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Leeds" />
+    <LinearLayout android:id="@id/journey_manager_journey_type_icon" android:background="@drawable/journey_manager_station_text" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="left" android:id="@id/journey_manager_leg_type_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/jl_bus" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

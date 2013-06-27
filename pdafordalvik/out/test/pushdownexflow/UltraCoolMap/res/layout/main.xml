@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.maps.MapView android:id="@id/mapview" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="8.0" android:apiKey="0ODXY6MdeXmCMdl5QiBWa4TNkhHPACW2AyFXTsg" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <Button android:textSize="15.0dip" android:id="@id/update_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:text="@string/update_label" />
+        <ToggleButton android:id="@id/flag1_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:textOn="@string/flag1_label" android:textOff="@string/flag1_label" />
+        <ToggleButton android:id="@id/flag2_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:textOn="@string/flag2_label" android:textOff="@string/flag2_label" />
+        <Button android:textSize="12.0dip" android:id="@id/directions_button" android:layout_width="80.0dip" android:layout_height="fill_parent" android:text="@string/directions_label" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <Button android:textSize="13.0dip" android:id="@id/save_red_flag_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:text="@string/flag1_save_label" />
+        <Button android:textSize="13.0dip" android:id="@id/save_blue_flag_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:text="@string/flag2_save_label" />
+        <Button android:textSize="13.0dip" android:id="@id/load_red_flag_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:text="@string/flag1_load_label" />
+        <Button android:textSize="13.0dip" android:id="@id/load_blue_flag_button" android:layout_width="75.0dip" android:layout_height="fill_parent" android:text="@string/flag2_load_label" />
+    </LinearLayout>
+</LinearLayout>

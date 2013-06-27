@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="home_screen_block_background" parent="@style/base_home_screen_block_background" />
+    <style name="home_screen_latest_item_block_background" parent="@style/base_latest_block_background" />
+    <style name="generic_item_block_background" parent="@style/base_home_screen_block_background">
+        <item name="android:background">@drawable/generic_item_background</item>
+    </style>
+    <style name="home_screen_gallery_block_background" parent="@style/base_home_screen_block_background">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+    </style>
+    <style name="information_gallery_block_background" parent="@style/home_screen_gallery_block_background">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="toc_banner_block" parent="@style/base_toc_banner_block" />
+    <style name="toc_banner_logo" parent="@style/base_toc_banner_logo" />
+    <style name="common_home_screen_block_title" parent="@style/base_block_title" />
+    <style name="common_home_screen_repeat_block_title" parent="@style/base_block_title" />
+    <style name="common_home_screen_gridview_title" parent="@style/base_block_title">
+        <item name="android:textColor">@color/gridview_title_text_color</item>
+        <item name="android:background">@drawable/separator_title_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="plan_journey_block_title" parent="@style/common_home_screen_block_title" />
+    <style name="ticket_wallet_block_title" parent="@style/common_home_screen_block_title" />
+    <style name="ticketWallet_TicketCount" parent="@style/base_ticketWallet_TicketCount">
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_alignLeft">@id/btnAction</item>
+        <item name="android:layout_alignParentLeft">false</item>
+        <item name="android:layout_alignParentRight">false</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="live_station_board_block_title" parent="@style/common_home_screen_block_title" />
+    <style name="my_account_block_title" parent="@style/common_home_screen_block_title" />
+    <style name="information_block_title" parent="@style/common_home_screen_block_title" />
+    <style name="latest_journey_search_block_title" parent="@style/common_home_screen_repeat_block_title" />
+    <style name="latest_lsb_search_block_title" parent="@style/common_home_screen_repeat_block_title" />
+    <style name="latest_ticket_purchase_block_title" parent="@style/common_home_screen_repeat_block_title" />
+    <style name="latest_journey_search_origin" parent="@style/repeat_station_listrow_origin">
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:layout_below">@id/txtBlockTitle</item>
+    </style>
+    <style name="latest_journey_search_destination" parent="@style/repeat_station_listrow_destination">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:layout_below">@id/txtOriginStationName</item>
+    </style>
+    <style name="latest_lsb_search_origin" parent="@style/repeat_station_listrow_origin">
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:layout_below">@id/txtBlockTitle</item>
+    </style>
+    <style name="latest_lsb_search_destination" parent="@style/repeat_station_listrow_destination">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:drawableLeft">@drawable/stationboard_filter</item>
+        <item name="android:layout_below">@id/txtOriginStationName</item>
+    </style>
+    <style name="ticketDate_Day" parent="@style/base_ticketDate_Day">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="ticketDate_Month" parent="@style/base_ticketDate_Month">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="home_screen_block_separator">
+        <item name="android:background">@color/ticket_block_date_separator_color</item>
+        <item name="android:padding">2.0dip</item>
+    </style>
+    <style name="common_empty_text" parent="@style/base_empty_text">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="common_block_content" parent="@style/base_block_content" />
+    <style name="latest_block_content_with_left_padding" parent="@style/common_block_content">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10.0dip</item>
+    </style>
+    <style name="latest_ticket_block_content" parent="@style/common_block_content">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="TitlePageIndicator">
+        <item name="android:background">@drawable/page_indicator_background</item>
+        <item name="clipPadding">@dimen/default_title_indicator_clip_padding</item>
+        <item name="footerColor">@color/default_title_indicator_footer_color</item>
+        <item name="footerLineHeight">@dimen/default_title_indicator_footer_line_height</item>
+        <item name="footerIndicatorStyle">@integer/default_title_indicator_footer_indicator_style</item>
+        <item name="footerIndicatorHeight">@dimen/default_title_indicator_footer_indicator_height</item>
+        <item name="footerIndicatorUnderlinePadding">@dimen/default_title_indicator_footer_indicator_underline_padding</item>
+        <item name="footerPadding">@dimen/default_title_indicator_footer_padding</item>
+        <item name="selectedColor">@color/default_title_indicator_selected_color</item>
+        <item name="selectedBold">@bool/default_title_indicator_selected_bold</item>
+        <item name="textColor">@color/default_title_indicator_text_color</item>
+        <item name="textSize">@dimen/default_title_indicator_text_size</item>
+        <item name="titlePadding">@dimen/default_title_indicator_title_padding</item>
+        <item name="topPadding">@dimen/default_title_indicator_top_padding</item>
+    </style>
+    <style name="listview_style" parent="@style/base_listview_style" />
+    <style name="ActionbarText" parent="@style/base_ActionbarText" />
+    <style name="ActionButton" parent="@style/base_ActionButton" />
+    <style name="action_button_disabled_bydefault" parent="@style/base_action_button_disabled_bydefault" />
+    <style name="DeleteButton" parent="@style/base_DeleteButton" />
+    <style name="DetourButton" parent="@style/base_DetourButton" />
+    <style name="HeaderText" parent="@style/base_HeaderText" />
+    <style name="Journey_Planner_Ticket_Feature_Button" parent="@style/base_Journey_Planner_Ticket_Feature_Button" />
+    <style name="StationName_EditText" parent="@style/base_StationName_EditText" />
+    <style name="journey_planner_rail_card_list_row" parent="@style/base_journey_planner_rail_card_list_row" />
+    <style name="journey_planner_rail_card_image" parent="@style/base_journey_planner_rail_card_image" />
+    <style name="journey_planner_rail_card_name" parent="@style/base_journey_planner_rail_card_name" />
+    <style name="journey_planner_field_group" parent="@style/base_journey_planner_field_group" />
+    <style name="journey_planner_field_group_horizontal_aligned" parent="@style/base_journey_planner_field_group_horizontal_aligned" />
+    <style name="journey_planner_station_switcher_image" parent="@style/base_journey_planner_station_switcher_image" />
+    <style name="journey_planner_station_name_edittext" parent="@style/base_journey_planner_station_name_edittext" />
+    <style name="journey_planner_date_time_container" parent="@style/base_journey_planner_date_time_container" />
+    <style name="Station_Name" parent="@style/base_Station_Name" />
+    <style name="station_board_details_listview" parent="@style/base_station_board_details_listview" />
+    <style name="station_board_listview" parent="@style/base_station_board_listview" />
+    <style name="station_board_station_name" parent="@style/base_station_board_station_name" />
+    <style name="station_board_splitmarge_station_name" parent="@style/base_station_board_splitmarge_station_name" />
+    <style name="station_board_list_row" parent="@style/base_station_board_list_row" />
+    <style name="station_board_viainfo" parent="@style/base_station_board_viainfo" />
+    <style name="station_board_detail" parent="@style/base_station_board_detail" />
+    <style name="station_board_details_status_caption" parent="@style/base_station_board_details_status_caption" />
+    <style name="station_board_scheduled_time" parent="@style/base_station_board_scheduled_time" />
+    <style name="station_board_status_caption" parent="@style/base_station_board_status_caption" />
+    <style name="station_board_adjusted_time" parent="@style/base_station_board_adjusted_time" />
+    <style name="station_board_last_updated" parent="@style/base_station_board_last_updated" />
+    <style name="station_board_station_holder" parent="@style/base_station_board_station_holder" />
+    <style name="station_board_time_holder" parent="@style/base_station_board_time_holder" />
+    <style name="station_board_refresh_button" parent="@style/base_station_board_refresh_button" />
+    <style name="station_board_arrive_depart_button" parent="@style/base_station_board_arrive_depart_button" />
+    <style name="station_board_clear_button" parent="@style/base_station_board_clear_button" />
+    <style name="station_board_vertical_item_label_container" parent="@style/base_station_board_vertical_item_label_container" />
+    <style name="station_board_vertical_item_value_container" parent="@style/base_station_board_vertical_item_value_container" />
+    <style name="station_board_vertical_item_label" parent="@style/base_station_board_vertical_item_label" />
+    <style name="station_board_view_train_button" parent="@style/base_station_board_view_train_button" />
+    <style name="station_board_repeat_search_title" parent="@style/base_station_board_repeat_search_title" />
+    <style name="station_board_repeat_search_list" parent="@style/base_station_board_repeat_search_list" />
+    <style name="titlebar" parent="@style/base_titlebar" />
+    <style name="titlebar_text" parent="@style/base_titlebar_text" />
+    <style name="titlebar_homebutton" parent="@style/base_titlebar_homebutton" />
+    <style name="titlebar_button_separator" parent="@style/base_titlebar_button_separator" />
+    <style name="titlebar_refreshbutton" parent="@style/base_titlebar_refreshbutton" />
+    <style name="titlebar_station_button" parent="@style/base_titlebar_station_button" />
+    <style name="titlebar_map_button" parent="@style/base_titlebar_map_button" />
+    <style name="titlebar_search_button" parent="@style/base_titlebar_search_button" />
+    <style name="titlebar_barcodebutton" parent="@style/base_titlebar_barcodebutton" />
+    <style name="checkbox_withtext" parent="@style/base_checkbox_withtext" />
+    <style name="card_details_field_group" parent="@style/base_card_details_field_group" />
+    <style name="card_details_field_group_title" parent="@style/base_card_details_field_group_title" />
+    <style name="card_details_postcode_field_value" parent="@style/base_card_details_postcode_field_value" />
+    <style name="card_details_address_field_value" parent="@style/base_card_details_address_field_value" />
+    <style name="card_details_card_images_holder" parent="@style/base_card_details_card_images_holder" />
+    <style name="card_details_card_number" parent="@style/base_card_details_card_number" />
+    <style name="card_details_security_info_label" parent="@style/base_card_details_security_info_label" />
+    <style name="card_details_security_info_date_value" parent="@style/base_card_details_security_info_date_value" />
+    <style name="card_details_security_info_cvv_value" parent="@style/base_card_details_security_info_cvv_value" />
+    <style name="card_details_security_info_cvv_image" parent="@style/base_card_details_security_info_cvv_image" />
+    <style name="card_details_security_info_separator" parent="@style/base_card_details_security_info_separator" />
+    <style name="card_details_pay_password_field" parent="@style/base_card_details_single_char_password_field" />
+    <style name="empty_listview_row_text" parent="@style/base_empty_listview_row_text">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="entropy_container" parent="@style/base_entropy_container" />
+    <style name="entropy_text" parent="@style/base_entropy_text" />
+    <style name="entropy_progressbar" parent="@style/base_entropy_progressbar" />
+    <style name="fare_gallery_text" parent="@style/base_fare_gallery_text" />
+    <style name="login_screen_group_container" parent="@style/base_login_screen_group_container" />
+    <style name="login_screen_username_edittext" parent="@style/base_login_screen_username_edittext" />
+    <style name="login_screen_password_edittext" parent="@style/base_login_screen_password_edittext" />
+    <style name="login_screen_note_text" parent="@style/base_login_screen_note_text" />
+    <style name="dashboard_icon" parent="@style/base_dashboard_icon" />
+    <style name="dashboard_find_train" parent="@style/base_dashboard_find_train" />
+    <style name="dashboard_repeat_previous_journey" parent="@style/base_dashboard_repeat_previous_journey" />
+    <style name="dashboard_my_ticket" parent="@style/base_dashboard_my_ticket" />
+    <style name="dashboard_my_account" parent="@style/base_dashboard_my_account" />
+    <style name="dashboard_info" parent="@style/base_dashboard_info" />
+    <style name="dashboard_live_station_board" parent="@style/base_dashboard_live_station_board" />
+    <style name="dashboard_live_station_board_container" parent="@style/base_dashboard_live_station_board_container" />
+    <style name="dashboard_empty_space" parent="@style/base_dashboard_empty_space" />
+    <style name="dashboard_icons_container" parent="@style/base_dashboard_icons_container" />
+    <style name="payment_option_listview" parent="@style/base_payment_option_listview" />
+    <style name="payment_option_note_text" parent="@style/base_payment_option_note_text" />
+    <style name="payment_option_row_title" parent="@style/base_payment_option_row_title">
+        <item name="android:textColor">@color/base_station_list_row_color</item>
+    </style>
+    <style name="payment_option_row_card_image" parent="@style/base_payment_option_row_card_image">
+        <item name="android:textColor">@color/base_station_list_row_color</item>
+    </style>
+    <style name="payment_option_fee_text" parent="@style/base_payment_option_fee_text">
+        <item name="android:textColor">@color/base_station_list_row_color</item>
+    </style>
+    <style name="payment_option_card_name" parent="@style/base_payment_option_card_name" />
+    <style name="repeat_station_listrow_container" parent="@style/base_repeat_station_listrow_container">
+        <item name="android:background">@drawable/repeat_background</item>
+    </style>
+    <style name="repeat_station_listrow_date" parent="@style/field_group_title_text">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="repeat_station_listrow_origin" parent="@style/base_repeat_station_listrow_origin">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="repeat_station_listrow_destination" parent="@style/base_repeat_station_listrow_destination">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="repeat_cvv_edittext" parent="@style/base_repeat_cvv_edittext" />
+    <style name="repeat_cvv_sub_container" parent="@style/base_repeat_cvv_sub_container" />
+    <style name="repeat_cvv_terms_and_condition_text" parent="@style/base_repeat_cvv_terms_and_condition_text" />
+    <style name="repeat_cvv_accept_checkbox" parent="@style/base_repeat_cvv_accept_checkbox" />
+    <style name="repeat_cvv_nfc_container" parent="@style/base_repeat_cvv_nfc_container" />
+    <style name="repeat_journey_newjourney_button" parent="@style/base_repeat_journey_newjourney_button">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="repeat_journey_title_text" parent="@style/base_repeat_journey_title_text">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="repeat_journey_listview" parent="@style/base_repeat_journey_listview" />
+    <style name="repeat_journey_empty_text" parent="@style/field_group_title_text">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="restriction_screen_inbound_button" parent="@style/base_restriction_screen_inbound_button" />
+    <style name="restriction_screen_inbound_date_button" parent="@style/base_restriction_screen_inbound_date_button" />
+    <style name="restriction_screen_inbound_time_button" parent="@style/base_restriction_screen_inbound_time_button" />
+    <style name="restriction_screen_inbound_arrivedepart_button" parent="@style/base_restriction_screen_inbound_arrivedepart_button" />
+    <style name="ticket_options_listview" parent="@style/base_ticket_options_listview" />
+    <style name="ticket_options_note" parent="@style/base_ticket_options_note">
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="station_picker_title" parent="@style/base_station_picker_title" />
+    <style name="timetable_advert" parent="@style/base_timetable_advert" />
+    <style name="generic_info_button" parent="@style/base_info_button">
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+    <style name="ticket_wallet_empty_text" parent="@style/field_group_title_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="payment_options_label" parent="@style/base_block_title">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/block_title_text_color</item>
+        <item name="android:gravity">left</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">false</item>
+    </style>
+    <style name="list_section_title" parent="@style/base_list_section_title" />
+    <style name="list_screen_definition_subtitle" parent="@style/base_list_screen_definition_subtitle" />
+    <style name="list_screen_definition_list" parent="@style/base_list_screen_definition_list" />
+    <style name="list_screen_definition_item_back" parent="@style/base_list_screen_definition_item_back" />
+    <style name="list_screen_definition_item_icon" parent="@style/base_list_screen_definition_item_icon" />
+    <style name="list_screen_definition_item_left_label" parent="@style/base_list_screen_definition_item_left_label" />
+    <style name="list_screen_definition_item_middle_label" parent="@style/base_list_screen_definition_item_middle_label" />
+    <style name="list_screen_definition_item_middle_holder" parent="@style/base_list_screen_definition_item_middle_holder" />
+    <style name="list_screen_definition_item_origin_label" parent="@style/base_list_screen_definition_item_origin_label" />
+    <style name="list_screen_definition_item_destination_label" parent="@style/base_list_screen_definition_item_destination_label" />
+    <style name="list_screen_definition_item_right_label" parent="@style/base_list_screen_definition_item_right_label" />
+    <style name="base_listview_style">
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    <style name="base_ActionbarText">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/actionbar_text_color</item>
+    </style>
+    <style name="base_progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+    <style name="base_ActionButton">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/action_button_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:background">@drawable/action_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginBottom">4.0dip</item>
+        <item name="android:minWidth">150.0dip</item>
+    </style>
+    <style name="base_info_button">
+        <item name="android:textColor">@color/action_button_text_color</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:drawablePadding">10.0dip</item>
+    </style>
+    <style name="base_action_button_disabled_bydefault" parent="@style/base_ActionButton">
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/disabled_button_text_color</item>
+    </style>
+    <style name="base_DeleteButton" parent="@style/base_ActionButton">
+        <item name="android:textColor">@color/light_text_color</item>
+        <item name="android:background">@drawable/delete_btn</item>
+    </style>
+    <style name="base_DetourButton" parent="@style/base_ActionButton">
+        <item name="android:textColor">@color/light_text_color</item>
+        <item name="android:background">@drawable/detour_btn</item>
+    </style>
+    <style name="base_HeaderText">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_Journey_Planner_Ticket_Feature_Button">
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_option_icon</item>
+        <item name="android:paddingTop">16.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/journey_feature_button_height</item>
+        <item name="android:layout_margin">5.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="base_StationName_EditText">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:background">@drawable/rounded_textbox</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/stationname_edittext_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">none</item>
+    </style>
+    <style name="base_journey_planner_rail_card_list_row" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:padding">14.0dip</item>
+    </style>
+    <style name="base_journey_planner_rail_card_image" parent="@style/field_image_item" />
+    <style name="base_journey_planner_rail_card_name" parent="@style/field_item_label">
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+    </style>
+    <style name="base_journey_planner_field_group" parent="@style/field_group_container_background_with_rounded_border">
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="base_journey_planner_field_group_horizontal_aligned" parent="@style/field_group_container_background_with_rounded_border">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="base_journey_planner_station_switcher_image" parent="@style/field_image_item">
+        <item name="android:background">@drawable/station_switch_arrow</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="base_journey_planner_station_name_edittext" parent="@style/StationName_EditText" />
+    <style name="base_journey_planner_date_time_container" parent="@style/field_group_container_background_with_rounded_border">
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="base_Station_Name">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:singleLine">false</item>
+    </style>
+    <style name="base_station_board_details_listview" parent="@style/listview_style">
+        <item name="android:divider">@android:color/transparent</item>
+    </style>
+    <style name="base_station_board_listview" parent="@style/station_board_details_listview">
+        <item name="android:divider">@color/disabled_text_color</item>
+        <item name="android:dividerHeight">1.0dip</item>
+    </style>
+    <style name="base_station_board_station_name" parent="@style/Station_Name" />
+    <style name="base_station_board_splitmarge_station_name" parent="@style/Station_Name">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/disabled_text_color</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="base_station_board_list_row">
+        <item name="android:background">#ffffffff</item>
+    </style>
+    <style name="base_station_board_viainfo">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/disabled_text_color</item>
+    </style>
+    <style name="base_station_board_detail">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_station_board_details_status_caption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_station_board_scheduled_time">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_station_board_status_caption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_station_board_adjusted_time">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_station_board_last_updated">
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/lsb_bg_header</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="base_station_board_station_holder">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+    </style>
+    <style name="base_station_board_time_holder">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">10.0dip</item>
+    </style>
+    <style name="base_station_board_refresh_button">
+        <item name="android:background">@drawable/refresh_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_station_board_arrive_depart_button" parent="@style/field_button_item">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="base_station_board_clear_button" parent="@style/field_button_item">
+        <item name="android:background">@drawable/btn_option_icon</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:text">Clear</item>
+    </style>
+    <style name="base_station_board_vertical_item_label_container" parent="@style/field_group_layout_container">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="base_station_board_vertical_item_value_container" parent="@style/field_group_layout_container">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+    </style>
+    <style name="base_station_board_vertical_item_label" parent="@style/field_item_label_black">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/stationname_edittext_height</item>
+    </style>
+    <style name="base_station_board_view_train_button" parent="@style/base_ActionButton">
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+    <style name="base_station_board_repeat_search_title" parent="@style/field_group_title_text" />
+    <style name="base_station_board_repeat_search_list" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:padding">10.0dip</item>
+    </style>
+    <style name="base_titlebar">
+        <item name="android:background">@drawable/header_gradient</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+    </style>
+    <style name="base_titlebar_text">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/actionbar_text_color</item>
+        <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="base_titlebar_button">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+    </style>
+    <style name="base_titlebar_homebutton">
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:src">@drawable/toc_home</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_titlebar_refreshbutton" parent="@style/base_titlebar_button">
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:src">@drawable/refresh_button</item>
+    </style>
+    <style name="base_titlebar_barcodebutton" parent="@style/base_titlebar_button">
+        <item name="android:src">@drawable/barcode_rsp6</item>
+    </style>
+    <style name="base_titlebar_station_button" parent="@style/base_titlebar_button">
+        <item name="android:src">@drawable/action_nearest_button</item>
+    </style>
+    <style name="base_titlebar_search_button" parent="@style/base_titlebar_button">
+        <item name="android:src">@drawable/action_search_button</item>
+    </style>
+    <style name="base_titlebar_map_button" parent="@style/base_titlebar_button">
+        <item name="android:src">@drawable/action_map_button</item>
+    </style>
+    <style name="base_titlebar_button_separator">
+        <item name="android:background">@color/titlebar_button_separator_color</item>
+        <item name="android:layout_width">1.0px</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+    </style>
+    <style name="base_checkbox_withtext">
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/checkbox_background</item>
+    </style>
+    <style name="base_card_details_field_group" parent="@style/field_group_container_background_with_rounded_border" />
+    <style name="base_card_details_field_group_title" parent="@style/field_group_title_text" />
+    <style name="base_card_details_postcode_field_value" parent="@style/field_horizontally_aligned_item_value" />
+    <style name="base_card_details_address_field_value" parent="@style/field_horizontally_aligned_item_value">
+        <item name="android:inputType">textPostalAddress</item>
+    </style>
+    <style name="base_card_details_card_images_holder">
+        <item name="android:gravity">right</item>
+        <item name="android:paddingRight">2.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="base_card_details_card_number" parent="@style/field_item_value_full_width">
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">19</item>
+        <item name="android:inputType">number</item>
+    </style>
+    <style name="base_card_details_security_info_label" parent="@style/field_horizontally_aligned_item_label">
+        <item name="android:layout_weight">2.0</item>
+    </style>
+    <style name="base_card_details_security_info_date_value" parent="@style/field_horizontally_aligned_item_value">
+        <item name="android:maxLength">2</item>
+        <item name="android:inputType">number</item>
+    </style>
+    <style name="base_card_details_security_info_cvv_value" parent="@style/field_horizontally_aligned_item_value">
+        <item name="android:password">true</item>
+        <item name="android:maxLength">4</item>
+        <item name="android:inputType">number</item>
+    </style>
+    <style name="base_card_details_single_char_password_field">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:password">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">1</item>
+    </style>
+    <style name="base_card_details_security_info_cvv_image" parent="@style/field_horizontally_aligned_item_value">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="base_card_details_security_info_separator" parent="@style/field_horizontally_aligned_item_label">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">0.5</item>
+    </style>
+    <style name="base_empty_listview_row_text" parent="@style/field_item_label">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/error_text_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="base_entropy_container" parent="@style/field_group_layout_container_with_padding">
+        <item name="android:background">@drawable/rounded_textbox_focused</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_entropy_text" parent="@style/field_item_label">
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="base_entropy_progressbar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30.0dip</item>
+        <item name="android:progress">0</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+    </style>
+    <style name="base_fare_gallery_text" parent="@style/field_item_label">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+    </style>
+    <style name="base_login_screen_group_container" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:background">@drawable/rounded_border_solid</item>
+        <item name="android:layout_margin">10.0dip</item>
+        <item name="android:stretchColumns">1</item>
+    </style>
+    <style name="base_login_screen_username_edittext" parent="@style/field_item_value_full_width">
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:maxWidth">100.0dip</item>
+        <item name="android:inputType">text</item>
+    </style>
+    <style name="base_login_screen_password_edittext" parent="@style/field_item_value_full_width">
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:maxWidth">100.0dip</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+    <style name="base_login_screen_note_text" parent="@style/field_item_label_small_text">
+        <item name="android:textColor">@color/disabled_text_color</item>
+    </style>
+    <style name="base_dashboard_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/txtBlockTitle</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="base_dashboard_find_train" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/find_trains_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_repeat_previous_journey" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/previous_journey_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_my_ticket" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/my_ticket_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_my_account" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/my_account_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_info" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/info_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_social_networks" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/social_networks_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_share_app" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/share_app_dashboard_icon</item>
+    </style>
+    <style name="base_dashboard_live_station_board" parent="@style/dashboard_icon">
+        <item name="android:background">@drawable/stationboard_icon</item>
+    </style>
+    <style name="base_dashboard_live_station_board_container">
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="base_dashboard_empty_space" parent="@style/dashboard_icon">
+        <item name="android:visibility">invisible</item>
+    </style>
+    <style name="base_dashboard_icons_container">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="base_payment_option_listview" parent="@style/listview_style">
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:divider">#00000000</item>
+        <item name="android:dividerHeight">10.0dip</item>
+    </style>
+    <style name="base_payment_option_note_text" parent="@style/field_item_label_small_text">
+        <item name="android:textColor">@color/disabled_text_color</item>
+        <item name="android:padding">10.0dip</item>
+    </style>
+    <style name="base_payment_option_row_title" parent="@style/field_group_title_text">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="base_payment_option_row_card_image" parent="@style/field_image_item">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="base_payment_option_fee_text" parent="@style/field_item_label_small_text">
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+    </style>
+    <style name="base_payment_option_card_name" parent="@style/field_item_label">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_repeat_station_listrow_container" parent="@style/field_group_layout_container">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/list_row_background</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_height">@dimen/list_row_height</item>
+    </style>
+    <style name="base_repeat_station_listrow_origin" parent="@style/field_item_label">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+    </style>
+    <style name="base_repeat_station_listrow_destination" parent="@style/field_item_label">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:drawableLeft">@drawable/arrow_fromto</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="base_repeat_cvv_edittext" parent="@style/field_item_value_full_width">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_textbox</item>
+        <item name="android:layout_width">60.0dip</item>
+        <item name="android:hint">@string/NOODLES_TEXT_CVV_CAPTION</item>
+        <item name="android:password">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">4</item>
+        <item name="android:inputType">number</item>
+    </style>
+    <style name="base_repeat_cvv_sub_container" parent="@style/field_group_container_background_with_rounded_border">
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="base_repeat_cvv_terms_and_condition_text" parent="@style/field_item_label_small_text">
+        <item name="android:autoLink">web</item>
+    </style>
+    <style name="base_repeat_cvv_accept" parent="@style/field_item_label">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="base_repeat_cvv_accept_checkbox" parent="@style/base_repeat_cvv_accept">
+        <item name="android:button">@drawable/checkbox_background</item>
+    </style>
+    <style name="base_repeat_journey_newjourney_button" parent="@style/base_ActionButton">
+        <item name="android:textColor">@color/light_text_color</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:background">@drawable/select_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/list_row_height</item>
+        <item name="android:layout_marginTop">0.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+        <item name="android:text">@string/NOODLES_TEXT_LABEL_REPEATMENU_NEWJOURNEY</item>
+        <item name="android:drawableLeft">@drawable/repeat_journey_icon</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="base_repeat_journey_title_text" parent="@style/field_group_title_text">
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:text">@string/NOODLES_TEXT_REPEAT_PREVIOUS_JOURNEYS</item>
+    </style>
+    <style name="base_repeat_journey_listview" parent="@style/listview_style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">10.0dip</item>
+    </style>
+    <style name="base_restriction_screen_inbound_button">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:background">@drawable/rounded_textbox</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/journey_planner_item_height</item>
+    </style>
+    <style name="base_restriction_screen_inbound_date_button" parent="@style/restriction_screen_inbound_button">
+        <item name="android:text">[...]</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="base_restriction_screen_inbound_time_button" parent="@style/restriction_screen_inbound_button">
+        <item name="android:text">[...]</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="base_restriction_screen_inbound_arrivedepart_button" parent="@style/restriction_screen_inbound_button">
+        <item name="android:background">@drawable/btn_option_icon</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:text">@string/NOODLES_TEXT_DEPARTING</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="base_ticket_options_listview" parent="@style/listview_style">
+        <item name="android:layout_margin">10.0dip</item>
+        <item name="android:listSelector">@drawable/list_focused</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">10.0dip</item>
+    </style>
+    <style name="base_ticket_wallet_list_row">
+        <item name="android:background">@drawable/select_background</item>
+        <item name="android:padding">3.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2.0dip</item>
+    </style>
+    <style name="base_ticket_options_note" parent="@style/field_item_label">
+        <item name="android:layout_margin">10.0dip</item>
+    </style>
+    <style name="base_station_picker_title" parent="@style/field_group_title_text" />
+    <style name="base_timetable_advert">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="base_home_screen_block_background">
+        <item name="android:background">@drawable/block_background</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/home_screen_block_height</item>
+        <item name="android:layout_marginLeft">1.0dip</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+        <item name="android:layout_marginBottom">1.0dip</item>
+    </style>
+    <style name="base_latest_block_background" parent="@style/home_screen_block_background">
+        <item name="android:background">@drawable/block_background_add</item>
+    </style>
+    <style name="base_block_title">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/block_title_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/menu_title_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="base_block_content">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_below">@id/txtBlockTitle</item>
+    </style>
+    <style name="base_block_image">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="base_toc_banner_block" parent="@style/base_home_screen_block_background">
+        <item name="android:background">@drawable/toc_banner_background</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/toc_banner_block_height</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginTop">0.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+    </style>
+    <style name="base_toc_banner_logo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/toc_banner_logo</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="base_ticketWallet_TicketCount">
+        <item name="android:textColor">@color/ticket_wallet_block_count_text_color</item>
+        <item name="android:background">@drawable/ticket_count_background</item>
+        <item name="android:padding">@dimen/ticket_counter_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/ticket_counter_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/ticket_counter_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/ticket_counter_margin_bottom</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="base_ticketDate_Day" parent="@style/field_item_label">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="base_ticketDate_Month" parent="@style/field_item_label">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+    <style name="base_activity_background">
+        <item name="android:background">@drawable/activity_background</item>
+    </style>
+    <style name="base_empty_text" parent="@style/field_item_label">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_margin">10.0dip</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="base_list_screen_definition_subtitle" parent="@style/field_item_label_black">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5.0dip</item>
+        <item name="android:layout_below">@id/title_container</item>
+    </style>
+    <style name="base_list_screen_definition_list">
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="base_list_screen_definition_item_back">
+        <item name="android:background">@drawable/select_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5.0dip</item>
+        <item name="android:minHeight">@dimen/list_row_height</item>
+    </style>
+    <style name="base_list_screen_definition_item_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5.0dip</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_list_screen_definition_item_text_view" parent="@style/field_item_label">
+        <item name="android:layout_margin">5.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_list_screen_definition_item_middle_holder" parent="@style/base_list_screen_definition_item_text_view" />
+    <style name="base_list_screen_definition_item_left_label" parent="@style/base_list_screen_definition_item_text_view" />
+    <style name="base_list_screen_definition_item_middle_label" parent="@style/base_list_screen_definition_item_text_view">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="base_list_screen_definition_item_right_label" parent="@style/base_list_screen_definition_item_text_view" />
+    <style name="base_list_screen_definition_item_station_label" parent="@style/field_item_label">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="base_list_screen_definition_item_origin_label" parent="@style/base_list_screen_definition_item_station_label" />
+    <style name="base_list_screen_definition_item_destination_label" parent="@style/base_list_screen_definition_item_station_label">
+        <item name="android:drawableLeft">@drawable/arrow_fromto</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="base_list_section_title">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/separator_title_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5.0dip</item>
+    </style>
+    <style name="base_repeat_cvv_nfc_container" parent="@style/field_group_layout_container">
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="scrollview_container">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:fillViewport">true</item>
+    </style>
+    <style name="field_group_layout_container_horizontal">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="field_group_layout_container" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="field_group_layout_container_with_padding" parent="@style/field_group_layout_container">
+        <item name="android:padding">10.0dip</item>
+    </style>
+    <style name="field_group_container_background_with_rounded_border" parent="@style/field_group_layout_container_with_padding">
+        <item name="android:background">@drawable/rounded_border_solid</item>
+    </style>
+    <style name="field_group_title_text">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="field_group_title_wrap_text" parent="@style/field_group_title_text">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="field_group_title_horizontally_aligned" parent="@style/field_group_title_text">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="field_item_label">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="field_item_label_black" parent="@style/field_item_label">
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="field_item_label_full_width" parent="@style/field_item_label">
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+    <style name="field_item_label_small_text" parent="@style/field_item_label">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <style name="field_image_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="field_image_item_full_width">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="field_item_value_full_width">
+        <item name="android:background">@drawable/rounded_textbox</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textCapCharacters|textNoSuggestions</item>
+    </style>
+    <style name="field_horizontally_aligned_item_label">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="field_horizontally_aligned_item_value">
+        <item name="android:background">@drawable/rounded_textbox</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:inputType">textCapCharacters|textNoSuggestions</item>
+    </style>
+    <style name="field_item_error_label" parent="@style/field_item_label">
+        <item name="android:textColor">@color/error_text_color</item>
+        <item name="android:gravity">right</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+    <style name="field_button_item">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="journey_leg_row_container">
+        <item name="android:gravity">left</item>
+        <item name="android:background">@color/jl_background_color</item>
+        <item name="android:paddingLeft">@dimen/journey_leg_border_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="journey_leg_row_left_section">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingTop">@dimen/journey_leg_layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+        <item name="android:layout_width">@dimen/journey_leg_left_section_width</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="journey_leg_row_right_section" parent="@style/field_group_layout_container">
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="journey_leg_row_time" parent="@style/field_item_label_small_text">
+        <item name="android:paddingTop">@dimen/layout_padding</item>
+    </style>
+    <style name="journey_leg_row_image" parent="@style/field_image_item">
+        <item name="android:paddingTop">@dimen/layout_padding</item>
+    </style>
+    <style name="journey_leg_row_status_line">
+        <item name="android:layout_width">@dimen/journey_leg_image_width</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="journey_leg_station_name" parent="@style/field_item_label">
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">false</item>
+    </style>
+    <style name="journey_leg_row_sub_container">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="journey_leg_duration_text" parent="@style/field_item_label_small_text">
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="journey_leg_toc_name" parent="@style/field_item_label_small_text" />
+    <style name="journey_leg_reservation" parent="@style/field_item_label_small_text">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="number_selector_image_name">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">3.0</item>
+    </style>
+    <style name="number_selector_button_minus">
+        <item name="android:background">@drawable/a_minus</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+    </style>
+    <style name="number_selector_button_plus">
+        <item name="android:background">@drawable/a_plus</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+    </style>
+    <style name="number_selector_selected_number">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_border</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+        <item name="android:button">@drawable/radio</item>
+        <item name="android:layout_weight">3.0</item>
+    </style>
+    <style name="ticket_container">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/ticket_bg</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ticket_sub_container" parent="@style/field_group_layout_container">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="ticket_details_container" parent="@style/field_group_layout_container">
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="ticket_header_image">
+        <item name="android:background">@drawable/ticket_top</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ticket_footer_image">
+        <item name="android:background">@drawable/ticket_bottom_x</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ticket_date" parent="@style/field_group_title_text">
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="ticket_station_name_origin" parent="@style/field_item_label">
+        <item name="android:paddingLeft">10.0dip</item>
+    </style>
+    <style name="ticket_station_name_destination" parent="@style/ticket_station_name_origin">
+        <item name="android:drawableLeft">@drawable/arrow_fromto</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="ticket_delivery_text" parent="@style/field_item_label">
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="ticket_fulfillment_text" parent="@style/field_item_label_small_text">
+        <item name="android:textColor">@color/fulfillment_text_color</item>
+    </style>
+    <style name="ticket_feature_images">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ticket_restriction_info" parent="@style/field_group_layout_container_with_padding">
+        <item name="android:background">@drawable/restriction_bg</item>
+    </style>
+    <style name="tod_ticket_restriction_info" parent="@style/field_group_layout_container">
+        <item name="android:background">@drawable/restriction_bg</item>
+    </style>
+    <style name="ticket_warning_info" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:background">@drawable/warning_bg</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_marginBottom">4.0dip</item>
+    </style>
+    <style name="ticket_receipt_container" parent="@style/field_group_layout_container_with_padding">
+        <item name="android:background">@drawable/receipt_bg</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:stretchColumns">1</item>
+    </style>
+    <style name="ticket_receipt_label" parent="@style/field_item_label">
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="ticket_receipt_value" parent="@style/field_item_label">
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="ticket_receipt_card_details" parent="@style/ticket_receipt_label">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="ticket_receipt_seperator_line">
+        <item name="android:background">@color/receipt_separator_line_color</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_span">2</item>
+    </style>
+    <style name="ActionButtonActivateBarcode" parent="@style/base_ActionButton">
+        <item name="android:textColor">@color/action_button_text_color</item>
+        <item name="android:background">@drawable/action_button_activate_barcode</item>
+    </style>
+    <style name="Barcode_time_animation" parent="@style/field_group_title_text">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="BarcodeTicketDetails" parent="@style/field_item_label_full_width">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">@dimen/layout_padding</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">@dimen/layout_padding</item>
+    </style>
+    <style name="eticket_container" parent="@style/field_group_layout_container">
+        <item name="android:background">@drawable/eticket_border</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="rsp6_barcode_container" parent="@style/eticket_container">
+        <item name="android:layout_margin">10.0dip</item>
+    </style>
+    <style name="BarcodeHeaderText" parent="@style/field_item_label_small_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingRight">4.0dip</item>
+    </style>
+    <style name="eticket_top" parent="@style/field_group_title_text">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/eticket_header_footer_height</item>
+        <item name="android:layout_marginLeft">1.0dip</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+    </style>
+    <style name="eticket_bottom" parent="@style/field_group_title_text">
+        <item name="android:paddingLeft">@dimen/drawable_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/eticket_header_footer_height</item>
+        <item name="android:layout_marginLeft">1.0dip</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+        <item name="android:layout_marginBottom">1.0dip</item>
+        <item name="android:drawableLeft">@drawable/rsp6_footer</item>
+    </style>
+    <style name="rsp6_barcode_image" parent="@style/field_image_item_full_width">
+        <item name="android:padding">10.0dip</item>
+    </style>
+    <style name="ccst_ticket_bottom" parent="@style/eticket_bottom">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="ccst_ticket_top" parent="@style/eticket_top">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="ccst_content_container" parent="@style/field_group_layout_container">
+        <item name="android:layout_marginLeft">1.0dip</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+    </style>
+    <style name="ccst_tricolor_container">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">42.0dip</item>
+    </style>
+    <style name="ccst_tricolor_background">
+        <item name="android:background">@android:color/black</item>
+        <item name="android:padding">2.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="ccst_tricolor_colorbox">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="ccst_tricolor_color1" parent="@style/ccst_tricolor_colorbox">
+        <item name="android:layout_marginRight">1.0dip</item>
+    </style>
+    <style name="ccst_tricolor_color2" parent="@style/ccst_tricolor_colorbox">
+        <item name="android:layout_marginLeft">1.0dip</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+    </style>
+    <style name="ccst_tricolor_color3" parent="@style/ccst_tricolor_colorbox">
+        <item name="android:layout_marginLeft">1.0dip</item>
+    </style>
+    <style name="ccst_tricolor_ticket_status" parent="@style/field_item_label">
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="ccst_ticket_detail_top" parent="@style/ticket_header_image">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/ccst_header_text_color</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_height">@dimen/ccst_ticket_header_height</item>
+    </style>
+    <style name="ccst_ticket_detail_bottom" parent="@style/ticket_footer_image">
+        <item name="android:background">@drawable/ticket_bottom</item>
+    </style>
+    <style name="ticket_tod_pick_me_image" parent="@style/field_image_item">
+        <item name="android:src">@drawable/ticket_view_tod_corner</item>
+        <item name="android:layout_below">@id/title_container</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="ticket_wallet_listview" parent="@style/listview_style">
+        <item name="android:padding">10.0dip</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">10.0dip</item>
+    </style>
+    <style name="ticket_wallet_list_row_image" parent="@style/field_image_item">
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:src">@drawable/ticket</item>
+    </style>
+    <style name="timetable_select_fare_button" parent="@style/base_ActionButton">
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:text">@string/NOODLES_TEXT_FARES_WITHOUT_JOURNEYS_MENU_TITLE</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="timetable_footer_image">
+        <item name="android:background">@drawable/ticket_bottom_x</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_above">@id/btnTimetableFareSelect</item>
+    </style>
+    <style name="timetable_header_image">
+        <item name="android:background">@drawable/ticket_top</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="timetable_single_spinner_fare_container" parent="@style/field_group_layout_container">
+        <item name="android:background">@drawable/ticket_bg</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_above">@id/imgBottomImage</item>
+    </style>
+    <style name="timetable_fare_details_container" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">6.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="timetable_fare_name_text" parent="@style/field_item_label_small_text">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">left</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:layout_toLeftOf">@id/layoutImageHolder</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="timetable_restriction_text" parent="@style/field_item_label_small_text">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="timetable_date" parent="@style/field_group_title_text">
+        <item name="android:layout_marginBottom">4.0dip</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+    <style name="timetable_singe_spinner_wheelview_container" parent="@style/field_group_layout_container">
+        <item name="android:background">@drawable/ticket_bg</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_above">@id/fareInfo</item>
+        <item name="android:layout_below">@id/txtTimetableHeader</item>
+    </style>
+    <style name="timetable_single_spinner_fare_gallery_container">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/fare_gallery_height</item>
+    </style>
+    <style name="timetable_single_spinner_fare_gallery">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/fare_gallery_height</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginBottom">8.0dip</item>
+        <item name="android:spacing">10.0dip</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="timetable_single_spinner_fare_gallery_overlay">
+        <item name="android:background">@drawable/fare_gallery_overlay</item>
+        <item name="android:layout_width">@dimen/fare_gallery_overlay_width</item>
+        <item name="android:layout_height">@dimen/fare_gallery_height</item>
+        <item name="android:maxHeight">100.0dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="timetable_single_spinner_fare_gallery_background">
+        <item name="android:background">@drawable/fare_gallery_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/fare_gallery_height</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginBottom">8.0dip</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="timetable_list_row_container" parent="@style/field_group_layout_container_horizontal">
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingRight">6.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+    </style>
+    <style name="timetable_fare_selection_button" parent="@style/ActionButton">
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="timetable_parallel_spinner_container">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="timetable_parallel_spinner_journey_date" parent="@style/field_group_title_text">
+        <item name="android:paddingTop">4.0dip</item>
+        <item name="android:paddingBottom">4.0dip</item>
+    </style>
+    <style name="timetable_parallel_spinner_invalid_fare_selection_text" parent="@style/field_item_label_full_width">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/spinners_title</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Theme.JourneyPlanner" parent="@android:style/Theme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="Theme.MyAlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.ApplicationTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@drawable/bg_dashboard</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+    <style name="Theme.SemiTransparent" parent="@android:style/Theme.Translucent">
+        <item name="android:colorForeground">#ffffffff</item>
+        <item name="android:windowBackground">@color/entropy_background_color</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+</resources>

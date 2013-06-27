@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView style="@style/scrollview_container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/field_group_layout_container">
+        <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+        <Button android:id="@id/btnPurchaseHistory" android:layout_margin="10.0dip" android:text="@string/NOODLES_TEXT_PURCHASE_HISTORY_BUTTON" style="@style/station_board_view_train_button" />
+        <TableLayout android:id="@id/tableLoginContent" style="@style/login_screen_group_container">
+            <TableRow>
+                <TextView android:id="@id/txtUserNameLabel" android:text="@string/NOODLES_TEXT_USERNAME_CAPTION" style="@style/field_item_label_black" />
+                <EditText android:id="@id/editTextUserName" style="@style/login_screen_username_edittext" />
+            </TableRow>
+            <TableRow>
+                <TextView android:id="@id/txtPasswordLabel" android:text="@string/NOODLES_TEXT_PASSWORD_CAPTION" style="@style/field_item_label_black" />
+                <EditText android:id="@id/editTextPassword" style="@style/login_screen_password_edittext" />
+            </TableRow>
+            <TableRow android:layout_marginTop="@dimen/layout_padding">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_span="2">
+                    <Button android:id="@id/btnLogout" android:visibility="invisible" android:layout_margin="2.0dip" android:text="@string/NOODLES_TEXT_ACCOUNT_LOGOUT_BUTTON" android:layout_weight="1.0" style="@style/ActionButton" />
+                    <Button android:id="@id/btnLogin" android:layout_margin="2.0dip" android:text="@string/NOODLES_TEXT_ACCOUNT_SUBMIT_BUTTON" android:layout_weight="1.0" style="@style/ActionButton" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <Button android:id="@id/btnSkipLogin" android:visibility="gone" android:layout_span="2" android:text="@string/NOODLES_TEXT_ACCOUNT_SKIP_LOGIN_BUTTON" style="@style/ActionButton" />
+            </TableRow>
+            <TableRow>
+                <TextView android:id="@id/txtLoginNote" android:layout_span="2" style="@style/login_screen_note_text" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

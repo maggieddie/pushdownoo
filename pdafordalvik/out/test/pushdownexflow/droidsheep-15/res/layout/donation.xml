@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_root" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/donateimg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/droidsheep_square" android:scaleType="matrix" />
+            <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/donatetext" android:paddingBottom="10.0px" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/donatetext" android:layout_below="@id/donateimg" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/donatetext">
+                <Button android:id="@id/donate_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/donate_no" android:layout_weight="1.0" android:layout_alignParentRight="true" />
+                <Button android:id="@id/donate_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/donate_yes" android:layout_weight="1.0" android:layout_alignParentLeft="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

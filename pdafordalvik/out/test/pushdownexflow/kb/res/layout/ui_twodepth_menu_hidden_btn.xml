@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:layout_gravity="fill" android:orientation="horizontal" android:id="@id/radiogroup" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerInParent="true">
+        <RadioButton android:id="@id/test" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="test" />
+        <RadioButton android:id="@id/real" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="real" />
+    </RadioGroup>
+    <TableLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:stretchColumns="0,1" android:layout_weight="1.0">
+        <TableRow android:layout_weight="1.0">
+            <Button android:textColor="#00000000" android:id="@id/btn1" android:layout_height="fill_parent" android:text="1" />
+            <Button android:textColor="#00000000" android:id="@id/btn2" android:layout_height="fill_parent" android:text="2" />
+        </TableRow>
+        <TableRow android:layout_weight="1.0">
+            <Button android:textColor="#00000000" android:id="@id/btn3" android:layout_height="fill_parent" android:text="3" />
+            <Button android:textColor="#00000000" android:id="@id/btn4" android:layout_height="fill_parent" android:text="4" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

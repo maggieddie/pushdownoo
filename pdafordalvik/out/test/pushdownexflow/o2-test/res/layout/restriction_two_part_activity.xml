@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <ScrollView android:layout_below="@id/title_container" style="@style/scrollview_container">
+        <LinearLayout style="@style/field_group_layout_container_with_padding">
+            <ImageView style="@style/ticket_header_image" />
+            <LinearLayout style="@style/ticket_container">
+                <TextView android:id="@id/txtTicketOutboundDateTime" style="@style/ticket_date" />
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketOutboundOriginTime" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtTicketOutboundOriginName" style="@style/ticket_station_name_origin" />
+                </LinearLayout>
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketOutboundDestinationTime" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtTicketOutboundDestinationName" style="@style/ticket_station_name_destination" />
+                </LinearLayout>
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketOutboundFareName" style="@style/field_item_label" />
+                    <LinearLayout android:id="@id/layoutTicketOutboundFeatureImages" style="@style/ticket_feature_images" />
+                </LinearLayout>
+                <TextView android:id="@id/txtTicketOutboundFareBreakdown" style="@style/field_item_label" />
+                <TextView android:id="@id/txtTicketOutboundRestrictionText" style="@style/field_item_label" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/restriction_info" style="@style/ticket_restriction_info">
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:text="@string/NOODLES_TEXT_FULFILMENT_CAPTION" style="@style/field_group_title_horizontally_aligned" />
+                    <TextView android:id="@id/txtTicketOutboundFulfillment" style="@style/ticket_delivery_text" />
+                </LinearLayout>
+                <TextView android:id="@id/txtTicketOutboundFulfillmentDetails" style="@style/ticket_fulfillment_text" />
+            </LinearLayout>
+            <ImageView style="@style/ticket_footer_image" />
+            <ImageView android:layout_marginTop="10.0dip" style="@style/ticket_header_image" />
+            <LinearLayout style="@style/ticket_container">
+                <TextView android:id="@id/txtTicketInboundDateTime" style="@style/ticket_date" />
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketInboundOriginTime" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtTicketInboundOriginName" style="@style/ticket_station_name_origin" />
+                </LinearLayout>
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketInboundDestinationTime" style="@style/field_item_label" />
+                    <TextView android:id="@id/txtTicketInboundDestinationName" style="@style/ticket_station_name_destination" />
+                </LinearLayout>
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:id="@id/txtTicketInboundFareName" style="@style/field_item_label" />
+                    <LinearLayout android:id="@id/layoutTicketInboundFeatureImages" style="@style/ticket_feature_images" />
+                </LinearLayout>
+                <TextView android:id="@id/txtTicketInboundFareBreakdown" style="@style/field_item_label" />
+                <TextView android:id="@id/txtTicketInboundRestrictionText" style="@style/field_item_label" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/restriction_info" style="@style/ticket_restriction_info">
+                <LinearLayout style="@style/ticket_sub_container">
+                    <TextView android:text="@string/NOODLES_TEXT_FULFILMENT_CAPTION" style="@style/field_group_title_horizontally_aligned" />
+                    <TextView android:id="@id/txtTicketInboundFulfillment" style="@style/ticket_delivery_text" />
+                </LinearLayout>
+                <TextView android:id="@id/txtTicketInboundFulfillmentDetails" style="@style/ticket_fulfillment_text" />
+            </LinearLayout>
+            <ImageView style="@style/ticket_footer_image" />
+            <TableLayout android:id="@id/cost_info" style="@style/ticket_receipt_container">
+                <TableRow>
+                    <TextView android:text="@string/NOODLES_TEXT_ITEMISED_PRICE_OUT_FARE" style="@style/ticket_receipt_label" />
+                    <TextView android:id="@id/txtRestrictionOutboundFare" style="@style/ticket_receipt_value" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/NOODLES_TEXT_ITEMISED_PRICE_IN_FARE" style="@style/ticket_receipt_label" />
+                    <TextView android:id="@id/txtRestrictionInboundFare" style="@style/ticket_receipt_value" />
+                </TableRow>
+                <TableRow android:id="@id/bookingFeeRow" android:visibility="gone">
+                    <TextView android:text="@string/NOODLES_TEXT_ITEMISED_PRICE_BOOKING_FEE" style="@style/ticket_receipt_label" />
+                    <TextView android:id="@id/txtRestrictionBookingFee" style="@style/ticket_receipt_value" />
+                </TableRow>
+                <TableRow>
+                    <View android:id="@id/separator" style="@style/ticket_receipt_seperator_line" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/NOODLES_TEXT_TOTAL_CAPTION" style="@style/ticket_receipt_label" />
+                    <TextView android:id="@id/txtRestrictionTotalCost" style="@style/ticket_receipt_value" />
+                </TableRow>
+            </TableLayout>
+            <Button android:id="@id/btnRestrictionContinue" android:text="@string/NOODLES_TEXT_INBOUND_OPENRETURN_SHOW_RESTRICTION_BUTTON" style="@style/ActionButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

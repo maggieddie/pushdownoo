@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/base_activity_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_layout" />
+    <TextView android:id="@id/txtTicketOptionsNote" android:text="@string/NOODLES_TEXT_ONEPART_TWOPART_MENU_REMINDER" android:layout_below="@id/title_container" style="@style/ticket_options_note" />
+    <ListView android:id="@id/ticketOptionList" android:layout_below="@id/txtTicketOptionsNote" style="@style/ticket_options_listview" />
+</RelativeLayout>

@@ -10,8 +10,9 @@ import java.io.File
 import org.ucombinator.utils.CommonUtils
 import models.PropertyCheckList
 import org.ucombinator.dalvik.preanalysis.RiskAnalysis
+import org.ucombinator.dalvik.parsing.ParserHelper
 
-object PlayHelper {
+object PlayHelper extends ParserHelper{
 
  // var gopts: AIOptions = null
   
@@ -130,6 +131,19 @@ object PlayHelper {
       println()
       println(helpMessage)
     }
+    
+         //parse in s-expressioned dalvik 
+     parseDalvikSExprs(opts)
+    
+     // parse in security related files
+     DalInformationFlow.parseInAndroidKnowledge
+
+            // read JVm report
+     APISpecs.readInReport
+
+            // preanalysis for the risk ranking happens before expensive analysis!!!
+      RiskAnalysis.computeAndSetOverallRisk
+      RiskAnalysis.dumpPreRiskRanking(opts) 
 
     processDalvik(opts)
 
@@ -169,15 +183,7 @@ object PlayHelper {
             // do lra
             doPreAnalysis(initEns, allIndividualInits, runner)
 
-            // parse in security related files
-            DalInformationFlow.parseInAndroidKnowledge
-
-            // read JVm report
-            APISpecs.readInReport
-
-            // preanalysis for the risk ranking happens before expensive analysis!!!
-            RiskAnalysis.computeAndSetOverallRisk
-            RiskAnalysis.dumpPreRiskRanking(opts) 
+           
             
             // starts to run Analysis
             runner.runPDCFA(opts, initEns)
@@ -185,7 +191,7 @@ object PlayHelper {
 
           } else // no lra, 
           {
-            APISpecs.readInReport
+           // APISpecs.readInReport
             runner.runPDCFA(opts, initEns)
           }
         }

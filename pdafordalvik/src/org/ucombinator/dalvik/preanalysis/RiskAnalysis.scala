@@ -9,12 +9,14 @@ import java.io.FileWriter
 import org.ucombinator.dalvik.syntax.Stmt
 
 object RiskAnalysis {
-
+   def Desc[T : Ordering] = implicitly[Ordering[T]].reverse
  
   // has to be called right before expensive analysis
    def computeAndSetOverallRisk  {
        
        val clsTbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable
+       //println("classTable?????")
+       //clsTbl.foreach(println)
        clsTbl.foreach {
          case (k, clsDef) => {
            clsDef.riskRank = clsDef.computeClassRisk 
@@ -40,7 +42,7 @@ object RiskAnalysis {
       val rawRes =  clsTbl.foldLeft(List[(Int, String, Set[String])]())((res, kv) =>{
         val k = kv._1
         val clsDef = kv._2
-        (clsDef.riskRank, clsDef.className, clsDef.allTaintKinds) :: res
+        res::: List((clsDef.riskRank, clsDef.className, clsDef.allTaintKinds))  
       })
       val rawRes1 = rawRes.filter {
         case (n, name, _) => {
@@ -63,11 +65,9 @@ object RiskAnalysis {
       })
       
       val allMethods2 = allMethods.filter(md => {md.riskRank > 0})
-      val allMethods3 = allMethods2.sortBy(- _.riskRank)
+      val allMethods3 = allMethods2.sortBy( _.riskRank)(Desc)
       
-      allMethods3.foldLeft(List[(Int, String, Set[String])]())((res, md) =>{
-        
-        
+      allMethods3.foldLeft(List[(Int, String, Set[String])]())((res, md) =>{ 
         (md.riskRank, md.methodPath, md.getAllTaintKinds) :: res
       })
    }
@@ -82,11 +82,12 @@ object RiskAnalysis {
       })
       
       val allStmt2 = allStmt.filter(st => {st.riskRanking > 0})
-      val allStmt3 = allStmt2.sortBy(- _.riskRanking)
+      val allStmt3 = allStmt2.sortBy {
+        case st => -st.riskRanking
+      }//( _.riskRanking)(Desc)
       
-      allStmt3.foldLeft(List[(Int, String, String, String, Set[String], String)]())((res, st) =>{ 
-        
-        (st.riskRanking, st.clsPath, st.methPath, st.lineNumber.toString, st.taintKind, st.toString) :: res
+      allStmt3.foldLeft(List[(Int, String, String, String, Set[String], String)]())((res, st) =>{  
+        res ::: List((st.riskRanking, st.clsPath, st.methPath, st.lineNumber.toString, st.taintKind, st.toString))  
       })
    }
    
@@ -163,9 +164,7 @@ object RiskAnalysis {
      
   }
    
-   def dumpMethRiskRanking(opts: AIOptions) { 
-    
-    
+   def dumpMethRiskRanking(opts: AIOptions) {  
     
     var buffer = new StringBuffer()
 

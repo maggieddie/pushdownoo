@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/intro_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="top|center" android:background="@drawable/loading_text_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="114.0dip">
+        <ImageView android:id="@id/Intro_ani" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="24.0dip" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="66.66998dip" android:src="@drawable/intro_logo" />
+</FrameLayout>

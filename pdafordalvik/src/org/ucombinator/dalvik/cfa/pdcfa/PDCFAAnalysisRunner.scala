@@ -384,6 +384,7 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
   
  def dumpSecurityReport(opts: AIOptions, dsgs: List[DSG]) {
  
+   
     var buffer = new StringBuffer()
     
     buffer.append("<html> <head> <title> Security Report </title> </head> <h2> Security Report  </h2><body> <table>\n")
@@ -443,7 +444,7 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
       if (!secuDir.exists) {
         secuDir.createDirectory(force = true)
         secuDir.createFile(failIfExists = false)
-    
+      }
  
       val path = opts.securityReportPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
       val file = new File(path)
@@ -457,7 +458,7 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
 
       println("Security dumped into: " + path) 
       path
-    } else ""
+    
   }
   
  

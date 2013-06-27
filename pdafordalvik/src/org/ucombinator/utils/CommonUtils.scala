@@ -502,7 +502,23 @@ object CommonUtils {
      var percentil = 0.0
    }
    
-  
+  def computeRiskForCates(cates: Set[String]) : Int = {
+     val rrm = Thread.currentThread().asInstanceOf[AnalysisHelperThread].riskRankingMap 
+       var rankingSum = 0 
+       cates.foreach(e => {
+         val ro = rrm.get(e)
+         ro match {
+           case Some(n) => {
+             rankingSum = rankingSum + n
+           }
+           case _ => { 
+             
+           }
+         }
+         
+       })
+       rankingSum
+  }
    
       
    

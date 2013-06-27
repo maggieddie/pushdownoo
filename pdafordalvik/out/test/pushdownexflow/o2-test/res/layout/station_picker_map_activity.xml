@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_stationpicker_layout" />
+    <app.view.map.MyMapView android:enabled="true" android:id="@id/stationMap" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:apiKey="@string/google_map_api_key" />
+</LinearLayout>

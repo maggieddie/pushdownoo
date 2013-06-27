@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/home_screen_latest_item_block_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/txtBlockTitle" android:text="@string/NOODLES_TEXT_SUBMENU_NEXT_TICKET" style="@style/latest_ticket_purchase_block_title" />
+    <LinearLayout android:id="@id/layoutHolder" style="@style/latest_ticket_block_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ticketDateHolder" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/ticketDateMonth" style="@style/ticketDate_Month" />
+            <TextView android:id="@id/ticketDateDay" style="@style/ticketDate_Day" />
+        </LinearLayout>
+        <ImageView android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" style="@style/home_screen_block_separator" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" android:layout_toRightOf="@id/ticketDateHolder" android:layout_below="@id/txtBlockTitle">
+            <TextView android:id="@id/txtOriginStationName" style="@style/latest_journey_search_origin" />
+            <TextView android:id="@id/txtDestinationStationName" style="@style/latest_journey_search_destination" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/txtEmptyText" style="@style/common_empty_text" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrolldebug" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:textColor="#ffffffff" android:gravity="left" android:id="@id/debug" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" />
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:id="@id/linearLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:enabled="true" android:id="@id/bdebug" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Start" />
+    </LinearLayout>
+</LinearLayout>

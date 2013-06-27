@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ui_farm_main" android:background="@drawable/bg_farm_main_01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ui_farm_menu_title" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="left" android:id="@id/profile_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="136.5dip" android:layout_marginTop="14.5dip" />
+        <ImageView android:layout_gravity="left" android:id="@id/img_farm_main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.3299866dip" android:layout_marginTop="6.0dip" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/Farm_Font_Color_a" android:layout_gravity="center_horizontal" android:id="@id/farm_main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="57.0dip" />
+        <ImageView android:layout_gravity="left" android:id="@id/farm_name_btn" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="276.0dip" android:layout_marginTop="58.0dip" android:src="@drawable/farm_arrow_btn" />
+        <Button android:layout_gravity="left" android:id="@id/btn_farm_name" android:visibility="invisible" android:layout_width="300.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.659973dip" android:layout_marginTop="53.329987dip" android:onClick="onFarmMenuClickListener" />
+        <ImageView android:layout_gravity="left" android:id="@id/farm_tree_0" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="119.32999dip" android:layout_marginTop="143.32999dip" android:src="@drawable/farm_tree_1" />
+        <ImageView android:layout_gravity="left" android:id="@id/farm_tree_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="178.0dip" android:layout_marginTop="147.32999dip" android:src="@drawable/farm_tree_2" />
+        <ImageView android:layout_gravity="left" android:id="@id/farm_tree_2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="238.66dip" android:layout_marginTop="162.0dip" android:src="@drawable/farm_tree_3" />
+        <include layout="@layout/ui_farm_main_theme" />
+        <include layout="@layout/ui_farm_feed_bg" />
+        <include layout="@layout/ui_farm_feed" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_0" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.66dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_squirrel" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.0dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_maeddugi" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.66dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_dog" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_3" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.66dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_ori" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_4" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.66dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_butterfly" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/farm_mini_5" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="240.66dip" android:layout_marginBottom="64.0dip" android:src="@drawable/farm_bird" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom|left|center" android:id="@id/farm_page_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="56.0dip" />
+        <Button android:layout_gravity="bottom|left|center" android:id="@id/farm_deposit_btn" android:background="@drawable/farm_icon_deposit_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.659973dip" android:layout_marginBottom="8.659973dip" android:onClick="onFarmMenuClickListener" />
+        <Button android:layout_gravity="bottom|left|center" android:id="@id/farm_recommend_btn" android:background="@drawable/farm_recommand_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="107.32999dip" android:layout_marginBottom="8.659973dip" android:onClick="onFarmMenuClickListener" />
+        <Button android:layout_gravity="bottom|left|center" android:id="@id/farm_newfarm_btn" android:background="@drawable/farm_create_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="212.0dip" android:layout_marginBottom="8.659973dip" android:onClick="onFarmMenuClickListener" />
+    </FrameLayout>
+</RelativeLayout>

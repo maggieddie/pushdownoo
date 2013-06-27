@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/layoutLegParent" style="@style/journey_leg_row_container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/leftColumn" style="@style/journey_leg_row_left_section">
+        <TextView android:id="@id/departureTimeTextView" android:text="12:00" style="@style/journey_leg_row_time" />
+        <ImageView android:gravity="fill_vertical" android:id="@id/legTypeImageView" android:src="@drawable/jl_bus" style="@style/journey_leg_row_image" />
+        <TextView android:id="@id/arrivalTimeTextView" android:text="13:00" style="@style/journey_leg_row_time" />
+    </LinearLayout>
+    <app.view.JourneyLegDiagramView android:id="@id/diagramView" style="@style/journey_leg_row_status_line" />
+    <LinearLayout android:id="@id/rightColumn" style="@style/journey_leg_row_right_section">
+        <TextView android:id="@id/departureStationNameTextView" android:text="Birmingham" android:layout_alignParentLeft="true" style="@style/journey_leg_station_name" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layoutLegDetails" android:layout_height="fill_parent" style="@style/journey_leg_row_sub_container">
+            <TextView android:id="@id/departureStatusView" android:text="3 minutes late" style="@style/journey_leg_duration_text" />
+            <TextView android:id="@id/durationTextView" android:text="1h23" style="@style/journey_leg_duration_text" />
+            <TextView android:id="@id/legTypeTextView" android:text="TOC name" style="@style/journey_leg_toc_name" />
+            <TextView android:id="@id/additionalInfoTextView" android:text="Coach 3, seat B" style="@style/journey_leg_reservation" />
+            <TextView android:id="@id/arrivalStatusView" android:text="On time" style="@style/journey_leg_duration_text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

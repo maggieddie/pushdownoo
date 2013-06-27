@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="journey_railcard">
+        <item>@string/NOODLES_TEXT_RC_NONE</item>
+        <item>@string/NOODLES_TEXT_RC_YOUNG</item>
+        <item>@string/NOODLES_TEXT_RC_SENIOR</item>
+        <item>@string/NOODLES_TEXT_RC_HM</item>
+        <item>@string/NOODLES_TEXT_RC_DISABLED</item>
+        <item>@string/NOODLES_TEXT_RC_GOLD</item>
+        <item>@string/NOODLES_TEXT_RC_NEWDEAL</item>
+        <item>@string/NOODLES_TEXT_RC_NETWORK</item>
+    </array>
+    <array name="ticket_options">
+        <item>@string/NOODLES_TEXT_MENUITEM_ONEPART_CAPTION</item>
+        <item>@string/NOODLES_TEXT_MENUITEM_TWOPART_CAPTION</item>
+    </array>
+    <string-array name="swipe_screen_order">
+        <item>MAINMENU_HOME</item>
+        <item>MAINMENU_PREVIOUS_JOURNEYS</item>
+        <item>MAINMENU_WALLET</item>
+        <item>MAINMENU_INFO</item>
+    </string-array>
+    <string-array name="home_screen_menu">
+        <item>TocBannerViewProvider</item>
+        <item>PlanJourneyViewProvider, TicketWalletViewProvider</item>
+        <item>RepeatPreviousJourneyViewProvider, InformationViewProvider</item>
+        <item>O2GridViewProvider</item>
+        <item>ImageBannerViewProvider</item>
+    </string-array>
+    <string-array name="o2_gridview_items">
+        <item>LinkMenuItem {TextId->PROVIDED_PAYMENT_INSTRUMENTS_LINK_CAPTION; Icon-> mi_wallet}</item>
+        <item>LinkMenuItem {TextId->PROVIDED_PAYMENT_INSTRUMENTS_INFO_TITLE; Icon-> mi_wallet_what}</item>
+    </string-array>
+    <string-array name="information_gridview_items">
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM1; Icon-> mi_info1; Link-> info1.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM2; Icon-> mi_info2; Link-> info2.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM3; Icon-> mi_info3; Link-> info3.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM4; Icon-> mi_info4; Link-> info4.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM5; Icon-> mi_info5; Link-> info5.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM6; Icon-> mi_info6; Link-> info6.html}</item>
+        <item>LinkMenuItem {TextId->INFO_MENU_ITEM7; Icon-> mi_info7; Link-> http://go.o2.co.uk/trainfaqs}</item>
+    </string-array>
+    <string-array name="share_app_items">
+        <item>LinkMenuItem {Text->Share via SMS; Icon-> mi_info10; Link-> {SmsMessage-> sms_message}}</item>
+        <item>LinkMenuItem {Text->Share via email; Icon-> mi_info11; Link-> {EmailMessage-> email_message}}</item>
+    </string-array>
+    <string-array name="other_travel_items">
+        <item>LinkMenuItem {Text->Live bus departures; Icon-> mi_info12; Link-> http://m.countdown.tfl.gov.uk/}</item>
+        <item>LinkMenuItem {Text->London Underground status; Icon-> mi_info12; Link-> http://m.tfl.gov.uk/mt/www.tfl.gov.uk/tfl/livetravelnews/realtime/tube/default.html}</item>
+        <item>LinkMenuItem {Text->London rail travel news; Icon-> mi_info12; Link-> http://m.tfl.gov.uk/mt/www.tfl.gov.uk/tfl/livetravelnews/realtime/rail/default.html}</item>
+        <item>LinkMenuItem {Text->London bus travel news; Icon-> mi_info12; Link-> http://m.tfl.gov.uk/mt/www.tfl.gov.uk/tfl/livetravelnews/realtime/buses/default.html}</item>
+    </string-array>
+    <string-array name="social_network_items">
+        <item>LinkMenuItem {Text->O2 Trains on Facebook; Icon-> mi_info14; Link-> http://www.facebook.com}</item>
+        <item>LinkMenuItem {Text->O2 Trains on Twitter; Icon-> mi_info8; Link-> http://www.twitter.com}</item>
+    </string-array>
+    <string-array name="repeat_journey_screen">
+        <item>RepeatSearchGridViewProvider_Column2</item>
+    </string-array>
+    <string-array name="repeat_lsb_screen">
+        <item>RepeatLSBGridViewProvider_Column2</item>
+    </string-array>
+    <string-array name="information_screen">
+        <item>InformationGridViewProvider {ItemSource->information_gridview_items}</item>
+    </string-array>
+</resources>

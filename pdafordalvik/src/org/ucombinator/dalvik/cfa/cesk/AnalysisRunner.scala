@@ -345,7 +345,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     }
 
   }
-  private def parseDalvikSExprs(opts: AIOptions) {
+   def parseDalvikSExprs(opts: AIOptions) {
     val dirName = opts.sexprDir
 
     val sexDir = new Directory(new File(dirName))
@@ -378,7 +378,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
   def getListofInitEntries(opts: AIOptions) :  (List[Stmt], List[Stmt]) = {
     
       //parse in s-expressioned dalvik 
-     parseDalvikSExprs(opts)
+    // parseDalvikSExprs(opts)
      
      //all the init-ens pathss
       getLinkedEntryPointHead(opts) 

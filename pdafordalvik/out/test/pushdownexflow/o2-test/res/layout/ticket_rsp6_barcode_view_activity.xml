@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_barcode_layout" />
+    <LinearLayout android:id="@id/layoutBarcodeDetails" android:layout_below="@id/title_container" style="@style/rsp6_barcode_container">
+        <TextView android:id="@id/barcodeHeader" style="@style/eticket_top" />
+        <ImageView android:id="@id/imgBarcode" style="@style/rsp6_barcode_image" />
+        <TextView android:id="@id/barcodeFooter" style="@style/eticket_bottom" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="27.329987dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/farm_prev_btn" android:background="@drawable/farm_home_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.329987dip" android:layout_centerVertical="true" android:onClick="onFarmMenuClickListener" />
+        <Button android:id="@id/farm_setting_btn" android:background="@drawable/farm_setting_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.6599731dip" android:layout_centerVertical="true" android:onClick="onFarmMenuClickListener" />
+        <Button android:id="@id/farm_help_btn" android:background="@drawable/farm_help_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="77.32999dip" android:layout_centerVertical="true" android:onClick="onFarmMenuClickListener" />
+        <Button android:id="@id/to_main_btn" android:background="@drawable/farm_kbmain_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.6599731dip" android:layout_centerVertical="true" android:onClick="onFarmMenuClickListener" />
+    </LinearLayout>
+</RelativeLayout>

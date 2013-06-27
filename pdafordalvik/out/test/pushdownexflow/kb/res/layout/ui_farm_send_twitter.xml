@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_farm_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/farm_apply_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.659973dip" android:layout_marginTop="30.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_farm_title_2" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/farm_menu_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ui_farm_menu_title" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="@color/Farm_Font_Color_b" android:gravity="center_horizontal" android:paddingLeft="110.0dip" android:paddingTop="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="트위터추천">
+                <requestFocus />
+            </TextView>
+        </LinearLayout>
+        <ScrollView android:scrollbarStyle="outsideInset" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip">
+                    <TextView android:textColor="@color/Farm_Font_Color_a" android:gravity="left" android:id="@id/twitter_title" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="26.0dip" android:src="@drawable/farm_edit_text_top" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginRight="26.0dip">
+                    <EditText android:textSize="13.329987sp" android:textColor="@color/Farm_Font_Color_g" android:gravity="left" android:id="@id/twitter_mesg" android:background="@drawable/farm_edit_text_pattern" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLength="140" />
+                </LinearLayout>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginRight="26.0dip" android:src="@drawable/farm_edit_text_bottom" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.659973dip">
+                    <Button android:id="@id/confirm_twitter_send" android:background="@drawable/farm_ok_short_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                    <Button android:id="@id/cancel_twitter_send" android:background="@drawable/farm_cancel_short_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.75dip" android:layout_centerInParent="true" />
+                    <Button android:id="@id/twitter_image_attach" android:background="@drawable/farm_img_attach_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.75dip" android:layout_centerInParent="true" />
+                </LinearLayout>
+                <ImageView android:id="@id/imageView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.659973dip" android:scaleType="center" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

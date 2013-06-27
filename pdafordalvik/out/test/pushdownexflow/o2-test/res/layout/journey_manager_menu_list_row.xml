@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/repeat_station_listrow_container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:id="@id/txtMenuItem" android:layout_height="@dimen/list_row_height" style="@style/repeat_station_listrow_origin" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/stationPickerContainer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_stationpicker_layout" />
+    <EditText android:id="@id/searchStationPicker" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:hint="Search" android:selectAllOnFocus="true" android:drawableLeft="@drawable/action_search_pressed" android:drawablePadding="@dimen/layout_padding" style="@style/journey_planner_station_name_edittext" />
+    <LinearLayout android:id="@id/layoutRecentStations" style="@style/field_group_layout_container_with_padding">
+        <ListView android:id="@id/listStationPickerStation" android:scrollbars="none" style="@style/listview_style" />
+    </LinearLayout>
+</LinearLayout>

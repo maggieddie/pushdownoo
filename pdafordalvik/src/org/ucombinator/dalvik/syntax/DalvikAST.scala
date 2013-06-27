@@ -1117,12 +1117,27 @@ case class DalvikClassDef(
   //  def riskRank_=(n : Int )
    // will compute trigger the computation top down, which is computed bottom up
    def computeClassRisk : Int =   {
-     if(riskRank == -1){
+     /*if(riskRank == -1){
          methods.foldLeft(0)((sum, md) => {
            md.riskRank = md.computeRiskRank
            sum + md.riskRank})}
      else 0
-   }
+   }*/
+   
+   
+    val cates = allTaintKinds
+    
+    
+    if(riskRank == -1) {
+//      val stmts = CommonUtils.flattenLinkedStmt(List())(bd)
+//      stmts.foldLeft(0)((sum, s) => {
+//        sum + s.riskRanking
+//      })
+      CommonUtils.computeRiskForCates(cates)
+    }
+    else 0
+  }
+  
    
    def allTaintKinds : Set[String] = {
      methods.foldLeft(Set[String]())((res, md) => {
@@ -1418,11 +1433,16 @@ case class MethodDef(methPath: String, ats: List[String], rn: BigInt, atl: List[
   // def riskRank_=(n : Int )
   
   def computeRiskRank :Int = {
+    
+    val cates = getAllTaintKinds
+    
+    
     if(riskRank == -1) {
-      val stmts = CommonUtils.flattenLinkedStmt(List())(bd) 
-        stmts.foldLeft(0)((sum, s) => {
-        sum + s.riskRanking
-      })
+//      val stmts = CommonUtils.flattenLinkedStmt(List())(bd)
+//      stmts.foldLeft(0)((sum, s) => {
+//        sum + s.riskRanking
+//      })
+      CommonUtils.computeRiskForCates(cates)
     }
     else 0
   }

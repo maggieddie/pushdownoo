@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/home_screen_block_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/btnAction" style="@style/dashboard_my_ticket" />
+    <TextView android:id="@id/txtTicketCount" style="@style/ticketWallet_TicketCount" />
+    <TextView android:id="@id/txtBlockTitle" android:text="@string/NOODLES_TEXT_MAINMENU_WALLET" style="@style/ticket_wallet_block_title" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_stationpicker_layout" />
+    <ListView android:id="@id/listviewNearStations" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" style="@style/listview_style" />
+    <TextView android:id="@id/txtLocationMessage" android:text="@string/NOODLES_TEXT_LOCATION_NOT_AVAILABLE" style="@style/field_item_label" />
+</LinearLayout>
