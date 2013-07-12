@@ -1,6 +1,7 @@
 package org.ucombinator.utils
 import org.ucombinator.dalvik.syntax._
 import java.io.File
+import scala.util.matching.Regex
 
 // the class path. method path, will all in string form.
 
@@ -205,6 +206,21 @@ object StringUtils {
     
     strSet.foldLeft("")((str, s) => {str + s + " "}) 
   }
- 
+  
+   def matchSS(input: String, pattern:Regex) : Boolean = {
+   
+    val resList = (pattern findAllIn input).toList
+  
+    if(resList.isEmpty) false
+    else true
+  }
+   
+   def strMatchinSensitivePatterns (input: String, patterns : List[Regex]) : Boolean = {
+     val resList = patterns.map((p) => {
+       val r = p findAllIn input
+       !r.toList.isEmpty
+     })
+     resList.contains(true)
+   } 
   	
 }

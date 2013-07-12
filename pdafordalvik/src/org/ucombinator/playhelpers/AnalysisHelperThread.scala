@@ -15,6 +15,7 @@ import org.ucombinator.dalvik.cfa.cesk.StmtForEqual
 import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
 import org.ucombinator.dalvik.cfa.widening.WideningHelperTrait
+import scala.util.matching.Regex
  
  
 
@@ -24,7 +25,7 @@ class AnalysisHelperThread (params: Array[String]) extends Thread with WideningH
   // for information flow
   var sources: Set[(String, String)] = Set[(String, String)]()
   var sinks: Set[(String, String)] = Set[(String, String)]()
-  var sensitiveStrings: Set[(String, String)] = Set[(String, String)]()
+  var sensitiveStrings: Set[(Regex, String)] = Set[(Regex, String)]()
   
   var permissionMap: scala.collection.mutable.Map[String, PermissionPair] = scala.collection.mutable.Map[String, PermissionPair]()
 

@@ -20,6 +20,10 @@ object RiskAnalysis {
        clsTbl.foreach {
          case (k, clsDef) => {
            clsDef.riskRank = clsDef.computeClassRisk 
+           val meths = clsDef.methods
+           meths.foreach(md => {
+             md.riskRank = md.computeRiskRank
+           })
          }
        }
    }
@@ -68,7 +72,7 @@ object RiskAnalysis {
       val allMethods3 = allMethods2.sortBy( _.riskRank)(Desc)
       
       allMethods3.foldLeft(List[(Int, String, Set[String])]())((res, md) =>{ 
-        (md.riskRank, md.methodPath, md.getAllTaintKinds) :: res
+       res::: List((md.riskRank, md.methodPath, md.getAllTaintKinds))  
       })
    }
    

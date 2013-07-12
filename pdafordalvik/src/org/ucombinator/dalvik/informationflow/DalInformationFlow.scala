@@ -6,6 +6,7 @@ import models.PermissionPair
 import scala.collection.mutable.Map
 import org.ucombinator.utils.AIOptions
 import scala.tools.nsc.io.Directory
+import scala.util.matching.Regex
 
 /**
  * maintaining the source and sinks strings, as well as sensitive string values
@@ -29,7 +30,7 @@ object DalInformationFlow {
     				     "display","executable", "timeordate", 
     				     "reflection", "deviceid",   "browserbosokmark", 
     				     "browserhistory", "thread", "ipc",
-    				      "contact", "sensor" ,"account" ,"media" ,"serialid", "random")
+    				      "contact", "sensor" ,"account" ,"media" ,"serialid", "random", "database")
  
 	//var sources: Set[(String, String)] = Set[(String, String)]()
 	//var sinks: Set[(String, String)] = Set[(String, String)]()
@@ -60,28 +61,34 @@ object DalInformationFlow {
 	 
 	  res 
 	}
+    
+    
 	
 	def isSensitiveStr(input: String) : Boolean = {
 	 
-	  val individuals =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.filter((recStr) => { 
-	    input.contains(recStr._1)  
-	  })
+//	  val individuals =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.filter((recStr) => { 
+//	    input.contains(recStr._1)  
+//	  })
+//	  
+//	  val strSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.map(_._1)
+//	  val cond1 = strSs.contains(input) 
+//	  val cond2 = !individuals.isEmpty 
+//	  
+//	 val res =  cond1 || cond2
+//	 res
 	  
-	  val strSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.map(_._1)
-	  val cond1 = strSs.contains(input) 
-	  val cond2 = !individuals.isEmpty 
+	  val regexes = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.map(_._1).toList
 	  
-	 val res =  cond1 || cond2
+	 StringUtils.strMatchinSensitivePatterns(input, regexes)
 	 
-	 res
 	 
 	}
 	
 	def getTaintKindsForString(input: String) : Set[String] = {
 	    val kindsFromSs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings.foldLeft(Set[String]())((res: Set[String], p) => {
-	    val str = p._1
+	    val strPatter = p._1
 	    val kind = p._2
-	    if ((input.contains(str) || str.contains(input)) && input != "")  
+	    if (StringUtils.matchSS(input, strPatter))//((input.contains(str) || str.contains(input)) && input != "")  
 	          res + kind 
 	          else res
 	  })
@@ -273,7 +280,7 @@ object DalInformationFlow {
   def parseInAndroidKnowledge {
     val srcPath = "android-knowledge" + File.separator + "sources.txt"
     val sinkPath = "android-knowledge" + File.separator + "sinks.txt"
-    val sstringPath = "android-knowledge" + File.separator + "sensitive-strings.txt"
+    val sstringPath = "android-knowledge" + File.separator + "str-pat.txt"
 
   
 
@@ -297,7 +304,8 @@ object DalInformationFlow {
     val ssLines = File(sstringPath).lines.toList.filter(_ != "")
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].sensitiveStrings = ssLines.map((ps) => {
       val pairStr = ps.split("\\s+").toList
-      (pairStr(0), pairStr(1))
+      val pattern = new Regex(pairStr(0))
+      (pattern, pairStr(1))
 
     }).toSet
     // permission map

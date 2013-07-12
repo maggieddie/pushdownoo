@@ -283,6 +283,9 @@ trait DalvikVMRelated {
     val (hdInit, restInits) = buildInitEntries(initDefs,clsP)
     //randomly get one init and intialize the reg
     val initD = hdInit.asInstanceOf[InitEntryPointStmt]
+    if(! ens.isEmpty) {
+      initD.lineNumber = ens.head.body.lineNumber // just set the current init's nect line number as the following entry points
+    }
     val thisRegExp = CommonUtils.getThisRegStr(initD.regsNum,initD.argsTypes.length)
      val entryStmts = buildEntryPointInvokeStmts(thisRegExp,ens, clsP)
        val linkHeadO= 

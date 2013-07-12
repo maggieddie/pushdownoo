@@ -224,7 +224,8 @@ trait StateSpace  {
   case object ASensor extends Value
   case object AContact extends Value
   case object ARandom extends Value
-  
+  case object ADB  extends Value  
+
   def genTaintKindValueFromStmt(stmt: Stmt) : Set[Value] = {
     val kindStrs = stmt.taintKind
     
@@ -254,6 +255,7 @@ trait StateSpace  {
       case "media" => res ++ Set(AMedia)
       case "serialid" => res ++ Set(ASerialID)
       case "random" => res ++ Set(ARandom)
+      case "database" => res ++ Set(ADB)
     }
      })
   }
