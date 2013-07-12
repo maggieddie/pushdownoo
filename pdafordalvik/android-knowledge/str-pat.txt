@@ -1,0 +1,13 @@
+\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b network
+(http|ftp|https)://(.*)\.([a-z]+) network
+android.intent.action.VIEW display
+android.intent.action.DIAL phone
+results_recognition audio
+getDeviceId deviceid
+android.provider.Telephony.SMS_RECEIVED sms
+content://sms sms
+ro.serialno deviceid
+DCIM picture
+DCIM/Camera picture
+/sdcard sdcard
+([^\\s]+(\\.(?i)(js|jar|dex|pl|cc|o|tar|zip|tar.gz|gzip))$) executable
