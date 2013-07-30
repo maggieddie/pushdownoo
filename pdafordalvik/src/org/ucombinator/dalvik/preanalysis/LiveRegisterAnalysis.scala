@@ -156,6 +156,7 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
     
   }
   
+  
   def runLRAOnListSts(lst: List[Stmt]) {
     val initialLRAMap = initLiveSet(lst)
    

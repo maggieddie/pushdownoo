@@ -438,14 +438,14 @@ trait DalvikVMRelated {
       }
     }
     
-    // chained the initentry pointsstatemetn and its body statements
-    val allInitsWithItsBodies = allIndividualInits.flatten {
-      case ies@InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
-        val inbd = ies.body
-        val bdSts = CommonUtils.flattenLinkedStmt(List())(inbd)
-        ies :: bdSts
-      }
-    }
+//    // chained the initentry pointsstatemetn and its body statements
+//    val allInitsWithItsBodies = allIndividualInits.flatten {
+//      case ies@InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
+//        val inbd = ies.body
+//        val bdSts = CommonUtils.flattenLinkedStmt(List())(inbd)
+//        ies :: bdSts
+//      }
+//    }
     
     // initEntries inlcude the initentrystmt and the entrypoints
     // they are going to be as the starting point to be explored.

@@ -11,8 +11,10 @@ import org.ucombinator.utils.CommonUtils
 import models.PropertyCheckList
 import org.ucombinator.dalvik.preanalysis.RiskAnalysis
 import org.ucombinator.dalvik.parsing.ParserHelper
+import org.ucombinator.dalvik.vmrelated.DalvikVMRelated
+//import org.ucombinator.dalvik.vmrelated.DalvikVMRelated.InitEntryPointStmt
 
-object PlayHelper extends ParserHelper{
+object PlayHelper extends ParserHelper with DalvikVMRelated{
 
  // var gopts: AIOptions = null
   
@@ -151,7 +153,15 @@ object PlayHelper extends ParserHelper{
     def doPreAnalysis(initEns: List[Stmt], resInits: List[Stmt], runner: PDCFAAnalysisRunner) {
       println("start lra for inits...")
 
-      runner.runLRAOnListSts(resInits)
+      //resInits.foreach(println)
+      resInits.foreach{
+        resi => {
+          val initEntrP = resi.asInstanceOf[InitEntryPointStmt]
+          val lstSts = CommonUtils.flattenLinkedStmt(List())(initEntrP.body)
+          runner.runLRAOnListSts(lstSts) 
+        }
+      } 
+      
 
       println("lra on rest  inits...")
 
@@ -177,6 +187,7 @@ object PlayHelper extends ParserHelper{
         case AnalysisType.PDCFA => {
           val runner = new PDCFAAnalysisRunner(opts)
 
+           
           val (initEns, allIndividualInits) = runner.getListofInitEntries(opts)
 
           if (opts.doLRA) {

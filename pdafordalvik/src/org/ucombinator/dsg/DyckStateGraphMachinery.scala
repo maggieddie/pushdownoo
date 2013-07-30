@@ -335,6 +335,7 @@ trait DyckStateGraphMachinery extends StateSpace{
       
       val epsNewNexts = newStates.flatMap(s => helper.getEpsNextStates(s))
       
+      println("EPSLANG NEXT size for the new states: ", epsNewNexts.size)
       // val possibleNewToVisit = (newStates
         // Lemma 1 (newEps)
       //  ++ epsNewNexts)
