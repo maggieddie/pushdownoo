@@ -9,6 +9,7 @@ import tools.nsc.io.Directory
 import org.ucombinator.playhelpers.AnalysisHelperThread
 import org.ucombinator.dalvik.cfa.widening.WideningConfiguration
 import org.ucombinator.dalvik.syntax.PopHandlerStmt
+import org.ucombinator.perfmeasure.Measure
 
 
 trait DyckStateGraphMachinery extends StateSpace{ 
@@ -213,7 +214,7 @@ trait DyckStateGraphMachinery extends StateSpace{
      
      // filter the edges that end with the pophandler
      val popHandlerEdges =  filterOutEdgesWithTargetInSet(possibleEdges, pophandlerStates)
-     val possibleEdges2 =  possibleEdges -- popHandlerEdges
+     val possibleEdges2 =  possibleEdges -- popHandlerEdges 
      
      // filter out the pophandler states statesPossibletoVisit
      val popEpsNextStates = filterOutPopHandlerStates(epsNextStates)
@@ -300,16 +301,46 @@ trait DyckStateGraphMachinery extends StateSpace{
    */
   private def iterateDSG(dsg: DSG, helper: NewDSGHelper, toVisit: Set[S], store: SharedStore, pStore: PSharedStore): (DSG, NewDSGHelper, Boolean, Set[S], SharedStore, PSharedStore) = dsg match {
     case DSG(ss, ee, s0) => {
-
-      val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = for {
-        s <- toVisit
-        
+      
+  // ECG contains all the previously explored states. 
+      // and so, let's test the membership in the preds and nexts for each of the newly created states 
+     // val toVisitNew =  helper.filterNewStatesInECG(toVisit)
+      
+       
+     val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = 
+      // Measure.measureTime("new states and stores:::") {
+       for {
+        s <-   toVisit 
         kont <- helper.getRequiredKont(s, s0)
         possibleFrames = helper.getPossibleStackFrames(s)
-        (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore)
-      } yield (s1, Edge(s, g, s1), littleStore, littlePStore)
-
-       
+        (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore) 
+      }   yield (s1, Edge(s, g, s1), littleStore, littlePStore) 
+   //  }
+     
+    /* var i = 0
+    
+     val len1 = toVisit.size
+     val toVisitSB = toVisit.toSeq
+     var newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = Set()
+     Measure.measureTime("while loop in iterate:::") {
+     while(i<len1){
+       val s = toVisitSB(i)
+       var k = 0
+       val konts = helper.getRequiredKont(s, s0).toSeq
+       while(k <  konts.size){
+         val possibleFrames = helper.getPossibleStackFrames(s)
+         val stepRes = step(s, konts(k), possibleFrames, store, pStore).toSeq 
+          var j = 0
+         while(j < stepRes.size){
+           val (g, s1, littleStore, littlePStore) = stepRes(j)
+           newNodesEdgesStores = Set((s1, Edge(s, g, s1), littleStore, littlePStore)) ++ newNodesEdgesStores
+           j = j+1;
+         }
+        k = k +1; 
+       }
+       i = i+1; 
+     }
+     }*/
       val (obtainedStates, obtainedEdges, obtainedStores, obtainedPStores) = unzip4Components(newNodesEdgesStores)
 
       // Transform switch edges to pairs of push/pop edges
@@ -323,45 +354,92 @@ trait DyckStateGraphMachinery extends StateSpace{
       } else obtainedStates)
    
      
+      if(!obtainedEdges.isEmpty){
+        //println("the currnet state is: ")
+        println(obtainedEdges.head.source.getCurSt)
+      }
+      
+    
+     
+      
         // first update the information, especially the epsilon closure 
       val newEdges = noSwitchesEdges -- ee 
-      helper.update(newEdges) 
       
+      // however, if the new states has been in the epsnext, no bother to get the epsnext.
+      // so here fisrt we filter out the states.
+     val filteredStatesPossileVisits = newStates.filter{
+     spvs => {
+        helper.getEpsNextStates(spvs).isEmpty
+     }
+   }
+      // and get the actual tovisit  edges
+      val possibleNewEdges = newEdges.filter(pe => {
+         filteredStatesPossileVisits.contains(pe.target)
+       })
+       
+      
+      
+     // helper.update(newEdges) 
+       // update the ECG
+      helper.update(possibleNewEdges)
       
       val newStore: SharedStore = obtainedStores.foldLeft(store)(_ ++ _) 
       val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ ++ _)
        
       val storeSS = getStoreSensitiveStates(ss)
       
-      val epsNewNexts = newStates.flatMap(s => helper.getEpsNextStates(s))
+     // println("new states epslang states: ")
       
-      println("EPSLANG NEXT size for the new states: ", epsNewNexts.size)
+      // get epsnext based on the filtered new states
+      val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {     //newStates.flatMap(s => {
+       // println("State:", s.getCurSt) 
+         val news = helper.getEpsNextStates(s)
+        /*news.foreach {
+          s => {
+            println(s.getCurSt)
+          }
+        }*/
+         news
+      })
+      
+     // println("end of println new states epslang")
+         
+      
+     // println("EPSLANG NEXT size for the new states: ", epsNewNexts.size)
       // val possibleNewToVisit = (newStates
         // Lemma 1 (newEps)
       //  ++ epsNewNexts)
         // Lemma 2 (store-sensitive)
      //   ++ storeSS)
-      
-        
-        val (newToVisit, newEdges2) = getStatesIfAco(helper, newStates, newEdges,  epsNewNexts)
+       
+        val (newToVisit, newEdges2) = 
+        //  Measure.measureTime ("getStatesIfAco: "){
+        getStatesIfAco(helper, filteredStatesPossileVisits //newStates
+            ,  possibleNewEdges, //newEdges,  
+            epsNewNexts)//}
         // println("After cutoff")
       // filterOutPopHandlerStates(newToVisit).foreach(pps => println(pps.getCurSt))
  
  // S' = ...
-        val ss1: Nodes = ss  ++ newStates + 
+        val ss1: Nodes = ss  ++ filteredStatesPossileVisits +// newStates + 
         				s0 
       // E' = ...
-      val ee1 = (ee ++ newEdges)
+      val ee1 = (ee ++ possibleNewEdges) 
+      //newEdges)
       
-      val cond1 =  !newEdges2.isEmpty  //!newEdges.subsetOf(ee)    
-    
-      val cond2 =   ! partialOrderStoreCompare(newStore, store)//(store !=   newStore) 
+      val cond1 =  !newEdges2.isEmpty  //!newEdges.subsetOf(ee)  
+      val cond2 =   // Measure.measureTime ("partialOrderStoreCompare")
+      //{
+        ! partialOrderStoreCompare(newStore, store) //}//(store !=   newStore) }
+      
       val cond3 =   !partialOrderStoreCompare(newPStore, pStore)
       
       val shouldProceed = cond1 || cond2 || cond3
 
       
-      println( "DSG: Nodes explored " + noEdgesExplored + " newEdges/newEdges2: " + newEdges.toList.length + "/" + newEdges2.toList.length + " Possible toVisit States/realvisit states " + (newStates ++ epsNewNexts).toList.length + "/"+ newToVisit.toList.length + " \n")
+      println( "DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/" 
+          + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " + 
+          (newStates ++ epsNewNexts).toList.length + "/" + (filteredStatesPossileVisits ++ epsNewNexts).toList.length + "/"+ newToVisit.toList.length + " \n")
       (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore )//newStore)
         
     }
@@ -399,6 +477,17 @@ trait DyckStateGraphMachinery extends StateSpace{
         }
       }
     }
+    
+   /* def filterNewStatesInECG(news: Set[S]) : Set[S] = {
+      news.filter{
+        s => (epsPreds.contains(s) || epsSuccs.contains(s))
+      }
+    }
+    
+    def inECG(s: S): Boolean = {
+      epsPreds.contains(s) || epsSuccs.contains(s)
+    }*/
+    
     
 
     

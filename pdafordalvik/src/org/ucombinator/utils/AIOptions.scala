@@ -39,7 +39,7 @@ class AIOptions {
 
   var timeInterrupt: Boolean = false
   var interruptAfterTime: Long = 900000
-  var doLRA = false 
+  var doLRA = true 
   var doRegex = false
   var regex: Regex = null
 

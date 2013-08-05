@@ -230,7 +230,11 @@ trait DalvikVMRelated {
     /**
      * TODO maybe nwe need exact clsPATH, methpath
      */
-   ens.map((en) => {EntryPointInvokeStmt(en, objRegStr, StmtNil, StmtNil, clP, en.methodPath)})
+   ens.map((en) => {
+    // EntryPointInvokeStmt(en, objRegStr, StmtNil, StmtNil, clP, en.methodPath)})
+    // println(en.body.next.lineNumber)
+     EntryPointInvokeStmt(en, objRegStr, StmtNil, en.body.next.lineNumber,//StmtNil, 
+         clP, en.methodPath)})
   }
   
   //found the init with the maixnum number of arguments
