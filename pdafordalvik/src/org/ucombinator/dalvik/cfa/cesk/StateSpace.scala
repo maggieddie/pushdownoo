@@ -1,14 +1,27 @@
+/**
+ *  1. Refactored the abstract domains definitions to CommonAbstractDomains
+ *  	(I'm really sick of path dependent types)
+ * 	2. Refactored the state definition to use top level Store. 
+ * 
+ * @author shuying
+ */
+
 package org.ucombinator.dalvik.cfa.cesk
 
 import org.ucombinator.dalvik.syntax._
- import scala.collection.immutable.{ Set => ImmSet, Map => ImmMap}
-//import scala.collection.immutable._
+import scala.collection.immutable.{ Set => ImmSet, Map => ImmMap}
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.CommonUtils
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import scala.util.matching.Regex
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.domains.CommonAbstractDomains
+import org.ucombinator.domains.StandardDomains
+  import CommonAbstractDomains._
+
 trait StateSpace  {
+  
+
   
   type :-> [T, S ] = ImmMap[T,S]
   // provided in particular impl
@@ -19,10 +32,10 @@ trait StateSpace  {
   type Kont
   
   // standard component for Dalvik
-  type Store = Addr :-> Set[Value]
+  //type Store = Addr :-> D //Set[Value]
   
   // mainly SecurityValue
-  type PropertyStore = Addr :-> Set[Value]
+  type PropertyStore = Store
   
   //conservative impl to inlcude time for states
   type Time 
@@ -69,7 +82,7 @@ trait StateSpace  {
    * 2.  FieldAddr = ObjectPointer * FieldName
    * 3.  KontAddr = not Known yet ...
    ********************************************/
-  sealed abstract  class Addr //extends some Ordering 
+  //sealed abstract  class Addr //extends some Ordering 
   
   abstract  class OffsetAddr extends Addr {
     def pointer : Pointer
@@ -113,21 +126,34 @@ trait StateSpace  {
     def callerFP = fp
   }
 
-/**
- * Abstract values
- */
-  sealed abstract class Value
   
   /**
+   * for Object values
+   */
+   abstract class AbstractObjectValue extends Value
+  case class ObjectValue(op: ObjectPointer, clsName: String) extends AbstractObjectValue {
+    def oPointer: ObjectPointer = op
+    def className = clsName
+  }
+  case class ObjectSomeTop(className: String)  extends AbstractObjectValue 
+  
+  
+  
+/**
+ * Abstract values
+ *//*
+  sealed abstract class Value
+  
+  *//**
    * Security values, exclusively in the security store
    * a. clsP, methPath, lineNumber are context information 
    *    of the security object
    * b. secuOps: what operations
    * c. sourceOrSink: 0 for source, 1 for sink, 2 for both
-   */
+   *//*
   // I think this is wrong. 
    // for the security values, the simple lattice there are only 8: 
-  /**
+  *//**
    * 1. gps
    * 2. sdcard
    * 3. filesystem
@@ -138,17 +164,17 @@ trait StateSpace  {
    * 8. sms
    * 
    * these form the flat lattice. of the abstract values.
-   */
-/*  case class SecurityValue(classPath: String,
+   *//*
+  case class SecurityValue(classPath: String,
 					  methPath: String, 
 					  lineNumber: Stmt,
 					  secuOps: String,
 					  sourceOrSink: Int) extends Value
-  */
   
-  /**
+  
+  *//**
    * The rest defined values of other types
-   */
+   *//*
   case class TrueValue() extends Value
   case class FalseValue() extends Value
   case object BoolTop extends Value
@@ -156,12 +182,12 @@ trait StateSpace  {
   
   case class VoidValue() extends Value
   
-  /**
+  *//**
    * No sophisticated abstraction for int, float or double.
    * or we just use the top, don't care whether it is int,
    * long, or Bigint
    * 
-   */
+   *//*
   abstract class AbstractNumLit extends Value
   case class NumLit(n: BigInt) extends AbstractNumLit
   case object NumTop extends AbstractNumLit
@@ -179,16 +205,16 @@ trait StateSpace  {
     def value = v
   }
   
-  /**
+  *//**
    * FOr simplest string abstraction
-   */
+   *//*
   abstract  class AbstractStringLiteral extends Value
   case class StringLit(str: String) extends AbstractStringLiteral
   case object StringTop extends AbstractStringLiteral
   
-  /**
+  *//**
    * for Object values
-   */
+   *//*
    abstract class AbstractObjectValue extends Value
   case class ObjectValue(op: ObjectPointer, clsName: String) extends AbstractObjectValue {
     def oPointer: ObjectPointer = op
@@ -224,11 +250,12 @@ trait StateSpace  {
   case object ASensor extends Value
   case object AContact extends Value
   case object ARandom extends Value
-  case object ADB  extends Value  
+  case object ADB  extends Value  */
 
-  def genTaintKindValueFromStmt(stmt: Stmt) : Set[Value] = {
+  def genTaintKindValueFromStmt(stmt: Stmt, s: Store) :D = {
     val kindStrs = stmt.taintKind
     
+    val res =
     kindStrs.foldLeft(Set[Value]()) ((res, kindStr) => { 
     kindStr match {
       case "sdcard" => res ++ Set(SdCard)
@@ -258,6 +285,7 @@ trait StateSpace  {
       case "database" => res ++ Set(ADB)
     }
      })
+     s.mkDomainD(res.toList: _*)
   }
 
   /*********************
@@ -268,7 +296,7 @@ trait StateSpace  {
    * if object something, then we record the clsType and return the objectop value
    * except for string, we return the StringTop
    */
-  def typeToTopValue(typeStr: String, op:ObjectPointer) : Set[Value] = {
+  def typeToTopValue(typeStr: String, op:ObjectPointer, s: Store) : D = {
     // let's first ignore the array type????
      val arrayReg = """\(array \(object [^\s]+\)\)""".r //array of objects
      val arrayPrim = """\(array [^\s]+\)\)""".r // array of primitives
@@ -282,30 +310,30 @@ trait StateSpace  {
        val clsType =if(clsTypeP.contains(")")) clsTypeP.substring(0,clsTypeP.length()-1) else clsTypeP
       
        clsType match {
-        case "java/lang/String" => Set(StringTop)
-        case _ => Set(ObjectValue(op,clsType))
+        case "java/lang/String" => s.mkDomainD(StringTop)
+        case _ => s.mkDomainD(ObjectValue(op,clsType))
       }
        
     } else {
       Debug.prntDebugInfo("not object or array", typeStr)
       typeStr match {
-        case "int" | "float" | "double" | "long" | "short"  => Set(NumTop)
-        case  "boolean" =>  Set(BoolTop)
-        case "void" => Set(new VoidValue)
+        case "int" | "float" | "double" | "long" | "short"  => s.mkDomainD(NumTop)
+        case  "boolean" =>  s.mkDomainD(BoolTop)
+        case "void" => s.mkDomainD(new VoidValue)
        // case "byte" | "char" => waht?
-        case _ => Set( UnspecifiedVal)
+        case _ => s.mkDomainD( UnspecifiedVal)
       }
     }
   }
   
    
     // filter out or check to see whether there is any source or sink values recorded
-    def srcOrSinksSecurityValues(vals: Set[Value]) : Set[Value] = {
+   /* def srcOrSinksSecurityValues(vals: Set[Value]) : Set[Value] = {
      vals.filter((oneV) => {
        oneV match {
-         /*case sv@SecurityValue(_, _, _, _, _) => {
+         case sv@SecurityValue(_, _, _, _, _) => {
            val srcOrSinkVal = sv.sourceOrSink
-            srcOrSinkVal > 0*/
+            srcOrSinkVal > 0
          case Location  |
          	  FileSystem | 
          	  Sms | 
@@ -326,16 +354,16 @@ trait StateSpace  {
          case _ => false
        }
      })
-   }
+   }*/
   
-  private def pStoreHasTaintVals(pst: PropertyStore) : Boolean = {
+  /*private def pStoreHasTaintVals(pst: PropertyStore) : Boolean = {
     val allVals = pst.foldLeft(Set[Value]())((res: Set[Value], pair) => {
       val vals : Set[Value] = pair._2
       res ++ vals
     })
     val secuVals = srcOrSinksSecurityValues(allVals)
     secuVals.toList.length > 0
-  }
+  }*/
   
   /*********************************************************************************************
    * Configurations are split into contorl states and continuation frames.
@@ -348,7 +376,7 @@ trait StateSpace  {
     
     def isPartialState : Boolean = {
      this match {
-      case ErrorState(_, _) | FinalState() => false
+      case ErrorState(_, _,_) | FinalState(_) => false
       case PartialState(st, fp, store, ps, kptr,  t) => {
          true
       }
@@ -373,19 +401,28 @@ trait StateSpace  {
    }
    
    
-    def weakerThan(that: ControlState) : Boolean = {
+    def weakerThan(that: ControlState, subsumption: Boolean) : Boolean = {
       if(this.isPartialState && that.isPartialState) {
         this match {
           case PartialState(stmt, fp, s, pst, kptr, t) => {
             that match{
               case PartialState(stmti, fpt, st, pstt, kptrt, tt) => {
                
-                val cond1 =  (stmt == stmti)     
-                val cond2 = (fp == fpt)  
-                val cond3 = partialOrderStoreCompare(s, st)  
-                val cond4 = partialOrderStoreCompare(pst, pstt)  
-                val cond5 =   (kptr == kptrt)  
-                val cond6 = (t == tt)
+                val cond1 =  (stmt.equals(stmti) )     
+                val cond2 = (fp.equals( fpt))  
+                var cond3 = false
+                var cond4 = false
+                if(subsumption) {
+                    cond3 =   s.isSubsumedBy(st)   //partialOrderStoreCompare(s, st)   
+                 cond4 =   pst.isSubsumedBy(pstt)//partialOrderStoreCompare(pst, pstt)  
+                }
+                else{
+                  cond3 = s.equal(st)
+                  cond4 = pst.equal(pstt)
+                }
+               
+                val cond5 =   (kptr.equals(kptrt) ) 
+                val cond6 = (t.equals( tt))
                 //println(stmt)
                 //println(stmti)
                // println(cond1.toString + " " + cond2.toString + " " + cond3.toString + " " + cond4.toString + " " + cond5.toString + " " + cond6.toString)
@@ -403,9 +440,10 @@ trait StateSpace  {
       } 
     
     // helper function that decide if a control is weaker than a set of (seen) states
-    def weakerThanAny(  seenStates: Set[ControlState]) : Boolean = {
+    def weakerThanAny(  seenStates: Set[ControlState], subsumption: Boolean) : Boolean = {
       val res = seenStates.filter(ss => {
-        this.weakerThan(ss)
+        this.weakerThan(ss, subsumption)
+        
       })
       ! res.isEmpty
     }
@@ -413,7 +451,7 @@ trait StateSpace  {
     
     def getStmtForEqual: Option[StForEqual] = {
       this match {
-      case ErrorState(_, _) | FinalState() => None
+      case ErrorState(_, _,_) | FinalState(_) => None
       case PartialState(st, fp, store, ps, kptr,  t) => {
         Some(st)
       }
@@ -485,7 +523,7 @@ trait StateSpace  {
     def taintedState : Boolean = {
       this match{
         case ps@PartialState(st, fp, s, pst, kptr, t) => {  
-             pStoreHasTaintVals(pst)
+             pst.pStoreHasTaintVals//(pst)
         }
         case _ => false
       } 
@@ -500,23 +538,28 @@ trait StateSpace  {
       } 
     }
     
-    def getCurStore: Store= {
+    
+    def getCurStore: Store = {
      this match{
         case ps@PartialState(st, fp, s, pst, kptr, t) => {  
             s
         }
-        case _ =>  ImmMap.empty
-      } 
+        case FinalState(st) => st.mkEmptyStore
+        case ErrorState(_, _, st) => st.mkEmptyStore
+      }
     }
+    
     
      def getCurPropertyStore: PropertyStore= {
      this match{
         case ps@PartialState(st, fp, s, pst, kptr, t) => {  
             pst
         }
-        case _ =>  ImmMap.empty
-      } 
-    }
+        case FinalState(st) => st.mkEmptyStore
+        case ErrorState(_, _, st) => st.mkEmptyStore
+      }     
+      
+     }
     
     //for widening
     def getCurFreq  : Int =  {
@@ -527,22 +570,38 @@ trait StateSpace  {
       case Some(stq) => Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningCounterTbl(stq)
     } 
   }
-    def getCurWidenedStore : (Store,  PropertyStore) = {
-      val stqO  = this.getStmtForEqual
-    stqO match {
-      case None => (ImmMap.empty, ImmMap.empty)
-      case Some(stq) => {
-        val tbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl
-        if(tbl.contains(stq)) {
-        	//Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl.foreach(println)
-        val (s, ps) = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl(stq) 
-        (s.asInstanceOf[Store], ps.asInstanceOf[PropertyStore]) 
-        }else{
-          (ImmMap.empty, ImmMap.empty)
+
+    def getCurWidenedStore: (Store, Store) = {
+      val stqO = this.getStmtForEqual
+
+      stqO match {
+        case None => {
+          this match {
+            case ps @ PartialState(st, fp, s, pst, kptr, t) => {
+              (s.mkEmptyStore, pst.mkEmptyStore)
+            }
+            case FinalState(st) => (st.mkEmptyStore, st.mkEmptyStore)
+            case ErrorState(_, _, st) => (st.mkEmptyStore, st.mkEmptyStore)
+          }
+        }  
+        case Some(stq) => {
+          val tbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl
+          if (tbl.contains(stq)) {
+            //Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl.foreach(println)
+            val (s, ps) = Thread.currentThread().asInstanceOf[AnalysisHelperThread].ppwWideningStoreTbl(stq)
+            (s.asInstanceOf[Store], ps.asInstanceOf[Store])
+          } else {
+            this match {
+              case ps @ PartialState(st, fp, s, pst, kptr, t) => {
+                (s.mkEmptyStore, pst.mkEmptyStore)
+              }
+              case FinalState(st) => (st.mkEmptyStore, st.mkEmptyStore)
+              case ErrorState(_, _, st) => (st.mkEmptyStore, st.mkEmptyStore)
+            }
+          }
         }
       }
     }
-  }
     
     // side effect the table
     def updateWideningFreqTbl {
@@ -582,10 +641,15 @@ trait StateSpace  {
   
  
  // case class PartialState(st: Stmt, fp: FramePointer, s: Store, kptr: KAddr, t:Time) extends ControlState
-  case class PartialState(st: StForEqual, fp: FramePointer, s: Store, ps: PropertyStore, kptr: KAddr, t:Time) extends ControlState
+  case class PartialState(st: StForEqual, fp: FramePointer, s: Store, ps: Store, kptr: KAddr, t:Time) extends ControlState {
+   override  def toString ={
+      
+      "Statement: " + st.oldStyleSt + "\n" + "fp: "+ fp.toString + "\n" +  "store: " + s
+    } 
+  }
   
-  case class FinalState() extends ControlState
-  case class ErrorState(s: Stmt, msg: String) extends ControlState
+  case class FinalState(s: Store) extends ControlState
+  case class ErrorState(s: Stmt, msg: String, st: Store) extends ControlState
  
 
   
@@ -610,8 +674,8 @@ trait StateSpace  {
    * Utility functions
    ******************************************************/
 // store compare
-  // s1 <= s2?
-  def partialOrderStoreCompare(s1: Store, s2: Store) : Boolean = {
+  // s1 <= s2? == s1.issubsumedBy
+ /* def partialOrderStoreCompare(s1: Store, s2: Store) : Boolean = {
     val res = s1.map(kv => {
       if(s2.contains(kv._1)){
         val absV2 = s2.get(kv._1)
@@ -630,48 +694,55 @@ trait StateSpace  {
     val l = s1.size
     val resL = res.size
     l == resL
-  }
-  def storeLookup(s: Store, a: Addr) : Set[Value] =
+  }*/
+  
+ 
+  
+  def storeLookup(s: Store, a: Addr) : D = //Set[Value] =
   {  
-    s.get(a) match {
-    case Some(x) => {
-      Debug.prntDebugInfo("Found value " , x)
-      x
-    }
-    case None => {
-      Debug.prntDebugInfo("Empty set ", Set() )
-      Set()
-    }
+    //import org.ucombinator.domains.GodelDomains._
+    
+//    s.get(a) match {
+//    case Some(x) => {
+//      Debug.prntDebugInfo("Found value " , x)
+//      x
+//    }
+//    case None => {
+//      Debug.prntDebugInfo("Empty set ", Set() )
+//      Set()
+//    }
     //case None => throw new SemanticException("StoreLookUp Exception: No values found for address" + a.toString())
+     s.getOrElse(a)
   }
-  }
-  
-  
-  def storeUpdate(s: Store, pairs: List[(Addr, Set[Value])]) = 
    
-      pairs.foldLeft(s)((accum, pair) => {
+  
+  
+  def storeUpdate(s: Store, pairs: List[(Addr, D)]) = //Set[Value])]) = 
+   s ++ pairs
+      /*pairs.foldLeft(s)((accum, pair) => {
       val (a, vs) = pair
-      val oldVals: Set[Value] = accum.getOrElse(a, Set())
-      val newVals: Set[Value] = oldVals ++ vs.filter(v => v != UnspecifiedVal)
+      val oldVals: D = accum.getOrElse(a)
+      val newVals: D = oldVals join vs.filterNot(UnspecifiedVal)
       Debug.prntDebugInfo("storeUpdate entry: ", (a, newVals))
-      accum + ((a, newVals))
-    })
+      accum + (a, newVals)
+    })*/
     
     // tmp use of the strong updates
-   def storeStrongUpdate(s: Store, pairs: List[(Addr, Set[Value])]) = {
+   def storeStrongUpdate(s: Store, pairs: List[(Addr, D)]) ={ //Set[Value])]) = {
      pairs.foldLeft(s)((accum, pair) => {
       val (a, vs) = pair
-      val oldVals: Set[Value] = accum.getOrElse(a, Set())
+      val oldVals: D = accum.getOrElse(a)
       // we dont care the original values in the store
-      val newVals: Set[Value] =  vs.filter(v => v != UnspecifiedVal)
+      val newVals: D =  vs.filterNot(UnspecifiedVal)
       Debug.prntDebugInfo("storeUpdate entry: ", (a, newVals))
-      accum + ((a, newVals))
+      accum + (a, newVals)
     })
   }
   
   /******
    * OK... just for the sake of concept clarity, here is duplicated code for Property store
-   */
+   * use storeLookup!!
+   *//*
    def pStoreLookup(s: PropertyStore, a: Addr) : Set[Value] =
   {  
     s.get(a) match {
@@ -709,7 +780,7 @@ trait StateSpace  {
       Debug.prntDebugInfo("storeUpdate entry: ", (a, newVals))
       accum + ((a, newVals))
     })
-  }
+  }*/
       
   /*******/
       
@@ -743,7 +814,7 @@ trait StateSpace  {
    * s1 is in the result, now you have got the s2's entry into the result
    * 
    */
-  def mergeTwoStores[K, V](s1: K :-> Set[V], s2: K :-> Set[V]): K :-> Set[V] = {
+/*  def mergeTwoStores[K, V](s1: K :-> Set[V], s2: K :-> Set[V]): K :-> Set[V] = {
     s2.foldLeft(s1)((resultStore: K :-> Set[V], keyValue: (K, Set[V])) => {
       // these are from s2
       val (k, vs) = keyValue
@@ -751,33 +822,52 @@ trait StateSpace  {
       val newValues = s1.getOrElse(k, Set())
       resultStore + ((k, vs ++ newValues))
     })
+  }*/
+   
+     def mergeTwoStores (s1: Store, s2: Store): Store = {
+       s1.join(s2)
+   /* s2.foldLeft(s1)((resultStore: K :-> Set[V], keyValue: (K, Set[V])) => {
+      // these are from s2
+      val (k, vs) = keyValue
+      // these are from s1
+      val newValues = s1.getOrElse(k, Set())
+      resultStore + ((k, vs ++ newValues))
+    })*/
   }
    
   // wil merge all the stores
- def mergeStores[K, V](
+/* def mergeStores[K, V](
      initial: K :-> Set[V], 
      newStores: List[K :-> Set[V]]): K :-> Set[V] = {
     newStores.foldLeft(initial)((result, current) =>
     mergeTwoStores(result, current))
+  }*/
+     
+      def mergeStores (
+     initial:Store, 
+     newStores: List[Store]): Store = {
+    newStores.foldLeft(initial)((result, current) =>
+    mergeTwoStores(result, current))
   }
   
-  def getMonovariantStore(states: Set[ControlState]): Addr:-> Set[Value] = {
+  def getMonovariantStore(states: Set[ControlState], store: Store): Store = {
     
+     
      val allRegularStores =  states.map {
       case PartialState(_, _, s, _,_,_) => s
      }
-     val emptyMonovariantStore : Addr :-> Set[Value] = ImmMap.empty
-    mergeStores(emptyMonovariantStore, allRegularStores.toList)
+     val  sss : List[Store] =  allRegularStores.toList
+    mergeStores(store.mkEmptyStore, sss)
   }
   
-   def getMonovariantPStore(states: Set[ControlState]): Addr:-> Set[Value] = {
+ /*  def getMonovariantPStore(states: Set[ControlState]): Addr:-> Set[Value] = {
     
      val allRegularStores =  states.map {
       case PartialState(_, _, _, pst,_,_) => pst
      }
      val emptyMonovariantStore : Addr :-> Set[Value] = ImmMap.empty
     mergeStores(emptyMonovariantStore, allRegularStores.toList)
-  }
+  }*/
   
       def filterRegisterStates (states: Set[ControlState]): Set[ControlState] = {
      states.filter({
@@ -794,12 +884,12 @@ trait StateSpace  {
    }
    
    // give a set of new states, filter out the ones that weaker than the seen set (which will be passed)
-   def getWeakerStates (possibleStates: Set[ControlState], seenStates: Set[ControlState]) : Set[ControlState] = {
+   def getWeakerStates (possibleStates: Set[ControlState], seenStates: Set[ControlState], subsumption: Boolean) : Set[ControlState] = {
      possibleStates.filter(ps => {
-        ps.weakerThanAny(seenStates)
+        ps.weakerThanAny(seenStates, subsumption)
      })
    }
-   
+    
    
 
   class SemanticException(s: String) extends Exception(s)

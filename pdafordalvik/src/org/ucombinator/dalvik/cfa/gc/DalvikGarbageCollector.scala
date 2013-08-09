@@ -2,41 +2,46 @@ package org.ucombinator.dalvik.cfa.gc
 import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.utils.Debug
 import org.ucombinator.dalvik.syntax.Stmt
+import org.ucombinator.domains.CommonAbstractDomains._
+import org.ucombinator.domains.CommonAbstractDomains
+  
+trait DalvikGarbageCollector extends StateSpace with 
+GarbageCollectorTrait {
 
-trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
 
   /**
    * The main GC interface
    */
   def gc(c:ControlState, frames: Kont) : ControlState = c match {
-    case ErrorState(_, _) | FinalState() => c
+    case ErrorState(_, _, _) | FinalState(_) => c
     case PartialState(st, fp, store, ps, kptr,  t) => {
       val livingAddrs = reachable(c, frames)
       
-      
-      val cleanStore = store.filter {
+      val map = store.getMap
+      val cleanMap = map.filter {
         case (a, _) => livingAddrs.contains(a)
       }
       
-      val cleanPStore = ps.filter {
+      val cleanPMap = ps.getMap.filter {
          case (a, _) => livingAddrs.contains(a)
       }
-      PartialState(st, fp, cleanStore, cleanPStore, kptr, t)
+      PartialState(st, fp, (store.mkEmptyStore ++ cleanMap),  (store.mkEmptyStore ++ cleanPMap), //cleanStore.asInstanceOf[ Store], cleanPStore.asInstanceOf[ Store], 
+          kptr, t)
     }
   }
   
   def reachable(c: ControlState, frames : Kont) : Set [Addr] = {
-    val rootAddresses: Set[Addr] = getRootAddrs(c, frames)
+    val rootAddresses: Set[ Addr] = getRootAddrs(c, frames)
    
     
     c match{
-      case ErrorState(_, _) | FinalState() => Set.empty
+      case ErrorState(_, _,_) | FinalState(_) => Set.empty
       case PartialState(st, fp, store, ps, kprt, t) => {
         val res : Set[Addr] = collectAdjacentAddrs(rootAddresses, store)
           Debug.prntDebugInfo("reachable : ", res)
         
         if(printGCDebug) {
-          val before = store.keys.toSet
+          val before = store.getMap.keys.toSet
           val delta = before -- res
           if(! delta.isEmpty) {
             Debug.prntDebugInfo("Before GC, the store size is", before.size)
@@ -67,7 +72,7 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
    */
  def getAddrsofCurFP(fp: FramePointer, s: Store) : Set[Addr] = {
    
-   s.foldLeft(Set[Addr]())((res : Set[Addr], kv) => kv._1 match {
+   s.getMap.foldLeft(Set[Addr]())((res : Set[Addr], kv) => kv._1 match {
      // case class RegAddr(fp: FramePointer, offs: String) e
      case RegAddr(ifp, offs) => {
        ifp match {
@@ -101,8 +106,8 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
    })
  }
  
- def AddrsofCurOP(op: ObjectPointer, s: Store) : Set[Addr] ={
-  s.foldLeft(Set[Addr]())((res : Set[Addr], kv) => kv._1 match {
+ def AddrsofCurOP(op: ObjectPointer, s:  Store) : Set[ Addr] ={
+  s.getMap.foldLeft(Set[Addr]())((res : Set[Addr], kv) => kv._1 match {
      //case class FieldAddr(op: ObjectPointer, field: String) extends OffsetAddr {
      case FieldAddr(iop, field) => {
        iop match {
@@ -122,18 +127,23 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
  /**
   * reach to all the object field address along with register addr
   */
-  def collectAdjacentAddrs (prevAddrs: Set[Addr], s: Store) : Set[Addr] ={
-    val filterStore = s.filter {
+  def collectAdjacentAddrs (prevAddrs: Set[ Addr], s:  Store) : Set[ Addr] ={
+    val filterStore = s.getMap.filter {
       case (a, vals) => prevAddrs.contains(a)
     }
     
     Debug.prntDebugInfo("Before Store is" + s, "the filter store is"+ filterStore)
     
-    val filterFlattenedVals = filterStore.flatMap {
-      case (a, vals) => vals
-    }
+//    val filterFlattenedVals = filterStore.flatMap {
+//      case (a, vals) => vals
+//    }
     
-    val reachedObjVals = filterFlattenedVals.filter {
+    val filterFlattenedVals = filterStore.foldLeft(s.mkDomainD())((res, kv)=>{
+      res join kv._2
+    }) 
+    
+    
+    val reachedObjVals = filterFlattenedVals.toList.filter {
         case ObjectValue(op, clsName) => true
         case _ => false
     }.toSet
@@ -144,7 +154,7 @@ trait DalvikGarbageCollector extends StateSpace with GarbageCollectorTrait {
       }
     }
     
-    val newAddrs : Set[Addr] = reachedOps.flatMap {
+    val newAddrs : Set[ Addr] = reachedOps.flatMap {
       op => AddrsofCurOP(op, s)
     }
     

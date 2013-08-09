@@ -4,12 +4,12 @@ import org.ucombinator.dalvik.syntax.{Stmt, ThrowStmt}
 import org.ucombinator.dalvik.exceptionhandling.ExceptionHandling
 import org.ucombinator.dalvik.syntax.StForEqual
 
-/**
- * @author shuying
- *
- */
 
-trait DalvikAnalysisStatistics extends StateSpace with ExceptionHandling{
+
+trait DalvikAnalysisStatistics extends //StateSpace with 
+ExceptionHandling{
+  
+  import org.ucombinator.domains.CommonAbstractDomains._
   /**
  * Large bulk of the code is about computing the points to information
  *
@@ -57,22 +57,29 @@ trait DalvikAnalysisStatistics extends StateSpace with ExceptionHandling{
   
   private def getPointsToElemPair(monoStore: Store) : ( Int, Int) = {
       def storeFilter(a: Any) : Boolean = true
-      val totalcardi =  monoStore.foldLeft(0)((sum, keyValue: (Addr, Set[Value])) => {
+      val totalcardi =  monoStore.getMap.foldLeft(0)((sum, keyValue: (Addr, D)) => {
        val (k, vs) = keyValue
        val cardi = vs.toList.length
        sum + cardi})
-      (monoStore.count(storeFilter), totalcardi)
+      (monoStore.getMap.count(storeFilter), totalcardi)
   }
    
   
   def computePointsToStatistics (states: Set[ControlState]) : (VarPointsTo, ThrowPointsTo) = {
+    val dymmyStoreforType = 
+    if(states.isEmpty) {
+      throw new Exception("no states to compute statistics")
+    }
+    else
+      states.first.getCurStore
+      
     val regularStates = filterRegisterStates(states)
     val thrownStates = filterThrownStates(states)
     
     //println("thrown states: ", thrownStates.toList.length)
     
-    val regularMonoStore = getMonovariantStore(regularStates)
-    val throwMonStore = getMonovariantStore(thrownStates)
+    val regularMonoStore = getMonovariantStore(regularStates, dymmyStoreforType)
+    val throwMonStore = getMonovariantStore(thrownStates, dymmyStoreforType)
     
     val (totalReguEntries, totalReguCardi) = getPointsToElemPair(regularMonoStore)
     val (totalThrownEntries,  totalThrownCardi) = getPointsToElemPair(throwMonStore)

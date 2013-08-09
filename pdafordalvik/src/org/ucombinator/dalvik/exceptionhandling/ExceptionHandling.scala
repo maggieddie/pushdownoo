@@ -13,6 +13,7 @@ import org.ucombinator.dalvik.statistics.Statistics
 
 trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual with LiveRegisterAnalysis{
 
+  import org.ucombinator.domains.CommonAbstractDomains._
    type Kont = List[Frame]
   
   type Time = List[Stmt]
@@ -25,7 +26,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
   /**********
    * to inject faults
    **********/
-  case class InjectThrownStmt(exnValues: Set[Value], nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
+  case class InjectThrownStmt(exnValues: D, nxt: Stmt, ls: Stmt, clsP: String, methP: String) extends Stmt {
  	 var next = nxt
  	 var lineNumber = ls
   
@@ -155,7 +156,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        val exnOp = ObjectPointer(t, p._1, st.lineNumber) // XX: NOTE: supposed we always can refernce to the line number here!
        val objVal = ObjectValue(exnOp, p._1)
        // so you see, the newly generated injstmt, the next stmt is StmtNil
-       val injStmt = InjectThrownStmt(Set(objVal), p._2, linNO, clsP, methP)
+       val injStmt = InjectThrownStmt(s.mkDomainD(objVal), p._2, linNO, clsP, methP)
        res ::: List(injStmt)
     })
     injectFaultStates(injStmtLsts, fp, s, pst, kptr, t, st,k)
@@ -197,7 +198,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
        val objVal = ObjectValue(exnOp, inTyStr)
        // so you see, the newly generated injstmt, the next stmt is StmtNil
        // but we are going to test on the lineNO later in the state with InjectThrownStmt
-       val injStmt = InjectThrownStmt(Set(objVal), StmtNil, linNO, clsP, methP)
+       val injStmt = InjectThrownStmt(s.mkDomainD(objVal), StmtNil, linNO, clsP, methP)
       
        res ::: List(injStmt)
     })
@@ -254,7 +255,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
       objValues.foldLeft(Set[Conf]())((res, absV) => {
          val clsName = classTypeOfAbsObject(absV)
       res ++ //dealWithOnePossibleExnValue(ts, absV, s, fp, kptr, t, k,objValues)
-      handleHandleFrame(ps, handlerType, handleExnType, lbl, clsName ,  Set(absV), 
+      handleHandleFrame(ps, handlerType, handleExnType, lbl, clsName ,  s.mkDomainD(absV), 
      k, fp, s, pst, kptr, t, ts) 
     })
    }
@@ -272,7 +273,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
           * if found any handler, then branches to it; otherwise, uncaught state will be forked
           */
          if(CommonUtils.isAnnoThrownLineStmt(lineS)) {
-           dealWithAllPossibleExnValues(itS, itS.exnValues.map(_.asInstanceOf[AbstractObjectValue]), s, pst, fp, kptr, t, k, clsP, methP)
+           dealWithAllPossibleExnValues(itS, s.mkDomainD(itS.exnValues.toList.map(_.asInstanceOf[AbstractObjectValue]): _*), s, pst, fp, kptr, t, k, clsP, methP)
          }
          /**
           * This is used to branch into all the catch handlers.
@@ -311,16 +312,16 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
   /**
    * To deal one Exception Value
    */
-  private def dealWithOnePossibleExnValue(ijt: Stmt, exnValue: Value, s: Store, pst: PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, allAbsVals:Set[Value], clsP:String, methP: String): Set[Conf] = {
+  private def dealWithOnePossibleExnValue(ijt: Stmt, exnValue: Value, s: Store, pst: PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, allAbsVals:D, clsP:String, methP: String): Set[Conf] = {
     val clsName = classTypeOfAbsObject(exnValue)
-    handleThrown(clsName, Set(exnValue), k, fp, s, pst, kptr, t, ijt, allAbsVals,clsP, methP )
+    handleThrown(clsName, s.mkDomainD(exnValue), k, fp, s, pst, kptr, t, ijt, allAbsVals,clsP, methP )
   }
   
  
   
-   def dealWithAllPossibleExnValues(ijt: Stmt, allExnVals: Set[Value], s: Store, pst:PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
+   def dealWithAllPossibleExnValues(ijt: Stmt, allExnVals: D, s: Store, pst:PropertyStore, fp: FramePointer, kptr: KAddr, t: Time, k: Kont, clsP: String, methP: String): Set[Conf] = {
    
-     allExnVals.foldLeft(Set[Conf]())((res, absV) => {
+     allExnVals.toList.foldLeft(Set[Conf]())((res, absV) => {
       res ++ dealWithOnePossibleExnValue(ijt, absV, s, pst, fp, kptr, t, k,allExnVals, clsP, methP)
     })
   }
@@ -341,7 +342,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    * Oh, along the way, it also pops out all the function kontinuation. if it is not found 
    *        
    */
- private def handleThrown(exnType: String,  exnValue: Set[Value], k: Kont, fp: FramePointer, s: Store, pst:PropertyStore,  kptr: KAddr, t: Time, ijt: Stmt, allVals:Set[Value], clsP: String, methP: String) : Set[Conf] = {
+ private def handleThrown(exnType: String,  exnValue: D, k: Kont, fp: FramePointer, s: Store, pst:PropertyStore,  kptr: KAddr, t: Time, ijt: Stmt, allVals:D, clsP: String, methP: String) : Set[Conf] = {
    val tp = tick(List(ijt), t)
    k match {
      // There should be the one last function kontinuation on the stack we popped out all the handleframe.
@@ -422,7 +423,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
      }
  }
  
- def handleHandleFrame(ps: PartialState, handlerType:String, handleExnType:String, lbl:String, exnType: String,  exnValue: Set[Value], 
+ def handleHandleFrame(ps: PartialState, handlerType:String, handleExnType:String, lbl:String, exnType: String,  exnValue: D, 
      k: Kont, fp: FramePointer, s: Store, pst: PropertyStore, kptr: KAddr, t: Time, ijt: Stmt) : Set[Conf] = {
      val tp = tick(List(ijt), t)
     //  println(" gonna catch the type: ", exnType)
@@ -475,7 +476,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
    
  }
  
- private def getProperStmt(curSt: Stmt, vals:Set[Value]) : Stmt = {
+ private def getProperStmt(curSt: Stmt, vals:D) : Stmt = {
    curSt match {
      case ijs@InjectThrownStmt(vals, _, _,_,_) => {
        ijs
@@ -522,7 +523,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
 
       if (!sameTypeFrames.isEmpty) {
         Debug.prntDebugInfo("Same exception type" + clsName + " number: ", sameTypeFrames.length)
-        val newStore = storeUpdate(s, List((fp.offset("exn"), Set(objV))))
+        val newStore = storeUpdate(s, List((fp.offset("exn"), s.mkDomainD(objV))))
         Debug.prntDebugInfo("@updated store: ", newStore)
         // It is expected to be one,so we grab one
         val nextSO = Stmt.forLabel(sameTypeFrames.head.handlerLabel)
@@ -535,7 +536,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
 
       } else if (!superTypeFrames.isEmpty) {
         Debug.prntDebugInfo("Super exception type" + clsName + " number: ", superTypeFrames.length)
-        val newStore = storeUpdate(s, List((fp.offset("exn"), Set(objV))))
+        val newStore = storeUpdate(s, List((fp.offset("exn"), s.mkDomainD(objV))))
         Debug.prntDebugInfo("@updated store: ", newStore)
         // It is expected to be one,so we grab one
         val nextSO = Stmt.forLabel(superTypeFrames.head.handlerLabel)

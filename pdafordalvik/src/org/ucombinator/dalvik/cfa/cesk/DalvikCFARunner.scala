@@ -3,8 +3,9 @@ package org.ucombinator.dalvik.cfa.cesk
 import org.ucombinator.utils._
 import org.apache.commons.lang3.StringEscapeUtils 
 
-abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) with StateSpace with FancyOutput  {
-
+abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) //with StateSpace 
+with FancyOutput  {
+ import org.ucombinator.domains.CommonAbstractDomains._
 
   def prettyPrintState(state: ControlState, map: Map[ControlState, Int]): String = {
     val result: String = if (simplify) {
@@ -23,8 +24,8 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
           "\\n" + kptr.toString +
           "\\n" + t.toString)*/
       }
-      case FinalState() => "Final(" + ")"
-      case ErrorState(_, _) => "ErrorState"
+      case FinalState(_) => "Final(" + ")"
+      case ErrorState(_, _,_) => "ErrorState"
     }
     StringEscapeUtils.escapeJava(result)
   }
@@ -44,22 +45,22 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
          
         
       }
-      case FinalState() => "Final(" + ")"
-      case ErrorState(_, _) => "ErrorState"
+      case FinalState(_) => "Final(" + ")"
+      case ErrorState(_, _, _) => "ErrorState"
     }
     StringEscapeUtils.escapeJava(result)
   }
   
   private def prettyPrintStore(store: Store) : String = {
    StringEscapeUtils.escapeJava( 
-    store.foldLeft("")((res, kv) => {
+    store.toList.foldLeft("")((res, kv) => {
       val addr = kv._1
       val valSet = kv._2
      
       res +
       "* Addr:          " + addr + 
       "<br>" + "* Abstract Values: " + 
-      "<br>" + "     " + valSet.foldLeft("")((res2, v) => res2 + v + "</br>")+ "<br>" 
+      "<br>" + "     " + valSet.toList.foldLeft("")((res2, v) => res2 + v + "</br>")+ "<br>" 
     })
     )
   }
@@ -84,8 +85,8 @@ abstract class DalvikCFARunner(opts: AIOptions) extends AnalysisRunner(opts) wit
            "<br></br>" + t.toString + 
           "<br></br>"
       }
-      case FinalState() => "<br></br>"+ "Final(" + ")"
-      case ErrorState(_, _) => "<br></br>" + "ErrorState"
+      case FinalState(_) => "<br></br>"+ "Final(" + ")"
+      case ErrorState(_, _, _) => "<br></br>" + "ErrorState"
     }
     StringEscapeUtils.escapeJava(result)
   }

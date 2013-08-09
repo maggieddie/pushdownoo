@@ -9,7 +9,7 @@ import org.ucombinator.dalvik.syntax.StForEqual
 
 trait RawStringLibsAI extends StateSpace with CESKMachinary{
 
- 
+ import org.ucombinator.domains.CommonAbstractDomains._
   
   
    def isStringBulder(clsName: String) : Boolean = 
@@ -25,8 +25,9 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
      if(methPath == "java/lang/String/valueOf") true else false
   }*/
     
-  private def conservativeUpdateObjStore(s: Store, objVals: Set[ObjectValue], vals: Set[Value]): Store = {
-    objVals.foldLeft(s)((resS, objVal) => {
+  private def conservativeUpdateObjStore(s: Store, objVals: D, vals: D): Store = {
+    objVals.toList.foldLeft(s)((resS, objValv) => {
+      val objVal = objValv.asInstanceOf[ObjectValue]
       val objPointer = objVal.op
       val valueAddr = objPointer.offset("value")
       Debug.prntDebugInfo("the entry added to store for the init stringbuilder  object", (valueAddr, vals))
@@ -41,13 +42,13 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
    * and the return value will be bounded to all the the objVals. 
    * This sucks. the object pointers (values) for string will be many
    */
-  def handleStringBuilderAppend(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
-  val objVals = filterStrBuilderObjVals(objValss)
+  def handleStringBuilderAppend(invokS: Stmt, argRegExps: List[AExp], objValss: D, ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+  val objVals = filterStrBuilderObjVals(objValss, s)
    Debug.prntDebugInfo("the stringbuilder object values length is ", objVals.toList.length)
-   val newStore = conservativeUpdateObjStore(s, objVals, Set(StringTop))
+   val newStore = conservativeUpdateObjStore(s, objVals, s.mkDomainD(StringTop))
    val retAddr  = fp.offset("ret")
    // if we cast the object value to the parent type, what will happen?
-   val newStore2 = storeUpdate(newStore, List((retAddr, objVals.map(_.asInstanceOf[Value]))))
+   val newStore2 = storeUpdate(newStore, List((retAddr, s.mkDomainD(objVals.toList.map(_.asInstanceOf[Value]): _*))))
    Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore2, pst, kptr, tp), k)))
  }
  
@@ -56,28 +57,30 @@ trait RawStringLibsAI extends StateSpace with CESKMachinary{
   * there is one argument, which is refering to the string object pointer
   * we will get the "value" of the objPointer, and extend the store for the (ret,fp)
   */
-  def handleStringValueof(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
-   val strobjvals = filterStrObjVals(objVals)
+  def handleStringValueof(invokS: Stmt, argRegExps: List[AExp], objVals: D, ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+   val strobjvals = filterStrObjVals(objVals, s)
     Debug.prntDebugInfo(" filtered String object length " + strobjvals.toList.length , strobjvals)
     
     // this gonna join  the "value" from all the OP in the objVals
-    val newValues = strobjvals.foldLeft(Set[Value]())((resV, objVal) => {
+    val newValues = strobjvals.toList.foldLeft(s.mkDomainD())((resV, objValv) => {
+      val objVal = objValv.asInstanceOf[ObjectValue]
       val strOp = objVal.op
       val valueAddr = strOp.offset("value")
-      resV ++ storeLookup(s,valueAddr)
+      resV join storeLookup(s,valueAddr)
     })
     
     val newStore = storeUpdate(s, List((fp.offset("ret"), newValues)))
      Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
  }
  
-   def handleStringBuilderInit(invokS: Stmt, argRegExps: List[AExp], objValss: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
-    val objVals = filterStrBuilderObjVals(objValss)
+   def handleStringBuilderInit(invokS: Stmt, argRegExps: List[AExp], objValss: D //Set[ObjectValue]
+   , ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+    val objVals = filterStrBuilderObjVals(objValss, s)
     val strBuilderOp = ObjectPointer(t, "java/lang/StringBuilder", ls)
     val arglen = argRegExps.length
     arglen match {
       case 0 => {
-        val newStore = conservativeUpdateObjStore(s, objVals, Set(StringLit("")))
+        val newStore = conservativeUpdateObjStore(s, objVals, s.mkDomainD(StringLit("")))
         Set(((PartialState(StForEqual(realN, realN.next, realN.clsPath, realN.methPath,realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
       }
       case 1 => {

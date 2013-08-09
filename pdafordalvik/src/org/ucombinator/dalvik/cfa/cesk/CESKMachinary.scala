@@ -19,35 +19,36 @@ import org.ucombinator.utils.CommonUtils.HeatPair
 
 trait CESKMachinary extends StateSpace with DalvikVMRelated {
 
+  import org.ucombinator.domains.CommonAbstractDomains._
  /*****************
   * Utility Functions 
   *****************/
 
   
-  def atomEval(ae: AExp, fp: FramePointer, s:Store) : Set[Value] = {
+  def atomEval(ae: AExp, fp: FramePointer, st: Store) : D = {// Set[Value] = {
     ae match {
       case BooleanExp(s) => {
         s.toString() match {
-          case "#t" => Set( BoolTop )
-          case "#f" => Set( BoolTop)
+          case "#t" => st.mkDomainD(BoolTop)  //Set( BoolTop )
+          case "#f" => st.mkDomainD(BoolTop)// Set( BoolTop)
         }
       }
       case IntExp(si) => {
         //here we go: return the number as top
-        Set(NumTop)
+        st.mkDomainD(NumTop)
        // Set( IntValue(si.value))
       }
-      case n: NullExp => Set(new NullValue)
-      case ve: VoidExp => Set(new VoidValue)
+      case n: NullExp => st.mkDomainD(new NullValue)
+      case ve: VoidExp => st.mkDomainD(new VoidValue)
       
       case re@(RegisterExp(sv)) => {
        val regAddr =  fp.offset(re.regStr)
-       storeLookup(s,regAddr)
+       storeLookup(st,regAddr)
       }
       
       // For string exp evaluation
       case sle@StringLitExp(_) => {
-       Set(StringLit(sle.strLit))
+       st.mkDomainD(StringLit(sle.strLit))
       }
       //case FieldExp(fieldPath, fieldType) => {
         
@@ -190,14 +191,15 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
 
   }
   
-  def filterObjValues(objs: Set[Value]) : Set[ObjectValue] = {
+  def filterObjValues(objs: D, s: Store) : D = {//Set[ObjectValue] = {
     val vs = 
-      objs filter ((o: Value) => o match {
+      objs.toList filter ((o: Value) => o match {
       case ob@(ObjectValue(_,_)) => true
      // case ObjectSomeTop(_) => true // should we need this at all? yes. we need to pass the topObject around.
       case _ => false
     })
-    vs.map(_.asInstanceOf[ObjectValue])
+  
+     s.mkDomainD(vs.map(_.asInstanceOf[ObjectValue]): _*)
    /*vs.map ((s)=>{
      s match {
        case ob@(ObjectValue(_,_)) => {s.asInstanceOf[ObjectValue]}
@@ -206,16 +208,16 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
    })*/
   }
   
-  def filterStrObjVals(objVals: Set[ObjectValue]) : Set[ObjectValue] ={
-    objVals.filter(_.className == "java/lang/String")
+  def filterStrObjVals(objVals: D, s: Store) : D ={
+    s.mkDomainD(objVals.toList.filter(_.asInstanceOf[ObjectValue].className == "java/lang/String"): _*)
   }
   
-  def filterStrBuilderObjVals(objVals: Set[ObjectValue]) : Set[ObjectValue] ={
-    objVals.filter(_.className == "java/lang/StringBuilder")
+  def filterStrBuilderObjVals(objVals: D, s: Store) : D ={
+    s.mkDomainD(objVals.toList.filter(_.asInstanceOf[ObjectValue].className == "java/lang/StringBuilder") : _*)
   }
   
-  def filterClassObjVals(objVals: Set[ObjectValue]) : Set[ObjectValue] ={
-     objVals.filter(_.className == "java/lang/Class")
+  def filterClassObjVals(objVals: D, s: Store) : D ={
+     s.mkDomainD(objVals.toList.filter(_.asInstanceOf[ObjectValue].className == "java/lang/Class"): _*)
   }
   
   // used in instance method call: entry point invoking
@@ -270,12 +272,13 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
       case (path, ftype) => op.offset(path)
     }
     
-    val ps = fieldOffsets map ((_, Set[Value]()))
+    val ps = fieldOffsets map ((_, s.mkDomainD()))//Set[Value]()))
     //storeUpdate(s, ps) strong update
     storeStrongUpdate(s,ps)
   }
   
-  def initObjectProperty(classPath: String, pst: PropertyStore, op: ObjectPointer, securityValues: Set[Value]) : PropertyStore ={
+  def initObjectProperty(classPath: String, pst: PropertyStore, op: ObjectPointer, securityValues: D //Set[Value]
+  ) : PropertyStore ={
      val fieldPathStrs = getFieldTypeStrs(classPath)
     val fieldOffsets = fieldPathStrs.map {
       case (path, ftype) => op.offset(path)
@@ -283,7 +286,8 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     
     val ps = fieldOffsets map ((_, securityValues))
     //storeUpdate(s, ps) strong update
-    pStoreStrongUpdate(pst,ps)
+   
+     storeStrongUpdate(pst,ps) 
   }
   
   
@@ -294,11 +298,11 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
 	    // println(strName + "sourceOrsink" + sourceOrSinkLevel)
 		   //val securityValue = SecurityValue(stForEqual.clsPath, stForEqual.methPath, stForEqual.lineSt, strName, sourceOrSinkLevel)
 		   //val bindings = targetAddrs.map((_, Set(securityValue.asInstanceOf[Value])))
-	     val bindings = targetAddrs.map((_, genTaintKindValueFromStmt(stForEqual.oldStyleSt)))
+	     val bindings = targetAddrs.map((_, pst.mkDomainD(genTaintKindValueFromStmt(stForEqual.oldStyleSt, pst).toList: _*)))
 		   if(strongUpdate)
-		        pStoreStrongUpdate(pst, bindings) 
+		        storeStrongUpdate(pst, bindings) 
 		   else
-		     pStoreUpdate(pst, bindings) 
+		     storeUpdate(pst, bindings) 
 	   }else{
 		   pst
 	   }
@@ -309,8 +313,8 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
               
  
    def canHaveEmptyContinuation(c: ControlState) = c match {
-    case FinalState() => true
-    case ErrorState(_, _) => true
+    case FinalState(_) => true
+    case ErrorState(_, _, _) => true
     /**
      * Be careful with the following!
      * when can the parital state have empty continuation?
@@ -322,7 +326,7 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
   }
 
   def mustHaveOnlyEmptyContinuation(c: ControlState) = c match {
-    case FinalState() => true
+    case FinalState(_) => true
     case _ => false
   }
   

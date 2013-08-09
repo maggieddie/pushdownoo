@@ -39,7 +39,10 @@ class AIOptions {
 
   var timeInterrupt: Boolean = false
   var interruptAfterTime: Long = 900000
-  var doLRA = true 
+  var doLRA = false 
+  
+  var godel = false
+  
   var doRegex = false
   var regex: Regex = null
 
@@ -147,6 +150,11 @@ object AIOptions {
         opts.analysisType = AnalysisType.PDCFA
         parse(rest, opts)
       }
+      
+      case "--godel" :: rest => {
+        opts.godel = true
+        parse(rest,opts)
+      }
 
       case "--gc" :: rest => {
         opts.gc = true
@@ -167,8 +175,7 @@ object AIOptions {
        case "--aco" ::  rest => {
          opts.aco = true 
          parse(rest, opts)
-       }
-
+       } 
       case "--gcDebug" :: rest => {
         opts.gcDebug = true
         parse(rest, opts)

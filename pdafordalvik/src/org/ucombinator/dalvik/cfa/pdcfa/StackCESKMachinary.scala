@@ -17,6 +17,7 @@ import org.ucombinator.playhelpers.AnalysisHelperThread
 
 trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
 
+  import org.ucombinator.domains.CommonAbstractDomains._
   //type Kont = List[Frame]
 
   // StackCESK machine has no continuation pointer
@@ -154,7 +155,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         if (isExternalLibCalls(methPath)) {
           val strRegExp = argRegExps.head
           val possibleValues = atomEval(strRegExp, fp, s)
-          val objVals = filterObjValues(possibleValues)
+          val objVals = filterObjValues(possibleValues, s)
           handleExternalLibCalls(methPath, ivkS, argRegExps, List(),  objVals, ls, s, pst, realN, fp: FramePointer, kptr, t, tp, k, ste)
         } /**
            * in the calling API with exceptions thrown, one brach is continue, normal case.
@@ -314,7 +315,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
           val newOP = ObjectPointer(t, clsName, newS.lineNumber)
           val objVal = ObjectValue(newOP, clsName)
           // modified to do strong update
-          val newStore = storeStrongUpdate(s, List((destAddr, Set(objVal))))
+          val newStore = storeStrongUpdate(s, List((destAddr, s.mkDomainD(objVal))))
           	// the propertyStore should also be strongupdated
           val newPStore = propagatePStore(pst, clsName , sfq ,  List(destAddr ), true )  
          // val newPStore = storeStrongUpdate(pst)
@@ -325,12 +326,12 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
           val newOP = ObjectPointer(t, clsName, newS.lineNumber)
           val objVal = ObjectValue(newOP, clsName)
           
-          val newStore = storeUpdate(s, List((destAddr, Set(objVal))))
+          val newStore = storeUpdate(s, List((destAddr, s.mkDomainD(objVal))))
            val newStore2 = initObject(newS.classPath, newStore, newOP) 
            
            if(newS.sourceOrSink > 0) {
         	   // val objSecurityValue = SecurityValue(sfq.clsPath, sfq.methPath,  newS.lineNumber, newS.classPath, newS.sourceOrSink) 
-        	   val objSecuVals = genTaintKindValueFromStmt(sfq.oldStyleSt)
+        	   val objSecuVals = genTaintKindValueFromStmt(sfq.oldStyleSt,s)
         	   val newPStore = propagatePStore(pst, sfq.clsPath , sfq ,  List(destAddr ), false )  
         	   /**
         	    * The taint store here, currently we will progagate the object's property to the all its field 
@@ -438,11 +439,11 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
               val retAddr = getReturnOffSet(fpCaller)
               val retVal = atomEval(resultAe, fp, s)
               val retRegStr = getRegExpStr(resultAe)
-              val retPropertyVals = pStoreLookup(pst, fp.offset(retRegStr))
+              val retPropertyVals = storeLookup(pst, fp.offset(retRegStr))
               
           //    val newStore = storeUpdate(s, List((retAddr, retVal)))
                val newStore = storeStrongUpdate(s, List((retAddr, retVal)))
-               val newPStore = pStoreUpdate(pst, List((retAddr, retPropertyVals)))
+               val newPStore = storeUpdate(pst, List((retAddr, retPropertyVals)))
               val newState = (PartialState(buildStForEqual(realCallerNext ), fpCaller, newStore,   newPStore,
                   kptr, tp), k)
 
@@ -552,9 +553,9 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val curObjAddrOffset = fp.offset(objRegStr)
         val possibleObjVals = storeLookup(s, curObjAddrOffset)
 
-        val curObjVals = filterObjValues(possibleObjVals)
+        val curObjVals = filterObjValues(possibleObjVals, s)
 
-        Statistics.recordCallObjs(stq, curObjVals.map(_.toString))
+        Statistics.recordCallObjs(stq, curObjVals.toList.map(_.toString))
         
         if (curObjVals.isEmpty) {
        
@@ -562,12 +563,21 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         } else {
           println("**************** Current EntryPointInvoke Statement is: ", eS)
           println("********* numbers of objects:", curObjVals.toList.length)
-          curObjVals.map((curObjVal) => {
+       
+          curObjVals.toList.foldLeft(Set[Conf]())((res, curObjValv)=>{
+            val curObjVal = curObjValv.asInstanceOf[ObjectValue]
+            val absValues =  argTypeList.map(typeToTopValue(_, curObjVal.op, s)) 
+           
+            Debug.prntDebugInfo("@@EntryPointInvokeStmt: abs ", absValues.length)
+            res ++ applyMethod(stq, true, en.body, en.regsNum, Some(curObjVal), fp, s, pst,  k, List(RegisterExp(SName.from(objRegStr))), List(), absValues, t, eS, realN, kptr)
+          })
+          /*((curObjValv) => {
+            val curObjVal = curObjValv.asInstanceOf[ObjectValue]
             val absValues = argTypeList.map(typeToTopValue(_, curObjVal.op))
            
             Debug.prntDebugInfo("@@EntryPointInvokeStmt: abs ", absValues.length)
             applyMethod(stq, true, en.body, en.regsNum, Some(curObjVal), fp, s, pst,  k, List(RegisterExp(SName.from(objRegStr))), List(), absValues, t, eS, realN, kptr)
-          }).flatten
+          }).flatten*/
         }
       }
 
@@ -594,11 +604,11 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val objVal = ObjectValue(newOP, entryClassName)
 
         // instantiate the class field map ... does strong update on the register help?
-        val newStore = storeStrongUpdate(s, List((thisRegExpOffset, Set(objVal))))
+        val newStore = storeStrongUpdate(s, List((thisRegExpOffset, s.mkDomainD(objVal))))
         // initialize the fields of the currnet class and return new store?
         val newStore2 = initObject(entryClassName, newStore, newOP)
 
-        val absValues = argsTypes.map(typeToTopValue(_, newOP))
+        val absValues = argsTypes.map(typeToTopValue(_, newOP,s))
         Debug.prntDebugInfo("New Object Created at entry init :" + ieS, (thisRegExpOffset, Set(objVal)))
         applyMethod(stq,true, body, regsNum, Some(objVal), fp, newStore2, pst, k, List(RegisterExp(SName.from(thisRegStr))), List(), absValues, t, ieS, realN, kptr)
       }
@@ -607,14 +617,14 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         updateHeatMap(stq)
         Debug.prntDebugInfo("@StmtNil: empty Nil ", "")
         Debug.prntDebugInfo("curstore is: ", s)
-        Set((FinalState(), Nil))
+        Set((FinalState(s), Nil))
       }
       case c @ (ps @ PartialState(stq@StForEqual(StmtNil, nsxx, line, clsPP, methPP), fp, s, pst, kptr, t), k) => {
        updateHeatMap(stq)
         Debug.prntDebugInfo("@StmtNil: The parital state has reached the StmtNil! but there are more kontinuations.", k.toList.length)
         // Debug.prntDebugInfo("Next is: ", nxt)
         Debug.prntDebugInfo("curstore is: ", s)
-        Set((FinalState(), Nil))
+        Set((FinalState(s), Nil))
       }
       //for unhandled instructions, move forward to the next stmt
       case c @ (ps @ PartialState(stq@StForEqual(stmt, nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
@@ -631,7 +641,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       /**
        * Alright, let's get out
        */
-      case (FinalState(), Nil) => Set()
+      case (FinalState(_), Nil) => Set()
 
     }
   }

@@ -49,9 +49,9 @@ object Statistics {
   //callSite Points to
    var callObjsTbl: ImmMap[StForEqual, Set[String]] = ImmMap()
   
-  def recordCallObjs (throwSt: StForEqual, exnObjNum: Set[String]) {
+  def recordCallObjs (throwSt: StForEqual, exnObjNum: List[String]) {
      val oldObjs  = callObjsTbl.getOrElse(throwSt, Set())
-      callObjsTbl += (throwSt ->  (exnObjNum ++ oldObjs) )
+      callObjsTbl += (throwSt ->  (exnObjNum.toSet ++ oldObjs) )
   }
   
   def totalAndMeanCallObjs: (Int, Double) = {

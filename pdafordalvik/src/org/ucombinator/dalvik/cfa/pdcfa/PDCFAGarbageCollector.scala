@@ -11,13 +11,14 @@ import org.ucombinator.dalvik.syntax.AssignAExpStmt
 import org.ucombinator.dalvik.syntax.AutomicOpExp
 import org.ucombinator.playhelpers.AnalysisHelperThread
 
+import org.ucombinator.domains.CommonAbstractDomains.Addr
 
 trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachinary with StmtForEqual {
   
    def getRootAddrs(c: ControlState, frames: List[Frame]): Set[Addr] = {
      
     val  addrsOfStateFP = c match {
-       case ErrorState(_,_) | FinalState() => Set.empty
+       case ErrorState(_,_,_) | FinalState(_) => Set.empty
        case ps@PartialState(StForEqual(stmt, nxss, lss, clsP, methP), curFP, store, pst, kptr, t) => {
          //getAddrsofCurFP(curFP, store)
          //turn to the following!!
@@ -32,7 +33,7 @@ trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachina
      }
  
     val stackAddrs : Set[Addr] = c match {
-       case ErrorState(_,_) | FinalState() => Set.empty
+       case ErrorState(_,_,_) | FinalState(_) => Set.empty
        case PartialState(stmt, curFP, store, ps, kptr, t) => {
           frames.foldLeft(Set[Addr]())((res: Set[Addr], f: Frame) => {
             val sf = getRootAddrsFromStack(f,store)

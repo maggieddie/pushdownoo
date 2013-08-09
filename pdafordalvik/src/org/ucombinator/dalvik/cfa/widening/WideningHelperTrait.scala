@@ -5,6 +5,7 @@ import org.ucombinator.dalvik.cfa.cesk.StmtForEqual
 
 trait WideningHelperTrait extends StateSpace with StmtForEqual{
 
+  import org.ucombinator.domains.CommonAbstractDomains.Store
    type Kont = List[Frame]
     // StackCESK machine has no continuation pointer
   type KAddr = Unit

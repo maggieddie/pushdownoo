@@ -9,6 +9,7 @@ import org.ucombinator.dalvik.syntax.StForEqual
 
 trait ReflectionAI extends StateSpace with CESKMachinary{
 
+  import org.ucombinator.domains.CommonAbstractDomains._
   
   /**
    * This will get the field "name" , which is a string object value, and extend
@@ -17,15 +18,16 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
    * Note that all the string objects are join together
    * */
   
-  def handleClassGetName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
-    val classObjVals = filterClassObjVals(objVals)
+  def handleClassGetName(invokS: Stmt, argRegExps: List[AExp], objVals: D, ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+    val classObjVals = filterClassObjVals(objVals, s)
     Debug.prntDebugInfo("the filtered class object is.length " + invokS.toString() , classObjVals.toList.length)
     
-    val resStrValues = classObjVals.foldLeft(Set[Value]())((res, classObjVal) => {
+    val resStrValues = classObjVals.toList.foldLeft(s.mkDomainD())((res, classObjValv) => {
+      val classObjVal = classObjValv.asInstanceOf[ObjectValue]
       val op = classObjVal.op
       val nameAddr = op.offset("name")
       val strVals = storeLookup(s, nameAddr)
-      res ++ strVals
+      res join strVals
     })
     
     val newStore = storeUpdate(s, List((fp.offset("ret"), resStrValues)))
@@ -36,8 +38,8 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
    * this will generate a class object on the heap, with the name updated to string reference of the classname
    * the class object value will be placed on the ret 
    */
-  def handleClassForName(invokS: Stmt, argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
-     val classObjVals = filterClassObjVals(objVals)
+  def handleClassForName(invokS: Stmt, argRegExps: List[AExp], objVals: D, ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+     val classObjVals = filterClassObjVals(objVals, s)
      Debug.prntDebugInfo("the filtered class object is.length " + invokS.toString() , classObjVals.toList.length)
     
      // the argument gotta be of length 1
@@ -45,7 +47,7 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
        throw new CESKException("the length of the argument of class forName is not 1")
      }else {
        val argVals = atomEval( argRegExps.head, fp, s)
-       val strVals = filterStrObjVals(filterObjValues(argVals))
+       val strVals = filterStrObjVals(filterObjValues(argVals, s), s)
        
         val objPointerCls = ObjectPointer(t, "java/lang/Class", ls)
         	val objValCls = ObjectValue(objPointerCls, "java/lang/Class")
@@ -54,7 +56,7 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
          * damn it, there is another invariant problem. 
          * I'm just do crude conversion here, 'cos it is safe
          */
-        val newStore = storeUpdate(s, List((clsFieldAddr, strVals.map(_.asInstanceOf[Value]) ), (fp.offset("ret"), Set(objValCls))))
+        val newStore = storeUpdate(s, List((clsFieldAddr, s.mkDomainD(strVals.toList.map(_.asInstanceOf[Value]): _*)), (fp.offset("ret"), s.mkDomainD(objValCls))))
           Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, newStore, pst, kptr, tp), k)))
      }
   }

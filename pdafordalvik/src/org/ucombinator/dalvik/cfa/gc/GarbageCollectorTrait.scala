@@ -3,7 +3,7 @@ package org.ucombinator.dalvik.cfa.gc
 
 trait GarbageCollectorTrait  {
 
-  type Addr
+  import org.ucombinator.domains.CommonAbstractDomains.Addr
   
   type ControlState
   

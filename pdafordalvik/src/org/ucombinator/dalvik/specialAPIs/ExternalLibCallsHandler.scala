@@ -10,8 +10,10 @@ import org.ucombinator.dalvik.exceptionhandling.ExceptionHandling
 import org.ucombinator.dalvik.syntax.StForEqual
 import org.ucombinator.dalvik.preanalysis.LiveRegisterAnalysis
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.domains.CommonAbstractDomains._
 
-trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStringLibsAI with ReflectionAI with ExceptionHandling with LiveRegisterAnalysis{
+trait ExternalLibCallsHandler //extends StateSpace with
+extends CESKMachinary with  RawStringLibsAI with ReflectionAI with ExceptionHandling with LiveRegisterAnalysis{
   def isExternalLibCalls(cls:String) : Boolean = {
     CommonUtils.isStringLibs(cls) || CommonUtils.isMetaLibCall(cls) || APISpecs.isInAPISpecsbyName(cls)
   }
@@ -20,7 +22,8 @@ trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStr
     CommonUtils.isStringLibs(meth) || CommonUtils.isMetaLibCall(meth)
   }
   
-   def handleSpecialCalls(methPath:String, invokS: Stmt,argRegExps: List[AExp], objVals: Set[ObjectValue], ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
+   def handleSpecialCalls(methPath:String, invokS: Stmt,argRegExps: List[AExp], objVals: D//Set[ObjectValue]
+   , ls: Stmt, s: Store, pst: PropertyStore, realN: Stmt, fp: FramePointer, kptr: KAddr, t: Time, tp: Time, k: Kont): Set[Conf] = {
     methPath match {
       case "java/lang/StringBuilder/<init>" =>  handleStringBuilderInit(invokS, argRegExps, objVals, ls, s, pst, realN, fp, kptr, t, tp, k)
       case "java/lang/StringBuilder/append" => handleStringBuilderAppend(invokS, argRegExps, objVals, ls, s, pst, realN, fp, kptr, t, tp, k)
@@ -55,13 +58,14 @@ trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStr
      
      val (isMoveResultS, targetRegister) = isMoveResult(nextStmt)
      
-     val argPropertyValues = argAddrs.flatMap((argAddr) => {
-       pStoreLookup(pst, argAddr)
-     }).toSet
+     val argPropertyValues = argAddrs.foldLeft(pst.mkDomainD())((res, argAddr)=>{
+       res join  storeLookup(pst, argAddr)
+     })
+    
    
       
     
-     val anySensitiveVals = srcOrSinksSecurityValues(argPropertyValues)
+     val anySensitiveVals =  argPropertyValues.srcOrSinksSecurityValues 
      
      if(anySensitiveVals.isEmpty)  
        pst
@@ -70,7 +74,7 @@ trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStr
        
          if(isMoveResultS) { // the next is move result, pass the joined properties to the returned result
          //  val newPStore = pStoreUpdate(pst, List((fp.offset(targetRegister.toString), argPropertyValues)))
-            val newPStore = pStoreUpdate(pst, List((fp.offset("ret"), argPropertyValues)))
+            val newPStore = storeUpdate(pst, List((fp.offset("ret"), argPropertyValues)))
             println("re assigned is", fp.offset("ret"))
            newPStore
          }
@@ -83,7 +87,7 @@ trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStr
          if(isMoveResultS){
           
            //val newPStore = pStoreUpdate(pst, List((hdAddr, argPropertyValues)))
-            val newPStore2 = pStoreUpdate(pst, //newPStore, 
+            val newPStore2 = storeUpdate(pst, //newPStore, 
                 List((fp.offset("ret"), argPropertyValues)))
            newPStore2 
          }
@@ -103,7 +107,7 @@ trait ExternalLibCallsHandler extends StateSpace with CESKMachinary with  RawStr
     		 					invokS: Stmt,
     		 					argRegExps: List[AExp], 
     		 					objAexps: List[AExp], //static invoke will be empty
-    		 					objVals: Set[ObjectValue], 
+    		 					objVals: D, //Set[ObjectValue], 
     		 					ls: Stmt, 
     		 					s: Store, 
     		 					pst: PropertyStore, 

@@ -38,7 +38,6 @@ import org.ucombinator.dsg.DyckStateGraphMachinery
 import org.ucombinator.dalvik.cfa.cesk.DalvikCFARunner
 import org.ucombinator.dsg.DSGAnalysisRunner
 import org.ucombinator.dalvik.cfa.cesk.CFAStatistics
-
 import org.ucombinator.utils.CommonUtils
 import org.ucombinator.utils.Debug
 import org.ucombinator.utils.ParsingUtils
@@ -54,6 +53,11 @@ import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
 import sys.process._
 import java.io.File
 import java.io.FileWriter
+import org.ucombinator.domains.GodelDomains
+import org.ucombinator.domains.StandardDomains
+import org.ucombinator.domains.CommonAbstractDomains.Store
+
+
 
 
 class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts) 
@@ -143,7 +147,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     (VarPointsTo(totalPointTp, totalPtCardi), ThrowPointsTo(totalThrows, totalTc)) 
   }
 
-  private def incNoEdges(explored: Int) {
+ /* private def incNoEdges(explored: Int) {
    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
  }
  
@@ -151,7 +155,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
  
  private def incNoStates(explored:Int) {
    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates += explored
- }
+ }*/
  
   private def incTime(explored: Int) {
    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
@@ -256,7 +260,7 @@ private def getEntryPointStmt(state: S) : Stmt = {
 def sortingRankings(rawNodes: List[S]) : List[S] = {
   val rawNodes0 = rawNodes.filter((rn) => {
     rn match {
-      case ErrorState(_,_) | FinalState() => {
+      case ErrorState(_,_,_) | FinalState(_) => {
         false
       }
       case _ => true
@@ -471,12 +475,22 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
    */
   def runPDCFA(opts: AIOptions, entryStmts: List[Stmt] ) { 
     
-    var inheirtedStore: SharedStore = Map.empty
-    var inheirtedPStore: PSharedStore = Map.empty
+   // import org.ucombinator.domains.CommonAbstractDomains._
+    
+    var (inheritedStore : Store , inheritedPStore : Store) = 
+    	if(opts.godel) {
+    		(GodelDomains.botStore , GodelDomains.botStore)
+    	}
+    	else {
+    		(StandardDomains.botStore, StandardDomains.botStore)
+    	}
+      
+   // var inheirtedStore: SharedStore = Map.empty
+   // var inheirtedPStore: PSharedStore = Map.empty
     
     var exploredcCnt = 0
     
-     println("All the entry points starts*****************")
+     println("All the entry points starts : *****************", entryStmts.length)
     entryStmts.foreach((entryStmt) => 
       CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println) 
       )
@@ -484,23 +498,28 @@ def sortingRankings(rawNodes: List[S]) : List[S] = {
     println("All the entry points ends*****************")
      val firstTime = (new java.util.Date()).getTime
      Thread.currentThread().asInstanceOf[AnalysisHelperThread].curThreadStartTime = firstTime
-     
-    val dsgs =
+     val firstHelper = new NewDSGHelper
+     var toStopEntryExploration = false
+     val dsgs =
       entryStmts.foldLeft(List[DSG]())( (res, entryStmt) => {
        
         println("--------- explore the entry--------" + entryStmt.next)
         //CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println)
-    	val (resultDSG, storee, pstoree) = evaluateDSG(entryStmt, entryStmt.methPath, inheirtedStore, inheirtedPStore) 
+       
+    	val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore, inheritedPStore, firstHelper) 
     	
-    	incNoEdges(resultDSG.edges.size)
-    	incNoStates(resultDSG.nodes.size)
+    	if(!toStopEntryExploration && toStop=="stop" ) toStopEntryExploration  = true
+    	//incNoEdges(resultDSG.edges.size)
+    	//incNoStates(resultDSG.nodes.size)
     	
     	 println("[" + StringUtils.trimFileName(opts.sexprDir) + ", " + " " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates  + "  " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges   + " \n")
     
-    	inheirtedStore = storee
-    	inheirtedPStore = pstoree 
-    	exploredcCnt += 1
-    	
+    	inheritedPStore = storee
+    	inheritedPStore = pstoree 
+        
+    	if(!toStopEntryExploration) {
+    		exploredcCnt += 1
+    	}
     	resultDSG :: res
     }) 
     

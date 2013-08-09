@@ -1,35 +1,47 @@
+/**
+ * @author shuying
+ * 
+ * This implementation has done a lot optimization based on the IPDCFA paper (Ilya's imlp):
+ * 	1. Olin's aggresive cut off - based on subsumption testing
+ * 	2. The original algorithm blindly add successors to todo set, which is optimized away 
+ * 	3. Of course, the godel hashing scheme really helps!
+ *
+ */
+
+
 package org.ucombinator.dsg
 import org.ucombinator.dalvik.cfa.gc.GarbageCollectorTrait
 import org.ucombinator.utils.FancyOutput
 import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.dalvik.syntax.Stmt
 import org.ucombinator.utils.Debug
-import org.ucombinator.utils.{StringUtils, AIOptions, FancyOutput}
+import org.ucombinator.utils.{ StringUtils, AIOptions, FancyOutput }
 import tools.nsc.io.Directory
 import org.ucombinator.playhelpers.AnalysisHelperThread
 import org.ucombinator.dalvik.cfa.widening.WideningConfiguration
 import org.ucombinator.dalvik.syntax.PopHandlerStmt
 import org.ucombinator.perfmeasure.Measure
+import org.ucombinator.domains.CommonAbstractDomains
 
+trait DyckStateGraphMachinery extends StateSpace {
+  self: GarbageCollectorTrait with FancyOutput with WideningConfiguration =>
 
-trait DyckStateGraphMachinery extends StateSpace{ 
-  self: GarbageCollectorTrait with FancyOutput  with WideningConfiguration =>
-
+  import org.ucombinator.domains.CommonAbstractDomains._
   /**
    * Abstract componnents
    */
 
- // type Frame
-//  type ControlState
+  // type Frame
+  //  type ControlState
 
   type EntryExp // term
   type AbsValue
-//  type Addr
+  //  type Addr
 
- // type SharedStore = Map[Addr, Set[AbsValue]]
- type SharedStore = Addr :-> Set[Value]
-  type PSharedStore = Addr :-> Set[Value]
- // def initState(e: Stmt, methP: String): (ControlState, Kont)
+  // type SharedStore = Map[Addr, Set[AbsValue]]
+  type SharedStore = Store //Addr :-> Set[Value]
+  type PSharedStore = Store // Addr :-> Set[Value]
+  // def initState(e: Stmt, methP: String): (ControlState, Kont)
 
   def step(q: ControlState, k: Kont, frames: Kont, store: SharedStore, pStore: PSharedStore): Set[(StackAction[Frame], ControlState, SharedStore, PSharedStore)]
 
@@ -39,7 +51,7 @@ trait DyckStateGraphMachinery extends StateSpace{
   def canHaveEmptyContinuation(s: ControlState): Boolean
 
   def canHaveSwitchFrames: Boolean
-  
+
   def isStoreSensitive(s: ControlState): Boolean
 
   /**
@@ -63,284 +75,223 @@ trait DyckStateGraphMachinery extends StateSpace{
    */
   sealed case class DSG(nodes: Set[S], edges: Edges, s0: S)
 
-  private def noEdgesExplored : Int = {
-   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges
- }
-  
-  private def timePassed(cutTime: Long)= {
+  private def noEdgesExplored: Int = {
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges
+  }
+
+  private def timePassed(cutTime: Long) = {
     cutTime - Thread.currentThread().asInstanceOf[AnalysisHelperThread].curThreadStartTime
   }
- 
- private def noStatesExplored : Int = {
-   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates
- }
-  
- 
- def evaluateDSG(e: Stmt, methP: String, store: Store, pStore: PropertyStore) : (DSG, SharedStore, PSharedStore) = {
+
+  private def noStatesExplored: Int = {
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates
+  }
+
+  private def incNoEdges(explored: Int) {
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
+  }
+
+  private def incNoStates(explored: Int) {
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates += explored
+  }
+
+  def evaluateDSG(e: Stmt, methP: String, store: CommonAbstractDomains.Store, pStore: CommonAbstractDomains.Store, firstHelper: NewDSGHelper): (DSG, CommonAbstractDomains.Store, CommonAbstractDomains.Store, String) = {
+    import org.ucombinator.domains.CommonAbstractDomains._
     val initial = initState(e, methP, store, pStore)
-   val initS = initial._1
-    //compute the LFP recursively: trap
-    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore, pStore:PSharedStore): 
-    (DSG, NewDSGHelper, SharedStore, PSharedStore) = {
-      
-       val curTime = (new java.util.Date()).getTime
-      
-     // System.out.println("\n The DSG graph: ")
-       // dumpDSGGraph2(next)
-      if (!shouldProceed) {
-        (next, helper,store, pStore)
-      }else if ((interrupt && (noEdgesExplored > interruptAfter || next.edges.size > interruptAfter)) || 
-          (timeInterrupt && timePassed(curTime) > interruptAfterTime) ){ //next.edges.size > interruptAfter){
-        println("no of edges explored: " + noEdgesExplored)
-         (next, helper, store, pStore) //ce
-      } else {
-        val (next2, helper2, goAgain, newToVisit, newStore, newPStore) 
-        = iterateDSG(next,helper, statesToVisit, store, pStore)
-        eval(next2, helper2, goAgain, newToVisit, newStore,newPStore)
-      }
-    }
-   
-     val firstDSG = DSG(Set(initS), Set(), initS)
-    val firstHelper = new NewDSGHelper
-    val (nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore) = iterateDSG(firstDSG, firstHelper, Set(initS), store, pStore)//Map.empty)
-    
-
-
-    val (resultDSG, _, newStore, newPStore) = eval(nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore)
-
-    (resultDSG, newStore, newPStore)
- }
- 
-  
-  /**
-   * Compute the least-fixed point by Kleene iteration 
-   *//* 
-  def evaluateDSG(e: Stmt, methP: String) : (DSG, SharedStore) ={
-    val initial = initState(e, methP)
     val initS = initial._1
-  
     //compute the LFP recursively: trap
-    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore): 
-    (DSG, NewDSGHelper, SharedStore) = {
-      
-        incNoEdges(next.edges.size)
-        incNoStates(next.nodes.size)
-        
-     // System.out.println("\n The DSG graph: ")
-       // dumpDSGGraph2(next)
+    def eval(next: DSG, helper: NewDSGHelper, shouldProceed: Boolean, statesToVisit: Set[S], store: SharedStore, pStore: PSharedStore): (DSG, NewDSGHelper, SharedStore, PSharedStore, String) = {
+
+      val curTime = (new java.util.Date()).getTime
+
+      // System.out.println("\n The DSG graph: ")
+      // dumpDSGGraph2(next)
       if (!shouldProceed) {
-        (next, helper,store)
-      }else if (interrupt && noEdgesExplored > interruptAfter){ //next.edges.size > interruptAfter){
-         (next, helper, store) //ce
+        (next, helper, store, pStore, "during")
+      } else if ((interrupt && (noEdgesExplored > interruptAfter || next.edges.size > interruptAfter)) ||
+        (timeInterrupt && timePassed(curTime) > interruptAfterTime)) { //next.edges.size > interruptAfter){
+        println("no of edges explored: " + noEdgesExplored)
+        (next, helper, store, pStore, "stop") //ce
       } else {
-        val (next2, helper2, goAgain, newToVisit, newStore) 
-        = iterateDSG(next,helper, statesToVisit, store)
-        eval(next2, helper2, goAgain, newToVisit, newStore)
+        val (next2, helper2, goAgain, newToVisit, newStore, newPStore) = iterateDSG(next, helper, statesToVisit, store, pStore)
+
+        eval(next2, helper2, goAgain, newToVisit, newStore, newPStore)
       }
     }
-     val firstDSG = DSG(Set(initS), Set(), initS)
-    val firstHelper = new NewDSGHelper
-    val (nextDSG, nextHelper, hasNew, toVisit, firstStore) = iterateDSG(firstDSG, firstHelper, Set(initS), Map.empty)
-    
 
+    val firstDSG = DSG(Set(initS), Set(), initS)
+    /**
+     * Come on, we should using one helper for all the entry points!
+     */
+    // val firstHelper = new NewDSGHelper
+    val (nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore) = iterateDSG(firstDSG, firstHelper, Set(initS), store, pStore) //Map.empty)
 
-    val (resultDSG, _, newStore) = eval(nextDSG, nextHelper, hasNew, toVisit, firstStore)
+    val (resultDSG, _, newStore, newPStore, toStopEntryExploration) = eval(nextDSG, nextHelper, hasNew, toVisit, firstStore, firstPStore)
 
-    (resultDSG, newStore)
-  }*/
- 
- def unzip4Components(res: Set[(S, Edge, SharedStore, PSharedStore)] ): (Set[S], Set[Edge], Set[SharedStore], Set[PSharedStore]) = {
-   var states = Set[S]()
-   var edges = Set[Edge]()
-   var sharedStore = Set[SharedStore]()
-   var pSharedStore = Set[PSharedStore]()
-   
-   res.foreach((e) => {
-     val (s, edge, ss, pss) = e
-     states = states ++ Set(s)
-     edges = edges ++ Set(edge)
-     sharedStore = sharedStore ++ Set(ss)
-     pSharedStore = pSharedStore ++ Set(pss)
-   })
-   
-   (states, edges, sharedStore, pSharedStore) 
-   
- }
-  
- // precond: weakerStates is subset of targetSet of possible Edges
- private def filterWeakerEdges(weakerStates: Set[ControlState], possibleEdges: Edges) : Edges= {
-       possibleEdges.filter(pe => {
+    (resultDSG, newStore, newPStore, toStopEntryExploration)
+  }
+
+  def unzip4Components(res: Set[(S, Edge, SharedStore, PSharedStore)]): (Set[S], Set[Edge], Set[SharedStore], Set[PSharedStore]) = {
+    var states = Set[S]()
+    var edges = Set[Edge]()
+    var sharedStore = Set[SharedStore]()
+    var pSharedStore = Set[PSharedStore]()
+
+    res.foreach((e) => {
+      val (s, edge, ss, pss) = e
+      states = states ++ Set(s)
+      edges = edges ++ Set(edge)
+      sharedStore = sharedStore ++ Set(ss)
+      pSharedStore = pSharedStore ++ Set(pss)
+    })
+
+    (states, edges, sharedStore, pSharedStore)
+
+  }
+
+  // precond: weakerStates is subset of targetSet of possible Edges
+  private def filterWeakerEdges(weakerStates: Set[ControlState], possibleEdges: Edges): Edges = {
+    possibleEdges.filter(pe => {
       weakerStates.contains(pe.target)
     })
- }
- 
- 
- 
- 
- 
- private def filterOutPopHandlerStates(states: Set[ControlState]) : Set[ControlState] = {
-    	states.filter(spv => { spv.isPopHandlerState
-     })
- }
- 
- private def filterOutEdgesWithTargetInSet(edges: Edges, states: Set[ControlState]) : Edges = {
-      edges.filter(pe => {
-         states.contains(pe.target)
-       })
- }
- 
- 
- /*
+  }
+
+  private def filterOutPopHandlerStates(states: Set[ControlState]): Set[ControlState] = {
+    states.filter(spv => {
+      spv.isPopHandlerState
+    })
+  }
+
+  private def filterOutEdgesWithTargetInSet(edges: Edges, states: Set[ControlState]): Edges = {
+    edges.filter(pe => {
+      states.contains(pe.target)
+    })
+  }
+
+  /*
   * Tuning the states!
   * @params: 
   * statesPossibletoVisit : successor statesl; 
   * possibleEdges: successor edges
   * epsNextStates: the folded set of next epsilon states
+  * subsumption: based on subsumption
   */
- 
- private def getStatesIfAco(helper: NewDSGHelper, statesPossibletoVisit: Set[ControlState], possibleEdges: Edges, epsNextStates:Set[ControlState]) : (Set[ControlState], Edges) = {
-    
-   /**
-    * filter out the pophandlers control states before cut off
-    * later will be added in 
-    */
-   // filter out the pophandler states
-   val pophandlerStates = filterOutPopHandlerStates(statesPossibletoVisit)
-    
-  // println("PopHandlers:")
-  // pophandlerStates.foreach(pps => println(pps.getCurSt))
-   
-     val statesPossibletoVisit2 = statesPossibletoVisit -- pophandlerStates
-     
-     // filter the edges that end with the pophandler
-     val popHandlerEdges =  filterOutEdgesWithTargetInSet(possibleEdges, pophandlerStates)
-     val possibleEdges2 =  possibleEdges -- popHandlerEdges 
-     
-     // filter out the pophandler states statesPossibletoVisit
-     val popEpsNextStates = filterOutPopHandlerStates(epsNextStates)
-     //println("pophandlers from next: ")
+
+  private def getStatesIfAco(helper: NewDSGHelper, statesPossibletoVisit: Set[ControlState], possibleEdges: Edges, epsNextStates: Set[ControlState], subsumption: Boolean): (Set[ControlState], Edges) = {
+
+    /**
+     * filter out the pophandlers control states before cut off
+     * later will be added in
+     */
+    // filter out the pophandler states
+    val pophandlerStates = filterOutPopHandlerStates(statesPossibletoVisit)
+
+    // println("PopHandlers:")
+    // pophandlerStates.foreach(pps => println(pps.getCurSt))
+
+    val statesPossibletoVisit2 = statesPossibletoVisit -- pophandlerStates
+
+    // filter the edges that end with the pophandler
+    val popHandlerEdges = filterOutEdgesWithTargetInSet(possibleEdges, pophandlerStates)
+    val possibleEdges2 = possibleEdges -- popHandlerEdges
+
+    // filter out the pophandler states statesPossibletoVisit
+    val popEpsNextStates = filterOutPopHandlerStates(epsNextStates)
+    //println("pophandlers from next: ")
     // popEpsNextStates.foreach(pps => println(pps.getCurSt))
-     
-     val epsNextStates2 = epsNextStates -- popEpsNextStates
-     
-     if(aggresiveCutOff){
-       val ss1 = statesPossibletoVisit2.filter((spv)=>{
-         val curStateEqualentStates  = helper.getEpsPredStates(spv)
-          ! spv.weakerThanAny(curStateEqualentStates)
-       }) 
-       
-        /**
-        * Between branches, which is proved to be in the equivalence class w.r.t stack net chance
-        * we cut off weaker states (refer to the partial order of control state)
-        */
-       val sss1 = getStrongerStatesWithin(ss1 )
-       
-       val possibleNewEdges = possibleEdges2.filter(pe => {
-         sss1.contains(pe.target)
-       })
-       
-       val ss2 = epsNextStates2.filter((spv)=>{
-         val curStateEqualentStates  = helper.getEpsPredStates(spv)
-          ! spv.weakerThanAny(curStateEqualentStates)
-       })  
-       
-       /**
-        * for epsilon next sucessors, also perform the filter
-        */
-       val sss2 = getStrongerStatesWithin(ss2 ) 
-       
-        println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
-       println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
-       
-       val res1 = sss1 ++ sss2 ++ pophandlerStates ++ popEpsNextStates
+
+    val epsNextStates2 = epsNextStates -- popEpsNextStates
+
+    if (aggresiveCutOff) {
+      //filter out weaker ones
+      val ss1 = statesPossibletoVisit2.filter((spv) => {
+        val curStateEqualentStates = helper.getEpsPredStates(spv)
+        !spv.weakerThanAny(curStateEqualentStates, subsumption) // false means equality
+      })
+
+      /**
+       * Between branches, which is proved to be in the equivalence class w.r.t stack net chance
+       * we cut off weaker states (refer to the partial order of control state)
+       * I think this is very interesting
+       */
+      val sss1 = getStrongerStatesWithin(ss1, subsumption)
+
+      val possibleNewEdges = possibleEdges2.filter(pe => {
+        sss1.contains(pe.target)
+      })
+
+      val ss2 = epsNextStates2.filter((spv) => {
+        val curStateEqualentStates = helper.getEpsPredStates(spv)
+        !spv.weakerThanAny(curStateEqualentStates, subsumption)
+      })
+
+      /**
+       * for epsilon next sucessors, also perform the filter
+       */
+      val sss2 = getStrongerStatesWithin(ss2, subsumption)
+
+      println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
+      println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
+
+      val res1 = sss1 ++ sss2 ++ pophandlerStates ++ popEpsNextStates
       // println("After cutoff")
       // filterOutPopHandlerStates(res1).foreach(pps => println(pps.getCurSt))
-       val res2 = possibleNewEdges ++ popHandlerEdges
-       (res1 , res2 )
-        
-      
-       
-     }else{
-    	 (statesPossibletoVisit ++ epsNextStates, possibleEdges)
-     } 
+      val res2 = possibleNewEdges ++ popHandlerEdges
+      (res1, res2)
+
+    } else {
+      (statesPossibletoVisit ++ epsNextStates, possibleEdges2)
     }
- 
- private def getStrongerStatesWithin(allSuccessors: Set[ControlState]) : Set[ControlState] = {
-    
-   val  weakerStates = allSuccessors.filter(as => {
-     // not considering itself.
-     val restSs = allSuccessors - as
-     as.weakerThanAny(restSs)
-   })
-   
-   allSuccessors -- weakerStates
-   
- }
- 
- private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges): (Set[ControlState],  Edges) = {
-   println("--before aco ----" + newStates.size + " " + newEdges.size)
-   if(aggresiveCutOff) {
-     val weakerStates = getWeakerStates(newStates, ss)
-     val weakerEdges = filterWeakerEdges(weakerStates, newEdges)
-     val newNewStates = newStates -- weakerStates // we are not going to explore weaker states 
-     val newNewEdges = newEdges -- weakerEdges
+  }
+
+  private def getStrongerStatesWithin(allSuccessors: Set[ControlState], subsumption: Boolean): Set[ControlState] = {
+
+    val weakerStates = allSuccessors.filter(as => {
+      // not considering itself.
+      val restSs = allSuccessors - as
+      as.weakerThanAny(restSs, subsumption)
+    })
+
+    allSuccessors -- weakerStates
+
+  }
+
+  private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges, subsumption: Boolean): (Set[ControlState], Edges) = {
+    println("--before aco ----" + newStates.size + " " + newEdges.size)
+    if (aggresiveCutOff) {
+      val weakerStates = getWeakerStates(newStates, ss, subsumption)
+      val weakerEdges = filterWeakerEdges(weakerStates, newEdges)
+      val newNewStates = newStates -- weakerStates // we are not going to explore weaker states 
+      val newNewEdges = newEdges -- weakerEdges
       println("--after aco ----" + newNewStates.size + " " + newNewEdges.size)
-     (newNewStates, newNewEdges)
-   }
-   else {
-      
-     (newStates, newEdges)
-   }
- }
- 
- 
- 
-   /**
+      (newNewStates, newNewEdges)
+    } else {
+
+      (newStates, newEdges)
+    }
+  }
+
+  /**
    * Monotonic DSG iteration function
    * denoted as 'f' in the paper
    */
   private def iterateDSG(dsg: DSG, helper: NewDSGHelper, toVisit: Set[S], store: SharedStore, pStore: PSharedStore): (DSG, NewDSGHelper, Boolean, Set[S], SharedStore, PSharedStore) = dsg match {
     case DSG(ss, ee, s0) => {
-      
-  // ECG contains all the previously explored states. 
+
+      // ECG contains all the previously explored states. 
       // and so, let's test the membership in the preds and nexts for each of the newly created states 
-     // val toVisitNew =  helper.filterNewStatesInECG(toVisit)
-      
-       
-     val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = 
-      // Measure.measureTime("new states and stores:::") {
-       for {
-        s <-   toVisit 
-        kont <- helper.getRequiredKont(s, s0)
-        possibleFrames = helper.getPossibleStackFrames(s)
-        (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore) 
-      }   yield (s1, Edge(s, g, s1), littleStore, littlePStore) 
-   //  }
-     
-    /* var i = 0
-    
-     val len1 = toVisit.size
-     val toVisitSB = toVisit.toSeq
-     var newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] = Set()
-     Measure.measureTime("while loop in iterate:::") {
-     while(i<len1){
-       val s = toVisitSB(i)
-       var k = 0
-       val konts = helper.getRequiredKont(s, s0).toSeq
-       while(k <  konts.size){
-         val possibleFrames = helper.getPossibleStackFrames(s)
-         val stepRes = step(s, konts(k), possibleFrames, store, pStore).toSeq 
-          var j = 0
-         while(j < stepRes.size){
-           val (g, s1, littleStore, littlePStore) = stepRes(j)
-           newNodesEdgesStores = Set((s1, Edge(s, g, s1), littleStore, littlePStore)) ++ newNodesEdgesStores
-           j = j+1;
-         }
-        k = k +1; 
-       }
-       i = i+1; 
-     }
-     }*/
+      // val toVisitNew =  helper.filterNewStatesInECG(toVisit)
+
+      val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] =
+        // Measure.measureTime("new states and stores:::") {
+        for {
+          s <- toVisit
+          kont <- helper.getRequiredKont(s, s0)
+          possibleFrames = helper.getPossibleStackFrames(s)
+          (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore)
+        } yield (s1, Edge(s, g, s1), littleStore, littlePStore)
+      //  }
+
       val (obtainedStates, obtainedEdges, obtainedStores, obtainedPStores) = unzip4Components(newNodesEdgesStores)
 
       // Transform switch edges to pairs of push/pop edges
@@ -352,111 +303,89 @@ trait DyckStateGraphMachinery extends StateSpace{
         }
         nodes ++ obtainedStates
       } else obtainedStates)
-   
-     
-      if(!obtainedEdges.isEmpty){
-        //println("the currnet state is: ")
-        println(obtainedEdges.head.source.getCurSt)
+
+       
+      val newEdges = noSwitchesEdges -- ee
+ 
+      val filteredStatesPossileVisits = newStates.filter {
+        spvs =>
+          {
+            helper.getEpsNextStates(spvs).isEmpty
+            //!spvs.weakerThanAny(helper.getEpsSuccsKeys, false) // strict equality in this case
+          }
       }
-      
-    
      
-      
-        // first update the information, especially the epsilon closure 
-      val newEdges = noSwitchesEdges -- ee 
-      
-      // however, if the new states has been in the epsnext, no bother to get the epsnext.
-      // so here fisrt we filter out the states.
-     val filteredStatesPossileVisits = newStates.filter{
-     spvs => {
-        helper.getEpsNextStates(spvs).isEmpty
-     }
-   }
       // and get the actual tovisit  edges
       val possibleNewEdges = newEdges.filter(pe => {
-         filteredStatesPossileVisits.contains(pe.target)
-       })
-       
-      
-      
-     // helper.update(newEdges) 
-       // update the ECG
-      helper.update(possibleNewEdges)
-      
-      val newStore: SharedStore = obtainedStores.foldLeft(store)(_ ++ _) 
-      val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ ++ _)
-       
-      val storeSS = getStoreSensitiveStates(ss)
-      
-     // println("new states epslang states: ")
-      
-      // get epsnext based on the filtered new states
-      val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {     //newStates.flatMap(s => {
-       // println("State:", s.getCurSt) 
-         val news = helper.getEpsNextStates(s)
-        /*news.foreach {
-          s => {
-            println(s.getCurSt)
-          }
-        }*/
-         news
+        filteredStatesPossileVisits.contains(pe.target)
+        //  pe.target.weakerThanAny(filteredStatesPossileVisits)
       })
-      
-     // println("end of println new states epslang")
-         
-      
-     // println("EPSLANG NEXT size for the new states: ", epsNewNexts.size)
-      // val possibleNewToVisit = (newStates
-        // Lemma 1 (newEps)
-      //  ++ epsNewNexts)
-        // Lemma 2 (store-sensitive)
-     //   ++ storeSS)
-       
-        val (newToVisit, newEdges2) = 
-        //  Measure.measureTime ("getStatesIfAco: "){
-        getStatesIfAco(helper, filteredStatesPossileVisits //newStates
-            ,  possibleNewEdges, //newEdges,  
-            epsNewNexts)//}
-        // println("After cutoff")
-      // filterOutPopHandlerStates(newToVisit).foreach(pps => println(pps.getCurSt))
+
+      // update the ECG
+      helper.update(possibleNewEdges)
  
- // S' = ...
-        val ss1: Nodes = ss  ++ filteredStatesPossileVisits +// newStates + 
-        				s0 
-      // E' = ...
-      val ee1 = (ee ++ possibleNewEdges) 
+     // helper.printEpsNexts
+
+      val newStore: SharedStore = obtainedStores.foldLeft(store)(_ join _) //++ _) 
+      val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ join _) //++ _)
+
+      val storeSS = getStoreSensitiveStates(ss) 
+
+      // get epsnext based on the filtered new states
+      val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {  
+        val news = helper.getEpsNextStates(s) 
+        news
+      })
+ 
+
+      val (newToVisit, newEdges2) = 
+        getStatesIfAco(helper, filteredStatesPossileVisits //newStates
+        , possibleNewEdges, //newEdges,  
+          epsNewNexts,
+          true) //}
+
+      val ss1: Nodes = ss ++ filteredStatesPossileVisits + // newStates + 
+        s0
+
+      val ee1 = (ee ++ possibleNewEdges)
       //newEdges)
-      
-      val cond1 =  !newEdges2.isEmpty  //!newEdges.subsetOf(ee)  
-      val cond2 =   // Measure.measureTime ("partialOrderStoreCompare")
-      //{
-        ! partialOrderStoreCompare(newStore, store) //}//(store !=   newStore) }
-      
-      val cond3 =   !partialOrderStoreCompare(newPStore, pStore)
-      
+
+      incNoEdges(possibleNewEdges.size)
+      incNoStates(filteredStatesPossileVisits.size)
+
+      val cond1 = !newEdges2.isEmpty //!newEdges.subsetOf(ee)  
+      val cond2 = // Measure.measureTime ("partialOrderStoreCompare")
+        //{
+        !newStore.isSubsumedBy(store) // ! partialOrderStoreCompare(newStore, store) //}//(store !=   newStore) }
+
+      val cond3 = !newPStore.isSubsumedBy(pStore) //!partialOrderStoreCompare(newPStore, pStore)
+
       val shouldProceed = cond1 || cond2 || cond3
 
-      
-      println( "DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/" 
-          + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " + 
-          (newStates ++ epsNewNexts).toList.length + "/" + (filteredStatesPossileVisits ++ epsNewNexts).toList.length + "/"+ newToVisit.toList.length + " \n")
-      (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore )//newStore)
-        
+      println("condition: " + cond1.toString() + "|" + cond2.toString() + "|" + cond3.toString())
+
+      println("DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/"
+        + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " +
+        (newStates ++ epsNewNexts).toList.length + "/" + (filteredStatesPossileVisits ++ epsNewNexts).toList.length + "/" + newToVisit.toList.length + " \n")
+      (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore) //newStore)
+
     }
   }
-      
-      
-    
-    
-  
+
   sealed class NewDSGHelper {
 
-    import scala.collection.mutable.{Map => MMap, HashMap => MHashMap}
+    import scala.collection.mutable.{ Map => MMap, HashMap => MHashMap }
 
     private val epsPreds: MMap[S, Nodes] = new MHashMap
     private val epsSuccs: MMap[S, Nodes] = new MHashMap
     private val topFrames: MMap[S, Set[Frame]] = new MHashMap
 
+    def getEpsSuccsKeys = epsSuccs.keySet.toSet
+
+    def printEpsNexts {
+      //  epsSuccs.foreach(println)
+      println(" +epslang size " + epsSuccs.size)
+    }
     /**
      * Let s1 --[+f]--> s2_1 --> .... --> s2_n --[-f]--> s3
      * Then predForPushFrame((s2_i, f)) contains s1
@@ -468,17 +397,18 @@ trait DyckStateGraphMachinery extends StateSpace{
     ////////////////// Public methods //////////////////
 
     def update(newEdges: Set[Edge]) {
+      //println("update helper:")
       for (e <- newEdges) {
         e match {
           case Edge(s1, Eps, s2) => equalize(s1, s2)
           case Edge(s1, Pop(f), s2) => processPop(s1, f, s2)
           case Edge(s1, Push(f), s2) => processPush(s1, f, s2)
-          case Edge(_, se@Switch(_, _, _), _) => throw new DSGException("Illegal switch edge: " + se)
+          case Edge(_, se @ Switch(_, _, _), _) => throw new DSGException("Illegal switch edge: " + se)
         }
       }
     }
-    
-   /* def filterNewStatesInECG(news: Set[S]) : Set[S] = {
+
+    /* def filterNewStatesInECG(news: Set[S]) : Set[S] = {
       news.filter{
         s => (epsPreds.contains(s) || epsSuccs.contains(s))
       }
@@ -487,13 +417,9 @@ trait DyckStateGraphMachinery extends StateSpace{
     def inECG(s: S): Boolean = {
       epsPreds.contains(s) || epsSuccs.contains(s)
     }*/
-    
-    
-
-    
 
     /**
-     * 
+     *
      * Constructs a fake continuation with only a top frame (if any)
      */
     def getRequiredKont(s: S, s0: S): Set[Kont] = {
@@ -512,12 +438,10 @@ trait DyckStateGraphMachinery extends StateSpace{
            * Should carry a value and be epsilon-reachable
            * from the initial state
            */
-        } 
-        else if (canHaveEmptyContinuation(s)
+        } else if (canHaveEmptyContinuation(s)
           && (getEpsPredStates(s)).contains(s0)) {
           frames.map(f => List(f)) + List()
-        } 
-        else {
+        } else {
           frames.map(f => List(f))
         }
       }
@@ -572,7 +496,7 @@ trait DyckStateGraphMachinery extends StateSpace{
 
     ///////////////// Inner methods ////////////////////
 
-   // private 
+    // private 
     def getEpsPredStates(s: S): Nodes = gets(epsPreds, s)
 
     def updatePossibleStackFrames(s: S) {
@@ -609,7 +533,7 @@ trait DyckStateGraphMachinery extends StateSpace{
           val predForPushForS1 = gets(predForPushFrame, (s1, f))
           puts(predForPushFrame, (s, f), predForPushForS1)
         }
-        
+
         // Update introspective history for GC
         updatePossibleStackFrames(s)
       }
@@ -650,11 +574,13 @@ trait DyckStateGraphMachinery extends StateSpace{
     private def gets[A, B](map: MMap[A, Set[B]], key: A): Set[B] = map.getOrElse(key, Set())
 
   }
-   private def getStoreSensitiveStates(ss: Set[S]) = ss.filter(isStoreSensitive(_))
-   
-   /**************************************************************
+  private def getStoreSensitiveStates(ss: Set[S]) = ss.filter(isStoreSensitive(_))
+
+  /**
+   * ************************************************************
    * Some utility methods
-   ***************************************************************/
+   * *************************************************************
+   */
 
   /**
    * The function exploits the balanced structure of paths in DSG
@@ -668,20 +594,18 @@ trait DyckStateGraphMachinery extends StateSpace{
   private def processSwitchEdges(edges: Edges): Edges = edges.flatMap {
     case Edge(source, Switch(popped, target: S, pushed), mid) => Set(
       Edge(source, Pop(popped), mid),
-      Edge(mid, Push(pushed), target)
-    )
+      Edge(mid, Push(pushed), target))
     case e => Set(e)
   }
-  
+
   /**
    * Prints DSG according to the passed parameters
    */
-  
 
   def prettyPrintDSG2(dsg: DSG): String = {
 
     val edges = dsg.edges
-    
+
     val states: Set[ControlState] = dsg.nodes.asInstanceOf[Set[ControlState]]
 
     var stateCounter = 0
@@ -715,14 +639,14 @@ trait DyckStateGraphMachinery extends StateSpace{
 
     buffer.toString
   }
-  
+
   import org.ucombinator.utils.StringUtils._
 
-  def dumpDSGGraph2( resultDSG: DSG ): String = {
+  def dumpDSGGraph2(resultDSG: DSG): String = {
 
     import java.io._
 
-    val graphs = new Directory(new File( graphsDirName))
+    val graphs = new Directory(new File(graphsDirName))
     if (!graphs.exists) {
       graphs.createDirectory(force = true)
       graphs.createFile(failIfExists = false)
@@ -735,7 +659,6 @@ trait DyckStateGraphMachinery extends StateSpace{
       subfolder.createFile(failIfExists = false)
     }
 
-
     val path = subfolderPath + File.separator + (new java.util.Date()).getTime + ".gv"
     val file = new File(path)
     if (!file.exists()) {
@@ -746,7 +669,6 @@ trait DyckStateGraphMachinery extends StateSpace{
     writer.close()
     path
   }
-
 
 }
 class DSGException(s: String) extends Exception(s)

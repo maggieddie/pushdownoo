@@ -41,13 +41,16 @@ trait DalvikVMRelated {
     def taintKind = Set[String]()
   }
   
+  /**
+   * We will make the random ln : Stmt random in a bit
+   */
   case class InitEntryPointStmt(methodPath: String, argsTypes: List[String], body: Stmt, regsNum: BigInt,nxt: Stmt, ln: Stmt, clsP: String, methP: String) extends Stmt {
      var next = nxt
     var lineNumber = ln
     
     var clsPath = clsP
     var methPath = methP
-    override def toString = "InitEntryPointStmt: " + methodPath +"(" + body + " " + regsNum + ")" 
+    override def toString = "InitEntryPointStmt: " + methodPath +"(" + body + " " + regsNum + ")"  + "ln: " + ln.toString
     
     //
      def refRegsStrSet : Set[String] = {
@@ -242,6 +245,10 @@ trait DalvikVMRelated {
   private def buildInitEntries(initDefs: List[MethodDef], clsPath:String) : (Stmt, List[Stmt]) = {
       val (maxInit, restI ) = findMaxArgsInit(initDefs)
        val methP = ""
+      //   case class LineStmt(lnstr : String, nxt: Stmt, ln: Stmt, clsP : String, methP : String) extends Stmt  {
+         
+        // val randNum = util.Random.nextInt
+      // val randLnSt = LineStmt(randNum.toString , StmtNil, StmtNil, clsPath, methP)
       val initEntryStmt = InitEntryPointStmt(maxInit.methodPath, maxInit.argTypeList, maxInit.body, maxInit.regsNum, StmtNil, StmtNil,clsPath, methP)
       val hdInit = CommonUtils.randomizeLineNumberOneStmt(initEntryStmt, clsPath, methP)
    
@@ -305,7 +312,9 @@ trait DalvikVMRelated {
   
   
   private def copeInitEntryStmt(ie: InitEntryPointStmt): InitEntryPointStmt = {
-      InitEntryPointStmt(ie.methodPath , ie.argsTypes , ie.body , ie.regsNum , ie.nxt , ie.ln , ie.clsP , ie.methP)
+      val randNum = util.Random.nextInt
+        val randLnSt = LineStmt(randNum.toString , ie.nxt, ie.ln, ie.clsP, ie.methP)
+      InitEntryPointStmt(ie.methodPath , ie.argsTypes , ie.body , ie.regsNum , ie.nxt , randLnSt , ie.clsP , ie.methP)
   }
   //eachInitEntryPairs, inddividual inits
     private def allInitAndWithfollowingInitEntries (initDefs: List[MethodDef], ens: List[EntryPoint], clsP:String) : (List[Stmt], List[Stmt]) = {
