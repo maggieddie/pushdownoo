@@ -1,0 +1,22 @@
+(class (attrs public final ) android/media/MediaRecorder$VideoSource
+ (super java/lang/Object)
+ (source "MediaRecorder.java")
+
+ (field (attrs public static final ) CAMERA int 1); 0x1 )
+ (field (attrs public static final ) DEFAULT int )
+ (field (attrs final ) this$0 [object android/media/MediaRecorder] )
+
+(method (attrs ) <init>([object android/media/MediaRecorder] )void
+  (limit registers 4)
+  ; this: v2 ([object android/media/MediaRecorder$VideoSource])
+  ; parameter[0] : v3 ([object android/media/MediaRecorder])
+  (line 18)
+  (iput-object v3 v2 android/media/MediaRecorder$VideoSource.this$0 [object android/media/MediaRecorder])
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

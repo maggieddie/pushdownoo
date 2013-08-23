@@ -1,0 +1,90 @@
+(class (attrs public ) com/cs141/kittey/kittey/KitteyNode
+ (super java/lang/Object)
+ (source "KitteyNode.java")
+
+ (field (attrs ) NextKittey [object com/cs141/kittey/kittey/KitteyNode] )
+ (field (attrs ) PrevKittey [object com/cs141/kittey/kittey/KitteyNode] )
+ (field (attrs ) ThisKittey [object com/cs141/kittey/kittey/KitteyNode] )
+ (field (attrs ) thekittey [object com/cs141/kittey/kittey/Kittey] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 8)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getNextKittey()[object com/cs141/kittey/kittey/KitteyNode]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 41)
+  (iget-object v0 v1 com/cs141/kittey/kittey/KitteyNode.NextKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (return-object v0)
+)
+
+(method (attrs public ) getPrevKittey()[object com/cs141/kittey/kittey/KitteyNode]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 26)
+  (iget-object v0 v1 com/cs141/kittey/kittey/KitteyNode.PrevKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (return-object v0)
+)
+
+(method (attrs public ) getThekittey()[object com/cs141/kittey/kittey/Kittey]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 15)
+  (iget-object v0 v1 com/cs141/kittey/kittey/KitteyNode.thekittey [object com/cs141/kittey/kittey/Kittey])
+  (return-object v0)
+)
+
+(method (attrs public ) getThisKittey()[object com/cs141/kittey/kittey/KitteyNode]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 56)
+  (iget-object v0 v1 com/cs141/kittey/kittey/KitteyNode.ThisKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (return-object v0)
+)
+
+(method (attrs public ) setNextKittey([object com/cs141/kittey/kittey/KitteyNode] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/KitteyNode])
+  ; parameter[0] : v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 49)
+  (iput-object v1 v0 com/cs141/kittey/kittey/KitteyNode.NextKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (line 50)
+  (return-void )
+)
+
+(method (attrs public ) setPrevKittey([object com/cs141/kittey/kittey/KitteyNode] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/KitteyNode])
+  ; parameter[0] : v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 34)
+  (iput-object v1 v0 com/cs141/kittey/kittey/KitteyNode.PrevKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (line 35)
+  (return-void )
+)
+
+(method (attrs public ) setThekittey([object com/cs141/kittey/kittey/Kittey] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/KitteyNode])
+  ; parameter[0] : v1 ([object com/cs141/kittey/kittey/Kittey])
+  (line 19)
+  (iput-object v1 v0 com/cs141/kittey/kittey/KitteyNode.thekittey [object com/cs141/kittey/kittey/Kittey])
+  (line 20)
+  (return-void )
+)
+
+(method (attrs public ) setThisKittey([object com/cs141/kittey/kittey/KitteyNode] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/KitteyNode])
+  ; parameter[0] : v1 ([object com/cs141/kittey/kittey/KitteyNode])
+  (line 64)
+  (iput-object v1 v0 com/cs141/kittey/kittey/KitteyNode.ThisKittey [object com/cs141/kittey/kittey/KitteyNode])
+  (line 65)
+  (return-void )
+)
+
+)

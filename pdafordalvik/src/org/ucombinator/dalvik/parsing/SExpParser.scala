@@ -95,8 +95,9 @@ class SExpParser extends RegexParsers {
 
   private def symbol: Parser[SExp] =
    // regex(new Regex("([^.#; \\t\\r\n()',`\"][^; \\t\\r\\n()',`\"]*|[.][^; \\t\\r\\n()',`\"]+)")) ^^ {
-     regex(new Regex("([^.#; \\t\\r\n(){}\\[\\]',`\"][^; \\t\\r\\n(){}\\[\\]',`\"]*|[.][^; \\t\\r\\n(){}\\[\\]',`\"]+)")) ^^ {
-      case s => SName.from(s)
+    // regex(new Regex("([^.#; \\t\\r\n(){}\\[\\]',`\"][^; \\t\\r\\n(){}\\[\\]',`\"]*|[.][^; \\t\\r\\n(){}\\[\\]',`\"]+)")) ^^ {
+      regex(new Regex("([^.; \\t\\r\n(){}\\[\\]',`\"][^; \\t\\r\\n(){}\\[\\]',`\"]*|[.][^; \\t\\r\\n(){}\\[\\]',`\"]+)")) ^^ {  
+	case s => SName.from(s)
     }
   
   

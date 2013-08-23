@@ -148,32 +148,46 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
   def applyMethod(stForEqual: StForEqual, isEntryApply: Boolean, methBody: Stmt, regsNum: BigInt, ovO: Option[ObjectValue], fp: FramePointer, 
 		  		s: Store, pst: PropertyStore, k: Kont, objExps: List[AExp], argsRegExps: List[AExp], argsTopVal: List[D], 
 		  		t: Time, st: Stmt, callerNxtSt: Stmt, kptr: KAddr): Set[Conf] = {
-    
+   // println("in ApplyMethod " + stForEqual.oldStyleSt)
     val tp = tick(List(st), t)
     val calleeBodyStmt = methBody
     val theNext = CommonUtils.findNextStmtNotLineOrLabel(calleeBodyStmt)
-    Debug.prntDebugInfo("@apply method callee's: ", theNext)
+   // println("method body is Stmt: " +theNext)
+    /* val theNext =
+       theNext1 match{
+      case StmtNil => {
+        new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, stForEqual.clsPath, stForEqual.methPath)
+      }
+      case _  => theNext1
+    }*/
+    
+    //println("@apply method callee's: ", theNext)
     val newFP = fp.push(t, st)
     val funk = new FNKFrame(callerNxtSt, fp)
     Debug.prntDebugInfo("@apply method caller's next: ", callerNxtSt) 
     
     val argRegAddrs = argsRegExps.map((argExp) => {fp.offset(getRegExpStr(argExp))}) 
     
+        
      val pstMoveResult=  propagateTaintPropertyForFunctionInvokeObjAndMoveResult(argRegAddrs, objExps, pst , st , callerNxtSt , stForEqual.clsPath,  stForEqual.methPath, stForEqual.lineSt,  fp )
           // the property of the arguments are properagated too 
      
       val argExpStrs = argsRegExps map (getRegExpStr)
       val argSecurityVals = argExpStrs.map((argRegStr) => {storeLookup(pst, fp.offset(argRegStr))}) 
      
-      
+      //println(isEntryApply)
     if (!isEntryApply) {
+       
       val argVals = argsRegExps map (atomEval(_, fp, s))
+      
       
       val startingIndex = regsNum - argsRegExps.length
 
       val formalRegStrOffsets = List.range(startingIndex, regsNum) map (StringUtils.constrRegStr)
       val formalRegOffsetAddrs = formalRegStrOffsets map (newFP.offset(_))
       val bindings = formalRegOffsetAddrs.zip(argVals) 
+      
+   
       val newStore = storeUpdate(s, bindings) 
    
       val propertyBindings = formalRegOffsetAddrs.zip(argSecurityVals)
@@ -197,7 +211,8 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
           Debug.prntDebugInfo("the this reg offset is", thisRegAddr)
           
           
-          val newStore2 = storeStrongUpdate(newStore, List((thisRegAddr, newStore.mkDomainD(ov) ))) //storeUpdate(newStore, List((thisRegAddr, Set(ov))))
+          val newStore2 = //storeStrongUpdate(newStore, List((thisRegAddr, newStore.mkDomainD(ov) ))) 
+           storeUpdate(newStore, List((thisRegAddr, newStore.mkDomainD(ov) ))) 
           //the property of the arguments are propagated to formal parameters
           val newPStore2 = storeUpdate(newPStore, List((thisRegAddr, pv))) 
           
@@ -209,13 +224,19 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
             kptr, tp), funk :: k))
       }
 
-    } else { // if it is entry apply, maybe no need to propagate the security property
+    } else { // if it is entry apply,  no need to propagate the security property
+      
       val argVals = argsTopVal
+      //println("argVals")
+     // argVals.foreach(println)
       val startingIndex = regsNum - argVals.length
       val formalRegStrOffsets = List.range(startingIndex, regsNum) map (StringUtils.constrRegStr)
       val formalRegOffsetAddrs = formalRegStrOffsets map (newFP.offset(_))
       val bindings = formalRegOffsetAddrs.zip(argVals)
       val newStore = storeUpdate(s, bindings) 
+      
+      //println("binding: ")
+     // bindings.foreach(println)
       
       val propertyBindings = formalRegOffsetAddrs.zip(argSecurityVals)
       val newPStore = storeUpdate(pstMoveResult, propertyBindings)
@@ -312,7 +333,8 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
                 
                 val objVal = ObjectValue(newOP, clsName)
 
-                val newStore = storeStrongUpdate(s, List((fp.offset(destReg.regStr), s.mkDomainD(objVal))))
+                val newStore = //storeStrongUpdate(s, List((fp.offset(destReg.regStr), s.mkDomainD(objVal))))
+                  storeUpdate(s, List((fp.offset(destReg.regStr), s.mkDomainD(objVal))))
                 // initialize the fields of the currnet class and return new store?
                 val newStore2 = initObject(castTypeStr, newStore, newOP)
                 //field area is propagated with hte sources from the object
@@ -502,7 +524,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       }
       // iputfield
       case FieldAssignStmt(fieldExp: NonStaticFieldExp, srcReg: RegisterExp, _, _, _,_) => { 
-    
+    	// println("iputField!!!" , fieldS)
         fieldAssignHandleHelperI(false, fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
       }
       // Sgetfield 
@@ -578,6 +600,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
     val objRegExp = fieldExp.objExp
     val fieldPath = fieldExp.fp
 
+  //  println(fieldExp)
     val (fieldClsPath, fieldName) = StringUtils.getClsPathAndFldNameFromFieldPath(fieldPath)
 
     val objRegE = objRegExp match {
@@ -631,6 +654,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
        
       if (isInstanceGet) {
         val fieldVals = storeLookup(s, fieldAddr)
+      
         val newStore = storeUpdate(s, List((srcOrDestAddr, fieldVals)))
         
         // the joined values of the fields as well as the object addr will be propergated to the iget target
@@ -646,8 +670,11 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
         List(newState)
         
       } else 
-      {
+      { 
         val newValtoPut = storeLookup(s, srcOrDestAddr)
+       // println("srcOrDestAddr: " + srcOrDestAddr)
+       // println("---looked vals ", newValtoPut)
+       // println("----to fiedAddr", fieldAddr)
         val newStore = storeUpdate(s, List((fieldAddr, newValtoPut))) 
         
         val newPropertyValToPut = storeLookup(pst, srcOrDestAddr)

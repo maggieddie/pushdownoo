@@ -1,0 +1,18 @@
+(interface (attrs public abstract synchronized ) org/xml/sax/Locator
+ (super java/lang/Object)
+ (source "Locator.java")
+
+
+(method (attrs public abstract ) getColumnNumber()int
+)
+
+(method (attrs public abstract ) getLineNumber()int
+)
+
+(method (attrs public abstract ) getPublicId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSystemId()[object java/lang/String]
+)
+
+)

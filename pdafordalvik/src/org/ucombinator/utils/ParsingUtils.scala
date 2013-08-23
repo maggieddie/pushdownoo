@@ -173,7 +173,13 @@ object ParsingUtils {
     val destOrSrcRegister = RegisterExp(destOrSrcReg)
     val objRegister = RegisterExp(objReg)
     val fp = fieldPath.toString
-    val ft = fieldType.toList.head.toString()
+   // println("fieldPath: ", fp)
+    val ftList =  fieldType.toList 
+    val ft = 
+      if(ftList.isEmpty) { 
+       // println("fieldPath: ", fp) 
+        ""}
+      else ftList.head.toString()
     val fieldExp = new NonStaticFieldExp(objRegister, fp, ft)
     if (isget)
       new FieldAssignStmt(destOrSrcRegister, fieldExp, next, StmtNil, clsP, methP)
@@ -187,7 +193,19 @@ object ParsingUtils {
     val srcReg = RegisterExp(SName.from("ret"))
     new AssignAExpStmt(destRegister, srcReg, next, StmtNil, clsP, methP)
   }
+  
+  
 
+  def genMonitorEnterStmt(destReg: SName, next: Stmt, clsP:String, methP:String): MonitorEnterStmt = {
+      val destRegister = RegisterExp(destReg)
+      new MonitorEnterStmt(destRegister, next ,StmtNil, clsP, methP)
+  }
+  
+   def genMonitorExitStmt(destReg: SName, next: Stmt, clsP:String, methP:String): MonitorExitStmt = {
+      val destRegister = RegisterExp(destReg)
+      new MonitorExitStmt(destRegister, next , StmtNil, clsP, methP)
+  }
+  
   //for transforming the exception
   def extractCatchStmts(fst: Stmt): List[CatchStmt] = {
     val flattenedList = CommonUtils.flattenLinkedStmt(List())(fst)
@@ -325,6 +343,8 @@ object ParsingUtils {
       }
     }
   }
+
+   
   
   private def genSeriLnForPophandler(ln: Stmt, sn: Int) : LineStmt = {
      ln.lineNumber match{
@@ -346,6 +366,9 @@ object ParsingUtils {
          throw new Exception("@genSeriLnForPopHandler: Not a LineStmt")}
      }
   }
+  
+  
+  
   private def setPopHandlerLn(pphs: List[Stmt], lnSt: Stmt) {
     var serirNo = 0
      
@@ -362,7 +385,11 @@ object ParsingUtils {
 
   def transFormBody(bd: Stmt, exnHandler: ExceptionHandlers, annot: List[String], clsP:  String, methP: String): Stmt = {
     bd match {
-      case StmtNil => StmtNil
+      case StmtNil => {
+        println("This is the empty method body")
+         val fkeReturnStmt = new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, clsP, methP) 
+        fkeReturnStmt
+      }
       case _ => {
         var flattendList = CommonUtils.flattenLinkedStmt(List())(bd)
         Debug.prntDebugInfo("Before transforming the method, length", flattendList.length)

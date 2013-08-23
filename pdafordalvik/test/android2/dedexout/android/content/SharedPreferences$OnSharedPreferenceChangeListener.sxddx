@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/content/SharedPreferences$OnSharedPreferenceChangeListener
+ (super java/lang/Object)
+ (source "SharedPreferences.java")
+
+
+(method (attrs public abstract ) onSharedPreferenceChanged([object android/content/SharedPreferences] [object java/lang/String] )void
+)
+
+)

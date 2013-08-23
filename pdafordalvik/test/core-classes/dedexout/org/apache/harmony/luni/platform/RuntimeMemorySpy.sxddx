@@ -1,0 +1,40 @@
+(class (attrs final synchronized ) org/apache/harmony/luni/platform/RuntimeMemorySpy
+ (super org/apache/harmony/luni/platform/AbstractMemorySpy)
+ (source "RuntimeMemorySpy.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/luni/platform/RuntimeMemorySpy])
+  (line 24)
+  (invoke-direct {v0} org/apache/harmony/luni/platform/AbstractMemorySpy/<init> )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) alloc([object org/apache/harmony/luni/platform/PlatformAddress] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/harmony/luni/platform/RuntimeMemorySpy])
+  ; parameter[0] : v3 ([object org/apache/harmony/luni/platform/PlatformAddress])
+  (line 29)
+  (iget-object-quick v1 v2 )
+  (invoke-virtual-quick {v1} vtable #0xc)
+  (move-result-object v0)
+  (label l18d098)
+  (line 30)
+  (if-eqz v0 l18d0b0)
+  (line 31)
+  (invoke-virtual-quick {v2 v0} org/apache/harmony/luni/platform/RuntimeMemorySpy/orphanedMemory [object java/lang/ref/Reference] )
+  (line 32)
+  (iget-object-quick v1 v2 )
+  (invoke-virtual-quick {v1} vtable #0xc)
+  (move-result-object v0)
+  (goto l18d098)
+  (label l18d0b0)
+  (line 35)
+  (invoke-super-quick {v2 v3} org/apache/harmony/luni/platform/RuntimeMemorySpy/alloc [object org/apache/harmony/luni/platform/PlatformAddress] )
+  (line 36)
+  (return-void )
+)
+
+)

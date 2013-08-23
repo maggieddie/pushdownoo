@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/view/SurfaceHolder$Callback2
+ (super java/lang/Object)
+ (source "SurfaceHolder.java")
+ (implements android/view/SurfaceHolder$Callback)
+
+
+(method (attrs public abstract ) surfaceRedrawNeeded([object android/view/SurfaceHolder] )void
+)
+
+)

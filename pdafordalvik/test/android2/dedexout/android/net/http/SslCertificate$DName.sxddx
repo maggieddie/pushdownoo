@@ -1,0 +1,61 @@
+(class (attrs public ) android/net/http/SslCertificate$DName
+ (super java/lang/Object)
+ (source "SslCertificate.java")
+
+ (field (attrs final ) this$0 [object android/net/http/SslCertificate] )
+
+(method (attrs public ) <init>([object android/net/http/SslCertificate] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object android/net/http/SslCertificate$DName])
+  ; parameter[0] : v3 ([object android/net/http/SslCertificate])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 6)
+  (iput-object v3 v2 android/net/http/SslCertificate$DName.this$0 [object android/net/http/SslCertificate])
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getCName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/http/SslCertificate$DName])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/http/SslCertificate$DName])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getOName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/http/SslCertificate$DName])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getUName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/http/SslCertificate$DName])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

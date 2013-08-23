@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) java/util/concurrent/RejectedExecutionHandler
+ (super java/lang/Object)
+ (source "RejectedExecutionHandler.java")
+
+
+(method (attrs public abstract ) rejectedExecution([object java/lang/Runnable] [object java/util/concurrent/ThreadPoolExecutor] )void
+)
+
+)

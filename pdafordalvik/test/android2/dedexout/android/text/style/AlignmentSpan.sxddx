@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/text/style/AlignmentSpan
+ (super java/lang/Object)
+ (source "AlignmentSpan.java")
+ (implements android/text/style/ParagraphStyle)
+
+
+(method (attrs public abstract ) getAlignment()[object android/text/Layout$Alignment]
+)
+
+)

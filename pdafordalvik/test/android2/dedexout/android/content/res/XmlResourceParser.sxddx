@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) android/content/res/XmlResourceParser
+ (super java/lang/Object)
+ (source "XmlResourceParser.java")
+ (implements org/xmlpull/v1/XmlPullParser)
+ (implements android/util/AttributeSet)
+
+
+(method (attrs public abstract ) close()void
+)
+
+)

@@ -1,0 +1,53 @@
+(class (attrs public ) org/apache/http/conn/params/ConnRouteParamBean
+ (super org/apache/http/params/HttpAbstractParamBean)
+ (source "ConnRouteParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/http/params/HttpParams] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object org/apache/http/params/HttpParams])
+  (line 5)
+  (const/4 v0 0)
+  (check-cast v0 [object org/apache/http/params/HttpParams])
+  (invoke-direct {v2 v0} org/apache/http/params/HttpAbstractParamBean/<init> [object org/apache/http/params/HttpParams] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) setDefaultProxy([object org/apache/http/HttpHost] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object org/apache/http/HttpHost])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setForcedRoute([object org/apache/http/conn/routing/HttpRoute] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object org/apache/http/conn/routing/HttpRoute])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setLocalAddress([object java/net/InetAddress] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/conn/params/ConnRouteParamBean])
+  ; parameter[0] : v3 ([object java/net/InetAddress])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

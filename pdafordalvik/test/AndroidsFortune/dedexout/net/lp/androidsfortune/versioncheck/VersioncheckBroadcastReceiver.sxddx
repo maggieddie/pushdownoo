@@ -1,0 +1,34 @@
+(class (attrs public ) net/lp/androidsfortune/versioncheck/VersioncheckBroadcastReceiver
+ (super com/tomgibara/android/veecheck/VeecheckReceiver)
+ (source "VersioncheckBroadcastReceiver.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/versioncheck/VersioncheckBroadcastReceiver])
+  (line 38)
+  (invoke-direct {v0} com/tomgibara/android/veecheck/VeecheckReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) createSettings([object android/content/Context] )[object com/tomgibara/android/veecheck/VeecheckSettings]
+  (limit registers 3)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckBroadcastReceiver])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 42)
+  (new-instance v0 com/tomgibara/android/veecheck/util/PrefSettings)
+  (invoke-direct {v0 v2} com/tomgibara/android/veecheck/util/PrefSettings/<init> [object android/content/Context] )
+  (return-object v0)
+)
+
+(method (attrs protected ) createState([object android/content/Context] )[object com/tomgibara/android/veecheck/VeecheckState]
+  (limit registers 3)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckBroadcastReceiver])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 47)
+  (new-instance v0 com/tomgibara/android/veecheck/util/PrefState)
+  (invoke-direct {v0 v2} com/tomgibara/android/veecheck/util/PrefState/<init> [object android/content/Context] )
+  (return-object v0)
+)
+
+)

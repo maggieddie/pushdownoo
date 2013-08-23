@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) java/lang/SuppressWarnings
+ (super java/lang/Object)
+ (source "SuppressWarnings.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object java/lang/String]]
+)
+
+)

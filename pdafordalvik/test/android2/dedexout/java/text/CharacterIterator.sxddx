@@ -1,0 +1,38 @@
+(interface (attrs public abstract ) java/text/CharacterIterator
+ (super java/lang/Object)
+ (source "CharacterIterator.java")
+ (implements java/lang/Cloneable)
+
+ (field (attrs public static final ) DONE char #\\uFFFF )
+
+(method (attrs public abstract ) clone()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) current()char
+)
+
+(method (attrs public abstract ) first()char
+)
+
+(method (attrs public abstract ) getBeginIndex()int
+)
+
+(method (attrs public abstract ) getEndIndex()int
+)
+
+(method (attrs public abstract ) getIndex()int
+)
+
+(method (attrs public abstract ) last()char
+)
+
+(method (attrs public abstract ) next()char
+)
+
+(method (attrs public abstract ) previous()char
+)
+
+(method (attrs public abstract ) setIndex(int )char
+)
+
+)

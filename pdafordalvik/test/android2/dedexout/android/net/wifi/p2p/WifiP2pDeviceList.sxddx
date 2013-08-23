@@ -1,0 +1,84 @@
+(class (attrs public ) android/net/wifi/p2p/WifiP2pDeviceList
+ (super java/lang/Object)
+ (source "WifiP2pDeviceList.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 12)
+  (const/4 v0 0)
+  (sput-object v0 android/net/wifi/p2p/WifiP2pDeviceList.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/net/wifi/p2p/WifiP2pDeviceList] )void
+  (limit registers 4)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  ; parameter[0] : v3 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDeviceList()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<"  "Landroid/net/wifi/p2p/WifiP2pDevice;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/net/wifi/p2p/WifiP2pDeviceList])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

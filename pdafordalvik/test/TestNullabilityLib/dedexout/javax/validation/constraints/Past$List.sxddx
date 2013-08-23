@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/validation/constraints/Past$List
+ (super java/lang/Object)
+ (source "Past.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object javax/validation/constraints/Past]]
+)
+
+)

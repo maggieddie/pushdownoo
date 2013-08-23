@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) org/json/JSONException
+ (super java/lang/Exception)
+ (source "JSONException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/json/JSONException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 14)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 15)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/tomgibara/android/veecheck/VeecheckState
+ (super java/lang/Object)
+ (source "VeecheckState.java")
+
+
+(method (attrs public abstract ) getLastCheck()long
+)
+
+(method (attrs public abstract ) isIgnoredIntent([object android/content/Intent] )boolean
+)
+
+(method (attrs public abstract ) setIgnoredIntent([object android/content/Intent] )void
+)
+
+(method (attrs public abstract ) setLastCheckNow(long )void
+)
+
+)

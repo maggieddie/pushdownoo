@@ -1,0 +1,19 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCEBlockCipher$PBEWithSHAAndDES3Key
+ (super org/bouncycastle/jce/provider/JCEBlockCipher)
+ (source "JCEBlockCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle/jce/provider/JCEBlockCipher$PBEWithSHAAndDES3Key])
+  (line 926)
+  (new-instance v0 org/bouncycastle/crypto/modes/CBCBlockCipher)
+  (new-instance v1 org/bouncycastle/crypto/engines/DESedeEngine)
+  (invoke-direct {v1} org/bouncycastle/crypto/engines/DESedeEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/modes/CBCBlockCipher/<init> [object org/bouncycastle/crypto/BlockCipher] )
+  (invoke-direct {v2 v0} org/bouncycastle/jce/provider/JCEBlockCipher/<init> [object org/bouncycastle/crypto/BlockCipher] )
+  (line 927)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Добре познатото приложение Fortune за Android: изписва произволна интересна поговорка.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune в Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">За да получиш информация за това приложение трябва да инсталираш OI About. Виж http://www.openintents.org/ или Пазара.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Изглежда нямаш инсталирано приложението Android Market. Пропуска заявката.</string>
+    <string name="market_description_short">Добре познатото приложение Fortune, вече и за Android: изписва произволни интересни поговорка, цитати, пословици, афоризми, шеги и др.</string>
+    <string name="menu_preferences">Настройки</string>
+    <string name="menu_about">"За Android's Fortune"</string>
+    <string name="menu_refresh">Ново късметче</string>
+    <string name="menu_get_more_cookies">Още късметчета</string>
+    <string name="menu_send">Изпрати като текст</string>
+    <string name="menu_web_search">Търси в Мрежата</string>
+    <string name="menu_feedback">Дай обратна връзка</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Изпрати чрез:</string>
+    <string name="chooser_web_search_action">Търси в Мрежата с:</string>
+    <string name="preferences_activity_name">"Настройки на Android's Fortune"</string>
+    <string name="resources">Ресурси</string>
+    <string name="title_cp_equal">Равен шанс за всички файлове с късметчета</string>
+    <string name="summary_cp_equal">Whether the chance that a cookie is displayed from a particular cookie file is equal between cookie files, irrespective of the cookie files sizes.</string>
+    <string name="title_ep_folder">Папка с файлове с късметчета</string>
+    <string name="summary_ep_folder">Въведете папката, където са вашите файлове с късметчета.</string>
+    <string name="dialog_title_ep_folder">Въведете папката, съдържаща файлове с късметчета</string>
+    <string name="title_ps_files">Файлове с късметчета</string>
+    <string name="summary_ps_files">Изберете от горната папка файловете, от които желаете да се взимат късметчета (не включвайте .num файлове).</string>
+    <string name="summary_ps_files_warning">ВНИМАНИЕ: Някои от избраните файлове нямат асоцииран .num файл! Щракнете тук и променете избора си!</string>
+    <string name="in_app_display">Показване</string>
+    <string name="title_lp_font">Стил на шрифта</string>
+    <string name="summary_lp_font">Monospace може да бъде полезен за късметчета с ascii-art.</string>
+    <string name="dialog_title_lp_font">Промени шрифта</string>
+    <string name="title_ep_fontsize">Размер на шрифта</string>
+    <string name="summary_ep_fontsize">Размер на шрифта в точки</string>
+    <string name="dialog_title_ep_fontsize">Промени размер на шрифта</string>
+    <string name="title_cp_wrap">Пренасяне на нов ред</string>
+    <string name="summary_cp_wrap">Fits the cookie text on the screen. Disable to correctly view cookie texts formatted with linebreaks and ascii-art.</string>
+    <string name="widget_display">Графичен обект</string>
+    <string name="title_lp_widget_font">Стил на шрифта</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Промени стила на шрифта</string>
+    <string name="title_ep_widget_period">Период на обновяване</string>
+    <string name="summary_ep_widget_period">Времеви период в за обновяване минути</string>
+    <string name="dialog_title_ep_widget_period">Промерни периода на обновяване</string>
+    <string name="notifications">Известия</string>
+    <string name="title_cp_notif_boot">Известия при стартиране</string>
+    <string name="summary_cp_notif_boot">Вади късметче при стартиране на системата.</string>
+    <string name="title_cp_notif_time">Периодични известия</string>
+    <string name="summary_cp_notif_time">Вади късметчета през времеви интервал.</string>
+    <string name="title_ep_time">Времеви период</string>
+    <string name="summary_ep_time">Времеви период между известията.</string>
+    <string name="dialog_title_ep_time">Промяна на времевия период</string>
+    <string name="dialog_title_num">Да се създадат .num файлове?</string>
+    <string name="dialog_message_num_warning">Някои от избраните файлове нямат асоцииран .num файл. Да се опитам ли да генерирам липсващите .num файлове?</string>
+    <string name="no_cookie_files">"Няма дефиниран файл с късметчета. Моля, отворете настройките и изберете файл с късметчета.
+
+Виж тук: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Това не е късметче!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Късметче</string>
+    <string name="dialog_install">Моля, изчакайте, докато се инсталира примерният файл с късметчета...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Късметчета</string>
+    <string name="widget_loading">Зареждане на късметче...</string>
+    <string name="widget_error">"Няма избрани файлове с късметчета или Android's Fortune се е изключил поради липса на свободна памет или преинсталация. Цъкни, за да отвориш Android's Fortune!"</string>
+    <string name="widget_dialog_activity_name">Избери операция:</string>
+    <string name="label_b_refresh">Обнови</string>
+    <string name="label_b_show_cookie">Покажи късметче</string>
+    <string name="label_b_cancel">Отказ</string>
+    <string name="error_no_file_name">Не е зададено име на файла.</string>
+    <string name="error_arg_twice">Аргумент бе предаден два пъти.</string>
+    <string name="error_num_file_exists">.num файлът, който щяхте да създадете, всъщност вече съществува.</string>
+    <string name="error_no_valid_cookie_file">Избраният файл не е валиден файл с късметчета.</string>
+    <string name="error_file_not_exists_or_no_num">Или файлът с късметчета липсва, или няма асоцииран .num файл към него:</string>
+    <string name="error_no_write_perms">Нямаш права за писане.</string>
+    <string name="toast_read_cookie_failed">Грешка при прочитането на късметчето:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Are you sure you have the SD card mounted?"</string>
+    <string name="toast_read_cookie_failed_internal">An internal error occured while reading the cookie (please report the bug):</string>
+    <string name="toast_generation_num_failed">Generation of .num file failed:</string>
+    <string name="toast_not_a_dir">The specified folder (above in the preferences) is not a valid directory:</string>
+    <string name="toast_selected_file_lost">A file that was previously selected is no longer found:</string>
+    <string name="toast_value_invalid">The entered value is invalid. Set to:</string>
+    <string name="toast_widget_period_short">Период, по-малък от 60 минути би повлиял отрицателно на изпълнението на системата и на издръжливостта на батерията.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune Update Checking Preferences"</string>
+    <string name="title_ps_versioncheck">Updates checking</string>
+    <string name="summary_ps_versioncheck">Automated self-checking for updates.</string>
+    <string name="vc_notify_ticker">Application Update</string>
+    <string name="vc_notify_title">Application Updated</string>
+    <string name="vc_notify_message">Download a new version.</string>
+    <string name="vc_category">Updates Checking</string>
+    <string name="vc_enabled_title">Разрешен</string>
+    <string name="vc_enabled_summary">Whether checking for app updates is enabled or not.</string>
+    <string name="vc_confirm_title">"Confirm Android's Fortune Update"</string>
+    <string name="vc_confirm_text">Would you like to update this application to the newest version?</string>
+    <string name="vc_confirm_stop">"Don't notify me of this update again"</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Check URI</string>
+    <string name="vc_check_uri_summary">The URI which will be checked for app updates.</string>
+    <string name="about_translators">Launchpad Contributions: vlood https://launchpad.net/~vladimir-vassilev</string>
+</resources>

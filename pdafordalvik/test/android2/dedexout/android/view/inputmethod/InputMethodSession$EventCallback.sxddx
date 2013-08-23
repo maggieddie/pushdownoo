@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/inputmethod/InputMethodSession$EventCallback
+ (super java/lang/Object)
+ (source "InputMethodSession.java")
+
+
+(method (attrs public abstract ) finishedEvent(int boolean )void
+)
+
+)

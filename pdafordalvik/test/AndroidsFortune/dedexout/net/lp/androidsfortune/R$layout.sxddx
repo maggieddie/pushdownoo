@@ -1,0 +1,25 @@
+(class (attrs public final ) net/lp/androidsfortune/R$layout
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) main int 2130903040); 0x7f030000 )
+ (field (attrs public static final ) main_ts int 2130903041); 0x7f030001 )
+ (field (attrs public static final ) main_wrap int 2130903042); 0x7f030002 )
+ (field (attrs public static final ) preference_child int 2130903043); 0x7f030003 )
+ (field (attrs public static final ) simple_list_item_multiple_choice int 2130903044); 0x7f030004 )
+ (field (attrs public static final ) versioncheck int 2130903045); 0x7f030005 )
+ (field (attrs public static final ) widget_cookie int 2130903046); 0x7f030006 )
+ (field (attrs public static final ) widget_cookie_monospace int 2130903047); 0x7f030007 )
+ (field (attrs public static final ) widget_cookie_sans int 2130903048); 0x7f030008 )
+ (field (attrs public static final ) widget_dialog_activity int 2130903049); 0x7f030009 )
+ (field (attrs public static final ) widget_message int 2130903050); 0x7f03000a )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/R$layout])
+  (line 66)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

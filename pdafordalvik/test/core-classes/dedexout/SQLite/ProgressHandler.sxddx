@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) SQLite/ProgressHandler
+ (super java/lang/Object)
+ (source "ProgressHandler.java")
+
+
+(method (attrs public abstract ) progress()boolean
+)
+
+)

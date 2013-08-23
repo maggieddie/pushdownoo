@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) java/io/FilenameFilter
+ (super java/lang/Object)
+ (source "FilenameFilter.java")
+
+
+(method (attrs public abstract ) accept([object java/io/File] [object java/lang/String] )boolean
+)
+
+)

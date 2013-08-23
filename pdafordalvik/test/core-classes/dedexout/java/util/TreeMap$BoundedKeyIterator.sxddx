@@ -1,0 +1,43 @@
+(class (attrs synchronized ) java/util/TreeMap$BoundedKeyIterator
+ (super java/util/TreeMap$BoundedMapIterator)
+ (source "TreeMap.java")
+ (implements java/util/Iterator)
+
+
+(method (attrs public ) <init>([object java/util/TreeMap$Node] int [object java/util/TreeMap] [object java/util/TreeMap$Node] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TreeMap$Node"  "<TK;TV;>;I"  "Ljava/util/TreeMap"  "<TK;TV;>;"  "Ljava/util/TreeMap$Node"  "<TK;TV;>;I)V")
+  )
+  (limit registers 6)
+  ; this: v0 ([object java/util/TreeMap$BoundedKeyIterator])
+  ; parameter[0] : v1 ([object java/util/TreeMap$Node])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/util/TreeMap])
+  ; parameter[3] : v4 ([object java/util/TreeMap$Node])
+  ; parameter[4] : v5 (int)
+  (line 333)
+  (invoke-direct/range {v0 .. v5} java/util/TreeMap$BoundedMapIterator/<init> [object java/util/TreeMap$Node] int [object java/util/TreeMap] [object java/util/TreeMap$Node] int )
+  (line 334)
+  (return-void )
+ )
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object java/util/TreeMap$BoundedKeyIterator])
+  (line 337)
+  (invoke-virtual-quick {v3} java/util/TreeMap$BoundedKeyIterator/makeBoundedNext )
+  (line 338)
+  (iget-object-quick v0 v3 )
+  (iget-object-quick v0 v0 )
+  (iget-object-quick v1 v3 )
+  (iget-quick v1 v1 )
+  (iget-quick v2 v3 )
+  (sub-int/2addr v1 v2)
+  (aget-object v0 v0 v1)
+  (return-object v0)
+)
+
+)

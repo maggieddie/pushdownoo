@@ -1,0 +1,36 @@
+(class (attrs public ) android/graphics/SweepGradient
+ (super android/graphics/Shader)
+ (source "SweepGradient.java")
+
+
+(method (attrs public ) <init>(float float int int )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/SweepGradient])
+  ; parameter[0] : v3 (float)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 6)
+  (invoke-direct {v2} android/graphics/Shader/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(float float [array int] [array float] )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/SweepGradient])
+  ; parameter[0] : v3 (float)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 ([array int])
+  ; parameter[3] : v6 ([array float])
+  (line 5)
+  (invoke-direct {v2} android/graphics/Shader/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

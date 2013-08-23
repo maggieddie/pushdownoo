@@ -1,0 +1,27 @@
+(class (attrs synchronized ) java/util/concurrent/CyclicBarrier$Generation
+ (super java/lang/Object)
+ (source "CyclicBarrier.java")
+
+ (field (attrs ) broken boolean )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/CyclicBarrier$Generation])
+  (line 115)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 116)
+  (const/4 v0 0)
+  (iput-quick v0 v1 java/util/concurrent/CyclicBarrier$Generation.broken boolean)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/concurrent/CyclicBarrier$1] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/CyclicBarrier$Generation])
+  ; parameter[0] : v1 ([object java/util/concurrent/CyclicBarrier$1])
+  (line 115)
+  (invoke-direct {v0} java/util/concurrent/CyclicBarrier$Generation/<init> )
+  (return-void )
+ )
+
+)

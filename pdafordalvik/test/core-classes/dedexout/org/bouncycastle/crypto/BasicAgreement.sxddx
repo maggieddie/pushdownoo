@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/crypto/BasicAgreement
+ (super java/lang/Object)
+ (source "BasicAgreement.java")
+
+
+(method (attrs public abstract ) calculateAgreement([object org/bouncycastle/crypto/CipherParameters] )[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) init([object org/bouncycastle/crypto/CipherParameters] )void
+)
+
+)

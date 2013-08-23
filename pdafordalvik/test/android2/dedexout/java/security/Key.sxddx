@@ -1,0 +1,17 @@
+(interface (attrs public abstract ) java/security/Key
+ (super java/lang/Object)
+ (source "Key.java")
+ (implements java/io/Serializable)
+
+ (field (attrs public static final ) serialVersionUID long -541593882); 0xdfb7eee6 )
+
+(method (attrs public abstract ) getAlgorithm()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getEncoded()[array byte]
+)
+
+(method (attrs public abstract ) getFormat()[object java/lang/String]
+)
+
+)

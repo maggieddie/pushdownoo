@@ -3,6 +3,7 @@ import org.ucombinator.utils.AIOptions
 import scala.tools.nsc.io.Directory
 import org.ucombinator.dalvik.syntax.SExp
 import java.io.File
+import scala.util.matching.Regex
 
 trait ParserHelper {
 
@@ -14,25 +15,23 @@ trait ParserHelper {
     if (opts.verbose) {
       // System.err.println("Input program in S-expression Form:")
       //  System.out.println(sexp)
-      System.out.println("\n")
+   //   System.out.println("\n")
     } 
 
     S2DParser(sexp);
 
-    if (opts.verbose) {
-      System.err.println("done parsing file: " + fp)
-    }
+   // if (opts.verbose) {
+    //  System.err.println("done parsing file: " + fp)
+  //  }
 
-  }
+  }  
+    
    def parseDalvikSExprs(opts: AIOptions) {
     val dirName = opts.sexprDir
 
     val sexDir = new Directory(new File(dirName))
     val allFileList = sexDir.deepFiles
-    //val valSexFileList = allFileList.filter(_.name.endsWith(".sxddx"))
-    // val arrFiles = new java.io.File(dirName).listFiles.filter(_.getName.endsWith(".sxddx"))
-    //println("parse file length:", allFileList.length)
-
+     
     val sexpFiles = allFileList.filter((f) => {
       f.name.endsWith(".sxddx")
     })

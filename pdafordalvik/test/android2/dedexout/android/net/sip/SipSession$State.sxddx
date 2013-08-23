@@ -1,0 +1,38 @@
+(class (attrs public ) android/net/sip/SipSession$State
+ (super java/lang/Object)
+ (source "SipSession.java")
+
+ (field (attrs public static final ) DEREGISTERING int 2); 0x2 )
+ (field (attrs public static final ) INCOMING_CALL int 3); 0x3 )
+ (field (attrs public static final ) INCOMING_CALL_ANSWERING int 4); 0x4 )
+ (field (attrs public static final ) IN_CALL int 8); 0x8 )
+ (field (attrs public static final ) NOT_DEFINED int 101); 0x65 )
+ (field (attrs public static final ) OUTGOING_CALL int 5); 0x5 )
+ (field (attrs public static final ) OUTGOING_CALL_CANCELING int 7); 0x7 )
+ (field (attrs public static final ) OUTGOING_CALL_RING_BACK int 6); 0x6 )
+ (field (attrs public static final ) PINGING int 9); 0x9 )
+ (field (attrs public static final ) READY_TO_CALL int 0); 0x0 )
+ (field (attrs public static final ) REGISTERING int 1); 0x1 )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipSession$State])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) toString(int )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

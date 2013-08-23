@@ -1,0 +1,39 @@
+(class (attrs public ) org/apache/http/impl/EnglishReasonPhraseCatalog
+ (super java/lang/Object)
+ (source "EnglishReasonPhraseCatalog.java")
+ (implements org/apache/http/ReasonPhraseCatalog)
+
+ (field (attrs public static final ) INSTANCE [object org/apache/http/impl/EnglishReasonPhraseCatalog] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 8)
+  (const/4 v0 0)
+  (sput-object v0 org/apache/http/impl/EnglishReasonPhraseCatalog.INSTANCE [object org/apache/http/impl/EnglishReasonPhraseCatalog])
+  (return-void )
+ )
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/impl/EnglishReasonPhraseCatalog])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getReason(int [object java/util/Locale] )[object java/lang/String]
+  (limit registers 5)
+  ; this: v2 ([object org/apache/http/impl/EnglishReasonPhraseCatalog])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/util/Locale])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

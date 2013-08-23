@@ -1,0 +1,21 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCEStreamCipher$DES_OFB8
+ (super org/bouncycastle/jce/provider/JCEStreamCipher)
+ (source "JCEStreamCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle/jce/provider/JCEStreamCipher$DES_OFB8])
+  (line 458)
+  (new-instance v0 org/bouncycastle/crypto/modes/OFBBlockCipher)
+  (new-instance v1 org/bouncycastle/crypto/engines/DESEngine)
+  (invoke-direct {v1} org/bouncycastle/crypto/engines/DESEngine/<init> )
+  (const/16 v2 8)
+  (invoke-direct {v0 v1 v2} org/bouncycastle/crypto/modes/OFBBlockCipher/<init> [object org/bouncycastle/crypto/BlockCipher] int )
+  (const/16 v1 64)
+  (invoke-direct {v3 v0 v1} org/bouncycastle/jce/provider/JCEStreamCipher/<init> [object org/bouncycastle/crypto/BlockCipher] int )
+  (line 459)
+  (return-void )
+ )
+
+)

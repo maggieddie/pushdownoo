@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/widget/MultiAutoCompleteTextView$Tokenizer
+ (super java/lang/Object)
+ (source "MultiAutoCompleteTextView.java")
+
+
+(method (attrs public abstract ) findTokenEnd([object java/lang/CharSequence] int )int
+)
+
+(method (attrs public abstract ) findTokenStart([object java/lang/CharSequence] int )int
+)
+
+(method (attrs public abstract ) terminateToken([object java/lang/CharSequence] )[object java/lang/CharSequence]
+)
+
+)

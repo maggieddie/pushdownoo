@@ -1,0 +1,33 @@
+(class (attrs public abstract synchronized ) org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator
+ (super java/security/AlgorithmParameterGeneratorSpi)
+ (source "JDKAlgorithmParameterGenerator.java")
+
+ (field (attrs protected ) random [object java/security/SecureRandom] )
+ (field (attrs protected ) strength int )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator])
+  (line 30)
+  (invoke-direct {v1} java/security/AlgorithmParameterGeneratorSpi/<init> )
+  (line 34)
+  (const/16 v0 1024)
+  (iput-quick v0 v1 org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator.strength int)
+  (line 409)
+  (return-void )
+ )
+
+(method (attrs protected ) engineInit(int [object java/security/SecureRandom] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/security/SecureRandom])
+  (line 40)
+  (iput-quick v1 v0 org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator.strength int)
+  (line 41)
+  (iput-object-quick v2 v0 org/bouncycastle/jce/provider/JDKAlgorithmParameterGenerator.random [object java/security/SecureRandom])
+  (line 42)
+  (return-void )
+)
+
+)

@@ -1,0 +1,36 @@
+(class (attrs ) com/gueei/applocker/ApplicationListActivity$AppItem$1
+ (super gueei/binding/Command)
+ (source "ApplicationListActivity.java")
+
+ (field (attrs final ) this$1 [object com/gueei/applocker/ApplicationListActivity$AppItem] )
+
+(method (attrs ) <init>([object com/gueei/applocker/ApplicationListActivity$AppItem] )void
+  (limit registers 2)
+  ; this: v0 ([object com/gueei/applocker/ApplicationListActivity$AppItem$1])
+  ; parameter[0] : v1 ([object com/gueei/applocker/ApplicationListActivity$AppItem])
+  (line 1)
+  (iput-object v1 v0 com/gueei/applocker/ApplicationListActivity$AppItem$1.this$1 [object com/gueei/applocker/ApplicationListActivity$AppItem])
+  (line 191)
+  (invoke-direct {v0} gueei/binding/Command/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) Invoke([object android/view/View] [array [object java/lang/Object]] )void
+  (limit registers 4)
+  ; this: v1 ([object com/gueei/applocker/ApplicationListActivity$AppItem$1])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 ([array [object java/lang/Object]])
+  (line 194)
+  (iget-object v0 v1 com/gueei/applocker/ApplicationListActivity$AppItem$1.this$1 [object com/gueei/applocker/ApplicationListActivity$AppItem])
+  (iget-object v0 v0 com/gueei/applocker/ApplicationListActivity$AppItem.Included [object gueei/binding/observables/BooleanObservable])
+  (invoke-virtual {v0} gueei/binding/observables/BooleanObservable/toggle )
+  (line 195)
+  (iget-object v0 v1 com/gueei/applocker/ApplicationListActivity$AppItem$1.this$1 [object com/gueei/applocker/ApplicationListActivity$AppItem])
+  (invoke-static {v0} com/gueei/applocker/ApplicationListActivity$AppItem/access$1 [object com/gueei/applocker/ApplicationListActivity$AppItem] )
+  (move-result-object v0)
+  (invoke-static {v0} com/gueei/applocker/ApplicationListActivity/access$0 [object com/gueei/applocker/ApplicationListActivity] )
+  (line 196)
+  (return-void )
+)
+
+)

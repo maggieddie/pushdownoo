@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) java/util/Comparator
+ (super java/lang/Object)
+ (source "Comparator.java")
+
+
+(method (attrs public abstract ) compare([object java/lang/Object] [object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;TT;)I")
+  )
+)
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+)

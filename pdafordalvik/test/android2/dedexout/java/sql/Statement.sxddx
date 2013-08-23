@@ -1,0 +1,254 @@
+(interface (attrs public abstract ) java/sql/Statement
+ (super java/lang/Object)
+ (source "Statement.java")
+ (implements java/sql/Wrapper)
+
+ (field (attrs public static final ) CLOSE_ALL_RESULTS int 3); 0x3 )
+ (field (attrs public static final ) CLOSE_CURRENT_RESULT int 1); 0x1 )
+ (field (attrs public static final ) EXECUTE_FAILED int -3); 0xfffffffd )
+ (field (attrs public static final ) KEEP_CURRENT_RESULT int 2); 0x2 )
+ (field (attrs public static final ) NO_GENERATED_KEYS int 2); 0x2 )
+ (field (attrs public static final ) RETURN_GENERATED_KEYS int 1); 0x1 )
+ (field (attrs public static final ) SUCCESS_NO_INFO int -2); 0xfffffffe )
+
+(method (attrs public abstract ) addBatch([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) cancel()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) clearBatch()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) clearWarnings()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) execute([object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) execute([object java/lang/String] int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) execute([object java/lang/String] [array int] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) execute([object java/lang/String] [array [object java/lang/String]] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeBatch()[array int]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeQuery([object java/lang/String] )[object java/sql/ResultSet]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeUpdate([object java/lang/String] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeUpdate([object java/lang/String] int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeUpdate([object java/lang/String] [array int] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) executeUpdate([object java/lang/String] [array [object java/lang/String]] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getConnection()[object java/sql/Connection]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getFetchDirection()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getFetchSize()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getGeneratedKeys()[object java/sql/ResultSet]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getMaxFieldSize()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getMaxRows()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getMoreResults()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getMoreResults(int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getQueryTimeout()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getResultSet()[object java/sql/ResultSet]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getResultSetConcurrency()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getResultSetHoldability()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getResultSetType()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getUpdateCount()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getWarnings()[object java/sql/SQLWarning]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) isClosed()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) isPoolable()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setCursorName([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setEscapeProcessing(boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setFetchDirection(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setFetchSize(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setMaxFieldSize(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setMaxRows(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setPoolable(boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setQueryTimeout(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+)

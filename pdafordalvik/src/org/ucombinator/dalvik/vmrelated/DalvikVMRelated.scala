@@ -44,13 +44,21 @@ trait DalvikVMRelated {
   /**
    * We will make the random ln : Stmt random in a bit
    */
-  case class InitEntryPointStmt(methodPath: String, argsTypes: List[String], body: Stmt, regsNum: BigInt,nxt: Stmt, ln: Stmt, clsP: String, methP: String) extends Stmt {
+  case class InitEntryPointStmt(methodPath: String, 
+      argsTypes: List[String], 
+      body: Stmt, 
+      regsNum: BigInt,
+      nxt: Stmt, 
+      ln: Stmt, 
+      clsP: String, 
+      methP: String) extends Stmt {
+    
      var next = nxt
     var lineNumber = ln
     
     var clsPath = clsP
     var methPath = methP
-    override def toString = "InitEntryPointStmt: " + methodPath +"(" + body + " " + regsNum + ")"  + "ln: " + ln.toString
+    override def toString = "InitEntryPointStmt: " + methodPath +"(" + body + " " + regsNum + ")"  + " ln: " + ln.toString
     
     //
      def refRegsStrSet : Set[String] = {
@@ -403,8 +411,7 @@ trait DalvikVMRelated {
   private def getEntryPointStmts(opts: AIOptions): List[(List[Stmt], List[Stmt])] ={
     
     val listEns = extractRawEntryPoints(opts)  // getRawEntryPoints
-    
-  
+     
     
     if(listEns.isEmpty){
       Debug.prntDebugInfo("No cls + entry points found ", "")
@@ -438,6 +445,52 @@ trait DalvikVMRelated {
        }
      })
     }
+  }
+  
+    /**
+   * init entries for each class.
+   */
+   def buildInitEntries(ops: AIOptions) {
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foreach { 
+      case (className, clsDef) => {
+        val initDefs = clsDef.getInitMethods
+        val initEntries = buildInitEntriesHelper(initDefs, className)
+        val linkHeadO =
+        	CommonUtils.linkedListWrapper(List())(initEntries)
+        	
+       val testRes = linkHeadO match {
+          case  Some(hdt) => { CommonUtils.flattenLinkedStmt(List())(hdt)}
+          case None => {List()}
+        }
+       
+        println("testlinked init:")
+        testRes.foreach{
+          case tr => {
+            println(tr.methPath)
+            if(tr.isInstanceOf[InitEntryPointStmt]){
+              val tt = tr.asInstanceOf[InitEntryPointStmt]
+              println(tt.methodPath)
+              println(tt.body)
+            }  
+          }
+        }
+       
+        clsDef.linkedInitEntryStmt = linkHeadO
+      }
+    } 
+  }
+  
+    def buildInitEntriesHelper(initDefs: List[MethodDef], clsPath: String): List[Stmt] = {
+
+    initDefs.map((id) => {
+      val methP = ""
+        if(id.methodPath == "java/lang/Thread/<init>"){
+          println(id.methodPath + " : body is " + id.body )
+        }
+      val initEntryStmtO = InitEntryPointStmt(id.methodPath, id.argTypeList, id.body, id.regsNum, StmtNil, StmtNil, clsPath, methP)
+      CommonUtils.randomizeLineNumberOneStmt(initEntryStmtO, clsPath, methP) 
+    })
+
   }
   
   // returns a list of 
@@ -486,6 +539,7 @@ trait DalvikVMRelated {
    (linkHead, allInitsWithItsBodies)*/
   }
   
+  ///
  
   
   

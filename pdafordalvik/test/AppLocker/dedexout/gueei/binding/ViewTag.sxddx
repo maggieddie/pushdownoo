@@ -1,0 +1,14 @@
+(class (attrs public ) gueei/binding/ViewTag
+ (super gueei/binding/utility/TypeAsKeyHashMap)
+ (source "ViewTag.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/ViewTag])
+  (line 12)
+  (invoke-direct {v0} gueei/binding/utility/TypeAsKeyHashMap/<init> )
+  (return-void )
+ )
+
+)

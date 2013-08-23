@@ -1,0 +1,45 @@
+(class (attrs final synchronized ) java/util/concurrent/ConcurrentHashMap$ValueIterator
+ (super java/util/concurrent/ConcurrentHashMap$HashIterator)
+ (source "ConcurrentHashMap.java")
+ (implements java/util/Iterator)
+ (implements java/util/Enumeration)
+
+ (field (attrs final ) this$0 [object java/util/concurrent/ConcurrentHashMap] )
+
+(method (attrs ) <init>([object java/util/concurrent/ConcurrentHashMap] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/ConcurrentHashMap$ValueIterator])
+  ; parameter[0] : v1 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 1102)
+  (iput-object-quick v1 v0 java/util/concurrent/ConcurrentHashMap$ValueIterator.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-direct {v0 v1} java/util/concurrent/ConcurrentHashMap$HashIterator/<init> [object java/util/concurrent/ConcurrentHashMap] )
+  (return-void )
+ )
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$ValueIterator])
+  (line 1106)
+  (invoke-super-quick {v1} java/util/concurrent/ConcurrentHashMap$ValueIterator/nextEntry )
+  (move-result-object v0)
+  (iget-object-quick v0 v0 java/util/concurrent/ConcurrentHashMap$HashEntry.value [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) nextElement()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$ValueIterator])
+  (line 1107)
+  (invoke-super-quick {v1} java/util/concurrent/ConcurrentHashMap$ValueIterator/nextEntry )
+  (move-result-object v0)
+  (iget-object-quick v0 v0 java/util/concurrent/ConcurrentHashMap$HashEntry.value [object java/lang/Object])
+  (return-object v0)
+)
+
+)

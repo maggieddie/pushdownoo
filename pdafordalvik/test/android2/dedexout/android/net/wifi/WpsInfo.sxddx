@@ -1,0 +1,78 @@
+(class (attrs public ) android/net/wifi/WpsInfo
+ (super java/lang/Object)
+ (source "WpsInfo.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] null )
+ (field (attrs public static final ) DISPLAY int 1); 0x1 )
+ (field (attrs public static final ) INVALID int 4); 0x4 )
+ (field (attrs public static final ) KEYPAD int 2); 0x2 )
+ (field (attrs public static final ) LABEL int 3); 0x3 )
+ (field (attrs public static final ) PBC int )
+ (field (attrs public ) pin [object java/lang/String] )
+ (field (attrs public ) setup int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 18)
+  (const/4 v0 0)
+  (sput-object v0 android/net/wifi/WpsInfo.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/WpsInfo])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/net/wifi/WpsInfo] )void
+  (limit registers 4)
+  ; this: v2 ([object android/net/wifi/WpsInfo])
+  ; parameter[0] : v3 ([object android/net/wifi/WpsInfo])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/WpsInfo])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/wifi/WpsInfo])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/net/wifi/WpsInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

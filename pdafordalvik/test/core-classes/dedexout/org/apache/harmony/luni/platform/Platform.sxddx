@@ -1,0 +1,83 @@
+(class (attrs public synchronized ) org/apache/harmony/luni/platform/Platform
+ (super java/lang/Object)
+ (source "Platform.java")
+
+ (field (attrs static final ) FILE_SYSTEM [object org/apache/harmony/luni/platform/IFileSystem] )
+ (field (attrs static final ) MEMORY_SYSTEM [object org/apache/harmony/luni/platform/IMemorySystem] )
+ (field (attrs static final ) NETWORK_SYSTEM [object org/apache/harmony/luni/platform/INetworkSystem] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 41)
+  (invoke-static {} org/apache/harmony/luni/platform/OSFileSystem/getOSFileSystem )
+  (nop )
+  (move-result-object v0)
+  (sput-object v0 org/apache/harmony/luni/platform/Platform.FILE_SYSTEM [object org/apache/harmony/luni/platform/IFileSystem])
+  (line 43)
+  (invoke-static {} org/apache/harmony/luni/platform/OSMemory/getOSMemory )
+  (nop )
+  (move-result-object v0)
+  (sput-object v0 org/apache/harmony/luni/platform/Platform.MEMORY_SYSTEM [object org/apache/harmony/luni/platform/IMemorySystem])
+  (line 45)
+  (invoke-static {} org/apache/harmony/luni/platform/OSNetworkSystem/getOSNetworkSystem )
+  (nop )
+  (move-result-object v0)
+  (sput-object v0 org/apache/harmony/luni/platform/Platform.NETWORK_SYSTEM [object org/apache/harmony/luni/platform/INetworkSystem])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/luni/platform/Platform])
+  (line 39)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs private static final ) accessCheck()void
+  (limit registers 1)
+  (line 53)
+  (invoke-static {} dalvik/system/VMStack/getCallingClassLoader )
+  (nop )
+  (move-result-object v0)
+  (if-eqz v0 l18dd60)
+  (line 54)
+  (new-instance v0 java/lang/SecurityException)
+  (invoke-direct {v0} java/lang/SecurityException/<init> )
+  (throw v0)
+  (label l18dd60)
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs public static ) getFileSystem()[object org/apache/harmony/luni/platform/IFileSystem]
+  (limit registers 1)
+  (line 65)
+  (invoke-static {} org/apache/harmony/luni/platform/Platform/accessCheck )
+  (nop )
+  (line 66)
+  (sget-object v0 org/apache/harmony/luni/platform/Platform.FILE_SYSTEM [object org/apache/harmony/luni/platform/IFileSystem])
+  (return-object v0)
+ )
+
+(method (attrs public static ) getMemorySystem()[object org/apache/harmony/luni/platform/IMemorySystem]
+  (limit registers 1)
+  (line 75)
+  (invoke-static {} org/apache/harmony/luni/platform/Platform/accessCheck )
+  (nop )
+  (line 76)
+  (sget-object v0 org/apache/harmony/luni/platform/Platform.MEMORY_SYSTEM [object org/apache/harmony/luni/platform/IMemorySystem])
+  (return-object v0)
+ )
+
+(method (attrs public static ) getNetworkSystem()[object org/apache/harmony/luni/platform/INetworkSystem]
+  (limit registers 1)
+  (line 85)
+  (invoke-static {} org/apache/harmony/luni/platform/Platform/accessCheck )
+  (nop )
+  (line 86)
+  (sget-object v0 org/apache/harmony/luni/platform/Platform.NETWORK_SYSTEM [object org/apache/harmony/luni/platform/INetworkSystem])
+  (return-object v0)
+ )
+
+)

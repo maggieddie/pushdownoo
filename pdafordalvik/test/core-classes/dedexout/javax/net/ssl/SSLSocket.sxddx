@@ -1,0 +1,135 @@
+(class (attrs public abstract synchronized ) javax/net/ssl/SSLSocket
+ (super java/net/Socket)
+ (source "SSLSocket.java")
+
+
+(method (attrs protected ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 1)
+  ; this: v0 ([object javax/net/ssl/SSLSocket])
+  (line 37)
+  (invoke-direct {v0} java/net/Socket/<init> )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/lang/String] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object javax/net/ssl/SSLSocket])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 56)
+  (invoke-direct {v0 v1 v2} java/net/Socket/<init> [object java/lang/String] int )
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/lang/String] int [object java/net/InetAddress] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v0 ([object javax/net/ssl/SSLSocket])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/net/InetAddress])
+  ; parameter[3] : v4 (int)
+  (line 97)
+  (invoke-direct {v0 v1 v2 v3 v4} java/net/Socket/<init> [object java/lang/String] int [object java/net/InetAddress] int )
+  (line 98)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/net/InetAddress] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object javax/net/ssl/SSLSocket])
+  ; parameter[0] : v1 ([object java/net/InetAddress])
+  ; parameter[1] : v2 (int)
+  (line 73)
+  (invoke-direct {v0 v1 v2} java/net/Socket/<init> [object java/net/InetAddress] int )
+  (line 74)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/net/InetAddress] int [object java/net/InetAddress] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v0 ([object javax/net/ssl/SSLSocket])
+  ; parameter[0] : v1 ([object java/net/InetAddress])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/net/InetAddress])
+  ; parameter[3] : v4 (int)
+  (line 119)
+  (invoke-direct {v0 v1 v2 v3 v4} java/net/Socket/<init> [object java/net/InetAddress] int [object java/net/InetAddress] int )
+  (line 120)
+  (return-void )
+ )
+
+(method (attrs public abstract ) addHandshakeCompletedListener([object javax/net/ssl/HandshakeCompletedListener] )void
+)
+
+(method (attrs public abstract ) getEnableSessionCreation()boolean
+)
+
+(method (attrs public abstract ) getEnabledCipherSuites()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getEnabledProtocols()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getNeedClientAuth()boolean
+)
+
+(method (attrs public abstract ) getSession()[object javax/net/ssl/SSLSession]
+)
+
+(method (attrs public abstract ) getSupportedCipherSuites()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getSupportedProtocols()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getUseClientMode()boolean
+)
+
+(method (attrs public abstract ) getWantClientAuth()boolean
+)
+
+(method (attrs public abstract ) removeHandshakeCompletedListener([object javax/net/ssl/HandshakeCompletedListener] )void
+)
+
+(method (attrs public abstract ) setEnableSessionCreation(boolean )void
+)
+
+(method (attrs public abstract ) setEnabledCipherSuites([array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) setEnabledProtocols([array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) setNeedClientAuth(boolean )void
+)
+
+(method (attrs public abstract ) setUseClientMode(boolean )void
+)
+
+(method (attrs public abstract ) setWantClientAuth(boolean )void
+)
+
+(method (attrs public abstract ) startHandshake()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

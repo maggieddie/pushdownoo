@@ -1,0 +1,142 @@
+(class (attrs public final ) android/view/textservice/SpellCheckerInfo
+ (super java/lang/Object)
+ (source "SpellCheckerInfo.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 18)
+  (const/4 v0 0)
+  (sput-object v0 android/view/textservice/SpellCheckerInfo.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getComponent()[object android/content/ComponentName]
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getId()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPackageName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getServiceInfo()[object android/content/pm/ServiceInfo]
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSettingsActivity()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSubtypeAt(int )[object android/view/textservice/SpellCheckerSubtype]
+  (limit registers 4)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  ; parameter[0] : v3 (int)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSubtypeCount()int
+  (limit registers 3)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) loadIcon([object android/content/pm/PackageManager] )[object android/graphics/drawable/Drawable]
+  (limit registers 4)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  ; parameter[0] : v3 ([object android/content/pm/PackageManager])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) loadLabel([object android/content/pm/PackageManager] )[object java/lang/CharSequence]
+  (limit registers 4)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  ; parameter[0] : v3 ([object android/content/pm/PackageManager])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/textservice/SpellCheckerInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

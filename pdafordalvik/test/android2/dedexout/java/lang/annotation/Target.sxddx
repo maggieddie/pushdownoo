@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) java/lang/annotation/Target
+ (super java/lang/Object)
+ (source "Target.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object java/lang/annotation/ElementType]]
+)
+
+)

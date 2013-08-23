@@ -1,0 +1,50 @@
+(class (attrs synchronized ) java/util/AbstractMap$2
+ (super java/util/AbstractCollection)
+ (source "AbstractMap.java")
+
+ (field (attrs final ) this$0 [object java/util/AbstractMap] )
+
+(method (attrs ) <init>([object java/util/AbstractMap] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/AbstractMap$2])
+  ; parameter[0] : v1 ([object java/util/AbstractMap])
+  (line 413)
+  (iput-object-quick v1 v0 java/util/AbstractMap$2.this$0 [object java/util/AbstractMap])
+  (invoke-direct {v0} java/util/AbstractCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/AbstractMap$2])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 409)
+  (iget-object-quick v0 v1 java/util/AbstractMap$2.this$0 [object java/util/AbstractMap])
+  (invoke-virtual-quick {v0 v2} java/util/AbstractMap/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/AbstractMap$2])
+  (line 414)
+  (new-instance v0 java/util/AbstractMap$2$1)
+  (invoke-direct {v0 v1} java/util/AbstractMap$2$1/<init> [object java/util/AbstractMap$2] )
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/AbstractMap$2])
+  (line 404)
+  (iget-object-quick v0 v1 java/util/AbstractMap$2.this$0 [object java/util/AbstractMap])
+  (invoke-virtual-quick {v0} java/util/AbstractMap/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

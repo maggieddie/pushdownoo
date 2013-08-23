@@ -1,0 +1,64 @@
+(class (attrs public synchronized ) java/security/spec/DSAPrivateKeySpec
+ (super java/lang/Object)
+ (source "DSAPrivateKeySpec.java")
+ (implements java/security/spec/KeySpec)
+
+ (field (attrs private final ) g [object java/math/BigInteger] )
+ (field (attrs private final ) p [object java/math/BigInteger] )
+ (field (attrs private final ) q [object java/math/BigInteger] )
+ (field (attrs private final ) x [object java/math/BigInteger] )
+
+(method (attrs public ) <init>([object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] [object java/math/BigInteger] )void
+  (limit registers 5)
+  ; this: v0 ([object java/security/spec/DSAPrivateKeySpec])
+  ; parameter[0] : v1 ([object java/math/BigInteger])
+  ; parameter[1] : v2 ([object java/math/BigInteger])
+  ; parameter[2] : v3 ([object java/math/BigInteger])
+  ; parameter[3] : v4 ([object java/math/BigInteger])
+  (line 52)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 53)
+  (iput-object-quick v1 v0 java/security/spec/DSAPrivateKeySpec.x [object java/math/BigInteger])
+  (line 54)
+  (iput-object-quick v2 v0 java/security/spec/DSAPrivateKeySpec.p [object java/math/BigInteger])
+  (line 55)
+  (iput-object-quick v3 v0 java/security/spec/DSAPrivateKeySpec.q [object java/math/BigInteger])
+  (line 56)
+  (iput-object-quick v4 v0 java/security/spec/DSAPrivateKeySpec.g [object java/math/BigInteger])
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs public ) getG()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/DSAPrivateKeySpec])
+  (line 66)
+  (iget-object-quick v0 v1 java/security/spec/DSAPrivateKeySpec.g [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getP()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/DSAPrivateKeySpec])
+  (line 76)
+  (iget-object-quick v0 v1 java/security/spec/DSAPrivateKeySpec.p [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getQ()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/DSAPrivateKeySpec])
+  (line 86)
+  (iget-object-quick v0 v1 java/security/spec/DSAPrivateKeySpec.q [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getX()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/DSAPrivateKeySpec])
+  (line 96)
+  (iget-object-quick v0 v1 java/security/spec/DSAPrivateKeySpec.x [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

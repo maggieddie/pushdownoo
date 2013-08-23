@@ -1,0 +1,79 @@
+(class (attrs public ) gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent
+ (super gueei/binding/viewAttributes/ViewEventAttribute)
+ (source "OnItemLongClickedViewEvent.java")
+ (implements android/widget/AdapterView$OnItemLongClickListener)
+
+
+(method (attrs public ) <init>([object android/widget/AdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent])
+  ; parameter[0] : v2 ([object android/widget/AdapterView])
+  (line 18)
+  (const-string v0 "onItemLongClicked")
+  (invoke-direct {v1 v2 v0} gueei/binding/viewAttributes/ViewEventAttribute/<init> [object android/view/View] [object java/lang/String] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) onItemLongClick([object android/widget/AdapterView] [object android/view/View] int long )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)Z")
+  )
+  (limit registers 10)
+  ; this: v4 ([object gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent])
+  ; parameter[0] : v5 ([object android/widget/AdapterView])
+  ; parameter[1] : v6 ([object android/view/View])
+  ; parameter[2] : v7 (int)
+  ; parameter[3] : v8 (long)
+  (const/4 v3 1)
+  (line 26)
+  (const/4 v0 3)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (const/4 v1 0)
+  (aput-object v6 v0 v1)
+  (invoke-static {v7} java/lang/Integer/valueOf int )
+  (move-result-object v1)
+  (aput-object v1 v0 v3)
+  (const/4 v1 2)
+  (invoke-static {v8 v9} java/lang/Long/valueOf long )
+  (move-result-object v2)
+  (aput-object v2 v0 v1)
+  (invoke-virtual {v4 v5 v0} gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent/invokeCommand [object android/view/View] [array [object java/lang/Object]] )
+  (line 27)
+  (return v3)
+)
+
+(method (attrs protected ) registerToListener([object android/view/View] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent])
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 1)
+  (check-cast v1 [object android/widget/AdapterView])
+  (invoke-virtual {v0 v1} gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent/registerToListener [object android/widget/AdapterView] )
+  (return-void )
+)
+
+(method (attrs protected ) registerToListener([object android/widget/AdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/adapterView/OnItemLongClickedViewEvent])
+  ; parameter[0] : v2 ([object android/widget/AdapterView])
+  (line 22)
+  (const-class v0 gueei/binding/listeners/OnItemLongClickListenerMulticast)
+  (invoke-static {v2 v0} gueei/binding/Binder/getMulticastListenerForView [object android/view/View] [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object gueei/binding/listeners/OnItemLongClickListenerMulticast])
+  (invoke-virtual {v0 v1} gueei/binding/listeners/OnItemLongClickListenerMulticast/register [object java/lang/Object] )
+  (line 23)
+  (return-void )
+)
+
+)

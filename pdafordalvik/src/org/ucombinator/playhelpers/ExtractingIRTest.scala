@@ -5,7 +5,7 @@ object IRExtractHelper {
 
   var parseThread : ExtractIRHelperThread = null
   
-   def parseInApk(filePath: String) : (String, String)  = {
+   def parseInApk(filePath: String, doNotNull: Boolean) : (String, String)  = {
       println("filePath" + filePath)
       val lst = filePath.split("/").toList
       val plen = lst.length
@@ -23,22 +23,25 @@ object IRExtractHelper {
       
       val pathToScript  = lst.dropRight(1).foldLeft("")((res, s) => {res + s + "/"})
       
-     val getIRCmdStr = "/usr/bin/python ./getIR.py" + " " + pathToScript
+     val getIRCmdStr = 
+       if(doNotNull) {
+         "/usr/bin/python ./getIR.py" + " " + "--donull" + " " + pathToScript
+       } else{
+         "/usr/bin/python ./getIR.py" + " " + "--nonull" +  " " + pathToScript
+       }//"/usr/bin/python ./getIR.py" + " " +  pathToScript
      val et: ExtractIRHelperThread = new ExtractIRHelperThread(getIRCmdStr)
       IRExtractHelper.parseThread = et
       et.start() 
       
       var projFolder = fileFoldnerName 
       var  irfolder= fileFoldnerName + File.separator + "dedexout"
-      (irfolder, projFolder) 
-     
+      (irfolder, projFolder)  
     }
  
     def main(args: Array[String]) :Unit = {
         val curDir = System.getProperty("user.dir") 
-        parseInApk("/Users/shuying/Documents/bk/apk-apps/UltraCoolMap.apk") 
+        parseInApk("/Users/shuying/Documents/bk/wk_if/pdcfaexp/test/core-classes.apk", true) 
         IRExtractHelper.parseThread.join()
-        println("finished")
-         
+        println("finished") 
     }
 }

@@ -1,0 +1,48 @@
+(class (attrs synchronized ) java/lang/Character$valueOfCache
+ (super java/lang/Object)
+ (source "Character.java")
+
+ (field (attrs private static final ) CACHE [array [object java/lang/Character]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 4)
+  (line 1544)
+  (const/16 v1 512)
+  (new-array v1 v1 [array [object java/lang/Character]])
+  (sput-object v1 java/lang/Character$valueOfCache.CACHE [array [object java/lang/Character]])
+  (line 1547)
+  (const/4 v0 0)
+  (label l12d556)
+  (sget-object v1 java/lang/Character$valueOfCache.CACHE [array [object java/lang/Character]])
+  (array-length v1 v1)
+  (if-ge v0 v1 l12d57a)
+  (line 1548)
+  (sget-object v1 java/lang/Character$valueOfCache.CACHE [array [object java/lang/Character]])
+  (new-instance v2 java/lang/Character)
+  (int-to-char v3 v0)
+  (invoke-direct {v2 v3} java/lang/Character/<init> char )
+  (aput-object v2 v1 v0)
+  (line 1547)
+  (add-int/lit8 v0 v0 1)
+  (goto l12d556)
+  (label l12d57a)
+  (line 1550)
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/Character$valueOfCache])
+  (line 1538)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) access$000()[array [object java/lang/Character]]
+  (limit registers 1)
+  (line 1538)
+  (sget-object v0 java/lang/Character$valueOfCache.CACHE [array [object java/lang/Character]])
+  (return-object v0)
+ )
+
+)

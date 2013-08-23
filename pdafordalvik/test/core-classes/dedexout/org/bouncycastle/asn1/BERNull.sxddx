@@ -1,0 +1,50 @@
+(class (attrs public synchronized ) org/bouncycastle/asn1/BERNull
+ (super org/bouncycastle/asn1/DERNull)
+ (source "BERNull.java")
+
+ (field (attrs public static final ) THE_ONE [object org/bouncycastle/asn1/BERNull] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 13)
+  (new-instance v0 org/bouncycastle/asn1/BERNull)
+  (invoke-direct {v0} org/bouncycastle/asn1/BERNull/<init> )
+  (sput-object v0 org/bouncycastle/asn1/BERNull.THE_ONE [object org/bouncycastle/asn1/BERNull])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle/asn1/BERNull])
+  (line 18)
+  (invoke-direct {v0} org/bouncycastle/asn1/DERNull/<init> )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs ) encode([object org/bouncycastle/asn1/DEROutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle/asn1/BERNull])
+  ; parameter[0] : v2 ([object org/bouncycastle/asn1/DEROutputStream])
+  (line 26)
+  (instance-of v0 v2 org/bouncycastle/asn1/ASN1OutputStream)
+  (if-nez v0 l1e1efc)
+  (instance-of v0 v2 org/bouncycastle/asn1/BEROutputStream)
+  (if-eqz v0 l1e1f06)
+  (label l1e1efc)
+  (line 28)
+  (const/4 v0 5)
+  (invoke-virtual-quick {v2 v0} org/bouncycastle/asn1/DEROutputStream/write int )
+  (label l1e1f04)
+  (line 34)
+  (return-void )
+  (label l1e1f06)
+  (line 32)
+  (invoke-super-quick {v1 v2} org/bouncycastle/asn1/BERNull/encode [object org/bouncycastle/asn1/DEROutputStream] )
+  (goto l1e1f04)
+)
+
+)

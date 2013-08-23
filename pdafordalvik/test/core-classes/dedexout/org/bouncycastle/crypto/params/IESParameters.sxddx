@@ -1,0 +1,52 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/IESParameters
+ (super java/lang/Object)
+ (source "IESParameters.java")
+ (implements org/bouncycastle/crypto/CipherParameters)
+
+ (field (attrs private ) derivation [array byte] )
+ (field (attrs private ) encoding [array byte] )
+ (field (attrs private ) macKeySize int )
+
+(method (attrs public ) <init>([array byte] [array byte] int )void
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle/crypto/params/IESParameters])
+  ; parameter[0] : v1 ([array byte])
+  ; parameter[1] : v2 ([array byte])
+  ; parameter[2] : v3 (int)
+  (line 24)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 25)
+  (iput-object-quick v1 v0 org/bouncycastle/crypto/params/IESParameters.derivation [array byte])
+  (line 26)
+  (iput-object-quick v2 v0 org/bouncycastle/crypto/params/IESParameters.encoding [array byte])
+  (line 27)
+  (iput-quick v3 v0 org/bouncycastle/crypto/params/IESParameters.macKeySize int)
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getDerivationV()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/IESParameters])
+  (line 32)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/IESParameters.derivation [array byte])
+  (return-object v0)
+)
+
+(method (attrs public ) getEncodingV()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/IESParameters])
+  (line 37)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/IESParameters.encoding [array byte])
+  (return-object v0)
+)
+
+(method (attrs public ) getMacKeySize()int
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/IESParameters])
+  (line 42)
+  (iget-quick v0 v1 org/bouncycastle/crypto/params/IESParameters.macKeySize int)
+  (return v0)
+)
+
+)

@@ -1,0 +1,38 @@
+(interface (attrs public abstract ) android/widget/Adapter
+ (super java/lang/Object)
+ (source "Adapter.java")
+
+ (field (attrs public static final ) IGNORE_ITEM_VIEW_TYPE int -1); 0xffffffff )
+ (field (attrs public static final ) NO_SELECTION int -2147483648); 0x80000000 )
+
+(method (attrs public abstract ) getCount()int
+)
+
+(method (attrs public abstract ) getItem(int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getItemId(int )long
+)
+
+(method (attrs public abstract ) getItemViewType(int )int
+)
+
+(method (attrs public abstract ) getView(int [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+)
+
+(method (attrs public abstract ) getViewTypeCount()int
+)
+
+(method (attrs public abstract ) hasStableIds()boolean
+)
+
+(method (attrs public abstract ) isEmpty()boolean
+)
+
+(method (attrs public abstract ) registerDataSetObserver([object android/database/DataSetObserver] )void
+)
+
+(method (attrs public abstract ) unregisterDataSetObserver([object android/database/DataSetObserver] )void
+)
+
+)

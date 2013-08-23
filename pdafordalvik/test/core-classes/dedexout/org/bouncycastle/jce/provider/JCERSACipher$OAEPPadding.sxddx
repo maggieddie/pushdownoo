@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCERSACipher$OAEPPadding
+ (super org/bouncycastle/jce/provider/JCERSACipher)
+ (source "JCERSACipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/jce/provider/JCERSACipher$OAEPPadding])
+  (line 569)
+  (sget-object v0 javax/crypto/spec/OAEPParameterSpec.DEFAULT [object javax/crypto/spec/OAEPParameterSpec])
+  (invoke-direct {v1 v0} org/bouncycastle/jce/provider/JCERSACipher/<init> [object javax/crypto/spec/OAEPParameterSpec] )
+  (line 570)
+  (return-void )
+ )
+
+)

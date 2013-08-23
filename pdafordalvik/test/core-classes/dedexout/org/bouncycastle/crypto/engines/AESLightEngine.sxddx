@@ -1,0 +1,2413 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/engines/AESLightEngine
+ (super java/lang/Object)
+ (source "AESLightEngine.java")
+ (implements org/bouncycastle/crypto/BlockCipher)
+
+ (field (attrs private static final ) BLOCK_SIZE int 16); 0x10 )
+ (field (attrs private static final ) S [array byte] null )
+ (field (attrs private static final ) Si [array byte] null )
+ (field (attrs private static final ) m1 int -2139062144); 0x80808080 )
+ (field (attrs private static final ) m2 int 2139062143); 0x7f7f7f7f )
+ (field (attrs private static final ) m3 int 27); 0x1b )
+ (field (attrs private static final ) rcon [array int] )
+ (field (attrs private ) C0 int )
+ (field (attrs private ) C1 int )
+ (field (attrs private ) C2 int )
+ (field (attrs private ) C3 int )
+ (field (attrs private ) ROUNDS int )
+ (field (attrs private ) WorkingKey [array [array int]] )
+ (field (attrs private ) forEncryption boolean )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (const/16 v1 256)
+  (line 37)
+  (new-array v0 v1 [array byte])
+  (fill-array-data v0 l20c0f0)
+  (sput-object v0 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (line 73)
+  (new-array v0 v1 [array byte])
+  (fill-array-data v0 l20c1f8)
+  (sput-object v0 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (line 109)
+  (const/16 v0 30)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l20c300)
+  (sput-object v0 org/bouncycastle/crypto/engines/AESLightEngine.rcon [array int])
+  (return-void )
+  (line 37)
+  (label l20c0f0)
+  (data-array
+    (0x63) ; #0
+    (0x7C) ; #1
+    (0x77) ; #2
+    (0x7B) ; #3
+    (0xF2) ; #4
+    (0x6B) ; #5
+    (0x6F) ; #6
+    (0xC5) ; #7
+    (0x30) ; #8
+    (0x01) ; #9
+    (0x67) ; #10
+    (0x2B) ; #11
+    (0xFE) ; #12
+    (0xD7) ; #13
+    (0xAB) ; #14
+    (0x76) ; #15
+    (0xCA) ; #16
+    (0x82) ; #17
+    (0xC9) ; #18
+    (0x7D) ; #19
+    (0xFA) ; #20
+    (0x59) ; #21
+    (0x47) ; #22
+    (0xF0) ; #23
+    (0xAD) ; #24
+    (0xD4) ; #25
+    (0xA2) ; #26
+    (0xAF) ; #27
+    (0x9C) ; #28
+    (0xA4) ; #29
+    (0x72) ; #30
+    (0xC0) ; #31
+    (0xB7) ; #32
+    (0xFD) ; #33
+    (0x93) ; #34
+    (0x26) ; #35
+    (0x36) ; #36
+    (0x3F) ; #37
+    (0xF7) ; #38
+    (0xCC) ; #39
+    (0x34) ; #40
+    (0xA5) ; #41
+    (0xE5) ; #42
+    (0xF1) ; #43
+    (0x71) ; #44
+    (0xD8) ; #45
+    (0x31) ; #46
+    (0x15) ; #47
+    (0x04) ; #48
+    (0xC7) ; #49
+    (0x23) ; #50
+    (0xC3) ; #51
+    (0x18) ; #52
+    (0x96) ; #53
+    (0x05) ; #54
+    (0x9A) ; #55
+    (0x07) ; #56
+    (0x12) ; #57
+    (0x80) ; #58
+    (0xE2) ; #59
+    (0xEB) ; #60
+    (0x27) ; #61
+    (0xB2) ; #62
+    (0x75) ; #63
+    (0x09) ; #64
+    (0x83) ; #65
+    (0x2C) ; #66
+    (0x1A) ; #67
+    (0x1B) ; #68
+    (0x6E) ; #69
+    (0x5A) ; #70
+    (0xA0) ; #71
+    (0x52) ; #72
+    (0x3B) ; #73
+    (0xD6) ; #74
+    (0xB3) ; #75
+    (0x29) ; #76
+    (0xE3) ; #77
+    (0x2F) ; #78
+    (0x84) ; #79
+    (0x53) ; #80
+    (0xD1) ; #81
+    (0x00) ; #82
+    (0xED) ; #83
+    (0x20) ; #84
+    (0xFC) ; #85
+    (0xB1) ; #86
+    (0x5B) ; #87
+    (0x6A) ; #88
+    (0xCB) ; #89
+    (0xBE) ; #90
+    (0x39) ; #91
+    (0x4A) ; #92
+    (0x4C) ; #93
+    (0x58) ; #94
+    (0xCF) ; #95
+    (0xD0) ; #96
+    (0xEF) ; #97
+    (0xAA) ; #98
+    (0xFB) ; #99
+    (0x43) ; #100
+    (0x4D) ; #101
+    (0x33) ; #102
+    (0x85) ; #103
+    (0x45) ; #104
+    (0xF9) ; #105
+    (0x02) ; #106
+    (0x7F) ; #107
+    (0x50) ; #108
+    (0x3C) ; #109
+    (0x9F) ; #110
+    (0xA8) ; #111
+    (0x51) ; #112
+    (0xA3) ; #113
+    (0x40) ; #114
+    (0x8F) ; #115
+    (0x92) ; #116
+    (0x9D) ; #117
+    (0x38) ; #118
+    (0xF5) ; #119
+    (0xBC) ; #120
+    (0xB6) ; #121
+    (0xDA) ; #122
+    (0x21) ; #123
+    (0x10) ; #124
+    (0xFF) ; #125
+    (0xF3) ; #126
+    (0xD2) ; #127
+    (0xCD) ; #128
+    (0x0C) ; #129
+    (0x13) ; #130
+    (0xEC) ; #131
+    (0x5F) ; #132
+    (0x97) ; #133
+    (0x44) ; #134
+    (0x17) ; #135
+    (0xC4) ; #136
+    (0xA7) ; #137
+    (0x7E) ; #138
+    (0x3D) ; #139
+    (0x64) ; #140
+    (0x5D) ; #141
+    (0x19) ; #142
+    (0x73) ; #143
+    (0x60) ; #144
+    (0x81) ; #145
+    (0x4F) ; #146
+    (0xDC) ; #147
+    (0x22) ; #148
+    (0x2A) ; #149
+    (0x90) ; #150
+    (0x88) ; #151
+    (0x46) ; #152
+    (0xEE) ; #153
+    (0xB8) ; #154
+    (0x14) ; #155
+    (0xDE) ; #156
+    (0x5E) ; #157
+    (0x0B) ; #158
+    (0xDB) ; #159
+    (0xE0) ; #160
+    (0x32) ; #161
+    (0x3A) ; #162
+    (0x0A) ; #163
+    (0x49) ; #164
+    (0x06) ; #165
+    (0x24) ; #166
+    (0x5C) ; #167
+    (0xC2) ; #168
+    (0xD3) ; #169
+    (0xAC) ; #170
+    (0x62) ; #171
+    (0x91) ; #172
+    (0x95) ; #173
+    (0xE4) ; #174
+    (0x79) ; #175
+    (0xE7) ; #176
+    (0xC8) ; #177
+    (0x37) ; #178
+    (0x6D) ; #179
+    (0x8D) ; #180
+    (0xD5) ; #181
+    (0x4E) ; #182
+    (0xA9) ; #183
+    (0x6C) ; #184
+    (0x56) ; #185
+    (0xF4) ; #186
+    (0xEA) ; #187
+    (0x65) ; #188
+    (0x7A) ; #189
+    (0xAE) ; #190
+    (0x08) ; #191
+    (0xBA) ; #192
+    (0x78) ; #193
+    (0x25) ; #194
+    (0x2E) ; #195
+    (0x1C) ; #196
+    (0xA6) ; #197
+    (0xB4) ; #198
+    (0xC6) ; #199
+    (0xE8) ; #200
+    (0xDD) ; #201
+    (0x74) ; #202
+    (0x1F) ; #203
+    (0x4B) ; #204
+    (0xBD) ; #205
+    (0x8B) ; #206
+    (0x8A) ; #207
+    (0x70) ; #208
+    (0x3E) ; #209
+    (0xB5) ; #210
+    (0x66) ; #211
+    (0x48) ; #212
+    (0x03) ; #213
+    (0xF6) ; #214
+    (0x0E) ; #215
+    (0x61) ; #216
+    (0x35) ; #217
+    (0x57) ; #218
+    (0xB9) ; #219
+    (0x86) ; #220
+    (0xC1) ; #221
+    (0x1D) ; #222
+    (0x9E) ; #223
+    (0xE1) ; #224
+    (0xF8) ; #225
+    (0x98) ; #226
+    (0x11) ; #227
+    (0x69) ; #228
+    (0xD9) ; #229
+    (0x8E) ; #230
+    (0x94) ; #231
+    (0x9B) ; #232
+    (0x1E) ; #233
+    (0x87) ; #234
+    (0xE9) ; #235
+    (0xCE) ; #236
+    (0x55) ; #237
+    (0x28) ; #238
+    (0xDF) ; #239
+    (0x8C) ; #240
+    (0xA1) ; #241
+    (0x89) ; #242
+    (0x0D) ; #243
+    (0xBF) ; #244
+    (0xE6) ; #245
+    (0x42) ; #246
+    (0x68) ; #247
+    (0x41) ; #248
+    (0x99) ; #249
+    (0x2D) ; #250
+    (0x0F) ; #251
+    (0xB0) ; #252
+    (0x54) ; #253
+    (0xBB) ; #254
+    (0x16) ; #255
+  )
+  (line 73)
+  (label l20c1f8)
+  (data-array
+    (0x52) ; #0
+    (0x09) ; #1
+    (0x6A) ; #2
+    (0xD5) ; #3
+    (0x30) ; #4
+    (0x36) ; #5
+    (0xA5) ; #6
+    (0x38) ; #7
+    (0xBF) ; #8
+    (0x40) ; #9
+    (0xA3) ; #10
+    (0x9E) ; #11
+    (0x81) ; #12
+    (0xF3) ; #13
+    (0xD7) ; #14
+    (0xFB) ; #15
+    (0x7C) ; #16
+    (0xE3) ; #17
+    (0x39) ; #18
+    (0x82) ; #19
+    (0x9B) ; #20
+    (0x2F) ; #21
+    (0xFF) ; #22
+    (0x87) ; #23
+    (0x34) ; #24
+    (0x8E) ; #25
+    (0x43) ; #26
+    (0x44) ; #27
+    (0xC4) ; #28
+    (0xDE) ; #29
+    (0xE9) ; #30
+    (0xCB) ; #31
+    (0x54) ; #32
+    (0x7B) ; #33
+    (0x94) ; #34
+    (0x32) ; #35
+    (0xA6) ; #36
+    (0xC2) ; #37
+    (0x23) ; #38
+    (0x3D) ; #39
+    (0xEE) ; #40
+    (0x4C) ; #41
+    (0x95) ; #42
+    (0x0B) ; #43
+    (0x42) ; #44
+    (0xFA) ; #45
+    (0xC3) ; #46
+    (0x4E) ; #47
+    (0x08) ; #48
+    (0x2E) ; #49
+    (0xA1) ; #50
+    (0x66) ; #51
+    (0x28) ; #52
+    (0xD9) ; #53
+    (0x24) ; #54
+    (0xB2) ; #55
+    (0x76) ; #56
+    (0x5B) ; #57
+    (0xA2) ; #58
+    (0x49) ; #59
+    (0x6D) ; #60
+    (0x8B) ; #61
+    (0xD1) ; #62
+    (0x25) ; #63
+    (0x72) ; #64
+    (0xF8) ; #65
+    (0xF6) ; #66
+    (0x64) ; #67
+    (0x86) ; #68
+    (0x68) ; #69
+    (0x98) ; #70
+    (0x16) ; #71
+    (0xD4) ; #72
+    (0xA4) ; #73
+    (0x5C) ; #74
+    (0xCC) ; #75
+    (0x5D) ; #76
+    (0x65) ; #77
+    (0xB6) ; #78
+    (0x92) ; #79
+    (0x6C) ; #80
+    (0x70) ; #81
+    (0x48) ; #82
+    (0x50) ; #83
+    (0xFD) ; #84
+    (0xED) ; #85
+    (0xB9) ; #86
+    (0xDA) ; #87
+    (0x5E) ; #88
+    (0x15) ; #89
+    (0x46) ; #90
+    (0x57) ; #91
+    (0xA7) ; #92
+    (0x8D) ; #93
+    (0x9D) ; #94
+    (0x84) ; #95
+    (0x90) ; #96
+    (0xD8) ; #97
+    (0xAB) ; #98
+    (0x00) ; #99
+    (0x8C) ; #100
+    (0xBC) ; #101
+    (0xD3) ; #102
+    (0x0A) ; #103
+    (0xF7) ; #104
+    (0xE4) ; #105
+    (0x58) ; #106
+    (0x05) ; #107
+    (0xB8) ; #108
+    (0xB3) ; #109
+    (0x45) ; #110
+    (0x06) ; #111
+    (0xD0) ; #112
+    (0x2C) ; #113
+    (0x1E) ; #114
+    (0x8F) ; #115
+    (0xCA) ; #116
+    (0x3F) ; #117
+    (0x0F) ; #118
+    (0x02) ; #119
+    (0xC1) ; #120
+    (0xAF) ; #121
+    (0xBD) ; #122
+    (0x03) ; #123
+    (0x01) ; #124
+    (0x13) ; #125
+    (0x8A) ; #126
+    (0x6B) ; #127
+    (0x3A) ; #128
+    (0x91) ; #129
+    (0x11) ; #130
+    (0x41) ; #131
+    (0x4F) ; #132
+    (0x67) ; #133
+    (0xDC) ; #134
+    (0xEA) ; #135
+    (0x97) ; #136
+    (0xF2) ; #137
+    (0xCF) ; #138
+    (0xCE) ; #139
+    (0xF0) ; #140
+    (0xB4) ; #141
+    (0xE6) ; #142
+    (0x73) ; #143
+    (0x96) ; #144
+    (0xAC) ; #145
+    (0x74) ; #146
+    (0x22) ; #147
+    (0xE7) ; #148
+    (0xAD) ; #149
+    (0x35) ; #150
+    (0x85) ; #151
+    (0xE2) ; #152
+    (0xF9) ; #153
+    (0x37) ; #154
+    (0xE8) ; #155
+    (0x1C) ; #156
+    (0x75) ; #157
+    (0xDF) ; #158
+    (0x6E) ; #159
+    (0x47) ; #160
+    (0xF1) ; #161
+    (0x1A) ; #162
+    (0x71) ; #163
+    (0x1D) ; #164
+    (0x29) ; #165
+    (0xC5) ; #166
+    (0x89) ; #167
+    (0x6F) ; #168
+    (0xB7) ; #169
+    (0x62) ; #170
+    (0x0E) ; #171
+    (0xAA) ; #172
+    (0x18) ; #173
+    (0xBE) ; #174
+    (0x1B) ; #175
+    (0xFC) ; #176
+    (0x56) ; #177
+    (0x3E) ; #178
+    (0x4B) ; #179
+    (0xC6) ; #180
+    (0xD2) ; #181
+    (0x79) ; #182
+    (0x20) ; #183
+    (0x9A) ; #184
+    (0xDB) ; #185
+    (0xC0) ; #186
+    (0xFE) ; #187
+    (0x78) ; #188
+    (0xCD) ; #189
+    (0x5A) ; #190
+    (0xF4) ; #191
+    (0x1F) ; #192
+    (0xDD) ; #193
+    (0xA8) ; #194
+    (0x33) ; #195
+    (0x88) ; #196
+    (0x07) ; #197
+    (0xC7) ; #198
+    (0x31) ; #199
+    (0xB1) ; #200
+    (0x12) ; #201
+    (0x10) ; #202
+    (0x59) ; #203
+    (0x27) ; #204
+    (0x80) ; #205
+    (0xEC) ; #206
+    (0x5F) ; #207
+    (0x60) ; #208
+    (0x51) ; #209
+    (0x7F) ; #210
+    (0xA9) ; #211
+    (0x19) ; #212
+    (0xB5) ; #213
+    (0x4A) ; #214
+    (0x0D) ; #215
+    (0x2D) ; #216
+    (0xE5) ; #217
+    (0x7A) ; #218
+    (0x9F) ; #219
+    (0x93) ; #220
+    (0xC9) ; #221
+    (0x9C) ; #222
+    (0xEF) ; #223
+    (0xA0) ; #224
+    (0xE0) ; #225
+    (0x3B) ; #226
+    (0x4D) ; #227
+    (0xAE) ; #228
+    (0x2A) ; #229
+    (0xF5) ; #230
+    (0xB0) ; #231
+    (0xC8) ; #232
+    (0xEB) ; #233
+    (0xBB) ; #234
+    (0x3C) ; #235
+    (0x83) ; #236
+    (0x53) ; #237
+    (0x99) ; #238
+    (0x61) ; #239
+    (0x17) ; #240
+    (0x2B) ; #241
+    (0x04) ; #242
+    (0x7E) ; #243
+    (0xBA) ; #244
+    (0x77) ; #245
+    (0xD6) ; #246
+    (0x26) ; #247
+    (0xE1) ; #248
+    (0x69) ; #249
+    (0x14) ; #250
+    (0x63) ; #251
+    (0x55) ; #252
+    (0x21) ; #253
+    (0x0C) ; #254
+    (0x7D) ; #255
+  )
+  (line 109)
+  (label l20c300)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x04 0x00 0x00 0x00) ; #2
+    (0x08 0x00 0x00 0x00) ; #3
+    (0x10 0x00 0x00 0x00) ; #4
+    (0x20 0x00 0x00 0x00) ; #5
+    (0x40 0x00 0x00 0x00) ; #6
+    (0x80 0x00 0x00 0x00) ; #7
+    (0x1B 0x00 0x00 0x00) ; #8
+    (0x36 0x00 0x00 0x00) ; #9
+    (0x6C 0x00 0x00 0x00) ; #10
+    (0xD8 0x00 0x00 0x00) ; #11
+    (0xAB 0x00 0x00 0x00) ; #12
+    (0x4D 0x00 0x00 0x00) ; #13
+    (0x9A 0x00 0x00 0x00) ; #14
+    (0x2F 0x00 0x00 0x00) ; #15
+    (0x5E 0x00 0x00 0x00) ; #16
+    (0xBC 0x00 0x00 0x00) ; #17
+    (0x63 0x00 0x00 0x00) ; #18
+    (0xC6 0x00 0x00 0x00) ; #19
+    (0x97 0x00 0x00 0x00) ; #20
+    (0x35 0x00 0x00 0x00) ; #21
+    (0x6A 0x00 0x00 0x00) ; #22
+    (0xD4 0x00 0x00 0x00) ; #23
+    (0xB3 0x00 0x00 0x00) ; #24
+    (0x7D 0x00 0x00 0x00) ; #25
+    (0xFA 0x00 0x00 0x00) ; #26
+    (0xEF 0x00 0x00 0x00) ; #27
+    (0xC5 0x00 0x00 0x00) ; #28
+    (0x91 0x00 0x00 0x00) ; #29
+  )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  (line 242)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 232)
+  (const/4 v0 0)
+  (check-cast v0 [array [array int]])
+  (iput-object-quick v0 v1 org/bouncycastle/crypto/engines/AESLightEngine.WorkingKey [array [array int]])
+  (line 243)
+  (return-void )
+ )
+
+(method (attrs private ) FFmulX(int )int
+  (limit registers 4)
+  ; this: v2 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v3 (int)
+  (line 128)
+  (const v0 2139062143) ; 0x7f7f7f7f)
+  (and-int/2addr v0 v3)
+  (shl-int/lit8 v0 v0 1)
+  (const v1 2155905152) ; 0x80808080)
+  (and-int/2addr v1 v3)
+  (ushr-int/lit8 v1 v1 7)
+  (mul-int/lit8 v1 v1 27)
+  (xor-int/2addr v0 v1)
+  (return v0)
+ )
+
+(method (attrs private final ) decryptBlock([array [array int]] )void
+  (limit registers 15)
+  ; this: v13 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v14 ([array [array int]])
+  (const/4 v12 3)
+  (const/4 v11 2)
+  (const/4 v10 0)
+  (const/4 v9 1)
+  (line 411)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (aget-object v7 v14 v7)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 412)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (aget-object v7 v14 v7)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 413)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (aget-object v7 v14 v7)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 414)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (aget-object v7 v14 v7)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 416)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (sub-int v0 v6 v9)
+  (label l20c44c)
+  (move v1 v0)
+  (label l20c44e)
+  (if-le v1 v9 l20c816)
+  (line 418)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v10)
+  (xor-int v2 v6 v7)
+  (label l20c4d0)
+  (line 419)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v9)
+  (xor-int v3 v6 v7)
+  (label l20c54e)
+  (line 420)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v11)
+  (xor-int v4 v6 v7)
+  (label l20c5cc)
+  (line 421)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (sub-int v0 v1 v9)
+  (label l20c642)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v12)
+  (xor-int v5 v6 v7)
+  (label l20c64e)
+  (line 422)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v2 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 423)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v3 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 424)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v4 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 425)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v5 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (sub-int v1 v0 v9)
+  (label l20c804)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (goto/16 l20c44e)
+  (label l20c816)
+  (line 428)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v10)
+  (xor-int v2 v6 v7)
+  (line 429)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v9)
+  (xor-int v3 v6 v7)
+  (line 430)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v11)
+  (xor-int v4 v6 v7)
+  (line 431)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v6)
+  (sub-int v0 v1 v9)
+  (label l20ca06)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v12)
+  (xor-int v5 v6 v7)
+  (line 435)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v2 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v10)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 436)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v3 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v10)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 437)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v4 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v5 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v10)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 438)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (and-int/lit16 v7 v5 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v4 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v3 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.Si [array byte])
+  (shr-int/lit8 v8 v2 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v10)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 439)
+  (return-void )
+ )
+
+(method (attrs private ) encryptBlock([array [array int]] )void
+  (limit registers 15)
+  ; this: v13 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v14 ([array [array int]])
+  (const/4 v12 3)
+  (const/4 v11 2)
+  (const/4 v10 1)
+  (const/4 v9 0)
+  (line 376)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (aget-object v7 v14 v9)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 377)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (aget-object v7 v14 v9)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 378)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (aget-object v7 v14 v9)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 379)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (aget-object v7 v14 v9)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 381)
+  (const/4 v0 1)
+  (label l20cc16)
+  (iget-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (sub-int/2addr v6 v10)
+  (if-ge v0 v6 l20cfe4)
+  (line 383)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v9)
+  (xor-int v2 v6 v7)
+  (label l20cc9e)
+  (line 384)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v10)
+  (xor-int v3 v6 v7)
+  (label l20cd1c)
+  (line 385)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v11)
+  (xor-int v4 v6 v7)
+  (label l20cd9a)
+  (line 386)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (add-int/lit8 v1 v0 1)
+  (label l20ce10)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v12)
+  (xor-int v5 v6 v7)
+  (label l20ce1c)
+  (line 387)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v2 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 388)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v3 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 389)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v4 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 390)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v5 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (add-int/lit8 v0 v1 1)
+  (label l20cfd2)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (goto/16 l20cc16)
+  (label l20cfe4)
+  (line 393)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v9)
+  (xor-int v2 v6 v7)
+  (line 394)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v10)
+  (xor-int v3 v6 v7)
+  (line 395)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v11)
+  (xor-int v4 v6 v7)
+  (line 396)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v7 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (and-int/lit16 v7 v7 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v8 v8 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v8 v8 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (iget-quick v8 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v8 v8 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (invoke-direct {v13 v6} org/bouncycastle/crypto/engines/AESLightEngine/mcol int )
+  (move-result v6)
+  (add-int/lit8 v1 v0 1)
+  (label l20d1d4)
+  (aget-object v7 v14 v0)
+  (aget v7 v7 v12)
+  (xor-int v5 v6 v7)
+  (line 400)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v2 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v9)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 401)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v3 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v10)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 402)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v4 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v5 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v11)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 403)
+  (sget-object v6 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v7 v5 255)
+  (aget-byte v6 v6 v7)
+  (and-int/lit16 v6 v6 255)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v2 8)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 8)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v3 16)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (and-int/lit16 v7 v7 255)
+  (shl-int/lit8 v7 v7 16)
+  (xor-int/2addr v6 v7)
+  (sget-object v7 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v8 v4 24)
+  (and-int/lit16 v8 v8 255)
+  (aget-byte v7 v7 v8)
+  (shl-int/lit8 v7 v7 24)
+  (xor-int/2addr v6 v7)
+  (aget-object v7 v14 v1)
+  (aget v7 v7 v12)
+  (xor-int/2addr v6 v7)
+  (iput-quick v6 v13 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 405)
+  (return-void )
+ )
+
+(method (attrs private ) generateWorkingKey([array byte] boolean )[array [array int]]
+  (limit registers 14)
+  ; this: v11 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v12 ([array byte])
+  ; parameter[1] : v13 (boolean)
+  (line 173)
+  (array-length v7 v12)
+  (div-int/lit8 v0 v7 4)
+  (line 176)
+  (const/4 v7 4)
+  (if-eq v0 v7 l20d3ae)
+  (const/4 v7 6)
+  (if-eq v0 v7 l20d3ae)
+  (const/16 v7 8)
+  (if-ne v0 v7 l20d3b8)
+  (label l20d3ae)
+  (mul-int/lit8 v7 v0 4)
+  (array-length v8 v12)
+  (if-eq v7 v8 l20d3c8)
+  (label l20d3b8)
+  (line 178)
+  (new-instance v7 java/lang/IllegalArgumentException)
+  (const-string v8 "Key length not 128/192/256 bits.")
+  (invoke-direct {v7 v8} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v7)
+  (label l20d3c8)
+  (line 181)
+  (add-int/lit8 v7 v0 6)
+  (iput-quick v7 v11 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (line 182)
+  (iget-quick v7 v11 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (add-int/lit8 v7 v7 1)
+  (const/4 v8 4)
+  (filled-new-array {v7 v8} [array int])
+  (move-result-object v7)
+  (sget-object v8 java/lang/Integer.TYPE [object java/lang/Class])
+  (invoke-static {v8 v7} java/lang/reflect/Array/newInstance [object java/lang/Class] [array int] )
+  (move-result-object v1)
+  (check-cast v1 [array [array int]])
+  (line 188)
+  (const/4 v5 0)
+  (line 189)
+  (const/4 v2 0)
+  (label l20d3f6)
+  (line 190)
+  (array-length v7 v12)
+  (if-ge v2 v7 l20d450)
+  (line 192)
+  (shr-int/lit8 v7 v5 2)
+  (aget-object v7 v1 v7)
+  (and-int/lit8 v8 v5 3)
+  (aget-byte v9 v12 v2)
+  (and-int/lit16 v9 v9 255)
+  (add-int/lit8 v10 v2 1)
+  (aget-byte v10 v12 v10)
+  (and-int/lit16 v10 v10 255)
+  (shl-int/lit8 v10 v10 8)
+  (or-int/2addr v9 v10)
+  (add-int/lit8 v10 v2 2)
+  (aget-byte v10 v12 v10)
+  (and-int/lit16 v10 v10 255)
+  (shl-int/lit8 v10 v10 16)
+  (or-int/2addr v9 v10)
+  (add-int/lit8 v10 v2 3)
+  (aget-byte v10 v12 v10)
+  (shl-int/lit8 v10 v10 24)
+  (or-int/2addr v9 v10)
+  (aput v9 v7 v8)
+  (line 193)
+  (add-int/lit8 v2 v2 4)
+  (line 194)
+  (add-int/lit8 v5 v5 1)
+  (goto l20d3f6)
+  (label l20d450)
+  (line 201)
+  (iget-quick v7 v11 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (add-int/lit8 v7 v7 1)
+  (shl-int/lit8 v4 v7 2)
+  (line 202)
+  (move v2 v0)
+  (label l20d45e)
+  (if-ge v2 v4 l20d4f8)
+  (line 204)
+  (const/4 v7 1)
+  (sub-int v7 v2 v7)
+  (shr-int/lit8 v7 v7 2)
+  (aget-object v7 v1 v7)
+  (const/4 v8 1)
+  (sub-int v8 v2 v8)
+  (and-int/lit8 v8 v8 3)
+  (aget v6 v7 v8)
+  (label l20d47e)
+  (line 205)
+  (rem-int v7 v2 v0)
+  (if-nez v7 l20d4de)
+  (line 207)
+  (const/16 v7 8)
+  (invoke-direct {v11 v6 v7} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v7)
+  (invoke-direct {v11 v7} org/bouncycastle/crypto/engines/AESLightEngine/subWord int )
+  (move-result v7)
+  (sget-object v8 org/bouncycastle/crypto/engines/AESLightEngine.rcon [array int])
+  (div-int v9 v2 v0)
+  (const/4 v10 1)
+  (sub-int/2addr v9 v10)
+  (aget v8 v8 v9)
+  (xor-int v6 v7 v8)
+  (label l20d4ae)
+  (line 214)
+  (shr-int/lit8 v7 v2 2)
+  (aget-object v7 v1 v7)
+  (and-int/lit8 v8 v2 3)
+  (sub-int v9 v2 v0)
+  (shr-int/lit8 v9 v9 2)
+  (aget-object v9 v1 v9)
+  (sub-int v10 v2 v0)
+  (and-int/lit8 v10 v10 3)
+  (aget v9 v9 v10)
+  (xor-int/2addr v9 v6)
+  (aput v9 v7 v8)
+  (line 202)
+  (add-int/lit8 v2 v2 1)
+  (goto l20d45e)
+  (label l20d4de)
+  (line 209)
+  (const/4 v7 6)
+  (if-le v0 v7 l20d4ae)
+  (rem-int v7 v2 v0)
+  (const/4 v8 4)
+  (if-ne v7 v8 l20d4ae)
+  (line 211)
+  (invoke-direct {v11 v6} org/bouncycastle/crypto/engines/AESLightEngine/subWord int )
+  (move-result v6)
+  (goto l20d4ae)
+  (label l20d4f8)
+  (line 217)
+  (if-nez v13 l20d532)
+  (line 219)
+  (const/4 v3 1)
+  (label l20d4fe)
+  (iget-quick v7 v11 org/bouncycastle/crypto/engines/AESLightEngine.ROUNDS int)
+  (if-ge v3 v7 l20d532)
+  (line 221)
+  (const/4 v2 0)
+  (label l20d508)
+  (const/4 v7 4)
+  (if-ge v2 v7 l20d52c)
+  (line 223)
+  (aget-object v7 v1 v3)
+  (aget-object v8 v1 v3)
+  (aget v8 v8 v2)
+  (invoke-direct {v11 v8} org/bouncycastle/crypto/engines/AESLightEngine/inv_mcol int )
+  (move-result v8)
+  (aput v8 v7 v2)
+  (line 221)
+  (add-int/lit8 v2 v2 1)
+  (goto l20d508)
+  (label l20d52c)
+  (line 219)
+  (add-int/lit8 v3 v3 1)
+  (goto l20d4fe)
+  (label l20d532)
+  (line 228)
+  (return-object v1)
+ )
+
+(method (attrs private ) inv_mcol(int )int
+  (limit registers 9)
+  ; this: v7 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v8 (int)
+  (line 149)
+  (invoke-direct {v7 v8} org/bouncycastle/crypto/engines/AESLightEngine/FFmulX int )
+  (move-result v0)
+  (line 150)
+  (invoke-direct {v7 v0} org/bouncycastle/crypto/engines/AESLightEngine/FFmulX int )
+  (move-result v1)
+  (line 151)
+  (invoke-direct {v7 v1} org/bouncycastle/crypto/engines/AESLightEngine/FFmulX int )
+  (move-result v2)
+  (line 152)
+  (xor-int v3 v8 v2)
+  (line 154)
+  (xor-int v4 v0 v1)
+  (xor-int/2addr v4 v2)
+  (xor-int v5 v0 v3)
+  (const/16 v6 8)
+  (invoke-direct {v7 v5 v6} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v5)
+  (xor-int/2addr v4 v5)
+  (xor-int v5 v1 v3)
+  (const/16 v6 16)
+  (invoke-direct {v7 v5 v6} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v5)
+  (xor-int/2addr v4 v5)
+  (const/16 v5 24)
+  (invoke-direct {v7 v3 v5} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v5)
+  (xor-int/2addr v4 v5)
+  (return v4)
+ )
+
+(method (attrs private ) mcol(int )int
+  (limit registers 5)
+  ; this: v3 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v4 (int)
+  (line 143)
+  (invoke-direct {v3 v4} org/bouncycastle/crypto/engines/AESLightEngine/FFmulX int )
+  (move-result v0)
+  (line 144)
+  (xor-int v1 v4 v0)
+  (const/16 v2 8)
+  (invoke-direct {v3 v1 v2} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v1)
+  (xor-int/2addr v1 v0)
+  (const/16 v2 16)
+  (invoke-direct {v3 v4 v2} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v2)
+  (xor-int/2addr v1 v2)
+  (const/16 v2 24)
+  (invoke-direct {v3 v4 v2} org/bouncycastle/crypto/engines/AESLightEngine/shift int int )
+  (move-result v2)
+  (xor-int/2addr v1 v2)
+  (return v1)
+ )
+
+(method (attrs private final ) packBlock([array byte] int )void
+  (limit registers 6)
+  ; this: v3 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v4 ([array byte])
+  ; parameter[1] : v5 (int)
+  (line 349)
+  (move v0 v5)
+  (label l20d5f6)
+  (line 351)
+  (add-int/lit8 v1 v0 1)
+  (label l20d5fa)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 352)
+  (add-int/lit8 v0 v1 1)
+  (label l20d608)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v2 v2 8)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 353)
+  (add-int/lit8 v1 v0 1)
+  (label l20d61a)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v2 v2 16)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 354)
+  (add-int/lit8 v0 v1 1)
+  (label l20d62c)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (shr-int/lit8 v2 v2 24)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 356)
+  (add-int/lit8 v1 v0 1)
+  (label l20d63e)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 357)
+  (add-int/lit8 v0 v1 1)
+  (label l20d64c)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v2 v2 8)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 358)
+  (add-int/lit8 v1 v0 1)
+  (label l20d65e)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v2 v2 16)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 359)
+  (add-int/lit8 v0 v1 1)
+  (label l20d670)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (shr-int/lit8 v2 v2 24)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 361)
+  (add-int/lit8 v1 v0 1)
+  (label l20d682)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 362)
+  (add-int/lit8 v0 v1 1)
+  (label l20d690)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v2 v2 8)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 363)
+  (add-int/lit8 v1 v0 1)
+  (label l20d6a2)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v2 v2 16)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 364)
+  (add-int/lit8 v0 v1 1)
+  (label l20d6b4)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (shr-int/lit8 v2 v2 24)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 366)
+  (add-int/lit8 v1 v0 1)
+  (label l20d6c6)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 367)
+  (add-int/lit8 v0 v1 1)
+  (label l20d6d4)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v2 v2 8)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 368)
+  (add-int/lit8 v1 v0 1)
+  (label l20d6e6)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v2 v2 16)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v0)
+  (line 369)
+  (add-int/lit8 v0 v1 1)
+  (label l20d6f8)
+  (iget-quick v2 v3 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (shr-int/lit8 v2 v2 24)
+  (int-to-byte v2 v2)
+  (aput-byte v2 v4 v1)
+  (line 370)
+  (return-void )
+ )
+
+(method (attrs private ) shift(int int )int
+  (limit registers 5)
+  ; this: v2 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 117)
+  (ushr-int v0 v3 v4)
+  (neg-int v1 v4)
+  (shl-int v1 v3 v1)
+  (or-int/2addr v0 v1)
+  (return v0)
+ )
+
+(method (attrs private ) subWord(int )int
+  (limit registers 5)
+  ; this: v3 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v4 (int)
+  (line 160)
+  (sget-object v0 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (and-int/lit16 v1 v4 255)
+  (aget-byte v0 v0 v1)
+  (and-int/lit16 v0 v0 255)
+  (sget-object v1 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v2 v4 8)
+  (and-int/lit16 v2 v2 255)
+  (aget-byte v1 v1 v2)
+  (and-int/lit16 v1 v1 255)
+  (shl-int/lit8 v1 v1 8)
+  (or-int/2addr v0 v1)
+  (sget-object v1 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v2 v4 16)
+  (and-int/lit16 v2 v2 255)
+  (aget-byte v1 v1 v2)
+  (and-int/lit16 v1 v1 255)
+  (shl-int/lit8 v1 v1 16)
+  (or-int/2addr v0 v1)
+  (sget-object v1 org/bouncycastle/crypto/engines/AESLightEngine.S [array byte])
+  (shr-int/lit8 v2 v4 24)
+  (and-int/lit16 v2 v2 255)
+  (aget-byte v1 v1 v2)
+  (shl-int/lit8 v1 v1 24)
+  (or-int/2addr v0 v1)
+  (return v0)
+ )
+
+(method (attrs private final ) unpackBlock([array byte] int )void
+  (limit registers 7)
+  ; this: v4 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v5 ([array byte])
+  ; parameter[1] : v6 (int)
+  (line 322)
+  (move v0 v6)
+  (label l20d7a6)
+  (line 324)
+  (add-int/lit8 v1 v0 1)
+  (label l20d7aa)
+  (aget-byte v2 v5 v0)
+  (and-int/lit16 v2 v2 255)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 325)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d7be)
+  (aget-byte v3 v5 v1)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 8)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 326)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (add-int/lit8 v1 v0 1)
+  (label l20d7d8)
+  (aget-byte v3 v5 v0)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 16)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 327)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d7f2)
+  (aget-byte v3 v5 v1)
+  (shl-int/lit8 v3 v3 24)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C0 int)
+  (line 329)
+  (add-int/lit8 v1 v0 1)
+  (label l20d804)
+  (aget-byte v2 v5 v0)
+  (and-int/lit16 v2 v2 255)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 330)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d818)
+  (aget-byte v3 v5 v1)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 8)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 331)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (add-int/lit8 v1 v0 1)
+  (label l20d832)
+  (aget-byte v3 v5 v0)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 16)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 332)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d84c)
+  (aget-byte v3 v5 v1)
+  (shl-int/lit8 v3 v3 24)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C1 int)
+  (line 334)
+  (add-int/lit8 v1 v0 1)
+  (label l20d85e)
+  (aget-byte v2 v5 v0)
+  (and-int/lit16 v2 v2 255)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 335)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d872)
+  (aget-byte v3 v5 v1)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 8)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 336)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (add-int/lit8 v1 v0 1)
+  (label l20d88c)
+  (aget-byte v3 v5 v0)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 16)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 337)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d8a6)
+  (aget-byte v3 v5 v1)
+  (shl-int/lit8 v3 v3 24)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C2 int)
+  (line 339)
+  (add-int/lit8 v1 v0 1)
+  (label l20d8b8)
+  (aget-byte v2 v5 v0)
+  (and-int/lit16 v2 v2 255)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 340)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d8cc)
+  (aget-byte v3 v5 v1)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 8)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 341)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (add-int/lit8 v1 v0 1)
+  (label l20d8e6)
+  (aget-byte v3 v5 v0)
+  (and-int/lit16 v3 v3 255)
+  (shl-int/lit8 v3 v3 16)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 342)
+  (iget-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (add-int/lit8 v0 v1 1)
+  (label l20d900)
+  (aget-byte v3 v5 v1)
+  (shl-int/lit8 v3 v3 24)
+  (or-int/2addr v2 v3)
+  (iput-quick v2 v4 org/bouncycastle/crypto/engines/AESLightEngine.C3 int)
+  (line 343)
+  (return-void )
+ )
+
+(method (attrs public ) getAlgorithmName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  (line 269)
+  (const-string v0 "AES")
+  (return-object v0)
+)
+
+(method (attrs public ) getBlockSize()int
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  (line 274)
+  (const/16 v0 16)
+  (return v0)
+)
+
+(method (attrs public ) init(boolean [object org/bouncycastle/crypto/CipherParameters] )void
+  (limit registers 6)
+  ; this: v3 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v4 (boolean)
+  ; parameter[1] : v5 ([object org/bouncycastle/crypto/CipherParameters])
+  (line 257)
+  (instance-of v0 v5 org/bouncycastle/crypto/params/KeyParameter)
+  (if-eqz v0 l20d976)
+  (line 259)
+  (check-cast v5 [object org/bouncycastle/crypto/params/KeyParameter])
+  (invoke-virtual-quick {v5} org/bouncycastle/crypto/params/KeyParameter/getKey )
+  (move-result-object v0)
+  (invoke-direct {v3 v0 v4} org/bouncycastle/crypto/engines/AESLightEngine/generateWorkingKey [array byte] boolean )
+  (move-result-object v0)
+  (iput-object-quick v0 v3 org/bouncycastle/crypto/engines/AESLightEngine.WorkingKey [array [array int]])
+  (line 260)
+  (iput-quick v4 v3 org/bouncycastle/crypto/engines/AESLightEngine.forEncryption boolean)
+  (line 261)
+  (return-void )
+  (label l20d976)
+  (line 264)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (new-instance v1 java/lang/StringBuilder)
+  (invoke-direct {v1} java/lang/StringBuilder/<init> )
+  (const-string v2 "invalid parameter passed to AES init - ")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v5} org/bouncycastle/crypto/CipherParameters/getClass )
+  (move-result-object v2)
+  (invoke-virtual-quick {v2} java/lang/Class/getName )
+  (move-result-object v2)
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v1} java/lang/StringBuilder/toString )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) processBlock([array byte] int [array byte] int )int
+  (limit registers 7)
+  ; this: v2 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  ; parameter[0] : v3 ([array byte])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 ([array byte])
+  ; parameter[3] : v6 (int)
+  (line 283)
+  (iget-object-quick v0 v2 org/bouncycastle/crypto/engines/AESLightEngine.WorkingKey [array [array int]])
+  (if-nez v0 l20d9e0)
+  (line 285)
+  (new-instance v0 java/lang/IllegalStateException)
+  (const-string v1 "AES engine not initialised")
+  (invoke-direct {v0 v1} java/lang/IllegalStateException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l20d9e0)
+  (line 288)
+  (add-int/lit8 v0 v4 16)
+  (array-length v1 v3)
+  (if-le v0 v1 l20d9fa)
+  (line 290)
+  (new-instance v0 org/bouncycastle/crypto/DataLengthException)
+  (const-string v1 "input buffer too short")
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/DataLengthException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l20d9fa)
+  (line 293)
+  (add-int/lit8 v0 v6 16)
+  (array-length v1 v5)
+  (if-le v0 v1 l20da14)
+  (line 295)
+  (new-instance v0 org/bouncycastle/crypto/DataLengthException)
+  (const-string v1 "output buffer too short")
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/DataLengthException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l20da14)
+  (line 298)
+  (iget-quick v0 v2 org/bouncycastle/crypto/engines/AESLightEngine.forEncryption boolean)
+  (if-eqz v0 l20da38)
+  (line 300)
+  (invoke-direct {v2 v3 v4} org/bouncycastle/crypto/engines/AESLightEngine/unpackBlock [array byte] int )
+  (line 301)
+  (iget-object-quick v0 v2 org/bouncycastle/crypto/engines/AESLightEngine.WorkingKey [array [array int]])
+  (invoke-direct {v2 v0} org/bouncycastle/crypto/engines/AESLightEngine/encryptBlock [array [array int]] )
+  (line 302)
+  (invoke-direct {v2 v5 v6} org/bouncycastle/crypto/engines/AESLightEngine/packBlock [array byte] int )
+  (label l20da32)
+  (line 311)
+  (const/16 v0 16)
+  (return v0)
+  (label l20da38)
+  (line 306)
+  (invoke-direct {v2 v3 v4} org/bouncycastle/crypto/engines/AESLightEngine/unpackBlock [array byte] int )
+  (line 307)
+  (iget-object-quick v0 v2 org/bouncycastle/crypto/engines/AESLightEngine.WorkingKey [array [array int]])
+  (invoke-direct {v2 v0} org/bouncycastle/crypto/engines/AESLightEngine/decryptBlock [array [array int]] )
+  (line 308)
+  (invoke-direct {v2 v5 v6} org/bouncycastle/crypto/engines/AESLightEngine/packBlock [array byte] int )
+  (goto l20da32)
+)
+
+(method (attrs public ) reset()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle/crypto/engines/AESLightEngine])
+  (line 316)
+  (return-void )
+)
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation synchronized ) dalvik/annotation/VirtualTestTarget
+ (super java/lang/Object)
+ (source "VirtualTestTarget.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

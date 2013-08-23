@@ -1,0 +1,487 @@
+(class (attrs public ) java/lang/SecurityManager
+ (super java/lang/Object)
+ (source "SecurityManager.java")
+
+ (field (attrs protected ) inCheck boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) checkAccept([object java/lang/String] int )void
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkAccess([object java/lang/Thread] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/Thread])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkAccess([object java/lang/ThreadGroup] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/ThreadGroup])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkAwtEventQueueAccess()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkConnect([object java/lang/String] int )void
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkConnect([object java/lang/String] int [object java/lang/Object] )void
+  (limit registers 6)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 ([object java/lang/Object])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkCreateClassLoader()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkDelete([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkExec([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkExit(int )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 (int)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkLink([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkListen(int )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 (int)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkMemberAccess([object java/lang/Class] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;I)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  ; parameter[1] : v4 (int)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkMulticast([object java/net/InetAddress] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/net/InetAddress])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkMulticast([object java/net/InetAddress] byte )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/net/InetAddress])
+  ; parameter[1] : v4 (byte)
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPackageAccess([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPackageDefinition([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPermission([object java/security/Permission] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/security/Permission])
+  (line 52)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPermission([object java/security/Permission] [object java/lang/Object] )void
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/security/Permission])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 53)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPrintJobAccess()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 32)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPropertiesAccess()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkPropertyAccess([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkRead([object java/io/FileDescriptor] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/io/FileDescriptor])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkRead([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkRead([object java/lang/String] [object java/lang/Object] )void
+  (limit registers 5)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkSecurityAccess([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkSetFactory()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkSystemClipboardAccess()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkTopLevelWindow([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkWrite([object java/io/FileDescriptor] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/io/FileDescriptor])
+  (line 33)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) checkWrite([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 34)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) classDepth([object java/lang/String] )int
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 45)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) classLoaderDepth()int
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 41)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) currentClassLoader()[object java/lang/ClassLoader]
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 39)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) currentLoadedClass()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 43)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) getClassContext()[array [object java/lang/Class]]
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 37)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInCheck()boolean
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 36)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSecurityContext()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 51)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getThreadGroup()[object java/lang/ThreadGroup]
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 50)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) inClass([object java/lang/String] )boolean
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/lang/SecurityManager])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 47)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) inClassLoader()boolean
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/SecurityManager])
+  (line 49)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

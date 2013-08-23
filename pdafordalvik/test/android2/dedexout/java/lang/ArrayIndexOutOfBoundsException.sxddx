@@ -1,0 +1,41 @@
+(class (attrs public ) java/lang/ArrayIndexOutOfBoundsException
+ (super java/lang/IndexOutOfBoundsException)
+ (source "ArrayIndexOutOfBoundsException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/ArrayIndexOutOfBoundsException])
+  (line 5)
+  (invoke-direct {v2} java/lang/IndexOutOfBoundsException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/ArrayIndexOutOfBoundsException])
+  ; parameter[0] : v3 (int)
+  (line 6)
+  (invoke-direct {v2} java/lang/IndexOutOfBoundsException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/lang/ArrayIndexOutOfBoundsException])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 7)
+  (invoke-direct {v2} java/lang/IndexOutOfBoundsException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

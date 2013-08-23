@@ -1,0 +1,25 @@
+(class (attrs synchronized ) org/apache/harmony/xml/ExpatPullParser$StartDocumentEvent
+ (super org/apache/harmony/xml/ExpatPullParser$Event)
+ (source "ExpatPullParser.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/harmony/xml/ExpatPullParser$StartDocumentEvent])
+  (line 561)
+  (const/4 v0 0)
+  (sget-object v1 org/apache/harmony/xml/ExpatPullParser$NamespaceStack.EMPTY [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack])
+  (invoke-direct {v2 v0 v1} org/apache/harmony/xml/ExpatPullParser$Event/<init> int [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack] )
+  (line 562)
+  (return-void )
+ )
+
+(method (attrs ) getType()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/ExpatPullParser$StartDocumentEvent])
+  (line 566)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) android/widget/ListAdapter
+ (super java/lang/Object)
+ (source "ListAdapter.java")
+ (implements android/widget/Adapter)
+
+
+(method (attrs public abstract ) areAllItemsEnabled()boolean
+)
+
+(method (attrs public abstract ) isEnabled(int )boolean
+)
+
+)

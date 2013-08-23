@@ -1,0 +1,72 @@
+(class (attrs public ) android/content/Intent$ShortcutIconResource
+ (super java/lang/Object)
+ (source "Intent.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+ (field (attrs public ) packageName [object java/lang/String] )
+ (field (attrs public ) resourceName [object java/lang/String] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 16)
+  (const/4 v0 0)
+  (sput-object v0 android/content/Intent$ShortcutIconResource.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/content/Intent$ShortcutIconResource])
+  (line 8)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) fromContext([object android/content/Context] int )[object android/content/Intent$ShortcutIconResource]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/content/Intent$ShortcutIconResource])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/content/Intent$ShortcutIconResource])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/content/Intent$ShortcutIconResource])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

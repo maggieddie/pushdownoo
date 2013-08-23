@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/book_bgrnd_largeheader_textarea" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/abouttitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="1.0dip" android:text="@string/app_name" style="@style/titlegold" />
+    <ImageView android:gravity="center" android:id="@id/aboutlogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/books48" android:layout_below="@id/abouttitle" />
+    <TextView android:gravity="right" android:id="@id/aboutby" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/by" android:layout_toRightOf="@id/aboutlogo" android:layout_below="@id/abouttitle" style="@style/whitesmall" />
+    <TextView android:gravity="left" android:id="@id/aboutcontent" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/aboutlogo" style="@style/blacksmall" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_below="@id/aboutcontent">
+        <Button android:id="@id/aboutdetails" android:background="@drawable/button_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btnDetails" style="@style/button" />
+    </LinearLayout>
+</RelativeLayout>

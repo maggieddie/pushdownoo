@@ -1,0 +1,35 @@
+(class (attrs public abstract ) java/util/jar/Pack200
+ (super java/lang/Object)
+ (source "Pack200.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/jar/Pack200])
+  (line 44)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newPacker()[object java/util/jar/Pack200$Packer]
+  (limit registers 2)
+  (line 45)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newUnpacker()[object java/util/jar/Pack200$Unpacker]
+  (limit registers 2)
+  (line 46)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

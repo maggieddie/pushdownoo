@@ -1,0 +1,91 @@
+(class (attrs public final ) java/util/ServiceLoader
+ (super java/lang/Object)
+ (source "ServiceLoader.java")
+ (implements java/lang/Iterable)
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/ServiceLoader])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) load([object java/lang/Class] )[object java/util/ServiceLoader]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<S:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TS;>;"  "Ljava/lang/ClassLoader;"  ")"  "Ljava/util/ServiceLoader"  "<TS;>;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) load([object java/lang/Class] [object java/lang/ClassLoader] )[object java/util/ServiceLoader]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<S:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TS;>;"  "Ljava/lang/ClassLoader;"  ")"  "Ljava/util/ServiceLoader"  "<TS;>;")
+  )
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) loadInstalled([object java/lang/Class] )[object java/util/ServiceLoader]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<S:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TS;>;)"  "Ljava/util/ServiceLoader"  "<TS;>;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TS;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/ServiceLoader])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) reload()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/ServiceLoader])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/ServiceLoader])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

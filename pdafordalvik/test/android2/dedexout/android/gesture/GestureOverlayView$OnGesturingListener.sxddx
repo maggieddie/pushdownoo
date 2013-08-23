@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/gesture/GestureOverlayView$OnGesturingListener
+ (super java/lang/Object)
+ (source "GestureOverlayView.java")
+
+
+(method (attrs public abstract ) onGesturingEnded([object android/gesture/GestureOverlayView] )void
+)
+
+(method (attrs public abstract ) onGesturingStarted([object android/gesture/GestureOverlayView] )void
+)
+
+)

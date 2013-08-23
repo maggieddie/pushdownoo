@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/provider/CalendarContract$ExtendedPropertiesColumns
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+
+ (field (attrs public static final ) EVENT_ID [object java/lang/String] "event_id" )
+ (field (attrs public static final ) NAME [object java/lang/String] "name" )
+ (field (attrs public static final ) VALUE [object java/lang/String] "value" )
+
+)

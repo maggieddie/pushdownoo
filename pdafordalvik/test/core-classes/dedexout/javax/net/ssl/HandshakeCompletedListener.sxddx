@@ -1,0 +1,10 @@
+(interface (attrs public abstract synchronized ) javax/net/ssl/HandshakeCompletedListener
+ (super java/lang/Object)
+ (source "HandshakeCompletedListener.java")
+ (implements java/util/EventListener)
+
+
+(method (attrs public abstract ) handshakeCompleted([object javax/net/ssl/HandshakeCompletedEvent] )void
+)
+
+)

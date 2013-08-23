@@ -1,0 +1,25 @@
+(class (attrs public synchronized ) org/bouncycastle/asn1/x509/CRLNumber
+ (super org/bouncycastle/asn1/DERInteger)
+ (source "CRLNumber.java")
+
+
+(method (attrs public ) <init>([object java/math/BigInteger] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle/asn1/x509/CRLNumber])
+  ; parameter[0] : v1 ([object java/math/BigInteger])
+  (line 20)
+  (invoke-direct {v0 v1} org/bouncycastle/asn1/DERInteger/<init> [object java/math/BigInteger] )
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) getCRLNumber()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/asn1/x509/CRLNumber])
+  (line 25)
+  (invoke-virtual-quick {v1} org/bouncycastle/asn1/x509/CRLNumber/getPositiveValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

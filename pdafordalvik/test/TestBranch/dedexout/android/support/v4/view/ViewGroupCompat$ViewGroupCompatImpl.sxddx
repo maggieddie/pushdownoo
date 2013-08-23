@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/view/ViewGroupCompat$ViewGroupCompatImpl
+ (super java/lang/Object)
+ (source "ViewGroupCompat.java")
+
+
+(method (attrs public abstract ) onRequestSendAccessibilityEvent([object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+)
+
+)

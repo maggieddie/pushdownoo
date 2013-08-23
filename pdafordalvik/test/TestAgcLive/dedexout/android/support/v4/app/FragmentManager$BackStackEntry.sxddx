@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) android/support/v4/app/FragmentManager$BackStackEntry
+ (super java/lang/Object)
+ (source "FragmentManager.java")
+
+
+(method (attrs public abstract ) getBreadCrumbShortTitle()[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getBreadCrumbShortTitleRes()int
+)
+
+(method (attrs public abstract ) getBreadCrumbTitle()[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getBreadCrumbTitleRes()int
+)
+
+(method (attrs public abstract ) getId()int
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+)

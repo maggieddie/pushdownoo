@@ -1,0 +1,46 @@
+(class (attrs synchronized ) java/util/EnumMap$EnumMapKeySet$1
+ (super java/lang/Object)
+ (source "EnumMap.java")
+ (implements java/util/MapEntry$Type)
+
+ (field (attrs final ) this$0 [object java/util/EnumMap$EnumMapKeySet] )
+
+(method (attrs ) <init>([object java/util/EnumMap$EnumMapKeySet] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/EnumMap$EnumMapKeySet$1])
+  ; parameter[0] : v1 ([object java/util/EnumMap$EnumMapKeySet])
+  (line 211)
+  (iput-object-quick v1 v0 java/util/EnumMap$EnumMapKeySet$1.this$0 [object java/util/EnumMap$EnumMapKeySet])
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) get([object java/util/MapEntry] )[object java/lang/Enum]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/MapEntry"  "<TKT;TVT;>;)TKT;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/EnumMap$EnumMapKeySet$1])
+  ; parameter[0] : v1 ([object java/util/MapEntry])
+  (label ld95ec)
+  (line 212)
+  (iget-object-quick v0 v1 java/util/MapEntry.key [object java/lang/Object])
+  (label ld95f0)
+  (check-cast v0 [object java/lang/Enum])
+  (return-object v0)
+)
+
+(method (attrs public ) get([object java/util/MapEntry] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/MapEntry"  "<TKT;TVT;>;)TKT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/EnumMap$EnumMapKeySet$1])
+  ; parameter[0] : v2 ([object java/util/MapEntry])
+  (line 211)
+  (invoke-virtual-quick {v1 v2} java/util/EnumMap$EnumMapKeySet$1/get [object java/util/MapEntry] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

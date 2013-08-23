@@ -1,0 +1,60 @@
+(class (attrs synchronized ) java/util/TreeMap$3
+ (super java/util/AbstractCollection)
+ (source "TreeMap.java")
+
+ (field (attrs final ) this$0 [object java/util/TreeMap] )
+
+(method (attrs ) <init>([object java/util/TreeMap] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/TreeMap$3])
+  ; parameter[0] : v1 ([object java/util/TreeMap])
+  (line 2373)
+  (iput-object-quick v1 v0 java/util/TreeMap$3.this$0 [object java/util/TreeMap])
+  (invoke-direct {v0} java/util/AbstractCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/TreeMap$3])
+  (line 2369)
+  (iget-object-quick v0 v1 java/util/TreeMap$3.this$0 [object java/util/TreeMap])
+  (invoke-virtual-quick {v0} java/util/TreeMap/clear )
+  (line 2370)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/TreeMap$3])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 2359)
+  (iget-object-quick v0 v1 java/util/TreeMap$3.this$0 [object java/util/TreeMap])
+  (invoke-virtual-quick {v0 v2} java/util/TreeMap/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/TreeMap$3])
+  (line 2374)
+  (new-instance v0 java/util/TreeMap$UnboundedValueIterator)
+  (iget-object-quick v1 v2 java/util/TreeMap$3.this$0 [object java/util/TreeMap])
+  (invoke-direct {v0 v1} java/util/TreeMap$UnboundedValueIterator/<init> [object java/util/TreeMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/TreeMap$3])
+  (line 2364)
+  (iget-object-quick v0 v1 java/util/TreeMap$3.this$0 [object java/util/TreeMap])
+  (iget-quick v0 v0 )
+  (return v0)
+)
+
+)

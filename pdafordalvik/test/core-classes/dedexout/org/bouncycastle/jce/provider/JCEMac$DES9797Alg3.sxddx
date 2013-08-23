@@ -1,0 +1,19 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCEMac$DES9797Alg3
+ (super org/bouncycastle/jce/provider/JCEMac)
+ (source "JCEMac.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle/jce/provider/JCEMac$DES9797Alg3])
+  (line 338)
+  (new-instance v0 org/bouncycastle/crypto/macs/ISO9797Alg3Mac)
+  (new-instance v1 org/bouncycastle/crypto/engines/DESEngine)
+  (invoke-direct {v1} org/bouncycastle/crypto/engines/DESEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/macs/ISO9797Alg3Mac/<init> [object org/bouncycastle/crypto/BlockCipher] )
+  (invoke-direct {v2 v0} org/bouncycastle/jce/provider/JCEMac/<init> [object org/bouncycastle/crypto/Mac] )
+  (line 339)
+  (return-void )
+ )
+
+)

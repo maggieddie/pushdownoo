@@ -1,0 +1,40 @@
+(class (attrs public synchronized ) java/security/spec/RSAPrivateKeySpec
+ (super java/lang/Object)
+ (source "RSAPrivateKeySpec.java")
+ (implements java/security/spec/KeySpec)
+
+ (field (attrs private final ) modulus [object java/math/BigInteger] )
+ (field (attrs private final ) privateExponent [object java/math/BigInteger] )
+
+(method (attrs public ) <init>([object java/math/BigInteger] [object java/math/BigInteger] )void
+  (limit registers 3)
+  ; this: v0 ([object java/security/spec/RSAPrivateKeySpec])
+  ; parameter[0] : v1 ([object java/math/BigInteger])
+  ; parameter[1] : v2 ([object java/math/BigInteger])
+  (line 48)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 49)
+  (iput-object-quick v1 v0 java/security/spec/RSAPrivateKeySpec.modulus [object java/math/BigInteger])
+  (line 50)
+  (iput-object-quick v2 v0 java/security/spec/RSAPrivateKeySpec.privateExponent [object java/math/BigInteger])
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public ) getModulus()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/RSAPrivateKeySpec])
+  (line 60)
+  (iget-object-quick v0 v1 java/security/spec/RSAPrivateKeySpec.modulus [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getPrivateExponent()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/RSAPrivateKeySpec])
+  (line 70)
+  (iget-object-quick v0 v1 java/security/spec/RSAPrivateKeySpec.privateExponent [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,57 @@
+(class (attrs synchronized ) java/util/ListResourceBundle$2
+ (super java/lang/Object)
+ (source "ListResourceBundle.java")
+ (implements java/util/Enumeration)
+
+ (field (attrs ) it [object java/util/Iterator] )
+ (field (attrs final ) this$0 [object java/util/ListResourceBundle] )
+
+(method (attrs ) <init>([object java/util/ListResourceBundle] )void
+  (limit registers 3)
+  ; this: v1 ([object java/util/ListResourceBundle$2])
+  ; parameter[0] : v2 ([object java/util/ListResourceBundle])
+  (line 106)
+  (iput-object-quick v2 v1 java/util/ListResourceBundle$2.this$0 [object java/util/ListResourceBundle])
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 100)
+  (iget-object-quick v0 v1 java/util/ListResourceBundle$2.this$0 [object java/util/ListResourceBundle])
+  (iget-object-quick v0 v0 )
+  (invoke-virtual-quick {v0} vtable #0x11)
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/iterator )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 java/util/ListResourceBundle$2.it [object java/util/Iterator])
+  (return-void )
+ )
+
+(method (attrs public ) hasMoreElements()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/ListResourceBundle$2])
+  (line 103)
+  (iget-object-quick v0 v1 java/util/ListResourceBundle$2.it [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) nextElement()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object java/util/ListResourceBundle$2])
+  (line 106)
+  (invoke-virtual-quick {v1} java/util/ListResourceBundle$2/nextElement )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) nextElement()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/util/ListResourceBundle$2])
+  (line 107)
+  (iget-object-quick v0 v1 java/util/ListResourceBundle$2.it [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v1)
+  (check-cast v1 [object java/lang/String])
+  (return-object v1)
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) java/util/concurrent/locks/ReadWriteLock
+ (super java/lang/Object)
+ (source "ReadWriteLock.java")
+
+
+(method (attrs public abstract ) readLock()[object java/util/concurrent/locks/Lock]
+)
+
+(method (attrs public abstract ) writeLock()[object java/util/concurrent/locks/Lock]
+)
+
+)

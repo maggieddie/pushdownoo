@@ -1,0 +1,24 @@
+(interface (attrs public abstract synchronized ) java/sql/SQLData
+ (super java/lang/Object)
+ (source "SQLData.java")
+
+
+(method (attrs public abstract ) getSQLTypeName()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readSQL([object java/sql/SQLInput] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) writeSQL([object java/sql/SQLOutput] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+)

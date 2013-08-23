@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/os/IInterface
+ (super java/lang/Object)
+ (source "IInterface.java")
+
+
+(method (attrs public abstract ) asBinder()[object android/os/IBinder]
+)
+
+)

@@ -1,0 +1,78 @@
+(class (attrs public synchronized ) org/xml/sax/ext/Locator2Impl
+ (super org/xml/sax/helpers/LocatorImpl)
+ (source "Locator2Impl.java")
+ (implements org/xml/sax/ext/Locator2)
+
+ (field (attrs private ) encoding [object java/lang/String] )
+ (field (attrs private ) version [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/xml/sax/ext/Locator2Impl])
+  (line 38)
+  (invoke-direct {v0} org/xml/sax/helpers/LocatorImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/xml/sax/Locator] )void
+  (limit registers 5)
+  ; this: v3 ([object org/xml/sax/ext/Locator2Impl])
+  ; parameter[0] : v4 ([object org/xml/sax/Locator])
+  (line 50)
+  (invoke-direct {v3 v4} org/xml/sax/helpers/LocatorImpl/<init> [object org/xml/sax/Locator] )
+  (line 51)
+  (instance-of v2 v4 org/xml/sax/ext/Locator2)
+  (if-eqz v2 l1c233e)
+  (line 52)
+  (move-object v0 v4)
+  (check-cast v0 [object org/xml/sax/ext/Locator2])
+  (move-object v1 v0)
+  (label l1c2326)
+  (line 54)
+  (invoke-interface {v1} org/xml/sax/ext/Locator2/getXMLVersion )
+  (move-result-object v2)
+  (iput-object-quick v2 v3 org/xml/sax/ext/Locator2Impl.version [object java/lang/String])
+  (line 55)
+  (invoke-interface {v1} org/xml/sax/ext/Locator2/getEncoding )
+  (move-result-object v2)
+  (iput-object-quick v2 v3 org/xml/sax/ext/Locator2Impl.encoding [object java/lang/String])
+  (label l1c233e)
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs public ) getEncoding()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/xml/sax/ext/Locator2Impl])
+  (line 81)
+  (iget-object-quick v0 v1 org/xml/sax/ext/Locator2Impl.encoding [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) getXMLVersion()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/xml/sax/ext/Locator2Impl])
+  (line 71)
+  (iget-object-quick v0 v1 org/xml/sax/ext/Locator2Impl.version [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) setEncoding([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/xml/sax/ext/Locator2Impl])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 104)
+  (iput-object-quick v1 v0 org/xml/sax/ext/Locator2Impl.encoding [object java/lang/String])
+  (return-void )
+)
+
+(method (attrs public ) setXMLVersion([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/xml/sax/ext/Locator2Impl])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 95)
+  (iput-object-quick v1 v0 org/xml/sax/ext/Locator2Impl.version [object java/lang/String])
+  (return-void )
+)
+
+)

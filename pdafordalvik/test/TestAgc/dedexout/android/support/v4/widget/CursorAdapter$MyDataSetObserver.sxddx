@@ -1,0 +1,55 @@
+(class (attrs ) android/support/v4/widget/CursorAdapter$MyDataSetObserver
+ (super android/database/DataSetObserver)
+ (source "CursorAdapter.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/widget/CursorAdapter] )
+
+(method (attrs private ) <init>([object android/support/v4/widget/CursorAdapter] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/CursorAdapter$MyDataSetObserver])
+  ; parameter[0] : v1 ([object android/support/v4/widget/CursorAdapter])
+  (line 469)
+  (iput-object v1 v0 android/support/v4/widget/CursorAdapter$MyDataSetObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (invoke-direct {v0} android/database/DataSetObserver/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/support/v4/widget/CursorAdapter] [object android/support/v4/widget/CursorAdapter$1] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/CursorAdapter$MyDataSetObserver])
+  ; parameter[0] : v1 ([object android/support/v4/widget/CursorAdapter])
+  ; parameter[1] : v2 ([object android/support/v4/widget/CursorAdapter$1])
+  (line 469)
+  (invoke-direct {v0 v1} android/support/v4/widget/CursorAdapter$MyDataSetObserver/<init> [object android/support/v4/widget/CursorAdapter] )
+  (return-void )
+ )
+
+(method (attrs public ) onChanged()void
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/widget/CursorAdapter$MyDataSetObserver])
+  (line 472)
+  (iget-object v0 v2 android/support/v4/widget/CursorAdapter$MyDataSetObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (const/4 v1 1)
+  (iput-boolean v1 v0 android/support/v4/widget/CursorAdapter.mDataValid boolean)
+  (line 473)
+  (iget-object v0 v2 android/support/v4/widget/CursorAdapter$MyDataSetObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (invoke-virtual {v0} android/support/v4/widget/CursorAdapter/notifyDataSetChanged )
+  (line 474)
+  (return-void )
+)
+
+(method (attrs public ) onInvalidated()void
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/widget/CursorAdapter$MyDataSetObserver])
+  (line 478)
+  (iget-object v0 v2 android/support/v4/widget/CursorAdapter$MyDataSetObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (const/4 v1 0)
+  (iput-boolean v1 v0 android/support/v4/widget/CursorAdapter.mDataValid boolean)
+  (line 479)
+  (iget-object v0 v2 android/support/v4/widget/CursorAdapter$MyDataSetObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (invoke-virtual {v0} android/support/v4/widget/CursorAdapter/notifyDataSetInvalidated )
+  (line 480)
+  (return-void )
+)
+
+)

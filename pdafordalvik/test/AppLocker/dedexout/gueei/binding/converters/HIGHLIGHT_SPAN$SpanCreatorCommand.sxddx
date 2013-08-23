@@ -1,0 +1,50 @@
+(class (attrs public abstract ) gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand
+ (super gueei/binding/Command)
+ (source "HIGHLIGHT_SPAN.java")
+
+ (field (attrs public ) Span [object gueei/binding/observables/SpanObservable$Span] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand])
+  (line 102)
+  (invoke-direct {v1} gueei/binding/Command/<init> )
+  (line 103)
+  (const/4 v0 0)
+  (iput-object v0 v1 gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand.Span [object gueei/binding/observables/SpanObservable$Span])
+  (line 102)
+  (return-void )
+ )
+
+(method (attrs public ) Invoke([object android/view/View] [array [object java/lang/Object]] )void
+  (limit registers 6)
+  ; this: v3 ([object gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand])
+  ; parameter[0] : v4 ([object android/view/View])
+  ; parameter[1] : v5 ([array [object java/lang/Object]])
+  (const/4 v2 0)
+  (line 107)
+  (const/4 v0 0)
+  (line 108)
+  (array-length v1 v5)
+  (if-lez v1 l2540e)
+  (aget-object v1 v5 v2)
+  (instance-of v1 v1 java/lang/Integer)
+  (if-eqz v1 l2540e)
+  (line 109)
+  (aget-object v1 v5 v2)
+  (check-cast v1 [object java/lang/Integer])
+  (invoke-virtual {v1} java/lang/Integer/intValue )
+  (move-result v0)
+  (label l2540e)
+  (line 111)
+  (invoke-virtual {v3 v0} gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand/onCreateSpan int )
+  (move-result-object v1)
+  (iput-object v1 v3 gueei/binding/converters/HIGHLIGHT_SPAN$SpanCreatorCommand.Span [object gueei/binding/observables/SpanObservable$Span])
+  (line 112)
+  (return-void )
+)
+
+(method (attrs public abstract ) onCreateSpan(int )[object gueei/binding/observables/SpanObservable$Span]
+)
+
+)

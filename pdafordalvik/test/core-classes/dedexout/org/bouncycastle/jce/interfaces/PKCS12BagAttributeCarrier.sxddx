@@ -1,0 +1,15 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier
+ (super java/lang/Object)
+ (source "PKCS12BagAttributeCarrier.java")
+
+
+(method (attrs public abstract ) getBagAttribute([object org/bouncycastle/asn1/DERObjectIdentifier] )[object org/bouncycastle/asn1/DEREncodable]
+)
+
+(method (attrs public abstract ) getBagAttributeKeys()[object java/util/Enumeration]
+)
+
+(method (attrs public abstract ) setBagAttribute([object org/bouncycastle/asn1/DERObjectIdentifier] [object org/bouncycastle/asn1/DEREncodable] )void
+)
+
+)

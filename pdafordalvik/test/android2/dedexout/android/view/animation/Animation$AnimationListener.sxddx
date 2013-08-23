@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/view/animation/Animation$AnimationListener
+ (super java/lang/Object)
+ (source "Animation.java")
+
+
+(method (attrs public abstract ) onAnimationEnd([object android/view/animation/Animation] )void
+)
+
+(method (attrs public abstract ) onAnimationRepeat([object android/view/animation/Animation] )void
+)
+
+(method (attrs public abstract ) onAnimationStart([object android/view/animation/Animation] )void
+)
+
+)

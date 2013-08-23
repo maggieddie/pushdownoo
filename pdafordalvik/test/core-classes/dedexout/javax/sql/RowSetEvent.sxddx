@@ -1,0 +1,18 @@
+(class (attrs public synchronized ) javax/sql/RowSetEvent
+ (super java/util/EventObject)
+ (source "RowSetEvent.java")
+ (implements java/io/Serializable)
+
+ (field (attrs private static final ) serialVersionUID long -436482081); 0xe5fbcfdf )
+
+(method (attrs public ) <init>([object javax/sql/RowSet] )void
+  (limit registers 2)
+  ; this: v0 ([object javax/sql/RowSetEvent])
+  ; parameter[0] : v1 ([object javax/sql/RowSet])
+  (line 52)
+  (invoke-direct {v0 v1} java/util/EventObject/<init> [object java/lang/Object] )
+  (line 53)
+  (return-void )
+ )
+
+)

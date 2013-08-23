@@ -1,0 +1,32 @@
+(class (attrs public abstract ) java/nio/channels/Pipe$SinkChannel
+ (super java/nio/channels/spi/AbstractSelectableChannel)
+ (source "Pipe.java")
+ (implements java/nio/channels/WritableByteChannel)
+ (implements java/nio/channels/GatheringByteChannel)
+
+
+(method (attrs protected ) <init>([object java/nio/channels/spi/SelectorProvider] )void
+  (limit registers 4)
+  ; this: v2 ([object java/nio/channels/Pipe$SinkChannel])
+  ; parameter[0] : v3 ([object java/nio/channels/spi/SelectorProvider])
+  (line 8)
+  (const/4 v0 0)
+  (check-cast v0 [object java/nio/channels/spi/SelectorProvider])
+  (invoke-direct {v2 v0} java/nio/channels/spi/AbstractSelectableChannel/<init> [object java/nio/channels/spi/SelectorProvider] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public final ) validOps()int
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/Pipe$SinkChannel])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

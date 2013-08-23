@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/resources">
+        <EditTextPreference android:layout="@layout/preference_child" android:title="@string/title_ep_folder" android:key="ep_folder" android:summary="@string/summary_ep_folder" android:dialogTitle="@string/dialog_title_ep_folder" />
+        <PreferenceScreen android:layout="@layout/preference_child" android:title="@string/title_ps_files" android:key="ps_files" android:summary="@string/summary_ps_files">
+            <intent android:name="android.intent.category.DEFAULT" android:mimeType="text/plain" android:action="android.intent.action.PICK" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="@string/title_cp_equal" android:key="cp_equal" android:summary="@string/summary_cp_equal" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/in_app_display">
+        <ListPreference android:entries="@array/entries_lp_font" android:layout="@layout/preference_child" android:title="@string/title_lp_font" android:key="lp_font" android:summary="@string/summary_lp_font" android:defaultValue="serif" android:dialogTitle="@string/dialog_title_lp_font" android:entryValues="@array/entryvalues_lp_font" />
+        <EditTextPreference android:layout="@layout/preference_child" android:title="@string/title_ep_fontsize" android:key="ep_fontsize" android:summary="@string/summary_ep_fontsize" android:defaultValue="12" android:dialogTitle="@string/dialog_title_ep_fontsize" />
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="@string/title_cp_wrap" android:key="cp_wrap" android:summary="@string/summary_cp_wrap" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/widget_display">
+        <ListPreference android:entries="@array/entries_lp_font" android:layout="@layout/preference_child" android:title="@string/title_lp_widget_font" android:key="lp_widget_font" android:summary="@string/summary_lp_widget_font" android:defaultValue="serif" android:dialogTitle="@string/dialog_title_lp_widget_font" android:entryValues="@array/entryvalues_lp_font" />
+        <EditTextPreference android:layout="@layout/preference_child" android:title="@string/title_ep_widget_period" android:key="ep_widget_period" android:summary="@string/summary_ep_widget_period" android:defaultValue="60" android:dialogTitle="@string/dialog_title_ep_widget_period" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notifications">
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="@string/title_cp_notif_boot" android:key="cp_notif_boot" android:summary="@string/summary_cp_notif_boot" android:defaultValue="true" />
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="@string/title_cp_notif_time" android:key="cp_notif_time" android:summary="@string/summary_cp_notif_time" android:defaultValue="true" />
+        <EditTextPreference android:layout="@layout/preference_child" android:title="@string/title_ep_time" android:key="ep_time" android:summary="@string/summary_ep_time" android:dependency="cp_notif_time" android:defaultValue="60" android:dialogTitle="@string/dialog_title_ep_time" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vc_category">
+        <PreferenceScreen android:layout="@layout/preference_child" android:title="@string/title_ps_versioncheck" android:key="ps_versioncheck" android:summary="@string/summary_ps_versioncheck">
+            <intent android:name="android.intent.category.DEFAULT" android:action="net.lp.androidsfortune.SHOW_VC_PREFERENCES" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

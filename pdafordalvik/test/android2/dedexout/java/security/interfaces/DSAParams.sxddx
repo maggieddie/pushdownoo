@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) java/security/interfaces/DSAParams
+ (super java/lang/Object)
+ (source "DSAParams.java")
+
+
+(method (attrs public abstract ) getG()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getP()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getQ()[object java/math/BigInteger]
+)
+
+)

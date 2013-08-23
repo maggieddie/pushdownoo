@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/validation/OverridesAttribute$List
+ (super java/lang/Object)
+ (source "OverridesAttribute.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object javax/validation/OverridesAttribute]]
+)
+
+)

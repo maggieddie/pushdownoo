@@ -1,0 +1,17 @@
+(class (attrs public synchronized ) java/io/InvalidObjectException
+ (super java/io/ObjectStreamException)
+ (source "InvalidObjectException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1092690945); 0xbededbff )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/InvalidObjectException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 38)
+  (invoke-direct {v0 v1} java/io/ObjectStreamException/<init> [object java/lang/String] )
+  (line 39)
+  (return-void )
+ )
+
+)

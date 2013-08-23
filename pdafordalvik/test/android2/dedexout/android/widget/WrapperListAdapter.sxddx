@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/widget/WrapperListAdapter
+ (super java/lang/Object)
+ (source "WrapperListAdapter.java")
+ (implements android/widget/ListAdapter)
+
+
+(method (attrs public abstract ) getWrappedAdapter()[object android/widget/ListAdapter]
+)
+
+)

@@ -1,0 +1,17 @@
+(class (attrs public ) android/renderscript/ProgramVertex
+ (super android/renderscript/Program)
+ (source "ProgramVertex.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/ProgramVertex])
+  (line 12)
+  (invoke-direct {v2} android/renderscript/Program/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

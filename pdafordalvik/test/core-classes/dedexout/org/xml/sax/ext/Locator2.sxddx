@@ -1,0 +1,13 @@
+(interface (attrs public abstract synchronized ) org/xml/sax/ext/Locator2
+ (super java/lang/Object)
+ (source "Locator2.java")
+ (implements org/xml/sax/Locator)
+
+
+(method (attrs public abstract ) getEncoding()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getXMLVersion()[object java/lang/String]
+)
+
+)

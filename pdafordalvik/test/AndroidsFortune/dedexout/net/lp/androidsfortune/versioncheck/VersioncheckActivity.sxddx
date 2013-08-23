@@ -1,0 +1,97 @@
+(class (attrs public ) net/lp/androidsfortune/versioncheck/VersioncheckActivity
+ (super com/tomgibara/android/veecheck/VeecheckActivity)
+ (source "VersioncheckActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 38)
+  (invoke-direct {v0} com/tomgibara/android/veecheck/VeecheckActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) createState()[object com/tomgibara/android/veecheck/VeecheckState]
+  (limit registers 2)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 66)
+  (new-instance v0 com/tomgibara/android/veecheck/util/PrefState)
+  (invoke-direct {v0 v1} com/tomgibara/android/veecheck/util/PrefState/<init> [object android/content/Context] )
+  (return-object v0)
+)
+
+(method (attrs protected ) getNoButton()[object android/view/View]
+  (limit registers 2)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 71)
+  (const v0 2131296260) ; 0x7f090004)
+  (invoke-virtual {v1 v0} net/lp/androidsfortune/versioncheck/VersioncheckActivity/findViewById int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) getStopCheckBox()[object android/widget/Checkable]
+  (limit registers 2)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 81)
+  (const v0 2131296261) ; 0x7f090005)
+  (invoke-virtual {v1 v0} net/lp/androidsfortune/versioncheck/VersioncheckActivity/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/Checkable])
+  (return-object v0)
+)
+
+(method (attrs protected ) getYesButton()[object android/view/View]
+  (limit registers 2)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 76)
+  (const v0 2131296259) ; 0x7f090003)
+  (invoke-virtual {v1 v0} net/lp/androidsfortune/versioncheck/VersioncheckActivity/findViewById int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 2)
+  ; this: v0 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 89)
+  (invoke-super {v0 v1} com/tomgibara/android/veecheck/VeecheckActivity/onClick [object android/view/View] )
+  (line 90)
+  (return-void )
+)
+
+(method (attrs protected ) onCreate([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 42)
+  (invoke-super {v1 v2} com/tomgibara/android/veecheck/VeecheckActivity/onCreate [object android/os/Bundle] )
+  (line 43)
+  (const v0 2130903045) ; 0x7f030005)
+  (invoke-virtual {v1 v0} net/lp/androidsfortune/versioncheck/VersioncheckActivity/setContentView int )
+  (line 46)
+  (const-string v0 "13M4EX92CTBYEXMM5A4Q")
+  (invoke-static {v1 v0} com/flurry/android/FlurryAgent/onStartSession [object android/content/Context] [object java/lang/String] )
+  (line 48)
+  (const-string v0 "versioncheck_activity_displayed")
+  (invoke-static {v0} com/flurry/android/FlurryAgent/onEvent [object java/lang/String] )
+  (line 49)
+  (invoke-static {} com/flurry/android/FlurryAgent/onPageView )
+  (nop )
+  (line 51)
+  (return-void )
+)
+
+(method (attrs protected ) onDestroy()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/versioncheck/VersioncheckActivity])
+  (line 58)
+  (invoke-super {v0} com/tomgibara/android/veecheck/VeecheckActivity/onDestroy )
+  (line 61)
+  (invoke-static {v0} com/flurry/android/FlurryAgent/onEndSession [object android/content/Context] )
+  (line 62)
+  (return-void )
+)
+
+)

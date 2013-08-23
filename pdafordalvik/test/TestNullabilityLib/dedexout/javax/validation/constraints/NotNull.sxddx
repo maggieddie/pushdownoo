@@ -1,0 +1,22 @@
+(interface (attrs public abstract annotation ) javax/validation/constraints/NotNull
+ (super java/lang/Object)
+ (source "NotNull.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) groups()[array [object java/lang/Class]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()["  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) message()[object java/lang/String]
+)
+
+(method (attrs public abstract ) payload()[array [object java/lang/Class]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()["  "Ljava/lang/Class"  "<+"  "Ljavax/validation/Payload;"  ">;")
+  )
+)
+
+)

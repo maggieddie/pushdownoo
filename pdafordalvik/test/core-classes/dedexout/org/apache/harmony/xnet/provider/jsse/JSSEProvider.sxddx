@@ -1,0 +1,23 @@
+(class (attrs public final synchronized ) org/apache/harmony/xnet/provider/jsse/JSSEProvider
+ (super java/security/Provider)
+ (source "JSSEProvider.java")
+
+ (field (attrs private static final ) serialVersionUID long -1410369281); 0xabef78ff )
+
+(method (attrs public ) <init>()void
+  (limit registers 5)
+  ; this: v4 ([object org/apache/harmony/xnet/provider/jsse/JSSEProvider])
+  (line 110)
+  (const-string v0 "HarmonyJSSE")
+  (const-wide/high16 v1 16368)
+  (const-string v3 "Harmony JSSE Provider")
+  (invoke-direct {v4 v0 v1 v2 v3} java/security/Provider/<init> [object java/lang/String] double [object java/lang/String] )
+  (line 111)
+  (new-instance v0 org/apache/harmony/xnet/provider/jsse/JSSEProvider$1)
+  (invoke-direct {v0 v4} org/apache/harmony/xnet/provider/jsse/JSSEProvider$1/<init> [object org/apache/harmony/xnet/provider/jsse/JSSEProvider] )
+  (invoke-static {v0} java/security/AccessController/doPrivileged [object java/security/PrivilegedAction] )
+  (line 134)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/tomgibara/android/veecheck/VeecheckSettings
+ (super java/lang/Object)
+ (source "VeecheckSettings.java")
+
+
+(method (attrs public abstract ) getCheckInterval()long
+)
+
+(method (attrs public abstract ) getCheckUri()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getPeriod()long
+)
+
+(method (attrs public abstract ) isEnabled()boolean
+)
+
+)

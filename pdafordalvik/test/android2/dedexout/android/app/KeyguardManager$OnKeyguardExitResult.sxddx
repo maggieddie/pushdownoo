@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/app/KeyguardManager$OnKeyguardExitResult
+ (super java/lang/Object)
+ (source "KeyguardManager.java")
+
+
+(method (attrs public abstract ) onKeyguardExitResult(boolean )void
+)
+
+)

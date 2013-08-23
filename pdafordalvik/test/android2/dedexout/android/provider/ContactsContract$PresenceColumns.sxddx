@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$PresenceColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) CUSTOM_PROTOCOL [object java/lang/String] "custom_protocol" )
+ (field (attrs public static final ) DATA_ID [object java/lang/String] "presence_data_id" )
+ (field (attrs public static final ) IM_ACCOUNT [object java/lang/String] "im_account" )
+ (field (attrs public static final ) IM_HANDLE [object java/lang/String] "im_handle" )
+ (field (attrs public static final ) PROTOCOL [object java/lang/String] "protocol" )
+
+)

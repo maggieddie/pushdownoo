@@ -1,0 +1,15 @@
+(interface (attrs public abstract synchronized ) SQLite/Callback
+ (super java/lang/Object)
+ (source "Callback.java")
+
+
+(method (attrs public abstract ) columns([array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) newrow([array [object java/lang/String]] )boolean
+)
+
+(method (attrs public abstract ) types([array [object java/lang/String]] )void
+)
+
+)

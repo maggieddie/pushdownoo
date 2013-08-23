@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/view/ActionMode$Callback
+ (super java/lang/Object)
+ (source "ActionMode.java")
+
+
+(method (attrs public abstract ) onActionItemClicked([object android/view/ActionMode] [object android/view/MenuItem] )boolean
+)
+
+(method (attrs public abstract ) onCreateActionMode([object android/view/ActionMode] [object android/view/Menu] )boolean
+)
+
+(method (attrs public abstract ) onDestroyActionMode([object android/view/ActionMode] )void
+)
+
+(method (attrs public abstract ) onPrepareActionMode([object android/view/ActionMode] [object android/view/Menu] )boolean
+)
+
+)

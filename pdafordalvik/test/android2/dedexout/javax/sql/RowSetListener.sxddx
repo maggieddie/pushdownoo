@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) javax/sql/RowSetListener
+ (super java/lang/Object)
+ (source "RowSetListener.java")
+ (implements java/util/EventListener)
+
+
+(method (attrs public abstract ) cursorMoved([object javax/sql/RowSetEvent] )void
+)
+
+(method (attrs public abstract ) rowChanged([object javax/sql/RowSetEvent] )void
+)
+
+(method (attrs public abstract ) rowSetChanged([object javax/sql/RowSetEvent] )void
+)
+
+)

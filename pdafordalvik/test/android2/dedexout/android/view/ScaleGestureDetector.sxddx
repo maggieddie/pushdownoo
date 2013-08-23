@@ -1,0 +1,150 @@
+(class (attrs public ) android/view/ScaleGestureDetector
+ (super java/lang/Object)
+ (source "ScaleGestureDetector.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] [object android/view/ScaleGestureDetector$OnScaleGestureListener] )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/view/ScaleGestureDetector$OnScaleGestureListener])
+  (line 18)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getCurrentSpan()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getCurrentSpanX()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getCurrentSpanY()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getEventTime()long
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFocusX()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFocusY()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPreviousSpan()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPreviousSpanX()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPreviousSpanY()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getScaleFactor()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTimeDelta()long
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isInProgress()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onTouchEvent([object android/view/MotionEvent] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/view/ScaleGestureDetector])
+  ; parameter[0] : v3 ([object android/view/MotionEvent])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

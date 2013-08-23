@@ -1,0 +1,13 @@
+(interface (attrs public abstract synchronized ) org/w3c/dom/Notation
+ (super java/lang/Object)
+ (source "Notation.java")
+ (implements org/w3c/dom/Node)
+
+
+(method (attrs public abstract ) getPublicId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSystemId()[object java/lang/String]
+)
+
+)

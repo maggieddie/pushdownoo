@@ -1,0 +1,123 @@
+(class (attrs public final ) org/apache/http/params/HttpProtocolParams
+ (super java/lang/Object)
+ (source "HttpProtocolParams.java")
+ (implements org/apache/http/params/CoreProtocolPNames)
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParams])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getContentCharset([object org/apache/http/params/HttpParams] )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getHttpElementCharset([object org/apache/http/params/HttpParams] )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getUserAgent([object org/apache/http/params/HttpParams] )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getVersion([object org/apache/http/params/HttpParams] )[object org/apache/http/ProtocolVersion]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setContentCharset([object org/apache/http/params/HttpParams] [object java/lang/String] )void
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setHttpElementCharset([object org/apache/http/params/HttpParams] [object java/lang/String] )void
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setUseExpectContinue([object org/apache/http/params/HttpParams] boolean )void
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  ; parameter[1] : v3 (boolean)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setUserAgent([object org/apache/http/params/HttpParams] [object java/lang/String] )void
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setVersion([object org/apache/http/params/HttpParams] [object org/apache/http/ProtocolVersion] )void
+  (limit registers 4)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  ; parameter[1] : v3 ([object org/apache/http/ProtocolVersion])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) useExpectContinue([object org/apache/http/params/HttpParams] )boolean
+  (limit registers 3)
+  ; parameter[0] : v2 ([object org/apache/http/params/HttpParams])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

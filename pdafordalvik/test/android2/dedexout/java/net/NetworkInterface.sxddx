@@ -1,0 +1,246 @@
+(class (attrs public final ) java/net/NetworkInterface
+ (super java/lang/Object)
+ (source "NetworkInterface.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getByInetAddress([object java/net/InetAddress] )[object java/net/NetworkInterface]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/net/InetAddress])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getByName([object java/lang/String] )[object java/net/NetworkInterface]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getNetworkInterfaces()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<"  "Ljava/net/NetworkInterface;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 2)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/net/NetworkInterface])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDisplayName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getHardwareAddress()[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInetAddresses()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<"  "Ljava/net/InetAddress;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInterfaceAddresses()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ljava/net/InterfaceAddress;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMTU()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getParent()[object java/net/NetworkInterface]
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSubInterfaces()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<"  "Ljava/net/NetworkInterface;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isLoopback()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isPointToPoint()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isUp()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isVirtual()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) supportsMulticast()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/net/NetworkInterface])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

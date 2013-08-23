@@ -1,0 +1,50 @@
+(class (attrs public ) android/graphics/PixelFormat
+ (super java/lang/Object)
+ (source "PixelFormat.java")
+
+ (field (attrs public static final ) A_8 int 8); 0x8 )
+ (field (attrs public static final ) JPEG int 256); 0x100 )
+ (field (attrs public static final ) LA_88 int 10); 0xa )
+ (field (attrs public static final ) L_8 int 9); 0x9 )
+ (field (attrs public static final ) OPAQUE int -1); 0xffffffff )
+ (field (attrs public static final ) RGBA_4444 int 7); 0x7 )
+ (field (attrs public static final ) RGBA_5551 int 6); 0x6 )
+ (field (attrs public static final ) RGBA_8888 int 1); 0x1 )
+ (field (attrs public static final ) RGBX_8888 int 2); 0x2 )
+ (field (attrs public static final ) RGB_332 int 11); 0xb )
+ (field (attrs public static final ) RGB_565 int 4); 0x4 )
+ (field (attrs public static final ) RGB_888 int 3); 0x3 )
+ (field (attrs public static final ) TRANSLUCENT int -3); 0xfffffffd )
+ (field (attrs public static final ) TRANSPARENT int -2); 0xfffffffe )
+ (field (attrs public static final ) UNKNOWN int 0); 0x0 )
+ (field (attrs public static final ) YCbCr_420_SP int 17); 0x11 )
+ (field (attrs public static final ) YCbCr_422_I int 20); 0x14 )
+ (field (attrs public static final ) YCbCr_422_SP int 16); 0x10 )
+ (field (attrs public ) bitsPerPixel int )
+ (field (attrs public ) bytesPerPixel int )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/PixelFormat])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) formatHasAlpha(int )boolean
+  (limit registers 3)
+  ; parameter[0] : v2 (int)
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) getPixelFormatInfo(int [object android/graphics/PixelFormat] )void
+ )
+
+)

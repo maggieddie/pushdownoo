@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/content/IntentSender$OnFinished
+ (super java/lang/Object)
+ (source "IntentSender.java")
+
+
+(method (attrs public abstract ) onSendFinished([object android/content/IntentSender] [object android/content/Intent] int [object java/lang/String] [object android/os/Bundle] )void
+)
+
+)

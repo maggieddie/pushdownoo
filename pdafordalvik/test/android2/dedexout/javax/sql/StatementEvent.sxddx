@@ -1,0 +1,57 @@
+(class (attrs public ) javax/sql/StatementEvent
+ (super java/util/EventObject)
+ (source "StatementEvent.java")
+
+
+(method (attrs public ) <init>([object javax/sql/PooledConnection] [object java/sql/PreparedStatement] )void
+  (limit registers 5)
+  ; this: v2 ([object javax/sql/StatementEvent])
+  ; parameter[0] : v3 ([object javax/sql/PooledConnection])
+  ; parameter[1] : v4 ([object java/sql/PreparedStatement])
+  (line 6)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/Object])
+  (invoke-direct {v2 v0} java/util/EventObject/<init> [object java/lang/Object] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object javax/sql/PooledConnection] [object java/sql/PreparedStatement] [object java/sql/SQLException] )void
+  (limit registers 6)
+  ; this: v2 ([object javax/sql/StatementEvent])
+  ; parameter[0] : v3 ([object javax/sql/PooledConnection])
+  ; parameter[1] : v4 ([object java/sql/PreparedStatement])
+  ; parameter[2] : v5 ([object java/sql/SQLException])
+  (line 5)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/Object])
+  (invoke-direct {v2 v0} java/util/EventObject/<init> [object java/lang/Object] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getSQLException()[object java/sql/SQLException]
+  (limit registers 3)
+  ; this: v2 ([object javax/sql/StatementEvent])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getStatement()[object java/sql/PreparedStatement]
+  (limit registers 3)
+  ; this: v2 ([object javax/sql/StatementEvent])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

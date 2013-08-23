@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/provider/MediaStore$Audio$PlaylistsColumns
+ (super java/lang/Object)
+ (source "MediaStore.java")
+
+ (field (attrs public static final ) DATA [object java/lang/String] "_data" )
+ (field (attrs public static final ) DATE_ADDED [object java/lang/String] "date_added" )
+ (field (attrs public static final ) DATE_MODIFIED [object java/lang/String] "date_modified" )
+ (field (attrs public static final ) NAME [object java/lang/String] "name" )
+
+)

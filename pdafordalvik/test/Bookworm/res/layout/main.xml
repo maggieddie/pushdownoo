@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/booklistview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:layout_weight="1.0" android:fastScrollEnabled="true" />
+    <LinearLayout android:gravity="top" android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="@string/msgBookListEmpty" style="@style/whitemed" />
+    </LinearLayout>
+    <View android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:id="@id/mainactionbar" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="55.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/actionsort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" android:src="@android:drawable/ic_menu_sort_by_size" />
+        <ImageView android:layout_gravity="center" android:id="@id/actionaddscan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" android:src="@android:drawable/ic_menu_camera" />
+        <ImageView android:layout_gravity="center" android:id="@id/actionaddsearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:src="@android:drawable/ic_menu_search" />
+        <ImageView android:layout_gravity="center" android:id="@id/actionaddform" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" android:src="@android:drawable/ic_menu_edit" />
+        <ImageView android:layout_gravity="center" android:id="@id/actionmanagedata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" android:src="@android:drawable/ic_menu_manage" />
+    </LinearLayout>
+</LinearLayout>

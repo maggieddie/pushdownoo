@@ -1,0 +1,71 @@
+(class (attrs final synchronized ) java/util/concurrent/ConcurrentHashMap$Values
+ (super java/util/AbstractCollection)
+ (source "ConcurrentHashMap.java")
+
+ (field (attrs final ) this$0 [object java/util/concurrent/ConcurrentHashMap] )
+
+(method (attrs ) <init>([object java/util/concurrent/ConcurrentHashMap] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  ; parameter[0] : v1 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 1169)
+  (iput-object-quick v1 v0 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-direct {v0} java/util/AbstractCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  (line 1183)
+  (iget-object-quick v0 v1 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-virtual-quick {v0} java/util/concurrent/ConcurrentHashMap/clear )
+  (line 1184)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1180)
+  (iget-object-quick v0 v1 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-virtual-quick {v0 v2} java/util/concurrent/ConcurrentHashMap/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  (line 1177)
+  (iget-object-quick v0 v1 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-virtual-quick {v0} java/util/concurrent/ConcurrentHashMap/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  (line 1171)
+  (new-instance v0 java/util/concurrent/ConcurrentHashMap$ValueIterator)
+  (iget-object-quick v1 v2 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-direct {v0 v1} java/util/concurrent/ConcurrentHashMap$ValueIterator/<init> [object java/util/concurrent/ConcurrentHashMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/concurrent/ConcurrentHashMap$Values])
+  (line 1174)
+  (iget-object-quick v0 v1 java/util/concurrent/ConcurrentHashMap$Values.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-virtual-quick {v0} java/util/concurrent/ConcurrentHashMap/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

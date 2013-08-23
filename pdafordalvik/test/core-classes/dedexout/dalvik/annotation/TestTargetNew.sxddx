@@ -1,0 +1,28 @@
+(interface (attrs public abstract annotation synchronized ) dalvik/annotation/TestTargetNew
+ (super java/lang/Object)
+ (source "TestTargetNew.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) args()[array [object java/lang/Class]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()["  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) clazz()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) level()[object dalvik/annotation/TestLevel]
+)
+
+(method (attrs public abstract ) method()[object java/lang/String]
+)
+
+(method (attrs public abstract ) notes()[object java/lang/String]
+)
+
+)

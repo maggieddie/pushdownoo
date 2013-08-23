@@ -1,0 +1,20 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCEBlockCipher$AESCFB
+ (super org/bouncycastle/jce/provider/JCEBlockCipher)
+ (source "JCEBlockCipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/bouncycastle/jce/provider/JCEBlockCipher$AESCFB])
+  (const/16 v2 128)
+  (line 810)
+  (new-instance v0 org/bouncycastle/crypto/modes/CFBBlockCipher)
+  (new-instance v1 org/bouncycastle/crypto/engines/AESFastEngine)
+  (invoke-direct {v1} org/bouncycastle/crypto/engines/AESFastEngine/<init> )
+  (invoke-direct {v0 v1 v2} org/bouncycastle/crypto/modes/CFBBlockCipher/<init> [object org/bouncycastle/crypto/BlockCipher] int )
+  (invoke-direct {v3 v0 v2} org/bouncycastle/jce/provider/JCEBlockCipher/<init> [object org/bouncycastle/crypto/BlockCipher] int )
+  (line 811)
+  (return-void )
+ )
+
+)

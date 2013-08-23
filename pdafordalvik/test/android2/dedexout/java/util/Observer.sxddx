@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) java/util/Observer
+ (super java/lang/Object)
+ (source "Observer.java")
+
+
+(method (attrs public abstract ) update([object java/util/Observable] [object java/lang/Object] )void
+)
+
+)

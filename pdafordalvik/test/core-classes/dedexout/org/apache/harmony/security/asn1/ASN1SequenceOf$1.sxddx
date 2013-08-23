@@ -1,0 +1,42 @@
+(class (attrs synchronized ) org/apache/harmony/security/asn1/ASN1SequenceOf$1
+ (super org/apache/harmony/security/asn1/ASN1SequenceOf)
+ (source "ASN1SequenceOf.java")
+
+
+(method (attrs ) <init>([object org/apache/harmony/security/asn1/ASN1Type] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/asn1/ASN1SequenceOf$1])
+  ; parameter[0] : v1 ([object org/apache/harmony/security/asn1/ASN1Type])
+  (line 88)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1SequenceOf/<init> [object org/apache/harmony/security/asn1/ASN1Type] )
+  (return-void )
+ )
+
+(method (attrs public ) getDecodedObject([object org/apache/harmony/security/asn1/BerInputStream] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/asn1/ASN1SequenceOf$1])
+  ; parameter[0] : v2 ([object org/apache/harmony/security/asn1/BerInputStream])
+  (line 85)
+  (iget-object-quick v1 v2 org/apache/harmony/security/asn1/BerInputStream.content [object java/lang/Object])
+  (check-cast v1 [object java/util/List])
+  (invoke-interface {v1} java/util/List/toArray )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getValues([object java/lang/Object] )[object java/util/Collection]
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/asn1/ASN1SequenceOf$1])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 89)
+  (check-cast v2 [array [object java/lang/Object]])
+  (check-cast v2 [array [object java/lang/Object]])
+  (invoke-static {v2} java/util/Arrays/asList [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

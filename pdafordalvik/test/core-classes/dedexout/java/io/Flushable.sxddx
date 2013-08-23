@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) java/io/Flushable
+ (super java/lang/Object)
+ (source "Flushable.java")
+
+
+(method (attrs public abstract ) flush()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

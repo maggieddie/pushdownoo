@@ -1,0 +1,26 @@
+(class (attrs public abstract synchronized ) java/nio/channels/Pipe$SourceChannel
+ (super java/nio/channels/spi/AbstractSelectableChannel)
+ (source "Pipe.java")
+ (implements java/nio/channels/ReadableByteChannel)
+ (implements java/nio/channels/ScatteringByteChannel)
+
+
+(method (attrs protected ) <init>([object java/nio/channels/spi/SelectorProvider] )void
+  (limit registers 2)
+  ; this: v0 ([object java/nio/channels/Pipe$SourceChannel])
+  ; parameter[0] : v1 ([object java/nio/channels/spi/SelectorProvider])
+  (line 77)
+  (invoke-direct {v0 v1} java/nio/channels/spi/AbstractSelectableChannel/<init> [object java/nio/channels/spi/SelectorProvider] )
+  (line 78)
+  (return-void )
+ )
+
+(method (attrs public final ) validOps()int
+  (limit registers 2)
+  ; this: v1 ([object java/nio/channels/Pipe$SourceChannel])
+  (line 87)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

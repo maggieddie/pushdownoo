@@ -1,0 +1,87 @@
+(class (attrs public final ) android/location/GpsSatellite
+ (super java/lang/Object)
+ (source "GpsSatellite.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getAzimuth()float
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getElevation()float
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPrn()int
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSnr()float
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasAlmanac()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasEphemeris()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) usedInFix()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/location/GpsSatellite])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

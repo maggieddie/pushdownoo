@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/provider/Contacts$GroupsColumns
+ (super java/lang/Object)
+ (source "Contacts.java")
+
+ (field (attrs public static final ) NAME [object java/lang/String] "name" )
+ (field (attrs public static final ) NOTES [object java/lang/String] "notes" )
+ (field (attrs public static final ) SHOULD_SYNC [object java/lang/String] "should_sync" )
+ (field (attrs public static final ) SYSTEM_ID [object java/lang/String] "system_id" )
+
+)

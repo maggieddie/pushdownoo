@@ -1,0 +1,40 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/RSAKeyParameters
+ (super org/bouncycastle/crypto/params/AsymmetricKeyParameter)
+ (source "RSAKeyParameters.java")
+
+ (field (attrs private ) exponent [object java/math/BigInteger] )
+ (field (attrs private ) modulus [object java/math/BigInteger] )
+
+(method (attrs public ) <init>(boolean [object java/math/BigInteger] [object java/math/BigInteger] )void
+  (limit registers 4)
+  ; this: v0 ([object org/bouncycastle/crypto/params/RSAKeyParameters])
+  ; parameter[0] : v1 (boolean)
+  ; parameter[1] : v2 ([object java/math/BigInteger])
+  ; parameter[2] : v3 ([object java/math/BigInteger])
+  (line 16)
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/params/AsymmetricKeyParameter/<init> boolean )
+  (line 18)
+  (iput-object-quick v2 v0 org/bouncycastle/crypto/params/RSAKeyParameters.modulus [object java/math/BigInteger])
+  (line 19)
+  (iput-object-quick v3 v0 org/bouncycastle/crypto/params/RSAKeyParameters.exponent [object java/math/BigInteger])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) getExponent()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/RSAKeyParameters])
+  (line 29)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/RSAKeyParameters.exponent [object java/math/BigInteger])
+  (return-object v0)
+)
+
+(method (attrs public ) getModulus()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/RSAKeyParameters])
+  (line 24)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/RSAKeyParameters.modulus [object java/math/BigInteger])
+  (return-object v0)
+)
+
+)

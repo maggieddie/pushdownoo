@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/ExpandableListView$OnGroupClickListener
+ (super java/lang/Object)
+ (source "ExpandableListView.java")
+
+
+(method (attrs public abstract ) onGroupClick([object android/widget/ExpandableListView] [object android/view/View] int long )boolean
+)
+
+)

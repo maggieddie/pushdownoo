@@ -1,0 +1,40 @@
+(class (attrs public synchronized ) org/apache/harmony/xnet/provider/jsse/AlertException
+ (super java/lang/RuntimeException)
+ (source "AlertException.java")
+
+ (field (attrs private static final ) serialVersionUID long -363397405); 0xea56fee3 )
+ (field (attrs private final ) description byte )
+ (field (attrs private final ) reason [object javax/net/ssl/SSLException] )
+
+(method (attrs protected ) <init>(byte [object javax/net/ssl/SSLException] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/AlertException])
+  ; parameter[0] : v1 (byte)
+  ; parameter[1] : v2 ([object javax/net/ssl/SSLException])
+  (line 43)
+  (invoke-direct {v0 v2} java/lang/RuntimeException/<init> [object java/lang/Throwable] )
+  (line 44)
+  (iput-object-quick v2 v0 org/apache/harmony/xnet/provider/jsse/AlertException.reason [object javax/net/ssl/SSLException])
+  (line 45)
+  (iput-quick v1 v0 org/apache/harmony/xnet/provider/jsse/AlertException.description byte)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs protected ) getDescriptionCode()byte
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xnet/provider/jsse/AlertException])
+  (line 64)
+  (iget-quick v0 v1 org/apache/harmony/xnet/provider/jsse/AlertException.description byte)
+  (return v0)
+)
+
+(method (attrs protected ) getReason()[object javax/net/ssl/SSLException]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xnet/provider/jsse/AlertException])
+  (line 54)
+  (iget-object-quick v0 v1 org/apache/harmony/xnet/provider/jsse/AlertException.reason [object javax/net/ssl/SSLException])
+  (return-object v0)
+)
+
+)

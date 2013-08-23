@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/w3c/dom/DOMErrorHandler
+ (super java/lang/Object)
+ (source "DOMErrorHandler.java")
+
+
+(method (attrs public abstract ) handleError([object org/w3c/dom/DOMError] )boolean
+)
+
+)

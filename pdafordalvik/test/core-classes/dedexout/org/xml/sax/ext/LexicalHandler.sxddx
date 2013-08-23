@@ -1,0 +1,48 @@
+(interface (attrs public abstract synchronized ) org/xml/sax/ext/LexicalHandler
+ (super java/lang/Object)
+ (source "LexicalHandler.java")
+
+
+(method (attrs public abstract ) comment([array char] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) endCDATA()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) endDTD()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) endEntity([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) startCDATA()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) startDTD([object java/lang/String] [object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) startEntity([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+)

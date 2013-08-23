@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) javax/xml/transform/dom/DOMLocator
+ (super java/lang/Object)
+ (source "DOMLocator.java")
+ (implements javax/xml/transform/SourceLocator)
+
+
+(method (attrs public abstract ) getOriginatingNode()[object org/w3c/dom/Node]
+)
+
+)

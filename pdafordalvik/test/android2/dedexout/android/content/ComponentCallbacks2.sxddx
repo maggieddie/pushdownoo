@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) android/content/ComponentCallbacks2
+ (super java/lang/Object)
+ (source "ComponentCallbacks2.java")
+ (implements android/content/ComponentCallbacks)
+
+ (field (attrs public static final ) TRIM_MEMORY_BACKGROUND int 40); 0x28 )
+ (field (attrs public static final ) TRIM_MEMORY_COMPLETE int 80); 0x50 )
+ (field (attrs public static final ) TRIM_MEMORY_MODERATE int 60); 0x3c )
+ (field (attrs public static final ) TRIM_MEMORY_UI_HIDDEN int 20); 0x14 )
+
+(method (attrs public abstract ) onTrimMemory(int )void
+)
+
+)

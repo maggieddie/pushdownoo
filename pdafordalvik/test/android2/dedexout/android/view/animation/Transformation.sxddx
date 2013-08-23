@@ -1,0 +1,128 @@
+(class (attrs public ) android/view/animation/Transformation
+ (super java/lang/Object)
+ (source "Transformation.java")
+
+ (field (attrs public static ) TYPE_ALPHA int )
+ (field (attrs public static ) TYPE_BOTH int )
+ (field (attrs public static ) TYPE_IDENTITY int )
+ (field (attrs public static ) TYPE_MATRIX int )
+ (field (attrs protected ) mAlpha float )
+ (field (attrs protected ) mMatrix [object android/graphics/Matrix] )
+ (field (attrs protected ) mTransformationType int )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) compose([object android/view/animation/Transformation] )void
+  (limit registers 4)
+  ; this: v2 ([object android/view/animation/Transformation])
+  ; parameter[0] : v3 ([object android/view/animation/Transformation])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getAlpha()float
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMatrix()[object android/graphics/Matrix]
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTransformationType()int
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) set([object android/view/animation/Transformation] )void
+  (limit registers 4)
+  ; this: v2 ([object android/view/animation/Transformation])
+  ; parameter[0] : v3 ([object android/view/animation/Transformation])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setAlpha(float )void
+  (limit registers 4)
+  ; this: v2 ([object android/view/animation/Transformation])
+  ; parameter[0] : v3 (float)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setTransformationType(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/view/animation/Transformation])
+  ; parameter[0] : v3 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toShortString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/Transformation])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

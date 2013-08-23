@@ -1,0 +1,349 @@
+(class (attrs public synchronized ) org/apache/harmony/xnet/provider/jsse/DHParameters
+ (super java/lang/Object)
+ (source "DHParameters.java")
+
+ (field (attrs private static ) prime [array byte] )
+ (field (attrs private static ) prime512 [array byte] )
+ (field (attrs private static ) primeGroup1 [array byte] )
+ (field (attrs private static ) primeGroup2 [array byte] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 26)
+  (const/16 v0 64)
+  (new-array v0 v0 [array byte])
+  (fill-array-data v0 l17708c)
+  (sput-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.prime512 [array byte])
+  (line 43)
+  (const/16 v0 96)
+  (new-array v0 v0 [array byte])
+  (fill-array-data v0 l1770d4)
+  (sput-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.primeGroup1 [array byte])
+  (line 66)
+  (const/16 v0 128)
+  (new-array v0 v0 [array byte])
+  (fill-array-data v0 l17713c)
+  (sput-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.primeGroup2 [array byte])
+  (line 98)
+  (sget-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.prime512 [array byte])
+  (sput-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.prime [array byte])
+  (line 99)
+  (return-void )
+  (line 26)
+  (label l17708c)
+  (data-array
+    (0xF5) ; #0
+    (0x2A) ; #1
+    (0xFF) ; #2
+    (0x3C) ; #3
+    (0xE1) ; #4
+    (0xB1) ; #5
+    (0x29) ; #6
+    (0x40) ; #7
+    (0x18) ; #8
+    (0x11) ; #9
+    (0x8D) ; #10
+    (0x7C) ; #11
+    (0x84) ; #12
+    (0xA7) ; #13
+    (0x0A) ; #14
+    (0x72) ; #15
+    (0xD6) ; #16
+    (0x86) ; #17
+    (0xC4) ; #18
+    (0x03) ; #19
+    (0x19) ; #20
+    (0xC8) ; #21
+    (0x07) ; #22
+    (0x29) ; #23
+    (0x7A) ; #24
+    (0xCA) ; #25
+    (0x95) ; #26
+    (0x0C) ; #27
+    (0xD9) ; #28
+    (0x96) ; #29
+    (0x9F) ; #30
+    (0xAB) ; #31
+    (0xD0) ; #32
+    (0x0A) ; #33
+    (0x50) ; #34
+    (0x9B) ; #35
+    (0x02) ; #36
+    (0x46) ; #37
+    (0xD3) ; #38
+    (0x08) ; #39
+    (0x3D) ; #40
+    (0x66) ; #41
+    (0xA4) ; #42
+    (0x5D) ; #43
+    (0x41) ; #44
+    (0x9F) ; #45
+    (0x9C) ; #46
+    (0x7C) ; #47
+    (0xBD) ; #48
+    (0x89) ; #49
+    (0x4B) ; #50
+    (0x22) ; #51
+    (0x19) ; #52
+    (0x26) ; #53
+    (0xBA) ; #54
+    (0xAB) ; #55
+    (0xA2) ; #56
+    (0x5E) ; #57
+    (0xC3) ; #58
+    (0x55) ; #59
+    (0xE9) ; #60
+    (0x2A) ; #61
+    (0x05) ; #62
+    (0x5F) ; #63
+  )
+  (line 43)
+  (label l1770d4)
+  (data-array
+    (0xFF) ; #0
+    (0xFF) ; #1
+    (0xFF) ; #2
+    (0xFF) ; #3
+    (0xFF) ; #4
+    (0xFF) ; #5
+    (0xFF) ; #6
+    (0xFF) ; #7
+    (0xC9) ; #8
+    (0x0F) ; #9
+    (0xDA) ; #10
+    (0xA2) ; #11
+    (0x21) ; #12
+    (0x68) ; #13
+    (0xC2) ; #14
+    (0x34) ; #15
+    (0xC4) ; #16
+    (0xC6) ; #17
+    (0x62) ; #18
+    (0x8B) ; #19
+    (0x80) ; #20
+    (0xDC) ; #21
+    (0x1C) ; #22
+    (0xD1) ; #23
+    (0x29) ; #24
+    (0x02) ; #25
+    (0x4E) ; #26
+    (0x08) ; #27
+    (0x8A) ; #28
+    (0x67) ; #29
+    (0xCC) ; #30
+    (0x74) ; #31
+    (0x02) ; #32
+    (0x0B) ; #33
+    (0xBE) ; #34
+    (0xA6) ; #35
+    (0x3B) ; #36
+    (0x13) ; #37
+    (0x9B) ; #38
+    (0x22) ; #39
+    (0x51) ; #40
+    (0x4A) ; #41
+    (0x08) ; #42
+    (0x79) ; #43
+    (0x8E) ; #44
+    (0x34) ; #45
+    (0x04) ; #46
+    (0xDD) ; #47
+    (0xEF) ; #48
+    (0x95) ; #49
+    (0x19) ; #50
+    (0xB3) ; #51
+    (0xCD) ; #52
+    (0x3A) ; #53
+    (0x43) ; #54
+    (0x1B) ; #55
+    (0x30) ; #56
+    (0x2B) ; #57
+    (0x0A) ; #58
+    (0x6D) ; #59
+    (0xF2) ; #60
+    (0x5F) ; #61
+    (0x14) ; #62
+    (0x37) ; #63
+    (0x4F) ; #64
+    (0xE1) ; #65
+    (0x35) ; #66
+    (0x6D) ; #67
+    (0x6D) ; #68
+    (0x51) ; #69
+    (0xC2) ; #70
+    (0x45) ; #71
+    (0xE4) ; #72
+    (0x85) ; #73
+    (0xB5) ; #74
+    (0x76) ; #75
+    (0x62) ; #76
+    (0x5E) ; #77
+    (0x7E) ; #78
+    (0xC6) ; #79
+    (0xF4) ; #80
+    (0x4C) ; #81
+    (0x42) ; #82
+    (0xE9) ; #83
+    (0xA6) ; #84
+    (0x3A) ; #85
+    (0x36) ; #86
+    (0x20) ; #87
+    (0xFF) ; #88
+    (0xFF) ; #89
+    (0xFF) ; #90
+    (0xFF) ; #91
+    (0xFF) ; #92
+    (0xFF) ; #93
+    (0xFF) ; #94
+    (0xFF) ; #95
+  )
+  (line 66)
+  (label l17713c)
+  (data-array
+    (0xFF) ; #0
+    (0xFF) ; #1
+    (0xFF) ; #2
+    (0xFF) ; #3
+    (0xFF) ; #4
+    (0xFF) ; #5
+    (0xFF) ; #6
+    (0xFF) ; #7
+    (0xC9) ; #8
+    (0x0F) ; #9
+    (0xDA) ; #10
+    (0xA2) ; #11
+    (0x21) ; #12
+    (0x68) ; #13
+    (0xC2) ; #14
+    (0x34) ; #15
+    (0xC4) ; #16
+    (0xC6) ; #17
+    (0x62) ; #18
+    (0x8B) ; #19
+    (0x80) ; #20
+    (0xDC) ; #21
+    (0x1C) ; #22
+    (0xD1) ; #23
+    (0x29) ; #24
+    (0x02) ; #25
+    (0x4E) ; #26
+    (0x08) ; #27
+    (0x8A) ; #28
+    (0x67) ; #29
+    (0xCC) ; #30
+    (0x74) ; #31
+    (0x02) ; #32
+    (0x0B) ; #33
+    (0xBE) ; #34
+    (0xA6) ; #35
+    (0x3B) ; #36
+    (0x13) ; #37
+    (0x9B) ; #38
+    (0x22) ; #39
+    (0x51) ; #40
+    (0x4A) ; #41
+    (0x08) ; #42
+    (0x79) ; #43
+    (0x8E) ; #44
+    (0x34) ; #45
+    (0x04) ; #46
+    (0xDD) ; #47
+    (0xEF) ; #48
+    (0x95) ; #49
+    (0x19) ; #50
+    (0xB3) ; #51
+    (0xCD) ; #52
+    (0x3A) ; #53
+    (0x43) ; #54
+    (0x1B) ; #55
+    (0x30) ; #56
+    (0x2B) ; #57
+    (0x0A) ; #58
+    (0x6D) ; #59
+    (0xF2) ; #60
+    (0x5F) ; #61
+    (0x14) ; #62
+    (0x37) ; #63
+    (0x4F) ; #64
+    (0xE1) ; #65
+    (0x35) ; #66
+    (0x6D) ; #67
+    (0x6D) ; #68
+    (0x51) ; #69
+    (0xC2) ; #70
+    (0x45) ; #71
+    (0xE4) ; #72
+    (0x85) ; #73
+    (0xB5) ; #74
+    (0x76) ; #75
+    (0x62) ; #76
+    (0x5E) ; #77
+    (0x7E) ; #78
+    (0xC6) ; #79
+    (0xF4) ; #80
+    (0x4C) ; #81
+    (0x42) ; #82
+    (0xE9) ; #83
+    (0xA6) ; #84
+    (0x37) ; #85
+    (0xED) ; #86
+    (0x6B) ; #87
+    (0x0B) ; #88
+    (0xFF) ; #89
+    (0x5C) ; #90
+    (0xB6) ; #91
+    (0xF4) ; #92
+    (0x06) ; #93
+    (0xB7) ; #94
+    (0xED) ; #95
+    (0xEE) ; #96
+    (0x38) ; #97
+    (0x6B) ; #98
+    (0xFB) ; #99
+    (0x5A) ; #100
+    (0x89) ; #101
+    (0x9F) ; #102
+    (0xA5) ; #103
+    (0xAE) ; #104
+    (0x9F) ; #105
+    (0x24) ; #106
+    (0x11) ; #107
+    (0x7C) ; #108
+    (0x4B) ; #109
+    (0x1F) ; #110
+    (0xE6) ; #111
+    (0x49) ; #112
+    (0x28) ; #113
+    (0x66) ; #114
+    (0x51) ; #115
+    (0xEC) ; #116
+    (0xE6) ; #117
+    (0x53) ; #118
+    (0x81) ; #119
+    (0xFF) ; #120
+    (0xFF) ; #121
+    (0xFF) ; #122
+    (0xFF) ; #123
+    (0xFF) ; #124
+    (0xFF) ; #125
+    (0xFF) ; #126
+    (0xFF) ; #127
+  )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/DHParameters])
+  (line 22)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getPrime()[array byte]
+  (limit registers 1)
+  (line 106)
+  (sget-object v0 org/apache/harmony/xnet/provider/jsse/DHParameters.prime [array byte])
+  (return-object v0)
+ )
+
+)

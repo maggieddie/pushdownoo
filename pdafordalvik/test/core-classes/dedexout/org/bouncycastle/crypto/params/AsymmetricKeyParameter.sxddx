@@ -1,0 +1,28 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/AsymmetricKeyParameter
+ (super java/lang/Object)
+ (source "AsymmetricKeyParameter.java")
+ (implements org/bouncycastle/crypto/CipherParameters)
+
+ (field (attrs ) privateKey boolean )
+
+(method (attrs public ) <init>(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle/crypto/params/AsymmetricKeyParameter])
+  ; parameter[0] : v1 (boolean)
+  (line 12)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 13)
+  (iput-quick v1 v0 org/bouncycastle/crypto/params/AsymmetricKeyParameter.privateKey boolean)
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) isPrivate()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/AsymmetricKeyParameter])
+  (line 18)
+  (iget-quick v0 v1 org/bouncycastle/crypto/params/AsymmetricKeyParameter.privateKey boolean)
+  (return v0)
+)
+
+)

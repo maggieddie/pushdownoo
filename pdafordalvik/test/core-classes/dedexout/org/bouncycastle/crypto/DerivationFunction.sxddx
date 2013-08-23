@@ -1,0 +1,18 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/crypto/DerivationFunction
+ (super java/lang/Object)
+ (source "DerivationFunction.java")
+
+
+(method (attrs public abstract ) generateBytes([array byte] int int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/bouncycastle/crypto/DataLengthException]  [object java/lang/IllegalArgumentException])
+  )
+)
+
+(method (attrs public abstract ) getDigest()[object org/bouncycastle/crypto/Digest]
+)
+
+(method (attrs public abstract ) init([object org/bouncycastle/crypto/DerivationParameters] )void
+)
+
+)

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune"</string>
+    <string name="about_comments">Známý Fortune pro OS Android: vytiskněte si, snad zajímavé, přísloví.</string>
+    <string name="about_copyright">Autorská práva © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune v systému Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Pro zobrazení informací o této aplikaci je třeba nainstalovat OI About. Pro více informací běžte na http://www.openintents.org/ či do Android Market.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Zdá se, že aplikace pro službu Android Market není nainstalována. Ignoruji.</string>
+    <string name="market_description_short">Známý Fortune, nyní pro Android: vytiskněte se, snad zajímavá, přísloví., fráze, pořekadla, aforismy, vtipy, texty, ...</string>
+    <string name="menu_preferences">Nastavení programu</string>
+    <string name="menu_about">"O aplikaci Android's Fortune"</string>
+    <string name="menu_refresh">Obnovit soubory Cookie</string>
+    <string name="menu_get_more_cookies">Získat další Cookie</string>
+    <string name="menu_send">Odeslat jako Text</string>
+    <string name="menu_web_search">Vyhledat na Webu</string>
+    <string name="menu_feedback">Poskytnout Zpětnou Vazbu</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Odeslat přes:</string>
+    <string name="chooser_web_search_action">Prohledat web pomocí:</string>
+    <string name="preferences_activity_name">"Android's Fortune Nastavení"</string>
+    <string name="resources">Zdroje</string>
+    <string name="title_cp_equal">Vyrovnat priority mezi soubory cookie</string>
+    <string name="summary_cp_equal">Stanovuje, zdali je zobrazená cookie z určitého souboru rovnocená s ostatními cookie s přihlédnutím k velikostem souborů s cookie.</string>
+    <string name="title_ep_folder">Adresář obsahuje cookie soubory</string>
+    <string name="summary_ep_folder">Zadejte složku, v níž jsou uloženy Vaše soubory cookie.</string>
+    <string name="dialog_title_ep_folder">Zadejte adresář, jenž obsahuje soubory cookie</string>
+    <string name="title_ps_files">Soubory cookie</string>
+    <string name="summary_ps_files">Vyberte soubory cookie, které mají být použity z výše uvedené složky (neobsahuje .num soubory).</string>
+    <string name="summary_ps_files_warning">VAROVÁNÍ: Některé soubory dosud nemají přiřazen odpovídající .num soubor! Klikněte sem a změňte výběr.</string>
+    <string name="in_app_display">Zobrazit</string>
+    <string name="title_lp_font">Styl písma</string>
+    <string name="summary_lp_font">Monospace mohou být užitečné pro ascii-art cookies.</string>
+    <string name="dialog_title_lp_font">Změnit styl písma</string>
+    <string name="title_ep_fontsize">Velikost písma</string>
+    <string name="summary_ep_fontsize">Velikost písma v bodech</string>
+    <string name="dialog_title_ep_fontsize">Změnit velikost písma</string>
+    <string name="title_cp_wrap">Zalamování textu</string>
+    <string name="summary_cp_wrap">Roztáhne text dané cookie na celou obrazovku. Pro správné zobrazení textů s formátováním a předčasným ukončení řádků se toto doporuuje zakázat.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Styl písma</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Změnit styl písma widgetu.</string>
+    <string name="title_ep_widget_period">Četnost aktualizace widgetu</string>
+    <string name="summary_ep_widget_period">Časový interval v minutách mezi aktualizacemi widgetu.</string>
+    <string name="dialog_title_ep_widget_period">Změnit časový interval aktualizací widgetu</string>
+    <string name="notifications">Upozornění</string>
+    <string name="title_cp_notif_boot">Upozoňovat při startu</string>
+    <string name="summary_cp_notif_boot">Při startu systému doporučit určitou cookie.</string>
+    <string name="title_cp_notif_time">Pravidelné oznamování</string>
+    <string name="summary_cp_notif_time">V určitých časových intervalech doporučovat cookie.</string>
+    <string name="title_ep_time">Časový interval</string>
+    <string name="summary_ep_time">Časový interval v minutách mezi jednotlivými oznámeními.</string>
+    <string name="dialog_title_ep_time">Změnit časový interval</string>
+    <string name="dialog_title_num">Vytvořit .num soubory?</string>
+    <string name="dialog_message_num_warning">Některé vybrané soubory dosud nemají přiřazené .num soubory. Chcete tyto .num soubory vytvořit?</string>
+    <string name="no_cookie_files">"Nejsou nastaveny žádné cookie. Prosím, otevřete Nastavení a zvolte nějaké cookie.
+
+Podívejte se na: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Tohle není cookie programu Fortune!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Cookie programu Fortune</string>
+    <string name="dialog_install">Prosím čekejte, neboť se právě instaluje ukázkový cookie soubor...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Cookie programu Fortune</string>
+    <string name="widget_loading">Načítá se cookie...</string>
+    <string name="widget_error">"Nejsou nastaveny žádné cookie nebo byl program Android's Fortunemoc brzy kvůli nedostatku paměti či přeinstalaci. Pro otevření programu Android's Fortune poklepejte!"</string>
+    <string name="widget_dialog_activity_name">Zvolit operaci:</string>
+    <string name="label_b_refresh">Aktualizovat</string>
+    <string name="label_b_show_cookie">Zobrazit cookie</string>
+    <string name="label_b_cancel">Zrušit</string>
+    <string name="error_no_file_name">Nebylo specifikováno jméno souboru.</string>
+    <string name="error_arg_twice">Argument byl předán dvakrát.</string>
+    <string name="error_num_file_exists">Soubor .num, který mohl být pravděpodobně náhle vytvořen, již existuje.</string>
+    <string name="error_no_valid_cookie_file">Vybraný soubor není platný cookie soubor.</string>
+    <string name="error_file_not_exists_or_no_num">Soubor cookie buď neexistuje a nebo nemá dosud přiřazen patřičný soubor .num:</string>
+    <string name="error_no_write_perms">Nemá dostatečná práva pro zápis.</string>
+    <string name="toast_read_cookie_failed">Čtení cookie se nezdařilo:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+JSte si jisti, že máte připojenou kartu SD?"</string>
+    <string name="toast_read_cookie_failed_internal">Při čtení cookie došlo ke vnitřní chybě (prosím, nahlašte tuto chybu):</string>
+    <string name="toast_generation_num_failed">Vytvoření souboru .num se nezdařilo:</string>
+    <string name="toast_not_a_dir">Specifikovaný adresář (v menu Nastavení) není platný:</string>
+    <string name="toast_selected_file_lost">Soubor, který byl dříve vybrán, nebyl nalezen:</string>
+    <string name="toast_value_invalid">Vložená hodnota je chybná. Nastavit:</string>
+    <string name="toast_widget_period_short">Časový interval menší než 60 minut může negativně ovlivnit výkon a výdrž baterie.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune Nastavení Kontroly Aktualizací"</string>
+    <string name="title_ps_versioncheck">Kontrola dostupnosti aktualizací</string>
+    <string name="summary_ps_versioncheck">Automatická detekce aktualizací.</string>
+    <string name="vc_notify_ticker">Aktualizovat aplikaci</string>
+    <string name="vc_notify_title">Aplikace byla aktualizována</string>
+    <string name="vc_notify_message">Stáhnout novou verzi.</string>
+    <string name="vc_category">Kontrola dostupnosti aktualizací</string>
+    <string name="vc_enabled_title">Povoleno</string>
+    <string name="vc_enabled_summary">Zdali je automatická kontrola aktualizací povolena či ne.</string>
+    <string name="vc_confirm_title">"Potvrdit aktualizaci programu Android's Fortune"</string>
+    <string name="vc_confirm_text">Chcete tuto aplikaci aktualizovat na nejnovější verzi?</string>
+    <string name="vc_confirm_stop">Neinformovat mě o dalších aktualizacích</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Změnit URL</string>
+    <string name="vc_check_uri_summary">URL, která bude použita pro kontrolu aktualizací.</string>
+    <string name="about_translators">Launchpad Contributions: DrakecZ https://launchpad.net/~drakec48 Jan Benedek https://launchpad.net/~jan.benedek Konki https://launchpad.net/~pavel-konkol Kuvaly [LCT] https://launchpad.net/~kuvaly Martin Rotter https://launchpad.net/~skunkic</string>
+</resources>

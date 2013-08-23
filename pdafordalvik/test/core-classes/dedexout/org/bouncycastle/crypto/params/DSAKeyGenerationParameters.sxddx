@@ -1,0 +1,34 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/DSAKeyGenerationParameters
+ (super org/bouncycastle/crypto/KeyGenerationParameters)
+ (source "DSAKeyGenerationParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle/crypto/params/DSAParameters] )
+
+(method (attrs public ) <init>([object java/security/SecureRandom] [object org/bouncycastle/crypto/params/DSAParameters] )void
+  (limit registers 5)
+  ; this: v2 ([object org/bouncycastle/crypto/params/DSAKeyGenerationParameters])
+  ; parameter[0] : v3 ([object java/security/SecureRandom])
+  ; parameter[1] : v4 ([object org/bouncycastle/crypto/params/DSAParameters])
+  (line 16)
+  (invoke-virtual-quick {v4} org/bouncycastle/crypto/params/DSAParameters/getP )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0} java/math/BigInteger/bitLength )
+  (move-result v0)
+  (const/4 v1 1)
+  (sub-int/2addr v0 v1)
+  (invoke-direct {v2 v3 v0} org/bouncycastle/crypto/KeyGenerationParameters/<init> [object java/security/SecureRandom] int )
+  (line 18)
+  (iput-object-quick v4 v2 org/bouncycastle/crypto/params/DSAKeyGenerationParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle/crypto/params/DSAParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/DSAKeyGenerationParameters])
+  (line 23)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/DSAKeyGenerationParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (return-object v0)
+)
+
+)

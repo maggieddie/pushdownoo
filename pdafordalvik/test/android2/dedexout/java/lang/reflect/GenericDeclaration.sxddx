@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) java/lang/reflect/GenericDeclaration
+ (super java/lang/Object)
+ (source "GenericDeclaration.java")
+
+
+(method (attrs public abstract ) getTypeParameters()[array [object java/lang/reflect/TypeVariable]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()["  "Ljava/lang/reflect/TypeVariable"  "<*>;")
+  )
+)
+
+)

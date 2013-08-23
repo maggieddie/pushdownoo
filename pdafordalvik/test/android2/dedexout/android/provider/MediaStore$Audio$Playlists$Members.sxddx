@@ -1,0 +1,48 @@
+(class (attrs public final ) android/provider/MediaStore$Audio$Playlists$Members
+ (super java/lang/Object)
+ (source "MediaStore.java")
+ (implements android/provider/MediaStore$Audio$AudioColumns)
+
+ (field (attrs public static final ) AUDIO_ID [object java/lang/String] "audio_id" )
+ (field (attrs public static final ) CONTENT_DIRECTORY [object java/lang/String] "members" )
+ (field (attrs public static final ) DEFAULT_SORT_ORDER [object java/lang/String] "play_order" )
+ (field (attrs public static final ) PLAYLIST_ID [object java/lang/String] "playlist_id" )
+ (field (attrs public static final ) PLAY_ORDER [object java/lang/String] "play_order" )
+ (field (attrs public static final ) _ID [object java/lang/String] "_id" )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/MediaStore$Audio$Playlists$Members])
+  (line 172)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static final ) getContentUri([object java/lang/String] long )[object android/net/Uri]
+  (limit registers 5)
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (long)
+  (line 173)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static final ) moveItem([object android/content/ContentResolver] long int int )boolean
+  (limit registers 7)
+  ; parameter[0] : v2 ([object android/content/ContentResolver])
+  ; parameter[1] : v3 (long)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 174)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

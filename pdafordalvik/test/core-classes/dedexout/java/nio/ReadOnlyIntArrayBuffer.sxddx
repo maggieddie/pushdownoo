@@ -1,0 +1,163 @@
+(class (attrs final synchronized ) java/nio/ReadOnlyIntArrayBuffer
+ (super java/nio/IntArrayBuffer)
+ (source "ReadOnlyIntArrayBuffer.java")
+
+
+(method (attrs ) <init>(int [array int] int )void
+  (limit registers 4)
+  ; this: v0 ([object java/nio/ReadOnlyIntArrayBuffer])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([array int])
+  ; parameter[2] : v3 (int)
+  (line 44)
+  (invoke-direct {v0 v1 v2 v3} java/nio/IntArrayBuffer/<init> int [array int] int )
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs static ) copy([object java/nio/IntArrayBuffer] int )[object java/nio/ReadOnlyIntArrayBuffer]
+  (limit registers 6)
+  ; parameter[0] : v4 ([object java/nio/IntArrayBuffer])
+  ; parameter[1] : v5 (int)
+  (line 35)
+  (new-instance v0 java/nio/ReadOnlyIntArrayBuffer)
+  (invoke-virtual-quick {v4} java/nio/IntArrayBuffer/capacity )
+  (move-result v1)
+  (iget-object-quick v2 v4 java/nio/IntArrayBuffer.backingArray [array int])
+  (iget-quick v3 v4 java/nio/IntArrayBuffer.offset int)
+  (invoke-direct {v0 v1 v2 v3} java/nio/ReadOnlyIntArrayBuffer/<init> int [array int] int )
+  (line 37)
+  (invoke-virtual-quick {v4} java/nio/IntArrayBuffer/limit )
+  (move-result v1)
+  (iput-quick v1 v0 )
+  (line 38)
+  (invoke-virtual-quick {v4} java/nio/IntArrayBuffer/position )
+  (move-result v1)
+  (iput-quick v1 v0 )
+  (line 39)
+  (iput-quick v5 v0 )
+  (line 40)
+  (return-object v0)
+ )
+
+(method (attrs public ) asReadOnlyBuffer()[object java/nio/IntBuffer]
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 48)
+  (invoke-virtual-quick {v1} java/nio/ReadOnlyIntArrayBuffer/duplicate )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) compact()[object java/nio/IntBuffer]
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 52)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) duplicate()[object java/nio/IntBuffer]
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 56)
+  (iget-quick v0 v1 )
+  (invoke-static {v1 v0} java/nio/ReadOnlyIntArrayBuffer/copy [object java/nio/IntArrayBuffer] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isReadOnly()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 60)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs protected ) protectedArray()[array int]
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 64)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs protected ) protectedArrayOffset()int
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 68)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs protected ) protectedHasArray()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 72)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) put(int )[object java/nio/IntBuffer]
+  (limit registers 3)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  ; parameter[0] : v2 (int)
+  (line 76)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) put(int int )[object java/nio/IntBuffer]
+  (limit registers 4)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 80)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) put([object java/nio/IntBuffer] )[object java/nio/IntBuffer]
+  (limit registers 3)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  ; parameter[0] : v2 ([object java/nio/IntBuffer])
+  (line 84)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs public final ) put([array int] int int )[object java/nio/IntBuffer]
+  (limit registers 5)
+  ; this: v1 ([object java/nio/ReadOnlyIntArrayBuffer])
+  ; parameter[0] : v2 ([array int])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 88)
+  (new-instance v0 java/nio/ReadOnlyBufferException)
+  (invoke-direct {v0} java/nio/ReadOnlyBufferException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) slice()[object java/nio/IntBuffer]
+  (limit registers 6)
+  ; this: v5 ([object java/nio/ReadOnlyIntArrayBuffer])
+  (line 92)
+  (new-instance v0 java/nio/ReadOnlyIntArrayBuffer)
+  (invoke-virtual-quick {v5} java/nio/ReadOnlyIntArrayBuffer/remaining )
+  (move-result v1)
+  (iget-object-quick v2 v5 )
+  (iget-quick v3 v5 )
+  (iget-quick v4 v5 )
+  (add-int/2addr v3 v4)
+  (invoke-direct {v0 v1 v2 v3} java/nio/ReadOnlyIntArrayBuffer/<init> int [array int] int )
+  (return-object v0)
+)
+
+)

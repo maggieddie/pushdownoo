@@ -1,0 +1,17 @@
+(class (attrs public synchronized ) javax/net/ssl/SSLProtocolException
+ (super javax/net/ssl/SSLException)
+ (source "SSLProtocolException.java")
+
+ (field (attrs private static final ) serialVersionUID long 2080242677); 0x7bfdfbf5 )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object javax/net/ssl/SSLProtocolException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 35)
+  (invoke-direct {v0 v1} javax/net/ssl/SSLException/<init> [object java/lang/String] )
+  (line 36)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/opengl/GLSurfaceView$Renderer
+ (super java/lang/Object)
+ (source "GLSurfaceView.java")
+
+
+(method (attrs public abstract ) onDrawFrame([object javax/microedition/khronos/opengles/GL10] )void
+)
+
+(method (attrs public abstract ) onSurfaceChanged([object javax/microedition/khronos/opengles/GL10] int int )void
+)
+
+(method (attrs public abstract ) onSurfaceCreated([object javax/microedition/khronos/opengles/GL10] [object javax/microedition/khronos/egl/EGLConfig] )void
+)
+
+)

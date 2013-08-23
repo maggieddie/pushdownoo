@@ -1,0 +1,29 @@
+(class (attrs public ) android/graphics/drawable/shapes/OvalShape
+ (super android/graphics/drawable/shapes/RectShape)
+ (source "OvalShape.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/drawable/shapes/OvalShape])
+  (line 5)
+  (invoke-direct {v2} android/graphics/drawable/shapes/RectShape/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) draw([object android/graphics/Canvas] [object android/graphics/Paint] )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/drawable/shapes/OvalShape])
+  ; parameter[0] : v3 ([object android/graphics/Canvas])
+  ; parameter[1] : v4 ([object android/graphics/Paint])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

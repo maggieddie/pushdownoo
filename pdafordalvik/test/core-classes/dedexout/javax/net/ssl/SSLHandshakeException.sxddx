@@ -1,0 +1,17 @@
+(class (attrs public synchronized ) javax/net/ssl/SSLHandshakeException
+ (super javax/net/ssl/SSLException)
+ (source "SSLHandshakeException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1073906241); 0xbffd7dbf )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object javax/net/ssl/SSLHandshakeException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 35)
+  (invoke-direct {v0 v1} javax/net/ssl/SSLException/<init> [object java/lang/String] )
+  (line 36)
+  (return-void )
+ )
+
+)

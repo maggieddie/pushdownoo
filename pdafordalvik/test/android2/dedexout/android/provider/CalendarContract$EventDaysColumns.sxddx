@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) android/provider/CalendarContract$EventDaysColumns
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+
+ (field (attrs public static final ) ENDDAY [object java/lang/String] "endDay" )
+ (field (attrs public static final ) STARTDAY [object java/lang/String] "startDay" )
+
+)

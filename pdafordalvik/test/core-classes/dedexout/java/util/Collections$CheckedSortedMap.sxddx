@@ -1,0 +1,121 @@
+(class (attrs synchronized ) java/util/Collections$CheckedSortedMap
+ (super java/util/Collections$CheckedMap)
+ (source "Collections.java")
+ (implements java/util/SortedMap)
+
+ (field (attrs private static final ) serialVersionUID long 1056911359); 0x3eff2fff )
+ (field (attrs ) sm [object java/util/SortedMap] )
+
+(method (attrs ) <init>([object java/util/SortedMap] [object java/lang/Class] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/SortedMap"  "<TK;TV;>;"  "Ljava/lang/Class"  "<TK;>;"  "Ljava/lang/Class"  "<TV;>;)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object java/util/Collections$CheckedSortedMap])
+  ; parameter[0] : v2 ([object java/util/SortedMap])
+  ; parameter[1] : v3 ([object java/lang/Class])
+  ; parameter[2] : v4 ([object java/lang/Class])
+  (line 3591)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v4 v0} java/util/Collections$CheckedMap/<init> [object java/util/Map] [object java/lang/Class] [object java/lang/Class] [object java/util/Collections$1] )
+  (line 3592)
+  (iput-object-quick v2 v1 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (line 3593)
+  (return-void )
+ )
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedSortedMap])
+  (line 3599)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/comparator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) firstKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedSortedMap])
+  (line 3630)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/firstKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) headMap([object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 6)
+  ; this: v4 ([object java/util/Collections$CheckedSortedMap])
+  ; parameter[0] : v5 ([object java/lang/Object])
+  (line 3614)
+  (new-instance v0 java/util/Collections$CheckedSortedMap)
+  (iget-object-quick v1 v4 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v5} java/util/SortedMap/headMap [object java/lang/Object] )
+  (move-result-object v1)
+  (iget-object-quick v2 v4 java/util/Collections$CheckedMap.keyType [object java/lang/Class])
+  (iget-object-quick v3 v4 java/util/Collections$CheckedMap.valueType [object java/lang/Class])
+  (invoke-direct {v0 v1 v2 v3} java/util/Collections$CheckedSortedMap/<init> [object java/util/SortedMap] [object java/lang/Class] [object java/lang/Class] )
+  (return-object v0)
+)
+
+(method (attrs public ) lastKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedSortedMap])
+  (line 3637)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/lastKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) subMap([object java/lang/Object] [object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 7)
+  ; this: v4 ([object java/util/Collections$CheckedSortedMap])
+  ; parameter[0] : v5 ([object java/lang/Object])
+  ; parameter[1] : v6 ([object java/lang/Object])
+  (line 3606)
+  (new-instance v0 java/util/Collections$CheckedSortedMap)
+  (iget-object-quick v1 v4 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v5 v6} java/util/SortedMap/subMap [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v1)
+  (iget-object-quick v2 v4 java/util/Collections$CheckedMap.keyType [object java/lang/Class])
+  (iget-object-quick v3 v4 java/util/Collections$CheckedMap.valueType [object java/lang/Class])
+  (invoke-direct {v0 v1 v2 v3} java/util/Collections$CheckedSortedMap/<init> [object java/util/SortedMap] [object java/lang/Class] [object java/lang/Class] )
+  (return-object v0)
+)
+
+(method (attrs public ) tailMap([object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 6)
+  ; this: v4 ([object java/util/Collections$CheckedSortedMap])
+  ; parameter[0] : v5 ([object java/lang/Object])
+  (line 3622)
+  (new-instance v0 java/util/Collections$CheckedSortedMap)
+  (iget-object-quick v1 v4 java/util/Collections$CheckedSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v5} java/util/SortedMap/tailMap [object java/lang/Object] )
+  (move-result-object v1)
+  (iget-object-quick v2 v4 java/util/Collections$CheckedMap.keyType [object java/lang/Class])
+  (iget-object-quick v3 v4 java/util/Collections$CheckedMap.valueType [object java/lang/Class])
+  (invoke-direct {v0 v1 v2 v3} java/util/Collections$CheckedSortedMap/<init> [object java/util/SortedMap] [object java/lang/Class] [object java/lang/Class] )
+  (return-object v0)
+)
+
+)

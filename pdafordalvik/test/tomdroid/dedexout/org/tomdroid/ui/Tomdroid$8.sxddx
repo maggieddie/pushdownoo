@@ -1,0 +1,34 @@
+(class (attrs ) org/tomdroid/ui/Tomdroid$8
+ (super java/lang/Object)
+ (source "Tomdroid.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/tomdroid/ui/Tomdroid] )
+
+(method (attrs ) <init>([object org/tomdroid/ui/Tomdroid] )void
+  (limit registers 2)
+  ; this: v0 ([object org/tomdroid/ui/Tomdroid$8])
+  ; parameter[0] : v1 ([object org/tomdroid/ui/Tomdroid])
+  (line 1)
+  (iput-object v1 v0 org/tomdroid/ui/Tomdroid$8.this$0 [object org/tomdroid/ui/Tomdroid])
+  (line 557)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 5)
+  ; this: v2 ([object org/tomdroid/ui/Tomdroid$8])
+  ; parameter[0] : v3 ([object android/content/DialogInterface])
+  ; parameter[1] : v4 (int)
+  (line 559)
+  (sget-object v0 org/tomdroid/util/Preferences$Key.FIRST_RUN [object org/tomdroid/util/Preferences$Key])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} org/tomdroid/util/Preferences/putBoolean [object org/tomdroid/util/Preferences$Key] boolean )
+  (line 560)
+  (invoke-interface {v3} android/content/DialogInterface/dismiss )
+  (line 561)
+  (return-void )
+)
+
+)

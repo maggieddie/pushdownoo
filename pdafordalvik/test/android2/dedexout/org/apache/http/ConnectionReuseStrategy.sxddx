@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/http/ConnectionReuseStrategy
+ (super java/lang/Object)
+ (source "ConnectionReuseStrategy.java")
+
+
+(method (attrs public abstract ) keepAlive([object org/apache/http/HttpResponse] [object org/apache/http/protocol/HttpContext] )boolean
+)
+
+)

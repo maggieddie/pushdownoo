@@ -1,0 +1,34 @@
+(class (attrs public synchronized ) javax/net/ssl/CertPathTrustManagerParameters
+ (super java/lang/Object)
+ (source "CertPathTrustManagerParameters.java")
+ (implements javax/net/ssl/ManagerFactoryParameters)
+
+ (field (attrs private final ) param [object java/security/cert/CertPathParameters] )
+
+(method (attrs public ) <init>([object java/security/cert/CertPathParameters] )void
+  (limit registers 3)
+  ; this: v1 ([object javax/net/ssl/CertPathTrustManagerParameters])
+  ; parameter[0] : v2 ([object java/security/cert/CertPathParameters])
+  (line 39)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 40)
+  (invoke-interface {v2} java/security/cert/CertPathParameters/clone )
+  (move-result-object v0)
+  (check-cast v0 [object java/security/cert/CertPathParameters])
+  (iput-object-quick v0 v1 javax/net/ssl/CertPathTrustManagerParameters.param [object java/security/cert/CertPathParameters])
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object java/security/cert/CertPathParameters]
+  (limit registers 2)
+  ; this: v1 ([object javax/net/ssl/CertPathTrustManagerParameters])
+  (line 49)
+  (iget-object-quick v0 v1 javax/net/ssl/CertPathTrustManagerParameters.param [object java/security/cert/CertPathParameters])
+  (invoke-interface {v0} java/security/cert/CertPathParameters/clone )
+  (move-result-object v1)
+  (check-cast v1 [object java/security/cert/CertPathParameters])
+  (return-object v1)
+)
+
+)

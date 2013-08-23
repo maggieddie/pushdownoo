@@ -1,0 +1,47 @@
+(class (attrs synchronized ) java/util/Collections$1
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/Enumeration)
+
+ (field (attrs ) it [object java/util/Iterator] )
+ (field (attrs final ) val$c [object java/util/Collection] )
+
+(method (attrs ) <init>([object java/util/Collection] )void
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$1])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 1623)
+  (iput-object-quick v2 v1 java/util/Collections$1.val$c [object java/util/Collection])
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 1617)
+  (iget-object-quick v0 v1 java/util/Collections$1.val$c [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/iterator )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 java/util/Collections$1.it [object java/util/Iterator])
+  (return-void )
+ )
+
+(method (attrs public ) hasMoreElements()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$1])
+  (line 1620)
+  (iget-object-quick v0 v1 java/util/Collections$1.it [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) nextElement()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$1])
+  (line 1624)
+  (iget-object-quick v0 v1 java/util/Collections$1.it [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

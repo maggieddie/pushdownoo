@@ -1,0 +1,567 @@
+(class (attrs public ) org/json/JSONArray
+ (super java/lang/Object)
+ (source "JSONArray.java")
+
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/json/JSONArray])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 7)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object java/util/Collection])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object org/json/JSONTokener] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object org/json/JSONTokener])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 45)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) get(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBoolean(int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDouble(int )double
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInt(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getJSONArray(int )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 37)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getJSONObject(int )[object org/json/JSONObject]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 39)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getLong(int )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getString(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 34)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object org/json/JSONArray])
+  (line 46)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isNull(int )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) join([object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 42)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) length()int
+  (limit registers 3)
+  ; this: v2 ([object org/json/JSONArray])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) opt(int )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optBoolean(int )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optBoolean(int boolean )boolean
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (boolean)
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optDouble(int )double
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optDouble(int double )double
+  (limit registers 6)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (double)
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optInt(int )int
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optInt(int int )int
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optJSONArray(int )[object org/json/JSONArray]
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 38)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optJSONObject(int )[object org/json/JSONObject]
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 40)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optLong(int )long
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 32)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optLong(int long )long
+  (limit registers 6)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (long)
+  (line 33)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optString(int )[object java/lang/String]
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 35)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) optString(int [object java/lang/String] )[object java/lang/String]
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 36)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(double )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (double)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int double )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 6)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (double)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int int )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int long )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 6)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (long)
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int [object java/lang/Object] )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(int boolean )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (boolean)
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(long )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (long)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put([object java/lang/Object] )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put(boolean )[object org/json/JSONArray]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (boolean)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toJSONObject([object org/json/JSONArray] )[object org/json/JSONObject]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 ([object org/json/JSONArray])
+  (line 41)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/json/JSONArray])
+  (line 43)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/json/JSONException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONArray])
+  ; parameter[0] : v3 (int)
+  (line 44)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

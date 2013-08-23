@@ -1,0 +1,46 @@
+(class (attrs synchronized ) java/net/InetAddress$CacheElement
+ (super java/lang/Object)
+ (source "InetAddress.java")
+
+ (field (attrs final ) addresses [array [object java/net/InetAddress]] )
+ (field (attrs final ) hostName [object java/lang/String] )
+ (field (attrs final ) nanoTimeAdded long )
+ (field (attrs ) next [object java/net/InetAddress$CacheElement] )
+
+(method (attrs ) <init>([object java/lang/String] [array [object java/net/InetAddress]] )void
+  (limit registers 5)
+  ; this: v2 ([object java/net/InetAddress$CacheElement])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([array [object java/net/InetAddress]])
+  (line 655)
+  (invoke-direct-empty {v2} java/lang/Object/<init> )
+  (line 649)
+  (invoke-static {} java/lang/System/nanoTime )
+  (nop )
+  (move-result-wide v0)
+  (iput-wide-quick v0 v2 java/net/InetAddress$CacheElement.null)
+  (line 656)
+  (iput-object-quick v4 v2 java/net/InetAddress$CacheElement.addresses [array [object java/net/InetAddress]])
+  (line 657)
+  (iput-object-quick v3 v2 java/net/InetAddress$CacheElement.hostName [object java/lang/String])
+  (line 658)
+  (return-void )
+ )
+
+(method (attrs ) addresses()[array [object java/net/InetAddress]]
+  (limit registers 2)
+  ; this: v1 ([object java/net/InetAddress$CacheElement])
+  (line 665)
+  (iget-object-quick v0 v1 java/net/InetAddress$CacheElement.addresses [array [object java/net/InetAddress]])
+  (return-object v0)
+)
+
+(method (attrs ) hostName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/net/InetAddress$CacheElement])
+  (line 661)
+  (iget-object-quick v0 v1 java/net/InetAddress$CacheElement.hostName [object java/lang/String])
+  (return-object v0)
+)
+
+)

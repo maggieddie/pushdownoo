@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/MediaPlayer$OnSeekCompleteListener
+ (super java/lang/Object)
+ (source "MediaPlayer.java")
+
+
+(method (attrs public abstract ) onSeekComplete([object android/media/MediaPlayer] )void
+)
+
+)

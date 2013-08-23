@@ -1,0 +1,45 @@
+(interface (attrs public abstract ) javax/validation/metadata/ConstraintDescriptor
+ (super java/lang/Object)
+ (source "ConstraintDescriptor.java")
+
+
+(method (attrs public abstract ) getAnnotation()[object java/lang/annotation/Annotation]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+)
+
+(method (attrs public abstract ) getAttributes()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getComposingConstraints()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljavax/validation/metadata/ConstraintDescriptor"  "<*>;>;")
+  )
+)
+
+(method (attrs public abstract ) getConstraintValidatorClasses()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ljava/lang/Class"  "<+"  "Ljavax/validation/ConstraintValidator"  "<TT;*>;>;>;")
+  )
+)
+
+(method (attrs public abstract ) getGroups()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/Class"  "<*>;>;")
+  )
+)
+
+(method (attrs public abstract ) getPayload()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/Class"  "<+"  "Ljavax/validation/Payload;"  ">;>;")
+  )
+)
+
+(method (attrs public abstract ) isReportAsSingleViolation()boolean
+)
+
+)

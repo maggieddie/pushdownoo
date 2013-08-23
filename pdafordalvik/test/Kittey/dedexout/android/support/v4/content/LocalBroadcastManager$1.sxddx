@@ -1,0 +1,45 @@
+(class (attrs ) android/support/v4/content/LocalBroadcastManager$1
+ (super android/os/Handler)
+ (source "LocalBroadcastManager.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/content/LocalBroadcastManager] )
+
+(method (attrs ) <init>([object android/support/v4/content/LocalBroadcastManager] [object android/os/Looper] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/content/LocalBroadcastManager$1])
+  ; parameter[0] : v1 ([object android/support/v4/content/LocalBroadcastManager])
+  ; parameter[1] : v2 ([object android/os/Looper])
+  (line 110)
+  (iput-object v1 v0 android/support/v4/content/LocalBroadcastManager$1.this$0 [object android/support/v4/content/LocalBroadcastManager])
+  (invoke-direct {v0 v2} android/os/Handler/<init> [object android/os/Looper] )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/LocalBroadcastManager$1])
+  ; parameter[0] : v2 ([object android/os/Message])
+  (line 114)
+  (iget v0 v2 android/os/Message.what int)
+  (packed-switch v0 1
+    ps1ee74_1ee82 ; case 1
+    ps1ee74_default) ; default
+  (label ps1ee74_default)
+  (line 119)
+  (invoke-super {v1 v2} android/os/Handler/handleMessage [object android/os/Message] )
+  (label l1ee80)
+  (line 121)
+  (return-void )
+  (label ps1ee74_1ee82)
+  (line 116)
+  (iget-object v0 v1 android/support/v4/content/LocalBroadcastManager$1.this$0 [object android/support/v4/content/LocalBroadcastManager])
+  (invoke-static {v0} android/support/v4/content/LocalBroadcastManager/access$000 [object android/support/v4/content/LocalBroadcastManager] )
+  (goto l1ee80)
+  (line 114)
+  (label l1ee8e)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

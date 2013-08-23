@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/text/ParcelableSpan
+ (super java/lang/Object)
+ (source "ParcelableSpan.java")
+ (implements android/os/Parcelable)
+
+
+(method (attrs public abstract ) getSpanTypeId()int
+)
+
+)

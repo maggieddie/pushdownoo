@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/AudioManager$OnAudioFocusChangeListener
+ (super java/lang/Object)
+ (source "AudioManager.java")
+
+
+(method (attrs public abstract ) onAudioFocusChange(int )void
+)
+
+)

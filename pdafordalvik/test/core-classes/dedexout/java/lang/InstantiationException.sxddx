@@ -1,0 +1,47 @@
+(class (attrs public synchronized ) java/lang/InstantiationException
+ (super java/lang/Exception)
+ (source "InstantiationException.java")
+
+ (field (attrs private static final ) serialVersionUID long -807551057); 0xcfddbfaf )
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 1)
+  ; this: v0 ([object java/lang/InstantiationException])
+  (line 32)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/lang/InstantiationException])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 54)
+  (invoke-virtual-quick {v2} java/lang/Class/getName )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} java/lang/Exception/<init> [object java/lang/String] )
+  (line 55)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/lang/InstantiationException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 43)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 44)
+  (return-void )
+ )
+
+)

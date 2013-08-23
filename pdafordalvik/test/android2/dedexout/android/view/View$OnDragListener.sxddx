@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/View$OnDragListener
+ (super java/lang/Object)
+ (source "View.java")
+
+
+(method (attrs public abstract ) onDrag([object android/view/View] [object android/view/DragEvent] )boolean
+)
+
+)

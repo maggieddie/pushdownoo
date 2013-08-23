@@ -1,0 +1,43 @@
+(interface (attrs public abstract ) java/util/SortedSet
+ (super java/lang/Object)
+ (source "SortedSet.java")
+ (implements java/util/Set)
+
+
+(method (attrs public abstract ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TE;>;")
+  )
+)
+
+(method (attrs public abstract ) first()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+)
+
+(method (attrs public abstract ) headSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+)
+
+(method (attrs public abstract ) last()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+)
+
+(method (attrs public abstract ) subSet([object java/lang/Object] [object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+)
+
+(method (attrs public abstract ) tailSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+)
+
+)

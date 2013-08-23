@@ -1,0 +1,74 @@
+(class (attrs public final ) org/apache/http/util/LangUtils
+ (super java/lang/Object)
+ (source "LangUtils.java")
+
+ (field (attrs public static final ) HASH_OFFSET int 37); 0x25 )
+ (field (attrs public static final ) HASH_SEED int 17); 0x11 )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/util/LangUtils])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) equals([object java/lang/Object] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) equals([array [object java/lang/Object]] [array [object java/lang/Object]] )boolean
+  (limit registers 4)
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  ; parameter[1] : v3 ([array [object java/lang/Object]])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) hashCode(int int )int
+  (limit registers 4)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) hashCode(int [object java/lang/Object] )int
+  (limit registers 4)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) hashCode(int boolean )int
+  (limit registers 4)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (boolean)
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

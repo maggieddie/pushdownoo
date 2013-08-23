@@ -21,6 +21,7 @@ object CommonAbstractDomains {
     def isCacheable : Boolean
   }
 */
+    
   
   
   trait Addr extends PrimeHashable   {
@@ -224,7 +225,15 @@ object CommonAbstractDomains {
     def size : Int ;
     def toList : List[Value] ;
     
-  
+    def toSet : Set[Value]
+    
+   	override def toString = {
+   	  toList.foldLeft(""){
+   	    case (res, elem) => {
+   	      res + ", " + elem
+   	    }
+   	  }
+   	}
 
     def + (v : Value) : D ;
     
@@ -251,7 +260,7 @@ object CommonAbstractDomains {
 
 
 
-  trait Store {
+  trait Store { 
     
     def apply(l : Addr) : D ;
     
@@ -286,6 +295,14 @@ object CommonAbstractDomains {
     def getMap: Map[Addr, D]
     
     def equal(s2: Store) : Boolean 
+    
+    override def toString = {
+      getMap.foldLeft(""){
+        case (res, (k,v)) => {
+          res + "Addr: " + k   + "\n" + "Vals: " + v
+        }
+      }
+    }
     
   }
 

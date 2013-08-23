@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) android/test/FlakyTest
+ (super java/lang/Object)
+ (source "FlakyTest.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) tolerance()int
+)
+
+)

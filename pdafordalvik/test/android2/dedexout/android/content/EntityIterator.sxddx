@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) android/content/EntityIterator
+ (super java/lang/Object)
+ (source "EntityIterator.java")
+ (implements java/util/Iterator)
+
+
+(method (attrs public abstract ) close()void
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+)

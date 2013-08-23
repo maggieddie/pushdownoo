@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$DataColumnsWithJoins
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+ (implements android/provider/BaseColumns)
+ (implements android/provider/ContactsContract$DataColumns)
+ (implements android/provider/ContactsContract$StatusColumns)
+ (implements android/provider/ContactsContract$RawContactsColumns)
+ (implements android/provider/ContactsContract$ContactsColumns)
+ (implements android/provider/ContactsContract$ContactNameColumns)
+ (implements android/provider/ContactsContract$ContactOptionsColumns)
+ (implements android/provider/ContactsContract$ContactStatusColumns)
+
+
+)

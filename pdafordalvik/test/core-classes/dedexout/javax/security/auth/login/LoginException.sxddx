@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) javax/security/auth/login/LoginException
+ (super java/security/GeneralSecurityException)
+ (source "LoginException.java")
+
+ (field (attrs private static final ) serialVersionUID long -2107395); 0xffdfd7fd )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object javax/security/auth/login/LoginException])
+  (line 33)
+  (invoke-direct {v0} java/security/GeneralSecurityException/<init> )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object javax/security/auth/login/LoginException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 42)
+  (invoke-direct {v0 v1} java/security/GeneralSecurityException/<init> [object java/lang/String] )
+  (line 43)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/charset/CharacterCodingException
+ (super java/io/IOException)
+ (source "CharacterCodingException.java")
+
+ (field (attrs private static final ) serialVersionUID long 2128576247); 0x7edf7ef7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/charset/CharacterCodingException])
+  (line 42)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 43)
+  (return-void )
+ )
+
+)

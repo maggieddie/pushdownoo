@@ -1,0 +1,184 @@
+(class (attrs public ) android/telephony/NeighboringCellInfo
+ (super java/lang/Object)
+ (source "NeighboringCellInfo.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] null )
+ (field (attrs public static final ) UNKNOWN_CID int -1); 0xffffffff )
+ (field (attrs public static final ) UNKNOWN_RSSI int 99); 0x63 )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 26)
+  (const/4 v0 0)
+  (sput-object v0 android/telephony/NeighboringCellInfo.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int int )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 5)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 8)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int [object java/lang/String] int )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 6)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/lang/String])
+  ; parameter[2] : v5 (int)
+  (line 9)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/os/Parcel] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 10)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getCid()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getLac()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getNetworkType()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPsc()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getRssi()int
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setCid(int )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 (int)
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setRssi(int )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 (int)
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/telephony/NeighboringCellInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

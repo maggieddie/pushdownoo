@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/menuNew" android:orderInCategory="2" android:title="@string/menuNew" android:showAsAction="always" />
+    <item android:icon="@drawable/ic_menu_sync" android:id="@id/menuSync" android:orderInCategory="2" android:title="@string/menuSync" android:showAsAction="always" />
+    <item android:icon="@android:drawable/ic_menu_sort_by_size" android:id="@id/menuSort" android:orderInCategory="2" android:title="@string/sortByDate" android:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/menuSearch" android:orderInCategory="1" android:title="@string/menuSearch" android:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_upload" android:id="@id/menuImport" android:orderInCategory="3" android:title="@string/menuImport" android:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_revert" android:id="@id/menuRevert" android:orderInCategory="3" android:title="@string/menuRevert" android:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_info_details" android:id="@id/menuAbout" android:orderInCategory="4" android:title="@string/menuAbout" android:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menuPrefs" android:orderInCategory="5" android:title="@string/menuPrefs" android:showAsAction="never" />
+</menu>

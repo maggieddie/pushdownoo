@@ -1,0 +1,37 @@
+(class (attrs public ) android/database/sqlite/SQLiteQuery
+ (super android/database/sqlite/SQLiteProgram)
+ (source "SQLiteQuery.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/database/sqlite/SQLiteQuery])
+  (line 5)
+  (invoke-direct {v2} android/database/sqlite/SQLiteProgram/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) close()void
+  (limit registers 3)
+  ; this: v2 ([object android/database/sqlite/SQLiteQuery])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/database/sqlite/SQLiteQuery])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) android/support/v4/view/PagerTabStrip$1
+ (super java/lang/Object)
+ (source "PagerTabStrip.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object android/support/v4/view/PagerTabStrip] )
+
+(method (attrs ) <init>([object android/support/v4/view/PagerTabStrip] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/view/PagerTabStrip$1])
+  ; parameter[0] : v1 ([object android/support/v4/view/PagerTabStrip])
+  (line 103)
+  (iput-object v1 v0 android/support/v4/view/PagerTabStrip$1.this$0 [object android/support/v4/view/PagerTabStrip])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/view/PagerTabStrip$1])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 106)
+  (iget-object v0 v2 android/support/v4/view/PagerTabStrip$1.this$0 [object android/support/v4/view/PagerTabStrip])
+  (iget-object v0 v0 android/support/v4/view/PagerTabStrip.mPager [object android/support/v4/view/ViewPager])
+  (iget-object v1 v2 android/support/v4/view/PagerTabStrip$1.this$0 [object android/support/v4/view/PagerTabStrip])
+  (iget-object v1 v1 android/support/v4/view/PagerTabStrip.mPager [object android/support/v4/view/ViewPager])
+  (invoke-virtual {v1} android/support/v4/view/ViewPager/getCurrentItem )
+  (move-result v1)
+  (add-int/lit8 v1 v1 255)
+  (invoke-virtual {v0 v1} android/support/v4/view/ViewPager/setCurrentItem int )
+  (line 107)
+  (return-void )
+)
+
+)

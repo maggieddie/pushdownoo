@@ -1,0 +1,20 @@
+(class (attrs synchronized ) java/lang/SystemProperties
+ (super java/util/Properties)
+ (source "System.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/SystemProperties])
+  (line 669)
+  (invoke-direct {v0} java/util/Properties/<init> )
+  (return-void )
+ )
+
+(method (attrs native ) postInit()void
+)
+
+(method (attrs native ) preInit()void
+)
+
+)

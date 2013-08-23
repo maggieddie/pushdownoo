@@ -1,0 +1,117 @@
+(class (attrs public ) gueei/binding/cursor/RowModel
+ (super java/lang/Object)
+ (source "RowModel.java")
+ (implements gueei/binding/cursor/ICursorRowModel)
+
+ (field (attrs private ) displaying boolean )
+ (field (attrs protected ) mapped boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/cursor/RowModel])
+  (const/4 v0 0)
+  (line 10)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 17)
+  (iput-boolean v0 v1 gueei/binding/cursor/RowModel.displaying boolean)
+  (line 38)
+  (iput-boolean v0 v1 gueei/binding/cursor/RowModel.mapped boolean)
+  (line 10)
+  (return-void )
+ )
+
+(method (attrs public final ) display([object gueei/binding/IObservableCollection] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection"  "<*>;I)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object gueei/binding/cursor/RowModel])
+  ; parameter[0] : v2 ([object gueei/binding/IObservableCollection])
+  ; parameter[1] : v3 (int)
+  (line 20)
+  (iget-boolean v0 v1 gueei/binding/cursor/RowModel.displaying boolean)
+  (if-eqz v0 l22d92)
+  (label l22d90)
+  (line 24)
+  (return-void )
+  (label l22d92)
+  (line 22)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 gueei/binding/cursor/RowModel.displaying boolean)
+  (line 23)
+  (invoke-virtual {v1} gueei/binding/cursor/RowModel/onDisplay )
+  (goto l22d90)
+)
+
+(method (attrs public ) getId(int )long
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/cursor/RowModel])
+  ; parameter[0] : v3 (int)
+  (line 14)
+  (int-to-long v0 v3)
+  (return-wide v0)
+)
+
+(method (attrs public final ) hide([object gueei/binding/IObservableCollection] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection"  "<*>;I)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object gueei/binding/cursor/RowModel])
+  ; parameter[0] : v2 ([object gueei/binding/IObservableCollection])
+  ; parameter[1] : v3 (int)
+  (line 27)
+  (iget-boolean v0 v1 gueei/binding/cursor/RowModel.displaying boolean)
+  (if-nez v0 l22dce)
+  (label l22dcc)
+  (line 30)
+  (return-void )
+  (label l22dce)
+  (line 28)
+  (const/4 v0 0)
+  (iput-boolean v0 v1 gueei/binding/cursor/RowModel.displaying boolean)
+  (line 29)
+  (invoke-virtual {v1} gueei/binding/cursor/RowModel/onHide )
+  (goto l22dcc)
+)
+
+(method (attrs public ) isMapped()boolean
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/cursor/RowModel])
+  (line 47)
+  (iget-boolean v0 v1 gueei/binding/cursor/RowModel.mapped boolean)
+  (return v0)
+)
+
+(method (attrs public ) onDisplay()void
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/cursor/RowModel])
+  (line 33)
+  (return-void )
+)
+
+(method (attrs public ) onHide()void
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/cursor/RowModel])
+  (line 36)
+  (return-void )
+)
+
+(method (attrs public ) onInitialize()void
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/cursor/RowModel])
+  (line 11)
+  (return-void )
+)
+
+(method (attrs public ) setMapped(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/cursor/RowModel])
+  ; parameter[0] : v1 (boolean)
+  (line 42)
+  (iput-boolean v1 v0 gueei/binding/cursor/RowModel.mapped boolean)
+  (line 43)
+  (return-void )
+)
+
+)

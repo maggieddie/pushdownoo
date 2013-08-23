@@ -1,0 +1,87 @@
+(class (attrs final synchronized ) javax/net/DefaultSocketFactory
+ (super javax/net/SocketFactory)
+ (source "DefaultSocketFactory.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object javax/net/DefaultSocketFactory])
+  (line 31)
+  (invoke-direct {v0} javax/net/SocketFactory/<init> )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) createSocket()[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object javax/net/DefaultSocketFactory])
+  (line 36)
+  (new-instance v0 java/net/Socket)
+  (invoke-direct {v0} java/net/Socket/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) createSocket([object java/lang/String] int )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object javax/net/DefaultSocketFactory])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 41)
+  (new-instance v0 java/net/Socket)
+  (invoke-direct {v0 v2 v3} java/net/Socket/<init> [object java/lang/String] int )
+  (return-object v0)
+)
+
+(method (attrs public ) createSocket([object java/lang/String] int [object java/net/InetAddress] int )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 6)
+  ; this: v1 ([object javax/net/DefaultSocketFactory])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object java/net/InetAddress])
+  ; parameter[3] : v5 (int)
+  (line 47)
+  (new-instance v0 java/net/Socket)
+  (invoke-direct {v0 v2 v3 v4 v5} java/net/Socket/<init> [object java/lang/String] int [object java/net/InetAddress] int )
+  (return-object v0)
+)
+
+(method (attrs public ) createSocket([object java/net/InetAddress] int )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object javax/net/DefaultSocketFactory])
+  ; parameter[0] : v2 ([object java/net/InetAddress])
+  ; parameter[1] : v3 (int)
+  (line 52)
+  (new-instance v0 java/net/Socket)
+  (invoke-direct {v0 v2 v3} java/net/Socket/<init> [object java/net/InetAddress] int )
+  (return-object v0)
+)
+
+(method (attrs public ) createSocket([object java/net/InetAddress] int [object java/net/InetAddress] int )[object java/net/Socket]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 6)
+  ; this: v1 ([object javax/net/DefaultSocketFactory])
+  ; parameter[0] : v2 ([object java/net/InetAddress])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object java/net/InetAddress])
+  ; parameter[3] : v5 (int)
+  (line 58)
+  (new-instance v0 java/net/Socket)
+  (invoke-direct {v0 v2 v3 v4 v5} java/net/Socket/<init> [object java/net/InetAddress] int [object java/net/InetAddress] int )
+  (return-object v0)
+)
+
+)

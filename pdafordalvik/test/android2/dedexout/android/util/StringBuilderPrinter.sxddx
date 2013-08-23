@@ -1,0 +1,30 @@
+(class (attrs public ) android/util/StringBuilderPrinter
+ (super java/lang/Object)
+ (source "StringBuilderPrinter.java")
+ (implements android/util/Printer)
+
+
+(method (attrs public ) <init>([object java/lang/StringBuilder] )void
+  (limit registers 4)
+  ; this: v2 ([object android/util/StringBuilderPrinter])
+  ; parameter[0] : v3 ([object java/lang/StringBuilder])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) println([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object android/util/StringBuilderPrinter])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

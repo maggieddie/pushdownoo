@@ -1,0 +1,30 @@
+(class (attrs synchronized ) org/apache/harmony/luni/util/ThreadLocalCache$1
+ (super java/lang/ThreadLocal)
+ (source "ThreadLocalCache.java")
+
+ (field (attrs final ) this$0 [object org/apache/harmony/luni/util/ThreadLocalCache] )
+
+(method (attrs ) <init>([object org/apache/harmony/luni/util/ThreadLocalCache] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/luni/util/ThreadLocalCache$1])
+  ; parameter[0] : v1 ([object org/apache/harmony/luni/util/ThreadLocalCache])
+  (line 40)
+  (iput-object-quick v1 v0 org/apache/harmony/luni/util/ThreadLocalCache$1.this$0 [object org/apache/harmony/luni/util/ThreadLocalCache])
+  (invoke-direct {v0} java/lang/ThreadLocal/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) initialValue()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/luni/util/ThreadLocalCache$1])
+  (line 41)
+  (iget-object-quick v0 v1 org/apache/harmony/luni/util/ThreadLocalCache$1.this$0 [object org/apache/harmony/luni/util/ThreadLocalCache])
+  (invoke-virtual-quick {v0} org/apache/harmony/luni/util/ThreadLocalCache/initialValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

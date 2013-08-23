@@ -1,0 +1,17 @@
+(class (attrs public ) java/nio/channels/FileLockInterruptionException
+ (super java/io/IOException)
+ (source "FileLockInterruptionException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/FileLockInterruptionException])
+  (line 5)
+  (invoke-direct {v2} java/io/IOException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

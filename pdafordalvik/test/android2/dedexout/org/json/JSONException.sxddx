@@ -1,0 +1,18 @@
+(class (attrs public ) org/json/JSONException
+ (super java/lang/Exception)
+ (source "JSONException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/json/JSONException])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} java/lang/Exception/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

@@ -1,0 +1,78 @@
+(class (attrs public ) gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute
+ (super gueei/binding/ViewAttribute)
+ (source "TextAppearanceViewAttribute.java")
+
+
+(method (attrs public ) <init>([object android/widget/TextView] )void
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute])
+  ; parameter[0] : v3 ([object android/widget/TextView])
+  (line 11)
+  (const-class v0 java/lang/Integer)
+  (const-string v1 "textAppearance")
+  (invoke-direct {v2 v0 v3 v1} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs protected ) AcceptThisTypeAs([object java/lang/Class] )[object gueei/binding/BindingType]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Lgueei/binding/BindingType;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 24)
+  (sget-object v0 gueei/binding/BindingType.OneWay [object gueei/binding/BindingType])
+  (return-object v0)
+)
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 5)
+  ; this: v3 ([object gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 16)
+  (invoke-virtual {v3} gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute/getView )
+  (move-result-object v0)
+  (if-nez v0 l284ea)
+  (label l284e8)
+  (line 20)
+  (return-void )
+  (label l284ea)
+  (line 17)
+  (instance-of v0 v4 java/lang/Integer)
+  (if-eqz v0 l284e8)
+  (line 18)
+  (invoke-virtual {v3} gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute/getView )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (invoke-virtual {v3} gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute/getView )
+  (move-result-object v1)
+  (check-cast v1 [object android/widget/TextView])
+  (invoke-virtual {v1} android/widget/TextView/getContext )
+  (move-result-object v1)
+  (check-cast v4 [object java/lang/Integer])
+  (invoke-virtual {v4} java/lang/Integer/intValue )
+  (move-result v2)
+  (invoke-virtual {v0 v1 v2} android/widget/TextView/setTextAppearance [object android/content/Context] int )
+  (goto l284e8)
+)
+
+(method (attrs public ) get()[object java/lang/Integer]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute])
+  (line 29)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/TextAppearanceViewAttribute/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

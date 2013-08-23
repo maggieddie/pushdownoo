@@ -1,0 +1,50 @@
+(class (attrs public ) gueei/binding/listeners/OnFocusChangeListenerMulticast
+ (super gueei/binding/listeners/ViewMulticastListener)
+ (source "OnFocusChangeListenerMulticast.java")
+ (implements android/view/View$OnFocusChangeListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/listeners/OnFocusChangeListenerMulticast])
+  (line 5)
+  (invoke-direct {v0} gueei/binding/listeners/ViewMulticastListener/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onFocusChange([object android/view/View] boolean )void
+  (limit registers 6)
+  ; this: v3 ([object gueei/binding/listeners/OnFocusChangeListenerMulticast])
+  ; parameter[0] : v4 ([object android/view/View])
+  ; parameter[1] : v5 (boolean)
+  (line 14)
+  (iget-object v1 v3 gueei/binding/listeners/OnFocusChangeListenerMulticast.listeners [object java/util/ArrayList])
+  (invoke-virtual {v1} java/util/ArrayList/iterator )
+  (move-result-object v1)
+  (label l2327c)
+  (invoke-interface {v1} java/util/Iterator/hasNext )
+  (move-result v2)
+  (if-nez v2 l2328a)
+  (line 17)
+  (return-void )
+  (label l2328a)
+  (line 14)
+  (invoke-interface {v1} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object android/view/View$OnFocusChangeListener])
+  (line 15)
+  (invoke-interface {v0 v4 v5} android/view/View$OnFocusChangeListener/onFocusChange [object android/view/View] boolean )
+  (goto l2327c)
+)
+
+(method (attrs public ) registerToView([object android/view/View] )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/listeners/OnFocusChangeListenerMulticast])
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 10)
+  (invoke-virtual {v1 v0} android/view/View/setOnFocusChangeListener [object android/view/View$OnFocusChangeListener] )
+  (line 11)
+  (return-void )
+)
+
+)

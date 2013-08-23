@@ -1,0 +1,207 @@
+(class (attrs public ) android/gesture/GestureStore
+ (super java/lang/Object)
+ (source "GestureStore.java")
+
+ (field (attrs public static final ) ORIENTATION_INVARIANT int 1); 0x1 )
+ (field (attrs public static final ) ORIENTATION_SENSITIVE int 2); 0x2 )
+ (field (attrs public static final ) SEQUENCE_INVARIANT int 1); 0x1 )
+ (field (attrs public static final ) SEQUENCE_SENSITIVE int 2); 0x2 )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStore])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) addGesture([object java/lang/String] [object android/gesture/Gesture] )void
+  (limit registers 5)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([object android/gesture/Gesture])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getGestureEntries()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStore])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getGestures([object java/lang/String] )[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  ")"  "Ljava/util/ArrayList"  "<"  "Landroid/gesture/Gesture;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getOrientationStyle()int
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStore])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSequenceType()int
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStore])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasChanged()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStore])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object java/io/InputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object java/io/InputStream] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  ; parameter[1] : v4 (boolean)
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) recognize([object android/gesture/Gesture] )[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/gesture/Gesture;"  ")"  "Ljava/util/ArrayList"  "<"  "Landroid/gesture/Prediction;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object android/gesture/Gesture])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) removeEntry([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) removeGesture([object java/lang/String] [object android/gesture/Gesture] )void
+  (limit registers 5)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([object android/gesture/Gesture])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) save([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/io/OutputStream])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) save([object java/io/OutputStream] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 ([object java/io/OutputStream])
+  ; parameter[1] : v4 (boolean)
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setOrientationStyle(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 (int)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSequenceType(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStore])
+  ; parameter[0] : v3 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

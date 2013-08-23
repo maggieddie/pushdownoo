@@ -1,0 +1,82 @@
+(interface (attrs public abstract synchronized ) org/w3c/dom/Document
+ (super java/lang/Object)
+ (source "Document.java")
+ (implements org/w3c/dom/Node)
+
+
+(method (attrs public abstract ) createAttribute([object java/lang/String] )[object org/w3c/dom/Attr]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createAttributeNS([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/Attr]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createCDATASection([object java/lang/String] )[object org/w3c/dom/CDATASection]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createComment([object java/lang/String] )[object org/w3c/dom/Comment]
+)
+
+(method (attrs public abstract ) createDocumentFragment()[object org/w3c/dom/DocumentFragment]
+)
+
+(method (attrs public abstract ) createElement([object java/lang/String] )[object org/w3c/dom/Element]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createElementNS([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/Element]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createEntityReference([object java/lang/String] )[object org/w3c/dom/EntityReference]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createProcessingInstruction([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/ProcessingInstruction]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) createTextNode([object java/lang/String] )[object org/w3c/dom/Text]
+)
+
+(method (attrs public abstract ) getDoctype()[object org/w3c/dom/DocumentType]
+)
+
+(method (attrs public abstract ) getDocumentElement()[object org/w3c/dom/Element]
+)
+
+(method (attrs public abstract ) getElementById([object java/lang/String] )[object org/w3c/dom/Element]
+)
+
+(method (attrs public abstract ) getElementsByTagName([object java/lang/String] )[object org/w3c/dom/NodeList]
+)
+
+(method (attrs public abstract ) getElementsByTagNameNS([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/NodeList]
+)
+
+(method (attrs public abstract ) getImplementation()[object org/w3c/dom/DOMImplementation]
+)
+
+(method (attrs public abstract ) importNode([object org/w3c/dom/Node] boolean )[object org/w3c/dom/Node]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+)

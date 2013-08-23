@@ -70,7 +70,10 @@ object RunAnalysis {
     --lra  				   			switch on live register analysis
     --ppw n				   			per-point widening
     --aco 				   			aggresive cut off based on approximation
-    --dump-graph           			dump Transition/Dyck State Graphs into a GraphViz file ./graphs/filename/graph-(analysis-type).gv
+    --godel							abstract domain backed by Godel hashing (can be significantly fast)
+    --non-null-check				mainly used to verify non-nullability for Android core libraries.
+    --nn-unlinked					again, for verifying non-nullability of Android core libraries, don't use it if you're analyzing Android application
+    --dump-graph           			dump Transition/Dyck State Graphs into a GraphViz file (default is off) 
     --dump-statisitcs      			dump analysis statistics into ./statistics/filename/stat-(analysis-type).txt
     --simple-graph         			if the graph is dumped, distinct natural numbers are displayed on its nodes instead of actual configurations
     --interrupt-after n    			interrupts the analysis after n states computed (default = off)

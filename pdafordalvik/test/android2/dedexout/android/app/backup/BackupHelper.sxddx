@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/app/backup/BackupHelper
+ (super java/lang/Object)
+ (source "BackupHelper.java")
+
+
+(method (attrs public abstract ) performBackup([object android/os/ParcelFileDescriptor] [object android/app/backup/BackupDataOutput] [object android/os/ParcelFileDescriptor] )void
+)
+
+(method (attrs public abstract ) restoreEntity([object android/app/backup/BackupDataInputStream] )void
+)
+
+(method (attrs public abstract ) writeNewStateDescription([object android/os/ParcelFileDescriptor] )void
+)
+
+)

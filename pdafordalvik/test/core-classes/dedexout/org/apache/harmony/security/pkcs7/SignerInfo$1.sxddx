@@ -1,0 +1,37 @@
+(class (attrs synchronized ) org/apache/harmony/security/pkcs7/SignerInfo$1
+ (super org/apache/harmony/security/asn1/ASN1Sequence)
+ (source "SignerInfo.java")
+
+
+(method (attrs ) <init>([array [object org/apache/harmony/security/asn1/ASN1Type]] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/pkcs7/SignerInfo$1])
+  ; parameter[0] : v1 ([array [object org/apache/harmony/security/asn1/ASN1Type]])
+  (line 165)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1Sequence/<init> [array [object org/apache/harmony/security/asn1/ASN1Type]] )
+  (return-void )
+ )
+
+(method (attrs public ) getValues([object java/lang/Object] [array [object java/lang/Object]] )void
+  (limit registers 8)
+  ; this: v5 ([object org/apache/harmony/security/pkcs7/SignerInfo$1])
+  ; parameter[0] : v6 ([object java/lang/Object])
+  ; parameter[1] : v7 ([array [object java/lang/Object]])
+  (const/4 v4 1)
+  (const/4 v3 0)
+  (line 166)
+  (check-cast v6 [array [object java/lang/Object]])
+  (move-object v0 v6)
+  (check-cast v0 [array [object java/lang/Object]])
+  (move-object v1 v0)
+  (line 167)
+  (aget-object v2 v1 v3)
+  (aput-object v2 v7 v3)
+  (line 168)
+  (aget-object v2 v1 v4)
+  (aput-object v2 v7 v4)
+  (line 169)
+  (return-void )
+)
+
+)

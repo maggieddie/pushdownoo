@@ -1,0 +1,45 @@
+(interface (attrs public abstract ) java/util/concurrent/CompletionService
+ (super java/lang/Object)
+ (source "CompletionService.java")
+
+
+(method (attrs public abstract ) poll()[object java/util/concurrent/Future]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(J"  "Ljava/util/concurrent/TimeUnit;"  ")"  "Ljava/util/concurrent/Future"  "<TV;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/InterruptedException])
+  )
+)
+
+(method (attrs public abstract ) poll(long [object java/util/concurrent/TimeUnit] )[object java/util/concurrent/Future]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(J"  "Ljava/util/concurrent/TimeUnit;"  ")"  "Ljava/util/concurrent/Future"  "<TV;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/InterruptedException])
+  )
+)
+
+(method (attrs public abstract ) submit([object java/lang/Runnable] [object java/lang/Object] )[object java/util/concurrent/Future]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/concurrent/Callable"  "<TV;>;)"  "Ljava/util/concurrent/Future"  "<TV;>;")
+  )
+)
+
+(method (attrs public abstract ) submit([object java/util/concurrent/Callable] )[object java/util/concurrent/Future]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/concurrent/Callable"  "<TV;>;)"  "Ljava/util/concurrent/Future"  "<TV;>;")
+  )
+)
+
+(method (attrs public abstract ) take()[object java/util/concurrent/Future]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/concurrent/Future"  "<TV;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/InterruptedException])
+  )
+)
+
+)

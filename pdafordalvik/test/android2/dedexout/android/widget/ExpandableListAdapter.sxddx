@@ -1,0 +1,60 @@
+(interface (attrs public abstract ) android/widget/ExpandableListAdapter
+ (super java/lang/Object)
+ (source "ExpandableListAdapter.java")
+
+
+(method (attrs public abstract ) areAllItemsEnabled()boolean
+)
+
+(method (attrs public abstract ) getChild(int int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getChildId(int int )long
+)
+
+(method (attrs public abstract ) getChildView(int int boolean [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+)
+
+(method (attrs public abstract ) getChildrenCount(int )int
+)
+
+(method (attrs public abstract ) getCombinedChildId(long long )long
+)
+
+(method (attrs public abstract ) getCombinedGroupId(long )long
+)
+
+(method (attrs public abstract ) getGroup(int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getGroupCount()int
+)
+
+(method (attrs public abstract ) getGroupId(int )long
+)
+
+(method (attrs public abstract ) getGroupView(int boolean [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+)
+
+(method (attrs public abstract ) hasStableIds()boolean
+)
+
+(method (attrs public abstract ) isChildSelectable(int int )boolean
+)
+
+(method (attrs public abstract ) isEmpty()boolean
+)
+
+(method (attrs public abstract ) onGroupCollapsed(int )void
+)
+
+(method (attrs public abstract ) onGroupExpanded(int )void
+)
+
+(method (attrs public abstract ) registerDataSetObserver([object android/database/DataSetObserver] )void
+)
+
+(method (attrs public abstract ) unregisterDataSetObserver([object android/database/DataSetObserver] )void
+)
+
+)

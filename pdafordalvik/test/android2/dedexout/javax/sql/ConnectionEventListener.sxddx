@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) javax/sql/ConnectionEventListener
+ (super java/lang/Object)
+ (source "ConnectionEventListener.java")
+ (implements java/util/EventListener)
+
+
+(method (attrs public abstract ) connectionClosed([object javax/sql/ConnectionEvent] )void
+)
+
+(method (attrs public abstract ) connectionErrorOccurred([object javax/sql/ConnectionEvent] )void
+)
+
+)

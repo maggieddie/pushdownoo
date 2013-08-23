@@ -1,0 +1,28 @@
+(interface (attrs public abstract annotation ) android/view/ViewDebug$ExportedProperty
+ (super java/lang/Object)
+ (source "ViewDebug.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) category()[object java/lang/String]
+)
+
+(method (attrs public abstract ) deepExport()boolean
+)
+
+(method (attrs public abstract ) flagMapping()[array [object android/view/ViewDebug$FlagToString]]
+)
+
+(method (attrs public abstract ) indexMapping()[array [object android/view/ViewDebug$IntToString]]
+)
+
+(method (attrs public abstract ) mapping()[array [object android/view/ViewDebug$IntToString]]
+)
+
+(method (attrs public abstract ) prefix()[object java/lang/String]
+)
+
+(method (attrs public abstract ) resolveId()boolean
+)
+
+)

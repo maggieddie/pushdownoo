@@ -1,0 +1,211 @@
+(class (attrs public final synchronized ) sun/misc/Unsafe
+ (super java/lang/Object)
+ (source "Unsafe.java")
+
+ (field (attrs private static final ) THE_ONE [object sun/misc/Unsafe] )
+ (field (attrs private final ) lang [object org/apache/harmony/kernel/vm/LangAccess] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 34)
+  (new-instance v0 sun/misc/Unsafe)
+  (invoke-direct {v0} sun/misc/Unsafe/<init> )
+  (sput-object v0 sun/misc/Unsafe.THE_ONE [object sun/misc/Unsafe])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object sun/misc/Unsafe])
+  (line 42)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 43)
+  (invoke-static {} org/apache/harmony/kernel/vm/LangAccess/getInstance )
+  (nop )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 sun/misc/Unsafe.lang [object org/apache/harmony/kernel/vm/LangAccess])
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs private static native ) arrayBaseOffset0([object java/lang/Class] )int
+ )
+
+(method (attrs private static native ) arrayIndexScale0([object java/lang/Class] )int
+ )
+
+(method (attrs public static ) getUnsafe()[object sun/misc/Unsafe]
+  (limit registers 3)
+  (line 55)
+  (invoke-static {} dalvik/system/VMStack/getCallingClassLoader )
+  (nop )
+  (move-result-object v0)
+  (line 56)
+  (if-eqz v0 l14f568)
+  (const-class v1 sun/misc/Unsafe)
+  (invoke-virtual-quick {v1} java/lang/Class/getClassLoader )
+  (move-result-object v1)
+  (if-eq v0 v1 l14f568)
+  (line 57)
+  (new-instance v1 java/lang/SecurityException)
+  (const-string v2 "Unsafe access denied")
+  (invoke-direct {v1 v2} java/lang/SecurityException/<init> [object java/lang/String] )
+  (throw v1)
+  (label l14f568)
+  (line 60)
+  (sget-object v1 sun/misc/Unsafe.THE_ONE [object sun/misc/Unsafe])
+  (return-object v1)
+ )
+
+(method (attrs private static native ) objectFieldOffset0([object java/lang/reflect/Field] )long
+ )
+
+(method (attrs public ) arrayBaseOffset([object java/lang/Class] )int
+  (limit registers 4)
+  ; this: v2 ([object sun/misc/Unsafe])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 97)
+  (invoke-virtual-quick {v3} java/lang/Class/isArray )
+  (move-result v0)
+  (if-nez v0 l14f59c)
+  (line 98)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "valid for array classes only")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l14f59c)
+  (line 102)
+  (invoke-static {v3} sun/misc/Unsafe/arrayBaseOffset0 [object java/lang/Class] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) arrayIndexScale([object java/lang/Class] )int
+  (limit registers 4)
+  ; this: v2 ([object sun/misc/Unsafe])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 121)
+  (invoke-virtual-quick {v3} java/lang/Class/isArray )
+  (move-result v0)
+  (if-nez v0 l14f5d4)
+  (line 122)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "valid for array classes only")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l14f5d4)
+  (line 126)
+  (invoke-static {v3} sun/misc/Unsafe/arrayIndexScale0 [object java/lang/Class] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public native ) compareAndSwapInt([object java/lang/Object] long int int )boolean
+)
+
+(method (attrs public native ) compareAndSwapLong([object java/lang/Object] long long long )boolean
+)
+
+(method (attrs public native ) compareAndSwapObject([object java/lang/Object] long [object java/lang/Object] [object java/lang/Object] )boolean
+)
+
+(method (attrs public native ) getInt([object java/lang/Object] long )int
+)
+
+(method (attrs public native ) getIntVolatile([object java/lang/Object] long )int
+)
+
+(method (attrs public native ) getLong([object java/lang/Object] long )long
+)
+
+(method (attrs public native ) getLongVolatile([object java/lang/Object] long )long
+)
+
+(method (attrs public native ) getObject([object java/lang/Object] long )[object java/lang/Object]
+)
+
+(method (attrs public native ) getObjectVolatile([object java/lang/Object] long )[object java/lang/Object]
+)
+
+(method (attrs public ) objectFieldOffset([object java/lang/reflect/Field] )long
+  (limit registers 4)
+  ; this: v2 ([object sun/misc/Unsafe])
+  ; parameter[0] : v3 ([object java/lang/reflect/Field])
+  (line 72)
+  (invoke-virtual-quick {v3} java/lang/reflect/Field/getModifiers )
+  (move-result v0)
+  (invoke-static {v0} java/lang/reflect/Modifier/isStatic int )
+  (move-result v0)
+  (if-eqz v0 l14f614)
+  (line 73)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "valid for instance fields only")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l14f614)
+  (line 77)
+  (invoke-static {v3} sun/misc/Unsafe/objectFieldOffset0 [object java/lang/reflect/Field] )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) park(boolean long )void
+  (limit registers 5)
+  ; this: v1 ([object sun/misc/Unsafe])
+  ; parameter[0] : v2 (boolean)
+  ; parameter[1] : v3 (long)
+  (line 314)
+  (if-eqz v2 l14f640)
+  (line 315)
+  (iget-object-quick v0 v1 sun/misc/Unsafe.lang [object org/apache/harmony/kernel/vm/LangAccess])
+  (invoke-virtual-quick {v0 v3 v4} org/apache/harmony/kernel/vm/LangAccess/parkUntil long )
+  (label l14f63e)
+  (line 319)
+  (return-void )
+  (label l14f640)
+  (line 317)
+  (iget-object-quick v0 v1 sun/misc/Unsafe.lang [object org/apache/harmony/kernel/vm/LangAccess])
+  (invoke-virtual-quick {v0 v3 v4} org/apache/harmony/kernel/vm/LangAccess/parkFor long )
+  (goto l14f63e)
+)
+
+(method (attrs public native ) putInt([object java/lang/Object] long int )void
+)
+
+(method (attrs public native ) putIntVolatile([object java/lang/Object] long int )void
+)
+
+(method (attrs public native ) putLong([object java/lang/Object] long long )void
+)
+
+(method (attrs public native ) putLongVolatile([object java/lang/Object] long long )void
+)
+
+(method (attrs public native ) putObject([object java/lang/Object] long [object java/lang/Object] )void
+)
+
+(method (attrs public native ) putObjectVolatile([object java/lang/Object] long [object java/lang/Object] )void
+)
+
+(method (attrs public ) unpark([object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v2 ([object sun/misc/Unsafe])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 330)
+  (instance-of v0 v3 java/lang/Thread)
+  (if-eqz v0 l14f674)
+  (line 331)
+  (iget-object-quick v0 v2 sun/misc/Unsafe.lang [object org/apache/harmony/kernel/vm/LangAccess])
+  (check-cast v3 [object java/lang/Thread])
+  (invoke-virtual-quick {v0 v3} org/apache/harmony/kernel/vm/LangAccess/unpark [object java/lang/Thread] )
+  (line 335)
+  (return-void )
+  (label l14f674)
+  (line 333)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "valid for Threads only")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/validation/constraints/Digits$List
+ (super java/lang/Object)
+ (source "Digits.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object javax/validation/constraints/Digits]]
+)
+
+)

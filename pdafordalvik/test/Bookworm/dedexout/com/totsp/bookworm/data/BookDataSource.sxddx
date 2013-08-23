@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/totsp/bookworm/data/BookDataSource
+ (super java/lang/Object)
+ (source "BookDataSource.java")
+
+
+(method (attrs public abstract ) getBook([object java/lang/String] )[object com/totsp/bookworm/model/Book]
+)
+
+(method (attrs public abstract ) getBooks([object java/lang/String] int int )[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "II)"  "Ljava/util/ArrayList"  "<"  "Lcom/totsp/bookworm/model/Book;"  ">;")
+  )
+)
+
+)

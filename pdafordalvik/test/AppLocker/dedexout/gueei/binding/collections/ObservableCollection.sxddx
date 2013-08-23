@@ -1,0 +1,282 @@
+(class (attrs public abstract ) gueei/binding/collections/ObservableCollection
+ (super java/lang/Object)
+ (source "ObservableCollection.java")
+ (implements gueei/binding/IObservableCollection)
+
+ (field (attrs private ) mCollectionObservers [object gueei/binding/utility/WeakList] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  (line 13)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 16)
+  (new-instance v0 gueei/binding/utility/WeakList)
+  (invoke-direct {v0} gueei/binding/utility/WeakList/<init> )
+  (iput-object v0 v1 gueei/binding/collections/ObservableCollection.mCollectionObservers [object gueei/binding/utility/WeakList])
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) _setObject([object java/lang/Object] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/util/Collection])
+  (line 54)
+  (return-void )
+)
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  (line 69)
+  (iget-object v0 v1 gueei/binding/collections/ObservableCollection.mCollectionObservers [object gueei/binding/utility/WeakList])
+  (invoke-virtual {v0} gueei/binding/utility/WeakList/clear )
+  (line 70)
+  (return-void )
+)
+
+(method (attrs public final ) get()[object gueei/binding/IObservableCollection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lgueei/binding/IObservableCollection"  "<*>;")
+  )
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  (line 57)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lgueei/binding/IObservableCollection"  "<*>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/collections/ObservableCollection/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) getAllObservers()[array [object gueei/binding/Observer]]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  (line 31)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getItemId(int )long
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v3 (int)
+  (line 88)
+  (int-to-long v0 v3)
+  (return-wide v0)
+)
+
+(method (attrs public ) getType()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<"  "Lgueei/binding/IObservableCollection;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  (line 20)
+  (const-class v0 gueei/binding/IObservableCollection)
+  (return-object v0)
+)
+
+(method (attrs public final ) notifyChanged()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  (line 41)
+  (return-void )
+)
+
+(method (attrs public final ) notifyChanged([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 35)
+  (return-void )
+)
+
+(method (attrs public final ) notifyChanged([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/util/Collection])
+  (line 38)
+  (return-void )
+)
+
+(method (attrs public ) notifyCollectionChanged([object gueei/binding/CollectionChangedEventArg] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/CollectionChangedEventArg;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v2 ([object gueei/binding/CollectionChangedEventArg])
+  (line 73)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (line 74)
+  (invoke-virtual {v0 v1} java/util/ArrayList/add [object java/lang/Object] )
+  (line 75)
+  (invoke-virtual {v1 v2 v0} gueei/binding/collections/ObservableCollection/notifyCollectionChanged [object gueei/binding/CollectionChangedEventArg] [object java/util/Collection] )
+  (line 76)
+  (return-void )
+)
+
+(method (attrs public ) notifyCollectionChanged([object gueei/binding/CollectionChangedEventArg] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/CollectionChangedEventArg;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 8)
+  ; this: v5 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v6 ([object gueei/binding/CollectionChangedEventArg])
+  ; parameter[1] : v7 ([object java/util/Collection])
+  (line 79)
+  (if-nez v7 l22ace)
+  (label l22acc)
+  (line 85)
+  (return-void )
+  (label l22ace)
+  (line 80)
+  (invoke-interface {v7 v5} java/util/Collection/add [object java/lang/Object] )
+  (line 81)
+  (iget-object v1 v5 gueei/binding/collections/ObservableCollection.mCollectionObservers [object gueei/binding/utility/WeakList])
+  (invoke-virtual {v1} gueei/binding/utility/WeakList/toArray )
+  (move-result-object v2)
+  (array-length v3 v2)
+  (const/4 v1 0)
+  (label l22ae4)
+  (if-ge v1 v3 l22acc)
+  (aget-object v0 v2 v1)
+  (label l22aec)
+  (line 82)
+  (invoke-interface {v7 v0} java/util/Collection/contains [object java/lang/Object] )
+  (move-result v4)
+  (if-eqz v4 l22afe)
+  (label l22af8)
+  (line 81)
+  (add-int/lit8 v1 v1 1)
+  (goto l22ae4)
+  (label l22afe)
+  (line 83)
+  (check-cast v0 [object gueei/binding/CollectionObserver])
+  (label l22b02)
+  (invoke-interface {v0 v5 v6 v7} gueei/binding/CollectionObserver/onCollectionChanged [object gueei/binding/IObservableCollection] [object gueei/binding/CollectionChangedEventArg] [object java/util/Collection] )
+  (goto l22af8)
+)
+
+(method (attrs public final ) set([object gueei/binding/IObservableCollection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object gueei/binding/IObservableCollection])
+  (line 50)
+  (return-void )
+)
+
+(method (attrs public final ) set([object gueei/binding/IObservableCollection] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object gueei/binding/IObservableCollection])
+  ; parameter[1] : v2 ([object java/util/Collection])
+  (line 46)
+  (return-void )
+)
+
+(method (attrs public ) set([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 1)
+  (check-cast v1 [object gueei/binding/IObservableCollection])
+  (invoke-virtual {v0 v1} gueei/binding/collections/ObservableCollection/set [object gueei/binding/IObservableCollection] )
+  (return-void )
+)
+
+(method (attrs public ) set([object java/lang/Object] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/util/Collection])
+  (line 1)
+  (check-cast v1 [object gueei/binding/IObservableCollection])
+  (invoke-virtual {v0 v1 v2} gueei/binding/collections/ObservableCollection/set [object gueei/binding/IObservableCollection] [object java/util/Collection] )
+  (return-void )
+)
+
+(method (attrs public ) setVisibleChildrenCount([object java/lang/Object] int )void
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 98)
+  (return-void )
+)
+
+(method (attrs public ) subscribe([object gueei/binding/CollectionObserver] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v2 ([object gueei/binding/CollectionObserver])
+  (line 61)
+  (iget-object v0 v1 gueei/binding/collections/ObservableCollection.mCollectionObservers [object gueei/binding/utility/WeakList])
+  (invoke-virtual {v0 v2} gueei/binding/utility/WeakList/add [object java/lang/Object] )
+  (line 62)
+  (return-void )
+)
+
+(method (attrs public final ) subscribe([object gueei/binding/Observer] )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object gueei/binding/Observer])
+  (line 24)
+  (return-void )
+)
+
+(method (attrs public ) unsubscribe([object gueei/binding/CollectionObserver] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v2 ([object gueei/binding/CollectionObserver])
+  (line 65)
+  (iget-object v0 v1 gueei/binding/collections/ObservableCollection.mCollectionObservers [object gueei/binding/utility/WeakList])
+  (invoke-virtual {v0 v2} gueei/binding/utility/WeakList/remove [object java/lang/Object] )
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public final ) unsubscribe([object gueei/binding/Observer] )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/ObservableCollection])
+  ; parameter[0] : v1 ([object gueei/binding/Observer])
+  (line 27)
+  (return-void )
+)
+
+)

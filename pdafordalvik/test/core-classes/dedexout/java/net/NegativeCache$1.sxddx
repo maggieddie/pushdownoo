@@ -1,0 +1,37 @@
+(class (attrs synchronized ) java/net/NegativeCache$1
+ (super java/util/LinkedHashMap)
+ (source "NegativeCache.java")
+
+
+(method (attrs ) <init>(int float boolean )void
+  (limit registers 4)
+  ; this: v0 ([object java/net/NegativeCache$1])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (boolean)
+  (line 49)
+  (invoke-direct {v0 v1 v2 v3} java/util/LinkedHashMap/<init> int float boolean )
+  (return-void )
+ )
+
+(method (attrs protected ) removeEldestEntry([object java/util/Map$Entry] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<"  "Ljava/lang/String;"  "Ljava/net/NegCacheElement;"  ">;)Z")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/net/NegativeCache$1])
+  ; parameter[0] : v3 ([object java/util/Map$Entry])
+  (line 51)
+  (invoke-virtual-quick {v2} java/net/NegativeCache$1/size )
+  (move-result v0)
+  (const/4 v1 5)
+  (if-le v0 v1 l146056)
+  (const/4 v0 1)
+  (label l146054)
+  (return v0)
+  (label l146056)
+  (const/4 v0 0)
+  (goto l146054)
+)
+
+)

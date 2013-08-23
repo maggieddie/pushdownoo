@@ -1,0 +1,45 @@
+(class (attrs public ) android/hardware/Camera$Size
+ (super java/lang/Object)
+ (source "Camera.java")
+
+ (field (attrs public ) height int )
+ (field (attrs final ) this$0 [object android/hardware/Camera] )
+ (field (attrs public ) width int )
+
+(method (attrs public ) <init>([object android/hardware/Camera] int int )void
+  (limit registers 6)
+  ; this: v2 ([object android/hardware/Camera$Size])
+  ; parameter[0] : v3 ([object android/hardware/Camera])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 52)
+  (iput-object v3 v2 android/hardware/Camera$Size.this$0 [object android/hardware/Camera])
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/hardware/Camera$Size])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 53)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/Camera$Size])
+  (line 54)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

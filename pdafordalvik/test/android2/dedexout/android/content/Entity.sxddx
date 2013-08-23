@@ -1,0 +1,63 @@
+(class (attrs public final ) android/content/Entity
+ (super java/lang/Object)
+ (source "Entity.java")
+
+
+(method (attrs public ) <init>([object android/content/ContentValues] )void
+  (limit registers 4)
+  ; this: v2 ([object android/content/Entity])
+  ; parameter[0] : v3 ([object android/content/ContentValues])
+  (line 10)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) addSubValue([object android/net/Uri] [object android/content/ContentValues] )void
+  (limit registers 5)
+  ; this: v2 ([object android/content/Entity])
+  ; parameter[0] : v3 ([object android/net/Uri])
+  ; parameter[1] : v4 ([object android/content/ContentValues])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getEntityValues()[object android/content/ContentValues]
+  (limit registers 3)
+  ; this: v2 ([object android/content/Entity])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSubValues()[object java/util/ArrayList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/ArrayList"  "<"  "Landroid/content/Entity$NamedContentValues;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/content/Entity])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/content/Entity])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

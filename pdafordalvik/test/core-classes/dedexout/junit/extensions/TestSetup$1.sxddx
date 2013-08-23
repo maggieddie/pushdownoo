@@ -1,0 +1,44 @@
+(class (attrs synchronized ) junit/extensions/TestSetup$1
+ (super java/lang/Object)
+ (source "TestSetup.java")
+ (implements junit/framework/Protectable)
+
+ (field (attrs final ) this$0 [object junit/extensions/TestSetup] )
+ (field (attrs final ) val$result [object junit/framework/TestResult] )
+
+(method (attrs ) <init>([object junit/extensions/TestSetup] [object junit/framework/TestResult] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v0 ([object junit/extensions/TestSetup$1])
+  ; parameter[0] : v1 ([object junit/extensions/TestSetup])
+  ; parameter[1] : v2 ([object junit/framework/TestResult])
+  (line 17)
+  (iput-object-quick v1 v0 junit/extensions/TestSetup$1.this$0 [object junit/extensions/TestSetup])
+  (iput-object-quick v2 v0 junit/extensions/TestSetup$1.val$result [object junit/framework/TestResult])
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) protect()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v2 ([object junit/extensions/TestSetup$1])
+  (line 18)
+  (iget-object-quick v0 v2 junit/extensions/TestSetup$1.this$0 [object junit/extensions/TestSetup])
+  (invoke-virtual-quick {v0} junit/extensions/TestSetup/setUp )
+  (line 19)
+  (iget-object-quick v0 v2 junit/extensions/TestSetup$1.this$0 [object junit/extensions/TestSetup])
+  (iget-object-quick v1 v2 junit/extensions/TestSetup$1.val$result [object junit/framework/TestResult])
+  (invoke-virtual-quick {v0 v1} junit/extensions/TestSetup/basicRun [object junit/framework/TestResult] )
+  (line 20)
+  (iget-object-quick v0 v2 junit/extensions/TestSetup$1.this$0 [object junit/extensions/TestSetup])
+  (invoke-virtual-quick {v0} junit/extensions/TestSetup/tearDown )
+  (line 21)
+  (return-void )
+)
+
+)

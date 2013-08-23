@@ -1,0 +1,41 @@
+(class (attrs synchronized ) javax/security/auth/Subject$2
+ (super java/lang/Object)
+ (source "Subject.java")
+ (implements java/security/PrivilegedAction)
+
+ (field (attrs final ) val$combiner [object javax/security/auth/SubjectDomainCombiner] )
+ (field (attrs final ) val$context [object java/security/AccessControlContext] )
+
+(method (attrs ) <init>([object java/security/AccessControlContext] [object javax/security/auth/SubjectDomainCombiner] )void
+  (limit registers 3)
+  ; this: v0 ([object javax/security/auth/Subject$2])
+  ; parameter[0] : v1 ([object java/security/AccessControlContext])
+  ; parameter[1] : v2 ([object javax/security/auth/SubjectDomainCombiner])
+  (line 277)
+  (iput-object-quick v1 v0 javax/security/auth/Subject$2.val$context [object java/security/AccessControlContext])
+  (iput-object-quick v2 v0 javax/security/auth/Subject$2.val$combiner [object javax/security/auth/SubjectDomainCombiner])
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object javax/security/auth/Subject$2])
+  (line 277)
+  (invoke-virtual-quick {v1} javax/security/auth/Subject$2/run )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) run()[object java/security/AccessControlContext]
+  (limit registers 4)
+  ; this: v3 ([object javax/security/auth/Subject$2])
+  (line 278)
+  (new-instance v0 java/security/AccessControlContext)
+  (iget-object-quick v1 v3 javax/security/auth/Subject$2.val$context [object java/security/AccessControlContext])
+  (iget-object-quick v2 v3 javax/security/auth/Subject$2.val$combiner [object javax/security/auth/SubjectDomainCombiner])
+  (invoke-direct {v0 v1 v2} java/security/AccessControlContext/<init> [object java/security/AccessControlContext] [object java/security/DomainCombiner] )
+  (return-object v0)
+)
+
+)

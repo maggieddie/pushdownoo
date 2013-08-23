@@ -1,0 +1,50 @@
+(class (attrs ) android/support/v4/net/ConnectivityManagerCompatGingerbread
+ (super java/lang/Object)
+ (source "ConnectivityManagerCompatGingerbread.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/net/ConnectivityManagerCompatGingerbread])
+  (line 33)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) isActiveNetworkMetered([object android/net/ConnectivityManager] )boolean
+  (limit registers 4)
+  ; parameter[0] : v3 ([object android/net/ConnectivityManager])
+  (const/4 v2 1)
+  (line 35)
+  (invoke-virtual {v3} android/net/ConnectivityManager/getActiveNetworkInfo )
+  (move-result-object v0)
+  (line 36)
+  (if-nez v0 l1fea0)
+  (label l1fe9e)
+  (label ps1fea8_1fe9e)
+  (line 54)
+  (return v2)
+  (label l1fea0)
+  (line 41)
+  (invoke-virtual {v0} android/net/NetworkInfo/getType )
+  (move-result v1)
+  (line 42)
+  (packed-switch v1 0
+    ps1fea8_1fe9e ; case 0
+    ps1fea8_1feb0 ; case 1
+    ps1fea8_1fe9e ; case 2
+    ps1fea8_1fe9e ; case 3
+    ps1fea8_1fe9e ; case 4
+    ps1fea8_1fe9e ; case 5
+    ps1fea8_1fe9e ; case 6
+    ps1fea8_default) ; default
+  (label ps1fea8_default)
+  (goto l1fe9e)
+  (label ps1fea8_1feb0)
+  (line 51)
+  (const/4 v2 0)
+  (goto l1fe9e)
+  (line 42)
+ )
+
+)

@@ -23,27 +23,35 @@ class S2DParser {
       }
     }
     sx match {
-      case SClass :+: attrs    
+      case SClass :+: attrs
         :+: (clsName: SName)
         :+: supercons
         :+: source
         :+: fieldsAndMethods => {
-           val clsClsStr = clsName.toString()
-           // no parsing of the support lib 
-          if(clsClsStr.startsWith("android/support/v4")) {
-            None
-          }
-          else{
-        val supSn = CommonUtils.TestSNRet(parseSuperOrSource(supercons))
-        val (flds, meths, interfaceNames, interfaces) = parseClassBody(List(), List(), List(), Map.empty)(fieldsAndMethods.toList,  clsName.toString())
-       
-        val dvcd = new DalvikClassDef(clsClsStr, supSn, flds, meths, interfaceNames, interfaces)
-        println("cur class: " + clsClsStr + "super:"  + supSn)
-        dvcd.registerClass(clsClsStr)
-       // Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))
-        Some(dvcd)
-          }
+        val clsClsStr = clsName.toString()
+        val attrList = parseAttrs(attrs)
+        val clsAttrStrings = StringUtils.toLstStrFromLstSExp(attrList)
+        
+        // no parsing of the support lib 
+        // should get the Analysis Scope.
+        //if(clsClsStr.startsWith("android/support/v4")) {
+        if (AnalysisScope.isExclusive(clsClsStr)) {
+          println("oh yeah, filter out ", clsClsStr)
+         //  System.err.println("No more pasing ")
+          None
+        } else {
+          val supSn = CommonUtils.TestSNRet(parseSuperOrSource(supercons))
+          val (flds, meths, interfaceNames, interfaces) = parseClassBody(List(), List(), List(), Map.empty)(fieldsAndMethods.toList, clsName.toString())
+
+          val dvcd = new DalvikClassDef(clsClsStr, clsAttrStrings, supSn, flds, meths, interfaceNames, interfaces)
+        //  println("cur class: " + clsClsStr + " super:" + supSn)
+          dvcd.registerClass(clsClsStr)
+          println("done parsing file: " + clsClsStr)
+          // Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))
+          Some(dvcd)
+        }
       }
+        // no parsinginterface yet
        case SInterface :+: attrs
         :+: (clsName: SName)
         :+: supercons
@@ -97,14 +105,14 @@ class S2DParser {
               hd match {
                 case SField :+: attrs :+: rest => {
                   val newField = parseField(rest, List(), clsP,false)
-                  parseClassBody(newField :: newField :: fields, methods, interfaceNames, implmentedInterfaces)(tl, clsP) // bug? why the heck newFIeld added twice
+                  parseClassBody(newField ::  fields, methods, interfaceNames, implmentedInterfaces)(tl, clsP) // bug? why the heck newFIeld added twice
                 }
               }
             } else {
               val isStatic = flagsContains(attrList, "static")
               val attrsStrs = StringUtils.toLstStrFromLstSExp(attrList)
               val newField = parseField(rest, attrsStrs, clsP, isStatic)
-              parseClassBody(newField :: newField :: fields, methods, interfaceNames, implmentedInterfaces)(tl, clsP)
+              parseClassBody(newField ::   fields, methods, interfaceNames, implmentedInterfaces)(tl, clsP)
             }
           }
           // the implmented interfaces, we just get the name anyway. 
@@ -135,11 +143,9 @@ class S2DParser {
         val (regLimit, rest2) = getRegLimitsFromList(rest1)
         val (handlerLst, rest3) = (getCatchHandlers(rest2, List()), rest2)
         val stmt = parseBodyMap(rest3, clsP, methName)//parseBodyTailRecursion(List(), rest)//parseBody(rest)
-        val stmtTransformed = ParsingUtils.transFormBody(stmt, ExceptionHandlers(handlerLst), throwAnnotations, clsP, methName)
-        if(methName == "onHandleIntent") {
-        println("method: ") 
-        CommonUtils.flattenLinkedStmt(List())(stmt).foreach(println)}
-        MethodDef(StringUtils.getDistinctMethodOrFieldPath(clsP,methName, "meth"), attrList, regLimit, formalTys, retTyStr, stmt, ExceptionHandlers(handlerLst), throwAnnotations)
+        //val stmtTransformed = ParsingUtils.transFormBody(stmt, ExceptionHandlers(handlerLst), throwAnnotations, clsP, methName) 
+        MethodDef(StringUtils.getDistinctMethodOrFieldPath(clsP,methName, "meth"), attrList, regLimit, formalTys, retTyStr, stmt, //stmtTransformed,  
+            ExceptionHandlers(handlerLst), throwAnnotations)
       }
       //case other cases- let it fail
     }
@@ -281,14 +287,16 @@ class S2DParser {
 
   private def parseBodyMap(sl: List[SExp], clsPath: String, methPath: String): Stmt = {
 // if is just empty body, then return empty stmt
-    if (sl.isEmpty) StmtNil
+    if (sl.isEmpty) {
+       println("This is the empty method body")
+         val fkeReturnStmt = new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, clsPath, methPath) 
+        fkeReturnStmt
+    }
     else {
       val lstS = sl.map((s) => {parse(s, clsPath, methPath)})
       val lstS2 = CommonUtils.extractStmts(lstS)
 
-      val lst = setLineNumber(lstS2, StmtNil, List())
-      println("after setlineNumber")
-      lst.foreach(println)
+      val lst = setLineNumber(lstS2, StmtNil, List()) 
       val linkHeadO =
         CommonUtils.linkedListWrapper(List())(lst)
       val linkHead =
@@ -354,14 +362,21 @@ class S2DParser {
           }
           case SInvokeVirtual :+: argsArgs :+: (methPPath: SName) :+: types => {
             
-            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath,  2, false))
-            
+            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath,  2, false)) 
           }
           case SInvokeSuper :+: argsArgs :+: (methPPath: SName) :+: types => {
             
             Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath,3, false))
            
           }
+          
+          // super quick
+          case SInvokeSuperQuick :+: argsArgs :+: (methPPath: SName) :+: types => {
+            
+            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath,3, false))
+           
+          }
+          
           case SInvokeStatic :+: argsArgs :+: (methPPath: SName) :+: types => {
             
             Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath, 0, false))
@@ -377,12 +392,21 @@ class S2DParser {
             Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath,1, true))
            
           }
-          case SInvokeVirtualRange :+: argsArgs :+: (methPPath: SName) :+: types => {
-            
-            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath, 2, true))
-            
+          case SInvokeVirtualRange :+: argsArgs :+: (methPPath: SName) :+: types => { 
+            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath, 2, true)) 
           }
+          
+          case SInvokeVirtualQuickRange :+: argsArgs :+: (methPPath: SName) :+: types => { 
+            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath, 2, true)) 
+          }
+          
           case SInvokeSuperRange :+: argsArgs :+: (methPPath: SName) :+: types => {
+            
+            Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath,3, true))
+           
+          }
+          // super quick range 
+           case SInvokeSuperQuickRange :+: argsArgs :+: (methPPath: SName) :+: types => {
             
             Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath,3, true))
            
@@ -397,8 +421,12 @@ class S2DParser {
             Some(ParsingUtils.genInterfaceInvokeStmt(methPPath, argsArgs, types, StmtNil, clsPath, methPath, true))
           }
           
+        case SInvokeVirtualQuick :+: argsArgs :+: (methPPath: SName) :+: types => {
+           Some(ParsingUtils.genInvokeStmt(methPPath, argsArgs, types, StmtNil,clsPath, methPath,  2, false)) 
+          }
+        
           
-          // TODO invoke ranges
+          
 
           //return
           case SReturnVoid :+: SNil() => {
@@ -476,15 +504,30 @@ class S2DParser {
           }
            // iget
           case SIGet :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
+            Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true)) 
+          }
+          
+          // not distinguish the optmized one
+          case SIGetQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
             Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true))
            
-          }
+          } 
             
           case SIGetWide :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
             Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true))
            
           }
+          
+            case SIGetWideQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
+            Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true))
+           
+          }
           case SIGetObject :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
+        	  	Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true))
+        	  
+          }
+          
+          case SIGetObjectQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
         	  	Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, true))
         	  
           }
@@ -495,8 +538,7 @@ class S2DParser {
           }
             
           case SIGetChar :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
-            Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath,true))
-           
+            Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath,true)) 
           }
             
           case SIGetShort :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
@@ -514,15 +556,35 @@ class S2DParser {
              Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, false))
             
           }
+          
+          //SIPutQuick
+          case SIPutQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType =>{
+             Some(ParsingUtils.genNSGetOrPutStmt(destReg, objReg, fieldPath, fldType, StmtNil, clsPath, methPath, false)) 
+          }
+          
           case SIPutWide :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
             Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg,fieldPath, fldType, StmtNil, clsPath, methPath, false))
            
           }
-            
+          
+          // iput-wide-quick
+           case SIPutWideQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType=> {
+            Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg,fieldPath, fldType, StmtNil, clsPath, methPath, false))
+           
+          }
+           
           case SIPutObject :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
             Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg, fieldPath, fldType, StmtNil, clsPath, methPath, false))
            
           }
+          
+          // iput-object-quick
+          case SIPutObjectQuick :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
+            Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg, fieldPath, fldType, StmtNil, clsPath, methPath, false))
+           
+          }
+          
+          
           case SIPutBoolean :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+:fldType => {
             Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg, fieldPath, fldType, StmtNil, clsPath, methPath, false))
             
@@ -538,8 +600,7 @@ class S2DParser {
            case SIPutShort :+: (destReg: SName) :+: (objReg:SName) :+: (fieldPath: SName) :+: fldType => {
               Some(ParsingUtils.genNSGetOrPutStmt(destReg,  objReg, fieldPath, fldType, StmtNil, clsPath, methPath,false))
             
-           }
-           
+           } 
 
           // sget
           case SGet :+: (destReg: SName) :+: (fieldPath: SName) :+: fldType=> {
@@ -1179,6 +1240,14 @@ class S2DParser {
           
           case SXorIntLit16 :+: rest => {
              Some(ParsingUtils.genAssignStmt(SXorIntLit16, rest, StmtNil, clsPath, methPath, false))
+          }
+          
+          case SMonitorEnter :+: (resReg: SName) :+: SNil() =>{
+             Some(ParsingUtils.genMonitorEnterStmt(resReg, StmtNil, clsPath, methPath))
+          }
+          
+          case SMonitorExit :+: (resReg : SName) :+: SNil() => {
+            Some(ParsingUtils.genMonitorExitStmt(resReg, StmtNil, clsPath, methPath))
           }
           case _ => None 
             

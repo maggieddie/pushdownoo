@@ -1,0 +1,59 @@
+(class (attrs public ) gueei/binding/cursor/IntegerField
+ (super gueei/binding/cursor/CursorField)
+ (source "IntegerField.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/cursor/IntegerField])
+  ; parameter[0] : v2 (int)
+  (line 8)
+  (const-class v0 java/lang/Integer)
+  (invoke-direct {v1 v0 v2} gueei/binding/cursor/CursorField/<init> [object java/lang/Class] int )
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/cursor/IntegerField])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 12)
+  (const-class v0 java/lang/Integer)
+  (invoke-direct {v1 v0 v2} gueei/binding/cursor/CursorField/<init> [object java/lang/Class] [object java/lang/String] )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) returnValue([object android/database/Cursor] )[object java/lang/Integer]
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/cursor/IntegerField])
+  ; parameter[0] : v2 ([object android/database/Cursor])
+  (line 21)
+  (iget v0 v1 gueei/binding/cursor/IntegerField.mColumnIndex int)
+  (invoke-interface {v2 v0} android/database/Cursor/getInt int )
+  (move-result v0)
+  (invoke-static {v0} java/lang/Integer/valueOf int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) returnValue([object android/database/Cursor] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/cursor/IntegerField])
+  ; parameter[0] : v2 ([object android/database/Cursor])
+  (line 1)
+  (invoke-virtual {v1 v2} gueei/binding/cursor/IntegerField/returnValue [object android/database/Cursor] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) saveValue([object android/database/Cursor] )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/cursor/IntegerField])
+  ; parameter[0] : v1 ([object android/database/Cursor])
+  (line 17)
+  (return-void )
+)
+
+)

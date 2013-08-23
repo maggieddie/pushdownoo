@@ -1,0 +1,66 @@
+(class (attrs public ) org/apache/http/client/methods/HttpOptions
+ (super org/apache/http/client/methods/HttpRequestBase)
+ (source "HttpOptions.java")
+
+ (field (attrs public static final ) METHOD_NAME [object java/lang/String] "OPTIONS" )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/client/methods/HttpOptions])
+  (line 5)
+  (invoke-direct {v2} org/apache/http/client/methods/HttpRequestBase/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/client/methods/HttpOptions])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 7)
+  (invoke-direct {v2} org/apache/http/client/methods/HttpRequestBase/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/net/URI] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/client/methods/HttpOptions])
+  ; parameter[0] : v3 ([object java/net/URI])
+  (line 6)
+  (invoke-direct {v2} org/apache/http/client/methods/HttpRequestBase/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getAllowedMethods([object org/apache/http/HttpResponse] )[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/apache/http/HttpResponse;"  ")"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/client/methods/HttpOptions])
+  ; parameter[0] : v3 ([object org/apache/http/HttpResponse])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMethod()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/client/methods/HttpOptions])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

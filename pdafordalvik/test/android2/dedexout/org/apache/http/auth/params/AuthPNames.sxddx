@@ -1,0 +1,7 @@
+(interface (attrs public abstract ) org/apache/http/auth/params/AuthPNames
+ (super java/lang/Object)
+ (source "AuthPNames.java")
+
+ (field (attrs public static final ) CREDENTIAL_CHARSET [object java/lang/String] "http.auth.credential-charset" )
+
+)

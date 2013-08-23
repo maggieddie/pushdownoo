@@ -1,0 +1,49 @@
+(class (attrs synchronized ) org/apache/harmony/security/x509/Extensions$1
+ (super org/apache/harmony/security/asn1/ASN1SequenceOf)
+ (source "Extensions.java")
+
+
+(method (attrs ) <init>([object org/apache/harmony/security/asn1/ASN1Type] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x509/Extensions$1])
+  ; parameter[0] : v1 ([object org/apache/harmony/security/asn1/ASN1Type])
+  (line 413)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1SequenceOf/<init> [object org/apache/harmony/security/asn1/ASN1Type] )
+  (return-void )
+ )
+
+(method (attrs public ) getDecodedObject([object org/apache/harmony/security/asn1/BerInputStream] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/x509/Extensions$1])
+  ; parameter[0] : v2 ([object org/apache/harmony/security/asn1/BerInputStream])
+  (line 410)
+  (new-instance v0 org/apache/harmony/security/x509/Extensions)
+  (iget-object-quick v1 v2 org/apache/harmony/security/asn1/BerInputStream.content [object java/lang/Object])
+  (check-cast v1 [object java/util/List])
+  (invoke-direct {v0 v1} org/apache/harmony/security/x509/Extensions/<init> [object java/util/List] )
+  (return-object v0)
+)
+
+(method (attrs public ) getValues([object java/lang/Object] )[object java/util/Collection]
+  (limit registers 5)
+  ; this: v3 ([object org/apache/harmony/security/x509/Extensions$1])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 414)
+  (move-object v0 v4)
+  (check-cast v0 [object org/apache/harmony/security/x509/Extensions])
+  (move-object v1 v0)
+  (line 415)
+  (invoke-static {v1} org/apache/harmony/security/x509/Extensions/access$000 [object org/apache/harmony/security/x509/Extensions] )
+  (move-result-object v2)
+  (if-nez v2 l1a1398)
+  (new-instance v2 java/util/ArrayList)
+  (invoke-direct {v2} java/util/ArrayList/<init> )
+  (label l1a1396)
+  (return-object v2)
+  (label l1a1398)
+  (invoke-static {v1} org/apache/harmony/security/x509/Extensions/access$000 [object org/apache/harmony/security/x509/Extensions] )
+  (move-result-object v2)
+  (goto l1a1396)
+)
+
+)

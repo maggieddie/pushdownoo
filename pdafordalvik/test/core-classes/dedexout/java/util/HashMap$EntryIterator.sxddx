@@ -1,0 +1,52 @@
+(class (attrs final synchronized ) java/util/HashMap$EntryIterator
+ (super java/util/HashMap$HashIterator)
+ (source "HashMap.java")
+ (implements java/util/Iterator)
+
+ (field (attrs final ) this$0 [object java/util/HashMap] )
+
+(method (attrs private ) <init>([object java/util/HashMap] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/HashMap$EntryIterator])
+  ; parameter[0] : v1 ([object java/util/HashMap])
+  (line 813)
+  (iput-object-quick v1 v0 java/util/HashMap$EntryIterator.this$0 [object java/util/HashMap])
+  (invoke-direct {v0 v1} java/util/HashMap$HashIterator/<init> [object java/util/HashMap] )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/HashMap] [object java/util/HashMap$1] )void
+  (limit registers 3)
+  ; this: v0 ([object java/util/HashMap$EntryIterator])
+  ; parameter[0] : v1 ([object java/util/HashMap])
+  ; parameter[1] : v2 ([object java/util/HashMap$1])
+  (line 813)
+  (invoke-direct {v0 v1} java/util/HashMap$EntryIterator/<init> [object java/util/HashMap] )
+  (return-void )
+ )
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/HashMap$EntryIterator])
+  (line 813)
+  (invoke-virtual-quick {v1} java/util/HashMap$EntryIterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) next()[object java/util/Map$Entry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/HashMap$EntryIterator])
+  (line 815)
+  (invoke-virtual-quick {v1} java/util/HashMap$EntryIterator/nextEntry )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

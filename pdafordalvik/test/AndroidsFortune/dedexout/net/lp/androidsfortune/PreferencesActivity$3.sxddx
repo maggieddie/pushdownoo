@@ -1,0 +1,41 @@
+(class (attrs ) net/lp/androidsfortune/PreferencesActivity$3
+ (super java/lang/Object)
+ (source "PreferencesActivity.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$0 [object net/lp/androidsfortune/PreferencesActivity] )
+
+(method (attrs ) <init>([object net/lp/androidsfortune/PreferencesActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object net/lp/androidsfortune/PreferencesActivity$3])
+  ; parameter[0] : v1 ([object net/lp/androidsfortune/PreferencesActivity])
+  (line 1)
+  (iput-object v1 v0 net/lp/androidsfortune/PreferencesActivity$3.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (line 410)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 6)
+  ; this: v3 ([object net/lp/androidsfortune/PreferencesActivity$3])
+  ; parameter[0] : v4 ([object android/content/DialogInterface])
+  ; parameter[1] : v5 (int)
+  (line 412)
+  (iget-object v1 v3 net/lp/androidsfortune/PreferencesActivity$3.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (iget-object v0 v3 net/lp/androidsfortune/PreferencesActivity$3.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (invoke-virtual {v0} net/lp/androidsfortune/PreferencesActivity/getPreferenceManager )
+  (move-result-object v0)
+  (const-string v2 "ps_files")
+  (invoke-virtual {v0 v2} android/preference/PreferenceManager/findPreference [object java/lang/CharSequence] )
+  (move-result-object v0)
+  (check-cast v0 [object android/preference/PreferenceScreen])
+  (invoke-static {v1 v0} net/lp/androidsfortune/PreferencesActivity/access$1 [object net/lp/androidsfortune/PreferencesActivity] [object android/preference/PreferenceScreen] )
+  (line 414)
+  (iget-object v0 v3 net/lp/androidsfortune/PreferencesActivity$3.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (invoke-static {v0} net/lp/androidsfortune/PreferencesActivity/access$2 [object net/lp/androidsfortune/PreferencesActivity] )
+  (line 415)
+  (return-void )
+)
+
+)

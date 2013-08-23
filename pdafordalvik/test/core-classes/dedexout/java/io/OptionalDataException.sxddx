@@ -1,0 +1,28 @@
+(class (attrs public synchronized ) java/io/OptionalDataException
+ (super java/io/ObjectStreamException)
+ (source "OptionalDataException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1611202625); 0x9ff6ffbf )
+ (field (attrs public ) eof boolean )
+ (field (attrs public ) length int )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/io/OptionalDataException])
+  (line 49)
+  (invoke-direct {v0} java/io/ObjectStreamException/<init> )
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/OptionalDataException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 60)
+  (invoke-direct {v0 v1} java/io/ObjectStreamException/<init> [object java/lang/String] )
+  (line 61)
+  (return-void )
+ )
+
+)

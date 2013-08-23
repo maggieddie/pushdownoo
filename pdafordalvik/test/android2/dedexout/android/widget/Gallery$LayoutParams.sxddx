@@ -1,0 +1,50 @@
+(class (attrs public ) android/widget/Gallery$LayoutParams
+ (super android/view/ViewGroup$LayoutParams)
+ (source "Gallery.java")
+
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 5)
+  ; this: v2 ([object android/widget/Gallery$LayoutParams])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 10)
+  (const/4 v0 0)
+  (check-cast v0 [object android/view/ViewGroup$LayoutParams])
+  (invoke-direct {v2 v0} android/view/ViewGroup$LayoutParams/<init> [object android/view/ViewGroup$LayoutParams] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] )void
+  (limit registers 5)
+  ; this: v2 ([object android/widget/Gallery$LayoutParams])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/util/AttributeSet])
+  (line 9)
+  (const/4 v0 0)
+  (check-cast v0 [object android/view/ViewGroup$LayoutParams])
+  (invoke-direct {v2 v0} android/view/ViewGroup$LayoutParams/<init> [object android/view/ViewGroup$LayoutParams] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/view/ViewGroup$LayoutParams] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/Gallery$LayoutParams])
+  ; parameter[0] : v3 ([object android/view/ViewGroup$LayoutParams])
+  (line 11)
+  (const/4 v0 0)
+  (check-cast v0 [object android/view/ViewGroup$LayoutParams])
+  (invoke-direct {v2 v0} android/view/ViewGroup$LayoutParams/<init> [object android/view/ViewGroup$LayoutParams] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

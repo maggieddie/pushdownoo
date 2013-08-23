@@ -1,0 +1,453 @@
+(class (attrs public abstract synchronized ) java/util/prefs/Preferences
+ (super java/lang/Object)
+ (source "Preferences.java")
+
+ (field (attrs private static final ) CONFIGURATION_FILE_COMMENT [object java/lang/String] "#" )
+ (field (attrs private static final ) CONFIGURATION_FILE_ENCODING [object java/lang/String] "UTF-8" )
+ (field (attrs private static final ) FACTORY_CONFIGURATION_FILE_NAME [object java/lang/String] "META-INF/services/java.util.prefs.PreferencesFactory" )
+ (field (attrs public static final ) MAX_KEY_LENGTH int 80); 0x50 )
+ (field (attrs public static final ) MAX_NAME_LENGTH int 80); 0x50 )
+ (field (attrs public static final ) MAX_VALUE_LENGTH int 8192); 0x2000 )
+ (field (attrs private static final ) PREFS_PERM [object java/lang/RuntimePermission] )
+ (field (attrs private static final ) factory [object java/util/prefs/PreferencesFactory] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 13)
+  (catch java/lang/Exception from l1097d6 to l1097ee using l10981c)
+  (catch java/io/IOException from l109798 to l1097c8 using l109838)
+  (catch java/lang/Exception from l109798 to l1097c8 using l1097fc)
+  (catch java/io/IOException from l109768 to l109798 using l1097f4)
+  (catch java/lang/Exception from l109768 to l109798 using l1097fc)
+  (catch java/lang/Exception from l10974a to l109762 using l1097fc)
+  (const-string v12 "prefs.10")
+  (const-string v11 "META-INF/services/java.util.prefs.PreferencesFactory")
+  (line 133)
+  (new-instance v9 java/lang/RuntimePermission)
+  (const-string v10 "preferences")
+  (invoke-direct {v9 v10} java/lang/RuntimePermission/<init> [object java/lang/String] )
+  (sput-object v9 java/util/prefs/Preferences.PREFS_PERM [object java/lang/RuntimePermission])
+  (line 147)
+  (new-instance v9 java/util/prefs/Preferences$1)
+  (invoke-direct {v9} java/util/prefs/Preferences$1/<init> )
+  (invoke-static {v9} java/security/AccessController/doPrivileged [object java/security/PrivilegedAction] )
+  (move-result-object v4)
+  (check-cast v4 [object java/lang/String])
+  (line 182)
+  (invoke-static {} java/lang/Thread/currentThread )
+  (nop )
+  (move-result-object v9)
+  (invoke-virtual-quick {v9} java/lang/Thread/getContextClassLoader )
+  (move-result-object v6)
+  (line 183)
+  (if-nez v6 l109744)
+  (line 184)
+  (invoke-static {} java/lang/ClassLoader/getSystemClassLoader )
+  (nop )
+  (move-result-object v6)
+  (label l109744)
+  (line 186)
+  (if-nez v4 l1097ce)
+  (line 187)
+  (const/4 v3 0)
+  (label l10974a)
+  (line 189)
+  (const-string v9 "META-INF/services/java.util.prefs.PreferencesFactory")
+  (invoke-virtual-quick {v6 v9} java/lang/ClassLoader/getResources [object java/lang/String] )
+  (move-result-object v3)
+  (line 190)
+  (const/4 v7 0)
+  (label l109758)
+  (line 191)
+  (const/4 v1 0)
+  (label l10975a)
+  (move-object v8 v7)
+  (label l10975c)
+  (line 192)
+  (invoke-interface {v3} java/util/Enumeration/hasMoreElements )
+  (label l109762)
+  (move-result v9)
+  (if-eqz v9 l10983c)
+  (label l109768)
+  (line 194)
+  (invoke-interface {v3} java/util/Enumeration/nextElement )
+  (move-result-object v0)
+  (check-cast v0 [object java/net/URL])
+  (invoke-virtual-quick {v0} java/net/URL/openStream )
+  (move-result-object v5)
+  (label l10977c)
+  (line 196)
+  (new-instance v7 java/io/BufferedReader)
+  (new-instance v9 java/io/InputStreamReader)
+  (const-string v10 "UTF-8")
+  (invoke-direct {v9 v5 v10} java/io/InputStreamReader/<init> [object java/io/InputStream] [object java/lang/String] )
+  (const/16 v10 8192)
+  (invoke-direct {v7 v9 v10} java/io/BufferedReader/<init> [object java/io/Reader] int )
+  (label l109798)
+  (line 198)
+  (invoke-virtual-quick {v7} java/io/BufferedReader/readLine )
+  (move-result-object v4)
+  (line 199)
+  (const-string v9 "#")
+  (invoke-virtual-quick {v4 v9} java/lang/String/indexOf [object java/lang/String] )
+  (move-result v1)
+  (line 200)
+  (if-lez v1 l1097c2)
+  (line 201)
+  (const/4 v9 0)
+  (invoke-virtual-quick {v4 v9 v1} java/lang/String/substring int int )
+  (move-result-object v9)
+  (invoke-virtual-quick {v9} java/lang/String/trim )
+  (move-result-object v4)
+  (label l1097c2)
+  (line 203)
+  (execute-inline {v4} Ljava/lang/String/length )
+  (label l1097c8)
+  (move-result v9)
+  (if-lez v9 l1097f0)
+  (label l1097ce)
+  (line 218)
+  (if-nez v4 l1097d6)
+  (line 219)
+  (const-string v4 "java.util.prefs.FilePreferencesFactoryImpl")
+  (label l1097d6)
+  (line 223)
+  (invoke-virtual-quick {v6 v4} java/lang/ClassLoader/loadClass [object java/lang/String] )
+  (move-result-object v0)
+  (label l1097de)
+  (line 224)
+  (invoke-virtual-quick {v0} java/lang/Class/newInstance )
+  (move-result-object v0)
+  (label l1097e6)
+  (check-cast v0 [object java/util/prefs/PreferencesFactory])
+  (sput-object v0 java/util/prefs/Preferences.factory [object java/util/prefs/PreferencesFactory])
+  (label l1097ee)
+  (line 230)
+  (return-void )
+  (label l1097f0)
+  (move-object v8 v7)
+  (label l1097f2)
+  (line 208)
+  (goto l10975c)
+  (label l1097f4)
+  (line 206)
+  (move-exception v9)
+  (move-object v7 v8)
+  (label l1097f8)
+  (move-object v8 v7)
+  (label l1097fa)
+  (line 208)
+  (goto l10975c)
+  (label l1097fc)
+  (line 210)
+  (move-exception v9)
+  (move-object v2 v9)
+  (label l109800)
+  (line 213)
+  (new-instance v9 java/lang/InternalError)
+  (const-string v10 "prefs.10")
+  (const-string v10 "META-INF/services/java.util.prefs.PreferencesFactory")
+  (invoke-static {v12 v11 v2} org/apache/harmony/prefs/internal/nls/Messages/getString [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v10)
+  (invoke-direct {v9 v10} java/lang/InternalError/<init> [object java/lang/String] )
+  (throw v9)
+  (label l10981c)
+  (line 225)
+  (move-exception v9)
+  (move-object v2 v9)
+  (label l109820)
+  (line 227)
+  (new-instance v9 java/lang/InternalError)
+  (const-string v10 "prefs.10")
+  (invoke-static {v12 v4 v2} org/apache/harmony/prefs/internal/nls/Messages/getString [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v10)
+  (invoke-direct {v9 v10} java/lang/InternalError/<init> [object java/lang/String] )
+  (throw v9)
+  (label l109838)
+  (line 206)
+  (move-exception v9)
+  (goto l1097f8)
+  (label l10983c)
+  (move-object v7 v8)
+  (label l10983e)
+  (goto l1097ce)
+ )
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/prefs/Preferences])
+  (line 236)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 237)
+  (return-void )
+ )
+
+(method (attrs private static ) checkSecurity()void
+  (limit registers 2)
+  (line 942)
+  (invoke-static {} java/lang/System/getSecurityManager )
+  (nop )
+  (move-result-object v0)
+  (line 943)
+  (if-eqz v0 l1098ba)
+  (line 944)
+  (sget-object v1 java/util/prefs/Preferences.PREFS_PERM [object java/lang/RuntimePermission])
+  (invoke-virtual-quick {v0 v1} java/lang/SecurityManager/checkPermission [object java/security/Permission] )
+  (label l1098ba)
+  (line 947)
+  (return-void )
+ )
+
+(method (attrs private static ) getNodeName([object java/lang/Class] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Ljava/lang/String;")
+  )
+  (limit registers 6)
+  ; parameter[0] : v5 ([object java/lang/Class])
+  (line 976)
+  (invoke-virtual-quick {v5} java/lang/Class/getPackage )
+  (move-result-object v0)
+  (line 977)
+  (if-nez v0 l1098de)
+  (line 978)
+  (const-string v1 "/<unnamed>")
+  (label l1098dc)
+  (line 980)
+  (return-object v1)
+  (label l1098de)
+  (new-instance v1 java/lang/StringBuilder)
+  (invoke-direct {v1} java/lang/StringBuilder/<init> )
+  (const-string v2 "/")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v0} java/lang/Package/getName )
+  (move-result-object v2)
+  (const/16 v3 46)
+  (const/16 v4 47)
+  (invoke-virtual-quick {v2 v3 v4} java/lang/String/replace char char )
+  (move-result-object v2)
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v1} java/lang/StringBuilder/toString )
+  (move-result-object v1)
+  (goto l1098dc)
+ )
+
+(method (attrs public static ) importPreferences([object java/io/InputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/InvalidPreferencesFormatException]  [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/io/InputStream])
+  (line 559)
+  (invoke-static {} java/util/prefs/Preferences/checkSecurity )
+  (nop )
+  (line 560)
+  (if-nez v2 l109952)
+  (line 562)
+  (new-instance v0 java/net/MalformedURLException)
+  (const-string v1 "prefs.0")
+  (invoke-static {v1} org/apache/harmony/prefs/internal/nls/Messages/getString [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/net/MalformedURLException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l109952)
+  (line 564)
+  (invoke-static {v2} java/util/prefs/XMLParser/importPrefs [object java/io/InputStream] )
+  (line 565)
+  (return-void )
+ )
+
+(method (attrs public static ) systemNodeForPackage([object java/lang/Class] )[object java/util/prefs/Preferences]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Ljava/util/prefs/Preferences;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 923)
+  (invoke-static {} java/util/prefs/Preferences/checkSecurity )
+  (nop )
+  (line 924)
+  (sget-object v0 java/util/prefs/Preferences.factory [object java/util/prefs/PreferencesFactory])
+  (invoke-interface {v0} java/util/prefs/PreferencesFactory/systemRoot )
+  (move-result-object v0)
+  (invoke-static {v2} java/util/prefs/Preferences/getNodeName [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v0 v1} java/util/prefs/Preferences/node [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) systemRoot()[object java/util/prefs/Preferences]
+  (limit registers 1)
+  (line 936)
+  (invoke-static {} java/util/prefs/Preferences/checkSecurity )
+  (nop )
+  (line 937)
+  (sget-object v0 java/util/prefs/Preferences.factory [object java/util/prefs/PreferencesFactory])
+  (invoke-interface {v0} java/util/prefs/PreferencesFactory/systemRoot )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) userNodeForPackage([object java/lang/Class] )[object java/util/prefs/Preferences]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Ljava/util/prefs/Preferences;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 970)
+  (invoke-static {} java/util/prefs/Preferences/checkSecurity )
+  (nop )
+  (line 971)
+  (sget-object v0 java/util/prefs/Preferences.factory [object java/util/prefs/PreferencesFactory])
+  (invoke-interface {v0} java/util/prefs/PreferencesFactory/userRoot )
+  (move-result-object v0)
+  (invoke-static {v2} java/util/prefs/Preferences/getNodeName [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-virtual-quick {v0 v1} java/util/prefs/Preferences/node [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) userRoot()[object java/util/prefs/Preferences]
+  (limit registers 1)
+  (line 992)
+  (invoke-static {} java/util/prefs/Preferences/checkSecurity )
+  (nop )
+  (line 993)
+  (sget-object v0 java/util/prefs/Preferences.factory [object java/util/prefs/PreferencesFactory])
+  (invoke-interface {v0} java/util/prefs/PreferencesFactory/userRoot )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public abstract ) absolutePath()[object java/lang/String]
+)
+
+(method (attrs public abstract ) addNodeChangeListener([object java/util/prefs/NodeChangeListener] )void
+)
+
+(method (attrs public abstract ) addPreferenceChangeListener([object java/util/prefs/PreferenceChangeListener] )void
+)
+
+(method (attrs public abstract ) childrenNames()[array [object java/lang/String]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) clear()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) exportNode([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) exportSubtree([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException]  [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) flush()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) get([object java/lang/String] [object java/lang/String] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getBoolean([object java/lang/String] boolean )boolean
+)
+
+(method (attrs public abstract ) getByteArray([object java/lang/String] [array byte] )[array byte]
+)
+
+(method (attrs public abstract ) getDouble([object java/lang/String] double )double
+)
+
+(method (attrs public abstract ) getFloat([object java/lang/String] float )float
+)
+
+(method (attrs public abstract ) getInt([object java/lang/String] int )int
+)
+
+(method (attrs public abstract ) getLong([object java/lang/String] long )long
+)
+
+(method (attrs public abstract ) isUserNode()boolean
+)
+
+(method (attrs public abstract ) keys()[array [object java/lang/String]]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) name()[object java/lang/String]
+)
+
+(method (attrs public abstract ) node([object java/lang/String] )[object java/util/prefs/Preferences]
+)
+
+(method (attrs public abstract ) nodeExists([object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) parent()[object java/util/prefs/Preferences]
+)
+
+(method (attrs public abstract ) put([object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) putBoolean([object java/lang/String] boolean )void
+)
+
+(method (attrs public abstract ) putByteArray([object java/lang/String] [array byte] )void
+)
+
+(method (attrs public abstract ) putDouble([object java/lang/String] double )void
+)
+
+(method (attrs public abstract ) putFloat([object java/lang/String] float )void
+)
+
+(method (attrs public abstract ) putInt([object java/lang/String] int )void
+)
+
+(method (attrs public abstract ) putLong([object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) remove([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) removeNode()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) removeNodeChangeListener([object java/util/prefs/NodeChangeListener] )void
+)
+
+(method (attrs public abstract ) removePreferenceChangeListener([object java/util/prefs/PreferenceChangeListener] )void
+)
+
+(method (attrs public abstract ) sync()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/util/prefs/BackingStoreException])
+  )
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+)

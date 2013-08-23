@@ -1,0 +1,56 @@
+(class (attrs public ) java/util/IllegalFormatConversionException
+ (super java/util/IllegalFormatException)
+ (source "IllegalFormatConversionException.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public ) <init>(char [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(C"  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/IllegalFormatConversionException])
+  ; parameter[0] : v3 (char)
+  ; parameter[1] : v4 ([object java/lang/Class])
+  (line 6)
+  (invoke-direct {v2} java/util/IllegalFormatException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getArgumentClass()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/IllegalFormatConversionException])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getConversion()char
+  (limit registers 3)
+  ; this: v2 ([object java/util/IllegalFormatConversionException])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMessage()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/IllegalFormatConversionException])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

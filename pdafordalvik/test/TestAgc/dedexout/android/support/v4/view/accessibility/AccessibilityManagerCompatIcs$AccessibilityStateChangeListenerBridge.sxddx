@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge
+ (super java/lang/Object)
+ (source "AccessibilityManagerCompatIcs.java")
+
+
+(method (attrs public abstract ) onAccessibilityStateChanged(boolean )void
+)
+
+)

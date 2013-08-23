@@ -1,0 +1,31 @@
+(class (attrs synchronized ) java/text/MessageFormat$FieldContainer
+ (super java/lang/Object)
+ (source "MessageFormat.java")
+
+ (field (attrs ) attribute [object java/text/AttributedCharacterIterator$Attribute] )
+ (field (attrs ) end int )
+ (field (attrs ) start int )
+ (field (attrs ) value [object java/lang/Object] )
+
+(method (attrs public ) <init>(int int [object java/text/AttributedCharacterIterator$Attribute] [object java/lang/Object] )void
+  (limit registers 5)
+  ; this: v0 ([object java/text/MessageFormat$FieldContainer])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/text/AttributedCharacterIterator$Attribute])
+  ; parameter[3] : v4 ([object java/lang/Object])
+  (line 661)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 662)
+  (iput-quick v1 v0 java/text/MessageFormat$FieldContainer.start int)
+  (line 663)
+  (iput-quick v2 v0 java/text/MessageFormat$FieldContainer.end int)
+  (line 664)
+  (iput-object-quick v3 v0 java/text/MessageFormat$FieldContainer.attribute [object java/text/AttributedCharacterIterator$Attribute])
+  (line 665)
+  (iput-object-quick v4 v0 java/text/MessageFormat$FieldContainer.value [object java/lang/Object])
+  (line 666)
+  (return-void )
+ )
+
+)

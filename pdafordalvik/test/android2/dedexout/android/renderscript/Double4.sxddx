@@ -1,0 +1,36 @@
+(class (attrs public ) android/renderscript/Double4
+ (super java/lang/Object)
+ (source "Double4.java")
+
+ (field (attrs public ) w double )
+ (field (attrs public ) x double )
+ (field (attrs public ) y double )
+ (field (attrs public ) z double )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Double4])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(double double double double )void
+  (limit registers 11)
+  ; this: v2 ([object android/renderscript/Double4])
+  ; parameter[0] : v3 (double)
+  ; parameter[1] : v5 (double)
+  ; parameter[2] : v7 (double)
+  ; parameter[3] : v9 (double)
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

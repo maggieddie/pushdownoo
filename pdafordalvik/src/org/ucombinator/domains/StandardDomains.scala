@@ -90,7 +90,7 @@ object StandardDomains {
    lazy  val size = set.size
     def isEmpty = size ==0
     lazy val toList = set.toList
-
+    lazy val toSet = set
     def + (v : Value) : D =   new StdD(set + v)
 
     def join (otherD : D) : D = {

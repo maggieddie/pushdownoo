@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/net/MalformedURLException
+ (super java/io/IOException)
+ (source "MalformedURLException.java")
+
+ (field (attrs private static final ) serialVersionUID long -33629257); 0xfdfedbb7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/net/MalformedURLException])
+  (line 36)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/net/MalformedURLException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 47)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 48)
+  (return-void )
+ )
+
+)

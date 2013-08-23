@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/BufferUnderflowException
+ (super java/lang/RuntimeException)
+ (source "BufferUnderflowException.java")
+
+ (field (attrs private static final ) serialVersionUID long -117604658); 0xf8fd7ece )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/BufferUnderflowException])
+  (line 36)
+  (invoke-direct {v0} java/lang/RuntimeException/<init> )
+  (line 37)
+  (return-void )
+ )
+
+)

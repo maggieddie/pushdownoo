@@ -1,0 +1,29 @@
+(class (attrs public ) android/nfc/FormatException
+ (super java/lang/Exception)
+ (source "FormatException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/nfc/FormatException])
+  (line 5)
+  (invoke-direct {v2} java/lang/Exception/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object android/nfc/FormatException])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 6)
+  (invoke-direct {v2} java/lang/Exception/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

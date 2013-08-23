@@ -1,0 +1,12 @@
+(interface (attrs abstract ) android/support/v4/view/VelocityTrackerCompat$VelocityTrackerVersionImpl
+ (super java/lang/Object)
+ (source "VelocityTrackerCompat.java")
+
+
+(method (attrs public abstract ) getXVelocity([object android/view/VelocityTracker] int )float
+)
+
+(method (attrs public abstract ) getYVelocity([object android/view/VelocityTracker] int )float
+)
+
+)

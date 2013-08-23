@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) android/bluetooth/BluetoothProfile
+ (super java/lang/Object)
+ (source "BluetoothProfile.java")
+
+ (field (attrs public static final ) A2DP int 2); 0x2 )
+ (field (attrs public static final ) EXTRA_PREVIOUS_STATE [object java/lang/String] "android.bluetooth.profile.extra.PREVIOUS_STATE" )
+ (field (attrs public static final ) EXTRA_STATE [object java/lang/String] "android.bluetooth.profile.extra.STATE" )
+ (field (attrs public static final ) HEADSET int 1); 0x1 )
+ (field (attrs public static final ) HEALTH int 3); 0x3 )
+ (field (attrs public static final ) STATE_CONNECTED int 2); 0x2 )
+ (field (attrs public static final ) STATE_CONNECTING int 1); 0x1 )
+ (field (attrs public static final ) STATE_DISCONNECTED int 0); 0x0 )
+ (field (attrs public static final ) STATE_DISCONNECTING int 3); 0x3 )
+
+(method (attrs public abstract ) getConnectedDevices()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Landroid/bluetooth/BluetoothDevice;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getConnectionState([object android/bluetooth/BluetoothDevice] )int
+)
+
+(method (attrs public abstract ) getDevicesMatchingConnectionStates([array int] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([I)"  "Ljava/util/List"  "<"  "Landroid/bluetooth/BluetoothDevice;"  ">;")
+  )
+)
+
+)

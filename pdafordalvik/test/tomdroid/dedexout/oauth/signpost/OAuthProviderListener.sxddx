@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) oauth/signpost/OAuthProviderListener
+ (super java/lang/Object)
+ (source "OAuthProviderListener.java")
+
+
+(method (attrs public abstract ) onResponseReceived([object oauth/signpost/http/HttpRequest] [object oauth/signpost/http/HttpResponse] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) prepareRequest([object oauth/signpost/http/HttpRequest] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public abstract ) prepareSubmission([object oauth/signpost/http/HttpRequest] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+)

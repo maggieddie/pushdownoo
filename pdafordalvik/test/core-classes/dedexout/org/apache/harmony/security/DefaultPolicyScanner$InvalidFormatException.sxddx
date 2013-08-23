@@ -1,0 +1,17 @@
+(class (attrs public synchronized ) org/apache/harmony/security/DefaultPolicyScanner$InvalidFormatException
+ (super java/lang/Exception)
+ (source "DefaultPolicyScanner.java")
+
+ (field (attrs private static final ) serialVersionUID long -195297297); 0xf45bffef )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/DefaultPolicyScanner$InvalidFormatException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 87)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 88)
+  (return-void )
+ )
+
+)

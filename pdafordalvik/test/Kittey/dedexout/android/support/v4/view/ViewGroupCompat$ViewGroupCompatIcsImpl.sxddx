@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/view/ViewGroupCompat$ViewGroupCompatIcsImpl
+ (super android/support/v4/view/ViewGroupCompat$ViewGroupCompatStubImpl)
+ (source "ViewGroupCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewGroupCompat$ViewGroupCompatIcsImpl])
+  (line 42)
+  (invoke-direct {v0} android/support/v4/view/ViewGroupCompat$ViewGroupCompatStubImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onRequestSendAccessibilityEvent([object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+  (limit registers 5)
+  ; this: v1 ([object android/support/v4/view/ViewGroupCompat$ViewGroupCompatIcsImpl])
+  ; parameter[0] : v2 ([object android/view/ViewGroup])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 46)
+  (invoke-static {v2 v3 v4} android/support/v4/view/ViewGroupCompatIcs/onRequestSendAccessibilityEvent [object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+)

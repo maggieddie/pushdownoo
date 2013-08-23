@@ -1,0 +1,49 @@
+(interface (attrs public abstract ) java/util/jar/Pack200$Packer
+ (super java/lang/Object)
+ (source "Pack200.java")
+
+ (field (attrs public static final ) CLASS_ATTRIBUTE_PFX [object java/lang/String] "pack.class.attribute." )
+ (field (attrs public static final ) CODE_ATTRIBUTE_PFX [object java/lang/String] "pack.code.attribute." )
+ (field (attrs public static final ) DEFLATE_HINT [object java/lang/String] "pack.deflate.hint" )
+ (field (attrs public static final ) EFFORT [object java/lang/String] "pack.effort" )
+ (field (attrs public static final ) ERROR [object java/lang/String] "error" )
+ (field (attrs public static final ) FALSE [object java/lang/String] "false" )
+ (field (attrs public static final ) FIELD_ATTRIBUTE_PFX [object java/lang/String] "pack.field.attribute." )
+ (field (attrs public static final ) KEEP [object java/lang/String] "keep" )
+ (field (attrs public static final ) KEEP_FILE_ORDER [object java/lang/String] "pack.keep.file.order" )
+ (field (attrs public static final ) LATEST [object java/lang/String] "latest" )
+ (field (attrs public static final ) METHOD_ATTRIBUTE_PFX [object java/lang/String] "pack.method.attribute." )
+ (field (attrs public static final ) MODIFICATION_TIME [object java/lang/String] "pack.modification.time" )
+ (field (attrs public static final ) PASS [object java/lang/String] "pass" )
+ (field (attrs public static final ) PASS_FILE_PFX [object java/lang/String] "pack.pass.file." )
+ (field (attrs public static final ) PROGRESS [object java/lang/String] "pack.progress" )
+ (field (attrs public static final ) SEGMENT_LIMIT [object java/lang/String] "pack.segment.limit" )
+ (field (attrs public static final ) STRIP [object java/lang/String] "strip" )
+ (field (attrs public static final ) TRUE [object java/lang/String] "true" )
+ (field (attrs public static final ) UNKNOWN_ATTRIBUTE [object java/lang/String] "pack.unknown.attribute" )
+
+(method (attrs public abstract ) addPropertyChangeListener([object java/beans/PropertyChangeListener] )void
+)
+
+(method (attrs public abstract ) pack([object java/util/jar/JarFile] [object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) pack([object java/util/jar/JarInputStream] [object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) properties()[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/SortedMap"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) removePropertyChangeListener([object java/beans/PropertyChangeListener] )void
+)
+
+)

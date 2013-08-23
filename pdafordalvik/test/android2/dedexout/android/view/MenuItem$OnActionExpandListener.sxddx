@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/view/MenuItem$OnActionExpandListener
+ (super java/lang/Object)
+ (source "MenuItem.java")
+
+
+(method (attrs public abstract ) onMenuItemActionCollapse([object android/view/MenuItem] )boolean
+)
+
+(method (attrs public abstract ) onMenuItemActionExpand([object android/view/MenuItem] )boolean
+)
+
+)

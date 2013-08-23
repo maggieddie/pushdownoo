@@ -1,0 +1,37 @@
+(class (attrs public synchronized ) org/apache/harmony/security/x509/Time
+ (super java/lang/Object)
+ (source "Time.java")
+
+ (field (attrs public static final ) ASN1 [object org/apache/harmony/security/asn1/ASN1Choice] null )
+ (field (attrs private static final ) JAN_01_2050 long -832769461); 0xce5cf24b )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 4)
+  (line 48)
+  (new-instance v0 org/apache/harmony/security/x509/Time$1)
+  (const/4 v1 2)
+  (new-array v1 v1 [array [object org/apache/harmony/security/asn1/ASN1Type]])
+  (const/4 v2 0)
+  (invoke-static {} org/apache/harmony/security/asn1/ASN1GeneralizedTime/getInstance )
+  (nop )
+  (move-result-object v3)
+  (aput-object v3 v1 v2)
+  (const/4 v2 1)
+  (invoke-static {} org/apache/harmony/security/asn1/ASN1UTCTime/getInstance )
+  (nop )
+  (move-result-object v3)
+  (aput-object v3 v1 v2)
+  (invoke-direct {v0 v1} org/apache/harmony/security/x509/Time$1/<init> [array [object org/apache/harmony/security/asn1/ASN1Type]] )
+  (sput-object v0 org/apache/harmony/security/x509/Time.ASN1 [object org/apache/harmony/security/asn1/ASN1Choice])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/security/x509/Time])
+  (line 44)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

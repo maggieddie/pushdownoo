@@ -1,0 +1,16 @@
+(class (attrs public final ) com/example/test/R$style
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) AppBaseTheme int 2131034112); 0x7f050000 )
+ (field (attrs public static final ) AppTheme int 2131034113); 0x7f050001 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/example/test/R$style])
+  (line 30)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

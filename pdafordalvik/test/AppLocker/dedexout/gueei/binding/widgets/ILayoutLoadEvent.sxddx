@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) gueei/binding/widgets/ILayoutLoadEvent
+ (super java/lang/Object)
+ (source "ILayoutLoadEvent.java")
+
+
+(method (attrs public abstract ) setDatasource([array [object java/lang/Object]] )void
+)
+
+(method (attrs public abstract ) setLayoutId(int )void
+)
+
+)

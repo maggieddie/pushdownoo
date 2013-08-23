@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) gueei/binding/cursor/ICursorRowModel
+ (super java/lang/Object)
+ (source "ICursorRowModel.java")
+ (implements gueei/binding/collections/ILazyLoadRowModel)
+
+
+(method (attrs public abstract ) getId(int )long
+)
+
+(method (attrs public abstract ) onInitialize()void
+)
+
+)

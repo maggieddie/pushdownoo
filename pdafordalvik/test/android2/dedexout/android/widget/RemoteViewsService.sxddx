@@ -1,0 +1,31 @@
+(class (attrs public abstract ) android/widget/RemoteViewsService
+ (super android/app/Service)
+ (source "RemoteViewsService.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/widget/RemoteViewsService])
+  (line 17)
+  (invoke-direct {v2} android/app/Service/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) onBind([object android/content/Intent] )[object android/os/IBinder]
+  (limit registers 4)
+  ; this: v2 ([object android/widget/RemoteViewsService])
+  ; parameter[0] : v3 ([object android/content/Intent])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) onGetViewFactory([object android/content/Intent] )[object android/widget/RemoteViewsService$RemoteViewsFactory]
+)
+
+)

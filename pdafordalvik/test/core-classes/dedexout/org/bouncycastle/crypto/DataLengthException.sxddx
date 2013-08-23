@@ -1,0 +1,25 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/DataLengthException
+ (super org/bouncycastle/crypto/RuntimeCryptoException)
+ (source "DataLengthException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle/crypto/DataLengthException])
+  (line 16)
+  (invoke-direct {v0} org/bouncycastle/crypto/RuntimeCryptoException/<init> )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle/crypto/DataLengthException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 27)
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/RuntimeCryptoException/<init> [object java/lang/String] )
+  (line 28)
+  (return-void )
+ )
+
+)

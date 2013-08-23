@@ -1,0 +1,93 @@
+(class (attrs ) android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl
+ (super java/lang/Object)
+ (source "TrafficStatsCompat.java")
+ (implements android/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl)
+
+ (field (attrs private ) mThreadSocketTags [object java/lang/ThreadLocal] )
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  (line 40)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 45)
+  (new-instance v0 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$1)
+  (invoke-direct {v0 v1} android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$1/<init> [object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl] )
+  (iput-object v0 v1 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl.mThreadSocketTags [object java/lang/ThreadLocal])
+  (return-void )
+ )
+
+(method (attrs public ) clearThreadStatsTag()void
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  (line 54)
+  (iget-object v0 v2 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl.mThreadSocketTags [object java/lang/ThreadLocal])
+  (invoke-virtual {v0} java/lang/ThreadLocal/get )
+  (move-result-object v0)
+  (check-cast v0 [object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags])
+  (const/4 v1 15)
+  (iput v1 v0 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags.statsTag int)
+  (line 55)
+  (return-void )
+)
+
+(method (attrs public ) getThreadStatsTag()int
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  (line 59)
+  (iget-object v0 v1 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl.mThreadSocketTags [object java/lang/ThreadLocal])
+  (invoke-virtual {v0} java/lang/ThreadLocal/get )
+  (move-result-object v0)
+  (check-cast v0 [object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags])
+  (iget v0 v0 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags.statsTag int)
+  (return v0)
+)
+
+(method (attrs public ) incrementOperationCount(int )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  ; parameter[0] : v1 (int)
+  (line 64)
+  (return-void )
+)
+
+(method (attrs public ) incrementOperationCount(int int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 68)
+  (return-void )
+)
+
+(method (attrs public ) setThreadStatsTag(int )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  ; parameter[0] : v2 (int)
+  (line 72)
+  (iget-object v0 v1 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl.mThreadSocketTags [object java/lang/ThreadLocal])
+  (invoke-virtual {v0} java/lang/ThreadLocal/get )
+  (move-result-object v0)
+  (check-cast v0 [object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags])
+  (iput v2 v0 android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags.statsTag int)
+  (line 73)
+  (return-void )
+)
+
+(method (attrs public ) tagSocket([object java/net/Socket] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  ; parameter[0] : v1 ([object java/net/Socket])
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) untagSocket([object java/net/Socket] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl])
+  ; parameter[0] : v1 ([object java/net/Socket])
+  (line 81)
+  (return-void )
+)
+
+)

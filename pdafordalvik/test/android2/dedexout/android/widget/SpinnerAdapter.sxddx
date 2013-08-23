@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/widget/SpinnerAdapter
+ (super java/lang/Object)
+ (source "SpinnerAdapter.java")
+ (implements android/widget/Adapter)
+
+
+(method (attrs public abstract ) getDropDownView(int [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+)
+
+)

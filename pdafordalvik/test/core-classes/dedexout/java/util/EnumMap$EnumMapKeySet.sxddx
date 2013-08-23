@@ -1,0 +1,86 @@
+(class (attrs synchronized ) java/util/EnumMap$EnumMapKeySet
+ (super java/util/AbstractSet)
+ (source "EnumMap.java")
+
+ (field (attrs private final ) enumMap [object java/util/EnumMap] )
+
+(method (attrs ) <init>([object java/util/EnumMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/EnumMap"  "<TKT;TVT;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/EnumMap$EnumMapKeySet])
+  ; parameter[0] : v1 ([object java/util/EnumMap])
+  (line 192)
+  (invoke-direct {v0} java/util/AbstractSet/<init> )
+  (line 193)
+  (iput-object-quick v1 v0 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (line 194)
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/EnumMap$EnumMapKeySet])
+  (line 198)
+  (iget-object-quick v0 v1 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (invoke-virtual-quick {v0} java/util/EnumMap/clear )
+  (line 199)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/EnumMap$EnumMapKeySet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 203)
+  (iget-object-quick v0 v1 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (invoke-virtual-quick {v0 v2} java/util/EnumMap/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 4)
+  ; this: v3 ([object java/util/EnumMap$EnumMapKeySet])
+  (line 209)
+  (new-instance v0 java/util/EnumMap$EnumMapIterator)
+  (new-instance v1 java/util/EnumMap$EnumMapKeySet$1)
+  (invoke-direct {v1 v3} java/util/EnumMap$EnumMapKeySet$1/<init> [object java/util/EnumMap$EnumMapKeySet] )
+  (iget-object-quick v2 v3 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (invoke-direct {v0 v1 v2} java/util/EnumMap$EnumMapIterator/<init> [object java/util/MapEntry$Type] [object java/util/EnumMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/EnumMap$EnumMapKeySet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 220)
+  (invoke-virtual-quick {v1 v2} java/util/EnumMap$EnumMapKeySet/contains [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l11aee6)
+  (line 221)
+  (iget-object-quick v0 v1 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (invoke-virtual-quick {v0 v2} java/util/EnumMap/remove [object java/lang/Object] )
+  (line 222)
+  (const/4 v0 1)
+  (label l11aee4)
+  (line 224)
+  (return v0)
+  (label l11aee6)
+  (const/4 v0 0)
+  (goto l11aee4)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/EnumMap$EnumMapKeySet])
+  (line 229)
+  (iget-object-quick v0 v1 java/util/EnumMap$EnumMapKeySet.enumMap [object java/util/EnumMap])
+  (invoke-virtual-quick {v0} java/util/EnumMap/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

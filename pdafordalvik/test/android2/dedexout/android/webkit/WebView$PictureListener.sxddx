@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) android/webkit/WebView$PictureListener
+ (super java/lang/Object)
+ (source "WebView.java")
+
+
+(method (attrs public abstract ) onNewPicture([object android/webkit/WebView] [object android/graphics/Picture] )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+)

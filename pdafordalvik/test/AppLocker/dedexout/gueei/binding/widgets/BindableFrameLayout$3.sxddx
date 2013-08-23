@@ -1,0 +1,71 @@
+(class (attrs ) gueei/binding/widgets/BindableFrameLayout$3
+ (super gueei/binding/ViewAttribute)
+ (source "BindableFrameLayout.java")
+
+ (field (attrs final ) this$0 [object gueei/binding/widgets/BindableFrameLayout] )
+
+(method (attrs ) <init>([object gueei/binding/widgets/BindableFrameLayout] [object java/lang/Class] [object gueei/binding/widgets/BindableFrameLayout] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v0 ([object gueei/binding/widgets/BindableFrameLayout$3])
+  ; parameter[0] : v1 ([object gueei/binding/widgets/BindableFrameLayout])
+  ; parameter[1] : v2 ([object java/lang/Class])
+  ; parameter[2] : v3 ([object gueei/binding/widgets/BindableFrameLayout])
+  ; parameter[3] : v4 ([object java/lang/String])
+  (line 1)
+  (iput-object v1 v0 gueei/binding/widgets/BindableFrameLayout$3.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (line 82)
+  (invoke-direct {v0 v2 v3 v4} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (return-void )
+ )
+
+(method (attrs static ) access$1([object gueei/binding/widgets/BindableFrameLayout$3] )[object gueei/binding/widgets/BindableFrameLayout]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object gueei/binding/widgets/BindableFrameLayout$3])
+  (line 82)
+  (iget-object v0 v1 gueei/binding/widgets/BindableFrameLayout$3.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (return-object v0)
+ )
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 7)
+  ; this: v5 ([object gueei/binding/widgets/BindableFrameLayout$3])
+  ; parameter[0] : v6 ([object java/lang/Object])
+  (line 86)
+  (instance-of v1 v6 gueei/binding/Command)
+  (if-eqz v1 l2983a)
+  (move-object v0 v6)
+  (line 87)
+  (check-cast v0 [object gueei/binding/Command])
+  (label l2981a)
+  (line 88)
+  (iget-object v1 v5 gueei/binding/widgets/BindableFrameLayout$3.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (const/4 v2 1)
+  (new-array v2 v2 [array [object java/lang/Object]])
+  (const/4 v3 0)
+  (new-instance v4 gueei/binding/widgets/BindableFrameLayout$3$1)
+  (invoke-direct {v4 v5} gueei/binding/widgets/BindableFrameLayout$3$1/<init> [object gueei/binding/widgets/BindableFrameLayout$3] )
+  (aput-object v4 v2 v3)
+  (invoke-virtual {v0 v1 v2} gueei/binding/Command/Invoke [object android/view/View] [array [object java/lang/Object]] )
+  (label l2983a)
+  (line 99)
+  (return-void )
+)
+
+(method (attrs public ) get()[object gueei/binding/Command]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/widgets/BindableFrameLayout$3])
+  (line 103)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/widgets/BindableFrameLayout$3])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/widgets/BindableFrameLayout$3/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

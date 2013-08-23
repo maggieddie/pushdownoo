@@ -1,0 +1,76 @@
+(class (attrs public abstract ) android/service/textservice/SpellCheckerService$Session
+ (super java/lang/Object)
+ (source "SpellCheckerService.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  (line 7)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getBundle()[object android/os/Bundle]
+  (limit registers 3)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getLocale()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onCancel()void
+  (limit registers 3)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onClose()void
+  (limit registers 3)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) onCreate()void
+)
+
+(method (attrs public abstract ) onGetSuggestions([object android/view/textservice/TextInfo] int )[object android/view/textservice/SuggestionsInfo]
+)
+
+(method (attrs public ) onGetSuggestionsMultiple([array [object android/view/textservice/TextInfo]] int boolean )[array [object android/view/textservice/SuggestionsInfo]]
+  (limit registers 6)
+  ; this: v2 ([object android/service/textservice/SpellCheckerService$Session])
+  ; parameter[0] : v3 ([array [object android/view/textservice/TextInfo]])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (boolean)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

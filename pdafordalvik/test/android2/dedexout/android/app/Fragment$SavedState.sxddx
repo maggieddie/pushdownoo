@@ -1,0 +1,49 @@
+(class (attrs public ) android/app/Fragment$SavedState
+ (super java/lang/Object)
+ (source "Fragment.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$ClassLoaderCreator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 12)
+  (const/4 v0 0)
+  (sput-object v0 android/app/Fragment$SavedState.CREATOR [object android/os/Parcelable$ClassLoaderCreator])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/app/Fragment$SavedState])
+  (line 8)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/app/Fragment$SavedState])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/app/Fragment$SavedState])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,40 @@
+(class (attrs public ) java/nio/channels/FileChannel$MapMode
+ (super java/lang/Object)
+ (source "FileChannel.java")
+
+ (field (attrs public static final ) PRIVATE [object java/nio/channels/FileChannel$MapMode] )
+ (field (attrs public static final ) READ_ONLY [object java/nio/channels/FileChannel$MapMode] )
+ (field (attrs public static final ) READ_WRITE [object java/nio/channels/FileChannel$MapMode] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 13)
+  (sput-object v0 java/nio/channels/FileChannel$MapMode.PRIVATE [object java/nio/channels/FileChannel$MapMode])
+  (sput-object v0 java/nio/channels/FileChannel$MapMode.READ_ONLY [object java/nio/channels/FileChannel$MapMode])
+  (sput-object v0 java/nio/channels/FileChannel$MapMode.READ_WRITE [object java/nio/channels/FileChannel$MapMode])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/FileChannel$MapMode])
+  (line 8)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/FileChannel$MapMode])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

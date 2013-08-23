@@ -1,0 +1,223 @@
+(class (attrs public ) android/database/MergeCursor
+ (super android/database/AbstractCursor)
+ (source "MergeCursor.java")
+
+
+(method (attrs public ) <init>([array [object android/database/Cursor]] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 ([array [object android/database/Cursor]])
+  (line 5)
+  (invoke-direct {v2} android/database/AbstractCursor/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) close()void
+  (limit registers 3)
+  ; this: v2 ([object android/database/MergeCursor])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) deactivate()void
+  (limit registers 3)
+  ; this: v2 ([object android/database/MergeCursor])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBlob(int )[array byte]
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getColumnNames()[array [object java/lang/String]]
+  (limit registers 3)
+  ; this: v2 ([object android/database/MergeCursor])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getCount()int
+  (limit registers 3)
+  ; this: v2 ([object android/database/MergeCursor])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDouble(int )double
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFloat(int )float
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInt(int )int
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getLong(int )long
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getShort(int )short
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getString(int )[object java/lang/String]
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getType(int )int
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isNull(int )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onMove(int int )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) registerContentObserver([object android/database/ContentObserver] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 ([object android/database/ContentObserver])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) registerDataSetObserver([object android/database/DataSetObserver] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 ([object android/database/DataSetObserver])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) requery()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/database/MergeCursor])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) unregisterContentObserver([object android/database/ContentObserver] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 ([object android/database/ContentObserver])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) unregisterDataSetObserver([object android/database/DataSetObserver] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/MergeCursor])
+  ; parameter[0] : v3 ([object android/database/DataSetObserver])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,46 @@
+(class (attrs public ) android/text/method/SingleLineTransformationMethod
+ (super android/text/method/ReplacementTransformationMethod)
+ (source "SingleLineTransformationMethod.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/text/method/SingleLineTransformationMethod])
+  (line 5)
+  (invoke-direct {v2} android/text/method/ReplacementTransformationMethod/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getInstance()[object android/text/method/SingleLineTransformationMethod]
+  (limit registers 2)
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected ) getOriginal()[array char]
+  (limit registers 3)
+  ; this: v2 ([object android/text/method/SingleLineTransformationMethod])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) getReplacement()[array char]
+  (limit registers 3)
+  ; this: v2 ([object android/text/method/SingleLineTransformationMethod])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

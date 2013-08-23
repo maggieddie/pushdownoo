@@ -1,0 +1,196 @@
+(class (attrs public abstract ) javax/xml/datatype/XMLGregorianCalendar
+ (super java/lang/Object)
+ (source "XMLGregorianCalendar.java")
+ (implements java/lang/Cloneable)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) add([object javax/xml/datatype/Duration] )void
+)
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) clone()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) compare([object javax/xml/datatype/XMLGregorianCalendar] )int
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 34)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) getDay()int
+)
+
+(method (attrs public abstract ) getEon()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getEonAndYear()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getFractionalSecond()[object java/math/BigDecimal]
+)
+
+(method (attrs public abstract ) getHour()int
+)
+
+(method (attrs public ) getMillisecond()int
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) getMinute()int
+)
+
+(method (attrs public abstract ) getMonth()int
+)
+
+(method (attrs public abstract ) getSecond()int
+)
+
+(method (attrs public abstract ) getTimeZone(int )[object java/util/TimeZone]
+)
+
+(method (attrs public abstract ) getTimezone()int
+)
+
+(method (attrs public abstract ) getXMLSchemaType()[object javax/xml/namespace/QName]
+)
+
+(method (attrs public abstract ) getYear()int
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  (line 35)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) isValid()boolean
+)
+
+(method (attrs public abstract ) normalize()[object javax/xml/datatype/XMLGregorianCalendar]
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+(method (attrs public abstract ) setDay(int )void
+)
+
+(method (attrs public abstract ) setFractionalSecond([object java/math/BigDecimal] )void
+)
+
+(method (attrs public abstract ) setHour(int )void
+)
+
+(method (attrs public abstract ) setMillisecond(int )void
+)
+
+(method (attrs public abstract ) setMinute(int )void
+)
+
+(method (attrs public abstract ) setMonth(int )void
+)
+
+(method (attrs public abstract ) setSecond(int )void
+)
+
+(method (attrs public ) setTime(int int int )void
+  (limit registers 6)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setTime(int int int int )void
+  (limit registers 7)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setTime(int int int [object java/math/BigDecimal] )void
+  (limit registers 7)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object java/math/BigDecimal])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) setTimezone(int )void
+)
+
+(method (attrs public abstract ) setYear(int )void
+)
+
+(method (attrs public abstract ) setYear([object java/math/BigInteger] )void
+)
+
+(method (attrs public abstract ) toGregorianCalendar()[object java/util/GregorianCalendar]
+)
+
+(method (attrs public abstract ) toGregorianCalendar([object java/util/TimeZone] [object java/util/Locale] [object javax/xml/datatype/XMLGregorianCalendar] )[object java/util/GregorianCalendar]
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/datatype/XMLGregorianCalendar])
+  (line 38)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) toXMLFormat()[object java/lang/String]
+)
+
+)

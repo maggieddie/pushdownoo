@@ -1,0 +1,29 @@
+(class (attrs public ) javax/net/ssl/CertPathTrustManagerParameters
+ (super java/lang/Object)
+ (source "CertPathTrustManagerParameters.java")
+ (implements javax/net/ssl/ManagerFactoryParameters)
+
+
+(method (attrs public ) <init>([object java/security/cert/CertPathParameters] )void
+  (limit registers 4)
+  ; this: v2 ([object javax/net/ssl/CertPathTrustManagerParameters])
+  ; parameter[0] : v3 ([object java/security/cert/CertPathParameters])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getParameters()[object java/security/cert/CertPathParameters]
+  (limit registers 3)
+  ; this: v2 ([object javax/net/ssl/CertPathTrustManagerParameters])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/security/KeyChainAliasCallback
+ (super java/lang/Object)
+ (source "KeyChainAliasCallback.java")
+
+
+(method (attrs public abstract ) alias([object java/lang/String] )void
+)
+
+)

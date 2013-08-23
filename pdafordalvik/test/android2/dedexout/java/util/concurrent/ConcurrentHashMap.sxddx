@@ -1,0 +1,331 @@
+(class (attrs public ) java/util/concurrent/ConcurrentHashMap
+ (super java/util/AbstractMap)
+ (source "ConcurrentHashMap.java")
+ (implements java/util/concurrent/ConcurrentMap)
+ (implements java/io/Serializable)
+
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 9)
+  (invoke-direct {v2} java/util/AbstractMap/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 (int)
+  (line 8)
+  (invoke-direct {v2} java/util/AbstractMap/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int float )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (float)
+  (line 7)
+  (invoke-direct {v2} java/util/AbstractMap/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int float int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 6)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 (int)
+  (line 6)
+  (invoke-direct {v2} java/util/AbstractMap/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/util/Map])
+  (line 10)
+  (invoke-direct {v2} java/util/AbstractMap/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) containsKey([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) containsValue([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) elements()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) get([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TV;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) keySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TK;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) keys()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<TK;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) put([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) putAll([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/util/Map])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) putIfAbsent([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TV;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TV;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) replace([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) replace([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+  (limit registers 6)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  ; parameter[2] : v5 ([object java/lang/Object])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) values()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/concurrent/ConcurrentHashMap])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

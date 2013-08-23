@@ -1,0 +1,27 @@
+(class (attrs synchronized ) java/lang/ThreadGroup$ChildrenGroupsLock
+ (super java/lang/Object)
+ (source "ThreadGroup.java")
+
+ (field (attrs final ) this$0 [object java/lang/ThreadGroup] )
+
+(method (attrs private ) <init>([object java/lang/ThreadGroup] )void
+  (limit registers 2)
+  ; this: v0 ([object java/lang/ThreadGroup$ChildrenGroupsLock])
+  ; parameter[0] : v1 ([object java/lang/ThreadGroup])
+  (line 67)
+  (iput-object-quick v1 v0 java/lang/ThreadGroup$ChildrenGroupsLock.this$0 [object java/lang/ThreadGroup])
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/ThreadGroup] [object java/lang/ThreadGroup$1] )void
+  (limit registers 3)
+  ; this: v0 ([object java/lang/ThreadGroup$ChildrenGroupsLock])
+  ; parameter[0] : v1 ([object java/lang/ThreadGroup])
+  ; parameter[1] : v2 ([object java/lang/ThreadGroup$1])
+  (line 67)
+  (invoke-direct {v0 v1} java/lang/ThreadGroup$ChildrenGroupsLock/<init> [object java/lang/ThreadGroup] )
+  (return-void )
+ )
+
+)

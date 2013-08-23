@@ -1,0 +1,96 @@
+(class (attrs public ) android/webkit/WebViewDatabase
+ (super java/lang/Object)
+ (source "WebViewDatabase.java")
+
+ (field (attrs protected static final ) LOGTAG [object java/lang/String] "webviewdatabase" )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static synchronized ) getInstance([object android/content/Context] )[object android/webkit/WebViewDatabase]
+  (limit registers 4)
+  ; parameter[0] : v3 ([object android/content/Context])
+  (catchall  java/lang/Exception from l10769e to l1076ae using l1076ae)
+  (line 5)
+  (const-class v1 android/webkit/WebViewDatabase)
+  (monitor-enter v1)
+  (label l10769e)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v2 "Stub!")
+  (invoke-direct {v0 v2} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l1076ae)
+  (move-exception v0)
+  (monitor-exit v1)
+  (throw v0)
+ )
+
+(method (attrs public ) clearFormData()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) clearHttpAuthUsernamePassword()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) clearUsernamePassword()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasFormData()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasHttpAuthUsernamePassword()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hasUsernamePassword()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/WebViewDatabase])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

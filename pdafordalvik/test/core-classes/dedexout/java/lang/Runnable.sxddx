@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) java/lang/Runnable
+ (super java/lang/Object)
+ (source "Runnable.java")
+
+
+(method (attrs public abstract ) run()void
+)
+
+)

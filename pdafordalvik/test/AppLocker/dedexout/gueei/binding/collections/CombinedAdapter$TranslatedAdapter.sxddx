@@ -1,0 +1,24 @@
+(class (attrs ) gueei/binding/collections/CombinedAdapter$TranslatedAdapter
+ (super java/lang/Object)
+ (source "CombinedAdapter.java")
+
+ (field (attrs public final ) adapter [object android/widget/Adapter] )
+ (field (attrs public ) itemTypeOffset int )
+ (field (attrs public ) offset int )
+ (field (attrs final ) this$0 [object gueei/binding/collections/CombinedAdapter] )
+
+(method (attrs public ) <init>([object gueei/binding/collections/CombinedAdapter] [object android/widget/Adapter] )void
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/collections/CombinedAdapter$TranslatedAdapter])
+  ; parameter[0] : v1 ([object gueei/binding/collections/CombinedAdapter])
+  ; parameter[1] : v2 ([object android/widget/Adapter])
+  (line 148)
+  (iput-object v1 v0 gueei/binding/collections/CombinedAdapter$TranslatedAdapter.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 149)
+  (iput-object v2 v0 gueei/binding/collections/CombinedAdapter$TranslatedAdapter.adapter [object android/widget/Adapter])
+  (line 150)
+  (return-void )
+ )
+
+)

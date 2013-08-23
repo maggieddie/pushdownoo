@@ -1,0 +1,85 @@
+(class (attrs public ) java/security/ProtectionDomain
+ (super java/lang/Object)
+ (source "ProtectionDomain.java")
+
+
+(method (attrs public ) <init>([object java/security/CodeSource] [object java/security/PermissionCollection] )void
+  (limit registers 5)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  ; parameter[0] : v3 ([object java/security/CodeSource])
+  ; parameter[1] : v4 ([object java/security/PermissionCollection])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/security/CodeSource] [object java/security/PermissionCollection] [object java/lang/ClassLoader] [array [object java/security/Principal]] )void
+  (limit registers 7)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  ; parameter[0] : v3 ([object java/security/CodeSource])
+  ; parameter[1] : v4 ([object java/security/PermissionCollection])
+  ; parameter[2] : v5 ([object java/lang/ClassLoader])
+  ; parameter[3] : v6 ([array [object java/security/Principal]])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public final ) getClassLoader()[object java/lang/ClassLoader]
+  (limit registers 3)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) getCodeSource()[object java/security/CodeSource]
+  (limit registers 3)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) getPermissions()[object java/security/PermissionCollection]
+  (limit registers 3)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) getPrincipals()[array [object java/security/Principal]]
+  (limit registers 3)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) implies([object java/security/Permission] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/security/ProtectionDomain])
+  ; parameter[0] : v3 ([object java/security/Permission])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

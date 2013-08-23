@@ -1,0 +1,86 @@
+(interface (attrs public abstract ) javax/microedition/khronos/opengles/GL11Ext
+ (super java/lang/Object)
+ (source "GL11Ext.java")
+ (implements javax/microedition/khronos/opengles/GL)
+
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES int 35742); 0x8b9e )
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_OES int 34884); 0x8844 )
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_POINTER_OES int 34889); 0x8849 )
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_SIZE_OES int 34886); 0x8846 )
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_STRIDE_OES int 34888); 0x8848 )
+ (field (attrs public static final ) GL_MATRIX_INDEX_ARRAY_TYPE_OES int 34887); 0x8847 )
+ (field (attrs public static final ) GL_MATRIX_PALETTE_OES int 34880); 0x8840 )
+ (field (attrs public static final ) GL_MAX_PALETTE_MATRICES_OES int 34882); 0x8842 )
+ (field (attrs public static final ) GL_MAX_VERTEX_UNITS_OES int 34468); 0x86a4 )
+ (field (attrs public static final ) GL_TEXTURE_CROP_RECT_OES int 35741); 0x8b9d )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_BUFFER_BINDING_OES int 34974); 0x889e )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_OES int 34477); 0x86ad )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_POINTER_OES int 34476); 0x86ac )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_SIZE_OES int 34475); 0x86ab )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_STRIDE_OES int 34474); 0x86aa )
+ (field (attrs public static final ) GL_WEIGHT_ARRAY_TYPE_OES int 34473); 0x86a9 )
+
+(method (attrs public abstract ) glCurrentPaletteMatrixOES(int )void
+)
+
+(method (attrs public abstract ) glDrawTexfOES(float float float float float )void
+)
+
+(method (attrs public abstract ) glDrawTexfvOES([object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glDrawTexfvOES([array float] int )void
+)
+
+(method (attrs public abstract ) glDrawTexiOES(int int int int int )void
+)
+
+(method (attrs public abstract ) glDrawTexivOES([object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glDrawTexivOES([array int] int )void
+)
+
+(method (attrs public abstract ) glDrawTexsOES(short short short short short )void
+)
+
+(method (attrs public abstract ) glDrawTexsvOES([object java/nio/ShortBuffer] )void
+)
+
+(method (attrs public abstract ) glDrawTexsvOES([array short] int )void
+)
+
+(method (attrs public abstract ) glDrawTexxOES(int int int int int )void
+)
+
+(method (attrs public abstract ) glDrawTexxvOES([object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glDrawTexxvOES([array int] int )void
+)
+
+(method (attrs public abstract ) glEnable(int )void
+)
+
+(method (attrs public abstract ) glEnableClientState(int )void
+)
+
+(method (attrs public abstract ) glLoadPaletteFromModelViewMatrixOES()void
+)
+
+(method (attrs public abstract ) glMatrixIndexPointerOES(int int int int )void
+)
+
+(method (attrs public abstract ) glMatrixIndexPointerOES(int int int [object java/nio/Buffer] )void
+)
+
+(method (attrs public abstract ) glTexParameterfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glWeightPointerOES(int int int int )void
+)
+
+(method (attrs public abstract ) glWeightPointerOES(int int int [object java/nio/Buffer] )void
+)
+
+)

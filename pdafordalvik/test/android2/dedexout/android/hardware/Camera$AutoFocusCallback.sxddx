@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/hardware/Camera$AutoFocusCallback
+ (super java/lang/Object)
+ (source "Camera.java")
+
+
+(method (attrs public abstract ) onAutoFocus(boolean [object android/hardware/Camera] )void
+)
+
+)

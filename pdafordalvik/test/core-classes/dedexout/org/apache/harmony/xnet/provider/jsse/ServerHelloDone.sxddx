@@ -1,0 +1,63 @@
+(class (attrs public synchronized ) org/apache/harmony/xnet/provider/jsse/ServerHelloDone
+ (super org/apache/harmony/xnet/provider/jsse/Message)
+ (source "ServerHelloDone.java")
+
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/ServerHelloDone])
+  (line 37)
+  (invoke-direct {v0} org/apache/harmony/xnet/provider/jsse/Message/<init> )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/apache/harmony/xnet/provider/jsse/HandshakeIODataStream] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object org/apache/harmony/xnet/provider/jsse/ServerHelloDone])
+  ; parameter[0] : v3 ([object org/apache/harmony/xnet/provider/jsse/HandshakeIODataStream])
+  ; parameter[1] : v4 (int)
+  (line 47)
+  (invoke-direct {v2} org/apache/harmony/xnet/provider/jsse/Message/<init> )
+  (line 48)
+  (if-eqz v4 l17359c)
+  (line 49)
+  (const/16 v0 50)
+  (const-string v1 "DECODE ERROR: incorrect ServerHelloDone")
+  (invoke-virtual-quick {v2 v0 v1} org/apache/harmony/xnet/provider/jsse/ServerHelloDone/fatalAlert byte [object java/lang/String] )
+  (label l17359c)
+  (line 51)
+  (return-void )
+ )
+
+(method (attrs public ) getType()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xnet/provider/jsse/ServerHelloDone])
+  (line 76)
+  (const/16 v0 14)
+  (return v0)
+)
+
+(method (attrs public ) length()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xnet/provider/jsse/ServerHelloDone])
+  (line 67)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) send([object org/apache/harmony/xnet/provider/jsse/HandshakeIODataStream] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/ServerHelloDone])
+  ; parameter[0] : v1 ([object org/apache/harmony/xnet/provider/jsse/HandshakeIODataStream])
+  (line 59)
+  (return-void )
+)
+
+)

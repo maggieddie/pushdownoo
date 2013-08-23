@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) java/util/concurrent/ScheduledFuture
+ (super java/lang/Object)
+ (source "ScheduledFuture.java")
+ (implements java/util/concurrent/Delayed)
+ (implements java/util/concurrent/Future)
+
+
+)

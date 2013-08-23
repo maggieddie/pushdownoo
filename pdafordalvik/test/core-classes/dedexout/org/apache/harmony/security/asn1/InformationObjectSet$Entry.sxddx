@@ -1,0 +1,26 @@
+(class (attrs synchronized ) org/apache/harmony/security/asn1/InformationObjectSet$Entry
+ (super java/lang/Object)
+ (source "InformationObjectSet.java")
+
+ (field (attrs public ) object [object java/lang/Object] )
+ (field (attrs public ) oid [array int] )
+ (field (attrs final ) this$0 [object org/apache/harmony/security/asn1/InformationObjectSet] )
+
+(method (attrs public ) <init>([object org/apache/harmony/security/asn1/InformationObjectSet] [array int] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/harmony/security/asn1/InformationObjectSet$Entry])
+  ; parameter[0] : v1 ([object org/apache/harmony/security/asn1/InformationObjectSet])
+  ; parameter[1] : v2 ([array int])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 103)
+  (iput-object-quick v1 v0 org/apache/harmony/security/asn1/InformationObjectSet$Entry.this$0 [object org/apache/harmony/security/asn1/InformationObjectSet])
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 104)
+  (iput-object-quick v2 v0 org/apache/harmony/security/asn1/InformationObjectSet$Entry.oid [array int])
+  (line 105)
+  (iput-object-quick v3 v0 org/apache/harmony/security/asn1/InformationObjectSet$Entry.object [object java/lang/Object])
+  (line 106)
+  (return-void )
+ )
+
+)

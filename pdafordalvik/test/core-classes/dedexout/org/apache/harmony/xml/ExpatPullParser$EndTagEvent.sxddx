@@ -1,0 +1,49 @@
+(class (attrs synchronized ) org/apache/harmony/xml/ExpatPullParser$EndTagEvent
+ (super org/apache/harmony/xml/ExpatPullParser$Event)
+ (source "ExpatPullParser.java")
+
+ (field (attrs final ) localName [object java/lang/String] )
+ (field (attrs final ) namespace [object java/lang/String] )
+
+(method (attrs ) <init>([object java/lang/String] [object java/lang/String] int [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack] )void
+  (limit registers 5)
+  ; this: v0 ([object org/apache/harmony/xml/ExpatPullParser$EndTagEvent])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/String])
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 ([object org/apache/harmony/xml/ExpatPullParser$NamespaceStack])
+  (line 643)
+  (invoke-direct {v0 v3 v4} org/apache/harmony/xml/ExpatPullParser$Event/<init> int [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack] )
+  (line 644)
+  (iput-object-quick v1 v0 org/apache/harmony/xml/ExpatPullParser$EndTagEvent.namespace [object java/lang/String])
+  (line 645)
+  (iput-object-quick v2 v0 org/apache/harmony/xml/ExpatPullParser$EndTagEvent.localName [object java/lang/String])
+  (line 646)
+  (return-void )
+ )
+
+(method (attrs ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/ExpatPullParser$EndTagEvent])
+  (line 650)
+  (iget-object-quick v0 v1 org/apache/harmony/xml/ExpatPullParser$EndTagEvent.localName [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs ) getNamespace()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/ExpatPullParser$EndTagEvent])
+  (line 655)
+  (iget-object-quick v0 v1 org/apache/harmony/xml/ExpatPullParser$EndTagEvent.namespace [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs ) getType()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/ExpatPullParser$EndTagEvent])
+  (line 660)
+  (const/4 v0 3)
+  (return v0)
+)
+
+)

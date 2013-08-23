@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/RatingBar$OnRatingBarChangeListener
+ (super java/lang/Object)
+ (source "RatingBar.java")
+
+
+(method (attrs public abstract ) onRatingChanged([object android/widget/RatingBar] float boolean )void
+)
+
+)

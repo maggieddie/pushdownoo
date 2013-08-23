@@ -1,0 +1,19 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JCERSACipher$PKCS1v1_5Padding
+ (super org/bouncycastle/jce/provider/JCERSACipher)
+ (source "JCERSACipher.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/bouncycastle/jce/provider/JCERSACipher$PKCS1v1_5Padding])
+  (line 542)
+  (new-instance v0 org/bouncycastle/crypto/encodings/PKCS1Encoding)
+  (new-instance v1 org/bouncycastle/crypto/engines/RSAEngine)
+  (invoke-direct {v1} org/bouncycastle/crypto/engines/RSAEngine/<init> )
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/encodings/PKCS1Encoding/<init> [object org/bouncycastle/crypto/AsymmetricBlockCipher] )
+  (invoke-direct {v2 v0} org/bouncycastle/jce/provider/JCERSACipher/<init> [object org/bouncycastle/crypto/AsymmetricBlockCipher] )
+  (line 543)
+  (return-void )
+ )
+
+)

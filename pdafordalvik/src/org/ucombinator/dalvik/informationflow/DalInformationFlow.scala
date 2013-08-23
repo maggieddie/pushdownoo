@@ -253,14 +253,8 @@ object DalInformationFlow {
       if (!statDir.exists) {
         statDir.createDirectory(force = true)
         statDir.createFile(failIfExists = false)
-      }
-
-      /* val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
-      val subfolder = new Directory(new File(subfolderPath))
-      if (!subfolder.exists) {
-        subfolder.createDirectory(force = true)
-        subfolder.createFile(failIfExists = false)
-      }*/
+      } 
+     
       val path = opts.permReportPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
       val file = new File(path)
       if (!file.exists()) {

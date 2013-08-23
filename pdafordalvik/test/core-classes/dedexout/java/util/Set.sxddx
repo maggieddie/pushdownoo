@@ -1,0 +1,76 @@
+(interface (attrs public abstract synchronized ) java/util/Set
+ (super java/lang/Object)
+ (source "Set.java")
+ (implements java/util/Collection)
+
+
+(method (attrs public abstract ) add([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)Z")
+  )
+)
+
+(method (attrs public abstract ) addAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<+TE;>;)Z")
+  )
+)
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) contains([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+)
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) hashCode()int
+)
+
+(method (attrs public abstract ) isEmpty()boolean
+)
+
+(method (attrs public abstract ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TE;>;")
+  )
+)
+
+(method (attrs public abstract ) remove([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+)
+
+(method (attrs public abstract ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+)
+
+(method (attrs public abstract ) size()int
+)
+
+(method (attrs public abstract ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+)
+
+(method (attrs public abstract ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+)
+
+)

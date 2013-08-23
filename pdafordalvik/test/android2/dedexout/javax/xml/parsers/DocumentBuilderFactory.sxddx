@@ -1,0 +1,235 @@
+(class (attrs public abstract ) javax/xml/parsers/DocumentBuilderFactory
+ (super java/lang/Object)
+ (source "DocumentBuilderFactory.java")
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newInstance()[object javax/xml/parsers/DocumentBuilderFactory]
+  (limit registers 2)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newInstance([object java/lang/String] [object java/lang/ClassLoader] )[object javax/xml/parsers/DocumentBuilderFactory]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) getAttribute([object java/lang/String] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+)
+
+(method (attrs public abstract ) getFeature([object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException])
+  )
+)
+
+(method (attrs public ) getSchema()[object javax/xml/validation/Schema]
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isCoalescing()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isExpandEntityReferences()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isIgnoringComments()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isIgnoringElementContentWhitespace()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isNamespaceAware()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isValidating()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isXIncludeAware()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) newDocumentBuilder()[object javax/xml/parsers/DocumentBuilder]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException])
+  )
+)
+
+(method (attrs public abstract ) setAttribute([object java/lang/String] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/IllegalArgumentException])
+  )
+)
+
+(method (attrs public ) setCoalescing(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setExpandEntityReferences(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) setFeature([object java/lang/String] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException])
+  )
+)
+
+(method (attrs public ) setIgnoringComments(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setIgnoringElementContentWhitespace(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setNamespaceAware(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSchema([object javax/xml/validation/Schema] )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 ([object javax/xml/validation/Schema])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setValidating(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setXIncludeAware(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilderFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

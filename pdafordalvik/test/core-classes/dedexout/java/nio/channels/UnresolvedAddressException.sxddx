@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/channels/UnresolvedAddressException
+ (super java/lang/IllegalArgumentException)
+ (source "UnresolvedAddressException.java")
+
+ (field (attrs private static final ) serialVersionUID long -578880537); 0xdd7efbe7 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/channels/UnresolvedAddressException])
+  (line 36)
+  (invoke-direct {v0} java/lang/IllegalArgumentException/<init> )
+  (line 37)
+  (return-void )
+ )
+
+)

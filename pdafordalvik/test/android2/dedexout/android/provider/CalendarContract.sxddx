@@ -1,0 +1,33 @@
+(class (attrs public final ) android/provider/CalendarContract
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+
+ (field (attrs public static final ) ACCOUNT_TYPE_LOCAL [object java/lang/String] "LOCAL" )
+ (field (attrs public static final ) ACTION_EVENT_REMINDER [object java/lang/String] "android.intent.action.EVENT_REMINDER" )
+ (field (attrs public static final ) AUTHORITY [object java/lang/String] "com.android.calendar" )
+ (field (attrs public static final ) CALLER_IS_SYNCADAPTER [object java/lang/String] "caller_is_syncadapter" )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs public static final ) EXTRA_EVENT_ALL_DAY [object java/lang/String] "allDay" )
+ (field (attrs public static final ) EXTRA_EVENT_BEGIN_TIME [object java/lang/String] "beginTime" )
+ (field (attrs public static final ) EXTRA_EVENT_END_TIME [object java/lang/String] "endTime" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 321)
+  (const/4 v0 0)
+  (sput-object v0 android/provider/CalendarContract.CONTENT_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/CalendarContract])
+  (line 312)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

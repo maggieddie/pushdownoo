@@ -1,0 +1,112 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableSortedMap
+ (super java/util/Collections$UnmodifiableMap)
+ (source "Collections.java")
+ (implements java/util/SortedMap)
+
+ (field (attrs private static final ) serialVersionUID long -672268502); 0xd7edff2a )
+ (field (attrs private final ) sm [object java/util/SortedMap] )
+
+(method (attrs ) <init>([object java/util/SortedMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/SortedMap"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/Collections$UnmodifiableSortedMap])
+  ; parameter[0] : v1 ([object java/util/SortedMap])
+  (line 1391)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableMap/<init> [object java/util/Map] )
+  (line 1392)
+  (iput-object-quick v1 v0 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (line 1393)
+  (return-void )
+ )
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedMap])
+  (line 1396)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/comparator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) firstKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedMap])
+  (line 1400)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/firstKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) headMap([object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1404)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedMap)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v3} java/util/SortedMap/headMap [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedMap/<init> [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) lastKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedMap])
+  (line 1408)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v0} java/util/SortedMap/lastKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) subMap([object java/lang/Object] [object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 1412)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedMap)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v3 v4} java/util/SortedMap/subMap [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedMap/<init> [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) tailMap([object java/lang/Object] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedMap"  "<TK;TV;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedMap])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1416)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedMap)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedMap.sm [object java/util/SortedMap])
+  (invoke-interface {v1 v3} java/util/SortedMap/tailMap [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedMap/<init> [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+)

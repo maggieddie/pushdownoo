@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) java/lang/reflect/Member
+ (super java/lang/Object)
+ (source "Member.java")
+
+ (field (attrs public static final ) DECLARED int 1); 0x1 )
+ (field (attrs public static final ) PUBLIC int )
+
+(method (attrs public abstract ) getDeclaringClass()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) getModifiers()int
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) isSynthetic()boolean
+)
+
+)

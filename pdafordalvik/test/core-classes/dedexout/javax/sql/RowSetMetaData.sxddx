@@ -1,0 +1,109 @@
+(interface (attrs public abstract synchronized ) javax/sql/RowSetMetaData
+ (super java/lang/Object)
+ (source "RowSetMetaData.java")
+ (implements java/sql/ResultSetMetaData)
+
+
+(method (attrs public abstract ) setAutoIncrement(int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setCaseSensitive(int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setCatalogName(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnCount(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnDisplaySize(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnLabel(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnName(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnType(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setColumnTypeName(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setCurrency(int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setNullable(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setPrecision(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setScale(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setSchemaName(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setSearchable(int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setSigned(int boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) setTableName(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+)

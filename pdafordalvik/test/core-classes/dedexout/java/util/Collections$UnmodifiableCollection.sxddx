@@ -1,0 +1,190 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableCollection
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/Collection)
+ (implements java/io/Serializable)
+
+ (field (attrs private static final ) serialVersionUID long -614533218); 0xdb5ef79e )
+ (field (attrs final ) c [object java/util/Collection] )
+
+(method (attrs ) <init>([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v1 ([object java/util/Collection])
+  (line 971)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 972)
+  (iput-object-quick v1 v0 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (line 973)
+  (return-void )
+ )
+
+(method (attrs public ) add([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 976)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) addAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<+TE;>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 980)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 984)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 988)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0 v2} java/util/Collection/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 992)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0 v2} java/util/Collection/containsAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 996)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 1000)
+  (new-instance v0 java/util/Collections$UnmodifiableCollection$1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableCollection$1/<init> [object java/util/Collections$UnmodifiableCollection] )
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1018)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 1022)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 1026)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 1030)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 1034)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/toArray )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 1038)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-interface {v0 v2} java/util/Collection/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection])
+  (line 1043)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection.c [object java/util/Collection])
+  (invoke-virtual-quick {v0} java/util/Collection/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

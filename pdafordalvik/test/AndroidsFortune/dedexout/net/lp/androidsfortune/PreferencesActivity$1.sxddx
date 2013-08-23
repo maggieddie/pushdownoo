@@ -1,0 +1,33 @@
+(class (attrs ) net/lp/androidsfortune/PreferencesActivity$1
+ (super java/lang/Object)
+ (source "PreferencesActivity.java")
+ (implements android/preference/Preference$OnPreferenceClickListener)
+
+ (field (attrs final ) this$0 [object net/lp/androidsfortune/PreferencesActivity] )
+
+(method (attrs ) <init>([object net/lp/androidsfortune/PreferencesActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object net/lp/androidsfortune/PreferencesActivity$1])
+  ; parameter[0] : v1 ([object net/lp/androidsfortune/PreferencesActivity])
+  (line 1)
+  (iput-object v1 v0 net/lp/androidsfortune/PreferencesActivity$1.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (line 193)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreferenceClick([object android/preference/Preference] )boolean
+  (limit registers 5)
+  ; this: v3 ([object net/lp/androidsfortune/PreferencesActivity$1])
+  ; parameter[0] : v4 ([object android/preference/Preference])
+  (const/4 v2 1)
+  (line 199)
+  (iget-object v0 v3 net/lp/androidsfortune/PreferencesActivity$1.this$0 [object net/lp/androidsfortune/PreferencesActivity])
+  (invoke-virtual {v4} android/preference/Preference/getIntent )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1 v2} net/lp/androidsfortune/PreferencesActivity/startActivityForResult [object android/content/Intent] int )
+  (line 200)
+  (return v2)
+)
+
+)

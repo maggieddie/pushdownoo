@@ -1,0 +1,87 @@
+(class (attrs public ) android/renderscript/ProgramStore$Builder
+ (super java/lang/Object)
+ (source "ProgramStore.java")
+
+
+(method (attrs public ) <init>([object android/renderscript/RenderScript] )void
+  (limit registers 4)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 ([object android/renderscript/RenderScript])
+  (line 40)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) create()[object android/renderscript/ProgramStore]
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  (line 46)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setBlendFunc([object android/renderscript/ProgramStore$BlendSrcFunc] [object android/renderscript/ProgramStore$BlendDstFunc] )[object android/renderscript/ProgramStore$Builder]
+  (limit registers 5)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 ([object android/renderscript/ProgramStore$BlendSrcFunc])
+  ; parameter[1] : v4 ([object android/renderscript/ProgramStore$BlendDstFunc])
+  (line 44)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setColorMaskEnabled(boolean boolean boolean boolean )[object android/renderscript/ProgramStore$Builder]
+  (limit registers 7)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 (boolean)
+  ; parameter[1] : v4 (boolean)
+  ; parameter[2] : v5 (boolean)
+  ; parameter[3] : v6 (boolean)
+  (line 43)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setDepthFunc([object android/renderscript/ProgramStore$DepthFunc] )[object android/renderscript/ProgramStore$Builder]
+  (limit registers 4)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 ([object android/renderscript/ProgramStore$DepthFunc])
+  (line 41)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setDepthMaskEnabled(boolean )[object android/renderscript/ProgramStore$Builder]
+  (limit registers 4)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 (boolean)
+  (line 42)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setDitherEnabled(boolean )[object android/renderscript/ProgramStore$Builder]
+  (limit registers 4)
+  ; this: v2 ([object android/renderscript/ProgramStore$Builder])
+  ; parameter[0] : v3 (boolean)
+  (line 45)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

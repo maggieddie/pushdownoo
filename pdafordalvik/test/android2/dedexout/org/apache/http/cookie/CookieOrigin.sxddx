@@ -1,0 +1,71 @@
+(class (attrs public final ) org/apache/http/cookie/CookieOrigin
+ (super java/lang/Object)
+ (source "CookieOrigin.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] int [object java/lang/String] boolean )void
+  (limit registers 7)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 ([object java/lang/String])
+  ; parameter[3] : v6 (boolean)
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getHost()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPath()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPort()int
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isSecure()boolean
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/cookie/CookieOrigin])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

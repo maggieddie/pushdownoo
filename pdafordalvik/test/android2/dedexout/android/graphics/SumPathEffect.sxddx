@@ -1,0 +1,19 @@
+(class (attrs public ) android/graphics/SumPathEffect
+ (super android/graphics/PathEffect)
+ (source "SumPathEffect.java")
+
+
+(method (attrs public ) <init>([object android/graphics/PathEffect] [object android/graphics/PathEffect] )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/SumPathEffect])
+  ; parameter[0] : v3 ([object android/graphics/PathEffect])
+  ; parameter[1] : v4 ([object android/graphics/PathEffect])
+  (line 5)
+  (invoke-direct {v2} android/graphics/PathEffect/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

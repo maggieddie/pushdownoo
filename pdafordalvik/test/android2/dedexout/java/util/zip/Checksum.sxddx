@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) java/util/zip/Checksum
+ (super java/lang/Object)
+ (source "Checksum.java")
+
+
+(method (attrs public abstract ) getValue()long
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+(method (attrs public abstract ) update(int )void
+)
+
+(method (attrs public abstract ) update([array byte] int int )void
+)
+
+)

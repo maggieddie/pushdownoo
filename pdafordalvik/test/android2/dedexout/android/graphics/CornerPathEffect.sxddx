@@ -1,0 +1,18 @@
+(class (attrs public ) android/graphics/CornerPathEffect
+ (super android/graphics/PathEffect)
+ (source "CornerPathEffect.java")
+
+
+(method (attrs public ) <init>(float )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/CornerPathEffect])
+  ; parameter[0] : v3 (float)
+  (line 5)
+  (invoke-direct {v2} android/graphics/PathEffect/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

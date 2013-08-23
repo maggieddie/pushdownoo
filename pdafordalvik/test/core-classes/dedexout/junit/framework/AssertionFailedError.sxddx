@@ -1,0 +1,25 @@
+(class (attrs public synchronized ) junit/framework/AssertionFailedError
+ (super java/lang/Error)
+ (source "AssertionFailedError.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object junit/framework/AssertionFailedError])
+  (line 8)
+  (invoke-direct {v0} java/lang/Error/<init> )
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object junit/framework/AssertionFailedError])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 11)
+  (invoke-direct {v0 v1} java/lang/Error/<init> [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+)

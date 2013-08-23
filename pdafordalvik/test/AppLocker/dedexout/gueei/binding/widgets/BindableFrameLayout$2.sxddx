@@ -1,0 +1,42 @@
+(class (attrs ) gueei/binding/widgets/BindableFrameLayout$2
+ (super gueei/binding/ViewAttribute)
+ (source "BindableFrameLayout.java")
+
+ (field (attrs final ) this$0 [object gueei/binding/widgets/BindableFrameLayout] )
+
+(method (attrs ) <init>([object gueei/binding/widgets/BindableFrameLayout] [object java/lang/Class] [object gueei/binding/widgets/BindableFrameLayout] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v0 ([object gueei/binding/widgets/BindableFrameLayout$2])
+  ; parameter[0] : v1 ([object gueei/binding/widgets/BindableFrameLayout])
+  ; parameter[1] : v2 ([object java/lang/Class])
+  ; parameter[2] : v3 ([object gueei/binding/widgets/BindableFrameLayout])
+  ; parameter[3] : v4 ([object java/lang/String])
+  (line 1)
+  (iput-object v1 v0 gueei/binding/widgets/BindableFrameLayout$2.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (line 69)
+  (invoke-direct {v0 v2 v3 v4} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (return-void )
+ )
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/widgets/BindableFrameLayout$2])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 72)
+  (iget-object v0 v1 gueei/binding/widgets/BindableFrameLayout$2.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (invoke-virtual {v0 v2} gueei/binding/widgets/BindableFrameLayout/setDatasource [object java/lang/Object] )
+  (line 73)
+  (return-void )
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/widgets/BindableFrameLayout$2])
+  (line 77)
+  (iget-object v0 v1 gueei/binding/widgets/BindableFrameLayout$2.this$0 [object gueei/binding/widgets/BindableFrameLayout])
+  (invoke-static {v0} gueei/binding/widgets/BindableFrameLayout/access$1 [object gueei/binding/widgets/BindableFrameLayout] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

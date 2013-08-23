@@ -1,0 +1,80 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityManagerCompatIcs
+ (super java/lang/Object)
+ (source "AccessibilityManagerCompatIcs.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityManagerCompatIcs])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public static ) addAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object java/lang/Object] )boolean
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 46)
+  (check-cast v2 [object android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener])
+  (invoke-virtual {v1 v2} android/view/accessibility/AccessibilityManager/addAccessibilityStateChangeListener [object android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener] )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) getEnabledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  "I)"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v2 (int)
+  (line 58)
+  (invoke-virtual {v1 v2} android/view/accessibility/AccessibilityManager/getEnabledAccessibilityServiceList int )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getInstalledAccessibilityServiceList([object android/view/accessibility/AccessibilityManager] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/view/accessibility/AccessibilityManager;"  ")"  "Ljava/util/List"  "<"  "Landroid/accessibilityservice/AccessibilityServiceInfo;"  ">;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityManager])
+  (line 63)
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityManager/getInstalledAccessibilityServiceList )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) isTouchExplorationEnabled([object android/view/accessibility/AccessibilityManager] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityManager])
+  (line 67)
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityManager/isTouchExplorationEnabled )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) newAccessibilityStateChangeListener([object android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge])
+  (line 36)
+  (new-instance v0 android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$1)
+  (invoke-direct {v0 v1} android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$1/<init> [object android/support/v4/view/accessibility/AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge] )
+  (return-object v0)
+ )
+
+(method (attrs public static ) removeAccessibilityStateChangeListener([object android/view/accessibility/AccessibilityManager] [object java/lang/Object] )boolean
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityManager])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 52)
+  (check-cast v2 [object android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener])
+  (invoke-virtual {v1 v2} android/view/accessibility/AccessibilityManager/removeAccessibilityStateChangeListener [object android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener] )
+  (move-result v0)
+  (return v0)
+ )
+
+)

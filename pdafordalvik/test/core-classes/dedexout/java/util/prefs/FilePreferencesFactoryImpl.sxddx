@@ -1,0 +1,49 @@
+(class (attrs synchronized ) java/util/prefs/FilePreferencesFactoryImpl
+ (super java/lang/Object)
+ (source "FilePreferencesFactoryImpl.java")
+ (implements java/util/prefs/PreferencesFactory)
+
+ (field (attrs private static final ) SYSTEM_ROOT [object java/util/prefs/Preferences] )
+ (field (attrs private static final ) USER_ROOT [object java/util/prefs/Preferences] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 27)
+  (new-instance v0 java/util/prefs/FilePreferencesImpl)
+  (const/4 v1 1)
+  (invoke-direct {v0 v1} java/util/prefs/FilePreferencesImpl/<init> boolean )
+  (sput-object v0 java/util/prefs/FilePreferencesFactoryImpl.USER_ROOT [object java/util/prefs/Preferences])
+  (line 30)
+  (new-instance v0 java/util/prefs/FilePreferencesImpl)
+  (const/4 v1 0)
+  (invoke-direct {v0 v1} java/util/prefs/FilePreferencesImpl/<init> boolean )
+  (sput-object v0 java/util/prefs/FilePreferencesFactoryImpl.SYSTEM_ROOT [object java/util/prefs/Preferences])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/prefs/FilePreferencesFactoryImpl])
+  (line 33)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) systemRoot()[object java/util/prefs/Preferences]
+  (limit registers 2)
+  ; this: v1 ([object java/util/prefs/FilePreferencesFactoryImpl])
+  (line 41)
+  (sget-object v0 java/util/prefs/FilePreferencesFactoryImpl.SYSTEM_ROOT [object java/util/prefs/Preferences])
+  (return-object v0)
+)
+
+(method (attrs public ) userRoot()[object java/util/prefs/Preferences]
+  (limit registers 2)
+  ; this: v1 ([object java/util/prefs/FilePreferencesFactoryImpl])
+  (line 37)
+  (sget-object v0 java/util/prefs/FilePreferencesFactoryImpl.USER_ROOT [object java/util/prefs/Preferences])
+  (return-object v0)
+)
+
+)

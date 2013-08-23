@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) java/security/spec/ECField
+ (super java/lang/Object)
+ (source "ECField.java")
+
+
+(method (attrs public abstract ) getFieldSize()int
+)
+
+)

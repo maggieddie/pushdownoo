@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/gesture/GestureOverlayView$OnGestureListener
+ (super java/lang/Object)
+ (source "GestureOverlayView.java")
+
+
+(method (attrs public abstract ) onGesture([object android/gesture/GestureOverlayView] [object android/view/MotionEvent] )void
+)
+
+(method (attrs public abstract ) onGestureCancelled([object android/gesture/GestureOverlayView] [object android/view/MotionEvent] )void
+)
+
+(method (attrs public abstract ) onGestureEnded([object android/gesture/GestureOverlayView] [object android/view/MotionEvent] )void
+)
+
+(method (attrs public abstract ) onGestureStarted([object android/gesture/GestureOverlayView] [object android/view/MotionEvent] )void
+)
+
+)

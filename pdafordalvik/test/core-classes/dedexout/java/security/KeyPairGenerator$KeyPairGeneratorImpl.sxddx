@@ -1,0 +1,75 @@
+(class (attrs synchronized ) java/security/KeyPairGenerator$KeyPairGeneratorImpl
+ (super java/security/KeyPairGenerator)
+ (source "KeyPairGenerator.java")
+
+ (field (attrs private ) spiImpl [object java/security/KeyPairGeneratorSpi] )
+
+(method (attrs private ) <init>([object java/security/KeyPairGeneratorSpi] [object java/security/Provider] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v0 ([object java/security/KeyPairGenerator$KeyPairGeneratorImpl])
+  ; parameter[0] : v1 ([object java/security/KeyPairGeneratorSpi])
+  ; parameter[1] : v2 ([object java/security/Provider])
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 290)
+  (invoke-direct {v0 v3} java/security/KeyPairGenerator/<init> [object java/lang/String] )
+  (line 291)
+  (invoke-static {v0 v2} java/security/KeyPairGenerator/access$102 [object java/security/KeyPairGenerator] [object java/security/Provider] )
+  (line 292)
+  (iput-object-quick v1 v0 java/security/KeyPairGenerator$KeyPairGeneratorImpl.spiImpl [object java/security/KeyPairGeneratorSpi])
+  (line 293)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/security/KeyPairGeneratorSpi] [object java/security/Provider] [object java/lang/String] [object java/security/KeyPairGenerator$1] )void
+  (limit registers 5)
+  ; this: v0 ([object java/security/KeyPairGenerator$KeyPairGeneratorImpl])
+  ; parameter[0] : v1 ([object java/security/KeyPairGeneratorSpi])
+  ; parameter[1] : v2 ([object java/security/Provider])
+  ; parameter[2] : v3 ([object java/lang/String])
+  ; parameter[3] : v4 ([object java/security/KeyPairGenerator$1])
+  (line 279)
+  (invoke-direct {v0 v1 v2 v3} java/security/KeyPairGenerator$KeyPairGeneratorImpl/<init> [object java/security/KeyPairGeneratorSpi] [object java/security/Provider] [object java/lang/String] )
+  (return-void )
+ )
+
+(method (attrs public ) generateKeyPair()[object java/security/KeyPair]
+  (limit registers 2)
+  ; this: v1 ([object java/security/KeyPairGenerator$KeyPairGeneratorImpl])
+  (line 304)
+  (iget-object-quick v0 v1 java/security/KeyPairGenerator$KeyPairGeneratorImpl.spiImpl [object java/security/KeyPairGeneratorSpi])
+  (invoke-virtual-quick {v0} java/security/KeyPairGeneratorSpi/generateKeyPair )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) initialize(int [object java/security/SecureRandom] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/InvalidAlgorithmParameterException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object java/security/KeyPairGenerator$KeyPairGeneratorImpl])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object java/security/SecureRandom])
+  (line 298)
+  (iget-object-quick v0 v1 java/security/KeyPairGenerator$KeyPairGeneratorImpl.spiImpl [object java/security/KeyPairGeneratorSpi])
+  (invoke-virtual-quick {v0 v2 v3} java/security/KeyPairGeneratorSpi/initialize int [object java/security/SecureRandom] )
+  (line 299)
+  (return-void )
+)
+
+(method (attrs public ) initialize([object java/security/spec/AlgorithmParameterSpec] [object java/security/SecureRandom] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/InvalidAlgorithmParameterException])
+  )
+  (limit registers 4)
+  ; this: v1 ([object java/security/KeyPairGenerator$KeyPairGeneratorImpl])
+  ; parameter[0] : v2 ([object java/security/spec/AlgorithmParameterSpec])
+  ; parameter[1] : v3 ([object java/security/SecureRandom])
+  (line 311)
+  (iget-object-quick v0 v1 java/security/KeyPairGenerator$KeyPairGeneratorImpl.spiImpl [object java/security/KeyPairGeneratorSpi])
+  (invoke-virtual-quick {v0 v2 v3} java/security/KeyPairGeneratorSpi/initialize [object java/security/spec/AlgorithmParameterSpec] [object java/security/SecureRandom] )
+  (line 312)
+  (return-void )
+)
+
+)

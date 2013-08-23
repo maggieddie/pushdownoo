@@ -1,0 +1,333 @@
+(interface (attrs public abstract ) javax/microedition/khronos/opengles/GL11
+ (super java/lang/Object)
+ (source "GL11.java")
+ (implements javax/microedition/khronos/opengles/GL10)
+
+ (field (attrs public static final ) GL_ACTIVE_TEXTURE int 34016); 0x84e0 )
+ (field (attrs public static final ) GL_ADD_SIGNED int 34164); 0x8574 )
+ (field (attrs public static final ) GL_ALPHA_SCALE int 3356); 0xd1c )
+ (field (attrs public static final ) GL_ALPHA_TEST_FUNC int 3009); 0xbc1 )
+ (field (attrs public static final ) GL_ALPHA_TEST_REF int 3010); 0xbc2 )
+ (field (attrs public static final ) GL_ARRAY_BUFFER int 34962); 0x8892 )
+ (field (attrs public static final ) GL_ARRAY_BUFFER_BINDING int 34964); 0x8894 )
+ (field (attrs public static final ) GL_BLEND_DST int 3040); 0xbe0 )
+ (field (attrs public static final ) GL_BLEND_SRC int 3041); 0xbe1 )
+ (field (attrs public static final ) GL_BUFFER_ACCESS int 35003); 0x88bb )
+ (field (attrs public static final ) GL_BUFFER_SIZE int 34660); 0x8764 )
+ (field (attrs public static final ) GL_BUFFER_USAGE int 34661); 0x8765 )
+ (field (attrs public static final ) GL_CLIENT_ACTIVE_TEXTURE int 34017); 0x84e1 )
+ (field (attrs public static final ) GL_CLIP_PLANE0 int 12288); 0x3000 )
+ (field (attrs public static final ) GL_CLIP_PLANE1 int 12289); 0x3001 )
+ (field (attrs public static final ) GL_CLIP_PLANE2 int 12290); 0x3002 )
+ (field (attrs public static final ) GL_CLIP_PLANE3 int 12291); 0x3003 )
+ (field (attrs public static final ) GL_CLIP_PLANE4 int 12292); 0x3004 )
+ (field (attrs public static final ) GL_CLIP_PLANE5 int 12293); 0x3005 )
+ (field (attrs public static final ) GL_COLOR_ARRAY_BUFFER_BINDING int 34968); 0x8898 )
+ (field (attrs public static final ) GL_COLOR_ARRAY_POINTER int 32912); 0x8090 )
+ (field (attrs public static final ) GL_COLOR_ARRAY_SIZE int 32897); 0x8081 )
+ (field (attrs public static final ) GL_COLOR_ARRAY_STRIDE int 32899); 0x8083 )
+ (field (attrs public static final ) GL_COLOR_ARRAY_TYPE int 32898); 0x8082 )
+ (field (attrs public static final ) GL_COLOR_CLEAR_VALUE int 3106); 0xc22 )
+ (field (attrs public static final ) GL_COLOR_WRITEMASK int 3107); 0xc23 )
+ (field (attrs public static final ) GL_COMBINE int 34160); 0x8570 )
+ (field (attrs public static final ) GL_COMBINE_ALPHA int 34162); 0x8572 )
+ (field (attrs public static final ) GL_COMBINE_RGB int 34161); 0x8571 )
+ (field (attrs public static final ) GL_CONSTANT int 34166); 0x8576 )
+ (field (attrs public static final ) GL_COORD_REPLACE_OES int 34914); 0x8862 )
+ (field (attrs public static final ) GL_CULL_FACE_MODE int 2885); 0xb45 )
+ (field (attrs public static final ) GL_CURRENT_COLOR int 2816); 0xb00 )
+ (field (attrs public static final ) GL_CURRENT_NORMAL int 2818); 0xb02 )
+ (field (attrs public static final ) GL_CURRENT_TEXTURE_COORDS int 2819); 0xb03 )
+ (field (attrs public static final ) GL_DEPTH_CLEAR_VALUE int 2931); 0xb73 )
+ (field (attrs public static final ) GL_DEPTH_FUNC int 2932); 0xb74 )
+ (field (attrs public static final ) GL_DEPTH_RANGE int 2928); 0xb70 )
+ (field (attrs public static final ) GL_DEPTH_WRITEMASK int 2930); 0xb72 )
+ (field (attrs public static final ) GL_DOT3_RGB int 34478); 0x86ae )
+ (field (attrs public static final ) GL_DOT3_RGBA int 34479); 0x86af )
+ (field (attrs public static final ) GL_DYNAMIC_DRAW int 35048); 0x88e8 )
+ (field (attrs public static final ) GL_ELEMENT_ARRAY_BUFFER int 34963); 0x8893 )
+ (field (attrs public static final ) GL_ELEMENT_ARRAY_BUFFER_BINDING int 34965); 0x8895 )
+ (field (attrs public static final ) GL_FRONT_FACE int 2886); 0xb46 )
+ (field (attrs public static final ) GL_GENERATE_MIPMAP int 33169); 0x8191 )
+ (field (attrs public static final ) GL_GENERATE_MIPMAP_HINT int 33170); 0x8192 )
+ (field (attrs public static final ) GL_INTERPOLATE int 34165); 0x8575 )
+ (field (attrs public static final ) GL_LINE_WIDTH int 2849); 0xb21 )
+ (field (attrs public static final ) GL_LOGIC_OP_MODE int 3056); 0xbf0 )
+ (field (attrs public static final ) GL_MATRIX_MODE int 2976); 0xba0 )
+ (field (attrs public static final ) GL_MAX_CLIP_PLANES int 3378); 0xd32 )
+ (field (attrs public static final ) GL_MODELVIEW_MATRIX int 2982); 0xba6 )
+ (field (attrs public static final ) GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES int 35213); 0x898d )
+ (field (attrs public static final ) GL_MODELVIEW_STACK_DEPTH int 2979); 0xba3 )
+ (field (attrs public static final ) GL_NORMAL_ARRAY_BUFFER_BINDING int 34967); 0x8897 )
+ (field (attrs public static final ) GL_NORMAL_ARRAY_POINTER int 32911); 0x808f )
+ (field (attrs public static final ) GL_NORMAL_ARRAY_STRIDE int 32895); 0x807f )
+ (field (attrs public static final ) GL_NORMAL_ARRAY_TYPE int 32894); 0x807e )
+ (field (attrs public static final ) GL_OPERAND0_ALPHA int 34200); 0x8598 )
+ (field (attrs public static final ) GL_OPERAND0_RGB int 34192); 0x8590 )
+ (field (attrs public static final ) GL_OPERAND1_ALPHA int 34201); 0x8599 )
+ (field (attrs public static final ) GL_OPERAND1_RGB int 34193); 0x8591 )
+ (field (attrs public static final ) GL_OPERAND2_ALPHA int 34202); 0x859a )
+ (field (attrs public static final ) GL_OPERAND2_RGB int 34194); 0x8592 )
+ (field (attrs public static final ) GL_POINT_DISTANCE_ATTENUATION int 33065); 0x8129 )
+ (field (attrs public static final ) GL_POINT_FADE_THRESHOLD_SIZE int 33064); 0x8128 )
+ (field (attrs public static final ) GL_POINT_SIZE int 2833); 0xb11 )
+ (field (attrs public static final ) GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES int 35743); 0x8b9f )
+ (field (attrs public static final ) GL_POINT_SIZE_ARRAY_OES int 35740); 0x8b9c )
+ (field (attrs public static final ) GL_POINT_SIZE_ARRAY_POINTER_OES int 35212); 0x898c )
+ (field (attrs public static final ) GL_POINT_SIZE_ARRAY_STRIDE_OES int 35211); 0x898b )
+ (field (attrs public static final ) GL_POINT_SIZE_ARRAY_TYPE_OES int 35210); 0x898a )
+ (field (attrs public static final ) GL_POINT_SIZE_MAX int 33063); 0x8127 )
+ (field (attrs public static final ) GL_POINT_SIZE_MIN int 33062); 0x8126 )
+ (field (attrs public static final ) GL_POINT_SPRITE_OES int 34913); 0x8861 )
+ (field (attrs public static final ) GL_POLYGON_OFFSET_FACTOR int 32824); 0x8038 )
+ (field (attrs public static final ) GL_POLYGON_OFFSET_UNITS int 10752); 0x2a00 )
+ (field (attrs public static final ) GL_PREVIOUS int 34168); 0x8578 )
+ (field (attrs public static final ) GL_PRIMARY_COLOR int 34167); 0x8577 )
+ (field (attrs public static final ) GL_PROJECTION_MATRIX int 2983); 0xba7 )
+ (field (attrs public static final ) GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES int 35214); 0x898e )
+ (field (attrs public static final ) GL_PROJECTION_STACK_DEPTH int 2980); 0xba4 )
+ (field (attrs public static final ) GL_RGB_SCALE int 34163); 0x8573 )
+ (field (attrs public static final ) GL_SAMPLES int 32937); 0x80a9 )
+ (field (attrs public static final ) GL_SAMPLE_BUFFERS int 32936); 0x80a8 )
+ (field (attrs public static final ) GL_SAMPLE_COVERAGE_INVERT int 32939); 0x80ab )
+ (field (attrs public static final ) GL_SAMPLE_COVERAGE_VALUE int 32938); 0x80aa )
+ (field (attrs public static final ) GL_SCISSOR_BOX int 3088); 0xc10 )
+ (field (attrs public static final ) GL_SHADE_MODEL int 2900); 0xb54 )
+ (field (attrs public static final ) GL_SRC0_ALPHA int 34184); 0x8588 )
+ (field (attrs public static final ) GL_SRC0_RGB int 34176); 0x8580 )
+ (field (attrs public static final ) GL_SRC1_ALPHA int 34185); 0x8589 )
+ (field (attrs public static final ) GL_SRC1_RGB int 34177); 0x8581 )
+ (field (attrs public static final ) GL_SRC2_ALPHA int 34186); 0x858a )
+ (field (attrs public static final ) GL_SRC2_RGB int 34178); 0x8582 )
+ (field (attrs public static final ) GL_STATIC_DRAW int 35044); 0x88e4 )
+ (field (attrs public static final ) GL_STENCIL_CLEAR_VALUE int 2961); 0xb91 )
+ (field (attrs public static final ) GL_STENCIL_FAIL int 2964); 0xb94 )
+ (field (attrs public static final ) GL_STENCIL_FUNC int 2962); 0xb92 )
+ (field (attrs public static final ) GL_STENCIL_PASS_DEPTH_FAIL int 2965); 0xb95 )
+ (field (attrs public static final ) GL_STENCIL_PASS_DEPTH_PASS int 2966); 0xb96 )
+ (field (attrs public static final ) GL_STENCIL_REF int 2967); 0xb97 )
+ (field (attrs public static final ) GL_STENCIL_VALUE_MASK int 2963); 0xb93 )
+ (field (attrs public static final ) GL_STENCIL_WRITEMASK int 2968); 0xb98 )
+ (field (attrs public static final ) GL_SUBTRACT int 34023); 0x84e7 )
+ (field (attrs public static final ) GL_TEXTURE_BINDING_2D int 32873); 0x8069 )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING int 34970); 0x889a )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY_POINTER int 32914); 0x8092 )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY_SIZE int 32904); 0x8088 )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY_STRIDE int 32906); 0x808a )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY_TYPE int 32905); 0x8089 )
+ (field (attrs public static final ) GL_TEXTURE_MATRIX int 2984); 0xba8 )
+ (field (attrs public static final ) GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES int 35215); 0x898f )
+ (field (attrs public static final ) GL_TEXTURE_STACK_DEPTH int 2981); 0xba5 )
+ (field (attrs public static final ) GL_VERTEX_ARRAY_BUFFER_BINDING int 34966); 0x8896 )
+ (field (attrs public static final ) GL_VERTEX_ARRAY_POINTER int 32910); 0x808e )
+ (field (attrs public static final ) GL_VERTEX_ARRAY_SIZE int 32890); 0x807a )
+ (field (attrs public static final ) GL_VERTEX_ARRAY_STRIDE int 32892); 0x807c )
+ (field (attrs public static final ) GL_VERTEX_ARRAY_TYPE int 32891); 0x807b )
+ (field (attrs public static final ) GL_VIEWPORT int 2978); 0xba2 )
+ (field (attrs public static final ) GL_WRITE_ONLY int 35001); 0x88b9 )
+
+(method (attrs public abstract ) glBindBuffer(int int )void
+)
+
+(method (attrs public abstract ) glBufferData(int int [object java/nio/Buffer] int )void
+)
+
+(method (attrs public abstract ) glBufferSubData(int int int [object java/nio/Buffer] )void
+)
+
+(method (attrs public abstract ) glClipPlanef(int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glClipPlanef(int [array float] int )void
+)
+
+(method (attrs public abstract ) glClipPlanex(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glClipPlanex(int [array int] int )void
+)
+
+(method (attrs public abstract ) glColor4ub(byte byte byte byte )void
+)
+
+(method (attrs public abstract ) glColorPointer(int int int int )void
+)
+
+(method (attrs public abstract ) glDeleteBuffers(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glDeleteBuffers(int [array int] int )void
+)
+
+(method (attrs public abstract ) glDrawElements(int int int int )void
+)
+
+(method (attrs public abstract ) glGenBuffers(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGenBuffers(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetBooleanv(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetBooleanv(int [array boolean] int )void
+)
+
+(method (attrs public abstract ) glGetBufferParameteriv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetBufferParameteriv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetClipPlanef(int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetClipPlanef(int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetClipPlanex(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetClipPlanex(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetFixedv(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetFixedv(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetFloatv(int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetFloatv(int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetLightfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetLightfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetLightxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetLightxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetMaterialfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetMaterialfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetMaterialxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetMaterialxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetPointerv(int [array [object java/nio/Buffer]] )void
+)
+
+(method (attrs public abstract ) glGetTexEnviv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexEnviv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetTexEnvxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexEnvxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetTexParameterfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexParameterfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetTexParameteriv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexParameteriv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetTexParameterxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexParameterxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glIsBuffer(int )boolean
+)
+
+(method (attrs public abstract ) glIsEnabled(int )boolean
+)
+
+(method (attrs public abstract ) glIsTexture(int )boolean
+)
+
+(method (attrs public abstract ) glNormalPointer(int int int )void
+)
+
+(method (attrs public abstract ) glPointParameterf(int float )void
+)
+
+(method (attrs public abstract ) glPointParameterfv(int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glPointParameterfv(int [array float] int )void
+)
+
+(method (attrs public abstract ) glPointParameterx(int int )void
+)
+
+(method (attrs public abstract ) glPointParameterxv(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glPointParameterxv(int [array int] int )void
+)
+
+(method (attrs public abstract ) glPointSizePointerOES(int int [object java/nio/Buffer] )void
+)
+
+(method (attrs public abstract ) glTexCoordPointer(int int int int )void
+)
+
+(method (attrs public abstract ) glTexEnvi(int int int )void
+)
+
+(method (attrs public abstract ) glTexEnviv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexEnviv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glTexParameterfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glTexParameterfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glTexParameteri(int int int )void
+)
+
+(method (attrs public abstract ) glTexParameteriv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexParameteriv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glTexParameterxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexParameterxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glVertexPointer(int int int int )void
+)
+
+)

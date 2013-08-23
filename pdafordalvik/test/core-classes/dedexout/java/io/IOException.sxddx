@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/io/IOException
+ (super java/lang/Exception)
+ (source "IOException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1839592431); 0x6da5f3ef )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/io/IOException])
+  (line 34)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/IOException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 45)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 46)
+  (return-void )
+ )
+
+)

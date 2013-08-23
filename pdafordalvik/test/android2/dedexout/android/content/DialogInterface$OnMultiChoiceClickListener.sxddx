@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/content/DialogInterface$OnMultiChoiceClickListener
+ (super java/lang/Object)
+ (source "DialogInterface.java")
+
+
+(method (attrs public abstract ) onClick([object android/content/DialogInterface] int boolean )void
+)
+
+)

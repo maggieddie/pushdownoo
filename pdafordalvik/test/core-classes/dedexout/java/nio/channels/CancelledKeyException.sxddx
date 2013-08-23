@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/channels/CancelledKeyException
+ (super java/lang/IllegalStateException)
+ (source "CancelledKeyException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1409911170); 0xabf6767e )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/channels/CancelledKeyException])
+  (line 39)
+  (invoke-direct {v0} java/lang/IllegalStateException/<init> )
+  (line 40)
+  (return-void )
+ )
+
+)

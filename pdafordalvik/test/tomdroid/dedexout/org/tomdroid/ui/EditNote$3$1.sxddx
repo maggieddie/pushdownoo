@@ -1,0 +1,35 @@
+(class (attrs ) org/tomdroid/ui/EditNote$3$1
+ (super java/lang/Object)
+ (source "EditNote.java")
+ (implements android/content/DialogInterface$OnClickListener)
+
+ (field (attrs final ) this$1 [object org/tomdroid/ui/EditNote$3] )
+
+(method (attrs ) <init>([object org/tomdroid/ui/EditNote$3] )void
+  (limit registers 2)
+  ; this: v0 ([object org/tomdroid/ui/EditNote$3$1])
+  ; parameter[0] : v1 ([object org/tomdroid/ui/EditNote$3])
+  (line 1)
+  (iput-object v1 v0 org/tomdroid/ui/EditNote$3$1.this$1 [object org/tomdroid/ui/EditNote$3])
+  (line 411)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/content/DialogInterface] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/tomdroid/ui/EditNote$3$1])
+  ; parameter[0] : v2 ([object android/content/DialogInterface])
+  ; parameter[1] : v3 (int)
+  (line 413)
+  (invoke-interface {v2} android/content/DialogInterface/dismiss )
+  (line 414)
+  (iget-object v0 v1 org/tomdroid/ui/EditNote$3$1.this$1 [object org/tomdroid/ui/EditNote$3])
+  (invoke-static {v0} org/tomdroid/ui/EditNote$3/access$0 [object org/tomdroid/ui/EditNote$3] )
+  (move-result-object v0)
+  (invoke-virtual {v0} org/tomdroid/ui/EditNote/finish )
+  (line 415)
+  (return-void )
+)
+
+)

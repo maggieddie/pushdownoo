@@ -1,0 +1,23 @@
+(class (attrs synchronized ) java/io/RandomAccessFile$RepositionLock
+ (super java/lang/Object)
+ (source "RandomAccessFile.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/io/RandomAccessFile$RepositionLock])
+  (line 57)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/io/RandomAccessFile$1] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/RandomAccessFile$RepositionLock])
+  ; parameter[0] : v1 ([object java/io/RandomAccessFile$1])
+  (line 57)
+  (invoke-direct {v0} java/io/RandomAccessFile$RepositionLock/<init> )
+  (return-void )
+ )
+
+)

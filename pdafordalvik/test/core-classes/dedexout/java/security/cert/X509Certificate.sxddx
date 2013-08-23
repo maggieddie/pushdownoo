@@ -1,0 +1,194 @@
+(class (attrs public abstract synchronized ) java/security/cert/X509Certificate
+ (super java/security/cert/Certificate)
+ (source "X509Certificate.java")
+ (implements java/security/cert/X509Extension)
+
+ (field (attrs private static final ) serialVersionUID long -1065480); 0xffefbdf8 )
+
+(method (attrs protected ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/X509Certificate])
+  (line 84)
+  (const-string v0 "X.509")
+  (invoke-direct {v1 v0} java/security/cert/Certificate/<init> [object java/lang/String] )
+  (line 85)
+  (return-void )
+ )
+
+(method (attrs public abstract ) checkValidity()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateExpiredException]  [object java/security/cert/CertificateNotYetValidException])
+  )
+)
+
+(method (attrs public abstract ) checkValidity([object java/util/Date] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateExpiredException]  [object java/security/cert/CertificateNotYetValidException])
+  )
+)
+
+(method (attrs public abstract ) getBasicConstraints()int
+)
+
+(method (attrs public ) getExtendedKeyUsage()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateParsingException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/X509Certificate])
+  (line 401)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getIssuerAlternativeNames()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<"  "Ljava/util/List"  "<*>;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateParsingException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/X509Certificate])
+  (line 486)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getIssuerDN()[object java/security/Principal]
+)
+
+(method (attrs public abstract ) getIssuerUniqueID()[array boolean]
+)
+
+(method (attrs public ) getIssuerX500Principal()[object javax/security/auth/x500/X500Principal]
+  (limit registers 6)
+  ; this: v5 ([object java/security/cert/X509Certificate])
+  (catch java/lang/Exception from lbfb90 to lbfbc0 using lbfbc4)
+  (label lbfb90)
+  (line 208)
+  (const-string v3 "X.509")
+  (invoke-static {v3} java/security/cert/CertificateFactory/getInstance [object java/lang/String] )
+  (move-result-object v2)
+  (label lbfb9c)
+  (line 211)
+  (new-instance v3 java/io/ByteArrayInputStream)
+  (invoke-virtual-quick {v5} java/security/cert/X509Certificate/getEncoded )
+  (move-result-object v4)
+  (invoke-direct {v3 v4} java/io/ByteArrayInputStream/<init> [array byte] )
+  (invoke-virtual-quick {v2 v3} java/security/cert/CertificateFactory/generateCertificate [object java/io/InputStream] )
+  (move-result-object v0)
+  (check-cast v0 [object java/security/cert/X509Certificate])
+  (label lbfbba)
+  (line 214)
+  (invoke-virtual-quick {v0} java/security/cert/X509Certificate/getIssuerX500Principal )
+  (label lbfbc0)
+  (move-result-object v3)
+  (return-object v3)
+  (label lbfbc4)
+  (line 216)
+  (move-exception v3)
+  (move-object v1 v3)
+  (line 217)
+  (new-instance v3 java/lang/RuntimeException)
+  (const-string v4 "security.59")
+  (invoke-static {v4} org/apache/harmony/security/internal/nls/Messages/getString [object java/lang/String] )
+  (move-result-object v4)
+  (invoke-direct {v3 v4 v1} java/lang/RuntimeException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (throw v3)
+)
+
+(method (attrs public abstract ) getKeyUsage()[array boolean]
+)
+
+(method (attrs public abstract ) getNotAfter()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getNotBefore()[object java/util/Date]
+)
+
+(method (attrs public abstract ) getSerialNumber()[object java/math/BigInteger]
+)
+
+(method (attrs public abstract ) getSigAlgName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSigAlgOID()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSigAlgParams()[array byte]
+)
+
+(method (attrs public abstract ) getSignature()[array byte]
+)
+
+(method (attrs public ) getSubjectAlternativeNames()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<"  "Ljava/util/List"  "<*>;>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateParsingException])
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/X509Certificate])
+  (line 449)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getSubjectDN()[object java/security/Principal]
+)
+
+(method (attrs public abstract ) getSubjectUniqueID()[array boolean]
+)
+
+(method (attrs public ) getSubjectX500Principal()[object javax/security/auth/x500/X500Principal]
+  (limit registers 6)
+  ; this: v5 ([object java/security/cert/X509Certificate])
+  (catch java/lang/Exception from lbfc14 to lbfc44 using lbfc48)
+  (label lbfc14)
+  (line 268)
+  (const-string v3 "X.509")
+  (invoke-static {v3} java/security/cert/CertificateFactory/getInstance [object java/lang/String] )
+  (move-result-object v2)
+  (label lbfc20)
+  (line 271)
+  (new-instance v3 java/io/ByteArrayInputStream)
+  (invoke-virtual-quick {v5} java/security/cert/X509Certificate/getEncoded )
+  (move-result-object v4)
+  (invoke-direct {v3 v4} java/io/ByteArrayInputStream/<init> [array byte] )
+  (invoke-virtual-quick {v2 v3} java/security/cert/CertificateFactory/generateCertificate [object java/io/InputStream] )
+  (move-result-object v0)
+  (check-cast v0 [object java/security/cert/X509Certificate])
+  (label lbfc3e)
+  (line 274)
+  (invoke-virtual-quick {v0} java/security/cert/X509Certificate/getSubjectX500Principal )
+  (label lbfc44)
+  (move-result-object v3)
+  (return-object v3)
+  (label lbfc48)
+  (line 276)
+  (move-exception v3)
+  (move-object v1 v3)
+  (line 277)
+  (new-instance v3 java/lang/RuntimeException)
+  (const-string v4 "security.5A")
+  (invoke-static {v4} org/apache/harmony/security/internal/nls/Messages/getString [object java/lang/String] )
+  (move-result-object v4)
+  (invoke-direct {v3 v4 v1} java/lang/RuntimeException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (throw v3)
+)
+
+(method (attrs public abstract ) getTBSCertificate()[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertificateEncodingException])
+  )
+)
+
+(method (attrs public abstract ) getVersion()int
+)
+
+)

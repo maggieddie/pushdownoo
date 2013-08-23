@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/support/v4/os/ParcelableCompatCreatorCallbacks
+ (super java/lang/Object)
+ (source "ParcelableCompatCreatorCallbacks.java")
+
+
+(method (attrs public abstract ) createFromParcel([object android/os/Parcel] [object java/lang/ClassLoader] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Parcel;"  "Ljava/lang/ClassLoader;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) newArray(int )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)[TT;")
+  )
+)
+
+)

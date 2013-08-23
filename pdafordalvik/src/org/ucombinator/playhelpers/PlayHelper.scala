@@ -12,9 +12,12 @@ import models.PropertyCheckList
 import org.ucombinator.dalvik.preanalysis.RiskAnalysis
 import org.ucombinator.dalvik.parsing.ParserHelper
 import org.ucombinator.dalvik.vmrelated.DalvikVMRelated
+import org.ucombinator.utils.AnalysisScope
+//import org.ucombinator.utils.NonNullCheckUtils
+ 
 //import org.ucombinator.dalvik.vmrelated.DalvikVMRelated.InitEntryPointStmt
 
-object PlayHelper extends ParserHelper with DalvikVMRelated{
+object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheckUtils{
 
  // var gopts: AIOptions = null
   
@@ -78,8 +81,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated{
      }
   }*/
   
-  private def setPaths(opts:AIOptions) : AIOptions =  {
-     
+  private def setPaths(opts:AIOptions) : AIOptions =  { 
     opts. statsDirName = opts.apkProjDir +  File.separator +  "statistics"
     opts.graphDirName =  opts.apkProjDir +  File.separator +  "graphs"
     opts.permReportsDirName = opts.apkProjDir + File.separator + "reports"
@@ -94,8 +96,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated{
       opts.riskRankingReportPath = CommonUtils.getRiskRankingFolderFileName(opts)
       opts.clsRiskRankingReportPath = CommonUtils.getClsRiskRankingFolderFileName(opts)
       opts.methRiskRankingReportPath= CommonUtils.getMethRiskRankingFolderFileName(opts)
-      opts
-    
+      opts 
   }
     
 
@@ -134,76 +135,122 @@ object PlayHelper extends ParserHelper with DalvikVMRelated{
       println(helpMessage)
     }
     
-         //parse in s-expressioned dalvik 
-     parseDalvikSExprs(opts)
+    /**
+     *  parse in exclusive libs. 
+     *  if none specified in file, then parse and analyze all available bytecode
+     */
+    AnalysisScope.parseInExclusiveLibNames
     
-     // parse in security related files
+     //parse in s-expressioned dalvik 
+     parseDalvikSExprs(opts) 
+    
+    if(! opts.doNotNullCheck) {
+       // parse in security related files
      DalInformationFlow.parseInAndroidKnowledge
 
-            // read JVm report
+     // read JVm report
      APISpecs.readInReport
-
-            // preanalysis for the risk ranking happens before expensive analysis!!!
+      
+      // preanalysis for the risk ranking happens before expensive analysis!!!
       RiskAnalysis.computeAndSetOverallRisk
       RiskAnalysis.dumpPreRiskRanking(opts) 
-
+     
+    } else {
+     // buildInitEntries(opts)
+    }
+      
     processDalvik(opts)
+    	
+    def runLRAOnUnlinkedInitEntryPointStmts(initEntryPointStmts : List[Stmt], runner: PDCFAAnalysisRunner) {
+      initEntryPointStmts.foreach{
+    		  resi => {
+    		    if(resi.isInstanceOf[InitEntryPointStmt]){
+    			  val initEntrP = resi.asInstanceOf[InitEntryPointStmt]
+    			  val lstSts = CommonUtils.flattenLinkedStmt(List())(initEntrP.body)
+    			  runner.runLRAOnListSts(lstSts) 
+    		    }
+    		  }
+     	 }
+    }
 
     // for each of the resinits, we run the runLRAOnListSts
-    def doPreAnalysis(initEns: List[Stmt], resInits: List[Stmt], runner: PDCFAAnalysisRunner) {
+    def doPreAnalysis(initEns: List[Stmt], resInits: List[Stmt], runner: PDCFAAnalysisRunner, opts:AIOptions) {
       println("start lra for inits...")
 
-      //resInits.foreach(println)
-      resInits.foreach{
-        resi => {
-          val initEntrP = resi.asInstanceOf[InitEntryPointStmt]
-          val lstSts = CommonUtils.flattenLinkedStmt(List())(initEntrP.body)
-          runner.runLRAOnListSts(lstSts) 
+      if(opts.unlinkedNonNull){
+        println("do lra for unlinked notnull")
+        //  run through all of them
+           Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foreach  {
+          case (clsName, clsDef) => {
+            val initEntryPointStmts = clsDef.unlinkedInitEntryPoints
+            runLRAOnUnlinkedInitEntryPointStmts(initEntryPointStmts, runner)
+            initEntryPointStmts.foreach(runner.runLRAEntryBodies(_, opts)) 
+          }
         }
-      } 
+         runner.runLRAOnAllMethods 
+      }
+      else{
+        //resInits.foreach(println)
+        runLRAOnUnlinkedInitEntryPointStmts(resInits, runner)
+    	 /* resInits.foreach{
+    		  resi => {
+    			  val initEntrP = resi.asInstanceOf[InitEntryPointStmt]
+    			  val lstSts = CommonUtils.flattenLinkedStmt(List())(initEntrP.body)
+    			  runner.runLRAOnListSts(lstSts) 
+    		  }
+     	 }  */
+     	 println("lra on rest  inits...") 
+     	 initEns.foreach(runner.runLRAEntryBodies(_, opts)) 
+     	 runner.runLRAOnAllMethods 
       
-
-      println("lra on rest  inits...")
-
-      initEns.foreach(runner.runLRAEntryBodies)
-
-      runner.runLRAOnAllMethods
-
+      	} 
+      
       println("Done with LRA preanalysis!")
     //   Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)
       
     }
 
-    def processDalvik(opts: AIOptions) {
-
+    def processDalvik(opts: AIOptions) { 
       import org.ucombinator.dalvik.syntax._
-
       val sd = opts.sexprDir
       if (opts.verbose) {
         System.err.print("Parsing s-expressions...")
-      }
-
+      } 
       opts.analysisType match {
         case AnalysisType.PDCFA => {
-          val runner = new PDCFAAnalysisRunner(opts)
-
-           
-          val (initEns, allIndividualInits) = runner.getListofInitEntries(opts)
-
-          if (opts.doLRA) {
-            // do lra
-            doPreAnalysis(initEns, allIndividualInits, runner)
-
-           
-            
-            // starts to run Analysis
-            runner.runPDCFA(opts, initEns)
-            
-
-          } else // no lra, 
-          {
-           // APISpecs.readInReport
-            runner.runPDCFA(opts, initEns)
+          val runner = new PDCFAAnalysisRunner(opts)  
+          
+           if(!opts.doNotNullCheck){
+        	   val (initEns, allIndividualInits) = runner.getListofInitEntries(opts) 
+        	   if (opts.doLRA) { // do lra 
+            	doPreAnalysis(initEns, allIndividualInits, runner, opts)  
+            	// starts to run Analysis
+            	runner.runPDCFA(opts, initEns) 
+            	}
+        	   	else{
+        	   		runner.runPDCFA(opts, initEns) 
+        	   	}
+          } else {// do NotNull 
+            if(!opts.unlinkedNonNull) {
+            	val initStmts = runner.getAllInitEntryPoints(opts) 
+            	if (opts.doLRA) {  
+            		doPreAnalysis(initStmts, List(), runner, opts)  
+            		runner.runPDCFA(opts, initStmts)
+            	} else { 
+            		runner.runPDCFA(opts, initStmts)
+            	}
+            } 
+            else { // do notnull unlinked
+              if(opts.doLRA) {
+                runner.setUnlinkedInitEntryPoints(opts)
+                doPreAnalysis(List(), List(), runner, opts)
+                runner.runPDCFA(opts, List())
+              }
+              else{
+                runner.setUnlinkedInitEntryPoints(opts)
+                runner.runPDCFA(opts, List())
+              }
+            }
           }
         }
       }

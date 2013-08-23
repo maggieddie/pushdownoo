@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/tomgibara/android/veecheck/VeecheckNotifier
+ (super java/lang/Object)
+ (source "VeecheckNotifier.java")
+
+
+(method (attrs public abstract ) createIntent([object java/lang/String] [object java/lang/String] [object java/lang/String] [object java/util/Map] )[object android/content/Intent]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ljava/lang/String;"  "Ljava/lang/String;"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;)"  "Landroid/content/Intent;")
+  )
+)
+
+(method (attrs public abstract ) createNotification([object android/content/Intent] )[object android/app/Notification]
+)
+
+(method (attrs public abstract ) getNotificationId()int
+)
+
+)

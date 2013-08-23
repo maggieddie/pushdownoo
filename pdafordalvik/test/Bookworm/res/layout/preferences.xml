@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prefSectApp">
+        <CheckBoxPreference android:title="@string/prefTitleSplash" android:key="showsplash" android:summary="@string/prefSumSplash" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/prefTitleDebugLog" android:key="debugenabled" android:summary="@string/prefSumDebugLog" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefSectDataProvider">
+        <ListPreference android:entries="@array/bookdataprovidernames" android:title="@string/prefTitleBookData" android:key="dataproviderpref" android:summary="@string/prefSumBookData" android:defaultValue="com.totsp.bookworm.data.GoogleBookDataSource" android:entryValues="@array/bookdataproviderkeys" />
+    </PreferenceCategory>
+</PreferenceScreen>

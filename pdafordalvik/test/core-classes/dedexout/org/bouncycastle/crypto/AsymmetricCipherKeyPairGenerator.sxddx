@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/crypto/AsymmetricCipherKeyPairGenerator
+ (super java/lang/Object)
+ (source "AsymmetricCipherKeyPairGenerator.java")
+
+
+(method (attrs public abstract ) generateKeyPair()[object org/bouncycastle/crypto/AsymmetricCipherKeyPair]
+)
+
+(method (attrs public abstract ) init([object org/bouncycastle/crypto/KeyGenerationParameters] )void
+)
+
+)

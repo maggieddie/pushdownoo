@@ -1,0 +1,76 @@
+(interface (attrs public abstract synchronized ) org/w3c/dom/Element
+ (super java/lang/Object)
+ (source "Element.java")
+ (implements org/w3c/dom/Node)
+
+
+(method (attrs public abstract ) getAttribute([object java/lang/String] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getAttributeNS([object java/lang/String] [object java/lang/String] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getAttributeNode([object java/lang/String] )[object org/w3c/dom/Attr]
+)
+
+(method (attrs public abstract ) getAttributeNodeNS([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/Attr]
+)
+
+(method (attrs public abstract ) getElementsByTagName([object java/lang/String] )[object org/w3c/dom/NodeList]
+)
+
+(method (attrs public abstract ) getElementsByTagNameNS([object java/lang/String] [object java/lang/String] )[object org/w3c/dom/NodeList]
+)
+
+(method (attrs public abstract ) getTagName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) hasAttribute([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) hasAttributeNS([object java/lang/String] [object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) removeAttribute([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) removeAttributeNS([object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) removeAttributeNode([object org/w3c/dom/Attr] )[object org/w3c/dom/Attr]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) setAttribute([object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) setAttributeNS([object java/lang/String] [object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) setAttributeNode([object org/w3c/dom/Attr] )[object org/w3c/dom/Attr]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+(method (attrs public abstract ) setAttributeNodeNS([object org/w3c/dom/Attr] )[object org/w3c/dom/Attr]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+)

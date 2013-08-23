@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">The well-known Fortune for Android: print a random, hopefully interesting, adage.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune at Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">要檢視本程式的資訊您需要安裝OI About。到Market或http://www.openintents.org/上檢視。</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">看起來您并沒有安裝Android Market程式。忽視。</string>
+    <string name="market_description_short">眾所周知的Fortune，現在有Android版了：隨機輸出，有趣，諺語，引用，語錄，警句，笑話，文字...</string>
+    <string name="menu_preferences">首選項</string>
+    <string name="menu_about">"關於Android's Fortune"</string>
+    <string name="menu_refresh">重新整理Cookie</string>
+    <string name="menu_get_more_cookies">獲取更多的Cookie</string>
+    <string name="menu_send">發送為文字</string>
+    <string name="menu_web_search">搜尋網路</string>
+    <string name="menu_feedback">給予回饋</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">發送透過：</string>
+    <string name="chooser_web_search_action">搜尋網路透過：</string>
+    <string name="preferences_activity_name">"Android's Fortune首選項"</string>
+    <string name="resources">資源</string>
+    <string name="title_cp_equal">Cookie檔案之間的概率相等</string>
+    <string name="summary_cp_equal">從各個cookie檔案中顯示cookie的幾率是相等的，不考慮cookie檔案的大小。</string>
+    <string name="title_ep_folder">包含cookie檔案的資料夾</string>
+    <string name="summary_ep_folder">輸入您存儲您的cookie檔案的資料夾。</string>
+    <string name="dialog_title_ep_folder">輸入包含cookie檔案的資料夾</string>
+    <string name="title_ps_files">Cookie檔案</string>
+    <string name="summary_ps_files">從上面的資料夾中選擇cookie檔案(不包含.num檔案)。</string>
+    <string name="summary_ps_files_warning">警告：一些選定的檔案沒有關聯的.num檔案！按這里變更所選。</string>
+    <string name="in_app_display">顯示</string>
+    <string name="title_lp_font">字型類型</string>
+    <string name="summary_lp_font">Monospace can be useful for ascii-art cookies.</string>
+    <string name="dialog_title_lp_font">Change the font style</string>
+    <string name="title_ep_fontsize">Font size</string>
+    <string name="summary_ep_fontsize">Font size in points.</string>
+    <string name="dialog_title_ep_fontsize">變更字型大小</string>
+    <string name="title_cp_wrap">文字換行</string>
+    <string name="summary_cp_wrap">使cookie文字適合螢幕。禁用可以正確的檢視使用換行符或ASCII符號圖片的cookie文字。</string>
+    <string name="widget_display">小工具</string>
+    <string name="title_lp_widget_font">字型類型</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">變更小工具字型樣式</string>
+    <string name="title_ep_widget_period">小工具更新間隔</string>
+    <string name="summary_ep_widget_period">小工具重新整理的時間間隔(分鐘)。</string>
+    <string name="dialog_title_ep_widget_period">變更小工具更新週期</string>
+    <string name="notifications">通知</string>
+    <string name="title_cp_notif_boot">啟動時通知</string>
+    <string name="summary_cp_notif_boot">Suggest a cookie at system startup.</string>
+    <string name="title_cp_notif_time">定期通知</string>
+    <string name="summary_cp_notif_time">推薦的cookie時間間隔。</string>
+    <string name="title_ep_time">時間間隔</string>
+    <string name="summary_ep_time">通知之間的時間間隔(分鐘)。</string>
+    <string name="dialog_title_ep_time">變更時間間隔</string>
+    <string name="dialog_title_num">建立.num檔案？</string>
+    <string name="dialog_message_num_warning">一些選定的檔案沒有關聯的.num檔案。</string>
+    <string name="no_cookie_files">"沒有Cookie檔案的組態。請開啟首選項并選擇一些cookie檔案。
+
+檢視: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(這不是一個Fortune的cookie！)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune Cookie</string>
+    <string name="dialog_install">請稍候，正在安裝例子cookie檔案...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Fortune cookie</string>
+    <string name="widget_loading">Cookie檔案載入中...</string>
+    <string name="widget_error">"沒有cookie檔案組態，或者Android's Fortune因為重新安裝或剩余記憶體太少而關閉。按開啟Android's Fortune！"</string>
+    <string name="widget_dialog_activity_name">選擇操作：</string>
+    <string name="label_b_refresh">重新整理</string>
+    <string name="label_b_show_cookie">顯示cookie</string>
+    <string name="label_b_cancel">取消</string>
+    <string name="error_no_file_name">A file name was not specified.</string>
+    <string name="error_arg_twice">An argument was passed twice.</string>
+    <string name="error_num_file_exists">即將建立的.num意外的已存在。</string>
+    <string name="error_no_valid_cookie_file">所選檔案不是有效的cookie檔案。</string>
+    <string name="error_file_not_exists_or_no_num">Cookie檔案不存在并且沒有與它相關的.num檔案：</string>
+    <string name="error_no_write_perms">您沒有寫入許可權。</string>
+    <string name="toast_read_cookie_failed">讀取cookie失敗：</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+您確定SD卡已經安裝？"</string>
+    <string name="toast_read_cookie_failed_internal">讀取cookie時發生內部錯誤(請報告此bug)：</string>
+    <string name="toast_generation_num_failed">生成.num檔案失敗：</string>
+    <string name="toast_not_a_dir">指定的資料夾(在選項中)不是可用的資料夾：</string>
+    <string name="toast_selected_file_lost">先前選定的一個檔案現在無法找到：</string>
+    <string name="toast_value_invalid">輸入的數值無效。設定到：</string>
+    <string name="toast_widget_period_short">小于60分鐘的週期可能會對效能和續航能力造成負面影響。</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune更新檢查選項"</string>
+    <string name="title_ps_versioncheck">更新檢查中</string>
+    <string name="summary_ps_versioncheck">自動檢查更新。</string>
+    <string name="vc_notify_ticker">程式更新</string>
+    <string name="vc_notify_title">程式已更新</string>
+    <string name="vc_notify_message">下載新版本</string>
+    <string name="vc_category">更新檢查中</string>
+    <string name="vc_enabled_title">已啟用</string>
+    <string name="vc_enabled_summary">程式更新檢查是否已啟用。</string>
+    <string name="vc_confirm_title">"確認Android's Fortune更新"</string>
+    <string name="vc_confirm_text">您要升級本程式到最新版本么？</string>
+    <string name="vc_confirm_stop">不再提醒我此更新</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Check URI</string>
+    <string name="vc_check_uri_summary">The URI which will be checked for app updates.</string>
+    <string name="about_translators">Launchpad Contributions: 冯超 https://launchpad.net/~rainofchaos</string>
+</resources>

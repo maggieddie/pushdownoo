@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$SyncColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+ (implements android/provider/ContactsContract$BaseSyncColumns)
+
+ (field (attrs public static final ) ACCOUNT_NAME [object java/lang/String] "account_name" )
+ (field (attrs public static final ) ACCOUNT_TYPE [object java/lang/String] "account_type" )
+ (field (attrs public static final ) DIRTY [object java/lang/String] "dirty" )
+ (field (attrs public static final ) SOURCE_ID [object java/lang/String] "sourceid" )
+ (field (attrs public static final ) VERSION [object java/lang/String] "version" )
+
+)

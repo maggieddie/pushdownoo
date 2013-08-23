@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/media/audiofx/Visualizer$OnDataCaptureListener
+ (super java/lang/Object)
+ (source "Visualizer.java")
+
+
+(method (attrs public abstract ) onFftDataCapture([object android/media/audiofx/Visualizer] [array byte] int )void
+)
+
+(method (attrs public abstract ) onWaveFormDataCapture([object android/media/audiofx/Visualizer] [array byte] int )void
+)
+
+)

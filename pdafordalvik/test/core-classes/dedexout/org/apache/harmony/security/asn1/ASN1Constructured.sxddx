@@ -1,0 +1,56 @@
+(class (attrs public abstract synchronized ) org/apache/harmony/security/asn1/ASN1Constructured
+ (super org/apache/harmony/security/asn1/ASN1Type)
+ (source "ASN1Constructured.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/asn1/ASN1Constructured])
+  ; parameter[0] : v2 (int)
+  (line 35)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0 v2} org/apache/harmony/security/asn1/ASN1Type/<init> int int )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/harmony/security/asn1/ASN1Constructured])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 39)
+  (invoke-direct {v0 v1 v2} org/apache/harmony/security/asn1/ASN1Type/<init> int int )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public final ) checkTag(int )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/asn1/ASN1Constructured])
+  ; parameter[0] : v2 (int)
+  (line 50)
+  (iget-quick v0 v1 )
+  (if-ne v0 v2 l19cc0c)
+  (const/4 v0 1)
+  (label l19cc0a)
+  (return v0)
+  (label l19cc0c)
+  (const/4 v0 0)
+  (goto l19cc0a)
+)
+
+(method (attrs public ) encodeASN([object org/apache/harmony/security/asn1/BerOutputStream] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/asn1/ASN1Constructured])
+  ; parameter[0] : v2 ([object org/apache/harmony/security/asn1/BerOutputStream])
+  (line 57)
+  (iget-quick v0 v1 )
+  (invoke-virtual-quick {v2 v0} org/apache/harmony/security/asn1/BerOutputStream/encodeTag int )
+  (line 58)
+  (invoke-virtual-quick {v1 v2} org/apache/harmony/security/asn1/ASN1Constructured/encodeContent [object org/apache/harmony/security/asn1/BerOutputStream] )
+  (line 59)
+  (return-void )
+)
+
+)

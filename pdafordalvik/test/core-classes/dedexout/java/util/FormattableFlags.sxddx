@@ -1,0 +1,18 @@
+(class (attrs public synchronized ) java/util/FormattableFlags
+ (super java/lang/Object)
+ (source "FormattableFlags.java")
+
+ (field (attrs public static final ) ALTERNATE int 4); 0x4 )
+ (field (attrs public static final ) LEFT_JUSTIFY int 1); 0x1 )
+ (field (attrs public static final ) UPPERCASE int 2); 0x2 )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/FormattableFlags])
+  (line 28)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+)

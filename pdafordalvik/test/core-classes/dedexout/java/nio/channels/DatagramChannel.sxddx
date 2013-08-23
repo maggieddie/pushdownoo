@@ -1,0 +1,155 @@
+(class (attrs public abstract synchronized ) java/nio/channels/DatagramChannel
+ (super java/nio/channels/spi/AbstractSelectableChannel)
+ (source "DatagramChannel.java")
+ (implements java/nio/channels/ByteChannel)
+ (implements java/nio/channels/ScatteringByteChannel)
+ (implements java/nio/channels/GatheringByteChannel)
+
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 52)
+  (invoke-static {} org/apache/harmony/luni/platform/Platform/getNetworkSystem )
+  (nop )
+  (move-result-object v0)
+  (const/4 v1 1)
+  (invoke-interface {v0 v1} org/apache/harmony/luni/platform/INetworkSystem/oneTimeInitialization boolean )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/nio/channels/spi/SelectorProvider] )void
+  (limit registers 2)
+  ; this: v0 ([object java/nio/channels/DatagramChannel])
+  ; parameter[0] : v1 ([object java/nio/channels/spi/SelectorProvider])
+  (line 63)
+  (invoke-direct {v0 v1} java/nio/channels/spi/AbstractSelectableChannel/<init> [object java/nio/channels/spi/SelectorProvider] )
+  (line 64)
+  (return-void )
+ )
+
+(method (attrs public static ) open()[object java/nio/channels/DatagramChannel]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 1)
+  (line 79)
+  (invoke-static {} java/nio/channels/spi/SelectorProvider/provider )
+  (nop )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0} java/nio/channels/spi/SelectorProvider/openDatagramChannel )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public abstract ) connect([object java/net/SocketAddress] )[object java/nio/channels/DatagramChannel]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) disconnect()[object java/nio/channels/DatagramChannel]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) isConnected()boolean
+)
+
+(method (attrs public abstract ) read([object java/nio/ByteBuffer] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public final synchronized ) read([array [object java/nio/ByteBuffer]] )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/nio/channels/DatagramChannel])
+  ; parameter[0] : v3 ([array [object java/nio/ByteBuffer]])
+  (catchall  java/lang/Exception from l8ff40 to l8ff48 using l8ff4e)
+  (line 365)
+  (monitor-enter v2)
+  (const/4 v0 0)
+  (label l8ff40)
+  (array-length v1 v3)
+  (invoke-virtual-quick {v2 v3 v0 v1} java/nio/channels/DatagramChannel/read [array [object java/nio/ByteBuffer]] int int )
+  (label l8ff48)
+  (move-result-wide v0)
+  (monitor-exit v2)
+  (return-wide v0)
+  (label l8ff4e)
+  (move-exception v0)
+  (monitor-exit v2)
+  (throw v0)
+)
+
+(method (attrs public abstract ) read([array [object java/nio/ByteBuffer]] int int )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) receive([object java/nio/ByteBuffer] )[object java/net/SocketAddress]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) send([object java/nio/ByteBuffer] [object java/net/SocketAddress] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) socket()[object java/net/DatagramSocket]
+)
+
+(method (attrs public final ) validOps()int
+  (limit registers 2)
+  ; this: v1 ([object java/nio/channels/DatagramChannel])
+  (line 92)
+  (const/4 v0 5)
+  (return v0)
+)
+
+(method (attrs public abstract ) write([object java/nio/ByteBuffer] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public final synchronized ) write([array [object java/nio/ByteBuffer]] )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/nio/channels/DatagramChannel])
+  ; parameter[0] : v3 ([array [object java/nio/ByteBuffer]])
+  (catchall  java/lang/Exception from l8ff88 to l8ff90 using l8ff96)
+  (line 472)
+  (monitor-enter v2)
+  (const/4 v0 0)
+  (label l8ff88)
+  (array-length v1 v3)
+  (invoke-virtual-quick {v2 v3 v0 v1} java/nio/channels/DatagramChannel/write [array [object java/nio/ByteBuffer]] int int )
+  (label l8ff90)
+  (move-result-wide v0)
+  (monitor-exit v2)
+  (return-wide v0)
+  (label l8ff96)
+  (move-exception v0)
+  (monitor-exit v2)
+  (throw v0)
+)
+
+(method (attrs public abstract ) write([array [object java/nio/ByteBuffer]] int int )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

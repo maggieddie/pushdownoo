@@ -1,0 +1,148 @@
+(class (attrs synchronized ) java/lang/VMThread
+ (super java/lang/Object)
+ (source "VMThread.java")
+
+ (field (attrs static final ) STATE_MAP [array [object java/lang/Thread$State]] null )
+ (field (attrs private static final ) UNSUPPORTED_THREAD_METHOD [object java/lang/String] "Deprecated Thread methods are not supported." )
+ (field (attrs ) thread [object java/lang/Thread] )
+ (field (attrs ) vmData int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (line 96)
+  (const/16 v0 9)
+  (new-array v0 v0 [array [object java/lang/Thread$State]])
+  (const/4 v1 0)
+  (sget-object v2 java/lang/Thread$State.TERMINATED [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (sget-object v2 java/lang/Thread$State.RUNNABLE [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 2)
+  (sget-object v2 java/lang/Thread$State.TIMED_WAITING [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 3)
+  (sget-object v2 java/lang/Thread$State.BLOCKED [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 4)
+  (sget-object v2 java/lang/Thread$State.WAITING [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 5)
+  (sget-object v2 java/lang/Thread$State.NEW [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 6)
+  (sget-object v2 java/lang/Thread$State.NEW [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/4 v1 7)
+  (sget-object v2 java/lang/Thread$State.RUNNABLE [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (const/16 v1 8)
+  (sget-object v2 java/lang/Thread$State.WAITING [object java/lang/Thread$State])
+  (aput-object v2 v0 v1)
+  (sput-object v0 java/lang/VMThread.STATE_MAP [array [object java/lang/Thread$State]])
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/Thread] )void
+  (limit registers 2)
+  ; this: v0 ([object java/lang/VMThread])
+  ; parameter[0] : v1 ([object java/lang/Thread])
+  (line 27)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 28)
+  (iput-object-quick v1 v0 java/lang/VMThread.thread [object java/lang/Thread])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs static native ) create([object java/lang/Thread] long )void
+ )
+
+(method (attrs static native ) currentThread()[object java/lang/Thread]
+ )
+
+(method (attrs static native ) interrupted()boolean
+ )
+
+(method (attrs static native ) sleep(long int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/InterruptedException])
+  )
+ )
+
+(method (attrs static native ) yield()void
+ )
+
+(method (attrs native ) getStatus()int
+)
+
+(method (attrs native ) holdsLock([object java/lang/Object] )boolean
+)
+
+(method (attrs native ) interrupt()void
+)
+
+(method (attrs native ) isInterrupted()boolean
+)
+
+(method (attrs native ) nameChanged([object java/lang/String] )void
+)
+
+(method (attrs ) resume()void
+  (limit registers 5)
+  ; this: v4 ([object java/lang/VMThread])
+  (line 70)
+  (sget-object v0 java/util/logging/Logger.global [object java/util/logging/Logger])
+  (sget-object v1 java/util/logging/Level.SEVERE [object java/util/logging/Level])
+  (const-string v2 "Deprecated Thread methods are not supported.")
+  (new-instance v3 java/lang/UnsupportedOperationException)
+  (invoke-direct {v3} java/lang/UnsupportedOperationException/<init> )
+  (invoke-virtual-quick {v0 v1 v2 v3} java/util/logging/Logger/log [object java/util/logging/Level] [object java/lang/String] [object java/lang/Throwable] )
+  (line 72)
+  (return-void )
+)
+
+(method (attrs native ) setPriority(int )void
+)
+
+(method (attrs ) start(long )void
+  (limit registers 4)
+  ; this: v1 ([object java/lang/VMThread])
+  ; parameter[0] : v2 (long)
+  (line 50)
+  (iget-object-quick v0 v1 java/lang/VMThread.thread [object java/lang/Thread])
+  (invoke-static {v0 v2 v3} java/lang/VMThread/create [object java/lang/Thread] long )
+  (line 51)
+  (return-void )
+)
+
+(method (attrs ) stop([object java/lang/Throwable] )void
+  (limit registers 6)
+  ; this: v4 ([object java/lang/VMThread])
+  ; parameter[0] : v5 ([object java/lang/Throwable])
+  (line 85)
+  (sget-object v0 java/util/logging/Logger.global [object java/util/logging/Logger])
+  (sget-object v1 java/util/logging/Level.SEVERE [object java/util/logging/Level])
+  (const-string v2 "Deprecated Thread methods are not supported.")
+  (new-instance v3 java/lang/UnsupportedOperationException)
+  (invoke-direct {v3} java/lang/UnsupportedOperationException/<init> )
+  (invoke-virtual-quick {v0 v1 v2 v3} java/util/logging/Logger/log [object java/util/logging/Level] [object java/lang/String] [object java/lang/Throwable] )
+  (line 87)
+  (return-void )
+)
+
+(method (attrs ) suspend()void
+  (limit registers 5)
+  ; this: v4 ([object java/lang/VMThread])
+  (line 61)
+  (sget-object v0 java/util/logging/Logger.global [object java/util/logging/Logger])
+  (sget-object v1 java/util/logging/Level.SEVERE [object java/util/logging/Level])
+  (const-string v2 "Deprecated Thread methods are not supported.")
+  (new-instance v3 java/lang/UnsupportedOperationException)
+  (invoke-direct {v3} java/lang/UnsupportedOperationException/<init> )
+  (invoke-virtual-quick {v0 v1 v2 v3} java/util/logging/Logger/log [object java/util/logging/Level] [object java/lang/String] [object java/lang/Throwable] )
+  (line 63)
+  (return-void )
+)
+
+)

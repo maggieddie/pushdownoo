@@ -14,6 +14,7 @@ import org.ucombinator.domains.CommonAbstractDomains._
 
 trait ExternalLibCallsHandler //extends StateSpace with
 extends CESKMachinary with  RawStringLibsAI with ReflectionAI with ExceptionHandling with LiveRegisterAnalysis{
+  
   def isExternalLibCalls(cls:String) : Boolean = {
     CommonUtils.isStringLibs(cls) || CommonUtils.isMetaLibCall(cls) || APISpecs.isInAPISpecsbyName(cls)
   }

@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) javax/xml/transform/ErrorListener
+ (super java/lang/Object)
+ (source "ErrorListener.java")
+
+
+(method (attrs public abstract ) error([object javax/xml/transform/TransformerException] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/transform/TransformerException])
+  )
+)
+
+(method (attrs public abstract ) fatalError([object javax/xml/transform/TransformerException] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/transform/TransformerException])
+  )
+)
+
+(method (attrs public abstract ) warning([object javax/xml/transform/TransformerException] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/transform/TransformerException])
+  )
+)
+
+)

@@ -1,0 +1,50 @@
+(class (attrs public abstract ) java/security/PermissionCollection
+ (super java/lang/Object)
+ (source "PermissionCollection.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/security/PermissionCollection])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) add([object java/security/Permission] )void
+)
+
+(method (attrs public abstract ) elements()[object java/util/Enumeration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Enumeration"  "<"  "Ljava/security/Permission;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) implies([object java/security/Permission] )boolean
+)
+
+(method (attrs public ) isReadOnly()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/security/PermissionCollection])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setReadOnly()void
+  (limit registers 3)
+  ; this: v2 ([object java/security/PermissionCollection])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

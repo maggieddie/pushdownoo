@@ -1,0 +1,30 @@
+(class (attrs public ) android/drm/DrmConvertedStatus
+ (super java/lang/Object)
+ (source "DrmConvertedStatus.java")
+
+ (field (attrs public static final ) STATUS_ERROR int 3); 0x3 )
+ (field (attrs public static final ) STATUS_INPUTDATA_ERROR int 2); 0x2 )
+ (field (attrs public static final ) STATUS_OK int 1); 0x1 )
+ (field (attrs public final ) convertedData [array byte] )
+ (field (attrs public final ) offset int )
+ (field (attrs public final ) statusCode int )
+
+(method (attrs public ) <init>(int [array byte] int )void
+  (limit registers 6)
+  ; this: v2 ([object android/drm/DrmConvertedStatus])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([array byte])
+  ; parameter[2] : v5 (int)
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 9)
+  (const/4 v0 0)
+  (iput-object v0 v2 android/drm/DrmConvertedStatus.convertedData [array byte])
+  (line 4)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

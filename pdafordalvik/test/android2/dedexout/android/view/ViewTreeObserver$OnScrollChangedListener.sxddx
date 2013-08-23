@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/ViewTreeObserver$OnScrollChangedListener
+ (super java/lang/Object)
+ (source "ViewTreeObserver.java")
+
+
+(method (attrs public abstract ) onScrollChanged()void
+)
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/view/LayoutInflater$Factory2
+ (super java/lang/Object)
+ (source "LayoutInflater.java")
+ (implements android/view/LayoutInflater$Factory)
+
+
+(method (attrs public abstract ) onCreateView([object android/view/View] [object java/lang/String] [object android/content/Context] [object android/util/AttributeSet] )[object android/view/View]
+)
+
+)

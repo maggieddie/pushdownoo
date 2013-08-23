@@ -1,0 +1,24 @@
+(class (attrs public synchronized ) org/apache/harmony/xnet/provider/jsse/Handshake
+ (super java/lang/Object)
+ (source "Handshake.java")
+
+ (field (attrs public static final ) CERTIFICATE byte 11 )
+ (field (attrs public static final ) CERTIFICATE_REQUEST byte 13 )
+ (field (attrs public static final ) CERTIFICATE_VERIFY byte 15 )
+ (field (attrs public static final ) CLIENT_HELLO byte 1 )
+ (field (attrs public static final ) CLIENT_KEY_EXCHANGE byte 16 )
+ (field (attrs public static final ) FINISHED byte 20 )
+ (field (attrs public static final ) HELLO_REQUEST byte 0 )
+ (field (attrs public static final ) SERVER_HELLO byte 2 )
+ (field (attrs public static final ) SERVER_HELLO_DONE byte 14 )
+ (field (attrs public static final ) SERVER_KEY_EXCHANGE byte 12 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/Handshake])
+  (line 27)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

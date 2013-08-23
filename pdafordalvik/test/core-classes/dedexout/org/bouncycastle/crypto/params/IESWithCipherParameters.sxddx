@@ -1,0 +1,30 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/IESWithCipherParameters
+ (super org/bouncycastle/crypto/params/IESParameters)
+ (source "IESWithCipherParameters.java")
+
+ (field (attrs private ) cipherKeySize int )
+
+(method (attrs public ) <init>([array byte] [array byte] int int )void
+  (limit registers 5)
+  ; this: v0 ([object org/bouncycastle/crypto/params/IESWithCipherParameters])
+  ; parameter[0] : v1 ([array byte])
+  ; parameter[1] : v2 ([array byte])
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 21)
+  (invoke-direct {v0 v1 v2 v3} org/bouncycastle/crypto/params/IESParameters/<init> [array byte] [array byte] int )
+  (line 23)
+  (iput-quick v4 v0 org/bouncycastle/crypto/params/IESWithCipherParameters.cipherKeySize int)
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) getCipherKeySize()int
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/IESWithCipherParameters])
+  (line 28)
+  (iget-quick v0 v1 org/bouncycastle/crypto/params/IESWithCipherParameters.cipherKeySize int)
+  (return v0)
+)
+
+)

@@ -1,0 +1,30 @@
+(class (attrs public ) android/widget/RemoteViews$ActionException
+ (super java/lang/RuntimeException)
+ (source "RemoteViews.java")
+
+
+(method (attrs public ) <init>([object java/lang/Exception] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/RemoteViews$ActionException])
+  ; parameter[0] : v3 ([object java/lang/Exception])
+  (line 13)
+  (invoke-direct {v2} java/lang/RuntimeException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/RemoteViews$ActionException])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 14)
+  (invoke-direct {v2} java/lang/RuntimeException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

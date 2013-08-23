@@ -1,0 +1,47 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/AnnotatedException
+ (super java/lang/Exception)
+ (source "AnnotatedException.java")
+
+ (field (attrs private ) _underlyingException [object java/lang/Exception] )
+
+(method (attrs ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle/jce/provider/AnnotatedException])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 20)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v0} org/bouncycastle/jce/provider/AnnotatedException/<init> [object java/lang/String] [object java/lang/Exception] )
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/String] [object java/lang/Exception] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle/jce/provider/AnnotatedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Exception])
+  (line 12)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 14)
+  (iput-object-quick v2 v0 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/jce/provider/AnnotatedException])
+  (line 30)
+  (iget-object-quick v0 v1 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (return-object v0)
+)
+
+(method (attrs ) getUnderlyingException()[object java/lang/Exception]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/jce/provider/AnnotatedException])
+  (line 25)
+  (iget-object-quick v0 v1 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (return-object v0)
+)
+
+)

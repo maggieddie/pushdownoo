@@ -1,0 +1,33 @@
+(class (attrs public final synchronized ) org/apache/harmony/dalvik/NativeTestTarget
+ (super java/lang/Object)
+ (source "NativeTestTarget.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/dalvik/NativeTestTarget])
+  (line 28)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public static ) emptyInlineMethod()void
+  (limit registers 0)
+  (line 60)
+  (return-void )
+ )
+
+(method (attrs public static native ) emptyInternalStaticMethod()void
+ )
+
+(method (attrs public static native ) emptyJniStaticMethod0()void
+ )
+
+(method (attrs public static native ) emptyJniStaticMethod6(int int int int int int )void
+ )
+
+(method (attrs public static native ) emptyJniStaticMethod6L([object java/lang/String] [array [object java/lang/String]] [array [array int]] [object java/lang/Object] [array [object java/lang/Object]] [array [array [array [array [object java/lang/Object]]]]] )void
+ )
+
+)

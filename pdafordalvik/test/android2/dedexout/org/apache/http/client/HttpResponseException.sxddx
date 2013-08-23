@@ -1,0 +1,29 @@
+(class (attrs public ) org/apache/http/client/HttpResponseException
+ (super org/apache/http/client/ClientProtocolException)
+ (source "HttpResponseException.java")
+
+
+(method (attrs public ) <init>(int [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object org/apache/http/client/HttpResponseException])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} org/apache/http/client/ClientProtocolException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getStatusCode()int
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/client/HttpResponseException])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

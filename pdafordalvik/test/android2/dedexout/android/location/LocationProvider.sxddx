@@ -1,0 +1,68 @@
+(class (attrs public abstract ) android/location/LocationProvider
+ (super java/lang/Object)
+ (source "LocationProvider.java")
+
+ (field (attrs public static final ) AVAILABLE int 2); 0x2 )
+ (field (attrs public static final ) OUT_OF_SERVICE int 0); 0x0 )
+ (field (attrs public static final ) TEMPORARILY_UNAVAILABLE int 1); 0x1 )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/location/LocationProvider])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) getAccuracy()int
+)
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/location/LocationProvider])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) getPowerRequirement()int
+)
+
+(method (attrs public abstract ) hasMonetaryCost()boolean
+)
+
+(method (attrs public ) meetsCriteria([object android/location/Criteria] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/location/LocationProvider])
+  ; parameter[0] : v3 ([object android/location/Criteria])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) requiresCell()boolean
+)
+
+(method (attrs public abstract ) requiresNetwork()boolean
+)
+
+(method (attrs public abstract ) requiresSatellite()boolean
+)
+
+(method (attrs public abstract ) supportsAltitude()boolean
+)
+
+(method (attrs public abstract ) supportsBearing()boolean
+)
+
+(method (attrs public abstract ) supportsSpeed()boolean
+)
+
+)

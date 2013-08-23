@@ -1,0 +1,62 @@
+(class (attrs public ) gueei/binding/converters/ALT_TEMPLATE
+ (super gueei/binding/Converter)
+ (source "ALT_TEMPLATE.java")
+
+
+(method (attrs public ) <init>([array [object gueei/binding/IObservable]] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(["  "Lgueei/binding/IObservable"  "<*>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/converters/ALT_TEMPLATE])
+  ; parameter[0] : v2 ([array [object gueei/binding/IObservable]])
+  (line 25)
+  (const-class v0 gueei/binding/viewAttributes/templates/Layout)
+  (invoke-direct {v1 v0 v2} gueei/binding/Converter/<init> [object java/lang/Class] [array [object gueei/binding/IObservable]] )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) calculateValue([array [object java/lang/Object]] )[object gueei/binding/viewAttributes/templates/Layout]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 5)
+  ; this: v3 ([object gueei/binding/converters/ALT_TEMPLATE])
+  ; parameter[0] : v4 ([array [object java/lang/Object]])
+  (line 30)
+  (array-length v2 v4)
+  (new-array v1 v2 [array [object gueei/binding/viewAttributes/templates/Layout]])
+  (line 31)
+  (const/4 v0 0)
+  (label l2a048)
+  (array-length v2 v4)
+  (if-lt v0 v2 l2a05a)
+  (line 34)
+  (new-instance v2 gueei/binding/converters/ALT_TEMPLATE$Alt_Layout)
+  (invoke-direct {v2 v1} gueei/binding/converters/ALT_TEMPLATE$Alt_Layout/<init> [array [object gueei/binding/viewAttributes/templates/Layout]] )
+  (return-object v2)
+  (label l2a05a)
+  (line 32)
+  (aget-object v2 v4 v0)
+  (check-cast v2 [object gueei/binding/viewAttributes/templates/Layout])
+  (aput-object v2 v1 v0)
+  (line 31)
+  (add-int/lit8 v0 v0 1)
+  (goto l2a048)
+)
+
+(method (attrs public ) calculateValue([array [object java/lang/Object]] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/converters/ALT_TEMPLATE])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 1)
+  (invoke-virtual {v1 v2} gueei/binding/converters/ALT_TEMPLATE/calculateValue [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,69 @@
+(class (attrs public synchronized ) java/net/HttpRetryException
+ (super java/io/IOException)
+ (source "HttpRetryException.java")
+
+ (field (attrs private static final ) serialVersionUID long -324013585); 0xecaff1ef )
+ (field (attrs private ) location [object java/lang/String] )
+ (field (attrs private ) responseCode int )
+
+(method (attrs public ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object java/net/HttpRetryException])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 43)
+  (invoke-direct {v1 v2} java/io/IOException/<init> [object java/lang/String] )
+  (line 31)
+  (const/4 v0 0)
+  (iput-object-quick v0 v1 java/net/HttpRetryException.location [object java/lang/String])
+  (line 44)
+  (iput-quick v3 v1 java/net/HttpRetryException.responseCode int)
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] int [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v1 ([object java/net/HttpRetryException])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object java/lang/String])
+  (line 60)
+  (invoke-direct {v1 v2} java/io/IOException/<init> [object java/lang/String] )
+  (line 31)
+  (const/4 v0 0)
+  (iput-object-quick v0 v1 java/net/HttpRetryException.location [object java/lang/String])
+  (line 61)
+  (iput-quick v3 v1 java/net/HttpRetryException.responseCode int)
+  (line 62)
+  (iput-object-quick v4 v1 java/net/HttpRetryException.location [object java/lang/String])
+  (line 63)
+  (return-void )
+ )
+
+(method (attrs public ) getLocation()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/net/HttpRetryException])
+  (line 71)
+  (iget-object-quick v0 v1 java/net/HttpRetryException.location [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) getReason()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/net/HttpRetryException])
+  (line 80)
+  (invoke-virtual-quick {v1} java/net/HttpRetryException/getMessage )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) responseCode()int
+  (limit registers 2)
+  ; this: v1 ([object java/net/HttpRetryException])
+  (line 89)
+  (iget-quick v0 v1 java/net/HttpRetryException.responseCode int)
+  (return v0)
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/text/util/Linkify$MatchFilter
+ (super java/lang/Object)
+ (source "Linkify.java")
+
+
+(method (attrs public abstract ) acceptMatch([object java/lang/CharSequence] int int )boolean
+)
+
+)

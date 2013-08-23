@@ -1,0 +1,99 @@
+(class (attrs public ) com/cs141/kittey/kittey/Animal
+ (super java/lang/Object)
+ (source "Animal.java")
+
+ (field (attrs ) animalsound [object java/lang/String] )
+ (field (attrs ) name [object java/lang/String] )
+ (field (attrs ) numberoflegs int )
+ (field (attrs ) species [object java/lang/String] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/cs141/kittey/kittey/Animal])
+  (line 25)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getAnimalsound()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/Animal])
+  (line 47)
+  (iget-object v0 v1 com/cs141/kittey/kittey/Animal.animalsound [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/Animal])
+  (line 31)
+  (iget-object v0 v1 com/cs141/kittey/kittey/Animal.name [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) getNumberoflegs()int
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/Animal])
+  (line 55)
+  (iget v0 v1 com/cs141/kittey/kittey/Animal.numberoflegs int)
+  (return v0)
+)
+
+(method (attrs public ) getSpecies()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/Animal])
+  (line 39)
+  (iget-object v0 v1 com/cs141/kittey/kittey/Animal.species [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs ) makeSound()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/Animal])
+  (line 22)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public ) setAnimalsound([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/Animal])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 51)
+  (iput-object v1 v0 com/cs141/kittey/kittey/Animal.animalsound [object java/lang/String])
+  (line 52)
+  (return-void )
+)
+
+(method (attrs public ) setName([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/Animal])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 35)
+  (iput-object v1 v0 com/cs141/kittey/kittey/Animal.name [object java/lang/String])
+  (line 36)
+  (return-void )
+)
+
+(method (attrs public ) setNumberoflegs(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/Animal])
+  ; parameter[0] : v1 (int)
+  (line 59)
+  (iput v1 v0 com/cs141/kittey/kittey/Animal.numberoflegs int)
+  (line 60)
+  (return-void )
+)
+
+(method (attrs public ) setSpecies([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/cs141/kittey/kittey/Animal])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 43)
+  (iput-object v1 v0 com/cs141/kittey/kittey/Animal.species [object java/lang/String])
+  (line 44)
+  (return-void )
+)
+
+)

@@ -1,0 +1,44 @@
+(class (attrs synchronized ) org/apache/harmony/security/x509/Time$1
+ (super org/apache/harmony/security/asn1/ASN1Choice)
+ (source "Time.java")
+
+
+(method (attrs ) <init>([array [object org/apache/harmony/security/asn1/ASN1Type]] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x509/Time$1])
+  ; parameter[0] : v1 ([array [object org/apache/harmony/security/asn1/ASN1Type]])
+  (line 60)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1Choice/<init> [array [object org/apache/harmony/security/asn1/ASN1Type]] )
+  (return-void )
+ )
+
+(method (attrs public ) getIndex([object java/lang/Object] )int
+  (limit registers 6)
+  ; this: v4 ([object org/apache/harmony/security/x509/Time$1])
+  ; parameter[0] : v5 ([object java/lang/Object])
+  (line 53)
+  (check-cast v5 [object java/util/Date])
+  (invoke-virtual-quick {v5} java/util/Date/getTime )
+  (move-result-wide v0)
+  (const-wide v2 2524608000000) ; 0x24bce5cf000)
+  (cmp-long v0 v0 v2)
+  (if-gez v0 l1a224a)
+  (line 54)
+  (const/4 v0 1)
+  (label l1a2248)
+  (line 56)
+  (return v0)
+  (label l1a224a)
+  (const/4 v0 0)
+  (goto l1a2248)
+)
+
+(method (attrs public ) getObjectToEncode([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x509/Time$1])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 61)
+  (return-object v1)
+)
+
+)

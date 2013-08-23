@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) javax/validation/metadata/PropertyDescriptor
+ (super java/lang/Object)
+ (source "PropertyDescriptor.java")
+ (implements javax/validation/metadata/ElementDescriptor)
+
+
+(method (attrs public abstract ) getPropertyName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) isCascaded()boolean
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public final ) android/provider/ContactsContract$RawContactsEntity
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+ (implements android/provider/BaseColumns)
+ (implements android/provider/ContactsContract$DataColumns)
+ (implements android/provider/ContactsContract$RawContactsColumns)
+
+ (field (attrs public static final ) CONTENT_TYPE [object java/lang/String] "vnd.android.cursor.dir/raw_contact_entity" )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs public static final ) DATA_ID [object java/lang/String] "data_id" )
+ (field (attrs public static final ) PROFILE_CONTENT_URI [object android/net/Uri] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 386)
+  (sput-object v0 android/provider/ContactsContract$RawContactsEntity.CONTENT_URI [object android/net/Uri])
+  (sput-object v0 android/provider/ContactsContract$RawContactsEntity.PROFILE_CONTENT_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/ContactsContract$RawContactsEntity])
+  (line 381)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

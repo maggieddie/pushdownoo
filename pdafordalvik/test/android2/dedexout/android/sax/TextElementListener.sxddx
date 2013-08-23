@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) android/sax/TextElementListener
+ (super java/lang/Object)
+ (source "TextElementListener.java")
+ (implements android/sax/StartElementListener)
+ (implements android/sax/EndTextElementListener)
+
+
+)

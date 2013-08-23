@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/widget/SearchView$OnSuggestionListener
+ (super java/lang/Object)
+ (source "SearchView.java")
+
+
+(method (attrs public abstract ) onSuggestionClick(int )boolean
+)
+
+(method (attrs public abstract ) onSuggestionSelect(int )boolean
+)
+
+)

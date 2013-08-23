@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$ContactsColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) DISPLAY_NAME [object java/lang/String] "display_name" )
+ (field (attrs public static final ) HAS_PHONE_NUMBER [object java/lang/String] "has_phone_number" )
+ (field (attrs public static final ) IN_VISIBLE_GROUP [object java/lang/String] "in_visible_group" )
+ (field (attrs public static final ) IS_USER_PROFILE [object java/lang/String] "is_user_profile" )
+ (field (attrs public static final ) LOOKUP_KEY [object java/lang/String] "lookup" )
+ (field (attrs public static final ) PHOTO_FILE_ID [object java/lang/String] "photo_file_id" )
+ (field (attrs public static final ) PHOTO_ID [object java/lang/String] "photo_id" )
+ (field (attrs public static final ) PHOTO_THUMBNAIL_URI [object java/lang/String] "photo_thumb_uri" )
+ (field (attrs public static final ) PHOTO_URI [object java/lang/String] "photo_uri" )
+
+)

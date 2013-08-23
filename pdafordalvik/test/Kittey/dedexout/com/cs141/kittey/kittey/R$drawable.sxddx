@@ -1,0 +1,25 @@
+(class (attrs public final ) com/cs141/kittey/kittey/R$drawable
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ic_action_search int 2130837504); 0x7f020000 )
+ (field (attrs public static final ) ic_launcher int 2130837505); 0x7f020001 )
+ (field (attrs public static final ) k0 int 2130837506); 0x7f020002 )
+ (field (attrs public static final ) k1 int 2130837507); 0x7f020003 )
+ (field (attrs public static final ) k2 int 2130837508); 0x7f020004 )
+ (field (attrs public static final ) k3 int 2130837509); 0x7f020005 )
+ (field (attrs public static final ) k4 int 2130837510); 0x7f020006 )
+ (field (attrs public static final ) k5 int 2130837511); 0x7f020007 )
+ (field (attrs public static final ) k6 int 2130837512); 0x7f020008 )
+ (field (attrs public static final ) k7 int 2130837513); 0x7f020009 )
+ (field (attrs public static final ) title int 2130837514); 0x7f02000a )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/cs141/kittey/kittey/R$drawable])
+  (line 13)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

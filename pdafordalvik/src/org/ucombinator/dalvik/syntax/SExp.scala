@@ -566,6 +566,12 @@ object CommonSSymbols {
     val SInvokeStaticRange = SName.from("invoke-static/range")
     val SInvokeInterfaceRange = SName.from("invoke-interface/range")
     
+    // should be able to fixed in the front end.
+    val SInvokeVirtualQuick = SName.from("invoke-virtual-quick")
+    val SInvokeVirtualQuickRange = SName.from("invoke-virtual-quick/range") 
+    val SInvokeSuperQuick = SName.from("invoke-super-quick")
+    val SInvokeSuperQuickRange = SName.from("invoke-super-quick/range")
+    
     val SIfEq = SName.from("if-eq")
     val SIfNe = SName.from("if-ne")
     val SIfLt = SName.from("if-lt")
@@ -611,6 +617,14 @@ object CommonSSymbols {
     val SIPutByte = SName.from("iput-byte")
     val SIPutChar = SName.from("iput-char")
     val SIPutShort = SName.from("iput-short")
+    
+    // should be changed to normal iget/iput in the front end
+    val SIGetQuick = SName.from("iget-quick")
+    val SIPutQuick = SName.from("iput-quick")
+    val SIGetWideQuick = SName.from("iget-wide-quick")
+    val SIGetObjectQuick = SName.from("iget-object-quick")
+    val SIPutWideQuick = SName.from("iput-wide-quick")
+    val SIPutObjectQuick = SName.from("iput-object-quick")
     
     
     // unop
@@ -730,6 +744,10 @@ object CommonSSymbols {
     // multi-branchs
     val SPackedSwitch = SName.from("packed-switch")
     val SSparseSwitch = SName.from("sparse-switch")
+    
+    // we still need to pass! 
+    val SMonitorEnter = SName.from("monitor-enter")
+    val SMonitorExit = SName.from("monitor-exit")
     
     
 

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$DisplayNameSources
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) EMAIL int 10); 0xa )
+ (field (attrs public static final ) NICKNAME int 35); 0x23 )
+ (field (attrs public static final ) ORGANIZATION int 30); 0x1e )
+ (field (attrs public static final ) PHONE int 20); 0x14 )
+ (field (attrs public static final ) STRUCTURED_NAME int 40); 0x28 )
+ (field (attrs public static final ) UNDEFINED int )
+
+)

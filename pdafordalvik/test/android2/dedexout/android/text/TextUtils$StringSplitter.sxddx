@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/text/TextUtils$StringSplitter
+ (super java/lang/Object)
+ (source "TextUtils.java")
+ (implements java/lang/Iterable)
+
+
+(method (attrs public abstract ) setString([object java/lang/String] )void
+)
+
+)

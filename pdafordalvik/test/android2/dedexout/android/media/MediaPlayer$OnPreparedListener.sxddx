@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/MediaPlayer$OnPreparedListener
+ (super java/lang/Object)
+ (source "MediaPlayer.java")
+
+
+(method (attrs public abstract ) onPrepared([object android/media/MediaPlayer] )void
+)
+
+)

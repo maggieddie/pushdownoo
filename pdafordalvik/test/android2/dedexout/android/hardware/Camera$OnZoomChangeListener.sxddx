@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/hardware/Camera$OnZoomChangeListener
+ (super java/lang/Object)
+ (source "Camera.java")
+
+
+(method (attrs public abstract ) onZoomChange(int boolean [object android/hardware/Camera] )void
+)
+
+)

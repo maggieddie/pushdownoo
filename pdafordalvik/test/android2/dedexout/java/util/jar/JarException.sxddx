@@ -1,0 +1,29 @@
+(class (attrs public ) java/util/jar/JarException
+ (super java/util/zip/ZipException)
+ (source "JarException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/jar/JarException])
+  (line 5)
+  (invoke-direct {v2} java/util/zip/ZipException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/jar/JarException])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 6)
+  (invoke-direct {v2} java/util/zip/ZipException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

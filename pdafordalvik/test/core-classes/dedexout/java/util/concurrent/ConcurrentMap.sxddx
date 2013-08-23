@@ -1,0 +1,28 @@
+(interface (attrs public abstract synchronized ) java/util/concurrent/ConcurrentMap
+ (super java/lang/Object)
+ (source "ConcurrentMap.java")
+ (implements java/util/Map)
+
+
+(method (attrs public abstract ) putIfAbsent([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+)
+
+(method (attrs public abstract ) remove([object java/lang/Object] [object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) replace([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+)
+
+(method (attrs public abstract ) replace([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+)
+
+)

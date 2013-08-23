@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$ContactNameColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) DISPLAY_NAME_ALTERNATIVE [object java/lang/String] "display_name_alt" )
+ (field (attrs public static final ) DISPLAY_NAME_PRIMARY [object java/lang/String] "display_name" )
+ (field (attrs public static final ) DISPLAY_NAME_SOURCE [object java/lang/String] "display_name_source" )
+ (field (attrs public static final ) PHONETIC_NAME [object java/lang/String] "phonetic_name" )
+ (field (attrs public static final ) PHONETIC_NAME_STYLE [object java/lang/String] "phonetic_name_style" )
+ (field (attrs public static final ) SORT_KEY_ALTERNATIVE [object java/lang/String] "sort_key_alt" )
+ (field (attrs public static final ) SORT_KEY_PRIMARY [object java/lang/String] "sort_key" )
+
+)

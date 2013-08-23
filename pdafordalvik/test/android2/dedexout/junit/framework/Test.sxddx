@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) junit/framework/Test
+ (super java/lang/Object)
+ (source "Test.java")
+
+
+(method (attrs public abstract ) countTestCases()int
+)
+
+(method (attrs public abstract ) run([object junit/framework/TestResult] )void
+)
+
+)

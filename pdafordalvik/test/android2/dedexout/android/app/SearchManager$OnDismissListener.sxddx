@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/app/SearchManager$OnDismissListener
+ (super java/lang/Object)
+ (source "SearchManager.java")
+
+
+(method (attrs public abstract ) onDismiss()void
+)
+
+)

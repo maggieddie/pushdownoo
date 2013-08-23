@@ -1,0 +1,36 @@
+(class (attrs synchronized ) java/lang/ProcessManager$ProcessReferenceQueue
+ (super java/lang/ref/ReferenceQueue)
+ (source "ProcessManager.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/ProcessManager$ProcessReferenceQueue])
+  (line 309)
+  (invoke-direct {v0} java/lang/ref/ReferenceQueue/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) poll()[object java/lang/ProcessManager$ProcessReference]
+  (limit registers 2)
+  ; this: v1 ([object java/lang/ProcessManager$ProcessReferenceQueue])
+  (line 314)
+  (invoke-super-quick {v1} java/lang/ProcessManager$ProcessReferenceQueue/poll )
+  (move-result-object v0)
+  (label l11e444)
+  (line 315)
+  (check-cast v0 [object java/lang/ProcessManager$ProcessReference])
+  (label l11e448)
+  (return-object v0)
+)
+
+(method (attrs public ) poll()[object java/lang/ref/Reference]
+  (limit registers 2)
+  ; this: v1 ([object java/lang/ProcessManager$ProcessReferenceQueue])
+  (line 309)
+  (invoke-virtual-quick {v1} java/lang/ProcessManager$ProcessReferenceQueue/poll )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

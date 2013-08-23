@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) org/w3c/dom/ls/LSOutput
+ (super java/lang/Object)
+ (source "LSOutput.java")
+
+
+(method (attrs public abstract ) getByteStream()[object java/io/OutputStream]
+)
+
+(method (attrs public abstract ) getCharacterStream()[object java/io/Writer]
+)
+
+(method (attrs public abstract ) getEncoding()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getSystemId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) setByteStream([object java/io/OutputStream] )void
+)
+
+(method (attrs public abstract ) setCharacterStream([object java/io/Writer] )void
+)
+
+(method (attrs public abstract ) setEncoding([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setSystemId([object java/lang/String] )void
+)
+
+)

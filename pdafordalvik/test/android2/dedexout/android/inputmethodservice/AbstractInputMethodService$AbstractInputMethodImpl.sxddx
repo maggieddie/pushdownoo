@@ -1,0 +1,55 @@
+(class (attrs public abstract ) android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl
+ (super java/lang/Object)
+ (source "AbstractInputMethodService.java")
+ (implements android/view/inputmethod/InputMethod)
+
+ (field (attrs final ) this$0 [object android/inputmethodservice/AbstractInputMethodService] )
+
+(method (attrs public ) <init>([object android/inputmethodservice/AbstractInputMethodService] )void
+  (limit registers 4)
+  ; this: v2 ([object android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl])
+  ; parameter[0] : v3 ([object android/inputmethodservice/AbstractInputMethodService])
+  (line 9)
+  (iput-object v3 v2 android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl.this$0 [object android/inputmethodservice/AbstractInputMethodService])
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) createSession([object android/view/inputmethod/InputMethod$SessionCallback] )void
+  (limit registers 4)
+  ; this: v2 ([object android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl])
+  ; parameter[0] : v3 ([object android/view/inputmethod/InputMethod$SessionCallback])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) revokeSession([object android/view/inputmethod/InputMethodSession] )void
+  (limit registers 4)
+  ; this: v2 ([object android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl])
+  ; parameter[0] : v3 ([object android/view/inputmethod/InputMethodSession])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSessionEnabled([object android/view/inputmethod/InputMethodSession] boolean )void
+  (limit registers 5)
+  ; this: v2 ([object android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl])
+  ; parameter[0] : v3 ([object android/view/inputmethod/InputMethodSession])
+  ; parameter[1] : v4 (boolean)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/accounts/OnAccountsUpdateListener
+ (super java/lang/Object)
+ (source "OnAccountsUpdateListener.java")
+
+
+(method (attrs public abstract ) onAccountsUpdated([array [object android/accounts/Account]] )void
+)
+
+)

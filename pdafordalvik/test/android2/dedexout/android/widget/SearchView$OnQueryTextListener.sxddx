@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/widget/SearchView$OnQueryTextListener
+ (super java/lang/Object)
+ (source "SearchView.java")
+
+
+(method (attrs public abstract ) onQueryTextChange([object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) onQueryTextSubmit([object java/lang/String] )boolean
+)
+
+)

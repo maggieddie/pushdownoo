@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) java/security/acl/Permission
+ (super java/lang/Object)
+ (source "Permission.java")
+
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,46 @@
+(class (attrs public abstract synchronized ) java/nio/channels/spi/AbstractSelectionKey
+ (super java/nio/channels/SelectionKey)
+ (source "AbstractSelectionKey.java")
+
+ (field (attrs ) isValid boolean )
+
+(method (attrs protected ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object java/nio/channels/spi/AbstractSelectionKey])
+  (line 40)
+  (invoke-direct {v1} java/nio/channels/SelectionKey/<init> )
+  (line 32)
+  (const/4 v0 1)
+  (iput-quick v0 v1 java/nio/channels/spi/AbstractSelectionKey.isValid boolean)
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public final ) cancel()void
+  (limit registers 2)
+  ; this: v1 ([object java/nio/channels/spi/AbstractSelectionKey])
+  (line 65)
+  (iget-quick v0 v1 java/nio/channels/spi/AbstractSelectionKey.isValid boolean)
+  (if-eqz v0 l8eeec)
+  (line 66)
+  (const/4 v0 0)
+  (iput-quick v0 v1 java/nio/channels/spi/AbstractSelectionKey.isValid boolean)
+  (line 67)
+  (invoke-virtual-quick {v1} java/nio/channels/spi/AbstractSelectionKey/selector )
+  (move-result-object v0)
+  (check-cast v0 [object java/nio/channels/spi/AbstractSelector])
+  (invoke-virtual-quick {v0 v1} java/nio/channels/spi/AbstractSelector/cancel [object java/nio/channels/SelectionKey] )
+  (label l8eeec)
+  (line 69)
+  (return-void )
+)
+
+(method (attrs public final ) isValid()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/nio/channels/spi/AbstractSelectionKey])
+  (line 52)
+  (iget-quick v0 v1 java/nio/channels/spi/AbstractSelectionKey.isValid boolean)
+  (return v0)
+)
+
+)

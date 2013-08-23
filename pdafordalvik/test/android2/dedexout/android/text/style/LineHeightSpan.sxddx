@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) android/text/style/LineHeightSpan
+ (super java/lang/Object)
+ (source "LineHeightSpan.java")
+ (implements android/text/style/ParagraphStyle)
+ (implements android/text/style/WrapTogetherSpan)
+
+
+(method (attrs public abstract ) chooseHeight([object java/lang/CharSequence] int int int int [object android/graphics/Paint$FontMetricsInt] )void
+)
+
+)

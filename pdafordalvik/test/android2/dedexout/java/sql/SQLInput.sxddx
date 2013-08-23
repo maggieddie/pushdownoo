@@ -1,0 +1,168 @@
+(interface (attrs public abstract ) java/sql/SQLInput
+ (super java/lang/Object)
+ (source "SQLInput.java")
+
+
+(method (attrs public abstract ) readArray()[object java/sql/Array]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readAsciiStream()[object java/io/InputStream]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readBigDecimal()[object java/math/BigDecimal]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readBinaryStream()[object java/io/InputStream]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readBlob()[object java/sql/Blob]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readBoolean()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readByte()byte
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readBytes()[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readCharacterStream()[object java/io/Reader]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readClob()[object java/sql/Clob]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readDate()[object java/sql/Date]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readDouble()double
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readFloat()float
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readInt()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readLong()long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readNClob()[object java/sql/NClob]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readNString()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readObject()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readRef()[object java/sql/Ref]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readRowId()[object java/sql/RowId]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readSQLXML()[object java/sql/SQLXML]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readShort()short
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readString()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readTime()[object java/sql/Time]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readTimestamp()[object java/sql/Timestamp]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) readURL()[object java/net/URL]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) wasNull()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+)

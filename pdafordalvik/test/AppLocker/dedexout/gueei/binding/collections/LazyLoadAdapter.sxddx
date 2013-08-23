@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) gueei/binding/collections/LazyLoadAdapter
+ (super java/lang/Object)
+ (source "LazyLoadAdapter.java")
+
+
+(method (attrs public abstract ) onVisibleChildrenChanged(int int )void
+)
+
+(method (attrs public abstract ) setMode([object gueei/binding/collections/LazyLoadAdapter$Mode] )void
+)
+
+(method (attrs public abstract ) setRoot([object android/widget/AbsListView] )void
+)
+
+)

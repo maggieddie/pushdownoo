@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffff00ff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip" android:text="@string/kitteybutton" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:onClick="aboutButton" />
+    <Button android:id="@id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="46.0dip" android:text="@string/prevbutton" android:layout_above="@id/button1" android:layout_alignParentLeft="true" android:onClick="prevButton" />
+    <Button android:id="@id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nextbutton" android:layout_alignBottom="@id/button2" android:layout_alignParentRight="true" android:onClick="nextButton" />
+    <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="43.0dip" android:src="@drawable/k0" android:scaleType="centerInside" android:layout_above="@id/button2" android:layout_centerHorizontal="true" android:contentDescription="@string/its_a_kittey" />
+    <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title" android:layout_alignBottom="@id/button3" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/button4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kittey Quote!" android:layout_below="@id/imageView2" android:layout_centerHorizontal="true" android:onClick="kittyQuoteButton" />
+</RelativeLayout>

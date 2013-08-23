@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) android/widget/RemoteViewsService$RemoteViewsFactory
+ (super java/lang/Object)
+ (source "RemoteViewsService.java")
+
+
+(method (attrs public abstract ) getCount()int
+)
+
+(method (attrs public abstract ) getItemId(int )long
+)
+
+(method (attrs public abstract ) getLoadingView()[object android/widget/RemoteViews]
+)
+
+(method (attrs public abstract ) getViewAt(int )[object android/widget/RemoteViews]
+)
+
+(method (attrs public abstract ) getViewTypeCount()int
+)
+
+(method (attrs public abstract ) hasStableIds()boolean
+)
+
+(method (attrs public abstract ) onCreate()void
+)
+
+(method (attrs public abstract ) onDataSetChanged()void
+)
+
+(method (attrs public abstract ) onDestroy()void
+)
+
+)

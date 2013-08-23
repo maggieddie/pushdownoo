@@ -1,0 +1,13 @@
+(interface (attrs public abstract synchronized ) java/security/cert/CRLSelector
+ (super java/lang/Object)
+ (source "CRLSelector.java")
+ (implements java/lang/Cloneable)
+
+
+(method (attrs public abstract ) clone()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) match([object java/security/cert/CRL] )boolean
+)
+
+)

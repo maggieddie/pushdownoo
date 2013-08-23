@@ -1,0 +1,21 @@
+(class (attrs public ) android/view/animation/GridLayoutAnimationController$AnimationParameters
+ (super android/view/animation/LayoutAnimationController$AnimationParameters)
+ (source "GridLayoutAnimationController.java")
+
+ (field (attrs public ) column int )
+ (field (attrs public ) columnsCount int )
+ (field (attrs public ) row int )
+ (field (attrs public ) rowsCount int )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/animation/GridLayoutAnimationController$AnimationParameters])
+  (line 8)
+  (invoke-direct {v2} android/view/animation/LayoutAnimationController$AnimationParameters/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

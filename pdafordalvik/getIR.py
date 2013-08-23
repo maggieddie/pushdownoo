@@ -6,8 +6,8 @@ import sys
 #the script folder
 CURFOLD=os.getcwd()
 
-
-APK_SRC=  sys.argv[1] #"apks"
+DONULL= sys.argv[1]
+APK_SRC=  sys.argv[2] #"apks"
 APK_TOOL =  "../apktool/apktool"
 JDex2Sex_CP= os.path.join(os.getcwd(),'../jdex2sex/bin')
 
@@ -15,6 +15,7 @@ JDex2Sex_CP= os.path.join(os.getcwd(),'../jdex2sex/bin')
 #print os.getcwd()
 
 JA_PATH = "/usr/bin/java"
+Dependencies = "../odex-dependencies/"
 DDX  = JA_PATH +" -cp " + JDex2Sex_CP + " hu.uw.pallergabor.dedexer.Dedexer"
 STANDARD_DEX_FN = "classes.dex"
 SEXP_OUT = "dedexout"
@@ -157,13 +158,21 @@ def run():
                 return
     
             #            if(subprocess.check_call([DDX, "-d", sex_out, sdx])):
-            if(subprocess.check_call([JA_PATH, "-cp", J_BIN,
+            if(DONULL == "--donull"):
+                if(subprocess.check_call([JA_PATH, "-cp", J_BIN,
                                       "hu.uw.pallergabor.dedexer.Dedexer",
                                       "-d",
-                                      sex_out, sdx])):
+                                      sex_out, sdx, "-e", Dependencies])):
                 
-                print "JSex2Dex failed!"
-                return
+                    print "JDex2Sex failed!"
+                    return
+            else:
+                if(subprocess.check_call([JA_PATH, "-cp", J_BIN,
+                                           "hu.uw.pallergabor.dedexer.Dedexer",
+                                          "-d", sex_out, sdx])):
+                    print "JDex2Sex Failed!"
+                    return
+                
             print "finished Sexing..."
 
             os.chdir(oldcwd)

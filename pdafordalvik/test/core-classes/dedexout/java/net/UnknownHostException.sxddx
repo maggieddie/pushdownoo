@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/net/UnknownHostException
+ (super java/io/IOException)
+ (source "UnknownHostException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1080043651); 0xbf9fd77d )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/net/UnknownHostException])
+  (line 34)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/net/UnknownHostException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 45)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 46)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,64 @@
+(class (attrs public synchronized ) java/util/zip/CheckedOutputStream
+ (super java/io/FilterOutputStream)
+ (source "CheckedOutputStream.java")
+
+ (field (attrs private final ) check [object java/util/zip/Checksum] )
+
+(method (attrs public ) <init>([object java/io/OutputStream] [object java/util/zip/Checksum] )void
+  (limit registers 3)
+  ; this: v0 ([object java/util/zip/CheckedOutputStream])
+  ; parameter[0] : v1 ([object java/io/OutputStream])
+  ; parameter[1] : v2 ([object java/util/zip/Checksum])
+  (line 44)
+  (invoke-direct {v0 v1} java/io/FilterOutputStream/<init> [object java/io/OutputStream] )
+  (line 45)
+  (iput-object-quick v2 v0 java/util/zip/CheckedOutputStream.check [object java/util/zip/Checksum])
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) getChecksum()[object java/util/zip/Checksum]
+  (limit registers 2)
+  ; this: v1 ([object java/util/zip/CheckedOutputStream])
+  (line 54)
+  (iget-object-quick v0 v1 java/util/zip/CheckedOutputStream.check [object java/util/zip/Checksum])
+  (return-object v0)
+)
+
+(method (attrs public ) write(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/zip/CheckedOutputStream])
+  ; parameter[0] : v2 (int)
+  (line 68)
+  (iget-object-quick v0 v1 java/io/FilterOutputStream.out [object java/io/OutputStream])
+  (invoke-virtual-quick {v0 v2} java/io/OutputStream/write int )
+  (line 69)
+  (iget-object-quick v0 v1 java/util/zip/CheckedOutputStream.check [object java/util/zip/Checksum])
+  (invoke-interface {v0 v2} java/util/zip/Checksum/update int )
+  (line 70)
+  (return-void )
+)
+
+(method (attrs public ) write([array byte] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v1 ([object java/util/zip/CheckedOutputStream])
+  ; parameter[0] : v2 ([array byte])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 88)
+  (iget-object-quick v0 v1 java/io/FilterOutputStream.out [object java/io/OutputStream])
+  (invoke-virtual-quick {v0 v2 v3 v4} java/io/OutputStream/write [array byte] int int )
+  (line 89)
+  (iget-object-quick v0 v1 java/util/zip/CheckedOutputStream.check [object java/util/zip/Checksum])
+  (invoke-interface {v0 v2 v3 v4} java/util/zip/Checksum/update [array byte] int int )
+  (line 90)
+  (return-void )
+)
+
+)

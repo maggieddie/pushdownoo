@@ -1,0 +1,40 @@
+(class (attrs ) android/support/v4/widget/CursorAdapter$ChangeObserver
+ (super android/database/ContentObserver)
+ (source "CursorAdapter.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/widget/CursorAdapter] )
+
+(method (attrs public ) <init>([object android/support/v4/widget/CursorAdapter] )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/CursorAdapter$ChangeObserver])
+  ; parameter[0] : v2 ([object android/support/v4/widget/CursorAdapter])
+  (line 454)
+  (iput-object v2 v1 android/support/v4/widget/CursorAdapter$ChangeObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (line 455)
+  (new-instance v0 android/os/Handler)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (invoke-direct {v1 v0} android/database/ContentObserver/<init> [object android/os/Handler] )
+  (line 456)
+  (return-void )
+ )
+
+(method (attrs public ) deliverSelfNotifications()boolean
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/widget/CursorAdapter$ChangeObserver])
+  (line 460)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) onChange(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/CursorAdapter$ChangeObserver])
+  ; parameter[0] : v2 (boolean)
+  (line 465)
+  (iget-object v0 v1 android/support/v4/widget/CursorAdapter$ChangeObserver.this$0 [object android/support/v4/widget/CursorAdapter])
+  (invoke-virtual {v0} android/support/v4/widget/CursorAdapter/onContentChanged )
+  (line 466)
+  (return-void )
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) junit/runner/TestSuiteLoader
+ (super java/lang/Object)
+ (source "TestSuiteLoader.java")
+
+
+(method (attrs public abstract ) load([object java/lang/String] )[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ClassNotFoundException])
+  )
+)
+
+(method (attrs public abstract ) reload([object java/lang/Class] )[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/ClassNotFoundException])
+  )
+)
+
+)

@@ -1,0 +1,27 @@
+(class (attrs public synchronized ) java/io/InterruptedIOException
+ (super java/io/IOException)
+ (source "InterruptedIOException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1211105353); 0xb7cfffb7 )
+ (field (attrs public ) bytesTransferred int )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/io/InterruptedIOException])
+  (line 39)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/InterruptedIOException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 50)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 51)
+  (return-void )
+ )
+
+)

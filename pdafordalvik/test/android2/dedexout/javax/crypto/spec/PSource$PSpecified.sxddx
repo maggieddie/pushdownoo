@@ -1,0 +1,39 @@
+(class (attrs public final ) javax/crypto/spec/PSource$PSpecified
+ (super javax/crypto/spec/PSource)
+ (source "PSource.java")
+
+ (field (attrs public static final ) DEFAULT [object javax/crypto/spec/PSource$PSpecified] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 10)
+  (const/4 v0 0)
+  (sput-object v0 javax/crypto/spec/PSource$PSpecified.DEFAULT [object javax/crypto/spec/PSource$PSpecified])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([array byte] )void
+  (limit registers 4)
+  ; this: v2 ([object javax/crypto/spec/PSource$PSpecified])
+  ; parameter[0] : v3 ([array byte])
+  (line 7)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/String])
+  (invoke-direct {v2 v0} javax/crypto/spec/PSource/<init> [object java/lang/String] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getValue()[array byte]
+  (limit registers 3)
+  ; this: v2 ([object javax/crypto/spec/PSource$PSpecified])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

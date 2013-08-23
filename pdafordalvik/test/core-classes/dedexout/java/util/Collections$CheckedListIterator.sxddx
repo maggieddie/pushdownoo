@@ -1,0 +1,137 @@
+(class (attrs synchronized ) java/util/Collections$CheckedListIterator
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/ListIterator)
+
+ (field (attrs private ) i [object java/util/ListIterator] )
+ (field (attrs private ) type [object java/lang/Class] )
+
+(method (attrs public ) <init>([object java/util/ListIterator] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/ListIterator"  "<TE;>;"  "Ljava/lang/Class"  "<TE;>;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object java/util/Collections$CheckedListIterator])
+  ; parameter[0] : v1 ([object java/util/ListIterator])
+  ; parameter[1] : v2 ([object java/lang/Class])
+  (line 2840)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 2841)
+  (iput-object-quick v1 v0 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (line 2842)
+  (iput-object-quick v2 v0 java/util/Collections$CheckedListIterator.type [object java/lang/Class])
+  (line 2843)
+  (return-void )
+ )
+
+(method (attrs public ) add([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$CheckedListIterator])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 2905)
+  (iget-object-quick v0 v2 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (iget-object-quick v1 v2 java/util/Collections$CheckedListIterator.type [object java/lang/Class])
+  (invoke-static {v3 v1} java/util/Collections/checkType [object java/lang/Object] [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} java/util/ListIterator/add [object java/lang/Object] )
+  (line 2906)
+  (return-void )
+)
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2849)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hasPrevious()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2870)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/hasPrevious )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2856)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) nextIndex()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2884)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/nextIndex )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) previous()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2877)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/previous )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) previousIndex()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2891)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/previousIndex )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$CheckedListIterator])
+  (line 2863)
+  (iget-object-quick v0 v1 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/remove )
+  (line 2864)
+  (return-void )
+)
+
+(method (attrs public ) set([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$CheckedListIterator])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 2898)
+  (iget-object-quick v0 v2 java/util/Collections$CheckedListIterator.i [object java/util/ListIterator])
+  (iget-object-quick v1 v2 java/util/Collections$CheckedListIterator.type [object java/lang/Class])
+  (invoke-static {v3 v1} java/util/Collections/checkType [object java/lang/Object] [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} java/util/ListIterator/set [object java/lang/Object] )
+  (line 2899)
+  (return-void )
+)
+
+)

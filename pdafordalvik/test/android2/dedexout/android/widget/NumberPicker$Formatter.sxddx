@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/NumberPicker$Formatter
+ (super java/lang/Object)
+ (source "NumberPicker.java")
+
+
+(method (attrs public abstract ) format(int )[object java/lang/String]
+)
+
+)

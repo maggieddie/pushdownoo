@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/TabHost$TabContentFactory
+ (super java/lang/Object)
+ (source "TabHost.java")
+
+
+(method (attrs public abstract ) createTabContent([object java/lang/String] )[object android/view/View]
+)
+
+)

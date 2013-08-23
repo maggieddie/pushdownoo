@@ -1,0 +1,32 @@
+(class (attrs public abstract ) javax/net/ssl/KeyManagerFactorySpi
+ (super java/lang/Object)
+ (source "KeyManagerFactorySpi.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/net/ssl/KeyManagerFactorySpi])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected abstract ) engineGetKeyManagers()[array [object javax/net/ssl/KeyManager]]
+)
+
+(method (attrs protected abstract ) engineInit([object java/security/KeyStore] [array char] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/InvalidAlgorithmParameterException])
+  )
+)
+
+(method (attrs protected abstract ) engineInit([object javax/net/ssl/ManagerFactoryParameters] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/InvalidAlgorithmParameterException])
+  )
+)
+
+)

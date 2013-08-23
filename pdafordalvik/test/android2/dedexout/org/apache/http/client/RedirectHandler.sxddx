@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/apache/http/client/RedirectHandler
+ (super java/lang/Object)
+ (source "RedirectHandler.java")
+
+
+(method (attrs public abstract ) getLocationURI([object org/apache/http/HttpResponse] [object org/apache/http/protocol/HttpContext] )[object java/net/URI]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/apache/http/ProtocolException])
+  )
+)
+
+(method (attrs public abstract ) isRedirectRequested([object org/apache/http/HttpResponse] [object org/apache/http/protocol/HttpContext] )boolean
+)
+
+)

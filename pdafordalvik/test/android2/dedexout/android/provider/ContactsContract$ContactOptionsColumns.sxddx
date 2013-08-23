@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$ContactOptionsColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) CUSTOM_RINGTONE [object java/lang/String] "custom_ringtone" )
+ (field (attrs public static final ) LAST_TIME_CONTACTED [object java/lang/String] "last_time_contacted" )
+ (field (attrs public static final ) SEND_TO_VOICEMAIL [object java/lang/String] "send_to_voicemail" )
+ (field (attrs public static final ) STARRED [object java/lang/String] "starred" )
+ (field (attrs public static final ) TIMES_CONTACTED [object java/lang/String] "times_contacted" )
+
+)

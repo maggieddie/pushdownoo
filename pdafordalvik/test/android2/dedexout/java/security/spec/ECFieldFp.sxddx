@@ -1,0 +1,60 @@
+(class (attrs public ) java/security/spec/ECFieldFp
+ (super java/lang/Object)
+ (source "ECFieldFp.java")
+ (implements java/security/spec/ECField)
+
+
+(method (attrs public ) <init>([object java/math/BigInteger] )void
+  (limit registers 4)
+  ; this: v2 ([object java/security/spec/ECFieldFp])
+  ; parameter[0] : v3 ([object java/math/BigInteger])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/security/spec/ECFieldFp])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFieldSize()int
+  (limit registers 3)
+  ; this: v2 ([object java/security/spec/ECFieldFp])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getP()[object java/math/BigInteger]
+  (limit registers 3)
+  ; this: v2 ([object java/security/spec/ECFieldFp])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object java/security/spec/ECFieldFp])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

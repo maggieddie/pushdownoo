@@ -1,0 +1,28 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/DSAKeyParameters
+ (super org/bouncycastle/crypto/params/AsymmetricKeyParameter)
+ (source "DSAKeyParameters.java")
+
+ (field (attrs private ) params [object org/bouncycastle/crypto/params/DSAParameters] )
+
+(method (attrs public ) <init>(boolean [object org/bouncycastle/crypto/params/DSAParameters] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle/crypto/params/DSAKeyParameters])
+  ; parameter[0] : v1 (boolean)
+  ; parameter[1] : v2 ([object org/bouncycastle/crypto/params/DSAParameters])
+  (line 12)
+  (invoke-direct {v0 v1} org/bouncycastle/crypto/params/AsymmetricKeyParameter/<init> boolean )
+  (line 14)
+  (iput-object-quick v2 v0 org/bouncycastle/crypto/params/DSAKeyParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getParameters()[object org/bouncycastle/crypto/params/DSAParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/DSAKeyParameters])
+  (line 19)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/DSAKeyParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (return-object v0)
+)
+
+)

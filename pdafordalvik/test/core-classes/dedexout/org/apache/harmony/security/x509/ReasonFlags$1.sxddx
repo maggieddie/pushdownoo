@@ -1,0 +1,51 @@
+(class (attrs synchronized ) org/apache/harmony/security/x509/ReasonFlags$1
+ (super org/apache/harmony/security/asn1/ASN1BitString$ASN1NamedBitList)
+ (source "ReasonFlags.java")
+
+
+(method (attrs ) <init>(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x509/ReasonFlags$1])
+  ; parameter[0] : v1 (int)
+  (line 106)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1BitString$ASN1NamedBitList/<init> int )
+  (return-void )
+ )
+
+(method (attrs public ) getDecodedObject([object org/apache/harmony/security/asn1/BerInputStream] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/x509/ReasonFlags$1])
+  ; parameter[0] : v2 ([object org/apache/harmony/security/asn1/BerInputStream])
+  (line 103)
+  (new-instance v0 org/apache/harmony/security/x509/ReasonFlags)
+  (invoke-super-quick {v1 v2} org/apache/harmony/security/x509/ReasonFlags$1/getDecodedObject [object org/apache/harmony/security/asn1/BerInputStream] )
+  (move-result-object v1)
+  (check-cast v1 [array boolean])
+  (check-cast v1 [array boolean])
+  (invoke-direct {v0 v1} org/apache/harmony/security/x509/ReasonFlags/<init> [array boolean] )
+  (return-object v0)
+)
+
+(method (attrs public ) setEncodingContent([object org/apache/harmony/security/asn1/BerOutputStream] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/x509/ReasonFlags$1])
+  ; parameter[0] : v2 ([object org/apache/harmony/security/asn1/BerOutputStream])
+  (line 107)
+  (iget-object-quick v0 v2 org/apache/harmony/security/asn1/BerOutputStream.content [object java/lang/Object])
+  (check-cast v0 [object org/apache/harmony/security/x509/ReasonFlags])
+  (invoke-static {v0} org/apache/harmony/security/x509/ReasonFlags/access$000 [object org/apache/harmony/security/x509/ReasonFlags] )
+  (move-result-object v0)
+  (iput-object-quick v0 v2 org/apache/harmony/security/asn1/BerOutputStream.content [object java/lang/Object])
+  (line 108)
+  (invoke-super-quick {v1 v2} org/apache/harmony/security/x509/ReasonFlags$1/setEncodingContent [object org/apache/harmony/security/asn1/BerOutputStream] )
+  (line 109)
+  (return-void )
+)
+
+)

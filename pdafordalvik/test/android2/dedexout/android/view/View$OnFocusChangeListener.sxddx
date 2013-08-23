@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/View$OnFocusChangeListener
+ (super java/lang/Object)
+ (source "View.java")
+
+
+(method (attrs public abstract ) onFocusChange([object android/view/View] boolean )void
+)
+
+)

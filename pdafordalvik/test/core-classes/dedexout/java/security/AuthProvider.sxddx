@@ -1,0 +1,34 @@
+(class (attrs public abstract synchronized ) java/security/AuthProvider
+ (super java/security/Provider)
+ (source "AuthProvider.java")
+
+ (field (attrs private static final ) serialVersionUID long 2118377373); 0x7e43df9d )
+
+(method (attrs protected ) <init>([object java/lang/String] double [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v0 ([object java/security/AuthProvider])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (double)
+  ; parameter[2] : v4 ([object java/lang/String])
+  (line 52)
+  (invoke-direct {v0 v1 v2 v3 v4} java/security/Provider/<init> [object java/lang/String] double [object java/lang/String] )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs public abstract ) login([object javax/security/auth/Subject] [object javax/security/auth/callback/CallbackHandler] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/security/auth/login/LoginException])
+  )
+)
+
+(method (attrs public abstract ) logout()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/security/auth/login/LoginException])
+  )
+)
+
+(method (attrs public abstract ) setCallbackHandler([object javax/security/auth/callback/CallbackHandler] )void
+)
+
+)

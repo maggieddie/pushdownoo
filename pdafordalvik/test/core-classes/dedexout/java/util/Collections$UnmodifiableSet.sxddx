@@ -1,0 +1,42 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableSet
+ (super java/util/Collections$UnmodifiableCollection)
+ (source "Collections.java")
+ (implements java/util/Set)
+
+ (field (attrs private static final ) serialVersionUID long -1885367595); 0x8f9f92d5 )
+
+(method (attrs ) <init>([object java/util/Set] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/Collections$UnmodifiableSet])
+  ; parameter[0] : v1 ([object java/util/Set])
+  (line 1370)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableCollection/<init> [object java/util/Collection] )
+  (line 1371)
+  (return-void )
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1375)
+  (iget-object-quick v0 v1 )
+  (invoke-virtual-quick {v0 v2} vtable #0x1)
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSet])
+  (line 1380)
+  (iget-object-quick v0 v1 )
+  (invoke-virtual-quick {v0} vtable #0x4)
+  (move-result v0)
+  (return v0)
+)
+
+)

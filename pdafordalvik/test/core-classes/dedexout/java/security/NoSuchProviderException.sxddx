@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/security/NoSuchProviderException
+ (super java/security/GeneralSecurityException)
+ (source "NoSuchProviderException.java")
+
+ (field (attrs private static final ) serialVersionUID long -134217749); 0xf7ffffeb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/security/NoSuchProviderException])
+  (line 52)
+  (invoke-direct {v0} java/security/GeneralSecurityException/<init> )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/security/NoSuchProviderException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 44)
+  (invoke-direct {v0 v1} java/security/GeneralSecurityException/<init> [object java/lang/String] )
+  (line 45)
+  (return-void )
+ )
+
+)

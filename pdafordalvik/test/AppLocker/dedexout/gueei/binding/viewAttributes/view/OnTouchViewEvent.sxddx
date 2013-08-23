@@ -1,0 +1,53 @@
+(class (attrs public ) gueei/binding/viewAttributes/view/OnTouchViewEvent
+ (super gueei/binding/viewAttributes/ViewEventAttribute)
+ (source "OnTouchViewEvent.java")
+ (implements android/view/View$OnTouchListener)
+
+
+(method (attrs public ) <init>([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/view/OnTouchViewEvent])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 11)
+  (const-string v0 "onTouch")
+  (invoke-direct {v1 v2 v0} gueei/binding/viewAttributes/ViewEventAttribute/<init> [object android/view/View] [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) onTouch([object android/view/View] [object android/view/MotionEvent] )boolean
+  (limit registers 6)
+  ; this: v3 ([object gueei/binding/viewAttributes/view/OnTouchViewEvent])
+  ; parameter[0] : v4 ([object android/view/View])
+  ; parameter[1] : v5 ([object android/view/MotionEvent])
+  (line 16)
+  (new-instance v0 gueei/binding/viewAttributes/view/TouchEventResult)
+  (invoke-direct {v0} gueei/binding/viewAttributes/view/TouchEventResult/<init> )
+  (line 17)
+  (const/4 v1 2)
+  (new-array v1 v1 [array [object java/lang/Object]])
+  (const/4 v2 0)
+  (aput-object v5 v1 v2)
+  (const/4 v2 1)
+  (aput-object v0 v1 v2)
+  (invoke-virtual {v3 v4 v1} gueei/binding/viewAttributes/view/OnTouchViewEvent/invokeCommand [object android/view/View] [array [object java/lang/Object]] )
+  (line 18)
+  (iget-boolean v1 v0 gueei/binding/viewAttributes/view/TouchEventResult.eventConsumed boolean)
+  (return v1)
+)
+
+(method (attrs protected ) registerToListener([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/view/OnTouchViewEvent])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 23)
+  (const-class v0 gueei/binding/listeners/OnTouchListenerMulticast)
+  (invoke-static {v2 v0} gueei/binding/Binder/getMulticastListenerForView [object android/view/View] [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object gueei/binding/listeners/OnTouchListenerMulticast])
+  (invoke-virtual {v0 v1} gueei/binding/listeners/OnTouchListenerMulticast/register [object java/lang/Object] )
+  (line 24)
+  (return-void )
+)
+
+)

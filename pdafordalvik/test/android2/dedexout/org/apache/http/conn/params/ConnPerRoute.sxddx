@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/http/conn/params/ConnPerRoute
+ (super java/lang/Object)
+ (source "ConnPerRoute.java")
+
+
+(method (attrs public abstract ) getMaxForRoute([object org/apache/http/conn/routing/HttpRoute] )int
+)
+
+)

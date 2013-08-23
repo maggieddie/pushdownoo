@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) org/apache/harmony/xnet/provider/jsse/EndOfBufferException
+ (super java/io/IOException)
+ (source "EndOfBufferException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1577019247); 0x5dff676f )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/xnet/provider/jsse/EndOfBufferException])
+  (line 31)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 32)
+  (return-void )
+ )
+
+)

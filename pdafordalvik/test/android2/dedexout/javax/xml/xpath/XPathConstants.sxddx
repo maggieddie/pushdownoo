@@ -1,0 +1,35 @@
+(class (attrs public ) javax/xml/xpath/XPathConstants
+ (super java/lang/Object)
+ (source "XPathConstants.java")
+
+ (field (attrs public static final ) BOOLEAN [object javax/xml/namespace/QName] null )
+ (field (attrs public static final ) DOM_OBJECT_MODEL [object java/lang/String] "http://java.sun.com/jaxp/xpath/dom" )
+ (field (attrs public static final ) NODE [object javax/xml/namespace/QName] )
+ (field (attrs public static final ) NODESET [object javax/xml/namespace/QName] )
+ (field (attrs public static final ) NUMBER [object javax/xml/namespace/QName] )
+ (field (attrs public static final ) STRING [object javax/xml/namespace/QName] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 11)
+  (sput-object v0 javax/xml/xpath/XPathConstants.NUMBER [object javax/xml/namespace/QName])
+  (sput-object v0 javax/xml/xpath/XPathConstants.STRING [object javax/xml/namespace/QName])
+  (sput-object v0 javax/xml/xpath/XPathConstants.BOOLEAN [object javax/xml/namespace/QName])
+  (sput-object v0 javax/xml/xpath/XPathConstants.NODESET [object javax/xml/namespace/QName])
+  (sput-object v0 javax/xml/xpath/XPathConstants.NODE [object javax/xml/namespace/QName])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/xpath/XPathConstants])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

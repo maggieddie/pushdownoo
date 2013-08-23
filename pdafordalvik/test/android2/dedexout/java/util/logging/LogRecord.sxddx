@@ -1,0 +1,272 @@
+(class (attrs public ) java/util/logging/LogRecord
+ (super java/lang/Object)
+ (source "LogRecord.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public ) <init>([object java/util/logging/Level] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/util/logging/Level])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getLevel()[object java/util/logging/Level]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getLoggerName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMessage()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getMillis()long
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getParameters()[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getResourceBundle()[object java/util/ResourceBundle]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getResourceBundleName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSequenceNumber()long
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSourceClassName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSourceMethodName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getThreadID()int
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getThrown()[object java/lang/Throwable]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setLevel([object java/util/logging/Level] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/util/logging/Level])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setLoggerName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setMessage([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setMillis(long )void
+  (limit registers 5)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 (long)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setParameters([array [object java/lang/Object]] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([array [object java/lang/Object]])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setResourceBundle([object java/util/ResourceBundle] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/util/ResourceBundle])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setResourceBundleName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSequenceNumber(long )void
+  (limit registers 5)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 (long)
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSourceClassName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSourceMethodName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setThreadID(int )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 (int)
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setThrown([object java/lang/Throwable] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/LogRecord])
+  ; parameter[0] : v3 ([object java/lang/Throwable])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

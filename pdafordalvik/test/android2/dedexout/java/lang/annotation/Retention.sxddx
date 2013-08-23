@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) java/lang/annotation/Retention
+ (super java/lang/Object)
+ (source "Retention.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/annotation/RetentionPolicy]
+)
+
+)

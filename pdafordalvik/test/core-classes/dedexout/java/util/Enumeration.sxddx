@@ -1,0 +1,15 @@
+(interface (attrs public abstract synchronized ) java/util/Enumeration
+ (super java/lang/Object)
+ (source "Enumeration.java")
+
+
+(method (attrs public abstract ) hasMoreElements()boolean
+)
+
+(method (attrs public abstract ) nextElement()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+)
+
+)

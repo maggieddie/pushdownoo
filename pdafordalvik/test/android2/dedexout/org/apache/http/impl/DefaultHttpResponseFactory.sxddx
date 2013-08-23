@@ -1,0 +1,67 @@
+(class (attrs public ) org/apache/http/impl/DefaultHttpResponseFactory
+ (super java/lang/Object)
+ (source "DefaultHttpResponseFactory.java")
+ (implements org/apache/http/HttpResponseFactory)
+
+ (field (attrs protected final ) reasonCatalog [object org/apache/http/ReasonPhraseCatalog] )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/http/impl/DefaultHttpResponseFactory])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object org/apache/http/ReasonPhraseCatalog] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/impl/DefaultHttpResponseFactory])
+  ; parameter[0] : v3 ([object org/apache/http/ReasonPhraseCatalog])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected ) determineLocale([object org/apache/http/protocol/HttpContext] )[object java/util/Locale]
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/impl/DefaultHttpResponseFactory])
+  ; parameter[0] : v3 ([object org/apache/http/protocol/HttpContext])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) newHttpResponse([object org/apache/http/ProtocolVersion] int [object org/apache/http/protocol/HttpContext] )[object org/apache/http/HttpResponse]
+  (limit registers 6)
+  ; this: v2 ([object org/apache/http/impl/DefaultHttpResponseFactory])
+  ; parameter[0] : v3 ([object org/apache/http/ProtocolVersion])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 ([object org/apache/http/protocol/HttpContext])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) newHttpResponse([object org/apache/http/StatusLine] [object org/apache/http/protocol/HttpContext] )[object org/apache/http/HttpResponse]
+  (limit registers 5)
+  ; this: v2 ([object org/apache/http/impl/DefaultHttpResponseFactory])
+  ; parameter[0] : v3 ([object org/apache/http/StatusLine])
+  ; parameter[1] : v4 ([object org/apache/http/protocol/HttpContext])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,81 @@
+(class (attrs public ) android/gesture/GestureStroke
+ (super java/lang/Object)
+ (source "GestureStroke.java")
+
+ (field (attrs public final ) boundingBox [object android/graphics/RectF] )
+ (field (attrs public final ) length float )
+ (field (attrs public final ) points [array float] )
+
+(method (attrs public ) <init>([object java/util/ArrayList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/ArrayList"  "<"  "Landroid/gesture/GesturePoint;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  ; parameter[0] : v3 ([object java/util/ArrayList])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 12)
+  (const/4 v0 0)
+  (iput-object v0 v2 android/gesture/GestureStroke.points [array float])
+  (line 4)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) clearPath()void
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) clone()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) computeOrientedBoundingBox()[object android/gesture/OrientedBoundingBox]
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPath()[object android/graphics/Path]
+  (limit registers 3)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toPath(float float int )[object android/graphics/Path]
+  (limit registers 6)
+  ; this: v2 ([object android/gesture/GestureStroke])
+  ; parameter[0] : v3 (float)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

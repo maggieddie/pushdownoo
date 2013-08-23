@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/w3c/dom/NodeList
+ (super java/lang/Object)
+ (source "NodeList.java")
+
+
+(method (attrs public abstract ) getLength()int
+)
+
+(method (attrs public abstract ) item(int )[object org/w3c/dom/Node]
+)
+
+)

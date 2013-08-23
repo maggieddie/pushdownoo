@@ -1,0 +1,48 @@
+(class (attrs ) gueei/binding/collections/CombinedAdapter$1
+ (super android/database/DataSetObserver)
+ (source "CombinedAdapter.java")
+
+ (field (attrs final ) this$0 [object gueei/binding/collections/CombinedAdapter] )
+
+(method (attrs ) <init>([object gueei/binding/collections/CombinedAdapter] )void
+  (limit registers 2)
+  ; this: v0 ([object gueei/binding/collections/CombinedAdapter$1])
+  ; parameter[0] : v1 ([object gueei/binding/collections/CombinedAdapter])
+  (line 1)
+  (iput-object v1 v0 gueei/binding/collections/CombinedAdapter$1.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (line 22)
+  (invoke-direct {v0} android/database/DataSetObserver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onChanged()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/CombinedAdapter$1])
+  (line 25)
+  (invoke-super {v1} android/database/DataSetObserver/onChanged )
+  (line 26)
+  (iget-object v0 v1 gueei/binding/collections/CombinedAdapter$1.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (invoke-static {v0} gueei/binding/collections/CombinedAdapter/access$0 [object gueei/binding/collections/CombinedAdapter] )
+  (line 27)
+  (iget-object v0 v1 gueei/binding/collections/CombinedAdapter$1.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (invoke-virtual {v0} gueei/binding/collections/CombinedAdapter/notifyDataSetChanged )
+  (line 28)
+  (return-void )
+)
+
+(method (attrs public ) onInvalidated()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/collections/CombinedAdapter$1])
+  (line 32)
+  (invoke-super {v1} android/database/DataSetObserver/onInvalidated )
+  (line 33)
+  (iget-object v0 v1 gueei/binding/collections/CombinedAdapter$1.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (invoke-virtual {v0} gueei/binding/collections/CombinedAdapter/notifyDataSetInvalidated )
+  (line 34)
+  (iget-object v0 v1 gueei/binding/collections/CombinedAdapter$1.this$0 [object gueei/binding/collections/CombinedAdapter])
+  (invoke-static {v0} gueei/binding/collections/CombinedAdapter/access$0 [object gueei/binding/collections/CombinedAdapter] )
+  (line 35)
+  (return-void )
+)
+
+)

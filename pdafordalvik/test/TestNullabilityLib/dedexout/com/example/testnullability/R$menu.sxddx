@@ -1,0 +1,15 @@
+(class (attrs public final ) com/example/testnullability/R$menu
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) activity_main int 2131099648); 0x7f060000 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/example/testnullability/R$menu])
+  (line 22)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

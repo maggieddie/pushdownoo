@@ -1,0 +1,110 @@
+(class (attrs public final ) java/math/MathContext
+ (super java/lang/Object)
+ (source "MathContext.java")
+ (implements java/io/Serializable)
+
+ (field (attrs public static final ) DECIMAL128 [object java/math/MathContext] )
+ (field (attrs public static final ) DECIMAL32 [object java/math/MathContext] )
+ (field (attrs public static final ) DECIMAL64 [object java/math/MathContext] )
+ (field (attrs public static final ) UNLIMITED [object java/math/MathContext] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 17)
+  (sput-object v0 java/math/MathContext.DECIMAL128 [object java/math/MathContext])
+  (sput-object v0 java/math/MathContext.DECIMAL32 [object java/math/MathContext])
+  (sput-object v0 java/math/MathContext.DECIMAL64 [object java/math/MathContext])
+  (sput-object v0 java/math/MathContext.UNLIMITED [object java/math/MathContext])
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 4)
+  ; this: v2 ([object java/math/MathContext])
+  ; parameter[0] : v3 (int)
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int [object java/math/RoundingMode] )void
+  (limit registers 5)
+  ; this: v2 ([object java/math/MathContext])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/math/RoundingMode])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/math/MathContext])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 7)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/math/MathContext])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPrecision()int
+  (limit registers 3)
+  ; this: v2 ([object java/math/MathContext])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getRoundingMode()[object java/math/RoundingMode]
+  (limit registers 3)
+  ; this: v2 ([object java/math/MathContext])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object java/math/MathContext])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/math/MathContext])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

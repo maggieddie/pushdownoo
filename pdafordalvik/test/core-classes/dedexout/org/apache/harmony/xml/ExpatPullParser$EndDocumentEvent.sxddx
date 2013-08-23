@@ -1,0 +1,46 @@
+(class (attrs synchronized ) org/apache/harmony/xml/ExpatPullParser$EndDocumentEvent
+ (super org/apache/harmony/xml/ExpatPullParser$Event)
+ (source "ExpatPullParser.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/apache/harmony/xml/ExpatPullParser$EndDocumentEvent])
+  (line 692)
+  (const/4 v0 0)
+  (sget-object v1 org/apache/harmony/xml/ExpatPullParser$NamespaceStack.EMPTY [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack])
+  (invoke-direct {v2 v0 v1} org/apache/harmony/xml/ExpatPullParser$Event/<init> int [object org/apache/harmony/xml/ExpatPullParser$NamespaceStack] )
+  (line 693)
+  (return-void )
+ )
+
+(method (attrs ) getNext()[object org/apache/harmony/xml/ExpatPullParser$Event]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/harmony/xml/ExpatPullParser$EndDocumentEvent])
+  (line 697)
+  (new-instance v0 java/lang/IllegalStateException)
+  (const-string v1 "End of document.")
+  (invoke-direct {v0 v1} java/lang/IllegalStateException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs ) getType()int
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/ExpatPullParser$EndDocumentEvent])
+  (line 707)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs ) setNext([object org/apache/harmony/xml/ExpatPullParser$Event] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/harmony/xml/ExpatPullParser$EndDocumentEvent])
+  ; parameter[0] : v3 ([object org/apache/harmony/xml/ExpatPullParser$Event])
+  (line 702)
+  (new-instance v0 java/lang/IllegalStateException)
+  (const-string v1 "End of document.")
+  (invoke-direct {v0 v1} java/lang/IllegalStateException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

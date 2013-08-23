@@ -1,0 +1,61 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$BigPictureStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) mPicture [object android/graphics/Bitmap] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  (line 611)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 612)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/support/v4/app/NotificationCompat$Builder] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v1 ([object android/support/v4/app/NotificationCompat$Builder])
+  (line 614)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 615)
+  (invoke-virtual {v0 v1} android/support/v4/app/NotificationCompat$BigPictureStyle/setBuilder [object android/support/v4/app/NotificationCompat$Builder] )
+  (line 616)
+  (return-void )
+ )
+
+(method (attrs public ) bigPicture([object android/graphics/Bitmap] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v1 ([object android/graphics/Bitmap])
+  (line 637)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigPictureStyle.mPicture [object android/graphics/Bitmap])
+  (line 638)
+  (return-object v0)
+)
+
+(method (attrs public ) setBigContentTitle([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 623)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigPictureStyle.mBigContentTitle [object java/lang/CharSequence])
+  (line 624)
+  (return-object v0)
+)
+
+(method (attrs public ) setSummaryText([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 631)
+  (iput-object v2 v1 android/support/v4/app/NotificationCompat$BigPictureStyle.mSummaryText [object java/lang/CharSequence])
+  (line 632)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 android/support/v4/app/NotificationCompat$BigPictureStyle.mSummaryTextSet boolean)
+  (line 633)
+  (return-object v1)
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/ShareActionProvider$OnShareTargetSelectedListener
+ (super java/lang/Object)
+ (source "ShareActionProvider.java")
+
+
+(method (attrs public abstract ) onShareTargetSelected([object android/widget/ShareActionProvider] [object android/content/Intent] )boolean
+)
+
+)

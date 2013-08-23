@@ -1,0 +1,13 @@
+(interface (attrs public abstract annotation ) dalvik/annotation/TestTargetClass
+ (super java/lang/Object)
+ (source "TestTargetClass.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

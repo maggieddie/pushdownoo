@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/buttons" android:background="#ffcccccc" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/closeButton" android:background="@drawable/button_gray" android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/btnDismiss" style="@style/button" />
+    </LinearLayout>
+    <WebView android:id="@id/webkit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/buttons" />
+</RelativeLayout>

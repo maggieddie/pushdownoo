@@ -1,0 +1,7 @@
+(interface (attrs public abstract ) android/provider/MediaStore$Audio$GenresColumns
+ (super java/lang/Object)
+ (source "MediaStore.java")
+
+ (field (attrs public static final ) NAME [object java/lang/String] "name" )
+
+)

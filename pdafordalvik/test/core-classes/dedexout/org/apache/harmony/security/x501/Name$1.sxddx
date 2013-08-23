@@ -1,0 +1,39 @@
+(class (attrs synchronized ) org/apache/harmony/security/x501/Name$1
+ (super org/apache/harmony/security/asn1/ASN1SequenceOf)
+ (source "Name.java")
+
+
+(method (attrs ) <init>([object org/apache/harmony/security/asn1/ASN1Type] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x501/Name$1])
+  ; parameter[0] : v1 ([object org/apache/harmony/security/asn1/ASN1Type])
+  (line 261)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1SequenceOf/<init> [object org/apache/harmony/security/asn1/ASN1Type] )
+  (return-void )
+ )
+
+(method (attrs public ) getDecodedObject([object org/apache/harmony/security/asn1/BerInputStream] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v2 ([object org/apache/harmony/security/x501/Name$1])
+  ; parameter[0] : v3 ([object org/apache/harmony/security/asn1/BerInputStream])
+  (line 258)
+  (new-instance v0 org/apache/harmony/security/x501/Name)
+  (iget-object-quick v2 v3 org/apache/harmony/security/asn1/BerInputStream.content [object java/lang/Object])
+  (check-cast v2 [object java/util/List])
+  (const/4 v1 0)
+  (invoke-direct {v0 v2 v1} org/apache/harmony/security/x501/Name/<init> [object java/util/List] [object org/apache/harmony/security/x501/Name$1] )
+  (return-object v0)
+)
+
+(method (attrs public ) getValues([object java/lang/Object] )[object java/util/Collection]
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/security/x501/Name$1])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 262)
+  (check-cast v2 [object org/apache/harmony/security/x501/Name])
+  (invoke-static {v2} org/apache/harmony/security/x501/Name/access$100 [object org/apache/harmony/security/x501/Name] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

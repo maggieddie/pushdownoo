@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Il ben conosciuto Fortune per Android: stampa una massima casuale, si spera interessante.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune su Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Per visualizzare le informazioni su questa applicazione devi installare OI About. Visita http://www.openintents.org/ o il Mercato.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">"Sembra che tu non abbia l'applicazione Android Market installata. Ignorato"</string>
+    <string name="market_description_short">Il famoso Fortune, adesso per Android: visualizza casualmente adagi, aforismi, detti, scherzi (si spera interessanti)</string>
+    <string name="menu_preferences">Preferenze</string>
+    <string name="menu_about">"Riguardo ad Android's Fortune"</string>
+    <string name="menu_refresh">Ricarica Biscottino</string>
+    <string name="menu_get_more_cookies">Ottieni Più Biscottini</string>
+    <string name="menu_send">Invia Come Testo</string>
+    <string name="menu_web_search">Cerca Sul Web</string>
+    <string name="menu_feedback">Dai Feedback</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Invia tramite:</string>
+    <string name="chooser_web_search_action">Cerca il web tramite:</string>
+    <string name="preferences_activity_name">"Preferenze Di Android's Fortune"</string>
+    <string name="resources">Risorse</string>
+    <string name="title_cp_equal">Pari opportunità fra cookie</string>
+    <string name="summary_cp_equal">Se la possibilità che un biscottino è mostrato da un file biscottino particolare è uguale tra i file biscottino, indipendentemente dalle dimensioni dei file biscottino.</string>
+    <string name="title_ep_folder">Cartella contenente i cookie</string>
+    <string name="summary_ep_folder">Inserisci la cartella in cui hai immagazzinato i tuoi file biscottino.</string>
+    <string name="dialog_title_ep_folder">Inserisci la cartella che contiene i file biscottino</string>
+    <string name="title_ps_files">File biscottino</string>
+    <string name="summary_ps_files">Seleziona i file biscottino da usare dalla cartella sopra (non includere i file .num).</string>
+    <string name="summary_ps_files_warning">AVVISO: Alcuni dei file selezionati non hanno un file .num associato! Clicca qui e cambia la selezione.</string>
+    <string name="in_app_display">Mostra</string>
+    <string name="title_lp_font">Stile dei caratteri</string>
+    <string name="summary_lp_font">Monospace può essere utile per i biscottini ascii-art.</string>
+    <string name="dialog_title_lp_font">Cambia lo stile dei caratteri</string>
+    <string name="title_ep_fontsize">Dimensione dei caratteri</string>
+    <string name="summary_ep_fontsize">Dimensione carattere in punti.</string>
+    <string name="dialog_title_ep_fontsize">Cambia la dimensione dei caratteri</string>
+    <string name="title_cp_wrap">Avvolgi testo</string>
+    <string name="summary_cp_wrap">Adatta il testo del biscottino sullo schermo. Disattiva per visualizzare correttamente i testi dei biscottini formattati con interruzioni di testo e ascii-art.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Stile dei caratteri</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Cambia lo stile del carattere del Widget</string>
+    <string name="title_ep_widget_period">Periodo di aggiornamento del Widget</string>
+    <string name="summary_ep_widget_period">Tempo in minuti tra gli aggiornamenti del Widget</string>
+    <string name="dialog_title_ep_widget_period">Cambia il periodo di aggiornamento del Widget</string>
+    <string name="notifications">Notifiche</string>
+    <string name="title_cp_notif_boot">"Notifiche all'avvio"</string>
+    <string name="summary_cp_notif_boot">"Suggerisci un biscottino all'avvio del sistema."</string>
+    <string name="title_cp_notif_time">Notifiche periodiche</string>
+    <string name="summary_cp_notif_time">Suggerisci biscottini in intervalli di tempo.</string>
+    <string name="title_ep_time">Periodo di tempo</string>
+    <string name="summary_ep_time">Periodo di tempo in minuti tra le notifiche.</string>
+    <string name="dialog_title_ep_time">Cambia il periodo di tempo</string>
+    <string name="dialog_title_num">Creare file .num?</string>
+    <string name="dialog_message_num_warning">Alcuni dei file selezionati non hanno un file .num associato. Devo provare a generare i file .num?</string>
+    <string name="no_cookie_files">"Nessun file biscottino è configurato. Per piacere apri le preferenze e seleziona alcuni file biscottino.
+
+Visualizza: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Questo non è un biscottino della fortuna!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Biscotto Della Fortuna</string>
+    <string name="dialog_install">Per piacere aspetta mentre si sta installando il file biscottino di esempio...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Biscotto della Fortuna</string>
+    <string name="widget_loading">Caricamento di un biscotto...</string>
+    <string name="widget_error">Nessuno file di biscotti configurato, o Fortune per Android si è chiuso per via di troppa poca memoria libera o reinstallare. Battere leggermente per aprire Fortune per Android</string>
+    <string name="widget_dialog_activity_name">"Scegliere l'operazione:"</string>
+    <string name="label_b_refresh">Aggiorna</string>
+    <string name="label_b_show_cookie">Visualizza il biscotto</string>
+    <string name="label_b_cancel">Annulla</string>
+    <string name="error_no_file_name">Non è stato specificato il nome del file.</string>
+    <string name="error_arg_twice">Un argomento è stato passato due volte.</string>
+    <string name="error_num_file_exists">Il file .num che dovrebbe essere creato esiste già.</string>
+    <string name="error_no_valid_cookie_file">Il file selezionato non è un cookie valido.</string>
+    <string name="error_file_not_exists_or_no_num">Il file del biscotto non esiste o non ha un file .num associato ad esso:</string>
+    <string name="error_no_write_perms">Non hai i permessi di scrittura.</string>
+    <string name="toast_read_cookie_failed">Lettura del biscotto fallita:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Sei sicuro che hai la scheda SD montata?"</string>
+    <string name="toast_read_cookie_failed_internal">Un errore interno è apparso durante la lettura del biscottino (per favore riporta il bug):</string>
+    <string name="toast_generation_num_failed">Generazione del file .num fallita:</string>
+    <string name="toast_not_a_dir">La cartella specificata (sopra nelle preferenze) non è una directory valida)</string>
+    <string name="toast_selected_file_lost">Il file precedentemente selezionato non è stato trovato:</string>
+    <string name="toast_value_invalid">Il valore immesso noon è valido. Impostato a:</string>
+    <string name="toast_widget_period_short">Un periodo inferiore a 60 minuti potrebbe avere effetti negativi sule prestazioni e sulla durata della batteria</string>
+    <string name="versioncheck_preferences_activity_name">"Preferenze Del Controllo Dell'Aggiornamento Di Android's Fortune"</string>
+    <string name="title_ps_versioncheck">Controllo aggiornamenti</string>
+    <string name="summary_ps_versioncheck">Auto-controllo automatico per gli aggiornamenti.</string>
+    <string name="vc_notify_ticker">Aggiornamento Applicazione</string>
+    <string name="vc_notify_title">Applicazione Aggiornata</string>
+    <string name="vc_notify_message">Scarica una nuova versione.</string>
+    <string name="vc_category">Controllo Aggiornamenti</string>
+    <string name="vc_enabled_title">Abilitato</string>
+    <string name="vc_enabled_summary">"Se il controllo per gli aggiornamenti dell'applicazione è abilitato o no."</string>
+    <string name="vc_confirm_title">"Conferma L'Aggiornamento Di Android's Fortune"</string>
+    <string name="vc_confirm_text">Vuoi aggiornare questa applicazione alla versione più recente?</string>
+    <string name="vc_confirm_stop">Non notificarmi ancora questo aggiornamento</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">"Controlla l'URl"</string>
+    <string name="vc_check_uri_summary">"L'URI che sarà controllato per gli aggiornamenti dell'applicazione."</string>
+    <string name="about_translators">Launchpad Contributions: Ardaking https://launchpad.net/~ardaking Cecco https://launchpad.net/~cecco Guybrush88 https://launchpad.net/~erpizzo Pietrao https://launchpad.net/~isottipietro pjv https://launchpad.net/~pjv</string>
+</resources>

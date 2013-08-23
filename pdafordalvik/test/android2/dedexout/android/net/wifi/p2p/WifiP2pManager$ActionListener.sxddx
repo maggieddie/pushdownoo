@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/net/wifi/p2p/WifiP2pManager$ActionListener
+ (super java/lang/Object)
+ (source "WifiP2pManager.java")
+
+
+(method (attrs public abstract ) onFailure(int )void
+)
+
+(method (attrs public abstract ) onSuccess()void
+)
+
+)

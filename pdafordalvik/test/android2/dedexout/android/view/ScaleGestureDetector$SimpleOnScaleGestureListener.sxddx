@@ -1,0 +1,51 @@
+(class (attrs public ) android/view/ScaleGestureDetector$SimpleOnScaleGestureListener
+ (super java/lang/Object)
+ (source "ScaleGestureDetector.java")
+ (implements android/view/ScaleGestureDetector$OnScaleGestureListener)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/ScaleGestureDetector$SimpleOnScaleGestureListener])
+  (line 13)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) onScale([object android/view/ScaleGestureDetector] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/view/ScaleGestureDetector$SimpleOnScaleGestureListener])
+  ; parameter[0] : v3 ([object android/view/ScaleGestureDetector])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onScaleBegin([object android/view/ScaleGestureDetector] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/view/ScaleGestureDetector$SimpleOnScaleGestureListener])
+  ; parameter[0] : v3 ([object android/view/ScaleGestureDetector])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onScaleEnd([object android/view/ScaleGestureDetector] )void
+  (limit registers 4)
+  ; this: v2 ([object android/view/ScaleGestureDetector$SimpleOnScaleGestureListener])
+  ; parameter[0] : v3 ([object android/view/ScaleGestureDetector])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/Filterable
+ (super java/lang/Object)
+ (source "Filterable.java")
+
+
+(method (attrs public abstract ) getFilter()[object android/widget/Filter]
+)
+
+)

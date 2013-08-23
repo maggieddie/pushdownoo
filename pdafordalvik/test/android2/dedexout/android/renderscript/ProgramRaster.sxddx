@@ -1,0 +1,47 @@
+(class (attrs public ) android/renderscript/ProgramRaster
+ (super android/renderscript/BaseObj)
+ (source "ProgramRaster.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/ProgramRaster])
+  (line 18)
+  (invoke-direct {v2} android/renderscript/BaseObj/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) CULL_BACK([object android/renderscript/RenderScript] )[object android/renderscript/ProgramRaster]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object android/renderscript/RenderScript])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) CULL_FRONT([object android/renderscript/RenderScript] )[object android/renderscript/ProgramRaster]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object android/renderscript/RenderScript])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) CULL_NONE([object android/renderscript/RenderScript] )[object android/renderscript/ProgramRaster]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object android/renderscript/RenderScript])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

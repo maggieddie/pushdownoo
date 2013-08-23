@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/content/DialogInterface
+ (super java/lang/Object)
+ (source "DialogInterface.java")
+
+ (field (attrs public static final ) BUTTON1 int -1); 0xffffffff )
+ (field (attrs public static final ) BUTTON2 int -2); 0xfffffffe )
+ (field (attrs public static final ) BUTTON3 int -3); 0xfffffffd )
+ (field (attrs public static final ) BUTTON_NEGATIVE int -2); 0xfffffffe )
+ (field (attrs public static final ) BUTTON_NEUTRAL int -3); 0xfffffffd )
+ (field (attrs public static final ) BUTTON_POSITIVE int -1); 0xffffffff )
+
+(method (attrs public abstract ) cancel()void
+)
+
+(method (attrs public abstract ) dismiss()void
+)
+
+)

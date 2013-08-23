@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/preference/Preference$OnPreferenceChangeListener
+ (super java/lang/Object)
+ (source "Preference.java")
+
+
+(method (attrs public abstract ) onPreferenceChange([object android/preference/Preference] [object java/lang/Object] )boolean
+)
+
+)

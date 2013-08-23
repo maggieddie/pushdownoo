@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/MediaScannerConnection$OnScanCompletedListener
+ (super java/lang/Object)
+ (source "MediaScannerConnection.java")
+
+
+(method (attrs public abstract ) onScanCompleted([object java/lang/String] [object android/net/Uri] )void
+)
+
+)

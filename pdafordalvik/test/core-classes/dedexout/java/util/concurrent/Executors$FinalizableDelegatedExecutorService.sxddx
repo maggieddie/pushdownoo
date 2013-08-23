@@ -1,0 +1,25 @@
+(class (attrs synchronized ) java/util/concurrent/Executors$FinalizableDelegatedExecutorService
+ (super java/util/concurrent/Executors$DelegatedExecutorService)
+ (source "Executors.java")
+
+
+(method (attrs ) <init>([object java/util/concurrent/ExecutorService] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/Executors$FinalizableDelegatedExecutorService])
+  ; parameter[0] : v1 ([object java/util/concurrent/ExecutorService])
+  (line 640)
+  (invoke-direct {v0 v1} java/util/concurrent/Executors$DelegatedExecutorService/<init> [object java/util/concurrent/ExecutorService] )
+  (line 641)
+  (return-void )
+ )
+
+(method (attrs protected ) finalize()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/concurrent/Executors$FinalizableDelegatedExecutorService])
+  (line 643)
+  (invoke-super-quick {v0} java/util/concurrent/Executors$FinalizableDelegatedExecutorService/shutdown )
+  (line 644)
+  (return-void )
+)
+
+)

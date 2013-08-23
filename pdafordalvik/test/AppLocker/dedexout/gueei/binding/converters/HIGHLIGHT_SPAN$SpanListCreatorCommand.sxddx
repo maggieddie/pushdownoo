@@ -1,0 +1,53 @@
+(class (attrs public abstract ) gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand
+ (super gueei/binding/Command)
+ (source "HIGHLIGHT_SPAN.java")
+
+ (field (attrs public ) SpanList [object java/util/List] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand])
+  (line 117)
+  (invoke-direct {v1} gueei/binding/Command/<init> )
+  (line 118)
+  (const/4 v0 0)
+  (iput-object v0 v1 gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand.SpanList [object java/util/List])
+  (line 117)
+  (return-void )
+ )
+
+(method (attrs public ) Invoke([object android/view/View] [array [object java/lang/Object]] )void
+  (limit registers 6)
+  ; this: v3 ([object gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand])
+  ; parameter[0] : v4 ([object android/view/View])
+  ; parameter[1] : v5 ([array [object java/lang/Object]])
+  (const/4 v2 0)
+  (line 122)
+  (const/4 v0 0)
+  (line 123)
+  (array-length v1 v5)
+  (if-lez v1 l25472)
+  (aget-object v1 v5 v2)
+  (instance-of v1 v1 java/lang/Integer)
+  (if-eqz v1 l25472)
+  (line 124)
+  (aget-object v1 v5 v2)
+  (check-cast v1 [object java/lang/Integer])
+  (invoke-virtual {v1} java/lang/Integer/intValue )
+  (move-result v0)
+  (label l25472)
+  (line 126)
+  (invoke-virtual {v3 v0} gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand/onCreateSpanList int )
+  (move-result-object v1)
+  (iput-object v1 v3 gueei/binding/converters/HIGHLIGHT_SPAN$SpanListCreatorCommand.SpanList [object java/util/List])
+  (line 127)
+  (return-void )
+)
+
+(method (attrs public abstract ) onCreateSpanList(int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Ljava/util/List"  "<"  "Lgueei/binding/observables/SpanObservable$Span;"  ">;")
+  )
+)
+
+)

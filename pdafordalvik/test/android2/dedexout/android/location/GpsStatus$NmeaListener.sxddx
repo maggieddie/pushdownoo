@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/location/GpsStatus$NmeaListener
+ (super java/lang/Object)
+ (source "GpsStatus.java")
+
+
+(method (attrs public abstract ) onNmeaReceived(long [object java/lang/String] )void
+)
+
+)

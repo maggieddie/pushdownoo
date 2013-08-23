@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) org/apache/harmony/xnet/provider/jsse/DataStream
+ (super java/lang/Object)
+ (source "DataStream.java")
+
+
+(method (attrs public abstract ) getData(int )[array byte]
+)
+
+(method (attrs public abstract ) hasData()boolean
+)
+
+)

@@ -1,0 +1,73 @@
+(class (attrs public ) gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute
+ (super gueei/binding/ViewAttribute)
+ (source "EditTextFiltersViewAttribute.java")
+
+
+(method (attrs public ) <init>([object android/widget/EditText] )void
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute])
+  ; parameter[0] : v3 ([object android/widget/EditText])
+  (line 11)
+  (const-class v0 [array [object android/text/InputFilter]])
+  (const-string v1 "filters")
+  (invoke-direct {v2 v0 v3 v1} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs protected ) AcceptThisTypeAs([object java/lang/Class] )[object gueei/binding/BindingType]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Lgueei/binding/BindingType;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 27)
+  (sget-object v0 gueei/binding/BindingType.OneWay [object gueei/binding/BindingType])
+  (return-object v0)
+)
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 16)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute/getView )
+  (move-result-object v0)
+  (if-nez v0 l2843e)
+  (label l2843c)
+  (line 23)
+  (return-void )
+  (label l2843e)
+  (line 17)
+  (if-eqz v2 l2843c)
+  (line 20)
+  (instance-of v0 v2 [array [object android/text/InputFilter]])
+  (if-eqz v0 l2843c)
+  (line 21)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute/getView )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/EditText])
+  (check-cast v2 [array [object android/text/InputFilter]])
+  (invoke-virtual {v0 v2} android/widget/EditText/setFilters [array [object android/text/InputFilter]] )
+  (goto l2843c)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[array [object android/text/InputFilter]]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/EditTextFiltersViewAttribute])
+  (line 32)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

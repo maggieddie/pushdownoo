@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/speech/tts/TextToSpeech$OnInitListener
+ (super java/lang/Object)
+ (source "TextToSpeech.java")
+
+
+(method (attrs public abstract ) onInit(int )void
+)
+
+)

@@ -7,6 +7,7 @@ import org.ucombinator.utils.CommonUtils
 import org.ucombinator.utils.Debug
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import org.ucombinator.playhelpers.AnalysisHelperThread
+ 
 
 
 
@@ -464,8 +465,7 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
       case _ => (false, List())
     }
   }
-   
-
+  
   private def getSuitableRefStrsSet: Set[String] = {
     rhExp match {
       case re@RegisterExp(sv) => { // should be move-result
@@ -532,6 +532,71 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
      else Set[String]()
    }
 
+}
+  
+  
+  case class MonitorEnterStmt(lhReg: AExp,  nxt: Stmt, ls : Stmt, clsP: String, methP: String) extends Stmt {
+  var next = nxt
+  var lineNumber = ls
+   var clsPath = clsP
+  var methPath = methP 
+   
+  def lhs = lhReg
+  
+  
+  override def toString = "MonitorEnter(" + 
+      lhReg  +  ")" +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
+   
+  def refRegsStrSet : Set[String] = {
+   lhReg match {
+     case re@RegisterExp(sv) => { // should be move-result
+        Set(re.regStr)
+      }
+     case _ => throw new Exception(" monitor enter exception: impossible" + this)
+     }
+   }
+  
+  
+   def defRegsStrSet: Set[String] ={
+      Set()
+   } 
+   
+    def sourceOrSink  = 0
+   def taintKind =  Set[String]()
+
+}
+  
+  // duplicated
+  case class MonitorExitStmt(lhReg: AExp,  nxt: Stmt, ls : Stmt, clsP: String, methP: String) extends Stmt {
+  var next = nxt
+  var lineNumber = ls
+   var clsPath = clsP
+  var methPath = methP 
+   
+  def lhs = lhReg
+  
+  
+  override def toString = "MonitorExit(" + 
+      lhReg  +  ")" +  StringUtils.stmtContextInfo(clsP, methP, lineNumber)
+  
+   
+  
+  def refRegsStrSet : Set[String] = {
+   lhReg match {
+     case re@RegisterExp(sv) => { // should be move-result
+        Set(re.regStr)
+      }
+     case _ => throw new Exception(" monitor enter exception: impossible" + this)
+     }
+   }
+  
+  
+   def defRegsStrSet: Set[String] ={
+      Set()
+   } 
+
+    def sourceOrSink  = 0
+   def taintKind =  Set[String]()
 }
 
 // isn;t like the assignAExp? but simplify to match anyway
@@ -922,6 +987,7 @@ case class CompactMethodIndex(methPath: String, argsTypes: List[String]) {
 
 case class DalvikClassDef(
     val clsPath: String, 
+    attrs: List[String],
     superClsName: SName, 
     fields : List[FieldDef], 
     methods: List[MethodDef], 
@@ -929,11 +995,34 @@ case class DalvikClassDef(
     ivt: Map[CompactMethodIndex, MethodDef]) {
   
  
+  var linkedInitEntryStmt : Option[Stmt] =  None
+  
+  var unlinkedInitEntryPoints : List[Stmt] = List[Stmt]() 
+  
+  
   def className = clsPath.toString()
-
+  
   def superName = superClsName.toString()
   def interfaceVirtualTable = ivt
  
+  // for computing not-null. 
+  // we assume fields of super classes have been initialized.
+  def getDirectObjFields : List[String] = {
+    //println("fields", fields)
+   val res =  fields.filter((fld) => {
+      val attrs = fld.atrs
+      val ftype = fld.fieldType
+      val isObjectType = StringUtils.isObjectType(ftype)
+      (! attrs.contains("static") && isObjectType) 
+    }) 
+    
+    val res2 = res.map((e) => {
+      //val(clsPath, fldName) = //StringUtils.getClsPathAndFldNameFromFieldPath(e.fieldPath)
+      e.fieldPath
+    })
+    println("directObjectFields for clas: " + clsPath +  res2)
+    res2
+  }
   private def methodTable : Map [CompactMethodIndex, MethodDef] = {
     val entries: List[(CompactMethodIndex , MethodDef)] = methods map ((md:MethodDef) => 
       (new CompactMethodIndex(md.methodPath, md.argTypeList), md))

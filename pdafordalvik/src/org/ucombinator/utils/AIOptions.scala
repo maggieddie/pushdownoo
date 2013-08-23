@@ -32,7 +32,7 @@ class AIOptions {
   var aco: Boolean  = false
   
   
-  var dumpGraph = true
+  var dumpGraph = false
   var lang = "dalvik"
   var interrupt = false
   var interruptAfter = 250
@@ -42,7 +42,12 @@ class AIOptions {
   var doLRA = false 
   
   var godel = false
+ 
+  // currently for Android core library, not for Android apps
+  var doNotNullCheck = false
   
+  var unlinkedNonNull = false
+ 
   var doRegex = false
   var regex: Regex = null
 
@@ -71,7 +76,7 @@ object AIOptions {
   //var noOfStates = 0
   var debugInfo: Boolean = false
   
-   def parseInApk(filePath0: String) : (String, String)  = {
+   def parseInApk(filePath0: String, doNotNull: Boolean): (String, String)  = {
     println("filePath0", filePath0)
     val filePath = filePath0.replace(" ", "-")
     println("filePath", filePath)
@@ -92,7 +97,11 @@ object AIOptions {
       val pathToScript0  = lst.dropRight(1).foldLeft("")((res, s) => {res + s + "/"})
       val pathToScript = pathToScript0.replace(" ", "-")
       println("pathToScript", pathToScript)
-     val getIRCmdStr = "/usr/bin/python ./getIR.py" + " " + pathToScript
+     val getIRCmdStr = if(doNotNull) {
+         "/usr/bin/python ./getIR.py" + " " + "--donull" + " " + pathToScript
+       } else{
+         "/usr/bin/python ./getIR.py" + " " + "--nonull" +  " " +  pathToScript
+       }//"/usr/bin/python ./getIR.py" + " " +  pathToScript
     // val et: ExtractIRHelperThread = new ExtractIRHelperThread(getIRCmdStr)
     //  IRExtractHelper.parseThread = et
      // et.start() 
@@ -195,6 +204,17 @@ object AIOptions {
         opts.flatPolicy = s
         parse(rest, opts)
       }
+      
+      case "--non-null-check" :: rest => {
+        opts.doNotNullCheck = true
+        parse(rest, opts)
+      }
+      
+      case "--nn-unlinked" :: rest => {
+         opts.doNotNullCheck = true
+         opts.unlinkedNonNull = true
+        parse(rest, opts)
+      }
 
       case "--analysis" :: a :: rest => {
         opts.analysis = a
@@ -242,10 +262,16 @@ object AIOptions {
          parse(rest, opts)
       }
 
+      // make the file name as the last parameter!!!
+      // and so that the notnull can check if it is true or not
+     // because it will decide whether to let the disassembler to load the memory consuming odex dependencies!
       case fileName :: rest => {
          val fileName0 = fileName.replace(" ", "-")
-         println("fileName0", fileName0)
-         val (irFolder, profolder) = parseInApk(fileName0) 
+         println("fileName0", fileName0) 
+         val (irFolder, profolder) = 
+            if(opts.doNotNullCheck) parseInApk(fileName0, true)
+            else parseInApk(fileName0, false)
+         //= parseInApk(fileName0) 
          opts.sexprDir = irFolder  
       
          opts.apkProjDir = profolder 

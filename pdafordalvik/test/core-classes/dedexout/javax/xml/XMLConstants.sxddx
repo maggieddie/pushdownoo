@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) javax/xml/XMLConstants
+ (super java/lang/Object)
+ (source "XMLConstants.java")
+
+ (field (attrs public static final ) DEFAULT_NS_PREFIX [object java/lang/String] "" )
+ (field (attrs public static final ) FEATURE_SECURE_PROCESSING [object java/lang/String] "http://javax.xml.XMLConstants/feature/secure-processing" )
+ (field (attrs public static final ) NULL_NS_URI [object java/lang/String] "" )
+ (field (attrs public static final ) RELAXNG_NS_URI [object java/lang/String] "http://relaxng.org/ns/structure/1.0" )
+ (field (attrs public static final ) W3C_XML_SCHEMA_INSTANCE_NS_URI [object java/lang/String] "http://www.w3.org/2001/XMLSchema-instance" )
+ (field (attrs public static final ) W3C_XML_SCHEMA_NS_URI [object java/lang/String] "http://www.w3.org/2001/XMLSchema" )
+ (field (attrs public static final ) W3C_XPATH_DATATYPE_NS_URI [object java/lang/String] "http://www.w3.org/2003/11/xpath-datatypes" )
+ (field (attrs public static final ) XMLNS_ATTRIBUTE [object java/lang/String] "xmlns" )
+ (field (attrs public static final ) XMLNS_ATTRIBUTE_NS_URI [object java/lang/String] "http://www.w3.org/2000/xmlns/" )
+ (field (attrs public static final ) XML_DTD_NS_URI [object java/lang/String] "http://www.w3.org/TR/REC-xml" )
+ (field (attrs public static final ) XML_NS_PREFIX [object java/lang/String] "xml" )
+ (field (attrs public static final ) XML_NS_URI [object java/lang/String] "http://www.w3.org/XML/1998/namespace" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object javax/xml/XMLConstants])
+  (line 24)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

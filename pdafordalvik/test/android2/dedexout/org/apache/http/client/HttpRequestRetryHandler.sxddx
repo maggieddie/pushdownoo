@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/apache/http/client/HttpRequestRetryHandler
+ (super java/lang/Object)
+ (source "HttpRequestRetryHandler.java")
+
+
+(method (attrs public abstract ) retryRequest([object java/io/IOException] int [object org/apache/http/protocol/HttpContext] )boolean
+)
+
+)

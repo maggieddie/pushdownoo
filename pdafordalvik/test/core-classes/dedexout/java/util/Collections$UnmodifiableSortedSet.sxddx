@@ -1,0 +1,112 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableSortedSet
+ (super java/util/Collections$UnmodifiableSet)
+ (source "Collections.java")
+ (implements java/util/SortedSet)
+
+ (field (attrs private static final ) serialVersionUID long -67309681); 0xfbfcef8f )
+ (field (attrs private final ) ss [object java/util/SortedSet] )
+
+(method (attrs ) <init>([object java/util/SortedSet] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/SortedSet"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/Collections$UnmodifiableSortedSet])
+  ; parameter[0] : v1 ([object java/util/SortedSet])
+  (line 1427)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSet/<init> [object java/util/Set] )
+  (line 1428)
+  (iput-object-quick v1 v0 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (line 1429)
+  (return-void )
+ )
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedSet])
+  (line 1432)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v0} java/util/SortedSet/comparator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) first()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedSet])
+  (line 1436)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v0} java/util/SortedSet/first )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) headSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedSet])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1440)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedSet)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v1 v3} java/util/SortedSet/headSet [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedSet/<init> [object java/util/SortedSet] )
+  (return-object v0)
+)
+
+(method (attrs public ) last()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableSortedSet])
+  (line 1444)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v0} java/util/SortedSet/last )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) subSet([object java/lang/Object] [object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedSet])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (line 1448)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedSet)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v1 v3 v4} java/util/SortedSet/subSet [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedSet/<init> [object java/util/SortedSet] )
+  (return-object v0)
+)
+
+(method (attrs public ) tailSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/util/Collections$UnmodifiableSortedSet])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1452)
+  (new-instance v0 java/util/Collections$UnmodifiableSortedSet)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableSortedSet.ss [object java/util/SortedSet])
+  (invoke-interface {v1 v3} java/util/SortedSet/tailSet [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/util/Collections$UnmodifiableSortedSet/<init> [object java/util/SortedSet] )
+  (return-object v0)
+)
+
+)

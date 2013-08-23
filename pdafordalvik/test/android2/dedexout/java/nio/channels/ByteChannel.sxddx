@@ -1,0 +1,8 @@
+(interface (attrs public abstract ) java/nio/channels/ByteChannel
+ (super java/lang/Object)
+ (source "ByteChannel.java")
+ (implements java/nio/channels/ReadableByteChannel)
+ (implements java/nio/channels/WritableByteChannel)
+
+
+)

@@ -1,0 +1,16 @@
+(class (attrs synchronized ) org/apache/harmony/xml/ExpatException
+ (super java/lang/Exception)
+ (source "ExpatException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/xml/ExpatException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 26)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 27)
+  (return-void )
+ )
+
+)

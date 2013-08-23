@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) gueei/binding/CollectionObserver
+ (super java/lang/Object)
+ (source "CollectionObserver.java")
+
+
+(method (attrs public abstract ) onCollectionChanged([object gueei/binding/IObservableCollection] [object gueei/binding/CollectionChangedEventArg] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservableCollection"  "<*>;"  "Lgueei/binding/CollectionChangedEventArg;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+)
+
+)

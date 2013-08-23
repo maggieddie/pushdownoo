@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Holo.DialogWhenLarge" parent="@style/Theme.Holo.Dialog.MinWidth">
+        <item name="preferencePanelStyle">@style/PreferencePanel.Dialog</item>
+    </style>
+    <style name="Theme.Holo.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Dialog.NoActionBar.MinWidth">
+        <item name="preferencePanelStyle">@style/PreferencePanel.Dialog</item>
+    </style>
+    <style name="Theme.Holo.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light.Dialog.MinWidth" />
+    <style name="Theme.Holo.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@style/Theme.DeviceDefault.Dialog.MinWidth">
+        <item name="preferencePanelStyle">@style/PreferencePanel.Dialog</item>
+    </style>
+    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@style/Theme.DeviceDefault.Dialog.NoActionBar.MinWidth">
+        <item name="preferencePanelStyle">@style/PreferencePanel.Dialog</item>
+    </style>
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@style/Theme.DeviceDefault.Light.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" />
+</resources>

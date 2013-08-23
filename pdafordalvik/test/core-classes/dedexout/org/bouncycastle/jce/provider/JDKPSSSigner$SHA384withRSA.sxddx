@@ -1,0 +1,28 @@
+(class (attrs public synchronized ) org/bouncycastle/jce/provider/JDKPSSSigner$SHA384withRSA
+ (super org/bouncycastle/jce/provider/JDKPSSSigner)
+ (source "JDKPSSSigner.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 9)
+  ; this: v8 ([object org/bouncycastle/jce/provider/JDKPSSSigner$SHA384withRSA])
+  (const-string v1 "SHA-384")
+  (line 277)
+  (const-string v6 "SHA384withRSAandMGF1")
+  (new-instance v7 org/bouncycastle/crypto/engines/RSAEngine)
+  (invoke-direct {v7} org/bouncycastle/crypto/engines/RSAEngine/<init> )
+  (new-instance v0 java/security/spec/PSSParameterSpec)
+  (const-string v2 "SHA-384")
+  (const-string v2 "MGF1")
+  (new-instance v3 java/security/spec/MGF1ParameterSpec)
+  (const-string v4 "SHA-384")
+  (invoke-direct {v3 v1} java/security/spec/MGF1ParameterSpec/<init> [object java/lang/String] )
+  (const/16 v4 48)
+  (const/4 v5 1)
+  (invoke-direct/range {v0 .. v5} java/security/spec/PSSParameterSpec/<init> [object java/lang/String] [object java/lang/String] [object java/security/spec/AlgorithmParameterSpec] int int )
+  (invoke-direct {v8 v6 v7 v0} org/bouncycastle/jce/provider/JDKPSSSigner/<init> [object java/lang/String] [object org/bouncycastle/crypto/AsymmetricBlockCipher] [object java/security/spec/PSSParameterSpec] )
+  (line 278)
+  (return-void )
+ )
+
+)

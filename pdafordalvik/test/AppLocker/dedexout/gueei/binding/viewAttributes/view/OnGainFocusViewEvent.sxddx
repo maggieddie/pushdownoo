@@ -1,0 +1,48 @@
+(class (attrs public ) gueei/binding/viewAttributes/view/OnGainFocusViewEvent
+ (super gueei/binding/viewAttributes/ViewEventAttribute)
+ (source "OnGainFocusViewEvent.java")
+ (implements android/view/View$OnFocusChangeListener)
+
+
+(method (attrs public ) <init>([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/view/OnGainFocusViewEvent])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 10)
+  (const-string v0 "onGainFocus")
+  (invoke-direct {v1 v2 v0} gueei/binding/viewAttributes/ViewEventAttribute/<init> [object android/view/View] [object java/lang/String] )
+  (line 11)
+  (return-void )
+ )
+
+(method (attrs public ) onFocusChange([object android/view/View] boolean )void
+  (limit registers 4)
+  ; this: v1 ([object gueei/binding/viewAttributes/view/OnGainFocusViewEvent])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (boolean)
+  (line 19)
+  (if-eqz v3 l2bc6c)
+  (line 20)
+  (const/4 v0 0)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (invoke-virtual {v1 v2 v0} gueei/binding/viewAttributes/view/OnGainFocusViewEvent/invokeCommand [object android/view/View] [array [object java/lang/Object]] )
+  (label l2bc6c)
+  (line 21)
+  (return-void )
+)
+
+(method (attrs protected ) registerToListener([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/view/OnGainFocusViewEvent])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 15)
+  (const-class v0 gueei/binding/listeners/OnFocusChangeListenerMulticast)
+  (invoke-static {v2 v0} gueei/binding/Binder/getMulticastListenerForView [object android/view/View] [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object gueei/binding/listeners/OnFocusChangeListenerMulticast])
+  (invoke-virtual {v0 v1} gueei/binding/listeners/OnFocusChangeListenerMulticast/register [object java/lang/Object] )
+  (line 16)
+  (return-void )
+)
+
+)

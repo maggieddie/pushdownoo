@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/app/FragmentBreadCrumbs$OnBreadCrumbClickListener
+ (super java/lang/Object)
+ (source "FragmentBreadCrumbs.java")
+
+
+(method (attrs public abstract ) onBreadCrumbClick([object android/app/FragmentManager$BackStackEntry] int )boolean
+)
+
+)

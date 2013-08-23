@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) javax/security/cert/CertificateParsingException
+ (super javax/security/cert/CertificateException)
+ (source "CertificateParsingException.java")
+
+ (field (attrs private static final ) serialVersionUID long -268575041); 0xeffddebf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object javax/security/cert/CertificateParsingException])
+  (line 52)
+  (invoke-direct {v0} javax/security/cert/CertificateException/<init> )
+  (line 53)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object javax/security/cert/CertificateParsingException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 44)
+  (invoke-direct {v0 v1} javax/security/cert/CertificateException/<init> [object java/lang/String] )
+  (line 45)
+  (return-void )
+ )
+
+)

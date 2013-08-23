@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl
+ (super android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl)
+ (source "AccessibilityRecordCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl])
+  (line 497)
+  (invoke-direct {v0} android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) setSource([object java/lang/Object] [object android/view/View] int )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 (int)
+  (line 500)
+  (invoke-static {v1 v2 v3} android/support/v4/view/accessibility/AccessibilityRecordCompatJellyBean/setSource [object java/lang/Object] [object android/view/View] int )
+  (line 501)
+  (return-void )
+)
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/widget/AbsListView$MultiChoiceModeListener
+ (super java/lang/Object)
+ (source "AbsListView.java")
+ (implements android/view/ActionMode$Callback)
+
+
+(method (attrs public abstract ) onItemCheckedStateChanged([object android/view/ActionMode] int long boolean )void
+)
+
+)

@@ -1,0 +1,102 @@
+(class (attrs public abstract synchronized ) javax/net/ssl/SSLServerSocket
+ (super java/net/ServerSocket)
+ (source "SSLServerSocket.java")
+
+
+(method (attrs protected ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 1)
+  ; this: v0 ([object javax/net/ssl/SSLServerSocket])
+  (line 39)
+  (invoke-direct {v0} java/net/ServerSocket/<init> )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  ; this: v0 ([object javax/net/ssl/SSLServerSocket])
+  ; parameter[0] : v1 (int)
+  (line 54)
+  (invoke-direct {v0 v1} java/net/ServerSocket/<init> int )
+  (line 55)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object javax/net/ssl/SSLServerSocket])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 71)
+  (invoke-direct {v0 v1 v2} java/net/ServerSocket/<init> int int )
+  (line 72)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>(int int [object java/net/InetAddress] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v0 ([object javax/net/ssl/SSLServerSocket])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object java/net/InetAddress])
+  (line 91)
+  (invoke-direct {v0 v1 v2 v3} java/net/ServerSocket/<init> int int [object java/net/InetAddress] )
+  (line 92)
+  (return-void )
+ )
+
+(method (attrs public abstract ) getEnableSessionCreation()boolean
+)
+
+(method (attrs public abstract ) getEnabledCipherSuites()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getEnabledProtocols()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getNeedClientAuth()boolean
+)
+
+(method (attrs public abstract ) getSupportedCipherSuites()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getSupportedProtocols()[array [object java/lang/String]]
+)
+
+(method (attrs public abstract ) getUseClientMode()boolean
+)
+
+(method (attrs public abstract ) getWantClientAuth()boolean
+)
+
+(method (attrs public abstract ) setEnableSessionCreation(boolean )void
+)
+
+(method (attrs public abstract ) setEnabledCipherSuites([array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) setEnabledProtocols([array [object java/lang/String]] )void
+)
+
+(method (attrs public abstract ) setNeedClientAuth(boolean )void
+)
+
+(method (attrs public abstract ) setUseClientMode(boolean )void
+)
+
+(method (attrs public abstract ) setWantClientAuth(boolean )void
+)
+
+)

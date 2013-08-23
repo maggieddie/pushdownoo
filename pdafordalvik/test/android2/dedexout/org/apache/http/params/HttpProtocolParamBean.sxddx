@@ -1,0 +1,75 @@
+(class (attrs public ) org/apache/http/params/HttpProtocolParamBean
+ (super org/apache/http/params/HttpAbstractParamBean)
+ (source "HttpProtocolParamBean.java")
+
+
+(method (attrs public ) <init>([object org/apache/http/params/HttpParams] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 ([object org/apache/http/params/HttpParams])
+  (line 5)
+  (const/4 v0 0)
+  (check-cast v0 [object org/apache/http/params/HttpParams])
+  (invoke-direct {v2 v0} org/apache/http/params/HttpAbstractParamBean/<init> [object org/apache/http/params/HttpParams] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) setContentCharset([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setHttpElementCharset([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setUseExpectContinue(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 (boolean)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setUserAgent([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setVersion([object org/apache/http/HttpVersion] )void
+  (limit registers 4)
+  ; this: v2 ([object org/apache/http/params/HttpProtocolParamBean])
+  ; parameter[0] : v3 ([object org/apache/http/HttpVersion])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

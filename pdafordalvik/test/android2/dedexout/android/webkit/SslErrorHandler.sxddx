@@ -1,0 +1,37 @@
+(class (attrs public ) android/webkit/SslErrorHandler
+ (super android/os/Handler)
+ (source "SslErrorHandler.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/SslErrorHandler])
+  (line 5)
+  (invoke-direct {v2} android/os/Handler/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) cancel()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/SslErrorHandler])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) proceed()void
+  (limit registers 3)
+  ; this: v2 ([object android/webkit/SslErrorHandler])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

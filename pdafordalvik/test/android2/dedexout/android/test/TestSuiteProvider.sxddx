@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/test/TestSuiteProvider
+ (super java/lang/Object)
+ (source "TestSuiteProvider.java")
+
+
+(method (attrs public abstract ) getTestSuite()[object junit/framework/TestSuite]
+)
+
+)

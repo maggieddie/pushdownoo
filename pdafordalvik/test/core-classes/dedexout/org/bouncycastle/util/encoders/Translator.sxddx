@@ -1,0 +1,18 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/util/encoders/Translator
+ (super java/lang/Object)
+ (source "Translator.java")
+
+
+(method (attrs public abstract ) decode([array byte] int int [array byte] int )int
+)
+
+(method (attrs public abstract ) encode([array byte] int int [array byte] int )int
+)
+
+(method (attrs public abstract ) getDecodedBlockSize()int
+)
+
+(method (attrs public abstract ) getEncodedBlockSize()int
+)
+
+)

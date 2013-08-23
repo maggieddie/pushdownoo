@@ -1,0 +1,40 @@
+(class (attrs public ) javax/crypto/spec/DHGenParameterSpec
+ (super java/lang/Object)
+ (source "DHGenParameterSpec.java")
+ (implements java/security/spec/AlgorithmParameterSpec)
+
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 5)
+  ; this: v2 ([object javax/crypto/spec/DHGenParameterSpec])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getExponentSize()int
+  (limit registers 3)
+  ; this: v2 ([object javax/crypto/spec/DHGenParameterSpec])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPrimeSize()int
+  (limit registers 3)
+  ; this: v2 ([object javax/crypto/spec/DHGenParameterSpec])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

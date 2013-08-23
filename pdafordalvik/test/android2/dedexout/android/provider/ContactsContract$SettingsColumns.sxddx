@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$SettingsColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) ACCOUNT_NAME [object java/lang/String] "account_name" )
+ (field (attrs public static final ) ACCOUNT_TYPE [object java/lang/String] "account_type" )
+ (field (attrs public static final ) ANY_UNSYNCED [object java/lang/String] "any_unsynced" )
+ (field (attrs public static final ) DATA_SET [object java/lang/String] "data_set" )
+ (field (attrs public static final ) SHOULD_SYNC [object java/lang/String] "should_sync" )
+ (field (attrs public static final ) UNGROUPED_COUNT [object java/lang/String] "summ_count" )
+ (field (attrs public static final ) UNGROUPED_VISIBLE [object java/lang/String] "ungrouped_visible" )
+ (field (attrs public static final ) UNGROUPED_WITH_PHONES [object java/lang/String] "summ_phones" )
+
+)

@@ -1,0 +1,27 @@
+(class (attrs public final ) android/provider/ContactsContract$CommonDataKinds$Nickname
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+ (implements android/provider/ContactsContract$DataColumnsWithJoins)
+ (implements android/provider/ContactsContract$CommonDataKinds$CommonColumns)
+
+ (field (attrs public static final ) CONTENT_ITEM_TYPE [object java/lang/String] "vnd.android.cursor.item/nickname" )
+ (field (attrs public static final ) NAME [object java/lang/String] "data1" )
+ (field (attrs public static final ) TYPE_DEFAULT int 1); 0x1 )
+ (field (attrs public static final ) TYPE_INITIALS int 5); 0x5 )
+ (field (attrs public static final ) TYPE_MAIDEN_NAME int 3); 0x3 )
+ (field (attrs public static final ) TYPE_MAINDEN_NAME int 3); 0x3 )
+ (field (attrs public static final ) TYPE_OTHER_NAME int 2); 0x2 )
+ (field (attrs public static final ) TYPE_SHORT_NAME int 4); 0x4 )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/ContactsContract$CommonDataKinds$Nickname])
+  (line 458)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

@@ -1,0 +1,245 @@
+(class (attrs public synchronized ) SQLite/Stmt
+ (super java/lang/Object)
+ (source "Stmt.java")
+
+ (field (attrs protected ) error_code int )
+ (field (attrs private ) handle long )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 0)
+  (line 286)
+  (invoke-static {} SQLite/Stmt/internal_init )
+  (nop )
+  (line 287)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object SQLite/Stmt])
+  (line 12)
+  (invoke-direct-empty {v2} java/lang/Object/<init> )
+  (line 18)
+  (const-wide/16 v0 0)
+  (iput-wide-quick v0 v2 SQLite/Stmt.error_code int)
+  (line 24)
+  (const/4 v0 0)
+  (iput-quick v0 v2 SQLite/Stmt.null)
+  (return-void )
+ )
+
+(method (attrs private static native ) internal_init()void
+ )
+
+(method (attrs public native ) bind(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind(int double )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind(int long )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind(int [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind(int [array byte] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind_parameter_count()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind_parameter_index([object java/lang/String] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind_parameter_name(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) bind_zeroblob(int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) clear_bindings()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public ) column(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+  (limit registers 5)
+  ; this: v3 ([object SQLite/Stmt])
+  ; parameter[0] : v4 (int)
+  (line 228)
+  (invoke-virtual-quick {v3 v4} SQLite/Stmt/column_type int )
+  (move-result v0)
+  (packed-switch v0 1
+    ps22b8bc_22b8c6 ; case 1
+    ps22b8bc_22b8da ; case 2
+    ps22b8bc_22b8f8 ; case 3
+    ps22b8bc_22b8ee ; case 4
+    ps22b8bc_default) ; default
+  (label ps22b8bc_default)
+  (line 238)
+  (const/4 v0 0)
+  (label l22b8c4)
+  (return-object v0)
+  (label ps22b8bc_22b8c6)
+  (line 230)
+  (new-instance v0 java/lang/Long)
+  (invoke-virtual-quick {v3 v4} SQLite/Stmt/column_long int )
+  (move-result-wide v1)
+  (invoke-direct {v0 v1 v2} java/lang/Long/<init> long )
+  (goto l22b8c4)
+  (label ps22b8bc_22b8da)
+  (line 232)
+  (new-instance v0 java/lang/Double)
+  (invoke-virtual-quick {v3 v4} SQLite/Stmt/column_double int )
+  (move-result-wide v1)
+  (invoke-direct {v0 v1 v2} java/lang/Double/<init> double )
+  (goto l22b8c4)
+  (label ps22b8bc_22b8ee)
+  (line 234)
+  (invoke-virtual-quick {v3 v4} SQLite/Stmt/column_bytes int )
+  (move-result-object v0)
+  (goto l22b8c4)
+  (label ps22b8bc_22b8f8)
+  (line 236)
+  (invoke-virtual-quick {v3 v4} SQLite/Stmt/column_string int )
+  (move-result-object v0)
+  (goto l22b8c4)
+  (line 228)
+  (label l22b902)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public native ) column_bytes(int )[array byte]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_count()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_database_name(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_decltype(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_double(int )double
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_int(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_long(int )long
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_origin_name(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_string(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_table_name(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) column_type(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs protected native ) finalize()void
+)
+
+(method (attrs public native ) prepare()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) reset()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) step()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+)

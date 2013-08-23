@@ -1,0 +1,15 @@
+(class (attrs synchronized ) org/apache/harmony/security/x509/PolicyQualifierInfo$1
+ (super org/apache/harmony/security/asn1/ASN1Sequence)
+ (source "PolicyQualifierInfo.java")
+
+
+(method (attrs ) <init>([array [object org/apache/harmony/security/asn1/ASN1Type]] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/x509/PolicyQualifierInfo$1])
+  ; parameter[0] : v1 ([array [object org/apache/harmony/security/asn1/ASN1Type]])
+  (line 54)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1Sequence/<init> [array [object org/apache/harmony/security/asn1/ASN1Type]] )
+  (return-void )
+ )
+
+)

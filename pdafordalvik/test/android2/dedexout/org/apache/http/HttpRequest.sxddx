@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/apache/http/HttpRequest
+ (super java/lang/Object)
+ (source "HttpRequest.java")
+ (implements org/apache/http/HttpMessage)
+
+
+(method (attrs public abstract ) getRequestLine()[object org/apache/http/RequestLine]
+)
+
+)

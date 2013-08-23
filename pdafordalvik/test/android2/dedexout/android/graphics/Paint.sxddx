@@ -1,0 +1,776 @@
+(class (attrs public ) android/graphics/Paint
+ (super java/lang/Object)
+ (source "Paint.java")
+
+ (field (attrs public static final ) ANTI_ALIAS_FLAG int 1); 0x1 )
+ (field (attrs public static final ) DEV_KERN_TEXT_FLAG int 256); 0x100 )
+ (field (attrs public static final ) DITHER_FLAG int 4); 0x4 )
+ (field (attrs public static final ) FAKE_BOLD_TEXT_FLAG int 32); 0x20 )
+ (field (attrs public static final ) FILTER_BITMAP_FLAG int 2); 0x2 )
+ (field (attrs public static final ) HINTING_OFF int 0); 0x0 )
+ (field (attrs public static final ) HINTING_ON int 1); 0x1 )
+ (field (attrs public static final ) LINEAR_TEXT_FLAG int 64); 0x40 )
+ (field (attrs public static final ) STRIKE_THRU_TEXT_FLAG int 16); 0x10 )
+ (field (attrs public static final ) SUBPIXEL_TEXT_FLAG int 128); 0x80 )
+ (field (attrs public static final ) UNDERLINE_TEXT_FLAG int 8); 0x8 )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 47)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 (int)
+  (line 48)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/graphics/Paint] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint])
+  (line 49)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public native ) ascent()float
+)
+
+(method (attrs public ) breakText([object java/lang/CharSequence] int int boolean float [array float] )int
+  (limit registers 9)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/CharSequence])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (boolean)
+  ; parameter[4] : v7 (float)
+  ; parameter[5] : v8 ([array float])
+  (line 124)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) breakText([object java/lang/String] boolean float [array float] )int
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (boolean)
+  ; parameter[2] : v5 (float)
+  ; parameter[3] : v6 ([array float])
+  (line 125)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) breakText([array char] int int float [array float] )int
+  (limit registers 8)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([array char])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (float)
+  ; parameter[4] : v7 ([array float])
+  (line 123)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) clearShadowLayer()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 103)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) descent()float
+)
+
+(method (attrs protected ) finalize()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Throwable])
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 134)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getAlpha()int
+)
+
+(method (attrs public native ) getColor()int
+)
+
+(method (attrs public ) getColorFilter()[object android/graphics/ColorFilter]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 90)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFillPath([object android/graphics/Path] [object android/graphics/Path] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Path])
+  ; parameter[1] : v4 ([object android/graphics/Path])
+  (line 87)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getFlags()int
+)
+
+(method (attrs public native ) getFontMetrics([object android/graphics/Paint$FontMetrics] )float
+)
+
+(method (attrs public ) getFontMetrics()[object android/graphics/Paint$FontMetrics]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 115)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getFontMetricsInt([object android/graphics/Paint$FontMetricsInt] )int
+)
+
+(method (attrs public ) getFontMetricsInt()[object android/graphics/Paint$FontMetricsInt]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 117)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFontSpacing()float
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 118)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getHinting()int
+)
+
+(method (attrs public ) getMaskFilter()[object android/graphics/MaskFilter]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 96)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPathEffect()[object android/graphics/PathEffect]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 94)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getRasterizer()[object android/graphics/Rasterizer]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 100)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getShader()[object android/graphics/Shader]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 88)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getStrokeCap()[object android/graphics/Paint$Cap]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 83)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getStrokeJoin()[object android/graphics/Paint$Join]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 85)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getStrokeMiter()float
+)
+
+(method (attrs public native ) getStrokeWidth()float
+)
+
+(method (attrs public ) getStyle()[object android/graphics/Paint$Style]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 72)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextAlign()[object android/graphics/Paint$Align]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 104)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextBounds([object java/lang/String] int int [object android/graphics/Rect] )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object android/graphics/Rect])
+  (line 132)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextBounds([array char] int int [object android/graphics/Rect] )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([array char])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object android/graphics/Rect])
+  (line 133)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextPath([object java/lang/String] int int float float [object android/graphics/Path] )void
+  (limit registers 9)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (float)
+  ; parameter[4] : v7 (float)
+  ; parameter[5] : v8 ([object android/graphics/Path])
+  (line 131)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextPath([array char] int int float float [object android/graphics/Path] )void
+  (limit registers 9)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([array char])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (float)
+  ; parameter[4] : v7 (float)
+  ; parameter[5] : v8 ([object android/graphics/Path])
+  (line 130)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) getTextScaleX()float
+)
+
+(method (attrs public native ) getTextSize()float
+)
+
+(method (attrs public native ) getTextSkewX()float
+)
+
+(method (attrs public ) getTextWidths([object java/lang/CharSequence] int int [array float] )int
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/CharSequence])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([array float])
+  (line 127)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextWidths([object java/lang/String] int int [array float] )int
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([array float])
+  (line 128)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextWidths([object java/lang/String] [array float] )int
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([array float])
+  (line 129)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTextWidths([array char] int int [array float] )int
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([array char])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([array float])
+  (line 126)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTypeface()[object android/graphics/Typeface]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 98)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getXfermode()[object android/graphics/Xfermode]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 92)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isAntiAlias()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 56)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isDither()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 58)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isFakeBoldText()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 68)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isFilterBitmap()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 70)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isLinearText()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 60)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isStrikeThruText()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 66)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isSubpixelText()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 62)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) isUnderlineText()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 64)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) measureText([object java/lang/CharSequence] int int )float
+  (limit registers 6)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/CharSequence])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 122)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) measureText([object java/lang/String] )float
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 121)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) measureText([object java/lang/String] int int )float
+  (limit registers 6)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 120)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) measureText([array char] int int )float
+  (limit registers 6)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([array char])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 119)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) reset()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Paint])
+  (line 50)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) set([object android/graphics/Paint] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint])
+  (line 51)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setARGB(int int int int )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 78)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setAlpha(int )void
+)
+
+(method (attrs public native ) setAntiAlias(boolean )void
+)
+
+(method (attrs public native ) setColor(int )void
+)
+
+(method (attrs public ) setColorFilter([object android/graphics/ColorFilter] )[object android/graphics/ColorFilter]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/ColorFilter])
+  (line 91)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setDither(boolean )void
+)
+
+(method (attrs public native ) setFakeBoldText(boolean )void
+)
+
+(method (attrs public native ) setFilterBitmap(boolean )void
+)
+
+(method (attrs public native ) setFlags(int )void
+)
+
+(method (attrs public native ) setHinting(int )void
+)
+
+(method (attrs public native ) setLinearText(boolean )void
+)
+
+(method (attrs public ) setMaskFilter([object android/graphics/MaskFilter] )[object android/graphics/MaskFilter]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/MaskFilter])
+  (line 97)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setPathEffect([object android/graphics/PathEffect] )[object android/graphics/PathEffect]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/PathEffect])
+  (line 95)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setRasterizer([object android/graphics/Rasterizer] )[object android/graphics/Rasterizer]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Rasterizer])
+  (line 101)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setShader([object android/graphics/Shader] )[object android/graphics/Shader]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Shader])
+  (line 89)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setShadowLayer(float float float int )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 (float)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 (float)
+  ; parameter[3] : v6 (int)
+  (line 102)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setStrikeThruText(boolean )void
+)
+
+(method (attrs public ) setStrokeCap([object android/graphics/Paint$Cap] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint$Cap])
+  (line 84)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setStrokeJoin([object android/graphics/Paint$Join] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint$Join])
+  (line 86)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setStrokeMiter(float )void
+)
+
+(method (attrs public native ) setStrokeWidth(float )void
+)
+
+(method (attrs public ) setStyle([object android/graphics/Paint$Style] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint$Style])
+  (line 73)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setSubpixelText(boolean )void
+)
+
+(method (attrs public ) setTextAlign([object android/graphics/Paint$Align] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Paint$Align])
+  (line 105)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setTextScaleX(float )void
+)
+
+(method (attrs public native ) setTextSize(float )void
+)
+
+(method (attrs public native ) setTextSkewX(float )void
+)
+
+(method (attrs public ) setTypeface([object android/graphics/Typeface] )[object android/graphics/Typeface]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Typeface])
+  (line 99)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) setUnderlineText(boolean )void
+)
+
+(method (attrs public ) setXfermode([object android/graphics/Xfermode] )[object android/graphics/Xfermode]
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Paint])
+  ; parameter[0] : v3 ([object android/graphics/Xfermode])
+  (line 93)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

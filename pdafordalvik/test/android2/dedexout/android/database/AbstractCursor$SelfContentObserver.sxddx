@@ -1,0 +1,41 @@
+(class (attrs public ) android/database/AbstractCursor$SelfContentObserver
+ (super android/database/ContentObserver)
+ (source "AbstractCursor.java")
+
+
+(method (attrs public ) <init>([object android/database/AbstractCursor] )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/AbstractCursor$SelfContentObserver])
+  ; parameter[0] : v3 ([object android/database/AbstractCursor])
+  (line 8)
+  (const/4 v0 0)
+  (check-cast v0 [object android/os/Handler])
+  (invoke-direct {v2 v0} android/database/ContentObserver/<init> [object android/os/Handler] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) deliverSelfNotifications()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/database/AbstractCursor$SelfContentObserver])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onChange(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/database/AbstractCursor$SelfContentObserver])
+  ; parameter[0] : v3 (boolean)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

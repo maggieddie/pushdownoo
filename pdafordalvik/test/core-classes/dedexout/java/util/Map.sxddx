@@ -1,0 +1,69 @@
+(interface (attrs public abstract synchronized ) java/util/Map
+ (super java/lang/Object)
+ (source "Map.java")
+
+
+(method (attrs public abstract ) clear()void
+)
+
+(method (attrs public abstract ) containsKey([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) containsValue([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+)
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) get([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TV;")
+  )
+)
+
+(method (attrs public abstract ) hashCode()int
+)
+
+(method (attrs public abstract ) isEmpty()boolean
+)
+
+(method (attrs public abstract ) keySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TK;>;")
+  )
+)
+
+(method (attrs public abstract ) put([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+)
+
+(method (attrs public abstract ) putAll([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)V")
+  )
+)
+
+(method (attrs public abstract ) remove([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TV;")
+  )
+)
+
+(method (attrs public abstract ) size()int
+)
+
+(method (attrs public abstract ) values()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<TV;>;")
+  )
+)
+
+)

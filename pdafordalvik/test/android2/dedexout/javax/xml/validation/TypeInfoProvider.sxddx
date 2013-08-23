@@ -1,0 +1,29 @@
+(class (attrs public abstract ) javax/xml/validation/TypeInfoProvider
+ (super java/lang/Object)
+ (source "TypeInfoProvider.java")
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/validation/TypeInfoProvider])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) getAttributeTypeInfo(int )[object org/w3c/dom/TypeInfo]
+)
+
+(method (attrs public abstract ) getElementTypeInfo()[object org/w3c/dom/TypeInfo]
+)
+
+(method (attrs public abstract ) isIdAttribute(int )boolean
+)
+
+(method (attrs public abstract ) isSpecified(int )boolean
+)
+
+)

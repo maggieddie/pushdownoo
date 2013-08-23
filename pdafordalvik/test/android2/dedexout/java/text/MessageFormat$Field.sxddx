@@ -1,0 +1,29 @@
+(class (attrs public ) java/text/MessageFormat$Field
+ (super java/text/Format$Field)
+ (source "MessageFormat.java")
+
+ (field (attrs public static final ) ARGUMENT [object java/text/MessageFormat$Field] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 10)
+  (const/4 v0 0)
+  (sput-object v0 java/text/MessageFormat$Field.ARGUMENT [object java/text/MessageFormat$Field])
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/text/MessageFormat$Field])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 8)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/String])
+  (invoke-direct {v2 v0} java/text/Format$Field/<init> [object java/lang/String] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

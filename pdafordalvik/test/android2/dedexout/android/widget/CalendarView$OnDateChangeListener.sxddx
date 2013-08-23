@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/CalendarView$OnDateChangeListener
+ (super java/lang/Object)
+ (source "CalendarView.java")
+
+
+(method (attrs public abstract ) onSelectedDayChange([object android/widget/CalendarView] int int int )void
+)
+
+)

@@ -1,0 +1,21 @@
+(class (attrs public abstract synchronized ) java/security/cert/CertPathBuilderSpi
+ (super java/lang/Object)
+ (source "CertPathBuilderSpi.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/security/cert/CertPathBuilderSpi])
+  (line 35)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public abstract ) engineBuild([object java/security/cert/CertPathParameters] )[object java/security/cert/CertPathBuilderResult]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/cert/CertPathBuilderException]  [object java/security/InvalidAlgorithmParameterException])
+  )
+)
+
+)

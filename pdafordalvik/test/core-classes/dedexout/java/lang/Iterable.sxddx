@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) java/lang/Iterable
+ (super java/lang/Object)
+ (source "Iterable.java")
+
+
+(method (attrs public abstract ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TT;>;")
+  )
+)
+
+)

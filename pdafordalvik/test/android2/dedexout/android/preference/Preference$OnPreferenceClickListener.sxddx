@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/preference/Preference$OnPreferenceClickListener
+ (super java/lang/Object)
+ (source "Preference.java")
+
+
+(method (attrs public abstract ) onPreferenceClick([object android/preference/Preference] )boolean
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public synchronized ) org/apache/harmony/xml/dom/DocumentFragmentImpl
+ (super org/apache/harmony/xml/dom/InnerNodeImpl)
+ (source "DocumentFragmentImpl.java")
+ (implements org/w3c/dom/DocumentFragment)
+
+
+(method (attrs ) <init>([object org/apache/harmony/xml/dom/DocumentImpl] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/xml/dom/DocumentFragmentImpl])
+  ; parameter[0] : v1 ([object org/apache/harmony/xml/dom/DocumentImpl])
+  (line 37)
+  (invoke-direct {v0 v1} org/apache/harmony/xml/dom/InnerNodeImpl/<init> [object org/apache/harmony/xml/dom/DocumentImpl] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) getNodeName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/dom/DocumentFragmentImpl])
+  (line 42)
+  (const-string v0 "#document-fragment")
+  (return-object v0)
+)
+
+(method (attrs public ) getNodeType()short
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/xml/dom/DocumentFragmentImpl])
+  (line 47)
+  (const/16 v0 11)
+  (return v0)
+)
+
+)

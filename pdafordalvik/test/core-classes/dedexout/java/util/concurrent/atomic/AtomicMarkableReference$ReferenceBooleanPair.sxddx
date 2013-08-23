@@ -1,0 +1,41 @@
+(class (attrs synchronized ) java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair
+ (super java/lang/Object)
+ (source "AtomicMarkableReference.java")
+
+ (field (attrs private final ) bit boolean )
+ (field (attrs private final ) reference [object java/lang/Object] )
+
+(method (attrs ) <init>([object java/lang/Object] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;Z)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (boolean)
+  (line 26)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 27)
+  (iput-object-quick v1 v0 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.reference [object java/lang/Object])
+  (iput-quick v2 v0 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.bit boolean)
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs static ) access$000([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair])
+  (line 23)
+  (iget-object-quick v0 v1 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.reference [object java/lang/Object])
+  (return-object v0)
+ )
+
+(method (attrs static ) access$100([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair])
+  (line 23)
+  (iget-quick v0 v1 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.bit boolean)
+  (return v0)
+ )
+
+)

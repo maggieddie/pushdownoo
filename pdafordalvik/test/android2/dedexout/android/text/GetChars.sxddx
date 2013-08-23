@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/text/GetChars
+ (super java/lang/Object)
+ (source "GetChars.java")
+ (implements java/lang/CharSequence)
+
+
+(method (attrs public abstract ) getChars(int int [array char] int )void
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) javax/validation/MessageInterpolator
+ (super java/lang/Object)
+ (source "MessageInterpolator.java")
+
+
+(method (attrs public abstract ) interpolate([object java/lang/String] [object javax/validation/MessageInterpolator$Context] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) interpolate([object java/lang/String] [object javax/validation/MessageInterpolator$Context] [object java/util/Locale] )[object java/lang/String]
+)
+
+)

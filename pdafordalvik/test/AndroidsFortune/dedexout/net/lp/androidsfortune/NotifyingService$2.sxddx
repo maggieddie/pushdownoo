@@ -1,0 +1,34 @@
+(class (attrs ) net/lp/androidsfortune/NotifyingService$2
+ (super android/os/Binder)
+ (source "NotifyingService.java")
+
+ (field (attrs final ) this$0 [object net/lp/androidsfortune/NotifyingService] )
+
+(method (attrs ) <init>([object net/lp/androidsfortune/NotifyingService] )void
+  (limit registers 2)
+  ; this: v0 ([object net/lp/androidsfortune/NotifyingService$2])
+  ; parameter[0] : v1 ([object net/lp/androidsfortune/NotifyingService])
+  (line 1)
+  (iput-object v1 v0 net/lp/androidsfortune/NotifyingService$2.this$0 [object net/lp/androidsfortune/NotifyingService])
+  (line 233)
+  (invoke-direct {v0} android/os/Binder/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onTransact(int [object android/os/Parcel] [object android/os/Parcel] int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+  (limit registers 6)
+  ; this: v1 ([object net/lp/androidsfortune/NotifyingService$2])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/os/Parcel])
+  ; parameter[2] : v4 ([object android/os/Parcel])
+  ; parameter[3] : v5 (int)
+  (line 237)
+  (invoke-super {v1 v2 v3 v4 v5} android/os/Binder/onTransact int [object android/os/Parcel] [object android/os/Parcel] int )
+  (move-result v0)
+  (return v0)
+)
+
+)

@@ -1,0 +1,84 @@
+(class (attrs public ) android/renderscript/Script$FieldBase
+ (super java/lang/Object)
+ (source "Script.java")
+
+ (field (attrs protected ) mAllocation [object android/renderscript/Allocation] )
+ (field (attrs protected ) mElement [object android/renderscript/Element] )
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  (line 11)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getAllocation()[object android/renderscript/Allocation]
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getElement()[object android/renderscript/Element]
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getType()[object android/renderscript/Type]
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) init([object android/renderscript/RenderScript] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  ; parameter[0] : v3 ([object android/renderscript/RenderScript])
+  ; parameter[1] : v4 (int)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) init([object android/renderscript/RenderScript] int int )void
+  (limit registers 6)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  ; parameter[0] : v3 ([object android/renderscript/RenderScript])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) updateAllocation()void
+  (limit registers 3)
+  ; this: v2 ([object android/renderscript/Script$FieldBase])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,117 @@
+(class (attrs public final ) java/net/Inet4Address
+ (super java/net/InetAddress)
+ (source "Inet4Address.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 5)
+  (invoke-direct {v2} java/net/InetAddress/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) isAnyLocalAddress()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isLinkLocalAddress()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isLoopbackAddress()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMCGlobal()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMCLinkLocal()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMCNodeLocal()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMCOrgLocal()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMCSiteLocal()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isMulticastAddress()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isSiteLocalAddress()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/net/Inet4Address])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

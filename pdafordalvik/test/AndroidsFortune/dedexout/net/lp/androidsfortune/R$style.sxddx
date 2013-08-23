@@ -1,0 +1,21 @@
+(class (attrs public final ) net/lp/androidsfortune/R$style
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) Text int 2131230722); 0x7f080002 )
+ (field (attrs public static final ) Text_Loading int 2131230723); 0x7f080003 )
+ (field (attrs public static final ) Text_WidgetTextMonospace int 2131230726); 0x7f080006 )
+ (field (attrs public static final ) Text_WidgetTextSans int 2131230725); 0x7f080005 )
+ (field (attrs public static final ) Text_WidgetTextSerif int 2131230724); 0x7f080004 )
+ (field (attrs public static final ) WidgetBackground int 2131230720); 0x7f080000 )
+ (field (attrs public static final ) WidgetBackgroundMessage int 2131230721); 0x7f080001 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/R$style])
+  (line 9310)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

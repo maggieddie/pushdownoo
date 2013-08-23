@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) javax/crypto/interfaces/DHKey
+ (super java/lang/Object)
+ (source "DHKey.java")
+
+
+(method (attrs public abstract ) getParams()[object javax/crypto/spec/DHParameterSpec]
+)
+
+)

@@ -1,0 +1,49 @@
+(class (attrs public final ) org/apache/http/HttpVersion
+ (super org/apache/http/ProtocolVersion)
+ (source "HttpVersion.java")
+ (implements java/io/Serializable)
+
+ (field (attrs public static final ) HTTP [object java/lang/String] "HTTP" )
+ (field (attrs public static final ) HTTP_0_9 [object org/apache/http/HttpVersion] )
+ (field (attrs public static final ) HTTP_1_0 [object org/apache/http/HttpVersion] )
+ (field (attrs public static final ) HTTP_1_1 [object org/apache/http/HttpVersion] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 12)
+  (sput-object v0 org/apache/http/HttpVersion.HTTP_0_9 [object org/apache/http/HttpVersion])
+  (sput-object v0 org/apache/http/HttpVersion.HTTP_1_0 [object org/apache/http/HttpVersion])
+  (sput-object v0 org/apache/http/HttpVersion.HTTP_1_1 [object org/apache/http/HttpVersion])
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 5)
+  ; this: v2 ([object org/apache/http/HttpVersion])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (const/4 v1 0)
+  (line 6)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/String])
+  (invoke-direct {v2 v0 v1 v1} org/apache/http/ProtocolVersion/<init> [object java/lang/String] int int )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) forVersion(int int )[object org/apache/http/ProtocolVersion]
+  (limit registers 5)
+  ; this: v2 ([object org/apache/http/HttpVersion])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

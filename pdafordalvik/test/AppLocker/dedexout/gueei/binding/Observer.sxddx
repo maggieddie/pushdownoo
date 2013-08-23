@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) gueei/binding/Observer
+ (super java/lang/Object)
+ (source "Observer.java")
+
+
+(method (attrs public abstract ) onPropertyChanged([object gueei/binding/IObservable] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservable"  "<*>;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+)
+
+)

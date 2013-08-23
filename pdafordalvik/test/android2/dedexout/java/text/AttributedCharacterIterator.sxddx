@@ -1,0 +1,58 @@
+(interface (attrs public abstract ) java/text/AttributedCharacterIterator
+ (super java/lang/Object)
+ (source "AttributedCharacterIterator.java")
+ (implements java/text/CharacterIterator)
+
+
+(method (attrs public abstract ) getAllAttributeKeys()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getAttribute([object java/text/AttributedCharacterIterator$Attribute] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getAttributes()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/text/AttributedCharacterIterator$Attribute;"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getRunLimit()int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+(method (attrs public abstract ) getRunLimit([object java/text/AttributedCharacterIterator$Attribute] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+(method (attrs public abstract ) getRunLimit([object java/util/Set] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+(method (attrs public abstract ) getRunStart()int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+(method (attrs public abstract ) getRunStart([object java/text/AttributedCharacterIterator$Attribute] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+(method (attrs public abstract ) getRunStart([object java/util/Set] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<+"  "Ljava/text/AttributedCharacterIterator$Attribute;"  ">;)I")
+  )
+)
+
+)

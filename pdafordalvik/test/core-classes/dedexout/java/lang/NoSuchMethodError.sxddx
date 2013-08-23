@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/lang/NoSuchMethodError
+ (super java/lang/IncompatibleClassChangeError)
+ (source "NoSuchMethodError.java")
+
+ (field (attrs private static final ) serialVersionUID long -335659077); 0xebfe3fbb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/NoSuchMethodError])
+  (line 33)
+  (invoke-direct {v0} java/lang/IncompatibleClassChangeError/<init> )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/lang/NoSuchMethodError])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 44)
+  (invoke-direct {v0 v1} java/lang/IncompatibleClassChangeError/<init> [object java/lang/String] )
+  (line 45)
+  (return-void )
+ )
+
+)

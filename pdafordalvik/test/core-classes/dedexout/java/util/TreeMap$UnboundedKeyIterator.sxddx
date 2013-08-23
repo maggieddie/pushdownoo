@@ -1,0 +1,54 @@
+(class (attrs synchronized ) java/util/TreeMap$UnboundedKeyIterator
+ (super java/util/TreeMap$AbstractMapIterator)
+ (source "TreeMap.java")
+ (implements java/util/Iterator)
+
+
+(method (attrs ) <init>([object java/util/TreeMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TreeMap"  "<TK;TV;>;"  "Ljava/util/TreeMap$Node"  "<TK;TV;>;I)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/TreeMap$UnboundedKeyIterator])
+  ; parameter[0] : v1 ([object java/util/TreeMap])
+  (line 254)
+  (invoke-direct {v0 v1} java/util/TreeMap$AbstractMapIterator/<init> [object java/util/TreeMap] )
+  (line 255)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/TreeMap] [object java/util/TreeMap$Node] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TreeMap"  "<TK;TV;>;"  "Ljava/util/TreeMap$Node"  "<TK;TV;>;I)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object java/util/TreeMap$UnboundedKeyIterator])
+  ; parameter[0] : v1 ([object java/util/TreeMap])
+  ; parameter[1] : v2 ([object java/util/TreeMap$Node])
+  ; parameter[2] : v3 (int)
+  (line 250)
+  (invoke-direct {v0 v1 v2 v3} java/util/TreeMap$AbstractMapIterator/<init> [object java/util/TreeMap] [object java/util/TreeMap$Node] int )
+  (line 251)
+  (return-void )
+ )
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object java/util/TreeMap$UnboundedKeyIterator])
+  (line 258)
+  (invoke-virtual-quick {v3} java/util/TreeMap$UnboundedKeyIterator/makeNext )
+  (line 259)
+  (iget-object-quick v0 v3 )
+  (iget-object-quick v0 v0 )
+  (iget-object-quick v1 v3 )
+  (iget-quick v1 v1 )
+  (iget-quick v2 v3 )
+  (sub-int/2addr v1 v2)
+  (aget-object v0 v0 v1)
+  (return-object v0)
+)
+
+)

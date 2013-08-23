@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) gueei/binding/cursor/IRowModelFactory
+ (super java/lang/Object)
+ (source "IRowModelFactory.java")
+
+
+(method (attrs public abstract ) createInstance()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+)
+
+)

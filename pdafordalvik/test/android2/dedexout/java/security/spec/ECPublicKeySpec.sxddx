@@ -1,0 +1,40 @@
+(class (attrs public ) java/security/spec/ECPublicKeySpec
+ (super java/lang/Object)
+ (source "ECPublicKeySpec.java")
+ (implements java/security/spec/KeySpec)
+
+
+(method (attrs public ) <init>([object java/security/spec/ECPoint] [object java/security/spec/ECParameterSpec] )void
+  (limit registers 5)
+  ; this: v2 ([object java/security/spec/ECPublicKeySpec])
+  ; parameter[0] : v3 ([object java/security/spec/ECPoint])
+  ; parameter[1] : v4 ([object java/security/spec/ECParameterSpec])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getParams()[object java/security/spec/ECParameterSpec]
+  (limit registers 3)
+  ; this: v2 ([object java/security/spec/ECPublicKeySpec])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getW()[object java/security/spec/ECPoint]
+  (limit registers 3)
+  ; this: v2 ([object java/security/spec/ECPublicKeySpec])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,356 @@
+(class (attrs public ) android/graphics/Region
+ (super java/lang/Object)
+ (source "Region.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 50)
+  (const/4 v0 0)
+  (sput-object v0 android/graphics/Region.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 14)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>(int int int int )void
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 17)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/graphics/Rect] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 16)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/graphics/Region] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Region])
+  (line 15)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public native ) contains(int int )boolean
+)
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 45)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 47)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) finalize()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Throwable])
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 48)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBoundaryPath()[object android/graphics/Path]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBoundaryPath([object android/graphics/Path] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Path])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBounds()[object android/graphics/Rect]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getBounds([object android/graphics/Rect] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) isComplex()boolean
+)
+
+(method (attrs public native ) isEmpty()boolean
+)
+
+(method (attrs public native ) isRect()boolean
+)
+
+(method (attrs public ) op(int int int int [object android/graphics/Region$Op] )boolean
+  (limit registers 8)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  ; parameter[4] : v7 ([object android/graphics/Region$Op])
+  (line 40)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) op([object android/graphics/Rect] [object android/graphics/Region$Op] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  ; parameter[1] : v4 ([object android/graphics/Region$Op])
+  (line 39)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) op([object android/graphics/Rect] [object android/graphics/Region] [object android/graphics/Region$Op] )boolean
+  (limit registers 6)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  ; parameter[1] : v4 ([object android/graphics/Region])
+  ; parameter[2] : v5 ([object android/graphics/Region$Op])
+  (line 42)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) op([object android/graphics/Region] [object android/graphics/Region$Op] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Region])
+  ; parameter[1] : v4 ([object android/graphics/Region$Op])
+  (line 41)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) op([object android/graphics/Region] [object android/graphics/Region] [object android/graphics/Region$Op] )boolean
+  (limit registers 6)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Region])
+  ; parameter[1] : v4 ([object android/graphics/Region])
+  ; parameter[2] : v5 ([object android/graphics/Region$Op])
+  (line 43)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) quickContains(int int int int )boolean
+)
+
+(method (attrs public ) quickContains([object android/graphics/Rect] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) quickReject(int int int int )boolean
+)
+
+(method (attrs public ) quickReject([object android/graphics/Rect] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 33)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) quickReject([object android/graphics/Region] )boolean
+)
+
+(method (attrs public ) set(int int int int )boolean
+  (limit registers 7)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) set([object android/graphics/Rect] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) set([object android/graphics/Region] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Region])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setEmpty()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setPath([object android/graphics/Path] [object android/graphics/Region] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Path])
+  ; parameter[1] : v4 ([object android/graphics/Region])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/Region])
+  (line 44)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) translate(int int )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 36)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public native ) translate(int int [object android/graphics/Region] )void
+)
+
+(method (attrs public final ) union([object android/graphics/Rect] )boolean
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/graphics/Rect])
+  (line 38)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/Region])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 46)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

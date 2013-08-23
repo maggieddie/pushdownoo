@@ -1,0 +1,39 @@
+(interface (attrs public abstract ) android/content/SharedPreferences$Editor
+ (super java/lang/Object)
+ (source "SharedPreferences.java")
+
+
+(method (attrs public abstract ) apply()void
+)
+
+(method (attrs public abstract ) clear()[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) commit()boolean
+)
+
+(method (attrs public abstract ) putBoolean([object java/lang/String] boolean )[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) putFloat([object java/lang/String] float )[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) putInt([object java/lang/String] int )[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) putLong([object java/lang/String] long )[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) putString([object java/lang/String] [object java/lang/String] )[object android/content/SharedPreferences$Editor]
+)
+
+(method (attrs public abstract ) putStringSet([object java/lang/String] [object java/util/Set] )[object android/content/SharedPreferences$Editor]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;)"  "Landroid/content/SharedPreferences$Editor;")
+  )
+)
+
+(method (attrs public abstract ) remove([object java/lang/String] )[object android/content/SharedPreferences$Editor]
+)
+
+)

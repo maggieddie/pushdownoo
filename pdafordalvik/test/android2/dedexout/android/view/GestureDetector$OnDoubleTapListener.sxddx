@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/view/GestureDetector$OnDoubleTapListener
+ (super java/lang/Object)
+ (source "GestureDetector.java")
+
+
+(method (attrs public abstract ) onDoubleTap([object android/view/MotionEvent] )boolean
+)
+
+(method (attrs public abstract ) onDoubleTapEvent([object android/view/MotionEvent] )boolean
+)
+
+(method (attrs public abstract ) onSingleTapConfirmed([object android/view/MotionEvent] )boolean
+)
+
+)

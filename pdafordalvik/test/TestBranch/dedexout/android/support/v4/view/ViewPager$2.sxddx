@@ -1,0 +1,31 @@
+(class (attrs final ) android/support/v4/view/ViewPager$2
+ (super java/lang/Object)
+ (source "ViewPager.java")
+ (implements android/view/animation/Interpolator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewPager$2])
+  (line 113)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getInterpolation(float )float
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/view/ViewPager$2])
+  ; parameter[0] : v3 (float)
+  (const/high16 v1 16256)
+  (line 115)
+  (sub-float/2addr v3 v1)
+  (line 116)
+  (mul-float v0 v3 v3)
+  (mul-float/2addr v0 v3)
+  (mul-float/2addr v0 v3)
+  (mul-float/2addr v0 v3)
+  (add-float/2addr v0 v1)
+  (return v0)
+)
+
+)

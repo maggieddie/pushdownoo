@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/provider/Contacts$PhotosColumns
+ (super java/lang/Object)
+ (source "Contacts.java")
+
+ (field (attrs public static final ) DATA [object java/lang/String] "data" )
+ (field (attrs public static final ) DOWNLOAD_REQUIRED [object java/lang/String] "download_required" )
+ (field (attrs public static final ) EXISTS_ON_SERVER [object java/lang/String] "exists_on_server" )
+ (field (attrs public static final ) LOCAL_VERSION [object java/lang/String] "local_version" )
+ (field (attrs public static final ) PERSON_ID [object java/lang/String] "person" )
+ (field (attrs public static final ) SYNC_ERROR [object java/lang/String] "sync_error" )
+
+)

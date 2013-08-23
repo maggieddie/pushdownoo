@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/LayoutInflater$Filter
+ (super java/lang/Object)
+ (source "LayoutInflater.java")
+
+
+(method (attrs public abstract ) onLoadClass([object java/lang/Class] )boolean
+)
+
+)

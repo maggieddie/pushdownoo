@@ -1,0 +1,49 @@
+(class (attrs public abstract ) android/speech/RecognitionService
+ (super android/app/Service)
+ (source "RecognitionService.java")
+
+ (field (attrs public static final ) SERVICE_INTERFACE [object java/lang/String] "android.speech.RecognitionService" )
+ (field (attrs public static final ) SERVICE_META_DATA [object java/lang/String] "android.speech" )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/speech/RecognitionService])
+  (line 17)
+  (invoke-direct {v2} android/app/Service/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public final ) onBind([object android/content/Intent] )[object android/os/IBinder]
+  (limit registers 4)
+  ; this: v2 ([object android/speech/RecognitionService])
+  ; parameter[0] : v3 ([object android/content/Intent])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected abstract ) onCancel([object android/speech/RecognitionService$Callback] )void
+)
+
+(method (attrs public ) onDestroy()void
+  (limit registers 3)
+  ; this: v2 ([object android/speech/RecognitionService])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected abstract ) onStartListening([object android/content/Intent] [object android/speech/RecognitionService$Callback] )void
+)
+
+(method (attrs protected abstract ) onStopListening([object android/speech/RecognitionService$Callback] )void
+)
+
+)

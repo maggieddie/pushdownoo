@@ -1,0 +1,53 @@
+(class (attrs public synchronized ) java/lang/reflect/UndeclaredThrowableException
+ (super java/lang/RuntimeException)
+ (source "UndeclaredThrowableException.java")
+
+ (field (attrs private static final ) serialVersionUID long 2013134079); 0x77fdfcff )
+ (field (attrs private ) undeclaredThrowable [object java/lang/Throwable] )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object java/lang/reflect/UndeclaredThrowableException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 40)
+  (invoke-direct {v0} java/lang/RuntimeException/<init> )
+  (line 41)
+  (iput-object-quick v1 v0 java/lang/reflect/UndeclaredThrowableException.undeclaredThrowable [object java/lang/Throwable])
+  (line 42)
+  (invoke-virtual-quick {v0 v1} java/lang/reflect/UndeclaredThrowableException/initCause [object java/lang/Throwable] )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object java/lang/reflect/UndeclaredThrowableException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 56)
+  (invoke-direct {v0 v2} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 57)
+  (iput-object-quick v1 v0 java/lang/reflect/UndeclaredThrowableException.undeclaredThrowable [object java/lang/Throwable])
+  (line 58)
+  (invoke-virtual-quick {v0 v1} java/lang/reflect/UndeclaredThrowableException/initCause [object java/lang/Throwable] )
+  (line 59)
+  (return-void )
+ )
+
+(method (attrs public ) getCause()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object java/lang/reflect/UndeclaredThrowableException])
+  (line 79)
+  (iget-object-quick v0 v1 java/lang/reflect/UndeclaredThrowableException.undeclaredThrowable [object java/lang/Throwable])
+  (return-object v0)
+)
+
+(method (attrs public ) getUndeclaredThrowable()[object java/lang/Throwable]
+  (limit registers 2)
+  ; this: v1 ([object java/lang/reflect/UndeclaredThrowableException])
+  (line 68)
+  (iget-object-quick v0 v1 java/lang/reflect/UndeclaredThrowableException.undeclaredThrowable [object java/lang/Throwable])
+  (return-object v0)
+)
+
+)

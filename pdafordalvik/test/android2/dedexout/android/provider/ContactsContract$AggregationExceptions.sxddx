@@ -1,0 +1,35 @@
+(class (attrs public final ) android/provider/ContactsContract$AggregationExceptions
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+ (implements android/provider/BaseColumns)
+
+ (field (attrs public static final ) CONTENT_ITEM_TYPE [object java/lang/String] "vnd.android.cursor.item/aggregation_exception" )
+ (field (attrs public static final ) CONTENT_TYPE [object java/lang/String] "vnd.android.cursor.dir/aggregation_exception" )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs public static final ) RAW_CONTACT_ID1 [object java/lang/String] "raw_contact_id1" )
+ (field (attrs public static final ) RAW_CONTACT_ID2 [object java/lang/String] "raw_contact_id2" )
+ (field (attrs public static final ) TYPE [object java/lang/String] "type" )
+ (field (attrs public static final ) TYPE_AUTOMATIC int 0); 0x0 )
+ (field (attrs public static final ) TYPE_KEEP_SEPARATE int 2); 0x2 )
+ (field (attrs public static final ) TYPE_KEEP_TOGETHER int 1); 0x1 )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 717)
+  (const/4 v0 0)
+  (sput-object v0 android/provider/ContactsContract$AggregationExceptions.CONTENT_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/ContactsContract$AggregationExceptions])
+  (line 707)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

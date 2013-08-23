@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/audiofx/AudioEffect$OnEnableStatusChangeListener
+ (super java/lang/Object)
+ (source "AudioEffect.java")
+
+
+(method (attrs public abstract ) onEnableStatusChange([object android/media/audiofx/AudioEffect] boolean )void
+)
+
+)

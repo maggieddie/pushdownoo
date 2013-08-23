@@ -1,0 +1,67 @@
+(interface (attrs public abstract synchronized ) java/sql/ParameterMetaData
+ (super java/lang/Object)
+ (source "ParameterMetaData.java")
+
+ (field (attrs public static final ) parameterModeIn int 1); 0x1 )
+ (field (attrs public static final ) parameterModeInOut int 2); 0x2 )
+ (field (attrs public static final ) parameterModeOut int 4); 0x4 )
+ (field (attrs public static final ) parameterModeUnknown int 0); 0x0 )
+ (field (attrs public static final ) parameterNoNulls int 0); 0x0 )
+ (field (attrs public static final ) parameterNullable int 1); 0x1 )
+ (field (attrs public static final ) parameterNullableUnknown int 2); 0x2 )
+
+(method (attrs public abstract ) getParameterClassName(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getParameterCount()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getParameterMode(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getParameterType(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getParameterTypeName(int )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getPrecision(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) getScale(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) isNullable(int )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+(method (attrs public abstract ) isSigned(int )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/sql/SQLException])
+  )
+)
+
+)

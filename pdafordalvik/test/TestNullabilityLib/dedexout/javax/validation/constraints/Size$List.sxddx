@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/validation/constraints/Size$List
+ (super java/lang/Object)
+ (source "Size.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object javax/validation/constraints/Size]]
+)
+
+)

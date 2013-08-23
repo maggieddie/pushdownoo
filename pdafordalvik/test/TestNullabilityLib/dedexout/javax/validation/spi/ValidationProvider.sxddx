@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) javax/validation/spi/ValidationProvider
+ (super java/lang/Object)
+ (source "ValidationProvider.java")
+
+
+(method (attrs public abstract ) buildValidatorFactory([object javax/validation/spi/ConfigurationState] )[object javax/validation/ValidatorFactory]
+)
+
+(method (attrs public abstract ) createGenericConfiguration([object javax/validation/spi/BootstrapState] )[object javax/validation/Configuration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljavax/validation/spi/BootstrapState;"  ")"  "Ljavax/validation/Configuration"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) createSpecializedConfiguration([object javax/validation/spi/BootstrapState] )[object javax/validation/Configuration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljavax/validation/spi/BootstrapState;"  ")TT;")
+  )
+)
+
+)

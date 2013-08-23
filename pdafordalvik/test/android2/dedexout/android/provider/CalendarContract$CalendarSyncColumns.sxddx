@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) android/provider/CalendarContract$CalendarSyncColumns
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+
+ (field (attrs public static final ) CAL_SYNC1 [object java/lang/String] "cal_sync1" )
+ (field (attrs public static final ) CAL_SYNC10 [object java/lang/String] "cal_sync10" )
+ (field (attrs public static final ) CAL_SYNC2 [object java/lang/String] "cal_sync2" )
+ (field (attrs public static final ) CAL_SYNC3 [object java/lang/String] "cal_sync3" )
+ (field (attrs public static final ) CAL_SYNC4 [object java/lang/String] "cal_sync4" )
+ (field (attrs public static final ) CAL_SYNC5 [object java/lang/String] "cal_sync5" )
+ (field (attrs public static final ) CAL_SYNC6 [object java/lang/String] "cal_sync6" )
+ (field (attrs public static final ) CAL_SYNC7 [object java/lang/String] "cal_sync7" )
+ (field (attrs public static final ) CAL_SYNC8 [object java/lang/String] "cal_sync8" )
+ (field (attrs public static final ) CAL_SYNC9 [object java/lang/String] "cal_sync9" )
+
+)

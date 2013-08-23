@@ -1,0 +1,67 @@
+(class (attrs public ) com/tomgibara/android/veecheck/Veecheck
+ (super java/lang/Object)
+ (source "Veecheck.java")
+
+ (field (attrs public static final ) LOG_TAG [object java/lang/String] "veecheck" )
+ (field (attrs public static final ) XML_NAMESPACE [object java/lang/String] "http://www.tomgibara.com/android/veecheck/SCHEMA.1" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/tomgibara/android/veecheck/Veecheck])
+  (line 32)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getCheckAction([object android/content/Context] )[object java/lang/String]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 72)
+  (const-string v0 "PERFORM_CHECK")
+  (invoke-static {v1 v0} com/tomgibara/android/veecheck/Veecheck/getPackageQualifiedAction [object android/content/Context] [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getConsiderAction([object android/content/Context] )[object java/lang/String]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 63)
+  (const-string v0 "CONSIDER_CHECK")
+  (invoke-static {v1 v0} com/tomgibara/android/veecheck/Veecheck/getPackageQualifiedAction [object android/content/Context] [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs private static ) getPackageQualifiedAction([object android/content/Context] [object java/lang/String] )[object java/lang/String]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 43)
+  (new-instance v0 java/lang/StringBuilder)
+  (invoke-virtual {v2} android/content/Context/getPackageName )
+  (move-result-object v1)
+  (invoke-static {v1} java/lang/String/valueOf [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/lang/StringBuilder/<init> [object java/lang/String] )
+  (const-string v1 ".VEECHECK_")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0 v3} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getRescheduleAction([object android/content/Context] )[object java/lang/String]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 53)
+  (const-string v0 "RESCHEDULE_CHECKS")
+  (invoke-static {v1 v0} com/tomgibara/android/veecheck/Veecheck/getPackageQualifiedAction [object android/content/Context] [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+)

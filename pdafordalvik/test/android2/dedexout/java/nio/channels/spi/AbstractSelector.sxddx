@@ -1,0 +1,104 @@
+(class (attrs public abstract ) java/nio/channels/spi/AbstractSelector
+ (super java/nio/channels/Selector)
+ (source "AbstractSelector.java")
+
+
+(method (attrs protected ) <init>([object java/nio/channels/spi/SelectorProvider] )void
+  (limit registers 4)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  ; parameter[0] : v3 ([object java/nio/channels/spi/SelectorProvider])
+  (line 5)
+  (invoke-direct {v2} java/nio/channels/Selector/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected final ) begin()void
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected final ) cancelledKeys()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/nio/channels/SelectionKey;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) close()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected final ) deregister([object java/nio/channels/spi/AbstractSelectionKey] )void
+  (limit registers 4)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  ; parameter[0] : v3 ([object java/nio/channels/spi/AbstractSelectionKey])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected final ) end()void
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected abstract ) implCloseSelector()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public final ) isOpen()boolean
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) provider()[object java/nio/channels/spi/SelectorProvider]
+  (limit registers 3)
+  ; this: v2 ([object java/nio/channels/spi/AbstractSelector])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected abstract ) register([object java/nio/channels/spi/AbstractSelectableChannel] int [object java/lang/Object] )[object java/nio/channels/SelectionKey]
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/opengl/GLSurfaceView$EGLContextFactory
+ (super java/lang/Object)
+ (source "GLSurfaceView.java")
+
+
+(method (attrs public abstract ) createContext([object javax/microedition/khronos/egl/EGL10] [object javax/microedition/khronos/egl/EGLDisplay] [object javax/microedition/khronos/egl/EGLConfig] )[object javax/microedition/khronos/egl/EGLContext]
+)
+
+(method (attrs public abstract ) destroyContext([object javax/microedition/khronos/egl/EGL10] [object javax/microedition/khronos/egl/EGLDisplay] [object javax/microedition/khronos/egl/EGLContext] )void
+)
+
+)

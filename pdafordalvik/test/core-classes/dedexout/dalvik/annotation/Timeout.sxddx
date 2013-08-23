@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation synchronized ) dalvik/annotation/Timeout
+ (super java/lang/Object)
+ (source "Timeout.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()int
+)
+
+)

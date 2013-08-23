@@ -1,0 +1,12 @@
+(interface (attrs public abstract synchronized ) org/apache/harmony/xnet/provider/jsse/SSLClientSessionCache
+ (super java/lang/Object)
+ (source "SSLClientSessionCache.java")
+
+
+(method (attrs public abstract ) getSessionData([object java/lang/String] int )[array byte]
+)
+
+(method (attrs public abstract ) putSessionData([object javax/net/ssl/SSLSession] [array byte] )void
+)
+
+)

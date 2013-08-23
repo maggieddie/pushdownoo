@@ -1,0 +1,16 @@
+(interface (attrs public abstract ) android/text/SpanWatcher
+ (super java/lang/Object)
+ (source "SpanWatcher.java")
+ (implements android/text/NoCopySpan)
+
+
+(method (attrs public abstract ) onSpanAdded([object android/text/Spannable] [object java/lang/Object] int int )void
+)
+
+(method (attrs public abstract ) onSpanChanged([object android/text/Spannable] [object java/lang/Object] int int int int )void
+)
+
+(method (attrs public abstract ) onSpanRemoved([object android/text/Spannable] [object java/lang/Object] int int )void
+)
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) javax/validation/TraversableResolver
+ (super java/lang/Object)
+ (source "TraversableResolver.java")
+
+
+(method (attrs public abstract ) isCascadable([object java/lang/Object] [object javax/validation/Path$Node] [object java/lang/Class] [object javax/validation/Path] [object java/lang/annotation/ElementType] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljavax/validation/Path$Node;"  "Ljava/lang/Class"  "<*>;"  "Ljavax/validation/Path;"  "Ljava/lang/annotation/ElementType;"  ")Z")
+  )
+)
+
+(method (attrs public abstract ) isReachable([object java/lang/Object] [object javax/validation/Path$Node] [object java/lang/Class] [object javax/validation/Path] [object java/lang/annotation/ElementType] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljavax/validation/Path$Node;"  "Ljava/lang/Class"  "<*>;"  "Ljavax/validation/Path;"  "Ljava/lang/annotation/ElementType;"  ")Z")
+  )
+)
+
+)

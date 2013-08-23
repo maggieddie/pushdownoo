@@ -1,0 +1,50 @@
+(class (attrs final synchronized ) java/util/Hashtable$KeyEnumeration
+ (super java/util/Hashtable$HashIterator)
+ (source "Hashtable.java")
+ (implements java/util/Enumeration)
+
+ (field (attrs final ) this$0 [object java/util/Hashtable] )
+
+(method (attrs private ) <init>([object java/util/Hashtable] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/Hashtable$KeyEnumeration])
+  ; parameter[0] : v1 ([object java/util/Hashtable])
+  (line 793)
+  (iput-object-quick v1 v0 java/util/Hashtable$KeyEnumeration.this$0 [object java/util/Hashtable])
+  (invoke-direct {v0 v1} java/util/Hashtable$HashIterator/<init> [object java/util/Hashtable] )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/Hashtable] [object java/util/Hashtable$1] )void
+  (limit registers 3)
+  ; this: v0 ([object java/util/Hashtable$KeyEnumeration])
+  ; parameter[0] : v1 ([object java/util/Hashtable])
+  ; parameter[1] : v2 ([object java/util/Hashtable$1])
+  (line 793)
+  (invoke-direct {v0 v1} java/util/Hashtable$KeyEnumeration/<init> [object java/util/Hashtable] )
+  (return-void )
+ )
+
+(method (attrs public ) hasMoreElements()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Hashtable$KeyEnumeration])
+  (line 795)
+  (invoke-virtual-quick {v1} java/util/Hashtable$KeyEnumeration/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) nextElement()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Hashtable$KeyEnumeration])
+  (line 796)
+  (invoke-virtual-quick {v1} java/util/Hashtable$KeyEnumeration/nextEntryNotFailFast )
+  (move-result-object v0)
+  (iget-object-quick v0 v0 java/util/Hashtable$HashtableEntry.key [object java/lang/Object])
+  (return-object v0)
+)
+
+)

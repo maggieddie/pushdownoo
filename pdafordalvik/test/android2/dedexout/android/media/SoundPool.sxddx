@@ -1,0 +1,128 @@
+(class (attrs public ) android/media/SoundPool
+ (super java/lang/Object)
+ (source "SoundPool.java")
+
+
+(method (attrs public ) <init>(int int int )void
+  (limit registers 6)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 8)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public final native ) autoPause()void
+)
+
+(method (attrs public final native ) autoResume()void
+)
+
+(method (attrs protected ) finalize()void
+  (limit registers 3)
+  ; this: v2 ([object android/media/SoundPool])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object android/content/Context] int int )int
+  (limit registers 6)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object android/content/res/AssetFileDescriptor] int )int
+  (limit registers 5)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 ([object android/content/res/AssetFileDescriptor])
+  ; parameter[1] : v4 (int)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object java/io/FileDescriptor] long long int )int
+  (limit registers 9)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 ([object java/io/FileDescriptor])
+  ; parameter[1] : v4 (long)
+  ; parameter[2] : v6 (long)
+  ; parameter[3] : v8 (int)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) load([object java/lang/String] int )int
+  (limit registers 5)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final native ) pause(int )void
+)
+
+(method (attrs public final native ) play(int float float int int float )int
+)
+
+(method (attrs public final native ) release()void
+)
+
+(method (attrs public final native ) resume(int )void
+)
+
+(method (attrs public final native ) setLoop(int int )void
+)
+
+(method (attrs public ) setOnLoadCompleteListener([object android/media/SoundPool$OnLoadCompleteListener] )void
+  (limit registers 4)
+  ; this: v2 ([object android/media/SoundPool])
+  ; parameter[0] : v3 ([object android/media/SoundPool$OnLoadCompleteListener])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final native ) setPriority(int int )void
+)
+
+(method (attrs public final native ) setRate(int float )void
+)
+
+(method (attrs public final native ) setVolume(int float float )void
+)
+
+(method (attrs public final native ) stop(int )void
+)
+
+(method (attrs public final native ) unload(int )boolean
+)
+
+)

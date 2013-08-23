@@ -728,6 +728,7 @@ trait StateSpace  {
     })*/
     
     // tmp use of the strong updates
+   // this shoudl be deleted !!!!!!
    def storeStrongUpdate(s: Store, pairs: List[(Addr, D)]) ={ //Set[Value])]) = {
      pairs.foldLeft(s)((accum, pair) => {
       val (a, vs) = pair
@@ -855,6 +856,7 @@ trait StateSpace  {
      
      val allRegularStores =  states.map {
       case PartialState(_, _, s, _,_,_) => s
+      case FinalState(_) => store.mkEmptyStore
      }
      val  sss : List[Store] =  allRegularStores.toList
     mergeStores(store.mkEmptyStore, sss)
@@ -890,6 +892,9 @@ trait StateSpace  {
      })
    }
     
+   
+     
+  
    
 
   class SemanticException(s: String) extends Exception(s)

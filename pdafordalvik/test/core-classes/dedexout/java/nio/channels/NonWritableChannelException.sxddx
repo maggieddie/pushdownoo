@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/channels/NonWritableChannelException
+ (super java/lang/IllegalStateException)
+ (source "NonWritableChannelException.java")
+
+ (field (attrs private static final ) serialVersionUID long -33554465); 0xfdffffdf )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/channels/NonWritableChannelException])
+  (line 36)
+  (invoke-direct {v0} java/lang/IllegalStateException/<init> )
+  (line 37)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs abstract synchronized ) java/util/MapEntry$Type
+ (super java/lang/Object)
+ (source "MapEntry.java")
+
+
+(method (attrs public abstract ) get([object java/util/MapEntry] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/MapEntry"  "<TKT;TVT;>;)TRT;")
+  )
+)
+
+)

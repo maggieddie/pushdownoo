@@ -1,0 +1,18 @@
+(interface (attrs public abstract synchronized ) org/apache/harmony/kernel/vm/ReflectionAccess
+ (super java/lang/Object)
+ (source "ReflectionAccess.java")
+
+
+(method (attrs public abstract ) accessibleClone([object java/lang/reflect/Method] )[object java/lang/reflect/Method]
+)
+
+(method (attrs public abstract ) clone([object java/lang/reflect/Field] )[object java/lang/reflect/Field]
+)
+
+(method (attrs public abstract ) clone([object java/lang/reflect/Method] )[object java/lang/reflect/Method]
+)
+
+(method (attrs public abstract ) setAccessibleNoCheck([object java/lang/reflect/AccessibleObject] boolean )void
+)
+
+)

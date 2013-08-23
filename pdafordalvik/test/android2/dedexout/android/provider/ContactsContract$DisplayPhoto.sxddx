@@ -1,0 +1,30 @@
+(class (attrs public final ) android/provider/ContactsContract$DisplayPhoto
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) CONTENT_MAX_DIMENSIONS_URI [object android/net/Uri] null )
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] null )
+ (field (attrs public static final ) DISPLAY_MAX_DIM [object java/lang/String] "display_max_dim" )
+ (field (attrs public static final ) THUMBNAIL_MAX_DIM [object java/lang/String] "thumbnail_max_dim" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 765)
+  (sput-object v0 android/provider/ContactsContract$DisplayPhoto.CONTENT_URI [object android/net/Uri])
+  (sput-object v0 android/provider/ContactsContract$DisplayPhoto.CONTENT_MAX_DIMENSIONS_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/ContactsContract$DisplayPhoto])
+  (line 760)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

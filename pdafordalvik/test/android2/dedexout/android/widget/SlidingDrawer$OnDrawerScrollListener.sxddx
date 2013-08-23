@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/widget/SlidingDrawer$OnDrawerScrollListener
+ (super java/lang/Object)
+ (source "SlidingDrawer.java")
+
+
+(method (attrs public abstract ) onScrollEnded()void
+)
+
+(method (attrs public abstract ) onScrollStarted()void
+)
+
+)

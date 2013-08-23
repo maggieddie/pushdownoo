@@ -1,0 +1,27 @@
+(class (attrs public ) gueei/binding/viewAttributes/templates/LayoutObservable
+ (super gueei/binding/Observable)
+ (source "LayoutObservable.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/templates/LayoutObservable])
+  (line 12)
+  (const-class v0 gueei/binding/viewAttributes/templates/Layout)
+  (invoke-direct {v1 v0} gueei/binding/Observable/<init> [object java/lang/Class] )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object gueei/binding/viewAttributes/templates/Layout] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/templates/LayoutObservable])
+  ; parameter[0] : v2 ([object gueei/binding/viewAttributes/templates/Layout])
+  (line 8)
+  (const-class v0 gueei/binding/viewAttributes/templates/Layout)
+  (invoke-direct {v1 v0 v2} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 9)
+  (return-void )
+ )
+
+)

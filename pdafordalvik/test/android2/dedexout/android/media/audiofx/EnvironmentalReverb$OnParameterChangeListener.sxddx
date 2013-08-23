@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/audiofx/EnvironmentalReverb$OnParameterChangeListener
+ (super java/lang/Object)
+ (source "EnvironmentalReverb.java")
+
+
+(method (attrs public abstract ) onParameterChange([object android/media/audiofx/EnvironmentalReverb] int int int )void
+)
+
+)

@@ -1,0 +1,21 @@
+(class (attrs synchronized ) java/lang/ProcessManager$ProcessReference
+ (super java/lang/ref/WeakReference)
+ (source "ProcessManager.java")
+
+ (field (attrs final ) processId int )
+
+(method (attrs public ) <init>([object java/lang/ProcessManager$ProcessImpl] [object java/lang/ProcessManager$ProcessReferenceQueue] )void
+  (limit registers 4)
+  ; this: v1 ([object java/lang/ProcessManager$ProcessReference])
+  ; parameter[0] : v2 ([object java/lang/ProcessManager$ProcessImpl])
+  ; parameter[1] : v3 ([object java/lang/ProcessManager$ProcessReferenceQueue])
+  (line 304)
+  (invoke-direct {v1 v2 v3} java/lang/ref/WeakReference/<init> [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )
+  (line 305)
+  (iget-quick v0 v2 java/lang/ProcessManager$ProcessImpl.id int)
+  (iput-quick v0 v1 java/lang/ProcessManager$ProcessReference.processId int)
+  (line 306)
+  (return-void )
+ )
+
+)

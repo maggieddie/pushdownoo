@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) java/security/Guard
+ (super java/lang/Object)
+ (source "Guard.java")
+
+
+(method (attrs public abstract ) checkGuard([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/SecurityException])
+  )
+)
+
+)

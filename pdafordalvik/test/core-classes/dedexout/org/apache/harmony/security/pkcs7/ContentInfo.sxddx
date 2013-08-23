@@ -1,0 +1,305 @@
+(class (attrs public synchronized ) org/apache/harmony/security/pkcs7/ContentInfo
+ (super java/lang/Object)
+ (source "ContentInfo.java")
+
+ (field (attrs public static final ) ASN1 [object org/apache/harmony/security/asn1/ASN1Sequence] )
+ (field (attrs public static final ) DATA [array int] )
+ (field (attrs public static final ) DIGESTED_DATA [array int] )
+ (field (attrs public static final ) ENCRYPTED_DATA [array int] )
+ (field (attrs public static final ) ENVELOPED_DATA [array int] )
+ (field (attrs public static final ) SIGNED_AND_ENVELOPED_DATA [array int] )
+ (field (attrs public static final ) SIGNED_DATA [array int] )
+ (field (attrs private ) content [object java/lang/Object] )
+ (field (attrs private ) encoding [array byte] )
+ (field (attrs private ) oid [array int] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 6)
+  (const/4 v5 0)
+  (const/4 v1 7)
+  (line 48)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198ae4)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.DATA [array int])
+  (line 49)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198b08)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.SIGNED_DATA [array int])
+  (line 50)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198b2c)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.ENVELOPED_DATA [array int])
+  (line 51)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198b50)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.SIGNED_AND_ENVELOPED_DATA [array int])
+  (line 52)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198b74)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.DIGESTED_DATA [array int])
+  (line 53)
+  (new-array v0 v1 [array int])
+  (fill-array-data v0 l198b98)
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.ENCRYPTED_DATA [array int])
+  (line 113)
+  (new-instance v0 org/apache/harmony/security/pkcs7/ContentInfo$1)
+  (const/4 v1 2)
+  (new-array v1 v1 [array [object org/apache/harmony/security/asn1/ASN1Type]])
+  (invoke-static {} org/apache/harmony/security/asn1/ASN1Oid/getInstance )
+  (nop )
+  (move-result-object v2)
+  (aput-object v2 v1 v5)
+  (const/4 v2 1)
+  (new-instance v3 org/apache/harmony/security/asn1/ASN1Explicit)
+  (invoke-static {} org/apache/harmony/security/asn1/ASN1Any/getInstance )
+  (nop )
+  (move-result-object v4)
+  (invoke-direct {v3 v5 v4} org/apache/harmony/security/asn1/ASN1Explicit/<init> int [object org/apache/harmony/security/asn1/ASN1Type] )
+  (aput-object v3 v1 v2)
+  (invoke-direct {v0 v1} org/apache/harmony/security/pkcs7/ContentInfo$1/<init> [array [object org/apache/harmony/security/asn1/ASN1Type]] )
+  (sput-object v0 org/apache/harmony/security/pkcs7/ContentInfo.ASN1 [object org/apache/harmony/security/asn1/ASN1Sequence])
+  (return-void )
+  (line 48)
+  (label l198ae2)
+  (data-array
+    0x00 0x00
+  )
+  (label l198ae4)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x01 0x00 0x00 0x00) ; #6
+  )
+  (line 49)
+  (label l198b08)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x02 0x00 0x00 0x00) ; #6
+  )
+  (line 50)
+  (label l198b2c)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x03 0x00 0x00 0x00) ; #6
+  )
+  (line 51)
+  (label l198b50)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x04 0x00 0x00 0x00) ; #6
+  )
+  (line 52)
+  (label l198b74)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x05 0x00 0x00 0x00) ; #6
+  )
+  (line 53)
+  (label l198b98)
+  (data-array
+    (0x01 0x00 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+    (0x48 0x03 0x00 0x00) ; #2
+    (0x8D 0xBB 0x01 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x07 0x00 0x00 0x00) ; #5
+    (0x06 0x00 0x00 0x00) ; #6
+  )
+ )
+
+(method (attrs public ) <init>([array int] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  ; parameter[0] : v1 ([array int])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 59)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 60)
+  (iput-object-quick v1 v0 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (line 61)
+  (iput-object-quick v2 v0 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (line 62)
+  (return-void )
+ )
+
+(method (attrs private ) <init>([array int] [object java/lang/Object] [array byte] )void
+  (limit registers 4)
+  ; this: v0 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  ; parameter[0] : v1 ([array int])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([array byte])
+  (line 64)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 65)
+  (iput-object-quick v1 v0 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (line 66)
+  (iput-object-quick v2 v0 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (line 67)
+  (iput-object-quick v3 v0 org/apache/harmony/security/pkcs7/ContentInfo.encoding [array byte])
+  (line 68)
+  (return-void )
+ )
+
+(method (attrs ) <init>([array int] [object java/lang/Object] [array byte] [object org/apache/harmony/security/pkcs7/ContentInfo$1] )void
+  (limit registers 5)
+  ; this: v0 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  ; parameter[0] : v1 ([array int])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([array byte])
+  ; parameter[3] : v4 ([object org/apache/harmony/security/pkcs7/ContentInfo$1])
+  (line 45)
+  (invoke-direct {v0 v1 v2 v3} org/apache/harmony/security/pkcs7/ContentInfo/<init> [array int] [object java/lang/Object] [array byte] )
+  (return-void )
+ )
+
+(method (attrs static ) access$000([object org/apache/harmony/security/pkcs7/ContentInfo] )[array int]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 45)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (return-object v0)
+ )
+
+(method (attrs static ) access$100([object org/apache/harmony/security/pkcs7/ContentInfo] )[object java/lang/Object]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 45)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (return-object v0)
+ )
+
+(method (attrs public ) getContent()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 78)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) getContentType()[array int]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 82)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (return-object v0)
+)
+
+(method (attrs public ) getEncoded()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 86)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.encoding [array byte])
+  (if-nez v0 l198ca0)
+  (line 87)
+  (sget-object v0 org/apache/harmony/security/pkcs7/ContentInfo.ASN1 [object org/apache/harmony/security/asn1/ASN1Sequence])
+  (invoke-virtual-quick {v0 v1} org/apache/harmony/security/asn1/ASN1Sequence/encode [object java/lang/Object] )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.encoding [array byte])
+  (label l198ca0)
+  (line 92)
+  (iget-object-quick v0 v1 org/apache/harmony/security/pkcs7/ContentInfo.encoding [array byte])
+  (return-object v0)
+)
+
+(method (attrs public ) getSignedData()[object org/apache/harmony/security/pkcs7/SignedData]
+  (limit registers 3)
+  ; this: v2 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 71)
+  (iget-object-quick v0 v2 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (sget-object v1 org/apache/harmony/security/pkcs7/ContentInfo.SIGNED_DATA [array int])
+  (invoke-static {v0 v1} java/util/Arrays/equals [array int] [array int] )
+  (move-result v0)
+  (if-eqz v0 l198cd8)
+  (line 72)
+  (iget-object-quick v2 v2 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (check-cast v2 [object org/apache/harmony/security/pkcs7/SignedData])
+  (move-object v0 v2)
+  (label l198cd6)
+  (line 74)
+  (return-object v0)
+  (label l198cd8)
+  (const/4 v0 0)
+  (goto l198cd6)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 4)
+  ; this: v3 ([object org/apache/harmony/security/pkcs7/ContentInfo])
+  (line 96)
+  (new-instance v1 java/lang/StringBuffer)
+  (invoke-direct {v1} java/lang/StringBuffer/<init> )
+  (line 97)
+  (const-string v2 "==== ContentInfo:")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 98)
+  (const-string v2 "\n== ContentType (OID): ")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 99)
+  (const/4 v0 0)
+  (label l198d0c)
+  (iget-object-quick v2 v3 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (array-length v2 v2)
+  (if-ge v0 v2 l198d34)
+  (line 100)
+  (iget-object-quick v2 v3 org/apache/harmony/security/pkcs7/ContentInfo.oid [array int])
+  (aget v2 v2 v0)
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append int )
+  (line 101)
+  (const/16 v2 32)
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append char )
+  (line 99)
+  (add-int/lit8 v0 v0 1)
+  (goto l198d0c)
+  (label l198d34)
+  (line 103)
+  (const-string v2 "\n== Content: ")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 104)
+  (iget-object-quick v2 v3 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (if-eqz v2 l198d62)
+  (line 105)
+  (const-string v2 "\n")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 106)
+  (iget-object-quick v2 v3 org/apache/harmony/security/pkcs7/ContentInfo.content [object java/lang/Object])
+  (invoke-virtual-quick {v2} java/lang/Object/toString )
+  (move-result-object v2)
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (label l198d62)
+  (line 108)
+  (const-string v2 "\n== Content End")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 109)
+  (const-string v2 "\n==== ContentInfo End\n")
+  (invoke-virtual-quick {v1 v2} java/lang/StringBuffer/append [object java/lang/String] )
+  (line 110)
+  (invoke-virtual-quick {v1} java/lang/StringBuffer/toString )
+  (move-result-object v2)
+  (return-object v2)
+)
+
+)

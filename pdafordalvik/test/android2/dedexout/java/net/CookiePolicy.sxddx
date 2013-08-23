@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) java/net/CookiePolicy
+ (super java/lang/Object)
+ (source "CookiePolicy.java")
+
+ (field (attrs public static final ) ACCEPT_ALL [object java/net/CookiePolicy] )
+ (field (attrs public static final ) ACCEPT_NONE [object java/net/CookiePolicy] )
+ (field (attrs public static final ) ACCEPT_ORIGINAL_SERVER [object java/net/CookiePolicy] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 5)
+  (sput-object v0 java/net/CookiePolicy.ACCEPT_ALL [object java/net/CookiePolicy])
+  (line 6)
+  (sput-object v0 java/net/CookiePolicy.ACCEPT_NONE [object java/net/CookiePolicy])
+  (line 7)
+  (sput-object v0 java/net/CookiePolicy.ACCEPT_ORIGINAL_SERVER [object java/net/CookiePolicy])
+  (return-void )
+ )
+
+(method (attrs public abstract ) shouldAccept([object java/net/URI] [object java/net/HttpCookie] )boolean
+)
+
+)

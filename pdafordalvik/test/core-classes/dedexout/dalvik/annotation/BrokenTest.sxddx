@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation synchronized ) dalvik/annotation/BrokenTest
+ (super java/lang/Object)
+ (source "BrokenTest.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,38 @@
+(class (attrs public abstract synchronized ) javax/net/ssl/X509ExtendedKeyManager
+ (super java/lang/Object)
+ (source "X509ExtendedKeyManager.java")
+ (implements javax/net/ssl/X509KeyManager)
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object javax/net/ssl/X509ExtendedKeyManager])
+  (line 33)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) chooseEngineClientAlias([array [object java/lang/String]] [array [object java/security/Principal]] [object javax/net/ssl/SSLEngine] )[object java/lang/String]
+  (limit registers 5)
+  ; this: v1 ([object javax/net/ssl/X509ExtendedKeyManager])
+  ; parameter[0] : v2 ([array [object java/lang/String]])
+  ; parameter[1] : v3 ([array [object java/security/Principal]])
+  ; parameter[2] : v4 ([object javax/net/ssl/SSLEngine])
+  (line 53)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) chooseEngineServerAlias([object java/lang/String] [array [object java/security/Principal]] [object javax/net/ssl/SSLEngine] )[object java/lang/String]
+  (limit registers 5)
+  ; this: v1 ([object javax/net/ssl/X509ExtendedKeyManager])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([array [object java/security/Principal]])
+  ; parameter[2] : v4 ([object javax/net/ssl/SSLEngine])
+  (line 73)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

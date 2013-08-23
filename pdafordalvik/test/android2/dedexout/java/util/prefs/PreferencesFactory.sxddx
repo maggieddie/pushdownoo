@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) java/util/prefs/PreferencesFactory
+ (super java/lang/Object)
+ (source "PreferencesFactory.java")
+
+
+(method (attrs public abstract ) systemRoot()[object java/util/prefs/Preferences]
+)
+
+(method (attrs public abstract ) userRoot()[object java/util/prefs/Preferences]
+)
+
+)

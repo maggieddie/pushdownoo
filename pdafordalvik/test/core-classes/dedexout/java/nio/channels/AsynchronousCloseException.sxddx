@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/channels/AsynchronousCloseException
+ (super java/nio/channels/ClosedChannelException)
+ (source "AsynchronousCloseException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1609000558); 0x5fe7666e )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/channels/AsynchronousCloseException])
+  (line 36)
+  (invoke-direct {v0} java/nio/channels/ClosedChannelException/<init> )
+  (line 37)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,38 @@
+(class (attrs final synchronized ) java/util/concurrent/Exchanger$Slot
+ (super java/util/concurrent/atomic/AtomicReference)
+ (source "Exchanger.java")
+
+ (field (attrs ) q0 long )
+ (field (attrs ) q1 long )
+ (field (attrs ) q2 long )
+ (field (attrs ) q3 long )
+ (field (attrs ) q4 long )
+ (field (attrs ) q5 long )
+ (field (attrs ) q6 long )
+ (field (attrs ) q7 long )
+ (field (attrs ) q8 long )
+ (field (attrs ) q9 long )
+ (field (attrs ) qa long )
+ (field (attrs ) qb long )
+ (field (attrs ) qc long )
+ (field (attrs ) qd long )
+ (field (attrs ) qe long )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/concurrent/Exchanger$Slot])
+  (line 277)
+  (invoke-direct {v0} java/util/concurrent/atomic/AtomicReference/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/concurrent/Exchanger$1] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/Exchanger$Slot])
+  ; parameter[0] : v1 ([object java/util/concurrent/Exchanger$1])
+  (line 277)
+  (invoke-direct {v0} java/util/concurrent/Exchanger$Slot/<init> )
+  (return-void )
+ )
+
+)

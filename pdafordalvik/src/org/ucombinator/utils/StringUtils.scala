@@ -15,8 +15,11 @@ object StringUtils {
     // Debug.prntDebugInfo("",  trimLRPars(str))
    //  System.out.println(str.drop(1)) // test
     // Debug.prntDebugInfo("test args", getArgsFromformals(SName.from("{v0 v1}")))
+     println(isObjectType("(object dalvik/annotation/Throws)"))
+     println(isObjectType("(array int)"))
+         println(isObjectType("(array (object dalvik/annotation/Throws))"))
      
-     val arrayPattern = """\(array \(object [^\s]+\)\)""".r
+     /*val arrayPattern = """\(array \(object [^\s]+\)\)""".r
      val clsmethPattern = """([^\s]+(\/[^s])*)""".r
      //clsmethPattern.findAllIn("a/b/c") foreach {println _}
      
@@ -36,7 +39,7 @@ object StringUtils {
       println(getClsPathAndFldNameFromFieldPath("org/ucombinator/test$R.fileName"))
       
       println(getTypeFromObjectWrapper("(object dalvik/annotation/Throws)"))
-        println(getTypeFromObjectWrapper("(array int)"))
+        println(getTypeFromObjectWrapper("(array int)"))*/
   }
   
   def trimRPar(str: String) : String = str.dropRight(1)
@@ -120,6 +123,7 @@ object StringUtils {
     }
   }
   
+  // if nothig found, then will return original string
   def getTypeFromObjectWrapper(str: String) : String = {
     val objectRP = """\(object [^\s]+\)""".r
     if(! objectRP.findAllIn(str).toList.isEmpty) {
@@ -137,6 +141,8 @@ object StringUtils {
    */
   def getClsPathAndFldNameFromFieldPath(fldPath: String) : (String, String) = {
     val splitRes = fldPath.split("\\.").toList
+   // println("what's in the splitRes: ", splitRes)
+   // println("btw, the path is",  fldPath)
      (splitRes.dropRight(1).head, splitRes.takeRight(1).head)
    
   }
@@ -151,6 +157,16 @@ object StringUtils {
       val elemsLst = CommonUtils.toList(elemsArray)
       elemsLst.takeRight(1).head
     }
+  }
+  
+  def isObjectType(ftype: String) : Boolean = {
+     val arrayReg = """\(array \(object [^\s]+\)\)""".r
+     val objReg =  """\(object [^\s]+\)""".r
+     //ok we dob;t care about array of primitive type rgit now
+   //  val arrayPrimitiveReg = 
+     
+    ! arrayReg.findAllIn(ftype).isEmpty || !objReg.findAllIn(ftype).isEmpty
+     
   }
   
   def constrRegStr(num: BigInt) : String = "v"+num.toString

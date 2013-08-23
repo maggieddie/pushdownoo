@@ -1,0 +1,26 @@
+(class (attrs public ) com/example/testagc/Bb
+ (super com/example/testagc/B)
+ (source "Bb.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/example/testagc/Bb])
+  ; parameter[0] : v1 (int)
+  (line 6)
+  (invoke-direct {v0 v1} com/example/testagc/B/<init> int )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) toFork()void
+  (limit registers 2)
+  ; this: v1 ([object com/example/testagc/Bb])
+  (line 12)
+  (const/4 v0 0)
+  (iput v0 v1 com/example/testagc/Bb.testField int)
+  (line 13)
+  (return-void )
+)
+
+)

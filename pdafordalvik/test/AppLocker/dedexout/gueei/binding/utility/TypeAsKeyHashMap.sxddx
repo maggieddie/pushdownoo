@@ -1,0 +1,87 @@
+(class (attrs public ) gueei/binding/utility/TypeAsKeyHashMap
+ (super java/lang/Object)
+ (source "TypeAsKeyHashMap.java")
+
+ (field (attrs private ) mCollection [object java/util/HashMap] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/utility/TypeAsKeyHashMap])
+  (line 5)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 6)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (iput-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (line 5)
+  (return-void )
+ )
+
+(method (attrs public ) containsKey([object java/lang/Class] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+TT;>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/utility/TypeAsKeyHashMap])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 26)
+  (iget-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) get([object java/lang/Class] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<S:TT;>("  "Ljava/lang/Class"  "<TS;>;)TS;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/utility/TypeAsKeyHashMap])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 14)
+  (iget-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l1a35a)
+  (line 15)
+  (iget-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/get [object java/lang/Object] )
+  (move-result-object v0)
+  (label l1a358)
+  (line 17)
+  (return-object v0)
+  (label l1a35a)
+  (const/4 v0 0)
+  (goto l1a358)
+)
+
+(method (attrs public ) put([object java/lang/Class] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+TT;>;TT;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object gueei/binding/utility/TypeAsKeyHashMap])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 9)
+  (iget-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (invoke-virtual {v0 v2 v3} java/util/HashMap/put [object java/lang/Object] [object java/lang/Object] )
+  (line 10)
+  (return-void )
+)
+
+(method (attrs public ) remove([object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+TT;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/utility/TypeAsKeyHashMap])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 22)
+  (iget-object v0 v1 gueei/binding/utility/TypeAsKeyHashMap.mCollection [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/remove [object java/lang/Object] )
+  (line 23)
+  (return-void )
+)
+
+)

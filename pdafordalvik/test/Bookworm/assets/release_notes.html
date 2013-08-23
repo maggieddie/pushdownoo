@@ -1,0 +1,154 @@
+<html>
+<style>
+* { font-family: sans-serif; color:white; }
+body { background: black;}
+</style>
+<body>
+
+<h2>BookWorm Details</h2>
+
+<p>BookWorm is an app for organizing your book collection. 
+Future plans are to add the ability to sync with multiple
+online book sources (import/export), to include tags for multi-level customizable organization,
+and social features (all in the works).</p>
+
+<h3>Developers</h3>
+<ul>
+<li>Charlie Collins</li>
+</ul>
+
+<h3>Contributors</h3>
+<ul>
+<li>Jason Liick (code for tagging [in progress], sliding note drawer, UI updates, more)</li>
+<li>Andreas F.X. Siegert (testing, feedback, and translations)</li>
+<li>David MacLeod (testing and feedback)</li>
+<li>Simon McLaughlin (OpenLibrary data source code)</li>
+</ul>
+
+<p>Please let us know if you come across any new issues, 
+the <a href="http://code.google.com/p/and-bookworm/issues/list">project site issue tracker</a> 
+is where currently known issues and enhancement plans are logged. Thanks!</p>
+
+<p>If you like this app, or find it useful, please consider a donation.
+<br />
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=44VVR7MDXAKJA">
+<img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Donate to BookWorm via PayPal" />
+</a>
+</form>
+</p>
+
+<h3>Current Version: 1.0.17</h3>
+<ul>
+<li>Enhancement 20: Auto-backup data! Now done using Android BackupAgent, so backups will only work for Android 2.2 and later (rest of app runs fine, just doesn't auto-backup).</li>
+<li>Enhancement 93: More book data sources! Include Simon's branch (after cleanup) which creates compound data provider (currently Google Books and OpenLibrary).</li>
+<li>Enhancement 97: ISBN only CSV import support. (In addition to full CSV import format, which already exists).</li>
+<li>Fix Issue 102: Support dates older than 1900 (now supports 1500 on, if you have books older than that, wow!)</li>
+<li>General improvements around CSV import: UI updated, fetch images when restoring from CSV, more.</li>
+<li>Remove capability to export/import the DB file itself (because this could cause issues with future releases that may change the data schema, prefer CSV import/export).</li>
+</ul>
+
+<h3>Previous Version: 1.0.16</h3>
+(Note 1.0.15 same, but Donate button broken.)
+<ul>
+<li>Fix issue 76: Multiple authors CSV import was mangled with quotes.</li>
+<li>Enhancement 79: Added a donate button to the About->Details screen (several people asked).</li>
+<li>Fix issue 82: Pressing sort button twice fast results in multiple dialogs.</li>
+<li>Enhancement 86: Allow users to save "Notes" with books. Many have asked for this. Current implementation is plain/ugly, but works, more planned in this area.</li>
+<li>Enhancement 87: Create Developers and Contributors areas in About->Details to acknowledge people that have pitched in.</li>
+</ul>
+
+<h3>Previous Version: 1.0.14</h3>
+<ul>
+<li>Insta-Bug fix for 1.0.13: Search repeat loop on 1.0.13 fixed. For details on all other new stuff see 1.0.13 below.</li>
+</ul>
+
+<h3>Previous Version: 1.0.13</h3>
+<ul>
+<li>Fix issue 6: Handle case where Barcode Scanner app is not installed more smoothly.</li>
+<li>Enhancement 58: Add an action bar to Main for quicker access to common actions (UI pattern improvement).</li>
+<li>Fix issue 60: Better results with global reloading of cover images.</li> 
+<li>Enhancement 63: New capability to import data from a CSV file.</li>
+<li>Fix issue 68: CSV export date format fixed.</li>
+<li>Enhancement 69: Add a .nomedia file to images directory by default (to prevent Gallery from locating book cover images).</li>
+<li>Fix issue 70: Several improvements to the search form page to improve performance and prevent FC errors.</li>
+<li>Enhancement 73: Change BookSearch to automatically retrieve new data when user scrolls to bottom of list.</li>
+<li>Fix issue 75: Resolve bug where main list screen did not show books with no authors (though they were in DB).</li>
+<li>Enhancement: Include setting in manifest to allow users to move app to SD card, if so desired.</li>
+</ul>
+
+<h3>Previous Version: 1.0.12</h3>
+<ul>
+<li>Fix issue 41: Orientation change causes repeat search for cover image on book search result activity.</li>
+<li>Fix issue 61: German translation tweak.</li>
+<li>Work on issue 64: Rare book insert error causes bookuserdata table to prevent further books from being inserted (see issue at tracker for details).</li>
+<li>Fix issue 65: Search results page error if new search yields no results and prev results are left on screen and clickable (now clears prev results).</li>
+</ul>
+
+<h3>Previous Version: 1.0.11</h3>
+<ul>
+<li>Patch update: Address socket timeouts when retrieving cover images (fail fast) and bitmap decoding memory.</li>
+</ul>
+
+<h3>Previous Version: 1.0.10</h3>
+<ul>
+<li>Enhancement: New feature to allow export of database as a CSV file (via email, accessible via menu).</li> 
+<li>Enhancement: Update the manual input form to make it "nice for the people." Ok, it's still not great, but better. UI and UX improvements.</li>
+<li>Fix issue 56: Use alternate book cover image providers if OpenLibrary fails (have a few fallbacks now, more reliable retrieval of cover images).</li>
+<li>Internal updates: Architectural changes internally to make code easier to manage and to facilitate upcoming updates. Full import/export and online sync still in progress (the right way, not by just asking the user for email/pass and storing it -- that is very bad even though many other apps do it).</li>
+</ul>
+
+<h3>Previous Version: 1.0.9</h3>
+<ul>
+<li>Fix issue 54: Fix force close when NOT using supported language (now falls back to English if we don't have a translation - current supported translations are English, Spanish, German, and French).</li>
+<li>Fix issue 50: German translation updated (and other translations tweaked a bit too).</li> 
+</ul>
+
+<h3>Previous Version: 1.0.8</h3>
+<ul>
+<li>Enhancement 52: Include subject as sort by option.</li>
+<li>Fix issue 51: Always retrieve authors in the same order so that sorts/filters are predictable.</li>
+<li>Minor enhancement: German translation updated based on feedback.</li> 
+<li>Minor enhancement: Clean up manage cover image form/tab UI.</li> 
+</ul>
+
+<h3>Previous Version: 1.0.7</h3>
+<ul>
+<li>Enhancement 32: Internationalized. Now supports English, Spanish, French, and German (based on locale).</li>
+<li>Enhancement 33: Allow main list sort by publication date.</li>
+<li>Enhancement 42: Allow use of enter key to initiate search from web search activity.</li>
+<li>Fix issue 43: Inconsistent results from web search when entering ISBN manually (also now faster results).</li>
+<li>Fix issue 44: Allow non numeric characters in ISBN entry on manual form (they are valid).</li>
+<li>Enhancement 47: Show authors in web search results - helps disambiguate when multiple identical titles are present.</li>
+<li>Enhancement 48: Show authors on main list page (right now they are shown in place of subtitle, crowded to include all).</li>
+<li>Fix issue 49: Hide the soft keyboard if open when coming back to web search results with results present.</li>
+</ul>
+
+<h3>Previous Version: 1.0.6</h3>
+<ul>
+<li>Fix issue 1: Filter on main list screen now works using book titles (just start typing, it will filter).</li>
+<li>Enhancement 18: Created a stats dialog that shows total books, read books, and some other stuff.</li>
+<li>Fix issue 19: Go back to previous position in the main list on view/edit/delete.</li>
+<li>Enhancement 31: New sort dialog that allows sort by title, read status, author(s), rating, or publisher.</li>
+<li>Minor Enhancement: Included HTMLScreen to show About details, much better formatting for this screen now.</li>
+</ul>
+
+<h3>Previous Version: 1.0.5</h3>
+<ul>
+<li>Fix issue 12 - Force close on some devices with input form (Camera causing issues), use new form, see enh-14.</li>
+<li>Enhancement 14 - Switch to new entry form, and allow user to select image for cover from gallery (for new, and existing books).</li>
+<li>Fix issue 15 - Remove HTML from this about/detail dialog. Formatting lost, but better than random (more work to do for this).</li>
+<li>Fix issue 24 - Make ISBN editable. This allows users to enter correct ISBN, which then can be used to retrieve cover images.</li>
+<li>Enhancement 25 - Warn on the book add page if the current DB/list already has same book (whether scan or search).</li>
+<li>Enhancement 26 - Make compatible with Android 1.5 for users still running older release (current version still 1.6, will make separate 1.5 app name/release).</li>
+</ul>
+
+<h3>Previous Version: 1.0.4</h3>
+<ul>
+<li>Enhancement - Add "enable debug logging" option in prefs (to try to help figure out other issues if they arise).</li>
+<li>Enhancement - Add "Scanning Tips" menu option to no results found page.</li>
+<li>Fix issue 10 - Force close after scan due to bar code format differences (EAN vs UPC, etc.). Should decode many more books now, and should not force close even when cannot decode.</li>
+<li>Fix issue 13 - Changing a book's title orphans the cover image.</li>
+</ul>
+
+</body>
+</html>

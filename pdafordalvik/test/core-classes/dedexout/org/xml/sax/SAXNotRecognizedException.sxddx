@@ -1,0 +1,25 @@
+(class (attrs public synchronized ) org/xml/sax/SAXNotRecognizedException
+ (super org/xml/sax/SAXException)
+ (source "SAXNotRecognizedException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/xml/sax/SAXNotRecognizedException])
+  (line 37)
+  (invoke-direct {v0} org/xml/sax/SAXException/<init> )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/xml/sax/SAXNotRecognizedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 48)
+  (invoke-direct {v0 v1} org/xml/sax/SAXException/<init> [object java/lang/String] )
+  (line 49)
+  (return-void )
+ )
+
+)

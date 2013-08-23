@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/widget/Checkable
+ (super java/lang/Object)
+ (source "Checkable.java")
+
+
+(method (attrs public abstract ) isChecked()boolean
+)
+
+(method (attrs public abstract ) setChecked(boolean )void
+)
+
+(method (attrs public abstract ) toggle()void
+)
+
+)

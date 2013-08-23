@@ -1,0 +1,30 @@
+(class (attrs public final ) android/R$interpolator
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) accelerate_cubic int 17563650); 0x10c0002 )
+ (field (attrs public static final ) accelerate_decelerate int 17563654); 0x10c0006 )
+ (field (attrs public static final ) accelerate_quad int 17563648); 0x10c0000 )
+ (field (attrs public static final ) accelerate_quint int 17563652); 0x10c0004 )
+ (field (attrs public static final ) anticipate int 17563655); 0x10c0007 )
+ (field (attrs public static final ) anticipate_overshoot int 17563657); 0x10c0009 )
+ (field (attrs public static final ) bounce int 17563658); 0x10c000a )
+ (field (attrs public static final ) cycle int 17563660); 0x10c000c )
+ (field (attrs public static final ) decelerate_cubic int 17563651); 0x10c0003 )
+ (field (attrs public static final ) decelerate_quad int 17563649); 0x10c0001 )
+ (field (attrs public static final ) decelerate_quint int 17563653); 0x10c0005 )
+ (field (attrs public static final ) linear int 17563659); 0x10c000b )
+ (field (attrs public static final ) overshoot int 17563656); 0x10c0008 )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/R$interpolator])
+  (line 1279)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

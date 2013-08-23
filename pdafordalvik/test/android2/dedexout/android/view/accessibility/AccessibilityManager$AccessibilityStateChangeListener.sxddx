@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener
+ (super java/lang/Object)
+ (source "AccessibilityManager.java")
+
+
+(method (attrs public abstract ) onAccessibilityStateChanged(boolean )void
+)
+
+)

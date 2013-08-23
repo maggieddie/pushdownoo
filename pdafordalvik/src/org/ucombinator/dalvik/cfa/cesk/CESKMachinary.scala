@@ -17,7 +17,7 @@ import org.ucombinator.utils.CommonUtils.HeatPair
  *  2. Pointer-based CESK for traditional kCFA
  */
 
-trait CESKMachinary extends StateSpace with DalvikVMRelated {
+trait CESKMachinary extends StateSpace {// with DalvikVMRelated {
 
   import org.ucombinator.domains.CommonAbstractDomains._
  /*****************
@@ -187,8 +187,7 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
       case ObjectSomeTop(_) => true // should we need this at all? yes. we need to pass the topObject around.
       case _ => false
     })
-    vs.map(_.asInstanceOf[AbstractObjectValue])
-
+    vs.map(_.asInstanceOf[AbstractObjectValue]) 
   }
   
   def filterObjValues(objs: D, s: Store) : D = {//Set[ObjectValue] = {
@@ -207,6 +206,17 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
      }
    })*/
   }
+  
+  // for not null to detect object valuess, only need to return Value type
+  def filterAbsObjAndStringTop(objs: Set[Value]) : Set[Value] = {
+    objs.filter((obj) => {
+      obj match {
+        case ObjectValue(_, _) | ObjectSomeTop(_) |  StringTop | StringLit(_)   => true
+        case _ => false
+      }
+    })
+  }
+  
   
   def filterStrObjVals(objVals: D, s: Store) : D ={
     s.mkDomainD(objVals.toList.filter(_.asInstanceOf[ObjectValue].className == "java/lang/String"): _*)
@@ -243,7 +253,7 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     clsDefO match {
       case Some(cd) => {
         val fields = cd.getAllFields
-         Debug.prntDebugInfo("fields of clsName: " + clsName, fields)
+        // println("fields of clsName: " + clsName, fields)
       fields
       }
       case None => {
@@ -267,14 +277,18 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     * modifed to do strong udpate  along with the allocation site NewStmt
     */
   def initObject(classPath: String, s: Store, op: ObjectPointer) : Store ={
+    
+   
     val fieldPathStrs = getFieldTypeStrs(classPath)
+   
     val fieldOffsets = fieldPathStrs.map {
       case (path, ftype) => op.offset(path)
     }
-    
+  
     val ps = fieldOffsets map ((_, s.mkDomainD()))//Set[Value]()))
-    //storeUpdate(s, ps) strong update
+    //val res = storeUpdate(s, ps)// strong update
     storeStrongUpdate(s,ps)
+    //res
   }
   
   def initObjectProperty(classPath: String, pst: PropertyStore, op: ObjectPointer, securityValues: D //Set[Value]
@@ -285,7 +299,7 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
     }
     
     val ps = fieldOffsets map ((_, securityValues))
-    //storeUpdate(s, ps) strong update
+    //storeUpdate(pst, ps) //strong update
    
      storeStrongUpdate(pst,ps) 
   }
@@ -299,8 +313,12 @@ trait CESKMachinary extends StateSpace with DalvikVMRelated {
 		   //val securityValue = SecurityValue(stForEqual.clsPath, stForEqual.methPath, stForEqual.lineSt, strName, sourceOrSinkLevel)
 		   //val bindings = targetAddrs.map((_, Set(securityValue.asInstanceOf[Value])))
 	     val bindings = targetAddrs.map((_, pst.mkDomainD(genTaintKindValueFromStmt(stForEqual.oldStyleSt, pst).toList: _*)))
-		   if(strongUpdate)
-		        storeStrongUpdate(pst, bindings) 
+		   if(strongUpdate) {
+		     // please just use strong update!
+		      //storeStrongUpdate(pst, bindings) 
+		      storeUpdate(pst, bindings) 
+		   }
+		       
 		   else
 		     storeUpdate(pst, bindings) 
 	   }else{

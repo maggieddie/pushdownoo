@@ -1,0 +1,148 @@
+(class (attrs public ) android/widget/ZoomButtonsController
+ (super java/lang/Object)
+ (source "ZoomButtonsController.java")
+ (implements android/view/View$OnTouchListener)
+
+
+(method (attrs public ) <init>([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 10)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getContainer()[object android/view/ViewGroup]
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getZoomControls()[object android/view/View]
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isAutoDismissed()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isVisible()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onTouch([object android/view/View] [object android/view/MotionEvent] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/MotionEvent])
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setAutoDismissed(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (boolean)
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setFocusable(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (boolean)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setOnZoomListener([object android/widget/ZoomButtonsController$OnZoomListener] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 ([object android/widget/ZoomButtonsController$OnZoomListener])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setVisible(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (boolean)
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setZoomInEnabled(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (boolean)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setZoomOutEnabled(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (boolean)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setZoomSpeed(long )void
+  (limit registers 5)
+  ; this: v2 ([object android/widget/ZoomButtonsController])
+  ; parameter[0] : v3 (long)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

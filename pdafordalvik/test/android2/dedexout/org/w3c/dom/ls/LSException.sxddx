@@ -1,0 +1,22 @@
+(class (attrs public ) org/w3c/dom/ls/LSException
+ (super java/lang/RuntimeException)
+ (source "LSException.java")
+
+ (field (attrs public static final ) PARSE_ERR short 81 )
+ (field (attrs public static final ) SERIALIZE_ERR short 82 )
+ (field (attrs public ) code short )
+
+(method (attrs public ) <init>(short [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object org/w3c/dom/ls/LSException])
+  ; parameter[0] : v3 (short)
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} java/lang/RuntimeException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

@@ -208,9 +208,9 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     val buffer = new StringBuffer()
     val meanRegular = (varPointsTo.totalCardi.toDouble / varPointsTo.totalEntries).toDouble
     val meanThrown = (throwPointsTo.totalCardi.toDouble / throwPointsTo.totalEntries).toDouble
+ 
 
-   
-
+    println("in statistics dump new")
     buffer.append("entry points: explored " +  exploredEns + "\n")
     
     buffer.append("Control states: " + numStates + "\n")
@@ -245,20 +245,17 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     }
 
     val stasticsDir = opts.statsDirName//opts.apkProjDir + File.separator + statisticsDirName
-    
+    println("the statistics Dir is: ", stasticsDir)
       val statDir = new Directory(new File(stasticsDir))
       if (!statDir.exists) {
         statDir.createDirectory(force = true)
         statDir.createFile(failIfExists = false)
-      
-
-     /* val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
-      val subfolder = new Directory(new File(subfolderPath))
-      if (!subfolder.exists) {
-        subfolder.createDirectory(force = true)
-        subfolder.createFile(failIfExists = false)
-      }*/
+      } 
+    
       val path = opts.statsPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
+      
+      println("the statistics path is: ", path)
+        
       val file = new File(path)
       if (!file.exists()) {
         file.createNewFile()
@@ -271,7 +268,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
       println("Statistics dumped into: " + path)
 
       path
-    } else ""
+    
   }
 
   /**
@@ -383,6 +380,49 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
      //all the init-ens pathss
       getLinkedEntryPointHead(opts) 
   }
+  
+    /**
+   *  get all the individual init methods.
+   *  
+   */
+  
+  def getAllInitEntryPoints (opts: AIOptions) : List[Stmt] = {
+     buildInitEntries(opts)
+     val res=
+      Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[Stmt]())((res, clsDefEntry) => {      
+          val clsName = clsDefEntry._1
+           // println(clsName)
+          val clsDef: DalvikClassDef = clsDefEntry._2
+          val linkedInitO = clsDef.linkedInitEntryStmt
+         // println(linkedInitO)
+          linkedInitO match{
+            case Some (id) => {
+              id :: res
+            }
+            case None => res
+          }
+      }) 
+      res
+  }
+  
+  /**
+   * get separate (unlinked) init entry points
+   */
+  
+  def setUnlinkedInitEntryPoints(opts :AIOptions)   ={
+    
+     Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foreach { 
+      case (className, clsDef) => {
+        val initDefs = clsDef.getInitMethods
+        val initEntries = buildInitEntriesHelper(initDefs, className)
+        println("init entryies for cls:" , className)
+        initEntries.foreach(println)
+        clsDef.unlinkedInitEntryPoints = initEntries
+      }
+     }
+  }
+  
+  
   
   
  /* *//**

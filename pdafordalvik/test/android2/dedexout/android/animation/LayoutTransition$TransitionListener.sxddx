@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/animation/LayoutTransition$TransitionListener
+ (super java/lang/Object)
+ (source "LayoutTransition.java")
+
+
+(method (attrs public abstract ) endTransition([object android/animation/LayoutTransition] [object android/view/ViewGroup] [object android/view/View] int )void
+)
+
+(method (attrs public abstract ) startTransition([object android/animation/LayoutTransition] [object android/view/ViewGroup] [object android/view/View] int )void
+)
+
+)

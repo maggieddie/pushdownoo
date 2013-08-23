@@ -1,0 +1,16 @@
+(interface (attrs public abstract synchronized ) java/lang/reflect/ParameterizedType
+ (super java/lang/Object)
+ (source "ParameterizedType.java")
+ (implements java/lang/reflect/Type)
+
+
+(method (attrs public abstract ) getActualTypeArguments()[array [object java/lang/reflect/Type]]
+)
+
+(method (attrs public abstract ) getOwnerType()[object java/lang/reflect/Type]
+)
+
+(method (attrs public abstract ) getRawType()[object java/lang/reflect/Type]
+)
+
+)

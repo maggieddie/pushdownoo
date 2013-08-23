@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/graphics/drawable/Animatable
+ (super java/lang/Object)
+ (source "Animatable.java")
+
+
+(method (attrs public abstract ) isRunning()boolean
+)
+
+(method (attrs public abstract ) start()void
+)
+
+(method (attrs public abstract ) stop()void
+)
+
+)

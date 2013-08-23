@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$ContactStatusColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) CONTACT_CHAT_CAPABILITY [object java/lang/String] "contact_chat_capability" )
+ (field (attrs public static final ) CONTACT_PRESENCE [object java/lang/String] "contact_presence" )
+ (field (attrs public static final ) CONTACT_STATUS [object java/lang/String] "contact_status" )
+ (field (attrs public static final ) CONTACT_STATUS_ICON [object java/lang/String] "contact_status_icon" )
+ (field (attrs public static final ) CONTACT_STATUS_LABEL [object java/lang/String] "contact_status_label" )
+ (field (attrs public static final ) CONTACT_STATUS_RES_PACKAGE [object java/lang/String] "contact_status_res_package" )
+ (field (attrs public static final ) CONTACT_STATUS_TIMESTAMP [object java/lang/String] "contact_status_ts" )
+
+)

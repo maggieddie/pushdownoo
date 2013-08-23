@@ -1,0 +1,56 @@
+(class (attrs synchronized ) org/apache/harmony/luni/util/OIDDatabase$DBEntry
+ (super java/lang/Object)
+ (source "OIDDatabase.java")
+
+ (field (attrs private final ) equivalents [object java/util/List] )
+ (field (attrs private final ) value [object java/lang/String] )
+
+(method (attrs ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/luni/util/OIDDatabase$DBEntry])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 173)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 169)
+  (new-instance v0 java/util/LinkedList)
+  (invoke-direct {v0} java/util/LinkedList/<init> )
+  (iput-object-quick v0 v1 org/apache/harmony/luni/util/OIDDatabase$DBEntry.equivalents [object java/util/List])
+  (line 174)
+  (iput-object-quick v2 v1 org/apache/harmony/luni/util/OIDDatabase$DBEntry.value [object java/lang/String])
+  (line 175)
+  (return-void )
+ )
+
+(method (attrs ) addEquivalent([object org/apache/harmony/luni/util/OIDDatabase$DBEntry] )void
+  (limit registers 3)
+  ; this: v1 ([object org/apache/harmony/luni/util/OIDDatabase$DBEntry])
+  ; parameter[0] : v2 ([object org/apache/harmony/luni/util/OIDDatabase$DBEntry])
+  (line 178)
+  (iget-object-quick v0 v1 org/apache/harmony/luni/util/OIDDatabase$DBEntry.equivalents [object java/util/List])
+  (invoke-interface {v0 v2} java/util/List/add [object java/lang/Object] )
+  (line 179)
+  (return-void )
+)
+
+(method (attrs ) getAllEquivalents()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Lorg/apache/harmony/luni/util/OIDDatabase$DBEntry;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object org/apache/harmony/luni/util/OIDDatabase$DBEntry])
+  (line 186)
+  (new-instance v0 java/util/HashSet)
+  (iget-object-quick v1 v2 org/apache/harmony/luni/util/OIDDatabase$DBEntry.equivalents [object java/util/List])
+  (invoke-direct {v0 v1} java/util/HashSet/<init> [object java/util/Collection] )
+  (return-object v0)
+)
+
+(method (attrs ) getValue()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/luni/util/OIDDatabase$DBEntry])
+  (line 182)
+  (iget-object-quick v0 v1 org/apache/harmony/luni/util/OIDDatabase$DBEntry.value [object java/lang/String])
+  (return-object v0)
+)
+
+)

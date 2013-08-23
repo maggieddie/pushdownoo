@@ -1,0 +1,24 @@
+(class (attrs ) android/support/v4/view/ViewCompat$HCViewCompatImpl
+ (super android/support/v4/view/ViewCompat$GBViewCompatImpl)
+ (source "ViewCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$HCViewCompatImpl])
+  (line 153)
+  (invoke-direct {v0} android/support/v4/view/ViewCompat$GBViewCompatImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs ) getFrameTime()long
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$HCViewCompatImpl])
+  (line 155)
+  (invoke-static {} android/support/v4/view/ViewCompatHC/getFrameTime )
+  (nop )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/accounts/AccountManagerCallback
+ (super java/lang/Object)
+ (source "AccountManagerCallback.java")
+
+
+(method (attrs public abstract ) run([object android/accounts/AccountManagerFuture] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/accounts/AccountManagerFuture"  "<TV;>;)V")
+  )
+)
+
+)

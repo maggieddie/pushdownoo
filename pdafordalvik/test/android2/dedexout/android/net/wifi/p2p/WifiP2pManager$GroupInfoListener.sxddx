@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/net/wifi/p2p/WifiP2pManager$GroupInfoListener
+ (super java/lang/Object)
+ (source "WifiP2pManager.java")
+
+
+(method (attrs public abstract ) onGroupInfoAvailable([object android/net/wifi/p2p/WifiP2pGroup] )void
+)
+
+)

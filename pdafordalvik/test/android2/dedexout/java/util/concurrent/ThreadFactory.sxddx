@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) java/util/concurrent/ThreadFactory
+ (super java/lang/Object)
+ (source "ThreadFactory.java")
+
+
+(method (attrs public abstract ) newThread([object java/lang/Runnable] )[object java/lang/Thread]
+)
+
+)

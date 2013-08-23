@@ -1,0 +1,23 @@
+(class (attrs ) android/support/v4/view/ViewConfigurationCompatFroyo
+ (super java/lang/Object)
+ (source "ViewConfigurationCompatFroyo.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewConfigurationCompatFroyo])
+  (line 24)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) getScaledPagingTouchSlop([object android/view/ViewConfiguration] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/ViewConfiguration])
+  (line 26)
+  (invoke-virtual {v1} android/view/ViewConfiguration/getScaledPagingTouchSlop )
+  (move-result v0)
+  (return v0)
+ )
+
+)

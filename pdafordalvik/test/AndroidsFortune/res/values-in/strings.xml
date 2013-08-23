@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Keberuntungan yang terkenal untuk Android: mencetak acak, mudah-mudahan menarik, pepatah.</string>
+    <string name="about_copyright">Hak cipta © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune pada Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Untuk melihat informasi tentang aplikasi ini, Anda perlu menginstal OI About. Lihat http://www.openintents.org/ atau the Market (Pasar).</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Anda tampaknya tidak memiliki atau belum menginstal aplikasi Android Market. Mengabaikan.</string>
+    <string name="market_description_short">Fortune yang terkenal, sekarang untuk Android: cetak acak, mudah-mudahan menarik, pepatah, mengutip, perkataan, aforisme, lelucon, teks, ...</string>
+    <string name="menu_preferences">Pilihan</string>
+    <string name="menu_about">"Tentang Android's Fortune"</string>
+    <string name="menu_refresh">Refresh Cookie</string>
+    <string name="menu_get_more_cookies">Mendapatkan lebih banyak cookies</string>
+    <string name="menu_send">Kirim sebagai Text</string>
+    <string name="menu_web_search">Cari dalam Web</string>
+    <string name="menu_feedback">Beri Masukan</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Kirim melalui:</string>
+    <string name="chooser_web_search_action">Cari web melalui:</string>
+    <string name="preferences_activity_name">"Android's Fortune Pilihan"</string>
+    <string name="resources">Referensi</string>
+    <string name="title_cp_equal">Kesempatan yang sama antara file cookie</string>
+    <string name="summary_cp_equal">Apakah kesempatan dimana cookie ditampilkan dari file cookie tertentu adalah sama diantara file cookie, terlepas dari ukuran file cookie.</string>
+    <string name="title_ep_folder">Folder yang berisi file cookie</string>
+    <string name="summary_ep_folder">Masuk ke folder di mana Anda menyimpan file cookie Anda.</string>
+    <string name="dialog_title_ep_folder">Masuk ke folder yang berisi file cookie</string>
+    <string name="title_ps_files">File cookie</string>
+    <string name="summary_ps_files">Pilih file cookie yang akan digunakan dari folder di atas (tidak termasuk file .num).</string>
+    <string name="summary_ps_files_warning">PERINGATAN: Beberapa file yang dipilih tidak memiliki asosiasi file .num! Klik di sini untuk mengubah pilihan.</string>
+    <string name="in_app_display">Tampilan</string>
+    <string name="title_lp_font">Gaya huruf</string>
+    <string name="summary_lp_font">Monospace dapat bermanfaat bagi cookie ascii-art.</string>
+    <string name="dialog_title_lp_font">Ubah gaya huruf</string>
+    <string name="title_ep_fontsize">Ukuran font</string>
+    <string name="summary_ep_fontsize">Ukuran font dalam point-point.</string>
+    <string name="dialog_title_ep_fontsize">Ubah ukuran huruf</string>
+    <string name="title_cp_wrap">Wrap teks</string>
+    <string name="summary_cp_wrap">Pas-kan/Sesuaikan cookie teks pada layar. Nonaktifkan untuk melihat teks cookie yang diformat secara benar dengan linebreaks dan ascii-art.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Gaya huruf</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Ubah gaya font widget</string>
+    <string name="title_ep_widget_period">Periode pembaruan widget</string>
+    <string name="summary_ep_widget_period">Periode waktu dalam menit di antara refresh widget.</string>
+    <string name="dialog_title_ep_widget_period">Ubah periode pembaruan widget</string>
+    <string name="notifications">Pemberitahuan</string>
+    <string name="title_cp_notif_boot">Pemberitahuan pada saat startup</string>
+    <string name="summary_cp_notif_boot">Sarankan cookie pada sistem startup.</string>
+    <string name="title_cp_notif_time">Pemberitahuan periodik</string>
+    <string name="summary_cp_notif_time">Sarankan cookie pada interval waktu.</string>
+    <string name="title_ep_time">Periode waktu</string>
+    <string name="summary_ep_time">Periode waktu dalam menit di antara pemberitahuan.</string>
+    <string name="dialog_title_ep_time">Ubah periode waktu</string>
+    <string name="dialog_title_num">Buat file-file .num?</string>
+    <string name="dialog_message_num_warning">Beberapa file yang dipilih tidak memiliki asosiasi file .num. Apakah saya harus mencoba dan membentuk file .num?</string>
+    <string name="no_cookie_files">"Tidak ada file-file cookie yang dikonfigurasi. Silakan buka preferensi dan pilih beberapa file-file cookie. 
+
+Lihat: Http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Ini bukan fortune cookie!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune Cookie</string>
+    <string name="dialog_install">Harap tunggu ketika menginstal file cookie sampel...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Fortune cookie</string>
+    <string name="widget_loading">Loading a cookie...</string>
+    <string name="widget_error">"Tidak ada file cookie yang dikonfigurasi, atau Android's Fortune tutup karena memori bebas terlalu sedikit atau instal ulang. Tekan untuk membuka Android's Fortune!"</string>
+    <string name="widget_dialog_activity_name">Pilih operasi</string>
+    <string name="label_b_refresh">Perbarui</string>
+    <string name="label_b_show_cookie">Tampilkan cookie</string>
+    <string name="label_b_cancel">Batalkan</string>
+    <string name="error_no_file_name">Sebuah nama file tidak ditentukan.</string>
+    <string name="error_arg_twice">Sebuah argumen terlewati dua kali.</string>
+    <string name="error_num_file_exists">File. Num yang akan dibuat tiba-tiba sudah ada.</string>
+    <string name="error_no_valid_cookie_file">File yang dipilih adalah bukan file cookie yang valid.</string>
+    <string name="error_file_not_exists_or_no_num">File cookie tidak ada atau tidak memiliki file num. yang terkait padanya:</string>
+    <string name="error_no_write_perms">Anda tidak memiliki izin untuk menulis</string>
+    <string name="toast_read_cookie_failed">Membaca cookie gagal:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Apakah Anda yakin memiliki kartu SD yang terpasang?"</string>
+    <string name="toast_read_cookie_failed_internal">Sebuah kesalahan internal terjadi saat membaca cookie (laporkan bug):</string>
+    <string name="toast_generation_num_failed">Pembentukan file .num gagal:</string>
+    <string name="toast_not_a_dir">Folder tertentu (yang di atas pada preferensi) adalah bukan direktori yang benar:</string>
+    <string name="toast_selected_file_lost">Sebuah file yang sebelumnya dipilih tidak lagi ditemukan:</string>
+    <string name="toast_value_invalid">Nilai yang dimasukkan tidak valid. Atur ke:</string>
+    <string name="toast_widget_period_short">Sebuah periode yang kurang dari 60 menit kemungkinan dapat mempengaruhi kinerja dan masa pakai baterai secara negatif.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune Preferensi Pembaruan Pemeriksaan"</string>
+    <string name="title_ps_versioncheck">Pembaruan pemerikasaan</string>
+    <string name="summary_ps_versioncheck">Pemeriksaan otomatis untuk pembaruan.</string>
+    <string name="vc_notify_ticker">Pembaruan aplikasi</string>
+    <string name="vc_notify_title">Aplikasi diperbarui</string>
+    <string name="vc_notify_message">Download sebuah versi baru</string>
+    <string name="vc_category">Pembaruan pemeriksaan</string>
+    <string name="vc_enabled_title">Aktifkan</string>
+    <string name="vc_enabled_summary">Apakah pemeriksaan untuk pembaruan aplikasi diaktifkan atau tidak.</string>
+    <string name="vc_confirm_title">"Konfirmasi pembaruan Android's Fortune"</string>
+    <string name="vc_confirm_text">Apakah Anda ingin memperbarui aplikasi ini ke versi terbaru?</string>
+    <string name="vc_confirm_stop">Jangan memberitahu saya lagi tentang pembaruan ini</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Periksa URI</string>
+    <string name="vc_check_uri_summary">URI yang akan diperiksa untuk pembaruan aplikasi.</string>
+    <string name="about_translators">Launchpad Contributions: princessay https://launchpad.net/~adyaaydy wu ve https://launchpad.net/~polaries-ling</string>
+</resources>

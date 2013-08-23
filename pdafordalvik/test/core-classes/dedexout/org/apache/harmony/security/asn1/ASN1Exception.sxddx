@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) org/apache/harmony/security/asn1/ASN1Exception
+ (super java/io/IOException)
+ (source "ASN1Exception.java")
+
+ (field (attrs private static final ) serialVersionUID long -539632403); 0xdfd5dced )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/security/asn1/ASN1Exception])
+  (line 41)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 42)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/asn1/ASN1Exception])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 50)
+  (invoke-direct {v0 v1} java/io/IOException/<init> [object java/lang/String] )
+  (line 51)
+  (return-void )
+ )
+
+)

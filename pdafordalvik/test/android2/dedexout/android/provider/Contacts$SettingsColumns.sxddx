@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/provider/Contacts$SettingsColumns
+ (super java/lang/Object)
+ (source "Contacts.java")
+
+ (field (attrs public static final ) KEY [object java/lang/String] "key" )
+ (field (attrs public static final ) VALUE [object java/lang/String] "value" )
+ (field (attrs public static final ) _SYNC_ACCOUNT [object java/lang/String] "_sync_account" )
+ (field (attrs public static final ) _SYNC_ACCOUNT_TYPE [object java/lang/String] "_sync_account_type" )
+
+)

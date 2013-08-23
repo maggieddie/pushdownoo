@@ -1,0 +1,95 @@
+(class (attrs public ) android/graphics/SurfaceTexture
+ (super java/lang/Object)
+ (source "SurfaceTexture.java")
+
+
+(method (attrs public ) <init>(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  ; parameter[0] : v3 (int)
+  (line 14)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected ) finalize()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Throwable])
+  )
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTimestamp()long
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getTransformMatrix([array float] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  ; parameter[0] : v3 ([array float])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) release()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setDefaultBufferSize(int int )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 (int)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setOnFrameAvailableListener([object android/graphics/SurfaceTexture$OnFrameAvailableListener] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  ; parameter[0] : v3 ([object android/graphics/SurfaceTexture$OnFrameAvailableListener])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) updateTexImage()void
+  (limit registers 3)
+  ; this: v2 ([object android/graphics/SurfaceTexture])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

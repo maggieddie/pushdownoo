@@ -1,0 +1,51 @@
+(interface (attrs public abstract synchronized ) org/xml/sax/DocumentHandler
+ (super java/lang/Object)
+ (source "DocumentHandler.java")
+
+
+(method (attrs public abstract ) characters([array char] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) endDocument()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) endElement([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) ignorableWhitespace([array char] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) processingInstruction([object java/lang/String] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) setDocumentLocator([object org/xml/sax/Locator] )void
+)
+
+(method (attrs public abstract ) startDocument()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) startElement([object java/lang/String] [object org/xml/sax/AttributeList] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+)

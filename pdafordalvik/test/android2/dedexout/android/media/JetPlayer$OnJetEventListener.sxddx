@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/media/JetPlayer$OnJetEventListener
+ (super java/lang/Object)
+ (source "JetPlayer.java")
+
+
+(method (attrs public abstract ) onJetEvent([object android/media/JetPlayer] short byte byte byte byte )void
+)
+
+(method (attrs public abstract ) onJetNumQueuedSegmentUpdate([object android/media/JetPlayer] int )void
+)
+
+(method (attrs public abstract ) onJetPauseUpdate([object android/media/JetPlayer] int )void
+)
+
+(method (attrs public abstract ) onJetUserIdUpdate([object android/media/JetPlayer] int int )void
+)
+
+)

@@ -1,0 +1,53 @@
+(class (attrs public abstract ) com/cs141/kittey/kittey/KitteyQuote
+ (super java/lang/Object)
+ (source "KitteyQuote.java")
+
+ (field (attrs ) kitteyquotes [object java/util/ArrayList] )
+ (field (attrs ) randomnumber int )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyQuote])
+  (line 15)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 17)
+  (const/4 v0 0)
+  (iput v0 v1 com/cs141/kittey/kittey/KitteyQuote.randomnumber int)
+  (line 19)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 com/cs141/kittey/kittey/KitteyQuote.kitteyquotes [object java/util/ArrayList])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) backupQuote()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyQuote])
+  (line 25)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) getQuote()[object java/lang/String]
+)
+
+(method (attrs public ) getQuoteSize()int
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyQuote])
+  (line 35)
+  (iget-object v0 v1 com/cs141/kittey/kittey/KitteyQuote.kitteyquotes [object java/util/ArrayList])
+  (invoke-virtual {v0} java/util/ArrayList/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hasBackup()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/cs141/kittey/kittey/KitteyQuote])
+  (line 30)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

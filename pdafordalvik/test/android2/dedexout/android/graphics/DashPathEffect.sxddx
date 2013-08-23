@@ -1,0 +1,19 @@
+(class (attrs public ) android/graphics/DashPathEffect
+ (super android/graphics/PathEffect)
+ (source "DashPathEffect.java")
+
+
+(method (attrs public ) <init>([array float] float )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/DashPathEffect])
+  ; parameter[0] : v3 ([array float])
+  ; parameter[1] : v4 (float)
+  (line 5)
+  (invoke-direct {v2} android/graphics/PathEffect/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

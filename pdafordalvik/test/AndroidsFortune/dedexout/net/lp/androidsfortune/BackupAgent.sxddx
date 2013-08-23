@@ -1,0 +1,38 @@
+(class (attrs public ) net/lp/androidsfortune/BackupAgent
+ (super android/app/backup/BackupAgentHelper)
+ (source "BackupAgent.java")
+
+ (field (attrs static final ) PREFS_BACKUP_KEY [object java/lang/String] "prefs" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/BackupAgent])
+  (line 35)
+  (invoke-direct {v0} android/app/backup/BackupAgentHelper/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCreate()void
+  (limit registers 5)
+  ; this: v4 ([object net/lp/androidsfortune/BackupAgent])
+  (line 45)
+  (invoke-super {v4} android/app/backup/BackupAgentHelper/onCreate )
+  (line 49)
+  (new-instance v0 android/app/backup/SharedPreferencesBackupHelper)
+  (const/4 v1 2)
+  (new-array v1 v1 [array [object java/lang/String]])
+  (const/4 v2 0)
+  (const-string v3 "AndroidsFortunePrefs")
+  (aput-object v3 v1 v2)
+  (const/4 v2 1)
+  (sget-object v3 com/tomgibara/android/veecheck/util/PrefSettings.SHARED_PREFS_NAME [object java/lang/String])
+  (aput-object v3 v1 v2)
+  (invoke-direct {v0 v4 v1} android/app/backup/SharedPreferencesBackupHelper/<init> [object android/content/Context] [array [object java/lang/String]] )
+  (line 50)
+  (const-string v1 "prefs")
+  (invoke-virtual {v4 v1 v0} net/lp/androidsfortune/BackupAgent/addHelper [object java/lang/String] [object android/app/backup/BackupHelper] )
+  (line 53)
+  (return-void )
+)
+
+)

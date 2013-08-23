@@ -1,0 +1,24 @@
+(interface (attrs public abstract synchronized ) java/security/cert/X509Extension
+ (super java/lang/Object)
+ (source "X509Extension.java")
+
+
+(method (attrs public abstract ) getCriticalExtensionOIDs()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getExtensionValue([object java/lang/String] )[array byte]
+)
+
+(method (attrs public abstract ) getNonCriticalExtensionOIDs()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) hasUnsupportedCriticalExtension()boolean
+)
+
+)

@@ -1,0 +1,158 @@
+(class (attrs public ) org/xml/sax/InputSource
+ (super java/lang/Object)
+ (source "InputSource.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/io/InputStream] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  (line 6)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/io/Reader] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/io/Reader])
+  (line 7)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getByteStream()[object java/io/InputStream]
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getCharacterStream()[object java/io/Reader]
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getEncoding()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPublicId()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSystemId()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setByteStream([object java/io/InputStream] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setCharacterStream([object java/io/Reader] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/io/Reader])
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setEncoding([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setPublicId([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSystemId([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object org/xml/sax/InputSource])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

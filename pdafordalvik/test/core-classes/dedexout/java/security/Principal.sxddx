@@ -1,0 +1,18 @@
+(interface (attrs public abstract synchronized ) java/security/Principal
+ (super java/lang/Object)
+ (source "Principal.java")
+
+
+(method (attrs public abstract ) equals([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) hashCode()int
+)
+
+(method (attrs public abstract ) toString()[object java/lang/String]
+)
+
+)

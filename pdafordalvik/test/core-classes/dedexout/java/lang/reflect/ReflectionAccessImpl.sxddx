@@ -1,0 +1,71 @@
+(class (attrs final synchronized ) java/lang/reflect/ReflectionAccessImpl
+ (super java/lang/Object)
+ (source "ReflectionAccessImpl.java")
+ (implements org/apache/harmony/kernel/vm/ReflectionAccess)
+
+ (field (attrs static final ) THE_ONE [object java/lang/reflect/ReflectionAccessImpl] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 27)
+  (new-instance v0 java/lang/reflect/ReflectionAccessImpl)
+  (invoke-direct {v0} java/lang/reflect/ReflectionAccessImpl/<init> )
+  (sput-object v0 java/lang/reflect/ReflectionAccessImpl.THE_ONE [object java/lang/reflect/ReflectionAccessImpl])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/reflect/ReflectionAccessImpl])
+  (line 33)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) accessibleClone([object java/lang/reflect/Method] )[object java/lang/reflect/Method]
+  (limit registers 4)
+  ; this: v2 ([object java/lang/reflect/ReflectionAccessImpl])
+  ; parameter[0] : v3 ([object java/lang/reflect/Method])
+  (line 46)
+  (new-instance v0 java/lang/reflect/Method)
+  (invoke-direct {v0 v3} java/lang/reflect/Method/<init> [object java/lang/reflect/Method] )
+  (line 47)
+  (const/4 v1 1)
+  (invoke-virtual-quick {v0 v1} java/lang/reflect/Method/setAccessibleNoCheck boolean )
+  (line 48)
+  (return-object v0)
+)
+
+(method (attrs public ) clone([object java/lang/reflect/Field] )[object java/lang/reflect/Field]
+  (limit registers 3)
+  ; this: v1 ([object java/lang/reflect/ReflectionAccessImpl])
+  ; parameter[0] : v2 ([object java/lang/reflect/Field])
+  (line 42)
+  (new-instance v0 java/lang/reflect/Field)
+  (invoke-direct {v0 v2} java/lang/reflect/Field/<init> [object java/lang/reflect/Field] )
+  (return-object v0)
+)
+
+(method (attrs public ) clone([object java/lang/reflect/Method] )[object java/lang/reflect/Method]
+  (limit registers 3)
+  ; this: v1 ([object java/lang/reflect/ReflectionAccessImpl])
+  ; parameter[0] : v2 ([object java/lang/reflect/Method])
+  (line 38)
+  (new-instance v0 java/lang/reflect/Method)
+  (invoke-direct {v0 v2} java/lang/reflect/Method/<init> [object java/lang/reflect/Method] )
+  (return-object v0)
+)
+
+(method (attrs public ) setAccessibleNoCheck([object java/lang/reflect/AccessibleObject] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object java/lang/reflect/ReflectionAccessImpl])
+  ; parameter[0] : v1 ([object java/lang/reflect/AccessibleObject])
+  ; parameter[1] : v2 (boolean)
+  (line 52)
+  (invoke-virtual-quick {v1 v2} java/lang/reflect/AccessibleObject/setAccessibleNoCheck boolean )
+  (line 53)
+  (return-void )
+)
+
+)

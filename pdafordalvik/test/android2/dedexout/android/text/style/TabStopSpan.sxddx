@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) android/text/style/TabStopSpan
+ (super java/lang/Object)
+ (source "TabStopSpan.java")
+ (implements android/text/style/ParagraphStyle)
+
+
+(method (attrs public abstract ) getTabStop()int
+)
+
+)

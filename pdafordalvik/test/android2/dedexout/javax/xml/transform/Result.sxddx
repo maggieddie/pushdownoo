@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) javax/xml/transform/Result
+ (super java/lang/Object)
+ (source "Result.java")
+
+ (field (attrs public static final ) PI_DISABLE_OUTPUT_ESCAPING [object java/lang/String] "javax.xml.transform.disable-output-escaping" )
+ (field (attrs public static final ) PI_ENABLE_OUTPUT_ESCAPING [object java/lang/String] "javax.xml.transform.enable-output-escaping" )
+
+(method (attrs public abstract ) getSystemId()[object java/lang/String]
+)
+
+(method (attrs public abstract ) setSystemId([object java/lang/String] )void
+)
+
+)

@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/util/NoSuchElementException
+ (super java/lang/RuntimeException)
+ (source "NoSuchElementException.java")
+
+ (field (attrs private static final ) serialVersionUID long -537166851); 0xdffb7bfd )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/NoSuchElementException])
+  (line 39)
+  (invoke-direct {v0} java/lang/RuntimeException/<init> )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/NoSuchElementException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 50)
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 51)
+  (return-void )
+ )
+
+)

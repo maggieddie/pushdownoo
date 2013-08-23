@@ -1,0 +1,73 @@
+(class (attrs public ) android/support/v4/app/Fragment$SavedState
+ (super java/lang/Object)
+ (source "Fragment.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+ (field (attrs final ) mState [object android/os/Bundle] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 316)
+  (new-instance v0 android/support/v4/app/Fragment$SavedState$1)
+  (invoke-direct {v0} android/support/v4/app/Fragment$SavedState$1/<init> )
+  (sput-object v0 android/support/v4/app/Fragment$SavedState.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/os/Bundle] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/Fragment$SavedState])
+  ; parameter[0] : v1 ([object android/os/Bundle])
+  (line 295)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 296)
+  (iput-object v1 v0 android/support/v4/app/Fragment$SavedState.mState [object android/os/Bundle])
+  (line 297)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/os/Parcel] [object java/lang/ClassLoader] )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 299)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 300)
+  (invoke-virtual {v2} android/os/Parcel/readBundle )
+  (move-result-object v0)
+  (iput-object v0 v1 android/support/v4/app/Fragment$SavedState.mState [object android/os/Bundle])
+  (line 301)
+  (if-eqz v3 l1a2dc)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.mState [object android/os/Bundle])
+  (if-eqz v0 l1a2dc)
+  (line 302)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.mState [object android/os/Bundle])
+  (invoke-virtual {v0 v3} android/os/Bundle/setClassLoader [object java/lang/ClassLoader] )
+  (label l1a2dc)
+  (line 304)
+  (return-void )
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  (line 308)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 (int)
+  (line 313)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.mState [object android/os/Bundle])
+  (invoke-virtual {v2 v0} android/os/Parcel/writeBundle [object android/os/Bundle] )
+  (line 314)
+  (return-void )
+)
+
+)

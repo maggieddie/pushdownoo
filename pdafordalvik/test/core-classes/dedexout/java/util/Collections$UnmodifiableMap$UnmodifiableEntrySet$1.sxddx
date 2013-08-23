@@ -1,0 +1,74 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/Iterator)
+
+ (field (attrs ) iterator [object java/util/Iterator] )
+ (field (attrs final ) this$0 [object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet] )
+
+(method (attrs ) <init>([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet] )void
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1])
+  ; parameter[0] : v2 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet])
+  (line 1261)
+  (iput-object-quick v2 v1 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1.this$0 [object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet])
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 1251)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1.this$0 [object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet])
+  (iget-object-quick v0 v0 )
+  (invoke-interface {v0} java/util/Collection/iterator )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1.iterator [object java/util/Iterator])
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1])
+  (line 1254)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1.iterator [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1])
+  (line 1261)
+  (invoke-virtual-quick {v1} java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) next()[object java/util/Map$Entry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1])
+  (label l10c59c)
+  (line 1258)
+  (new-instance v0 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$UnmodifiableMapEntry)
+  (iget-object-quick v1 v2 java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1.iterator [object java/util/Iterator])
+  (invoke-interface {v1} java/util/Iterator/next )
+  (move-result-object v2)
+  (label l10c5ac)
+  (check-cast v2 [object java/util/Map$Entry])
+  (invoke-direct {v0 v2} java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$UnmodifiableMapEntry/<init> [object java/util/Map$Entry] )
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableMap$UnmodifiableEntrySet$1])
+  (line 1262)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+)

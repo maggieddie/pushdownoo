@@ -1,0 +1,171 @@
+(class (attrs public ) android/net/sip/SipProfile
+ (super java/lang/Object)
+ (source "SipProfile.java")
+ (implements android/os/Parcelable)
+ (implements java/io/Serializable)
+ (implements java/lang/Cloneable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 37)
+  (const/4 v0 0)
+  (sput-object v0 android/net/sip/SipProfile.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 21)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 23)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getAuthUserName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 27)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getAutoRegistration()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 35)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getDisplayName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPassword()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 28)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPort()int
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getProfileName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 33)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getProtocol()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getProxyAddress()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 32)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSendKeepAlive()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 34)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getSipDomain()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getUriString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getUserName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/net/sip/SipProfile])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

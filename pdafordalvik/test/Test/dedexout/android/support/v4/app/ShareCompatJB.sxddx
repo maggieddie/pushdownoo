@@ -1,0 +1,23 @@
+(class (attrs ) android/support/v4/app/ShareCompatJB
+ (super java/lang/Object)
+ (source "ShareCompatJB.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/ShareCompatJB])
+  (line 21)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) escapeHtml([object java/lang/CharSequence] )[object java/lang/String]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 23)
+  (invoke-static {v1} android/text/Html/escapeHtml [object java/lang/CharSequence] )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+)

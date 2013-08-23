@@ -1,0 +1,128 @@
+(class (attrs public abstract ) javax/xml/parsers/DocumentBuilder
+ (super java/lang/Object)
+ (source "DocumentBuilder.java")
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) getDOMImplementation()[object org/w3c/dom/DOMImplementation]
+)
+
+(method (attrs public ) getSchema()[object javax/xml/validation/Schema]
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) isNamespaceAware()boolean
+)
+
+(method (attrs public abstract ) isValidating()boolean
+)
+
+(method (attrs public ) isXIncludeAware()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) newDocument()[object org/w3c/dom/Document]
+)
+
+(method (attrs public ) parse([object java/io/File] )[object org/w3c/dom/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  ; parameter[0] : v3 ([object java/io/File])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) parse([object java/io/InputStream] )[object org/w3c/dom/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) parse([object java/io/InputStream] [object java/lang/String] )[object org/w3c/dom/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+  (limit registers 5)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  ; parameter[0] : v3 ([object java/io/InputStream])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) parse([object java/lang/String] )[object org/w3c/dom/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) parse([object org/xml/sax/InputSource] )[object org/w3c/dom/Document]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+)
+
+(method (attrs public ) reset()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/DocumentBuilder])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) setEntityResolver([object org/xml/sax/EntityResolver] )void
+)
+
+(method (attrs public abstract ) setErrorHandler([object org/xml/sax/ErrorHandler] )void
+)
+
+)

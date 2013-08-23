@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent" binding:tabs="TAB(         {tag='1', activity='com.gueei.applocker.AppLockerPreferenceActivity', label='Preference'},         {tag='2', activity='com.gueei.applocker.ApplicationListActivity', label='Black List'}        )"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:binding="http://www.gueei.com/android-binding/">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</TabHost>

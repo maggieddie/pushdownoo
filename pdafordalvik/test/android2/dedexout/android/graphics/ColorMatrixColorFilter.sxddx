@@ -1,0 +1,30 @@
+(class (attrs public ) android/graphics/ColorMatrixColorFilter
+ (super android/graphics/ColorFilter)
+ (source "ColorMatrixColorFilter.java")
+
+
+(method (attrs public ) <init>([object android/graphics/ColorMatrix] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/ColorMatrixColorFilter])
+  ; parameter[0] : v3 ([object android/graphics/ColorMatrix])
+  (line 5)
+  (invoke-direct {v2} android/graphics/ColorFilter/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([array float] )void
+  (limit registers 4)
+  ; this: v2 ([object android/graphics/ColorMatrixColorFilter])
+  ; parameter[0] : v3 ([array float])
+  (line 6)
+  (invoke-direct {v2} android/graphics/ColorFilter/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

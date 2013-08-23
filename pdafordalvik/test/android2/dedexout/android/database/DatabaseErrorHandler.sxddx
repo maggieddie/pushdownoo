@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/database/DatabaseErrorHandler
+ (super java/lang/Object)
+ (source "DatabaseErrorHandler.java")
+
+
+(method (attrs public abstract ) onCorruption([object android/database/sqlite/SQLiteDatabase] )void
+)
+
+)

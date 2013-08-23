@@ -1,0 +1,36 @@
+(interface (attrs public abstract synchronized ) org/xml/sax/Parser
+ (super java/lang/Object)
+ (source "Parser.java")
+
+
+(method (attrs public abstract ) parse([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) parse([object org/xml/sax/InputSource] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException]  [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) setDTDHandler([object org/xml/sax/DTDHandler] )void
+)
+
+(method (attrs public abstract ) setDocumentHandler([object org/xml/sax/DocumentHandler] )void
+)
+
+(method (attrs public abstract ) setEntityResolver([object org/xml/sax/EntityResolver] )void
+)
+
+(method (attrs public abstract ) setErrorHandler([object org/xml/sax/ErrorHandler] )void
+)
+
+(method (attrs public abstract ) setLocale([object java/util/Locale] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/xml/sax/SAXException])
+  )
+)
+
+)

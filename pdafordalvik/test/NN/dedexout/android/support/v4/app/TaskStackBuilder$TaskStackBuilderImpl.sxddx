@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/app/TaskStackBuilder$TaskStackBuilderImpl
+ (super java/lang/Object)
+ (source "TaskStackBuilder.java")
+
+
+(method (attrs public abstract ) getPendingIntent([object android/content/Context] [array [object android/content/Intent]] int int [object android/os/Bundle] )[object android/app/PendingIntent]
+)
+
+)

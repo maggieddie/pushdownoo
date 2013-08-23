@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/drm/DrmStore$ConstraintsColumns
+ (super java/lang/Object)
+ (source "DrmStore.java")
+
+ (field (attrs public static final ) EXTENDED_METADATA [object java/lang/String] "extended_metadata" )
+ (field (attrs public static final ) LICENSE_AVAILABLE_TIME [object java/lang/String] "license_available_time" )
+ (field (attrs public static final ) LICENSE_EXPIRY_TIME [object java/lang/String] "license_expiry_time" )
+ (field (attrs public static final ) LICENSE_START_TIME [object java/lang/String] "license_start_time" )
+ (field (attrs public static final ) MAX_REPEAT_COUNT [object java/lang/String] "max_repeat_count" )
+ (field (attrs public static final ) REMAINING_REPEAT_COUNT [object java/lang/String] "remaining_repeat_count" )
+
+)

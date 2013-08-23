@@ -1,0 +1,41 @@
+(interface (attrs public abstract ) android/text/Spanned
+ (super java/lang/Object)
+ (source "Spanned.java")
+ (implements java/lang/CharSequence)
+
+ (field (attrs public static final ) SPAN_COMPOSING int 256); 0x100 )
+ (field (attrs public static final ) SPAN_EXCLUSIVE_EXCLUSIVE int 33); 0x21 )
+ (field (attrs public static final ) SPAN_EXCLUSIVE_INCLUSIVE int 34); 0x22 )
+ (field (attrs public static final ) SPAN_INCLUSIVE_EXCLUSIVE int 17); 0x11 )
+ (field (attrs public static final ) SPAN_INCLUSIVE_INCLUSIVE int 18); 0x12 )
+ (field (attrs public static final ) SPAN_INTERMEDIATE int 512); 0x200 )
+ (field (attrs public static final ) SPAN_MARK_MARK int 17); 0x11 )
+ (field (attrs public static final ) SPAN_MARK_POINT int 18); 0x12 )
+ (field (attrs public static final ) SPAN_PARAGRAPH int 51); 0x33 )
+ (field (attrs public static final ) SPAN_POINT_MARK int 33); 0x21 )
+ (field (attrs public static final ) SPAN_POINT_MARK_MASK int 51); 0x33 )
+ (field (attrs public static final ) SPAN_POINT_POINT int 34); 0x22 )
+ (field (attrs public static final ) SPAN_PRIORITY int 16711680); 0xff0000 )
+ (field (attrs public static final ) SPAN_PRIORITY_SHIFT int 16); 0x10 )
+ (field (attrs public static final ) SPAN_USER int -16777216); 0xff000000 )
+ (field (attrs public static final ) SPAN_USER_SHIFT int 24); 0x18 )
+
+(method (attrs public abstract ) getSpanEnd([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getSpanFlags([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getSpanStart([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getSpans(int int [object java/lang/Class] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">(II"  "Ljava/lang/Class"  "<TT;>;)[TT;")
+  )
+)
+
+(method (attrs public abstract ) nextSpanTransition(int int [object java/lang/Class] )int
+)
+
+)

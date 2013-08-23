@@ -1,0 +1,157 @@
+(class (attrs public ) gueei/binding/DynamicObject
+ (super gueei/binding/Observable)
+ (source "DynamicObject.java")
+ (implements gueei/binding/IPropertyContainer)
+ (implements gueei/binding/Observer)
+
+ (field (attrs private ) observables [object java/util/HashMap] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  (line 8)
+  (const-class v0 gueei/binding/DynamicObject)
+  (invoke-direct {v1 v0} gueei/binding/Observable/<init> [object java/lang/Class] )
+  (line 12)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (iput-object v0 v1 gueei/binding/DynamicObject.observables [object java/util/HashMap])
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) get()[object gueei/binding/DynamicObject]
+  (limit registers 1)
+  ; this: v0 ([object gueei/binding/DynamicObject])
+  (line 43)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/DynamicObject/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getCommandByName([object java/lang/String] )[object gueei/binding/Command]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 38)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getObservableByName([object java/lang/String] )[object gueei/binding/IObservable]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  ")"  "Lgueei/binding/IObservable"  "<*>;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 24)
+  (iget-object v0 v1 gueei/binding/DynamicObject.observables [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/get [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object gueei/binding/IObservable])
+  (return-object v0)
+)
+
+(method (attrs public ) getValueByName([object java/lang/String] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 47)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) observableExists([object java/lang/String] )boolean
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 20)
+  (iget-object v0 v1 gueei/binding/DynamicObject.observables [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onPropertyChanged([object gueei/binding/IObservable] [object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lgueei/binding/IObservable"  "<*>;"  "Ljava/util/Collection"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v1 ([object gueei/binding/IObservable])
+  ; parameter[1] : v2 ([object java/util/Collection])
+  (line 53)
+  (invoke-interface {v2 v0} java/util/Collection/add [object java/lang/Object] )
+  (line 54)
+  (invoke-virtual {v0 v2} gueei/binding/DynamicObject/notifyChanged [object java/util/Collection] )
+  (line 55)
+  (return-void )
+)
+
+(method (attrs public ) putObservable([object java/lang/String] [object gueei/binding/IObservable] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Lgueei/binding/IObservable"  "<*>;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object gueei/binding/IObservable])
+  (line 15)
+  (iget-object v0 v1 gueei/binding/DynamicObject.observables [object java/util/HashMap])
+  (invoke-virtual {v0 v2 v3} java/util/HashMap/put [object java/lang/Object] [object java/lang/Object] )
+  (line 16)
+  (invoke-interface {v3 v1} gueei/binding/IObservable/subscribe [object gueei/binding/Observer] )
+  (line 17)
+  (return-void )
+)
+
+(method (attrs public ) tryGetObservableValue([object java/lang/String] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/String;"  "TT;)TT;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object gueei/binding/DynamicObject])
+  ; parameter[0] : v3 ([object java/lang/String])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  (catch java/lang/Exception from l225c2 to l225d0 using l225d4)
+  (label l225b4)
+  (line 29)
+  (invoke-virtual {v2 v3} gueei/binding/DynamicObject/observableExists [object java/lang/String] )
+  (move-result v1)
+  (if-nez v1 l225c2)
+  (label l225c0)
+  (line 33)
+  (return-object v4)
+  (label l225c2)
+  (line 31)
+  (invoke-virtual {v2 v3} gueei/binding/DynamicObject/getObservableByName [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-interface {v1} gueei/binding/IObservable/get )
+  (label l225d0)
+  (move-result-object v4)
+  (goto l225c0)
+  (label l225d4)
+  (line 32)
+  (move-exception v0)
+  (line 33)
+  (goto l225c0)
+)
+
+)

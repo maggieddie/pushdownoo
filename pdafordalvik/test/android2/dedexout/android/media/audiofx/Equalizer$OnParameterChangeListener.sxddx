@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/media/audiofx/Equalizer$OnParameterChangeListener
+ (super java/lang/Object)
+ (source "Equalizer.java")
+
+
+(method (attrs public abstract ) onParameterChange([object android/media/audiofx/Equalizer] int int int int )void
+)
+
+)

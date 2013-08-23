@@ -1,0 +1,27 @@
+(class (attrs final synchronized ) java/util/concurrent/Semaphore$NonfairSync
+ (super java/util/concurrent/Semaphore$Sync)
+ (source "Semaphore.java")
+
+ (field (attrs private static final ) serialVersionUID long -73474314); 0xfb9edef6 )
+
+(method (attrs ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/concurrent/Semaphore$NonfairSync])
+  ; parameter[0] : v1 (int)
+  (line 196)
+  (invoke-direct {v0 v1} java/util/concurrent/Semaphore$Sync/<init> int )
+  (line 197)
+  (return-void )
+ )
+
+(method (attrs protected ) tryAcquireShared(int )int
+  (limit registers 3)
+  ; this: v1 ([object java/util/concurrent/Semaphore$NonfairSync])
+  ; parameter[0] : v2 (int)
+  (line 200)
+  (invoke-virtual-quick {v1 v2} java/util/concurrent/Semaphore$NonfairSync/nonfairTryAcquireShared int )
+  (move-result v0)
+  (return v0)
+)
+
+)

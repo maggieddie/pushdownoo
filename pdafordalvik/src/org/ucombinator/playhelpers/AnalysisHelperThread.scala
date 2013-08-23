@@ -21,6 +21,9 @@ import scala.util.matching.Regex
 class AnalysisHelperThread(params: Array[String]) extends Thread with WideningHelperTrait {
 
   import org.ucombinator.domains.CommonAbstractDomains._
+  
+  var exculsiveLibPatterns : List[Regex]= List[Regex]() 
+  
   // for information flow
   var sources: Set[(String, String)] = Set[(String, String)]()
   var sinks: Set[(String, String)] = Set[(String, String)]()

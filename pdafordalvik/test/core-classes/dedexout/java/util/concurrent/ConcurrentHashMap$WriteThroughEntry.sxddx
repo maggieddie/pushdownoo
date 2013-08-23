@@ -1,0 +1,49 @@
+(class (attrs final synchronized ) java/util/concurrent/ConcurrentHashMap$WriteThroughEntry
+ (super java/util/concurrent/ConcurrentHashMap$SimpleEntry)
+ (source "ConcurrentHashMap.java")
+
+ (field (attrs final ) this$0 [object java/util/concurrent/ConcurrentHashMap] )
+
+(method (attrs ) <init>([object java/util/concurrent/ConcurrentHashMap] [object java/lang/Object] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object java/util/concurrent/ConcurrentHashMap$WriteThroughEntry])
+  ; parameter[0] : v1 ([object java/util/concurrent/ConcurrentHashMap])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 1117)
+  (iput-object-quick v1 v0 java/util/concurrent/ConcurrentHashMap$WriteThroughEntry.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (line 1118)
+  (invoke-direct {v0 v2 v3} java/util/concurrent/ConcurrentHashMap$SimpleEntry/<init> [object java/lang/Object] [object java/lang/Object] )
+  (line 1119)
+  (return-void )
+ )
+
+(method (attrs public ) setValue([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)TV;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object java/util/concurrent/ConcurrentHashMap$WriteThroughEntry])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 1131)
+  (if-nez v4 lf7064)
+  (new-instance v1 java/lang/NullPointerException)
+  (invoke-direct {v1} java/lang/NullPointerException/<init> )
+  (throw v1)
+  (label lf7064)
+  (line 1132)
+  (invoke-super-quick {v3 v4} java/util/concurrent/ConcurrentHashMap$WriteThroughEntry/setValue [object java/lang/Object] )
+  (move-result-object v0)
+  (line 1133)
+  (iget-object-quick v1 v3 java/util/concurrent/ConcurrentHashMap$WriteThroughEntry.this$0 [object java/util/concurrent/ConcurrentHashMap])
+  (invoke-virtual-quick {v3} java/util/concurrent/ConcurrentHashMap$WriteThroughEntry/getKey )
+  (move-result-object v2)
+  (invoke-virtual-quick {v1 v2 v4} java/util/concurrent/ConcurrentHashMap/put [object java/lang/Object] [object java/lang/Object] )
+  (line 1134)
+  (return-object v0)
+)
+
+)

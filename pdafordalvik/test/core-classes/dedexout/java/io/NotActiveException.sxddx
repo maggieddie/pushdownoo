@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/io/NotActiveException
+ (super java/io/ObjectStreamException)
+ (source "NotActiveException.java")
+
+ (field (attrs private static final ) serialVersionUID long -839393243); 0xcdf7e025 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/io/NotActiveException])
+  (line 42)
+  (invoke-direct {v0} java/io/ObjectStreamException/<init> )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/io/NotActiveException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 53)
+  (invoke-direct {v0 v1} java/io/ObjectStreamException/<init> [object java/lang/String] )
+  (line 54)
+  (return-void )
+ )
+
+)

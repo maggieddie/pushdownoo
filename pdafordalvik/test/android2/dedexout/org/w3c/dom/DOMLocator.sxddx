@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) org/w3c/dom/DOMLocator
+ (super java/lang/Object)
+ (source "DOMLocator.java")
+
+
+(method (attrs public abstract ) getByteOffset()int
+)
+
+(method (attrs public abstract ) getColumnNumber()int
+)
+
+(method (attrs public abstract ) getLineNumber()int
+)
+
+(method (attrs public abstract ) getRelatedNode()[object org/w3c/dom/Node]
+)
+
+(method (attrs public abstract ) getUri()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getUtf16Offset()int
+)
+
+)

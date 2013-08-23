@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/widget/AutoCompleteTextView$Validator
+ (super java/lang/Object)
+ (source "AutoCompleteTextView.java")
+
+
+(method (attrs public abstract ) fixText([object java/lang/CharSequence] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) isValid([object java/lang/CharSequence] )boolean
+)
+
+)

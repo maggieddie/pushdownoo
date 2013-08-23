@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/SimpleAdapter$ViewBinder
+ (super java/lang/Object)
+ (source "SimpleAdapter.java")
+
+
+(method (attrs public abstract ) setViewValue([object android/view/View] [object java/lang/Object] [object java/lang/String] )boolean
+)
+
+)

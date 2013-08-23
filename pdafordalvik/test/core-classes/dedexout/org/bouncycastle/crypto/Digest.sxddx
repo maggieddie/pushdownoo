@@ -1,0 +1,24 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/crypto/Digest
+ (super java/lang/Object)
+ (source "Digest.java")
+
+
+(method (attrs public abstract ) doFinal([array byte] int )int
+)
+
+(method (attrs public abstract ) getAlgorithmName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getDigestSize()int
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+(method (attrs public abstract ) update(byte )void
+)
+
+(method (attrs public abstract ) update([array byte] int int )void
+)
+
+)

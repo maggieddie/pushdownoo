@@ -1,0 +1,34 @@
+(class (attrs synchronized ) java/security/cert/CertStore$1
+ (super java/lang/Object)
+ (source "CertStore.java")
+ (implements java/security/PrivilegedAction)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/security/cert/CertStore$1])
+  (line 297)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/CertStore$1])
+  (line 297)
+  (invoke-virtual-quick {v1} java/security/cert/CertStore$1/run )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) run()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/security/cert/CertStore$1])
+  (line 298)
+  (const-string v0 "certstore.type")
+  (invoke-static {v0} java/security/Security/getProperty [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

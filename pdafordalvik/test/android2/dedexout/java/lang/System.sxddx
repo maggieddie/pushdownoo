@@ -1,0 +1,261 @@
+(class (attrs public final ) java/lang/System
+ (super java/lang/Object)
+ (source "System.java")
+
+ (field (attrs public static final ) err [object java/io/PrintStream] )
+ (field (attrs public static final ) in [object java/io/InputStream] )
+ (field (attrs public static final ) out [object java/io/PrintStream] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (const/4 v0 0)
+  (line 36)
+  (sput-object v0 java/lang/System.in [object java/io/InputStream])
+  (sput-object v0 java/lang/System.out [object java/io/PrintStream])
+  (sput-object v0 java/lang/System.err [object java/io/PrintStream])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/lang/System])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) arraycopy([object java/lang/Object] int [object java/lang/Object] int int )void
+ )
+
+(method (attrs public static ) clearProperty([object java/lang/String] )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) console()[object java/io/Console]
+  (limit registers 2)
+  (line 21)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) currentTimeMillis()long
+ )
+
+(method (attrs public static ) exit(int )void
+  (limit registers 3)
+  ; parameter[0] : v2 (int)
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) gc()void
+  (limit registers 2)
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getProperties()[object java/util/Properties]
+  (limit registers 2)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getProperty([object java/lang/String] )[object java/lang/String]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getProperty([object java/lang/String] [object java/lang/String] )[object java/lang/String]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 18)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getSecurityManager()[object java/lang/SecurityManager]
+  (limit registers 2)
+  (line 22)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getenv([object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) getenv()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 2)
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) identityHashCode([object java/lang/Object] )int
+ )
+
+(method (attrs public static ) inheritedChannel()[object java/nio/channels/Channel]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (limit registers 2)
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) load([object java/lang/String] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 24)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) loadLibrary([object java/lang/String] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 25)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) mapLibraryName([object java/lang/String] )[object java/lang/String]
+ )
+
+(method (attrs public static native ) nanoTime()long
+ )
+
+(method (attrs public static ) runFinalization()void
+  (limit registers 2)
+  (line 26)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) runFinalizersOnExit(boolean )void
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+  (limit registers 3)
+  ; parameter[0] : v2 (boolean)
+  (line 29)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setErr([object java/io/PrintStream] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/io/PrintStream])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setIn([object java/io/InputStream] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/io/InputStream])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setOut([object java/io/PrintStream] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/io/PrintStream])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setProperties([object java/util/Properties] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/util/Properties])
+  (line 30)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setProperty([object java/lang/String] [object java/lang/String] )[object java/lang/String]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 19)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) setSecurityManager([object java/lang/SecurityManager] )void
+  (limit registers 3)
+  ; parameter[0] : v2 ([object java/lang/SecurityManager])
+  (line 31)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

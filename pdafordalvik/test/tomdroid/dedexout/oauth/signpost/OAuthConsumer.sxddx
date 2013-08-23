@@ -1,0 +1,55 @@
+(interface (attrs public abstract ) oauth/signpost/OAuthConsumer
+ (super java/lang/Object)
+ (source "OAuthConsumer.java")
+ (implements java/io/Serializable)
+
+
+(method (attrs public abstract ) getConsumerKey()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getConsumerSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getRequestParameters()[object oauth/signpost/http/HttpParameters]
+)
+
+(method (attrs public abstract ) getToken()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTokenSecret()[object java/lang/String]
+)
+
+(method (attrs public abstract ) setAdditionalParameters([object oauth/signpost/http/HttpParameters] )void
+)
+
+(method (attrs public abstract ) setMessageSigner([object oauth/signpost/signature/OAuthMessageSigner] )void
+)
+
+(method (attrs public abstract ) setSendEmptyTokens(boolean )void
+)
+
+(method (attrs public abstract ) setSigningStrategy([object oauth/signpost/signature/SigningStrategy] )void
+)
+
+(method (attrs public abstract ) setTokenWithSecret([object java/lang/String] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) sign([object java/lang/String] )[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object oauth/signpost/exception/OAuthMessageSignerException]  [object oauth/signpost/exception/OAuthExpectationFailedException]  [object oauth/signpost/exception/OAuthCommunicationException])
+  )
+)
+
+(method (attrs public abstract ) sign([object java/lang/Object] )[object oauth/signpost/http/HttpRequest]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object oauth/signpost/exception/OAuthMessageSignerException]  [object oauth/signpost/exception/OAuthExpectationFailedException]  [object oauth/signpost/exception/OAuthCommunicationException])
+  )
+)
+
+(method (attrs public abstract ) sign([object oauth/signpost/http/HttpRequest] )[object oauth/signpost/http/HttpRequest]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object oauth/signpost/exception/OAuthMessageSignerException]  [object oauth/signpost/exception/OAuthExpectationFailedException]  [object oauth/signpost/exception/OAuthCommunicationException])
+  )
+)
+
+)

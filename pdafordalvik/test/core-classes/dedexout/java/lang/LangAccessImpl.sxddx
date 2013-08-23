@@ -1,0 +1,77 @@
+(class (attrs final synchronized ) java/lang/LangAccessImpl
+ (super org/apache/harmony/kernel/vm/LangAccess)
+ (source "LangAccessImpl.java")
+
+ (field (attrs static final ) THE_ONE [object java/lang/LangAccessImpl] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 26)
+  (new-instance v0 java/lang/LangAccessImpl)
+  (invoke-direct {v0} java/lang/LangAccessImpl/<init> )
+  (sput-object v0 java/lang/LangAccessImpl.THE_ONE [object java/lang/LangAccessImpl])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/LangAccessImpl])
+  (line 31)
+  (invoke-direct {v0} org/apache/harmony/kernel/vm/LangAccess/<init> )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) getEnumValuesInOrder([object java/lang/Class] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TT;>;)[TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object java/lang/LangAccessImpl])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 37)
+  (invoke-virtual-quick {v3} java/lang/Class/getClassCache )
+  (move-result-object v0)
+  (line 38)
+  (invoke-virtual-quick {v0} java/lang/ClassCache/getEnumValuesInOrder )
+  (move-result-object v1)
+  (return-object v1)
+)
+
+(method (attrs public ) parkFor(long )void
+  (limit registers 4)
+  ; this: v1 ([object java/lang/LangAccessImpl])
+  ; parameter[0] : v2 (long)
+  (line 48)
+  (invoke-static {} java/lang/Thread/currentThread )
+  (nop )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0 v2 v3} java/lang/Thread/parkFor long )
+  (line 49)
+  (return-void )
+)
+
+(method (attrs public ) parkUntil(long )void
+  (limit registers 4)
+  ; this: v1 ([object java/lang/LangAccessImpl])
+  ; parameter[0] : v2 (long)
+  (line 53)
+  (invoke-static {} java/lang/Thread/currentThread )
+  (nop )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0 v2 v3} java/lang/Thread/parkUntil long )
+  (line 54)
+  (return-void )
+)
+
+(method (attrs public ) unpark([object java/lang/Thread] )void
+  (limit registers 2)
+  ; this: v0 ([object java/lang/LangAccessImpl])
+  ; parameter[0] : v1 ([object java/lang/Thread])
+  (line 43)
+  (invoke-virtual-quick {v1} java/lang/Thread/unpark )
+  (line 44)
+  (return-void )
+)
+
+)

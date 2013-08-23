@@ -1,0 +1,51 @@
+(class (attrs public ) gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute
+ (super gueei/binding/ViewAttribute)
+ (source "FilterViewAttribute.java")
+
+ (field (attrs private ) mValue [object android/widget/Filter] )
+
+(method (attrs public ) <init>([object android/widget/ListView] )void
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute])
+  ; parameter[0] : v3 ([object android/widget/ListView])
+  (line 9)
+  (const-class v0 android/widget/Filter)
+  (const-string v1 "filter")
+  (invoke-direct {v2 v0 v3 v1} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (line 10)
+  (return-void )
+ )
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 16)
+  (instance-of v0 v2 android/widget/Filter)
+  (if-eqz v0 l27244)
+  (line 17)
+  (check-cast v2 [object android/widget/Filter])
+  (iput-object v2 v1 gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute.mValue [object android/widget/Filter])
+  (label l27244)
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) get()[object android/widget/Filter]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute])
+  (line 23)
+  (iget-object v0 v1 gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute.mValue [object android/widget/Filter])
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/adapterView/listView/FilterViewAttribute/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

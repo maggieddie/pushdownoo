@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/graphics/SurfaceTexture$OnFrameAvailableListener
+ (super java/lang/Object)
+ (source "SurfaceTexture.java")
+
+
+(method (attrs public abstract ) onFrameAvailable([object android/graphics/SurfaceTexture] )void
+)
+
+)

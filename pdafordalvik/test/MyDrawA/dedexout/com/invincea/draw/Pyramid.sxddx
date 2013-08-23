@@ -1,0 +1,200 @@
+(class (attrs public ) com/invincea/draw/Pyramid
+ (super java/lang/Object)
+ (source "Pyramid.java")
+
+ (field (attrs private ) colorBuffer [object java/nio/FloatBuffer] )
+ (field (attrs private ) colors [array float] )
+ (field (attrs private ) indexBuffer [object java/nio/ByteBuffer] )
+ (field (attrs private ) indices [array byte] )
+ (field (attrs private ) vertexBuffer [object java/nio/FloatBuffer] )
+ (field (attrs private ) vertices [array float] )
+
+(method (attrs public ) <init>()void
+  (limit registers 10)
+  ; this: v9 ([object com/invincea/draw/Pyramid])
+  (const/4 v8 3)
+  (const/4 v7 2)
+  (const/4 v6 1)
+  (const/4 v5 0)
+  (const/4 v4 4)
+  (line 37)
+  (invoke-direct {v9} java/lang/Object/<init> )
+  (line 13)
+  (const/16 v2 15)
+  (new-array v2 v2 [array float])
+  (fill-array-data v2 l1ad0)
+  (line 18)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.vertices [array float])
+  (line 21)
+  (const/16 v2 20)
+  (new-array v2 v2 [array float])
+  (fill-array-data v2 l1b14)
+  (line 26)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.colors [array float])
+  (line 29)
+  (const/16 v2 12)
+  (new-array v2 v2 [array byte])
+  (line 30)
+  (aput-byte v7 v2 v5)
+  (aput-byte v4 v2 v6)
+  (aput-byte v8 v2 v7)
+  (line 31)
+  (aput-byte v6 v2 v8)
+  (aput-byte v4 v2 v4)
+  (const/4 v3 5)
+  (aput-byte v7 v2 v3)
+  (const/4 v3 7)
+  (line 32)
+  (aput-byte v4 v2 v3)
+  (const/16 v3 8)
+  (aput-byte v6 v2 v3)
+  (const/16 v3 9)
+  (line 33)
+  (aput-byte v4 v2 v3)
+  (const/16 v3 11)
+  (aput-byte v8 v2 v3)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.indices [array byte])
+  (line 39)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.vertices [array float])
+  (array-length v2 v2)
+  (mul-int/lit8 v2 v2 4)
+  (invoke-static {v2} java/nio/ByteBuffer/allocateDirect int )
+  (move-result-object v1)
+  (line 40)
+  (invoke-static {} java/nio/ByteOrder/nativeOrder )
+  (nop )
+  (move-result-object v2)
+  (invoke-virtual {v1 v2} java/nio/ByteBuffer/order [object java/nio/ByteOrder] )
+  (line 41)
+  (invoke-virtual {v1} java/nio/ByteBuffer/asFloatBuffer )
+  (move-result-object v2)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.vertexBuffer [object java/nio/FloatBuffer])
+  (line 42)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.vertexBuffer [object java/nio/FloatBuffer])
+  (iget-object v3 v9 com/invincea/draw/Pyramid.vertices [array float])
+  (invoke-virtual {v2 v3} java/nio/FloatBuffer/put [array float] )
+  (line 43)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.vertexBuffer [object java/nio/FloatBuffer])
+  (invoke-virtual {v2 v5} java/nio/FloatBuffer/position int )
+  (line 46)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.colors [array float])
+  (array-length v2 v2)
+  (mul-int/lit8 v2 v2 4)
+  (invoke-static {v2} java/nio/ByteBuffer/allocateDirect int )
+  (move-result-object v0)
+  (line 47)
+  (invoke-static {} java/nio/ByteOrder/nativeOrder )
+  (nop )
+  (move-result-object v2)
+  (invoke-virtual {v0 v2} java/nio/ByteBuffer/order [object java/nio/ByteOrder] )
+  (line 48)
+  (invoke-virtual {v0} java/nio/ByteBuffer/asFloatBuffer )
+  (move-result-object v2)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.colorBuffer [object java/nio/FloatBuffer])
+  (line 49)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.colorBuffer [object java/nio/FloatBuffer])
+  (iget-object v3 v9 com/invincea/draw/Pyramid.colors [array float])
+  (invoke-virtual {v2 v3} java/nio/FloatBuffer/put [array float] )
+  (line 50)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.colorBuffer [object java/nio/FloatBuffer])
+  (invoke-virtual {v2 v5} java/nio/FloatBuffer/position int )
+  (line 53)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.indices [array byte])
+  (array-length v2 v2)
+  (invoke-static {v2} java/nio/ByteBuffer/allocateDirect int )
+  (move-result-object v2)
+  (iput-object v2 v9 com/invincea/draw/Pyramid.indexBuffer [object java/nio/ByteBuffer])
+  (line 54)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.indexBuffer [object java/nio/ByteBuffer])
+  (iget-object v3 v9 com/invincea/draw/Pyramid.indices [array byte])
+  (invoke-virtual {v2 v3} java/nio/ByteBuffer/put [array byte] )
+  (line 55)
+  (iget-object v2 v9 com/invincea/draw/Pyramid.indexBuffer [object java/nio/ByteBuffer])
+  (invoke-virtual {v2 v5} java/nio/ByteBuffer/position int )
+  (line 56)
+  (return-void )
+  (line 13)
+  (label l1ad0)
+  (data-array
+    (0x00 0x00 0x80 0xBF) ; #0
+    (0x00 0x00 0x80 0xBF) ; #1
+    (0x00 0x00 0x80 0xBF) ; #2
+    (0x00 0x00 0x80 0x3F) ; #3
+    (0x00 0x00 0x80 0xBF) ; #4
+    (0x00 0x00 0x80 0xBF) ; #5
+    (0x00 0x00 0x80 0x3F) ; #6
+    (0x00 0x00 0x80 0xBF) ; #7
+    (0x00 0x00 0x80 0x3F) ; #8
+    (0x00 0x00 0x80 0xBF) ; #9
+    (0x00 0x00 0x80 0xBF) ; #10
+    (0x00 0x00 0x80 0x3F) ; #11
+    (0x00 0x00 0x00 0x00) ; #12
+    (0x00 0x00 0x80 0x3F) ; #13
+    (0x00 0x00 0x00 0x00) ; #14
+  )
+  (line 21)
+  (label l1b14)
+  (data-array
+    (0x00 0x00 0x00 0x00) ; #0
+    (0x00 0x00 0x00 0x00) ; #1
+    (0x00 0x00 0x80 0x3F) ; #2
+    (0x00 0x00 0x80 0x3F) ; #3
+    (0x00 0x00 0x00 0x00) ; #4
+    (0x00 0x00 0x80 0x3F) ; #5
+    (0x00 0x00 0x00 0x00) ; #6
+    (0x00 0x00 0x80 0x3F) ; #7
+    (0x00 0x00 0x00 0x00) ; #8
+    (0x00 0x00 0x00 0x00) ; #9
+    (0x00 0x00 0x80 0x3F) ; #10
+    (0x00 0x00 0x80 0x3F) ; #11
+    (0x00 0x00 0x00 0x00) ; #12
+    (0x00 0x00 0x80 0x3F) ; #13
+    (0x00 0x00 0x00 0x00) ; #14
+    (0x00 0x00 0x80 0x3F) ; #15
+    (0x00 0x00 0x80 0x3F) ; #16
+    (0x00 0x00 0x00 0x00) ; #17
+    (0x00 0x00 0x00 0x00) ; #18
+    (0x00 0x00 0x80 0x3F) ; #19
+  )
+ )
+
+(method (attrs public ) draw([object javax/microedition/khronos/opengles/GL10] )void
+  (limit registers 9)
+  ; this: v7 ([object com/invincea/draw/Pyramid])
+  ; parameter[0] : v8 ([object javax/microedition/khronos/opengles/GL10])
+  (const v6 32886) ; 0x8076)
+  (const v5 32884) ; 0x8074)
+  (const/16 v4 5126)
+  (const/4 v3 4)
+  (const/4 v2 0)
+  (line 60)
+  (const/16 v0 2305)
+  (invoke-interface {v8 v0} javax/microedition/khronos/opengles/GL10/glFrontFace int )
+  (line 63)
+  (invoke-interface {v8 v5} javax/microedition/khronos/opengles/GL10/glEnableClientState int )
+  (line 64)
+  (const/4 v0 3)
+  (iget-object v1 v7 com/invincea/draw/Pyramid.vertexBuffer [object java/nio/FloatBuffer])
+  (invoke-interface {v8 v0 v4 v2 v1} javax/microedition/khronos/opengles/GL10/glVertexPointer int int int [object java/nio/Buffer] )
+  (line 65)
+  (invoke-interface {v8 v6} javax/microedition/khronos/opengles/GL10/glEnableClientState int )
+  (line 66)
+  (iget-object v0 v7 com/invincea/draw/Pyramid.colorBuffer [object java/nio/FloatBuffer])
+  (invoke-interface {v8 v3 v4 v2 v0} javax/microedition/khronos/opengles/GL10/glColorPointer int int int [object java/nio/Buffer] )
+  (line 68)
+  (iget-object v0 v7 com/invincea/draw/Pyramid.indices [array byte])
+  (array-length v0 v0)
+  (const/16 v1 5121)
+  (line 69)
+  (iget-object v2 v7 com/invincea/draw/Pyramid.indexBuffer [object java/nio/ByteBuffer])
+  (line 68)
+  (invoke-interface {v8 v3 v0 v1 v2} javax/microedition/khronos/opengles/GL10/glDrawElements int int int [object java/nio/Buffer] )
+  (line 71)
+  (invoke-interface {v8 v5} javax/microedition/khronos/opengles/GL10/glDisableClientState int )
+  (line 72)
+  (invoke-interface {v8 v6} javax/microedition/khronos/opengles/GL10/glDisableClientState int )
+  (line 73)
+  (return-void )
+)
+
+)

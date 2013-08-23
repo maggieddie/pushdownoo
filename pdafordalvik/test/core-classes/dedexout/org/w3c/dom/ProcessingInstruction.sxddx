@@ -1,0 +1,19 @@
+(interface (attrs public abstract synchronized ) org/w3c/dom/ProcessingInstruction
+ (super java/lang/Object)
+ (source "ProcessingInstruction.java")
+ (implements org/w3c/dom/Node)
+
+
+(method (attrs public abstract ) getData()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTarget()[object java/lang/String]
+)
+
+(method (attrs public abstract ) setData([object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/w3c/dom/DOMException])
+  )
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/webkit/WebIconDatabase$IconListener
+ (super java/lang/Object)
+ (source "WebIconDatabase.java")
+
+
+(method (attrs public abstract ) onReceivedIcon([object java/lang/String] [object android/graphics/Bitmap] )void
+)
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) java/lang/reflect/TypeVariable
+ (super java/lang/Object)
+ (source "TypeVariable.java")
+ (implements java/lang/reflect/Type)
+
+
+(method (attrs public abstract ) getBounds()[array [object java/lang/reflect/Type]]
+)
+
+(method (attrs public abstract ) getGenericDeclaration()[object java/lang/reflect/GenericDeclaration]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TD;")
+  )
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+)

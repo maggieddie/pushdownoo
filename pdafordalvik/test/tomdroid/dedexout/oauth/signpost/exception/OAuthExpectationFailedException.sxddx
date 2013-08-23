@@ -1,0 +1,16 @@
+(class (attrs public ) oauth/signpost/exception/OAuthExpectationFailedException
+ (super oauth/signpost/exception/OAuthException)
+ (source "OAuthExpectationFailedException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object oauth/signpost/exception/OAuthExpectationFailedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 21)
+  (invoke-direct {v0 v1} oauth/signpost/exception/OAuthException/<init> [object java/lang/String] )
+  (line 22)
+  (return-void )
+ )
+
+)

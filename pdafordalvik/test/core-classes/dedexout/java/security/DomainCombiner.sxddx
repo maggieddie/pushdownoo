@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) java/security/DomainCombiner
+ (super java/lang/Object)
+ (source "DomainCombiner.java")
+
+
+(method (attrs public abstract ) combine([array [object java/security/ProtectionDomain]] [array [object java/security/ProtectionDomain]] )[array [object java/security/ProtectionDomain]]
+)
+
+)

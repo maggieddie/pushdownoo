@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/view/accessibility/AccessibilityEventSource
+ (super java/lang/Object)
+ (source "AccessibilityEventSource.java")
+
+
+(method (attrs public abstract ) sendAccessibilityEvent(int )void
+)
+
+(method (attrs public abstract ) sendAccessibilityEventUnchecked([object android/view/accessibility/AccessibilityEvent] )void
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs synchronized ) org/apache/harmony/luni/util/ThreadLocalCache$2
+ (super org/apache/harmony/luni/util/ThreadLocalCache)
+ (source "ThreadLocalCache.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/apache/harmony/luni/util/ThreadLocalCache$2])
+  (line 79)
+  (invoke-direct {v0} org/apache/harmony/luni/util/ThreadLocalCache/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) initialValue()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/luni/util/ThreadLocalCache$2])
+  (line 79)
+  (invoke-virtual-quick {v1} org/apache/harmony/luni/util/ThreadLocalCache$2/initialValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) initialValue()[object java/nio/charset/CharsetDecoder]
+  (limit registers 2)
+  ; this: v1 ([object org/apache/harmony/luni/util/ThreadLocalCache$2])
+  (line 80)
+  (const-string v0 "UTF-8")
+  (invoke-static {v0} java/nio/charset/Charset/forName [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0} java/nio/charset/Charset/newDecoder )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

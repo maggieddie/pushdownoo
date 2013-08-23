@@ -1,0 +1,39 @@
+(class (attrs public final ) android/provider/CalendarContract$CalendarEntity
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+ (implements android/provider/BaseColumns)
+ (implements android/provider/CalendarContract$SyncColumns)
+ (implements android/provider/CalendarContract$CalendarColumns)
+
+ (field (attrs public static final ) CONTENT_URI [object android/net/Uri] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 60)
+  (const/4 v0 0)
+  (sput-object v0 android/provider/CalendarContract$CalendarEntity.CONTENT_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/CalendarContract$CalendarEntity])
+  (line 56)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newEntityIterator([object android/database/Cursor] )[object android/content/EntityIterator]
+  (limit registers 3)
+  ; parameter[0] : v2 ([object android/database/Cursor])
+  (line 57)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

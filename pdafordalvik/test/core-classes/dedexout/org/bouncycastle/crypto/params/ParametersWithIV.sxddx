@@ -1,0 +1,60 @@
+(class (attrs public synchronized ) org/bouncycastle/crypto/params/ParametersWithIV
+ (super java/lang/Object)
+ (source "ParametersWithIV.java")
+ (implements org/bouncycastle/crypto/CipherParameters)
+
+ (field (attrs private ) iv [array byte] )
+ (field (attrs private ) parameters [object org/bouncycastle/crypto/CipherParameters] )
+
+(method (attrs public ) <init>([object org/bouncycastle/crypto/CipherParameters] [array byte] )void
+  (limit registers 5)
+  ; this: v2 ([object org/bouncycastle/crypto/params/ParametersWithIV])
+  ; parameter[0] : v3 ([object org/bouncycastle/crypto/CipherParameters])
+  ; parameter[1] : v4 ([array byte])
+  (line 15)
+  (const/4 v0 0)
+  (array-length v1 v4)
+  (invoke-direct {v2 v3 v4 v0 v1} org/bouncycastle/crypto/params/ParametersWithIV/<init> [object org/bouncycastle/crypto/CipherParameters] [array byte] int int )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/bouncycastle/crypto/CipherParameters] [array byte] int int )void
+  (limit registers 7)
+  ; this: v2 ([object org/bouncycastle/crypto/params/ParametersWithIV])
+  ; parameter[0] : v3 ([object org/bouncycastle/crypto/CipherParameters])
+  ; parameter[1] : v4 ([array byte])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 23)
+  (invoke-direct-empty {v2} java/lang/Object/<init> )
+  (line 24)
+  (new-array v0 v6 [array byte])
+  (iput-object-quick v0 v2 org/bouncycastle/crypto/params/ParametersWithIV.iv [array byte])
+  (line 25)
+  (iput-object-quick v3 v2 org/bouncycastle/crypto/params/ParametersWithIV.parameters [object org/bouncycastle/crypto/CipherParameters])
+  (line 27)
+  (iget-object-quick v0 v2 org/bouncycastle/crypto/params/ParametersWithIV.iv [array byte])
+  (const/4 v1 0)
+  (invoke-static {v4 v5 v0 v1 v6} java/lang/System/arraycopy [object java/lang/Object] int [object java/lang/Object] int int )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getIV()[array byte]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ParametersWithIV])
+  (line 32)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/ParametersWithIV.iv [array byte])
+  (return-object v0)
+)
+
+(method (attrs public ) getParameters()[object org/bouncycastle/crypto/CipherParameters]
+  (limit registers 2)
+  ; this: v1 ([object org/bouncycastle/crypto/params/ParametersWithIV])
+  (line 37)
+  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/ParametersWithIV.parameters [object org/bouncycastle/crypto/CipherParameters])
+  (return-object v0)
+)
+
+)

@@ -67,9 +67,7 @@ object CommonUtils {
         }
       }
     }
-    
-
-    
+     
       
   def linkedListWrapper(res: List[Stmt])(as: List[Stmt]) : Option[Stmt] = {
     if (as.length == 0) None
@@ -250,9 +248,22 @@ object CommonUtils {
     (dotfilePath, svgFilePath)
   }
   
+  def getDumpFileName(opts: AIOptions, prefix: String): String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if(opts.doLRA) "-lra" else "" 
+    val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + ".txt"
+  }
 
-
+// stupid methods duplicates, should be replaced with getDumpFileName
   def getStatisticsDumpFileName(opts: AIOptions): String = {
+    println("called this statistics")
     val cfa = opts.analysisType match {
       case AnalysisType.KCFA => "-cfa"
       case AnalysisType.PDCFA => "-pdcfa"
@@ -261,7 +272,8 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + ".txt"
+    val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + ".txt"
   }
   
   def getReportName(opts: AIOptions): String = {
@@ -273,7 +285,8 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + "-least-permission" + ".txt"
+        val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + "-least-permission" + ".txt"
   }
   
   def getHeatReportName(opts: AIOptions) :String = {
@@ -297,7 +310,8 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + "-security" + ".html"
+        val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + "-security" + ".html"
   }
    
    def getRiskRankingReportName(opts: AIOptions) : String = {
@@ -309,7 +323,8 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + "-riskranking" + ".html"
+        val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + "-riskranking" + ".html"
    }
    
    def getClsRiskRankingReportName(opts: AIOptions) : String = {
@@ -321,7 +336,8 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + "-riskranking-classes" + ".html"
+        val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + "-riskranking-classes" + ".html"
    }
    
    def getMethRiskRankingReportName(opts: AIOptions) : String = {
@@ -333,12 +349,14 @@ object CommonUtils {
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
-    prefix + arity + cfa + gc + lrv + "-riskranking-methods" + ".html"
+        val godel = if(opts.godel) "-godel" else ""
+    prefix + arity + godel + cfa + gc + lrv + "-riskranking-methods" + ".html"
    }
   
   
   
   def getStatisticsDumpFolderFileName(opts: AIOptions) : String ={
+     
     opts.statsDirName + File.separator + getStatisticsDumpFileName(opts)
   }
   

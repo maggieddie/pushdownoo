@@ -1,0 +1,48 @@
+(class (attrs synchronized ) java/lang/Short$valueOfCache
+ (super java/lang/Object)
+ (source "Short.java")
+
+ (field (attrs private static final ) CACHE [array [object java/lang/Short]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 5)
+  (line 318)
+  (const/16 v1 256)
+  (new-array v1 v1 [array [object java/lang/Short]])
+  (sput-object v1 java/lang/Short$valueOfCache.CACHE [array [object java/lang/Short]])
+  (line 321)
+  (const/16 v0 65408)
+  (label l12c50c)
+  (const/16 v1 127)
+  (if-gt v0 v1 l12c532)
+  (line 322)
+  (sget-object v1 java/lang/Short$valueOfCache.CACHE [array [object java/lang/Short]])
+  (add-int/lit16 v2 v0 128)
+  (new-instance v3 java/lang/Short)
+  (int-to-short v4 v0)
+  (invoke-direct {v3 v4} java/lang/Short/<init> short )
+  (aput-object v3 v1 v2)
+  (line 321)
+  (add-int/lit8 v0 v0 1)
+  (goto l12c50c)
+  (label l12c532)
+  (line 324)
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/Short$valueOfCache])
+  (line 314)
+  (invoke-direct-empty {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) access$000()[array [object java/lang/Short]]
+  (limit registers 1)
+  (line 314)
+  (sget-object v0 java/lang/Short$valueOfCache.CACHE [array [object java/lang/Short]])
+  (return-object v0)
+ )
+
+)

@@ -1,0 +1,36 @@
+(class (attrs public synchronized ) org/bouncycastle/asn1/ocsp/OCSPResponseStatus
+ (super org/bouncycastle/asn1/DEREnumerated)
+ (source "OCSPResponseStatus.java")
+
+ (field (attrs public static final ) INTERNAL_ERROR int 2); 0x2 )
+ (field (attrs public static final ) MALFORMED_REQUEST int 1); 0x1 )
+ (field (attrs public static final ) SIG_REQUIRED int 5); 0x5 )
+ (field (attrs public static final ) SUCCESSFUL int 0); 0x0 )
+ (field (attrs public static final ) TRY_LATER int 3); 0x3 )
+ (field (attrs public static final ) UNAUTHORIZED int 6); 0x6 )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle/asn1/ocsp/OCSPResponseStatus])
+  ; parameter[0] : v1 (int)
+  (line 32)
+  (invoke-direct {v0 v1} org/bouncycastle/asn1/DEREnumerated/<init> int )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/bouncycastle/asn1/DEREnumerated] )void
+  (limit registers 3)
+  ; this: v1 ([object org/bouncycastle/asn1/ocsp/OCSPResponseStatus])
+  ; parameter[0] : v2 ([object org/bouncycastle/asn1/DEREnumerated])
+  (line 38)
+  (invoke-virtual-quick {v2} org/bouncycastle/asn1/DEREnumerated/getValue )
+  (move-result-object v0)
+  (invoke-virtual-quick {v0} java/math/BigInteger/intValue )
+  (move-result v0)
+  (invoke-direct {v1 v0} org/bouncycastle/asn1/DEREnumerated/<init> int )
+  (line 39)
+  (return-void )
+ )
+
+)

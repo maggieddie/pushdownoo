@@ -1,0 +1,45 @@
+(class (attrs public ) java/lang/annotation/IncompleteAnnotationException
+ (super java/lang/RuntimeException)
+ (source "IncompleteAnnotationException.java")
+
+
+(method (attrs public ) <init>([object java/lang/Class] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object java/lang/annotation/IncompleteAnnotationException])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 5)
+  (invoke-direct {v2} java/lang/RuntimeException/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) annotationType()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object java/lang/annotation/IncompleteAnnotationException])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) elementName()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object java/lang/annotation/IncompleteAnnotationException])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,55 @@
+(class (attrs public synchronized ) SQLite/Vm
+ (super java/lang/Object)
+ (source "Vm.java")
+
+ (field (attrs protected ) error_code int )
+ (field (attrs private ) handle long )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 0)
+  (line 76)
+  (invoke-static {} SQLite/Vm/internal_init )
+  (nop )
+  (line 77)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object SQLite/Vm])
+  (line 7)
+  (invoke-direct-empty {v2} java/lang/Object/<init> )
+  (line 13)
+  (const-wide/16 v0 0)
+  (iput-wide-quick v0 v2 SQLite/Vm.error_code int)
+  (line 19)
+  (const/4 v0 0)
+  (iput-quick v0 v2 SQLite/Vm.null)
+  (return-void )
+ )
+
+(method (attrs private static native ) internal_init()void
+ )
+
+(method (attrs public native ) compile()boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs protected native ) finalize()void
+)
+
+(method (attrs public native ) step([object SQLite/Callback] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+(method (attrs public native ) stop()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object SQLite/Exception])
+  )
+)
+
+)

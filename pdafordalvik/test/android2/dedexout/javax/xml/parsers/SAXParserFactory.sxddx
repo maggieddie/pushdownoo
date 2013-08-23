@@ -1,0 +1,139 @@
+(class (attrs public abstract ) javax/xml/parsers/SAXParserFactory
+ (super java/lang/Object)
+ (source "SAXParserFactory.java")
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newInstance()[object javax/xml/parsers/SAXParserFactory]
+  (limit registers 2)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) newInstance([object java/lang/String] [object java/lang/ClassLoader] )[object javax/xml/parsers/SAXParserFactory]
+  (limit registers 4)
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public abstract ) getFeature([object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException]  [object org/xml/sax/SAXNotRecognizedException]  [object org/xml/sax/SAXNotSupportedException])
+  )
+)
+
+(method (attrs public ) getSchema()[object javax/xml/validation/Schema]
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isNamespaceAware()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isValidating()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isXIncludeAware()boolean
+  (limit registers 3)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  (line 17)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public abstract ) newSAXParser()[object javax/xml/parsers/SAXParser]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException]  [object org/xml/sax/SAXException])
+  )
+)
+
+(method (attrs public abstract ) setFeature([object java/lang/String] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object javax/xml/parsers/ParserConfigurationException]  [object org/xml/sax/SAXNotRecognizedException]  [object org/xml/sax/SAXNotSupportedException])
+  )
+)
+
+(method (attrs public ) setNamespaceAware(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setSchema([object javax/xml/validation/Schema] )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  ; parameter[0] : v3 ([object javax/xml/validation/Schema])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setValidating(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setXIncludeAware(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object javax/xml/parsers/SAXParserFactory])
+  ; parameter[0] : v3 (boolean)
+  (line 16)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

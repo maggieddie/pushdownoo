@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/lang/reflect/GenericSignatureFormatError
+ (super java/lang/ClassFormatError)
+ (source "GenericSignatureFormatError.java")
+
+ (field (attrs private static final ) serialVersionUID long -37786629); 0xfdbf6bfb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/lang/reflect/GenericSignatureFormatError])
+  (line 34)
+  (invoke-direct {v0} java/lang/ClassFormatError/<init> )
+  (line 35)
+  (return-void )
+ )
+
+)

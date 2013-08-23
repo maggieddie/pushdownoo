@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/webkit/PluginStub
+ (super java/lang/Object)
+ (source "PluginStub.java")
+
+
+(method (attrs public abstract ) getEmbeddedView(int [object android/content/Context] )[object android/view/View]
+)
+
+(method (attrs public abstract ) getFullScreenView(int [object android/content/Context] )[object android/view/View]
+)
+
+)

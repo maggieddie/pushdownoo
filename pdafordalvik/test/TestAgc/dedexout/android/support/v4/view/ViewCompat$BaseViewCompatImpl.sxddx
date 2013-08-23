@@ -1,0 +1,203 @@
+(class (attrs ) android/support/v4/view/ViewCompat$BaseViewCompatImpl
+ (super java/lang/Object)
+ (source "ViewCompat.java")
+ (implements android/support/v4/view/ViewCompat$ViewCompatImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  (line 84)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) canScrollHorizontally([object android/view/View] int )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  (line 86)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) canScrollVertically([object android/view/View] int )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  (line 89)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getAccessibilityNodeProvider([object android/view/View] )[object android/support/v4/view/accessibility/AccessibilityNodeProviderCompat]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 138)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs ) getFrameTime()long
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  (line 129)
+  (const-wide/16 v0 10)
+  (return-wide v0)
+)
+
+(method (attrs public ) getImportantForAccessibility([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 132)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getOverScrollMode([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 92)
+  (const/4 v0 2)
+  (return v0)
+)
+
+(method (attrs public ) hasTransientState([object android/view/View] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 111)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  (line 105)
+  (return-void )
+)
+
+(method (attrs public ) onInitializeAccessibilityNodeInfo([object android/view/View] [object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat])
+  (line 108)
+  (return-void )
+)
+
+(method (attrs public ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  (line 102)
+  (return-void )
+)
+
+(method (attrs public ) postInvalidateOnAnimation([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 117)
+  (invoke-virtual {v2} android/support/v4/view/ViewCompat$BaseViewCompatImpl/getFrameTime )
+  (move-result-wide v0)
+  (invoke-virtual {v3 v0 v1} android/view/View/postInvalidateDelayed long )
+  (line 118)
+  (return-void )
+)
+
+(method (attrs public ) postInvalidateOnAnimation([object android/view/View] int int int int )void
+  (limit registers 13)
+  ; this: v7 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v8 ([object android/view/View])
+  ; parameter[1] : v9 (int)
+  ; parameter[2] : v10 (int)
+  ; parameter[3] : v11 (int)
+  ; parameter[4] : v12 (int)
+  (line 120)
+  (invoke-virtual {v7} android/support/v4/view/ViewCompat$BaseViewCompatImpl/getFrameTime )
+  (move-result-wide v1)
+  (move-object v0 v8)
+  (move v3 v9)
+  (move v4 v10)
+  (move v5 v11)
+  (move v6 v12)
+  (invoke-virtual/range {v0 .. v6} android/view/View/postInvalidateDelayed long int int int int )
+  (line 121)
+  (return-void )
+)
+
+(method (attrs public ) postOnAnimation([object android/view/View] [object java/lang/Runnable] )void
+  (limit registers 5)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object java/lang/Runnable])
+  (line 123)
+  (invoke-virtual {v2} android/support/v4/view/ViewCompat$BaseViewCompatImpl/getFrameTime )
+  (move-result-wide v0)
+  (invoke-virtual {v3 v4 v0 v1} android/view/View/postDelayed [object java/lang/Runnable] long )
+  (line 124)
+  (return-void )
+)
+
+(method (attrs public ) postOnAnimationDelayed([object android/view/View] [object java/lang/Runnable] long )void
+  (limit registers 7)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object java/lang/Runnable])
+  ; parameter[2] : v5 (long)
+  (line 126)
+  (invoke-virtual {v2} android/support/v4/view/ViewCompat$BaseViewCompatImpl/getFrameTime )
+  (move-result-wide v0)
+  (add-long/2addr v0 v5)
+  (invoke-virtual {v3 v4 v0 v1} android/view/View/postDelayed [object java/lang/Runnable] long )
+  (line 127)
+  (return-void )
+)
+
+(method (attrs public ) setAccessibilityDelegate([object android/view/View] [object android/support/v4/view/AccessibilityDelegateCompat] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/support/v4/view/AccessibilityDelegateCompat])
+  (line 99)
+  (return-void )
+)
+
+(method (attrs public ) setHasTransientState([object android/view/View] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (boolean)
+  (line 115)
+  (return-void )
+)
+
+(method (attrs public ) setImportantForAccessibility([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 136)
+  (return-void )
+)
+
+(method (attrs public ) setOverScrollMode([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$BaseViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 96)
+  (return-void )
+)
+
+)

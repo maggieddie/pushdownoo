@@ -1,0 +1,28 @@
+(class (attrs public final ) net/lp/androidsfortune/R$id
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) b_cancel int 2131296268); 0x7f09000c )
+ (field (attrs public static final ) b_refresh int 2131296266); 0x7f09000a )
+ (field (attrs public static final ) b_show_cookie int 2131296267); 0x7f09000b )
+ (field (attrs public static final ) cookie int 2131296263); 0x7f090007 )
+ (field (attrs public static final ) ll int 2131296265); 0x7f090009 )
+ (field (attrs public static final ) message int 2131296269); 0x7f09000d )
+ (field (attrs public static final ) no int 2131296260); 0x7f090004 )
+ (field (attrs public static final ) stop int 2131296261); 0x7f090005 )
+ (field (attrs public static final ) sv_fscroll int 2131296256); 0x7f090000 )
+ (field (attrs public static final ) sv_scroll int 2131296258); 0x7f090002 )
+ (field (attrs public static final ) tv_quote int 2131296257); 0x7f090001 )
+ (field (attrs public static final ) watermark int 2131296264); 0x7f090008 )
+ (field (attrs public static final ) widget int 2131296262); 0x7f090006 )
+ (field (attrs public static final ) yes int 2131296259); 0x7f090003 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object net/lp/androidsfortune/R$id])
+  (line 50)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

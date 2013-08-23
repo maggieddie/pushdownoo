@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/provider/CalendarContract$ColorsColumns
+ (super java/lang/Object)
+ (source "CalendarContract.java")
+ (implements android/provider/SyncStateContract$Columns)
+
+ (field (attrs public static final ) COLOR [object java/lang/String] "color" )
+ (field (attrs public static final ) COLOR_KEY [object java/lang/String] "color_index" )
+ (field (attrs public static final ) COLOR_TYPE [object java/lang/String] "color_type" )
+ (field (attrs public static final ) TYPE_CALENDAR int 0); 0x0 )
+ (field (attrs public static final ) TYPE_EVENT int 1); 0x1 )
+
+)

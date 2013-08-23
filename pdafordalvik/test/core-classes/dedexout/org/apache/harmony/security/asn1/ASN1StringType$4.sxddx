@@ -1,0 +1,15 @@
+(class (attrs synchronized ) org/apache/harmony/security/asn1/ASN1StringType$4
+ (super org/apache/harmony/security/asn1/ASN1StringType)
+ (source "ASN1StringType.java")
+
+
+(method (attrs ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/apache/harmony/security/asn1/ASN1StringType$4])
+  ; parameter[0] : v1 (int)
+  (line 52)
+  (invoke-direct {v0 v1} org/apache/harmony/security/asn1/ASN1StringType/<init> int )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,40 @@
+(class (attrs public synchronized ) java/security/spec/ECGenParameterSpec
+ (super java/lang/Object)
+ (source "ECGenParameterSpec.java")
+ (implements java/security/spec/AlgorithmParameterSpec)
+
+ (field (attrs private final ) name [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 5)
+  ; this: v3 ([object java/security/spec/ECGenParameterSpec])
+  ; parameter[0] : v4 ([object java/lang/String])
+  (line 40)
+  (invoke-direct-empty {v3} java/lang/Object/<init> )
+  (line 41)
+  (iput-object-quick v4 v3 java/security/spec/ECGenParameterSpec.name [object java/lang/String])
+  (line 42)
+  (iget-object-quick v0 v3 java/security/spec/ECGenParameterSpec.name [object java/lang/String])
+  (if-nez v0 lc95f6)
+  (line 43)
+  (new-instance v0 java/lang/NullPointerException)
+  (const-string v1 "security.83")
+  (const-string v2 "name")
+  (invoke-static {v1 v2} org/apache/harmony/security/internal/nls/Messages/getString [object java/lang/String] [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/lang/NullPointerException/<init> [object java/lang/String] )
+  (throw v0)
+  (label lc95f6)
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object java/security/spec/ECGenParameterSpec])
+  (line 55)
+  (iget-object-quick v0 v1 java/security/spec/ECGenParameterSpec.name [object java/lang/String])
+  (return-object v0)
+)
+
+)

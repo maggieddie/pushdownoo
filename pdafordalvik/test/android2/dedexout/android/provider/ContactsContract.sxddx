@@ -1,0 +1,42 @@
+(class (attrs public final ) android/provider/ContactsContract
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) AUTHORITY [object java/lang/String] "com.android.contacts" )
+ (field (attrs public static final ) AUTHORITY_URI [object android/net/Uri] null )
+ (field (attrs public static final ) CALLER_IS_SYNCADAPTER [object java/lang/String] "caller_is_syncadapter" )
+ (field (attrs public static final ) DIRECTORY_PARAM_KEY [object java/lang/String] "directory" )
+ (field (attrs public static final ) LIMIT_PARAM_KEY [object java/lang/String] "limit" )
+ (field (attrs public static final ) PRIMARY_ACCOUNT_NAME [object java/lang/String] "name_for_primary_account" )
+ (field (attrs public static final ) PRIMARY_ACCOUNT_TYPE [object java/lang/String] "type_for_primary_account" )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 820)
+  (const/4 v0 0)
+  (sput-object v0 android/provider/ContactsContract.AUTHORITY_URI [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/provider/ContactsContract])
+  (line 811)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static ) isProfileId(long )boolean
+  (limit registers 4)
+  ; parameter[0] : v2 (long)
+  (line 812)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

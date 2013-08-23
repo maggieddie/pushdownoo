@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) java/security/interfaces/ECKey
+ (super java/lang/Object)
+ (source "ECKey.java")
+
+
+(method (attrs public abstract ) getParams()[object java/security/spec/ECParameterSpec]
+)
+
+)

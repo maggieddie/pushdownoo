@@ -1,0 +1,57 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableCollection$1
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/Iterator)
+
+ (field (attrs ) iterator [object java/util/Iterator] )
+ (field (attrs final ) this$0 [object java/util/Collections$UnmodifiableCollection] )
+
+(method (attrs ) <init>([object java/util/Collections$UnmodifiableCollection] )void
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection$1])
+  ; parameter[0] : v2 ([object java/util/Collections$UnmodifiableCollection])
+  (line 1011)
+  (iput-object-quick v2 v1 java/util/Collections$UnmodifiableCollection$1.this$0 [object java/util/Collections$UnmodifiableCollection])
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 1001)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection$1.this$0 [object java/util/Collections$UnmodifiableCollection])
+  (iget-object-quick v0 v0 )
+  (invoke-interface {v0} java/util/Collection/iterator )
+  (move-result-object v0)
+  (iput-object-quick v0 v1 java/util/Collections$UnmodifiableCollection$1.iterator [object java/util/Iterator])
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection$1])
+  (line 1004)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection$1.iterator [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection$1])
+  (line 1008)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableCollection$1.iterator [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableCollection$1])
+  (line 1012)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+)

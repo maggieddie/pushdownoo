@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) android/provider/MediaStore$Video$VideoColumns
+ (super java/lang/Object)
+ (source "MediaStore.java")
+ (implements android/provider/MediaStore$MediaColumns)
+
+ (field (attrs public static final ) ALBUM [object java/lang/String] "album" )
+ (field (attrs public static final ) ARTIST [object java/lang/String] "artist" )
+ (field (attrs public static final ) BOOKMARK [object java/lang/String] "bookmark" )
+ (field (attrs public static final ) BUCKET_DISPLAY_NAME [object java/lang/String] "bucket_display_name" )
+ (field (attrs public static final ) BUCKET_ID [object java/lang/String] "bucket_id" )
+ (field (attrs public static final ) CATEGORY [object java/lang/String] "category" )
+ (field (attrs public static final ) DATE_TAKEN [object java/lang/String] "datetaken" )
+ (field (attrs public static final ) DESCRIPTION [object java/lang/String] "description" )
+ (field (attrs public static final ) DURATION [object java/lang/String] "duration" )
+ (field (attrs public static final ) IS_PRIVATE [object java/lang/String] "isprivate" )
+ (field (attrs public static final ) LANGUAGE [object java/lang/String] "language" )
+ (field (attrs public static final ) LATITUDE [object java/lang/String] "latitude" )
+ (field (attrs public static final ) LONGITUDE [object java/lang/String] "longitude" )
+ (field (attrs public static final ) MINI_THUMB_MAGIC [object java/lang/String] "mini_thumb_magic" )
+ (field (attrs public static final ) RESOLUTION [object java/lang/String] "resolution" )
+ (field (attrs public static final ) TAGS [object java/lang/String] "tags" )
+
+)

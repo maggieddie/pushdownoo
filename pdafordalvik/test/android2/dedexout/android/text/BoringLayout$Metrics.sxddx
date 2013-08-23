@@ -1,0 +1,28 @@
+(class (attrs public ) android/text/BoringLayout$Metrics
+ (super android/graphics/Paint$FontMetricsInt)
+ (source "BoringLayout.java")
+
+ (field (attrs public ) width int )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/text/BoringLayout$Metrics])
+  (line 9)
+  (invoke-direct {v2} android/graphics/Paint$FontMetricsInt/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object android/text/BoringLayout$Metrics])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

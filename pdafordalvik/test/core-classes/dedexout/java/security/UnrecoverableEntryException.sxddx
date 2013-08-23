@@ -1,0 +1,26 @@
+(class (attrs public synchronized ) java/security/UnrecoverableEntryException
+ (super java/security/GeneralSecurityException)
+ (source "UnrecoverableEntryException.java")
+
+ (field (attrs private static final ) serialVersionUID long -449970309); 0xe52dff7b )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/security/UnrecoverableEntryException])
+  (line 43)
+  (invoke-direct {v0} java/security/GeneralSecurityException/<init> )
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/security/UnrecoverableEntryException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 55)
+  (invoke-direct {v0 v1} java/security/GeneralSecurityException/<init> [object java/lang/String] )
+  (line 56)
+  (return-void )
+ )
+
+)

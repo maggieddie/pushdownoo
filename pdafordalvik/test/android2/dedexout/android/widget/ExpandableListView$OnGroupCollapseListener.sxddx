@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/ExpandableListView$OnGroupCollapseListener
+ (super java/lang/Object)
+ (source "ExpandableListView.java")
+
+
+(method (attrs public abstract ) onGroupCollapse(int )void
+)
+
+)

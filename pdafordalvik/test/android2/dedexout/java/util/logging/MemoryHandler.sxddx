@@ -1,0 +1,111 @@
+(class (attrs public ) java/util/logging/MemoryHandler
+ (super java/util/logging/Handler)
+ (source "MemoryHandler.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  (line 5)
+  (invoke-direct {v2} java/util/logging/Handler/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object java/util/logging/Handler] int [object java/util/logging/Level] )void
+  (limit registers 6)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  ; parameter[0] : v3 ([object java/util/logging/Handler])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 ([object java/util/logging/Level])
+  (line 6)
+  (invoke-direct {v2} java/util/logging/Handler/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) close()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) flush()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getPushLevel()[object java/util/logging/Level]
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isLoggable([object java/util/logging/LogRecord] )boolean
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  ; parameter[0] : v3 ([object java/util/logging/LogRecord])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public synchronized ) publish([object java/util/logging/LogRecord] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  ; parameter[0] : v3 ([object java/util/logging/LogRecord])
+  (catchall  java/lang/Exception from l14d45e to l14d46e using l14d46e)
+  (line 9)
+  (monitor-enter v2)
+  (label l14d45e)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l14d46e)
+  (move-exception v0)
+  (monitor-exit v2)
+  (throw v0)
+)
+
+(method (attrs public ) push()void
+  (limit registers 3)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setPushLevel([object java/util/logging/Level] )void
+  (limit registers 4)
+  ; this: v2 ([object java/util/logging/MemoryHandler])
+  ; parameter[0] : v3 ([object java/util/logging/Level])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

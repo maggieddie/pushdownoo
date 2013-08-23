@@ -1,0 +1,16 @@
+(class (attrs public synchronized ) java/nio/channels/FileLockInterruptionException
+ (super java/io/IOException)
+ (source "FileLockInterruptionException.java")
+
+ (field (attrs private static final ) serialVersionUID long -155780097); 0xf6b6fbff )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/nio/channels/FileLockInterruptionException])
+  (line 41)
+  (invoke-direct {v0} java/io/IOException/<init> )
+  (line 42)
+  (return-void )
+ )
+
+)

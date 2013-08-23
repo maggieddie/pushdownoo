@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) java/security/Certificate
+ (super java/lang/Object)
+ (source "Certificate.java")
+
+
+(method (attrs public abstract ) decode([object java/io/InputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/KeyException]  [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) encode([object java/io/OutputStream] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/security/KeyException]  [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) getFormat()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getGuarantor()[object java/security/Principal]
+)
+
+(method (attrs public abstract ) getPrincipal()[object java/security/Principal]
+)
+
+(method (attrs public abstract ) getPublicKey()[object java/security/PublicKey]
+)
+
+(method (attrs public abstract ) toString(boolean )[object java/lang/String]
+)
+
+)

@@ -8,6 +8,8 @@ import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.dalvik.cfa.cesk.StmtForEqual
 import org.ucombinator.dalvik.syntax.StmtNil
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.utils.AIOptions
+ 
 
 trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
 
@@ -216,32 +218,57 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
   }
   
 
+   
   // for each chained entry points, we flatten and then run lra
-  def runLRAEntryBodies (entrySt: Stmt )   :   (String, Stmt) = {
+  def runLRAEntryBodies (entrySt: Stmt, opts: AIOptions )   :   (String, Stmt) = {
     
     val stLinkedList = CommonUtils.flattenLinkedStmt(List())(entrySt)
     
-    val initWithBodyAndEntries = 
-    stLinkedList.flatten{
-      case s@StmtNil => List(s)
-      case ns@NopStmt(_,_,_,_)  => {
-        List(ns)
+   var initWithBodyAndEntries = List[Stmt]()
+
+    initWithBodyAndEntries =
+      if (opts.doNotNullCheck) {
+       // println("in runLRAEntryBodies.")
+        val stRes = 
+        stLinkedList.foldLeft(List[Stmt]())((res, st) => {
+          if (st.isInstanceOf[InitEntryPointStmt]) {
+            val ips = st.asInstanceOf[InitEntryPointStmt]
+            val bd = ips.body
+            val initbodyList = CommonUtils.flattenLinkedStmt(List())(bd)
+            ips :: initbodyList ::: res
+          } else {
+            res
+          }
+        })
+        stRes
+        //stRes ::: List(StmtNil) 
+      } else { 
+        // val initWithBodyAndEntries = 
+        stLinkedList.flatten {
+
+          case s @ StmtNil => List(s)
+          case ns @ NopStmt(_, _, _, _) => {
+            List(ns)
+          }
+          case ips @ InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
+            val bd = ips.body
+            val initbodyList = CommonUtils.flattenLinkedStmt(List())(bd)
+            ips :: initbodyList
+          }
+          case eps @ EntryPointInvokeStmt(_, _, _, _, _, _) => {
+            val enbd = eps.entr.body
+            val enBodyList = CommonUtils.flattenLinkedStmt(List())(enbd)
+            eps :: enBodyList
+          }
+
+          case _ => { throw new Exception("not matching????") }
+        }
       }
-      case ips@InitEntryPointStmt(_, _, _, _, _,_,_,_) => {
-        val bd = ips.body
-        val initbodyList = CommonUtils.flattenLinkedStmt(List())(bd)
-        ips :: initbodyList
-      }
-      case eps@EntryPointInvokeStmt(_, _, _,_,_,_) => {
-        val enbd = eps.entr.body
-        val enBodyList = CommonUtils.flattenLinkedStmt(List())(enbd)
-        eps :: enBodyList
-      }
-    }
+    //initWithBodyAndEntries.foreach(println)
     runLRAOnListSts(initWithBodyAndEntries)
-    
+
     //runLRAOnListSts(stLinkedList)
-/*    val mapOfIEies = getMapOfInitWithItsEntries(entrySt)
+    /*    val mapOfIEies = getMapOfInitWithItsEntries(entrySt)
     
     mapOfIEies.foreach {
       case (k, vs) => {
@@ -272,11 +299,39 @@ trait LiveRegisterAnalysis extends DalvikVMRelated with StmtForEqual{
         runLRAOnListSts(asOne)
       }
   }*/
-   // Stmt.liveMap.foreach(println)
+    // Stmt.liveMap.foreach(println)
     (entrySt.toString(), entrySt)
   }
-  
-  
+
+  /*def runLRAEntryBodies2(entrySt: Stmt): (String, Stmt) = {
+    val stLinkedList = CommonUtils.flattenLinkedStmt(List())(entrySt)
+
+    stLinkedList.foreach(println)
+
+    val initWithBodyAndEntries = 
+      stLinkedList.foldLeft(List[Stmt]())((res, st) => { 
+       st match{
+            case s @ StmtNil => List(s)
+            case ns @ NopStmt(_, _, _, _) => {
+              List(ns)
+            }
+            case ips @ InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
+              val bd = ips.body
+              val initbodyList = CommonUtils.flattenLinkedStmt(List())(bd)
+              ips :: initbodyList
+            }
+            case eps @ EntryPointInvokeStmt(_, _, _, _, _, _) => {
+              val enbd = eps.entr.body
+              val enBodyList = CommonUtils.flattenLinkedStmt(List())(enbd)
+              eps :: enBodyList
+            } 
+
+            case _ => { throw new Exception("not matching????") }
+          }
+      })
+      runLRAOnListSts(initWithBodyAndEntries)
+      (entrySt.toString(), entrySt)
+  } */
   
   /**
    * run on the Dalvik Class def all methods interaprocedually

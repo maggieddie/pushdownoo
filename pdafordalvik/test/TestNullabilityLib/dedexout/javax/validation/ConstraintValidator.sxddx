@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) javax/validation/ConstraintValidator
+ (super java/lang/Object)
+ (source "ConstraintValidator.java")
+
+
+(method (attrs public abstract ) initialize([object java/lang/annotation/Annotation] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TA;)V")
+  )
+)
+
+(method (attrs public abstract ) isValid([object java/lang/Object] [object javax/validation/ConstraintValidatorContext] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Ljavax/validation/ConstraintValidatorContext;"  ")Z")
+  )
+)
+
+)

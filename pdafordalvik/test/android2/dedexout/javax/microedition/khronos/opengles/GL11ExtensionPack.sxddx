@@ -1,0 +1,252 @@
+(interface (attrs public abstract ) javax/microedition/khronos/opengles/GL11ExtensionPack
+ (super java/lang/Object)
+ (source "GL11ExtensionPack.java")
+ (implements javax/microedition/khronos/opengles/GL)
+
+ (field (attrs public static final ) GL_BLEND_DST_ALPHA int 32970); 0x80ca )
+ (field (attrs public static final ) GL_BLEND_DST_RGB int 32968); 0x80c8 )
+ (field (attrs public static final ) GL_BLEND_EQUATION int 32777); 0x8009 )
+ (field (attrs public static final ) GL_BLEND_EQUATION_ALPHA int 34877); 0x883d )
+ (field (attrs public static final ) GL_BLEND_EQUATION_RGB int 32777); 0x8009 )
+ (field (attrs public static final ) GL_BLEND_SRC_ALPHA int 32971); 0x80cb )
+ (field (attrs public static final ) GL_BLEND_SRC_RGB int 32969); 0x80c9 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT0_OES int 36064); 0x8ce0 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT10_OES int 36074); 0x8cea )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT11_OES int 36075); 0x8ceb )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT12_OES int 36076); 0x8cec )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT13_OES int 36077); 0x8ced )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT14_OES int 36078); 0x8cee )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT15_OES int 36079); 0x8cef )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT1_OES int 36065); 0x8ce1 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT2_OES int 36066); 0x8ce2 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT3_OES int 36067); 0x8ce3 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT4_OES int 36068); 0x8ce4 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT5_OES int 36069); 0x8ce5 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT6_OES int 36070); 0x8ce6 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT7_OES int 36071); 0x8ce7 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT8_OES int 36072); 0x8ce8 )
+ (field (attrs public static final ) GL_COLOR_ATTACHMENT9_OES int 36073); 0x8ce9 )
+ (field (attrs public static final ) GL_DECR_WRAP int 34056); 0x8508 )
+ (field (attrs public static final ) GL_DEPTH_ATTACHMENT_OES int 36096); 0x8d00 )
+ (field (attrs public static final ) GL_DEPTH_COMPONENT int 6402); 0x1902 )
+ (field (attrs public static final ) GL_DEPTH_COMPONENT16 int 33189); 0x81a5 )
+ (field (attrs public static final ) GL_DEPTH_COMPONENT24 int 33190); 0x81a6 )
+ (field (attrs public static final ) GL_DEPTH_COMPONENT32 int 33191); 0x81a7 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES int 36049); 0x8cd1 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES int 36048); 0x8cd0 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES int 36051); 0x8cd3 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES int 36050); 0x8cd2 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_BINDING_OES int 36006); 0x8ca6 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_COMPLETE_OES int 36053); 0x8cd5 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES int 36054); 0x8cd6 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES int 36057); 0x8cd9 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES int 36059); 0x8cdb )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES int 36058); 0x8cda )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES int 36055); 0x8cd7 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES int 36060); 0x8cdc )
+ (field (attrs public static final ) GL_FRAMEBUFFER_OES int 36160); 0x8d40 )
+ (field (attrs public static final ) GL_FRAMEBUFFER_UNSUPPORTED_OES int 36061); 0x8cdd )
+ (field (attrs public static final ) GL_FUNC_ADD int 32774); 0x8006 )
+ (field (attrs public static final ) GL_FUNC_REVERSE_SUBTRACT int 32779); 0x800b )
+ (field (attrs public static final ) GL_FUNC_SUBTRACT int 32778); 0x800a )
+ (field (attrs public static final ) GL_INCR_WRAP int 34055); 0x8507 )
+ (field (attrs public static final ) GL_INVALID_FRAMEBUFFER_OPERATION_OES int 1286); 0x506 )
+ (field (attrs public static final ) GL_MAX_COLOR_ATTACHMENTS_OES int 36063); 0x8cdf )
+ (field (attrs public static final ) GL_MAX_CUBE_MAP_TEXTURE_SIZE int 34076); 0x851c )
+ (field (attrs public static final ) GL_MAX_RENDERBUFFER_SIZE_OES int 34024); 0x84e8 )
+ (field (attrs public static final ) GL_MIRRORED_REPEAT int 33648); 0x8370 )
+ (field (attrs public static final ) GL_NORMAL_MAP int 34065); 0x8511 )
+ (field (attrs public static final ) GL_REFLECTION_MAP int 34066); 0x8512 )
+ (field (attrs public static final ) GL_RENDERBUFFER_ALPHA_SIZE_OES int 36179); 0x8d53 )
+ (field (attrs public static final ) GL_RENDERBUFFER_BINDING_OES int 36007); 0x8ca7 )
+ (field (attrs public static final ) GL_RENDERBUFFER_BLUE_SIZE_OES int 36178); 0x8d52 )
+ (field (attrs public static final ) GL_RENDERBUFFER_DEPTH_SIZE_OES int 36180); 0x8d54 )
+ (field (attrs public static final ) GL_RENDERBUFFER_GREEN_SIZE_OES int 36177); 0x8d51 )
+ (field (attrs public static final ) GL_RENDERBUFFER_HEIGHT_OES int 36163); 0x8d43 )
+ (field (attrs public static final ) GL_RENDERBUFFER_INTERNAL_FORMAT_OES int 36164); 0x8d44 )
+ (field (attrs public static final ) GL_RENDERBUFFER_OES int 36161); 0x8d41 )
+ (field (attrs public static final ) GL_RENDERBUFFER_RED_SIZE_OES int 36176); 0x8d50 )
+ (field (attrs public static final ) GL_RENDERBUFFER_STENCIL_SIZE_OES int 36181); 0x8d55 )
+ (field (attrs public static final ) GL_RENDERBUFFER_WIDTH_OES int 36162); 0x8d42 )
+ (field (attrs public static final ) GL_RGB565_OES int 36194); 0x8d62 )
+ (field (attrs public static final ) GL_RGB5_A1 int 32855); 0x8057 )
+ (field (attrs public static final ) GL_RGB8 int 32849); 0x8051 )
+ (field (attrs public static final ) GL_RGBA4 int 32854); 0x8056 )
+ (field (attrs public static final ) GL_RGBA8 int 32856); 0x8058 )
+ (field (attrs public static final ) GL_STENCIL_ATTACHMENT_OES int 36128); 0x8d20 )
+ (field (attrs public static final ) GL_STENCIL_INDEX int 6401); 0x1901 )
+ (field (attrs public static final ) GL_STENCIL_INDEX1_OES int 36166); 0x8d46 )
+ (field (attrs public static final ) GL_STENCIL_INDEX4_OES int 36167); 0x8d47 )
+ (field (attrs public static final ) GL_STENCIL_INDEX8_OES int 36168); 0x8d48 )
+ (field (attrs public static final ) GL_STR int -1); 0xffffffff )
+ (field (attrs public static final ) GL_TEXTURE_BINDING_CUBE_MAP int 34068); 0x8514 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP int 34067); 0x8513 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_NEGATIVE_X int 34070); 0x8516 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_NEGATIVE_Y int 34072); 0x8518 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_NEGATIVE_Z int 34074); 0x851a )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_POSITIVE_X int 34069); 0x8515 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_POSITIVE_Y int 34071); 0x8517 )
+ (field (attrs public static final ) GL_TEXTURE_CUBE_MAP_POSITIVE_Z int 34073); 0x8519 )
+ (field (attrs public static final ) GL_TEXTURE_GEN_MODE int 9472); 0x2500 )
+ (field (attrs public static final ) GL_TEXTURE_GEN_STR int 36192); 0x8d60 )
+
+(method (attrs public abstract ) glBindFramebufferOES(int int )void
+)
+
+(method (attrs public abstract ) glBindRenderbufferOES(int int )void
+)
+
+(method (attrs public abstract ) glBindTexture(int int )void
+)
+
+(method (attrs public abstract ) glBlendEquation(int )void
+)
+
+(method (attrs public abstract ) glBlendEquationSeparate(int int )void
+)
+
+(method (attrs public abstract ) glBlendFuncSeparate(int int int int )void
+)
+
+(method (attrs public abstract ) glCheckFramebufferStatusOES(int )int
+)
+
+(method (attrs public abstract ) glCompressedTexImage2D(int int int int int int int [object java/nio/Buffer] )void
+)
+
+(method (attrs public abstract ) glCopyTexImage2D(int int int int int int int int )void
+)
+
+(method (attrs public abstract ) glDeleteFramebuffersOES(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glDeleteFramebuffersOES(int [array int] int )void
+)
+
+(method (attrs public abstract ) glDeleteRenderbuffersOES(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glDeleteRenderbuffersOES(int [array int] int )void
+)
+
+(method (attrs public abstract ) glEnable(int )void
+)
+
+(method (attrs public abstract ) glFramebufferRenderbufferOES(int int int int )void
+)
+
+(method (attrs public abstract ) glFramebufferTexture2DOES(int int int int int )void
+)
+
+(method (attrs public abstract ) glGenFramebuffersOES(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGenFramebuffersOES(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGenRenderbuffersOES(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGenRenderbuffersOES(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGenerateMipmapOES(int )void
+)
+
+(method (attrs public abstract ) glGetFramebufferAttachmentParameterivOES(int int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetFramebufferAttachmentParameterivOES(int int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetIntegerv(int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetIntegerv(int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetRenderbufferParameterivOES(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetRenderbufferParameterivOES(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetTexGenfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexGenfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glGetTexGeniv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexGeniv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glGetTexGenxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glGetTexGenxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glIsFramebufferOES(int )boolean
+)
+
+(method (attrs public abstract ) glIsRenderbufferOES(int )boolean
+)
+
+(method (attrs public abstract ) glRenderbufferStorageOES(int int int int )void
+)
+
+(method (attrs public abstract ) glStencilOp(int int int )void
+)
+
+(method (attrs public abstract ) glTexEnvf(int int float )void
+)
+
+(method (attrs public abstract ) glTexEnvfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glTexEnvfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glTexEnvx(int int int )void
+)
+
+(method (attrs public abstract ) glTexEnvxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexEnvxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glTexGenf(int int float )void
+)
+
+(method (attrs public abstract ) glTexGenfv(int int [object java/nio/FloatBuffer] )void
+)
+
+(method (attrs public abstract ) glTexGenfv(int int [array float] int )void
+)
+
+(method (attrs public abstract ) glTexGeni(int int int )void
+)
+
+(method (attrs public abstract ) glTexGeniv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexGeniv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glTexGenx(int int int )void
+)
+
+(method (attrs public abstract ) glTexGenxv(int int [object java/nio/IntBuffer] )void
+)
+
+(method (attrs public abstract ) glTexGenxv(int int [array int] int )void
+)
+
+(method (attrs public abstract ) glTexParameterf(int int float )void
+)
+
+)

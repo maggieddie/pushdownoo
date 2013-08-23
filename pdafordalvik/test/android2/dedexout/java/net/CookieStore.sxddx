@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) java/net/CookieStore
+ (super java/lang/Object)
+ (source "CookieStore.java")
+
+
+(method (attrs public abstract ) add([object java/net/URI] [object java/net/HttpCookie] )void
+)
+
+(method (attrs public abstract ) get([object java/net/URI] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/net/URI;"  ")"  "Ljava/util/List"  "<"  "Ljava/net/HttpCookie;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getCookies()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ljava/net/HttpCookie;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getURIs()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Ljava/net/URI;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) remove([object java/net/URI] [object java/net/HttpCookie] )boolean
+)
+
+(method (attrs public abstract ) removeAll()boolean
+)
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) org/apache/harmony/xnet/provider/jsse/Appendable
+ (super java/lang/Object)
+ (source "Appendable.java")
+
+
+(method (attrs public abstract ) append([array byte] )void
+)
+
+)

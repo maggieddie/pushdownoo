@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/content/ComponentCallbacks
+ (super java/lang/Object)
+ (source "ComponentCallbacks.java")
+
+
+(method (attrs public abstract ) onConfigurationChanged([object android/content/res/Configuration] )void
+)
+
+(method (attrs public abstract ) onLowMemory()void
+)
+
+)

@@ -1,0 +1,27 @@
+(class (attrs public synchronized ) java/util/prefs/BackingStoreException
+ (super java/lang/Exception)
+ (source "BackingStoreException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1678852611); 0x9beebdfd )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/prefs/BackingStoreException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 38)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object java/util/prefs/BackingStoreException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 49)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/Throwable] )
+  (line 50)
+  (return-void )
+ )
+
+)

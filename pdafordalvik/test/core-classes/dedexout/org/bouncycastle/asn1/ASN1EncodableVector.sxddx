@@ -1,0 +1,14 @@
+(class (attrs public synchronized ) org/bouncycastle/asn1/ASN1EncodableVector
+ (super org/bouncycastle/asn1/DEREncodableVector)
+ (source "ASN1EncodableVector.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/bouncycastle/asn1/ASN1EncodableVector])
+  (line 6)
+  (invoke-direct {v0} org/bouncycastle/asn1/DEREncodableVector/<init> )
+  (return-void )
+ )
+
+)

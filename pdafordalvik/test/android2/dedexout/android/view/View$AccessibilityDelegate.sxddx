@@ -1,0 +1,102 @@
+(class (attrs public ) android/view/View$AccessibilityDelegate
+ (super java/lang/Object)
+ (source "View.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  (line 84)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) dispatchPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 87)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onInitializeAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 89)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onInitializeAccessibilityNodeInfo([object android/view/View] [object android/view/accessibility/AccessibilityNodeInfo] )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/accessibility/AccessibilityNodeInfo])
+  (line 90)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onPopulateAccessibilityEvent([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 88)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onRequestSendAccessibilityEvent([object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+  (limit registers 6)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/ViewGroup])
+  ; parameter[1] : v4 ([object android/view/View])
+  ; parameter[2] : v5 ([object android/view/accessibility/AccessibilityEvent])
+  (line 91)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) sendAccessibilityEvent([object android/view/View] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 (int)
+  (line 85)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) sendAccessibilityEventUnchecked([object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 5)
+  ; this: v2 ([object android/view/View$AccessibilityDelegate])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 86)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

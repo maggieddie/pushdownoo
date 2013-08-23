@@ -1,0 +1,20 @@
+(class (attrs public ) java/text/Format$Field
+ (super java/text/AttributedCharacterIterator$Attribute)
+ (source "Format.java")
+
+
+(method (attrs protected ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object java/text/Format$Field])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 8)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/String])
+  (invoke-direct {v2 v0} java/text/AttributedCharacterIterator$Attribute/<init> [object java/lang/String] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

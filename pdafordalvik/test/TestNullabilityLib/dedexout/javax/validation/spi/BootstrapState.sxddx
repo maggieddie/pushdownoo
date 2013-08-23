@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) javax/validation/spi/BootstrapState
+ (super java/lang/Object)
+ (source "BootstrapState.java")
+
+
+(method (attrs public abstract ) getDefaultValidationProviderResolver()[object javax/validation/ValidationProviderResolver]
+)
+
+(method (attrs public abstract ) getValidationProviderResolver()[object javax/validation/ValidationProviderResolver]
+)
+
+)

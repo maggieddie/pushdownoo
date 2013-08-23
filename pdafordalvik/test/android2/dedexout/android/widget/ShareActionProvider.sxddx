@@ -1,0 +1,85 @@
+(class (attrs public ) android/widget/ShareActionProvider
+ (super android/view/ActionProvider)
+ (source "ShareActionProvider.java")
+
+ (field (attrs public static final ) DEFAULT_SHARE_HISTORY_FILE_NAME [object java/lang/String] "share_history.xml" )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  ; parameter[0] : v3 ([object android/content/Context])
+  (line 9)
+  (const/4 v0 0)
+  (check-cast v0 [object android/content/Context])
+  (invoke-direct {v2 v0} android/view/ActionProvider/<init> [object android/content/Context] )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) hasSubMenu()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onCreateActionView()[object android/view/View]
+  (limit registers 3)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onPrepareSubMenu([object android/view/SubMenu] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  ; parameter[0] : v3 ([object android/view/SubMenu])
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setOnShareTargetSelectedListener([object android/widget/ShareActionProvider$OnShareTargetSelectedListener] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  ; parameter[0] : v3 ([object android/widget/ShareActionProvider$OnShareTargetSelectedListener])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setShareHistoryFileName([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 14)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) setShareIntent([object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v2 ([object android/widget/ShareActionProvider])
+  ; parameter[0] : v3 ([object android/content/Intent])
+  (line 15)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

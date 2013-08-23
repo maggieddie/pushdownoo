@@ -1,0 +1,71 @@
+(class (attrs public ) gueei/binding/observables/SpanObservable
+ (super gueei/binding/Observable)
+ (source "SpanObservable.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/observables/SpanObservable])
+  (line 36)
+  (const-class v0 gueei/binding/observables/SpanObservable$Span)
+  (invoke-direct {v1 v0} gueei/binding/Observable/<init> [object java/lang/Class] )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object gueei/binding/observables/SpanObservable$Span] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/observables/SpanObservable])
+  ; parameter[0] : v2 ([object gueei/binding/observables/SpanObservable$Span])
+  (line 40)
+  (const-class v0 gueei/binding/observables/SpanObservable$Span)
+  (invoke-direct {v1 v0 v2} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/observables/SpanObservable])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 44)
+  (const-class v0 gueei/binding/observables/SpanObservable$Span)
+  (new-instance v1 gueei/binding/observables/SpanObservable$Span)
+  (invoke-direct {v1 v3} gueei/binding/observables/SpanObservable$Span/<init> [object java/lang/Object] )
+  (invoke-direct {v2 v0 v1} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Object] int int )void
+  (limit registers 6)
+  ; this: v2 ([object gueei/binding/observables/SpanObservable])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 48)
+  (const-class v0 gueei/binding/observables/SpanObservable$Span)
+  (new-instance v1 gueei/binding/observables/SpanObservable$Span)
+  (invoke-direct {v1 v3 v4 v5} gueei/binding/observables/SpanObservable$Span/<init> [object java/lang/Object] int int )
+  (invoke-direct {v2 v0 v1} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 49)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Object] int int int )void
+  (limit registers 7)
+  ; this: v2 ([object gueei/binding/observables/SpanObservable])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (int)
+  (line 52)
+  (const-class v0 gueei/binding/observables/SpanObservable$Span)
+  (new-instance v1 gueei/binding/observables/SpanObservable$Span)
+  (invoke-direct {v1 v3 v4 v5 v6} gueei/binding/observables/SpanObservable$Span/<init> [object java/lang/Object] int int int )
+  (invoke-direct {v2 v0 v1} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 53)
+  (return-void )
+ )
+
+)

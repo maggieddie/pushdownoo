@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CodeFont" parent="@android:style/Widget.Button">
+        <item name="android:textSize">35.0dip</item>
+        <item name="android:textColor">#ffcccccc</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/lockscreen_button</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+    </style>
+</resources>

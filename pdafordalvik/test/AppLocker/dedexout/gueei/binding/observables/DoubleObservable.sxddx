@@ -1,0 +1,29 @@
+(class (attrs public ) gueei/binding/observables/DoubleObservable
+ (super gueei/binding/Observable)
+ (source "DoubleObservable.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/observables/DoubleObservable])
+  (line 7)
+  (const-class v0 java/lang/Double)
+  (invoke-direct {v1 v0} gueei/binding/Observable/<init> [object java/lang/Class] )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(double )void
+  (limit registers 5)
+  ; this: v2 ([object gueei/binding/observables/DoubleObservable])
+  ; parameter[0] : v3 (double)
+  (line 11)
+  (const-class v0 java/lang/Double)
+  (invoke-static {v3 v4} java/lang/Double/valueOf double )
+  (move-result-object v1)
+  (invoke-direct {v2 v0 v1} gueei/binding/Observable/<init> [object java/lang/Class] [object java/lang/Object] )
+  (line 12)
+  (return-void )
+ )
+
+)

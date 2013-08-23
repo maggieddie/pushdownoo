@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) javax/microedition/khronos/opengles/GL10Ext
+ (super java/lang/Object)
+ (source "GL10Ext.java")
+ (implements javax/microedition/khronos/opengles/GL)
+
+
+(method (attrs public abstract ) glQueryMatrixxOES([object java/nio/IntBuffer] [object java/nio/IntBuffer] )int
+)
+
+(method (attrs public abstract ) glQueryMatrixxOES([array int] int [array int] int )int
+)
+
+)

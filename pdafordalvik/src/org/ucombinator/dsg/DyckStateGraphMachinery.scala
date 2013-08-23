@@ -186,21 +186,22 @@ trait DyckStateGraphMachinery extends StateSpace {
     // filter out the pophandler states
     val pophandlerStates = filterOutPopHandlerStates(statesPossibletoVisit)
 
-    // println("PopHandlers:")
-    // pophandlerStates.foreach(pps => println(pps.getCurSt))
+    //println("possible before filter: " + possibleEdges)
+   //  println("PopHandlers:", pophandlerStates.size)
+     //pophandlerStates.foreach(pps => println(pps.getCurSt))
 
-    val statesPossibletoVisit2 = statesPossibletoVisit -- pophandlerStates
+    val statesPossibletoVisit2 = statesPossibletoVisit //statesPossibletoVisit -- pophandlerStates
 
     // filter the edges that end with the pophandler
     val popHandlerEdges = filterOutEdgesWithTargetInSet(possibleEdges, pophandlerStates)
-    val possibleEdges2 = possibleEdges -- popHandlerEdges
+    val possibleEdges2 = possibleEdges // -- popHandlerEdges
 
     // filter out the pophandler states statesPossibletoVisit
     val popEpsNextStates = filterOutPopHandlerStates(epsNextStates)
     //println("pophandlers from next: ")
     // popEpsNextStates.foreach(pps => println(pps.getCurSt))
 
-    val epsNextStates2 = epsNextStates -- popEpsNextStates
+    val epsNextStates2 = epsNextStates //-- popEpsNextStates
 
     if (aggresiveCutOff) {
       //filter out weaker ones
@@ -220,6 +221,8 @@ trait DyckStateGraphMachinery extends StateSpace {
         sss1.contains(pe.target)
       })
 
+      println("in aco: possibleEdges2 = possibleNewedges ", possibleEdges.size)
+      println("in aco: after filter out, larger: ", possibleNewEdges.size)
       val ss2 = epsNextStates2.filter((spv) => {
         val curStateEqualentStates = helper.getEpsPredStates(spv)
         !spv.weakerThanAny(curStateEqualentStates, subsumption)
@@ -233,14 +236,15 @@ trait DyckStateGraphMachinery extends StateSpace {
       println(statesPossibletoVisit.toList.length + "/" + ss1.toList.length + "/" + sss1.toList.length)
       println(epsNextStates.toList.length + "/" + ss2.toList.length + "/" + sss2.toList.length)
 
-      val res1 = sss1 ++ sss2 ++ pophandlerStates ++ popEpsNextStates
+      val res1 = sss1 ++ sss2  // ++  popEpsNextStates ++  pophandlerStates 
       // println("After cutoff")
       // filterOutPopHandlerStates(res1).foreach(pps => println(pps.getCurSt))
-      val res2 = possibleNewEdges ++ popHandlerEdges
+      val res2 = possibleNewEdges  //++ popHandlerEdges
       (res1, res2)
 
     } else {
-      (statesPossibletoVisit ++ epsNextStates, possibleEdges2)
+      (statesPossibletoVisit ++ epsNextStates, possibleEdges2 //++ popHandlerEdges
+          )
     }
   }
 
@@ -271,6 +275,15 @@ trait DyckStateGraphMachinery extends StateSpace {
     }
   }
 
+  
+  private def printOutStates (newToVisit : Set[S]) {
+     val newToVisitStatements = newToVisit.map(vt => {
+        vt.getCurSt
+      })
+      
+      println("has duplicated states?")
+      newToVisitStatements.foreach(println)
+  }
   /**
    * Monotonic DSG iteration function
    * denoted as 'f' in the paper
@@ -297,30 +310,61 @@ trait DyckStateGraphMachinery extends StateSpace {
       // Transform switch edges to pairs of push/pop edges
       val noSwitchesEdges: Edges = if (canHaveSwitchFrames) processSwitchEdges(obtainedEdges) else obtainedEdges
       // Collect new states after decoupling switches
-      val newStates: Nodes = (if (canHaveSwitchFrames) {
+      val newStates0: Nodes = (if (canHaveSwitchFrames) {
         val nodes: Set[S] = (noSwitchesEdges -- ee).map {
           case Edge(source, _, target) => target
         }
         nodes ++ obtainedStates
       } else obtainedStates)
 
+       println("before --ee edges: ", noSwitchesEdges.size)
+      
+       println("new states0 : ", newStates0.size)
+   
+       val newStates = newStates0 -- ss
        
+       val newStatesSubSumption = newStates0.filter((s0) => {
+         s0.weakerThanAny(ss, true)
+       }
+         )
+       
+            println("filter out states new state -- ss ", newStates0.size- newStates.size)
+            println("filter out states new state using weaker than any ss", newStatesSubSumption.size)
+     //  printOutStates(newStates0)
+       
+      val sss = ss.filter((siii) => {
+         newStates0.map(_.getCurSt).contains(siii.getCurSt)
+      })
+       
+      
+      println("duplicated statesment, not counting hte entire states between newStates0 and dcg", sss.size)
+      
+      
       val newEdges = noSwitchesEdges -- ee
- 
+      
+      
+      
+      println("new edges size", newEdges.size)
+     
+      
+        
       val filteredStatesPossileVisits = newStates.filter {
         spvs =>
           {
             helper.getEpsNextStates(spvs).isEmpty
-            //!spvs.weakerThanAny(helper.getEpsSuccsKeys, false) // strict equality in this case
+           // !spvs.weakerThanAny(helper.getEpsSuccsKeys, true) // strict equality in this case
           }
       }
      
+        println("filter out in next ECG states: ", filteredStatesPossileVisits.size)
+        
       // and get the actual tovisit  edges
       val possibleNewEdges = newEdges.filter(pe => {
         filteredStatesPossileVisits.contains(pe.target)
-        //  pe.target.weakerThanAny(filteredStatesPossileVisits)
+          //pe.target.weakerThanAny(filteredStatesPossileVisits, true)
       })
 
+      println("after filtering out ecg next, edge: ", possibleNewEdges.size)
       // update the ECG
       helper.update(possibleNewEdges)
  
@@ -336,7 +380,8 @@ trait DyckStateGraphMachinery extends StateSpace {
         val news = helper.getEpsNextStates(s) 
         news
       })
- 
+      
+      //println("epsnext new states: ", epsNewNexts.size)
 
       val (newToVisit, newEdges2) = 
         getStatesIfAco(helper, filteredStatesPossileVisits //newStates
@@ -344,6 +389,10 @@ trait DyckStateGraphMachinery extends StateSpace {
           epsNewNexts,
           true) //}
 
+     
+          
+    //  println("after aco, new states ", newToVisit.size)
+     // println("after aco, new edges: ", newEdges2.size)
       val ss1: Nodes = ss ++ filteredStatesPossileVisits + // newStates + 
         s0
 

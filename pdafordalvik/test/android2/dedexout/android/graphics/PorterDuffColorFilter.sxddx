@@ -1,0 +1,19 @@
+(class (attrs public ) android/graphics/PorterDuffColorFilter
+ (super android/graphics/ColorFilter)
+ (source "PorterDuffColorFilter.java")
+
+
+(method (attrs public ) <init>(int [object android/graphics/PorterDuff$Mode] )void
+  (limit registers 5)
+  ; this: v2 ([object android/graphics/PorterDuffColorFilter])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object android/graphics/PorterDuff$Mode])
+  (line 5)
+  (invoke-direct {v2} android/graphics/ColorFilter/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+)

@@ -1,0 +1,175 @@
+(class (attrs public abstract synchronized ) java/net/DatagramSocketImpl
+ (super java/lang/Object)
+ (source "DatagramSocketImpl.java")
+ (implements java/net/SocketOptions)
+
+ (field (attrs protected ) fd [object java/io/FileDescriptor] )
+ (field (attrs protected ) localPort int )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object java/net/DatagramSocketImpl])
+  (line 44)
+  (invoke-direct-empty {v1} java/lang/Object/<init> )
+  (line 45)
+  (const/4 v0 15)
+  (iput-quick v0 v1 java/net/DatagramSocketImpl.localPort int)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs protected abstract ) bind(int [object java/net/InetAddress] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+(method (attrs protected abstract ) close()void
+)
+
+(method (attrs protected ) connect([object java/net/InetAddress] int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+  (limit registers 3)
+  ; this: v0 ([object java/net/DatagramSocketImpl])
+  ; parameter[0] : v1 ([object java/net/InetAddress])
+  ; parameter[1] : v2 (int)
+  (line 288)
+  (return-void )
+)
+
+(method (attrs protected abstract ) create()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+(method (attrs protected ) disconnect()void
+  (limit registers 1)
+  ; this: v0 ([object java/net/DatagramSocketImpl])
+  (line 295)
+  (return-void )
+)
+
+(method (attrs protected ) getFileDescriptor()[object java/io/FileDescriptor]
+  (limit registers 2)
+  ; this: v1 ([object java/net/DatagramSocketImpl])
+  (line 84)
+  (iget-object-quick v0 v1 java/net/DatagramSocketImpl.fd [object java/io/FileDescriptor])
+  (return-object v0)
+)
+
+(method (attrs ) getLocalAddress()[object java/net/InetAddress]
+  (limit registers 4)
+  ; this: v3 ([object java/net/DatagramSocketImpl])
+  (line 93)
+  (invoke-static {} org/apache/harmony/luni/platform/Platform/getNetworkSystem )
+  (nop )
+  (move-result-object v0)
+  (iget-object-quick v1 v3 java/net/DatagramSocketImpl.fd [object java/io/FileDescriptor])
+  (invoke-static {} org/apache/harmony/luni/net/NetUtil/preferIPv6Addresses )
+  (nop )
+  (move-result v2)
+  (invoke-interface {v0 v1 v2} org/apache/harmony/luni/platform/INetworkSystem/getSocketLocalAddress [object java/io/FileDescriptor] boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) getLocalPort()int
+  (limit registers 2)
+  ; this: v1 ([object java/net/DatagramSocketImpl])
+  (line 103)
+  (iget-quick v0 v1 java/net/DatagramSocketImpl.localPort int)
+  (return v0)
+)
+
+(method (attrs public abstract ) getOption(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+(method (attrs protected abstract ) getTTL()byte
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+(method (attrs protected abstract ) getTimeToLive()int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) join([object java/net/InetAddress] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) joinGroup([object java/net/SocketAddress] [object java/net/NetworkInterface] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) leave([object java/net/InetAddress] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) leaveGroup([object java/net/SocketAddress] [object java/net/NetworkInterface] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) peek([object java/net/InetAddress] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) peekData([object java/net/DatagramPacket] )int
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) receive([object java/net/DatagramPacket] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs protected abstract ) send([object java/net/DatagramPacket] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) setOption(int [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/net/SocketException])
+  )
+)
+
+(method (attrs protected abstract ) setTTL(byte )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+(method (attrs protected abstract ) setTimeToLive(int )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+)

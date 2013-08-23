@@ -1,0 +1,27 @@
+(class (attrs public synchronized ) org/bouncycastle/asn1/pkcs/KeyDerivationFunc
+ (super org/bouncycastle/asn1/x509/AlgorithmIdentifier)
+ (source "KeyDerivationFunc.java")
+
+
+(method (attrs ) <init>([object org/bouncycastle/asn1/ASN1Sequence] )void
+  (limit registers 2)
+  ; this: v0 ([object org/bouncycastle/asn1/pkcs/KeyDerivationFunc])
+  ; parameter[0] : v1 ([object org/bouncycastle/asn1/ASN1Sequence])
+  (line 14)
+  (invoke-direct {v0 v1} org/bouncycastle/asn1/x509/AlgorithmIdentifier/<init> [object org/bouncycastle/asn1/ASN1Sequence] )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object org/bouncycastle/asn1/DERObjectIdentifier] [object org/bouncycastle/asn1/ASN1Encodable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/bouncycastle/asn1/pkcs/KeyDerivationFunc])
+  ; parameter[0] : v1 ([object org/bouncycastle/asn1/DERObjectIdentifier])
+  ; parameter[1] : v2 ([object org/bouncycastle/asn1/ASN1Encodable])
+  (line 21)
+  (invoke-direct {v0 v1 v2} org/bouncycastle/asn1/x509/AlgorithmIdentifier/<init> [object org/bouncycastle/asn1/DERObjectIdentifier] [object org/bouncycastle/asn1/DEREncodable] )
+  (line 22)
+  (return-void )
+ )
+
+)

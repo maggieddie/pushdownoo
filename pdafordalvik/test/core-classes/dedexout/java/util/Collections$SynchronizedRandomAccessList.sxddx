@@ -1,0 +1,75 @@
+(class (attrs synchronized ) java/util/Collections$SynchronizedRandomAccessList
+ (super java/util/Collections$SynchronizedList)
+ (source "Collections.java")
+ (implements java/util/RandomAccess)
+
+ (field (attrs private static final ) serialVersionUID long -1753322242); 0x977e6cfe )
+
+(method (attrs ) <init>([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<TE;>;"  "Ljava/lang/Object;"  ")V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object java/util/Collections$SynchronizedRandomAccessList])
+  ; parameter[0] : v1 ([object java/util/List])
+  (line 508)
+  (invoke-direct {v0 v1} java/util/Collections$SynchronizedList/<init> [object java/util/List] )
+  (line 509)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/List] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<TE;>;"  "Ljava/lang/Object;"  ")V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object java/util/Collections$SynchronizedRandomAccessList])
+  ; parameter[0] : v1 ([object java/util/List])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 512)
+  (invoke-direct {v0 v1 v2} java/util/Collections$SynchronizedList/<init> [object java/util/List] [object java/lang/Object] )
+  (line 513)
+  (return-void )
+ )
+
+(method (attrs private ) writeReplace()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object java/util/Collections$SynchronizedRandomAccessList])
+  (line 535)
+  (new-instance v0 java/util/Collections$SynchronizedList)
+  (iget-object-quick v1 v2 )
+  (invoke-direct {v0 v1} java/util/Collections$SynchronizedList/<init> [object java/util/List] )
+  (return-object v0)
+ )
+
+(method (attrs public ) subList(int int )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(II)"  "Ljava/util/List"  "<TE;>;")
+  )
+  (limit registers 7)
+  ; this: v4 ([object java/util/Collections$SynchronizedRandomAccessList])
+  ; parameter[0] : v5 (int)
+  ; parameter[1] : v6 (int)
+  (catchall  java/lang/Exception from le7446 to le7468 using le7464)
+  (line 517)
+  (iget-object-quick v0 v4 )
+  (monitor-enter v0)
+  (label le7446)
+  (line 518)
+  (new-instance v1 java/util/Collections$SynchronizedRandomAccessList)
+  (iget-object-quick v2 v4 )
+  (invoke-interface {v2 v5 v6} java/util/List/subList int int )
+  (move-result-object v2)
+  (iget-object-quick v3 v4 )
+  (invoke-direct {v1 v2 v3} java/util/Collections$SynchronizedRandomAccessList/<init> [object java/util/List] [object java/lang/Object] )
+  (monitor-exit v0)
+  (return-object v1)
+  (label le7464)
+  (line 520)
+  (move-exception v1)
+  (monitor-exit v0)
+  (label le7468)
+  (throw v1)
+)
+
+)

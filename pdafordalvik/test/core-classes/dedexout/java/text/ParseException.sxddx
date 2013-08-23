@@ -1,0 +1,29 @@
+(class (attrs public synchronized ) java/text/ParseException
+ (super java/lang/Exception)
+ (source "ParseException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1032570874); 0x3d8bc7fa )
+ (field (attrs private ) errorOffset int )
+
+(method (attrs public ) <init>([object java/lang/String] int )void
+  (limit registers 3)
+  ; this: v0 ([object java/text/ParseException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 39)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 40)
+  (iput-quick v2 v0 java/text/ParseException.errorOffset int)
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) getErrorOffset()int
+  (limit registers 2)
+  ; this: v1 ([object java/text/ParseException])
+  (line 49)
+  (iget-quick v0 v1 java/text/ParseException.errorOffset int)
+  (return v0)
+)
+
+)

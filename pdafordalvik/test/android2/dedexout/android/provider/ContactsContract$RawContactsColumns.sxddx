@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/provider/ContactsContract$RawContactsColumns
+ (super java/lang/Object)
+ (source "ContactsContract.java")
+
+ (field (attrs public static final ) AGGREGATION_MODE [object java/lang/String] "aggregation_mode" )
+ (field (attrs public static final ) CONTACT_ID [object java/lang/String] "contact_id" )
+ (field (attrs public static final ) DATA_SET [object java/lang/String] "data_set" )
+ (field (attrs public static final ) DELETED [object java/lang/String] "deleted" )
+ (field (attrs public static final ) RAW_CONTACT_IS_READ_ONLY [object java/lang/String] "raw_contact_is_read_only" )
+ (field (attrs public static final ) RAW_CONTACT_IS_USER_PROFILE [object java/lang/String] "raw_contact_is_user_profile" )
+
+)

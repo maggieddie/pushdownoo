@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/view/View$OnLongClickListener
+ (super java/lang/Object)
+ (source "View.java")
+
+
+(method (attrs public abstract ) onLongClick([object android/view/View] )boolean
+)
+
+)

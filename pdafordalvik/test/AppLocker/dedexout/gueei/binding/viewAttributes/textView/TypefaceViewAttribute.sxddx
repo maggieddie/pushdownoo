@@ -1,0 +1,73 @@
+(class (attrs public ) gueei/binding/viewAttributes/textView/TypefaceViewAttribute
+ (super gueei/binding/ViewAttribute)
+ (source "TypefaceViewAttribute.java")
+
+
+(method (attrs public ) <init>([object android/widget/TextView] )void
+  (limit registers 4)
+  ; this: v2 ([object gueei/binding/viewAttributes/textView/TypefaceViewAttribute])
+  ; parameter[0] : v3 ([object android/widget/TextView])
+  (line 12)
+  (const-class v0 android/graphics/Typeface)
+  (const-string v1 "typeface")
+  (invoke-direct {v2 v0 v3 v1} gueei/binding/ViewAttribute/<init> [object java/lang/Class] [object android/view/View] [object java/lang/String] )
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs protected ) AcceptThisTypeAs([object java/lang/Class] )[object gueei/binding/BindingType]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Lgueei/binding/BindingType;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TypefaceViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 28)
+  (sget-object v0 gueei/binding/BindingType.OneWay [object gueei/binding/BindingType])
+  (return-object v0)
+)
+
+(method (attrs protected ) doSetAttributeValue([object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TypefaceViewAttribute])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 17)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/TypefaceViewAttribute/getView )
+  (move-result-object v0)
+  (if-nez v0 l28a0e)
+  (label l28a0c)
+  (line 24)
+  (return-void )
+  (label l28a0e)
+  (line 18)
+  (if-eqz v2 l28a0c)
+  (line 21)
+  (instance-of v0 v2 android/graphics/Typeface)
+  (if-eqz v0 l28a0c)
+  (line 22)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/TypefaceViewAttribute/getView )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (check-cast v2 [object android/graphics/Typeface])
+  (invoke-virtual {v0 v2} android/widget/TextView/setTypeface [object android/graphics/Typeface] )
+  (goto l28a0c)
+)
+
+(method (attrs public ) get()[object android/graphics/Typeface]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TypefaceViewAttribute])
+  (line 33)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object gueei/binding/viewAttributes/textView/TypefaceViewAttribute])
+  (line 1)
+  (invoke-virtual {v1} gueei/binding/viewAttributes/textView/TypefaceViewAttribute/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

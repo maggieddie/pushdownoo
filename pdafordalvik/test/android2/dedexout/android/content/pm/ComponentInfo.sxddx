@@ -1,0 +1,113 @@
+(class (attrs public ) android/content/pm/ComponentInfo
+ (super android/content/pm/PackageItemInfo)
+ (source "ComponentInfo.java")
+
+ (field (attrs public ) applicationInfo [object android/content/pm/ApplicationInfo] )
+ (field (attrs public ) descriptionRes int )
+ (field (attrs public ) enabled boolean )
+ (field (attrs public ) exported boolean )
+ (field (attrs public ) processName [object java/lang/String] )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  (line 5)
+  (invoke-direct {v2} android/content/pm/PackageItemInfo/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) <init>([object android/content/pm/ComponentInfo] )void
+  (limit registers 4)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/content/pm/ComponentInfo])
+  (line 6)
+  (invoke-direct {v2} android/content/pm/PackageItemInfo/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected ) <init>([object android/os/Parcel] )void
+  (limit registers 4)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 7)
+  (invoke-direct {v2} android/content/pm/PackageItemInfo/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected ) dumpBack([object android/util/Printer] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/util/Printer])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 12)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected ) dumpFront([object android/util/Printer] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/util/Printer])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public final ) getIconResource()int
+  (limit registers 3)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) isEnabled()boolean
+  (limit registers 3)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) loadLabel([object android/content/pm/PackageManager] )[object java/lang/CharSequence]
+  (limit registers 4)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/content/pm/PackageManager])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/content/pm/ComponentInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 13)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs abstract synchronized ) java/util/WeakHashMap$Entry$Type
+ (super java/lang/Object)
+ (source "WeakHashMap.java")
+
+
+(method (attrs public abstract ) get([object java/util/Map$Entry] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TR;")
+  )
+)
+
+)

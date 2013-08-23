@@ -1,0 +1,130 @@
+(class (attrs synchronized ) java/util/Collections$UnmodifiableList$1
+ (super java/lang/Object)
+ (source "Collections.java")
+ (implements java/util/ListIterator)
+
+ (field (attrs ) iterator [object java/util/ListIterator] )
+ (field (attrs final ) this$0 [object java/util/Collections$UnmodifiableList] )
+ (field (attrs final ) val$location int )
+
+(method (attrs ) <init>([object java/util/Collections$UnmodifiableList] int )void
+  (limit registers 5)
+  ; this: v2 ([object java/util/Collections$UnmodifiableList$1])
+  ; parameter[0] : v3 ([object java/util/Collections$UnmodifiableList])
+  ; parameter[1] : v4 (int)
+  (line 1157)
+  (iput-object-quick v3 v2 java/util/Collections$UnmodifiableList$1.this$0 [object java/util/Collections$UnmodifiableList])
+  (iput-quick v4 v2 java/util/Collections$UnmodifiableList$1.val$location int)
+  (invoke-direct-empty {v2} java/lang/Object/<init> )
+  (line 1123)
+  (iget-object-quick v0 v2 java/util/Collections$UnmodifiableList$1.this$0 [object java/util/Collections$UnmodifiableList])
+  (iget-object-quick v0 v0 )
+  (iget-quick v1 v2 java/util/Collections$UnmodifiableList$1.val$location int)
+  (invoke-interface {v0 v1} java/util/List/listIterator int )
+  (move-result-object v0)
+  (iput-object-quick v0 v2 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (return-void )
+ )
+
+(method (attrs public ) add([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1126)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1130)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hasPrevious()boolean
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1134)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/hasPrevious )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1138)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) nextIndex()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1142)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/nextIndex )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) previous()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1146)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/previous )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) previousIndex()int
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1150)
+  (iget-object-quick v0 v1 java/util/Collections$UnmodifiableList$1.iterator [object java/util/ListIterator])
+  (invoke-interface {v0} java/util/ListIterator/previousIndex )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  (line 1154)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) set([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object java/util/Collections$UnmodifiableList$1])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1158)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+)

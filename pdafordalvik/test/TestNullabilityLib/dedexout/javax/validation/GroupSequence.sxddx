@@ -1,0 +1,13 @@
+(interface (attrs public abstract annotation ) javax/validation/GroupSequence
+ (super java/lang/Object)
+ (source "GroupSequence.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[array [object java/lang/Class]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()["  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

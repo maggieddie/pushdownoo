@@ -1,0 +1,91 @@
+(class (attrs public ) android/hardware/GeomagneticField
+ (super java/lang/Object)
+ (source "GeomagneticField.java")
+
+
+(method (attrs public ) <init>(float float float long )void
+  (limit registers 8)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  ; parameter[0] : v3 (float)
+  ; parameter[1] : v4 (float)
+  ; parameter[2] : v5 (float)
+  ; parameter[3] : v6 (long)
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) getDeclination()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getFieldStrength()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getHorizontalStrength()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getInclination()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getX()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getY()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) getZ()float
+  (limit registers 3)
+  ; this: v2 ([object android/hardware/GeomagneticField])
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

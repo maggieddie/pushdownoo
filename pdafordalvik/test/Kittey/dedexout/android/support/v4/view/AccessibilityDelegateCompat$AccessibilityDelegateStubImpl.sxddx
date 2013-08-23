@@ -1,0 +1,127 @@
+(class (attrs ) android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl
+ (super java/lang/Object)
+ (source "AccessibilityDelegateCompat.java")
+ (implements android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  (line 55)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) dispatchPopulateAccessibilityEvent([object java/lang/Object] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+  (limit registers 5)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 ([object android/view/accessibility/AccessibilityEvent])
+  (line 68)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getAccessibilityNodeProvider([object java/lang/Object] [object android/view/View] )[object android/support/v4/view/accessibility/AccessibilityNodeProviderCompat]
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/view/View])
+  (line 109)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) newAccessiblityDelegateBridge([object android/support/v4/view/AccessibilityDelegateCompat] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v2 ([object android/support/v4/view/AccessibilityDelegateCompat])
+  (line 62)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) newAccessiblityDelegateDefaultImpl()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  (line 57)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) onInitializeAccessibilityEvent([object java/lang/Object] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 ([object android/view/accessibility/AccessibilityEvent])
+  (line 75)
+  (return-void )
+)
+
+(method (attrs public ) onInitializeAccessibilityNodeInfo([object java/lang/Object] [object android/view/View] [object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat] )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 ([object android/support/v4/view/accessibility/AccessibilityNodeInfoCompat])
+  (line 81)
+  (return-void )
+)
+
+(method (attrs public ) onPopulateAccessibilityEvent([object java/lang/Object] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 ([object android/view/accessibility/AccessibilityEvent])
+  (line 87)
+  (return-void )
+)
+
+(method (attrs public ) onRequestSendAccessibilityEvent([object java/lang/Object] [object android/view/ViewGroup] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )boolean
+  (limit registers 6)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/view/ViewGroup])
+  ; parameter[2] : v4 ([object android/view/View])
+  ; parameter[3] : v5 ([object android/view/accessibility/AccessibilityEvent])
+  (line 92)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) performAccessibilityAction([object java/lang/Object] [object android/view/View] int [object android/os/Bundle] )boolean
+  (limit registers 6)
+  ; this: v1 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object android/os/Bundle])
+  (line 115)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) sendAccessibilityEvent([object java/lang/Object] [object android/view/View] int )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 (int)
+  (line 98)
+  (return-void )
+)
+
+(method (attrs public ) sendAccessibilityEventUnchecked([object java/lang/Object] [object android/view/View] [object android/view/accessibility/AccessibilityEvent] )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object android/view/View])
+  ; parameter[2] : v3 ([object android/view/accessibility/AccessibilityEvent])
+  (line 104)
+  (return-void )
+)
+
+)

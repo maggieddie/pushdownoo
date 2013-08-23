@@ -1,0 +1,47 @@
+(class (attrs public synchronized ) java/security/cert/CertificateEncodingException
+ (super java/security/cert/CertificateException)
+ (source "CertificateEncodingException.java")
+
+ (field (attrs private static final ) serialVersionUID long -699263029); 0xd65217cb )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/security/cert/CertificateEncodingException])
+  (line 47)
+  (invoke-direct {v0} java/security/cert/CertificateException/<init> )
+  (line 48)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/security/cert/CertificateEncodingException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 39)
+  (invoke-direct {v0 v1} java/security/cert/CertificateException/<init> [object java/lang/String] )
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object java/security/cert/CertificateEncodingException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 61)
+  (invoke-direct {v0 v1 v2} java/security/cert/CertificateException/<init> [object java/lang/String] [object java/lang/Throwable] )
+  (line 62)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object java/security/cert/CertificateEncodingException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 73)
+  (invoke-direct {v0 v1} java/security/cert/CertificateException/<init> [object java/lang/Throwable] )
+  (line 74)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,74 @@
+(class (attrs public abstract ) android/text/method/NumberKeyListener
+ (super android/text/method/BaseKeyListener)
+ (source "NumberKeyListener.java")
+ (implements android/text/InputFilter)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/text/method/NumberKeyListener])
+  (line 6)
+  (invoke-direct {v2} android/text/method/BaseKeyListener/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs protected static ) ok([array char] char )boolean
+  (limit registers 4)
+  ; parameter[0] : v2 ([array char])
+  ; parameter[1] : v3 (char)
+  (line 10)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) filter([object java/lang/CharSequence] int int [object android/text/Spanned] int int )[object java/lang/CharSequence]
+  (limit registers 9)
+  ; this: v2 ([object android/text/method/NumberKeyListener])
+  ; parameter[0] : v3 ([object java/lang/CharSequence])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object android/text/Spanned])
+  ; parameter[4] : v7 (int)
+  ; parameter[5] : v8 (int)
+  (line 9)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs protected abstract ) getAcceptedChars()[array char]
+)
+
+(method (attrs protected ) lookup([object android/view/KeyEvent] [object android/text/Spannable] )int
+  (limit registers 5)
+  ; this: v2 ([object android/text/method/NumberKeyListener])
+  ; parameter[0] : v3 ([object android/view/KeyEvent])
+  ; parameter[1] : v4 ([object android/text/Spannable])
+  (line 8)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) onKeyDown([object android/view/View] [object android/text/Editable] int [object android/view/KeyEvent] )boolean
+  (limit registers 7)
+  ; this: v2 ([object android/text/method/NumberKeyListener])
+  ; parameter[0] : v3 ([object android/view/View])
+  ; parameter[1] : v4 ([object android/text/Editable])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object android/view/KeyEvent])
+  (line 11)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

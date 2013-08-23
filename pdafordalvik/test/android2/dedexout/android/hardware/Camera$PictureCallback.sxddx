@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/hardware/Camera$PictureCallback
+ (super java/lang/Object)
+ (source "Camera.java")
+
+
+(method (attrs public abstract ) onPictureTaken([array byte] [object android/hardware/Camera] )void
+)
+
+)

@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) android/os/Parcelable$ClassLoaderCreator
+ (super java/lang/Object)
+ (source "Parcelable.java")
+ (implements android/os/Parcelable$Creator)
+
+
+(method (attrs public abstract ) createFromParcel([object android/os/Parcel] [object java/lang/ClassLoader] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Parcel;"  "Ljava/lang/ClassLoader;"  ")TT;")
+  )
+)
+
+)

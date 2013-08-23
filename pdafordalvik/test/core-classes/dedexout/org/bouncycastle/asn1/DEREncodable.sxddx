@@ -1,0 +1,9 @@
+(interface (attrs public abstract synchronized ) org/bouncycastle/asn1/DEREncodable
+ (super java/lang/Object)
+ (source "DEREncodable.java")
+
+
+(method (attrs public abstract ) getDERObject()[object org/bouncycastle/asn1/DERObject]
+)
+
+)

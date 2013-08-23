@@ -1,0 +1,51 @@
+(class (attrs public abstract ) android/app/backup/RestoreObserver
+ (super java/lang/Object)
+ (source "RestoreObserver.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/app/backup/RestoreObserver])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) onUpdate(int [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object android/app/backup/RestoreObserver])
+  ; parameter[0] : v3 (int)
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 6)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) restoreFinished(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/app/backup/RestoreObserver])
+  ; parameter[0] : v3 (int)
+  (line 7)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) restoreStarting(int )void
+  (limit registers 4)
+  ; this: v2 ([object android/app/backup/RestoreObserver])
+  ; parameter[0] : v3 (int)
+  (line 5)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

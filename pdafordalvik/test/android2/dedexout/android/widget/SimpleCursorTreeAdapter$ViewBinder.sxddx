@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/widget/SimpleCursorTreeAdapter$ViewBinder
+ (super java/lang/Object)
+ (source "SimpleCursorTreeAdapter.java")
+
+
+(method (attrs public abstract ) setViewValue([object android/view/View] [object android/database/Cursor] int )boolean
+)
+
+)

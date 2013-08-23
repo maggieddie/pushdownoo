@@ -1,0 +1,15 @@
+(class (attrs synchronized ) java/util/concurrent/SynchronousQueue$LifoWaitQueue
+ (super java/util/concurrent/SynchronousQueue$WaitQueue)
+ (source "SynchronousQueue.java")
+
+ (field (attrs private static final ) serialVersionUID long -34095462); 0xfdf7be9a )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object java/util/concurrent/SynchronousQueue$LifoWaitQueue])
+  (line 1088)
+  (invoke-direct {v0} java/util/concurrent/SynchronousQueue$WaitQueue/<init> )
+  (return-void )
+ )
+
+)

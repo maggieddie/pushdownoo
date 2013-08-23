@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) android/os/Parcelable
+ (super java/lang/Object)
+ (source "Parcelable.java")
+
+ (field (attrs public static final ) CONTENTS_FILE_DESCRIPTOR int 1); 0x1 )
+ (field (attrs public static final ) PARCELABLE_WRITE_RETURN_VALUE int 1); 0x1 )
+
+(method (attrs public abstract ) describeContents()int
+)
+
+(method (attrs public abstract ) writeToParcel([object android/os/Parcel] int )void
+)
+
+)

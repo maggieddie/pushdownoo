@@ -1,0 +1,662 @@
+(class (attrs public ) android/opengl/GLES10
+ (super java/lang/Object)
+ (source "GLES10.java")
+
+ (field (attrs public static final ) GL_ADD int 260); 0x104 )
+ (field (attrs public static final ) GL_ALIASED_LINE_WIDTH_RANGE int 33902); 0x846e )
+ (field (attrs public static final ) GL_ALIASED_POINT_SIZE_RANGE int 33901); 0x846d )
+ (field (attrs public static final ) GL_ALPHA int 6406); 0x1906 )
+ (field (attrs public static final ) GL_ALPHA_BITS int 3413); 0xd55 )
+ (field (attrs public static final ) GL_ALPHA_TEST int 3008); 0xbc0 )
+ (field (attrs public static final ) GL_ALWAYS int 519); 0x207 )
+ (field (attrs public static final ) GL_AMBIENT int 4608); 0x1200 )
+ (field (attrs public static final ) GL_AMBIENT_AND_DIFFUSE int 5634); 0x1602 )
+ (field (attrs public static final ) GL_AND int 5377); 0x1501 )
+ (field (attrs public static final ) GL_AND_INVERTED int 5380); 0x1504 )
+ (field (attrs public static final ) GL_AND_REVERSE int 5378); 0x1502 )
+ (field (attrs public static final ) GL_BACK int 1029); 0x405 )
+ (field (attrs public static final ) GL_BLEND int 3042); 0xbe2 )
+ (field (attrs public static final ) GL_BLUE_BITS int 3412); 0xd54 )
+ (field (attrs public static final ) GL_BYTE int 5120); 0x1400 )
+ (field (attrs public static final ) GL_CCW int 2305); 0x901 )
+ (field (attrs public static final ) GL_CLAMP_TO_EDGE int 33071); 0x812f )
+ (field (attrs public static final ) GL_CLEAR int 5376); 0x1500 )
+ (field (attrs public static final ) GL_COLOR_ARRAY int 32886); 0x8076 )
+ (field (attrs public static final ) GL_COLOR_BUFFER_BIT int 16384); 0x4000 )
+ (field (attrs public static final ) GL_COLOR_LOGIC_OP int 3058); 0xbf2 )
+ (field (attrs public static final ) GL_COLOR_MATERIAL int 2903); 0xb57 )
+ (field (attrs public static final ) GL_COMPRESSED_TEXTURE_FORMATS int 34467); 0x86a3 )
+ (field (attrs public static final ) GL_CONSTANT_ATTENUATION int 4615); 0x1207 )
+ (field (attrs public static final ) GL_COPY int 5379); 0x1503 )
+ (field (attrs public static final ) GL_COPY_INVERTED int 5388); 0x150c )
+ (field (attrs public static final ) GL_CULL_FACE int 2884); 0xb44 )
+ (field (attrs public static final ) GL_CW int 2304); 0x900 )
+ (field (attrs public static final ) GL_DECAL int 8449); 0x2101 )
+ (field (attrs public static final ) GL_DECR int 7683); 0x1e03 )
+ (field (attrs public static final ) GL_DEPTH_BITS int 3414); 0xd56 )
+ (field (attrs public static final ) GL_DEPTH_BUFFER_BIT int 256); 0x100 )
+ (field (attrs public static final ) GL_DEPTH_TEST int 2929); 0xb71 )
+ (field (attrs public static final ) GL_DIFFUSE int 4609); 0x1201 )
+ (field (attrs public static final ) GL_DITHER int 3024); 0xbd0 )
+ (field (attrs public static final ) GL_DONT_CARE int 4352); 0x1100 )
+ (field (attrs public static final ) GL_DST_ALPHA int 772); 0x304 )
+ (field (attrs public static final ) GL_DST_COLOR int 774); 0x306 )
+ (field (attrs public static final ) GL_EMISSION int 5632); 0x1600 )
+ (field (attrs public static final ) GL_EQUAL int 514); 0x202 )
+ (field (attrs public static final ) GL_EQUIV int 5385); 0x1509 )
+ (field (attrs public static final ) GL_EXP int 2048); 0x800 )
+ (field (attrs public static final ) GL_EXP2 int 2049); 0x801 )
+ (field (attrs public static final ) GL_EXTENSIONS int 7939); 0x1f03 )
+ (field (attrs public static final ) GL_FALSE int 0); 0x0 )
+ (field (attrs public static final ) GL_FASTEST int 4353); 0x1101 )
+ (field (attrs public static final ) GL_FIXED int 5132); 0x140c )
+ (field (attrs public static final ) GL_FLAT int 7424); 0x1d00 )
+ (field (attrs public static final ) GL_FLOAT int 5126); 0x1406 )
+ (field (attrs public static final ) GL_FOG int 2912); 0xb60 )
+ (field (attrs public static final ) GL_FOG_COLOR int 2918); 0xb66 )
+ (field (attrs public static final ) GL_FOG_DENSITY int 2914); 0xb62 )
+ (field (attrs public static final ) GL_FOG_END int 2916); 0xb64 )
+ (field (attrs public static final ) GL_FOG_HINT int 3156); 0xc54 )
+ (field (attrs public static final ) GL_FOG_MODE int 2917); 0xb65 )
+ (field (attrs public static final ) GL_FOG_START int 2915); 0xb63 )
+ (field (attrs public static final ) GL_FRONT int 1028); 0x404 )
+ (field (attrs public static final ) GL_FRONT_AND_BACK int 1032); 0x408 )
+ (field (attrs public static final ) GL_GEQUAL int 518); 0x206 )
+ (field (attrs public static final ) GL_GREATER int 516); 0x204 )
+ (field (attrs public static final ) GL_GREEN_BITS int 3411); 0xd53 )
+ (field (attrs public static final ) GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES int 35739); 0x8b9b )
+ (field (attrs public static final ) GL_IMPLEMENTATION_COLOR_READ_TYPE_OES int 35738); 0x8b9a )
+ (field (attrs public static final ) GL_INCR int 7682); 0x1e02 )
+ (field (attrs public static final ) GL_INVALID_ENUM int 1280); 0x500 )
+ (field (attrs public static final ) GL_INVALID_OPERATION int 1282); 0x502 )
+ (field (attrs public static final ) GL_INVALID_VALUE int 1281); 0x501 )
+ (field (attrs public static final ) GL_INVERT int 5386); 0x150a )
+ (field (attrs public static final ) GL_KEEP int 7680); 0x1e00 )
+ (field (attrs public static final ) GL_LEQUAL int 515); 0x203 )
+ (field (attrs public static final ) GL_LESS int 513); 0x201 )
+ (field (attrs public static final ) GL_LIGHT0 int 16384); 0x4000 )
+ (field (attrs public static final ) GL_LIGHT1 int 16385); 0x4001 )
+ (field (attrs public static final ) GL_LIGHT2 int 16386); 0x4002 )
+ (field (attrs public static final ) GL_LIGHT3 int 16387); 0x4003 )
+ (field (attrs public static final ) GL_LIGHT4 int 16388); 0x4004 )
+ (field (attrs public static final ) GL_LIGHT5 int 16389); 0x4005 )
+ (field (attrs public static final ) GL_LIGHT6 int 16390); 0x4006 )
+ (field (attrs public static final ) GL_LIGHT7 int 16391); 0x4007 )
+ (field (attrs public static final ) GL_LIGHTING int 2896); 0xb50 )
+ (field (attrs public static final ) GL_LIGHT_MODEL_AMBIENT int 2899); 0xb53 )
+ (field (attrs public static final ) GL_LIGHT_MODEL_TWO_SIDE int 2898); 0xb52 )
+ (field (attrs public static final ) GL_LINEAR int 9729); 0x2601 )
+ (field (attrs public static final ) GL_LINEAR_ATTENUATION int 4616); 0x1208 )
+ (field (attrs public static final ) GL_LINEAR_MIPMAP_LINEAR int 9987); 0x2703 )
+ (field (attrs public static final ) GL_LINEAR_MIPMAP_NEAREST int 9985); 0x2701 )
+ (field (attrs public static final ) GL_LINES int 1); 0x1 )
+ (field (attrs public static final ) GL_LINE_LOOP int 2); 0x2 )
+ (field (attrs public static final ) GL_LINE_SMOOTH int 2848); 0xb20 )
+ (field (attrs public static final ) GL_LINE_SMOOTH_HINT int 3154); 0xc52 )
+ (field (attrs public static final ) GL_LINE_STRIP int 3); 0x3 )
+ (field (attrs public static final ) GL_LUMINANCE int 6409); 0x1909 )
+ (field (attrs public static final ) GL_LUMINANCE_ALPHA int 6410); 0x190a )
+ (field (attrs public static final ) GL_MAX_ELEMENTS_INDICES int 33001); 0x80e9 )
+ (field (attrs public static final ) GL_MAX_ELEMENTS_VERTICES int 33000); 0x80e8 )
+ (field (attrs public static final ) GL_MAX_LIGHTS int 3377); 0xd31 )
+ (field (attrs public static final ) GL_MAX_MODELVIEW_STACK_DEPTH int 3382); 0xd36 )
+ (field (attrs public static final ) GL_MAX_PROJECTION_STACK_DEPTH int 3384); 0xd38 )
+ (field (attrs public static final ) GL_MAX_TEXTURE_SIZE int 3379); 0xd33 )
+ (field (attrs public static final ) GL_MAX_TEXTURE_STACK_DEPTH int 3385); 0xd39 )
+ (field (attrs public static final ) GL_MAX_TEXTURE_UNITS int 34018); 0x84e2 )
+ (field (attrs public static final ) GL_MAX_VIEWPORT_DIMS int 3386); 0xd3a )
+ (field (attrs public static final ) GL_MODELVIEW int 5888); 0x1700 )
+ (field (attrs public static final ) GL_MODULATE int 8448); 0x2100 )
+ (field (attrs public static final ) GL_MULTISAMPLE int 32925); 0x809d )
+ (field (attrs public static final ) GL_NAND int 5390); 0x150e )
+ (field (attrs public static final ) GL_NEAREST int 9728); 0x2600 )
+ (field (attrs public static final ) GL_NEAREST_MIPMAP_LINEAR int 9986); 0x2702 )
+ (field (attrs public static final ) GL_NEAREST_MIPMAP_NEAREST int 9984); 0x2700 )
+ (field (attrs public static final ) GL_NEVER int 512); 0x200 )
+ (field (attrs public static final ) GL_NICEST int 4354); 0x1102 )
+ (field (attrs public static final ) GL_NOOP int 5381); 0x1505 )
+ (field (attrs public static final ) GL_NOR int 5384); 0x1508 )
+ (field (attrs public static final ) GL_NORMALIZE int 2977); 0xba1 )
+ (field (attrs public static final ) GL_NORMAL_ARRAY int 32885); 0x8075 )
+ (field (attrs public static final ) GL_NOTEQUAL int 517); 0x205 )
+ (field (attrs public static final ) GL_NO_ERROR int 0); 0x0 )
+ (field (attrs public static final ) GL_NUM_COMPRESSED_TEXTURE_FORMATS int 34466); 0x86a2 )
+ (field (attrs public static final ) GL_ONE int 1); 0x1 )
+ (field (attrs public static final ) GL_ONE_MINUS_DST_ALPHA int 773); 0x305 )
+ (field (attrs public static final ) GL_ONE_MINUS_DST_COLOR int 775); 0x307 )
+ (field (attrs public static final ) GL_ONE_MINUS_SRC_ALPHA int 771); 0x303 )
+ (field (attrs public static final ) GL_ONE_MINUS_SRC_COLOR int 769); 0x301 )
+ (field (attrs public static final ) GL_OR int 5383); 0x1507 )
+ (field (attrs public static final ) GL_OR_INVERTED int 5389); 0x150d )
+ (field (attrs public static final ) GL_OR_REVERSE int 5387); 0x150b )
+ (field (attrs public static final ) GL_OUT_OF_MEMORY int 1285); 0x505 )
+ (field (attrs public static final ) GL_PACK_ALIGNMENT int 3333); 0xd05 )
+ (field (attrs public static final ) GL_PALETTE4_R5_G6_B5_OES int 35730); 0x8b92 )
+ (field (attrs public static final ) GL_PALETTE4_RGB5_A1_OES int 35732); 0x8b94 )
+ (field (attrs public static final ) GL_PALETTE4_RGB8_OES int 35728); 0x8b90 )
+ (field (attrs public static final ) GL_PALETTE4_RGBA4_OES int 35731); 0x8b93 )
+ (field (attrs public static final ) GL_PALETTE4_RGBA8_OES int 35729); 0x8b91 )
+ (field (attrs public static final ) GL_PALETTE8_R5_G6_B5_OES int 35735); 0x8b97 )
+ (field (attrs public static final ) GL_PALETTE8_RGB5_A1_OES int 35737); 0x8b99 )
+ (field (attrs public static final ) GL_PALETTE8_RGB8_OES int 35733); 0x8b95 )
+ (field (attrs public static final ) GL_PALETTE8_RGBA4_OES int 35736); 0x8b98 )
+ (field (attrs public static final ) GL_PALETTE8_RGBA8_OES int 35734); 0x8b96 )
+ (field (attrs public static final ) GL_PERSPECTIVE_CORRECTION_HINT int 3152); 0xc50 )
+ (field (attrs public static final ) GL_POINTS int 0); 0x0 )
+ (field (attrs public static final ) GL_POINT_FADE_THRESHOLD_SIZE int 33064); 0x8128 )
+ (field (attrs public static final ) GL_POINT_SIZE int 2833); 0xb11 )
+ (field (attrs public static final ) GL_POINT_SMOOTH int 2832); 0xb10 )
+ (field (attrs public static final ) GL_POINT_SMOOTH_HINT int 3153); 0xc51 )
+ (field (attrs public static final ) GL_POLYGON_OFFSET_FILL int 32823); 0x8037 )
+ (field (attrs public static final ) GL_POLYGON_SMOOTH_HINT int 3155); 0xc53 )
+ (field (attrs public static final ) GL_POSITION int 4611); 0x1203 )
+ (field (attrs public static final ) GL_PROJECTION int 5889); 0x1701 )
+ (field (attrs public static final ) GL_QUADRATIC_ATTENUATION int 4617); 0x1209 )
+ (field (attrs public static final ) GL_RED_BITS int 3410); 0xd52 )
+ (field (attrs public static final ) GL_RENDERER int 7937); 0x1f01 )
+ (field (attrs public static final ) GL_REPEAT int 10497); 0x2901 )
+ (field (attrs public static final ) GL_REPLACE int 7681); 0x1e01 )
+ (field (attrs public static final ) GL_RESCALE_NORMAL int 32826); 0x803a )
+ (field (attrs public static final ) GL_RGB int 6407); 0x1907 )
+ (field (attrs public static final ) GL_RGBA int 6408); 0x1908 )
+ (field (attrs public static final ) GL_SAMPLE_ALPHA_TO_COVERAGE int 32926); 0x809e )
+ (field (attrs public static final ) GL_SAMPLE_ALPHA_TO_ONE int 32927); 0x809f )
+ (field (attrs public static final ) GL_SAMPLE_COVERAGE int 32928); 0x80a0 )
+ (field (attrs public static final ) GL_SCISSOR_TEST int 3089); 0xc11 )
+ (field (attrs public static final ) GL_SET int 5391); 0x150f )
+ (field (attrs public static final ) GL_SHININESS int 5633); 0x1601 )
+ (field (attrs public static final ) GL_SHORT int 5122); 0x1402 )
+ (field (attrs public static final ) GL_SMOOTH int 7425); 0x1d01 )
+ (field (attrs public static final ) GL_SMOOTH_LINE_WIDTH_RANGE int 2850); 0xb22 )
+ (field (attrs public static final ) GL_SMOOTH_POINT_SIZE_RANGE int 2834); 0xb12 )
+ (field (attrs public static final ) GL_SPECULAR int 4610); 0x1202 )
+ (field (attrs public static final ) GL_SPOT_CUTOFF int 4614); 0x1206 )
+ (field (attrs public static final ) GL_SPOT_DIRECTION int 4612); 0x1204 )
+ (field (attrs public static final ) GL_SPOT_EXPONENT int 4613); 0x1205 )
+ (field (attrs public static final ) GL_SRC_ALPHA int 770); 0x302 )
+ (field (attrs public static final ) GL_SRC_ALPHA_SATURATE int 776); 0x308 )
+ (field (attrs public static final ) GL_SRC_COLOR int 768); 0x300 )
+ (field (attrs public static final ) GL_STACK_OVERFLOW int 1283); 0x503 )
+ (field (attrs public static final ) GL_STACK_UNDERFLOW int 1284); 0x504 )
+ (field (attrs public static final ) GL_STENCIL_BITS int 3415); 0xd57 )
+ (field (attrs public static final ) GL_STENCIL_BUFFER_BIT int 1024); 0x400 )
+ (field (attrs public static final ) GL_STENCIL_TEST int 2960); 0xb90 )
+ (field (attrs public static final ) GL_SUBPIXEL_BITS int 3408); 0xd50 )
+ (field (attrs public static final ) GL_TEXTURE int 5890); 0x1702 )
+ (field (attrs public static final ) GL_TEXTURE0 int 33984); 0x84c0 )
+ (field (attrs public static final ) GL_TEXTURE1 int 33985); 0x84c1 )
+ (field (attrs public static final ) GL_TEXTURE10 int 33994); 0x84ca )
+ (field (attrs public static final ) GL_TEXTURE11 int 33995); 0x84cb )
+ (field (attrs public static final ) GL_TEXTURE12 int 33996); 0x84cc )
+ (field (attrs public static final ) GL_TEXTURE13 int 33997); 0x84cd )
+ (field (attrs public static final ) GL_TEXTURE14 int 33998); 0x84ce )
+ (field (attrs public static final ) GL_TEXTURE15 int 33999); 0x84cf )
+ (field (attrs public static final ) GL_TEXTURE16 int 34000); 0x84d0 )
+ (field (attrs public static final ) GL_TEXTURE17 int 34001); 0x84d1 )
+ (field (attrs public static final ) GL_TEXTURE18 int 34002); 0x84d2 )
+ (field (attrs public static final ) GL_TEXTURE19 int 34003); 0x84d3 )
+ (field (attrs public static final ) GL_TEXTURE2 int 33986); 0x84c2 )
+ (field (attrs public static final ) GL_TEXTURE20 int 34004); 0x84d4 )
+ (field (attrs public static final ) GL_TEXTURE21 int 34005); 0x84d5 )
+ (field (attrs public static final ) GL_TEXTURE22 int 34006); 0x84d6 )
+ (field (attrs public static final ) GL_TEXTURE23 int 34007); 0x84d7 )
+ (field (attrs public static final ) GL_TEXTURE24 int 34008); 0x84d8 )
+ (field (attrs public static final ) GL_TEXTURE25 int 34009); 0x84d9 )
+ (field (attrs public static final ) GL_TEXTURE26 int 34010); 0x84da )
+ (field (attrs public static final ) GL_TEXTURE27 int 34011); 0x84db )
+ (field (attrs public static final ) GL_TEXTURE28 int 34012); 0x84dc )
+ (field (attrs public static final ) GL_TEXTURE29 int 34013); 0x84dd )
+ (field (attrs public static final ) GL_TEXTURE3 int 33987); 0x84c3 )
+ (field (attrs public static final ) GL_TEXTURE30 int 34014); 0x84de )
+ (field (attrs public static final ) GL_TEXTURE31 int 34015); 0x84df )
+ (field (attrs public static final ) GL_TEXTURE4 int 33988); 0x84c4 )
+ (field (attrs public static final ) GL_TEXTURE5 int 33989); 0x84c5 )
+ (field (attrs public static final ) GL_TEXTURE6 int 33990); 0x84c6 )
+ (field (attrs public static final ) GL_TEXTURE7 int 33991); 0x84c7 )
+ (field (attrs public static final ) GL_TEXTURE8 int 33992); 0x84c8 )
+ (field (attrs public static final ) GL_TEXTURE9 int 33993); 0x84c9 )
+ (field (attrs public static final ) GL_TEXTURE_2D int 3553); 0xde1 )
+ (field (attrs public static final ) GL_TEXTURE_COORD_ARRAY int 32888); 0x8078 )
+ (field (attrs public static final ) GL_TEXTURE_ENV int 8960); 0x2300 )
+ (field (attrs public static final ) GL_TEXTURE_ENV_COLOR int 8705); 0x2201 )
+ (field (attrs public static final ) GL_TEXTURE_ENV_MODE int 8704); 0x2200 )
+ (field (attrs public static final ) GL_TEXTURE_MAG_FILTER int 10240); 0x2800 )
+ (field (attrs public static final ) GL_TEXTURE_MIN_FILTER int 10241); 0x2801 )
+ (field (attrs public static final ) GL_TEXTURE_WRAP_S int 10242); 0x2802 )
+ (field (attrs public static final ) GL_TEXTURE_WRAP_T int 10243); 0x2803 )
+ (field (attrs public static final ) GL_TRIANGLES int 4); 0x4 )
+ (field (attrs public static final ) GL_TRIANGLE_FAN int 6); 0x6 )
+ (field (attrs public static final ) GL_TRIANGLE_STRIP int 5); 0x5 )
+ (field (attrs public static final ) GL_TRUE int 1); 0x1 )
+ (field (attrs public static final ) GL_UNPACK_ALIGNMENT int 3317); 0xcf5 )
+ (field (attrs public static final ) GL_UNSIGNED_BYTE int 5121); 0x1401 )
+ (field (attrs public static final ) GL_UNSIGNED_SHORT int 5123); 0x1403 )
+ (field (attrs public static final ) GL_UNSIGNED_SHORT_4_4_4_4 int 32819); 0x8033 )
+ (field (attrs public static final ) GL_UNSIGNED_SHORT_5_5_5_1 int 32820); 0x8034 )
+ (field (attrs public static final ) GL_UNSIGNED_SHORT_5_6_5 int 33635); 0x8363 )
+ (field (attrs public static final ) GL_VENDOR int 7936); 0x1f00 )
+ (field (attrs public static final ) GL_VERSION int 7938); 0x1f02 )
+ (field (attrs public static final ) GL_VERTEX_ARRAY int 32884); 0x8074 )
+ (field (attrs public static final ) GL_XOR int 5382); 0x1506 )
+ (field (attrs public static final ) GL_ZERO int )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/opengl/GLES10])
+  (line 4)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) glActiveTexture(int )void
+ )
+
+(method (attrs public static native ) glAlphaFunc(int float )void
+ )
+
+(method (attrs public static native ) glAlphaFuncx(int int )void
+ )
+
+(method (attrs public static native ) glBindTexture(int int )void
+ )
+
+(method (attrs public static native ) glBlendFunc(int int )void
+ )
+
+(method (attrs public static native ) glClear(int )void
+ )
+
+(method (attrs public static native ) glClearColor(float float float float )void
+ )
+
+(method (attrs public static native ) glClearColorx(int int int int )void
+ )
+
+(method (attrs public static native ) glClearDepthf(float )void
+ )
+
+(method (attrs public static native ) glClearDepthx(int )void
+ )
+
+(method (attrs public static native ) glClearStencil(int )void
+ )
+
+(method (attrs public static native ) glClientActiveTexture(int )void
+ )
+
+(method (attrs public static native ) glColor4f(float float float float )void
+ )
+
+(method (attrs public static native ) glColor4x(int int int int )void
+ )
+
+(method (attrs public static native ) glColorMask(boolean boolean boolean boolean )void
+ )
+
+(method (attrs public static ) glColorPointer(int int int [object java/nio/Buffer] )void
+  (limit registers 6)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object java/nio/Buffer])
+  (line 20)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) glCompressedTexImage2D(int int int int int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glCompressedTexSubImage2D(int int int int int int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glCopyTexImage2D(int int int int int int int int )void
+ )
+
+(method (attrs public static native ) glCopyTexSubImage2D(int int int int int int int int )void
+ )
+
+(method (attrs public static native ) glCullFace(int )void
+ )
+
+(method (attrs public static native ) glDeleteTextures(int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glDeleteTextures(int [array int] int )void
+ )
+
+(method (attrs public static native ) glDepthFunc(int )void
+ )
+
+(method (attrs public static native ) glDepthMask(boolean )void
+ )
+
+(method (attrs public static native ) glDepthRangef(float float )void
+ )
+
+(method (attrs public static native ) glDepthRangex(int int )void
+ )
+
+(method (attrs public static native ) glDisable(int )void
+ )
+
+(method (attrs public static native ) glDisableClientState(int )void
+ )
+
+(method (attrs public static native ) glDrawArrays(int int int )void
+ )
+
+(method (attrs public static native ) glDrawElements(int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glEnable(int )void
+ )
+
+(method (attrs public static native ) glEnableClientState(int )void
+ )
+
+(method (attrs public static native ) glFinish()void
+ )
+
+(method (attrs public static native ) glFlush()void
+ )
+
+(method (attrs public static native ) glFogf(int float )void
+ )
+
+(method (attrs public static native ) glFogfv(int [object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glFogfv(int [array float] int )void
+ )
+
+(method (attrs public static native ) glFogx(int int )void
+ )
+
+(method (attrs public static native ) glFogxv(int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glFogxv(int [array int] int )void
+ )
+
+(method (attrs public static native ) glFrontFace(int )void
+ )
+
+(method (attrs public static native ) glFrustumf(float float float float float float )void
+ )
+
+(method (attrs public static native ) glFrustumx(int int int int int int )void
+ )
+
+(method (attrs public static native ) glGenTextures(int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glGenTextures(int [array int] int )void
+ )
+
+(method (attrs public static native ) glGetError()int
+ )
+
+(method (attrs public static native ) glGetIntegerv(int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glGetIntegerv(int [array int] int )void
+ )
+
+(method (attrs public static native ) glGetString(int )[object java/lang/String]
+ )
+
+(method (attrs public static native ) glHint(int int )void
+ )
+
+(method (attrs public static native ) glLightModelf(int float )void
+ )
+
+(method (attrs public static native ) glLightModelfv(int [object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glLightModelfv(int [array float] int )void
+ )
+
+(method (attrs public static native ) glLightModelx(int int )void
+ )
+
+(method (attrs public static native ) glLightModelxv(int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glLightModelxv(int [array int] int )void
+ )
+
+(method (attrs public static native ) glLightf(int int float )void
+ )
+
+(method (attrs public static native ) glLightfv(int int [object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glLightfv(int int [array float] int )void
+ )
+
+(method (attrs public static native ) glLightx(int int int )void
+ )
+
+(method (attrs public static native ) glLightxv(int int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glLightxv(int int [array int] int )void
+ )
+
+(method (attrs public static native ) glLineWidth(float )void
+ )
+
+(method (attrs public static native ) glLineWidthx(int )void
+ )
+
+(method (attrs public static native ) glLoadIdentity()void
+ )
+
+(method (attrs public static native ) glLoadMatrixf([object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glLoadMatrixf([array float] int )void
+ )
+
+(method (attrs public static native ) glLoadMatrixx([object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glLoadMatrixx([array int] int )void
+ )
+
+(method (attrs public static native ) glLogicOp(int )void
+ )
+
+(method (attrs public static native ) glMaterialf(int int float )void
+ )
+
+(method (attrs public static native ) glMaterialfv(int int [object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glMaterialfv(int int [array float] int )void
+ )
+
+(method (attrs public static native ) glMaterialx(int int int )void
+ )
+
+(method (attrs public static native ) glMaterialxv(int int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glMaterialxv(int int [array int] int )void
+ )
+
+(method (attrs public static native ) glMatrixMode(int )void
+ )
+
+(method (attrs public static native ) glMultMatrixf([object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glMultMatrixf([array float] int )void
+ )
+
+(method (attrs public static native ) glMultMatrixx([object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glMultMatrixx([array int] int )void
+ )
+
+(method (attrs public static native ) glMultiTexCoord4f(int float float float float )void
+ )
+
+(method (attrs public static native ) glMultiTexCoord4x(int int int int int )void
+ )
+
+(method (attrs public static native ) glNormal3f(float float float )void
+ )
+
+(method (attrs public static native ) glNormal3x(int int int )void
+ )
+
+(method (attrs public static ) glNormalPointer(int int [object java/nio/Buffer] )void
+  (limit registers 5)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object java/nio/Buffer])
+  (line 91)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) glOrthof(float float float float float float )void
+ )
+
+(method (attrs public static native ) glOrthox(int int int int int int )void
+ )
+
+(method (attrs public static native ) glPixelStorei(int int )void
+ )
+
+(method (attrs public static native ) glPointSize(float )void
+ )
+
+(method (attrs public static native ) glPointSizex(int )void
+ )
+
+(method (attrs public static native ) glPolygonOffset(float float )void
+ )
+
+(method (attrs public static native ) glPolygonOffsetx(int int )void
+ )
+
+(method (attrs public static native ) glPopMatrix()void
+ )
+
+(method (attrs public static native ) glPushMatrix()void
+ )
+
+(method (attrs public static native ) glReadPixels(int int int int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glRotatef(float float float float )void
+ )
+
+(method (attrs public static native ) glRotatex(int int int int )void
+ )
+
+(method (attrs public static native ) glSampleCoverage(float boolean )void
+ )
+
+(method (attrs public static native ) glSampleCoveragex(int boolean )void
+ )
+
+(method (attrs public static native ) glScalef(float float float )void
+ )
+
+(method (attrs public static native ) glScalex(int int int )void
+ )
+
+(method (attrs public static native ) glScissor(int int int int )void
+ )
+
+(method (attrs public static native ) glShadeModel(int )void
+ )
+
+(method (attrs public static native ) glStencilFunc(int int int )void
+ )
+
+(method (attrs public static native ) glStencilMask(int )void
+ )
+
+(method (attrs public static native ) glStencilOp(int int int )void
+ )
+
+(method (attrs public static ) glTexCoordPointer(int int int [object java/nio/Buffer] )void
+  (limit registers 6)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object java/nio/Buffer])
+  (line 113)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) glTexEnvf(int int float )void
+ )
+
+(method (attrs public static native ) glTexEnvfv(int int [object java/nio/FloatBuffer] )void
+ )
+
+(method (attrs public static native ) glTexEnvfv(int int [array float] int )void
+ )
+
+(method (attrs public static native ) glTexEnvx(int int int )void
+ )
+
+(method (attrs public static native ) glTexEnvxv(int int [object java/nio/IntBuffer] )void
+ )
+
+(method (attrs public static native ) glTexEnvxv(int int [array int] int )void
+ )
+
+(method (attrs public static native ) glTexImage2D(int int int int int int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glTexParameterf(int int float )void
+ )
+
+(method (attrs public static native ) glTexParameterx(int int int )void
+ )
+
+(method (attrs public static native ) glTexSubImage2D(int int int int int int int int [object java/nio/Buffer] )void
+ )
+
+(method (attrs public static native ) glTranslatef(float float float )void
+ )
+
+(method (attrs public static native ) glTranslatex(int int int )void
+ )
+
+(method (attrs public static ) glVertexPointer(int int int [object java/nio/Buffer] )void
+  (limit registers 6)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object java/nio/Buffer])
+  (line 126)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public static native ) glViewport(int int int int )void
+ )
+
+)

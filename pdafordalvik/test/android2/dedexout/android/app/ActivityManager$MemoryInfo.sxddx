@@ -1,0 +1,63 @@
+(class (attrs public ) android/app/ActivityManager$MemoryInfo
+ (super java/lang/Object)
+ (source "ActivityManager.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+ (field (attrs public ) availMem long )
+ (field (attrs public ) lowMemory boolean )
+ (field (attrs public ) threshold long )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 75)
+  (const/4 v0 0)
+  (sput-object v0 android/app/ActivityManager$MemoryInfo.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/app/ActivityManager$MemoryInfo])
+  (line 67)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 3)
+  ; this: v2 ([object android/app/ActivityManager$MemoryInfo])
+  (line 68)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) readFromParcel([object android/os/Parcel] )void
+  (limit registers 4)
+  ; this: v2 ([object android/app/ActivityManager$MemoryInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 70)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 5)
+  ; this: v2 ([object android/app/ActivityManager$MemoryInfo])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  ; parameter[1] : v4 (int)
+  (line 69)
+  (new-instance v0 java/lang/RuntimeException)
+  (const-string v1 "Stub!")
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

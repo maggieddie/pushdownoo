@@ -1,0 +1,39 @@
+(class (attrs public synchronized ) java/security/AccessControlException
+ (super java/lang/SecurityException)
+ (source "AccessControlException.java")
+
+ (field (attrs private static final ) serialVersionUID long 1198503295); 0x476fb57f )
+ (field (attrs private ) perm [object java/security/Permission] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object java/security/AccessControlException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 46)
+  (invoke-direct {v0 v1} java/lang/SecurityException/<init> [object java/lang/String] )
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/security/Permission] )void
+  (limit registers 3)
+  ; this: v0 ([object java/security/AccessControlException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/security/Permission])
+  (line 60)
+  (invoke-direct {v0 v1} java/lang/SecurityException/<init> [object java/lang/String] )
+  (line 61)
+  (iput-object-quick v2 v0 java/security/AccessControlException.perm [object java/security/Permission])
+  (line 62)
+  (return-void )
+ )
+
+(method (attrs public ) getPermission()[object java/security/Permission]
+  (limit registers 2)
+  ; this: v1 ([object java/security/AccessControlException])
+  (line 72)
+  (iget-object-quick v0 v1 java/security/AccessControlException.perm [object java/security/Permission])
+  (return-object v0)
+)
+
+)

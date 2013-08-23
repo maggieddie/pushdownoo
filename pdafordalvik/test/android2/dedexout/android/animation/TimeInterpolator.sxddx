@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) android/animation/TimeInterpolator
+ (super java/lang/Object)
+ (source "TimeInterpolator.java")
+
+
+(method (attrs public abstract ) getInterpolation(float )float
+)
+
+)
