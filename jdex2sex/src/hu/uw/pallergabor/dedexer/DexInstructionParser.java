@@ -258,8 +258,8 @@ public class DexInstructionParser extends DexParser {
                             baseClass = getLocalVariableType( instrBase,reg );
                         if( baseClass != null )
                             baseClass = DexTypeIdsBlock.LTypeToJava( baseClass );
-                        System.out.println("-----base class type??????");
-                        System.out.println(baseClass);
+                      //  System.out.println("-----base class type??????");
+                       // System.out.println(baseClass);
                     }
                 }
                 if( lastreg >= 0 ) {
@@ -289,6 +289,8 @@ public class DexInstructionParser extends DexParser {
 // The base class register was tracked - we may even be able to resolve
 // the vtable offset 
                         if( baseClass != null ) {
+                        	if (baseClass.startsWith("[object "))
+                        	    baseClass = baseClass.substring(8, baseClass.length() - 1);
                             String methodProto = 
                                 dexOffsetResolver.getMethodNameFromOffset( 
                                     baseClass, vtableOffset );
@@ -299,13 +301,14 @@ public class DexInstructionParser extends DexParser {
                                     proto = methodProto.substring( idx+1 );
                                     methodProto = methodProto.substring( 0,idx );
                                 }
-                                
                                 String parameter = 
                                     methodProto+
                                     " ; "+proto+
-                                    " , vtable #0x"+
+                                    " , vtable #0x"+ 
                                     Integer.toHexString( vtableOffset );
                                 Long key = new Long( file.getFilePointer() );
+                                String params = proto.substring( proto.indexOf( '(' ) + 1, proto.indexOf( ')' ) );
+                                parameter = methodProto + " " + SExpHelpers.LTypeToSXTypes( params ); 
                                 quickParameterMap.put( key,parameter );
                                 instrText.append( parameter );
                                 String resultType = 
@@ -324,6 +327,7 @@ public class DexInstructionParser extends DexParser {
                         }
                     }
                 }
+
                 if( !offsetResolved ) {
                     instrText.append( "vtable #0x"+
                             Integer.toHexString( vtableOffset ) );
@@ -397,6 +401,8 @@ public class DexInstructionParser extends DexParser {
                                 " , inline #0x"+
                                 Integer.toHexString( inlineOffset );
                             Long key = new Long( file.getFilePointer() );
+                            String params = proto.substring( proto.indexOf( '(' ) + 1, proto.indexOf( ')' ) );
+                            parameter = methodProto + " " + SExpHelpers.LTypeToSXTypes( params ); 
                             quickParameterMap.put( key,parameter );
                             instrText.append( parameter );
                             String resultType = 
@@ -574,6 +580,8 @@ public class DexInstructionParser extends DexParser {
                             baseClass = regMap.get( new Integer( rangestart ) );
                             if( baseClass != null ) {
                                 baseClass = DexTypeIdsBlock.LTypeToJava( baseClass );
+                            	if (baseClass.startsWith("[object "))
+                            	    baseClass = baseClass.substring(8, baseClass.length() - 1);
                                 String methodProto = 
                                     dexOffsetResolver.getMethodNameFromOffset( 
                                         baseClass, vtableOffset );
@@ -590,6 +598,8 @@ public class DexInstructionParser extends DexParser {
                                         " ; "+proto+
                                         " , vtable #0x"+
                                         Integer.toHexString( vtableOffset );
+                                    String params = proto.substring( proto.indexOf( '(' ) + 1, proto.indexOf( ')' ) );
+                                    parameter = methodProto + " " + SExpHelpers.LTypeToSXTypes( params ); 
                                     instrText.append( parameter );
                                     Long key = new Long( file.getFilePointer() );
                                     quickParameterMap.put( key,parameter );
@@ -730,6 +740,7 @@ public class DexInstructionParser extends DexParser {
                             sizereg+
                             " "+
                             SExpHelpers.LTypeToSXType( arrayType ) );
+                
             }
             break;
 
@@ -743,6 +754,7 @@ public class DexInstructionParser extends DexParser {
                         reg+
                         " "+
                         "l"+Long.toHexString( target ) );
+               // System.out.println(instrText);
                 affectedRegisters = new int[1];
                 affectedRegisters[0] = reg;
                 if( !secondPass ) {
@@ -760,8 +772,11 @@ public class DexInstructionParser extends DexParser {
             case ONEREGFIELD_READ: {
                 int reg = read8Bit();
                 int fieldidx = read16Bit();
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+                //System.out.println("fieldOath in ONEREGFIELD_READ " + fieldPath);
                 instrText.append( "v"+reg+" "+
-                		SExpHelpers.LTypeToSXType( dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType( fieldPath));
+                //System.out.println(instrText);
                 affectedRegisters = new int[1];
                 affectedRegisters[0] = reg;
                 regMap.put( new Integer( reg ),TYPE_SINGLE_LENGTH );
@@ -774,8 +789,11 @@ public class DexInstructionParser extends DexParser {
             case ONEREGFIELD_READ_WIDE: {
                 int reg = read8Bit();
                 int fieldidx = read16Bit();
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+                //System.out.println("fieldOath in ONEREGFIELD_READ_WIDE " + fieldPath);
                 instrText.append( "v"+reg+" "+
-                		SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType(fieldPath ));
+               // System.out.println(instrText);
                 affectedRegisters = new int[1];
                 affectedRegisters[0] = reg;
                 regMap.put( new Integer( reg ),TYPE_DOUBLE_LENGTH );
@@ -788,8 +806,11 @@ public class DexInstructionParser extends DexParser {
             case ONEREGFIELD_READ_OBJECT: {
                 int reg = read8Bit();
                 int fieldidx = read16Bit();
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+                //System.out.println("fieldOath in ONEREGFIELD_READ_OBJECT " + fieldPath);
                 instrText.append( "v"+reg+" "+
-                		SExpHelpers.LTypeToSXType( dexFieldIdsBlock.getField( fieldidx) ) );
+                		SExpHelpers.LTypeToSXType( fieldPath));
+               // System.out.println(instrText);
                 affectedRegisters = new int[1];
                 affectedRegisters[0] = reg;
                 regMap.put( new Integer( reg ),
@@ -803,8 +824,11 @@ public class DexInstructionParser extends DexParser {
             case ONEREGFIELD_WRITE: {
                 int reg = read8Bit();
                 int fieldidx = read16Bit();
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+                //System.out.println("fieldOath in TWOREGSFIELD_READ_OBJECT " + fieldPath);
                 instrText.append( "v"+reg+" "+
-                		SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType(fieldPath ));
+                //System.out.println(instrText);
                 affectedRegisters = new int[1];
                 affectedRegisters[0] = reg;
                 regMap.put( new Integer( reg ),
@@ -823,8 +847,11 @@ public class DexInstructionParser extends DexParser {
                 affectedRegisters = new int[2];
                 affectedRegisters[0] = reg1;
                 affectedRegisters[1] = reg2;
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+              //  System.out.println("fieldOath in TWOREGSFIELD_READ " + fieldPath);
                 instrText.append( "v"+reg1+" v"+reg2+" "+
-                            SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                            SExpHelpers.LTypeToSXType(fieldPath ));
+               // System.out.println(instrText);
                 regMap.put( new Integer( reg1 ),TYPE_SINGLE_LENGTH );
             }
             break;
@@ -840,8 +867,11 @@ public class DexInstructionParser extends DexParser {
                 affectedRegisters = new int[2];
                 affectedRegisters[0] = reg1;
                 affectedRegisters[1] = reg2;
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+               // System.out.println("fieldOath in TWOREGSFIELD_READ_WIDE " + fieldPath);
                 instrText.append( "v"+reg1+" v"+reg2+" "+
-                		SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType(fieldPath));
+                //System.out.println(instrText);
                 regMap.put( new Integer( reg1 ),TYPE_DOUBLE_LENGTH );
             }
             break;
@@ -857,8 +887,11 @@ public class DexInstructionParser extends DexParser {
                 affectedRegisters = new int[2];
                 affectedRegisters[0] = reg1;
                 affectedRegisters[1] = reg2;
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+               // System.out.println("fieldOath in TWOREGSFIELD_READ_OBJECT " + fieldPath);
                 instrText.append( "v"+reg1+" v"+reg2+" "+
-                		SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType(fieldPath ));
+               // System.out.println(instrText);
                 regMap.put( new Integer( reg1 ),
                                 dexFieldIdsBlock.getFieldType( fieldidx ) );
             }
@@ -875,8 +908,12 @@ public class DexInstructionParser extends DexParser {
                 affectedRegisters = new int[2];
                 affectedRegisters[0] = reg1;
                 affectedRegisters[1] = reg2;
+                
+                String fieldPath = dexFieldIdsBlock.getField( fieldidx );
+               // System.out.println("fieldOath in TWOREGSFIELD_WRITE " + fieldPath);
+                //System.out.println(instrText);
                 instrText.append( "v"+reg1+" v"+reg2+" "+
-                		SExpHelpers.LTypeToSXType(dexFieldIdsBlock.getField( fieldidx ) ));
+                		SExpHelpers.LTypeToSXType(fieldPath ));
             }
             break;
 
@@ -1352,9 +1389,11 @@ public class DexInstructionParser extends DexParser {
 // finally parse the instruction.
                 if( secondPass ) {
                     Long key = new Long( file.getFilePointer() );
-                    String parameter = quickParameterMap.get( key );
+                    String parameter = quickParameterMap.get( key ); 
                     if( parameter != null ) {
+                    	//System.out.println(" get in the map: "+ parameter );
                         instrText.append( parameter );
+                       // System.out.println(" instr "+ instrText );
                         offsetResolved = true;
                     }
                 } else {
@@ -1363,24 +1402,27 @@ public class DexInstructionParser extends DexParser {
 // The base class register was tracked - we may even be able to resolve
 // the vtable offset 
                     if( baseClass != null ) {
-                        String fieldName = 
+                        String fieldName =  
                             dexOffsetResolver.getFieldNameFromOffset( 
-                                baseClass, constant );
+                                baseClass, constant )
+                                ;
                         if( fieldName != null ) {
                             Long key = new Long( file.getFilePointer() );
-                            fieldName += " ;[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]";
+                            //fieldName += " ;[obj+0x"+
+                            //        Integer.toHexString( constant )+
+                            //        "]";
+                           // System.out.println("fieldName put in the map: "+ fieldName );
                             quickParameterMap.put( key,fieldName );
                             instrText.append( fieldName );
+                          //  System.out.println(" instr "+ instrText );
                             offsetResolved = true;
                         }
                     }
                 }
-                if( !offsetResolved )
-                    instrText.append( "[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]" );
+                //if( !offsetResolved )
+                //    instrText.append( "[obj+0x"+
+                //                    Integer.toHexString( constant )+
+                //                    "]" );
             }
             break;
 
@@ -1408,9 +1450,13 @@ public class DexInstructionParser extends DexParser {
 // finally parse the instruction.
                 if( secondPass ) {
                     Long key = new Long( file.getFilePointer() );
-                    String parameter = quickParameterMap.get( key );
+                    String parameter = 	 
+                    	quickParameterMap.get( key 
+                    	);
                     if( parameter != null ) {
+                    	// System.out.println(" get in the map: "+ parameter );
                         instrText.append( parameter );
+                      //  System.out.println(" instr "+ instrText );
                         offsetResolved = true;
                     }
                 } else {
@@ -1419,24 +1465,27 @@ public class DexInstructionParser extends DexParser {
 // The base class register was tracked - we may even be able to resolve
 // the vtable offset 
                     if( baseClass != null ) {
-                        String fieldName = 
+                        String fieldName =  
                             dexOffsetResolver.getFieldNameFromOffset( 
-                                baseClass, constant );
+                                baseClass, constant  
+                                );
                         if( fieldName != null ) {
                             Long key = new Long( file.getFilePointer() );
-                            fieldName += " ;[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]";
+                            //fieldName += " ;[obj+0x"+
+                            //        Integer.toHexString( constant )+
+                            //        "]";
+                            //System.out.println("fieldName put in the map: "+ fieldName );
                             quickParameterMap.put( key,fieldName );
                             instrText.append( fieldName );
+                            //System.out.println(" instr "+ instrText );
                             offsetResolved = true;
                         }
                     }
                 }
-                if( !offsetResolved )
-                    instrText.append( "[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]" );
+                //if( !offsetResolved )
+                //    instrText.append( "[obj+0x"+
+                //                    Integer.toHexString( constant )+
+                //                    "]" );
             }
             break;
 
@@ -1451,6 +1500,7 @@ public class DexInstructionParser extends DexParser {
                     baseClass = regMap.get( new Integer( reg2 ) );
                 if( baseClass != null )
                     baseClass = DexTypeIdsBlock.LTypeToJava( baseClass );
+         
                 instrText.append( "v"+reg1+
                                     " v"+reg2+
                                     " " );
@@ -1461,9 +1511,12 @@ public class DexInstructionParser extends DexParser {
 // finally parse the instruction.
                 if( secondPass ) {
                     Long key = new Long( file.getFilePointer() );
-                    String parameter = quickParameterMap.get( key );
+                    String parameter = 	 
+                    	quickParameterMap.get( key  );
                     if( parameter != null ) {
+                    //	 System.out.println(" get in the map: "+ parameter );
                         instrText.append( parameter );
+                      //  System.out.println(" instr "+ instrText );
                         offsetResolved = true;
                     }
                 } else {
@@ -1472,27 +1525,29 @@ public class DexInstructionParser extends DexParser {
 // The base class register was tracked - we may even be able to resolve
 // the vtable offset 
                     if( baseClass != null ) {
-                        String fieldName = 
+                        String fieldName =  
                             dexOffsetResolver.getFieldNameFromOffset( 
-                                baseClass, constant );
+                                baseClass, constant  );
                         if( fieldName != null ) {
                             int idx = fieldName.indexOf( ' ' );
                             if( idx >= 0 );
                                 resultType = fieldName.substring( idx+1 );
-                            fieldName += " ;[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]";
+                            //fieldName += " ;[obj+0x"+
+                            //        Integer.toHexString( constant )+
+                            //        "]";
+                          //   System.out.println("fieldName put in the map: "+ fieldName );
                             Long key = new Long( file.getFilePointer() );
                             quickParameterMap.put( key,fieldName );
                             instrText.append( fieldName );
+                           // System.out.println(" instr "+ instrText );
                             offsetResolved = true;
                         }
                     }
                 }
-                if( !offsetResolved )
-                    instrText.append( "[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]" );
+                //if( !offsetResolved )
+                //    instrText.append( "[obj+0x"+
+                //                    Integer.toHexString( constant )+
+                //                    "]" );
                 affectedRegisters = new int[2];
                 affectedRegisters[0] = reg1;
                 affectedRegisters[1] = reg2;
@@ -1523,8 +1578,11 @@ public class DexInstructionParser extends DexParser {
 // finally parse the instruction.
                 if( secondPass ) {
                     Long key = new Long( file.getFilePointer() );
-                    String parameter = quickParameterMap.get( key );
+                    String parameter =  
+                    	quickParameterMap.get( key  
+                    	);
                     if( parameter != null ) {
+                    	// System.out.println(" get in the map: "+ parameter );
                         instrText.append( parameter );
                         offsetResolved = true;
                     }
@@ -1534,24 +1592,26 @@ public class DexInstructionParser extends DexParser {
 // The base class register was tracked - we may even be able to resolve
 // the vtable offset 
                     if( baseClass != null ) {
-                        String fieldName = 
+                        String fieldName =  
                             dexOffsetResolver.getFieldNameFromOffset( 
-                                baseClass, constant );
+                                baseClass, constant) ;
+                       // System.out.println("fieldName put in the map: "+ fieldName );
                         if( fieldName != null ) {
                             Long key = new Long( file.getFilePointer() );
-                            fieldName += " ;[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]";
+                            //fieldName += " ;[//0x"+
+                            //        Integer.toHexString( constant )+
+                            //        "]";
                             quickParameterMap.put( key,fieldName );
                             instrText.append( fieldName );
+                          //  System.out.println(" instr "+ instrText );
                             offsetResolved = true;
                         }
                     }
                 }
-                if( !offsetResolved )
-                    instrText.append( "[obj+0x"+
-                                    Integer.toHexString( constant )+
-                                    "]" );
+                //if( !offsetResolved )
+                //    instrText.append( "[obj+0x"+
+                //                    Integer.toHexString( constant )+
+                //                    "]" );
             }
             break;
 

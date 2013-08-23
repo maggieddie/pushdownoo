@@ -12,12 +12,12 @@ public class Dedexer {
     public static void main( String args[] ) {
         Dedexer dedexer = new Dedexer();
         dedexer.run( args );
-       // dedexer.run_gui();
+        //dedexer.run_gui();
         
     }
 
     public void run_gui(){
-    	String sourceFile = "./classes.dex";
+    	String sourceFile = "./core-classes.dex";
     	 String targetDir = "./res";
          String depsDir = null;
          boolean debugMode = false;
@@ -111,7 +111,24 @@ public class Dedexer {
             if( resolver != null )
                 resolver.addToOffsetResolver( dcb );
 
-            SExpStyleCodeGenerator jscg = new SExpStyleCodeGenerator();
+            /*SExpStyleCodeGenerator jscg = new SExpStyleCodeGenerator();
+            jscg.setDexStringIdsBlock( dstrb );
+            jscg.setDexSignatureBlock( dsb );
+            jscg.setDexTypeIdsBlock( dtb );
+            jscg.setDexFieldIdsBlock( dfb );
+            jscg.setDexMethodIdsBlock( dmb );
+            jscg.setDexClassDefsBlock( dcb );
+            jscg.setGeneratedSourceBaseDir( targetDir );
+            jscg.setDexOffsetResolver( resolver );
+            jscg.setRandomAccessFile( raf );
+            jscg.setDumpFile( dexLogStream );
+            jscg.setRegTracing( regTracing );
+            jscg.setRegTraceLog( regTraceLog );
+            jscg.generate();
+            raf.close();*/
+            
+            
+            JasminStyleCodeGenerator jscg = new JasminStyleCodeGenerator();
             jscg.setDexStringIdsBlock( dstrb );
             jscg.setDexSignatureBlock( dsb );
             jscg.setDexTypeIdsBlock( dtb );
@@ -126,6 +143,7 @@ public class Dedexer {
             jscg.setRegTraceLog( regTraceLog );
             jscg.generate();
             raf.close();
+            
         } catch( IOException ex ) {
             System.err.println( "I/O error: "+ex.getMessage() );
             if( debugMode )

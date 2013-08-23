@@ -54,7 +54,7 @@ public class DexOffsetResolver {
 /**
   * Obtains the field name for a field offset in a given class or null
   * if the offset cannot be resolved.
-  */
+  */ 
     public String getFieldNameFromOffset( String className, int offset ) {
         DexOffsetDescriptor descriptor = resolveFieldOffsets( className );
         if( descriptor == null )
@@ -68,12 +68,24 @@ public class DexOffsetResolver {
             String superClassName = dexClassDefsBlock.
                                     getSuperClass( classIdx );
             if( superClassName == null )
-                return null;
+                return null; 
             return getFieldNameFromOffset( superClassName,offset );
         }
+        
+        // sliang added
+        // I think, that the current descriptor should have the class infomration
+        // for the field? A: yes
+        DexClassDefsBlock dexClassDefsBlock = descriptor.dexClassDefsBlock;
+        String clsName = dexClassDefsBlock.getClassNameOnly(descriptor.classIdx);
+        
         String fieldName = 
             descriptor.fieldOffsetToName.get( new Integer( offset ) );
-        return fieldName;
+         
+        String fieldPath = clsName + "." + fieldName;
+       // System.out.println("fieldPath in getFIelOFFSET: " + fieldPath + "clsName: " + clsName);
+        
+       // return fieldName;
+        return fieldPath;
     }
 
 /**

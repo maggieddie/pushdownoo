@@ -1090,7 +1090,7 @@ currentOutput.println();
 
 
         
-        System.out.println("in method annotation");
+        //System.out.println("in method annotation");
         for( int n = 0 ; 
             n < dap.getAnnotationsSize( 
                 DexAnnotationParser.AnnotationType.METHOD, annotationIdx ) ;

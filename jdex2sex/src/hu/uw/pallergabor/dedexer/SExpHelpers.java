@@ -48,4 +48,28 @@ public class SExpHelpers {
     return type ;
   } 
 
+
+  public static final String LTypeToSXTypes(String javaTypes) {
+    StringBuilder sb = new StringBuilder();
+    while (!javaTypes.isEmpty()) {
+      int endIndex = endIndexOfFirstType(javaTypes);
+
+      String javaType = javaTypes.substring(0, endIndex);
+      javaTypes = javaTypes.substring(endIndex);
+
+      sb.append(LTypeToSXType(javaType));
+      sb.append(" ");
+    }
+    return sb.toString();
+  }
+  
+  private static int endIndexOfFirstType(String javaTypes) {
+	int i = 1;
+    if (javaTypes.charAt(0) == '[')
+      i += endIndexOfFirstType(javaTypes.substring(1));
+    else if (javaTypes.charAt(0) == 'L')
+      i = javaTypes.indexOf(';') + 1;
+    return i;
+  }
+
 }
