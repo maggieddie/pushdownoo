@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/tacArea" style="@style/repeat_cvv_sub_container"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/tacVerify" android:text="@string/NOODLES_TEXT_TANDCS_CAPTION" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/field_group_title_text" />
-    <TextView android:id="@id/tocText" android:text="@string/NOODLES_TEXT_TERMS_AND_CONDITIONS_BODY" android:layout_below="@id/tacVerify" android:layout_alignParentLeft="true" style="@style/repeat_cvv_terms_and_condition_text" />
-    <CheckBox android:id="@id/chkRepeatCard_TermsCondition" android:text="@string/NOODLES_TEXT_TANDCS_ACCEPT_CAPTION" android:layout_below="@id/tocText" style="@style/repeat_cvv_accept_checkbox" />
-</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="center_vertical" android:id="@id/layoutLegParent" style="@style/journey_leg_row_container"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/warning_icon" />
-    <TextView android:layout_gravity="center" android:id="@id/rttiCancelledWarning" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cancelled" style="@style/journey_leg_station_name" />
-</LinearLayout>

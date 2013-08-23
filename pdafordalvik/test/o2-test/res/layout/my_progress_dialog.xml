@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/screen" android:background="@null" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ProgressBar android:id="@id/progressMyDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
-    <TextView android:textColor="#ffffffff" android:id="@id/txtMessageMyDialog" android:paddingLeft="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="34%" android:layout_toRightOf="@id/progressMyDialog" android:layout_centerVertical="true" />
-</RelativeLayout>

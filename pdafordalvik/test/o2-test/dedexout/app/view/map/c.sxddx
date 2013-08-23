@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) app/view/map/c
- (super java/lang/Object)
- (source "SourceFile")
-
-
-(method (attrs public abstract ) a([object com/google/android/maps/MapView] [object com/google/android/maps/GeoPoint] [object com/google/android/maps/GeoPoint] int int )void
-)
-
-)

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/title_container" layout="@layout/actionbar_with_home_refresh_layout" />
-    <TextView android:id="@id/txtLSB_LastUpdated" android:layout_below="@id/title_container" style="@style/station_board_last_updated" />
-    <ListView android:id="@id/listLSB_Trains" android:layout_below="@id/txtLSB_LastUpdated" style="@style/station_board_listview" />
-</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout style="@style/repeat_station_listrow_container"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/originStationNameView" style="@style/repeat_station_listrow_origin" />
-    <TextView android:id="@id/destinationStationNameView" android:drawableLeft="@drawable/arrow_fromto" style="@style/repeat_station_listrow_destination" />
-</LinearLayout>
