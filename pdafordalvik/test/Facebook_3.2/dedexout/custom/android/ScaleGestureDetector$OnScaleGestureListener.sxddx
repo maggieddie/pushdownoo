@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) custom/android/ScaleGestureDetector$OnScaleGestureListener
+ (super java/lang/Object)
+ (source "ScaleGestureDetector.java")
+
+
+(method (attrs public abstract ) a([object custom/android/ScaleGestureDetector] )boolean
+)
+
+(method (attrs public abstract ) b([object custom/android/ScaleGestureDetector] )boolean
+)
+
+(method (attrs public abstract ) c([object custom/android/ScaleGestureDetector] )void
+)
+
+)

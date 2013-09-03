@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/share" android:title="@string/share_image" />
+    <item android:icon="@android:drawable/ic_menu_view" android:id="@id/open" android:title="@string/open_url_dialog_title" />
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/save" android:title="@string/save" />
+</menu>

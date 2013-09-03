@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/view/menu/MenuView$ItemView
+ (super java/lang/Object)
+ (source "MenuView.java")
+
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/MenuItemImpl] int )void
+)
+
+(method (attrs public abstract ) a()boolean
+)
+
+)

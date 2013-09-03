@@ -1,0 +1,60 @@
+(class (attrs ) com/facebook/orca/app/fe
+ (super com/facebook/inject/d)
+ (source "MessengerAppModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/app/eb] )
+
+(method (attrs private ) <init>([object com/facebook/orca/app/eb] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/app/fe])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/eb])
+  (line 519)
+  (iput-object v1 v0 com/facebook/orca/app/fe.a [object com/facebook/orca/app/eb])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/app/eb] [object com/facebook/orca/app/ec] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/app/fe])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/eb])
+  ; parameter[1] : v2 ([object com/facebook/orca/app/ec])
+  (line 519)
+  (invoke-direct {v0 v1} com/facebook/orca/app/fe/<init> [object com/facebook/orca/app/eb] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/common/b/a]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/app/fe])
+  (line 523)
+  (const-class v0 com/facebook/prefs/shared/d)
+  (invoke-virtual {v3 v0} com/facebook/orca/app/fe/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/d])
+  (line 524)
+  (sget-object v1 com/facebook/orca/prefs/o.x [object com/facebook/prefs/shared/ae])
+  (const/4 v2 0)
+  (invoke-interface {v0 v1 v2} com/facebook/prefs/shared/d/a [object com/facebook/prefs/shared/ae] boolean )
+  (move-result v0)
+  (if-eqz v0 l1f4444)
+  (line 525)
+  (sget-object v0 com/facebook/orca/common/b/a.FB4A [object com/facebook/orca/common/b/a])
+  (label l1f4442)
+  (line 527)
+  (return-object v0)
+  (label l1f4444)
+  (sget-object v0 com/facebook/orca/common/b/a.ORCA [object com/facebook/orca/common/b/a])
+  (goto l1f4442)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/fe])
+  (line 519)
+  (invoke-virtual {v1} com/facebook/orca/app/fe/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

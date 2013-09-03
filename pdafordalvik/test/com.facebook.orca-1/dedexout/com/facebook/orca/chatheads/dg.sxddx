@@ -1,0 +1,36 @@
+(class (attrs public ) com/facebook/orca/chatheads/dg
+ (super com/facebook/orca/chatheads/dv)
+ (source "ChatThreadKeyboardWindow.java")
+
+
+(method (attrs public ) <init>([object android/view/WindowManager] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/dg])
+  ; parameter[0] : v2 ([object android/view/WindowManager])
+  (line 15)
+  (invoke-static {} com/facebook/orca/chatheads/dg/c )
+  (nop )
+  (move-result-object v0)
+  (invoke-direct {v1 v2 v0} com/facebook/orca/chatheads/dv/<init> [object android/view/WindowManager] [object android/view/WindowManager$LayoutParams] )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs private static final ) c()[object android/view/WindowManager$LayoutParams]
+  (limit registers 6)
+  (line 19)
+  (new-instance v0 android/view/WindowManager$LayoutParams)
+  (const/4 v1 15)
+  (const/4 v2 14)
+  (sget v3 com/facebook/orca/chatheads/dg.a int)
+  (const/16 v4 512)
+  (const/4 v5 13)
+  (invoke-direct/range {v0 .. v5} android/view/WindowManager$LayoutParams/<init> int int int int int )
+  (line 26)
+  (const/16 v1 83)
+  (iput v1 v0 android/view/WindowManager$LayoutParams.gravity int)
+  (line 28)
+  (return-object v0)
+ )
+
+)

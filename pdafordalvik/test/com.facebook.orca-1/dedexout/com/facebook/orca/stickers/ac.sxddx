@@ -1,0 +1,30 @@
+(class (attrs ) com/facebook/orca/stickers/ac
+ (super java/lang/Object)
+ (source "StickerStoreActivity.java")
+ (implements com/facebook/base/fragment/c)
+
+ (field (attrs final ) a [object com/facebook/orca/stickers/StickerStoreActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/stickers/StickerStoreActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/stickers/ac])
+  ; parameter[0] : v1 ([object com/facebook/orca/stickers/StickerStoreActivity])
+  (line 67)
+  (iput-object v1 v0 com/facebook/orca/stickers/ac.a [object com/facebook/orca/stickers/StickerStoreActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/base/fragment/b] [object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/stickers/ac])
+  ; parameter[0] : v2 ([object com/facebook/base/fragment/b])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 70)
+  (iget-object v0 v1 com/facebook/orca/stickers/ac.a [object com/facebook/orca/stickers/StickerStoreActivity])
+  (invoke-static {v0 v2 v3} com/facebook/orca/stickers/StickerStoreActivity/a [object com/facebook/orca/stickers/StickerStoreActivity] [object com/facebook/base/fragment/b] [object android/content/Intent] )
+  (line 71)
+  (return-void )
+)
+
+)

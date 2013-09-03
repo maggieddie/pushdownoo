@@ -1,0 +1,97 @@
+(class (attrs final ) com/google/common/base/CharMatcher$6
+ (super com/google/common/base/CharMatcher)
+ (source "CharMatcher.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/CharMatcher$6])
+  (line 232)
+  (invoke-direct {v0} com/google/common/base/CharMatcher/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) apply([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 232)
+  (check-cast v2 [object java/lang/Character])
+  (invoke-super {v1 v2} com/google/common/base/CharMatcher/apply [object java/lang/Character] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) indexIn([object java/lang/CharSequence] )int
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 238)
+  (invoke-interface {v2} java/lang/CharSequence/length )
+  (move-result v0)
+  (if-nez v0 lf4634)
+  (const/4 v0 15)
+  (label lf4632)
+  (return v0)
+  (label lf4634)
+  (const/4 v0 0)
+  (goto lf4632)
+)
+
+(method (attrs public ) matches(char )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v2 (char)
+  (line 234)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) negate()[object com/google/common/base/CharMatcher]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  (line 302)
+  (sget-object v0 com/google/common/base/CharMatcher$6.NONE [object com/google/common/base/CharMatcher])
+  (return-object v0)
+)
+
+(method (attrs public ) or([object com/google/common/base/CharMatcher] )[object com/google/common/base/CharMatcher]
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v1 ([object com/google/common/base/CharMatcher])
+  (line 297)
+  (invoke-static {v1} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 298)
+  (return-object v0)
+)
+
+(method (attrs public ) precomputed()[object com/google/common/base/CharMatcher]
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/CharMatcher$6])
+  (line 306)
+  (return-object v0)
+)
+
+(method (attrs public ) removeFrom([object java/lang/CharSequence] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 261)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 262)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public ) trimFrom([object java/lang/CharSequence] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$6])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 284)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 285)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+)

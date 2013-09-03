@@ -12,7 +12,7 @@
   (line 12)
   (invoke-direct {v0 v1} org/bouncycastle/crypto/params/AsymmetricKeyParameter/<init> boolean )
   (line 14)
-  (iput-object-quick v2 v0 org/bouncycastle/crypto/params/DSAKeyParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (iput-object-quick v2 v0 )
   (line 15)
   (return-void )
  )
@@ -21,7 +21,7 @@
   (limit registers 2)
   ; this: v1 ([object org/bouncycastle/crypto/params/DSAKeyParameters])
   (line 19)
-  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/DSAKeyParameters.params [object org/bouncycastle/crypto/params/DSAParameters])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

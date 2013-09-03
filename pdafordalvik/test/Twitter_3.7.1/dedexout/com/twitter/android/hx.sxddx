@@ -1,0 +1,31 @@
+(interface (attrs public abstract ) com/twitter/android/hx
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public static final ) a [array [object java/lang/String]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (line 40)
+  (const/4 v0 5)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (const/4 v1 0)
+  (const-string v2 "_id")
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (const-string v2 "user_id")
+  (aput-object v2 v0 v1)
+  (const/4 v1 2)
+  (const-string v2 "username")
+  (aput-object v2 v0 v1)
+  (const/4 v1 3)
+  (const-string v2 "name")
+  (aput-object v2 v0 v1)
+  (const/4 v1 4)
+  (const-string v2 "image_url")
+  (aput-object v2 v0 v1)
+  (sput-object v0 com/twitter/android/hx.a [array [object java/lang/String]])
+  (return-void )
+ )
+
+)

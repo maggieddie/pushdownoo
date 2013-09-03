@@ -28,7 +28,7 @@
   (limit registers 4)
   ; this: v3 ([object java/util/TreeMap$BoundedKeyIterator])
   (line 337)
-  (invoke-virtual-quick {v3} java/util/TreeMap$BoundedKeyIterator/makeBoundedNext )
+  (invoke-virtual-quick {v3} vtable #0xe)
   (line 338)
   (iget-object-quick v0 v3 )
   (iget-object-quick v0 v0 )

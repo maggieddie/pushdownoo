@@ -1,0 +1,30 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/deser/DeserializationProblemHandler
+ (super java/lang/Object)
+ (source "DeserializationProblemHandler.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/DeserializationProblemHandler])
+  (line 26)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleUnknownProperty([object com/fasterxml/jackson/databind/DeserializationContext] [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/JsonDeserializer] [object java/lang/Object] [object java/lang/String] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/DeserializationContext;"  "Lcom/fasterxml/jackson/core/JsonParser;"  "Lcom/fasterxml/jackson/databind/JsonDeserializer"  "<*>;"  "Ljava/lang/Object;"  "Ljava/lang/String;"  ")Z")
+  )
+  (limit registers 7)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/DeserializationProblemHandler])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[2] : v4 ([object com/fasterxml/jackson/databind/JsonDeserializer])
+  ; parameter[3] : v5 ([object java/lang/Object])
+  ; parameter[4] : v6 ([object java/lang/String])
+  (line 60)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

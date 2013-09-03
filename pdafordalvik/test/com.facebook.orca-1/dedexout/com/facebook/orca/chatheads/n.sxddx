@@ -1,0 +1,19 @@
+(class (attrs public ) com/facebook/orca/chatheads/n
+ (super com/facebook/orca/chatheads/e)
+ (source "ChatHeadInboxButtonView.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/n])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 12)
+  (invoke-direct {v1 v2} com/facebook/orca/chatheads/e/<init> [object android/content/Context] )
+  (line 13)
+  (sget v0 com/facebook/k.chat_head_inbox_button int)
+  (invoke-virtual {v1 v0} com/facebook/orca/chatheads/n/setContentView int )
+  (line 14)
+  (return-void )
+ )
+
+)

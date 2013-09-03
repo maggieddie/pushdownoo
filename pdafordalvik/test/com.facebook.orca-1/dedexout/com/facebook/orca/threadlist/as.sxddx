@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/orca/threadlist/as
+ (super com/facebook/base/broadcast/q)
+ (source "ThreadListFragment.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadlist/ThreadListFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadlist/ThreadListFragment] [object android/content/Context] [object android/content/IntentFilter] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/orca/threadlist/as])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/ThreadListFragment])
+  ; parameter[1] : v2 ([object android/content/Context])
+  ; parameter[2] : v3 ([object android/content/IntentFilter])
+  (line 274)
+  (iput-object v1 v0 com/facebook/orca/threadlist/as.a [object com/facebook/orca/threadlist/ThreadListFragment])
+  (invoke-direct {v0 v2 v3} com/facebook/base/broadcast/q/<init> [object android/content/Context] [object android/content/IntentFilter] )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/threadlist/as])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 277)
+  (iget-object v0 v1 com/facebook/orca/threadlist/as.a [object com/facebook/orca/threadlist/ThreadListFragment])
+  (invoke-static {v0 v3} com/facebook/orca/threadlist/ThreadListFragment/a [object com/facebook/orca/threadlist/ThreadListFragment] [object android/content/Intent] )
+  (line 278)
+  (return-void )
+)
+
+)

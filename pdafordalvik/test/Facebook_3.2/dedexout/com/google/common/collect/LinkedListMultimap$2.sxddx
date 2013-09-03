@@ -1,0 +1,73 @@
+(class (attrs ) com/google/common/collect/LinkedListMultimap$2
+ (super java/util/AbstractSet)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object com/google/common/collect/LinkedListMultimap] )
+
+(method (attrs ) <init>([object com/google/common/collect/LinkedListMultimap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/LinkedListMultimap$2])
+  ; parameter[0] : v1 ([object com/google/common/collect/LinkedListMultimap])
+  (line 680)
+  (iput-object v1 v0 com/google/common/collect/LinkedListMultimap$2.a [object com/google/common/collect/LinkedListMultimap])
+  (invoke-direct {v0} java/util/AbstractSet/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$2])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 688)
+  (iget-object v0 v1 com/google/common/collect/LinkedListMultimap$2.a [object com/google/common/collect/LinkedListMultimap])
+  (invoke-static {v0} com/google/common/collect/LinkedListMultimap/d [object com/google/common/collect/LinkedListMultimap] )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} com/google/common/collect/Multiset/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TK;>;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/collect/LinkedListMultimap$2])
+  (line 685)
+  (new-instance v0 com/google/common/collect/LinkedListMultimap$DistinctKeyIterator)
+  (iget-object v1 v3 com/google/common/collect/LinkedListMultimap$2.a [object com/google/common/collect/LinkedListMultimap])
+  (const/4 v2 0)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/LinkedListMultimap$DistinctKeyIterator/<init> [object com/google/common/collect/LinkedListMultimap] [object com/google/common/collect/LinkedListMultimap$1] )
+  (return-object v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$2])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 691)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 692)
+  (invoke-super {v1 v2} java/util/AbstractSet/removeAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$2])
+  (line 682)
+  (iget-object v0 v1 com/google/common/collect/LinkedListMultimap$2.a [object com/google/common/collect/LinkedListMultimap])
+  (invoke-static {v0} com/google/common/collect/LinkedListMultimap/d [object com/google/common/collect/LinkedListMultimap] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/google/common/collect/Multiset/f )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

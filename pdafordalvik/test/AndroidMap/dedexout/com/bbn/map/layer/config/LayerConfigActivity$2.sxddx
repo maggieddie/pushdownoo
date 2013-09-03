@@ -1,0 +1,43 @@
+(class (attrs ) com/bbn/map/layer/config/LayerConfigActivity$2
+ (super java/lang/Object)
+ (source "LayerConfigActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/bbn/map/layer/config/LayerConfigActivity] )
+ (field (attrs private final ) val$box [object android/widget/CheckBox] )
+
+(method (attrs ) <init>([object com/bbn/map/layer/config/LayerConfigActivity] [object android/widget/CheckBox] )void
+  (limit registers 3)
+  ; this: v0 ([object com/bbn/map/layer/config/LayerConfigActivity$2])
+  ; parameter[0] : v1 ([object com/bbn/map/layer/config/LayerConfigActivity])
+  ; parameter[1] : v2 ([object android/widget/CheckBox])
+  (line 1)
+  (iput-object v1 v0 com/bbn/map/layer/config/LayerConfigActivity$2.this$0 [object com/bbn/map/layer/config/LayerConfigActivity])
+  (iput-object v2 v0 com/bbn/map/layer/config/LayerConfigActivity$2.val$box [object android/widget/CheckBox])
+  (line 107)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object com/bbn/map/layer/config/LayerConfigActivity$2])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 111)
+  (iget-object v1 v2 com/bbn/map/layer/config/LayerConfigActivity$2.val$box [object android/widget/CheckBox])
+  (iget-object v0 v2 com/bbn/map/layer/config/LayerConfigActivity$2.val$box [object android/widget/CheckBox])
+  (invoke-virtual {v0} android/widget/CheckBox/isChecked )
+  (move-result v0)
+  (if-eqz v0 l14a0e)
+  (const/4 v0 0)
+  (label l14a06)
+  (invoke-virtual {v1 v0} android/widget/CheckBox/setChecked boolean )
+  (line 112)
+  (return-void )
+  (label l14a0e)
+  (line 111)
+  (const/4 v0 1)
+  (goto l14a06)
+)
+
+)

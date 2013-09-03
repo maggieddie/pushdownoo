@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/ipc/photos/b
+ (super java/lang/Object)
+ (source "MediaItem.java")
+ (implements java/util/Comparator)
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/ipc/photos/b])
+  (line 118)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/ipc/photos/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ipc/photos/b])
+  ; parameter[0] : v1 ([object com/facebook/ipc/photos/a])
+  (line 118)
+  (invoke-direct {v0} com/facebook/ipc/photos/b/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/ipc/photos/MediaItem] [object com/facebook/ipc/photos/MediaItem] )int
+  (limit registers 7)
+  ; this: v4 ([object com/facebook/ipc/photos/b])
+  ; parameter[0] : v5 ([object com/facebook/ipc/photos/MediaItem])
+  ; parameter[1] : v6 ([object com/facebook/ipc/photos/MediaItem])
+  (line 122)
+  (invoke-virtual {v6} com/facebook/ipc/photos/MediaItem/c )
+  (move-result-wide v0)
+  (invoke-virtual {v5} com/facebook/ipc/photos/MediaItem/c )
+  (move-result-wide v2)
+  (sub-long/2addr v0 v2)
+  (invoke-static {v0 v1} java/lang/Long/signum long )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) compare([object java/lang/Object] [object java/lang/Object] )int
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/ipc/photos/b])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 118)
+  (check-cast v2 [object com/facebook/ipc/photos/MediaItem])
+  (check-cast v3 [object com/facebook/ipc/photos/MediaItem])
+  (invoke-virtual {v1 v2 v3} com/facebook/ipc/photos/b/a [object com/facebook/ipc/photos/MediaItem] [object com/facebook/ipc/photos/MediaItem] )
+  (move-result v0)
+  (return v0)
+)
+
+)

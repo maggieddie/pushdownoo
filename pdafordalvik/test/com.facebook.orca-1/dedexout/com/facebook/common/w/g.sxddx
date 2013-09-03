@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/common/w/g
+ (super java/lang/Object)
+ (source "ReflectionUtils.java")
+
+
+(method (attrs public abstract ) b([object java/lang/reflect/AccessibleObject] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/reflect/AccessibleObject;"  ")TT;")
+  )
+)
+
+)

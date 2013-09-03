@@ -1,0 +1,40 @@
+(class (attrs ) android/support/v4/app/ListFragment$2
+ (super java/lang/Object)
+ (source "ListFragment.java")
+ (implements android/widget/AdapterView$OnItemClickListener)
+
+ (field (attrs final ) this$0 [object android/support/v4/app/ListFragment] )
+
+(method (attrs ) <init>([object android/support/v4/app/ListFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/ListFragment$2])
+  ; parameter[0] : v1 ([object android/support/v4/app/ListFragment])
+  (line 56)
+  (iput-object v1 v0 android/support/v4/app/ListFragment$2.this$0 [object android/support/v4/app/ListFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onItemClick([object android/widget/AdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+  (limit registers 12)
+  ; this: v6 ([object android/support/v4/app/ListFragment$2])
+  ; parameter[0] : v7 ([object android/widget/AdapterView])
+  ; parameter[1] : v8 ([object android/view/View])
+  ; parameter[2] : v9 (int)
+  ; parameter[3] : v10 (long)
+  (line 58)
+  (iget-object v0 v6 android/support/v4/app/ListFragment$2.this$0 [object android/support/v4/app/ListFragment])
+  (move-object v1 v7)
+  (check-cast v1 [object android/widget/ListView])
+  (move-object v2 v8)
+  (move v3 v9)
+  (move-wide v4 v10)
+  (invoke-virtual/range {v0 .. v5} android/support/v4/app/ListFragment/onListItemClick [object android/widget/ListView] [object android/view/View] int long )
+  (line 59)
+  (return-void )
+)
+
+)

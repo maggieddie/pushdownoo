@@ -1,0 +1,55 @@
+(class (attrs final ) com/android/server/SystemNotificationWrapper$1
+ (super java/lang/Object)
+ (source "SystemNotificationWrapper.java")
+ (implements android/os/Parcelable$Creator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/android/server/SystemNotificationWrapper$1])
+  (line 61)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/os/Parcel] )[object com/android/server/SystemNotificationWrapper]
+  (limit registers 4)
+  ; this: v2 ([object com/android/server/SystemNotificationWrapper$1])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 63)
+  (new-instance v0 com/android/server/SystemNotificationWrapper)
+  (const/4 v1 0)
+  (invoke-direct {v0 v3 v1} com/android/server/SystemNotificationWrapper/<init> [object android/os/Parcel] [object com/android/server/SystemNotificationWrapper$1] )
+  (return-object v0)
+)
+
+(method (attrs public ) a(int )[array [object com/android/server/SystemNotificationWrapper]]
+  (limit registers 3)
+  ; this: v1 ([object com/android/server/SystemNotificationWrapper$1])
+  ; parameter[0] : v2 (int)
+  (line 66)
+  (new-array v0 v2 [array [object com/android/server/SystemNotificationWrapper]])
+  (return-object v0)
+)
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/android/server/SystemNotificationWrapper$1])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 61)
+  (invoke-virtual {v1 v2} com/android/server/SystemNotificationWrapper$1/a [object android/os/Parcel] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v1 ([object com/android/server/SystemNotificationWrapper$1])
+  ; parameter[0] : v2 (int)
+  (line 61)
+  (invoke-virtual {v1 v2} com/android/server/SystemNotificationWrapper$1/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/map_container_with_border" android:layout_width="fill_parent" android:layout_height="@dimen/top_map_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.MapImage android:id="@id/map_image_fallback" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:keepMarkerAtCenter="true" orca:retainMapDuringUpdate="true" />
+    <FrameLayout android:id="@id/map_container" android:layout_width="fill_parent" android:layout_height="@dimen/top_map_possible_height" />
+    <View android:background="#ff404040" android:layout_width="fill_parent" android:layout_height="@dimen/two_px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

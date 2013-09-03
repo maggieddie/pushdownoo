@@ -1,0 +1,26 @@
+(class (attrs public ) com/twitter/android/util/BitmapNotCreatedException
+ (super java/lang/Exception)
+ (source "Twttr")
+
+ (field (attrs private static final ) serialVersionUID long 2138954751); 0x7f7ddbff )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/twitter/android/util/BitmapNotCreatedException])
+  (line 7)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 8)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/util/BitmapNotCreatedException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 11)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 12)
+  (return-void )
+ )
+
+)

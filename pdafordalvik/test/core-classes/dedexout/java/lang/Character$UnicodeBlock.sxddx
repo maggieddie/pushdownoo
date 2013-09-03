@@ -1065,7 +1065,7 @@
   (label l12e3ac)
   (line 1415)
   (const-string v1 "greek")
-  (invoke-virtual-quick {v2 v1} java/lang/String/equalsIgnoreCase [object java/lang/String] )
+  (invoke-virtual-quick {v2 v1} vtable #0x18)
   (move-result v1)
   (if-eqz v1 l12e3c2)
   (line 1416)

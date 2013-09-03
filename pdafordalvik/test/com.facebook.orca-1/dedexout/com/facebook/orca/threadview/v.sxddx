@@ -1,0 +1,65 @@
+(class (attrs ) com/facebook/orca/threadview/v
+ (super java/lang/Object)
+ (source "MessageItemViewsAnimationManager.java")
+ (implements com/a/a/b)
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/orca/threadview/u] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/u] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/threadview/v])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/u])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 32)
+  (iput-object v1 v0 com/facebook/orca/threadview/v.b [object com/facebook/orca/threadview/u])
+  (iput-object v2 v0 com/facebook/orca/threadview/v.a [object java/lang/String])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/a/a/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/v])
+  ; parameter[0] : v1 ([object com/a/a/a])
+  (line 39)
+  (return-void )
+)
+
+(method (attrs public ) b([object com/a/a/a] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadview/v])
+  ; parameter[0] : v3 ([object com/a/a/a])
+  (line 35)
+  (iget-object v0 v2 com/facebook/orca/threadview/v.b [object com/facebook/orca/threadview/u])
+  (invoke-static {v0} com/facebook/orca/threadview/u/a [object com/facebook/orca/threadview/u] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/facebook/orca/threadview/v.a [object java/lang/String])
+  (invoke-interface {v0 v1} java/util/Map/remove [object java/lang/Object] )
+  (line 36)
+  (return-void )
+)
+
+(method (attrs public ) c([object com/a/a/a] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadview/v])
+  ; parameter[0] : v3 ([object com/a/a/a])
+  (line 43)
+  (iget-object v0 v2 com/facebook/orca/threadview/v.b [object com/facebook/orca/threadview/u])
+  (invoke-static {v0} com/facebook/orca/threadview/u/a [object com/facebook/orca/threadview/u] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/facebook/orca/threadview/v.a [object java/lang/String])
+  (invoke-interface {v0 v1} java/util/Map/remove [object java/lang/Object] )
+  (line 44)
+  (return-void )
+)
+
+(method (attrs public ) d([object com/a/a/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/v])
+  ; parameter[0] : v1 ([object com/a/a/a])
+  (line 47)
+  (return-void )
+)
+
+)

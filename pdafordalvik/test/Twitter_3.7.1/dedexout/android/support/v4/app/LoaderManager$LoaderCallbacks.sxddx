@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) android/support/v4/app/LoaderManager$LoaderCallbacks
+ (super java/lang/Object)
+ (source "Twttr")
+
+
+(method (attrs public abstract ) onCreateLoader(int [object android/os/Bundle] )[object android/support/v4/content/Loader]
+)
+
+(method (attrs public abstract ) onLoadFinished([object android/support/v4/content/Loader] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) onLoaderReset([object android/support/v4/content/Loader] )void
+)
+
+)

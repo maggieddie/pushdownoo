@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) org/andengine/entity/shape/IShape
+ (super java/lang/Object)
+ (source "IShape.java")
+ (implements org/andengine/entity/IEntity)
+ (implements org/andengine/entity/scene/ITouchArea)
+
+ (field (attrs public static final ) BLENDFUNCTION_DESTINATION_DEFAULT int 771); 0x303 )
+ (field (attrs public static final ) BLENDFUNCTION_DESTINATION_PREMULTIPLYALPHA_DEFAULT int 771); 0x303 )
+ (field (attrs public static final ) BLENDFUNCTION_SOURCE_DEFAULT int 770); 0x302 )
+ (field (attrs public static final ) BLENDFUNCTION_SOURCE_PREMULTIPLYALPHA_DEFAULT int 1); 0x1 )
+
+(method (attrs public abstract ) collidesWith([object org/andengine/entity/shape/IShape] )boolean
+)
+
+(method (attrs public abstract ) getDestinationBlendFunction()int
+)
+
+(method (attrs public abstract ) getShaderProgram()[object org/andengine/opengl/shader/ShaderProgram]
+)
+
+(method (attrs public abstract ) getSourceBlendFunction()int
+)
+
+(method (attrs public abstract ) getVertexBufferObject()[object org/andengine/opengl/vbo/IVertexBufferObject]
+)
+
+(method (attrs public abstract ) getVertexBufferObjectManager()[object org/andengine/opengl/vbo/VertexBufferObjectManager]
+)
+
+(method (attrs public abstract ) isBlendingEnabled()boolean
+)
+
+(method (attrs public abstract ) setBlendFunction(int int )void
+)
+
+(method (attrs public abstract ) setBlendingEnabled(boolean )void
+)
+
+(method (attrs public abstract ) setShaderProgram([object org/andengine/opengl/shader/ShaderProgram] )void
+)
+
+)

@@ -1,0 +1,215 @@
+(class (attrs ) com/google/common/collect/CustomConcurrentHashMap$SoftEntry
+ (super java/lang/ref/SoftReference)
+ (source "CustomConcurrentHashMap.java")
+ (implements com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry)
+
+ (field (attrs final ) a int )
+ (field (attrs final ) b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )
+ (field (attrs volatile ) c [object com/google/common/collect/CustomConcurrentHashMap$ValueReference] )
+
+(method (attrs ) <init>([object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/ref/ReferenceQueue"  "<TK;>;TK;I"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (annotation runtimeVisibility param 4 [object javax/annotation/Nullable]
+  )
+  (limit registers 6)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object java/lang/ref/ReferenceQueue])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1225)
+  (invoke-direct {v1 v3 v2} java/lang/ref/SoftReference/<init> [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )
+  (line 1292)
+  (invoke-static {} com/google/common/collect/CustomConcurrentHashMap/g )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.c [object com/google/common/collect/CustomConcurrentHashMap$ValueReference])
+  (line 1226)
+  (iput v4 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.a int)
+  (line 1227)
+  (iput-object v5 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1228)
+  (return-void )
+ )
+
+(method (attrs public ) getExpirationTime()long
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1238)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) getHash()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1308)
+  (iget v0 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.a int)
+  (return v0)
+)
+
+(method (attrs public ) getKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1232)
+  (invoke-virtual {v1} com/google/common/collect/CustomConcurrentHashMap$SoftEntry/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getNext()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1313)
+  (iget-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (return-object v0)
+)
+
+(method (attrs public ) getNextEvictable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1270)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) getNextExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1248)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) getPreviousEvictable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1280)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) getPreviousExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1258)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) getValueReference()[object com/google/common/collect/CustomConcurrentHashMap$ValueReference]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ValueReference"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  (line 1296)
+  (iget-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.c [object com/google/common/collect/CustomConcurrentHashMap$ValueReference])
+  (return-object v0)
+)
+
+(method (attrs public ) setExpirationTime(long )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 (long)
+  (line 1243)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) setNextEvictable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1275)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) setNextExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1253)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) setPreviousEvictable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1285)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) setPreviousExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 1263)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) setValueReference([object com/google/common/collect/CustomConcurrentHashMap$ValueReference] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ValueReference"  "<TK;TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$SoftEntry])
+  ; parameter[0] : v2 ([object com/google/common/collect/CustomConcurrentHashMap$ValueReference])
+  (line 1301)
+  (iget-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.c [object com/google/common/collect/CustomConcurrentHashMap$ValueReference])
+  (line 1302)
+  (iput-object v2 v1 com/google/common/collect/CustomConcurrentHashMap$SoftEntry.c [object com/google/common/collect/CustomConcurrentHashMap$ValueReference])
+  (line 1303)
+  (invoke-interface {v0 v2} com/google/common/collect/CustomConcurrentHashMap$ValueReference/a [object com/google/common/collect/CustomConcurrentHashMap$ValueReference] )
+  (line 1304)
+  (return-void )
+)
+
+)

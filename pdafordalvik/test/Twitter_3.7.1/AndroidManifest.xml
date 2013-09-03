@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="199" android:versionName="3.7.1" package="com.twitter.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:label="@string/permlab_readTwitterData" android:name="com.twitter.android.permission.READ_DATA" android:protectionLevel="signature" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:description="@string/permdesc_readTwitterData" />
+    <permission android:name="com.twitter.android.permission.RESTRICTED" android:protectionLevel="signature" />
+    <permission android:name="com.twitter.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <permission android:label="@string/permlab_authApp" android:name="com.twitter.android.permission.AUTH_APP" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:description="@string/permdesc_authApp" />
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="11" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.twitter.android.permission.RESTRICTED" />
+    <uses-permission android:name="com.twitter.android.permission.READ_DATA" />
+    <uses-permission android:name="com.twitter.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.twitter.android.permission.AUTH_APP" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <supports-screens android:anyDensity="true" android:normalScreens="true" android:largeScreens="true" />
+    <application android:theme="@style/Theme" android:label="@string/app_name" android:icon="@drawable/ic_launcher_twitter" android:name=".TwitterApplication" android:hardwareAccelerated="true" android:largeHeap="false">
+        <provider android:label="@string/twitter_data" android:name=".provider.TwitterProvider" android:permission="com.twitter.android.permission.RESTRICTED" android:authorities="com.twitter.android.provider.TwitterProvider">
+            <path-permission android:readPermission="android.permission.GLOBAL_SEARCH" android:pathPrefix="/search_suggest_query" />
+            <path-permission android:readPermission="com.twitter.android.permission.READ_DATA" android:pathPrefix="/status_groups_view" />
+        </provider>
+        <provider android:name=".provider.GlobalDatabaseProvider" android:exported="false" android:authorities="com.twitter.android.provider.GlobalDatabaseProvider" />
+        <service android:name=".service.TwitterService" />
+        <service android:name=".client.AppService" />
+        <service android:name=".platform.RemoveRawContactsService" />
+        <meta-data android:name="android.app.default_searchable" android:value=".SearchActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="login" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Dark" android:label="@string/login_about" android:name=".AboutActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@style/Theme.Dark" android:label="@string/settings" android:name=".SettingsActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@style/Theme.Dark" android:label="@string/settings" android:name=".ProxySettingsActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@style/Theme.Dark" android:label="@string/settings" android:name=".WidgetSettingsActivity" android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <service android:name=".client.WidgetService" />
+        <activity android:theme="@style/Theme.BlackBg" android:name=".HomeTabActivity" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="timeline" />
+                <data android:scheme="twitter" android:host="mentions" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TimelineActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="user_timeline" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UsersActivity" />
+        <activity android:name=".InviteActivity" />
+        <activity android:name=".ListsActivity" />
+        <activity android:name=".MessagesActivity" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="messages" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivitiesActivity" />
+        <activity android:name=".ActivityDetailActivity" />
+        <activity android:name=".ListTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="list" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="search" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".ListCreateEditActivity" />
+        <activity android:theme="@style/ComposeTheme" android:name=".PostActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="post" />
+                <data android:scheme="twitter" android:host="quote" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/app_name" android:name=".platform.AccountsChangedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/widget_name_large" android:name=".client.WidgetLargeProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_large_provider" />
+        </receiver>
+        <receiver android:label="@string/widget_name_small" android:name=".client.WidgetSmallProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_small_provider" />
+        </receiver>
+        <receiver android:name=".client.AppBroadcastReceiver" android:permission="com.twitter.android.permission.RESTRICTED">
+            <intent-filter>
+                <action android:name="com.twitter.android.poll.data" />
+                <action android:name="com.twitter.android.widget.button.next" />
+                <action android:name="com.twitter.android.widget.button.prev" />
+                <action android:name="com.twitter.android.c2dm.push_result" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".platform.InstallReferralReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".platform.TwitterAuthenticationService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator" />
+        </service>
+        <activity android:theme="@style/Theme.Dialog" android:label="@string/authenticator_activity_title" android:name=".AuthenticatorActivity" android:exported="true" android:excludeFromRecents="true" />
+        <activity android:name=".TweetActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="status" />
+                <data android:scheme="twitter" android:host="tweet" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MessagesThreadActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".EditProfileActivity" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".CropActivity" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".EditProfileCropActivity" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".ProfileActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.twitter.profile" android:host="com.android.contacts" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="user" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Dialog" android:name=".DialogActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="twitter" android:host="follow" />
+                <data android:scheme="twitter" android:host="unfollow" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SULActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".StartActivity" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".FollowActivity" />
+        <activity android:theme="@style/Theme.Fullscreen" android:name=".ImageActivity" />
+        <activity android:name=".WebViewActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".DraftsActivity" />
+        <activity android:theme="@style/Theme.Dialog" android:label="@string/accounts_title" android:name=".AccountsDialogActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@style/Theme.Dark" android:name=".AccountSettingsActivity" android:excludeFromRecents="true" />
+        <activity android:name=".UrlInterpreterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="twitter.com" />
+                <data android:scheme="https" android:host="twitter.com" />
+                <data android:scheme="http" android:host="www.twitter.com" />
+                <data android:scheme="https" android:host="www.twitter.com" />
+                <data android:scheme="twitter" android:host="session" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SearchQueriesActivity" />
+        <activity android:theme="@style/Theme.Dark" android:name=".NotificationSettingsActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@style/Theme.Dark" android:name=".TweetSettingsActivity" android:excludeFromRecents="true" />
+        <activity android:name=".AuthorizeAppActivity" android:permission="com.twitter.android.permission.AUTH_APP" android:exported="true" android:excludeFromRecents="true" />
+        <activity android:name=".MediaPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".EventActivity" />
+        <activity android:name=".GalleryActivity" />
+        <activity android:theme="@style/Theme.Fullscreen" android:name=".FilterActivity" />
+        <activity android:theme="@style/Theme.Fullscreen" android:name=".FilterCropActivity" />
+        <service android:name=".platform.TwitterDataSyncService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_data_adapter" />
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts" />
+        </service>
+        <service android:name=".platform.PushService" />
+        <service android:name=".service.ImageProcessorService" />
+        <receiver android:name=".platform.PushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.twitter.android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.twitter.android" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.ScribeService" />
+        <service android:name=".service.AuthTokenService" />
+    </application>
+</manifest>

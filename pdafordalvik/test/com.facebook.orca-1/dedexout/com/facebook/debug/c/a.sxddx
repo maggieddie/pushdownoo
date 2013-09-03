@@ -1,0 +1,33 @@
+(class (attrs public ) com/facebook/debug/c/a
+ (super com/facebook/widget/c/e)
+ (source "DebugLoggingLevelPreference.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/debug/c/a])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 17)
+  (invoke-direct {v1 v2} com/facebook/widget/c/e/<init> [object android/content/Context] )
+  (line 18)
+  (sget-object v0 com/facebook/prefs/shared/aj.i [object com/facebook/prefs/shared/ae])
+  (invoke-virtual {v0} com/facebook/prefs/shared/ae/a )
+  (move-result-object v0)
+  (invoke-virtual {v1 v0} com/facebook/debug/c/a/setKey [object java/lang/String] )
+  (line 19)
+  (sget v0 com/facebook/o.debug_log_level int)
+  (invoke-virtual {v1 v0} com/facebook/debug/c/a/setTitle int )
+  (line 20)
+  (const-string v0 "-1")
+  (invoke-virtual {v1 v0} com/facebook/debug/c/a/setDefaultValue [object java/lang/Object] )
+  (line 21)
+  (sget v0 com/facebook/c.logger_levels int)
+  (invoke-virtual {v1 v0} com/facebook/debug/c/a/setEntries int )
+  (line 22)
+  (sget v0 com/facebook/c.logger_levels_values int)
+  (invoke-virtual {v1 v0} com/facebook/debug/c/a/setEntryValues int )
+  (line 23)
+  (return-void )
+ )
+
+)

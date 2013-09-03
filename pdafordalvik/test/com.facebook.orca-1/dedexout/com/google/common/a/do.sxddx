@@ -1,0 +1,181 @@
+(class (attrs final ) com/google/common/a/do
+ (super com/google/common/a/ev)
+ (source "EmptyImmutableMap.java")
+
+ (field (attrs static final ) a [object com/google/common/a/do] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 33)
+  (new-instance v0 com/google/common/a/do)
+  (invoke-direct {v0} com/google/common/a/do/<init> )
+  (sput-object v0 com/google/common/a/do.a [object com/google/common/a/do])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/do])
+  (line 35)
+  (invoke-direct {v0} com/google/common/a/ev/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/util/Map$Entry"  "<"  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ">;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 59)
+  (invoke-static {} com/google/common/a/fi/d )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object com/google/common/a/em]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/em"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 67)
+  (sget-object v0 com/google/common/a/em.c [object com/google/common/a/em])
+  (return-object v0)
+)
+
+(method (attrs public ) containsKey([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/do])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 51)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) containsValue([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/do])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 55)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs ) d()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 79)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 31)
+  (invoke-virtual {v1} com/google/common/a/do/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/do])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 71)
+  (instance-of v0 v2 java/util/Map)
+  (if-eqz v0 l393826)
+  (line 72)
+  (check-cast v2 [object java/util/Map])
+  (line 73)
+  (invoke-interface {v2} java/util/Map/isEmpty )
+  (move-result v0)
+  (label l393824)
+  (line 75)
+  (return v0)
+  (label l393826)
+  (const/4 v0 0)
+  (goto l393824)
+)
+
+(method (attrs public ) get([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/do])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 38)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 83)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) i_()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 63)
+  (invoke-static {} com/google/common/a/fi/d )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 47)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) keySet()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 31)
+  (invoke-virtual {v1} com/google/common/a/do/i_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 43)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 87)
+  (const-string v0 "{}")
+  (return-object v0)
+)
+
+(method (attrs public ) values()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/do])
+  (line 31)
+  (invoke-virtual {v1} com/google/common/a/do/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

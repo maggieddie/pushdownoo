@@ -1,0 +1,46 @@
+(class (attrs ) com/facebook/orca/threadview/c
+ (super com/facebook/fbservice/ops/h)
+ (source "AddMembersActivity.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/AddMembersActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/AddMembersActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/c])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/AddMembersActivity])
+  (line 156)
+  (iput-object v1 v0 com/facebook/orca/threadview/c.a [object com/facebook/orca/threadview/AddMembersActivity])
+  (invoke-direct {v0} com/facebook/fbservice/ops/h/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadview/c])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 159)
+  (iget-object v0 v1 com/facebook/orca/threadview/c.a [object com/facebook/orca/threadview/AddMembersActivity])
+  (invoke-virtual {v0} com/facebook/orca/threadview/AddMembersActivity/finish )
+  (line 160)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadview/c])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/ServiceException])
+  (line 164)
+  (iget-object v0 v2 com/facebook/orca/threadview/c.a [object com/facebook/orca/threadview/AddMembersActivity])
+  (invoke-static {v0} com/facebook/ui/d/a/a [object android/content/Context] )
+  (move-result-object v0)
+  (sget v1 com/facebook/o.app_error_dialog_title int)
+  (invoke-virtual {v0 v1} com/facebook/ui/d/a/a int )
+  (move-result-object v0)
+  (invoke-virtual {v0 v3} com/facebook/ui/d/a/a [object com/facebook/fbservice/service/ServiceException] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/facebook/ui/d/a/a )
+  (line 168)
+  (return-void )
+)
+
+)

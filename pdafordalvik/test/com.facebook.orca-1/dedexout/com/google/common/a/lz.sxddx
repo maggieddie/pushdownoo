@@ -1,0 +1,34 @@
+(class (attrs public final ) com/google/common/a/lz
+ (super java/lang/Object)
+ (source "Tables.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/lz])
+  (line 46)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) a([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )[object com/google/common/a/ly]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<R:"  "Ljava/lang/Object;"  "C:"  "Ljava/lang/Object;"  "V:"  "Ljava/lang/Object;"  ">(TR;TC;TV;)"  "Lcom/google/common/a/ly"  "<TR;TC;TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 3 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 60)
+  (new-instance v0 com/google/common/a/mb)
+  (invoke-direct {v0 v1 v2 v3} com/google/common/a/mb/<init> [object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )
+  (return-object v0)
+ )
+
+)

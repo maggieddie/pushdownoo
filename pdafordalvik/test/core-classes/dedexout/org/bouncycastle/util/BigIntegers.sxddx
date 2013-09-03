@@ -17,7 +17,7 @@
   (const/4 v4 1)
   (const/4 v3 0)
   (line 19)
-  (invoke-virtual-quick {v5} java/math/BigInteger/toByteArray )
+  (invoke-virtual-quick {v5} vtable #0x38)
   (move-result-object v0)
   (line 21)
   (aget-byte v2 v0 v3)

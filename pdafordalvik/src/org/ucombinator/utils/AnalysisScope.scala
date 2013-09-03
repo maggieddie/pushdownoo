@@ -7,7 +7,7 @@ object AnalysisScope {
   
   // the parsed in exclusive pattern will be put in thread local
   
-//  var exculsiveLibPatterns : List[Regex]=  List()
+  //var exculsiveLibPatterns : List[Regex]=  List()
  
   
   def isExclusive (name: String) : Boolean = {
@@ -18,14 +18,19 @@ object AnalysisScope {
      return false
   }
   
-  /* def isExclusive2 (name: String) : Boolean = {
-     val res = exculsiveLibPatterns.foreach{
-       case p => {
-         if(p.findAllIn(name).size > 0 ) return true
-       } 
-     }
-     return false;
-   }*/
+//   def isExclusive2 (name: String) : Boolean = {
+//     val res = exculsiveLibPatterns.foreach{
+//       case p => {
+//         if(p.findAllIn(name).size > 0 ) {
+//           println("returned true")
+//           println(p)
+//            return true
+//         }
+//          
+//       } 
+//     }
+//     return false;
+//   }
   
 
   def parseInExclusiveLibNames {//List[Regex] = {
@@ -50,7 +55,7 @@ object AnalysisScope {
    // tests for reading 
 	def main(args: Array[String]): Unit = { 
 	  AnalysisScope.parseInExclusiveLibNames
-	  //println(AnalysisScope.isExclusive2("org/bouncycastle/File")) 
+	//  println(AnalysisScope.isExclusive2("java/io/BufferInputStream")) 
      
 }
 	}

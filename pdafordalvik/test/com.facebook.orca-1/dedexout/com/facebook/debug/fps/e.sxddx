@@ -1,0 +1,17 @@
+(class (attrs ) com/facebook/debug/fps/e
+ (super com/google/inject/f)
+ (source "FPSModule.java")
+
+ (field (attrs final ) a [object com/facebook/debug/fps/d] )
+
+(method (attrs ) <init>([object com/facebook/debug/fps/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/debug/fps/e])
+  ; parameter[0] : v1 ([object com/facebook/debug/fps/d])
+  (line 28)
+  (iput-object v1 v0 com/facebook/debug/fps/e.a [object com/facebook/debug/fps/d])
+  (invoke-direct {v0} com/google/inject/f/<init> )
+  (return-void )
+ )
+
+)

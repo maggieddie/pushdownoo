@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/feed_feedback_spacing" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+    <View android:id="@id/feed_story_feedback_divider" android:background="@color/feed_feedback_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" android:layout_below="@id/feed_feedback_spacing" />
+    <com.facebook.feed.ui.footer.SubStoryFeedbackView android:orientation="vertical" android:id="@id/feed_substory_feedback_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.feed.ui.footer.FeedStoryPageFeedbackView android:gravity="center" android:orientation="horizontal" android:id="@id/feed_story_page_like_bar" android:background="@drawable/feed_feedback_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+    <com.facebook.feed.ui.footer.StoryInsightsFooterView android:id="@id/feed_story_insights_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.feed.ui.footer.FriendStoryFeedbackView android:gravity="center" android:orientation="horizontal" android:id="@id/feed_story_friend_story_feedback" android:background="@drawable/feed_feedback_whole_button_bg_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_feedback_height" />
+    <com.facebook.feed.ui.footer.DefaultFeedbackView android:orientation="vertical" android:id="@id/feed_story_default_feedback_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.feed.ui.footer.PermalinkFeedbackViewStub android:id="@id/feed_permalink_feedback_bar_stub" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:inflatedLayoutAndroidId="@id/feed_permalink_feedback_bar" />
+</merge>

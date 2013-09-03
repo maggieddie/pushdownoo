@@ -1,0 +1,71 @@
+(class (attrs ) org/andengine/util/adt/cache/IntLRUCache$1
+ (super org/andengine/util/adt/pool/GenericPool)
+ (source "IntLRUCache.java")
+
+ (field (attrs final ) this$0 [object org/andengine/util/adt/cache/IntLRUCache] )
+
+(method (attrs ) <init>([object org/andengine/util/adt/cache/IntLRUCache] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/cache/IntLRUCache$1])
+  ; parameter[0] : v1 ([object org/andengine/util/adt/cache/IntLRUCache])
+  (line 1)
+  (iput-object v1 v0 org/andengine/util/adt/cache/IntLRUCache$1.this$0 [object org/andengine/util/adt/cache/IntLRUCache])
+  (line 28)
+  (invoke-direct {v0} org/andengine/util/adt/pool/GenericPool/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/cache/IntLRUCache$1])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/util/adt/cache/IntLRUCache$1/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/cache/IntLRUCache$1])
+  (line 31)
+  (new-instance v0 org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder)
+  (invoke-direct {v0} org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder/<init> )
+  (return-object v0)
+)
+
+(method (attrs protected ) onHandleRecycleItem([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder"  "<TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/cache/IntLRUCache$1])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 1)
+  (check-cast v1 [object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder])
+  (invoke-virtual {v0 v1} org/andengine/util/adt/cache/IntLRUCache$1/onHandleRecycleItem [object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder] )
+  (return-void )
+)
+
+(method (attrs protected ) onHandleRecycleItem([object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder"  "<TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/util/adt/cache/IntLRUCache$1])
+  ; parameter[0] : v2 ([object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder])
+  (const/4 v0 0)
+  (line 36)
+  (iput-object v0 v2 org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder.mIntLRUCacheQueueNode [object org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheQueueNode])
+  (line 37)
+  (iput-object v0 v2 org/andengine/util/adt/cache/IntLRUCache$IntLRUCacheValueHolder.mValue [object java/lang/Object])
+  (line 38)
+  (return-void )
+)
+
+)

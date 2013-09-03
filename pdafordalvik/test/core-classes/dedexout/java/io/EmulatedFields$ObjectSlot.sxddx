@@ -13,7 +13,7 @@
   (invoke-direct-empty {v1} java/lang/Object/<init> )
   (line 43)
   (const/4 v0 1)
-  (iput-quick v0 v1 java/io/EmulatedFields$ObjectSlot.defaulted boolean)
+  (iput-quick v0 v1 )
   (return-void )
  )
 
@@ -21,7 +21,7 @@
   (limit registers 2)
   ; this: v1 ([object java/io/EmulatedFields$ObjectSlot])
   (line 51)
-  (iget-object-quick v0 v1 java/io/EmulatedFields$ObjectSlot.field [object java/io/ObjectStreamField])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -29,7 +29,7 @@
   (limit registers 2)
   ; this: v1 ([object java/io/EmulatedFields$ObjectSlot])
   (line 60)
-  (iget-object-quick v0 v1 java/io/EmulatedFields$ObjectSlot.fieldValue [object java/lang/Object])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

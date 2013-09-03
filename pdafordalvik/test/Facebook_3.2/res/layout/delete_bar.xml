@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.launchables.view.DeleteBar android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/delete_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dash.launchables.view.UninstallApplicationDropTarget android:textSize="16.0sp" android:gravity="center_horizontal" android:id="@id/uninstall_application" android:padding="@dimen/delete_bar_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uninstall_application" android:drawableBottom="@drawable/uninstall_application" style="@style/drop_target_button" />
+    <com.facebook.dash.launchables.view.RemoveShortcutDropTarget android:textSize="16.0sp" android:gravity="center_horizontal" android:id="@id/remove_shortcut" android:padding="@dimen/delete_bar_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/remove_shortcut" android:drawableBottom="@drawable/remove_shortcut" style="@style/drop_target_button" />
+</com.facebook.dash.launchables.view.DeleteBar>

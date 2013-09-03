@@ -1,0 +1,54 @@
+(class (attrs public ) com/facebook/orca/app/fh
+ (super java/lang/Object)
+ (source "MessengerBugReporterConfig.java")
+ (implements com/facebook/bugreporter/l)
+
+ (field (attrs private final ) a [object com/google/common/a/es] )
+
+(method (attrs public ) <init>()void
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/orca/app/fh])
+  (line 27)
+  (invoke-direct {v4} java/lang/Object/<init> )
+  (line 30)
+  (new-instance v0 com/facebook/bugreporter/activity/categorylist/CategoryInfo)
+  (const-string v1 "Messenger")
+  (const-wide v2 113186105514995) ; 0x66f1319cdbf3)
+  (invoke-direct {v0 v1 v2 v3} com/facebook/bugreporter/activity/categorylist/CategoryInfo/<init> [object java/lang/String] long )
+  (invoke-static {v0} com/google/common/a/es/a [object java/lang/Object] )
+  (move-result-object v0)
+  (iput-object v0 v4 com/facebook/orca/app/fh.a [object com/google/common/a/es])
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/bugreporter/activity/categorylist/CategoryInfo;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/fh])
+  (line 37)
+  (iget-object v0 v1 com/facebook/orca/app/fh.a [object com/google/common/a/es])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/lang/Long;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/app/fh])
+  (line 42)
+  (const-wide v0 197397736948412) ; 0xb3883dfd82bc)
+  (invoke-static {v0 v1} java/lang/Long/valueOf long )
+  (move-result-object v0)
+  (const-wide v1 295497373795481) ; 0x10cc0d7ff4499)
+  (invoke-static {v1 v2} java/lang/Long/valueOf long )
+  (move-result-object v1)
+  (invoke-static {v0 v1} com/google/common/a/fi/a [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

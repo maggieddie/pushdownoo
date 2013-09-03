@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/bugreporter/c
+ (super java/lang/Object)
+ (source "BugReportExtraDataMapProvider.java")
+
+
+(method (attrs public abstract ) a()[object com/google/common/a/ev]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/ev"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) b()[object com/google/common/a/ev]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/ev"  "<"  "Ljava/lang/String;"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+)

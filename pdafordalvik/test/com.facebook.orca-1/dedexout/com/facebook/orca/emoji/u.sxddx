@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/orca/emoji/u
+ (super com/facebook/inject/d)
+ (source "EmojiModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/emoji/s] )
+
+(method (attrs private ) <init>([object com/facebook/orca/emoji/s] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/emoji/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/emoji/s])
+  (line 28)
+  (iput-object v1 v0 com/facebook/orca/emoji/u.a [object com/facebook/orca/emoji/s])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/emoji/s] [object com/facebook/orca/emoji/t] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/emoji/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/emoji/s])
+  ; parameter[1] : v2 ([object com/facebook/orca/emoji/t])
+  (line 28)
+  (invoke-direct {v0 v1} com/facebook/orca/emoji/u/<init> [object com/facebook/orca/emoji/s] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/emoji/z]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/emoji/u])
+  (line 32)
+  (new-instance v2 com/facebook/orca/emoji/z)
+  (const-class v0 com/facebook/orca/emoji/aa)
+  (invoke-virtual {v3 v0} com/facebook/orca/emoji/u/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/orca/emoji/aa])
+  (const-class v1 android/content/res/Resources)
+  (invoke-virtual {v3 v1} com/facebook/orca/emoji/u/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object android/content/res/Resources])
+  (invoke-direct {v2 v0 v1} com/facebook/orca/emoji/z/<init> [object com/facebook/orca/emoji/aa] [object android/content/res/Resources] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/u])
+  (line 28)
+  (invoke-virtual {v1} com/facebook/orca/emoji/u/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

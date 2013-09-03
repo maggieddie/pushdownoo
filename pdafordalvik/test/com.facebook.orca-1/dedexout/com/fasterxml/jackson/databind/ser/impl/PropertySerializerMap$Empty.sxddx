@@ -1,0 +1,50 @@
+(class (attrs final ) com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty
+ (super com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap)
+ (source "PropertySerializerMap.java")
+
+ (field (attrs protected static final ) instance [object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 105)
+  (new-instance v0 com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty/<init> )
+  (sput-object v0 com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty.instance [object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty])
+  (line 103)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) newWith([object java/lang/Class] [object com/fasterxml/jackson/databind/JsonSerializer] )[object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<"  "Ljava/lang/Object;"  ">;)"  "Lcom/fasterxml/jackson/databind/ser/impl/PropertySerializerMap;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 114)
+  (new-instance v0 com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Single)
+  (invoke-direct {v0 v2 v3} com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Single/<init> [object java/lang/Class] [object com/fasterxml/jackson/databind/JsonSerializer] )
+  (return-object v0)
+)
+
+(method (attrs public ) serializerFor([object java/lang/Class] )[object com/fasterxml/jackson/databind/JsonSerializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/impl/PropertySerializerMap$Empty])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 109)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+)

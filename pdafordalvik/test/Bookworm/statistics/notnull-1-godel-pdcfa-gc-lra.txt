@@ -1,0 +1,99 @@
+com/totsp/bookworm/BookDetail$1: 0.0
+com/totsp/bookworm/Main$RestoreTask: 0.0
+com/totsp/bookworm/Main$11$5: 0.0
+com/totsp/bookworm/Main$12: 0.0
+com/totsp/bookworm/BookDetail: 0.0
+com/totsp/bookworm/BookForm$1: 0.0
+com/totsp/bookworm/zxing/ZXingIntentIntegrator$1: 0.0
+com/totsp/bookworm/BookForm$4: 0.0
+com/totsp/bookworm/Main$11: 0.0
+com/totsp/bookworm/model/Author: 0.0
+com/totsp/bookworm/Main$ResetAllCoverImagesTask: 0.0
+com/totsp/bookworm/CsvImport$ParseTask: 0.0
+com/totsp/bookworm/BookEntryResult$BookMessageBean: 0.0
+com/totsp/bookworm/BookSearch$2: 0.0
+com/totsp/bookworm/Main$11$8: 0.0
+com/totsp/bookworm/BookListAdapter: 100.0
+com/totsp/bookworm/data/dao/BookDAO: 66.66666666666666
+com/totsp/bookworm/Main$4: 0.0
+com/totsp/bookworm/data/GoogleBooksHandler: 0.0
+com/totsp/bookworm/Main$11$1: 0.0
+com/totsp/bookworm/Main$ViewHolder: 0.0
+com/totsp/bookworm/CsvImport$ImportTask: 0.0
+com/totsp/bookworm/data/dao/BookDAO$2: 0.0
+com/totsp/bookworm/data/DataXmlExporter: 0.0
+com/totsp/bookworm/BookDetail$2: 0.0
+com/totsp/bookworm/BookListAdapter$ViewHolder: 0.0
+com/totsp/bookworm/Main$11$2: 0.0
+com/totsp/bookworm/CsvImport$1: 0.0
+com/totsp/bookworm/Preferences: 0.0
+com/totsp/bookworm/BookSearch$BookSearchStateBean: 0.0
+com/totsp/bookworm/BackupManagerWrapper: 100.0
+com/totsp/bookworm/model/BookUserData: 0.0
+com/totsp/bookworm/Main$DeleteDataTask: 0.0
+com/totsp/bookworm/data/DataXmlExporter$XmlBuilder: 100.0
+com/totsp/bookworm/Main$3: 0.0
+com/totsp/bookworm/Main: 0.0
+com/totsp/bookworm/BookEntryResult$1: 0.0
+com/totsp/bookworm/Main$7: 0.0
+com/totsp/bookworm/Main$8: 0.0
+com/totsp/bookworm/data/dao/BookUserDataDAO: 50.0
+com/totsp/bookworm/Main$BookCursorAdapter: 50.0
+com/totsp/bookworm/BookForm$SaveBookTask: 0.0
+com/totsp/bookworm/Main$11$7: 0.0
+com/totsp/bookworm/CsvImport: 0.0
+com/totsp/bookworm/BookEntryResult: 0.0
+com/totsp/bookworm/BookSearch$SearchTask: 0.0
+com/totsp/bookworm/data/HttpHelper$2: 0.0
+com/totsp/bookworm/data/dao/BookDAO$1: 0.0
+com/totsp/bookworm/data/HttpHelper: 100.0
+com/totsp/bookworm/Main$11$3: 0.0
+com/totsp/bookworm/data/dao/AuthorDAO: 50.0
+com/totsp/bookworm/data/GoogleBookDataSource: 66.66666666666666
+com/totsp/bookworm/Main$2: 0.0
+com/totsp/bookworm/BookSearch$4: 0.0
+com/totsp/bookworm/CsvImport$3$1: 0.0
+com/totsp/bookworm/data/DataManager: 80.0
+com/totsp/bookworm/BookForm$5: 0.0
+com/totsp/bookworm/Main$6: 0.0
+com/totsp/bookworm/data/OpenLibraryDataSource: 33.33333333333333
+com/totsp/bookworm/Main$11$4: 0.0
+com/totsp/bookworm/BookForm$3: 0.0
+com/totsp/bookworm/Main$9: 0.0
+com/totsp/bookworm/zxing/ZXingIntentResult: 0.0
+com/totsp/bookworm/BookEntryResult$2: 0.0
+com/totsp/bookworm/data/CompoundDataSource: 50.0
+com/totsp/bookworm/BookSearch: 25.0
+com/totsp/bookworm/CsvImport$2: 0.0
+com/totsp/bookworm/Main$11$6: 0.0
+com/totsp/bookworm/BookDetail$3: 0.0
+com/totsp/bookworm/Main$1: 0.0
+com/totsp/bookworm/BookForm$2: 0.0
+com/totsp/bookworm/BookSearch$1: 0.0
+com/totsp/bookworm/About$1: 0.0
+com/totsp/bookworm/BookForm$GenerateCoverImageTask: 0.0
+com/totsp/bookworm/BookWormApplication: 0.0
+com/totsp/bookworm/About: 0.0
+com/totsp/bookworm/Main$10: 0.0
+com/totsp/bookworm/BookEntryResult$SetupBookResultTask: 0.0
+com/totsp/bookworm/model/Book: 90.9090909090909
+com/totsp/bookworm/Preferences$1: 0.0
+com/totsp/bookworm/BookForm: 0.0
+com/totsp/bookworm/HtmlScreen$1: 0.0
+com/totsp/bookworm/BookSearch$3: 0.0
+com/totsp/bookworm/Splash: 0.0
+com/totsp/bookworm/Main$5: 0.0
+com/totsp/bookworm/CsvImport$3: 0.0
+com/totsp/bookworm/BookForm$RetrieveCoverImageTask: 0.0
+The total average: 11.064089167537443
+ Any places of null ref during constructions? 
+ com/totsp/bookworm/data/dao/BookDAO:<init>LineStmt(77)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/compileStatement(List(v0) , v4 , List((object java/lang/String)))@@@com/totsp/bookworm/data/dao/BookDAO$$<init>::LineStmt(77)
+com/totsp/bookworm/data/dao/BookUserDataDAO:<init>LineStmt(36)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/compileStatement(List(v0) , v2 , List((object java/lang/String)))@@@com/totsp/bookworm/data/dao/BookUserDataDAO$$<init>::LineStmt(36)
+com/totsp/bookworm/data/dao/AuthorDAO:<init>LineStmt(40)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/compileStatement(List(v0) , v2 , List((object java/lang/String)))@@@com/totsp/bookworm/data/dao/AuthorDAO$$<init>::LineStmt(40)
+com/totsp/bookworm/Main$BookCursorAdapter:<init>LineStmt(583)
+InvokeStmt:com/totsp/bookworm/Main/getSystemService(List(v0) , v2 , List((object java/lang/String)))@@@com/totsp/bookworm/Main$BookCursorAdapter$$<init>::LineStmt(583)
+com/totsp/bookworm/BookListAdapter:<init>LineStmt(35)
+InvokeStmt:android/content/Context/getSystemService(List(v0) , v2 , List((object java/lang/String)))@@@com/totsp/bookworm/BookListAdapter$$<init>::LineStmt(35)

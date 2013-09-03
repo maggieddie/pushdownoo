@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/orca/contacts/picker/c
+ (super java/lang/Object)
+ (source "ContactMultipickerFragment.java")
+ (implements com/facebook/orca/contacts/picker/aa)
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/picker/ContactMultipickerFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/picker/ContactMultipickerFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/c])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/ContactMultipickerFragment])
+  (line 144)
+  (iput-object v1 v0 com/facebook/orca/contacts/picker/c.a [object com/facebook/orca/contacts/picker/ContactMultipickerFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/c])
+  (line 147)
+  (iget-object v0 v1 com/facebook/orca/contacts/picker/c.a [object com/facebook/orca/contacts/picker/ContactMultipickerFragment])
+  (invoke-virtual {v0} com/facebook/orca/contacts/picker/ContactMultipickerFragment/c )
+  (line 148)
+  (return-void )
+)
+
+)

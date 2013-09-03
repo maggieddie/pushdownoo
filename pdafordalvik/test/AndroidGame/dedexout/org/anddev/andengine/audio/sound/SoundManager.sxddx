@@ -1,0 +1,54 @@
+(class (attrs public ) org/anddev/andengine/audio/sound/SoundManager
+ (super org/anddev/andengine/audio/BaseAudioManager)
+ (source "SoundManager.java")
+
+ (field (attrs private static final ) MAX_SIMULTANEOUS_STREAMS_DEFAULT int 5); 0x5 )
+ (field (attrs private final ) mSoundPool [object android/media/SoundPool] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/audio/sound/SoundManager])
+  (line 33)
+  (const/4 v0 5)
+  (invoke-direct {v1 v0} org/anddev/andengine/audio/sound/SoundManager/<init> int )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 5)
+  ; this: v3 ([object org/anddev/andengine/audio/sound/SoundManager])
+  ; parameter[0] : v4 (int)
+  (line 36)
+  (invoke-direct {v3} org/anddev/andengine/audio/BaseAudioManager/<init> )
+  (line 37)
+  (new-instance v0 android/media/SoundPool)
+  (const/4 v1 3)
+  (const/4 v2 0)
+  (invoke-direct {v0 v4 v1 v2} android/media/SoundPool/<init> int int int )
+  (iput-object v0 v3 org/anddev/andengine/audio/sound/SoundManager.mSoundPool [object android/media/SoundPool])
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs ) getSoundPool()[object android/media/SoundPool]
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/audio/sound/SoundManager])
+  (line 45)
+  (iget-object v0 v1 org/anddev/andengine/audio/sound/SoundManager.mSoundPool [object android/media/SoundPool])
+  (return-object v0)
+)
+
+(method (attrs public ) releaseAll()void
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/audio/sound/SoundManager])
+  (line 58)
+  (invoke-super {v1} org/anddev/andengine/audio/BaseAudioManager/releaseAll )
+  (line 60)
+  (iget-object v0 v1 org/anddev/andengine/audio/sound/SoundManager.mSoundPool [object android/media/SoundPool])
+  (invoke-virtual {v0} android/media/SoundPool/release )
+  (line 61)
+  (return-void )
+)
+
+)

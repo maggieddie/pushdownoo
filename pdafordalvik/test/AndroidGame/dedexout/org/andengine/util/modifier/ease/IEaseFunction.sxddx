@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/andengine/util/modifier/ease/IEaseFunction
+ (super java/lang/Object)
+ (source "IEaseFunction.java")
+
+
+(method (attrs public abstract ) getPercentage(float float )float
+)
+
+)

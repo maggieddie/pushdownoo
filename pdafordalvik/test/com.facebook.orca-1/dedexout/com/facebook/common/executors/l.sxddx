@@ -1,0 +1,157 @@
+(class (attrs public ) com/facebook/common/executors/l
+ (super com/facebook/common/executors/k)
+ (source "HandlerExecutorServiceImpl.java")
+ (implements com/google/common/d/a/s)
+ (implements java/lang/Runnable)
+ (implements java/util/concurrent/ScheduledFuture)
+
+ (field (attrs private final ) a [object com/google/common/d/a/t] )
+
+(method (attrs public ) <init>([object android/os/Handler] [object java/lang/Runnable] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Handler;"  "Ljava/util/concurrent/Callable"  "<TV;>;)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object android/os/Handler])
+  ; parameter[1] : v3 ([object java/lang/Runnable])
+  ; parameter[2] : v4 ([object java/lang/Object])
+  (line 242)
+  (invoke-direct {v1 v2} com/facebook/common/executors/k/<init> [object android/os/Handler] )
+  (line 243)
+  (invoke-static {v3 v4} com/google/common/d/a/t/a [object java/lang/Runnable] [object java/lang/Object] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/common/executors/l.a [object com/google/common/d/a/t])
+  (line 244)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/os/Handler] [object java/util/concurrent/Callable] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Handler;"  "Ljava/util/concurrent/Callable"  "<TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object android/os/Handler])
+  ; parameter[1] : v3 ([object java/util/concurrent/Callable])
+  (line 237)
+  (invoke-direct {v1 v2} com/facebook/common/executors/k/<init> [object android/os/Handler] )
+  (line 238)
+  (invoke-static {v3} com/google/common/d/a/t/a [object java/util/concurrent/Callable] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/common/executors/l.a [object com/google/common/d/a/t])
+  (line 239)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/util/concurrent/Delayed] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/t"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object java/util/concurrent/Delayed])
+  (line 258)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs protected ) a()[object com/google/common/d/a/t]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/t"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  (line 248)
+  (iget-object v0 v1 com/facebook/common/executors/l.a [object com/google/common/d/a/t])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Runnable] [object java/util/concurrent/Executor] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/t"  "<TV;>;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object java/lang/Runnable])
+  ; parameter[1] : v3 ([object java/util/concurrent/Executor])
+  (line 263)
+  (invoke-virtual {v1} com/facebook/common/executors/l/a )
+  (move-result-object v0)
+  (invoke-virtual {v0 v2 v3} com/google/common/d/a/t/a [object java/lang/Runnable] [object java/util/concurrent/Executor] )
+  (line 264)
+  (return-void )
+)
+
+(method (attrs protected ) b()[object java/util/concurrent/Future]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  (line 230)
+  (invoke-virtual {v1} com/facebook/common/executors/l/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  (line 230)
+  (invoke-virtual {v1} com/facebook/common/executors/l/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) compareTo([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 230)
+  (check-cast v2 [object java/util/concurrent/Delayed])
+  (invoke-virtual {v1 v2} com/facebook/common/executors/l/a [object java/util/concurrent/Delayed] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  (line 230)
+  (invoke-super {v1} com/facebook/common/executors/k/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) get(long [object java/util/concurrent/TimeUnit] )[object java/lang/Object]
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 (long)
+  ; parameter[1] : v4 ([object java/util/concurrent/TimeUnit])
+  (line 230)
+  (invoke-super {v1 v2 v3 v4} com/facebook/common/executors/k/get long [object java/util/concurrent/TimeUnit] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getDelay([object java/util/concurrent/TimeUnit] )long
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  ; parameter[0] : v2 ([object java/util/concurrent/TimeUnit])
+  (line 253)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/executors/l])
+  (line 268)
+  (invoke-virtual {v1} com/facebook/common/executors/l/a )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/d/a/t/run )
+  (line 269)
+  (return-void )
+)
+
+)

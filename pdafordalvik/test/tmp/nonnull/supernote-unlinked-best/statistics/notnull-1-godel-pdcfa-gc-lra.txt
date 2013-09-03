@@ -1,0 +1,48 @@
+com/tdizz/snote/keyboardnotes/NoteList$NoteDebuggerListener: 100.0
+com/tdizz/snote/keyboardnotes/NoteEdit$1: 100.0
+com/tdizz/snote/smsnotes/SmsNotes$3: 100.0
+com/tdizz/snote/drawnotes/DrawActivity$2: 100.0
+com/tdizz/snote/drawnotes/DrawActivity$1: 100.0
+com/tdizz/snote/recorder/RecorderActivity$PlayButton$1: 100.0
+com/tdizz/snote/SuperNoteActivity: 0.0
+com/tdizz/snote/smsnotes/SmsNotes$2: 100.0
+com/tdizz/snote/recorder/RecorderActivity$PlayButton: 100.0
+com/tdizz/snote/drawnotes/ReceiveUpdates: 25.0
+com/tdizz/snote/drawnotes/DrawActivity$3: 100.0
+com/tdizz/snote/keyboardnotes/NoteEntry: 0.0
+com/tdizz/snote/SuperNoteActivity$1: 100.0
+com/tdizz/snote/smsnotes/SmsNotes$debugger: 100.0
+com/tdizz/snote/keyboardnotes/DBHelper: 100.0
+com/tdizz/snote/smsnotes/SmsNotes: 0.0
+com/tdizz/snote/emailnotes/EmailActivity$1: 100.0
+com/tdizz/snote/drawnotes/DrawView: 100.0
+com/tdizz/snote/drawnotes/SendUpdates: 100.0
+com/tdizz/snote/keyboardnotes/NoteEdit$LinedEditText: 100.0
+com/tdizz/snote/smsnotes/SmsNotes$1NewThread: 100.0
+com/tdizz/snote/drawnotes/DrawActivity: 0.0
+com/tdizz/snote/keyboardnotes/NoteList: 0.0
+com/tdizz/snote/keyboardnotes/NoteEdit$NoteHeader: 100.0
+com/tdizz/snote/recorder/RecorderActivity: 0.0
+com/tdizz/snote/recorder/RecorderActivity$RecordButton$1: 100.0
+com/tdizz/snote/emailnotes/EmailActivity: 0.0
+com/tdizz/snote/recorder/RecorderActivity$RecordButton: 100.0
+com/tdizz/snote/smsnotes/SmsNotes$1: 100.0
+com/tdizz/snote/keyboardnotes/NoteEdit: 25.0
+The total average: 71.66666666666667
+ Any places of null ref during constructions? 
+ com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(62)
+InvokeInterfaceStmt:android/database/Cursor/moveToFirst(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(62)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(65)
+InvokeInterfaceStmt:android/database/Cursor/close(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(65)
+com/tdizz/snote/recorder/RecorderActivity:<init>LineStmt(39)
+InvokeStmt:java/io/File/getAbsolutePath(List() , v0 , List())@@@com/tdizz/snote/recorder/RecorderActivity$$<init>::LineStmt(39)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(63)
+InvokeInterfaceStmt:android/database/Cursor/getInt(List(v2) , v15 , List(int))@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(63)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(70)
+InvokeInterfaceStmt:android/database/Cursor/close(List() , v12 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(70)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(61)
+InvokeInterfaceStmt:android/database/Cursor/getCount(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(61)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(53)
+InvokeInterfaceStmt:android/database/Cursor/getCount(List() , v12 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(53)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(73)
+InvokeStmt:android/database/SQLException/getLocalizedMessage(List() , v13 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(73)

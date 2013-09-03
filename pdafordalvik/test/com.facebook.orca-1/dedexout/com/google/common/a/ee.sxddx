@@ -1,0 +1,121 @@
+(class (attrs public final ) com/google/common/a/ee
+ (super com/google/common/a/a)
+ (source "HashBiMap.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/ee])
+  (line 73)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (new-instance v1 java/util/HashMap)
+  (invoke-direct {v1} java/util/HashMap/<init> )
+  (invoke-direct {v2 v0 v1} com/google/common/a/a/<init> [object java/util/Map] [object java/util/Map] )
+  (line 74)
+  (return-void )
+ )
+
+(method (attrs public static ) e()[object com/google/common/a/ee]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<K:"  "Ljava/lang/Object;"  "V:"  "Ljava/lang/Object;"  ">()"  "Lcom/google/common/a/ee"  "<TK;TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 1)
+  (line 46)
+  (new-instance v0 com/google/common/a/ee)
+  (invoke-direct {v0} com/google/common/a/ee/<init> )
+  (return-object v0)
+ )
+
+(method (attrs public ) b()[object com/google/common/a/av]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ee])
+  (line 38)
+  (invoke-super {v1} com/google/common/a/a/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/ee])
+  (line 38)
+  (invoke-super {v0} com/google/common/a/a/clear )
+  (return-void )
+)
+
+(method (attrs public ) containsValue([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ee])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 38)
+  (invoke-super {v1 v2} com/google/common/a/a/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) d()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ee])
+  (line 38)
+  (invoke-super {v1} com/google/common/a/a/d )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ee])
+  (line 38)
+  (invoke-super {v1} com/google/common/a/a/entrySet )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) keySet()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ee])
+  (line 38)
+  (invoke-super {v1} com/google/common/a/a/keySet )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) put([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/ee])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 85)
+  (invoke-super {v1 v2 v3} com/google/common/a/a/put [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) putAll([object java/util/Map] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/ee])
+  ; parameter[0] : v1 ([object java/util/Map])
+  (line 38)
+  (invoke-super {v0 v1} com/google/common/a/a/putAll [object java/util/Map] )
+  (return-void )
+)
+
+(method (attrs public ) remove([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ee])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 38)
+  (invoke-super {v1 v2} com/google/common/a/a/remove [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

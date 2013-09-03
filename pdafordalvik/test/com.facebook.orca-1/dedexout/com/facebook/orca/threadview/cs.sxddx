@@ -1,0 +1,23 @@
+(class (attrs public ) com/facebook/orca/threadview/cs
+ (super java/lang/Object)
+ (source "ThreadViewLoader.java")
+
+ (field (attrs public final ) a [object com/facebook/fbservice/service/ServiceException] )
+ (field (attrs public final ) b boolean )
+
+(method (attrs public ) <init>([object com/facebook/fbservice/service/ServiceException] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/threadview/cs])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/ServiceException])
+  ; parameter[1] : v2 (boolean)
+  (line 97)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 98)
+  (iput-object v1 v0 com/facebook/orca/threadview/cs.a [object com/facebook/fbservice/service/ServiceException])
+  (line 99)
+  (iput-boolean v2 v0 com/facebook/orca/threadview/cs.b boolean)
+  (line 100)
+  (return-void )
+ )
+
+)

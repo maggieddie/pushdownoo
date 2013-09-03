@@ -1,0 +1,33 @@
+(interface (attrs public abstract ) com/facebook/auth/a/b
+ (super java/lang/Object)
+ (source "AuthComponent.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/auth/protocol/AuthenticationResult] )void
+)
+
+(method (attrs public abstract ) a([object java/lang/Throwable] )void
+)
+
+(method (attrs public abstract ) b()void
+)
+
+(method (attrs public abstract ) c()void
+)
+
+(method (attrs public abstract ) d()void
+)
+
+(method (attrs public abstract ) e()void
+)
+
+(method (attrs public abstract ) f()void
+)
+
+(method (attrs public abstract ) g()void
+)
+
+(method (attrs public abstract ) h()void
+)
+
+)

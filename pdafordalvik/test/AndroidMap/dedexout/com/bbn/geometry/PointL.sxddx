@@ -1,0 +1,48 @@
+(class (attrs public ) com/bbn/geometry/PointL
+ (super java/lang/Object)
+ (source "PointL.java")
+
+ (field (attrs public ) x long )
+ (field (attrs public ) y long )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/bbn/geometry/PointL])
+  (line 16)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(long long )void
+  (limit registers 5)
+  ; this: v0 ([object com/bbn/geometry/PointL])
+  ; parameter[0] : v1 (long)
+  ; parameter[1] : v3 (long)
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 12)
+  (iput-wide v1 v0 com/bbn/geometry/PointL.x long)
+  (line 13)
+  (iput-wide v3 v0 com/bbn/geometry/PointL.y long)
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public final ) getX()long
+  (limit registers 3)
+  ; this: v2 ([object com/bbn/geometry/PointL])
+  (line 20)
+  (iget-wide v0 v2 com/bbn/geometry/PointL.x long)
+  (return-wide v0)
+)
+
+(method (attrs public final ) getY()long
+  (limit registers 3)
+  ; this: v2 ([object com/bbn/geometry/PointL])
+  (line 24)
+  (iget-wide v0 v2 com/bbn/geometry/PointL.y long)
+  (return-wide v0)
+)
+
+)

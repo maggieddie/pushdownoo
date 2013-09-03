@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:appcenter="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.HorizontalImageGallery android:id="@id/screenshot_gallery" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" appcenter:left_item_width_percentage="0" />
+    <com.facebook.widget.HorizontalImageGalleryItemIndicator android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/item_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" appcenter:indicator_active_color="@color/appcenter_item_indicator_active" appcenter:indicator_inactive_color="@color/appcenter_item_indicator_inactive" />
+</LinearLayout>

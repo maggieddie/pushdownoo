@@ -1,0 +1,69 @@
+(class (attrs public abstract ) org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier
+ (super org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier)
+ (source "SingleValueSpanEntityModifier.java")
+ (implements org/anddev/andengine/entity/modifier/IEntityModifier)
+
+
+(method (attrs public ) <init>(float float float )void
+  (limit registers 4)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  (line 28)
+  (invoke-direct {v0 v1 v2 v3} org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier/<init> float float float )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float [object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  (line 36)
+  (invoke-direct {v0 v1 v2 v3 v4} org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier/<init> float float float [object org/anddev/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float [object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 6)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  ; parameter[4] : v5 ([object org/anddev/andengine/util/modifier/ease/IEaseFunction])
+  (line 40)
+  (invoke-direct/range {v0 .. v5} org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier/<init> float float float [object org/anddev/andengine/util/modifier/IModifier$IModifierListener] [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/anddev/andengine/util/modifier/ease/IEaseFunction])
+  (line 32)
+  (invoke-direct {v0 v1 v2 v3 v4} org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier/<init> float float float [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/modifier/SingleValueSpanEntityModifier])
+  (line 44)
+  (invoke-direct {v0 v1} org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier/<init> [object org/anddev/andengine/util/modifier/BaseSingleValueSpanModifier] )
+  (line 45)
+  (return-void )
+ )
+
+)

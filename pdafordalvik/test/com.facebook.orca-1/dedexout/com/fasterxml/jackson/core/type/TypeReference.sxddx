@@ -1,0 +1,72 @@
+(class (attrs public abstract ) com/fasterxml/jackson/core/type/TypeReference
+ (super java/lang/Object)
+ (source "TypeReference.java")
+ (implements java/lang/Comparable)
+
+ (field (attrs protected final ) _type [object java/lang/reflect/Type] )
+
+(method (attrs protected ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/type/TypeReference])
+  (line 33)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 34)
+  (invoke-virtual {v2} java/lang/Object/getClass )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/Class/getGenericSuperclass )
+  (move-result-object v0)
+  (line 35)
+  (instance-of v1 v0 java/lang/Class)
+  (if-eqz v1 l36da52)
+  (line 36)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "Internal error: TypeReference constructed without actual type information")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l36da52)
+  (line 45)
+  (check-cast v0 [object java/lang/reflect/ParameterizedType])
+  (invoke-interface {v0} java/lang/reflect/ParameterizedType/getActualTypeArguments )
+  (move-result-object v0)
+  (const/4 v1 0)
+  (aget-object v0 v0 v1)
+  (iput-object v0 v2 com/fasterxml/jackson/core/type/TypeReference._type [object java/lang/reflect/Type])
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) compareTo([object com/fasterxml/jackson/core/type/TypeReference] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/core/type/TypeReference"  "<TT;>;)I")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/type/TypeReference])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/type/TypeReference])
+  (line 58)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) compareTo([object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/core/type/TypeReference"  "<TT;>;)I")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/type/TypeReference])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 27)
+  (check-cast v2 [object com/fasterxml/jackson/core/type/TypeReference])
+  (invoke-virtual {v1 v2} com/fasterxml/jackson/core/type/TypeReference/compareTo [object com/fasterxml/jackson/core/type/TypeReference] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getType()[object java/lang/reflect/Type]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/type/TypeReference])
+  (line 48)
+  (iget-object v0 v1 com/fasterxml/jackson/core/type/TypeReference._type [object java/lang/reflect/Type])
+  (return-object v0)
+)
+
+)

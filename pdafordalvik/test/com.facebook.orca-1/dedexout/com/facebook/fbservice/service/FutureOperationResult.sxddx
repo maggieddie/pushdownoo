@@ -1,0 +1,33 @@
+(class (attrs public ) com/facebook/fbservice/service/FutureOperationResult
+ (super com/facebook/fbservice/service/OperationResult)
+ (source "FutureOperationResult.java")
+
+ (field (attrs private final ) a [object com/google/common/d/a/s] )
+
+(method (attrs public ) <init>([object com/google/common/d/a/s] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/d/a/s"  "<"  "Lcom/facebook/fbservice/service/OperationResult;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/service/FutureOperationResult])
+  ; parameter[0] : v1 ([object com/google/common/d/a/s])
+  (line 14)
+  (invoke-direct {v0} com/facebook/fbservice/service/OperationResult/<init> )
+  (line 15)
+  (iput-object v1 v0 com/facebook/fbservice/service/FutureOperationResult.a [object com/google/common/d/a/s])
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/s"  "<"  "Lcom/facebook/fbservice/service/OperationResult;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/fbservice/service/FutureOperationResult])
+  (line 19)
+  (iget-object v0 v1 com/facebook/fbservice/service/FutureOperationResult.a [object com/google/common/d/a/s])
+  (return-object v0)
+)
+
+)

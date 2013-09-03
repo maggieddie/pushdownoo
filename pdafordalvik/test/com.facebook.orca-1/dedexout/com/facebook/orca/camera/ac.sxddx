@@ -1,0 +1,43 @@
+(class (attrs ) com/facebook/orca/camera/ac
+ (super java/lang/Object)
+ (source "Util.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/camera/ab] )
+
+(method (attrs ) <init>([object com/facebook/orca/camera/ab] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/camera/ac])
+  ; parameter[0] : v1 ([object com/facebook/orca/camera/ab])
+  (line 347)
+  (iput-object v1 v0 com/facebook/orca/camera/ac.a [object com/facebook/orca/camera/ab])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/camera/ac])
+  (line 349)
+  (iget-object v0 v2 com/facebook/orca/camera/ac.a [object com/facebook/orca/camera/ab])
+  (invoke-static {v0} com/facebook/orca/camera/ab/a [object com/facebook/orca/camera/ab] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/facebook/orca/camera/ac.a [object com/facebook/orca/camera/ab])
+  (invoke-virtual {v0 v1} com/facebook/orca/camera/x/b [object com/facebook/orca/camera/z] )
+  (line 350)
+  (iget-object v0 v2 com/facebook/orca/camera/ac.a [object com/facebook/orca/camera/ab])
+  (invoke-static {v0} com/facebook/orca/camera/ab/b [object com/facebook/orca/camera/ab] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/ProgressDialog/getWindow )
+  (move-result-object v0)
+  (if-eqz v0 l1fe530)
+  (iget-object v0 v2 com/facebook/orca/camera/ac.a [object com/facebook/orca/camera/ab])
+  (invoke-static {v0} com/facebook/orca/camera/ab/b [object com/facebook/orca/camera/ab] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/ProgressDialog/dismiss )
+  (label l1fe530)
+  (line 351)
+  (return-void )
+)
+
+)

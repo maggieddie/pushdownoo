@@ -1,0 +1,46 @@
+(class (attrs ) com/facebook/http/b/c
+ (super org/apache/http/entity/HttpEntityWrapper)
+ (source "ClientGZipContentCompression.java")
+ (implements com/facebook/http/b/at)
+
+
+(method (attrs public ) <init>([object org/apache/http/HttpEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/b/c])
+  ; parameter[0] : v1 ([object org/apache/http/HttpEntity])
+  (line 80)
+  (invoke-direct {v0 v1} org/apache/http/entity/HttpEntityWrapper/<init> [object org/apache/http/HttpEntity] )
+  (line 81)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object org/apache/http/HttpEntity]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/b/c])
+  (line 101)
+  (iget-object v0 v1 com/facebook/http/b/c.wrappedEntity [object org/apache/http/HttpEntity])
+  (return-object v0)
+)
+
+(method (attrs public ) getContent()[object java/io/InputStream]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/http/b/c])
+  (line 88)
+  (iget-object v0 v2 com/facebook/http/b/c.wrappedEntity [object org/apache/http/HttpEntity])
+  (invoke-interface {v0} org/apache/http/HttpEntity/getContent )
+  (move-result-object v0)
+  (line 90)
+  (new-instance v1 java/util/zip/GZIPInputStream)
+  (invoke-direct {v1 v0} java/util/zip/GZIPInputStream/<init> [object java/io/InputStream] )
+  (return-object v1)
+)
+
+(method (attrs public ) getContentLength()long
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/http/b/c])
+  (line 96)
+  (const-wide/16 v0 65535)
+  (return-wide v0)
+)
+
+)

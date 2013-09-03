@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.photos.photogallery.tagging.BubbleLayout android:id="@id/tag_typeahead_bubble_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/tag_typeahead_bubble_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="18.0sp" android:textColor="@color/white" android:textColorHint="@color/white" android:id="@id/tag_typeahead_edit_text" android:background="#00000000" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/photo_tag_typeahead_prompt" android:inputType="textNoSuggestions" android:imeOptions="actionDone" android:textCursorDrawable="@null" />
+                <ProgressBar android:id="@id/tag_typeahead_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+            </RelativeLayout>
+            <View android:id="@id/tag_typeahead_divider" android:background="@color/tag_typeahead_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <ListView android:id="@id/tag_typeahead_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/tag_typeahead_divider" android:dividerHeight="1.0px" />
+        </LinearLayout>
+    </com.facebook.photos.photogallery.tagging.BubbleLayout>
+</merge>

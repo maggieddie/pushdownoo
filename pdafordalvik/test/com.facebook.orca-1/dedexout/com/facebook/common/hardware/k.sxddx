@@ -1,0 +1,38 @@
+(class (attrs ) com/facebook/common/hardware/k
+ (super android/telephony/PhoneStateListener)
+ (source "CellRadioWakeupManager.java")
+
+ (field (attrs final ) a [object com/facebook/common/hardware/h] )
+
+(method (attrs private ) <init>([object com/facebook/common/hardware/h] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/hardware/k])
+  ; parameter[0] : v1 ([object com/facebook/common/hardware/h])
+  (line 110)
+  (iput-object v1 v0 com/facebook/common/hardware/k.a [object com/facebook/common/hardware/h])
+  (invoke-direct {v0} android/telephony/PhoneStateListener/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/common/hardware/h] [object com/facebook/common/hardware/i] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/common/hardware/k])
+  ; parameter[0] : v1 ([object com/facebook/common/hardware/h])
+  ; parameter[1] : v2 ([object com/facebook/common/hardware/i])
+  (line 110)
+  (invoke-direct {v0 v1} com/facebook/common/hardware/k/<init> [object com/facebook/common/hardware/h] )
+  (return-void )
+ )
+
+(method (attrs public ) onSignalStrengthsChanged([object android/telephony/SignalStrength] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/hardware/k])
+  ; parameter[0] : v2 ([object android/telephony/SignalStrength])
+  (line 114)
+  (iget-object v0 v1 com/facebook/common/hardware/k.a [object com/facebook/common/hardware/h])
+  (invoke-static {v0} com/facebook/common/hardware/h/a [object com/facebook/common/hardware/h] )
+  (line 115)
+  (return-void )
+)
+
+)

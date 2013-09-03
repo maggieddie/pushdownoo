@@ -1,0 +1,36 @@
+(class (attrs final ) com/google/common/a/bz
+ (super com/google/common/a/bn)
+ (source "CustomConcurrentHashMap.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/bz])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 461)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/a/bn/<init> [object java/lang/String] int [object com/google/common/a/bk] )
+  (return-void )
+ )
+
+(method (attrs ) newEntry([object com/google/common/a/cn] [object java/lang/Object] int [object com/google/common/a/cm] )[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<K:"  "Ljava/lang/Object;"  "V:"  "Ljava/lang/Object;"  ">("  "Lcom/google/common/a/cn"  "<TK;TV;>;TK;I"  "Lcom/google/common/a/cm"  "<TK;TV;>;)"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (annotation runtimeVisibility param 4 [object javax/annotation/Nullable]
+  )
+  (limit registers 7)
+  ; this: v2 ([object com/google/common/a/bz])
+  ; parameter[0] : v3 ([object com/google/common/a/cn])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object com/google/common/a/cm])
+  (line 465)
+  (new-instance v0 com/google/common/a/df)
+  (iget-object v1 v3 com/google/common/a/cn.g [object java/lang/ref/ReferenceQueue])
+  (invoke-direct {v0 v1 v4 v5 v6} com/google/common/a/df/<init> [object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/a/cm] )
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,51 @@
+(class (attrs public ) com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdSerializer)
+ (source "StdKeySerializers.java")
+
+ (field (attrs protected static final ) instance [object com/fasterxml/jackson/databind/JsonSerializer] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 84)
+  (new-instance v0 com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer/<init> )
+  (sput-object v0 com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer.instance [object com/fasterxml/jackson/databind/JsonSerializer])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer])
+  (line 86)
+  (const-class v0 java/util/Calendar)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/ser/std/StdSerializer/<init> [object java/lang/Class] )
+  (return-void )
+ )
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 81)
+  (check-cast v1 [object java/util/Calendar])
+  (invoke-virtual {v0 v1 v2 v3} com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer/serialize [object java/util/Calendar] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (return-void )
+)
+
+(method (attrs public ) serialize([object java/util/Calendar] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializers$CalendarKeySerializer])
+  ; parameter[0] : v3 ([object java/util/Calendar])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 92)
+  (invoke-virtual {v3} java/util/Calendar/getTimeInMillis )
+  (move-result-wide v0)
+  (invoke-virtual {v5 v0 v1 v4} com/fasterxml/jackson/databind/SerializerProvider/defaultSerializeDateKey long [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 93)
+  (return-void )
+)
+
+)

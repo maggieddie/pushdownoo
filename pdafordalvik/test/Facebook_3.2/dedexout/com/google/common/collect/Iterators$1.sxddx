@@ -1,0 +1,31 @@
+(class (attrs final ) com/google/common/collect/Iterators$1
+ (super com/google/common/collect/UnmodifiableIterator)
+ (source "Iterators.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/Iterators$1])
+  (line 60)
+  (invoke-direct {v0} com/google/common/collect/UnmodifiableIterator/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Iterators$1])
+  (line 63)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Iterators$1])
+  (line 67)
+  (new-instance v0 java/util/NoSuchElementException)
+  (invoke-direct {v0} java/util/NoSuchElementException/<init> )
+  (throw v0)
+)
+
+)

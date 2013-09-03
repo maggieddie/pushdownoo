@@ -1,0 +1,37 @@
+(class (attrs public ) com/facebook/common/a/a
+ (super java/lang/Object)
+ (source "AsyncTaskRunner.java")
+
+ (field (attrs private final ) a [object android/os/AsyncTask] )
+
+(method (attrs public ) <init>([object java/lang/Runnable] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/a/a])
+  ; parameter[0] : v2 ([object java/lang/Runnable])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 15)
+  (new-instance v0 com/facebook/common/a/b)
+  (invoke-direct {v0 v1 v2} com/facebook/common/a/b/<init> [object com/facebook/common/a/a] [object java/lang/Runnable] )
+  (iput-object v0 v1 com/facebook/common/a/a.a [object android/os/AsyncTask])
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/common/a/a])
+  (line 26)
+  (iget-object v1 v4 com/facebook/common/a/a.a [object android/os/AsyncTask])
+  (const/4 v0 1)
+  (new-array v2 v0 [array [object java/lang/Void]])
+  (const/4 v3 0)
+  (const/4 v0 0)
+  (check-cast v0 [object java/lang/Void])
+  (aput-object v0 v2 v3)
+  (invoke-virtual {v1 v2} android/os/AsyncTask/execute [array [object java/lang/Object]] )
+  (line 27)
+  (return-void )
+)
+
+)

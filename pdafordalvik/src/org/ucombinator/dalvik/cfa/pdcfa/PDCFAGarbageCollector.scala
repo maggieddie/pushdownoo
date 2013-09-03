@@ -47,8 +47,10 @@ trait PDCFAGarbageCollector extends DalvikGarbageCollector with StackCESKMachina
    
     def filterLiveRegAddrs(st: StForEqual, addrs: Set[Addr]) : Set[Addr] = {
    //   val stStr = CommonUtils.constrDistinctStatementStr(st)
-      val liveRegs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap(st )
+      var liveRegs = Set[String]()//Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap(st )
       
+      if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.contains(st))
+        liveRegs = Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap(st )
      /* st match {
         case StForEqual(fs@FieldAssignStmt(NonStaticFieldExp(_, _, _), rhExp, nxt, ls ,_,_), _, _,_,_) => {
           println("gc hit fieldassign:" , fs)

@@ -1,0 +1,28 @@
+(class (attrs ) android/support/v4/widget/DrawerLayout$ViewDragCallback$1
+ (super java/lang/Object)
+ (source "DrawerLayout.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) this$1 [object android/support/v4/widget/DrawerLayout$ViewDragCallback] )
+
+(method (attrs ) <init>([object android/support/v4/widget/DrawerLayout$ViewDragCallback] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/DrawerLayout$ViewDragCallback$1])
+  ; parameter[0] : v1 ([object android/support/v4/widget/DrawerLayout$ViewDragCallback])
+  (line 1284)
+  (iput-object v1 v0 android/support/v4/widget/DrawerLayout$ViewDragCallback$1.this$1 [object android/support/v4/widget/DrawerLayout$ViewDragCallback])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/widget/DrawerLayout$ViewDragCallback$1])
+  (line 1286)
+  (iget-object v0 v1 android/support/v4/widget/DrawerLayout$ViewDragCallback$1.this$1 [object android/support/v4/widget/DrawerLayout$ViewDragCallback])
+  (invoke-static {v0} android/support/v4/widget/DrawerLayout$ViewDragCallback/access$000 [object android/support/v4/widget/DrawerLayout$ViewDragCallback] )
+  (line 1287)
+  (return-void )
+)
+
+)

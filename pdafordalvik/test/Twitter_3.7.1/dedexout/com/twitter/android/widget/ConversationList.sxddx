@@ -1,0 +1,57 @@
+(class (attrs public ) com/twitter/android/widget/ConversationList
+ (super android/widget/ListView)
+ (source "Twttr")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/widget/ConversationList])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 14)
+  (invoke-direct {v0 v1} android/widget/ListView/<init> [object android/content/Context] )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] )void
+  (limit registers 3)
+  ; this: v0 ([object com/twitter/android/widget/ConversationList])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object android/util/AttributeSet])
+  (line 18)
+  (invoke-direct {v0 v1 v2} android/widget/ListView/<init> [object android/content/Context] [object android/util/AttributeSet] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] int )void
+  (limit registers 4)
+  ; this: v0 ([object com/twitter/android/widget/ConversationList])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object android/util/AttributeSet])
+  ; parameter[2] : v3 (int)
+  (line 22)
+  (invoke-direct {v0 v1 v2 v3} android/widget/ListView/<init> [object android/content/Context] [object android/util/AttributeSet] int )
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs protected ) onSizeChanged(int int int int )void
+  (limit registers 6)
+  ; this: v1 ([object com/twitter/android/widget/ConversationList])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (int)
+  (line 27)
+  (invoke-super {v1 v2 v3 v4 v5} android/widget/ListView/onSizeChanged int int int int )
+  (line 28)
+  (invoke-virtual {v1} com/twitter/android/widget/ConversationList/getCount )
+  (move-result v0)
+  (add-int/lit8 v0 v0 255)
+  (invoke-virtual {v1 v0} com/twitter/android/widget/ConversationList/setSelection int )
+  (line 29)
+  (return-void )
+)
+
+)

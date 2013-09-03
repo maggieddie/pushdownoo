@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) com/google/common/d/a/s
+ (super java/lang/Object)
+ (source "ListenableFuture.java")
+ (implements java/util/concurrent/Future)
+
+
+(method (attrs public abstract ) a([object java/lang/Runnable] [object java/util/concurrent/Executor] )void
+)
+
+)

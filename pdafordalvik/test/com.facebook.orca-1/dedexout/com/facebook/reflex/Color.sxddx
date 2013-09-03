@@ -1,0 +1,68 @@
+(class (attrs public ) com/facebook/reflex/Color
+ (super com/facebook/reflex/d)
+ (source "Color.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/Color])
+  (line 9)
+  (invoke-direct {v1} com/facebook/reflex/d/<init> )
+  (line 10)
+  (invoke-direct {v1} com/facebook/reflex/Color/initialize )
+  (move-result v0)
+  (invoke-virtual {v1 v0} com/facebook/reflex/Color/a int )
+  (line 11)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 7)
+  ; this: v5 ([object com/facebook/reflex/Color])
+  ; parameter[0] : v6 (int)
+  (const/high16 v4 17279)
+  (line 19)
+  (invoke-direct {v5} com/facebook/reflex/Color/<init> )
+  (line 20)
+  (invoke-static {v6} android/graphics/Color/alpha int )
+  (move-result v0)
+  (int-to-float v0 v0)
+  (div-float/2addr v0 v4)
+  (invoke-static {v6} android/graphics/Color/red int )
+  (move-result v1)
+  (int-to-float v1 v1)
+  (div-float/2addr v1 v4)
+  (invoke-static {v6} android/graphics/Color/green int )
+  (move-result v2)
+  (int-to-float v2 v2)
+  (div-float/2addr v2 v4)
+  (invoke-static {v6} android/graphics/Color/blue int )
+  (move-result v3)
+  (int-to-float v3 v3)
+  (div-float/2addr v3 v4)
+  (invoke-direct {v5 v0 v1 v2 v3} com/facebook/reflex/Color/setColor float float float float )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs private native ) initialize()int
+ )
+
+(method (attrs private native ) setColor(float float float float )void
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/reflex/Color])
+  (line 35)
+  (return-void )
+)
+
+(method (attrs protected ) c()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/reflex/Color])
+  (line 30)
+  (return-void )
+)
+
+)

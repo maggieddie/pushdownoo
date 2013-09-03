@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/http/protocol/v
+ (super java/lang/Object)
+ (source "BatchComponent.java")
+
+
+(method (attrs public abstract ) a()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/Object;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) a([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/Object;"  ">;)V")
+  )
+)
+
+)

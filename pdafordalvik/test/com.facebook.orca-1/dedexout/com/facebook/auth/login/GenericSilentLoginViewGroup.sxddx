@@ -1,0 +1,17 @@
+(class (attrs public ) com/facebook/auth/login/GenericSilentLoginViewGroup
+ (super com/facebook/auth/login/m)
+ (source "GenericSilentLoginViewGroup.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] [object com/facebook/auth/login/c] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/auth/login/GenericSilentLoginViewGroup])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object com/facebook/auth/login/c])
+  (line 21)
+  (invoke-direct {v0 v1 v2} com/facebook/auth/login/m/<init> [object android/content/Context] [object com/facebook/auth/login/c] )
+  (line 22)
+  (return-void )
+ )
+
+)

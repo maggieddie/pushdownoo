@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/orca/chatheads/b/l
+ (super java/lang/Object)
+ (source "ChatHeadNuxController.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object android/graphics/Point] )
+ (field (attrs final ) b [object com/facebook/orca/chatheads/b/e] )
+ (field (attrs final ) c [object com/facebook/orca/chatheads/b/k] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/b/k] [object android/graphics/Point] [object com/facebook/orca/chatheads/b/e] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/orca/chatheads/b/l])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/b/k])
+  ; parameter[1] : v2 ([object android/graphics/Point])
+  ; parameter[2] : v3 ([object com/facebook/orca/chatheads/b/e])
+  (line 97)
+  (iput-object v1 v0 com/facebook/orca/chatheads/b/l.c [object com/facebook/orca/chatheads/b/k])
+  (iput-object v2 v0 com/facebook/orca/chatheads/b/l.a [object android/graphics/Point])
+  (iput-object v3 v0 com/facebook/orca/chatheads/b/l.b [object com/facebook/orca/chatheads/b/e])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/chatheads/b/l])
+  (line 100)
+  (iget-object v0 v3 com/facebook/orca/chatheads/b/l.c [object com/facebook/orca/chatheads/b/k])
+  (iget-object v1 v3 com/facebook/orca/chatheads/b/l.a [object android/graphics/Point])
+  (iget-object v2 v3 com/facebook/orca/chatheads/b/l.b [object com/facebook/orca/chatheads/b/e])
+  (invoke-static {v0 v1 v2} com/facebook/orca/chatheads/b/k/a [object com/facebook/orca/chatheads/b/k] [object android/graphics/Point] [object com/facebook/orca/chatheads/b/e] )
+  (line 101)
+  (return-void )
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/entity/IEntityFactory
+ (super java/lang/Object)
+ (source "IEntityFactory.java")
+
+
+(method (attrs public abstract ) create(float float )[object org/andengine/entity/Entity]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(FF)TT;")
+  )
+)
+
+)

@@ -1,0 +1,18 @@
+(class (attrs public final ) org/darpa/smsreminder/R$menu
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) activity_alarm_details int 2131099648); 0x7f060000 )
+ (field (attrs public static final ) activity_alarm_viewer int 2131099649); 0x7f060001 )
+ (field (attrs public static final ) activity_settings int 2131099650); 0x7f060002 )
+ (field (attrs public static final ) main_menu int 2131099651); 0x7f060003 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/darpa/smsreminder/R$menu])
+  (line 48)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

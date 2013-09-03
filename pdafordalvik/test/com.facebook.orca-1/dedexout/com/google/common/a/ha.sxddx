@@ -1,0 +1,46 @@
+(class (attrs ) com/google/common/a/ha
+ (super java/util/AbstractSequentialList)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object com/google/common/a/gw] )
+
+(method (attrs ) <init>([object com/google/common/a/gw] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/ha])
+  ; parameter[0] : v1 ([object com/google/common/a/gw])
+  (line 937)
+  (iput-object v1 v0 com/google/common/a/ha.a [object com/google/common/a/gw])
+  (invoke-direct {v0} java/util/AbstractSequentialList/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) listIterator(int )[object java/util/ListIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Ljava/util/ListIterator"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/ha])
+  ; parameter[0] : v3 (int)
+  (line 943)
+  (new-instance v0 com/google/common/a/hn)
+  (iget-object v1 v2 com/google/common/a/ha.a [object com/google/common/a/gw])
+  (invoke-direct {v0 v1 v3} com/google/common/a/hn/<init> [object com/google/common/a/gw] int )
+  (line 944)
+  (new-instance v1 com/google/common/a/hb)
+  (invoke-direct {v1 v2 v0} com/google/common/a/hb/<init> [object com/google/common/a/ha] [object java/util/ListIterator] )
+  (return-object v1)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ha])
+  (line 939)
+  (iget-object v0 v1 com/google/common/a/ha.a [object com/google/common/a/gw])
+  (invoke-static {v0} com/google/common/a/gw/d [object com/google/common/a/gw] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/google/common/a/jf/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

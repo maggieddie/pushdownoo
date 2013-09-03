@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/action_bar_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/divider" layout="@layout/divider" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/actionbar" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_below="@id/divider">
+        <ImageButton android:id="@id/reply" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_reply" android:layout_weight="0.2" android:contentDescription="@string/button_action_reply" />
+        <ImageButton android:id="@id/retweet" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_rt_off" android:layout_weight="0.2" android:contentDescription="@string/button_action_retweet" />
+        <ImageButton android:id="@id/favorite" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_fave_off" android:layout_weight="0.2" android:contentDescription="@string/button_action_fave" />
+        <ImageButton android:id="@id/share" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_share" android:layout_weight="0.2" android:contentDescription="@string/button_action_share" />
+        <ImageButton android:id="@id/delete" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_delete" android:layout_weight="0.2" android:contentDescription="@string/button_action_delete" />
+    </LinearLayout>
+</RelativeLayout>

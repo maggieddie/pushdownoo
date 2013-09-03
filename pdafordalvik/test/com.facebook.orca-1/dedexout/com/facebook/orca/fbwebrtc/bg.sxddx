@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/orca/fbwebrtc/bg
+ (super java/lang/Object)
+ (source "WebrtcUiHandler.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a boolean )
+ (field (attrs final ) b [object com/facebook/orca/fbwebrtc/bb] )
+
+(method (attrs ) <init>([object com/facebook/orca/fbwebrtc/bb] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/bg])
+  ; parameter[0] : v1 ([object com/facebook/orca/fbwebrtc/bb])
+  ; parameter[1] : v2 (boolean)
+  (line 737)
+  (iput-object v1 v0 com/facebook/orca/fbwebrtc/bg.b [object com/facebook/orca/fbwebrtc/bb])
+  (iput-boolean v2 v0 com/facebook/orca/fbwebrtc/bg.a boolean)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/fbwebrtc/bg])
+  (line 739)
+  (iget-object v0 v2 com/facebook/orca/fbwebrtc/bg.b [object com/facebook/orca/fbwebrtc/bb])
+  (iget-boolean v1 v2 com/facebook/orca/fbwebrtc/bg.a boolean)
+  (invoke-static {v0 v1} com/facebook/orca/fbwebrtc/bb/b [object com/facebook/orca/fbwebrtc/bb] boolean )
+  (line 740)
+  (return-void )
+)
+
+)

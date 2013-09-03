@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/stickers/u
+ (super java/lang/Object)
+ (source "StickerPopup.java")
+ (implements com/facebook/orca/emoji/an)
+
+ (field (attrs final ) a [object com/facebook/orca/stickers/StickerPopup] )
+
+(method (attrs ) <init>([object com/facebook/orca/stickers/StickerPopup] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/stickers/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/stickers/StickerPopup])
+  (line 243)
+  (iput-object v1 v0 com/facebook/orca/stickers/u.a [object com/facebook/orca/stickers/StickerPopup])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/stickers/u])
+  ; parameter[0] : v2 (int)
+  (line 251)
+  (iget-object v0 v1 com/facebook/orca/stickers/u.a [object com/facebook/orca/stickers/StickerPopup])
+  (invoke-static {v0 v2} com/facebook/orca/stickers/StickerPopup/a [object com/facebook/orca/stickers/StickerPopup] int )
+  (line 252)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/stickers/u])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 246)
+  (iget-object v0 v1 com/facebook/orca/stickers/u.a [object com/facebook/orca/stickers/StickerPopup])
+  (invoke-static {v0 v2} com/facebook/orca/stickers/StickerPopup/a [object com/facebook/orca/stickers/StickerPopup] [object java/lang/String] )
+  (line 247)
+  (return-void )
+)
+
+)

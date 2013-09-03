@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/util/algorithm/path/IPathFinder$IPathFinderListener
+ (super java/lang/Object)
+ (source "IPathFinder.java")
+
+
+(method (attrs public abstract ) onVisited([object java/lang/Object] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;II)V")
+  )
+)
+
+)

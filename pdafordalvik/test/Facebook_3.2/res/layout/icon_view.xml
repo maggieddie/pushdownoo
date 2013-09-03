@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.launchables.view.IconView android:layout_width="@dimen/cell_width" android:layout_height="@dimen/cell_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image_icon" android:layout_width="fill_parent" android:layout_height="@dimen/iconview_icon_height" android:scaleType="centerInside" android:layout_alignParentTop="true" />
+    <TextView android:textSize="11.0dip" android:ellipsize="end" android:gravity="top|center" android:id="@id/text_view" android:paddingLeft="@dimen/iconview_text_leftright_padding" android:paddingTop="@dimen/iconview_text_top_padding" android:paddingRight="@dimen/iconview_text_leftright_padding" android:layout_width="fill_parent" android:layout_height="@dimen/iconview_text_height" android:maxLines="2" android:scrollHorizontally="true" android:includeFontPadding="false" android:layout_alignParentBottom="true" android:lineSpacingExtra="-1.0dip" android:lineSpacingMultiplier="1.0" style="@style/white_text_with_shadow" />
+</com.facebook.dash.launchables.view.IconView>

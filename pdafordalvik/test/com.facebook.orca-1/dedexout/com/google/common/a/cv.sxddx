@@ -1,0 +1,46 @@
+(class (attrs final ) com/google/common/a/cv
+ (super com/google/common/a/ct)
+ (source "CustomConcurrentHashMap.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/cv])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 309)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/a/ct/<init> [object java/lang/String] int [object com/google/common/a/bk] )
+  (return-void )
+ )
+
+(method (attrs ) defaultEquivalence()[object com/google/common/base/Equivalence]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/base/Equivalence"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cv])
+  (line 318)
+  (invoke-static {} com/google/common/base/Equivalences/identity )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) referenceValue([object com/google/common/a/cn] [object com/google/common/a/cm] [object java/lang/Object] )[object com/google/common/a/dd]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<K:"  "Ljava/lang/Object;"  "V:"  "Ljava/lang/Object;"  ">("  "Lcom/google/common/a/cn"  "<TK;TV;>;"  "Lcom/google/common/a/cm"  "<TK;TV;>;TV;)"  "Lcom/google/common/a/dd"  "<TK;TV;>;")
+  )
+  (limit registers 6)
+  ; this: v2 ([object com/google/common/a/cv])
+  ; parameter[0] : v3 ([object com/google/common/a/cn])
+  ; parameter[1] : v4 ([object com/google/common/a/cm])
+  ; parameter[2] : v5 ([object java/lang/Object])
+  (line 313)
+  (new-instance v0 com/google/common/a/cs)
+  (iget-object v1 v3 com/google/common/a/cn.h [object java/lang/ref/ReferenceQueue])
+  (invoke-direct {v0 v1 v5 v4} com/google/common/a/cs/<init> [object java/lang/ref/ReferenceQueue] [object java/lang/Object] [object com/google/common/a/cm] )
+  (return-object v0)
+)
+
+)

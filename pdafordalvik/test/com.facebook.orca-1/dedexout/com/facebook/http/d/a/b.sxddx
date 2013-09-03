@@ -1,0 +1,48 @@
+(class (attrs public ) com/facebook/http/d/a/b
+ (super com/facebook/http/a/a/a/i)
+ (source "MultipartEntityWithProgressListener.java")
+
+ (field (attrs ) a [object com/facebook/http/d/a/a] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/d/a/b])
+  (line 29)
+  (invoke-direct {v1} com/facebook/http/a/a/a/i/<init> )
+  (line 15)
+  (const/4 v0 0)
+  (iput-object v0 v1 com/facebook/http/d/a/b.a [object com/facebook/http/d/a/a])
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/http/d/a/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/d/a/b])
+  ; parameter[0] : v1 ([object com/facebook/http/d/a/a])
+  (line 41)
+  (iput-object v1 v0 com/facebook/http/d/a/b.a [object com/facebook/http/d/a/a])
+  (line 42)
+  (return-void )
+)
+
+(method (attrs public ) writeTo([object java/io/OutputStream] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/http/d/a/b])
+  ; parameter[0] : v3 ([object java/io/OutputStream])
+  (line 34)
+  (iget-object v0 v2 com/facebook/http/d/a/b.a [object com/facebook/http/d/a/a])
+  (if-eqz v0 l2b2e08)
+  (line 35)
+  (new-instance v0 com/facebook/http/d/a/c)
+  (iget-object v1 v2 com/facebook/http/d/a/b.a [object com/facebook/http/d/a/a])
+  (invoke-direct {v0 v3 v1} com/facebook/http/d/a/c/<init> [object java/io/OutputStream] [object com/facebook/http/d/a/a] )
+  (move-object v3 v0)
+  (label l2b2e08)
+  (line 37)
+  (invoke-super {v2 v3} com/facebook/http/a/a/a/i/writeTo [object java/io/OutputStream] )
+  (line 38)
+  (return-void )
+)
+
+)

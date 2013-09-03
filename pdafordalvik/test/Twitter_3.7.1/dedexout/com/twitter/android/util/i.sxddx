@@ -1,0 +1,31 @@
+(class (attrs public final ) com/twitter/android/util/i
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public final ) a [object android/graphics/Bitmap] )
+ (field (attrs public final ) b int )
+ (field (attrs public final ) c int )
+ (field (attrs public final ) d int )
+
+(method (attrs public ) <init>([object android/graphics/Bitmap] int int int )void
+  (limit registers 5)
+  ; this: v0 ([object com/twitter/android/util/i])
+  ; parameter[0] : v1 ([object android/graphics/Bitmap])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 987)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 988)
+  (iput-object v1 v0 com/twitter/android/util/i.a [object android/graphics/Bitmap])
+  (line 989)
+  (iput v2 v0 com/twitter/android/util/i.b int)
+  (line 990)
+  (iput v3 v0 com/twitter/android/util/i.c int)
+  (line 991)
+  (iput v4 v0 com/twitter/android/util/i.d int)
+  (line 992)
+  (return-void )
+ )
+
+)

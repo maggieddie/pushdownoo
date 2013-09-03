@@ -38,7 +38,7 @@
   (label l10b9c4)
   (line 144)
   (const-string v1 "http://java.sun.com/dtd/preferences.dtd")
-  (invoke-virtual-quick {v0 v3} org/xml/sax/InputSource/setSystemId [object java/lang/String] )
+  (invoke-virtual-quick {v0 v3} vtable #0x14)
   (line 145)
   (return-object v0)
   (label l10b9d0)

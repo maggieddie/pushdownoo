@@ -1,0 +1,881 @@
+(class (attrs public final ) com/facebook/q
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) BetterButton [array int] null )
+ (field (attrs public static final ) BetterButton_fontFamily int 0); 0x0 )
+ (field (attrs public static final ) BetterEditTextView [array int] null )
+ (field (attrs public static final ) BetterEditTextView_fontFamily int 0); 0x0 )
+ (field (attrs public static final ) BetterTextView [array int] null )
+ (field (attrs public static final ) BetterTextView_fontFamily int 0); 0x0 )
+ (field (attrs public static final ) BetterTextView_maximallyWideThreshold int 2); 0x2 )
+ (field (attrs public static final ) BetterTextView_minimallyWide int 1); 0x1 )
+ (field (attrs public static final ) CirclePageIndicator [array int] null )
+ (field (attrs public static final ) CirclePageIndicator_android_orientation int 0); 0x0 )
+ (field (attrs public static final ) CirclePageIndicator_centered int 1); 0x1 )
+ (field (attrs public static final ) CirclePageIndicator_fillColor int 3); 0x3 )
+ (field (attrs public static final ) CirclePageIndicator_pageColor int 5); 0x5 )
+ (field (attrs public static final ) CirclePageIndicator_radius int 6); 0x6 )
+ (field (attrs public static final ) CirclePageIndicator_snap int 7); 0x7 )
+ (field (attrs public static final ) CirclePageIndicator_strokeColor int 4); 0x4 )
+ (field (attrs public static final ) CirclePageIndicator_strokeWidth int 2); 0x2 )
+ (field (attrs public static final ) ConfirmationView [array int] null )
+ (field (attrs public static final ) ConfirmationView_message int 0); 0x0 )
+ (field (attrs public static final ) ConfirmationView_negativeButtonTitle int 2); 0x2 )
+ (field (attrs public static final ) ConfirmationView_positiveButtonTitle int 1); 0x1 )
+ (field (attrs public static final ) ContainerView [array int] null )
+ (field (attrs public static final ) ContainerView_compatibilityDrawMode int 0); 0x0 )
+ (field (attrs public static final ) ContainerView_dispatchAndroidTouchEvents int 1); 0x1 )
+ (field (attrs public static final ) ContainerView_reflexAndroidTouchMode int 2); 0x2 )
+ (field (attrs public static final ) CustomViewStub [array int] null )
+ (field (attrs public static final ) CustomViewStub_inflatedLayoutAndroidId int 0); 0x0 )
+ (field (attrs public static final ) DragSortListView [array int] null )
+ (field (attrs public static final ) DragSortListView_dragndropBackground int 3); 0x3 )
+ (field (attrs public static final ) DragSortListView_dragndropImageBackground int 4); 0x4 )
+ (field (attrs public static final ) DragSortListView_grabberId int 1); 0x1 )
+ (field (attrs public static final ) DragSortListView_normalHeight int 0); 0x0 )
+ (field (attrs public static final ) DragSortListView_viewToHideWhileDragging int 2); 0x2 )
+ (field (attrs public static final ) EllipsizingTextView [array int] null )
+ (field (attrs public static final ) EllipsizingTextView_ellipsizeLineBreaks int 0); 0x0 )
+ (field (attrs public static final ) EmptyListViewItem [array int] null )
+ (field (attrs public static final ) EmptyListViewItem_empty_background_color int 1); 0x1 )
+ (field (attrs public static final ) EmptyListViewItem_textColor int 0); 0x0 )
+ (field (attrs public static final ) FavoritesDragSortListView [array int] null )
+ (field (attrs public static final ) FavoritesDragSortListView_bottom_divider int 1); 0x1 )
+ (field (attrs public static final ) FavoritesDragSortListView_top_divider int 0); 0x0 )
+ (field (attrs public static final ) FlowLayout [array int] null )
+ (field (attrs public static final ) FlowLayout_horizontalSpacing int 0); 0x0 )
+ (field (attrs public static final ) FlowLayout_verticalSpacing int 1); 0x1 )
+ (field (attrs public static final ) HorizontalImageGallery [array int] null )
+ (field (attrs public static final ) HorizontalImageGalleryItemIndicator [array int] null )
+ (field (attrs public static final ) HorizontalImageGalleryItemIndicator_indicator_active_color int 0); 0x0 )
+ (field (attrs public static final ) HorizontalImageGalleryItemIndicator_indicator_inactive_color int 1); 0x1 )
+ (field (attrs public static final ) HorizontalImageGallery_left_item_width_percentage int 0); 0x0 )
+ (field (attrs public static final ) HorizontalImageGallery_support_vertical_scrolling int 1); 0x1 )
+ (field (attrs public static final ) HorizontalOrVerticalViewGroup [array int] null )
+ (field (attrs public static final ) HorizontalOrVerticalViewGroup_childMargin int 0); 0x0 )
+ (field (attrs public static final ) ListView [array int] null )
+ (field (attrs public static final ) ListView_longpressSelectorColor int 1); 0x1 )
+ (field (attrs public static final ) ListView_selectorColor int 0); 0x0 )
+ (field (attrs public static final ) MapImage [array int] null )
+ (field (attrs public static final ) MapImage_keepMarkerAtCenter int 2); 0x2 )
+ (field (attrs public static final ) MapImage_markerColor int 1); 0x1 )
+ (field (attrs public static final ) MapImage_retainMapDuringUpdate int 3); 0x3 )
+ (field (attrs public static final ) MapImage_zoom int 0); 0x0 )
+ (field (attrs public static final ) MaskedFrameLayout [array int] null )
+ (field (attrs public static final ) MaskedFrameLayout_mask int 0); 0x0 )
+ (field (attrs public static final ) MaskedFrameLayout_usesFboToMask int 1); 0x1 )
+ (field (attrs public static final ) MaxWidthFrameLayout [array int] null )
+ (field (attrs public static final ) MaxWidthFrameLayout_maximumWidth int 0); 0x0 )
+ (field (attrs public static final ) MultilineEllipsizeTextView [array int] null )
+ (field (attrs public static final ) MultilineEllipsizeTextView_includeFontPadding int 7); 0x7 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_maxLines int 1); 0x1 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_maxWidth int 6); 0x6 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_minLines int 2); 0x2 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_shadowColor int 11); 0xb )
+ (field (attrs public static final ) MultilineEllipsizeTextView_shadowDx int 8); 0x8 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_shadowDy int 9); 0x9 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_shadowRadius int 10); 0xa )
+ (field (attrs public static final ) MultilineEllipsizeTextView_textColor int 0); 0x0 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_textSize int 5); 0x5 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_textStyle int 4); 0x4 )
+ (field (attrs public static final ) MultilineEllipsizeTextView_typeface int 3); 0x3 )
+ (field (attrs public static final ) OrcaTabWidget [array int] null )
+ (field (attrs public static final ) OrcaTabWidget_divider int 0); 0x0 )
+ (field (attrs public static final ) OrcaTabWidget_tabStripEnabled int 1); 0x1 )
+ (field (attrs public static final ) OrcaTabWidget_tabStripLeft int 2); 0x2 )
+ (field (attrs public static final ) OrcaTabWidget_tabStripRight int 3); 0x3 )
+ (field (attrs public static final ) OverlayLayout_Layout [array int] null )
+ (field (attrs public static final ) OverlayLayout_Layout_layout_anchorPosition int 0); 0x0 )
+ (field (attrs public static final ) OverlayLayout_Layout_layout_anchoredTo int 2); 0x2 )
+ (field (attrs public static final ) OverlayLayout_Layout_layout_isOverlay int 1); 0x1 )
+ (field (attrs public static final ) PhotoToggleButton [array int] null )
+ (field (attrs public static final ) PhotoToggleButton_checkedImage int 1); 0x1 )
+ (field (attrs public static final ) PhotoToggleButton_shouldBounce int 2); 0x2 )
+ (field (attrs public static final ) PhotoToggleButton_uncheckedImage int 0); 0x0 )
+ (field (attrs public static final ) PresenceIndicatorView [array int] null )
+ (field (attrs public static final ) PresenceIndicatorView_alignment int 1); 0x1 )
+ (field (attrs public static final ) PresenceIndicatorView_textColor int 0); 0x0 )
+ (field (attrs public static final ) PullToRefreshListView [array int] null )
+ (field (attrs public static final ) PullToRefreshListView_refreshDirection int 0); 0x0 )
+ (field (attrs public static final ) RadioButtonWithSubtitle [array int] null )
+ (field (attrs public static final ) RadioButtonWithSubtitle_android_text int 0); 0x0 )
+ (field (attrs public static final ) RadioButtonWithSubtitle_subtitle int 1); 0x1 )
+ (field (attrs public static final ) RefreshableListViewContainer [array int] null )
+ (field (attrs public static final ) RefreshableListViewContainer_overflowAndListOverlap int 0); 0x0 )
+ (field (attrs public static final ) RoundedBitmapView [array int] null )
+ (field (attrs public static final ) RoundedBitmapView_cornerRadius int 4); 0x4 )
+ (field (attrs public static final ) RoundedBitmapView_foregroundDrawable int 5); 0x5 )
+ (field (attrs public static final ) RoundedBitmapView_isBottomLeftRounded int 3); 0x3 )
+ (field (attrs public static final ) RoundedBitmapView_isBottomRightRounded int 2); 0x2 )
+ (field (attrs public static final ) RoundedBitmapView_isTopLeftRounded int 0); 0x0 )
+ (field (attrs public static final ) RoundedBitmapView_isTopRightRounded int 1); 0x1 )
+ (field (attrs public static final ) RoundedBitmapView_scaling int 6); 0x6 )
+ (field (attrs public static final ) RoundedCornerSelectorButton [array int] null )
+ (field (attrs public static final ) RoundedCornerSelectorButton_showChevronOnRight int 6); 0x6 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_text int 3); 0x3 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_textColor int 0); 0x0 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_textGravity int 5); 0x5 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_textSize int 4); 0x4 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_textStyle int 2); 0x2 )
+ (field (attrs public static final ) RoundedCornerSelectorButton_typeface int 1); 0x1 )
+ (field (attrs public static final ) SherlockActionMenuItemView [array int] null )
+ (field (attrs public static final ) SherlockActionMenuItemView_android_minWidth int 0); 0x0 )
+ (field (attrs public static final ) SherlockMenuGroup [array int] null )
+ (field (attrs public static final ) SherlockMenuGroup_android_checkableBehavior int 5); 0x5 )
+ (field (attrs public static final ) SherlockMenuGroup_android_enabled int 0); 0x0 )
+ (field (attrs public static final ) SherlockMenuGroup_android_id int 1); 0x1 )
+ (field (attrs public static final ) SherlockMenuGroup_android_menuCategory int 3); 0x3 )
+ (field (attrs public static final ) SherlockMenuGroup_android_orderInCategory int 4); 0x4 )
+ (field (attrs public static final ) SherlockMenuGroup_android_visible int 2); 0x2 )
+ (field (attrs public static final ) SherlockMenuItem [array int] null )
+ (field (attrs public static final ) SherlockMenuItem_android_actionLayout int 14); 0xe )
+ (field (attrs public static final ) SherlockMenuItem_android_actionProviderClass int 16); 0x10 )
+ (field (attrs public static final ) SherlockMenuItem_android_actionViewClass int 15); 0xf )
+ (field (attrs public static final ) SherlockMenuItem_android_alphabeticShortcut int 9); 0x9 )
+ (field (attrs public static final ) SherlockMenuItem_android_checkable int 11); 0xb )
+ (field (attrs public static final ) SherlockMenuItem_android_checked int 3); 0x3 )
+ (field (attrs public static final ) SherlockMenuItem_android_enabled int 1); 0x1 )
+ (field (attrs public static final ) SherlockMenuItem_android_icon int 0); 0x0 )
+ (field (attrs public static final ) SherlockMenuItem_android_id int 2); 0x2 )
+ (field (attrs public static final ) SherlockMenuItem_android_menuCategory int 5); 0x5 )
+ (field (attrs public static final ) SherlockMenuItem_android_numericShortcut int 10); 0xa )
+ (field (attrs public static final ) SherlockMenuItem_android_onClick int 12); 0xc )
+ (field (attrs public static final ) SherlockMenuItem_android_orderInCategory int 6); 0x6 )
+ (field (attrs public static final ) SherlockMenuItem_android_showAsAction int 13); 0xd )
+ (field (attrs public static final ) SherlockMenuItem_android_title int 7); 0x7 )
+ (field (attrs public static final ) SherlockMenuItem_android_titleCondensed int 8); 0x8 )
+ (field (attrs public static final ) SherlockMenuItem_android_visible int 4); 0x4 )
+ (field (attrs public static final ) SherlockMenuView [array int] null )
+ (field (attrs public static final ) SherlockMenuView_headerBackground int 3); 0x3 )
+ (field (attrs public static final ) SherlockMenuView_horizontalDivider int 1); 0x1 )
+ (field (attrs public static final ) SherlockMenuView_itemBackground int 4); 0x4 )
+ (field (attrs public static final ) SherlockMenuView_itemIconDisabledAlpha int 6); 0x6 )
+ (field (attrs public static final ) SherlockMenuView_itemTextAppearance int 0); 0x0 )
+ (field (attrs public static final ) SherlockMenuView_preserveIconSpacing int 7); 0x7 )
+ (field (attrs public static final ) SherlockMenuView_verticalDivider int 2); 0x2 )
+ (field (attrs public static final ) SherlockMenuView_windowAnimationStyle int 5); 0x5 )
+ (field (attrs public static final ) SherlockTheme [array int] null )
+ (field (attrs public static final ) SherlockTheme_actionButtonStyle int 20); 0x14 )
+ (field (attrs public static final ) SherlockTheme_actionDropDownStyle int 19); 0x13 )
+ (field (attrs public static final ) SherlockTheme_actionSpinnerItemStyle int 25); 0x19 )
+ (field (attrs public static final ) SherlockTheme_activatedBackgroundIndicator int 33); 0x21 )
+ (field (attrs public static final ) SherlockTheme_activityChooserViewStyle int 32); 0x20 )
+ (field (attrs public static final ) SherlockTheme_android_windowIsFloating int 0); 0x0 )
+ (field (attrs public static final ) SherlockTheme_buttonStyleSmall int 1); 0x1 )
+ (field (attrs public static final ) SherlockTheme_dividerVertical int 18); 0x12 )
+ (field (attrs public static final ) SherlockTheme_dropDownListViewStyle int 22); 0x16 )
+ (field (attrs public static final ) SherlockTheme_dropdownListPreferredItemHeight int 24); 0x18 )
+ (field (attrs public static final ) SherlockTheme_homeAsUpIndicator int 21); 0x15 )
+ (field (attrs public static final ) SherlockTheme_listPopupWindowStyle int 31); 0x1f )
+ (field (attrs public static final ) SherlockTheme_listPreferredItemHeightSmall int 12); 0xc )
+ (field (attrs public static final ) SherlockTheme_listPreferredItemPaddingLeft int 13); 0xd )
+ (field (attrs public static final ) SherlockTheme_listPreferredItemPaddingRight int 14); 0xe )
+ (field (attrs public static final ) SherlockTheme_popupMenuStyle int 23); 0x17 )
+ (field (attrs public static final ) SherlockTheme_selectableItemBackground int 2); 0x2 )
+ (field (attrs public static final ) SherlockTheme_spinnerDropDownItemStyle int 11); 0xb )
+ (field (attrs public static final ) SherlockTheme_spinnerItemStyle int 10); 0xa )
+ (field (attrs public static final ) SherlockTheme_textAppearanceLargePopupMenu int 4); 0x4 )
+ (field (attrs public static final ) SherlockTheme_textAppearanceListItemSmall int 15); 0xf )
+ (field (attrs public static final ) SherlockTheme_textAppearanceSmall int 6); 0x6 )
+ (field (attrs public static final ) SherlockTheme_textAppearanceSmallPopupMenu int 5); 0x5 )
+ (field (attrs public static final ) SherlockTheme_textColorPrimary int 7); 0x7 )
+ (field (attrs public static final ) SherlockTheme_textColorPrimaryDisableOnly int 8); 0x8 )
+ (field (attrs public static final ) SherlockTheme_textColorPrimaryInverse int 9); 0x9 )
+ (field (attrs public static final ) SherlockTheme_windowActionBar int 27); 0x1b )
+ (field (attrs public static final ) SherlockTheme_windowActionBarOverlay int 28); 0x1c )
+ (field (attrs public static final ) SherlockTheme_windowActionModeOverlay int 29); 0x1d )
+ (field (attrs public static final ) SherlockTheme_windowContentOverlay int 3); 0x3 )
+ (field (attrs public static final ) SherlockTheme_windowMinWidthMajor int 16); 0x10 )
+ (field (attrs public static final ) SherlockTheme_windowMinWidthMinor int 17); 0x11 )
+ (field (attrs public static final ) SherlockTheme_windowNoTitle int 26); 0x1a )
+ (field (attrs public static final ) SherlockTheme_windowSplitActionBar int 30); 0x1e )
+ (field (attrs public static final ) SherlockView [array int] null )
+ (field (attrs public static final ) SherlockView_android_focusable int 0); 0x0 )
+ (field (attrs public static final ) SlidingOutSuggestionView [array int] null )
+ (field (attrs public static final ) SlidingOutSuggestionView_animateOutDirection int 1); 0x1 )
+ (field (attrs public static final ) SlidingOutSuggestionView_buttonText int 3); 0x3 )
+ (field (attrs public static final ) SlidingOutSuggestionView_dividerPosition int 0); 0x0 )
+ (field (attrs public static final ) SlidingOutSuggestionView_suggestionText int 2); 0x2 )
+ (field (attrs public static final ) SplitHideableListView [array int] null )
+ (field (attrs public static final ) SplitHideableListView_headerHideThreshold int 1); 0x1 )
+ (field (attrs public static final ) SplitHideableListView_headerStartHeight int 0); 0x0 )
+ (field (attrs public static final ) TabbedPageView [array int] null )
+ (field (attrs public static final ) TabbedPageView_emptyMessage int 0); 0x0 )
+ (field (attrs public static final ) TextViewWithTruncationContainer [array int] null )
+ (field (attrs public static final ) TextViewWithTruncationContainer_maxLines int 0); 0x0 )
+ (field (attrs public static final ) ThreadNameView [array int] null )
+ (field (attrs public static final ) ThreadNameView_alignment int 6); 0x6 )
+ (field (attrs public static final ) ThreadNameView_maxLines int 1); 0x1 )
+ (field (attrs public static final ) ThreadNameView_maxScaledTextSize int 5); 0x5 )
+ (field (attrs public static final ) ThreadNameView_minScaledTextSize int 4); 0x4 )
+ (field (attrs public static final ) ThreadNameView_nameOption int 7); 0x7 )
+ (field (attrs public static final ) ThreadNameView_textColor int 0); 0x0 )
+ (field (attrs public static final ) ThreadNameView_textStyle int 3); 0x3 )
+ (field (attrs public static final ) ThreadNameView_typeface int 2); 0x2 )
+ (field (attrs public static final ) ThreadTileView [array int] null )
+ (field (attrs public static final ) ThreadTileView_bigImageLocation int 2); 0x2 )
+ (field (attrs public static final ) ThreadTileView_bigImageWidthPercent int 1); 0x1 )
+ (field (attrs public static final ) ThreadTileView_overlayDivider int 3); 0x3 )
+ (field (attrs public static final ) ThreadTileView_threadTileSize int 0); 0x0 )
+ (field (attrs public static final ) ThreadTitleView [array int] null )
+ (field (attrs public static final ) ThreadTitleView_chatStyle int 0); 0x0 )
+ (field (attrs public static final ) ThreadViewDetailsItem [array int] null )
+ (field (attrs public static final ) ThreadViewDetailsItem_hintText int 2); 0x2 )
+ (field (attrs public static final ) ThreadViewDetailsItem_iconSrc int 0); 0x0 )
+ (field (attrs public static final ) ThreadViewDetailsItem_itemTitle int 1); 0x1 )
+ (field (attrs public static final ) TitleBar [array int] null )
+ (field (attrs public static final ) TitleBarButton [array int] null )
+ (field (attrs public static final ) TitleBarButton_dividerPosition int 0); 0x0 )
+ (field (attrs public static final ) TitleBarButton_src int 1); 0x1 )
+ (field (attrs public static final ) TitleBarViewStub [array int] null )
+ (field (attrs public static final ) TitleBarViewStub_centerTitle int 3); 0x3 )
+ (field (attrs public static final ) TitleBarViewStub_hasBackButton int 2); 0x2 )
+ (field (attrs public static final ) TitleBarViewStub_hasProgressBar int 1); 0x1 )
+ (field (attrs public static final ) TitleBarViewStub_navless int 4); 0x4 )
+ (field (attrs public static final ) TitleBarViewStub_title int 0); 0x0 )
+ (field (attrs public static final ) TitleBar_centerTitle int 3); 0x3 )
+ (field (attrs public static final ) TitleBar_hasBackButton int 2); 0x2 )
+ (field (attrs public static final ) TitleBar_hasProgressBar int 1); 0x1 )
+ (field (attrs public static final ) TitleBar_title int 0); 0x0 )
+ (field (attrs public static final ) UrlImage [array int] null )
+ (field (attrs public static final ) UrlImage_adjustViewBounds int 10); 0xa )
+ (field (attrs public static final ) UrlImage_isShownInGallery int 3); 0x3 )
+ (field (attrs public static final ) UrlImage_isUsedWithUploadProgress int 6); 0x6 )
+ (field (attrs public static final ) UrlImage_loadResolutionDuringScroll int 11); 0xb )
+ (field (attrs public static final ) UrlImage_placeHolderScaleType int 12); 0xc )
+ (field (attrs public static final ) UrlImage_placeholderSrc int 1); 0x1 )
+ (field (attrs public static final ) UrlImage_retainImageDuringUpdate int 7); 0x7 )
+ (field (attrs public static final ) UrlImage_scaleType int 13); 0xd )
+ (field (attrs public static final ) UrlImage_shouldCacheOriginal int 8); 0x8 )
+ (field (attrs public static final ) UrlImage_shouldRetryFetch int 14); 0xe )
+ (field (attrs public static final ) UrlImage_shouldShowLoadingAnimation int 9); 0x9 )
+ (field (attrs public static final ) UrlImage_showProgressBar int 2); 0x2 )
+ (field (attrs public static final ) UrlImage_url int 0); 0x0 )
+ (field (attrs public static final ) UrlImage_useQuickContactBadge int 5); 0x5 )
+ (field (attrs public static final ) UrlImage_useZoomableImageView int 4); 0x4 )
+ (field (attrs public static final ) UserTileRowView [array int] null )
+ (field (attrs public static final ) UserTileRowView_childMargin int 1); 0x1 )
+ (field (attrs public static final ) UserTileRowView_tileSize int 0); 0x0 )
+ (field (attrs public static final ) UserTileView [array int] null )
+ (field (attrs public static final ) UserTileView_tileSize int 0); 0x0 )
+ (field (attrs public static final ) VariableTextLayoutView [array int] null )
+ (field (attrs public static final ) VariableTextLayoutView_alignment int 6); 0x6 )
+ (field (attrs public static final ) VariableTextLayoutView_fontFamily int 7); 0x7 )
+ (field (attrs public static final ) VariableTextLayoutView_maxLines int 1); 0x1 )
+ (field (attrs public static final ) VariableTextLayoutView_maxScaledTextSize int 5); 0x5 )
+ (field (attrs public static final ) VariableTextLayoutView_minScaledTextSize int 4); 0x4 )
+ (field (attrs public static final ) VariableTextLayoutView_textColor int 0); 0x0 )
+ (field (attrs public static final ) VariableTextLayoutView_textStyle int 3); 0x3 )
+ (field (attrs public static final ) VariableTextLayoutView_typeface int 2); 0x2 )
+ (field (attrs public static final ) ViewPagerIndicator [array int] )
+ (field (attrs public static final ) ViewPagerIndicator_vpiCirclePageIndicatorStyle int )
+ (field (attrs public static final ) ZigzagImageView [array int] )
+ (field (attrs public static final ) ZigzagImageView_foregroundColor int )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 7)
+  (const/4 v6 4)
+  (const/4 v5 3)
+  (const/4 v4 2)
+  (const/4 v3 1)
+  (const/4 v2 0)
+  (line 8430)
+  (new-array v0 v3 [array int])
+  (const v1 2130772019) ; 0x7f010033)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.BetterButton [array int])
+  (line 8460)
+  (new-array v0 v3 [array int])
+  (const v1 2130772019) ; 0x7f010033)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.BetterEditTextView [array int])
+  (line 8494)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e2e8)
+  (sput-object v0 com/facebook/q.BetterTextView [array int])
+  (line 8568)
+  (const/16 v0 8)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e2fc)
+  (sput-object v0 com/facebook/q.CirclePageIndicator [array int])
+  (line 8713)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e324)
+  (sput-object v0 com/facebook/q.ConfirmationView [array int])
+  (line 8772)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e338)
+  (sput-object v0 com/facebook/q.ContainerView [array int])
+  (line 8833)
+  (new-array v0 v3 [array int])
+  (const v1 2130772022) ; 0x7f010036)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.CustomViewStub [array int])
+  (line 8868)
+  (const/4 v0 5)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e34c)
+  (sput-object v0 com/facebook/q.DragSortListView [array int])
+  (line 8946)
+  (new-array v0 v3 [array int])
+  (const v1 2130772041) ; 0x7f010049)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.EllipsizingTextView [array int])
+  (line 8975)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e368)
+  (sput-object v0 com/facebook/q.EmptyListViewItem [array int])
+  (line 9017)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e378)
+  (sput-object v0 com/facebook/q.FavoritesDragSortListView [array int])
+  (line 9052)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e388)
+  (sput-object v0 com/facebook/q.FlowLayout [array int])
+  (line 9099)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e398)
+  (sput-object v0 com/facebook/q.HorizontalImageGallery [array int])
+  (line 9142)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e3a8)
+  (sput-object v0 com/facebook/q.HorizontalImageGalleryItemIndicator [array int])
+  (line 9179)
+  (new-array v0 v3 [array int])
+  (const v1 2130772029) ; 0x7f01003d)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.HorizontalOrVerticalViewGroup [array int])
+  (line 9210)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e3b8)
+  (sput-object v0 com/facebook/q.ListView [array int])
+  (line 9259)
+  (new-array v0 v6 [array int])
+  (fill-array-data v0 l13e3c8)
+  (sput-object v0 com/facebook/q.MapImage [array int])
+  (line 9330)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e3e0)
+  (sput-object v0 com/facebook/q.MaskedFrameLayout [array int])
+  (line 9367)
+  (new-array v0 v3 [array int])
+  (const v1 2130772036) ; 0x7f010044)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.MaxWidthFrameLayout [array int])
+  (line 9418)
+  (const/16 v0 12)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e3f0)
+  (sput-object v0 com/facebook/q.MultilineEllipsizeTextView [array int])
+  (line 9619)
+  (new-array v0 v6 [array int])
+  (fill-array-data v0 l13e428)
+  (sput-object v0 com/facebook/q.OrcaTabWidget [array int])
+  (line 9690)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e440)
+  (sput-object v0 com/facebook/q.OverlayLayout_Layout [array int])
+  (line 9756)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e454)
+  (sput-object v0 com/facebook/q.PhotoToggleButton [array int])
+  (line 9805)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e468)
+  (sput-object v0 com/facebook/q.PresenceIndicatorView [array int])
+  (line 9848)
+  (new-array v0 v3 [array int])
+  (const v1 2130771991) ; 0x7f010017)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.PullToRefreshListView [array int])
+  (line 9880)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e478)
+  (sput-object v0 com/facebook/q.RadioButtonWithSubtitle [array int])
+  (line 9913)
+  (new-array v0 v3 [array int])
+  (const v1 2130772018) ; 0x7f010032)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.RefreshableListViewContainer [array int])
+  (line 9954)
+  (const/4 v0 7)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e488)
+  (sput-object v0 com/facebook/q.RoundedBitmapView [array int])
+  (line 10082)
+  (const/4 v0 7)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e4ac)
+  (sput-object v0 com/facebook/q.RoundedCornerSelectorButton [array int])
+  (line 10229)
+  (new-array v0 v3 [array int])
+  (const v1 16843071) ; 0x101013f)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.SherlockActionMenuItemView [array int])
+  (line 10258)
+  (const/4 v0 6)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e4d0)
+  (sput-object v0 com/facebook/q.SherlockMenuGroup [array int])
+  (line 10357)
+  (const/16 v0 17)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e4f0)
+  (sput-object v0 com/facebook/q.SherlockMenuItem [array int])
+  (line 10539)
+  (const/16 v0 8)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e53c)
+  (sput-object v0 com/facebook/q.SherlockMenuView [array int])
+  (line 10728)
+  (const/16 v0 34)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e564)
+  (sput-object v0 com/facebook/q.SherlockTheme [array int])
+  (line 11183)
+  (new-array v0 v3 [array int])
+  (const v1 16842970) ; 0x10100da)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.SherlockView [array int])
+  (line 11208)
+  (new-array v0 v6 [array int])
+  (fill-array-data v0 l13e5f4)
+  (sput-object v0 com/facebook/q.SlidingOutSuggestionView [array int])
+  (line 11288)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e60c)
+  (sput-object v0 com/facebook/q.SplitHideableListView [array int])
+  (line 11333)
+  (new-array v0 v3 [array int])
+  (const v1 2130772008) ; 0x7f010028)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.TabbedPageView [array int])
+  (line 11360)
+  (new-array v0 v3 [array int])
+  (const v1 2130771975) ; 0x7f010007)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.TextViewWithTruncationContainer [array int])
+  (line 11401)
+  (const/16 v0 8)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e61c)
+  (sput-object v0 com/facebook/q.ThreadNameView [array int])
+  (line 11547)
+  (new-array v0 v6 [array int])
+  (fill-array-data v0 l13e644)
+  (sput-object v0 com/facebook/q.ThreadTileView [array int])
+  (line 11621)
+  (new-array v0 v3 [array int])
+  (const v1 2130772117) ; 0x7f010095)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.ThreadTitleView [array int])
+  (line 11652)
+  (new-array v0 v5 [array int])
+  (fill-array-data v0 l13e65c)
+  (sput-object v0 com/facebook/q.ThreadViewDetailsItem [array int])
+  (line 11709)
+  (new-array v0 v6 [array int])
+  (fill-array-data v0 l13e670)
+  (sput-object v0 com/facebook/q.TitleBar [array int])
+  (line 11780)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e688)
+  (sput-object v0 com/facebook/q.TitleBarButton [array int])
+  (line 11831)
+  (const/4 v0 5)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e698)
+  (sput-object v0 com/facebook/q.TitleBarViewStub [array int])
+  (line 11943)
+  (const/16 v0 15)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e6b4)
+  (sput-object v0 com/facebook/q.UrlImage [array int])
+  (line 12189)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l13e6f8)
+  (sput-object v0 com/facebook/q.UserTileRowView [array int])
+  (line 12234)
+  (new-array v0 v3 [array int])
+  (const v1 2130771985) ; 0x7f010011)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.UserTileView [array int])
+  (line 12277)
+  (const/16 v0 8)
+  (new-array v0 v0 [array int])
+  (fill-array-data v0 l13e708)
+  (sput-object v0 com/facebook/q.VariableTextLayoutView [array int])
+  (line 12417)
+  (new-array v0 v3 [array int])
+  (const v1 2130772091) ; 0x7f01007b)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.ViewPagerIndicator [array int])
+  (line 12442)
+  (new-array v0 v3 [array int])
+  (const v1 2130772033) ; 0x7f010041)
+  (aput v1 v0 v2)
+  (sput-object v0 com/facebook/q.ZigzagImageView [array int])
+  (return-void )
+  (line 8494)
+  (label l13e2e6)
+  (data-array
+    0x00 0x00
+  )
+  (label l13e2e8)
+  (data-array
+    (0x33 0x00 0x01 0x7F) ; #0
+    (0x34 0x00 0x01 0x7F) ; #1
+    (0x35 0x00 0x01 0x7F) ; #2
+  )
+  (line 8568)
+  (label l13e2fc)
+  (data-array
+    (0xC4 0x00 0x01 0x01) ; #0
+    (0x01 0x00 0x01 0x7F) ; #1
+    (0x03 0x00 0x01 0x7F) ; #2
+    (0x05 0x00 0x01 0x7F) ; #3
+    (0x06 0x00 0x01 0x7F) ; #4
+    (0x7C 0x00 0x01 0x7F) ; #5
+    (0x7D 0x00 0x01 0x7F) ; #6
+    (0x7E 0x00 0x01 0x7F) ; #7
+  )
+  (line 8713)
+  (label l13e324)
+  (data-array
+    (0x3E 0x00 0x01 0x7F) ; #0
+    (0x3F 0x00 0x01 0x7F) ; #1
+    (0x40 0x00 0x01 0x7F) ; #2
+  )
+  (line 8772)
+  (label l13e338)
+  (data-array
+    (0x8F 0x00 0x01 0x7F) ; #0
+    (0x90 0x00 0x01 0x7F) ; #1
+    (0x91 0x00 0x01 0x7F) ; #2
+  )
+  (line 8868)
+  (label l13e34c)
+  (data-array
+    (0x2D 0x00 0x01 0x7F) ; #0
+    (0x2E 0x00 0x01 0x7F) ; #1
+    (0x2F 0x00 0x01 0x7F) ; #2
+    (0x30 0x00 0x01 0x7F) ; #3
+    (0x31 0x00 0x01 0x7F) ; #4
+  )
+  (line 8975)
+  (label l13e368)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x18 0x00 0x01 0x7F) ; #1
+  )
+  (line 9017)
+  (label l13e378)
+  (data-array
+    (0xA8 0x00 0x01 0x7F) ; #0
+    (0xA9 0x00 0x01 0x7F) ; #1
+  )
+  (line 9052)
+  (label l13e388)
+  (data-array
+    (0x42 0x00 0x01 0x7F) ; #0
+    (0x43 0x00 0x01 0x7F) ; #1
+  )
+  (line 9099)
+  (label l13e398)
+  (data-array
+    (0x8A 0x00 0x01 0x7F) ; #0
+    (0x8B 0x00 0x01 0x7F) ; #1
+  )
+  (line 9142)
+  (label l13e3a8)
+  (data-array
+    (0x8C 0x00 0x01 0x7F) ; #0
+    (0x8D 0x00 0x01 0x7F) ; #1
+  )
+  (line 9210)
+  (label l13e3b8)
+  (data-array
+    (0x92 0x00 0x01 0x7F) ; #0
+    (0x93 0x00 0x01 0x7F) ; #1
+  )
+  (line 9259)
+  (label l13e3c8)
+  (data-array
+    (0x29 0x00 0x01 0x7F) ; #0
+    (0x2A 0x00 0x01 0x7F) ; #1
+    (0x2B 0x00 0x01 0x7F) ; #2
+    (0x2C 0x00 0x01 0x7F) ; #3
+  )
+  (line 9330)
+  (label l13e3e0)
+  (data-array
+    (0x12 0x00 0x01 0x7F) ; #0
+    (0x13 0x00 0x01 0x7F) ; #1
+  )
+  (line 9418)
+  (label l13e3f0)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x07 0x00 0x01 0x7F) ; #1
+    (0x08 0x00 0x01 0x7F) ; #2
+    (0x09 0x00 0x01 0x7F) ; #3
+    (0x0A 0x00 0x01 0x7F) ; #4
+    (0x0F 0x00 0x01 0x7F) ; #5
+    (0x9B 0x00 0x01 0x7F) ; #6
+    (0x9C 0x00 0x01 0x7F) ; #7
+    (0x9D 0x00 0x01 0x7F) ; #8
+    (0x9E 0x00 0x01 0x7F) ; #9
+    (0x9F 0x00 0x01 0x7F) ; #10
+    (0xA0 0x00 0x01 0x7F) ; #11
+  )
+  (line 9619)
+  (label l13e428)
+  (data-array
+    (0xA1 0x00 0x01 0x7F) ; #0
+    (0xA2 0x00 0x01 0x7F) ; #1
+    (0xA3 0x00 0x01 0x7F) ; #2
+    (0xA4 0x00 0x01 0x7F) ; #3
+  )
+  (line 9690)
+  (label l13e440)
+  (data-array
+    (0x87 0x00 0x01 0x7F) ; #0
+    (0x88 0x00 0x01 0x7F) ; #1
+    (0x89 0x00 0x01 0x7F) ; #2
+  )
+  (line 9756)
+  (label l13e454)
+  (data-array
+    (0x14 0x00 0x01 0x7F) ; #0
+    (0x15 0x00 0x01 0x7F) ; #1
+    (0x16 0x00 0x01 0x7F) ; #2
+  )
+  (line 9805)
+  (label l13e468)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x0D 0x00 0x01 0x7F) ; #1
+  )
+  (line 9880)
+  (label l13e478)
+  (data-array
+    (0x4F 0x01 0x01 0x01) ; #0
+    (0x37 0x00 0x01 0x7F) ; #1
+  )
+  (line 9954)
+  (label l13e488)
+  (data-array
+    (0x80 0x00 0x01 0x7F) ; #0
+    (0x81 0x00 0x01 0x7F) ; #1
+    (0x82 0x00 0x01 0x7F) ; #2
+    (0x83 0x00 0x01 0x7F) ; #3
+    (0x84 0x00 0x01 0x7F) ; #4
+    (0x85 0x00 0x01 0x7F) ; #5
+    (0x86 0x00 0x01 0x7F) ; #6
+  )
+  (line 10082)
+  (label l13e4ac)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x09 0x00 0x01 0x7F) ; #1
+    (0x0A 0x00 0x01 0x7F) ; #2
+    (0x0E 0x00 0x01 0x7F) ; #3
+    (0x0F 0x00 0x01 0x7F) ; #4
+    (0x10 0x00 0x01 0x7F) ; #5
+    (0x7F 0x00 0x01 0x7F) ; #6
+  )
+  (line 10258)
+  (label l13e4d0)
+  (data-array
+    (0x0E 0x00 0x01 0x01) ; #0
+    (0xD0 0x00 0x01 0x01) ; #1
+    (0x94 0x01 0x01 0x01) ; #2
+    (0xDE 0x01 0x01 0x01) ; #3
+    (0xDF 0x01 0x01 0x01) ; #4
+    (0xE0 0x01 0x01 0x01) ; #5
+  )
+  (line 10357)
+  (label l13e4f0)
+  (data-array
+    (0x02 0x00 0x01 0x01) ; #0
+    (0x0E 0x00 0x01 0x01) ; #1
+    (0xD0 0x00 0x01 0x01) ; #2
+    (0x06 0x01 0x01 0x01) ; #3
+    (0x94 0x01 0x01 0x01) ; #4
+    (0xDE 0x01 0x01 0x01) ; #5
+    (0xDF 0x01 0x01 0x01) ; #6
+    (0xE1 0x01 0x01 0x01) ; #7
+    (0xE2 0x01 0x01 0x01) ; #8
+    (0xE3 0x01 0x01 0x01) ; #9
+    (0xE4 0x01 0x01 0x01) ; #10
+    (0xE5 0x01 0x01 0x01) ; #11
+    (0x6F 0x02 0x01 0x01) ; #12
+    (0xD9 0x02 0x01 0x01) ; #13
+    (0xFB 0x02 0x01 0x01) ; #14
+    (0xFC 0x02 0x01 0x01) ; #15
+    (0x89 0x03 0x01 0x01) ; #16
+  )
+  (line 10539)
+  (label l13e53c)
+  (data-array
+    (0x70 0x00 0x01 0x7F) ; #0
+    (0x71 0x00 0x01 0x7F) ; #1
+    (0x72 0x00 0x01 0x7F) ; #2
+    (0x73 0x00 0x01 0x7F) ; #3
+    (0x74 0x00 0x01 0x7F) ; #4
+    (0x75 0x00 0x01 0x7F) ; #5
+    (0x76 0x00 0x01 0x7F) ; #6
+    (0x77 0x00 0x01 0x7F) ; #7
+  )
+  (line 10728)
+  (label l13e564)
+  (data-array
+    (0x57 0x00 0x01 0x01) ; #0
+    (0x4F 0x00 0x01 0x7F) ; #1
+    (0x50 0x00 0x01 0x7F) ; #2
+    (0x51 0x00 0x01 0x7F) ; #3
+    (0x52 0x00 0x01 0x7F) ; #4
+    (0x53 0x00 0x01 0x7F) ; #5
+    (0x54 0x00 0x01 0x7F) ; #6
+    (0x55 0x00 0x01 0x7F) ; #7
+    (0x56 0x00 0x01 0x7F) ; #8
+    (0x57 0x00 0x01 0x7F) ; #9
+    (0x58 0x00 0x01 0x7F) ; #10
+    (0x59 0x00 0x01 0x7F) ; #11
+    (0x5A 0x00 0x01 0x7F) ; #12
+    (0x5B 0x00 0x01 0x7F) ; #13
+    (0x5C 0x00 0x01 0x7F) ; #14
+    (0x5D 0x00 0x01 0x7F) ; #15
+    (0x5E 0x00 0x01 0x7F) ; #16
+    (0x5F 0x00 0x01 0x7F) ; #17
+    (0x60 0x00 0x01 0x7F) ; #18
+    (0x61 0x00 0x01 0x7F) ; #19
+    (0x62 0x00 0x01 0x7F) ; #20
+    (0x63 0x00 0x01 0x7F) ; #21
+    (0x64 0x00 0x01 0x7F) ; #22
+    (0x65 0x00 0x01 0x7F) ; #23
+    (0x66 0x00 0x01 0x7F) ; #24
+    (0x67 0x00 0x01 0x7F) ; #25
+    (0x68 0x00 0x01 0x7F) ; #26
+    (0x69 0x00 0x01 0x7F) ; #27
+    (0x6A 0x00 0x01 0x7F) ; #28
+    (0x6B 0x00 0x01 0x7F) ; #29
+    (0x6C 0x00 0x01 0x7F) ; #30
+    (0x6D 0x00 0x01 0x7F) ; #31
+    (0x6E 0x00 0x01 0x7F) ; #32
+    (0x6F 0x00 0x01 0x7F) ; #33
+  )
+  (line 11208)
+  (label l13e5f4)
+  (data-array
+    (0x94 0x00 0x01 0x7F) ; #0
+    (0xA5 0x00 0x01 0x7F) ; #1
+    (0xA6 0x00 0x01 0x7F) ; #2
+    (0xA7 0x00 0x01 0x7F) ; #3
+  )
+  (line 11288)
+  (label l13e60c)
+  (data-array
+    (0x79 0x00 0x01 0x7F) ; #0
+    (0x7A 0x00 0x01 0x7F) ; #1
+  )
+  (line 11401)
+  (label l13e61c)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x07 0x00 0x01 0x7F) ; #1
+    (0x09 0x00 0x01 0x7F) ; #2
+    (0x0A 0x00 0x01 0x7F) ; #3
+    (0x0B 0x00 0x01 0x7F) ; #4
+    (0x0C 0x00 0x01 0x7F) ; #5
+    (0x0D 0x00 0x01 0x7F) ; #6
+    (0x78 0x00 0x01 0x7F) ; #7
+  )
+  (line 11547)
+  (label l13e644)
+  (data-array
+    (0x45 0x00 0x01 0x7F) ; #0
+    (0x46 0x00 0x01 0x7F) ; #1
+    (0x47 0x00 0x01 0x7F) ; #2
+    (0x48 0x00 0x01 0x7F) ; #3
+  )
+  (line 11652)
+  (label l13e65c)
+  (data-array
+    (0x98 0x00 0x01 0x7F) ; #0
+    (0x99 0x00 0x01 0x7F) ; #1
+    (0x9A 0x00 0x01 0x7F) ; #2
+  )
+  (line 11709)
+  (label l13e670)
+  (data-array
+    (0x38 0x00 0x01 0x7F) ; #0
+    (0x39 0x00 0x01 0x7F) ; #1
+    (0x3A 0x00 0x01 0x7F) ; #2
+    (0x3B 0x00 0x01 0x7F) ; #3
+  )
+  (line 11780)
+  (label l13e688)
+  (data-array
+    (0x94 0x00 0x01 0x7F) ; #0
+    (0x97 0x00 0x01 0x7F) ; #1
+  )
+  (line 11831)
+  (label l13e698)
+  (data-array
+    (0x38 0x00 0x01 0x7F) ; #0
+    (0x39 0x00 0x01 0x7F) ; #1
+    (0x3A 0x00 0x01 0x7F) ; #2
+    (0x3B 0x00 0x01 0x7F) ; #3
+    (0x3C 0x00 0x01 0x7F) ; #4
+  )
+  (line 11943)
+  (label l13e6b4)
+  (data-array
+    (0x19 0x00 0x01 0x7F) ; #0
+    (0x1A 0x00 0x01 0x7F) ; #1
+    (0x1B 0x00 0x01 0x7F) ; #2
+    (0x1C 0x00 0x01 0x7F) ; #3
+    (0x1D 0x00 0x01 0x7F) ; #4
+    (0x1E 0x00 0x01 0x7F) ; #5
+    (0x1F 0x00 0x01 0x7F) ; #6
+    (0x20 0x00 0x01 0x7F) ; #7
+    (0x21 0x00 0x01 0x7F) ; #8
+    (0x22 0x00 0x01 0x7F) ; #9
+    (0x23 0x00 0x01 0x7F) ; #10
+    (0x24 0x00 0x01 0x7F) ; #11
+    (0x25 0x00 0x01 0x7F) ; #12
+    (0x26 0x00 0x01 0x7F) ; #13
+    (0x27 0x00 0x01 0x7F) ; #14
+  )
+  (line 12189)
+  (label l13e6f8)
+  (data-array
+    (0x11 0x00 0x01 0x7F) ; #0
+    (0x3D 0x00 0x01 0x7F) ; #1
+  )
+  (line 12277)
+  (label l13e708)
+  (data-array
+    (0x00 0x00 0x01 0x7F) ; #0
+    (0x07 0x00 0x01 0x7F) ; #1
+    (0x09 0x00 0x01 0x7F) ; #2
+    (0x0A 0x00 0x01 0x7F) ; #3
+    (0x0B 0x00 0x01 0x7F) ; #4
+    (0x0C 0x00 0x01 0x7F) ; #5
+    (0x0D 0x00 0x01 0x7F) ; #6
+    (0x33 0x00 0x01 0x7F) ; #7
+  )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/q])
+  (line 8419)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_reply" android:layout_weight="0.2" android:contentDescription="@string/button_action_reply" style="@style/Button.Action" />
+    <ImageButton android:id="@id/retweet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_rt_off" android:layout_weight="0.2" android:contentDescription="@string/button_action_retweet" style="@style/Button.Action" />
+    <ImageButton android:id="@id/favorite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_fave_off" android:layout_weight="0.2" android:contentDescription="@string/button_action_fave" style="@style/Button.Action" />
+    <ImageButton android:id="@id/share" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_share" android:layout_weight="0.2" android:contentDescription="@string/button_action_share" style="@style/Button.Action" />
+    <ImageButton android:id="@id/delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_delete" android:layout_weight="0.2" android:contentDescription="@string/button_action_delete" style="@style/Button.Action" />
+    <ImageButton android:id="@id/dismiss" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_action_dismiss" android:layout_weight="0.2" android:contentDescription="@string/button_action_dismiss" style="@style/Button.Action" />
+</LinearLayout>

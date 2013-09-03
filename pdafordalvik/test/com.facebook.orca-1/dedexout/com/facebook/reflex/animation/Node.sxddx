@@ -1,0 +1,25 @@
+(class (attrs public final ) com/facebook/reflex/animation/Node
+ (super java/lang/Object)
+ (source "Node.java")
+
+ (field (attrs private final ) a [object com/facebook/reflex/animation/SystemConfig] )
+ (field (attrs private final ) mNativePtr int )
+
+(method (attrs private ) <init>(int [object com/facebook/reflex/animation/SystemConfig] )void
+  (annotation buildVisibility [object com/facebook/base/DoNotStrip]
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/reflex/animation/Node])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object com/facebook/reflex/animation/SystemConfig])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 12)
+  (iput v1 v0 com/facebook/reflex/animation/Node.mNativePtr int)
+  (line 13)
+  (iput-object v2 v0 com/facebook/reflex/animation/Node.a [object com/facebook/reflex/animation/SystemConfig])
+  (line 14)
+  (return-void )
+ )
+
+)

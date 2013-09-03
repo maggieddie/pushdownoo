@@ -1,0 +1,68 @@
+(class (attrs ) com/google/common/collect/ImmutableMultimap$Values
+ (super com/google/common/collect/ImmutableCollection)
+ (source "ImmutableMultimap.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+ (field (attrs final ) multimap [object com/google/common/collect/ImmutableMultimap] )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableMultimap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/ImmutableMultimap"  "<*TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableMultimap$Values])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableMultimap])
+  (line 572)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (line 573)
+  (iput-object v1 v0 com/google/common/collect/ImmutableMultimap$Values.multimap [object com/google/common/collect/ImmutableMultimap])
+  (line 574)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableMultimap$Values])
+  (line 577)
+  (iget-object v0 v2 com/google/common/collect/ImmutableMultimap$Values.multimap [object com/google/common/collect/ImmutableMultimap])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableMultimap/n )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/collect/ImmutableCollection/I_ )
+  (move-result-object v0)
+  (line 579)
+  (new-instance v1 com/google/common/collect/ImmutableMultimap$Values$1)
+  (invoke-direct {v1 v2 v0} com/google/common/collect/ImmutableMultimap$Values$1/<init> [object com/google/common/collect/ImmutableMultimap$Values] [object java/util/Iterator] )
+  (return-object v1)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableMultimap$Values])
+  (line 597)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableMultimap$Values])
+  (line 569)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableMultimap$Values/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableMultimap$Values])
+  (line 593)
+  (iget-object v0 v1 com/google/common/collect/ImmutableMultimap$Values.multimap [object com/google/common/collect/ImmutableMultimap])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableMultimap/d )
+  (move-result v0)
+  (return v0)
+)
+
+)

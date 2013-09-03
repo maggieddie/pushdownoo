@@ -1,0 +1,27 @@
+(class (attrs public ) com/bbn/map/TileCache$EphemeralBitmapDrawable
+ (super android/graphics/drawable/BitmapDrawable)
+ (source "TileCache.java")
+
+
+(method (attrs ) <init>([object android/graphics/Bitmap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/bbn/map/TileCache$EphemeralBitmapDrawable])
+  ; parameter[0] : v1 ([object android/graphics/Bitmap])
+  (line 43)
+  (invoke-direct {v0 v1} android/graphics/drawable/BitmapDrawable/<init> [object android/graphics/Bitmap] )
+  (line 44)
+  (return-void )
+ )
+
+(method (attrs public ) clean()void
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/TileCache$EphemeralBitmapDrawable])
+  (line 47)
+  (invoke-virtual {v1} com/bbn/map/TileCache$EphemeralBitmapDrawable/getBitmap )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/graphics/Bitmap/recycle )
+  (line 48)
+  (return-void )
+)
+
+)

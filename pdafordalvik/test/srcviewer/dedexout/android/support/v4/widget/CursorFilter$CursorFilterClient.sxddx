@@ -1,0 +1,18 @@
+(interface (attrs abstract ) android/support/v4/widget/CursorFilter$CursorFilterClient
+ (super java/lang/Object)
+ (source "CursorFilter.java")
+
+
+(method (attrs public abstract ) changeCursor([object android/database/Cursor] )void
+)
+
+(method (attrs public abstract ) convertToString([object android/database/Cursor] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getCursor()[object android/database/Cursor]
+)
+
+(method (attrs public abstract ) runQueryOnBackgroundThread([object java/lang/CharSequence] )[object android/database/Cursor]
+)
+
+)

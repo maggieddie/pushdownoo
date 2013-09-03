@@ -1,0 +1,39 @@
+(class (attrs ) com/facebook/auth/login/aa
+ (super com/facebook/fbservice/ops/h)
+ (source "FirstPartySsoFragment.java")
+
+ (field (attrs final ) a [object com/facebook/auth/login/FirstPartySsoFragment] )
+
+(method (attrs ) <init>([object com/facebook/auth/login/FirstPartySsoFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/login/aa])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/FirstPartySsoFragment])
+  (line 79)
+  (iput-object v1 v0 com/facebook/auth/login/aa.a [object com/facebook/auth/login/FirstPartySsoFragment])
+  (invoke-direct {v0} com/facebook/fbservice/ops/h/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/auth/login/aa])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 82)
+  (iget-object v0 v1 com/facebook/auth/login/aa.a [object com/facebook/auth/login/FirstPartySsoFragment])
+  (invoke-static {v0} com/facebook/auth/login/FirstPartySsoFragment/a [object com/facebook/auth/login/FirstPartySsoFragment] )
+  (line 83)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/auth/login/aa])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/ServiceException])
+  (line 87)
+  (iget-object v0 v1 com/facebook/auth/login/aa.a [object com/facebook/auth/login/FirstPartySsoFragment])
+  (invoke-static {v0 v2} com/facebook/auth/login/FirstPartySsoFragment/a [object com/facebook/auth/login/FirstPartySsoFragment] [object com/facebook/fbservice/service/ServiceException] )
+  (line 88)
+  (return-void )
+)
+
+)

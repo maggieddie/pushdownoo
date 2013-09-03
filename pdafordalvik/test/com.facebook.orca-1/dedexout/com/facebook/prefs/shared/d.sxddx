@@ -1,0 +1,62 @@
+(interface (attrs public abstract ) com/facebook/prefs/shared/d
+ (super java/lang/Object)
+ (source "FbSharedPreferences.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] float )float
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] int )int
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] long )long
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] [object java/lang/String] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/f] )void
+)
+
+(method (attrs public abstract ) a([object java/lang/Runnable] )void
+)
+
+(method (attrs public abstract ) a()boolean
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] )boolean
+)
+
+(method (attrs public abstract ) a([object com/facebook/prefs/shared/ae] boolean )boolean
+)
+
+(method (attrs public abstract ) b([object com/facebook/prefs/shared/ae] )[object com/facebook/common/w/q]
+)
+
+(method (attrs public abstract ) b()[object com/facebook/prefs/shared/e]
+)
+
+(method (attrs public abstract ) b([object com/facebook/prefs/shared/f] )void
+)
+
+(method (attrs public abstract ) c([object com/facebook/prefs/shared/ae] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) c()void
+)
+
+(method (attrs public abstract ) d([object com/facebook/prefs/shared/ae] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/prefs/shared/ae;"  ")"  "Ljava/util/SortedSet"  "<"  "Lcom/facebook/prefs/shared/ae;"  ">;")
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) e([object com/facebook/prefs/shared/ae] )[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/prefs/shared/ae;"  ")"  "Ljava/util/SortedMap"  "<"  "Lcom/facebook/prefs/shared/ae;"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+)

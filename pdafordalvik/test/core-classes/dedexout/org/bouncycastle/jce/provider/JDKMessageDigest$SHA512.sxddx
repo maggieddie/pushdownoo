@@ -22,7 +22,7 @@
   (limit registers 3)
   ; this: v2 ([object org/bouncycastle/jce/provider/JDKMessageDigest$SHA512])
   (line 140)
-  (invoke-super-quick {v2} org/bouncycastle/jce/provider/JDKMessageDigest$SHA512/clone )
+  (invoke-super-quick {v2} vtable #0x0)
   (move-result-object v0)
   (check-cast v0 [object org/bouncycastle/jce/provider/JDKMessageDigest$SHA512])
   (line 141)

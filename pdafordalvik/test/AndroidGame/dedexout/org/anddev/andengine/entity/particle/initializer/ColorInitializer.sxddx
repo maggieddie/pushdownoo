@@ -1,0 +1,53 @@
+(class (attrs public ) org/anddev/andengine/entity/particle/initializer/ColorInitializer
+ (super org/anddev/andengine/entity/particle/initializer/BaseTripleValueInitializer)
+ (source "ColorInitializer.java")
+
+
+(method (attrs public ) <init>(float float float )void
+  (limit registers 11)
+  ; this: v7 ([object org/anddev/andengine/entity/particle/initializer/ColorInitializer])
+  ; parameter[0] : v8 (float)
+  ; parameter[1] : v9 (float)
+  ; parameter[2] : v10 (float)
+  (line 27)
+  (move-object v0 v7)
+  (move v1 v8)
+  (move v2 v8)
+  (move v3 v9)
+  (move v4 v9)
+  (move v5 v10)
+  (move v6 v10)
+  (invoke-direct/range {v0 .. v6} org/anddev/andengine/entity/particle/initializer/BaseTripleValueInitializer/<init> float float float float float float )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float float float float )void
+  (limit registers 7)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/ColorInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  ; parameter[4] : v5 (float)
+  ; parameter[5] : v6 (float)
+  (line 31)
+  (invoke-direct/range {v0 .. v6} org/anddev/andengine/entity/particle/initializer/BaseTripleValueInitializer/<init> float float float float float float )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs protected ) onInitializeParticle([object org/anddev/andengine/entity/particle/Particle] float float float )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/ColorInitializer])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/particle/Particle])
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  (line 44)
+  (invoke-virtual {v1 v2 v3 v4} org/anddev/andengine/entity/particle/Particle/setColor float float float )
+  (line 45)
+  (return-void )
+)
+
+)

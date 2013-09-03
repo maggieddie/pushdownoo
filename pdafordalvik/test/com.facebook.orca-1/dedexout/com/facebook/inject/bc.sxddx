@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/inject/bc
+ (super java/lang/Object)
+ (source "StrictInjector.java")
+
+
+(method (attrs public abstract ) a([object java/lang/Class] [object com/google/inject/a] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Lcom/facebook/inject/ag;"  ">;"  "Lcom/google/inject/a"  "<*>;)V")
+  )
+)
+
+)

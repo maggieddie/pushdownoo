@@ -1,0 +1,41 @@
+(class (attrs final ) com/twitter/android/ff
+ (super com/twitter/android/client/j)
+ (source "Twttr")
+
+ (field (attrs final ) a [object com/twitter/android/SULFragment] )
+
+(method (attrs ) <init>([object com/twitter/android/SULFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/ff])
+  ; parameter[0] : v1 ([object com/twitter/android/SULFragment])
+  (line 144)
+  (iput-object v1 v0 com/twitter/android/ff.a [object com/twitter/android/SULFragment])
+  (invoke-direct {v0} com/twitter/android/client/j/<init> )
+  (line 145)
+  (return-void )
+ )
+
+(method (attrs public final ) b([object com/twitter/android/client/Session] [object java/lang/String] int [object java/lang/String] int )void
+  (limit registers 8)
+  ; this: v2 ([object com/twitter/android/ff])
+  ; parameter[0] : v3 ([object com/twitter/android/client/Session])
+  ; parameter[1] : v4 ([object java/lang/String])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object java/lang/String])
+  ; parameter[4] : v7 (int)
+  (line 151)
+  (iget-object v0 v2 com/twitter/android/ff.a [object com/twitter/android/SULFragment])
+  (invoke-virtual {v0 v4} com/twitter/android/SULFragment/c [object java/lang/String] )
+  (move-result-object v0)
+  (line 152)
+  (if-eqz v0 la73d6)
+  (line 153)
+  (iget-object v1 v2 com/twitter/android/ff.a [object com/twitter/android/SULFragment])
+  (iget v0 v0 com/twitter/android/dc.b int)
+  (invoke-virtual {v1 v0} com/twitter/android/SULFragment/d int )
+  (label la73d6)
+  (line 155)
+  (return-void )
+)
+
+)

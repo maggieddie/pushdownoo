@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer android:id="@id/newsfeed_container" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:overflowAndListOverlap="@dimen/publisher_height">
+        <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.feed.ui.NewsFeedListView android:id="@android:id/list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/white" android:divider="@color/feed_list_item_bg_color" android:dividerHeight="0.0dip" />
+    </com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer>
+    <include layout="@layout/feed_empty_layout" />
+    <include layout="@layout/feed_error_view" />
+    <RelativeLayout android:id="@id/publisher_buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/x_story_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/publisher" layout="@layout/feed_x_story_button" />
+        <com.facebook.feed.ui.GenericErrorBanner android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" android:layout_below="@id/publisher" />
+        <include android:id="@id/publisher" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/publisher" />
+        <ImageView android:id="@id/publisher_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/composerbar" android:scaleType="fitXY" android:layout_below="@id/publisher" />
+    </RelativeLayout>
+</RelativeLayout>

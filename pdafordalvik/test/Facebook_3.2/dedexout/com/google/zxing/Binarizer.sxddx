@@ -1,0 +1,30 @@
+(class (attrs public abstract ) com/google/zxing/Binarizer
+ (super java/lang/Object)
+ (source "Binarizer.java")
+
+ (field (attrs private final ) a [object com/google/zxing/LuminanceSource] )
+
+(method (attrs protected ) <init>([object com/google/zxing/LuminanceSource] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/zxing/Binarizer])
+  ; parameter[0] : v1 ([object com/google/zxing/LuminanceSource])
+  (line 34)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 35)
+  (iput-object v1 v0 com/google/zxing/Binarizer.a [object com/google/zxing/LuminanceSource])
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public final ) a()[object com/google/zxing/LuminanceSource]
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/Binarizer])
+  (line 39)
+  (iget-object v0 v1 com/google/zxing/Binarizer.a [object com/google/zxing/LuminanceSource])
+  (return-object v0)
+)
+
+(method (attrs public abstract ) b()[object com/google/zxing/common/BitMatrix]
+)
+
+)

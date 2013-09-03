@@ -1,0 +1,33 @@
+(class (attrs ) org/andengine/util/adt/transformation/TransformationPool$1
+ (super org/andengine/util/adt/pool/GenericPool)
+ (source "TransformationPool.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/adt/transformation/TransformationPool$1])
+  (line 21)
+  (invoke-direct {v0} org/andengine/util/adt/pool/GenericPool/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/transformation/TransformationPool$1])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/util/adt/transformation/TransformationPool$1/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/andengine/util/adt/transformation/Transformation]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/transformation/TransformationPool$1])
+  (line 24)
+  (new-instance v0 org/andengine/util/adt/transformation/Transformation)
+  (invoke-direct {v0} org/andengine/util/adt/transformation/Transformation/<init> )
+  (return-object v0)
+)
+
+)

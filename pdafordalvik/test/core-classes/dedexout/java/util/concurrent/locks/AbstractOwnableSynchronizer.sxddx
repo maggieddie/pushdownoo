@@ -18,7 +18,7 @@
   (limit registers 2)
   ; this: v1 ([object java/util/concurrent/locks/AbstractOwnableSynchronizer])
   (line 54)
-  (iget-object-quick v0 v1 java/util/concurrent/locks/AbstractOwnableSynchronizer.exclusiveOwnerThread [object java/lang/Thread])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -27,7 +27,7 @@
   ; this: v0 ([object java/util/concurrent/locks/AbstractOwnableSynchronizer])
   ; parameter[0] : v1 ([object java/lang/Thread])
   (line 43)
-  (iput-object-quick v1 v0 java/util/concurrent/locks/AbstractOwnableSynchronizer.exclusiveOwnerThread [object java/lang/Thread])
+  (iput-object-quick v1 v0 )
   (line 44)
   (return-void )
 )

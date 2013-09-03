@@ -1,0 +1,65 @@
+(class (attrs public abstract ) com/facebook/m/a
+ (super java/lang/Object)
+ (source "RageSensorEventListener.java")
+ (implements android/hardware/SensorEventListener)
+
+ (field (attrs private ) a [object com/facebook/m/c] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/m/a])
+  (line 20)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 36)
+  (new-instance v0 com/facebook/m/c)
+  (invoke-direct {v0} com/facebook/m/c/<init> )
+  (iput-object v0 v1 com/facebook/m/a.a [object com/facebook/m/c])
+  (line 82)
+  (return-void )
+ )
+
+(method (attrs protected abstract ) a()void
+)
+
+(method (attrs public ) b()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/m/a])
+  (line 60)
+  (iget-object v0 v1 com/facebook/m/a.a [object com/facebook/m/c])
+  (invoke-virtual {v0} com/facebook/m/c/a )
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) onAccuracyChanged([object android/hardware/Sensor] int )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/m/a])
+  ; parameter[0] : v1 ([object android/hardware/Sensor])
+  ; parameter[1] : v2 (int)
+  (line 50)
+  (return-void )
+)
+
+(method (attrs public ) onSensorChanged([object android/hardware/SensorEvent] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/m/a])
+  ; parameter[0] : v2 ([object android/hardware/SensorEvent])
+  (line 40)
+  (iget-object v0 v1 com/facebook/m/a.a [object com/facebook/m/c])
+  (invoke-virtual {v0 v2} com/facebook/m/c/a [object android/hardware/SensorEvent] )
+  (line 41)
+  (iget-object v0 v1 com/facebook/m/a.a [object com/facebook/m/c])
+  (invoke-virtual {v0} com/facebook/m/c/b )
+  (move-result v0)
+  (if-eqz v0 l13fa4e)
+  (line 42)
+  (iget-object v0 v1 com/facebook/m/a.a [object com/facebook/m/c])
+  (invoke-virtual {v0} com/facebook/m/c/a )
+  (line 43)
+  (invoke-virtual {v1} com/facebook/m/a/a )
+  (label l13fa4e)
+  (line 45)
+  (return-void )
+)
+
+)

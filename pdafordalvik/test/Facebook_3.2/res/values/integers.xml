@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_transition_duration">300</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="launchables_container_shortcuts">-100</integer>
+    <integer name="launchables_container_dock">-101</integer>
+    <integer name="config_allAppsBatchLoadDelay">0</integer>
+    <integer name="config_allAppsBatchSize">0</integer>
+    <integer name="config_flingToDeleteMinVelocity">-1500</integer>
+    <integer name="config_dropAnimMinDuration">100</integer>
+    <integer name="config_dropAnimMaxDuration">500</integer>
+    <integer name="config_dropAnimMaxDist">800</integer>
+    <integer name="notification_row_anim_duration">50</integer>
+    <integer name="preferences_enter_anim_duration">650</integer>
+    <integer name="preferences_exit_anim_duration">500</integer>
+    <integer name="page_identity_num_top_recommendations">3</integer>
+    <integer name="page_identity_friends_info_fragment_max_friends">20</integer>
+    <integer name="page_identity_photos_max_num">10</integer>
+    <integer name="page_identity_photo_grid_fetch_size">50</integer>
+    <integer name="page_identity_events_max_num">1</integer>
+    <integer name="page_identity_num_initial_child_locations">2</integer>
+    <integer name="page_identity_max_child_locations">20</integer>
+    <integer name="appcenter_detail_screenshot_width_percentage">80</integer>
+    <integer name="appcenter_detail_screenshot_left_width_percentage">5</integer>
+    <integer name="page_animation_time">500</integer>
+    <integer name="error_anim_time">200</integer>
+    <integer name="maximum_status_length">63206</integer>
+</resources>

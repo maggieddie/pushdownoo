@@ -73,7 +73,7 @@
   (line 70)
   (if-eqz v0 l15af26)
   (line 71)
-  (invoke-virtual-quick {v0} javax/net/ssl/SSLContext/getServerSocketFactory )
+  (invoke-virtual-quick {v0} vtable #0x11)
   (move-result-object v2)
   (sput-object v2 javax/net/ssl/SSLServerSocketFactory.defaultServerSocketFactory [object javax/net/ServerSocketFactory])
   (label l15af26)

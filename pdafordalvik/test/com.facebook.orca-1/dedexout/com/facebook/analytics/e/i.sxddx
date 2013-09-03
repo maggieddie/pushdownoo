@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) com/facebook/analytics/e/i
+ (super java/lang/Object)
+ (source "PerformanceLogger.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/analytics/e/g] )void
+)
+
+(method (attrs public abstract ) a([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) a([object java/lang/String] double )void
+)
+
+(method (attrs public abstract ) b([object com/facebook/analytics/e/g] )void
+)
+
+(method (attrs public abstract ) b([object java/lang/String] )void
+)
+
+)

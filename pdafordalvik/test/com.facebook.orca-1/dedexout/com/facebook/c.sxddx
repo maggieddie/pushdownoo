@@ -1,0 +1,26 @@
+(class (attrs public final ) com/facebook/c
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) logger_levels int 2131623936); 0x7f0e0000 )
+ (field (attrs public static final ) logger_levels_values int 2131623937); 0x7f0e0001 )
+ (field (attrs public static final ) mqtt_server_tiers int 2131623940); 0x7f0e0004 )
+ (field (attrs public static final ) mqtt_server_tiers_values int 2131623941); 0x7f0e0005 )
+ (field (attrs public static final ) upload_contacts_batch_size_values int 2131623943); 0x7f0e0007 )
+ (field (attrs public static final ) upload_contacts_batch_sizes int 2131623942); 0x7f0e0006 )
+ (field (attrs public static final ) voip_audio_modes int 2131623944); 0x7f0e0008 )
+ (field (attrs public static final ) voip_audio_modes_values int 2131623945); 0x7f0e0009 )
+ (field (attrs public static final ) voip_stream_types int 2131623946); 0x7f0e000a )
+ (field (attrs public static final ) voip_stream_types_values int 2131623947); 0x7f0e000b )
+ (field (attrs public static final ) web_server_tiers int 2131623938); 0x7f0e0002 )
+ (field (attrs public static final ) web_server_tiers_values int 2131623939); 0x7f0e0003 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/c])
+  (line 23)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

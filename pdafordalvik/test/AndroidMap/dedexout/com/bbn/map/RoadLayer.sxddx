@@ -1,0 +1,127 @@
+(class (attrs public ) com/bbn/map/RoadLayer
+ (super com/bbn/map/RemoteMercatorTileLayer)
+ (source "RoadLayer.java")
+ (implements com/bbn/map/ConfigurableLayer)
+
+
+(method (attrs public ) <init>([object com/bbn/map/TileCache] )void
+  (limit registers 4)
+  ; this: v2 ([object com/bbn/map/RoadLayer])
+  ; parameter[0] : v3 ([object com/bbn/map/TileCache])
+  (line 13)
+  (invoke-direct {v2 v3} com/bbn/map/RemoteMercatorTileLayer/<init> [object com/bbn/map/TileCache] )
+  (line 14)
+  (new-instance v0 com/bbn/map/OSMRequestFactory)
+  (invoke-virtual {v2} com/bbn/map/RoadLayer/getBaseString )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/bbn/map/OSMRequestFactory/<init> [object java/lang/String] )
+  (invoke-virtual {v3 v0} com/bbn/map/TileCache/registerRequestFactory [object com/bbn/map/RequestFactory] )
+  (move-result v0)
+  (iput v0 v2 com/bbn/map/RoadLayer.layerToken int)
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) getBaseString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 29)
+  (const-string v0 "http://vtiles01.mqcdn.com/tiles/1.0.0/vy/hyb/")
+  (return-object v0)
+)
+
+(method (attrs public ) getLayerConfigActivity()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 61)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getLayerConfigData()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/Object;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 67)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 49)
+  (const-string v0 "Labels, Roads & Boundaries")
+  (return-object v0)
+)
+
+(method (attrs public ) getNumTilesAcross(int )int
+  (limit registers 6)
+  ; this: v4 ([object com/bbn/map/RoadLayer])
+  ; parameter[0] : v5 (int)
+  (line 34)
+  (const-wide/high16 v0 16384)
+  (int-to-double v2 v5)
+  (invoke-static {v0 v1 v2 v3} java/lang/Math/pow double double )
+  (move-result-wide v0)
+  (double-to-int v0 v0)
+  (return v0)
+)
+
+(method (attrs public ) getTileRequest(int int int )[object com/bbn/map/TileRequest]
+  (limit registers 10)
+  ; this: v6 ([object com/bbn/map/RoadLayer])
+  ; parameter[0] : v7 (int)
+  ; parameter[1] : v8 (int)
+  ; parameter[2] : v9 (int)
+  (line 22)
+  (new-instance v0 com/bbn/map/DefaultTileRequest)
+  (invoke-virtual {v6} com/bbn/map/RoadLayer/getTileCache )
+  (move-result-object v1)
+  (iget v2 v6 com/bbn/map/RoadLayer.layerToken int)
+  (move v3 v8)
+  (move v4 v9)
+  (move v5 v7)
+  (invoke-direct/range {v0 .. v5} com/bbn/map/DefaultTileRequest/<init> [object com/bbn/map/TileCache] int int int int )
+  (return-object v0)
+)
+
+(method (attrs public ) getTileSize()int
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 39)
+  (const/16 v0 256)
+  (return v0)
+)
+
+(method (attrs public ) isUserConfigurable()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 55)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) isUserHidable()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/RoadLayer])
+  (line 44)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) loadConfigData([object com/bbn/map/MapView] [object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/bbn/map/MapView;"  "Ljava/util/Map"  "<"  "Ljava/lang/String;"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/bbn/map/RoadLayer])
+  ; parameter[0] : v1 ([object com/bbn/map/MapView])
+  ; parameter[1] : v2 ([object java/util/Map])
+  (line 74)
+  (return-void )
+)
+
+)

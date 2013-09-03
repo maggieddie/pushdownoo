@@ -1,0 +1,199 @@
+(class (attrs public ) com/google/common/collect/HashBasedTable
+ (super com/google/common/collect/StandardTable)
+ (source "HashBasedTable.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs ) <init>([object java/util/Map] [object com/google/common/collect/HashBasedTable$Factory] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<TR;"  "Ljava/util/Map"  "<TC;TV;>;>;"  "Lcom/google/common/collect/HashBasedTable$Factory"  "<TC;TV;>;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v1 ([object java/util/Map])
+  ; parameter[1] : v2 ([object com/google/common/collect/HashBasedTable$Factory])
+  (line 110)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/StandardTable/<init> [object java/util/Map] [object com/google/common/base/Supplier] )
+  (line 111)
+  (return-void )
+ )
+
+(method (attrs public static ) a()[object com/google/common/collect/HashBasedTable]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  (line 72)
+  (new-instance v0 com/google/common/collect/HashBasedTable)
+  (new-instance v1 java/util/HashMap)
+  (invoke-direct {v1} java/util/HashMap/<init> )
+  (new-instance v2 com/google/common/collect/HashBasedTable$Factory)
+  (const/4 v3 0)
+  (invoke-direct {v2 v3} com/google/common/collect/HashBasedTable$Factory/<init> int )
+  (invoke-direct {v0 v1 v2} com/google/common/collect/HashBasedTable/<init> [object java/util/Map] [object com/google/common/collect/HashBasedTable$Factory] )
+  (return-object v0)
+ )
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 133)
+  (invoke-super {v1 v2 v3} com/google/common/collect/StandardTable/a [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 5)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  ; parameter[2] : v4 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2 v3 v4} com/google/common/collect/StandardTable/a [object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 125)
+  (invoke-super {v1 v2} com/google/common/collect/StandardTable/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 142)
+  (invoke-super {v1 v2 v3} com/google/common/collect/StandardTable/b [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ")TV;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/StandardTable/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/d )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) e()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/e )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 137)
+  (invoke-super {v1 v2} com/google/common/collect/StandardTable/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashBasedTable])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/StandardTable/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

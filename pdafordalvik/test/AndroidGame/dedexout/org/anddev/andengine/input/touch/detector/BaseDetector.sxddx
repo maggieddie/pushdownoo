@@ -1,0 +1,70 @@
+(class (attrs public abstract ) org/anddev/andengine/input/touch/detector/BaseDetector
+ (super java/lang/Object)
+ (source "BaseDetector.java")
+ (implements org/anddev/andengine/entity/scene/Scene$IOnSceneTouchListener)
+
+ (field (attrs private ) mEnabled boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/input/touch/detector/BaseDetector])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 org/anddev/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (line 14)
+  (return-void )
+ )
+
+(method (attrs public ) isEnabled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/input/touch/detector/BaseDetector])
+  (line 34)
+  (iget-boolean v0 v1 org/anddev/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (return v0)
+)
+
+(method (attrs protected abstract ) onManagedTouchEvent([object org/anddev/andengine/input/touch/TouchEvent] )boolean
+)
+
+(method (attrs public ) onSceneTouchEvent([object org/anddev/andengine/entity/scene/Scene] [object org/anddev/andengine/input/touch/TouchEvent] )boolean
+  (limit registers 4)
+  ; this: v1 ([object org/anddev/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v2 ([object org/anddev/andengine/entity/scene/Scene])
+  ; parameter[1] : v3 ([object org/anddev/andengine/input/touch/TouchEvent])
+  (line 49)
+  (invoke-virtual {v1 v3} org/anddev/andengine/input/touch/detector/BaseDetector/onTouchEvent [object org/anddev/andengine/input/touch/TouchEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public final ) onTouchEvent([object org/anddev/andengine/input/touch/TouchEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object org/anddev/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v2 ([object org/anddev/andengine/input/touch/TouchEvent])
+  (line 53)
+  (iget-boolean v0 v1 org/anddev/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (if-eqz v0 l77c42)
+  (line 54)
+  (invoke-virtual {v1 v2} org/anddev/andengine/input/touch/detector/BaseDetector/onManagedTouchEvent [object org/anddev/andengine/input/touch/TouchEvent] )
+  (move-result v0)
+  (label l77c40)
+  (line 56)
+  (return v0)
+  (label l77c42)
+  (const/4 v0 0)
+  (goto l77c40)
+)
+
+(method (attrs public ) setEnabled(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/input/touch/detector/BaseDetector])
+  ; parameter[0] : v1 (boolean)
+  (line 38)
+  (iput-boolean v1 v0 org/anddev/andengine/input/touch/detector/BaseDetector.mEnabled boolean)
+  (line 39)
+  (return-void )
+)
+
+)

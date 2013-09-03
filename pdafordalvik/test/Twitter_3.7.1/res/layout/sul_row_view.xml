@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/ListRow">
+        <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:id="@id/sul_name" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/user_images_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/sul_name">
+            <ImageView android:id="@id/user_image_0" android:visibility="invisible" style="@style/InterestsUserImage" />
+            <ImageView android:id="@id/user_image_1" android:visibility="invisible" style="@style/InterestsUserImage" />
+            <ImageView android:id="@id/user_image_2" android:visibility="invisible" style="@style/InterestsUserImage" />
+            <ImageView android:id="@id/user_image_3" android:visibility="invisible" style="@style/InterestsUserImage" />
+            <ImageView android:id="@id/user_image_4" android:visibility="invisible" style="@style/InterestsUserImage" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

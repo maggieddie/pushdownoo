@@ -1,0 +1,29 @@
+(class (attrs public ) com/facebook/http/c/d
+ (super java/lang/Object)
+ (source "HttpGateKeeperSetProvider.java")
+ (implements com/facebook/f/f)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/c/d])
+  (line 10)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/http/c/d])
+  (line 14)
+  (const-string v0 "fbandroid_ssl_cache_enabled")
+  (const-string v1 "fbandroid_http_aggressive_retry")
+  (invoke-static {v0 v1} com/google/common/a/fi/a [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

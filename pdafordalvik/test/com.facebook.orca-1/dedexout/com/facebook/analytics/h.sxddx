@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/analytics/h
+ (super com/facebook/inject/d)
+ (source "AnalyticsClientModule.java")
+
+ (field (attrs final ) a [object com/facebook/analytics/f] )
+
+(method (attrs private ) <init>([object com/facebook/analytics/f] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/analytics/h])
+  ; parameter[0] : v1 ([object com/facebook/analytics/f])
+  (line 290)
+  (iput-object v1 v0 com/facebook/analytics/h.a [object com/facebook/analytics/f])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/analytics/f] [object com/facebook/analytics/g] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/analytics/h])
+  ; parameter[0] : v1 ([object com/facebook/analytics/f])
+  ; parameter[1] : v2 ([object com/facebook/analytics/g])
+  (line 290)
+  (invoke-direct {v0 v1} com/facebook/analytics/h/<init> [object com/facebook/analytics/f] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/analytics/a]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/analytics/h])
+  (line 293)
+  (new-instance v1 com/facebook/analytics/a)
+  (const-class v0 com/facebook/analytics/b/c)
+  (invoke-virtual {v2 v0} com/facebook/analytics/h/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/analytics/b/c])
+  (invoke-direct {v1 v0} com/facebook/analytics/a/<init> [object com/facebook/analytics/b/c] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/h])
+  (line 290)
+  (invoke-virtual {v1} com/facebook/analytics/h/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

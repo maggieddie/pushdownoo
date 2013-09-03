@@ -1,0 +1,67 @@
+(class (attrs ) com/facebook/analytics/a/e
+ (super java/lang/Object)
+ (source "AnalyticsEventSender.java")
+ (implements android/content/ServiceConnection)
+
+ (field (attrs private final ) a [object com/google/common/d/a/ab] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/a/e])
+  (line 284)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 285)
+  (invoke-static {} com/google/common/d/a/ab/a )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/analytics/a/e.a [object com/google/common/d/a/ab])
+  (line 286)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/s"  "<"  "Lcom/facebook/analytics/cd;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/a/e])
+  (line 281)
+  (iget-object v0 v1 com/facebook/analytics/a/e.a [object com/google/common/d/a/ab])
+  (return-object v0)
+)
+
+(method (attrs public ) onServiceConnected([object android/content/ComponentName] [object android/os/IBinder] )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/analytics/a/e])
+  ; parameter[0] : v3 ([object android/content/ComponentName])
+  ; parameter[1] : v4 ([object android/os/IBinder])
+  (line 290)
+  (invoke-static {} com/facebook/analytics/a/a/e )
+  (nop )
+  (move-result-object v0)
+  (const-string v1 "onServiceConnected()")
+  (invoke-static {v0 v1} com/facebook/debug/log/b/a [object java/lang/Class] [object java/lang/String] )
+  (line 291)
+  (iget-object v0 v2 com/facebook/analytics/a/e.a [object com/google/common/d/a/ab])
+  (invoke-static {v4} com/facebook/analytics/ce/a [object android/os/IBinder] )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} com/google/common/d/a/ab/a_ [object java/lang/Object] )
+  (line 292)
+  (return-void )
+)
+
+(method (attrs public ) onServiceDisconnected([object android/content/ComponentName] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/analytics/a/e])
+  ; parameter[0] : v3 ([object android/content/ComponentName])
+  (line 296)
+  (invoke-static {} com/facebook/analytics/a/a/e )
+  (nop )
+  (move-result-object v0)
+  (const-string v1 "onServiceDisconnected()")
+  (invoke-static {v0 v1} com/facebook/debug/log/b/a [object java/lang/Class] [object java/lang/String] )
+  (line 297)
+  (return-void )
+)
+
+)

@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/annotation/CheckReturnValue
+ (super java/lang/Object)
+ (source "CheckReturnValue.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) when()[object javax/annotation/meta/When]
+)
+
+)

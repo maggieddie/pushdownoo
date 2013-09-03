@@ -1,0 +1,25 @@
+(class (attrs public ) a/a/a
+ (super java/lang/Exception)
+ (source "DiffException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object a/a/a])
+  (line 71)
+  (invoke-direct {v0} java/lang/Exception/<init> )
+  (line 72)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object a/a/a])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 75)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 76)
+  (return-void )
+ )
+
+)

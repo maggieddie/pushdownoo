@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/anddev/andengine/engine/handler/IUpdateHandler
+ (super java/lang/Object)
+ (source "IUpdateHandler.java")
+
+
+(method (attrs public abstract ) onUpdate(float )void
+)
+
+(method (attrs public abstract ) reset()void
+)
+
+)

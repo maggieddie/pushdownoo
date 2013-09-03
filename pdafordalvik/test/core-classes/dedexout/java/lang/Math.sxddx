@@ -361,7 +361,7 @@
   (label l122016)
   (line 949)
   (sget-object v0 java/lang/Math.random [object java/util/Random])
-  (invoke-virtual-quick {v0} java/util/Random/nextDouble )
+  (invoke-virtual-quick {v0} vtable #0xe)
   (move-result-wide v0)
   (return-wide v0)
  )

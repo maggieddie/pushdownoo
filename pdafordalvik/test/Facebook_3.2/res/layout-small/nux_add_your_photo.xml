@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title_layout_navless" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="24.0sp" android:textColor="@color/silver_text_color" android:gravity="center_horizontal" android:layout_width="260.0dip" android:layout_height="wrap_content" android:text="@string/profile_pic_text" />
+    </LinearLayout>
+    <LinearLayout android:background="#ffe3e6ec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="#ffeff2f9" android:paddingLeft="20.0dip" android:paddingTop="22.0dip" android:paddingRight="20.0dip" android:paddingBottom="22.0dip" android:layout_width="fill_parent" android:layout_height="140.0dip">
+        <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="@drawable/solid_white" android:gravity="center" android:id="@id/choose_from_gallery" android:background="@drawable/button_blue_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="8.0dip" android:text="@string/profile_pic_gallery_button" />
+        <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="@drawable/solid_white" android:gravity="center" android:id="@id/take_a_photo" android:background="@drawable/button_blue_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:text="@string/profile_pic_camera_button" />
+    </LinearLayout>
+</LinearLayout>

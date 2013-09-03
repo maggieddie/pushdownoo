@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/facebook/analytics/ck
+ (super java/lang/Object)
+ (source "NetworkDataLogger.java")
+
+
+(method (attrs public abstract ) a([object java/net/URI] long )void
+)
+
+(method (attrs public abstract ) a([object java/net/URI] [object java/lang/String] long )void
+)
+
+(method (attrs public abstract ) a([object java/net/URI] [object java/lang/String] long long )void
+)
+
+)

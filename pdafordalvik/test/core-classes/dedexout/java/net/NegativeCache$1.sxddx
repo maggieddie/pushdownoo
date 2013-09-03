@@ -22,7 +22,7 @@
   ; this: v2 ([object java/net/NegativeCache$1])
   ; parameter[0] : v3 ([object java/util/Map$Entry])
   (line 51)
-  (invoke-virtual-quick {v2} java/net/NegativeCache$1/size )
+  (invoke-virtual-quick {v2} vtable #0x15)
   (move-result v0)
   (const/4 v1 5)
   (if-le v0 v1 l146056)

@@ -1,0 +1,60 @@
+(class (attrs final ) com/google/common/base/Joiner$3
+ (super java/util/AbstractList)
+ (source "Joiner.java")
+
+ (field (attrs final ) val$first [object java/lang/Object] )
+ (field (attrs final ) val$rest [array [object java/lang/Object]] )
+ (field (attrs final ) val$second [object java/lang/Object] )
+
+(method (attrs ) <init>([array [object java/lang/Object]] [object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/base/Joiner$3])
+  ; parameter[0] : v1 ([array [object java/lang/Object]])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 377)
+  (iput-object v1 v0 com/google/common/base/Joiner$3.val$rest [array [object java/lang/Object]])
+  (iput-object v2 v0 com/google/common/base/Joiner$3.val$first [object java/lang/Object])
+  (iput-object v3 v0 com/google/common/base/Joiner$3.val$second [object java/lang/Object])
+  (invoke-direct {v0} java/util/AbstractList/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) get(int )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/base/Joiner$3])
+  ; parameter[0] : v3 (int)
+  (line 383)
+  (packed-switch v3 0
+    psf5614_f5628 ; case 0
+    psf5614_f562e ; case 1
+    psf5614_default) ; default
+  (label psf5614_default)
+  (line 389)
+  (iget-object v0 v2 com/google/common/base/Joiner$3.val$rest [array [object java/lang/Object]])
+  (add-int/lit8 v1 v3 254)
+  (aget-object v0 v0 v1)
+  (label lf5626)
+  (return-object v0)
+  (label psf5614_f5628)
+  (line 385)
+  (iget-object v0 v2 com/google/common/base/Joiner$3.val$first [object java/lang/Object])
+  (goto lf5626)
+  (label psf5614_f562e)
+  (line 387)
+  (iget-object v0 v2 com/google/common/base/Joiner$3.val$second [object java/lang/Object])
+  (goto lf5626)
+  (line 383)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Joiner$3])
+  (line 379)
+  (iget-object v0 v1 com/google/common/base/Joiner$3.val$rest [array [object java/lang/Object]])
+  (array-length v0 v0)
+  (add-int/lit8 v0 v0 2)
+  (return v0)
+)
+
+)

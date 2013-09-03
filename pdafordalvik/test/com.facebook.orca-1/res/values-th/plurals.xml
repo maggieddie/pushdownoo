@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s thousand</item>
+        <item quantity="one">1 พัน</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s ล้าน</item>
+        <item quantity="one">1 ล้าน</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s พันล้าน</item>
+        <item quantity="one">1 พันล้าน</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d ชั่วโมงที่แล้ว</item>
+        <item quantity="one">1 ชั่วโมงที่แล้ว</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d นาทีที่แล้ว</item>
+        <item quantity="one">1 นาทีที่แล้ว</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d ชั่วโมงจากนี้</item>
+        <item quantity="one">1 ชั่วโมงจากนี้</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d นาทีจากนี้</item>
+        <item quantity="one">1 นาทีจากนี้</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">ลบข้อความหรือไม่?</item>
+        <item quantity="one">ลบข้อความหรือไม่?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">เมื่อคุณลบสำเนาการสนทนาเหล่านี้แล้ว จะไม่สามารถเรียกคืนได้</item>
+        <item quantity="one">เมื่อคุณลบสำเนาการสนทนาแล้ว จะไม่สามารถเรียกคืนได้</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">ลบข้อความ</item>
+        <item quantity="one">ลบข้อความ</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">กำลังลบข้อความ…</item>
+        <item quantity="one">กำลังลบข้อความ…</item>
+    </plurals>
+</resources>

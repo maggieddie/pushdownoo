@@ -1,0 +1,15 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge
+ (super java/lang/Object)
+ (source "Twttr")
+
+
+(method (attrs public abstract ) createAccessibilityNodeInfo(int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) findAccessibilityNodeInfosByText([object java/lang/String] int )[object java/util/List]
+)
+
+(method (attrs public abstract ) performAction(int int [object android/os/Bundle] )boolean
+)
+
+)

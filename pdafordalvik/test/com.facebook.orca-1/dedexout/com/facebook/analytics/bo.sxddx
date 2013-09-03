@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/analytics/bo
+ (super com/facebook/inject/d)
+ (source "AnalyticsServiceModule.java")
+
+ (field (attrs final ) a [object com/facebook/analytics/ay] )
+
+(method (attrs private ) <init>([object com/facebook/analytics/ay] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/analytics/bo])
+  ; parameter[0] : v1 ([object com/facebook/analytics/ay])
+  (line 260)
+  (iput-object v1 v0 com/facebook/analytics/bo.a [object com/facebook/analytics/ay])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/analytics/ay] [object com/facebook/analytics/az] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/analytics/bo])
+  ; parameter[0] : v1 ([object com/facebook/analytics/ay])
+  ; parameter[1] : v2 ([object com/facebook/analytics/az])
+  (line 260)
+  (invoke-direct {v0 v1} com/facebook/analytics/bo/<init> [object com/facebook/analytics/ay] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/analytics/service/v]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/bo])
+  (line 264)
+  (new-instance v0 com/facebook/analytics/service/v)
+  (invoke-direct {v0} com/facebook/analytics/service/v/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/bo])
+  (line 260)
+  (invoke-virtual {v1} com/facebook/analytics/bo/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

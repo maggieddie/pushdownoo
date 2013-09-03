@@ -19,7 +19,7 @@
   (check-cast v0 [object java/security/Key])
   (const/4 v1 0)
   (check-cast v1 [object java/security/SecureRandom])
-  (invoke-virtual-quick {v3 v2 v0 v1} javax/crypto/NullCipher/init int [object java/security/Key] [object java/security/SecureRandom] )
+  (invoke-virtual-quick {v3 v2 v0 v1} vtable #0x1c)
   (label l156dbe)
   (line 47)
   (return-void )

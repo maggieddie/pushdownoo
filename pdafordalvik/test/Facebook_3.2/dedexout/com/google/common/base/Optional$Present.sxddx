@@ -1,0 +1,125 @@
+(class (attrs final ) com/google/common/base/Optional$Present
+ (super com/google/common/base/Optional)
+ (source "Optional.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+ (field (attrs private final ) reference [object java/lang/Object] )
+
+(method (attrs ) <init>([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/Optional$Present])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 161)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} com/google/common/base/Optional/<init> [object com/google/common/base/Optional$1] )
+  (line 162)
+  (iput-object v2 v1 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (line 163)
+  (return-void )
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/base/Optional$Present])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 193)
+  (instance-of v0 v3 com/google/common/base/Optional$Present)
+  (if-eqz v0 lf5c9e)
+  (line 194)
+  (check-cast v3 [object com/google/common/base/Optional$Present])
+  (line 195)
+  (iget-object v0 v2 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (iget-object v1 v3 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (invoke-virtual {v0 v1} java/lang/Object/equals [object java/lang/Object] )
+  (move-result v0)
+  (label lf5c9c)
+  (line 197)
+  (return v0)
+  (label lf5c9e)
+  (const/4 v0 0)
+  (goto lf5c9c)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Present])
+  (line 170)
+  (iget-object v0 v1 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/base/Optional$Present])
+  (line 201)
+  (const v0 1502476572) ; 0x598df91c)
+  (iget-object v1 v2 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (invoke-virtual {v1} java/lang/Object/hashCode )
+  (move-result v1)
+  (add-int/2addr v0 v1)
+  (return v0)
+)
+
+(method (attrs public ) isPresent()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Present])
+  (line 166)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) or([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/Optional$Present])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 174)
+  (const-string v0 "use orNull() instead of or(null)")
+  (invoke-static {v2 v0} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] [object java/lang/Object] )
+  (line 175)
+  (iget-object v0 v1 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) orNull()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Present])
+  (line 189)
+  (iget-object v0 v1 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/base/Optional$Present])
+  (line 205)
+  (new-instance v0 java/lang/StringBuilder)
+  (invoke-direct {v0} java/lang/StringBuilder/<init> )
+  (const-string v1 "Optional.of(")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/google/common/base/Optional$Present.reference [object java/lang/Object])
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/Object] )
+  (move-result-object v0)
+  (const-string v1 ")")
+  (invoke-virtual {v0 v1} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

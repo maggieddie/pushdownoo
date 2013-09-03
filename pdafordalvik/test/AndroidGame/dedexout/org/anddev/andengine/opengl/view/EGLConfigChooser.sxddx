@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/opengl/view/EGLConfigChooser
+ (super java/lang/Object)
+ (source "EGLConfigChooser.java")
+
+
+(method (attrs public abstract ) chooseConfig([object javax/microedition/khronos/egl/EGL10] [object javax/microedition/khronos/egl/EGLDisplay] )[object javax/microedition/khronos/egl/EGLConfig]
+)
+
+)

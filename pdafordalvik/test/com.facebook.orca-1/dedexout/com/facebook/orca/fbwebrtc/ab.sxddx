@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/orca/fbwebrtc/ab
+ (super java/lang/Object)
+ (source "WebrtcIncallActivity.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/fbwebrtc/WebrtcIncallActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/ab])
+  ; parameter[0] : v1 ([object com/facebook/orca/fbwebrtc/WebrtcIncallActivity])
+  (line 672)
+  (iput-object v1 v0 com/facebook/orca/fbwebrtc/ab.a [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/fbwebrtc/ab])
+  (line 675)
+  (iget-object v0 v2 com/facebook/orca/fbwebrtc/ab.a [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/orca/fbwebrtc/WebrtcIncallActivity/b [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity] boolean )
+  (line 676)
+  (iget-object v0 v2 com/facebook/orca/fbwebrtc/ab.a [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity])
+  (invoke-static {v0} com/facebook/orca/fbwebrtc/WebrtcIncallActivity/h [object com/facebook/orca/fbwebrtc/WebrtcIncallActivity] )
+  (line 677)
+  (return-void )
+)
+
+)

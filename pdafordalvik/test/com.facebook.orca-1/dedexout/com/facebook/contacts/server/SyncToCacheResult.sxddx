@@ -1,0 +1,26 @@
+(class (attrs public ) com/facebook/contacts/server/SyncToCacheResult
+ (super com/facebook/fbservice/c/a)
+ (source "SyncToCacheResult.java")
+ (implements android/os/Parcelable)
+
+
+(method (attrs public ) <init>([object com/facebook/fbservice/c/b] long )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/contacts/server/SyncToCacheResult])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/c/b])
+  ; parameter[1] : v2 (long)
+  (line 24)
+  (invoke-direct {v0 v1 v2 v3} com/facebook/fbservice/c/a/<init> [object com/facebook/fbservice/c/b] long )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/server/SyncToCacheResult])
+  (line 33)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

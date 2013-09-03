@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/orca_nux_top_right_popover" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/dark_orca_blue" android:gravity="center_horizontal" android:id="@id/thread_alert_rate_limit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/rate_limit_text" />
+</LinearLayout>

@@ -1,0 +1,32 @@
+(class (attrs final ) com/google/common/collect/CustomConcurrentHashMap$KeyIterator
+ (super com/google/common/collect/CustomConcurrentHashMap$HashIterator)
+ (source "CustomConcurrentHashMap.java")
+ (implements java/util/Iterator)
+
+ (field (attrs final ) a [object com/google/common/collect/CustomConcurrentHashMap] )
+
+(method (attrs ) <init>([object com/google/common/collect/CustomConcurrentHashMap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$KeyIterator])
+  ; parameter[0] : v1 ([object com/google/common/collect/CustomConcurrentHashMap])
+  (line 3753)
+  (iput-object v1 v0 com/google/common/collect/CustomConcurrentHashMap$KeyIterator.a [object com/google/common/collect/CustomConcurrentHashMap])
+  (invoke-direct {v0 v1} com/google/common/collect/CustomConcurrentHashMap$HashIterator/<init> [object com/google/common/collect/CustomConcurrentHashMap] )
+  (return-void )
+ )
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$KeyIterator])
+  (line 3757)
+  (invoke-virtual {v1} com/google/common/collect/CustomConcurrentHashMap$KeyIterator/e )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/collect/CustomConcurrentHashMap$WriteThroughEntry/getKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

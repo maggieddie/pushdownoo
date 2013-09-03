@@ -1,0 +1,31 @@
+(class (attrs final ) com/facebook/zero/ui/n
+ (super java/lang/Object)
+ (source "ExtraChargesDialogController.java")
+
+ (field (attrs public ) a [object com/facebook/prefs/shared/ae] )
+ (field (attrs public ) b [object java/lang/String] )
+ (field (attrs public ) c [object java/lang/String] )
+ (field (attrs public ) d [object com/facebook/zero/ui/k] )
+ (field (attrs final ) e [object com/facebook/zero/ui/l] )
+
+(method (attrs private ) <init>([object com/facebook/zero/ui/l] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/zero/ui/n])
+  ; parameter[0] : v1 ([object com/facebook/zero/ui/l])
+  (line 31)
+  (iput-object v1 v0 com/facebook/zero/ui/n.e [object com/facebook/zero/ui/l])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/zero/ui/l] [object com/facebook/zero/ui/m] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/zero/ui/n])
+  ; parameter[0] : v1 ([object com/facebook/zero/ui/l])
+  ; parameter[1] : v2 ([object com/facebook/zero/ui/m])
+  (line 31)
+  (invoke-direct {v0 v1} com/facebook/zero/ui/n/<init> [object com/facebook/zero/ui/l] )
+  (return-void )
+ )
+
+)

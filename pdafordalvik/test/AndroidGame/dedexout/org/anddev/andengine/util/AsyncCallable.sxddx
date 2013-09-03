@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/AsyncCallable
+ (super java/lang/Object)
+ (source "AsyncCallable.java")
+
+
+(method (attrs public abstract ) call([object org/anddev/andengine/util/Callback] [object org/anddev/andengine/util/Callback] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/util/Callback"  "<TT;>;"  "Lorg/anddev/andengine/util/Callback"  "<"  "Ljava/lang/Exception;"  ">;)V")
+  )
+)
+
+)

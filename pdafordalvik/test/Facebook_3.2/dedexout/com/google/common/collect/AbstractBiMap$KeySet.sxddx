@@ -1,0 +1,138 @@
+(class (attrs ) com/google/common/collect/AbstractBiMap$KeySet
+ (super com/google/common/collect/ForwardingSet)
+ (source "AbstractBiMap.java")
+
+ (field (attrs final ) a [object com/google/common/collect/AbstractBiMap] )
+
+(method (attrs private ) <init>([object com/google/common/collect/AbstractBiMap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  ; parameter[0] : v1 ([object com/google/common/collect/AbstractBiMap])
+  (line 168)
+  (iput-object v1 v0 com/google/common/collect/AbstractBiMap$KeySet.a [object com/google/common/collect/AbstractBiMap])
+  (invoke-direct {v0} com/google/common/collect/ForwardingSet/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/google/common/collect/AbstractBiMap] [object com/google/common/collect/AbstractBiMap$1] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  ; parameter[0] : v1 ([object com/google/common/collect/AbstractBiMap])
+  ; parameter[1] : v2 ([object com/google/common/collect/AbstractBiMap$1])
+  (line 168)
+  (invoke-direct {v0 v1} com/google/common/collect/AbstractBiMap$KeySet/<init> [object com/google/common/collect/AbstractBiMap] )
+  (return-void )
+ )
+
+(method (attrs protected ) a()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  (line 170)
+  (iget-object v0 v1 com/google/common/collect/AbstractBiMap$KeySet.a [object com/google/common/collect/AbstractBiMap])
+  (invoke-static {v0} com/google/common/collect/AbstractBiMap/b [object com/google/common/collect/AbstractBiMap] )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Map/keySet )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) b()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  (line 168)
+  (invoke-virtual {v1} com/google/common/collect/AbstractBiMap$KeySet/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  (line 168)
+  (invoke-virtual {v1} com/google/common/collect/AbstractBiMap$KeySet/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  (line 174)
+  (iget-object v0 v1 com/google/common/collect/AbstractBiMap$KeySet.a [object com/google/common/collect/AbstractBiMap])
+  (invoke-virtual {v0} com/google/common/collect/AbstractBiMap/clear )
+  (line 175)
+  (return-void )
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TK;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  (line 194)
+  (iget-object v0 v2 com/google/common/collect/AbstractBiMap$KeySet.a [object com/google/common/collect/AbstractBiMap])
+  (invoke-static {v0} com/google/common/collect/AbstractBiMap/b [object com/google/common/collect/AbstractBiMap] )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Map/entrySet )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/iterator )
+  (move-result-object v0)
+  (line 195)
+  (new-instance v1 com/google/common/collect/AbstractBiMap$KeySet$1)
+  (invoke-direct {v1 v2 v0} com/google/common/collect/AbstractBiMap$KeySet$1/<init> [object com/google/common/collect/AbstractBiMap$KeySet] [object java/util/Iterator] )
+  (return-object v1)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 178)
+  (invoke-virtual {v1 v2} com/google/common/collect/AbstractBiMap$KeySet/contains [object java/lang/Object] )
+  (move-result v0)
+  (if-nez v0 lf8048)
+  (line 179)
+  (const/4 v0 0)
+  (label lf8046)
+  (line 182)
+  (return v0)
+  (label lf8048)
+  (line 181)
+  (iget-object v0 v1 com/google/common/collect/AbstractBiMap$KeySet.a [object com/google/common/collect/AbstractBiMap])
+  (invoke-static {v0 v2} com/google/common/collect/AbstractBiMap/a [object com/google/common/collect/AbstractBiMap] [object java/lang/Object] )
+  (line 182)
+  (const/4 v0 1)
+  (goto lf8046)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 186)
+  (invoke-virtual {v1 v2} com/google/common/collect/AbstractBiMap$KeySet/b [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$KeySet])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 190)
+  (invoke-virtual {v1 v2} com/google/common/collect/AbstractBiMap$KeySet/c [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+)

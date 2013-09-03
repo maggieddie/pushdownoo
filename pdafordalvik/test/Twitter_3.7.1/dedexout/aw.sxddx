@@ -1,0 +1,272 @@
+(class (attrs public final ) aw
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs protected final ) a [array byte] )
+ (field (attrs protected ) b byte )
+ (field (attrs protected final ) c [array byte] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object aw])
+  (line 50)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (const/16 v0 64)
+  (new-array v0 v0 [array byte])
+  (fill-array-data v0 l5d348)
+  (iput-object v0 v1 aw.a [array byte])
+  (line 34)
+  (const/16 v0 61)
+  (iput-byte v0 v1 aw.b byte)
+  (line 39)
+  (const/16 v0 128)
+  (new-array v0 v0 [array byte])
+  (iput-object v0 v1 aw.c [array byte])
+  (line 51)
+  (invoke-direct {v1} aw/a )
+  (line 52)
+  (return-void )
+  (line 23)
+  (label l5d348)
+  (data-array
+    (0x41) ; #0
+    (0x42) ; #1
+    (0x43) ; #2
+    (0x44) ; #3
+    (0x45) ; #4
+    (0x46) ; #5
+    (0x47) ; #6
+    (0x48) ; #7
+    (0x49) ; #8
+    (0x4A) ; #9
+    (0x4B) ; #10
+    (0x4C) ; #11
+    (0x4D) ; #12
+    (0x4E) ; #13
+    (0x4F) ; #14
+    (0x50) ; #15
+    (0x51) ; #16
+    (0x52) ; #17
+    (0x53) ; #18
+    (0x54) ; #19
+    (0x55) ; #20
+    (0x56) ; #21
+    (0x57) ; #22
+    (0x58) ; #23
+    (0x59) ; #24
+    (0x5A) ; #25
+    (0x61) ; #26
+    (0x62) ; #27
+    (0x63) ; #28
+    (0x64) ; #29
+    (0x65) ; #30
+    (0x66) ; #31
+    (0x67) ; #32
+    (0x68) ; #33
+    (0x69) ; #34
+    (0x6A) ; #35
+    (0x6B) ; #36
+    (0x6C) ; #37
+    (0x6D) ; #38
+    (0x6E) ; #39
+    (0x6F) ; #40
+    (0x70) ; #41
+    (0x71) ; #42
+    (0x72) ; #43
+    (0x73) ; #44
+    (0x74) ; #45
+    (0x75) ; #46
+    (0x76) ; #47
+    (0x77) ; #48
+    (0x78) ; #49
+    (0x79) ; #50
+    (0x7A) ; #51
+    (0x30) ; #52
+    (0x31) ; #53
+    (0x32) ; #54
+    (0x33) ; #55
+    (0x34) ; #56
+    (0x35) ; #57
+    (0x36) ; #58
+    (0x37) ; #59
+    (0x38) ; #60
+    (0x39) ; #61
+    (0x2B) ; #62
+    (0x2F) ; #63
+  )
+ )
+
+(method (attrs private ) a()void
+  (limit registers 5)
+  ; this: v4 ([object aw])
+  (line 42)
+  (const/4 v0 0)
+  (label l5d3a2)
+  (iget-object v1 v4 aw.a [array byte])
+  (array-length v1 v1)
+  (if-ge v0 v1 l5d3c4)
+  (line 43)
+  (iget-object v1 v4 aw.c [array byte])
+  (iget-object v2 v4 aw.a [array byte])
+  (aget-byte v2 v2 v0)
+  (int-to-byte v3 v0)
+  (aput-byte v3 v1 v2)
+  (line 42)
+  (add-int/lit8 v0 v0 1)
+  (goto l5d3a2)
+  (label l5d3c4)
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public final ) a([array byte] int int [object java/io/OutputStream] )int
+  (limit registers 14)
+  ; this: v9 ([object aw])
+  ; parameter[0] : v10 ([array byte])
+  ; parameter[1] : v11 (int)
+  ; parameter[2] : v12 (int)
+  ; parameter[3] : v13 ([object java/io/OutputStream])
+  (const/4 v0 0)
+  (line 60)
+  (rem-int/lit8 v2 v12 3)
+  (line 61)
+  (sub-int v3 v12 v2)
+  (move v1 v0)
+  (label l5d3e4)
+  (line 64)
+  (add-int/lit8 v4 v3 0)
+  (if-ge v1 v4 l5d472)
+  (line 65)
+  (aget-byte v4 v10 v1)
+  (and-int/lit16 v4 v4 255)
+  (line 66)
+  (add-int/lit8 v5 v1 1)
+  (aget-byte v5 v10 v5)
+  (and-int/lit16 v5 v5 255)
+  (line 67)
+  (add-int/lit8 v6 v1 2)
+  (aget-byte v6 v10 v6)
+  (and-int/lit16 v6 v6 255)
+  (line 69)
+  (iget-object v7 v9 aw.a [array byte])
+  (ushr-int/lit8 v8 v4 2)
+  (and-int/lit8 v8 v8 63)
+  (aget-byte v7 v7 v8)
+  (invoke-virtual {v13 v7} java/io/OutputStream/write int )
+  (line 70)
+  (iget-object v7 v9 aw.a [array byte])
+  (shl-int/lit8 v4 v4 4)
+  (ushr-int/lit8 v8 v5 4)
+  (or-int/2addr v4 v8)
+  (and-int/lit8 v4 v4 63)
+  (aget-byte v4 v7 v4)
+  (invoke-virtual {v13 v4} java/io/OutputStream/write int )
+  (line 71)
+  (iget-object v4 v9 aw.a [array byte])
+  (shl-int/lit8 v5 v5 2)
+  (ushr-int/lit8 v7 v6 6)
+  (or-int/2addr v5 v7)
+  (and-int/lit8 v5 v5 63)
+  (aget-byte v4 v4 v5)
+  (invoke-virtual {v13 v4} java/io/OutputStream/write int )
+  (line 72)
+  (iget-object v4 v9 aw.a [array byte])
+  (and-int/lit8 v5 v6 63)
+  (aget-byte v4 v4 v5)
+  (invoke-virtual {v13 v4} java/io/OutputStream/write int )
+  (line 64)
+  (add-int/lit8 v1 v1 3)
+  (goto l5d3e4)
+  (label l5d472)
+  (line 81)
+  (packed-switch v2 0
+    ps5d472_5d478 ; case 0
+    ps5d472_5d488 ; case 1
+    ps5d472_5d4d6 ; case 2
+    ps5d472_default) ; default
+  (label l5d478)
+  (label ps5d472_default)
+  (label ps5d472_5d478)
+  (line 109)
+  (div-int/lit8 v1 v3 3)
+  (mul-int/lit8 v1 v1 4)
+  (if-nez v2 l5d546)
+  (label l5d484)
+  (add-int/2addr v0 v1)
+  (return v0)
+  (label ps5d472_5d488)
+  (line 85)
+  (add-int/lit8 v1 v3 0)
+  (aget-byte v1 v10 v1)
+  (and-int/lit16 v1 v1 255)
+  (line 86)
+  (ushr-int/lit8 v4 v1 2)
+  (and-int/lit8 v4 v4 63)
+  (line 87)
+  (shl-int/lit8 v1 v1 4)
+  (and-int/lit8 v1 v1 63)
+  (line 89)
+  (iget-object v5 v9 aw.a [array byte])
+  (aget-byte v4 v5 v4)
+  (invoke-virtual {v13 v4} java/io/OutputStream/write int )
+  (line 90)
+  (iget-object v4 v9 aw.a [array byte])
+  (aget-byte v1 v4 v1)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (line 91)
+  (iget-byte v1 v9 aw.b byte)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (line 92)
+  (iget-byte v1 v9 aw.b byte)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (goto l5d478)
+  (label ps5d472_5d4d6)
+  (line 95)
+  (add-int/lit8 v1 v3 0)
+  (aget-byte v1 v10 v1)
+  (and-int/lit16 v1 v1 255)
+  (line 96)
+  (add-int/lit8 v4 v3 0)
+  (add-int/lit8 v4 v4 1)
+  (aget-byte v4 v10 v4)
+  (and-int/lit16 v4 v4 255)
+  (line 98)
+  (ushr-int/lit8 v5 v1 2)
+  (and-int/lit8 v5 v5 63)
+  (line 99)
+  (shl-int/lit8 v1 v1 4)
+  (ushr-int/lit8 v6 v4 4)
+  (or-int/2addr v1 v6)
+  (and-int/lit8 v1 v1 63)
+  (line 100)
+  (shl-int/lit8 v4 v4 2)
+  (and-int/lit8 v4 v4 63)
+  (line 102)
+  (iget-object v6 v9 aw.a [array byte])
+  (aget-byte v5 v6 v5)
+  (invoke-virtual {v13 v5} java/io/OutputStream/write int )
+  (line 103)
+  (iget-object v5 v9 aw.a [array byte])
+  (aget-byte v1 v5 v1)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (line 104)
+  (iget-object v1 v9 aw.a [array byte])
+  (aget-byte v1 v1 v4)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (line 105)
+  (iget-byte v1 v9 aw.b byte)
+  (invoke-virtual {v13 v1} java/io/OutputStream/write int )
+  (goto l5d478)
+  (label l5d546)
+  (line 109)
+  (const/4 v0 4)
+  (goto l5d484)
+  (line 81)
+  (label l5d54a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

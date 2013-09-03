@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/feed_error_view" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/feed_error_view_contents" android:background="@color/white" android:paddingTop="@dimen/publisher_height" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/feed_error_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/no_connection_connect_icon" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/error_message_title" android:gravity="center" android:id="@id/feed_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+            <ImageView android:id="@id/feed_error_retry_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_connection_retry_icon" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/error_message_details" android:id="@id/feed_error_retry_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/tap_to_retry" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

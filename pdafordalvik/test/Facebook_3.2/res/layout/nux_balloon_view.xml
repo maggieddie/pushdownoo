@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.nux.ui.NuxBalloonView android:background="@drawable/balloon_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_marginRight="22.0dip" android:layout_marginBottom="-40.0dip" android:layout_above="@id/bauble_center_button" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/nux_balloon_view_text_view" android:paddingLeft="13.0dip" android:paddingRight="13.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="285.0dip" android:text="@string/dash_nux_balloon_text" android:shadowColor="@color/black25a" android:shadowDy="-2.0" android:shadowRadius="0.25" />
+</com.facebook.dash.nux.ui.NuxBalloonView>

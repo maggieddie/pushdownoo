@@ -1,0 +1,38 @@
+(class (attrs ) com/facebook/orca/j/d
+ (super java/lang/Object)
+ (source "TempFileManager.java")
+ (implements java/io/FilenameFilter)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/j/d])
+  (line 216)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) accept([object java/io/File] [object java/lang/String] )boolean
+  (limit registers 6)
+  ; this: v3 ([object com/facebook/orca/j/d])
+  ; parameter[0] : v4 ([object java/io/File])
+  ; parameter[1] : v5 ([object java/lang/String])
+  (const/4 v0 0)
+  (line 221)
+  (const-string v1 ".")
+  (invoke-virtual {v5 v1} java/lang/String/lastIndexOf [object java/lang/String] )
+  (move-result v1)
+  (invoke-virtual {v5 v0 v1} java/lang/String/substring int int )
+  (move-result-object v1)
+  (line 222)
+  (if-eqz v1 l1d3630)
+  (const-string v2 "_tmp")
+  (invoke-virtual {v1 v2} java/lang/String/endsWith [object java/lang/String] )
+  (move-result v1)
+  (if-eqz v1 l1d3630)
+  (const/4 v0 1)
+  (label l1d3630)
+  (return v0)
+)
+
+)

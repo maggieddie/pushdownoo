@@ -1,0 +1,26 @@
+(class (attrs public final ) android_src/c/e
+ (super java/lang/Object)
+ (source "Telephony.java")
+ (implements android_src/c/b)
+
+ (field (attrs public static final ) a [object android/net/Uri] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 1430)
+  (const-string v0 "content://mms/drafts")
+  (invoke-static {v0} android/net/Uri/parse [object java/lang/String] )
+  (move-result-object v0)
+  (sput-object v0 android_src/c/e.a [object android/net/Uri])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android_src/c/e])
+  (line 1425)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

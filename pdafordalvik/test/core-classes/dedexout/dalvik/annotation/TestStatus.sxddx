@@ -68,7 +68,7 @@
   (limit registers 1)
   (line 25)
   (sget-object v0 dalvik/annotation/TestStatus.$VALUES [array [object dalvik/annotation/TestStatus]])
-  (invoke-virtual-quick {v0} java/lang/Object/clone )
+  (invoke-virtual-quick {v0} vtable #0x0)
   (move-result-object v0)
   (check-cast v0 [array [object dalvik/annotation/TestStatus]])
   (return-object v0)

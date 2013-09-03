@@ -1,0 +1,41 @@
+(class (attrs public ) org/andengine/util/exception/DeviceNotSupportedException
+ (super org/andengine/util/exception/AndEngineException)
+ (source "DeviceNotSupportedException.java")
+
+ (field (attrs private static final ) serialVersionUID long -140038273); 0xf7a72f7f )
+ (field (attrs private final ) mDeviceNotSupportedCause [object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause] )
+
+(method (attrs public ) <init>([object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/exception/DeviceNotSupportedException])
+  ; parameter[0] : v1 ([object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause])
+  (line 27)
+  (invoke-direct {v0} org/andengine/util/exception/AndEngineException/<init> )
+  (line 29)
+  (iput-object v1 v0 org/andengine/util/exception/DeviceNotSupportedException.mDeviceNotSupportedCause [object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause])
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause] [object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/util/exception/DeviceNotSupportedException])
+  ; parameter[0] : v1 ([object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause])
+  ; parameter[1] : v2 ([object java/lang/Throwable])
+  (line 33)
+  (invoke-direct {v0 v2} org/andengine/util/exception/AndEngineException/<init> [object java/lang/Throwable] )
+  (line 35)
+  (iput-object v1 v0 org/andengine/util/exception/DeviceNotSupportedException.mDeviceNotSupportedCause [object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause])
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) getDeviceNotSupportedCause()[object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/exception/DeviceNotSupportedException])
+  (line 43)
+  (iget-object v0 v1 org/andengine/util/exception/DeviceNotSupportedException.mDeviceNotSupportedCause [object org/andengine/util/exception/DeviceNotSupportedException$DeviceNotSupportedCause])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,60 @@
+(interface (attrs public abstract ) com/bbn/map/Projection
+ (super java/lang/Object)
+ (source "Projection.java")
+
+
+(method (attrs public abstract ) getAngleUp()int
+)
+
+(method (attrs public abstract ) getProjectionDimension()[object com/bbn/geometry/DimensionF]
+)
+
+(method (attrs public abstract ) getViewDimension()[object com/bbn/geometry/DimensionL]
+)
+
+(method (attrs public abstract ) getViewOffsetX()long
+)
+
+(method (attrs public abstract ) getViewOffsetY()long
+)
+
+(method (attrs public abstract ) getZoomLevel()int
+)
+
+(method (attrs public abstract ) metersToEquatorPixels(float )float
+)
+
+(method (attrs public abstract ) offsetView(long long )void
+)
+
+(method (attrs public abstract ) projectProjToView([object com/bbn/geometry/PointD] [object com/bbn/geometry/PointL] )[object com/bbn/geometry/PointL]
+)
+
+(method (attrs public abstract ) projectProjToWorld([object com/bbn/geometry/PointD] [object com/bbn/map/LatLon] )[object com/bbn/map/LatLon]
+)
+
+(method (attrs public abstract ) projectViewToProj([object com/bbn/geometry/PointL] [object com/bbn/geometry/PointD] )[object com/bbn/geometry/PointD]
+)
+
+(method (attrs public abstract ) projectViewToWorld([object com/bbn/geometry/PointL] [object com/bbn/geometry/PointD] [object com/bbn/map/LatLon] )[object com/bbn/map/LatLon]
+)
+
+(method (attrs public abstract ) projectWorldToProj([object com/bbn/map/LatLon] [object com/bbn/geometry/PointD] )[object com/bbn/geometry/PointD]
+)
+
+(method (attrs public abstract ) projectWorldToView([object com/bbn/map/LatLon] [object com/bbn/geometry/PointD] [object com/bbn/geometry/PointL] )[object com/bbn/geometry/PointL]
+)
+
+(method (attrs public abstract ) rotateCanvasDimension([object com/bbn/geometry/Dimension] )[object com/bbn/geometry/Dimension]
+)
+
+(method (attrs public abstract ) scaleView(int )void
+)
+
+(method (attrs public abstract ) setAngleUp(int )void
+)
+
+(method (attrs public abstract ) setViewOffset(long long )void
+)
+
+)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.feed.ui.footer.FeedbackCustomPressStateButton android:gravity="center" android:orientation="horizontal" android:id="@id/feed_feedback_like_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" orca:buttonType="like" />
+    <View android:id="@id/feed_feedback_comment_divider" android:background="@color/feed_feedback_action_button_bar_divider_color" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+    <com.facebook.feed.ui.footer.FeedbackCustomPressStateButton android:gravity="center" android:orientation="horizontal" android:id="@id/feed_feedback_comment_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" orca:buttonType="comment" />
+    <View android:id="@id/feed_feedback_share_divider" android:background="@color/feed_feedback_action_button_bar_divider_color" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+    <com.facebook.feed.ui.footer.FeedbackCustomPressStateButton android:gravity="center" android:orientation="horizontal" android:id="@id/feed_feedback_share_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" orca:buttonType="share" />
+</merge>

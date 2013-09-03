@@ -1,0 +1,51 @@
+(class (attrs ) com/facebook/contacts/contactcard/i
+ (super java/lang/Object)
+ (source "ContactCardFragment.java")
+ (implements java/util/concurrent/Callable)
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/contacts/contactcard/ContactCardFragment] )
+
+(method (attrs ) <init>([object com/facebook/contacts/contactcard/ContactCardFragment] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/contacts/contactcard/i])
+  ; parameter[0] : v1 ([object com/facebook/contacts/contactcard/ContactCardFragment])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 787)
+  (iput-object v1 v0 com/facebook/contacts/contactcard/i.b [object com/facebook/contacts/contactcard/ContactCardFragment])
+  (iput-object v2 v0 com/facebook/contacts/contactcard/i.a [object java/lang/String])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object android/net/Uri]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/contacts/contactcard/i])
+  (line 790)
+  (sget-object v0 android/provider/ContactsContract$Contacts.CONTENT_LOOKUP_URI [object android/net/Uri])
+  (iget-object v1 v2 com/facebook/contacts/contactcard/i.a [object java/lang/String])
+  (invoke-static {v1} android/net/Uri/encode [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-static {v0 v1} android/net/Uri/withAppendedPath [object android/net/Uri] [object java/lang/String] )
+  (move-result-object v0)
+  (line 793)
+  (iget-object v1 v2 com/facebook/contacts/contactcard/i.b [object com/facebook/contacts/contactcard/ContactCardFragment])
+  (invoke-virtual {v1} com/facebook/contacts/contactcard/ContactCardFragment/n )
+  (move-result-object v1)
+  (invoke-virtual {v1} android/content/Context/getContentResolver )
+  (move-result-object v1)
+  (invoke-static {v1 v0} android/provider/ContactsContract$Contacts/lookupContact [object android/content/ContentResolver] [object android/net/Uri] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) call()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/contactcard/i])
+  (line 787)
+  (invoke-virtual {v1} com/facebook/contacts/contactcard/i/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

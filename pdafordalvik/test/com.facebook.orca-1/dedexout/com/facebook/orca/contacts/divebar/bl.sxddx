@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/orca/contacts/divebar/bl
+ (super java/lang/Object)
+ (source "DivebarViewListener.java")
+
+
+(method (attrs public abstract ) a()void
+)
+
+(method (attrs public abstract ) a([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/orca/threads/ThreadSummary] boolean [object com/facebook/contacts/picker/ad] [object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) a([object com/facebook/user/UserWithIdentifier] boolean [object com/facebook/contacts/picker/ad] [object java/lang/String] int )boolean
+)
+
+)

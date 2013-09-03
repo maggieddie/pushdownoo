@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/app_category_filter" android:background="@drawable/appcenter_category_filter_background" android:padding="@dimen/appcenter_browse_filter_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/appcenter_category_filter_height" android:contentDescription="@string/appcenter_browse_category_filter_description"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/app_selected_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/category_filter" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_small_padding" android:src="@drawable/arrow" android:layout_toRightOf="@id/app_selected_category" android:layout_centerVertical="true" />
+</RelativeLayout>

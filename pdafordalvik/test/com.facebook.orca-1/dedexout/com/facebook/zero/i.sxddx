@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/zero/i
+ (super com/facebook/inject/d)
+ (source "ZeroModule.java")
+
+ (field (attrs final ) a [object com/facebook/zero/c] )
+
+(method (attrs private ) <init>([object com/facebook/zero/c] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/zero/i])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  (line 201)
+  (iput-object v1 v0 com/facebook/zero/i.a [object com/facebook/zero/c])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/zero/c] [object com/facebook/zero/d] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/zero/i])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  ; parameter[1] : v2 ([object com/facebook/zero/d])
+  (line 201)
+  (invoke-direct {v0 v1} com/facebook/zero/i/<init> [object com/facebook/zero/c] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/zero/ui/o]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/zero/i])
+  (line 205)
+  (new-instance v2 com/facebook/zero/ui/o)
+  (const-class v0 com/facebook/prefs/shared/d)
+  (invoke-virtual {v5 v0} com/facebook/zero/i/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/d])
+  (const-class v1 com/facebook/zero/d/a)
+  (invoke-virtual {v5 v1} com/facebook/zero/i/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/zero/d/a])
+  (const-class v3 com/facebook/common/w/q)
+  (const-class v4 com/facebook/zero/annotations/IsUserCurrentlyZeroRated)
+  (invoke-virtual {v5 v3 v4} com/facebook/zero/i/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v3)
+  (invoke-direct {v2 v0 v1 v3} com/facebook/zero/ui/o/<init> [object com/facebook/prefs/shared/d] [object com/facebook/zero/d/a] [object javax/inject/a] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/i])
+  (line 201)
+  (invoke-virtual {v1} com/facebook/zero/i/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

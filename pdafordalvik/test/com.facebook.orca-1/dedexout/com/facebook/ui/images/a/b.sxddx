@@ -1,0 +1,46 @@
+(class (attrs ) com/facebook/ui/images/a/b
+ (super java/lang/Object)
+ (source "ImageAttachmentDecoder.java")
+ (implements com/google/common/b/j)
+
+ (field (attrs final ) a [object java/io/File] )
+ (field (attrs final ) b [object com/facebook/ui/images/a/a] )
+
+(method (attrs ) <init>([object com/facebook/ui/images/a/a] [object java/io/File] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/ui/images/a/b])
+  ; parameter[0] : v1 ([object com/facebook/ui/images/a/a])
+  ; parameter[1] : v2 ([object java/io/File])
+  (line 164)
+  (iput-object v1 v0 com/facebook/ui/images/a/b.b [object com/facebook/ui/images/a/a])
+  (iput-object v2 v0 com/facebook/ui/images/a/b.a [object java/io/File])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/io/OutputStream]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/ui/images/a/b])
+  (line 167)
+  (iget-object v0 v3 com/facebook/ui/images/a/b.b [object com/facebook/ui/images/a/a])
+  (invoke-static {v0} com/facebook/ui/images/a/a/a [object com/facebook/ui/images/a/a] )
+  (move-result-object v0)
+  (iget-object v1 v3 com/facebook/ui/images/a/b.a [object java/io/File])
+  (invoke-virtual {v1} java/io/File/getName )
+  (move-result-object v1)
+  (const/4 v2 0)
+  (invoke-virtual {v0 v1 v2} android/content/Context/openFileOutput [object java/lang/String] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/images/a/b])
+  (line 164)
+  (invoke-virtual {v1} com/facebook/ui/images/a/b/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

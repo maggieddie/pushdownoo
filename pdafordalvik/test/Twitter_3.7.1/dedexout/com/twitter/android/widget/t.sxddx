@@ -1,0 +1,27 @@
+(class (attrs public ) com/twitter/android/widget/t
+ (super android/text/style/CharacterStyle)
+ (source "Twttr")
+ (implements android/text/style/UpdateAppearance)
+
+ (field (attrs private final ) a int )
+
+(method (attrs public final ) a()int
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/widget/t])
+  (line 20)
+  (iget v0 v1 com/twitter/android/widget/t.a int)
+  (return v0)
+)
+
+(method (attrs public ) updateDrawState([object android/text/TextPaint] )void
+  (limit registers 3)
+  ; this: v1 ([object com/twitter/android/widget/t])
+  ; parameter[0] : v2 ([object android/text/TextPaint])
+  (line 16)
+  (iget v0 v2 android/text/TextPaint.linkColor int)
+  (invoke-virtual {v2 v0} android/text/TextPaint/setColor int )
+  (line 17)
+  (return-void )
+)
+
+)

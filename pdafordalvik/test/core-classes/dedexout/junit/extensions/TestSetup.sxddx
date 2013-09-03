@@ -21,7 +21,7 @@
   (new-instance v0 junit/extensions/TestSetup$1)
   (invoke-direct {v0 v1 v2} junit/extensions/TestSetup$1/<init> [object junit/extensions/TestSetup] [object junit/framework/TestResult] )
   (line 23)
-  (invoke-virtual-quick {v2 v1 v0} junit/framework/TestResult/runProtected [object junit/framework/Test] [object junit/framework/Protectable] )
+  (invoke-virtual-quick {v2 v1 v0} vtable #0x16)
   (line 24)
   (return-void )
 )

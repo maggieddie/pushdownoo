@@ -1,0 +1,56 @@
+(class (attrs ) com/google/common/a/hf
+ (super com/google/common/a/w)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object java/lang/Object] )
+ (field (attrs final ) b [object com/google/common/a/he] )
+
+(method (attrs ) <init>([object com/google/common/a/he] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/hf])
+  ; parameter[0] : v1 ([object com/google/common/a/he])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 1012)
+  (iput-object v1 v0 com/google/common/a/hf.b [object com/google/common/a/he])
+  (iput-object v2 v0 com/google/common/a/hf.a [object java/lang/Object])
+  (invoke-direct {v0} com/google/common/a/w/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/hf])
+  (line 1018)
+  (iget-object v0 v2 com/google/common/a/hf.b [object com/google/common/a/he])
+  (iget-object v0 v0 com/google/common/a/he.b [object com/google/common/a/hd])
+  (iget-object v0 v0 com/google/common/a/hd.a [object com/google/common/a/gw])
+  (iget-object v1 v2 com/google/common/a/hf.a [object java/lang/Object])
+  (invoke-virtual {v0 v1} com/google/common/a/gw/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/hf])
+  (line 1014)
+  (iget-object v0 v1 com/google/common/a/hf.a [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) getValue()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/hf])
+  (line 1012)
+  (invoke-virtual {v1} com/google/common/a/hf/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

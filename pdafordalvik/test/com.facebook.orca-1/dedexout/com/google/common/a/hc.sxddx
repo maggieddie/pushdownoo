@@ -1,0 +1,116 @@
+(class (attrs ) com/google/common/a/hc
+ (super java/util/AbstractMap)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs ) a [object java/util/Set] )
+ (field (attrs final ) b [object com/google/common/a/gw] )
+
+(method (attrs ) <init>([object com/google/common/a/gw] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/hc])
+  ; parameter[0] : v1 ([object com/google/common/a/gw])
+  (line 1039)
+  (iput-object v1 v0 com/google/common/a/hc.b [object com/google/common/a/gw])
+  (invoke-direct {v0} java/util/AbstractMap/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/hc])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1058)
+  (iget-object v0 v2 com/google/common/a/hc.b [object com/google/common/a/gw])
+  (invoke-virtual {v0 v3} com/google/common/a/gw/b [object java/lang/Object] )
+  (move-result-object v0)
+  (line 1059)
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v1)
+  (if-eqz v1 l393b72)
+  (const/4 v0 0)
+  (label l393b72)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/hc])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1063)
+  (iget-object v0 v2 com/google/common/a/hc.b [object com/google/common/a/gw])
+  (invoke-virtual {v0 v3} com/google/common/a/gw/a [object java/lang/Object] )
+  (move-result-object v0)
+  (line 1064)
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v1)
+  (if-eqz v1 l393b9e)
+  (const/4 v0 0)
+  (label l393b9e)
+  (return-object v0)
+)
+
+(method (attrs public ) containsKey([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/hc])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1053)
+  (iget-object v0 v1 com/google/common/a/hc.b [object com/google/common/a/gw])
+  (invoke-virtual {v0 v2} com/google/common/a/gw/f [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/a/hc])
+  (line 1043)
+  (iget-object v0 v3 com/google/common/a/hc.a [object java/util/Set])
+  (line 1044)
+  (if-nez v0 l393bec)
+  (line 1045)
+  (new-instance v0 com/google/common/a/hd)
+  (iget-object v1 v3 com/google/common/a/hc.b [object com/google/common/a/gw])
+  (const/4 v2 0)
+  (invoke-direct {v0 v1 v2} com/google/common/a/hd/<init> [object com/google/common/a/gw] [object com/google/common/a/gx] )
+  (iput-object v0 v3 com/google/common/a/hc.a [object java/util/Set])
+  (label l393bec)
+  (line 1047)
+  (return-object v0)
+)
+
+(method (attrs public ) get([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/hc])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1039)
+  (invoke-virtual {v1 v2} com/google/common/a/hc/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/hc])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1039)
+  (invoke-virtual {v1 v2} com/google/common/a/hc/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

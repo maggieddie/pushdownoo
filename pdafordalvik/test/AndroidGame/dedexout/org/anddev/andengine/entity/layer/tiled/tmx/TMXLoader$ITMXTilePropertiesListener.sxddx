@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/layer/tiled/tmx/TMXLoader$ITMXTilePropertiesListener
+ (super java/lang/Object)
+ (source "TMXLoader.java")
+
+
+(method (attrs public abstract ) onTMXTileWithPropertiesCreated([object org/anddev/andengine/entity/layer/tiled/tmx/TMXTiledMap] [object org/anddev/andengine/entity/layer/tiled/tmx/TMXLayer] [object org/anddev/andengine/entity/layer/tiled/tmx/TMXTile] [object org/anddev/andengine/entity/layer/tiled/tmx/TMXProperties] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/entity/layer/tiled/tmx/TMXTiledMap;"  "Lorg/anddev/andengine/entity/layer/tiled/tmx/TMXLayer;"  "Lorg/anddev/andengine/entity/layer/tiled/tmx/TMXTile;"  "Lorg/anddev/andengine/entity/layer/tiled/tmx/TMXProperties"  "<"  "Lorg/anddev/andengine/entity/layer/tiled/tmx/TMXTileProperty;"  ">;)V")
+  )
+)
+
+)

@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/fbservice/ops/s
+ (super com/facebook/common/d/a)
+ (source "DefaultBlueServiceOperationFactory.java")
+
+ (field (attrs final ) a [object com/facebook/fbservice/ops/r] )
+
+(method (attrs ) <init>([object com/facebook/fbservice/ops/r] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/ops/s])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/ops/r])
+  (line 257)
+  (iput-object v1 v0 com/facebook/fbservice/ops/s.a [object com/facebook/fbservice/ops/r])
+  (invoke-direct {v0} com/facebook/common/d/a/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) b()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/fbservice/ops/s])
+  (line 260)
+  (iget-object v0 v2 com/facebook/fbservice/ops/s.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0} com/facebook/fbservice/ops/r/d [object com/facebook/fbservice/ops/r] )
+  (line 261)
+  (iget-object v0 v2 com/facebook/fbservice/ops/s.a [object com/facebook/fbservice/ops/r])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/fbservice/ops/r/a [object com/facebook/fbservice/ops/r] [object com/facebook/fbservice/service/w] )
+  (line 262)
+  (iget-object v0 v2 com/facebook/fbservice/ops/s.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0} com/facebook/fbservice/ops/r/e [object com/facebook/fbservice/ops/r] )
+  (line 265)
+  (iget-object v0 v2 com/facebook/fbservice/ops/s.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0} com/facebook/fbservice/ops/r/f [object com/facebook/fbservice/ops/r] )
+  (move-result-object v0)
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} com/facebook/fbservice/ops/z/cancel boolean )
+  (line 266)
+  (return-void )
+)
+
+)

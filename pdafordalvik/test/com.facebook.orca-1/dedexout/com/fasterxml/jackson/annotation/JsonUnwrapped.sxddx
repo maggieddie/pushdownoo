@@ -1,0 +1,16 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonUnwrapped
+ (super java/lang/Object)
+ (source "JsonUnwrapped.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) enabled()boolean
+)
+
+(method (attrs public abstract ) prefix()[object java/lang/String]
+)
+
+(method (attrs public abstract ) suffix()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,64 @@
+(class (attrs final ) com/a/a/ad
+ (super com/a/b/a)
+ (source "PreHoneycombCompat.java")
+
+
+(method (attrs ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/a/a/ad])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 54)
+  (invoke-direct {v0 v1} com/a/b/a/<init> [object java/lang/String] )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/view/View] )[object java/lang/Float]
+  (limit registers 3)
+  ; this: v1 ([object com/a/a/ad])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 62)
+  (invoke-static {v2} com/a/c/a/a/a [object android/view/View] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/a/c/a/a/getTranslationY )
+  (move-result v0)
+  (invoke-static {v0} java/lang/Float/valueOf float )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/a/a/ad])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 54)
+  (check-cast v2 [object android/view/View])
+  (invoke-virtual {v1 v2} com/a/a/ad/a [object android/view/View] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object android/view/View] float )void
+  (limit registers 4)
+  ; this: v1 ([object com/a/a/ad])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (float)
+  (line 57)
+  (invoke-static {v2} com/a/c/a/a/a [object android/view/View] )
+  (move-result-object v0)
+  (invoke-virtual {v0 v3} com/a/c/a/a/setTranslationY float )
+  (line 58)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/Object] float )void
+  (limit registers 3)
+  ; this: v0 ([object com/a/a/ad])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (float)
+  (line 54)
+  (check-cast v1 [object android/view/View])
+  (invoke-virtual {v0 v1 v2} com/a/a/ad/a [object android/view/View] float )
+  (return-void )
+)
+
+)

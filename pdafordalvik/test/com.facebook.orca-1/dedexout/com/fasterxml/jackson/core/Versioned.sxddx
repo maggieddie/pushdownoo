@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/core/Versioned
+ (super java/lang/Object)
+ (source "Versioned.java")
+
+
+(method (attrs public abstract ) version()[object com/fasterxml/jackson/core/Version]
+)
+
+)

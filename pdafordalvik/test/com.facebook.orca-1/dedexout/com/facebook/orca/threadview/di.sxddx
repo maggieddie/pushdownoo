@@ -1,0 +1,43 @@
+(class (attrs ) com/facebook/orca/threadview/di
+ (super java/lang/Object)
+ (source "ThreadViewMessageFragment.java")
+ (implements android/widget/AdapterView$OnItemClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/ThreadViewMessageFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/ThreadViewMessageFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/di])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/ThreadViewMessageFragment])
+  (line 349)
+  (iput-object v1 v0 com/facebook/orca/threadview/di.a [object com/facebook/orca/threadview/ThreadViewMessageFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onItemClick([object android/widget/AdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+  (limit registers 8)
+  ; this: v2 ([object com/facebook/orca/threadview/di])
+  ; parameter[0] : v3 ([object android/widget/AdapterView])
+  ; parameter[1] : v4 ([object android/view/View])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 (long)
+  (line 352)
+  (invoke-virtual {v3 v5} android/widget/AdapterView/getItemAtPosition int )
+  (move-result-object v0)
+  (line 353)
+  (instance-of v1 v0 com/facebook/orca/threadview/ai)
+  (if-eqz v1 l25b75a)
+  (line 354)
+  (iget-object v1 v2 com/facebook/orca/threadview/di.a [object com/facebook/orca/threadview/ThreadViewMessageFragment])
+  (check-cast v0 [object com/facebook/orca/threadview/ai])
+  (invoke-static {v1 v0} com/facebook/orca/threadview/ThreadViewMessageFragment/a [object com/facebook/orca/threadview/ThreadViewMessageFragment] [object com/facebook/orca/threadview/ai] )
+  (label l25b75a)
+  (line 356)
+  (return-void )
+)
+
+)

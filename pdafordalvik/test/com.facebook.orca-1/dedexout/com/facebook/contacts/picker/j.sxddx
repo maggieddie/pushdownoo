@@ -1,0 +1,68 @@
+(class (attrs ) com/facebook/contacts/picker/j
+ (super java/lang/Object)
+ (source "ContactPickerCascadingFilter.java")
+
+ (field (attrs private final ) a [object com/facebook/contacts/picker/u] )
+ (field (attrs private ) b [object com/facebook/contacts/picker/l] )
+ (field (attrs private ) c [object com/facebook/widget/a/j] )
+
+(method (attrs public ) <init>([object com/facebook/contacts/picker/u] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/picker/j])
+  ; parameter[0] : v2 ([object com/facebook/contacts/picker/u])
+  (line 29)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 27)
+  (sget-object v0 com/facebook/widget/a/j.FINISHED [object com/facebook/widget/a/j])
+  (iput-object v0 v1 com/facebook/contacts/picker/j.c [object com/facebook/widget/a/j])
+  (line 30)
+  (iput-object v2 v1 com/facebook/contacts/picker/j.a [object com/facebook/contacts/picker/u])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/contacts/picker/u]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/j])
+  (line 34)
+  (iget-object v0 v1 com/facebook/contacts/picker/j.a [object com/facebook/contacts/picker/u])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/contacts/picker/l] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/j])
+  ; parameter[0] : v1 ([object com/facebook/contacts/picker/l])
+  (line 38)
+  (iput-object v1 v0 com/facebook/contacts/picker/j.b [object com/facebook/contacts/picker/l])
+  (line 39)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/widget/a/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/j])
+  ; parameter[0] : v1 ([object com/facebook/widget/a/j])
+  (line 46)
+  (iput-object v1 v0 com/facebook/contacts/picker/j.c [object com/facebook/widget/a/j])
+  (line 47)
+  (return-void )
+)
+
+(method (attrs public ) b()[object com/facebook/contacts/picker/l]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/j])
+  (line 42)
+  (iget-object v0 v1 com/facebook/contacts/picker/j.b [object com/facebook/contacts/picker/l])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object com/facebook/widget/a/j]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/j])
+  (line 50)
+  (iget-object v0 v1 com/facebook/contacts/picker/j.c [object com/facebook/widget/a/j])
+  (return-object v0)
+)
+
+)

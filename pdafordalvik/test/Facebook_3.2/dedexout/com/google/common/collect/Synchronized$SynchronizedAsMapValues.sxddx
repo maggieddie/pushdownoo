@@ -1,0 +1,39 @@
+(class (attrs ) com/google/common/collect/Synchronized$SynchronizedAsMapValues
+ (super com/google/common/collect/Synchronized$SynchronizedCollection)
+ (source "Synchronized.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs ) <init>([object java/util/Collection] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<"  "Ljava/util/Collection"  "<TV;>;>;"  "Ljava/lang/Object;"  ")V")
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/Synchronized$SynchronizedAsMapValues])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 1200)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/collect/Synchronized$SynchronizedCollection/<init> [object java/util/Collection] [object java/lang/Object] [object com/google/common/collect/Synchronized$1] )
+  (line 1201)
+  (return-void )
+ )
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/Synchronized$SynchronizedAsMapValues])
+  (line 1205)
+  (invoke-super {v2} com/google/common/collect/Synchronized$SynchronizedCollection/iterator )
+  (move-result-object v0)
+  (line 1206)
+  (new-instance v1 com/google/common/collect/Synchronized$SynchronizedAsMapValues$1)
+  (invoke-direct {v1 v2 v0} com/google/common/collect/Synchronized$SynchronizedAsMapValues$1/<init> [object com/google/common/collect/Synchronized$SynchronizedAsMapValues] [object java/util/Iterator] )
+  (return-object v1)
+)
+
+)

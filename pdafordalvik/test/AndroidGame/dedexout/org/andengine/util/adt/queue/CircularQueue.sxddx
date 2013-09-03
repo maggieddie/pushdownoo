@@ -1,0 +1,97 @@
+(class (attrs public ) org/andengine/util/adt/queue/CircularQueue
+ (super org/andengine/util/adt/list/CircularList)
+ (source "CircularQueue.java")
+ (implements org/andengine/util/adt/queue/IQueue)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/adt/queue/CircularQueue])
+  (line 25)
+  (invoke-direct {v0} org/andengine/util/adt/list/CircularList/<init> )
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/queue/CircularQueue])
+  ; parameter[0] : v1 (int)
+  (line 29)
+  (invoke-direct {v0 v1} org/andengine/util/adt/list/CircularList/<init> int )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) enter(int [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/util/adt/queue/CircularQueue])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 65)
+  (invoke-virtual {v0 v1 v2} org/andengine/util/adt/queue/CircularQueue/add int [object java/lang/Object] )
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) enter([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/queue/CircularQueue])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 60)
+  (invoke-virtual {v0 v1} org/andengine/util/adt/queue/CircularQueue/add [object java/lang/Object] )
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) peek()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/queue/CircularQueue])
+  (line 42)
+  (invoke-virtual {v1} org/andengine/util/adt/queue/CircularQueue/isEmpty )
+  (move-result v0)
+  (if-eqz v0 l9f28c)
+  (line 43)
+  (const/4 v0 0)
+  (label l9f28a)
+  (line 45)
+  (return-object v0)
+  (label l9f28c)
+  (const/4 v0 0)
+  (invoke-virtual {v1 v0} org/andengine/util/adt/queue/CircularQueue/get int )
+  (move-result-object v0)
+  (goto l9f28a)
+)
+
+(method (attrs public ) poll()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/queue/CircularQueue])
+  (line 51)
+  (invoke-virtual {v1} org/andengine/util/adt/queue/CircularQueue/isEmpty )
+  (move-result v0)
+  (if-eqz v0 l9f2b8)
+  (line 52)
+  (const/4 v0 0)
+  (label l9f2b6)
+  (line 54)
+  (return-object v0)
+  (label l9f2b8)
+  (const/4 v0 0)
+  (invoke-virtual {v1 v0} org/andengine/util/adt/queue/CircularQueue/remove int )
+  (move-result-object v0)
+  (goto l9f2b6)
+)
+
+)

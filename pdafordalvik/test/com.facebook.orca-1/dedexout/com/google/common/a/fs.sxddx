@@ -1,0 +1,46 @@
+(class (attrs ) com/google/common/a/fs
+ (super com/google/common/a/mh)
+ (source "ImmutableSortedMap.java")
+
+ (field (attrs final ) a [object com/google/common/a/mh] )
+ (field (attrs final ) b [object com/google/common/a/fp] )
+
+(method (attrs ) <init>([object com/google/common/a/fp] [object com/google/common/a/mh] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/fs])
+  ; parameter[0] : v1 ([object com/google/common/a/fp])
+  ; parameter[1] : v2 ([object com/google/common/a/mh])
+  (line 546)
+  (iput-object v1 v0 com/google/common/a/fs.b [object com/google/common/a/fp])
+  (iput-object v2 v0 com/google/common/a/fs.a [object com/google/common/a/mh])
+  (invoke-direct {v0} com/google/common/a/mh/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/fs])
+  (line 549)
+  (iget-object v0 v1 com/google/common/a/fs.a [object com/google/common/a/mh])
+  (invoke-virtual {v0} com/google/common/a/mh/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/fs])
+  (line 553)
+  (iget-object v0 v1 com/google/common/a/fs.a [object com/google/common/a/mh])
+  (invoke-virtual {v0} com/google/common/a/mh/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (invoke-interface {v0} java/util/Map$Entry/getValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

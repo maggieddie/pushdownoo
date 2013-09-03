@@ -1,0 +1,77 @@
+(class (attrs public final ) com/facebook/reflex/animation/PropertyName
+ (super java/lang/Object)
+ (source "PropertyName.java")
+
+ (field (attrs private final ) mNativePtr int )
+
+(method (attrs public ) <init>([object com/facebook/reflex/animation/PropertyName] [object com/facebook/reflex/animation/b] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/animation/PropertyName])
+  ; parameter[0] : v2 ([object com/facebook/reflex/animation/PropertyName])
+  ; parameter[1] : v3 ([object com/facebook/reflex/animation/b])
+  (line 22)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 23)
+  (invoke-virtual {v3} com/facebook/reflex/animation/b/ordinal )
+  (move-result v0)
+  (invoke-direct {v1 v2 v0} com/facebook/reflex/animation/PropertyName/fromField [object com/facebook/reflex/animation/PropertyName] int )
+  (move-result v0)
+  (iput v0 v1 com/facebook/reflex/animation/PropertyName.mNativePtr int)
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/animation/PropertyName])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 15)
+  (invoke-direct {v1 v2} com/facebook/reflex/animation/PropertyName/fromString [object java/lang/String] )
+  (move-result v0)
+  (iput v0 v1 com/facebook/reflex/animation/PropertyName.mNativePtr int)
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] [object com/facebook/reflex/animation/b] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/animation/PropertyName])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object com/facebook/reflex/animation/b])
+  (line 19)
+  (new-instance v0 com/facebook/reflex/animation/PropertyName)
+  (invoke-direct {v0 v2} com/facebook/reflex/animation/PropertyName/<init> [object java/lang/String] )
+  (invoke-direct {v1 v0 v3} com/facebook/reflex/animation/PropertyName/<init> [object com/facebook/reflex/animation/PropertyName] [object com/facebook/reflex/animation/b] )
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs private native ) fromField([object com/facebook/reflex/animation/PropertyName] int )int
+ )
+
+(method (attrs private native ) fromString([object java/lang/String] )int
+ )
+
+(method (attrs private native ) withParent([object com/facebook/reflex/animation/PropertyName] [object java/lang/String] )int
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/reflex/animation/PropertyName])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 35)
+  (iget v0 v2 com/facebook/reflex/animation/PropertyName.mNativePtr int)
+  (check-cast v3 [object com/facebook/reflex/animation/PropertyName])
+  (iget v1 v3 com/facebook/reflex/animation/PropertyName.mNativePtr int)
+  (if-ne v0 v1 l1a6120)
+  (const/4 v0 1)
+  (label l1a611e)
+  (return v0)
+  (label l1a6120)
+  (const/4 v0 0)
+  (goto l1a611e)
+)
+
+)

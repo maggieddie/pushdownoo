@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/message_divider_container" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="18.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_vertical" android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_weight="1.0" />
+    <com.facebook.widget.text.BetterTextView android:textSize="9.0sp" android:textStyle="bold" android:textColor="#ff9ca0a7" android:id="@id/message_divider_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+    <View android:layout_gravity="center_vertical" android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_weight="1.0" />
+</LinearLayout>

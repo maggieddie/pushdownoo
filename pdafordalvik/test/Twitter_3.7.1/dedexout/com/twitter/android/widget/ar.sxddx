@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/twitter/android/widget/ar
+ (super java/lang/Object)
+ (source "Twttr")
+
+
+(method (attrs public abstract ) a([object com/twitter/android/api/Promotion] )void
+)
+
+(method (attrs public abstract ) a([object com/twitter/android/api/TweetMedia] )void
+)
+
+(method (attrs public abstract ) a([object com/twitter/android/widget/c] [object com/twitter/android/api/UrlEntity] )void
+)
+
+(method (attrs public abstract ) d([object java/lang/String] )void
+)
+
+)

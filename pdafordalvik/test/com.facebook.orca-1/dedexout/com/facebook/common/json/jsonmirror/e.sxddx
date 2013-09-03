@@ -1,0 +1,16 @@
+(class (attrs public ) com/facebook/common/json/jsonmirror/e
+ (super java/lang/Exception)
+ (source "JMException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/json/jsonmirror/e])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 16)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 17)
+  (return-void )
+ )
+
+)

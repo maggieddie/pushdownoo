@@ -1,0 +1,58 @@
+(class (attrs public ) org/andengine/util/modifier/ease/EaseCircularIn
+ (super java/lang/Object)
+ (source "EaseCircularIn.java")
+ (implements org/andengine/util/modifier/ease/IEaseFunction)
+
+ (field (attrs private static ) INSTANCE [object org/andengine/util/modifier/ease/EaseCircularIn] )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/modifier/ease/EaseCircularIn])
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public static ) getInstance()[object org/andengine/util/modifier/ease/EaseCircularIn]
+  (limit registers 1)
+  (line 33)
+  (sget-object v0 org/andengine/util/modifier/ease/EaseCircularIn.INSTANCE [object org/andengine/util/modifier/ease/EaseCircularIn])
+  (if-nez v0 l8d0a2)
+  (line 34)
+  (new-instance v0 org/andengine/util/modifier/ease/EaseCircularIn)
+  (invoke-direct {v0} org/andengine/util/modifier/ease/EaseCircularIn/<init> )
+  (sput-object v0 org/andengine/util/modifier/ease/EaseCircularIn.INSTANCE [object org/andengine/util/modifier/ease/EaseCircularIn])
+  (label l8d0a2)
+  (line 36)
+  (sget-object v0 org/andengine/util/modifier/ease/EaseCircularIn.INSTANCE [object org/andengine/util/modifier/ease/EaseCircularIn])
+  (return-object v0)
+ )
+
+(method (attrs public static ) getValue(float )float
+  (limit registers 3)
+  ; parameter[0] : v2 (float)
+  (const/high16 v1 16256)
+  (line 57)
+  (mul-float v0 v2 v2)
+  (sub-float v0 v1 v0)
+  (invoke-static {v0} android/util/FloatMath/sqrt float )
+  (move-result v0)
+  (sub-float/2addr v0 v1)
+  (neg-float v0 v0)
+  (return v0)
+ )
+
+(method (attrs public ) getPercentage(float float )float
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/modifier/ease/EaseCircularIn])
+  ; parameter[0] : v2 (float)
+  ; parameter[1] : v3 (float)
+  (line 49)
+  (div-float v0 v2 v3)
+  (invoke-static {v0} org/andengine/util/modifier/ease/EaseCircularIn/getValue float )
+  (move-result v0)
+  (return v0)
+)
+
+)

@@ -392,7 +392,7 @@
   (label l1284b2)
   (line 712)
   (sget-object v0 java/lang/StrictMath.random [object java/util/Random])
-  (invoke-virtual-quick {v0} java/util/Random/nextDouble )
+  (invoke-virtual-quick {v0} vtable #0xe)
   (move-result-wide v0)
   (return-wide v0)
  )

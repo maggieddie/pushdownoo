@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.katana.ui.ListenableRelativeLayout android:orientation="horizontal" android:id="@id/rootLayout" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/solid_white" android:id="@id/tag_instruction" android:background="@drawable/tag_instruction_bg" android:padding="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_tag_instruction" android:layout_centerInParent="true" />
+            <ProgressBar android:id="@id/image_downloading" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/imageview_camera_review" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <VideoView android:id="@id/videoview_camera_review" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <Button android:id="@id/button_camera_video_play" android:background="@drawable/camera_review_video_play_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:baselineAligned="false">
+            <View android:gravity="bottom" android:layout_gravity="bottom" android:background="@color/camera_borders_and_dividers" android:layout_width="0.6600001dip" android:layout_height="fill_parent" android:alpha="0.2" />
+            <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:id="@id/gray_bar" android:background="@color/camera_gray_bar" android:clickable="true" android:layout_width="106.0dip" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/photo_camera_accept_box" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center" android:id="@id/button_camera_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_review_accept_button" />
+                </LinearLayout>
+                <View android:gravity="center_vertical" android:layout_gravity="center" android:background="@color/camera_borders_and_dividers" android:layout_width="80.0dip" android:layout_height="0.6600001dip" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/photo_camera_reject_box" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center" android:id="@id/button_camera_reject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_review_reject_button" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/tag_typeahead" android:background="@color/camera_gray_bar" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_weight="1.0">
+        <AutoCompleteTextView android:textColor="#ffc1c0c2" android:layout_gravity="center" android:id="@id/tag_text" android:background="@color/camera_gray_bar" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="@string/photo_tag_typeahead_prompt" android:maxLines="1" android:minLines="1" android:completionThreshold="1" android:popupBackground="@color/camera_review_typeahead_suggests" android:layout_centerVertical="true" android:inputType="textNoSuggestions" android:imeOptions="actionDone" />
+        <ImageView android:id="@id/tagging_x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/tag_typeahead_x" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:alpha="0.3" />
+        <View android:id="@id/tag_anchor" android:background="@color/camera_borders_and_dividers" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/photo_tags" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.facebook.katana.ui.ListenableRelativeLayout>

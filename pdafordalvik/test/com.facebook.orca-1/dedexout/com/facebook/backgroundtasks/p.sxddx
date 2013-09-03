@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/backgroundtasks/p
+ (super java/lang/Object)
+ (source "BackgroundTaskRunner.java")
+
+ (field (attrs final ) a [object com/facebook/backgroundtasks/c] )
+ (field (attrs ) b boolean )
+
+(method (attrs private ) <init>([object com/facebook/backgroundtasks/c] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/backgroundtasks/p])
+  ; parameter[0] : v1 ([object com/facebook/backgroundtasks/c])
+  (line 92)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 93)
+  (iput-object v1 v0 com/facebook/backgroundtasks/p.a [object com/facebook/backgroundtasks/c])
+  (line 94)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/backgroundtasks/c] [object com/facebook/backgroundtasks/k] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/backgroundtasks/p])
+  ; parameter[0] : v1 ([object com/facebook/backgroundtasks/c])
+  ; parameter[1] : v2 ([object com/facebook/backgroundtasks/k])
+  (line 88)
+  (invoke-direct {v0 v1} com/facebook/backgroundtasks/p/<init> [object com/facebook/backgroundtasks/c] )
+  (return-void )
+ )
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/p])
+  (line 98)
+  (iget-object v0 v1 com/facebook/backgroundtasks/p.a [object com/facebook/backgroundtasks/c])
+  (invoke-interface {v0} com/facebook/backgroundtasks/c/f )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public final ) com/android/videogame/R$id
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ControlLayout int 2131230725); 0x7f080005 )
+ (field (attrs public static final ) app_name int 2131230723); 0x7f080003 )
+ (field (attrs public static final ) bExit int 2131230730); 0x7f08000a )
+ (field (attrs public static final ) click int 2131230721); 0x7f080001 )
+ (field (attrs public static final ) image_ref int 2131230722); 0x7f080002 )
+ (field (attrs public static final ) mAbout int 2131230735); 0x7f08000f )
+ (field (attrs public static final ) mGCRegister int 2131230736); 0x7f080010 )
+ (field (attrs public static final ) mPicture int 2131230732); 0x7f08000c )
+ (field (attrs public static final ) mQuit int 2131230738); 0x7f080012 )
+ (field (attrs public static final ) mSettings int 2131230731); 0x7f08000b )
+ (field (attrs public static final ) mSound int 2131230734); 0x7f08000e )
+ (field (attrs public static final ) mUnregister int 2131230737); 0x7f080011 )
+ (field (attrs public static final ) mVideo int 2131230733); 0x7f08000d )
+ (field (attrs public static final ) sbSpeed int 2131230727); 0x7f080007 )
+ (field (attrs public static final ) spMovement int 2131230729); 0x7f080009 )
+ (field (attrs public static final ) textView1 int 2131230720); 0x7f080000 )
+ (field (attrs public static final ) textView2 int 2131230728); 0x7f080008 )
+ (field (attrs public static final ) tvSpeed int 2131230726); 0x7f080006 )
+ (field (attrs public static final ) videoView1 int 2131230724); 0x7f080004 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/android/videogame/R$id])
+  (line 20)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

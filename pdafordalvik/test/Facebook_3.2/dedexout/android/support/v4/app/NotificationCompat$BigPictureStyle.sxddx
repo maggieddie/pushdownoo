@@ -1,0 +1,49 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$BigPictureStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) a [object android/graphics/Bitmap] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  (line 615)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 616)
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/graphics/Bitmap] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v1 ([object android/graphics/Bitmap])
+  (line 644)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigPictureStyle.a [object android/graphics/Bitmap])
+  (line 645)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 627)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigPictureStyle.c [object java/lang/CharSequence])
+  (line 628)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigPictureStyle]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$BigPictureStyle])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 635)
+  (iput-object v2 v1 android/support/v4/app/NotificationCompat$BigPictureStyle.d [object java/lang/CharSequence])
+  (line 636)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 android/support/v4/app/NotificationCompat$BigPictureStyle.e boolean)
+  (line 637)
+  (return-object v1)
+)
+
+)

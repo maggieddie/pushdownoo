@@ -1,0 +1,158 @@
+(class (attrs public ) org/andengine/entity/particle/initializer/AccelerationParticleInitializer
+ (super org/andengine/entity/particle/initializer/BaseDoubleValueParticleInitializer)
+ (source "AccelerationParticleInitializer.java")
+
+
+(method (attrs public ) <init>(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  (line 27)
+  (invoke-direct {v0 v1 v1} org/andengine/entity/particle/initializer/AccelerationParticleInitializer/<init> float float )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 31)
+  (invoke-direct {v0 v1 v1 v2 v2} org/andengine/entity/particle/initializer/AccelerationParticleInitializer/<init> float float float float )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float float )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  (line 35)
+  (invoke-direct {v0 v1 v2 v3 v4} org/andengine/entity/particle/initializer/BaseDoubleValueParticleInitializer/<init> float float float float )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) getMaxAccelerationX()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  (line 47)
+  (iget v0 v1 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValue float)
+  (return v0)
+)
+
+(method (attrs public ) getMaxAccelerationY()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  (line 55)
+  (iget v0 v1 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValueB float)
+  (return v0)
+)
+
+(method (attrs public ) getMinAccelerationX()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  (line 43)
+  (iget v0 v1 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValue float)
+  (return v0)
+)
+
+(method (attrs public ) getMinAccelerationY()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  (line 51)
+  (iget v0 v1 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValueB float)
+  (return v0)
+)
+
+(method (attrs public ) onInitializeParticle([object org/andengine/entity/particle/Particle] float float )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/entity/particle/Particle"  "<TT;>;FF)V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v2 ([object org/andengine/entity/particle/Particle])
+  ; parameter[1] : v3 (float)
+  ; parameter[2] : v4 (float)
+  (line 91)
+  (invoke-virtual {v2} org/andengine/entity/particle/Particle/getPhysicsHandler )
+  (move-result-object v0)
+  (invoke-virtual {v0 v3 v4} org/andengine/engine/handler/physics/PhysicsHandler/accelerate float float )
+  (line 92)
+  (return-void )
+)
+
+(method (attrs public ) setAcceleration(float float float float )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  (line 79)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValue float)
+  (line 80)
+  (iput v2 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValue float)
+  (line 81)
+  (iput v3 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValueB float)
+  (line 82)
+  (iput v4 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValueB float)
+  (line 83)
+  (return-void )
+)
+
+(method (attrs public ) setAccelerationX(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  (line 59)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValue float)
+  (line 60)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValue float)
+  (line 61)
+  (return-void )
+)
+
+(method (attrs public ) setAccelerationX(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 69)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValue float)
+  (line 70)
+  (iput v2 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValue float)
+  (line 71)
+  (return-void )
+)
+
+(method (attrs public ) setAccelerationY(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  (line 64)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValueB float)
+  (line 65)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValueB float)
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) setAccelerationY(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/particle/initializer/AccelerationParticleInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 74)
+  (iput v1 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMinValueB float)
+  (line 75)
+  (iput v2 v0 org/andengine/entity/particle/initializer/AccelerationParticleInitializer.mMaxValueB float)
+  (line 76)
+  (return-void )
+)
+
+)

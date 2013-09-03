@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/menu_background_transparent_black" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/two_px" />
+    <TableLayout android:layout_gravity="center_horizontal" android:id="@id/custom_menu_table" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="*" />
+</LinearLayout>

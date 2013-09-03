@@ -18,7 +18,7 @@
   ; parameter[0] : v5 ([object java/lang/Object])
   (line 53)
   (check-cast v5 [object java/util/Date])
-  (invoke-virtual-quick {v5} java/util/Date/getTime )
+  (invoke-virtual-quick {v5} vtable #0x15)
   (move-result-wide v0)
   (const-wide v2 2524608000000) ; 0x24bce5cf000)
   (cmp-long v0 v0 v2)

@@ -1,0 +1,52 @@
+(class (attrs public abstract ) org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier
+ (super org/anddev/andengine/util/modifier/BaseTripleValueSpanModifier)
+ (source "TripleValueSpanEntityModifier.java")
+ (implements org/anddev/andengine/entity/modifier/IEntityModifier)
+
+
+(method (attrs public ) <init>(float float float float float float float [object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 10)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  ; parameter[4] : v5 (float)
+  ; parameter[5] : v6 (float)
+  ; parameter[6] : v7 (float)
+  ; parameter[7] : v8 ([object org/anddev/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  ; parameter[8] : v9 ([object org/anddev/andengine/util/modifier/ease/IEaseFunction])
+  (line 32)
+  (invoke-direct/range {v0 .. v9} org/anddev/andengine/util/modifier/BaseTripleValueSpanModifier/<init> float float float float float float float [object org/anddev/andengine/util/modifier/IModifier$IModifierListener] [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float float float float float float [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )void
+  (limit registers 9)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  ; parameter[4] : v5 (float)
+  ; parameter[5] : v6 (float)
+  ; parameter[6] : v7 (float)
+  ; parameter[7] : v8 ([object org/anddev/andengine/util/modifier/ease/IEaseFunction])
+  (line 28)
+  (invoke-direct/range {v0 .. v8} org/anddev/andengine/util/modifier/BaseTripleValueSpanModifier/<init> float float float float float float float [object org/anddev/andengine/util/modifier/ease/IEaseFunction] )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/modifier/TripleValueSpanEntityModifier])
+  (line 36)
+  (invoke-direct {v0 v1} org/anddev/andengine/util/modifier/BaseTripleValueSpanModifier/<init> [object org/anddev/andengine/util/modifier/BaseTripleValueSpanModifier] )
+  (line 37)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/fbservice/service/n
+ (super java/lang/Object)
+ (source "BlueServiceQueueHook.java")
+
+
+(method (attrs public abstract ) a([object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;"  "Lcom/facebook/fbservice/service/ac;"  ")V")
+  )
+)
+
+(method (attrs public abstract ) a([object java/lang/Class] [object com/facebook/fbservice/service/ac] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;"  "Lcom/facebook/fbservice/service/ac;"  ")V")
+  )
+)
+
+)

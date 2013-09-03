@@ -8,6 +8,7 @@ import org.ucombinator.dalvik.exceptionhandling.ExceptionHandling
 import org.ucombinator.dalvik.statistics.Statistics
 import org.ucombinator.dalvik.informationflow.DalInformationFlow
 import org.ucombinator.playhelpers.AnalysisHelperThread
+import org.ucombinator.utils.ForIntentFuzzerUtil
 
 /**
  * Part of the logic from StackCESK is extracted to this trait
@@ -68,13 +69,36 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
         // get the className from the method name is not sound actually for non-static
 
         
-          Statistics.recordCallObjs(buildStForEqual(ivkS), objVals.toList.map(_.toString))
+       Statistics.recordCallObjs(buildStForEqual(ivkS), objVals.toList.map(_.toString))
           
+       // for intent fuzzer
+       if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.forIntentFuzzer){
+        // println("IntentFuzzer: " + methPath + "--" + stForEqual.clsPath + "--" + stForEqual.methPath)
+           
+        val argVals = argRegExps map (atomEval(_, fp, s))
+         
+         if(argVals.length > 0) {
+           val objVal = argVals.head
+           val strKeys = getPossibleStrings(objVal, s)
+           //println("....argVal; ", argVals.head)
+            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, strKeys)
+         }
+         
+         else{
+           // empty domain
+          // println("....empty val")
+            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, Set[String]())
+         }
+        
+       }
            /**
          * It is possible that the objVals are empty!
          */
          if (objVals.isEmpty) {
-        
+           if( !AnalysisScope.isExclusive(methPath)){
+        	 NonNullUtils.trackNullRefDuringConstrs(ivkS)
+        	// println("EMPTY OBJTS" + methPath)
+           }
           Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k))
         } 
           
@@ -520,12 +544,12 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       // igetfield
       case FieldAssignStmt(destReg: RegisterExp, fieldExp: NonStaticFieldExp, _, _, _,_) => {
         Debug.prntDebugInfo("@igetfield ", fieldS)
-        fieldAssignHandleHelperI(true, fieldExp, destReg, s, pst, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperI(true, fieldS, fieldExp, destReg, s, pst, nxt, fp, kptr, tp, k)
       }
       // iputfield
       case FieldAssignStmt(fieldExp: NonStaticFieldExp, srcReg: RegisterExp, _, _, _,_) => { 
     	// println("iputField!!!" , fieldS)
-        fieldAssignHandleHelperI(false, fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperI(false, fieldS, fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
       }
       // Sgetfield 
       case FieldAssignStmt(destReg: RegisterExp, fieldExp: StaticFieldExp, _, _,_,_) => {
@@ -535,7 +559,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       // Sputfield
       case FieldAssignStmt(fieldExp: StaticFieldExp, srcReg: RegisterExp, _, _, _,_) => {
         Debug.prntDebugInfo("@Sputfield ", fieldS)
-        fieldAssignHandleHelperS(false, fieldS ,fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
+        fieldAssignHandleHelperS(false,  fieldS ,fieldExp, srcReg, s, pst, nxt, fp, kptr, tp, k)
       }
       case _ => {
         throw new SemanticException("the field assginment statement type error!" + fieldS.toString())
@@ -594,7 +618,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
    * for iget and iput
    */
 
-  def fieldAssignHandleHelperI(isInstanceGet: Boolean, fieldExp: NonStaticFieldExp, srcOrDestReg: RegisterExp, 
+  def fieldAssignHandleHelperI(isInstanceGet: Boolean, fieldAssignStmt: FieldAssignStmt, fieldExp: NonStaticFieldExp, srcOrDestReg: RegisterExp, 
       s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {
     
     val objRegExp = fieldExp.objExp
@@ -611,6 +635,9 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
     val objVals = filterObjValues(vals, s)
 
     if(objVals.isEmpty) {
+      if(isInstanceGet){ 
+        NonNullUtils.trackNullRefDuringConstrs(fieldAssignStmt)
+      }
         Set ((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, tp), k))
     } else {
     
@@ -653,6 +680,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
        val objectPropertyVals = storeLookup(pst, fp.offset(objRegE.regStr))
        
       if (isInstanceGet) {
+        
         val fieldVals = storeLookup(s, fieldAddr)
       
         val newStore = storeUpdate(s, List((srcOrDestAddr, fieldVals)))

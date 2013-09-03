@@ -1,0 +1,41 @@
+(class (attrs ) com/facebook/orca/notify/o
+ (super java/lang/Object)
+ (source "InAppMessagingNotificationHandler.java")
+ (implements com/facebook/orca/activity/d)
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/orca/notify/j] )
+
+(method (attrs ) <init>([object com/facebook/orca/notify/j] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/notify/o])
+  ; parameter[0] : v1 ([object com/facebook/orca/notify/j])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 294)
+  (iput-object v1 v0 com/facebook/orca/notify/o.b [object com/facebook/orca/notify/j])
+  (iput-object v2 v0 com/facebook/orca/notify/o.a [object java/lang/String])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(boolean )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/notify/o])
+  ; parameter[0] : v3 (boolean)
+  (line 298)
+  (if-eqz v3 l27cf48)
+  (line 299)
+  (iget-object v0 v2 com/facebook/orca/notify/o.b [object com/facebook/orca/notify/j])
+  (iget-object v1 v2 com/facebook/orca/notify/o.a [object java/lang/String])
+  (invoke-static {v0 v1} com/facebook/orca/notify/j/a [object com/facebook/orca/notify/j] [object java/lang/String] )
+  (label l27cf46)
+  (line 303)
+  (return-void )
+  (label l27cf48)
+  (line 301)
+  (iget-object v0 v2 com/facebook/orca/notify/o.b [object com/facebook/orca/notify/j])
+  (invoke-static {v0} com/facebook/orca/notify/j/c [object com/facebook/orca/notify/j] )
+  (goto l27cf46)
+)
+
+)

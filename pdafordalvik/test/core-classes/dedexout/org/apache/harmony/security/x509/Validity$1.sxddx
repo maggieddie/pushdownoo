@@ -17,7 +17,7 @@
   ; this: v4 ([object org/apache/harmony/security/x509/Validity$1])
   ; parameter[0] : v5 ([object org/apache/harmony/security/asn1/BerInputStream])
   (line 98)
-  (iget-object-quick v4 v5 org/apache/harmony/security/asn1/BerInputStream.content [object java/lang/Object])
+  (iget-object-quick v4 v5 )
   (check-cast v4 [array [object java/lang/Object]])
   (move-object v0 v4)
   (check-cast v0 [array [object java/lang/Object]])

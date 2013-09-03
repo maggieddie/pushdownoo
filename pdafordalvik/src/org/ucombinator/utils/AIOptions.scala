@@ -45,9 +45,14 @@ class AIOptions {
  
   // currently for Android core library, not for Android apps
   var doNotNullCheck = false
-  
   var unlinkedNonNull = false
- 
+  var initTopNull = false
+  
+ // for intent fuzzer
+  var forIntentFuzzer = false
+  
+  
+  
   var doRegex = false
   var regex: Regex = null
 
@@ -216,11 +221,25 @@ object AIOptions {
         parse(rest, opts)
       }
 
+      // this option should be after the above two
+       case "--init-topNull" :: rest => {
+        if(opts.doNotNullCheck){
+         opts.initTopNull = true
+        }
+        parse(rest, opts)
+      }
+       
+       // this option should be after the above two
+       case "--for-intent-fuzzer" :: rest => {
+    	   opts.forIntentFuzzer = true
+    	   parse(rest, opts)
+      } 
+       
       case "--analysis" :: a :: rest => {
         opts.analysis = a
         parse(rest, opts)
       }
-
+       
       case "--print-states" :: "true" :: rest => {
         opts.printStates = true
         parse(rest, opts)

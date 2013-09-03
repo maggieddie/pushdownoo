@@ -1,0 +1,35 @@
+(class (attrs public ) com/facebook/orca/background/c
+ (super com/facebook/orca/background/d)
+ (source "FetchOwnedStickerPacksBackgroundTask.java")
+
+ (field (attrs private static final ) a [object java/lang/Class] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 16)
+  (const-class v0 com/facebook/orca/background/c)
+  (sput-object v0 com/facebook/orca/background/c.a [object java/lang/Class])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/facebook/auth/b/b] [object com/facebook/fbservice/ops/k] [object com/facebook/prefs/shared/d] [object com/facebook/common/time/a] )void
+  (limit registers 12)
+  ; this: v7 ([object com/facebook/orca/background/c])
+  ; parameter[0] : v8 ([object com/facebook/auth/b/b])
+  ; parameter[1] : v9 ([object com/facebook/fbservice/ops/k])
+  ; parameter[2] : v10 ([object com/facebook/prefs/shared/d])
+  ; parameter[3] : v11 ([object com/facebook/common/time/a])
+  (line 23)
+  (const-string v1 "FETCH_OWNED_STICKER_PACKS")
+  (sget-object v3 com/facebook/orca/server/v.USER_PACKS [object com/facebook/orca/server/v])
+  (move-object v0 v7)
+  (move-object v2 v8)
+  (move-object v4 v9)
+  (move-object v5 v10)
+  (move-object v6 v11)
+  (invoke-direct/range {v0 .. v6} com/facebook/orca/background/d/<init> [object java/lang/String] [object com/facebook/auth/b/b] [object com/facebook/orca/server/v] [object com/facebook/fbservice/ops/k] [object com/facebook/prefs/shared/d] [object com/facebook/common/time/a] )
+  (line 30)
+  (return-void )
+ )
+
+)

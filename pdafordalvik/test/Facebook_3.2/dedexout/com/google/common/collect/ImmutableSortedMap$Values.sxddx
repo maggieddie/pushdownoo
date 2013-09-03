@@ -1,0 +1,83 @@
+(class (attrs ) com/google/common/collect/ImmutableSortedMap$Values
+ (super com/google/common/collect/ImmutableCollection)
+ (source "ImmutableSortedMap.java")
+
+ (field (attrs private final ) map [object com/google/common/collect/ImmutableSortedMap] )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableSortedMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/ImmutableSortedMap"  "<*TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableSortedMap])
+  (line 562)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (line 563)
+  (iput-object v1 v0 com/google/common/collect/ImmutableSortedMap$Values.map [object com/google/common/collect/ImmutableSortedMap])
+  (line 564)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  (line 572)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedMap$Values.map [object com/google/common/collect/ImmutableSortedMap])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableSortedMap/h )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  (line 580)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 576)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedMap$Values.map [object com/google/common/collect/ImmutableSortedMap])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableSortedMap/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  (line 558)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableSortedMap$Values/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  (line 568)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedMap$Values.map [object com/google/common/collect/ImmutableSortedMap])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableSortedMap/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs ) writeReplace()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableSortedMap$Values])
+  (line 584)
+  (new-instance v0 com/google/common/collect/ImmutableSortedMap$ValuesSerializedForm)
+  (iget-object v1 v2 com/google/common/collect/ImmutableSortedMap$Values.map [object com/google/common/collect/ImmutableSortedMap])
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableSortedMap$ValuesSerializedForm/<init> [object com/google/common/collect/ImmutableSortedMap] )
+  (return-object v0)
+)
+
+)

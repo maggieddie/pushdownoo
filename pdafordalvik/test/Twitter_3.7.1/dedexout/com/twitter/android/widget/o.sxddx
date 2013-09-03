@@ -1,0 +1,40 @@
+(class (attrs final ) com/twitter/android/widget/o
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements android/widget/RadioGroup$OnCheckedChangeListener)
+
+ (field (attrs final ) a [object com/twitter/android/widget/LocalePreference] )
+
+(method (attrs ) <init>([object com/twitter/android/widget/LocalePreference] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/widget/o])
+  ; parameter[0] : v1 ([object com/twitter/android/widget/LocalePreference])
+  (line 106)
+  (iput-object v1 v0 com/twitter/android/widget/o.a [object com/twitter/android/widget/LocalePreference])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) onCheckedChanged([object android/widget/RadioGroup] int )void
+  (limit registers 5)
+  ; this: v2 ([object com/twitter/android/widget/o])
+  ; parameter[0] : v3 ([object android/widget/RadioGroup])
+  ; parameter[1] : v4 (int)
+  (line 109)
+  (iget-object v0 v2 com/twitter/android/widget/o.a [object com/twitter/android/widget/LocalePreference])
+  (invoke-static {v0} com/twitter/android/widget/LocalePreference/a [object com/twitter/android/widget/LocalePreference] )
+  (move-result-object v1)
+  (const v0 2131165333) ; 0x7f070095)
+  (if-ne v4 v0 lec290)
+  (const/4 v0 1)
+  (label lec288)
+  (invoke-virtual {v1 v0} android/widget/Spinner/setEnabled boolean )
+  (line 110)
+  (return-void )
+  (label lec290)
+  (line 109)
+  (const/4 v0 0)
+  (goto lec288)
+)
+
+)

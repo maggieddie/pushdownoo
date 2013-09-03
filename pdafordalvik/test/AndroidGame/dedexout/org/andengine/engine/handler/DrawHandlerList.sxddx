@@ -1,0 +1,52 @@
+(class (attrs public ) org/andengine/engine/handler/DrawHandlerList
+ (super org/andengine/util/adt/list/SmartList)
+ (source "DrawHandlerList.java")
+ (implements org/andengine/engine/handler/IDrawHandler)
+
+ (field (attrs private static final ) serialVersionUID long -658051906); 0xd8c6ecbe )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/engine/handler/DrawHandlerList])
+  (line 28)
+  (invoke-direct {v0} org/andengine/util/adt/list/SmartList/<init> )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/handler/DrawHandlerList])
+  ; parameter[0] : v1 (int)
+  (line 33)
+  (invoke-direct {v0 v1} org/andengine/util/adt/list/SmartList/<init> int )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public ) onDraw([object org/andengine/opengl/util/GLState] [object org/andengine/engine/camera/Camera] )void
+  (limit registers 6)
+  ; this: v3 ([object org/andengine/engine/handler/DrawHandlerList])
+  ; parameter[0] : v4 ([object org/andengine/opengl/util/GLState])
+  ; parameter[1] : v5 ([object org/andengine/engine/camera/Camera])
+  (line 46)
+  (invoke-virtual {v3} org/andengine/engine/handler/DrawHandlerList/size )
+  (move-result v0)
+  (line 47)
+  (add-int/lit8 v1 v0 255)
+  (label l81088)
+  (if-gez v1 l8108e)
+  (line 50)
+  (return-void )
+  (label l8108e)
+  (line 48)
+  (invoke-virtual {v3 v1} org/andengine/engine/handler/DrawHandlerList/get int )
+  (move-result-object v2)
+  (check-cast v2 [object org/andengine/engine/handler/IDrawHandler])
+  (invoke-interface {v2 v4 v5} org/andengine/engine/handler/IDrawHandler/onDraw [object org/andengine/opengl/util/GLState] [object org/andengine/engine/camera/Camera] )
+  (line 47)
+  (add-int/lit8 v1 v1 255)
+  (goto l81088)
+)
+
+)

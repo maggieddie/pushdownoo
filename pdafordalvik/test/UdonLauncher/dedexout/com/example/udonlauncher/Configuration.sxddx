@@ -1,0 +1,19 @@
+(class (attrs public ) com/example/udonlauncher/Configuration
+ (super java/lang/Object)
+ (source "Configuration.java")
+
+ (field (attrs public static final ) CONTENT_TO_MATCH [object java/lang/String] "juPoLk2083" )
+ (field (attrs public static final ) DEFAULT_IP_SERVER [object java/lang/String] "192.168.1.196" )
+ (field (attrs public static final ) FILENAME [object java/lang/String] "update.txt" )
+ (field (attrs public static final ) IP_PORT [object java/lang/String] "8888" )
+ (field (attrs public static final ) UPDATE_URL_FORMAT [object java/lang/String] "http://%s:%s/%s" )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/example/udonlauncher/Configuration])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

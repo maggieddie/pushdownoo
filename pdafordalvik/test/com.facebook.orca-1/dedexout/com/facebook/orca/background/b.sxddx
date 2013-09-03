@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/orca/background/b
+ (super android/content/BroadcastReceiver)
+ (source "FetchOutOfDateThreadsBackgroundTask.java")
+
+ (field (attrs final ) a [object com/facebook/orca/background/a] )
+
+(method (attrs ) <init>([object com/facebook/orca/background/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/background/b])
+  ; parameter[0] : v1 ([object com/facebook/orca/background/a])
+  (line 71)
+  (iput-object v1 v0 com/facebook/orca/background/b.a [object com/facebook/orca/background/a])
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/background/b])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 74)
+  (iget-object v0 v1 com/facebook/orca/background/b.a [object com/facebook/orca/background/a])
+  (invoke-static {v0} com/facebook/orca/background/a/a [object com/facebook/orca/background/a] )
+  (line 75)
+  (return-void )
+)
+
+)

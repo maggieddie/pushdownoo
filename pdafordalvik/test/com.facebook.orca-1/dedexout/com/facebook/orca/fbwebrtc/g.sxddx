@@ -1,0 +1,31 @@
+(class (attrs public ) com/facebook/orca/fbwebrtc/g
+ (super java/lang/Object)
+ (source "MessageCache.java")
+
+ (field (attrs public final ) a long )
+ (field (attrs public final ) b long )
+ (field (attrs public final ) c long )
+ (field (attrs public final ) d [object java/lang/String] )
+
+(method (attrs public ) <init>(long long long [object java/lang/String] )void
+  (limit registers 8)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/g])
+  ; parameter[0] : v1 (long)
+  ; parameter[1] : v3 (long)
+  ; parameter[2] : v5 (long)
+  ; parameter[3] : v7 ([object java/lang/String])
+  (line 23)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 24)
+  (iput-wide v1 v0 com/facebook/orca/fbwebrtc/g.a long)
+  (line 25)
+  (iput-wide v3 v0 com/facebook/orca/fbwebrtc/g.b long)
+  (line 26)
+  (iput-wide v5 v0 com/facebook/orca/fbwebrtc/g.c long)
+  (line 27)
+  (iput-object v7 v0 com/facebook/orca/fbwebrtc/g.d [object java/lang/String])
+  (line 28)
+  (return-void )
+ )
+
+)

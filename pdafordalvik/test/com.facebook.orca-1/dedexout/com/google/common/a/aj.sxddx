@@ -1,0 +1,133 @@
+(class (attrs ) com/google/common/a/aj
+ (super com/google/common/a/af)
+ (source "AbstractMultimap.java")
+ (implements java/util/SortedSet)
+
+ (field (attrs final ) c [object com/google/common/a/x] )
+
+(method (attrs ) <init>([object com/google/common/a/x] [object java/util/SortedMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/SortedMap"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/aj])
+  ; parameter[0] : v1 ([object com/google/common/a/x])
+  ; parameter[1] : v2 ([object java/util/SortedMap])
+  (line 951)
+  (iput-object v1 v0 com/google/common/a/aj.c [object com/google/common/a/x])
+  (line 952)
+  (invoke-direct {v0 v1 v2} com/google/common/a/af/<init> [object com/google/common/a/x] [object java/util/Map] )
+  (line 953)
+  (return-void )
+ )
+
+(method (attrs ) b()[object java/util/SortedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/SortedMap"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aj])
+  (line 956)
+  (iget-object v0 v1 com/google/common/a/aj.a [object java/util/Map])
+  (check-cast v0 [object java/util/SortedMap])
+  (return-object v0)
+)
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aj])
+  (line 961)
+  (invoke-virtual {v1} com/google/common/a/aj/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/SortedMap/comparator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) first()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aj])
+  (line 966)
+  (invoke-virtual {v1} com/google/common/a/aj/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/SortedMap/firstKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) headSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedSet"  "<TK;>;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/google/common/a/aj])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 971)
+  (new-instance v0 com/google/common/a/aj)
+  (iget-object v1 v3 com/google/common/a/aj.c [object com/google/common/a/x])
+  (invoke-virtual {v3} com/google/common/a/aj/b )
+  (move-result-object v2)
+  (invoke-interface {v2 v4} java/util/SortedMap/headMap [object java/lang/Object] )
+  (move-result-object v2)
+  (invoke-direct {v0 v1 v2} com/google/common/a/aj/<init> [object com/google/common/a/x] [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) last()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aj])
+  (line 976)
+  (invoke-virtual {v1} com/google/common/a/aj/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/SortedMap/lastKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) subSet([object java/lang/Object] [object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TK;)"  "Ljava/util/SortedSet"  "<TK;>;")
+  )
+  (limit registers 6)
+  ; this: v3 ([object com/google/common/a/aj])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  ; parameter[1] : v5 ([object java/lang/Object])
+  (line 981)
+  (new-instance v0 com/google/common/a/aj)
+  (iget-object v1 v3 com/google/common/a/aj.c [object com/google/common/a/x])
+  (invoke-virtual {v3} com/google/common/a/aj/b )
+  (move-result-object v2)
+  (invoke-interface {v2 v4 v5} java/util/SortedMap/subMap [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v2)
+  (invoke-direct {v0 v1 v2} com/google/common/a/aj/<init> [object com/google/common/a/x] [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) tailSet([object java/lang/Object] )[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/SortedSet"  "<TK;>;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/google/common/a/aj])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 986)
+  (new-instance v0 com/google/common/a/aj)
+  (iget-object v1 v3 com/google/common/a/aj.c [object com/google/common/a/x])
+  (invoke-virtual {v3} com/google/common/a/aj/b )
+  (move-result-object v2)
+  (invoke-interface {v2 v4} java/util/SortedMap/tailMap [object java/lang/Object] )
+  (move-result-object v2)
+  (invoke-direct {v0 v1 v2} com/google/common/a/aj/<init> [object com/google/common/a/x] [object java/util/SortedMap] )
+  (return-object v0)
+)
+
+)

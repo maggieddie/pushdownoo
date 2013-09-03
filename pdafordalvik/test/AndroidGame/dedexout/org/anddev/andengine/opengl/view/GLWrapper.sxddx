@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/opengl/view/GLWrapper
+ (super java/lang/Object)
+ (source "GLWrapper.java")
+
+
+(method (attrs public abstract ) wrap([object javax/microedition/khronos/opengles/GL] )[object javax/microedition/khronos/opengles/GL]
+)
+
+)

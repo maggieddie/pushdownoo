@@ -1,0 +1,7 @@
+(interface (attrs public abstract annotation ) com/facebook/common/init/NeedsLowPriorityInitOnUiThread
+ (super java/lang/Object)
+ (source "NeedsLowPriorityInitOnUiThread.java")
+ (implements java/lang/annotation/Annotation)
+
+
+)

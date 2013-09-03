@@ -1,0 +1,79 @@
+(class (attrs public ) com/facebook/orca/notify/w
+ (super com/facebook/orca/notify/ai)
+ (source "LoggedOutMessageNotification.java")
+
+ (field (attrs private final ) b [object java/lang/String] )
+ (field (attrs private final ) c [object java/lang/String] )
+ (field (attrs private final ) d [object com/facebook/push/g] )
+ (field (attrs private ) e boolean )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object com/facebook/push/g] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/String])
+  ; parameter[2] : v4 ([object com/facebook/push/g])
+  (line 29)
+  (sget-object v0 com/facebook/orca/notify/aj.LOGGED_OUT [object com/facebook/orca/notify/aj])
+  (invoke-direct {v1 v0} com/facebook/orca/notify/ai/<init> [object com/facebook/orca/notify/aj] )
+  (line 30)
+  (iput-object v2 v1 com/facebook/orca/notify/w.b [object java/lang/String])
+  (line 31)
+  (iput-object v3 v1 com/facebook/orca/notify/w.c [object java/lang/String])
+  (line 32)
+  (iput-object v4 v1 com/facebook/orca/notify/w.d [object com/facebook/push/g])
+  (line 33)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  (line 36)
+  (iget-object v0 v1 com/facebook/orca/notify/w.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) a(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/notify/w])
+  ; parameter[0] : v1 (boolean)
+  (line 58)
+  (iput-boolean v1 v0 com/facebook/orca/notify/w.e boolean)
+  (line 59)
+  (return-void )
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  (line 40)
+  (iget-object v0 v1 com/facebook/orca/notify/w.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  (line 45)
+  (iget-object v0 v1 com/facebook/orca/notify/w.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object com/facebook/push/g]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  (line 49)
+  (iget-object v0 v1 com/facebook/orca/notify/w.d [object com/facebook/push/g])
+  (return-object v0)
+)
+
+(method (attrs public ) e()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/w])
+  (line 54)
+  (iget-boolean v0 v1 com/facebook/orca/notify/w.e boolean)
+  (return v0)
+)
+
+)

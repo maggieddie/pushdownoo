@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/chambray_standard_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/page_identity_attribution_image" android:paddingTop="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:scaleType="centerInside" android:layout_alignParentLeft="true" />
+    <com.facebook.pages.identity.ui.text.TextWithEntitiesView android:id="@id/page_identity_attribution_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_toRightOf="@id/page_identity_attribution_image" android:layout_alignTop="@id/page_identity_attribution_image" orca:highlightColor="@color/chambray_text_medium" style="@style/ChambrayText.Light" />
+</RelativeLayout>

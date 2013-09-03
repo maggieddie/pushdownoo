@@ -1,0 +1,58 @@
+(class (attrs ) com/google/common/collect/TransformedImmutableList$TransformedView
+ (super com/google/common/collect/TransformedImmutableList)
+ (source "TransformedImmutableList.java")
+
+ (field (attrs final ) this$0 [object com/google/common/collect/TransformedImmutableList] )
+
+(method (attrs ) <init>([object com/google/common/collect/TransformedImmutableList] [object com/google/common/collect/ImmutableList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/ImmutableList"  "<TD;>;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/TransformedImmutableList$TransformedView])
+  ; parameter[0] : v1 ([object com/google/common/collect/TransformedImmutableList])
+  ; parameter[1] : v2 ([object com/google/common/collect/ImmutableList])
+  (line 36)
+  (iput-object v1 v0 com/google/common/collect/TransformedImmutableList$TransformedView.this$0 [object com/google/common/collect/TransformedImmutableList])
+  (line 37)
+  (invoke-direct {v0 v2} com/google/common/collect/TransformedImmutableList/<init> [object com/google/common/collect/ImmutableList] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs ) b([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TD;)TE;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TransformedImmutableList$TransformedView])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 41)
+  (iget-object v0 v1 com/google/common/collect/TransformedImmutableList$TransformedView.this$0 [object com/google/common/collect/TransformedImmutableList])
+  (invoke-virtual {v0 v2} com/google/common/collect/TransformedImmutableList/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) listIterator(int )[object java/util/ListIterator]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TransformedImmutableList$TransformedView])
+  ; parameter[0] : v2 (int)
+  (line 35)
+  (invoke-super {v1 v2} com/google/common/collect/TransformedImmutableList/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) subList(int int )[object java/util/List]
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/TransformedImmutableList$TransformedView])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 35)
+  (invoke-super {v1 v2 v3} com/google/common/collect/TransformedImmutableList/a int int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

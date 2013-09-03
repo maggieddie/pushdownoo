@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/facebook/analytics/d/a
+ (super java/lang/Object)
+ (source "FeatureStatusReporter.java")
+
+
+(method (attrs public abstract ) a()[object java/lang/String]
+)
+
+(method (attrs public abstract ) b()boolean
+)
+
+(method (attrs public abstract ) c()[object com/fasterxml/jackson/databind/JsonNode]
+)
+
+)

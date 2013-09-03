@@ -1,0 +1,30 @@
+(class (attrs public ) com/facebook/orca/contacts/picker/af
+ (super java/lang/Object)
+ (source "ContactPickerInviteFriendsRow.java")
+ (implements com/facebook/contacts/picker/ad)
+
+ (field (attrs private final ) a [object com/facebook/orca/contacts/picker/aj] )
+
+(method (attrs public ) <init>([object com/facebook/orca/contacts/picker/ag] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/af])
+  ; parameter[0] : v2 ([object com/facebook/orca/contacts/picker/ag])
+  (line 13)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 14)
+  (invoke-virtual {v2} com/facebook/orca/contacts/picker/ag/b )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/orca/contacts/picker/af.a [object com/facebook/orca/contacts/picker/aj])
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/contacts/picker/aj]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/af])
+  (line 18)
+  (iget-object v0 v1 com/facebook/orca/contacts/picker/af.a [object com/facebook/orca/contacts/picker/aj])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,86 @@
+(class (attrs ) com/facebook/orca/chatheads/dm
+ (super java/lang/Object)
+ (source "ChatThreadView.java")
+ (implements com/facebook/orca/threadview/cr)
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/dh] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/dh] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/dh])
+  (line 285)
+  (iput-object v1 v0 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/orca/threads/ThreadSummary] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/orca/threads/ThreadSummary])
+  (line 298)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object com/facebook/orca/threads/ThreadSummary] )
+  (line 299)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/orca/threadview/ct] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/orca/threadview/ct])
+  (line 288)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object com/facebook/orca/threadview/ct] )
+  (line 289)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/orca/threadview/ct] [object com/facebook/orca/threadview/cs] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/orca/threadview/ct])
+  ; parameter[1] : v3 ([object com/facebook/orca/threadview/cs])
+  (line 313)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2 v3} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object com/facebook/orca/threadview/ct] [object com/facebook/orca/threadview/cs] )
+  (line 314)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/orca/threadview/ct] [object com/facebook/orca/threadview/cv] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/orca/threadview/ct])
+  ; parameter[1] : v3 ([object com/facebook/orca/threadview/cv])
+  (line 293)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2 v3} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object com/facebook/orca/threadview/ct] [object com/facebook/orca/threadview/cv] )
+  (line 294)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/user/User] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/user/User])
+  (line 303)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object com/facebook/user/User] )
+  (line 304)
+  (return-void )
+)
+
+(method (attrs public ) b([object com/facebook/orca/threadview/ct] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/dm])
+  ; parameter[0] : v2 ([object com/facebook/orca/threadview/ct])
+  (line 308)
+  (iget-object v0 v1 com/facebook/orca/chatheads/dm.a [object com/facebook/orca/chatheads/dh])
+  (invoke-static {v0 v2} com/facebook/orca/chatheads/dh/b [object com/facebook/orca/chatheads/dh] [object com/facebook/orca/threadview/ct] )
+  (line 309)
+  (return-void )
+)
+
+)

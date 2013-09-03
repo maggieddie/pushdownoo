@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title_layout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:src="@drawable/code_generator" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/text_color" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="18.0dip" android:text="@string/code_generator_about" />
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/text_color" android:gravity="center" android:id="@id/code_generator_activate_auto_provision" android:background="@drawable/code_generator_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="10.0dip" android:text="@string/code_generator_activate_button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

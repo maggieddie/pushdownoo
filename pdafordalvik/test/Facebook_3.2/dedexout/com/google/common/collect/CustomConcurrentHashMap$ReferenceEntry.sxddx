@@ -1,0 +1,87 @@
+(interface (attrs abstract ) com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry
+ (super java/lang/Object)
+ (source "CustomConcurrentHashMap.java")
+
+
+(method (attrs public abstract ) getExpirationTime()long
+)
+
+(method (attrs public abstract ) getHash()int
+)
+
+(method (attrs public abstract ) getKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+)
+
+(method (attrs public abstract ) getNext()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) getNextEvictable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) getNextExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) getPreviousEvictable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) getPreviousExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) getValueReference()[object com/google/common/collect/CustomConcurrentHashMap$ValueReference]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ValueReference"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) setExpirationTime(long )void
+)
+
+(method (attrs public abstract ) setNextEvictable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+)
+
+(method (attrs public abstract ) setNextExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+)
+
+(method (attrs public abstract ) setPreviousEvictable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+)
+
+(method (attrs public abstract ) setPreviousExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+)
+
+(method (attrs public abstract ) setValueReference([object com/google/common/collect/CustomConcurrentHashMap$ValueReference] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ValueReference"  "<TK;TV;>;)V")
+  )
+)
+
+)

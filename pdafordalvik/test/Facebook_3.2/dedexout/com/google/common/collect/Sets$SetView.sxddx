@@ -1,0 +1,23 @@
+(class (attrs public abstract ) com/google/common/collect/Sets$SetView
+ (super java/util/AbstractSet)
+ (source "Sets.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/Sets$SetView])
+  (line 517)
+  (invoke-direct {v0} java/util/AbstractSet/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/google/common/collect/Sets$1] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/Sets$SetView])
+  ; parameter[0] : v1 ([object com/google/common/collect/Sets$1])
+  (line 516)
+  (invoke-direct {v0} com/google/common/collect/Sets$SetView/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/facebook/inject/FbInjectorProvider
+ (super java/lang/Object)
+ (source "FbInjectorProvider.java")
+
+
+(method (attrs public abstract ) g()[object com/facebook/inject/FbInjector]
+)
+
+)

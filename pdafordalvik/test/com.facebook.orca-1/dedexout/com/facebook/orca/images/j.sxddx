@@ -1,0 +1,76 @@
+(class (attrs ) com/facebook/orca/images/j
+ (super com/facebook/orca/photos/picking/i)
+ (source "ThreadIconPickerActivity.java")
+
+ (field (attrs final ) a [object com/facebook/orca/images/ThreadIconPickerActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/images/ThreadIconPickerActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/images/j])
+  ; parameter[0] : v1 ([object com/facebook/orca/images/ThreadIconPickerActivity])
+  (line 71)
+  (iput-object v1 v0 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (invoke-direct {v0} com/facebook/orca/photos/picking/i/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/images/j])
+  (line 81)
+  (iget-object v0 v1 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (invoke-virtual {v0} com/facebook/orca/images/ThreadIconPickerActivity/finish )
+  (line 82)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/ui/media/attachments/MediaResource] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/images/j])
+  ; parameter[0] : v3 ([object com/facebook/ui/media/attachments/MediaResource])
+  (line 74)
+  (new-instance v0 java/io/File)
+  (invoke-virtual {v3} com/facebook/ui/media/attachments/MediaResource/d )
+  (move-result-object v1)
+  (invoke-virtual {v1} android/net/Uri/getPath )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/io/File/<init> [object java/lang/String] )
+  (line 76)
+  (iget-object v1 v2 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (invoke-static {v1 v0} com/facebook/orca/images/ThreadIconPickerActivity/a [object com/facebook/orca/images/ThreadIconPickerActivity] [object java/io/File] )
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) b()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/images/j])
+  (line 86)
+  (iget-object v0 v1 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (invoke-virtual {v0} com/facebook/orca/images/ThreadIconPickerActivity/finish )
+  (line 87)
+  (return-void )
+)
+
+(method (attrs public ) c()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/images/j])
+  (line 91)
+  (iget-object v0 v2 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/orca/images/ThreadIconPickerActivity/a [object com/facebook/orca/images/ThreadIconPickerActivity] [object java/io/File] )
+  (line 92)
+  (return-void )
+)
+
+(method (attrs public ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/images/j])
+  (line 96)
+  (iget-object v0 v1 com/facebook/orca/images/j.a [object com/facebook/orca/images/ThreadIconPickerActivity])
+  (invoke-virtual {v0} com/facebook/orca/images/ThreadIconPickerActivity/finish )
+  (line 97)
+  (return-void )
+)
+
+)

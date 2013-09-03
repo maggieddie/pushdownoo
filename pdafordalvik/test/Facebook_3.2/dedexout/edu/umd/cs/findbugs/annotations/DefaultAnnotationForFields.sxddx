@@ -1,0 +1,15 @@
+(interface (attrs public abstract annotation ) edu/umd/cs/findbugs/annotations/DefaultAnnotationForFields
+ (super java/lang/Object)
+ (source "DefaultAnnotationForFields.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) confidence()[object edu/umd/cs/findbugs/annotations/Confidence]
+)
+
+(method (attrs public abstract ) priority()[object edu/umd/cs/findbugs/annotations/Priority]
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+)

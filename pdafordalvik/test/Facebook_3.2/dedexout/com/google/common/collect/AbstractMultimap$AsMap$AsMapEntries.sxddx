@@ -1,0 +1,82 @@
+(class (attrs ) com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries
+ (super com/google/common/collect/Maps$EntrySet)
+ (source "AbstractMultimap.java")
+
+ (field (attrs final ) a [object com/google/common/collect/AbstractMultimap$AsMap] )
+
+(method (attrs ) <init>([object com/google/common/collect/AbstractMultimap$AsMap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries])
+  ; parameter[0] : v1 ([object com/google/common/collect/AbstractMultimap$AsMap])
+  (line 1244)
+  (iput-object v1 v0 com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries.a [object com/google/common/collect/AbstractMultimap$AsMap])
+  (invoke-direct {v0} com/google/common/collect/Maps$EntrySet/<init> )
+  (return-void )
+ )
+
+(method (attrs ) a()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries])
+  (line 1247)
+  (iget-object v0 v1 com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries.a [object com/google/common/collect/AbstractMultimap$AsMap])
+  (return-object v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1257)
+  (iget-object v0 v1 com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries.a [object com/google/common/collect/AbstractMultimap$AsMap])
+  (iget-object v0 v0 com/google/common/collect/AbstractMultimap$AsMap.a [object java/util/Map])
+  (invoke-interface {v0} java/util/Map/entrySet )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/collect/Collections2/a [object java/util/Collection] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<"  "Ljava/util/Map$Entry"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries])
+  (line 1251)
+  (new-instance v0 com/google/common/collect/AbstractMultimap$AsMap$AsMapIterator)
+  (iget-object v1 v2 com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries.a [object com/google/common/collect/AbstractMultimap$AsMap])
+  (invoke-direct {v0 v1} com/google/common/collect/AbstractMultimap$AsMap$AsMapIterator/<init> [object com/google/common/collect/AbstractMultimap$AsMap] )
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1261)
+  (invoke-virtual {v2 v3} com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries/contains [object java/lang/Object] )
+  (move-result v0)
+  (if-nez v0 lfa654)
+  (line 1262)
+  (const/4 v0 0)
+  (label lfa652)
+  (line 1266)
+  (return v0)
+  (label lfa654)
+  (line 1264)
+  (check-cast v3 [object java/util/Map$Entry])
+  (line 1265)
+  (iget-object v0 v2 com/google/common/collect/AbstractMultimap$AsMap$AsMapEntries.a [object com/google/common/collect/AbstractMultimap$AsMap])
+  (iget-object v0 v0 com/google/common/collect/AbstractMultimap$AsMap.c [object com/google/common/collect/AbstractMultimap])
+  (invoke-interface {v3} java/util/Map$Entry/getKey )
+  (move-result-object v1)
+  (invoke-static {v0 v1} com/google/common/collect/AbstractMultimap/a [object com/google/common/collect/AbstractMultimap] [object java/lang/Object] )
+  (line 1266)
+  (const/4 v0 1)
+  (goto lfa652)
+)
+
+)

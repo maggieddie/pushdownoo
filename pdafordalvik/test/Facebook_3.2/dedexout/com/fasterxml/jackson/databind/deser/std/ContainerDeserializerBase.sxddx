@@ -1,0 +1,28 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/deser/std/ContainerDeserializerBase
+ (super com/fasterxml/jackson/databind/deser/std/StdDeserializer)
+ (source "ContainerDeserializerBase.java")
+
+
+(method (attrs protected ) <init>([object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/std/ContainerDeserializerBase])
+  ; parameter[0] : v1 ([object java/lang/Class])
+  (line 17)
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/deser/std/StdDeserializer/<init> [object java/lang/Class] )
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public abstract ) getContentDeserializer()[object com/fasterxml/jackson/databind/JsonDeserializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/fasterxml/jackson/databind/JsonDeserializer"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) getContentType()[object com/fasterxml/jackson/databind/JavaType]
+)
+
+)

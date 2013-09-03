@@ -1,0 +1,41 @@
+(class (attrs public ) com/bbn/map/ToastEvent
+ (super com/bbn/event/Event)
+ (source "ToastEvent.java")
+
+ (field (attrs private ) delay int )
+ (field (attrs private ) message [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/Object] [object java/lang/String] int )void
+  (limit registers 5)
+  ; this: v1 ([object com/bbn/map/ToastEvent])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/String])
+  ; parameter[2] : v4 (int)
+  (line 15)
+  (const-string v0 "ToastEvent")
+  (invoke-direct {v1 v0 v2} com/bbn/event/Event/<init> [object java/lang/String] [object java/lang/Object] )
+  (line 16)
+  (iput-object v3 v1 com/bbn/map/ToastEvent.message [object java/lang/String])
+  (line 17)
+  (iput v4 v1 com/bbn/map/ToastEvent.delay int)
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) getDelay()int
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/ToastEvent])
+  (line 25)
+  (iget v0 v1 com/bbn/map/ToastEvent.delay int)
+  (return v0)
+)
+
+(method (attrs public ) getMessage()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/ToastEvent])
+  (line 21)
+  (iget-object v0 v1 com/bbn/map/ToastEvent.message [object java/lang/String])
+  (return-object v0)
+)
+
+)

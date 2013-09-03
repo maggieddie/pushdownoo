@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/andengine/entity/text/vbo/ITextVertexBufferObject
+ (super java/lang/Object)
+ (source "ITextVertexBufferObject.java")
+ (implements org/andengine/opengl/vbo/IVertexBufferObject)
+
+
+(method (attrs public abstract ) onUpdateColor([object org/andengine/entity/text/Text] )void
+)
+
+(method (attrs public abstract ) onUpdateVertices([object org/andengine/entity/text/Text] )void
+)
+
+)

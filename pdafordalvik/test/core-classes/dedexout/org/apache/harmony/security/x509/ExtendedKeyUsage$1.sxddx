@@ -22,7 +22,7 @@
   ; this: v3 ([object org/apache/harmony/security/x509/ExtendedKeyUsage$1])
   ; parameter[0] : v4 ([object org/apache/harmony/security/asn1/BerInputStream])
   (line 117)
-  (invoke-super-quick {v3 v4} org/apache/harmony/security/x509/ExtendedKeyUsage$1/getDecodedObject [object org/apache/harmony/security/asn1/BerInputStream] )
+  (invoke-super-quick {v3 v4} vtable #0x13)
   (move-result-object v3)
   (check-cast v3 [array int])
   (move-object v0 v3)

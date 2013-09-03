@@ -13,7 +13,7 @@
   (const/4 v0 1)
   (invoke-direct {v1 v0 v3} org/bouncycastle/crypto/params/DSAKeyParameters/<init> boolean [object org/bouncycastle/crypto/params/DSAParameters] )
   (line 16)
-  (iput-object-quick v2 v1 org/bouncycastle/crypto/params/DSAPrivateKeyParameters.x [object java/math/BigInteger])
+  (iput-object-quick v2 v1 )
   (line 17)
   (return-void )
  )
@@ -22,7 +22,7 @@
   (limit registers 2)
   ; this: v1 ([object org/bouncycastle/crypto/params/DSAPrivateKeyParameters])
   (line 21)
-  (iget-object-quick v0 v1 org/bouncycastle/crypto/params/DSAPrivateKeyParameters.x [object java/math/BigInteger])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

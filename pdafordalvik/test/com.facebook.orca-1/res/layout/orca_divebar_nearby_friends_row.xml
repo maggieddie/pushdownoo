@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/divebar_nearby_friends_row" android:background="@drawable/divebar_contact_bg" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/divebar_nearby_friends_row_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/orca_nearby_icon_large" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/divebar_nearby_friends_row_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/broadcast_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toLeftOf="@id/divebar_nearby_friends_row_arrow" android:layout_toRightOf="@id/divebar_nearby_friends_row_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="15.0sp" android:textColor="@color/divebar_contact_name_text" android:ellipsize="end" android:layout_gravity="center" android:id="@id/divebar_nearby_friends_row_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <com.facebook.messages.threads.ui.name.ThreadNameView android:id="@id/divebar_nearby_friends_row_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" fb:textColor="@color/divebar_contact_status_text" fb:maxLines="1" fb:minScaledTextSize="12" fb:maxScaledTextSize="12" fb:alignment="normal" fb:nameOption="useThreadNameIfAvailable" />
+    </LinearLayout>
+    <View android:id="@id/divebar_nearby_friends_row_divider" android:background="@color/divebar_header_separator" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -13,7 +13,7 @@
   (line 38)
   (invoke-direct {v0 v1} org/apache/harmony/xml/dom/LeafNodeImpl/<init> [object org/apache/harmony/xml/dom/DocumentImpl] )
   (line 39)
-  (iput-object-quick v2 v0 org/apache/harmony/xml/dom/EntityReferenceImpl.name [object java/lang/String])
+  (iput-object-quick v2 v0 )
   (line 40)
   (return-void )
  )
@@ -22,7 +22,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/xml/dom/EntityReferenceImpl])
   (line 44)
-  (iget-object-quick v0 v1 org/apache/harmony/xml/dom/EntityReferenceImpl.name [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

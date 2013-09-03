@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/backgroundtasks/h
+ (super com/facebook/inject/d)
+ (source "BackgroundTaskModule.java")
+
+ (field (attrs final ) a [object com/facebook/backgroundtasks/f] )
+
+(method (attrs private ) <init>([object com/facebook/backgroundtasks/f] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/backgroundtasks/h])
+  ; parameter[0] : v1 ([object com/facebook/backgroundtasks/f])
+  (line 58)
+  (iput-object v1 v0 com/facebook/backgroundtasks/h.a [object com/facebook/backgroundtasks/f])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/backgroundtasks/f] [object com/facebook/backgroundtasks/g] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/backgroundtasks/h])
+  ; parameter[0] : v1 ([object com/facebook/backgroundtasks/f])
+  ; parameter[1] : v2 ([object com/facebook/backgroundtasks/g])
+  (line 58)
+  (invoke-direct {v0 v1} com/facebook/backgroundtasks/h/<init> [object com/facebook/backgroundtasks/f] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/backgroundtasks/d]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/h])
+  (line 63)
+  (new-instance v0 com/facebook/backgroundtasks/d)
+  (invoke-direct {v0} com/facebook/backgroundtasks/d/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/h])
+  (line 58)
+  (invoke-virtual {v1} com/facebook/backgroundtasks/h/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

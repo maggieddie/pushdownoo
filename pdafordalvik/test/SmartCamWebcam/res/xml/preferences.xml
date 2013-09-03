@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_connection_type_preferences_title">
+        <ListPreference android:entries="@array/connections_string_array" android:title="@string/settings_connection_type_title" android:key="@string/settings_connection_type_key" android:summary="@string/settings_connection_type_summary" android:defaultValue="@string/settings_connection_type_bt" android:dialogTitle="@string/settings_connection_type_dialog_title" android:entryValues="@array/connection_values_string_array" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_bluetooth_preferences_title">
+        <com.smartcam.webcam.preference.BtDevPreference android:title="@string/settings_bt_dev_title" android:key="settings_bt_dev_key" android:summary="@string/settings_bt_dev_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_inet_preferences_title">
+        <EditTextPreference android:title="@string/settings_inet_server_title" android:key="inet_server_addr" android:summary="@string/settings_inet_server_summary" android:dialogTitle="@string/settings_inet_server_dialog_title" />
+        <EditTextPreference android:title="@string/settings_inet_port_title" android:key="inet_server_port" android:summary="@string/settings_inet_port_summary" android:defaultValue="9361" android:dialogTitle="@string/settings_inet_port_dialog_title" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_camera_preferences_title">
+        <ListPreference android:title="@string/settings_camera_resolution_title" android:key="@string/settings_camera_resolution_key" android:summary="@string/settings_camera_resolution_summary" android:defaultValue="0" android:dialogTitle="@string/settings_camera_resolution_dialog_title" />
+        <CheckBoxPreference android:title="@string/settings_cam_hide_preview_title" android:key="@string/settings_cam_hide_preview_key" android:summary="@string/settings_cam_hide_preview_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/settings_keep_screen_on_title" android:key="@string/settings_keep_screen_on_key" android:summary="@string/settings_keep_screen_on_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

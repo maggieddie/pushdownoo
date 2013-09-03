@@ -1,0 +1,53 @@
+(class (attrs public final ) com/google/common/util/concurrent/SettableFuture
+ (super com/google/common/util/concurrent/AbstractFuture)
+ (source "SettableFuture.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/util/concurrent/SettableFuture])
+  (line 41)
+  (invoke-direct {v0} com/google/common/util/concurrent/AbstractFuture/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) a()[object com/google/common/util/concurrent/SettableFuture]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<V:"  "Ljava/lang/Object;"  ">()"  "Lcom/google/common/util/concurrent/SettableFuture"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 1)
+  (line 34)
+  (new-instance v0 com/google/common/util/concurrent/SettableFuture)
+  (invoke-direct {v0} com/google/common/util/concurrent/SettableFuture/<init> )
+  (return-object v0)
+ )
+
+(method (attrs public ) a_([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/util/concurrent/SettableFuture])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 53)
+  (invoke-super {v1 v2} com/google/common/util/concurrent/AbstractFuture/a_ [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a_([object java/lang/Throwable] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/util/concurrent/SettableFuture])
+  ; parameter[0] : v2 ([object java/lang/Throwable])
+  (line 68)
+  (invoke-super {v1 v2} com/google/common/util/concurrent/AbstractFuture/a_ [object java/lang/Throwable] )
+  (move-result v0)
+  (return v0)
+)
+
+)

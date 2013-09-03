@@ -1,0 +1,103 @@
+(class (attrs ) com/facebook/messages/threads/ui/name/b
+ (super java/lang/Object)
+ (source "TextListWithMoreComputer.java")
+ (implements com/google/common/a/jr)
+
+ (field (attrs private final ) a [object com/google/common/a/jr] )
+ (field (attrs private ) b int )
+
+(method (attrs private ) <init>([object java/util/Collection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<TT;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/messages/threads/ui/name/b])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 240)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 241)
+  (invoke-interface {v2} java/util/Collection/iterator )
+  (move-result-object v0)
+  (invoke-static {v0} com/google/common/a/gg/g [object java/util/Iterator] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/messages/threads/ui/name/b.a [object com/google/common/a/jr])
+  (line 242)
+  (invoke-interface {v2} java/util/Collection/size )
+  (move-result v0)
+  (iput v0 v1 com/facebook/messages/threads/ui/name/b.b int)
+  (line 243)
+  (return-void )
+ )
+
+(method (attrs public static ) a([object java/util/Collection] )[object com/facebook/messages/threads/ui/name/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/util/Collection])
+  (line 237)
+  (new-instance v0 com/facebook/messages/threads/ui/name/b)
+  (invoke-direct {v0 v1} com/facebook/messages/threads/ui/name/b/<init> [object java/util/Collection] )
+  (return-object v0)
+ )
+
+(method (attrs public ) a()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/threads/ui/name/b])
+  (line 247)
+  (iget-object v0 v1 com/facebook/messages/threads/ui/name/b.a [object com/google/common/a/jr])
+  (invoke-interface {v0} com/google/common/a/jr/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/threads/ui/name/b])
+  (line 268)
+  (iget v0 v1 com/facebook/messages/threads/ui/name/b.b int)
+  (return v0)
+)
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/threads/ui/name/b])
+  (line 252)
+  (iget-object v0 v1 com/facebook/messages/threads/ui/name/b.a [object com/google/common/a/jr])
+  (invoke-interface {v0} com/google/common/a/jr/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/messages/threads/ui/name/b])
+  (line 257)
+  (iget-object v0 v2 com/facebook/messages/threads/ui/name/b.a [object com/google/common/a/jr])
+  (invoke-interface {v0} com/google/common/a/jr/next )
+  (move-result-object v0)
+  (line 258)
+  (iget v1 v2 com/facebook/messages/threads/ui/name/b.b int)
+  (add-int/lit8 v1 v1 255)
+  (iput v1 v2 com/facebook/messages/threads/ui/name/b.b int)
+  (line 259)
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/threads/ui/name/b])
+  (line 264)
+  (iget-object v0 v1 com/facebook/messages/threads/ui/name/b.a [object com/google/common/a/jr])
+  (invoke-interface {v0} com/google/common/a/jr/remove )
+  (line 265)
+  (return-void )
+)
+
+)

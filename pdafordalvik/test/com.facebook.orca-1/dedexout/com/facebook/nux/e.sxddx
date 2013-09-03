@@ -1,0 +1,56 @@
+(class (attrs ) com/facebook/nux/e
+ (super com/facebook/inject/d)
+ (source "NuxModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/nux/e])
+  (line 103)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/nux/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/nux/e])
+  ; parameter[0] : v1 ([object com/facebook/nux/b])
+  (line 103)
+  (invoke-direct {v0} com/facebook/nux/e/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/nux/service/a]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/nux/e])
+  (line 107)
+  (new-instance v3 com/facebook/nux/service/a)
+  (const-class v0 com/facebook/http/protocol/aq)
+  (invoke-virtual {v5 v0} com/facebook/nux/e/b [object java/lang/Class] )
+  (move-result-object v4)
+  (const-class v0 com/facebook/nux/status/l)
+  (invoke-virtual {v5 v0} com/facebook/nux/e/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/nux/status/l])
+  (const-class v1 com/facebook/nux/status/a)
+  (invoke-virtual {v5 v1} com/facebook/nux/e/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/nux/status/a])
+  (const-class v2 com/facebook/nux/status/j)
+  (invoke-virtual {v5 v2} com/facebook/nux/e/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/facebook/nux/status/j])
+  (invoke-direct {v3 v4 v0 v1 v2} com/facebook/nux/service/a/<init> [object javax/inject/a] [object com/facebook/nux/status/l] [object com/facebook/nux/status/a] [object com/facebook/nux/status/j] )
+  (return-object v3)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/nux/e])
+  (line 103)
+  (invoke-virtual {v1} com/facebook/nux/e/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

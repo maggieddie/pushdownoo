@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) edu/umd/cs/findbugs/annotations/SuppressFBWarnings
+ (super java/lang/Object)
+ (source "SuppressFBWarnings.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) justification()[object java/lang/String]
+)
+
+)

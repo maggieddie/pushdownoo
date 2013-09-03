@@ -18,7 +18,7 @@
   (limit registers 2)
   ; this: v1 ([object java/util/logging/Logger$PrivateSecurityManager])
   (line 1383)
-  (invoke-super-quick {v1} java/util/logging/Logger$PrivateSecurityManager/getClassContext )
+  (invoke-super-quick {v1} vtable #0x2e)
   (move-result-object v0)
   (return-object v0)
 )

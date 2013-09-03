@@ -1,0 +1,20 @@
+(class (attrs public abstract ) android/support/v4/app/aw
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) b [object java/lang/CharSequence] )
+ (field (attrs ) c [object java/lang/CharSequence] )
+ (field (attrs ) d boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/app/aw])
+  (line 570)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 575)
+  (const/4 v0 0)
+  (iput-boolean v0 v1 android/support/v4/app/aw.d boolean)
+  (return-void )
+ )
+
+)

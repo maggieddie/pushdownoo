@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/orca/threadview/cw
+ (super java/lang/Object)
+ (source "ThreadViewMapActivity.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/orca/threads/ThreadSummary] [object com/google/common/a/es] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/orca/threads/ThreadSummary;"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/messages/model/threads/Message;"  ">;)V")
+  )
+)
+
+)

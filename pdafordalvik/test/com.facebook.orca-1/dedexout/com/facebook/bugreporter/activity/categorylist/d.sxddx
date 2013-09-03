@@ -1,0 +1,41 @@
+(class (attrs public ) com/facebook/bugreporter/activity/categorylist/d
+ (super com/facebook/widget/f)
+ (source "CategoryListItemView.java")
+
+ (field (attrs private final ) a [object android/widget/TextView] )
+ (field (attrs private ) b [object com/facebook/bugreporter/activity/categorylist/CategoryInfo] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/bugreporter/activity/categorylist/d])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 21)
+  (invoke-direct {v1 v2} com/facebook/widget/f/<init> [object android/content/Context] )
+  (line 23)
+  (sget v0 com/facebook/k.category_list_row_view int)
+  (invoke-virtual {v1 v0} com/facebook/bugreporter/activity/categorylist/d/setContentView int )
+  (line 24)
+  (sget v0 com/facebook/i.category_name int)
+  (invoke-virtual {v1 v0} com/facebook/bugreporter/activity/categorylist/d/getView int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (iput-object v0 v1 com/facebook/bugreporter/activity/categorylist/d.a [object android/widget/TextView])
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) setCategoryInfo([object com/facebook/bugreporter/activity/categorylist/CategoryInfo] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/bugreporter/activity/categorylist/d])
+  ; parameter[0] : v3 ([object com/facebook/bugreporter/activity/categorylist/CategoryInfo])
+  (line 33)
+  (iput-object v3 v2 com/facebook/bugreporter/activity/categorylist/d.b [object com/facebook/bugreporter/activity/categorylist/CategoryInfo])
+  (line 34)
+  (iget-object v0 v2 com/facebook/bugreporter/activity/categorylist/d.a [object android/widget/TextView])
+  (iget-object v1 v3 com/facebook/bugreporter/activity/categorylist/CategoryInfo.a [object java/lang/String])
+  (invoke-virtual {v0 v1} android/widget/TextView/setText [object java/lang/CharSequence] )
+  (line 35)
+  (return-void )
+)
+
+)

@@ -1,0 +1,15 @@
+(class (attrs public ) org/andengine/audio/music/MusicManager
+ (super org/andengine/audio/BaseAudioManager)
+ (source "MusicManager.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/audio/music/MusicManager])
+  (line 25)
+  (invoke-direct {v0} org/andengine/audio/BaseAudioManager/<init> )
+  (line 27)
+  (return-void )
+ )
+
+)

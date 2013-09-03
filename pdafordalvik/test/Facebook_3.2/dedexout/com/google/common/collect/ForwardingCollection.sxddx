@@ -1,0 +1,319 @@
+(class (attrs public abstract ) com/google/common/collect/ForwardingCollection
+ (super com/google/common/collect/ForwardingObject)
+ (source "ForwardingCollection.java")
+ (implements java/util/Collection)
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/ForwardingCollection])
+  (line 54)
+  (invoke-direct {v0} com/google/common/collect/ForwardingObject/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) a([object java/util/Collection] )boolean
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v3 ([object java/util/Collection])
+  (line 142)
+  (invoke-interface {v3} java/util/Collection/iterator )
+  (move-result-object v0)
+  (label lf71f4)
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v1)
+  (if-eqz v1 lf7218)
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v1)
+  (line 143)
+  (invoke-virtual {v2 v1} com/google/common/collect/ForwardingCollection/contains [object java/lang/Object] )
+  (move-result v1)
+  (if-nez v1 lf71f4)
+  (line 144)
+  (const/4 v0 0)
+  (label lf7216)
+  (line 147)
+  (return v0)
+  (label lf7218)
+  (const/4 v0 1)
+  (goto lf7216)
+)
+
+(method (attrs protected ) a([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 263)
+  (invoke-static {v1 v2} com/google/common/collect/ObjectArrays/a [object java/util/Collection] [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) add([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 85)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/add [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) addAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<+TE;>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 100)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/addAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected abstract ) b()[object java/util/Collection]
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+)
+
+(method (attrs protected ) b([object java/util/Collection] )boolean
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 189)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/iterator )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/collect/Iterators/a [object java/util/Iterator] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 48)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) c([object java/util/Collection] )boolean
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 201)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/iterator )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/collect/Iterators/b [object java/util/Iterator] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 110)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Collection/clear )
+  (line 111)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 80)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 95)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/containsAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected ) e()[object java/lang/String]
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 240)
+  (invoke-static {v1} com/google/common/collect/Collections2/a [object java/util/Collection] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) f()[array [object java/lang/Object]]
+  (annotation buildVisibility [object com/google/common/annotations/Beta]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 251)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/size )
+  (move-result v0)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (line 252)
+  (invoke-virtual {v1 v0} com/google/common/collect/ForwardingCollection/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 75)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 60)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Collection/iterator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 90)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/remove [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 70)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/removeAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 105)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/retainAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 65)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Collection/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  (line 115)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Collection/toArray )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ForwardingCollection])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 120)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingCollection/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2} java/util/Collection/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

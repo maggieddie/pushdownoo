@@ -1,0 +1,66 @@
+(class (attrs ) com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1
+ (super com/google/common/collect/ForwardingIterator)
+ (source "Synchronized.java")
+
+ (field (attrs final ) a [object java/util/Iterator] )
+ (field (attrs final ) b [object com/google/common/collect/Synchronized$SynchronizedAsMapEntries] )
+
+(method (attrs ) <init>([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries] [object java/util/Iterator] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries])
+  ; parameter[1] : v2 ([object java/util/Iterator])
+  (line 844)
+  (iput-object v1 v0 com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1.b [object com/google/common/collect/Synchronized$SynchronizedAsMapEntries])
+  (iput-object v2 v0 com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1.a [object java/util/Iterator])
+  (invoke-direct {v0} com/google/common/collect/ForwardingIterator/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) a()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<"  "Ljava/util/Map$Entry"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1])
+  (line 846)
+  (iget-object v0 v1 com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1.a [object java/util/Iterator])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/util/Map$Entry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1])
+  (line 850)
+  (iget-object v0 v2 com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (line 851)
+  (new-instance v1 com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1$1)
+  (invoke-direct {v1 v2 v0} com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1$1/<init> [object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1] [object java/util/Map$Entry] )
+  (return-object v1)
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1])
+  (line 844)
+  (invoke-virtual {v1} com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1])
+  (line 844)
+  (invoke-virtual {v1} com/google/common/collect/Synchronized$SynchronizedAsMapEntries$1/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

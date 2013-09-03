@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_list" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.android.widget.TapRefreshableListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/List.Refreshable.Card" />
+    <include android:id="@android:id/empty" layout="@layout/empty_layout" />
+</RelativeLayout>

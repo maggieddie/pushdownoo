@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/orca/threadlist/ad
+ (super com/facebook/orca/threadlist/bi)
+ (source "ThreadListActivityDelegate.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadlist/x] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadlist/x] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/ad])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/x])
+  (line 256)
+  (iput-object v1 v0 com/facebook/orca/threadlist/ad.a [object com/facebook/orca/threadlist/x])
+  (invoke-direct {v0} com/facebook/orca/threadlist/bi/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/ad])
+  (line 263)
+  (iget-object v0 v1 com/facebook/orca/threadlist/ad.a [object com/facebook/orca/threadlist/x])
+  (invoke-static {v0} com/facebook/orca/threadlist/x/c [object com/facebook/orca/threadlist/x] )
+  (line 264)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/widget/AbsListView] int )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/threadlist/ad])
+  ; parameter[0] : v1 ([object android/widget/AbsListView])
+  ; parameter[1] : v2 (int)
+  (line 259)
+  (return-void )
+)
+
+)

@@ -1,0 +1,97 @@
+(class (attrs public final ) com/google/common/a/ek
+ (super com/google/common/a/ew)
+ (source "ImmutableBiMap.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/ek])
+  (line 143)
+  (invoke-direct {v0} com/google/common/a/ew/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/ej]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)"  "Lcom/google/common/a/ek"  "<TK;TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/ek])
+  (line 172)
+  (invoke-super {v2} com/google/common/a/ew/b )
+  (move-result-object v1)
+  (line 173)
+  (invoke-virtual {v1} com/google/common/a/ev/isEmpty )
+  (move-result v0)
+  (if-eqz v0 l395396)
+  (line 174)
+  (invoke-static {} com/google/common/a/ej/e )
+  (nop )
+  (move-result-object v0)
+  (label l395394)
+  (line 176)
+  (return-object v0)
+  (label l395396)
+  (new-instance v0 com/google/common/a/jt)
+  (invoke-direct {v0 v1} com/google/common/a/jt/<init> [object com/google/common/a/ev] )
+  (goto l395394)
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] )[object com/google/common/a/ek]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)"  "Lcom/google/common/a/ek"  "<TK;TV;>;")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/ek])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 150)
+  (invoke-super {v0 v1 v2} com/google/common/a/ew/b [object java/lang/Object] [object java/lang/Object] )
+  (line 151)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/util/Map] )[object com/google/common/a/ek]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<+TK;+TV;>;)"  "Lcom/google/common/a/ek"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/ek])
+  ; parameter[0] : v1 ([object java/util/Map])
+  (line 162)
+  (invoke-super {v0 v1} com/google/common/a/ew/b [object java/util/Map] )
+  (line 163)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object com/google/common/a/ev]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ek])
+  (line 137)
+  (invoke-virtual {v1} com/google/common/a/ek/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] [object java/lang/Object] )[object com/google/common/a/ew]
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/ek])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 137)
+  (invoke-virtual {v1 v2 v3} com/google/common/a/ek/a [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/util/Map] )[object com/google/common/a/ew]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ek])
+  ; parameter[0] : v2 ([object java/util/Map])
+  (line 137)
+  (invoke-virtual {v1 v2} com/google/common/a/ek/a [object java/util/Map] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

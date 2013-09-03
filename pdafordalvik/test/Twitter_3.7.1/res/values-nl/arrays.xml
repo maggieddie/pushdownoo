@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 minuten</item>
+        <item>10 minuten</item>
+        <item>15 minuten</item>
+        <item>30 minuten</item>
+        <item>1 uur</item>
+        <item>2 uur</item>
+        <item>4 uur</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>Van personen die je volgt</item>
+        <item>Van wie dan ook</item>
+        <item>Uit</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Interacties</item>
+        <item>Vermeldingen</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Tweets te lezen uit je tijdlijn.</item>
+        <item>Te zien wie je volgt.</item>
+        <item>Tweets voor je te plaatsen.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Je Twitter-wachtwoord te zien.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Profiel bewerken</item>
+        <item>Instellingen</item>
+        <item>Help</item>
+    </string-array>
+</resources>

@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/device_id/d
+ (super com/facebook/inject/d)
+ (source "DeviceIdModule.java")
+
+ (field (attrs final ) a [object com/facebook/device_id/b] )
+
+(method (attrs private ) <init>([object com/facebook/device_id/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/device_id/d])
+  ; parameter[0] : v1 ([object com/facebook/device_id/b])
+  (line 51)
+  (iput-object v1 v0 com/facebook/device_id/d.a [object com/facebook/device_id/b])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/device_id/b] [object com/facebook/device_id/c] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/device_id/d])
+  ; parameter[0] : v1 ([object com/facebook/device_id/b])
+  ; parameter[1] : v2 ([object com/facebook/device_id/c])
+  (line 51)
+  (invoke-direct {v0 v1} com/facebook/device_id/d/<init> [object com/facebook/device_id/b] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/device_id/g]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/device_id/d])
+  (line 56)
+  (new-instance v1 com/facebook/device_id/g)
+  (const-class v0 com/facebook/common/time/a)
+  (invoke-virtual {v2 v0} com/facebook/device_id/d/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/time/a])
+  (invoke-direct {v1 v0} com/facebook/device_id/g/<init> [object com/facebook/common/time/a] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/device_id/d])
+  (line 51)
+  (invoke-virtual {v1} com/facebook/device_id/d/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

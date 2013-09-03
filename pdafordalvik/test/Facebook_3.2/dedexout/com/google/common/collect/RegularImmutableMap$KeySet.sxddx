@@ -1,0 +1,75 @@
+(class (attrs ) com/google/common/collect/RegularImmutableMap$KeySet
+ (super com/google/common/collect/ImmutableSet$TransformedImmutableSet)
+ (source "RegularImmutableMap.java")
+
+ (field (attrs final ) map [object com/google/common/collect/RegularImmutableMap] )
+
+(method (attrs ) <init>([object com/google/common/collect/RegularImmutableMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/RegularImmutableMap"  "<TK;TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/RegularImmutableMap$KeySet])
+  ; parameter[0] : v3 ([object com/google/common/collect/RegularImmutableMap])
+  (line 229)
+  (invoke-static {v3} com/google/common/collect/RegularImmutableMap/a [object com/google/common/collect/RegularImmutableMap] )
+  (move-result-object v0)
+  (invoke-static {v3} com/google/common/collect/RegularImmutableMap/b [object com/google/common/collect/RegularImmutableMap] )
+  (move-result v1)
+  (invoke-direct {v2 v0 v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet/<init> [array [object java/lang/Object]] int )
+  (line 230)
+  (iput-object v3 v2 com/google/common/collect/RegularImmutableMap$KeySet.map [object com/google/common/collect/RegularImmutableMap])
+  (line 231)
+  (return-void )
+ )
+
+(method (attrs ) a([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TK;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$KeySet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 223)
+  (check-cast v2 [object java/util/Map$Entry])
+  (invoke-virtual {v1 v2} com/google/common/collect/RegularImmutableMap$KeySet/a [object java/util/Map$Entry] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a([object java/util/Map$Entry] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TK;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$KeySet])
+  ; parameter[0] : v2 ([object java/util/Map$Entry])
+  (line 234)
+  (invoke-interface {v2} java/util/Map$Entry/getKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$KeySet])
+  (line 242)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$KeySet])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 238)
+  (iget-object v0 v1 com/google/common/collect/RegularImmutableMap$KeySet.map [object com/google/common/collect/RegularImmutableMap])
+  (invoke-virtual {v0 v2} com/google/common/collect/RegularImmutableMap/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

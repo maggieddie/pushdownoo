@@ -14,7 +14,7 @@
   (line 21)
   (invoke-direct {v0 v1 v2 v3} org/bouncycastle/crypto/params/IESParameters/<init> [array byte] [array byte] int )
   (line 23)
-  (iput-quick v4 v0 org/bouncycastle/crypto/params/IESWithCipherParameters.cipherKeySize int)
+  (iput-quick v4 v0 )
   (line 24)
   (return-void )
  )
@@ -23,7 +23,7 @@
   (limit registers 2)
   ; this: v1 ([object org/bouncycastle/crypto/params/IESWithCipherParameters])
   (line 28)
-  (iget-quick v0 v1 org/bouncycastle/crypto/params/IESWithCipherParameters.cipherKeySize int)
+  (iget-quick v0 v1 )
   (return v0)
 )
 

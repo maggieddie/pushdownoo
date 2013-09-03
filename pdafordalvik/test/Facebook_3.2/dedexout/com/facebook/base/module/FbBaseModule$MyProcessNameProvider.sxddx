@@ -1,0 +1,46 @@
+(class (attrs ) com/facebook/base/module/FbBaseModule$MyProcessNameProvider
+ (super com/facebook/inject/AbstractProvider)
+ (source "FbBaseModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/module/FbBaseModule$MyProcessNameProvider])
+  (line 636)
+  (invoke-direct {v0} com/facebook/inject/AbstractProvider/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/base/module/FbBaseModule$1] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/module/FbBaseModule$MyProcessNameProvider])
+  ; parameter[0] : v1 ([object com/facebook/base/module/FbBaseModule$1])
+  (line 636)
+  (invoke-direct {v0} com/facebook/base/module/FbBaseModule$MyProcessNameProvider/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/common/process/ProcessName]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/base/module/FbBaseModule$MyProcessNameProvider])
+  (line 640)
+  (iget-object v0 v2 com/facebook/base/module/FbBaseModule$MyProcessNameProvider.b [object com/facebook/inject/FbInjector])
+  (const-class v1 com/facebook/common/process/ProcessUtil)
+  (invoke-virtual {v0 v1} com/facebook/inject/FbInjector/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/process/ProcessUtil])
+  (invoke-interface {v0} com/facebook/common/process/ProcessUtil/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/module/FbBaseModule$MyProcessNameProvider])
+  (line 636)
+  (invoke-virtual {v1} com/facebook/base/module/FbBaseModule$MyProcessNameProvider/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,71 @@
+(class (attrs public ) com/facebook/widget/c/d
+ (super android/preference/ListPreference)
+ (source "OrcaListPreference.java")
+
+ (field (attrs private final ) a [object com/facebook/prefs/shared/b] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/widget/c/d])
+  ; parameter[0] : v4 ([object android/content/Context])
+  (line 22)
+  (invoke-direct {v3 v4} android/preference/ListPreference/<init> [object android/content/Context] )
+  (line 23)
+  (invoke-static {v4} com/facebook/inject/t/a [object android/content/Context] )
+  (move-result-object v0)
+  (line 24)
+  (new-instance v1 com/facebook/prefs/shared/b)
+  (const-class v2 com/facebook/prefs/shared/d)
+  (invoke-virtual {v0 v2} com/facebook/inject/t/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/d])
+  (invoke-direct {v1 v3 v0} com/facebook/prefs/shared/b/<init> [object android/preference/Preference] [object com/facebook/prefs/shared/d] )
+  (iput-object v1 v3 com/facebook/widget/c/d.a [object com/facebook/prefs/shared/b])
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/prefs/shared/ae] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/c/d])
+  ; parameter[0] : v2 ([object com/facebook/prefs/shared/ae])
+  (line 33)
+  (iget-object v0 v1 com/facebook/widget/c/d.a [object com/facebook/prefs/shared/b])
+  (invoke-virtual {v0 v2} com/facebook/prefs/shared/b/a [object com/facebook/prefs/shared/ae] )
+  (line 34)
+  (return-void )
+)
+
+(method (attrs protected ) getPersistedString([object java/lang/String] )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/c/d])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 38)
+  (iget-object v0 v1 com/facebook/widget/c/d.a [object com/facebook/prefs/shared/b])
+  (invoke-virtual {v0 v2} com/facebook/prefs/shared/b/a [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getSharedPreferences()[object android/content/SharedPreferences]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/c/d])
+  (line 29)
+  (iget-object v0 v1 com/facebook/widget/c/d.a [object com/facebook/prefs/shared/b])
+  (invoke-virtual {v0} com/facebook/prefs/shared/b/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) persistString([object java/lang/String] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/c/d])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 43)
+  (iget-object v0 v1 com/facebook/widget/c/d.a [object com/facebook/prefs/shared/b])
+  (invoke-virtual {v0 v2} com/facebook/prefs/shared/b/b [object java/lang/String] )
+  (move-result v0)
+  (return v0)
+)
+
+)

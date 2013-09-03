@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) com/facebook/i/a/b
+ (super java/lang/Object)
+ (source "PeerProcessManager.java")
+ (implements com/facebook/auth/f/b)
+ (implements com/facebook/base/c)
+
+
+(method (attrs public abstract ) a(int [object com/facebook/i/a/q] )void
+)
+
+(method (attrs public abstract ) a([object android/os/Message] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/i/a/a] [object android/os/Message] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/i/a/r] )void
+)
+
+(method (attrs public abstract ) b()[object com/facebook/i/a/a]
+)
+
+)

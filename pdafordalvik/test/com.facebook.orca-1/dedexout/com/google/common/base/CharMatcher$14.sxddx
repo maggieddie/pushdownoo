@@ -1,0 +1,56 @@
+(class (attrs ) com/google/common/base/CharMatcher$14
+ (super com/google/common/base/CharMatcher)
+ (source "CharMatcher.java")
+
+ (field (attrs final ) this$0 [object com/google/common/base/CharMatcher] )
+ (field (attrs final ) val$original [object com/google/common/base/CharMatcher] )
+
+(method (attrs ) <init>([object com/google/common/base/CharMatcher] [object com/google/common/base/CharMatcher] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/base/CharMatcher$14])
+  ; parameter[0] : v1 ([object com/google/common/base/CharMatcher])
+  ; parameter[1] : v2 ([object com/google/common/base/CharMatcher])
+  (line 565)
+  (iput-object v1 v0 com/google/common/base/CharMatcher$14.this$0 [object com/google/common/base/CharMatcher])
+  (iput-object v2 v0 com/google/common/base/CharMatcher$14.val$original [object com/google/common/base/CharMatcher])
+  (invoke-direct {v0} com/google/common/base/CharMatcher/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) apply([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$14])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 565)
+  (check-cast v2 [object java/lang/Character])
+  (invoke-super {v1 v2} com/google/common/base/CharMatcher/apply [object java/lang/Character] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) matches(char )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$14])
+  ; parameter[0] : v2 (char)
+  (line 567)
+  (iget-object v0 v1 com/google/common/base/CharMatcher$14.val$original [object com/google/common/base/CharMatcher])
+  (invoke-virtual {v0 v2} com/google/common/base/CharMatcher/matches char )
+  (move-result v0)
+  (if-nez v0 l37da34)
+  (const/4 v0 1)
+  (label l37da32)
+  (return v0)
+  (label l37da34)
+  (const/4 v0 0)
+  (goto l37da32)
+)
+
+(method (attrs public ) negate()[object com/google/common/base/CharMatcher]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/CharMatcher$14])
+  (line 583)
+  (iget-object v0 v1 com/google/common/base/CharMatcher$14.val$original [object com/google/common/base/CharMatcher])
+  (return-object v0)
+)
+
+)

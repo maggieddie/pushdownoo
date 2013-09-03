@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) difflib/DiffAlgorithm
+ (super java/lang/Object)
+ (source "DiffAlgorithm.java")
+
+
+(method (attrs public abstract ) a([object java/util/List] [object java/util/List] )[object difflib/Patch]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<*>;"  "Ljava/util/List"  "<*>;)"  "Ldifflib/Patch;")
+  )
+)
+
+)

@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/common/executors/m
+ (super com/facebook/common/executors/l)
+ (source "HandlerExecutorServiceImpl.java")
+ (implements java/util/concurrent/RunnableFuture)
+
+
+(method (attrs public ) <init>([object android/os/Handler] [object java/lang/Runnable] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Handler;"  "Ljava/util/concurrent/Callable"  "<TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/common/executors/m])
+  ; parameter[0] : v1 ([object android/os/Handler])
+  ; parameter[1] : v2 ([object java/lang/Runnable])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 288)
+  (invoke-direct {v0 v1 v2 v3} com/facebook/common/executors/l/<init> [object android/os/Handler] [object java/lang/Runnable] [object java/lang/Object] )
+  (line 289)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/os/Handler] [object java/util/concurrent/Callable] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/os/Handler;"  "Ljava/util/concurrent/Callable"  "<TV;>;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/common/executors/m])
+  ; parameter[0] : v1 ([object android/os/Handler])
+  ; parameter[1] : v2 ([object java/util/concurrent/Callable])
+  (line 284)
+  (invoke-direct {v0 v1 v2} com/facebook/common/executors/l/<init> [object android/os/Handler] [object java/util/concurrent/Callable] )
+  (line 285)
+  (return-void )
+ )
+
+)

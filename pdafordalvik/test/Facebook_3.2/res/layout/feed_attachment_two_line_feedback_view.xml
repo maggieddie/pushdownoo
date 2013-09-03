@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/feed_ufi_bling_bar" />
+    <View android:background="@color/feed_feedback_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_attachment_border_width" />
+    <com.facebook.feed.ui.footer.FeedbackActionButtonBar android:gravity="center" android:orientation="horizontal" android:id="@id/feed_feedback_container" android:background="@drawable/feed_feedback_background" android:layout_width="fill_parent" android:layout_height="31.0dip" orca:downstateType="newsfeed_shadow" />
+</merge>

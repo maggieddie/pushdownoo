@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/cfg/ConfigFeature
+ (super java/lang/Object)
+ (source "ConfigFeature.java")
+
+
+(method (attrs public abstract ) enabledByDefault()boolean
+)
+
+(method (attrs public abstract ) getMask()int
+)
+
+)

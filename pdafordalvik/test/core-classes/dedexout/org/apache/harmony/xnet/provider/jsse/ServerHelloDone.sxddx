@@ -30,7 +30,7 @@
   (line 49)
   (const/16 v0 50)
   (const-string v1 "DECODE ERROR: incorrect ServerHelloDone")
-  (invoke-virtual-quick {v2 v0 v1} org/apache/harmony/xnet/provider/jsse/ServerHelloDone/fatalAlert byte [object java/lang/String] )
+  (invoke-virtual-quick {v2 v0 v1} vtable #0xb)
   (label l17359c)
   (line 51)
   (return-void )

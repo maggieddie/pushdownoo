@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/constants/MIMETypes
+ (super java/lang/Object)
+ (source "MIMETypes.java")
+
+ (field (attrs public static final ) GIF [object java/lang/String] "image/gif" )
+ (field (attrs public static final ) JPEG [object java/lang/String] "image/jpeg" )
+ (field (attrs public static final ) PNG [object java/lang/String] "image/png" )
+
+)

@@ -39,7 +39,7 @@
   (limit registers 4)
   ; this: v3 ([object java/util/TreeMap$UnboundedKeyIterator])
   (line 258)
-  (invoke-virtual-quick {v3} java/util/TreeMap$UnboundedKeyIterator/makeNext )
+  (invoke-virtual-quick {v3} vtable #0xc)
   (line 259)
   (iget-object-quick v0 v3 )
   (iget-object-quick v0 v0 )

@@ -1,0 +1,43 @@
+(class (attrs ) com/facebook/orca/contacts/divebar/bu
+ (super java/lang/Object)
+ (source "WildfirePresenceExperiment.java")
+ (implements com/facebook/abtest/qe/data/d)
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/divebar/bt] )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/divebar/bt] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/divebar/bu])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/divebar/bt])
+  (line 94)
+  (iput-object v1 v0 com/facebook/orca/contacts/divebar/bu.a [object com/facebook/orca/contacts/divebar/bt])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/abtest/qe/data/QuickExperimentInfo] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/contacts/divebar/bu])
+  ; parameter[0] : v2 ([object com/facebook/abtest/qe/data/QuickExperimentInfo])
+  (line 97)
+  (const-string v0 "hide_offline")
+  (invoke-virtual {v2 v0} com/facebook/abtest/qe/data/QuickExperimentInfo/a [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/base/Optional/isPresent )
+  (move-result v0)
+  (if-eqz v0 l223054)
+  (const-string v0 "show_offline_section")
+  (invoke-virtual {v2 v0} com/facebook/abtest/qe/data/QuickExperimentInfo/a [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/base/Optional/isPresent )
+  (move-result v0)
+  (if-eqz v0 l223054)
+  (const/4 v0 1)
+  (label l223052)
+  (return v0)
+  (label l223054)
+  (const/4 v0 0)
+  (goto l223052)
+)
+
+)

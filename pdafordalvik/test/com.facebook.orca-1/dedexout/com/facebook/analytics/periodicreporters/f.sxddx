@@ -1,0 +1,79 @@
+(class (attrs ) com/facebook/analytics/periodicreporters/f
+ (super java/lang/Object)
+ (source "DeviceInfoPeriodicReporter.java")
+
+ (field (attrs private static ) c [object java/util/Comparator] )
+ (field (attrs private ) a [object java/lang/String] )
+ (field (attrs private ) b long )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 212)
+  (new-instance v0 com/facebook/analytics/periodicreporters/g)
+  (invoke-direct {v0} com/facebook/analytics/periodicreporters/g/<init> )
+  (sput-object v0 com/facebook/analytics/periodicreporters/f.c [object java/util/Comparator])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/io/File] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/analytics/periodicreporters/f])
+  ; parameter[0] : v3 ([object java/io/File])
+  (line 200)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 201)
+  (invoke-virtual {v3} java/io/File/getName )
+  (move-result-object v0)
+  (iput-object v0 v2 com/facebook/analytics/periodicreporters/f.a [object java/lang/String])
+  (line 202)
+  (invoke-virtual {v3} java/io/File/length )
+  (move-result-wide v0)
+  (iput-wide v0 v2 com/facebook/analytics/periodicreporters/f.b long)
+  (line 203)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/analytics/periodicreporters/f] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object com/facebook/analytics/periodicreporters/f])
+  (line 196)
+  (iget-wide v0 v2 com/facebook/analytics/periodicreporters/f.b long)
+  (return-wide v0)
+ )
+
+(method (attrs static ) a()[object java/util/Comparator]
+  (limit registers 1)
+  (line 196)
+  (sget-object v0 com/facebook/analytics/periodicreporters/f.c [object java/util/Comparator])
+  (return-object v0)
+ )
+
+(method (attrs private ) b()[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/analytics/periodicreporters/f])
+  (line 206)
+  (new-instance v0 com/fasterxml/jackson/databind/node/ObjectNode)
+  (sget-object v1 com/fasterxml/jackson/databind/node/JsonNodeFactory.instance [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/node/ObjectNode/<init> [object com/fasterxml/jackson/databind/node/JsonNodeFactory] )
+  (line 207)
+  (const-string v1 "name")
+  (iget-object v2 v4 com/facebook/analytics/periodicreporters/f.a [object java/lang/String])
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/node/ObjectNode/put [object java/lang/String] [object java/lang/String] )
+  (line 208)
+  (const-string v1 "size")
+  (iget-wide v2 v4 com/facebook/analytics/periodicreporters/f.b long)
+  (invoke-virtual {v0 v1 v2 v3} com/fasterxml/jackson/databind/node/ObjectNode/put [object java/lang/String] long )
+  (line 209)
+  (return-object v0)
+ )
+
+(method (attrs static ) b([object com/facebook/analytics/periodicreporters/f] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/analytics/periodicreporters/f])
+  (line 196)
+  (invoke-direct {v1} com/facebook/analytics/periodicreporters/f/b )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+)

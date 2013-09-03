@@ -1,0 +1,26 @@
+(class (attrs public abstract ) org/andengine/entity/modifier/EntityModifier
+ (super org/andengine/util/modifier/BaseModifier)
+ (source "EntityModifier.java")
+ (implements org/andengine/entity/modifier/IEntityModifier)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/entity/modifier/EntityModifier])
+  (line 27)
+  (invoke-direct {v0} org/andengine/util/modifier/BaseModifier/<init> )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/modifier/EntityModifier])
+  ; parameter[0] : v1 ([object org/andengine/entity/modifier/IEntityModifier$IEntityModifierListener])
+  (line 31)
+  (invoke-direct {v0 v1} org/andengine/util/modifier/BaseModifier/<init> [object org/andengine/util/modifier/IModifier$IModifierListener] )
+  (line 32)
+  (return-void )
+ )
+
+)

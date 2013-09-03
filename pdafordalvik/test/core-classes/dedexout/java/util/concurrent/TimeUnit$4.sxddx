@@ -20,7 +20,7 @@
   ; parameter[0] : v3 (long)
   ; parameter[1] : v5 ([object java/util/concurrent/TimeUnit])
   (line 88)
-  (invoke-virtual-quick {v5 v3 v4} java/util/concurrent/TimeUnit/toSeconds long )
+  (invoke-virtual-quick {v5 v3 v4} vtable #0x1b)
   (move-result-wide v0)
   (return-wide v0)
 )

@@ -1,0 +1,16 @@
+(class (attrs public ) com/facebook/fbservice/service/af
+ (super java/lang/RuntimeException)
+ (source "OperationResult.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/fbservice/service/af])
+  (line 31)
+  (const-string v0 "Invalid result data parcelable. This probably means there was no result")
+  (invoke-direct {v1 v0} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 32)
+  (return-void )
+ )
+
+)

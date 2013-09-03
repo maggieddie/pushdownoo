@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/backgroundtasks/o
+ (super java/lang/Object)
+ (source "BackgroundTaskRunner.java")
+
+ (field (attrs private final ) a [object com/facebook/common/executors/a] )
+ (field (attrs private final ) b [object java/util/concurrent/locks/ReentrantLock] )
+
+(method (attrs ) <init>([object com/facebook/common/executors/a] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/backgroundtasks/o])
+  ; parameter[0] : v2 ([object com/facebook/common/executors/a])
+  (line 62)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 60)
+  (new-instance v0 java/util/concurrent/locks/ReentrantLock)
+  (invoke-direct {v0} java/util/concurrent/locks/ReentrantLock/<init> )
+  (iput-object v0 v1 com/facebook/backgroundtasks/o.b [object java/util/concurrent/locks/ReentrantLock])
+  (line 63)
+  (iput-object v2 v1 com/facebook/backgroundtasks/o.a [object com/facebook/common/executors/a])
+  (line 64)
+  (return-void )
+ )
+
+(method (attrs ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/o])
+  (line 67)
+  (iget-object v0 v1 com/facebook/backgroundtasks/o.a [object com/facebook/common/executors/a])
+  (invoke-interface {v0} com/facebook/common/executors/a/b )
+  (line 68)
+  (iget-object v0 v1 com/facebook/backgroundtasks/o.b [object java/util/concurrent/locks/ReentrantLock])
+  (invoke-virtual {v0} java/util/concurrent/locks/ReentrantLock/lock )
+  (line 69)
+  (return-void )
+)
+
+(method (attrs ) b()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/o])
+  (line 72)
+  (iget-object v0 v1 com/facebook/backgroundtasks/o.b [object java/util/concurrent/locks/ReentrantLock])
+  (invoke-virtual {v0} java/util/concurrent/locks/ReentrantLock/unlock )
+  (line 73)
+  (return-void )
+)
+
+(method (attrs ) c()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/backgroundtasks/o])
+  (line 76)
+  (iget-object v0 v1 com/facebook/backgroundtasks/o.b [object java/util/concurrent/locks/ReentrantLock])
+  (invoke-virtual {v0} java/util/concurrent/locks/ReentrantLock/isHeldByCurrentThread )
+  (move-result v0)
+  (return v0)
+)
+
+)

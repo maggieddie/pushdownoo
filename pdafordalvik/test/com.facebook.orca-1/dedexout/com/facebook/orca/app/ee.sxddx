@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/orca/app/ee
+ (super com/facebook/inject/d)
+ (source "MessengerAppModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/app/ee])
+  (line 732)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/app/ec] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/app/ee])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/ec])
+  (line 732)
+  (invoke-direct {v0} com/facebook/orca/app/ee/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/auth/a]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/app/ee])
+  (line 737)
+  (new-instance v1 com/facebook/orca/auth/a)
+  (const-class v0 com/facebook/push/PushInitializer)
+  (invoke-virtual {v2 v0} com/facebook/orca/app/ee/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/push/PushInitializer])
+  (invoke-direct {v1 v0} com/facebook/orca/auth/a/<init> [object com/facebook/push/PushInitializer] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/ee])
+  (line 732)
+  (invoke-virtual {v1} com/facebook/orca/app/ee/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

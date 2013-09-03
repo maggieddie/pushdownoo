@@ -1,0 +1,34 @@
+(class (attrs ) org/andengine/util/adt/data/operator/FloatOperator$4
+ (super org/andengine/util/adt/data/operator/FloatOperator)
+ (source "FloatOperator.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/FloatOperator$4])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 32)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} org/andengine/util/adt/data/operator/FloatOperator/<init> [object java/lang/String] int [object org/andengine/util/adt/data/operator/FloatOperator] )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) check(float float )boolean
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/FloatOperator$4])
+  ; parameter[0] : v2 (float)
+  ; parameter[1] : v3 (float)
+  (line 35)
+  (cmpg-float v0 v2 v3)
+  (if-gtz v0 l87164)
+  (const/4 v0 1)
+  (label l87162)
+  (return v0)
+  (label l87164)
+  (const/4 v0 0)
+  (goto l87162)
+)
+
+)

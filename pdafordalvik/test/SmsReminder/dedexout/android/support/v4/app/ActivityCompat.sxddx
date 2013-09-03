@@ -1,0 +1,33 @@
+(class (attrs public ) android/support/v4/app/ActivityCompat
+ (super android/support/v4/content/ContextCompat)
+ (source "ActivityCompat.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/ActivityCompat])
+  (line 27)
+  (invoke-direct {v0} android/support/v4/content/ContextCompat/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) invalidateOptionsMenu([object android/app/Activity] )boolean
+  (limit registers 3)
+  ; parameter[0] : v2 ([object android/app/Activity])
+  (line 61)
+  (sget v0 android/os/Build$VERSION.SDK_INT int)
+  (const/16 v1 11)
+  (if-lt v0 v1 l14102)
+  (line 62)
+  (invoke-static {v2} android/support/v4/app/ActivityCompatHoneycomb/invalidateOptionsMenu [object android/app/Activity] )
+  (line 63)
+  (const/4 v0 1)
+  (label l14100)
+  (line 65)
+  (return v0)
+  (label l14102)
+  (const/4 v0 0)
+  (goto l14100)
+ )
+
+)

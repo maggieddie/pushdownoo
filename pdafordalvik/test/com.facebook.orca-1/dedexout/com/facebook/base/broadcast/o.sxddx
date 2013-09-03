@@ -1,0 +1,81 @@
+(class (attrs public abstract ) com/facebook/base/broadcast/o
+ (super java/lang/Object)
+ (source "SafeBroadcastReceiver.java")
+
+ (field (attrs private static final ) a [object java/lang/Class] )
+ (field (attrs private final ) b [object android/content/Context] )
+ (field (attrs private final ) c [object android/content/IntentFilter] )
+ (field (attrs private final ) d [object android/content/BroadcastReceiver] )
+ (field (attrs private ) e boolean )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 22)
+  (const-class v0 com/facebook/base/broadcast/o)
+  (sput-object v0 com/facebook/base/broadcast/o.a [object java/lang/Class])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/content/IntentFilter] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/broadcast/o])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/IntentFilter])
+  (line 30)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 31)
+  (iput-object v2 v1 com/facebook/base/broadcast/o.b [object android/content/Context])
+  (line 32)
+  (iput-object v3 v1 com/facebook/base/broadcast/o.c [object android/content/IntentFilter])
+  (line 33)
+  (new-instance v0 com/facebook/base/broadcast/p)
+  (invoke-direct {v0 v1} com/facebook/base/broadcast/p/<init> [object com/facebook/base/broadcast/o] )
+  (iput-object v0 v1 com/facebook/base/broadcast/o.d [object android/content/BroadcastReceiver])
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/base/broadcast/o] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/base/broadcast/o])
+  (line 20)
+  (iget-boolean v0 v1 com/facebook/base/broadcast/o.e boolean)
+  (return v0)
+ )
+
+(method (attrs static ) b()[object java/lang/Class]
+  (limit registers 1)
+  (line 20)
+  (sget-object v0 com/facebook/base/broadcast/o.a [object java/lang/Class])
+  (return-object v0)
+ )
+
+(method (attrs public ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/base/broadcast/o])
+  (line 46)
+  (iget-boolean v0 v3 com/facebook/base/broadcast/o.e boolean)
+  (if-eqz v0 l169d24)
+  (line 47)
+  (sget-object v0 com/facebook/base/broadcast/o.a [object java/lang/Class])
+  (const-string v1 "Called registerNotificationReceiver twice.")
+  (invoke-static {v0 v1} com/facebook/debug/log/b/e [object java/lang/Class] [object java/lang/String] )
+  (label l169d22)
+  (line 52)
+  (return-void )
+  (label l169d24)
+  (line 50)
+  (iget-object v0 v3 com/facebook/base/broadcast/o.b [object android/content/Context])
+  (iget-object v1 v3 com/facebook/base/broadcast/o.d [object android/content/BroadcastReceiver])
+  (iget-object v2 v3 com/facebook/base/broadcast/o.c [object android/content/IntentFilter])
+  (invoke-virtual {v0 v1 v2} android/content/Context/registerReceiver [object android/content/BroadcastReceiver] [object android/content/IntentFilter] )
+  (line 51)
+  (const/4 v0 1)
+  (iput-boolean v0 v3 com/facebook/base/broadcast/o.e boolean)
+  (goto l169d22)
+)
+
+(method (attrs public abstract ) a([object android/content/Context] [object android/content/Intent] )void
+)
+
+)

@@ -175,9 +175,19 @@ trait DalvikVMRelated {
              (!mdef.attrs.contains("private")) ) 
             // println(res)
              // here is a convinient to set the entry point flag
-             if(res) mdef.isEntryPoint = true else false
+             if(res) 
+               mdef.isEntryPoint = true else false
              
-             res
+              if(opts.forIntentFuzzer) {
+                val cond = mdef.isIntentProcessingMethod
+                //println ("res", res)
+                ///println("isIntentProecssMethod", cond)
+                //println("The method def is: ",  mdef)
+                res && cond
+              }
+                
+                else
+                	res
            }
          }
         
@@ -331,10 +341,8 @@ trait DalvikVMRelated {
     val initD = hdInit.asInstanceOf[InitEntryPointStmt]
     val thisRegExp = CommonUtils.getThisRegStr(initD.regsNum,initD.argsTypes.length)
      val entryStmts = buildEntryPointInvokeStmts(thisRegExp,ens, clsP)
-      
    
-   
-   // init-entry, inii-tentry
+   // init-entry, init-tentry
    val initCopies = entryStmts.map((en)=> {copeInitEntryStmt(initD)})
    val initEnPairs = initCopies.zip(entryStmts)
     /**
@@ -350,9 +358,8 @@ trait DalvikVMRelated {
      linkHeadO match {
       case Some(hi) => res ::: List(hi)
       case None => res
-      
     }
-    }) 
+    })
     
        /* val linkHeadO= 
     	   CommonUtils.linkedListWrapper(List())(initD ::  entryStmts)  
@@ -412,7 +419,6 @@ trait DalvikVMRelated {
     
     val listEns = extractRawEntryPoints(opts)  // getRawEntryPoints
      
-    
     if(listEns.isEmpty){
       Debug.prntDebugInfo("No cls + entry points found ", "")
       List()

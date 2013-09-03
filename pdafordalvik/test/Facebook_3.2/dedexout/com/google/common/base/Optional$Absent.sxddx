@@ -1,0 +1,112 @@
+(class (attrs final ) com/google/common/base/Optional$Absent
+ (super com/google/common/base/Optional)
+ (source "Optional.java")
+
+ (field (attrs private static final ) INSTANCE [object com/google/common/base/Optional$Absent] )
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 212)
+  (new-instance v0 com/google/common/base/Optional$Absent)
+  (invoke-direct {v0} com/google/common/base/Optional$Absent/<init> )
+  (sput-object v0 com/google/common/base/Optional$Absent.INSTANCE [object com/google/common/base/Optional$Absent])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 211)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} com/google/common/base/Optional/<init> [object com/google/common/base/Optional$1] )
+  (return-void )
+ )
+
+(method (attrs static ) access$000()[object com/google/common/base/Optional$Absent]
+  (limit registers 1)
+  (line 211)
+  (sget-object v0 com/google/common/base/Optional$Absent.INSTANCE [object com/google/common/base/Optional$Absent])
+  (return-object v0)
+ )
+
+(method (attrs private ) readResolve()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 252)
+  (sget-object v0 com/google/common/base/Optional$Absent.INSTANCE [object com/google/common/base/Optional$Absent])
+  (return-object v0)
+ )
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 240)
+  (if-ne v2 v1 lf5bb4)
+  (const/4 v0 1)
+  (label lf5bb2)
+  (return v0)
+  (label lf5bb4)
+  (const/4 v0 0)
+  (goto lf5bb2)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/base/Optional$Absent])
+  (line 219)
+  (new-instance v0 java/lang/IllegalStateException)
+  (const-string v1 "value is absent")
+  (invoke-direct {v0 v1} java/lang/IllegalStateException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 244)
+  (const v0 1502476572) ; 0x598df91c)
+  (return v0)
+)
+
+(method (attrs public ) isPresent()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 215)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) or([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 223)
+  (const-string v0 "use orNull() instead of or(null)")
+  (invoke-static {v2 v0} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) orNull()[object java/lang/Object]
+  (annotation runtimeVisibility [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 236)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Optional$Absent])
+  (line 248)
+  (const-string v0 "Optional.absent()")
+  (return-object v0)
+)
+
+)

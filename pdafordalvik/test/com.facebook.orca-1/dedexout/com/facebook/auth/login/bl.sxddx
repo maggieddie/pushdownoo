@@ -1,0 +1,39 @@
+(class (attrs ) com/facebook/auth/login/bl
+ (super com/facebook/fbservice/ops/h)
+ (source "SilentLoginFragment.java")
+
+ (field (attrs final ) a [object com/facebook/auth/login/SilentLoginFragment] )
+
+(method (attrs ) <init>([object com/facebook/auth/login/SilentLoginFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/login/bl])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/SilentLoginFragment])
+  (line 47)
+  (iput-object v1 v0 com/facebook/auth/login/bl.a [object com/facebook/auth/login/SilentLoginFragment])
+  (invoke-direct {v0} com/facebook/fbservice/ops/h/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/auth/login/bl])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 50)
+  (iget-object v0 v1 com/facebook/auth/login/bl.a [object com/facebook/auth/login/SilentLoginFragment])
+  (invoke-static {v0} com/facebook/auth/login/SilentLoginFragment/a [object com/facebook/auth/login/SilentLoginFragment] )
+  (line 51)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/auth/login/bl])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/ServiceException])
+  (line 55)
+  (iget-object v0 v1 com/facebook/auth/login/bl.a [object com/facebook/auth/login/SilentLoginFragment])
+  (invoke-static {v0} com/facebook/auth/login/SilentLoginFragment/b [object com/facebook/auth/login/SilentLoginFragment] )
+  (line 56)
+  (return-void )
+)
+
+)

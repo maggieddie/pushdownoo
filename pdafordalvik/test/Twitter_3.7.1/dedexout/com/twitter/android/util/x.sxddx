@@ -1,0 +1,24 @@
+(class (attrs final ) com/twitter/android/util/x
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b boolean )
+
+(method (attrs ) <init>([object java/lang/String] boolean )void
+  (limit registers 4)
+  ; this: v1 ([object com/twitter/android/util/x])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (boolean)
+  (line 219)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 220)
+  (iput-object v2 v1 com/twitter/android/util/x.a [object java/lang/String])
+  (line 221)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 com/twitter/android/util/x.b boolean)
+  (line 222)
+  (return-void )
+ )
+
+)

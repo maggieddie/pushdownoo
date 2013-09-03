@@ -1,0 +1,54 @@
+(class (attrs final ) com/google/common/base/Equivalences$Identity
+ (super com/google/common/base/Equivalence)
+ (source "Equivalences.java")
+ (implements java/io/Serializable)
+
+ (field (attrs static final ) INSTANCE [object com/google/common/base/Equivalences$Identity] null )
+ (field (attrs private static final ) serialVersionUID long 1); 0x1 )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 103)
+  (new-instance v0 com/google/common/base/Equivalences$Identity)
+  (invoke-direct {v0} com/google/common/base/Equivalences$Identity/<init> )
+  (sput-object v0 com/google/common/base/Equivalences$Identity.INSTANCE [object com/google/common/base/Equivalences$Identity])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/Equivalences$Identity])
+  (line 100)
+  (invoke-direct {v0} com/google/common/base/Equivalence/<init> )
+  (return-void )
+ )
+
+(method (attrs private ) readResolve()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/Equivalences$Identity])
+  (line 114)
+  (sget-object v0 com/google/common/base/Equivalences$Identity.INSTANCE [object com/google/common/base/Equivalences$Identity])
+  (return-object v0)
+ )
+
+(method (attrs protected ) doEquivalent([object java/lang/Object] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/base/Equivalences$Identity])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 106)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs protected ) doHash([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/Equivalences$Identity])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 110)
+  (invoke-static {v2} java/lang/System/identityHashCode [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

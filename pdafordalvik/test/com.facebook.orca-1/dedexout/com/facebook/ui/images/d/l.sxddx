@@ -1,0 +1,51 @@
+(class (attrs ) com/facebook/ui/images/d/l
+ (super com/facebook/ui/images/base/b)
+ (source "GraphicSizerFactory.java")
+
+ (field (attrs final ) a [object com/facebook/ui/images/d/h] )
+ (field (attrs final ) b [object com/facebook/ui/images/d/k] )
+ (field (attrs private ) c [object com/facebook/ui/images/d/j] )
+
+(method (attrs ) <init>([object com/facebook/ui/images/d/k] [object com/facebook/ui/images/d/h] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/ui/images/d/l])
+  ; parameter[0] : v1 ([object com/facebook/ui/images/d/k])
+  ; parameter[1] : v2 ([object com/facebook/ui/images/d/h])
+  (line 14)
+  (iput-object v1 v0 com/facebook/ui/images/d/l.b [object com/facebook/ui/images/d/k])
+  (iput-object v2 v0 com/facebook/ui/images/d/l.a [object com/facebook/ui/images/d/h])
+  (invoke-direct {v0} com/facebook/ui/images/base/b/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/graphics/Bitmap] )[object android/graphics/Bitmap]
+  (limit registers 6)
+  ; this: v4 ([object com/facebook/ui/images/d/l])
+  ; parameter[0] : v5 ([object android/graphics/Bitmap])
+  (line 20)
+  (new-instance v0 com/facebook/ui/images/d/j)
+  (iget-object v1 v4 com/facebook/ui/images/d/l.a [object com/facebook/ui/images/d/h])
+  (invoke-virtual {v5} android/graphics/Bitmap/getWidth )
+  (move-result v2)
+  (invoke-virtual {v5} android/graphics/Bitmap/getHeight )
+  (move-result v3)
+  (invoke-direct {v0 v1 v2 v3} com/facebook/ui/images/d/j/<init> [object com/facebook/ui/images/d/h] int int )
+  (iput-object v0 v4 com/facebook/ui/images/d/l.c [object com/facebook/ui/images/d/j])
+  (line 21)
+  (iget-object v0 v4 com/facebook/ui/images/d/l.c [object com/facebook/ui/images/d/j])
+  (invoke-virtual {v0 v5} com/facebook/ui/images/d/j/a [object android/graphics/Bitmap] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/images/d/l])
+  (line 26)
+  (iget-object v0 v1 com/facebook/ui/images/d/l.a [object com/facebook/ui/images/d/h])
+  (invoke-virtual {v0} com/facebook/ui/images/d/h/h )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

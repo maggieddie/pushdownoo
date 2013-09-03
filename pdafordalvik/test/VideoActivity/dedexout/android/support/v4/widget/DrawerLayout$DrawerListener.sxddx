@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) android/support/v4/widget/DrawerLayout$DrawerListener
+ (super java/lang/Object)
+ (source "DrawerLayout.java")
+
+
+(method (attrs public abstract ) onDrawerClosed([object android/view/View] )void
+)
+
+(method (attrs public abstract ) onDrawerOpened([object android/view/View] )void
+)
+
+(method (attrs public abstract ) onDrawerSlide([object android/view/View] float )void
+)
+
+(method (attrs public abstract ) onDrawerStateChanged(int )void
+)
+
+)

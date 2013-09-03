@@ -1,0 +1,30 @@
+(class (attrs ) com/facebook/orca/contacts/divebar/bf
+ (super java/lang/Object)
+ (source "DivebarPickerView.java")
+ (implements com/facebook/contacts/picker/aq)
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/divebar/be] )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/divebar/be] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/divebar/bf])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/divebar/be])
+  (line 72)
+  (iput-object v1 v0 com/facebook/orca/contacts/divebar/bf.a [object com/facebook/orca/contacts/divebar/be])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/contacts/picker/ad] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/contacts/divebar/bf])
+  ; parameter[0] : v2 ([object com/facebook/contacts/picker/ad])
+  ; parameter[1] : v3 (int)
+  (line 75)
+  (iget-object v0 v1 com/facebook/orca/contacts/divebar/bf.a [object com/facebook/orca/contacts/divebar/be])
+  (invoke-static {v0 v2 v3} com/facebook/orca/contacts/divebar/be/a [object com/facebook/orca/contacts/divebar/be] [object com/facebook/contacts/picker/ad] int )
+  (line 76)
+  (return-void )
+)
+
+)

@@ -1,0 +1,42 @@
+(class (attrs public ) com/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer
+ (super com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer)
+ (source "JacksonDeserializers.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer])
+  (line 129)
+  (const-class v0 com/fasterxml/jackson/databind/util/TokenBuffer)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer/<init> [object java/lang/Class] )
+  (return-void )
+ )
+
+(method (attrs public ) deserialize([object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )[object com/fasterxml/jackson/databind/util/TokenBuffer]
+  (limit registers 5)
+  ; this: v2 ([object com/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  (line 135)
+  (new-instance v0 com/fasterxml/jackson/databind/util/TokenBuffer)
+  (invoke-virtual {v3} com/fasterxml/jackson/core/JsonParser/getCodec )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/util/TokenBuffer/<init> [object com/fasterxml/jackson/core/ObjectCodec] )
+  (line 137)
+  (invoke-virtual {v0 v3} com/fasterxml/jackson/databind/util/TokenBuffer/copyCurrentStructure [object com/fasterxml/jackson/core/JsonParser] )
+  (line 138)
+  (return-object v0)
+)
+
+(method (attrs public ) deserialize([object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  (line 125)
+  (invoke-virtual {v1 v2 v3} com/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer/deserialize [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

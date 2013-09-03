@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/orca/prefs/m
+ (super java/lang/Object)
+ (source "LocationServicesPreference.java")
+ (implements android/widget/CompoundButton$OnCheckedChangeListener)
+
+ (field (attrs final ) a [object com/facebook/orca/prefs/l] )
+
+(method (attrs ) <init>([object com/facebook/orca/prefs/l] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/prefs/m])
+  ; parameter[0] : v1 ([object com/facebook/orca/prefs/l])
+  (line 101)
+  (iput-object v1 v0 com/facebook/orca/prefs/m.a [object com/facebook/orca/prefs/l])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCheckedChanged([object android/widget/CompoundButton] boolean )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/orca/prefs/m])
+  ; parameter[0] : v3 ([object android/widget/CompoundButton])
+  ; parameter[1] : v4 (boolean)
+  (line 104)
+  (iget-object v0 v2 com/facebook/orca/prefs/m.a [object com/facebook/orca/prefs/l])
+  (invoke-static {v4} java/lang/Boolean/valueOf boolean )
+  (move-result-object v1)
+  (invoke-static {v0 v1} com/facebook/orca/prefs/l/a [object com/facebook/orca/prefs/l] [object java/lang/Boolean] )
+  (line 105)
+  (return-void )
+)
+
+)

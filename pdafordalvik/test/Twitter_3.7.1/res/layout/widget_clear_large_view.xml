@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/clear_view" android:background="@drawable/appwidget_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/widget_header" />
+    <include layout="@layout/widget_loading" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/text_title_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/widget_clear_content" />
+    </RelativeLayout>
+</LinearLayout>

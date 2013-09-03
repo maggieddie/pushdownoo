@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/orca/camera/a/d
+ (super java/lang/Object)
+ (source "IImageList.java")
+
+
+(method (attrs public abstract ) a(int )[object com/facebook/orca/camera/a/c]
+)
+
+(method (attrs public abstract ) a([object android/net/Uri] )[object com/facebook/orca/camera/a/c]
+)
+
+(method (attrs public abstract ) a()void
+)
+
+(method (attrs public abstract ) b()int
+)
+
+)

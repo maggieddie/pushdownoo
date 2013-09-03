@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/orca/chatheads/cq
+ (super com/facebook/inject/d)
+ (source "ChatHeadsModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/cn] )
+
+(method (attrs private ) <init>([object com/facebook/orca/chatheads/cn] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/cq])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/cn])
+  (line 191)
+  (iput-object v1 v0 com/facebook/orca/chatheads/cq.a [object com/facebook/orca/chatheads/cn])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/cn] [object com/facebook/orca/chatheads/co] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/chatheads/cq])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/cn])
+  ; parameter[1] : v2 ([object com/facebook/orca/chatheads/co])
+  (line 191)
+  (invoke-direct {v0 v1} com/facebook/orca/chatheads/cq/<init> [object com/facebook/orca/chatheads/cn] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/chatheads/b/f]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/orca/chatheads/cq])
+  (line 196)
+  (new-instance v3 com/facebook/orca/chatheads/b/f)
+  (const-class v0 android/content/Context)
+  (invoke-virtual {v4 v0} com/facebook/orca/chatheads/cq/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (const-class v1 android/view/WindowManager)
+  (invoke-virtual {v4 v1} com/facebook/orca/chatheads/cq/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object android/view/WindowManager])
+  (const-class v2 android/os/Handler)
+  (invoke-virtual {v4 v2} com/facebook/orca/chatheads/cq/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object android/os/Handler])
+  (invoke-direct {v3 v0 v1 v2} com/facebook/orca/chatheads/b/f/<init> [object android/content/Context] [object android/view/WindowManager] [object android/os/Handler] )
+  (return-object v3)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/chatheads/cq])
+  (line 191)
+  (invoke-virtual {v1} com/facebook/orca/chatheads/cq/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

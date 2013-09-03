@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/deser/ContextualKeyDeserializer
+ (super java/lang/Object)
+ (source "ContextualKeyDeserializer.java")
+
+
+(method (attrs public abstract ) createContextual([object com/fasterxml/jackson/databind/DeserializationContext] [object com/fasterxml/jackson/databind/BeanProperty] )[object com/fasterxml/jackson/databind/KeyDeserializer]
+)
+
+)

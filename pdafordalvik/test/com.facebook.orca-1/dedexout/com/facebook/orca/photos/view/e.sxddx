@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/photos/view/e
+ (super android/view/GestureDetector$SimpleOnGestureListener)
+ (source "PhotoViewActivity.java")
+
+ (field (attrs final ) a [object com/facebook/orca/photos/view/PhotoViewActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/photos/view/PhotoViewActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/photos/view/e])
+  ; parameter[0] : v1 ([object com/facebook/orca/photos/view/PhotoViewActivity])
+  (line 160)
+  (iput-object v1 v0 com/facebook/orca/photos/view/e.a [object com/facebook/orca/photos/view/PhotoViewActivity])
+  (invoke-direct {v0} android/view/GestureDetector$SimpleOnGestureListener/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onSingleTapConfirmed([object android/view/MotionEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/photos/view/e])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  (line 164)
+  (iget-object v0 v1 com/facebook/orca/photos/view/e.a [object com/facebook/orca/photos/view/PhotoViewActivity])
+  (invoke-static {v0} com/facebook/orca/photos/view/PhotoViewActivity/k [object com/facebook/orca/photos/view/PhotoViewActivity] )
+  (move-result v0)
+  (if-eqz v0 l1d2592)
+  (line 165)
+  (iget-object v0 v1 com/facebook/orca/photos/view/e.a [object com/facebook/orca/photos/view/PhotoViewActivity])
+  (invoke-static {v0} com/facebook/orca/photos/view/PhotoViewActivity/l [object com/facebook/orca/photos/view/PhotoViewActivity] )
+  (label l1d258e)
+  (line 169)
+  (const/4 v0 1)
+  (return v0)
+  (label l1d2592)
+  (line 167)
+  (iget-object v0 v1 com/facebook/orca/photos/view/e.a [object com/facebook/orca/photos/view/PhotoViewActivity])
+  (invoke-static {v0} com/facebook/orca/photos/view/PhotoViewActivity/a [object com/facebook/orca/photos/view/PhotoViewActivity] )
+  (goto l1d258e)
+)
+
+)

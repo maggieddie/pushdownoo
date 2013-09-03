@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title_layout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@drawable/text_color" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="18.0dip" android:text="@string/code_generator_provision_manual" />
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/text_color" android:gravity="center" android:id="@id/code_generator_manual_provision_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="18.0dip" />
+            <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <EditText android:textSize="20.0sp" android:ellipsize="start" android:gravity="center" android:id="@id/code_generator_secret_key_manual" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="18.0dip" android:hint="XXXX XXXX XXXX XXXX" android:maxLines="1" android:inputType="textCapCharacters|textNoSuggestions" />
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/text_color" android:gravity="center" android:id="@id/code_generator_activate_manual_provision" android:background="@drawable/code_generator_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="10.0dip" android:text="@string/code_generator_activate_button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,84 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/introspect/VisibilityChecker
+ (super java/lang/Object)
+ (source "VisibilityChecker.java")
+
+
+(method (attrs public abstract ) isCreatorVisible([object com/fasterxml/jackson/databind/introspect/AnnotatedMember] )boolean
+)
+
+(method (attrs public abstract ) isCreatorVisible([object java/lang/reflect/Member] )boolean
+)
+
+(method (attrs public abstract ) isFieldVisible([object com/fasterxml/jackson/databind/introspect/AnnotatedField] )boolean
+)
+
+(method (attrs public abstract ) isFieldVisible([object java/lang/reflect/Field] )boolean
+)
+
+(method (attrs public abstract ) isGetterVisible([object com/fasterxml/jackson/databind/introspect/AnnotatedMethod] )boolean
+)
+
+(method (attrs public abstract ) isGetterVisible([object java/lang/reflect/Method] )boolean
+)
+
+(method (attrs public abstract ) isIsGetterVisible([object com/fasterxml/jackson/databind/introspect/AnnotatedMethod] )boolean
+)
+
+(method (attrs public abstract ) isIsGetterVisible([object java/lang/reflect/Method] )boolean
+)
+
+(method (attrs public abstract ) isSetterVisible([object com/fasterxml/jackson/databind/introspect/AnnotatedMethod] )boolean
+)
+
+(method (attrs public abstract ) isSetterVisible([object java/lang/reflect/Method] )boolean
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/annotation/JsonAutoDetect] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withCreatorVisibility([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withFieldVisibility([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withGetterVisibility([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withIsGetterVisibility([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withSetterVisibility([object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withVisibility([object com/fasterxml/jackson/annotation/PropertyAccessor] [object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/introspect/VisibilityChecker]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+)

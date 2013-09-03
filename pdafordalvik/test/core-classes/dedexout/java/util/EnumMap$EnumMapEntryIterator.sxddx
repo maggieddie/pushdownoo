@@ -24,7 +24,7 @@
   (limit registers 6)
   ; this: v5 ([object java/util/EnumMap$EnumMapEntryIterator])
   (line 298)
-  (invoke-virtual-quick {v5} java/util/EnumMap$EnumMapEntryIterator/hasNext )
+  (invoke-virtual-quick {v5} vtable #0xb)
   (move-result v0)
   (if-nez v0 ld9738)
   (line 299)

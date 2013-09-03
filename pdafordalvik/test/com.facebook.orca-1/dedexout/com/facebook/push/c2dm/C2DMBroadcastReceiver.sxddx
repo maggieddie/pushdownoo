@@ -1,0 +1,48 @@
+(class (attrs public ) com/facebook/push/c2dm/C2DMBroadcastReceiver
+ (super com/facebook/c/k)
+ (source "C2DMBroadcastReceiver.java")
+
+ (field (attrs private static final ) a [object java/lang/Class] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 24)
+  (const-class v0 com/facebook/push/c2dm/C2DMBroadcastReceiver)
+  (sput-object v0 com/facebook/push/c2dm/C2DMBroadcastReceiver.a [object java/lang/Class])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/push/c2dm/C2DMBroadcastReceiver])
+  (const/4 v3 0)
+  (line 27)
+  (new-instance v0 com/google/common/a/ew)
+  (invoke-direct {v0} com/google/common/a/ew/<init> )
+  (const-string v1 "com.google.android.c2dm.intent.RECEIVE")
+  (new-instance v2 com/facebook/push/c2dm/b)
+  (invoke-direct {v2 v3} com/facebook/push/c2dm/b/<init> [object com/facebook/push/c2dm/a] )
+  (invoke-virtual {v0 v1 v2} com/google/common/a/ew/b [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (const-string v1 "com.google.android.c2dm.intent.REGISTRATION")
+  (new-instance v2 com/facebook/push/c2dm/b)
+  (invoke-direct {v2 v3} com/facebook/push/c2dm/b/<init> [object com/facebook/push/c2dm/a] )
+  (invoke-virtual {v0 v1 v2} com/google/common/a/ew/b [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/a/ew/b )
+  (move-result-object v0)
+  (invoke-direct {v4 v0} com/facebook/c/k/<init> [object java/util/Map] )
+  (invoke-static {} com/facebook/debug/LogIntent/log )
+  (nop )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs static ) a()[object java/lang/Class]
+  (limit registers 1)
+  (line 22)
+  (sget-object v0 com/facebook/push/c2dm/C2DMBroadcastReceiver.a [object java/lang/Class])
+  (return-object v0)
+ )
+
+)

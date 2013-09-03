@@ -1,0 +1,67 @@
+(class (attrs public ) com/facebook/base/broadcast/m
+ (super com/facebook/base/broadcast/b)
+ (source "LocalFbBroadcastManager.java")
+
+ (field (attrs private final ) a [object android/support/v4/a/e] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/broadcast/m])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 18)
+  (invoke-direct {v1} com/facebook/base/broadcast/b/<init> )
+  (line 19)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (invoke-static {v0} android/support/v4/a/e/a [object android/content/Context] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/base/broadcast/m.a [object android/support/v4/a/e])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs protected ) a([object android/content/BroadcastReceiver] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/broadcast/m])
+  ; parameter[0] : v2 ([object android/content/BroadcastReceiver])
+  (line 36)
+  (iget-object v0 v1 com/facebook/base/broadcast/m.a [object android/support/v4/a/e])
+  (invoke-virtual {v0 v2} android/support/v4/a/e/a [object android/content/BroadcastReceiver] )
+  (line 37)
+  (return-void )
+)
+
+(method (attrs protected ) a([object android/content/BroadcastReceiver] [object android/content/IntentFilter] [object android/os/Handler] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/base/broadcast/m])
+  ; parameter[0] : v2 ([object android/content/BroadcastReceiver])
+  ; parameter[1] : v3 ([object android/content/IntentFilter])
+  ; parameter[2] : v4 ([object android/os/Handler])
+  (line 31)
+  (iget-object v0 v1 com/facebook/base/broadcast/m.a [object android/support/v4/a/e])
+  (invoke-virtual {v0 v2 v3} android/support/v4/a/e/a [object android/content/BroadcastReceiver] [object android/content/IntentFilter] )
+  (line 32)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/content/Intent] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/broadcast/m])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 25)
+  (iget-object v0 v1 com/facebook/base/broadcast/m.a [object android/support/v4/a/e])
+  (invoke-virtual {v0 v2} android/support/v4/a/e/a [object android/content/Intent] )
+  (line 26)
+  (return-void )
+)
+
+(method (attrs protected ) b()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/broadcast/m])
+  (line 41)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

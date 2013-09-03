@@ -1,0 +1,68 @@
+(class (attrs public ) com/facebook/common/o/e
+ (super java/lang/Object)
+ (source "ObjectPoolManager.java")
+
+ (field (attrs private final ) a [object java/util/HashMap] )
+ (field (attrs private final ) b [object com/facebook/common/time/a] )
+
+(method (attrs public ) <init>([object com/facebook/common/time/a] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/o/e])
+  ; parameter[0] : v2 ([object com/facebook/common/time/a])
+  (line 17)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (iput-object v0 v1 com/facebook/common/o/e.a [object java/util/HashMap])
+  (line 19)
+  (iput-object v2 v1 com/facebook/common/o/e.b [object com/facebook/common/time/a])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Class] )[object com/facebook/common/o/d]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TT;>;"  "Lcom/facebook/common/o/a"  "<TT;>;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/common/o/e])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 30)
+  (new-instance v0 com/facebook/common/o/d)
+  (iget-object v1 v2 com/facebook/common/o/e.b [object com/facebook/common/time/a])
+  (invoke-direct {v0 v2 v3 v1} com/facebook/common/o/d/<init> [object com/facebook/common/o/e] [object java/lang/Class] [object com/facebook/common/time/a] )
+  (return-object v0)
+)
+
+(method (attrs ) a([object java/lang/Class] [object com/facebook/common/o/a] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TT;>;"  "Lcom/facebook/common/o/a"  "<TT;>;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/common/o/e])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object com/facebook/common/o/a])
+  (line 34)
+  (iget-object v0 v1 com/facebook/common/o/e.a [object java/util/HashMap])
+  (invoke-virtual {v0 v2 v3} java/util/HashMap/put [object java/lang/Object] [object java/lang/Object] )
+  (line 35)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Class] )[object com/facebook/common/o/a]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/lang/Class"  "<TT;>;)"  "Lcom/facebook/common/o/a"  "<TT;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/o/e])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  (line 44)
+  (iget-object v0 v1 com/facebook/common/o/e.a [object java/util/HashMap])
+  (invoke-virtual {v0 v2} java/util/HashMap/get [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/o/a])
+  (return-object v0)
+)
+
+)

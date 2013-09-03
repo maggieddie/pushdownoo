@@ -1,0 +1,35 @@
+(class (attrs final ) com/google/common/base/CharMatcher$5
+ (super com/google/common/base/CharMatcher)
+ (source "CharMatcher.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/CharMatcher$5])
+  (line 175)
+  (invoke-direct {v0} com/google/common/base/CharMatcher/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) apply([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$5])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 175)
+  (check-cast v2 [object java/lang/Character])
+  (invoke-super {v1 v2} com/google/common/base/CharMatcher/apply [object java/lang/Character] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) matches(char )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$5])
+  ; parameter[0] : v2 (char)
+  (line 177)
+  (invoke-static {v2} java/lang/Character/isLowerCase char )
+  (move-result v0)
+  (return v0)
+)
+
+)

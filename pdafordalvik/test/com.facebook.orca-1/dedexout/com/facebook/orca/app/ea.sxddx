@@ -1,0 +1,18 @@
+(class (attrs public ) com/facebook/orca/app/ea
+ (super com/facebook/base/a/h)
+ (source "MessengerAppInitializationActivityHelper.java")
+
+
+(method (attrs public ) <init>([object com/facebook/base/a/d] [object com/facebook/c/s] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/orca/app/ea])
+  ; parameter[0] : v2 ([object com/facebook/base/a/d])
+  ; parameter[1] : v3 ([object com/facebook/c/s])
+  (line 17)
+  (const-class v0 com/facebook/orca/app/MessengerSplashScreenActivity)
+  (invoke-direct {v1 v2 v3 v0} com/facebook/base/a/h/<init> [object com/facebook/base/a/d] [object com/facebook/c/s] [object java/lang/Class] )
+  (line 18)
+  (return-void )
+ )
+
+)

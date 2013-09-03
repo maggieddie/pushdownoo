@@ -1,0 +1,282 @@
+(class (attrs final ) com/nineoldandroids/view/ViewHelper$Honeycomb
+ (super java/lang/Object)
+ (source "ViewHelper.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/nineoldandroids/view/ViewHelper$Honeycomb])
+  (line 187)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) a([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 189)
+  (invoke-virtual {v1} android/view/View/getAlpha )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) a([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 193)
+  (invoke-virtual {v0 v1} android/view/View/setAlpha float )
+  (line 194)
+  (return-void )
+ )
+
+(method (attrs static ) a([object android/view/View] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (int)
+  (line 257)
+  (invoke-virtual {v0 v1} android/view/View/setScrollX int )
+  (line 258)
+  (return-void )
+ )
+
+(method (attrs static ) b([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 197)
+  (invoke-virtual {v1} android/view/View/getPivotX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) b([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 201)
+  (invoke-virtual {v0 v1} android/view/View/setPivotX float )
+  (line 202)
+  (return-void )
+ )
+
+(method (attrs static ) b([object android/view/View] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (int)
+  (line 265)
+  (invoke-virtual {v0 v1} android/view/View/setScrollY int )
+  (line 266)
+  (return-void )
+ )
+
+(method (attrs static ) c([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 205)
+  (invoke-virtual {v1} android/view/View/getPivotY )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) c([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 209)
+  (invoke-virtual {v0 v1} android/view/View/setPivotY float )
+  (line 210)
+  (return-void )
+ )
+
+(method (attrs static ) d([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 213)
+  (invoke-virtual {v1} android/view/View/getRotation )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) d([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 217)
+  (invoke-virtual {v0 v1} android/view/View/setRotation float )
+  (line 218)
+  (return-void )
+ )
+
+(method (attrs static ) e([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 221)
+  (invoke-virtual {v1} android/view/View/getRotationX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) e([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 225)
+  (invoke-virtual {v0 v1} android/view/View/setRotationX float )
+  (line 226)
+  (return-void )
+ )
+
+(method (attrs static ) f([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 229)
+  (invoke-virtual {v1} android/view/View/getRotationY )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) f([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 233)
+  (invoke-virtual {v0 v1} android/view/View/setRotationY float )
+  (line 234)
+  (return-void )
+ )
+
+(method (attrs static ) g([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 237)
+  (invoke-virtual {v1} android/view/View/getScaleX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) g([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 241)
+  (invoke-virtual {v0 v1} android/view/View/setScaleX float )
+  (line 242)
+  (return-void )
+ )
+
+(method (attrs static ) h([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 245)
+  (invoke-virtual {v1} android/view/View/getScaleY )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) h([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 249)
+  (invoke-virtual {v0 v1} android/view/View/setScaleY float )
+  (line 250)
+  (return-void )
+ )
+
+(method (attrs static ) i([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 253)
+  (invoke-virtual {v1} android/view/View/getScrollX )
+  (move-result v0)
+  (int-to-float v0 v0)
+  (return v0)
+ )
+
+(method (attrs static ) i([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 273)
+  (invoke-virtual {v0 v1} android/view/View/setTranslationX float )
+  (line 274)
+  (return-void )
+ )
+
+(method (attrs static ) j([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 261)
+  (invoke-virtual {v1} android/view/View/getScrollY )
+  (move-result v0)
+  (int-to-float v0 v0)
+  (return v0)
+ )
+
+(method (attrs static ) j([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 281)
+  (invoke-virtual {v0 v1} android/view/View/setTranslationY float )
+  (line 282)
+  (return-void )
+ )
+
+(method (attrs static ) k([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 269)
+  (invoke-virtual {v1} android/view/View/getTranslationX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) k([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 289)
+  (invoke-virtual {v0 v1} android/view/View/setX float )
+  (line 290)
+  (return-void )
+ )
+
+(method (attrs static ) l([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 277)
+  (invoke-virtual {v1} android/view/View/getTranslationY )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) l([object android/view/View] float )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object android/view/View])
+  ; parameter[1] : v1 (float)
+  (line 297)
+  (invoke-virtual {v0 v1} android/view/View/setY float )
+  (line 298)
+  (return-void )
+ )
+
+(method (attrs static ) m([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 285)
+  (invoke-virtual {v1} android/view/View/getX )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs static ) n([object android/view/View] )float
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 293)
+  (invoke-virtual {v1} android/view/View/getY )
+  (move-result v0)
+  (return v0)
+ )
+
+)

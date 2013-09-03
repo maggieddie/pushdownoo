@@ -78,7 +78,7 @@
   (line 126)
   (sget-object v6 org/apache/harmony/security/provider/crypto/RandomBitsSupplier.bis [object java/io/FileInputStream])
   (sub-int v7 v8 v4)
-  (invoke-virtual-quick {v6 v0 v3 v7} java/io/FileInputStream/read [array byte] int int )
+  (invoke-virtual-quick {v6 v0 v3 v7} vtable #0x11)
   (move-result v1)
   (label l1b1db6)
   (line 132)

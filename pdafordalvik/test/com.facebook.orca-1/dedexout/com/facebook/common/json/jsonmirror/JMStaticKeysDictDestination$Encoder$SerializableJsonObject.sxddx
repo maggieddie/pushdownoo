@@ -1,0 +1,16 @@
+(interface (attrs public abstract annotation ) com/facebook/common/json/jsonmirror/JMStaticKeysDictDestination$Encoder$SerializableJsonObject
+ (super java/lang/Object)
+ (source "JMStaticKeysDictDestination.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) jsonFieldName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) type()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<+"  "Lcom/facebook/common/json/jsonmirror/JMStaticKeysDictDestination;"  ">;")
+  )
+)
+
+)

@@ -1,0 +1,59 @@
+(class (attrs public abstract ) org/andengine/engine/handler/BaseEntityUpdateHandler
+ (super java/lang/Object)
+ (source "BaseEntityUpdateHandler.java")
+ (implements org/andengine/engine/handler/IUpdateHandler)
+
+ (field (attrs private ) mEntity [object org/andengine/entity/IEntity] )
+
+(method (attrs public ) <init>([object org/andengine/entity/IEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/handler/BaseEntityUpdateHandler])
+  ; parameter[0] : v1 ([object org/andengine/entity/IEntity])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 28)
+  (iput-object v1 v0 org/andengine/engine/handler/BaseEntityUpdateHandler.mEntity [object org/andengine/entity/IEntity])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) getEntity()[object org/andengine/entity/IEntity]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/handler/BaseEntityUpdateHandler])
+  (line 36)
+  (iget-object v0 v1 org/andengine/engine/handler/BaseEntityUpdateHandler.mEntity [object org/andengine/entity/IEntity])
+  (return-object v0)
+)
+
+(method (attrs public final ) onUpdate(float )void
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/engine/handler/BaseEntityUpdateHandler])
+  ; parameter[0] : v2 (float)
+  (line 51)
+  (iget-object v0 v1 org/andengine/engine/handler/BaseEntityUpdateHandler.mEntity [object org/andengine/entity/IEntity])
+  (invoke-virtual {v1 v2 v0} org/andengine/engine/handler/BaseEntityUpdateHandler/onUpdate float [object org/andengine/entity/IEntity] )
+  (line 52)
+  (return-void )
+)
+
+(method (attrs protected abstract ) onUpdate(float [object org/andengine/entity/IEntity] )void
+)
+
+(method (attrs public ) reset()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/engine/handler/BaseEntityUpdateHandler])
+  (line 57)
+  (return-void )
+)
+
+(method (attrs public ) setEntity([object org/andengine/entity/IEntity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/handler/BaseEntityUpdateHandler])
+  ; parameter[0] : v1 ([object org/andengine/entity/IEntity])
+  (line 40)
+  (iput-object v1 v0 org/andengine/engine/handler/BaseEntityUpdateHandler.mEntity [object org/andengine/entity/IEntity])
+  (line 41)
+  (return-void )
+)
+
+)

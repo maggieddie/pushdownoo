@@ -1,0 +1,48 @@
+(class (attrs public abstract ) com/twitter/android/util/t
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public ) b long )
+ (field (attrs public final ) c [object java/lang/String] )
+ (field (attrs public ) d [object java/lang/Object] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 4)
+  ; this: v2 ([object com/twitter/android/util/t])
+  ; parameter[0] : v3 ([object java/lang/String])
+  (line 15)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 16)
+  (iput-object v3 v2 com/twitter/android/util/t.c [object java/lang/String])
+  (line 17)
+  (const-wide/16 v0 0)
+  (iput-wide v0 v2 com/twitter/android/util/t.b long)
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public abstract ) a()int
+)
+
+(method (attrs public abstract ) b()int
+)
+
+(method (attrs public final ) c()boolean
+  (limit registers 5)
+  ; this: v4 ([object com/twitter/android/util/t])
+  (line 29)
+  (iget-object v0 v4 com/twitter/android/util/t.d [object java/lang/Object])
+  (if-eqz v0 ldc9c8)
+  (iget-wide v0 v4 com/twitter/android/util/t.b long)
+  (const-wide/16 v2 0)
+  (cmp-long v0 v0 v2)
+  (if-nez v0 ldc9c8)
+  (const/4 v0 1)
+  (label ldc9c6)
+  (return v0)
+  (label ldc9c8)
+  (const/4 v0 0)
+  (goto ldc9c6)
+)
+
+)

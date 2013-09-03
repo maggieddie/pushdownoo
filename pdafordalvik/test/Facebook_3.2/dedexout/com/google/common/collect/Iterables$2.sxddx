@@ -1,0 +1,32 @@
+(class (attrs final ) com/google/common/collect/Iterables$2
+ (super com/google/common/collect/Iterables$IterableWithToString)
+ (source "Iterables.java")
+
+ (field (attrs final ) a [object java/lang/Iterable] )
+
+(method (attrs ) <init>([object java/lang/Iterable] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/Iterables$2])
+  ; parameter[0] : v1 ([object java/lang/Iterable])
+  (line 483)
+  (iput-object v1 v0 com/google/common/collect/Iterables$2.a [object java/lang/Iterable])
+  (invoke-direct {v0} com/google/common/collect/Iterables$IterableWithToString/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TT;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Iterables$2])
+  (line 486)
+  (iget-object v0 v1 com/google/common/collect/Iterables$2.a [object java/lang/Iterable])
+  (invoke-static {v0} com/google/common/collect/Iterables/e [object java/lang/Iterable] )
+  (move-result-object v0)
+  (invoke-static {v0} com/google/common/collect/Iterators/e [object java/util/Iterator] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,58 @@
+(class (attrs final ) com/google/common/a/gz
+ (super com/google/common/a/w)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object com/google/common/a/hm] )
+
+(method (attrs ) <init>([object com/google/common/a/hm] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/gz])
+  ; parameter[0] : v1 ([object com/google/common/a/hm])
+  (line 898)
+  (iput-object v1 v0 com/google/common/a/gz.a [object com/google/common/a/hm])
+  (invoke-direct {v0} com/google/common/a/w/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gz])
+  (line 900)
+  (iget-object v0 v1 com/google/common/a/gz.a [object com/google/common/a/hm])
+  (iget-object v0 v0 com/google/common/a/hm.a [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) getValue()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gz])
+  (line 903)
+  (iget-object v0 v1 com/google/common/a/gz.a [object com/google/common/a/hm])
+  (iget-object v0 v0 com/google/common/a/hm.b [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) setValue([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)TV;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/gz])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 906)
+  (iget-object v0 v2 com/google/common/a/gz.a [object com/google/common/a/hm])
+  (iget-object v0 v0 com/google/common/a/hm.b [object java/lang/Object])
+  (line 907)
+  (iget-object v1 v2 com/google/common/a/gz.a [object com/google/common/a/hm])
+  (iput-object v3 v1 com/google/common/a/hm.b [object java/lang/Object])
+  (line 908)
+  (return-object v0)
+)
+
+)

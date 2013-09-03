@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="@dimen/headcase_minimal_open_distance_from_edge" android:layout_height="fill_parent">
+            <View android:id="@id/headcase_bg_top" android:background="@drawable/headcase_bg_top_left" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+            <FrameLayout android:id="@id/headcase_bg_mid" android:background="@drawable/headcase_bg_mid_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_gravity="left|center" android:id="@id/nub" android:layout_width="@dimen/headcase_nub_width" android:layout_height="fill_parent">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/headcase_nub_icon" />
+                </FrameLayout>
+            </FrameLayout>
+            <View android:background="@drawable/headcase_bg_bottom_left" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@drawable/headcase_bg_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fragment_container" android:paddingLeft="36.0dip" android:paddingTop="6.0dip" android:paddingRight="0.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@drawable/orca_in_app_notification_background" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.tiles.ThreadTileView android:id="@id/thread_tile_view" android:background="@color/popup_background_color" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_margin="8.0dip" orca:threadTileSize="38.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/notif_text_view" android:padding="7.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+    <ImageView android:id="@id/green_dot" android:background="@drawable/orca_online_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:scaleType="centerInside" />
+    <ImageButton android:id="@id/notif_close_button" android:background="@drawable/notif_x" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_margin="8.0dip" android:scaleType="centerInside" />
+</LinearLayout>

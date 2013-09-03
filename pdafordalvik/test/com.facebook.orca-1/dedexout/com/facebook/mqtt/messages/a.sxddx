@@ -1,0 +1,37 @@
+(class (attrs public ) com/facebook/mqtt/messages/a
+ (super com/facebook/mqtt/messages/l)
+ (source "ConnAckMqttMessage.java")
+
+
+(method (attrs public ) <init>([object com/facebook/mqtt/messages/h] [object com/facebook/mqtt/messages/b] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/mqtt/messages/a])
+  ; parameter[0] : v2 ([object com/facebook/mqtt/messages/h])
+  ; parameter[1] : v3 ([object com/facebook/mqtt/messages/b])
+  (line 18)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/facebook/mqtt/messages/l/<init> [object com/facebook/mqtt/messages/h] [object java/lang/Object] [object java/lang/Object] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/mqtt/messages/b]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/a])
+  (line 23)
+  (invoke-super {v1} com/facebook/mqtt/messages/l/b )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/mqtt/messages/b])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/a])
+  (line 8)
+  (invoke-virtual {v1} com/facebook/mqtt/messages/a/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/auth/login/al
+ (super java/lang/Object)
+ (source "LaunchAuthActivityUtil.java")
+
+
+(method (attrs public abstract ) a([object android/app/Activity] )void
+)
+
+(method (attrs public abstract ) b([object android/app/Activity] )void
+)
+
+)

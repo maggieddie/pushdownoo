@@ -1,0 +1,60 @@
+com/tdizz/snote/keyboardnotes/NoteList$NoteDebuggerListener: 0.0
+com/tdizz/snote/keyboardnotes/NoteEdit$1: 0.0
+com/tdizz/snote/smsnotes/SmsNotes$3: 0.0
+com/tdizz/snote/drawnotes/DrawActivity$2: 0.0
+com/tdizz/snote/drawnotes/DrawActivity$1: 0.0
+com/tdizz/snote/recorder/RecorderActivity$PlayButton$1: 0.0
+com/tdizz/snote/SuperNoteActivity: 0.0
+com/tdizz/snote/smsnotes/SmsNotes$2: 0.0
+com/tdizz/snote/recorder/RecorderActivity$PlayButton: 50.0
+com/tdizz/snote/drawnotes/ReceiveUpdates: 0.0
+com/tdizz/snote/drawnotes/DrawActivity$3: 0.0
+com/tdizz/snote/keyboardnotes/NoteEntry: 0.0
+com/tdizz/snote/SuperNoteActivity$1: 0.0
+com/tdizz/snote/smsnotes/SmsNotes$debugger: 0.0
+com/tdizz/snote/keyboardnotes/DBHelper: 0.0
+com/tdizz/snote/smsnotes/SmsNotes: 0.0
+com/tdizz/snote/emailnotes/EmailActivity$1: 0.0
+com/tdizz/snote/drawnotes/DrawView: 100.0
+com/tdizz/snote/drawnotes/SendUpdates: 100.0
+com/tdizz/snote/keyboardnotes/NoteEdit$LinedEditText: 100.0
+com/tdizz/snote/smsnotes/SmsNotes$1NewThread: 0.0
+com/tdizz/snote/drawnotes/DrawActivity: 0.0
+com/tdizz/snote/keyboardnotes/NoteList: 0.0
+com/tdizz/snote/keyboardnotes/NoteEdit$NoteHeader: 100.0
+com/tdizz/snote/recorder/RecorderActivity: 0.0
+com/tdizz/snote/recorder/RecorderActivity$RecordButton$1: 0.0
+com/tdizz/snote/emailnotes/EmailActivity: 0.0
+com/tdizz/snote/recorder/RecorderActivity$RecordButton: 50.0
+com/tdizz/snote/smsnotes/SmsNotes$1: 0.0
+com/tdizz/snote/keyboardnotes/NoteEdit: 25.0
+The total average: 17.5
+ Any places of null ref during constructions? 
+ com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(45)
+InvokeStmt:android/content/Context/openOrCreateDatabase(List(v3, v4, v5) , v2 , List((object java/lang/String), int, (object android/database/sqlite/SQLiteDatabase$CursorFactory)))@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(45)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(62)
+InvokeInterfaceStmt:android/database/Cursor/moveToFirst(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(62)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(50)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/query(List(v3, v4, v5, v6, v7, v8, v9) , v2 , List((object java/lang/String), (array (object java/lang/String)), (object java/lang/String), (array (object java/lang/String)), (object java/lang/String), (object java/lang/String), (object java/lang/String)))@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(50)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(75)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/close(List() , v2 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(75)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(70)
+InvokeInterfaceStmt:android/database/Cursor/close(List() , v12 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(70)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(58)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/query(List(v3, v4, v5, v6, v7, v8, v9, v10, v11) , v2 , List(boolean, (object java/lang/String), (array (object java/lang/String)), (object java/lang/String), (array (object java/lang/String)), (object java/lang/String), (object java/lang/String), (object java/lang/String), (object java/lang/String)))@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(58)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(73)
+InvokeStmt:android/database/SQLException/getLocalizedMessage(List() , v13 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(73)
+com/tdizz/snote/recorder/RecorderActivity:<init>LineStmt(39)
+InvokeStmt:java/io/File/getAbsolutePath(List() , v0 , List())@@@com/tdizz/snote/recorder/RecorderActivity$$<init>::LineStmt(39)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(65)
+InvokeInterfaceStmt:android/database/Cursor/close(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(65)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(53)
+InvokeInterfaceStmt:android/database/Cursor/getCount(List() , v12 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(53)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(61)
+InvokeInterfaceStmt:android/database/Cursor/getCount(List() , v15 , List())@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(61)
+com/tdizz/snote/keyboardnotes/DBHelper:CreateDatabaseLineStmt(89)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/execSQL(List(v2) , v6 , List((object java/lang/String)))@@@com/tdizz/snote/keyboardnotes/DBHelper$$CreateDatabase::LineStmt(89)
+com/tdizz/snote/keyboardnotes/DBHelper:<init>LineStmt(63)
+InvokeInterfaceStmt:android/database/Cursor/getInt(List(v2) , v15 , List(int))@@@com/tdizz/snote/keyboardnotes/DBHelper$$<init>::LineStmt(63)
+com/tdizz/snote/keyboardnotes/DBHelper:CreateDatabaseLineStmt(87)
+InvokeStmt:android/database/sqlite/SQLiteDatabase/insert(List(v2, v3, v0) , v6 , List((object java/lang/String), (object java/lang/String), (object android/content/ContentValues)))@@@com/tdizz/snote/keyboardnotes/DBHelper$$CreateDatabase::LineStmt(87)

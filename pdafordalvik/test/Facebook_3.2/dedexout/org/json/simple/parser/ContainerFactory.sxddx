@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/json/simple/parser/ContainerFactory
+ (super java/lang/Object)
+
+
+(method (attrs public abstract ) a()[object java/util/Map]
+)
+
+(method (attrs public abstract ) b()[object java/util/List]
+)
+
+)

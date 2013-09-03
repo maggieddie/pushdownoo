@@ -1,0 +1,46 @@
+(class (attrs public ) com/facebook/common/errorreporting/FbCrashReporter
+ (super org/acra/reporter/BaseCrashReporter)
+ (source "FbCrashReporter.java")
+
+
+(method (attrs public ) <init>([object android/app/Application] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/errorreporting/FbCrashReporter])
+  ; parameter[0] : v1 ([object android/app/Application])
+  (line 14)
+  (invoke-direct {v0 v1} org/acra/reporter/BaseCrashReporter/<init> [object android/app/Application] )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) checkSSLCertsOnCrashReport()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/errorreporting/FbCrashReporter])
+  (line 19)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) logcatArguments()[array [object java/lang/String]]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/common/errorreporting/FbCrashReporter])
+  (line 24)
+  (const/4 v0 4)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (const/4 v1 0)
+  (const-string v2 "-t")
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (const-string v2 "500")
+  (aput-object v2 v0 v1)
+  (const/4 v1 2)
+  (const-string v2 "-v")
+  (aput-object v2 v0 v1)
+  (const/4 v1 3)
+  (const-string v2 "threadtime")
+  (aput-object v2 v0 v1)
+  (line 25)
+  (return-object v0)
+)
+
+)

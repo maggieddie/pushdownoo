@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/orca/threadlist/bl
+ (super com/facebook/fbservice/ops/ac)
+ (source "ThreadListLoader.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadlist/bj] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadlist/bj] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/bl])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/bj])
+  (line 413)
+  (iput-object v1 v0 com/facebook/orca/threadlist/bl.a [object com/facebook/orca/threadlist/bj])
+  (invoke-direct {v0} com/facebook/fbservice/ops/ac/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadlist/bl])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/OperationResult])
+  (line 416)
+  (iget-object v0 v2 com/facebook/orca/threadlist/bl.a [object com/facebook/orca/threadlist/bj])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/orca/threadlist/bj/b [object com/facebook/orca/threadlist/bj] [object com/facebook/common/g/c] )
+  (line 417)
+  (iget-object v0 v2 com/facebook/orca/threadlist/bl.a [object com/facebook/orca/threadlist/bj])
+  (invoke-static {v0 v3} com/facebook/orca/threadlist/bj/b [object com/facebook/orca/threadlist/bj] [object com/facebook/fbservice/service/OperationResult] )
+  (line 418)
+  (return-void )
+)
+
+(method (attrs protected ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadlist/bl])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/ServiceException])
+  (line 422)
+  (iget-object v0 v2 com/facebook/orca/threadlist/bl.a [object com/facebook/orca/threadlist/bj])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/orca/threadlist/bj/b [object com/facebook/orca/threadlist/bj] [object com/facebook/common/g/c] )
+  (line 423)
+  (iget-object v0 v2 com/facebook/orca/threadlist/bl.a [object com/facebook/orca/threadlist/bj])
+  (invoke-static {v0 v3} com/facebook/orca/threadlist/bj/b [object com/facebook/orca/threadlist/bj] [object com/facebook/fbservice/service/ServiceException] )
+  (line 424)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/bl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 413)
+  (check-cast v1 [object com/facebook/fbservice/service/OperationResult])
+  (invoke-virtual {v0 v1} com/facebook/orca/threadlist/bl/a [object com/facebook/fbservice/service/OperationResult] )
+  (return-void )
+)
+
+)

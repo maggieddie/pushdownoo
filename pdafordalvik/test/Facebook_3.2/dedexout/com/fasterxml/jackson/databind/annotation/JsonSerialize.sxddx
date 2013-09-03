@@ -1,0 +1,51 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/databind/annotation/JsonSerialize
+ (super java/lang/Object)
+ (source "JsonSerialize.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) as()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) contentAs()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) contentUsing()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<+"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;>;")
+  )
+)
+
+(method (attrs public abstract ) include()[object com/fasterxml/jackson/databind/annotation/JsonSerialize$Inclusion]
+  (annotation runtimeVisibility [object java/lang/Deprecated]
+  )
+)
+
+(method (attrs public abstract ) keyAs()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) keyUsing()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<+"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;>;")
+  )
+)
+
+(method (attrs public abstract ) typing()[object com/fasterxml/jackson/databind/annotation/JsonSerialize$Typing]
+)
+
+(method (attrs public abstract ) using()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<+"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;>;")
+  )
+)
+
+)

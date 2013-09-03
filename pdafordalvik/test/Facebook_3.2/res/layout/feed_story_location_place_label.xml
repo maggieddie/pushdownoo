@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/feed_story_location_place_thumbnail" android:layout_width="@dimen/feed_location_image_size" android:layout_height="@dimen/feed_location_image_size" android:layout_marginLeft="@dimen/feed_location_horizontal_margins" android:layout_marginRight="@dimen/feed_location_horizontal_margins" orca:loadResolutionDuringScroll="full_res" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff797b80" android:id="@id/feed_story_location_place_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/feed_story_light_gray_text_color" android:id="@id/feed_story_location_place_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

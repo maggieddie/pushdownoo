@@ -1,0 +1,39 @@
+(class (attrs public final ) com/twitter/android/network/j
+ (super com/twitter/android/network/d)
+ (source "Twttr")
+
+ (field (attrs private final ) f [object org/apache/http/client/methods/HttpDelete] )
+ (field (attrs private final ) g [object com/twitter/android/network/a] )
+
+(method (attrs public ) <init>([object com/twitter/android/network/e] [object org/apache/http/client/methods/HttpDelete] [object com/twitter/android/network/a] [object com/twitter/android/network/g] )void
+  (limit registers 6)
+  ; this: v1 ([object com/twitter/android/network/j])
+  ; parameter[0] : v2 ([object com/twitter/android/network/e])
+  ; parameter[1] : v3 ([object org/apache/http/client/methods/HttpDelete])
+  ; parameter[2] : v4 ([object com/twitter/android/network/a])
+  ; parameter[3] : v5 ([object com/twitter/android/network/g])
+  (line 18)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/twitter/android/network/d/<init> [object com/twitter/android/network/e] [object org/apache/http/client/methods/HttpRequestBase] [object com/twitter/android/network/g] )
+  (line 19)
+  (iput-object v3 v1 com/twitter/android/network/j.f [object org/apache/http/client/methods/HttpDelete])
+  (line 20)
+  (iput-object v4 v1 com/twitter/android/network/j.g [object com/twitter/android/network/a])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs protected final ) a(long )void
+  (limit registers 6)
+  ; this: v3 ([object com/twitter/android/network/j])
+  ; parameter[0] : v4 (long)
+  (line 25)
+  (iget-object v0 v3 com/twitter/android/network/j.g [object com/twitter/android/network/a])
+  (iget-object v1 v3 com/twitter/android/network/j.f [object org/apache/http/client/methods/HttpDelete])
+  (const/4 v2 0)
+  (invoke-virtual {v0 v1 v4 v5 v2} com/twitter/android/network/a/a [object org/apache/http/client/methods/HttpRequestBase] long [object org/apache/http/HttpEntity] )
+  (line 26)
+  (return-void )
+)
+
+)

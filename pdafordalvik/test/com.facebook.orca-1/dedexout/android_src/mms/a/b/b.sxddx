@@ -1,0 +1,17 @@
+(class (attrs public abstract ) android_src/mms/a/b/b
+ (super android_src/mms/a/b/c)
+ (source "ElementSequentialTimeContainerImpl.java")
+ (implements org/a/a/b/c)
+
+
+(method (attrs ) <init>([object org/a/a/b/g] )void
+  (limit registers 2)
+  ; this: v0 ([object android_src/mms/a/b/b])
+  ; parameter[0] : v1 ([object org/a/a/b/g])
+  (line 38)
+  (invoke-direct {v0 v1} android_src/mms/a/b/c/<init> [object org/a/a/b/g] )
+  (line 39)
+  (return-void )
+ )
+
+)

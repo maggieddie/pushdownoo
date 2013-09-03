@@ -1,0 +1,27 @@
+(class (attrs public ) org/anddev/andengine/sensor/accelerometer/AccelerometerSensorOptions
+ (super java/lang/Object)
+ (source "AccelerometerSensorOptions.java")
+
+ (field (attrs final ) mSensorDelay [object org/anddev/andengine/sensor/SensorDelay] )
+
+(method (attrs public ) <init>([object org/anddev/andengine/sensor/SensorDelay] )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/sensor/accelerometer/AccelerometerSensorOptions])
+  ; parameter[0] : v1 ([object org/anddev/andengine/sensor/SensorDelay])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 28)
+  (iput-object v1 v0 org/anddev/andengine/sensor/accelerometer/AccelerometerSensorOptions.mSensorDelay [object org/anddev/andengine/sensor/SensorDelay])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public ) getSensorDelay()[object org/anddev/andengine/sensor/SensorDelay]
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/sensor/accelerometer/AccelerometerSensorOptions])
+  (line 36)
+  (iget-object v0 v1 org/anddev/andengine/sensor/accelerometer/AccelerometerSensorOptions.mSensorDelay [object org/anddev/andengine/sensor/SensorDelay])
+  (return-object v0)
+)
+
+)

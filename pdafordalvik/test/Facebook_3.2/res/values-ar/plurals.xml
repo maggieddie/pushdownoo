@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">منذ ‏‎%d‎‏ ساعات</item>
+        <item quantity="one">منذ ساعة</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">منذ ‏‎%d‎‏ دقائق</item>
+        <item quantity="one">منذ دقيقة واحدة</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">بعد ‏‎%d‎‏ ساعات من الآن</item>
+        <item quantity="one">بعد ساعة من الآن</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">بعد ‏‎%d‎‏ دقائق من الآن</item>
+        <item quantity="one">بعد دقيقة من الآن</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">حذف الرسائل؟</item>
+        <item quantity="one">حذف رسالة؟</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">بمجرد حذف نسخة من هذه الرسائل، لا يمكن التراجع عن الإجراء.</item>
+        <item quantity="one">بمجرد حذف نسخة من هذه الرسالة، لا يمكن التراجع عن الإجراء.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">حذف الرسائل</item>
+        <item quantity="one">حذف رسالة</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">جارٍ حذف الرسائل…</item>
+        <item quantity="one">جارٍ حذف الرسالة…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">‏‎%d‎‏ من تسجيلات الإعجاب</item>
+        <item quantity="one">‏‎%d‎‏ من الإعجابات</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">‏‎%d‎‏ تعليق/تعليقات</item>
+        <item quantity="one">‏‎%d‎‏ من التعليقات</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">حذف ‏‎%d‎‏ من الصور المحددة</item>
+        <item quantity="one">حذف الصورة المحددة</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">هل أنت متأكد من رغبتك بحذف ‏‎%d‎‏ من الصور المحددة من جهازك؟</item>
+        <item quantity="one">هل أنت متأكد من رغبتك بحذف الصورة المحددة من جهازك؟</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">‏‎%d‎‏ من الأشخاص مُعجبين بهذا</item>
+        <item quantity="one">شخص واحد مُعجب بهذا</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">‏‎%d‎‏ أصدقاء مشتركون</item>
+        <item quantity="one">صديق مشترك واحد</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">‏‎%,d‎‏ إعجابات</item>
+        <item quantity="one">إعجاب واحد</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">‏‎%,d‎‏ تعليقات</item>
+        <item quantity="one">تعليق واحد</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">‏‎%1$s‎‏ إشعارات</item>
+        <item quantity="one">إشعار واحد</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">‏‎%1$s‎‏ دقائق</item>
+        <item quantity="one">دقيقة واحدة</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">‏‎%1$s‎‏ ساعات</item>
+        <item quantity="one">ساعة واحدة</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">‏‎%s‎‏ من تسجيلات الإعجاب</item>
+        <item quantity="one">‏‎%s‎‏ من الإعجابات</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">‏‎%s‎‏ تعليق/تعليقات</item>
+        <item quantity="one">‏‎%s‎‏ من التعليقات</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">الإعجاب بهذا المكان</item>
+        <item quantity="one">معجب بهذا المكان</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">كانوا هنا</item>
+        <item quantity="one">كان هنا</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">‏‎%1$d‎‏ تصنيفات</item>
+        <item quantity="one">تصنيف واحد</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">إعجابات</item>
+        <item quantity="one">إعجاب</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">كانوا هنا</item>
+        <item quantity="one">كان هنا</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">كنت هنا ‏‎%1$d‎‏ مرات.</item>
+        <item quantity="one">كنت هنا مرة واحدة.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">‏‎%,d‎‏ إعجابات</item>
+        <item quantity="one">إعجاب واحد</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">كان ‏‎%,d‎‏ هنا</item>
+        <item quantity="one">كان شخص واحد هنا</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">‏‎%,d‎‏ يتحدثون عن هذا</item>
+        <item quantity="one">شخص واحد يتحدث عن هذا</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">يستخدم كل من ‏‎%1$s‎‏ و‏‎%2$s‎‏ هذا التطبيق</item>
+        <item quantity="one">يستخدم ‏‎%1$s‎‏ هذا التطبيق</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">يلعب كل من ‏‎%1$s‎‏ و‏‎%2$s‎‏ هذه اللعبة</item>
+        <item quantity="one">يلعب ‏‎%1$s‎‏ هذه اللعبة</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">‏‎%d‎‏ إعجابات</item>
+        <item quantity="one">إعجاب واحد</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">‏‎%d‎‏ زيارات</item>
+        <item quantity="one">زيارة واحدة</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">‏‎%d‎‏ من أعياد الميلاد</item>
+        <item quantity="one">1 عيد ميلاد</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">‏‎%d‎‏ من الأشخاص مُعجبين بهذا</item>
+        <item quantity="one">شخص واحد مُعجب بهذا</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">‏‎%d‎‏ من مرات الدخول</item>
+        <item quantity="one">دخول مرة واحدة</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">‏‎%d‎‏ أصدقاء مشتركون</item>
+        <item quantity="zero">لا يوجد أصدقاء مشتركين</item>
+        <item quantity="one">صديق مشترك واحد</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">‏‎%d‎‏ شخص/أشخاص</item>
+        <item quantity="one">شخص واحد</item>
+    </plurals>
+</resources>

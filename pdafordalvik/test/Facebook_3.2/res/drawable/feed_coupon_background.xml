@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/feed_story_coupon_white" android:endColor="#fff4f5f6" android:angle="270.0" />
+    <corners android:bottomLeftRadius="3.0dip" android:bottomRightRadius="3.0dip" />
+</shape>

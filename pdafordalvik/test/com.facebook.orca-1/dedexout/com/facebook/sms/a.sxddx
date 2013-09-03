@@ -1,0 +1,42 @@
+(class (attrs public ) com/facebook/sms/a
+ (super com/facebook/inject/c)
+ (source "SmsInitializationModule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/sms/a])
+  (line 16)
+  (invoke-direct {v0} com/facebook/inject/c/<init> )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/sms/a])
+  (line 20)
+  (const-class v0 com/facebook/base/c/a)
+  (invoke-virtual {v3 v0} com/facebook/sms/a/e [object java/lang/Class] )
+  (line 22)
+  (const-class v0 com/facebook/sms/d)
+  (invoke-virtual {v3 v0} com/facebook/sms/a/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/sms/c)
+  (const/4 v2 0)
+  (invoke-direct {v1 v3 v2} com/facebook/sms/c/<init> [object com/facebook/sms/a] [object com/facebook/sms/b] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/inject/a/g/a )
+  (line 26)
+  (const-class v0 com/facebook/base/c)
+  (const-class v1 com/facebook/common/init/NeedsLowPriorityInitOnUiThread)
+  (invoke-virtual {v3 v0 v1} com/facebook/sms/a/a [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v0)
+  (const-class v1 com/facebook/sms/d)
+  (invoke-virtual {v0 v1} com/facebook/inject/aj/a [object java/lang/Class] )
+  (line 29)
+  (return-void )
+)
+
+)

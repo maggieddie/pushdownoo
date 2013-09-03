@@ -1,0 +1,35 @@
+(class (attrs public ) com/facebook/orca/activity/l
+ (super java/lang/Object)
+ (source "MessengerAboutHandler.java")
+ (implements com/facebook/orca/prefs/a)
+
+ (field (attrs private final ) a [object android/content/Context] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/l])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 18)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 19)
+  (iput-object v1 v0 com/facebook/orca/activity/l.a [object android/content/Context])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/activity/l])
+  (line 24)
+  (new-instance v0 android/content/Intent)
+  (iget-object v1 v3 com/facebook/orca/activity/l.a [object android/content/Context])
+  (const-class v2 com/facebook/orca/about/MessengerAboutActivity)
+  (invoke-direct {v0 v1 v2} android/content/Intent/<init> [object android/content/Context] [object java/lang/Class] )
+  (line 25)
+  (iget-object v1 v3 com/facebook/orca/activity/l.a [object android/content/Context])
+  (invoke-virtual {v1 v0} android/content/Context/startActivity [object android/content/Intent] )
+  (line 26)
+  (return-void )
+)
+
+)

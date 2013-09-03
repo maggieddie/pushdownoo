@@ -1,0 +1,46 @@
+(class (attrs public abstract ) com/facebook/fbservice/ops/ac
+ (super com/facebook/common/g/a)
+ (source "OperationResultFutureCallback.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/fbservice/ops/ac])
+  (line 17)
+  (invoke-direct {v0} com/facebook/common/g/a/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) a([object com/facebook/fbservice/service/ServiceException] )void
+)
+
+(method (attrs protected final ) b([object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/fbservice/ops/ac])
+  ; parameter[0] : v2 ([object java/lang/Throwable])
+  (line 30)
+  (instance-of v0 v2 com/facebook/fbservice/service/ServiceException)
+  (if-eqz v0 l148aa8)
+  (line 31)
+  (check-cast v2 [object com/facebook/fbservice/service/ServiceException])
+  (invoke-virtual {v1 v2} com/facebook/fbservice/ops/ac/a [object com/facebook/fbservice/service/ServiceException] )
+  (label l148aa6)
+  (line 35)
+  (return-void )
+  (label l148aa8)
+  (line 33)
+  (invoke-virtual {v1 v2} com/facebook/fbservice/ops/ac/c [object java/lang/Throwable] )
+  (goto l148aa6)
+)
+
+(method (attrs protected ) c([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/ops/ac])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 58)
+  (invoke-static {v1} com/google/common/base/Throwables/propagate [object java/lang/Throwable] )
+  (line 59)
+  (return-void )
+)
+
+)

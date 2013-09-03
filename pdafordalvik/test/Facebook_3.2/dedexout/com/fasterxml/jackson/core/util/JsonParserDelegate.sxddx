@@ -1,0 +1,437 @@
+(class (attrs public ) com/fasterxml/jackson/core/util/JsonParserDelegate
+ (super com/fasterxml/jackson/core/JsonParser)
+ (source "JsonParserDelegate.java")
+
+ (field (attrs protected ) delegate [object com/fasterxml/jackson/core/JsonParser] )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/core/JsonParser] )void
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/core/JsonParser])
+  (line 23)
+  (invoke-direct {v0} com/fasterxml/jackson/core/JsonParser/<init> )
+  (line 24)
+  (iput-object v1 v0 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) canUseSchema([object com/fasterxml/jackson/core/FormatSchema] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/FormatSchema])
+  (line 67)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/canUseSchema [object com/fasterxml/jackson/core/FormatSchema] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) clearCurrentToken()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 135)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/clearCurrentToken )
+  (line 136)
+  (return-void )
+)
+
+(method (attrs public ) close()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 88)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/close )
+  (line 89)
+  (return-void )
+)
+
+(method (attrs public ) disable([object com/fasterxml/jackson/core/JsonParser$Feature] )[object com/fasterxml/jackson/core/JsonParser]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser$Feature])
+  (line 51)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/disable [object com/fasterxml/jackson/core/JsonParser$Feature] )
+  (line 52)
+  (return-object v1)
+)
+
+(method (attrs public ) enable([object com/fasterxml/jackson/core/JsonParser$Feature] )[object com/fasterxml/jackson/core/JsonParser]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser$Feature])
+  (line 45)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/enable [object com/fasterxml/jackson/core/JsonParser$Feature] )
+  (line 46)
+  (return-object v1)
+)
+
+(method (attrs public ) getBigIntegerValue()[object java/math/BigInteger]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 187)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getBigIntegerValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getBinaryValue([object com/fasterxml/jackson/core/Base64Variant] )[array byte]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/Base64Variant])
+  (line 253)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/getBinaryValue [object com/fasterxml/jackson/core/Base64Variant] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getBooleanValue()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 192)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getBooleanValue )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getByteValue()byte
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 197)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getByteValue )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getCodec()[object com/fasterxml/jackson/core/ObjectCodec]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 40)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getCodec )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getCurrentLocation()[object com/fasterxml/jackson/core/JsonLocation]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 119)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getCurrentLocation )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getCurrentName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 114)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getCurrentName )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getCurrentToken()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 104)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getCurrentToken )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getDecimalValue()[object java/math/BigDecimal]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 207)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getDecimalValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getDoubleValue()double
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 212)
+  (iget-object v0 v2 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getDoubleValue )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) getEmbeddedObject()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 248)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getEmbeddedObject )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getFloatValue()float
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 217)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getFloatValue )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getInputSource()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 77)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getInputSource )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getIntValue()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 222)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getIntValue )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getLastClearedToken()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 140)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getLastClearedToken )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getLongValue()long
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 227)
+  (iget-object v0 v2 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getLongValue )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+(method (attrs public ) getNumberType()[object com/fasterxml/jackson/core/JsonParser$NumberType]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 232)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getNumberType )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getNumberValue()[object java/lang/Number]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 237)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getNumberValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getParsingContext()[object com/fasterxml/jackson/core/JsonStreamContext]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 124)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getParsingContext )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getShortValue()short
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 202)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getShortValue )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getText()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 156)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getText )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getTextCharacters()[array char]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 166)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getTextCharacters )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getTextLength()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 171)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getTextLength )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getTextOffset()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 176)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getTextOffset )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getTokenLocation()[object com/fasterxml/jackson/core/JsonLocation]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 258)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/getTokenLocation )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hasCurrentToken()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 109)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/hasCurrentToken )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hasTextCharacters()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 161)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/hasTextCharacters )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isClosed()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 93)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/isClosed )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEnabled([object com/fasterxml/jackson/core/JsonParser$Feature] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser$Feature])
+  (line 57)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/isEnabled [object com/fasterxml/jackson/core/JsonParser$Feature] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) nextToken()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 263)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/nextToken )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) nextValue()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 268)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/nextValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) overrideCurrentName([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 145)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/overrideCurrentName [object java/lang/String] )
+  (line 146)
+  (return-void )
+)
+
+(method (attrs public ) setCodec([object com/fasterxml/jackson/core/ObjectCodec] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/ObjectCodec])
+  (line 35)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/setCodec [object com/fasterxml/jackson/core/ObjectCodec] )
+  (line 36)
+  (return-void )
+)
+
+(method (attrs public ) setSchema([object com/fasterxml/jackson/core/FormatSchema] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/FormatSchema])
+  (line 62)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/core/JsonParser/setSchema [object com/fasterxml/jackson/core/FormatSchema] )
+  (line 63)
+  (return-void )
+)
+
+(method (attrs public ) skipChildren()[object com/fasterxml/jackson/core/JsonParser]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 273)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/skipChildren )
+  (line 275)
+  (return-object v1)
+)
+
+(method (attrs public ) version()[object com/fasterxml/jackson/core/Version]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/util/JsonParserDelegate])
+  (line 72)
+  (iget-object v0 v1 com/fasterxml/jackson/core/util/JsonParserDelegate.delegate [object com/fasterxml/jackson/core/JsonParser])
+  (invoke-virtual {v0} com/fasterxml/jackson/core/JsonParser/version )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

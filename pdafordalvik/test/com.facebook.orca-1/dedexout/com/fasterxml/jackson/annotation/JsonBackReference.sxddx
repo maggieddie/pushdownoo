@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonBackReference
+ (super java/lang/Object)
+ (source "JsonBackReference.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

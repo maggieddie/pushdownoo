@@ -28,7 +28,7 @@
   (const/16 v0 46)
   (iput-quick v0 v3 )
   (line 23)
-  (invoke-virtual-quick {v3} org/bouncycastle/util/encoders/UrlBase64Encoder/initialiseDecodingTable )
+  (invoke-virtual-quick {v3} vtable #0xe)
   (line 24)
   (return-void )
  )

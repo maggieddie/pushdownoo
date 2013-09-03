@@ -1,0 +1,24 @@
+(class (attrs final ) com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector$1
+ (super com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector)
+ (source "NopAnnotationIntrospector.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector$1])
+  (line 20)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) version()[object com/fasterxml/jackson/core/Version]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector$1])
+  (line 23)
+  (sget-object v0 com/fasterxml/jackson/databind/cfg/DatabindVersion.instance [object com/fasterxml/jackson/databind/cfg/DatabindVersion])
+  (invoke-virtual {v0} com/fasterxml/jackson/databind/cfg/DatabindVersion/version )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

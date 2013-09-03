@@ -19,7 +19,7 @@
   (throw v0)
   (label l11a426)
   (line 41)
-  (iput-object-quick v2 v1 java/util/MissingFormatWidthException.s [object java/lang/String])
+  (iput-object-quick v2 v1 )
   (line 42)
   (return-void )
  )
@@ -28,7 +28,7 @@
   (limit registers 2)
   ; this: v1 ([object java/util/MissingFormatWidthException])
   (line 50)
-  (iget-object-quick v0 v1 java/util/MissingFormatWidthException.s [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -36,7 +36,7 @@
   (limit registers 2)
   ; this: v1 ([object java/util/MissingFormatWidthException])
   (line 60)
-  (iget-object-quick v0 v1 java/util/MissingFormatWidthException.s [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

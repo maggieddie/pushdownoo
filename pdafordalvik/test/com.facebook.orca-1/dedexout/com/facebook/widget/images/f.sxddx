@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/widget/images/f
+ (super com/facebook/common/v/j)
+ (source "UrlImage.java")
+
+ (field (attrs final ) a [object com/facebook/widget/images/UrlImage] )
+
+(method (attrs ) <init>([object com/facebook/widget/images/UrlImage] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/widget/images/f])
+  ; parameter[0] : v1 ([object com/facebook/widget/images/UrlImage])
+  (line 266)
+  (iput-object v1 v0 com/facebook/widget/images/f.a [object com/facebook/widget/images/UrlImage])
+  (invoke-direct {v0} com/facebook/common/v/j/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/images/f])
+  ; parameter[0] : v2 (boolean)
+  (line 269)
+  (iget-object v0 v1 com/facebook/widget/images/f.a [object com/facebook/widget/images/UrlImage])
+  (invoke-virtual {v0 v2} com/facebook/widget/images/UrlImage/a boolean )
+  (line 270)
+  (return-void )
+)
+
+)

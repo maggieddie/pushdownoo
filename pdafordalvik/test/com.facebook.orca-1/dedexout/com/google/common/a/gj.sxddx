@@ -1,0 +1,36 @@
+(class (attrs final ) com/google/common/a/gj
+ (super com/google/common/a/k)
+ (source "Iterators.java")
+
+ (field (attrs final ) a [array [object java/lang/Object]] )
+ (field (attrs final ) b int )
+
+(method (attrs ) <init>(int [array [object java/lang/Object]] int )void
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/a/gj])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  ; parameter[2] : v3 (int)
+  (line 1042)
+  (iput-object v2 v0 com/google/common/a/gj.a [array [object java/lang/Object]])
+  (iput v3 v0 com/google/common/a/gj.b int)
+  (invoke-direct {v0 v1} com/google/common/a/k/<init> int )
+  (return-void )
+ )
+
+(method (attrs protected ) a(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/gj])
+  ; parameter[0] : v3 (int)
+  (line 1044)
+  (iget-object v0 v2 com/google/common/a/gj.a [array [object java/lang/Object]])
+  (iget v1 v2 com/google/common/a/gj.b int)
+  (add-int/2addr v1 v3)
+  (aget-object v0 v0 v1)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/contacts/database/d
+ (super com/facebook/fbservice/ops/ac)
+ (source "AddressBookPeriodicRunner.java")
+
+ (field (attrs final ) a [object com/facebook/contacts/database/AddressBookPeriodicRunner] )
+
+(method (attrs ) <init>([object com/facebook/contacts/database/AddressBookPeriodicRunner] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/database/d])
+  ; parameter[0] : v1 ([object com/facebook/contacts/database/AddressBookPeriodicRunner])
+  (line 363)
+  (iput-object v1 v0 com/facebook/contacts/database/d.a [object com/facebook/contacts/database/AddressBookPeriodicRunner])
+  (invoke-direct {v0} com/facebook/fbservice/ops/ac/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/database/d])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 366)
+  (iget-object v0 v1 com/facebook/contacts/database/d.a [object com/facebook/contacts/database/AddressBookPeriodicRunner])
+  (invoke-static {v0} com/facebook/contacts/database/AddressBookPeriodicRunner/c [object com/facebook/contacts/database/AddressBookPeriodicRunner] )
+  (line 367)
+  (return-void )
+)
+
+(method (attrs protected ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/database/d])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/ServiceException])
+  (line 371)
+  (iget-object v0 v1 com/facebook/contacts/database/d.a [object com/facebook/contacts/database/AddressBookPeriodicRunner])
+  (invoke-static {v0} com/facebook/contacts/database/AddressBookPeriodicRunner/b [object com/facebook/contacts/database/AddressBookPeriodicRunner] )
+  (line 372)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/database/d])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 363)
+  (check-cast v1 [object com/facebook/fbservice/service/OperationResult])
+  (invoke-virtual {v0 v1} com/facebook/contacts/database/d/a [object com/facebook/fbservice/service/OperationResult] )
+  (return-void )
+)
+
+)

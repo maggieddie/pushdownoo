@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NuxIntroLayout">
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginTop">0.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+    </style>
+    <style name="NuxIntroPadding">
+        <item name="android:paddingLeft">45.0dip</item>
+        <item name="android:paddingTop">55.0dip</item>
+        <item name="android:paddingRight">45.0dip</item>
+        <item name="android:paddingBottom">55.0dip</item>
+    </style>
+    <style name="NuxDiveBarButtonLayout">
+        <item name="android:layout_marginLeft">-12.0dip</item>
+        <item name="android:layout_marginTop">-25.0dip</item>
+        <item name="android:layout_marginRight">-12.0dip</item>
+        <item name="android:layout_marginBottom">30.0dip</item>
+    </style>
+    <style name="ThreadTitleNuxLayout">
+        <item name="android:layout_marginLeft">-40.0dip</item>
+        <item name="android:layout_marginTop">-35.0dip</item>
+        <item name="android:layout_marginRight">40.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+    </style>
+    <style name="ThreadTitleNuxPadding">
+        <item name="android:paddingLeft">50.0dip</item>
+        <item name="android:paddingTop">65.0dip</item>
+        <item name="android:paddingRight">50.0dip</item>
+        <item name="android:paddingBottom">50.0dip</item>
+    </style>
+</resources>

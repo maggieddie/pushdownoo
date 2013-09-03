@@ -1,0 +1,41 @@
+(class (attrs public abstract ) com/facebook/contacts/picker/c
+ (super com/facebook/contacts/picker/b)
+ (source "BaseSearchableContactPickerListAdapter.java")
+ (implements android/widget/Filterable)
+ (implements com/facebook/contacts/picker/w)
+ (implements com/facebook/widget/a/k)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/contacts/picker/c])
+  (line 13)
+  (invoke-direct {v0} com/facebook/contacts/picker/b/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) a()[object com/facebook/contacts/picker/u]
+)
+
+(method (attrs public abstract ) b()void
+)
+
+(method (attrs public ) c()[object com/facebook/widget/a/f]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/c])
+  (line 13)
+  (invoke-virtual {v1} com/facebook/contacts/picker/c/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getFilter()[object android/widget/Filter]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/c])
+  (line 28)
+  (new-instance v0 com/facebook/contacts/picker/d)
+  (invoke-direct {v0 v1} com/facebook/contacts/picker/d/<init> [object com/facebook/contacts/picker/c] )
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:title="@string/image_search_title" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <EditText android:id="@id/image_search_query" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/image_search_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionGo" />
+        <Button android:id="@id/image_search_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_search_button" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/orca_bing_logo" />
+    <GridView android:gravity="center" android:id="@id/image_search_grid" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:horizontalSpacing="10.0dip" android:verticalSpacing="10.0dip" android:stretchMode="columnWidth" android:columnWidth="100.0dip" android:numColumns="auto_fit" android:layout_weight="1.0" />
+    <com.facebook.widget.listview.EmptyListViewItem android:layout_gravity="center" android:id="@id/image_search_empty_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <RelativeLayout android:id="@id/image_search_page_range_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:textSize="18.0sp" android:id="@id/image_search_page_range" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/text_link_color" android:id="@id/image_search_page_range_prev" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_search_range_previous" android:layout_toLeftOf="@id/image_search_page_range" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/text_link_color" android:id="@id/image_search_page_range_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_search_range_next" android:layout_toRightOf="@id/image_search_page_range" />
+    </RelativeLayout>
+</LinearLayout>

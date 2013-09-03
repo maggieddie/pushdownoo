@@ -1,0 +1,24 @@
+(class (attrs ) com/fasterxml/jackson/dataformat/smile/ModuleVersion
+ (super com/fasterxml/jackson/core/util/VersionUtil)
+ (source "ModuleVersion.java")
+
+ (field (attrs public static final ) instance [object com/fasterxml/jackson/dataformat/smile/ModuleVersion] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 11)
+  (new-instance v0 com/fasterxml/jackson/dataformat/smile/ModuleVersion)
+  (invoke-direct {v0} com/fasterxml/jackson/dataformat/smile/ModuleVersion/<init> )
+  (sput-object v0 com/fasterxml/jackson/dataformat/smile/ModuleVersion.instance [object com/fasterxml/jackson/dataformat/smile/ModuleVersion])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/dataformat/smile/ModuleVersion])
+  (line 9)
+  (invoke-direct {v0} com/fasterxml/jackson/core/util/VersionUtil/<init> )
+  (return-void )
+ )
+
+)

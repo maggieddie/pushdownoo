@@ -1,0 +1,239 @@
+(class (attrs public final ) com/google/common/collect/HashMultiset
+ (super com/google/common/collect/AbstractMapBasedMultiset)
+ (source "HashMultiset.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 72)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (invoke-direct {v1 v0} com/google/common/collect/AbstractMapBasedMultiset/<init> [object java/util/Map] )
+  (line 73)
+  (return-void )
+ )
+
+(method (attrs public static ) h()[object com/google/common/collect/HashMultiset]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<E:"  "Ljava/lang/Object;"  ">()"  "Lcom/google/common/collect/HashMultiset"  "<TE;>;")
+  )
+  (limit registers 1)
+  (line 42)
+  (new-instance v0 com/google/common/collect/HashMultiset)
+  (invoke-direct {v0} com/google/common/collect/HashMultiset/<init> )
+  (return-object v0)
+ )
+
+(method (attrs private ) readObject([object java/io/ObjectInputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectInputStream")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v3 ([object java/io/ObjectInputStream])
+  (line 92)
+  (invoke-virtual {v3} java/io/ObjectInputStream/defaultReadObject )
+  (line 93)
+  (invoke-static {v3} com/google/common/collect/Serialization/a [object java/io/ObjectInputStream] )
+  (move-result v0)
+  (line 94)
+  (invoke-static {v0} com/google/common/collect/Maps/a int )
+  (move-result-object v1)
+  (invoke-virtual {v2 v1} com/google/common/collect/HashMultiset/a [object java/util/Map] )
+  (line 96)
+  (invoke-static {v2 v3 v0} com/google/common/collect/Serialization/a [object com/google/common/collect/Multiset] [object java/io/ObjectInputStream] int )
+  (line 97)
+  (return-void )
+ )
+
+(method (attrs private ) writeObject([object java/io/ObjectOutputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectOutputStream")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v1 ([object java/io/ObjectOutputStream])
+  (line 85)
+  (invoke-virtual {v1} java/io/ObjectOutputStream/defaultWriteObject )
+  (line 86)
+  (invoke-static {v0 v1} com/google/common/collect/Serialization/a [object com/google/common/collect/Multiset] [object java/io/ObjectOutputStream] )
+  (line 87)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] int )int
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 34)
+  (invoke-super {v1 v2 v3} com/google/common/collect/AbstractMapBasedMultiset/a [object java/lang/Object] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) add([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/add [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) addAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/addAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] int )int
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 34)
+  (invoke-super {v1 v2 v3} com/google/common/collect/AbstractMapBasedMultiset/b [object java/lang/Object] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v0} com/google/common/collect/AbstractMapBasedMultiset/clear )
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) f()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/f )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/iterator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/remove [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/removeAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 34)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/retainAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/HashMultiset])
+  (line 34)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

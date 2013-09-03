@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/facebook_grey" android:paddingLeft="10.0dip" android:paddingTop="16.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/orca_inbox_nux_background" android:padding="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff47546e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/thread_list_send_message_title" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/nux_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/thread_list_send_message_suggestions" />
+        <GridView android:id="@id/grid_view" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="3" />
+    </LinearLayout>
+    <Button android:layout_gravity="top|right|center" android:id="@id/wildfire_empty_thread_close" android:background="@drawable/orca_nux_close" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_margin="12.0dip" />
+</FrameLayout>

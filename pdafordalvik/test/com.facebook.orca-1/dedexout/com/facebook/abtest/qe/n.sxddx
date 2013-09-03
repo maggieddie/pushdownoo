@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/abtest/qe/n
+ (super com/facebook/inject/d)
+ (source "QuickExperimentPrefsModule.java")
+
+ (field (attrs final ) a [object com/facebook/abtest/qe/l] )
+
+(method (attrs private ) <init>([object com/facebook/abtest/qe/l] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/abtest/qe/n])
+  ; parameter[0] : v1 ([object com/facebook/abtest/qe/l])
+  (line 36)
+  (iput-object v1 v0 com/facebook/abtest/qe/n.a [object com/facebook/abtest/qe/l])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/abtest/qe/l] [object com/facebook/abtest/qe/m] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/abtest/qe/n])
+  ; parameter[0] : v1 ([object com/facebook/abtest/qe/l])
+  ; parameter[1] : v2 ([object com/facebook/abtest/qe/m])
+  (line 36)
+  (invoke-direct {v0 v1} com/facebook/abtest/qe/n/<init> [object com/facebook/abtest/qe/l] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/prefs/provider/a]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/abtest/qe/n])
+  (line 40)
+  (new-instance v0 com/facebook/abtest/qe/o)
+  (invoke-direct {v0 v1} com/facebook/abtest/qe/o/<init> [object com/facebook/abtest/qe/n] )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/abtest/qe/n])
+  (line 36)
+  (invoke-virtual {v1} com/facebook/abtest/qe/n/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

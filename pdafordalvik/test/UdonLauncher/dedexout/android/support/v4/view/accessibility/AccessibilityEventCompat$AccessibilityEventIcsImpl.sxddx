@@ -1,0 +1,46 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl
+ (super android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventStubImpl)
+ (source "AccessibilityEventCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl])
+  (line 52)
+  (invoke-direct {v0} android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventStubImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) appendRecord([object android/view/accessibility/AccessibilityEvent] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl])
+  ; parameter[0] : v1 ([object android/view/accessibility/AccessibilityEvent])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 56)
+  (invoke-static {v1 v2} android/support/v4/view/accessibility/AccessibilityEventCompatIcs/appendRecord [object android/view/accessibility/AccessibilityEvent] [object java/lang/Object] )
+  (line 57)
+  (return-void )
+)
+
+(method (attrs public ) getRecord([object android/view/accessibility/AccessibilityEvent] int )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  ; parameter[1] : v3 (int)
+  (line 61)
+  (invoke-static {v2 v3} android/support/v4/view/accessibility/AccessibilityEventCompatIcs/getRecord [object android/view/accessibility/AccessibilityEvent] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) getRecordCount([object android/view/accessibility/AccessibilityEvent] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl])
+  ; parameter[0] : v2 ([object android/view/accessibility/AccessibilityEvent])
+  (line 66)
+  (invoke-static {v2} android/support/v4/view/accessibility/AccessibilityEventCompatIcs/getRecordCount [object android/view/accessibility/AccessibilityEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+)

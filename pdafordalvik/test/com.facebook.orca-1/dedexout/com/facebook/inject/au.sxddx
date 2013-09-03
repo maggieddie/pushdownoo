@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) com/facebook/inject/au
+ (super java/lang/Object)
+ (source "Scope.java")
+ (implements javax/inject/Scope)
+
+
+(method (attrs public abstract ) a([object com/google/inject/a] [object javax/inject/a] )[object javax/inject/a]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Lcom/google/inject/a"  "<TT;>;"  "Ljavax/inject/a"  "<TT;>;)"  "Ljavax/inject/a"  "<TT;>;")
+  )
+)
+
+)

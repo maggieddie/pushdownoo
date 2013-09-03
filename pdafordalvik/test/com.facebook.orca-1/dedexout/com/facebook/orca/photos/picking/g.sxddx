@@ -1,0 +1,44 @@
+(class (attrs ) com/facebook/orca/photos/picking/g
+ (super java/lang/Object)
+ (source "PickMediaOperation.java")
+ (implements com/google/common/b/j)
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/orca/photos/picking/PickMediaOperation] )
+
+(method (attrs ) <init>([object com/facebook/orca/photos/picking/PickMediaOperation] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/photos/picking/g])
+  ; parameter[0] : v1 ([object com/facebook/orca/photos/picking/PickMediaOperation])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 277)
+  (iput-object v1 v0 com/facebook/orca/photos/picking/g.b [object com/facebook/orca/photos/picking/PickMediaOperation])
+  (iput-object v2 v0 com/facebook/orca/photos/picking/g.a [object java/lang/String])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/io/OutputStream]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/photos/picking/g])
+  (line 280)
+  (iget-object v0 v3 com/facebook/orca/photos/picking/g.b [object com/facebook/orca/photos/picking/PickMediaOperation])
+  (invoke-virtual {v0} com/facebook/orca/photos/picking/PickMediaOperation/n )
+  (move-result-object v0)
+  (iget-object v1 v3 com/facebook/orca/photos/picking/g.a [object java/lang/String])
+  (const/4 v2 3)
+  (invoke-virtual {v0 v1 v2} android/content/Context/openFileOutput [object java/lang/String] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/photos/picking/g])
+  (line 277)
+  (invoke-virtual {v1} com/facebook/orca/photos/picking/g/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

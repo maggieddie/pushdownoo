@@ -1,0 +1,20 @@
+(class (attrs ) com/google/common/collect/Lists$RandomAccessReverseList
+ (super com/google/common/collect/Lists$ReverseList)
+ (source "Lists.java")
+ (implements java/util/RandomAccess)
+
+
+(method (attrs ) <init>([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<TT;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/Lists$RandomAccessReverseList])
+  ; parameter[0] : v1 ([object java/util/List])
+  (line 884)
+  (invoke-direct {v0 v1} com/google/common/collect/Lists$ReverseList/<init> [object java/util/List] )
+  (line 885)
+  (return-void )
+ )
+
+)

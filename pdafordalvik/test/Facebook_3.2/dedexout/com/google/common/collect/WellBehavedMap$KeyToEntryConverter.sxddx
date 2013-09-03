@@ -1,0 +1,72 @@
+(class (attrs ) com/google/common/collect/WellBehavedMap$KeyToEntryConverter
+ (super com/google/common/collect/Sets$InvertibleFunction)
+ (source "WellBehavedMap.java")
+
+ (field (attrs final ) a [object java/util/Map] )
+
+(method (attrs ) <init>([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[0] : v1 ([object java/util/Map])
+  (line 69)
+  (invoke-direct {v0} com/google/common/collect/Sets$InvertibleFunction/<init> )
+  (line 70)
+  (iput-object v1 v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter.a [object java/util/Map])
+  (line 71)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TK;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 65)
+  (check-cast v2 [object java/util/Map$Entry])
+  (invoke-virtual {v1 v2} com/google/common/collect/WellBehavedMap$KeyToEntryConverter/a [object java/util/Map$Entry] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/util/Map$Entry] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map$Entry"  "<TK;TV;>;)TK;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[0] : v2 ([object java/util/Map$Entry])
+  (line 88)
+  (invoke-interface {v2} java/util/Map$Entry/getKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) apply([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 65)
+  (invoke-virtual {v1 v2} com/google/common/collect/WellBehavedMap$KeyToEntryConverter/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object java/util/Map$Entry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;)"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 74)
+  (new-instance v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1/<init> [object com/google/common/collect/WellBehavedMap$KeyToEntryConverter] [object java/lang/Object] )
+  (return-object v0)
+)
+
+)

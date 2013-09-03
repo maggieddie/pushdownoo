@@ -1,0 +1,27 @@
+(class (attrs ) com/nineoldandroids/view/ViewPropertyAnimatorHC$NameValuesHolder
+ (super java/lang/Object)
+ (source "ViewPropertyAnimatorHC.java")
+
+ (field (attrs ) a int )
+ (field (attrs ) b float )
+ (field (attrs ) c float )
+
+(method (attrs ) <init>(int float float )void
+  (limit registers 4)
+  ; this: v0 ([object com/nineoldandroids/view/ViewPropertyAnimatorHC$NameValuesHolder])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  (line 193)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 194)
+  (iput v1 v0 com/nineoldandroids/view/ViewPropertyAnimatorHC$NameValuesHolder.a int)
+  (line 195)
+  (iput v2 v0 com/nineoldandroids/view/ViewPropertyAnimatorHC$NameValuesHolder.b float)
+  (line 196)
+  (iput v3 v0 com/nineoldandroids/view/ViewPropertyAnimatorHC$NameValuesHolder.c float)
+  (line 197)
+  (return-void )
+ )
+
+)

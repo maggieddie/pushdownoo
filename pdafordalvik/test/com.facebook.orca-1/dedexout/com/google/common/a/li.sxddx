@@ -1,0 +1,35 @@
+(class (attrs final ) com/google/common/a/li
+ (super com/google/common/a/ld)
+ (source "SortedLists.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/li])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 124)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/a/ld/<init> [object java/lang/String] int [object com/google/common/a/ky] )
+  (return-void )
+ )
+
+(method (attrs public ) resultIndex([object java/util/Comparator] [object java/lang/Object] [object java/util/List] int )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<E:"  "Ljava/lang/Object;"  ">("  "Ljava/util/Comparator"  "<-TE;>;TE;"  "Ljava/util/List"  "<+TE;>;I)I")
+  )
+  (limit registers 6)
+  ; this: v1 ([object com/google/common/a/li])
+  ; parameter[0] : v2 ([object java/util/Comparator])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  ; parameter[2] : v4 ([object java/util/List])
+  ; parameter[3] : v5 (int)
+  (line 128)
+  (sget-object v0 com/google/common/a/li.FIRST_PRESENT [object com/google/common/a/ld])
+  (invoke-virtual {v0 v2 v3 v4 v5} com/google/common/a/ld/resultIndex [object java/util/Comparator] [object java/lang/Object] [object java/util/List] int )
+  (move-result v0)
+  (add-int/lit8 v0 v0 255)
+  (return v0)
+)
+
+)

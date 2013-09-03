@@ -1,0 +1,43 @@
+(class (attrs public ) com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter$FilterExceptFilter
+ (super com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter)
+ (source "SimpleBeanPropertyFilter.java")
+
+ (field (attrs protected final ) _propertiesToInclude [object java/util/Set] )
+
+(method (attrs public ) <init>([object java/util/Set] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter$FilterExceptFilter])
+  ; parameter[0] : v1 ([object java/util/Set])
+  (line 67)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter/<init> )
+  (line 68)
+  (iput-object v1 v0 com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter$FilterExceptFilter._propertiesToInclude [object java/util/Set])
+  (line 69)
+  (return-void )
+ )
+
+(method (attrs public ) serializeAsField([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/ser/BeanPropertyWriter] )void
+  (limit registers 7)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter$FilterExceptFilter])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[3] : v6 ([object com/fasterxml/jackson/databind/ser/BeanPropertyWriter])
+  (line 76)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/ser/impl/SimpleBeanPropertyFilter$FilterExceptFilter._propertiesToInclude [object java/util/Set])
+  (invoke-virtual {v6} com/fasterxml/jackson/databind/ser/BeanPropertyWriter/getName )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} java/util/Set/contains [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l337fda)
+  (line 77)
+  (invoke-virtual {v6 v3 v4 v5} com/fasterxml/jackson/databind/ser/BeanPropertyWriter/serializeAsField [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (label l337fda)
+  (line 79)
+  (return-void )
+)
+
+)

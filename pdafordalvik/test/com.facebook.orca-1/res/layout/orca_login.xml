@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/orca_login_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_splash" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/login_logo1_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/login_logo2_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ScrollView android:id="@id/login_root" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_logo_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_weight="1.0">
+                <ImageView android:id="@id/login_logo1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:id="@id/login_logo2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="top|center" android:orientation="vertical" android:id="@id/login_main_group" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_weight="1.0">
+                <RelativeLayout android:id="@id/user_display" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                    <com.facebook.widget.images.UrlImage android:id="@id/user_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="2.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" orca:placeholderSrc="@drawable/orca_phone_unknown_contact" orca:placeHolderScaleType="centerCrop" orca:scaleType="centerCrop" />
+                    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_toRightOf="@id/user_photo" android:layout_alignParentTop="true" />
+                    <TextView android:textSize="13.0sp" android:textColor="@android:color/white" android:textColorLink="@android:color/white" android:ellipsize="end" android:id="@id/not_you_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/start_screen_sso_text_not_you_link" android:singleLine="true" android:layout_toRightOf="@id/user_photo" android:layout_below="@id/user_name" />
+                </RelativeLayout>
+                <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:gravity="left|center" android:id="@id/email" android:background="@drawable/orca_login_inputfield_background" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip" android:hint="@string/login_screen_user_hint" android:singleLine="true" android:inputType="textNoSuggestions|textEmailAddress" />
+                <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:gravity="left|center" android:id="@id/password" android:background="@drawable/orca_login_inputfield_background" android:padding="9.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="17.0dip" android:hint="@string/login_screen_password_hint" android:password="true" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionGo" />
+                <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/login" android:background="@drawable/orca_login_button_background" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_screen_login_button" />
+                <View android:id="@id/login_focus_holder" android:focusable="true" android:focusableInTouchMode="true" android:visibility="visible" android:nextFocusRight="@id/email" android:nextFocusDown="@id/email" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/login_bottom_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/signup" android:background="@drawable/orca_login_secondary_button" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/login_screen_signup_button" />
+                <include layout="@layout/orca_login_help_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

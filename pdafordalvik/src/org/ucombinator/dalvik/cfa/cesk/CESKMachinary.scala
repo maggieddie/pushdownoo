@@ -377,6 +377,27 @@ trait CESKMachinary extends StateSpace {// with DalvikVMRelated {
        curHeatMap (st) = HeatPair(0)
      }
    }
+   
+    def getPossibleStrings(vals : D, store: Store) : Set[String] = {
+       vals.toSet.foldLeft(Set[String]())((res, v) => {
+         v match{
+           case ObjectValue(op, clsName) => {
+             if(clsName == "java/lang/String"){
+               val stringAddr = op.offset("value")
+               val resStrLits = storeLookup(store, stringAddr)
+               val resStrLits2  = resStrLits.toSet.filter((resStr) =>{
+                 resStr match{
+                   case StringLit(str) =>  true
+                   case _=>  false
+                 }
+               })
+               resStrLits2.map(_.asInstanceOf[StringLit]).map((strlit) => strlit.str) ++ res
+             }else res
+           }
+           case _ => res
+         }
+       })
+     }
 
   class CESKException(s: String) extends SemanticException(s)
 }

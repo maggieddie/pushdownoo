@@ -1,0 +1,52 @@
+(class (attrs public ) com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer
+ (super com/fasterxml/jackson/datatype/guava/deser/GuavaImmutableMapDeserializer)
+ (source "ImmutableSortedMapDeserializer.java")
+
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/type/MapType] [object com/fasterxml/jackson/databind/KeyDeserializer] [object com/fasterxml/jackson/databind/jsontype/TypeDeserializer] [object com/fasterxml/jackson/databind/JsonDeserializer] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/type/MapType;"  "Lcom/fasterxml/jackson/databind/KeyDeserializer;"  "Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;"  "Lcom/fasterxml/jackson/databind/JsonDeserializer"  "<*>;)V")
+  )
+  (limit registers 5)
+  ; this: v0 ([object com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/type/MapType])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/KeyDeserializer])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/jsontype/TypeDeserializer])
+  ; parameter[3] : v4 ([object com/fasterxml/jackson/databind/JsonDeserializer])
+  (line 14)
+  (invoke-direct {v0 v1 v2 v3 v4} com/fasterxml/jackson/datatype/guava/deser/GuavaImmutableMapDeserializer/<init> [object com/fasterxml/jackson/databind/type/MapType] [object com/fasterxml/jackson/databind/KeyDeserializer] [object com/fasterxml/jackson/databind/jsontype/TypeDeserializer] [object com/fasterxml/jackson/databind/JsonDeserializer] )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs protected ) createBuilder()[object com/google/common/collect/ImmutableMap$Builder]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/ImmutableMap$Builder"  "<"  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer])
+  (line 26)
+  (invoke-static {} com/google/common/collect/ImmutableSortedMap/e )
+  (nop )
+  (move-result-object v0)
+  (line 28)
+  (return-object v0)
+)
+
+(method (attrs public ) withResolved([object com/fasterxml/jackson/databind/KeyDeserializer] [object com/fasterxml/jackson/databind/jsontype/TypeDeserializer] [object com/fasterxml/jackson/databind/JsonDeserializer] )[object com/fasterxml/jackson/datatype/guava/deser/GuavaMapDeserializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/KeyDeserializer;"  "Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;"  "Lcom/fasterxml/jackson/databind/JsonDeserializer"  "<*>;)"  "Lcom/fasterxml/jackson/datatype/guava/deser/GuavaMapDeserializer"  "<"  "Lcom/google/common/collect/ImmutableSortedMap"  "<"  "Ljava/lang/Object;"  "Ljava/lang/Object;"  ">;>;")
+  )
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/databind/KeyDeserializer])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/databind/jsontype/TypeDeserializer])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/JsonDeserializer])
+  (line 34)
+  (new-instance v0 com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer)
+  (iget-object v1 v2 com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer._mapType [object com/fasterxml/jackson/databind/type/MapType])
+  (invoke-direct {v0 v1 v3 v4 v5} com/fasterxml/jackson/datatype/guava/deser/ImmutableSortedMapDeserializer/<init> [object com/fasterxml/jackson/databind/type/MapType] [object com/fasterxml/jackson/databind/KeyDeserializer] [object com/fasterxml/jackson/databind/jsontype/TypeDeserializer] [object com/fasterxml/jackson/databind/JsonDeserializer] )
+  (return-object v0)
+)
+
+)

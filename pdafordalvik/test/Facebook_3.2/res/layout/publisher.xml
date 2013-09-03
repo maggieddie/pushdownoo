@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/publishers_root" android:background="@drawable/publisher_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/publisher_height">
+        <LinearLayout android:gravity="center" android:id="@id/publisher_status" android:background="@drawable/publisher_btn_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/publisher_status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/publisher_status_icon" />
+            <TextView android:id="@id/publisher_status_button" android:paddingLeft="@dimen/publisher_text_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/publisher_button_text" />
+        </LinearLayout>
+        <View android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/one_px" android:layout_height="33.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/publisher_photo" android:background="@drawable/publisher_btn_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/publisher_photo_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/publisher_photo_icon" />
+            <TextView android:id="@id/publisher_photo_button" android:paddingLeft="@dimen/publisher_text_padding_left" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/publisher_button_text" />
+        </LinearLayout>
+        <View android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/one_px" android:layout_height="33.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/publisher_checkin" android:background="@drawable/publisher_btn_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/publisher_checkin_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/publisher_checkin_icon" />
+            <TextView android:id="@id/publisher_checkin_button" android:paddingLeft="@dimen/publisher_text_padding_left" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/publisher_button_text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

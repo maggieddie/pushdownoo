@@ -1,0 +1,32 @@
+(class (attrs final ) com/twitter/android/client/e
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object android/app/NotificationManager] )
+ (field (attrs final ) b [object com/twitter/android/client/b] )
+
+(method (attrs ) <init>([object com/twitter/android/client/b] [object android/app/NotificationManager] )void
+  (limit registers 3)
+  ; this: v0 ([object com/twitter/android/client/e])
+  ; parameter[0] : v1 ([object com/twitter/android/client/b])
+  ; parameter[1] : v2 ([object android/app/NotificationManager])
+  (line 2901)
+  (iput-object v1 v0 com/twitter/android/client/e.b [object com/twitter/android/client/b])
+  (iput-object v2 v0 com/twitter/android/client/e.a [object android/app/NotificationManager])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/twitter/android/client/e])
+  (line 2903)
+  (iget-object v0 v2 com/twitter/android/client/e.a [object android/app/NotificationManager])
+  (const/16 v1 1003)
+  (invoke-virtual {v0 v1} android/app/NotificationManager/cancel int )
+  (line 2904)
+  (return-void )
+)
+
+)

@@ -1,0 +1,48 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl
+ (super com/fasterxml/jackson/databind/ser/DefaultSerializerProvider)
+ (source "DefaultSerializerProvider.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl])
+  (line 365)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/DefaultSerializerProvider/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/ser/SerializerFactory])
+  (line 369)
+  (invoke-direct {v0 v1 v2 v3} com/fasterxml/jackson/databind/ser/DefaultSerializerProvider/<init> [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )
+  (line 370)
+  (return-void )
+ )
+
+(method (attrs public ) createInstance([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )[object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/ser/SerializerFactory])
+  (line 375)
+  (new-instance v0 com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl)
+  (invoke-direct {v0 v1 v2 v3} com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl/<init> [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )
+  (return-object v0)
+)
+
+(method (attrs public ) createInstance([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )[object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/ser/SerializerFactory])
+  (line 363)
+  (invoke-virtual {v1 v2 v3} com/fasterxml/jackson/databind/ser/DefaultSerializerProvider$Impl/createInstance [object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/ser/SerializerFactory] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -13,7 +13,7 @@
   (line 39)
   (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
   (line 40)
-  (iput-quick v2 v0 java/text/ParseException.errorOffset int)
+  (iput-quick v2 v0 )
   (line 41)
   (return-void )
  )
@@ -22,7 +22,7 @@
   (limit registers 2)
   ; this: v1 ([object java/text/ParseException])
   (line 49)
-  (iget-quick v0 v1 java/text/ParseException.errorOffset int)
+  (iget-quick v0 v1 )
   (return v0)
 )
 

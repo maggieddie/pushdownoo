@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="54.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/page_identity_action_sheet_like_button" android:layout_width="0.0dip" android:text="@string/page_identity_action_like" android:drawableTop="@drawable/page_identity_like_icon_selector" android:layout_weight="1.0" style="@style/PageIdentityActionSheetButton" />
+    <LinearLayout android:id="@id/page_identity_checkin_button_container" android:visibility="gone" android:layout_width="@dimen/page_identity_action_sheet_separator_width" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/page_action_sheet_separator" />
+        <Button android:id="@id/page_identity_action_sheet_checkin_button" android:layout_width="fill_parent" android:text="@string/page_identity_action_checkin" android:drawableTop="@drawable/page_identity_checkin_icon" style="@style/PageIdentityActionSheetButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/page_identity_call_button_container" android:visibility="gone" android:layout_width="@dimen/page_identity_action_sheet_separator_width" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/page_action_sheet_separator" />
+        <Button android:id="@id/page_identity_action_sheet_call_button" android:layout_width="fill_parent" android:text="@string/page_identity_action_call" android:drawableTop="@drawable/page_identity_call_icon" style="@style/PageIdentityActionSheetButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/page_identity_message_button_container" android:visibility="gone" android:layout_width="@dimen/page_identity_action_sheet_separator_width" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/page_action_sheet_separator" />
+        <Button android:id="@id/page_identity_action_sheet_message_button" android:layout_width="fill_parent" android:text="@string/page_identity_action_message" android:drawableTop="@drawable/page_identity_message_icon" style="@style/PageIdentityActionSheetButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/page_identity_share_button_container" android:visibility="gone" android:layout_width="@dimen/page_identity_action_sheet_separator_width" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/page_action_sheet_separator" />
+        <Button android:id="@id/page_identity_action_sheet_share_button" android:layout_width="fill_parent" android:text="@string/page_identity_action_share" android:drawableTop="@drawable/page_identity_share_icon" style="@style/PageIdentityActionSheetButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/page_identity_more_button_container" android:visibility="gone" android:layout_width="@dimen/page_identity_action_sheet_separator_width" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/page_action_sheet_separator" />
+        <Button android:id="@id/page_identity_action_sheet_more_button" android:layout_width="fill_parent" android:text="@string/page_identity_action_sheet_more" android:drawableTop="@drawable/page_identity_more_icon" style="@style/PageIdentityActionSheetButton" />
+    </LinearLayout>
+</LinearLayout>

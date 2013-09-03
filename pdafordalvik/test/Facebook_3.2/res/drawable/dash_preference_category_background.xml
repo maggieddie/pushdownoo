@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/preferences_category_gradient_top" android:endColor="@color/preferences_category_gradient_bottom" android:angle="270.0" />
+        </shape>
+    </item>
+    <item android:left="-2.0dip" android:right="-2.0dip" android:bottom="-2.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="2.0dip" android:color="@color/preferences_separator_top" />
+        </shape>
+    </item>
+    <item android:left="-2.0dip" android:top="1.0dip" android:right="-2.0dip" android:bottom="-2.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="1.0dip" android:color="@color/preferences_separator_bottom" />
+        </shape>
+    </item>
+    <item android:left="-2.0dip" android:top="-2.0dip" android:right="-2.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="2.0dip" android:color="@color/preferences_separator_top" />
+        </shape>
+    </item>
+    <item android:left="-2.0dip" android:top="-2.0dip" android:right="-2.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="1.0dip" android:color="@color/preferences_separator_bottom" />
+        </shape>
+    </item>
+</layer-list>

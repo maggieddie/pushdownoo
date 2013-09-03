@@ -1,0 +1,62 @@
+(class (attrs public ) com/facebook/auth/d/a
+ (super java/lang/Object)
+ (source "IsLoggedInUserAnEmployeeProvider.java")
+ (implements javax/inject/a)
+
+ (field (attrs private final ) a [object javax/inject/a] )
+
+(method (attrs public ) <init>([object javax/inject/a] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljavax/inject/a"  "<"  "Lcom/facebook/user/User;"  ">;)V")
+  )
+  (annotation runtimeVisibility [object javax/inject/Inject]
+  )
+  (annotation runtimeVisibility param 1 [object com/facebook/auth/annotations/LoggedInUser]
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/d/a])
+  ; parameter[0] : v1 ([object javax/inject/a])
+  (line 21)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 22)
+  (iput-object v1 v0 com/facebook/auth/d/a.a [object javax/inject/a])
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/common/w/q]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/auth/d/a])
+  (line 27)
+  (iget-object v0 v1 com/facebook/auth/d/a.a [object javax/inject/a])
+  (invoke-interface {v0} javax/inject/a/b )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/user/User])
+  (line 28)
+  (if-nez v0 l198de2)
+  (line 29)
+  (sget-object v0 com/facebook/common/w/q.UNSET [object com/facebook/common/w/q])
+  (label l198de0)
+  (line 31)
+  (return-object v0)
+  (label l198de2)
+  (invoke-virtual {v0} com/facebook/user/User/y )
+  (move-result v0)
+  (if-eqz v0 l198df4)
+  (sget-object v0 com/facebook/common/w/q.YES [object com/facebook/common/w/q])
+  (goto l198de0)
+  (label l198df4)
+  (sget-object v0 com/facebook/common/w/q.NO [object com/facebook/common/w/q])
+  (goto l198de0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/auth/d/a])
+  (line 16)
+  (invoke-virtual {v1} com/facebook/auth/d/a/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

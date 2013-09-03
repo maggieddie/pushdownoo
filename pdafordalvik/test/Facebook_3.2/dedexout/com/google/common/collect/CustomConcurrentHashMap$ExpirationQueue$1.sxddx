@@ -1,0 +1,87 @@
+(class (attrs ) com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1
+ (super com/google/common/collect/CustomConcurrentHashMap$AbstractReferenceEntry)
+ (source "CustomConcurrentHashMap.java")
+
+ (field (attrs ) a [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )
+ (field (attrs ) b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )
+ (field (attrs final ) c [object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue] )
+
+(method (attrs ) <init>([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue])
+  (line 3285)
+  (iput-object v1 v0 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.c [object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue])
+  (invoke-direct {v0} com/google/common/collect/CustomConcurrentHashMap$AbstractReferenceEntry/<init> )
+  (line 3295)
+  (iput-object v0 v0 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.a [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 3307)
+  (iput-object v0 v0 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (return-void )
+ )
+
+(method (attrs public ) getExpirationTime()long
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  (line 3289)
+  (const-wide v0 9223372036854775807) ; 0x7fffffffffffffff)
+  (return-wide v0)
+)
+
+(method (attrs public ) getNextExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  (line 3299)
+  (iget-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.a [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (return-object v0)
+)
+
+(method (attrs public ) getPreviousExpirable()[object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  (line 3311)
+  (iget-object v0 v1 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (return-object v0)
+)
+
+(method (attrs public ) setExpirationTime(long )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  ; parameter[0] : v1 (long)
+  (line 3293)
+  (return-void )
+)
+
+(method (attrs public ) setNextExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 3304)
+  (iput-object v1 v0 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.a [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 3305)
+  (return-void )
+)
+
+(method (attrs public ) setPreviousExpirable([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 3316)
+  (iput-object v1 v0 com/google/common/collect/CustomConcurrentHashMap$ExpirationQueue$1.b [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry])
+  (line 3317)
+  (return-void )
+)
+
+)

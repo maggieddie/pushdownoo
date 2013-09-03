@@ -59,7 +59,7 @@
   (line 289)
   (iget-object-quick v1 v3 )
   (check-cast v1 [object java/nio/channels/SelectableChannel])
-  (invoke-virtual-quick {v1} java/nio/channels/SelectableChannel/isBlocking )
+  (invoke-virtual-quick {v1} vtable #0x12)
   (move-result v1)
   (if-nez v1 l8fd18)
   (line 290)

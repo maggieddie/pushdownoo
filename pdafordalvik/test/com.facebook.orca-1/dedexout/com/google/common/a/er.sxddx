@@ -1,0 +1,171 @@
+(class (attrs final ) com/google/common/a/er
+ (super com/google/common/a/fi)
+ (source "ImmutableEnumSet.java")
+
+ (field (attrs private final transient ) a [object java/util/EnumSet] )
+ (field (attrs private transient ) b int )
+
+(method (attrs ) <init>([object java/util/EnumSet] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/EnumSet"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/er])
+  ; parameter[0] : v1 ([object java/util/EnumSet])
+  (line 44)
+  (invoke-direct {v0} com/google/common/a/fi/<init> )
+  (line 45)
+  (iput-object v1 v0 com/google/common/a/er.a [object java/util/EnumSet])
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 49)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/er])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 62)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0 v2} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/er])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 66)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0 v2} java/util/EnumSet/containsAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/er])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 82)
+  (if-eq v2 v1 l39643c)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0 v2} java/util/EnumSet/equals [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l396440)
+  (label l39643c)
+  (const/4 v0 1)
+  (label l39643e)
+  (return v0)
+  (label l396440)
+  (const/4 v0 0)
+  (goto l39643e)
+)
+
+(method (attrs public ) h_()[object com/google/common/a/mh]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/mh"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 53)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/iterator )
+  (move-result-object v0)
+  (invoke-static {v0} com/google/common/a/gg/a [object java/util/Iterator] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 88)
+  (iget v0 v1 com/google/common/a/er.b int)
+  (line 89)
+  (if-nez v0 l396494)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/hashCode )
+  (move-result v0)
+  (iput v0 v1 com/google/common/a/er.b int)
+  (label l396494)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 70)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 31)
+  (invoke-virtual {v1} com/google/common/a/er/h_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 58)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 74)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/toArray )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/er])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 78)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0 v2} java/util/EnumSet/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/er])
+  (line 93)
+  (iget-object v0 v1 com/google/common/a/er.a [object java/util/EnumSet])
+  (invoke-virtual {v0} java/util/EnumSet/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

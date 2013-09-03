@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.MapImage android:id="@id/page_identity_child_locations_map" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/page_identity_map_view_large_height" orca:zoom="-1" />
+    <include android:id="@id/page_identity_map_divider" android:visibility="gone" layout="@layout/page_card_divider" />
+    <LinearLayout android:orientation="vertical" android:id="@id/page_identity_child_locations_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/page_identity_see_more_divider" layout="@layout/page_card_divider" />
+    <RelativeLayout android:id="@id/page_identity_see_more_unit" android:background="@drawable/page_identity_card_clickable_unit_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_see_all_child_locations" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ChambrayText.Large" />
+        <ImageView android:id="@id/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/page_identity_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textStyle="bold" android:id="@id/page_identity_more_child_locations_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/page_identity_chevron" android:layout_centerVertical="true" style="@style/ChambrayText" />
+    </RelativeLayout>
+</LinearLayout>

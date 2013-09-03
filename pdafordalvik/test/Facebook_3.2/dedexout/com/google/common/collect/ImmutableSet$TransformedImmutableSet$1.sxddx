@@ -1,0 +1,35 @@
+(class (attrs ) com/google/common/collect/ImmutableSet$TransformedImmutableSet$1
+ (super com/google/common/collect/AbstractIndexedListIterator)
+ (source "ImmutableSet.java")
+
+ (field (attrs final ) a [object com/google/common/collect/ImmutableSet$TransformedImmutableSet] )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableSet$TransformedImmutableSet] int )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  ; parameter[1] : v2 (int)
+  (line 485)
+  (iput-object v1 v0 com/google/common/collect/ImmutableSet$TransformedImmutableSet$1.a [object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (invoke-direct {v0 v2} com/google/common/collect/AbstractIndexedListIterator/<init> int )
+  (return-void )
+ )
+
+(method (attrs protected ) a(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)TE;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet$1])
+  ; parameter[0] : v3 (int)
+  (line 487)
+  (iget-object v0 v2 com/google/common/collect/ImmutableSet$TransformedImmutableSet$1.a [object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (iget-object v1 v2 com/google/common/collect/ImmutableSet$TransformedImmutableSet$1.a [object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (iget-object v1 v1 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (aget-object v1 v1 v3)
+  (invoke-virtual {v0 v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

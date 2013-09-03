@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/app/NotificationCompat$NotificationCompatImpl
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+
+
+(method (attrs public abstract ) getNotification([object android/support/v4/app/NotificationCompat$Builder] )[object android/app/Notification]
+)
+
+)

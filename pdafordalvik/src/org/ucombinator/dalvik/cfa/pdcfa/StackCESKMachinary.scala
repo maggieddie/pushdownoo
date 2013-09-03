@@ -258,8 +258,8 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
           fp,
           tyStrs, tp, s, 
           pst, kptr, t, k, ste)
-
       }
+      
 
       case c @ (ps @ PartialState(ste@StForEqual(ivkS @ InvokeSuperStmt(methPath, argRegExps, objExp, tyStrs, nxt, ls, clsP, metP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
     	  collectPerms(methPath)
@@ -607,8 +607,11 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         // initialize the fields of the currnet class and return new store?
         val newStore2 = initObject(entryClassName, newStore, newOP)
        // println("in initentry point store: ", newStore2) 
-         
-        val absValues = argsTypes.map(typeToTopValue(_, newOP,s))
+         val absValues = 
+        if(! Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.initTopNull)
+        	  argsTypes.map(typeToTopValue(_, newOP,s))
+        else  argsTypes.map((arg) => s.mkDomainD(List[Value]():_*))
+        
         //println("argument types: ", argsTypes)
         //println(absValues)
         //println("New Object Created at entry init :" + ieS, (thisRegExpOffset, Set(objVal)))

@@ -1,0 +1,569 @@
+(class (attrs ) com/facebook/base/activity/e
+ (super java/lang/Object)
+ (source "DelegatingFbFragmentFrameworkActivity.java")
+ (implements com/facebook/base/activity/n)
+
+ (field (attrs final ) a [object com/facebook/base/activity/d] )
+
+(method (attrs ) <init>([object com/facebook/base/activity/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v1 ([object com/facebook/base/activity/d])
+  (line 65)
+  (iput-object v1 v0 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(int )[object android/app/Dialog]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  (line 149)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 201)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 85)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] )
+  (line 86)
+  (return-void )
+)
+
+(method (attrs public ) a(int [object android/app/Dialog] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/app/Dialog])
+  (line 153)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] int [object android/app/Dialog] )
+  (line 154)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/content/Intent] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 89)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/content/Intent] )
+  (line 90)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/content/res/Configuration] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/content/res/Configuration])
+  (line 161)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/content/res/Configuration] )
+  (line 162)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 73)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/os/Bundle] )
+  (line 74)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/support/v4/app/Fragment] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/support/v4/app/Fragment])
+  (line 213)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/support/v4/app/Fragment] )
+  (line 214)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/ContextMenu])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 ([object android/view/ContextMenu$ContextMenuInfo])
+  (line 226)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3 v4} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )
+  (line 227)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/common/d/e] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object com/facebook/common/d/e])
+  (line 181)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object com/facebook/common/d/e] )
+  (line 182)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 197)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object java/lang/Object] [object java/lang/Object] )
+  (line 198)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/String] [object android/support/v4/app/Fragment] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object android/support/v4/app/Fragment])
+  (line 173)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object java/lang/String] [object android/support/v4/app/Fragment] )
+  (line 174)
+  (return-void )
+)
+
+(method (attrs public ) a(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (boolean)
+  (line 221)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] boolean )
+  (line 222)
+  (return-void )
+)
+
+(method (attrs public ) a(int [object android/view/KeyEvent] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/view/KeyEvent])
+  (line 133)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] int [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/KeyEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/KeyEvent])
+  (line 234)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/Menu] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/Menu])
+  (line 185)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/view/Menu] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/MenuItem] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 193)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/view/MenuItem] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/MotionEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  (line 113)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object android/view/MotionEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object java/lang/Exception] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object java/lang/Exception])
+  (line 121)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/a [object com/facebook/base/activity/d] [object java/lang/Exception] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b(int )[object android/view/View]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  (line 169)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 93)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] )
+  (line 94)
+  (return-void )
+)
+
+(method (attrs public ) b([object android/content/Intent] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 258)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] [object android/content/Intent] )
+  (line 259)
+  (return-void )
+)
+
+(method (attrs public ) b([object android/os/Bundle] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 77)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] [object android/os/Bundle] )
+  (line 78)
+  (return-void )
+)
+
+(method (attrs public ) b(int [object android/view/KeyEvent] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/view/KeyEvent])
+  (line 137)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2 v3} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] int [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object android/view/Menu] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/Menu])
+  (line 189)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] [object android/view/Menu] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object android/view/MenuItem] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 230)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/b [object com/facebook/base/activity/d] [object android/view/MenuItem] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) c()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 101)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/c [object com/facebook/base/activity/d] )
+  (line 102)
+  (return-void )
+)
+
+(method (attrs public ) c(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  (line 242)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/c [object com/facebook/base/activity/d] int )
+  (line 243)
+  (return-void )
+)
+
+(method (attrs public ) c([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 81)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/c [object com/facebook/base/activity/d] [object android/os/Bundle] )
+  (line 82)
+  (return-void )
+)
+
+(method (attrs public ) d(int )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  (line 250)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/d [object com/facebook/base/activity/d] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 105)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/d [object com/facebook/base/activity/d] )
+  (line 106)
+  (return-void )
+)
+
+(method (attrs public ) d([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 217)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/d [object com/facebook/base/activity/d] [object android/os/Bundle] )
+  (line 218)
+  (return-void )
+)
+
+(method (attrs public ) e()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 109)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/e [object com/facebook/base/activity/d] )
+  (line 110)
+  (return-void )
+)
+
+(method (attrs public ) e(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  ; parameter[0] : v2 (int)
+  (line 262)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0 v2} com/facebook/base/activity/d/e [object com/facebook/base/activity/d] int )
+  (line 263)
+  (return-void )
+)
+
+(method (attrs public ) f()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 117)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/f [object com/facebook/base/activity/d] )
+  (line 118)
+  (return-void )
+)
+
+(method (attrs public ) g()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 125)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/g [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) h()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 129)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/h [object com/facebook/base/activity/d] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) i()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 141)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/i [object com/facebook/base/activity/d] )
+  (line 142)
+  (return-void )
+)
+
+(method (attrs public ) j()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 145)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/j [object com/facebook/base/activity/d] )
+  (line 146)
+  (return-void )
+)
+
+(method (attrs public ) k()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 157)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/k [object com/facebook/base/activity/d] )
+  (line 158)
+  (return-void )
+)
+
+(method (attrs public ) l()[object com/facebook/inject/t]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 165)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/l [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) m()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 205)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/m [object com/facebook/base/activity/d] )
+  (line 206)
+  (return-void )
+)
+
+(method (attrs public ) n()[object android/support/v4/app/q]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 209)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/n [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) o()[object android/view/Window]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 238)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/o [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) p()[object android/content/Intent]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 246)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/p [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) q()[object android/content/res/Resources]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 254)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/q [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) r()[object android/view/MenuInflater]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 266)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/r [object com/facebook/base/activity/d] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) s()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/activity/e])
+  (line 270)
+  (iget-object v0 v1 com/facebook/base/activity/e.a [object com/facebook/base/activity/d])
+  (invoke-static {v0} com/facebook/base/activity/d/s [object com/facebook/base/activity/d] )
+  (move-result v0)
+  (return v0)
+)
+
+)

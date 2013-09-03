@@ -1,0 +1,52 @@
+(class (attrs ) com/twitter/android/widget/PopupEditText$DropDownListView
+ (super android/widget/ListView)
+ (source "Twttr")
+
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] int )void
+  (limit registers 6)
+  ; this: v2 ([object com/twitter/android/widget/PopupEditText$DropDownListView])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/util/AttributeSet])
+  ; parameter[2] : v5 (int)
+  (const/4 v1 1)
+  (line 303)
+  (invoke-direct {v2 v3 v4 v5} android/widget/ListView/<init> [object android/content/Context] [object android/util/AttributeSet] int )
+  (line 304)
+  (const/4 v0 15)
+  (invoke-virtual {v2 v0} com/twitter/android/widget/PopupEditText$DropDownListView/setBackgroundColor int )
+  (line 305)
+  (invoke-virtual {v2 v1} com/twitter/android/widget/PopupEditText$DropDownListView/setVerticalFadingEdgeEnabled boolean )
+  (line 306)
+  (invoke-virtual {v2 v1} com/twitter/android/widget/PopupEditText$DropDownListView/setFocusable boolean )
+  (line 307)
+  (invoke-virtual {v2 v1} com/twitter/android/widget/PopupEditText$DropDownListView/setFocusableInTouchMode boolean )
+  (line 308)
+  (return-void )
+ )
+
+(method (attrs public ) hasFocus()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/widget/PopupEditText$DropDownListView])
+  (line 337)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) hasWindowFocus()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/widget/PopupEditText$DropDownListView])
+  (line 317)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) isFocused()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/widget/PopupEditText$DropDownListView])
+  (line 327)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

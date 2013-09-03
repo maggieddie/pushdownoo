@@ -1,0 +1,69 @@
+(class (attrs public ) com/fasterxml/jackson/databind/MappingJsonFactory
+ (super com/fasterxml/jackson/core/JsonFactory)
+ (source "MappingJsonFactory.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  (line 36)
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/MappingJsonFactory/<init> [object com/fasterxml/jackson/databind/ObjectMapper] )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/ObjectMapper] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/ObjectMapper])
+  (line 41)
+  (invoke-direct {v1 v2} com/fasterxml/jackson/core/JsonFactory/<init> [object com/fasterxml/jackson/core/ObjectCodec] )
+  (line 42)
+  (if-nez v2 laaa52)
+  (line 43)
+  (new-instance v0 com/fasterxml/jackson/databind/ObjectMapper)
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/ObjectMapper/<init> [object com/fasterxml/jackson/core/JsonFactory] )
+  (invoke-virtual {v1 v0} com/fasterxml/jackson/databind/MappingJsonFactory/setCodec [object com/fasterxml/jackson/core/ObjectCodec] )
+  (label laaa52)
+  (line 45)
+  (return-void )
+ )
+
+(method (attrs public ) getCodec()[object com/fasterxml/jackson/core/ObjectCodec]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  (line 31)
+  (invoke-virtual {v1} com/fasterxml/jackson/databind/MappingJsonFactory/getCodec )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) getCodec()[object com/fasterxml/jackson/databind/ObjectMapper]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  (line 52)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/MappingJsonFactory._objectCodec [object com/fasterxml/jackson/core/ObjectCodec])
+  (check-cast v0 [object com/fasterxml/jackson/databind/ObjectMapper])
+  (return-object v0)
+)
+
+(method (attrs public ) getFormatName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  (line 69)
+  (const-string v0 "JSON")
+  (return-object v0)
+)
+
+(method (attrs public ) hasFormat([object com/fasterxml/jackson/core/format/InputAccessor] )[object com/fasterxml/jackson/core/format/MatchStrength]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/MappingJsonFactory])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/format/InputAccessor])
+  (line 78)
+  (invoke-virtual {v1 v2} com/fasterxml/jackson/databind/MappingJsonFactory/hasJSONFormat [object com/fasterxml/jackson/core/format/InputAccessor] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

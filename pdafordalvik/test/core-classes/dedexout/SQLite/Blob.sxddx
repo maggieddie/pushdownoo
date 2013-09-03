@@ -21,10 +21,10 @@
   (invoke-direct-empty {v2} java/lang/Object/<init> )
   (line 253)
   (const-wide/16 v0 0)
-  (iput-wide-quick v0 v2 SQLite/Blob.handle long)
+  (iput-wide-quick v0 v2 )
   (line 260)
   (const/4 v0 0)
-  (iput-quick v0 v2 SQLite/Blob.null)
+  (iput-quick v0 v2 )
   (return-void )
  )
 

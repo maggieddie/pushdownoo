@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) com/facebook/http/c/i
+ (super java/lang/Object)
+ (source "PlatformAppHttpConfig.java")
+
+
+(method (attrs public abstract ) a()[object android/net/Uri$Builder]
+)
+
+(method (attrs public abstract ) b()[object android/net/Uri$Builder]
+)
+
+(method (attrs public abstract ) c()[object android/net/Uri$Builder]
+)
+
+(method (attrs public abstract ) d()[object android/net/Uri$Builder]
+)
+
+(method (attrs public abstract ) e()[object java/lang/String]
+)
+
+(method (attrs public abstract ) f()[object java/lang/String]
+)
+
+)

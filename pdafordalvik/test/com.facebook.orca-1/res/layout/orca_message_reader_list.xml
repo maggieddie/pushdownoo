@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.orca.messageview.ReadView android:textSize="12.0sp" android:textColor="@color/grey50" android:id="@id/message_read_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="false" />
+    <LinearLayout android:orientation="vertical" android:id="@id/message_read_timestamp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.orca.messageview.ReadView android:id="@id/message_read_without_timestamp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

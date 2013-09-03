@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/input/touch/detector/ClickDetector$IClickDetectorListener
+ (super java/lang/Object)
+ (source "ClickDetector.java")
+
+
+(method (attrs public abstract ) onClick([object org/anddev/andengine/input/touch/detector/ClickDetector] [object org/anddev/andengine/input/touch/TouchEvent] )void
+)
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) com/smartcam/webcam/comm/ICommService
+ (super java/lang/Object)
+ (source "ICommService.java")
+ (implements android/os/IInterface)
+
+
+(method (attrs public abstract ) clearSettings()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+(method (attrs public abstract ) getUpdate()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object android/os/RemoteException])
+  )
+)
+
+)

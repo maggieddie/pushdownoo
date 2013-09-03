@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/orca/dialog/c
+ (super java/lang/Object)
+ (source "ConfirmActionDialogFragment.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/dialog/ConfirmActionDialogFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/dialog/ConfirmActionDialogFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/dialog/c])
+  ; parameter[0] : v1 ([object com/facebook/orca/dialog/ConfirmActionDialogFragment])
+  (line 106)
+  (iput-object v1 v0 com/facebook/orca/dialog/c.a [object com/facebook/orca/dialog/ConfirmActionDialogFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/dialog/c])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 109)
+  (iget-object v0 v1 com/facebook/orca/dialog/c.a [object com/facebook/orca/dialog/ConfirmActionDialogFragment])
+  (invoke-virtual {v0} com/facebook/orca/dialog/ConfirmActionDialogFragment/Q )
+  (line 110)
+  (return-void )
+)
+
+)

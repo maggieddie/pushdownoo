@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:id="@id/tvSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:text="0" android:layout_alignBottom="@id/sbSpeed" android:layout_alignParentRight="true" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sprite Speed" android:layout_alignLeft="@id/sbSpeed" android:layout_alignParentTop="true" />"
+<Spinner android:entries="@array/movement_array" android:id="@id/spMovement" android:layout_width="10.0dip" android:layout_height="50.0dip" android:layout_marginTop="78.0dip" android:prompt="@string/movement" android:layout_below="@id/sbSpeed" android:layout_alignLeft="@id/sbSpeed" android:layout_alignRight="@id/sbSpeed" />
+    <SeekBar android:id="@id/sbSpeed" android:layout_width="148.0dip" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:max="20" android:progress="1" android:layout_below="@id/textView2" android:layout_alignParentLeft="true" />
+    <Button android:id="@id/bExit" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="Exit" android:layout_below="@id/spMovement" android:layout_alignLeft="@id/spMovement" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:text="Picture Movement Pattern" android:layout_below="@id/sbSpeed" android:layout_alignLeft="@id/sbSpeed" />
+</RelativeLayout>

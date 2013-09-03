@@ -1,0 +1,61 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$BigTextStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) mBigText [object java/lang/CharSequence] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  (line 723)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 724)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/support/v4/app/NotificationCompat$Builder] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  ; parameter[0] : v1 ([object android/support/v4/app/NotificationCompat$Builder])
+  (line 726)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 727)
+  (invoke-virtual {v0 v1} android/support/v4/app/NotificationCompat$BigTextStyle/setBuilder [object android/support/v4/app/NotificationCompat$Builder] )
+  (line 728)
+  (return-void )
+ )
+
+(method (attrs public ) bigText([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigTextStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 753)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigTextStyle.mBigText [object java/lang/CharSequence])
+  (line 754)
+  (return-object v0)
+)
+
+(method (attrs public ) setBigContentTitle([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigTextStyle]
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  (line 735)
+  (iput-object v1 v0 android/support/v4/app/NotificationCompat$BigTextStyle.mBigContentTitle [object java/lang/CharSequence])
+  (line 736)
+  (return-object v0)
+)
+
+(method (attrs public ) setSummaryText([object java/lang/CharSequence] )[object android/support/v4/app/NotificationCompat$BigTextStyle]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  (line 743)
+  (iput-object v2 v1 android/support/v4/app/NotificationCompat$BigTextStyle.mSummaryText [object java/lang/CharSequence])
+  (line 744)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 android/support/v4/app/NotificationCompat$BigTextStyle.mSummaryTextSet boolean)
+  (line 745)
+  (return-object v1)
+)
+
+)

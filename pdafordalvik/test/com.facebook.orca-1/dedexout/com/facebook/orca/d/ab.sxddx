@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/orca/d/ab
+ (super com/facebook/inject/d)
+ (source "AudioModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/d/s] )
+
+(method (attrs private ) <init>([object com/facebook/orca/d/s] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/d/ab])
+  ; parameter[0] : v1 ([object com/facebook/orca/d/s])
+  (line 144)
+  (iput-object v1 v0 com/facebook/orca/d/ab.a [object com/facebook/orca/d/s])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/d/s] [object com/facebook/orca/d/t] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/d/ab])
+  ; parameter[0] : v1 ([object com/facebook/orca/d/s])
+  ; parameter[1] : v2 ([object com/facebook/orca/d/t])
+  (line 144)
+  (invoke-direct {v0 v1} com/facebook/orca/d/ab/<init> [object com/facebook/orca/d/s] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/d/ay]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/d/ab])
+  (line 148)
+  (new-instance v0 com/facebook/orca/d/ay)
+  (invoke-direct {v0} com/facebook/orca/d/ay/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/d/ab])
+  (line 144)
+  (invoke-virtual {v1} com/facebook/orca/d/ab/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

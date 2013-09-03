@@ -1,0 +1,24 @@
+(class (attrs public ) com/fasterxml/jackson/databind/cfg/DatabindVersion
+ (super com/fasterxml/jackson/core/util/VersionUtil)
+ (source "DatabindVersion.java")
+
+ (field (attrs public static final ) instance [object com/fasterxml/jackson/databind/cfg/DatabindVersion] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 13)
+  (new-instance v0 com/fasterxml/jackson/databind/cfg/DatabindVersion)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/cfg/DatabindVersion/<init> )
+  (sput-object v0 com/fasterxml/jackson/databind/cfg/DatabindVersion.instance [object com/fasterxml/jackson/databind/cfg/DatabindVersion])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/cfg/DatabindVersion])
+  (line 11)
+  (invoke-direct {v0} com/fasterxml/jackson/core/util/VersionUtil/<init> )
+  (return-void )
+ )
+
+)

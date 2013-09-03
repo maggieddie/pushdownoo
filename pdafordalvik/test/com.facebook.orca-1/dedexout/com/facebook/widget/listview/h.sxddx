@@ -1,0 +1,53 @@
+(class (attrs public abstract ) com/facebook/widget/listview/h
+ (super android/widget/BaseAdapter)
+ (source "FbBaseAdapter.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/widget/listview/h])
+  (line 14)
+  (invoke-direct {v0} android/widget/BaseAdapter/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) a(int [object android/view/ViewGroup] )[object android/view/View]
+)
+
+(method (attrs public abstract ) a([object java/lang/Object] [object android/view/View] int [object android/view/ViewGroup] )void
+)
+
+(method (attrs public ) getView(int [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+  (limit registers 7)
+  ; this: v3 ([object com/facebook/widget/listview/h])
+  ; parameter[0] : v4 (int)
+  ; parameter[1] : v5 ([object android/view/View])
+  ; parameter[2] : v6 ([object android/view/ViewGroup])
+  (line 20)
+  (invoke-virtual {v3 v4} com/facebook/widget/listview/h/getItemViewType int )
+  (move-result v1)
+  (line 21)
+  (if-nez v5 l30421c)
+  (line 22)
+  (invoke-virtual {v3 v1 v6} com/facebook/widget/listview/h/a int [object android/view/ViewGroup] )
+  (move-result-object v5)
+  (line 23)
+  (if-eqz v5 l30422c)
+  (const/4 v0 1)
+  (label l304212)
+  (const-string v2 "createView() shall not return null value!")
+  (invoke-static {v0 v2} com/google/common/base/Preconditions/checkState boolean [object java/lang/Object] )
+  (label l30421c)
+  (line 25)
+  (invoke-virtual {v3 v4} com/facebook/widget/listview/h/getItem int )
+  (move-result-object v0)
+  (invoke-virtual {v3 v0 v5 v1 v6} com/facebook/widget/listview/h/a [object java/lang/Object] [object android/view/View] int [object android/view/ViewGroup] )
+  (line 26)
+  (return-object v5)
+  (label l30422c)
+  (line 23)
+  (const/4 v0 0)
+  (goto l304212)
+)
+
+)

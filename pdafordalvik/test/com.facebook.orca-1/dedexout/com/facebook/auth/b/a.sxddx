@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) com/facebook/auth/b/a
+ (super java/lang/Object)
+ (source "AuthDataStore.java")
+
+
+(method (attrs public abstract ) a()[object com/facebook/auth/viewercontext/ViewerContext]
+  (annotation runtimeVisibility [object javax/annotation/Nullable]
+  )
+)
+
+)

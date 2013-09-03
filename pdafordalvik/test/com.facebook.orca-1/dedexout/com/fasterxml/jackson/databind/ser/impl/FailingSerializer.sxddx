@@ -1,0 +1,43 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/ser/impl/FailingSerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdSerializer)
+ (source "FailingSerializer.java")
+
+ (field (attrs final ) _msg [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/impl/FailingSerializer])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 26)
+  (const-class v0 java/lang/Object)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/ser/std/StdSerializer/<init> [object java/lang/Class] )
+  (line 27)
+  (iput-object v2 v1 com/fasterxml/jackson/databind/ser/impl/FailingSerializer._msg [object java/lang/String])
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/impl/FailingSerializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v3 ([object java/lang/reflect/Type])
+  (line 41)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/impl/FailingSerializer])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 34)
+  (new-instance v0 com/fasterxml/jackson/core/JsonGenerationException)
+  (iget-object v1 v2 com/fasterxml/jackson/databind/ser/impl/FailingSerializer._msg [object java/lang/String])
+  (invoke-direct {v0 v1} com/fasterxml/jackson/core/JsonGenerationException/<init> [object java/lang/String] )
+  (throw v0)
+)
+
+)

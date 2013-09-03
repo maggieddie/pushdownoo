@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/chatheads/ao
+ (super com/facebook/orca/chatheads/bw)
+ (source "ChatHeadWindowManager.java")
+
+ (field (attrs final ) a [object com/facebook/messages/model/threads/Message] )
+ (field (attrs final ) b [object com/facebook/messages/threads/model/ThreadViewSpec] )
+ (field (attrs final ) c [object com/facebook/orca/chatheads/al] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/al] [object com/facebook/messages/model/threads/Message] [object com/facebook/messages/threads/model/ThreadViewSpec] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/orca/chatheads/ao])
+  ; parameter[0] : v2 ([object com/facebook/orca/chatheads/al])
+  ; parameter[1] : v3 ([object com/facebook/messages/model/threads/Message])
+  ; parameter[2] : v4 ([object com/facebook/messages/threads/model/ThreadViewSpec])
+  (line 903)
+  (iput-object v2 v1 com/facebook/orca/chatheads/ao.c [object com/facebook/orca/chatheads/al])
+  (iput-object v3 v1 com/facebook/orca/chatheads/ao.a [object com/facebook/messages/model/threads/Message])
+  (iput-object v4 v1 com/facebook/orca/chatheads/ao.b [object com/facebook/messages/threads/model/ThreadViewSpec])
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v0} com/facebook/orca/chatheads/bw/<init> [object com/facebook/orca/chatheads/al] [object com/facebook/orca/chatheads/am] )
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/chatheads/ao])
+  (line 906)
+  (iget-object v0 v3 com/facebook/orca/chatheads/ao.c [object com/facebook/orca/chatheads/al])
+  (iget-object v1 v3 com/facebook/orca/chatheads/ao.a [object com/facebook/messages/model/threads/Message])
+  (invoke-static {v0 v1} com/facebook/orca/chatheads/al/a [object com/facebook/orca/chatheads/al] [object com/facebook/messages/model/threads/Message] )
+  (line 907)
+  (iget-object v0 v3 com/facebook/orca/chatheads/ao.c [object com/facebook/orca/chatheads/al])
+  (const-string v1 "message")
+  (iget-object v2 v3 com/facebook/orca/chatheads/ao.b [object com/facebook/messages/threads/model/ThreadViewSpec])
+  (invoke-static {v0 v1 v2} com/facebook/orca/chatheads/al/a [object com/facebook/orca/chatheads/al] [object java/lang/String] [object com/facebook/messages/threads/model/ThreadViewSpec] )
+  (line 908)
+  (return-void )
+)
+
+)

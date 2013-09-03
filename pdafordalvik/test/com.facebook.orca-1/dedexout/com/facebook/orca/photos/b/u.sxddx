@@ -1,0 +1,61 @@
+(class (attrs ) com/facebook/orca/photos/b/u
+ (super com/facebook/inject/d)
+ (source "PhotoUploadModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/photos/b/n] )
+
+(method (attrs private ) <init>([object com/facebook/orca/photos/b/n] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/photos/b/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/photos/b/n])
+  (line 67)
+  (iput-object v1 v0 com/facebook/orca/photos/b/u.a [object com/facebook/orca/photos/b/n])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/photos/b/n] [object com/facebook/orca/photos/b/o] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/photos/b/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/photos/b/n])
+  ; parameter[1] : v2 ([object com/facebook/orca/photos/b/o])
+  (line 67)
+  (invoke-direct {v0 v1} com/facebook/orca/photos/b/u/<init> [object com/facebook/orca/photos/b/n] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/photos/b/j]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/orca/photos/b/u])
+  (line 71)
+  (new-instance v4 com/facebook/orca/photos/b/j)
+  (const-class v0 com/facebook/fbservice/ops/k)
+  (invoke-virtual {v5 v0} com/facebook/orca/photos/b/u/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/fbservice/ops/k])
+  (const-class v1 com/facebook/orca/j/c)
+  (invoke-virtual {v5 v1} com/facebook/orca/photos/b/u/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/orca/j/c])
+  (const-class v2 com/facebook/common/time/a)
+  (invoke-virtual {v5 v2} com/facebook/orca/photos/b/u/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/facebook/common/time/a])
+  (const-class v3 com/facebook/orca/f/r)
+  (invoke-virtual {v5 v3} com/facebook/orca/photos/b/u/a [object java/lang/Class] )
+  (move-result-object v3)
+  (check-cast v3 [object com/facebook/orca/f/r])
+  (invoke-direct {v4 v0 v1 v2 v3} com/facebook/orca/photos/b/j/<init> [object com/facebook/fbservice/ops/k] [object com/facebook/orca/j/c] [object com/facebook/common/time/a] [object com/facebook/orca/f/r] )
+  (return-object v4)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/photos/b/u])
+  (line 67)
+  (invoke-virtual {v1} com/facebook/orca/photos/b/u/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

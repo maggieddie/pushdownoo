@@ -1,0 +1,35 @@
+(class (attrs public ) com/facebook/mqtt/q
+ (super com/facebook/inject/c)
+ (source "MqttClientModule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/mqtt/q])
+  (line 18)
+  (invoke-direct {v0} com/facebook/inject/c/<init> )
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/mqtt/q])
+  (line 22)
+  (const-class v0 com/facebook/k/e)
+  (invoke-virtual {v3 v0} com/facebook/mqtt/q/f [object java/lang/Class] )
+  (line 24)
+  (const-class v0 com/facebook/mqtt/p)
+  (invoke-virtual {v3 v0} com/facebook/mqtt/q/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/mqtt/s)
+  (const/4 v2 0)
+  (invoke-direct {v1 v2} com/facebook/mqtt/s/<init> [object com/facebook/mqtt/r] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/inject/a/g/a )
+  (line 27)
+  (return-void )
+)
+
+)

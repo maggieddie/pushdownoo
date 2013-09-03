@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:state_pressed="true" android:drawable="@drawable/btn_active_pressed" />
+    <item android:state_focused="true" android:state_checked="true" android:drawable="@drawable/btn_active_focused" />
+    <item android:state_checked="true" android:state_pressed="false" android:drawable="@drawable/btn_active_default" />
+    <item android:state_checked="false" android:state_pressed="true" android:drawable="@drawable/btn_pressed" />
+    <item android:state_focused="true" android:state_checked="false" android:drawable="@drawable/btn_focused" />
+    <item android:drawable="@drawable/btn_default" />
+</selector>

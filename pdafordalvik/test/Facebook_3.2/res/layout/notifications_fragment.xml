@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.ui.notifications.NotificationsContainer android:id="@id/dash_notifications_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dash.ui.notifications.NotificationsListView android:id="@id/dash_notification_list" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="3.0dip" android:overScrollMode="never" />
+</com.facebook.dash.ui.notifications.NotificationsContainer>

@@ -1,0 +1,125 @@
+(class (attrs public abstract ) com/fasterxml/jackson/core/JsonStreamContext
+ (super java/lang/Object)
+ (source "JsonStreamContext.java")
+
+ (field (attrs protected static final ) TYPE_ARRAY int 1); 0x1 )
+ (field (attrs protected static final ) TYPE_OBJECT int 2); 0x2 )
+ (field (attrs protected static final ) TYPE_ROOT int )
+ (field (attrs protected ) _index int )
+ (field (attrs protected ) _type int )
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 53)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) getCurrentIndex()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 113)
+  (iget v0 v1 com/fasterxml/jackson/core/JsonStreamContext._index int)
+  (if-gez v0 l8f574)
+  (const/4 v0 0)
+  (label l8f572)
+  (return v0)
+  (label l8f574)
+  (iget v0 v1 com/fasterxml/jackson/core/JsonStreamContext._index int)
+  (goto l8f572)
+)
+
+(method (attrs public abstract ) getCurrentName()[object java/lang/String]
+)
+
+(method (attrs public final ) getEntryCount()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 105)
+  (iget v0 v1 com/fasterxml/jackson/core/JsonStreamContext._index int)
+  (add-int/lit8 v0 v0 1)
+  (return v0)
+)
+
+(method (attrs public abstract ) getParent()[object com/fasterxml/jackson/core/JsonStreamContext]
+)
+
+(method (attrs public final ) getTypeDesc()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 92)
+  (iget v0 v1 com/fasterxml/jackson/core/JsonStreamContext._type int)
+  (packed-switch v0 0
+    ps8f5ac_8f5b8 ; case 0
+    ps8f5ac_8f5be ; case 1
+    ps8f5ac_8f5c4 ; case 2
+    ps8f5ac_default) ; default
+  (label ps8f5ac_default)
+  (line 97)
+  (const-string v0 "?")
+  (label l8f5b6)
+  (return-object v0)
+  (label ps8f5ac_8f5b8)
+  (line 93)
+  (const-string v0 "ROOT")
+  (goto l8f5b6)
+  (label ps8f5ac_8f5be)
+  (line 94)
+  (const-string v0 "ARRAY")
+  (goto l8f5b6)
+  (label ps8f5ac_8f5c4)
+  (line 95)
+  (const-string v0 "OBJECT")
+  (goto l8f5b6)
+  (line 92)
+  (label l8f5ca)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public final ) inArray()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (const/4 v0 1)
+  (line 71)
+  (iget v1 v2 com/fasterxml/jackson/core/JsonStreamContext._type int)
+  (if-ne v1 v0 l8f5fc)
+  (label l8f5fa)
+  (return v0)
+  (label l8f5fc)
+  (const/4 v0 0)
+  (goto l8f5fa)
+)
+
+(method (attrs public final ) inObject()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 84)
+  (iget v0 v2 com/fasterxml/jackson/core/JsonStreamContext._type int)
+  (const/4 v1 2)
+  (if-ne v0 v1 l8f61e)
+  (const/4 v0 1)
+  (label l8f61c)
+  (return v0)
+  (label l8f61e)
+  (const/4 v0 0)
+  (goto l8f61c)
+)
+
+(method (attrs public final ) inRoot()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/JsonStreamContext])
+  (line 78)
+  (iget v0 v1 com/fasterxml/jackson/core/JsonStreamContext._type int)
+  (if-nez v0 l8f640)
+  (const/4 v0 1)
+  (label l8f63e)
+  (return v0)
+  (label l8f640)
+  (const/4 v0 0)
+  (goto l8f63e)
+)
+
+)

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%d óra</item>
+        <item quantity="one">1 mp</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d perc</item>
+        <item quantity="one">1 perc</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d óra</item>
+        <item quantity="one">1 óra</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dd</item>
+        <item quantity="one">1 nap</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_summary_on">
+        <item quantity="other">%d személytől</item>
+        <item quantity="one">1 személytől</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d ember</item>
+        <item quantity="one">1 személy</item>
+    </plurals>
+    <plurals name="social_fav_and_retweets_count">
+        <item quantity="other">%1$s kedveli és %2$s retweetelte</item>
+        <item quantity="one">%1$s kedveli és 1 retweetelte</item>
+    </plurals>
+    <plurals name="social_retweet_and_favs_count">
+        <item quantity="other">%1$s retweetelte és %2$s kedveli</item>
+        <item quantity="one">%1$s retweetelte és 1 kedveli</item>
+    </plurals>
+    <plurals name="social_fav_count">
+        <item quantity="other">%1$s kedveli</item>
+        <item quantity="one">1 kedvenc</item>
+    </plurals>
+    <plurals name="social_retweet_count">
+        <item quantity="other">%1$s retweetelte</item>
+        <item quantity="one">1 retweet</item>
+    </plurals>
+</resources>

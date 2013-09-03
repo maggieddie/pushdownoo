@@ -1,0 +1,88 @@
+(class (attrs ) com/facebook/contacts/picker/ab
+ (super java/lang/Object)
+ (source "ContactPickerMergedFilter.java")
+
+ (field (attrs private final ) a [object com/facebook/contacts/picker/u] )
+ (field (attrs private final ) b [object java/lang/String] )
+ (field (attrs private final ) c boolean )
+ (field (attrs private ) d [object com/facebook/contacts/picker/l] )
+ (field (attrs private ) e [object com/facebook/widget/a/j] )
+
+(method (attrs public ) <init>([object com/facebook/contacts/picker/ac] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/picker/ab])
+  ; parameter[0] : v2 ([object com/facebook/contacts/picker/ac])
+  (line 66)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 64)
+  (sget-object v0 com/facebook/widget/a/j.FINISHED [object com/facebook/widget/a/j])
+  (iput-object v0 v1 com/facebook/contacts/picker/ab.e [object com/facebook/widget/a/j])
+  (line 67)
+  (invoke-virtual {v2} com/facebook/contacts/picker/ac/a )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/contacts/picker/ab.a [object com/facebook/contacts/picker/u])
+  (line 68)
+  (invoke-virtual {v2} com/facebook/contacts/picker/ac/c )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/contacts/picker/ab.b [object java/lang/String])
+  (line 69)
+  (invoke-virtual {v2} com/facebook/contacts/picker/ac/b )
+  (move-result v0)
+  (iput-boolean v0 v1 com/facebook/contacts/picker/ab.c boolean)
+  (line 70)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/contacts/picker/u]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/ab])
+  (line 73)
+  (iget-object v0 v1 com/facebook/contacts/picker/ab.a [object com/facebook/contacts/picker/u])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/contacts/picker/l] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/ab])
+  ; parameter[0] : v1 ([object com/facebook/contacts/picker/l])
+  (line 85)
+  (iput-object v1 v0 com/facebook/contacts/picker/ab.d [object com/facebook/contacts/picker/l])
+  (line 86)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/widget/a/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/ab])
+  ; parameter[0] : v1 ([object com/facebook/widget/a/j])
+  (line 93)
+  (iput-object v1 v0 com/facebook/contacts/picker/ab.e [object com/facebook/widget/a/j])
+  (line 94)
+  (return-void )
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/ab])
+  (line 77)
+  (iget-object v0 v1 com/facebook/contacts/picker/ab.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object com/facebook/contacts/picker/l]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/ab])
+  (line 89)
+  (iget-object v0 v1 com/facebook/contacts/picker/ab.d [object com/facebook/contacts/picker/l])
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object com/facebook/widget/a/j]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/picker/ab])
+  (line 97)
+  (iget-object v0 v1 com/facebook/contacts/picker/ab.e [object com/facebook/widget/a/j])
+  (return-object v0)
+)
+
+)

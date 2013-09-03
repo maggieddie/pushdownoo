@@ -1,0 +1,63 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/ser/BeanSerializerModifier
+ (super java/lang/Object)
+ (source "BeanSerializerModifier.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/BeanSerializerModifier])
+  (line 36)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) changeProperties([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] [object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/SerializationConfig;"  "Lcom/fasterxml/jackson/databind/BeanDescription;"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;"  ">;)"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/BeanSerializerModifier])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/BeanDescription])
+  ; parameter[2] : v3 ([object java/util/List])
+  (line 49)
+  (return-object v3)
+)
+
+(method (attrs public ) modifySerializer([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] [object com/fasterxml/jackson/databind/JsonSerializer] )[object com/fasterxml/jackson/databind/JsonSerializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/SerializationConfig;"  "Lcom/fasterxml/jackson/databind/BeanDescription;"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;)"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/BeanSerializerModifier])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/BeanDescription])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 91)
+  (return-object v3)
+)
+
+(method (attrs public ) orderProperties([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] [object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/SerializationConfig;"  "Lcom/fasterxml/jackson/databind/BeanDescription;"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;"  ">;)"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/BeanSerializerModifier])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/BeanDescription])
+  ; parameter[2] : v3 ([object java/util/List])
+  (line 64)
+  (return-object v3)
+)
+
+(method (attrs public ) updateBuilder([object com/fasterxml/jackson/databind/SerializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] [object com/fasterxml/jackson/databind/ser/BeanSerializerBuilder] )[object com/fasterxml/jackson/databind/ser/BeanSerializerBuilder]
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/BeanSerializerModifier])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/SerializationConfig])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/BeanDescription])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/ser/BeanSerializerBuilder])
+  (line 78)
+  (return-object v3)
+)
+
+)

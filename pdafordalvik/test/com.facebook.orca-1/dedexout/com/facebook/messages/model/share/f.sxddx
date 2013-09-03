@@ -1,0 +1,137 @@
+(class (attrs public ) com/facebook/messages/model/share/f
+ (super java/lang/Object)
+ (source "ShareMediaPhotoBuilder.java")
+
+ (field (attrs private ) a [object java/lang/String] )
+ (field (attrs private ) b [object java/lang/String] )
+ (field (attrs private ) c [object java/lang/String] )
+ (field (attrs private ) d [object java/lang/String] )
+ (field (attrs private ) e int )
+ (field (attrs private ) f int )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 21)
+  (iget-object v0 v1 com/facebook/messages/model/share/f.a [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) a(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 (int)
+  (line 57)
+  (iput v1 v0 com/facebook/messages/model/share/f.e int)
+  (line 58)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 25)
+  (iput-object v1 v0 com/facebook/messages/model/share/f.a [object java/lang/String])
+  (line 26)
+  (return-void )
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 29)
+  (iget-object v0 v1 com/facebook/messages/model/share/f.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) b(int )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 (int)
+  (line 65)
+  (iput v1 v0 com/facebook/messages/model/share/f.f int)
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 33)
+  (iput-object v1 v0 com/facebook/messages/model/share/f.b [object java/lang/String])
+  (line 34)
+  (return-void )
+)
+
+(method (attrs public ) c()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 37)
+  (iget-object v0 v1 com/facebook/messages/model/share/f.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 41)
+  (iput-object v1 v0 com/facebook/messages/model/share/f.c [object java/lang/String])
+  (line 42)
+  (return-void )
+)
+
+(method (attrs public ) d()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 45)
+  (iget-object v0 v1 com/facebook/messages/model/share/f.d [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) d([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/model/share/f])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 49)
+  (iput-object v1 v0 com/facebook/messages/model/share/f.d [object java/lang/String])
+  (line 50)
+  (return-void )
+)
+
+(method (attrs public ) e()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 53)
+  (iget v0 v1 com/facebook/messages/model/share/f.e int)
+  (return v0)
+)
+
+(method (attrs public ) f()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 61)
+  (iget v0 v1 com/facebook/messages/model/share/f.f int)
+  (return v0)
+)
+
+(method (attrs public ) g()[object com/facebook/messages/model/share/ShareMediaPhoto]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/model/share/f])
+  (line 69)
+  (new-instance v0 com/facebook/messages/model/share/ShareMediaPhoto)
+  (invoke-direct {v0 v1} com/facebook/messages/model/share/ShareMediaPhoto/<init> [object com/facebook/messages/model/share/f] )
+  (return-object v0)
+)
+
+)

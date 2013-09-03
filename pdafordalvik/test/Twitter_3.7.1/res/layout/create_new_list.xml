@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/create_new_list" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:cardStyle="bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout style="@style/ListRow">
+        <TextView android:textColor="@color/primary_text" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lists_create_list" android:singleLine="true" android:layout_centerVertical="true" style="@style/ListItem" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d分钟</item>
+        <item quantity="one">1分钟</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d小时</item>
+        <item quantity="one">1小时</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d天</item>
+        <item quantity="one">1天</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_summary_on">
+        <item quantity="other">来自%d人</item>
+        <item quantity="one">来自1人</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d人</item>
+        <item quantity="one">1人</item>
+    </plurals>
+    <plurals name="social_fav_and_retweets_count">
+        <item quantity="other">%1$s 收藏 %2$s 转推</item>
+        <item quantity="one">%1$s 收藏 1 转推</item>
+    </plurals>
+    <plurals name="social_retweet_and_favs_count">
+        <item quantity="other">%1$s 转推和 %2$s 收藏</item>
+        <item quantity="one">%1$s 转推 1 收藏</item>
+    </plurals>
+    <plurals name="social_fav_count">
+        <item quantity="other">%1$s 收藏</item>
+        <item quantity="one">1 收藏</item>
+    </plurals>
+    <plurals name="social_retweet_count">
+        <item quantity="other">%1$s 转推</item>
+        <item quantity="one">1 转推</item>
+    </plurals>
+</resources>

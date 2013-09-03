@@ -1,0 +1,19 @@
+(class (attrs public ) com/facebook/prefs/shared/aa
+ (super com/facebook/d/c/a)
+ (source "FbSharedPropertyUtil.java")
+
+
+(method (attrs public ) <init>([object com/facebook/prefs/shared/w] )void
+  (annotation runtimeVisibility [object javax/inject/Inject]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/prefs/shared/aa])
+  ; parameter[0] : v2 ([object com/facebook/prefs/shared/w])
+  (line 13)
+  (const-string v0 "orca_non_cached_preferences")
+  (invoke-direct {v1 v2 v0} com/facebook/d/c/a/<init> [object com/google/common/base/Supplier] [object java/lang/String] )
+  (line 14)
+  (return-void )
+ )
+
+)

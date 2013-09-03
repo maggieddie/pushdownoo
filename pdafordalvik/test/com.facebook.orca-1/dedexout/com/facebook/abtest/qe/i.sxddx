@@ -1,0 +1,60 @@
+(class (attrs ) com/facebook/abtest/qe/i
+ (super com/facebook/inject/d)
+ (source "QuickExperimentModule.java")
+
+ (field (attrs final ) a [object com/facebook/abtest/qe/g] )
+
+(method (attrs private ) <init>([object com/facebook/abtest/qe/g] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/abtest/qe/i])
+  ; parameter[0] : v1 ([object com/facebook/abtest/qe/g])
+  (line 140)
+  (iput-object v1 v0 com/facebook/abtest/qe/i.a [object com/facebook/abtest/qe/g])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/abtest/qe/g] [object com/facebook/abtest/qe/h] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/abtest/qe/i])
+  ; parameter[0] : v1 ([object com/facebook/abtest/qe/g])
+  ; parameter[1] : v2 ([object com/facebook/abtest/qe/h])
+  (line 140)
+  (invoke-direct {v0 v1} com/facebook/abtest/qe/i/<init> [object com/facebook/abtest/qe/g] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/abtest/qe/b]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/abtest/qe/i])
+  (line 145)
+  (new-instance v3 com/facebook/abtest/qe/b)
+  (const-class v0 com/facebook/common/time/c)
+  (invoke-virtual {v5 v0} com/facebook/abtest/qe/i/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/time/a])
+  (const-class v1 com/facebook/common/l/a)
+  (invoke-virtual {v5 v1} com/facebook/abtest/qe/i/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/common/l/a])
+  (const-class v2 com/facebook/prefs/shared/d)
+  (invoke-virtual {v5 v2} com/facebook/abtest/qe/i/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/facebook/prefs/shared/d])
+  (const-class v4 com/facebook/abtest/qe/f/b)
+  (invoke-virtual {v5 v4} com/facebook/abtest/qe/i/c [object java/lang/Class] )
+  (move-result-object v4)
+  (invoke-direct {v3 v0 v1 v2 v4} com/facebook/abtest/qe/b/<init> [object com/facebook/common/time/a] [object com/facebook/common/l/a] [object com/facebook/prefs/shared/d] [object java/util/Set] )
+  (return-object v3)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/abtest/qe/i])
+  (line 140)
+  (invoke-virtual {v1} com/facebook/abtest/qe/i/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListRow">
+        <TextView android:textColor="@color/secondary_text" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

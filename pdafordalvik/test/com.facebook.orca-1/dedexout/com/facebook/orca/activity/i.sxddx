@@ -1,0 +1,118 @@
+(class (attrs public ) com/facebook/orca/activity/i
+ (super java/lang/Object)
+ (source "ConfirmActionParams.java")
+
+ (field (attrs private ) a [object java/lang/String] )
+ (field (attrs private ) b [object java/lang/String] )
+ (field (attrs private ) c [object java/lang/String] )
+ (field (attrs private ) d [object com/facebook/orca/activity/j] )
+ (field (attrs private ) e [object java/lang/String] )
+ (field (attrs private ) f [object com/facebook/orca/activity/j] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/activity/i])
+  (line 8)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (sget-object v0 com/facebook/orca/activity/j.NORMAL [object com/facebook/orca/activity/j])
+  (iput-object v0 v1 com/facebook/orca/activity/i.d [object com/facebook/orca/activity/j])
+  (line 20)
+  (sget-object v0 com/facebook/orca/activity/j.NORMAL [object com/facebook/orca/activity/j])
+  (iput-object v0 v1 com/facebook/orca/activity/i.f [object com/facebook/orca/activity/j])
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/activity/i])
+  (line 23)
+  (iget-object v0 v1 com/facebook/orca/activity/i.a [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/orca/activity/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object com/facebook/orca/activity/j])
+  (line 51)
+  (iput-object v1 v0 com/facebook/orca/activity/i.d [object com/facebook/orca/activity/j])
+  (line 52)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 27)
+  (iput-object v1 v0 com/facebook/orca/activity/i.a [object java/lang/String])
+  (line 28)
+  (return-void )
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/activity/i])
+  (line 31)
+  (iget-object v0 v1 com/facebook/orca/activity/i.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) b([object com/facebook/orca/activity/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object com/facebook/orca/activity/j])
+  (line 63)
+  (iput-object v1 v0 com/facebook/orca/activity/i.f [object com/facebook/orca/activity/j])
+  (line 64)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 35)
+  (iput-object v1 v0 com/facebook/orca/activity/i.b [object java/lang/String])
+  (line 36)
+  (return-void )
+)
+
+(method (attrs public ) c()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/activity/i])
+  (line 39)
+  (iget-object v0 v1 com/facebook/orca/activity/i.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 43)
+  (iput-object v1 v0 com/facebook/orca/activity/i.c [object java/lang/String])
+  (line 44)
+  (return-void )
+)
+
+(method (attrs public ) d()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/activity/i])
+  (line 67)
+  (iget-object v0 v1 com/facebook/orca/activity/i.e [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) d([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/activity/i])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 59)
+  (iput-object v1 v0 com/facebook/orca/activity/i.e [object java/lang/String])
+  (line 60)
+  (return-void )
+)
+
+)

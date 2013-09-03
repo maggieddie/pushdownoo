@@ -1,0 +1,9 @@
+(interface (attrs abstract ) android/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge
+ (super java/lang/Object)
+ (source "SearchViewCompatHoneycomb.java")
+
+
+(method (attrs public abstract ) onClose()boolean
+)
+
+)

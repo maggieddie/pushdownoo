@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">for %d timer siden</item>
+        <item quantity="one">for 1 time siden</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">for %d minutter siden</item>
+        <item quantity="one">for 1 minutt siden</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d timer fra nå av</item>
+        <item quantity="one">1 time fra nå av</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minutter fra nå av</item>
+        <item quantity="one">1 minutt fra nå av</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Slette meldinger?</item>
+        <item quantity="one">Slette melding?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Hvis du sletter din kopi av disse meldingene, kan du ikke angre.</item>
+        <item quantity="one">Hvis du sletter din kopi av denne meldingen, kan du ikke angre.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Slett meldinger</item>
+        <item quantity="one">Slett melding</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Sletter meldinger …</item>
+        <item quantity="one">Sletter melding …</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d liker</item>
+        <item quantity="one">%d liker</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d kommentarer</item>
+        <item quantity="one">%d kommentar</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">Slett %d valgte bilder</item>
+        <item quantity="one">Slett valgt bilde</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Er du sikker på at du vil slette disse %d bildene fra enheten?</item>
+        <item quantity="one">Er du sikker på at du vil slette dette bildet fra enheten?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d personer liker dette</item>
+        <item quantity="one">1 person liker dette</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">%d felles venner</item>
+        <item quantity="one">1 felles venn</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">%,d liker</item>
+        <item quantity="one">1 liker</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d kommentarer</item>
+        <item quantity="one">1 kommentar</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s varsler</item>
+        <item quantity="one">1 varsel</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s MIN</item>
+        <item quantity="one">1 MIN</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s T</item>
+        <item quantity="one">1 T</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s liker</item>
+        <item quantity="one">%s liker</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s kommentarer</item>
+        <item quantity="one">%s kommentar</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">liker dette stedet</item>
+        <item quantity="one">liker dette stedet</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">har vært her</item>
+        <item quantity="one">har vært her</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d vurderinger</item>
+        <item quantity="one">1 vurdering</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">liker</item>
+        <item quantity="one">liker</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">har vært her</item>
+        <item quantity="one">har vært her</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Du har vært her %1$d ganger.</item>
+        <item quantity="one">Du har vært her én gang.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">%,d liker</item>
+        <item quantity="one">1 liker</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d har vært her</item>
+        <item quantity="one">1 har vært her</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">%,d snakker om dette</item>
+        <item quantity="one">1 snakker om dette</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$s og %2$s bruker denne</item>
+        <item quantity="one">%1$s bruker denne</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$s og %2$s spiller dette</item>
+        <item quantity="one">%1$s spiller dette</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">%d liker</item>
+        <item quantity="one">1 liker</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d besøk</item>
+        <item quantity="one">1 besøk</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d bursdager</item>
+        <item quantity="one">1 bursdag</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d personer liker dette</item>
+        <item quantity="one">1 person liker dette</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d innsjekkinger</item>
+        <item quantity="one">1 innsjekking</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">%d felles venner</item>
+        <item quantity="zero">Ingen felles venner</item>
+        <item quantity="one">1 felles venn</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d personer</item>
+        <item quantity="one">1 person</item>
+    </plurals>
+</resources>

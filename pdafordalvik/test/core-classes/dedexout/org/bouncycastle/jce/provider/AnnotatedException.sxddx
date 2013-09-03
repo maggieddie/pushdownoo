@@ -23,7 +23,7 @@
   (line 12)
   (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
   (line 14)
-  (iput-object-quick v2 v0 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (iput-object-quick v2 v0 )
   (line 15)
   (return-void )
  )
@@ -32,7 +32,7 @@
   (limit registers 2)
   ; this: v1 ([object org/bouncycastle/jce/provider/AnnotatedException])
   (line 30)
-  (iget-object-quick v0 v1 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -40,7 +40,7 @@
   (limit registers 2)
   ; this: v1 ([object org/bouncycastle/jce/provider/AnnotatedException])
   (line 25)
-  (iget-object-quick v0 v1 org/bouncycastle/jce/provider/AnnotatedException._underlyingException [object java/lang/Exception])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

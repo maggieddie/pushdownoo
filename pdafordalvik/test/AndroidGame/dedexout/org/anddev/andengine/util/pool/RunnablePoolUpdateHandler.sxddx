@@ -1,0 +1,69 @@
+(class (attrs public abstract ) org/anddev/andengine/util/pool/RunnablePoolUpdateHandler
+ (super org/anddev/andengine/util/pool/PoolUpdateHandler)
+ (source "RunnablePoolUpdateHandler.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/util/pool/RunnablePoolUpdateHandler])
+  (line 26)
+  (invoke-direct {v0} org/anddev/andengine/util/pool/PoolUpdateHandler/<init> )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(int )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/util/pool/RunnablePoolUpdateHandler])
+  ; parameter[0] : v1 (int)
+  (line 31)
+  (invoke-direct {v0 v1} org/anddev/andengine/util/pool/PoolUpdateHandler/<init> int )
+  (line 32)
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object org/anddev/andengine/util/pool/PoolItem]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/util/pool/RunnablePoolUpdateHandler])
+  (line 1)
+  (invoke-virtual {v1} org/anddev/andengine/util/pool/RunnablePoolUpdateHandler/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected abstract ) onAllocatePoolItem()[object org/anddev/andengine/util/pool/RunnablePoolItem]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+)
+
+(method (attrs protected ) onHandlePoolItem([object org/anddev/andengine/util/pool/PoolItem] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/util/pool/RunnablePoolUpdateHandler])
+  ; parameter[0] : v1 ([object org/anddev/andengine/util/pool/PoolItem])
+  (line 1)
+  (check-cast v1 [object org/anddev/andengine/util/pool/RunnablePoolItem])
+  (invoke-virtual {v0 v1} org/anddev/andengine/util/pool/RunnablePoolUpdateHandler/onHandlePoolItem [object org/anddev/andengine/util/pool/RunnablePoolItem] )
+  (return-void )
+)
+
+(method (attrs protected ) onHandlePoolItem([object org/anddev/andengine/util/pool/RunnablePoolItem] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/util/pool/RunnablePoolUpdateHandler])
+  ; parameter[0] : v1 ([object org/anddev/andengine/util/pool/RunnablePoolItem])
+  (line 47)
+  (invoke-virtual {v1} org/anddev/andengine/util/pool/RunnablePoolItem/run )
+  (line 48)
+  (return-void )
+)
+
+)

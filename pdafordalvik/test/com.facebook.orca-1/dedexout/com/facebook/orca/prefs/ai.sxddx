@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/orca/prefs/ai
+ (super java/lang/Object)
+ (source "OrcaInternalPreferenceActivity.java")
+ (implements android/preference/Preference$OnPreferenceClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/prefs/OrcaInternalPreferenceActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/prefs/OrcaInternalPreferenceActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/prefs/ai])
+  ; parameter[0] : v1 ([object com/facebook/orca/prefs/OrcaInternalPreferenceActivity])
+  (line 496)
+  (iput-object v1 v0 com/facebook/orca/prefs/ai.a [object com/facebook/orca/prefs/OrcaInternalPreferenceActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreferenceClick([object android/preference/Preference] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/prefs/ai])
+  ; parameter[0] : v3 ([object android/preference/Preference])
+  (line 499)
+  (iget-object v0 v2 com/facebook/orca/prefs/ai.a [object com/facebook/orca/prefs/OrcaInternalPreferenceActivity])
+  (check-cast v3 [object com/facebook/widget/c/e])
+  (const/4 v1 1)
+  (invoke-static {v0 v3 v1} com/facebook/orca/prefs/OrcaInternalPreferenceActivity/a [object com/facebook/orca/prefs/OrcaInternalPreferenceActivity] [object com/facebook/widget/c/e] boolean )
+  (move-result v0)
+  (return v0)
+)
+
+)

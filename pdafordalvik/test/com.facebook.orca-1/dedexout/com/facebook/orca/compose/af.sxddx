@@ -1,0 +1,61 @@
+(class (attrs ) com/facebook/orca/compose/af
+ (super java/lang/Object)
+ (source "ComposeFragment.java")
+ (implements android/text/TextWatcher)
+
+ (field (attrs final ) a [object com/facebook/orca/compose/ComposeFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/compose/ComposeFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/compose/af])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeFragment])
+  (line 555)
+  (iput-object v1 v0 com/facebook/orca/compose/af.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) afterTextChanged([object android/text/Editable] )void
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/orca/compose/af])
+  ; parameter[0] : v4 ([object android/text/Editable])
+  (line 573)
+  (iget-object v0 v3 com/facebook/orca/compose/af.a [object com/facebook/orca/compose/ComposeFragment])
+  (const-wide/16 v1 500)
+  (invoke-static {v0 v1 v2} com/facebook/orca/compose/ComposeFragment/a [object com/facebook/orca/compose/ComposeFragment] long )
+  (line 574)
+  (return-void )
+)
+
+(method (attrs public ) beforeTextChanged([object java/lang/CharSequence] int int int )void
+  (limit registers 5)
+  ; this: v0 ([object com/facebook/orca/compose/af])
+  ; parameter[0] : v1 ([object java/lang/CharSequence])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  (line 558)
+  (return-void )
+)
+
+(method (attrs public ) onTextChanged([object java/lang/CharSequence] int int int )void
+  (limit registers 6)
+  ; this: v1 ([object com/facebook/orca/compose/af])
+  ; parameter[0] : v2 ([object java/lang/CharSequence])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (int)
+  (line 562)
+  (iget-object v0 v1 com/facebook/orca/compose/af.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v0} com/facebook/orca/compose/ComposeFragment/s [object com/facebook/orca/compose/ComposeFragment] )
+  (line 566)
+  (if-lez v5 l2a77e4)
+  (line 567)
+  (iget-object v0 v1 com/facebook/orca/compose/af.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v0 v3 v5} com/facebook/orca/compose/ComposeFragment/a [object com/facebook/orca/compose/ComposeFragment] int int )
+  (label l2a77e4)
+  (line 569)
+  (return-void )
+)
+
+)

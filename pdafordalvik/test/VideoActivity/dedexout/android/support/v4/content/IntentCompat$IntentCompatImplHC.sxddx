@@ -1,0 +1,34 @@
+(class (attrs ) android/support/v4/content/IntentCompat$IntentCompatImplHC
+ (super android/support/v4/content/IntentCompat$IntentCompatImplBase)
+ (source "IntentCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/content/IntentCompat$IntentCompatImplHC])
+  (line 65)
+  (invoke-direct {v0} android/support/v4/content/IntentCompat$IntentCompatImplBase/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) makeMainActivity([object android/content/ComponentName] )[object android/content/Intent]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/IntentCompat$IntentCompatImplHC])
+  ; parameter[0] : v2 ([object android/content/ComponentName])
+  (line 68)
+  (invoke-static {v2} android/support/v4/content/IntentCompatHoneycomb/makeMainActivity [object android/content/ComponentName] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) makeRestartActivityTask([object android/content/ComponentName] )[object android/content/Intent]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/IntentCompat$IntentCompatImplHC])
+  ; parameter[0] : v2 ([object android/content/ComponentName])
+  (line 72)
+  (invoke-static {v2} android/support/v4/content/IntentCompatHoneycomb/makeRestartActivityTask [object android/content/ComponentName] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

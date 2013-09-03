@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) com/facebook/orca/camera/a/c
+ (super java/lang/Object)
+ (source "IImage.java")
+
+
+(method (attrs public abstract ) a(int int )[object android/graphics/Bitmap]
+)
+
+(method (attrs public abstract ) a(boolean )[object android/graphics/Bitmap]
+)
+
+(method (attrs public abstract ) a()[object java/lang/String]
+)
+
+(method (attrs public abstract ) b()long
+)
+
+(method (attrs public abstract ) d()[object java/lang/String]
+)
+
+)

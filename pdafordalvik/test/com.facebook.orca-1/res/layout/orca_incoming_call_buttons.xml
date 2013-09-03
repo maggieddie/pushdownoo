@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/answer_call_button" android:background="@drawable/voip_accept_button_background" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="none" android:layout_gravity="center" android:id="@id/answer_call_button_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/incall_answer_call" android:singleLine="true" android:shadowColor="#ff235226" android:shadowDy="1.0" android:shadowRadius="0.001" android:drawableLeft="@drawable/voip_answer_button_icon" android:drawablePadding="11.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/decline_call_button" android:background="@drawable/voip_decline_button_background" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="none" android:layout_gravity="center" android:id="@id/decline_call_button_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/incall_decline_call" android:singleLine="true" android:shadowColor="#ff5d2b24" android:shadowDy="1.0" android:shadowRadius="0.001" android:drawableLeft="@drawable/voip_decline_button_icon" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+</LinearLayout>

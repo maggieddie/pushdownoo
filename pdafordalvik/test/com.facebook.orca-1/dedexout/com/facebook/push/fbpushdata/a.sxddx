@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/facebook/push/fbpushdata/a
+ (super java/lang/Object)
+ (source "FbPushDataHandler.java")
+
+
+(method (attrs public abstract ) a([object com/fasterxml/jackson/databind/JsonNode] [object com/facebook/push/g] )void
+)
+
+)

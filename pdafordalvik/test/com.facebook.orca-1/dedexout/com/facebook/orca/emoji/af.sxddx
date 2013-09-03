@@ -1,0 +1,111 @@
+(class (attrs public ) com/facebook/orca/emoji/af
+ (super java/lang/Object)
+ (source "GridSizingCalculator.java")
+
+ (field (attrs private final ) a int )
+ (field (attrs private final ) b int )
+ (field (attrs private final ) c int )
+ (field (attrs private final ) d int )
+ (field (attrs private final ) e int )
+ (field (attrs private final ) f int )
+ (field (attrs private final ) g int )
+ (field (attrs private final ) h int )
+
+(method (attrs public ) <init>(int int int int int int int int )void
+  (limit registers 9)
+  ; this: v0 ([object com/facebook/orca/emoji/af])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  ; parameter[4] : v5 (int)
+  ; parameter[5] : v6 (int)
+  ; parameter[6] : v7 (int)
+  ; parameter[7] : v8 (int)
+  (line 37)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 38)
+  (iput v1 v0 com/facebook/orca/emoji/af.a int)
+  (line 39)
+  (iput v2 v0 com/facebook/orca/emoji/af.b int)
+  (line 40)
+  (iput v3 v0 com/facebook/orca/emoji/af.c int)
+  (line 41)
+  (iput v4 v0 com/facebook/orca/emoji/af.d int)
+  (line 42)
+  (iput v5 v0 com/facebook/orca/emoji/af.e int)
+  (line 43)
+  (iput v6 v0 com/facebook/orca/emoji/af.f int)
+  (line 44)
+  (iput v7 v0 com/facebook/orca/emoji/af.g int)
+  (line 45)
+  (iput v8 v0 com/facebook/orca/emoji/af.h int)
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) a()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 49)
+  (iget v0 v1 com/facebook/orca/emoji/af.a int)
+  (return v0)
+)
+
+(method (attrs public ) b()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 53)
+  (iget v0 v1 com/facebook/orca/emoji/af.b int)
+  (return v0)
+)
+
+(method (attrs public ) c()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 57)
+  (iget v0 v1 com/facebook/orca/emoji/af.c int)
+  (return v0)
+)
+
+(method (attrs public ) d()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 61)
+  (iget v0 v1 com/facebook/orca/emoji/af.d int)
+  (return v0)
+)
+
+(method (attrs public ) e()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 65)
+  (iget v0 v1 com/facebook/orca/emoji/af.e int)
+  (return v0)
+)
+
+(method (attrs public ) f()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 69)
+  (iget v0 v1 com/facebook/orca/emoji/af.f int)
+  (return v0)
+)
+
+(method (attrs public ) g()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 73)
+  (iget v0 v1 com/facebook/orca/emoji/af.g int)
+  (return v0)
+)
+
+(method (attrs public ) h()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/af])
+  (line 77)
+  (iget v0 v1 com/facebook/orca/emoji/af.h int)
+  (return v0)
+)
+
+)

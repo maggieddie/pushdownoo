@@ -1,0 +1,52 @@
+(class (attrs ) com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider
+ (super com/facebook/inject/AbstractProvider)
+ (source "FbBaseModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider])
+  (line 902)
+  (invoke-direct {v0} com/facebook/inject/AbstractProvider/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/base/module/FbBaseModule$1] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider])
+  ; parameter[0] : v1 ([object com/facebook/base/module/FbBaseModule$1])
+  (line 902)
+  (invoke-direct {v0} com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/inject/FbInjectorImpl$LowPriorityInitializer]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider])
+  (line 907)
+  (iget-object v0 v2 com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider.b [object com/facebook/inject/FbInjector])
+  (line 908)
+  (instance-of v1 v0 com/facebook/inject/StrictInjector)
+  (if-eqz v1 l84aa4)
+  (line 909)
+  (check-cast v0 [object com/facebook/inject/StrictInjector])
+  (invoke-virtual {v0} com/facebook/inject/StrictInjector/d )
+  (move-result-object v0)
+  (label l84aa4)
+  (line 911)
+  (check-cast v0 [object com/facebook/inject/FbInjectorImpl])
+  (invoke-virtual {v0} com/facebook/inject/FbInjectorImpl/d )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider])
+  (line 902)
+  (invoke-virtual {v1} com/facebook/base/module/FbBaseModule$FbInjectorLowPriorityInitializerProviderProvider/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

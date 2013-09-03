@@ -1,0 +1,39 @@
+(class (attrs public ) com/facebook/orca/notify/i
+ (super com/facebook/orca/notify/ai)
+ (source "FailedToSendMessageNotification.java")
+
+ (field (attrs private final ) b [object java/lang/String] )
+ (field (attrs private ) c boolean )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/notify/i])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 20)
+  (sget-object v0 com/facebook/orca/notify/aj.FAILED_TO_SEND [object com/facebook/orca/notify/aj])
+  (invoke-direct {v1 v0} com/facebook/orca/notify/ai/<init> [object com/facebook/orca/notify/aj] )
+  (line 21)
+  (iput-object v2 v1 com/facebook/orca/notify/i.b [object java/lang/String])
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/i])
+  (line 25)
+  (iget-object v0 v1 com/facebook/orca/notify/i.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) a(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/notify/i])
+  ; parameter[0] : v1 (boolean)
+  (line 34)
+  (iput-boolean v1 v0 com/facebook/orca/notify/i.c boolean)
+  (line 35)
+  (return-void )
+)
+
+)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/ListRow">
+        <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:id="@id/found_people" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/follow_all" android:layout_alignParentLeft="true" style="@style/InsetText" />
+        <TextView android:textSize="@dimen/font_size_default" android:textColor="@color/secondary_text" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/follow_all" android:layout_below="@id/found_people" android:layout_alignParentLeft="true" style="@style/InsetText" />
+        <Button android:id="@id/follow_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_all" android:drawableLeft="@drawable/ic_follow_text" android:drawablePadding="@dimen/standard_spacing" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onClickHandler" style="@style/Button.Btn" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

@@ -1,0 +1,37 @@
+(class (attrs ) com/facebook/orca/threadview/t
+ (super android/graphics/drawable/LayerDrawable)
+ (source "MessageItemView.java")
+
+ (field (attrs private final ) a [object android/graphics/drawable/Drawable] )
+
+(method (attrs public ) <init>([object android/graphics/drawable/Drawable] [object android/graphics/drawable/Drawable] )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/orca/threadview/t])
+  ; parameter[0] : v3 ([object android/graphics/drawable/Drawable])
+  ; parameter[1] : v4 ([object android/graphics/drawable/Drawable])
+  (line 677)
+  (const/4 v0 2)
+  (new-array v0 v0 [array [object android/graphics/drawable/Drawable]])
+  (const/4 v1 0)
+  (aput-object v3 v0 v1)
+  (const/4 v1 1)
+  (aput-object v4 v0 v1)
+  (invoke-direct {v2 v0} android/graphics/drawable/LayerDrawable/<init> [array [object android/graphics/drawable/Drawable]] )
+  (line 678)
+  (iput-object v4 v2 com/facebook/orca/threadview/t.a [object android/graphics/drawable/Drawable])
+  (line 679)
+  (return-void )
+ )
+
+(method (attrs public ) a(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadview/t])
+  ; parameter[0] : v2 (int)
+  (line 682)
+  (iget-object v0 v1 com/facebook/orca/threadview/t.a [object android/graphics/drawable/Drawable])
+  (invoke-virtual {v0 v2} android/graphics/drawable/Drawable/setAlpha int )
+  (line 683)
+  (return-void )
+)
+
+)

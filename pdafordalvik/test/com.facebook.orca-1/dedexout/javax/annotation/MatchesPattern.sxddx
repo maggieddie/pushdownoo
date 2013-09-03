@@ -1,0 +1,12 @@
+(interface (attrs public abstract annotation ) javax/annotation/MatchesPattern
+ (super java/lang/Object)
+ (source "MatchesPattern.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+  (annotation runtimeVisibility [object javax/annotation/RegEx]
+  )
+)
+
+)

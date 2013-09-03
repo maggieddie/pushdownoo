@@ -1,0 +1,35 @@
+(class (attrs ) org/andengine/input/sensor/acceleration/AccelerationData$1
+ (super java/lang/Object)
+ (source "AccelerationData.java")
+ (implements org/andengine/input/sensor/acceleration/AccelerationData$IAxisSwap)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/input/sensor/acceleration/AccelerationData$1])
+  (line 25)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) swapAxis([array float] )void
+  (limit registers 7)
+  ; this: v5 ([object org/andengine/input/sensor/acceleration/AccelerationData$1])
+  ; parameter[0] : v6 ([array float])
+  (const/4 v4 1)
+  (const/4 v3 0)
+  (line 28)
+  (aget v2 v6 v3)
+  (neg-float v0 v2)
+  (line 29)
+  (aget v1 v6 v4)
+  (line 30)
+  (aput v0 v6 v3)
+  (line 31)
+  (aput v1 v6 v4)
+  (line 32)
+  (return-void )
+)
+
+)

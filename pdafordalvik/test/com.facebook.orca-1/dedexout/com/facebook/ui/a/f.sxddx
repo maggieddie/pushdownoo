@@ -1,0 +1,41 @@
+(class (attrs ) com/facebook/ui/a/f
+ (super com/a/a/c)
+ (source "AnimatorEndFuture.java")
+
+ (field (attrs final ) a [object com/facebook/ui/a/e] )
+
+(method (attrs ) <init>([object com/facebook/ui/a/e] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/a/f])
+  ; parameter[0] : v1 ([object com/facebook/ui/a/e])
+  (line 15)
+  (iput-object v1 v0 com/facebook/ui/a/f.a [object com/facebook/ui/a/e])
+  (invoke-direct {v0} com/a/a/c/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) b([object com/a/a/a] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/ui/a/f])
+  ; parameter[0] : v3 ([object com/a/a/a])
+  (line 18)
+  (iget-object v0 v2 com/facebook/ui/a/f.a [object com/facebook/ui/a/e])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/ui/a/e/a [object com/facebook/ui/a/e] [object java/lang/Object] )
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) c([object com/a/a/a] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/ui/a/f])
+  ; parameter[0] : v3 ([object com/a/a/a])
+  (line 23)
+  (iget-object v0 v2 com/facebook/ui/a/f.a [object com/facebook/ui/a/e])
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} com/facebook/ui/a/e/cancel boolean )
+  (line 24)
+  (return-void )
+)
+
+)

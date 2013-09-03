@@ -12,7 +12,7 @@
   (line 25)
   (invoke-direct {v0} java/lang/Exception/<init> )
   (line 26)
-  (iput-quick v1 v0 org/apache/harmony/luni/util/ErrorCodeException.errorCode int)
+  (iput-quick v1 v0 )
   (line 27)
   (return-void )
  )
@@ -21,7 +21,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/luni/util/ErrorCodeException])
   (line 30)
-  (iget-quick v0 v1 org/apache/harmony/luni/util/ErrorCodeException.errorCode int)
+  (iget-quick v0 v1 )
   (return v0)
 )
 

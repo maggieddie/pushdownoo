@@ -1,0 +1,30 @@
+(class (attrs public ) com/facebook/orca/fbwebrtc/af
+ (super java/lang/Object)
+ (source "WebrtcLogoutHandler.java")
+ (implements com/facebook/auth/f/b)
+
+ (field (attrs private ) a [object com/facebook/orca/fbwebrtc/ag] )
+
+(method (attrs public ) <init>([object com/facebook/orca/fbwebrtc/ag] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/af])
+  ; parameter[0] : v1 ([object com/facebook/orca/fbwebrtc/ag])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 12)
+  (iput-object v1 v0 com/facebook/orca/fbwebrtc/af.a [object com/facebook/orca/fbwebrtc/ag])
+  (line 13)
+  (return-void )
+ )
+
+(method (attrs public ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/fbwebrtc/af])
+  (line 17)
+  (iget-object v0 v1 com/facebook/orca/fbwebrtc/af.a [object com/facebook/orca/fbwebrtc/ag])
+  (invoke-virtual {v0} com/facebook/orca/fbwebrtc/ag/g )
+  (line 18)
+  (return-void )
+)
+
+)

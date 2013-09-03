@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/util/Named
+ (super java/lang/Object)
+ (source "Named.java")
+
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+)

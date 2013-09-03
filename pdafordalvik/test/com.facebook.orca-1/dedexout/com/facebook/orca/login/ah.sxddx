@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/orca/login/ah
+ (super java/lang/Object)
+ (source "WildfireRegistrationOperation.java")
+
+
+(method (attrs public abstract ) T()void
+)
+
+(method (attrs public abstract ) b([object com/facebook/fbservice/service/ServiceException] )void
+)
+
+)

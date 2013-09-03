@@ -1,0 +1,269 @@
+(class (attrs final ) com/google/common/collect/ImmutableSortedAsList
+ (super com/google/common/collect/ImmutableList)
+ (source "ImmutableSortedAsList.java")
+ (implements com/google/common/collect/SortedIterable)
+
+ (field (attrs private final transient ) a [object com/google/common/collect/ImmutableSortedSet] )
+ (field (attrs private final transient ) b [object com/google/common/collect/ImmutableList] )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableSortedSet] [object com/google/common/collect/ImmutableList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/ImmutableSortedSet"  "<TE;>;"  "Lcom/google/common/collect/ImmutableList"  "<TE;>;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableSortedSet])
+  ; parameter[1] : v2 ([object com/google/common/collect/ImmutableList])
+  (line 35)
+  (invoke-direct {v0} com/google/common/collect/ImmutableList/<init> )
+  (line 36)
+  (iput-object v1 v0 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (line 37)
+  (iput-object v2 v0 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TE;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 75)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableList/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a(int int )[object com/google/common/collect/ImmutableList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Lcom/google/common/collect/UnmodifiableListIterator"  "<TE;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 6)
+  ; this: v3 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v4 (int)
+  ; parameter[1] : v5 (int)
+  (line 62)
+  (invoke-virtual {v3} com/google/common/collect/ImmutableSortedAsList/size )
+  (move-result v0)
+  (invoke-static {v4 v5 v0} com/google/common/base/Preconditions/checkPositionIndexes int int int )
+  (line 63)
+  (if-ne v4 v5 l1086dc)
+  (invoke-static {} com/google/common/collect/ImmutableList/d )
+  (nop )
+  (move-result-object v0)
+  (label l1086da)
+  (return-object v0)
+  (label l1086dc)
+  (new-instance v0 com/google/common/collect/RegularImmutableSortedSet)
+  (iget-object v1 v3 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v1 v4 v5} com/google/common/collect/ImmutableList/a int int )
+  (move-result-object v1)
+  (iget-object v2 v3 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-virtual {v2} com/google/common/collect/ImmutableSortedSet/comparator )
+  (move-result-object v2)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/RegularImmutableSortedSet/<init> [object com/google/common/collect/ImmutableList] [object java/util/Comparator] )
+  (invoke-virtual {v0} com/google/common/collect/RegularImmutableSortedSet/h )
+  (move-result-object v0)
+  (goto l1086da)
+)
+
+(method (attrs public ) a(int )[object com/google/common/collect/UnmodifiableListIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Lcom/google/common/collect/UnmodifiableListIterator"  "<TE;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 (int)
+  (line 87)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableList/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Lcom/google/common/collect/UnmodifiableListIterator"  "<TE;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 103)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableList/a )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) c()[object com/google/common/collect/UnmodifiableListIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableListIterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 83)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableList/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 41)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableSortedSet/comparator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 48)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableSortedSet/a [object java/lang/Object] )
+  (move-result v0)
+  (if-ltz v0 l1087ac)
+  (const/4 v0 1)
+  (label l1087aa)
+  (return v0)
+  (label l1087ac)
+  (const/4 v0 0)
+  (goto l1087aa)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 95)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableList/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) get(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)TE;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 (int)
+  (line 79)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableList/get int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 99)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableList/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) indexOf([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableSortedSet/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 29)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableSortedAsList/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) lastIndexOf([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 56)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableSortedSet/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) listIterator()[object java/util/ListIterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 29)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableSortedAsList/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) listIterator(int )[object java/util/ListIterator]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 (int)
+  (line 29)
+  (invoke-virtual {v1 v2} com/google/common/collect/ImmutableSortedAsList/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 91)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSortedAsList.b [object com/google/common/collect/ImmutableList])
+  (invoke-virtual {v0} com/google/common/collect/ImmutableList/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) subList(int int )[object java/util/List]
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/ImmutableSortedAsList])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 29)
+  (invoke-virtual {v1 v2 v3} com/google/common/collect/ImmutableSortedAsList/a int int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) writeReplace()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableSortedAsList])
+  (line 71)
+  (new-instance v0 com/google/common/collect/ImmutableAsList$SerializedForm)
+  (iget-object v1 v2 com/google/common/collect/ImmutableSortedAsList.a [object com/google/common/collect/ImmutableSortedSet])
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableAsList$SerializedForm/<init> [object com/google/common/collect/ImmutableCollection] )
+  (return-object v0)
+)
+
+)

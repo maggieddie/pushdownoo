@@ -1,0 +1,27 @@
+(class (attrs ) com/facebook/widget/animatablelistview/c
+ (super com/facebook/widget/animatablelistview/b)
+ (source "AnimatingItemView.java")
+
+ (field (attrs final ) a [object com/facebook/widget/animatablelistview/AnimatingItemView] )
+
+(method (attrs ) <init>([object com/facebook/widget/animatablelistview/AnimatingItemView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/widget/animatablelistview/c])
+  ; parameter[0] : v1 ([object com/facebook/widget/animatablelistview/AnimatingItemView])
+  (line 30)
+  (iput-object v1 v0 com/facebook/widget/animatablelistview/c.a [object com/facebook/widget/animatablelistview/AnimatingItemView])
+  (invoke-direct {v0} com/facebook/widget/animatablelistview/b/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/animatablelistview/c])
+  (line 33)
+  (iget-object v0 v1 com/facebook/widget/animatablelistview/c.a [object com/facebook/widget/animatablelistview/AnimatingItemView])
+  (invoke-static {v0} com/facebook/widget/animatablelistview/AnimatingItemView/a [object com/facebook/widget/animatablelistview/AnimatingItemView] )
+  (line 34)
+  (return-void )
+)
+
+)

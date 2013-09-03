@@ -1,0 +1,46 @@
+(class (attrs ) com/google/common/a/jc
+ (super com/google/common/a/ji)
+ (source "Multimaps.java")
+
+ (field (attrs final ) a [object java/util/Map$Entry] )
+ (field (attrs final ) b [object com/google/common/a/jb] )
+
+(method (attrs ) <init>([object com/google/common/a/jb] [object java/util/Map$Entry] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/jc])
+  ; parameter[0] : v1 ([object com/google/common/a/jb])
+  ; parameter[1] : v2 ([object java/util/Map$Entry])
+  (line 1874)
+  (iput-object v1 v0 com/google/common/a/jc.b [object com/google/common/a/jb])
+  (iput-object v2 v0 com/google/common/a/jc.a [object java/util/Map$Entry])
+  (invoke-direct {v0} com/google/common/a/ji/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/jc])
+  (line 1876)
+  (iget-object v0 v1 com/google/common/a/jc.a [object java/util/Map$Entry])
+  (invoke-interface {v0} java/util/Map$Entry/getKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/jc])
+  (line 1880)
+  (iget-object v0 v1 com/google/common/a/jc.a [object java/util/Map$Entry])
+  (invoke-interface {v0} java/util/Map$Entry/getValue )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

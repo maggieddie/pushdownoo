@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.ui.DashDebugView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/debug_view_content" android:background="#77000000" android:padding="10.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="12.0sp" android:id="@id/debug_network_connection_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="75.0dip" />
+            <TextView android:textSize="12.0sp" android:id="@id/debug_mqtt_connection_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="2.0dip" android:layout_margin="10.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/debug_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.facebook.dash.ui.DashDebugView>

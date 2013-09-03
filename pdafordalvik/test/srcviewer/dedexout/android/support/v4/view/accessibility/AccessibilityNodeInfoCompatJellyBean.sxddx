@@ -1,0 +1,157 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityNodeInfoCompatJellyBean
+ (super java/lang/Object)
+ (source "AccessibilityNodeInfoCompatJellyBean.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityNodeInfoCompatJellyBean])
+  (line 26)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) addChild([object java/lang/Object] [object android/view/View] int )void
+  (limit registers 3)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object android/view/View])
+  ; parameter[2] : v2 (int)
+  (line 29)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1 v2} android/view/accessibility/AccessibilityNodeInfo/addChild [object android/view/View] int )
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public static ) findFocus([object java/lang/Object] int )[object java/lang/Object]
+  (limit registers 3)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 61)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1 v2} android/view/accessibility/AccessibilityNodeInfo/findFocus int )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) focusSearch([object java/lang/Object] int )[object java/lang/Object]
+  (limit registers 3)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 65)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1 v2} android/view/accessibility/AccessibilityNodeInfo/focusSearch int )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) getMovementGranularities([object java/lang/Object] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 53)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityNodeInfo/getMovementGranularities )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isAccessibilityFocused([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 73)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityNodeInfo/isAccessibilityFocused )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) isVisibleToUser([object java/lang/Object] )boolean
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 37)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1} android/view/accessibility/AccessibilityNodeInfo/isVisibleToUser )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) obtain([object android/view/View] int )[object java/lang/Object]
+  (limit registers 3)
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 57)
+  (invoke-static {v1 v2} android/view/accessibility/AccessibilityNodeInfo/obtain [object android/view/View] int )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+(method (attrs public static ) performAction([object java/lang/Object] int [object android/os/Bundle] )boolean
+  (limit registers 4)
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object android/os/Bundle])
+  (line 45)
+  (check-cast v1 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v1 v2 v3} android/view/accessibility/AccessibilityNodeInfo/performAction int [object android/os/Bundle] )
+  (move-result v0)
+  (return v0)
+ )
+
+(method (attrs public static ) setAccesibilityFocused([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 77)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityNodeInfo/setAccessibilityFocused boolean )
+  (line 78)
+  (return-void )
+ )
+
+(method (attrs public static ) setMovementGranularities([object java/lang/Object] int )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (int)
+  (line 49)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityNodeInfo/setMovementGranularities int )
+  (line 50)
+  (return-void )
+ )
+
+(method (attrs public static ) setParent([object java/lang/Object] [object android/view/View] int )void
+  (limit registers 3)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object android/view/View])
+  ; parameter[2] : v2 (int)
+  (line 69)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1 v2} android/view/accessibility/AccessibilityNodeInfo/setParent [object android/view/View] int )
+  (line 70)
+  (return-void )
+ )
+
+(method (attrs public static ) setSource([object java/lang/Object] [object android/view/View] int )void
+  (limit registers 3)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 ([object android/view/View])
+  ; parameter[2] : v2 (int)
+  (line 33)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1 v2} android/view/accessibility/AccessibilityNodeInfo/setSource [object android/view/View] int )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs public static ) setVisibleToUser([object java/lang/Object] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object java/lang/Object])
+  ; parameter[1] : v1 (boolean)
+  (line 41)
+  (check-cast v0 [object android/view/accessibility/AccessibilityNodeInfo])
+  (invoke-virtual {v0 v1} android/view/accessibility/AccessibilityNodeInfo/setVisibleToUser boolean )
+  (line 42)
+  (return-void )
+ )
+
+)

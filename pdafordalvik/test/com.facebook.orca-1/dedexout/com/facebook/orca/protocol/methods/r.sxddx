@@ -1,0 +1,26 @@
+(class (attrs ) com/facebook/orca/protocol/methods/r
+ (super java/lang/Object)
+ (source "FetchThreadsFqlHelper.java")
+
+ (field (attrs final ) a [object com/google/common/a/es] )
+ (field (attrs final ) b int )
+
+(method (attrs public ) <init>([object com/google/common/a/es] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/messages/model/threads/Message;"  ">;I)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/protocol/methods/r])
+  ; parameter[0] : v1 ([object com/google/common/a/es])
+  ; parameter[1] : v2 (int)
+  (line 296)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 297)
+  (iput-object v1 v0 com/facebook/orca/protocol/methods/r.a [object com/google/common/a/es])
+  (line 298)
+  (iput v2 v0 com/facebook/orca/protocol/methods/r.b int)
+  (line 299)
+  (return-void )
+ )
+
+)

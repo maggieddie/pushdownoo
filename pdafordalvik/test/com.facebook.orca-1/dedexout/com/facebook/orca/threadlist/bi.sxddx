@@ -1,0 +1,20 @@
+(class (attrs public abstract ) com/facebook/orca/threadlist/bi
+ (super java/lang/Object)
+ (source "ThreadListFragment.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/threadlist/bi])
+  (line 112)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) a()void
+)
+
+(method (attrs public abstract ) a([object android/widget/AbsListView] int )void
+)
+
+)

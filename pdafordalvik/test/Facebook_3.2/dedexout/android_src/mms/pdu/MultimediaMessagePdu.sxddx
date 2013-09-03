@@ -1,0 +1,49 @@
+(class (attrs public ) android_src/mms/pdu/MultimediaMessagePdu
+ (super android_src/mms/pdu/GenericPdu)
+ (source "MultimediaMessagePdu.java")
+
+ (field (attrs private ) b [object android_src/mms/pdu/PduBody] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android_src/mms/pdu/MultimediaMessagePdu])
+  (line 35)
+  (invoke-direct {v0} android_src/mms/pdu/GenericPdu/<init> )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android_src/mms/pdu/PduHeaders] [object android_src/mms/pdu/PduBody] )void
+  (limit registers 3)
+  ; this: v0 ([object android_src/mms/pdu/MultimediaMessagePdu])
+  ; parameter[0] : v1 ([object android_src/mms/pdu/PduHeaders])
+  ; parameter[1] : v2 ([object android_src/mms/pdu/PduBody])
+  (line 45)
+  (invoke-direct {v0 v1} android_src/mms/pdu/GenericPdu/<init> [object android_src/mms/pdu/PduHeaders] )
+  (line 46)
+  (iput-object v2 v0 android_src/mms/pdu/MultimediaMessagePdu.b [object android_src/mms/pdu/PduBody])
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs public ) a(long )void
+  (limit registers 5)
+  ; this: v2 ([object android_src/mms/pdu/MultimediaMessagePdu])
+  ; parameter[0] : v3 (long)
+  (line 148)
+  (iget-object v0 v2 android_src/mms/pdu/MultimediaMessagePdu.a [object android_src/mms/pdu/PduHeaders])
+  (const/16 v1 133)
+  (invoke-virtual {v0 v3 v4 v1} android_src/mms/pdu/PduHeaders/a long int )
+  (line 149)
+  (return-void )
+)
+
+(method (attrs public ) c()[object android_src/mms/pdu/PduBody]
+  (limit registers 2)
+  ; this: v1 ([object android_src/mms/pdu/MultimediaMessagePdu])
+  (line 64)
+  (iget-object v0 v1 android_src/mms/pdu/MultimediaMessagePdu.b [object android_src/mms/pdu/PduBody])
+  (return-object v0)
+)
+
+)

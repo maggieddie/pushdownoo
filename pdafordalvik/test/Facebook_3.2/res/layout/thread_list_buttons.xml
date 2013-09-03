@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/buttons_container" android:background="@drawable/publisher_gradient_background" android:layout_width="fill_parent" android:layout_height="@dimen/publisher_height">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/message_button" android:background="@drawable/publisher_button_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/broadcast_button_text_color" android:ellipsize="end" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/thread_list_new_message_button" android:drawableLeft="@drawable/new_message" android:drawablePadding="8.0dip" />
+        </FrameLayout>
+        <View android:id="@id/message_group_divider" android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/divider_width" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/group_button" android:background="@drawable/publisher_button_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/broadcast_button_text_color" android:ellipsize="end" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/thread_list_new_group_button" android:drawableLeft="@drawable/composer_group" android:drawablePadding="8.0dip" />
+        </FrameLayout>
+        <View android:id="@id/group_broadcast_divider" android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/divider_width" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/broadcast_button" android:background="@drawable/publisher_button_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/broadcast_button_text_color" android:ellipsize="end" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/broadcast_title" android:drawableLeft="@drawable/broadcast" android:drawablePadding="8.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/composerbar" android:scaleType="fitXY" />
+</LinearLayout>

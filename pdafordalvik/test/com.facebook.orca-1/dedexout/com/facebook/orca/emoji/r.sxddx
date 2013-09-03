@@ -1,0 +1,24 @@
+(class (attrs public ) com/facebook/orca/emoji/r
+ (super com/facebook/orca/emoji/af)
+ (source "EmojiGridSizingParams.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 10)
+  ; this: v9 ([object com/facebook/orca/emoji/r])
+  (const/16 v6 9)
+  (const/16 v4 8)
+  (line 25)
+  (const/4 v1 7)
+  (const/4 v2 4)
+  (const/16 v3 45)
+  (const/16 v8 20)
+  (move-object v0 v9)
+  (move v5 v4)
+  (move v7 v6)
+  (invoke-direct/range {v0 .. v8} com/facebook/orca/emoji/af/<init> int int int int int int int int )
+  (line 35)
+  (return-void )
+ )
+
+)

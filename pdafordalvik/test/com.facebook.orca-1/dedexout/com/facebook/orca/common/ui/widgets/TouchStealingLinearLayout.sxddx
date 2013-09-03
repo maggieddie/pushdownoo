@@ -1,0 +1,71 @@
+(class (attrs public ) com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout
+ (super com/facebook/widget/e)
+ (source "TouchStealingLinearLayout.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 18)
+  (invoke-direct {v0 v1} com/facebook/widget/e/<init> [object android/content/Context] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] [object android/util/AttributeSet] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout])
+  ; parameter[0] : v1 ([object android/content/Context])
+  ; parameter[1] : v2 ([object android/util/AttributeSet])
+  (line 22)
+  (invoke-direct {v0 v1 v2} com/facebook/widget/e/<init> [object android/content/Context] [object android/util/AttributeSet] )
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs private ) a()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout])
+  (line 26)
+  (invoke-virtual {v2} com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout/getParent )
+  (move-result-object v0)
+  (line 27)
+  (if-eqz v0 l287a88)
+  (line 28)
+  (const/4 v1 1)
+  (invoke-interface {v0 v1} android/view/ViewParent/requestDisallowInterceptTouchEvent boolean )
+  (label l287a88)
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) onInterceptTouchEvent([object android/view/MotionEvent] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout])
+  ; parameter[0] : v3 ([object android/view/MotionEvent])
+  (line 34)
+  (invoke-virtual {v3} android/view/MotionEvent/getAction )
+  (move-result v0)
+  (line 35)
+  (invoke-super {v2 v3} com/facebook/widget/e/onInterceptTouchEvent [object android/view/MotionEvent] )
+  (move-result v1)
+  (line 36)
+  (packed-switch v0 0
+    ps287aac_287ab4 ; case 0
+    ps287aac_287ab2 ; case 1
+    ps287aac_287ab4 ; case 2
+    ps287aac_default) ; default
+  (label l287ab2)
+  (label ps287aac_default)
+  (label ps287aac_287ab2)
+  (line 42)
+  (return v1)
+  (label ps287aac_287ab4)
+  (line 39)
+  (invoke-direct {v2} com/facebook/orca/common/ui/widgets/TouchStealingLinearLayout/a )
+  (goto l287ab2)
+  (line 36)
+)
+
+)

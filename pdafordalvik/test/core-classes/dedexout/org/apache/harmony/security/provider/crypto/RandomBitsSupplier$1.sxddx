@@ -30,7 +30,7 @@
   (invoke-direct {v0 v2} java/io/File/<init> [object java/lang/String] )
   (label l1b158c)
   (line 84)
-  (invoke-virtual-quick {v0} java/io/File/canRead )
+  (invoke-virtual-quick {v0} vtable #0xb)
   (move-result v2)
   (if-eqz v2 l1b15b4)
   (line 86)

@@ -1,0 +1,34 @@
+(class (attrs ) com/facebook/orca/contacts/picker/aq
+ (super android/content/BroadcastReceiver)
+ (source "ContactPickerProgressView.java")
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/picker/ap] )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/picker/ap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/aq])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/ap])
+  (line 46)
+  (iput-object v1 v0 com/facebook/orca/contacts/picker/aq.a [object com/facebook/orca/contacts/picker/ap])
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/orca/contacts/picker/aq])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 49)
+  (const-string v0 "state")
+  (invoke-virtual {v4 v0} android/content/Intent/getParcelableExtra [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/contacts/upload/ContactsUploadState])
+  (line 51)
+  (iget-object v1 v2 com/facebook/orca/contacts/picker/aq.a [object com/facebook/orca/contacts/picker/ap])
+  (invoke-static {v1 v0} com/facebook/orca/contacts/picker/ap/a [object com/facebook/orca/contacts/picker/ap] [object com/facebook/contacts/upload/ContactsUploadState] )
+  (line 52)
+  (return-void )
+)
+
+)

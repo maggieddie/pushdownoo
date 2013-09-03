@@ -1,0 +1,27 @@
+(class (attrs ) com/facebook/orca/nux/p
+ (super com/facebook/widget/text/f)
+ (source "ThreadListNuxController.java")
+
+ (field (attrs final ) a [object com/facebook/orca/nux/k] )
+
+(method (attrs ) <init>([object com/facebook/orca/nux/k] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/nux/p])
+  ; parameter[0] : v1 ([object com/facebook/orca/nux/k])
+  (line 334)
+  (iput-object v1 v0 com/facebook/orca/nux/p.a [object com/facebook/orca/nux/k])
+  (invoke-direct {v0} com/facebook/widget/text/f/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/nux/p])
+  (line 337)
+  (iget-object v0 v1 com/facebook/orca/nux/p.a [object com/facebook/orca/nux/k])
+  (invoke-static {v0} com/facebook/orca/nux/k/e [object com/facebook/orca/nux/k] )
+  (line 338)
+  (return-void )
+)
+
+)

@@ -1,0 +1,56 @@
+(class (attrs ) android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl
+ (super android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsImpl)
+ (source "AccessibilityRecordCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl])
+  (line 475)
+  (invoke-direct {v0} android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getMaxScrollX([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 478)
+  (invoke-static {v2} android/support/v4/view/accessibility/AccessibilityRecordCompatIcsMr1/getMaxScrollX [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) getMaxScrollY([object java/lang/Object] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 483)
+  (invoke-static {v2} android/support/v4/view/accessibility/AccessibilityRecordCompatIcsMr1/getMaxScrollY [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) setMaxScrollX([object java/lang/Object] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 488)
+  (invoke-static {v1 v2} android/support/v4/view/accessibility/AccessibilityRecordCompatIcsMr1/setMaxScrollX [object java/lang/Object] int )
+  (line 489)
+  (return-void )
+)
+
+(method (attrs public ) setMaxScrollY([object java/lang/Object] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (int)
+  (line 493)
+  (invoke-static {v1 v2} android/support/v4/view/accessibility/AccessibilityRecordCompatIcsMr1/setMaxScrollY [object java/lang/Object] int )
+  (line 494)
+  (return-void )
+)
+
+)

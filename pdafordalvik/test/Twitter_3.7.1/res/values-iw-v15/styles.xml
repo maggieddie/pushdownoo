@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TweetDetailsAvatar">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="TweetDetailsName">
+        <item name="android:layout_marginRight">@dimen/list_row_padding</item>
+        <item name="android:layout_toLeftOf">@id/profile_image</item>
+    </style>
+    <style name="ActivityText.Title" parent="@style/ActivityText">
+        <item name="android:textSize">@dimen/font_size_default</item>
+        <item name="android:textColor">@color/list_item_text</item>
+        <item name="android:gravity">bottom|right|center</item>
+    </style>
+    <style name="ListRow.Activity" parent="@style/ListRow">
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="TextContent">
+        <item name="android:gravity">right</item>
+    </style>
+</resources>

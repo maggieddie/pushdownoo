@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/orca_nux_dialog_right_nub" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:reflexAware="true" style="@style/NuxIntroPadding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" orca:reflexAware="true" orca:reflexAndroidTouchMode="generic">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/orca_nux_finding_contacts_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/orca_nux_finding_contacts_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NuxFindingContactsTitle" />
+            <TextView android:id="@id/orca_nux_finding_contacts_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NuxFindingContactsBody" />
+            <ProgressBar android:id="@id/orca_nux_finding_contacts_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NuxFindingContactsProgress" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

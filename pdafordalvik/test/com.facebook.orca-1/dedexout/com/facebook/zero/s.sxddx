@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/zero/s
+ (super com/facebook/inject/d)
+ (source "ZeroModule.java")
+
+ (field (attrs final ) a [object com/facebook/zero/c] )
+
+(method (attrs private ) <init>([object com/facebook/zero/c] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/zero/s])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  (line 249)
+  (iput-object v1 v0 com/facebook/zero/s.a [object com/facebook/zero/c])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/zero/c] [object com/facebook/zero/d] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/zero/s])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  ; parameter[1] : v2 ([object com/facebook/zero/d])
+  (line 249)
+  (invoke-direct {v0 v1} com/facebook/zero/s/<init> [object com/facebook/zero/c] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/zero/server/d]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/zero/s])
+  (line 253)
+  (new-instance v2 com/facebook/zero/server/d)
+  (const-class v0 android/telephony/TelephonyManager)
+  (invoke-virtual {v3 v0} com/facebook/zero/s/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/telephony/TelephonyManager])
+  (const-class v1 com/facebook/common/hardware/m)
+  (invoke-virtual {v3 v1} com/facebook/zero/s/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/common/hardware/m])
+  (invoke-direct {v2 v0 v1} com/facebook/zero/server/d/<init> [object android/telephony/TelephonyManager] [object com/facebook/common/hardware/m] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/s])
+  (line 249)
+  (invoke-virtual {v1} com/facebook/zero/s/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

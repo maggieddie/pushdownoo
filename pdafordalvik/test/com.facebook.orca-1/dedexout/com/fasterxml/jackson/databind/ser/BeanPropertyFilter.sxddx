@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/ser/BeanPropertyFilter
+ (super java/lang/Object)
+ (source "BeanPropertyFilter.java")
+
+
+(method (attrs public abstract ) serializeAsField([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/ser/BeanPropertyWriter] )void
+)
+
+)

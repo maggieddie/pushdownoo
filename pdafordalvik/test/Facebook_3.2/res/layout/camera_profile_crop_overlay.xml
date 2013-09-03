@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/profile_crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.camera.views.SquareLinearLayout android:id="@id/profile_crop_square" android:background="@drawable/profile_crop_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <LinearLayout android:background="@color/camera_crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/profile_crop_square" />
+    <LinearLayout android:background="@color/camera_crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/profile_crop_square" />
+    <LinearLayout android:background="@color/camera_crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/profile_crop_square" />
+    <LinearLayout android:background="@color/camera_crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/profile_crop_square" />
+</RelativeLayout>

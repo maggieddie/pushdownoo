@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top|left|center" android:id="@id/composer_popup_arrow_above" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:src="@drawable/orca_attachments_arrow" />
+    <LinearLayout android:id="@id/composer_popup_content_container" android:background="@color/emoji_attachment_popup_background_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/emoji_front_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/attachment_operation_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <View android:background="@drawable/orca_composer_divider_horizontal" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/emoji_front_content" android:background="@color/emoji_attachment_popup_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_gravity="bottom" android:id="@id/emoji_backspace_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+                    <Button android:layout_gravity="bottom|right|center" android:id="@id/emoji_backspace" android:background="@drawable/orca_emoji_backspace_front_button" android:layout_width="43.0dip" android:layout_height="33.0dip" android:layout_marginRight="4.0dip" />
+                </FrameLayout>
+                <FrameLayout android:layout_gravity="bottom" android:id="@id/emoji_show_back_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+                    <View android:layout_gravity="bottom|left|center" android:id="@id/emoji_show_back" android:background="@drawable/orca_emoji_more_front_button" android:layout_width="43.0dip" android:layout_height="33.0dip" android:layout_marginLeft="4.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ViewStub android:id="@id/emoji_back_stub" android:layout="@layout/orca_emoji_popup_backside" android:inflatedId="@id/emoji_back_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|left|center" android:id="@id/composer_popup_arrow_below" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:src="@drawable/orca_attachments_arrow_reversed" />
+</LinearLayout>

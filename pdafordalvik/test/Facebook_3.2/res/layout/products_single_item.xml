@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/standard_12pt_text_size" android:textStyle="bold" android:textColor="@color/standard_section_header_text" android:id="@id/text_product_category_header" android:paddingLeft="@dimen/products_cell_left_gap" android:paddingTop="@dimen/category_header_padding_top" android:paddingBottom="@dimen/category_header_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/layout_product" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_product" android:background="@drawable/cell" android:padding="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/standard_padding" android:layout_marginRight="@dimen/standard_padding" android:layout_below="@id/text_product_category_header" android:layout_centerHorizontal="true">
+        <com.facebook.widget.UrlImage android:layout_gravity="center" android:id="@id/ksimage_product_image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/product_name_text" android:ellipsize="end" android:gravity="top|left|center" android:id="@id/text_product_name" android:paddingTop="@dimen/standard_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <FrameLayout android:paddingTop="@dimen/standard_padding_and_a_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/price_tag_corner_negative_left_margin" android:layout_below="@id/text_product_category_header" android:layout_alignLeft="@id/layout_product">
+        <include layout="@layout/price_tag" />
+    </FrameLayout>
+</RelativeLayout>

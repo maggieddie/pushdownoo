@@ -1,0 +1,14 @@
+(class (attrs public ) org/andengine/audio/sound/SoundLibrary
+ (super org/andengine/util/adt/map/Library)
+ (source "SoundLibrary.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/audio/sound/SoundLibrary])
+  (line 12)
+  (invoke-direct {v0} org/andengine/util/adt/map/Library/<init> )
+  (return-void )
+ )
+
+)

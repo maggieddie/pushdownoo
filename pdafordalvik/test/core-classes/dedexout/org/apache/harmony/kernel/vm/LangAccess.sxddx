@@ -28,7 +28,7 @@
   (move-result-object v0)
   (line 55)
   (const-class v2 org/apache/harmony/kernel/vm/LangAccess)
-  (invoke-virtual-quick {v2} java/lang/Class/getClassLoader )
+  (invoke-virtual-quick {v2} vtable #0x13)
   (move-result-object v1)
   (line 57)
   (if-eqz v0 l1bd318)

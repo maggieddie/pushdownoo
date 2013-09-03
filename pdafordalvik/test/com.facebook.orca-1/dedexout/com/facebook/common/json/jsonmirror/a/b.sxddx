@@ -1,0 +1,14 @@
+(class (attrs public ) com/facebook/common/json/jsonmirror/a/b
+ (super com/facebook/common/json/jsonmirror/a/a)
+ (source "JMBoolean.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/common/json/jsonmirror/a/b])
+  (line 5)
+  (invoke-direct {v0} com/facebook/common/json/jsonmirror/a/a/<init> )
+  (return-void )
+ )
+
+)

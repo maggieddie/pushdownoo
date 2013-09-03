@@ -1,0 +1,40 @@
+(class (attrs final ) com/twitter/android/provider/k
+ (super android/database/DataSetObserver)
+ (source "Twttr")
+
+ (field (attrs final ) a [object com/twitter/android/provider/h] )
+
+(method (attrs public ) <init>([object com/twitter/android/provider/h] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/provider/k])
+  ; parameter[0] : v1 ([object com/twitter/android/provider/h])
+  (line 180)
+  (iput-object v1 v0 com/twitter/android/provider/k.a [object com/twitter/android/provider/h])
+  (invoke-direct {v0} android/database/DataSetObserver/<init> )
+  (line 181)
+  (return-void )
+ )
+
+(method (attrs public final ) onChanged()void
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/provider/k])
+  (line 190)
+  (iget-object v0 v1 com/twitter/android/provider/k.a [object com/twitter/android/provider/h])
+  (iget-object v0 v0 com/twitter/android/provider/h.d [object com/twitter/android/provider/j])
+  (invoke-virtual {v0} com/twitter/android/provider/j/notifyChanged )
+  (line 191)
+  (return-void )
+)
+
+(method (attrs public final ) onInvalidated()void
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/provider/k])
+  (line 185)
+  (iget-object v0 v1 com/twitter/android/provider/k.a [object com/twitter/android/provider/h])
+  (iget-object v0 v0 com/twitter/android/provider/h.d [object com/twitter/android/provider/j])
+  (invoke-virtual {v0} com/twitter/android/provider/j/notifyInvalidated )
+  (line 186)
+  (return-void )
+)
+
+)

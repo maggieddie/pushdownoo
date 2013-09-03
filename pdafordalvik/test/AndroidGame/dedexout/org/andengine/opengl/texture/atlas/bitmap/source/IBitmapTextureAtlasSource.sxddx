@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource
+ (super java/lang/Object)
+ (source "IBitmapTextureAtlasSource.java")
+ (implements org/andengine/opengl/texture/atlas/source/ITextureAtlasSource)
+
+
+(method (attrs public abstract ) deepCopy()[object org/andengine/opengl/texture/atlas/bitmap/source/IBitmapTextureAtlasSource]
+)
+
+(method (attrs public abstract ) onLoadBitmap([object android/graphics/Bitmap$Config] )[object android/graphics/Bitmap]
+)
+
+)

@@ -1,0 +1,30 @@
+(class (attrs final ) com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket
+ (super java/lang/Object)
+ (source "JsonSerializerMap.java")
+
+ (field (attrs public final ) key [object com/fasterxml/jackson/databind/ser/SerializerCache$TypeKey] )
+ (field (attrs public final ) next [object com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket] )
+ (field (attrs public final ) value [object com/fasterxml/jackson/databind/JsonSerializer] )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket] [object com/fasterxml/jackson/databind/ser/SerializerCache$TypeKey] [object com/fasterxml/jackson/databind/JsonSerializer] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket;"  "Lcom/fasterxml/jackson/databind/ser/SerializerCache$TypeKey;"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<"  "Ljava/lang/Object;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/ser/SerializerCache$TypeKey])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 85)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 86)
+  (iput-object v1 v0 com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket.next [object com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket])
+  (line 87)
+  (iput-object v2 v0 com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket.key [object com/fasterxml/jackson/databind/ser/SerializerCache$TypeKey])
+  (line 88)
+  (iput-object v3 v0 com/fasterxml/jackson/databind/ser/impl/JsonSerializerMap$Bucket.value [object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 89)
+  (return-void )
+ )
+
+)

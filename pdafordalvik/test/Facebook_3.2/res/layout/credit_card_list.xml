@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/layout_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/credit_cards_list_header" />
+        <View android:background="@color/table_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_credit_cards" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/generic_black" android:ellipsize="end" android:gravity="center" android:id="@id/button_add_card" android:background="@drawable/button_light" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" android:layout_marginTop="@dimen/standard_padding" android:text="@string/credit_cards_list_button_add_new_card" android:singleLine="true" />
+    </LinearLayout>
+</ScrollView>

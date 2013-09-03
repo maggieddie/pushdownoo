@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/http/b/ag
+ (super com/facebook/inject/d)
+ (source "FbHttpModule.java")
+
+ (field (attrs final ) a [object com/facebook/http/b/w] )
+
+(method (attrs private ) <init>([object com/facebook/http/b/w] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/b/ag])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  (line 212)
+  (iput-object v1 v0 com/facebook/http/b/ag.a [object com/facebook/http/b/w])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/http/b/w] [object com/facebook/http/b/x] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/http/b/ag])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  ; parameter[1] : v2 ([object com/facebook/http/b/x])
+  (line 212)
+  (invoke-direct {v0 v1} com/facebook/http/b/ag/<init> [object com/facebook/http/b/w] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/http/b/v]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/http/b/ag])
+  (line 217)
+  (new-instance v1 com/facebook/http/b/v)
+  (const-class v0 com/facebook/common/c/j)
+  (invoke-virtual {v2 v0} com/facebook/http/b/ag/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/c/j])
+  (invoke-direct {v1 v0} com/facebook/http/b/v/<init> [object com/facebook/common/c/j] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/b/ag])
+  (line 212)
+  (invoke-virtual {v1} com/facebook/http/b/ag/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

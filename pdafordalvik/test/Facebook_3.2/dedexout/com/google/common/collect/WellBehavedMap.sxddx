@@ -1,0 +1,80 @@
+(class (attrs final ) com/google/common/collect/WellBehavedMap
+ (super com/google/common/collect/ForwardingMap)
+ (source "WellBehavedMap.java")
+
+ (field (attrs private final ) a [object java/util/Map] )
+ (field (attrs private ) b [object java/util/Set] )
+
+(method (attrs private ) <init>([object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/WellBehavedMap])
+  ; parameter[0] : v1 ([object java/util/Map])
+  (line 38)
+  (invoke-direct {v0} com/google/common/collect/ForwardingMap/<init> )
+  (line 39)
+  (iput-object v1 v0 com/google/common/collect/WellBehavedMap.a [object java/util/Map])
+  (line 40)
+  (return-void )
+ )
+
+(method (attrs static ) a([object java/util/Map] )[object com/google/common/collect/WellBehavedMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/util/Map])
+  (line 49)
+  (new-instance v0 com/google/common/collect/WellBehavedMap)
+  (invoke-direct {v0 v1} com/google/common/collect/WellBehavedMap/<init> [object java/util/Map] )
+  (return-object v0)
+ )
+
+(method (attrs protected ) a()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap])
+  (line 53)
+  (iget-object v0 v1 com/google/common/collect/WellBehavedMap.a [object java/util/Map])
+  (return-object v0)
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap])
+  (line 33)
+  (invoke-virtual {v1} com/google/common/collect/WellBehavedMap/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/WellBehavedMap])
+  (line 57)
+  (iget-object v0 v2 com/google/common/collect/WellBehavedMap.b [object java/util/Set])
+  (line 58)
+  (if-eqz v0 l115d0a)
+  (label l115d08)
+  (line 61)
+  (return-object v0)
+  (label l115d0a)
+  (iget-object v0 v2 com/google/common/collect/WellBehavedMap.a [object java/util/Map])
+  (invoke-interface {v0} java/util/Map/keySet )
+  (move-result-object v0)
+  (new-instance v1 com/google/common/collect/WellBehavedMap$KeyToEntryConverter)
+  (invoke-direct {v1 v2} com/google/common/collect/WellBehavedMap$KeyToEntryConverter/<init> [object java/util/Map] )
+  (invoke-static {v0 v1} com/google/common/collect/Sets/a [object java/util/Set] [object com/google/common/collect/Sets$InvertibleFunction] )
+  (move-result-object v0)
+  (iput-object v0 v2 com/google/common/collect/WellBehavedMap.b [object java/util/Set])
+  (goto l115d08)
+)
+
+)

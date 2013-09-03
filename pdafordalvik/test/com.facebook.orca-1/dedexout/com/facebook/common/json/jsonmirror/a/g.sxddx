@@ -1,0 +1,14 @@
+(class (attrs public ) com/facebook/common/json/jsonmirror/a/g
+ (super com/facebook/common/json/jsonmirror/a/l)
+ (source "JMForcedString.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/common/json/jsonmirror/a/g])
+  (line 17)
+  (invoke-direct {v0} com/facebook/common/json/jsonmirror/a/l/<init> )
+  (return-void )
+ )
+
+)

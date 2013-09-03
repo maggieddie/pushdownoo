@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) com/facebook/c/c
+ (super java/lang/Object)
+ (source "BroadcastReceiverLike.java")
+
+
+(method (attrs public abstract ) abortBroadcast()void
+)
+
+(method (attrs public abstract ) getResultCode()int
+)
+
+(method (attrs public abstract ) getResultData()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getResultExtras(boolean )[object android/os/Bundle]
+)
+
+(method (attrs public abstract ) setResult(int [object java/lang/String] [object android/os/Bundle] )void
+)
+
+(method (attrs public abstract ) setResultCode(int )void
+)
+
+(method (attrs public abstract ) setResultData([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setResultExtras([object android/os/Bundle] )void
+)
+
+)

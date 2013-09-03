@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5분</item>
+        <item>10분</item>
+        <item>15분</item>
+        <item>30분</item>
+        <item>1시간</item>
+        <item>2시간</item>
+        <item>4시간</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>내가 팔로우한 사람만</item>
+        <item>모든 사람으로부터</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>반응</item>
+        <item>멘션</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>타임라인의 트윗 보기.</item>
+        <item>내가 팔로우하는 사람 보기</item>
+        <item>내 계정에 트윗 작성.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>트위터 비밀번호 조회.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>프로필 수정</item>
+        <item>설정</item>
+        <item>도움말</item>
+    </string-array>
+</resources>

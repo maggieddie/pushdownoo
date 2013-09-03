@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/push/mqtt/m
+ (super java/lang/Object)
+ (source "IProvideSubscribeTopics.java")
+
+
+(method (attrs public abstract ) a()[object com/google/common/a/ev]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/ev"  "<"  "Lcom/facebook/mqtt/messages/SubscribeTopic;"  "Lcom/facebook/push/mqtt/as;"  ">;")
+  )
+)
+
+)

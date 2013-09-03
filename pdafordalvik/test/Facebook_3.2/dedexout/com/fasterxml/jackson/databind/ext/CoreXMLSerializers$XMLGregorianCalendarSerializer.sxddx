@@ -1,0 +1,55 @@
+(class (attrs public ) com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdSerializer)
+ (source "CoreXMLSerializers.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer])
+  (line 56)
+  (const-class v0 javax/xml/datatype/XMLGregorianCalendar)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/ser/std/StdSerializer/<init> [object java/lang/Class] )
+  (line 57)
+  (return-void )
+ )
+
+(method (attrs public ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v3 ([object java/lang/reflect/Type])
+  (line 67)
+  (sget-object v0 com/fasterxml/jackson/databind/ser/std/CalendarSerializer.instance [object com/fasterxml/jackson/databind/ser/std/CalendarSerializer])
+  (invoke-virtual {v0 v2 v3} com/fasterxml/jackson/databind/ser/std/CalendarSerializer/getSchema [object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 53)
+  (check-cast v1 [object javax/xml/datatype/XMLGregorianCalendar])
+  (invoke-virtual {v0 v1 v2 v3} com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer/serialize [object javax/xml/datatype/XMLGregorianCalendar] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (return-void )
+)
+
+(method (attrs public ) serialize([object javax/xml/datatype/XMLGregorianCalendar] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ext/CoreXMLSerializers$XMLGregorianCalendarSerializer])
+  ; parameter[0] : v3 ([object javax/xml/datatype/XMLGregorianCalendar])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 62)
+  (sget-object v0 com/fasterxml/jackson/databind/ser/std/CalendarSerializer.instance [object com/fasterxml/jackson/databind/ser/std/CalendarSerializer])
+  (invoke-virtual {v3} javax/xml/datatype/XMLGregorianCalendar/toGregorianCalendar )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1 v4 v5} com/fasterxml/jackson/databind/ser/std/CalendarSerializer/serialize [object java/util/Calendar] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (line 63)
+  (return-void )
+)
+
+)

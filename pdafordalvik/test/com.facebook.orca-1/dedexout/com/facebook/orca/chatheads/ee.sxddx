@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/orca/chatheads/ee
+ (super com/facebook/orca/chatheads/dv)
+ (source "ScreenInsetsChangeDetector.java")
+
+
+(method (attrs public ) <init>([object android/view/WindowManager] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/ee])
+  ; parameter[0] : v2 ([object android/view/WindowManager])
+  (line 53)
+  (invoke-static {} com/facebook/orca/chatheads/ee/c )
+  (nop )
+  (move-result-object v0)
+  (invoke-direct {v1 v2 v0} com/facebook/orca/chatheads/dv/<init> [object android/view/WindowManager] [object android/view/WindowManager$LayoutParams] )
+  (line 54)
+  (return-void )
+ )
+
+(method (attrs private static ) c()[object android/view/WindowManager$LayoutParams]
+  (limit registers 6)
+  (const/4 v2 15)
+  (line 57)
+  (new-instance v0 android/view/WindowManager$LayoutParams)
+  (const/4 v1 0)
+  (sget v3 com/facebook/orca/chatheads/ee.a int)
+  (const v4 65792) ; 0x10100)
+  (move v5 v2)
+  (invoke-direct/range {v0 .. v5} android/view/WindowManager$LayoutParams/<init> int int int int int )
+  (line 65)
+  (const/16 v1 53)
+  (iput v1 v0 android/view/WindowManager$LayoutParams.gravity int)
+  (line 66)
+  (return-object v0)
+ )
+
+)

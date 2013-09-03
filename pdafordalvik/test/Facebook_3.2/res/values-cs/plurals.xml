@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">před %d hod.</item>
+        <item quantity="one">před 1 hod.</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">před %d min.</item>
+        <item quantity="one">před 1 min.</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">během %d hod. od této chvíle</item>
+        <item quantity="one">během 1 hod. od této chvíle</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">během %d min. od této chvíle</item>
+        <item quantity="one">během 1 min. od této chvíle</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Odstranit zprávy?</item>
+        <item quantity="one">Odstranit zprávu?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Jakmile odstraníte svoji kopii těchto zpráv, nebudete moci vrátit tuto akci zpět.</item>
+        <item quantity="one">Jakmile odstraníte svoji kopii této zprávy, nebudete moci vrátit tuto akci zpět.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Odstranit zprávy</item>
+        <item quantity="one">Odstranit zprávu</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Odstraňování zpráv…</item>
+        <item quantity="one">Odstraňování zprávy…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d To se mi líbí</item>
+        <item quantity="one">To se mi líbí (%d)</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">Komentáře: %d</item>
+        <item quantity="one">Komentáře (%d)</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">Odstranit vybrané fotky (%d)</item>
+        <item quantity="one">Odstranit vybranou fotku</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Opravdu chcete odstranit vybrané fotky %d ze svého zařízení?</item>
+        <item quantity="one">Opravdu chcete odstranit vybranou fotku ze svého zařízení?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">Toto se líbí %d lidem</item>
+        <item quantity="one">Líbí se to 1 osobě</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">Společní přátelé (%d)</item>
+        <item quantity="one">1 společný přítel</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">To se mi líbí (%,d)</item>
+        <item quantity="one">1 uživateli se líbí</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">Komentáře (%,d)</item>
+        <item quantity="one">1 komentář</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">Upozornění (%1$s)</item>
+        <item quantity="one">1 upozornění</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s HOD.</item>
+        <item quantity="one">1 MIN.</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s HOD.</item>
+        <item quantity="one">1 HOD.</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s To se mi líbí</item>
+        <item quantity="one">To se mi líbí (%s)</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">Komentáře: %s</item>
+        <item quantity="one">Komentáře (%s)</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">Toto místo se mi líbí.</item>
+        <item quantity="one">Toto místo se mi líbí.</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">Byli tady.</item>
+        <item quantity="one">Byl(a) tady.</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">Hodnocení (%1$d)</item>
+        <item quantity="one">1 hodnocení</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">To se mi líbí</item>
+        <item quantity="one">To se mi líbí</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">Byli tady</item>
+        <item quantity="one">Byl(a) tady</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Byli jste tady %1$dx.</item>
+        <item quantity="one">Byli jste tady jednou.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">To se mi líbí (%,d)</item>
+        <item quantity="one">To se mi líbí (1)</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">Byli tady (%,d)</item>
+        <item quantity="one">Byli tady (1)</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">Mluví o tom (%,d)</item>
+        <item quantity="one">1 o tom mluví</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">Toto používají %1$s a %2$s</item>
+        <item quantity="one">Toto používá %1$s.</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">Toto hrají %1$s a %2$s</item>
+        <item quantity="one">Toto hraje %1$s.</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">To se mi líbí (%d)</item>
+        <item quantity="one">To se mi líbí (1)</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">Návštěvy (%d)</item>
+        <item quantity="one">1 návštěva</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">Narozeniny: %d</item>
+        <item quantity="one">1 narozeniny</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">Toto se líbí %d lidem</item>
+        <item quantity="one">Líbí se to 1 osobě</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">Počet návštěv: %d</item>
+        <item quantity="one">1 návštěva</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">Společní přátelé (%d)</item>
+        <item quantity="zero">Žádní společní přátelé</item>
+        <item quantity="one">1 společný přítel</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d uživatelů</item>
+        <item quantity="one">1 uživatel</item>
+    </plurals>
+</resources>

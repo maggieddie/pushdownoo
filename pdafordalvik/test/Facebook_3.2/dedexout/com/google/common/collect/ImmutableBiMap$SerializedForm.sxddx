@@ -1,0 +1,32 @@
+(class (attrs ) com/google/common/collect/ImmutableBiMap$SerializedForm
+ (super com/google/common/collect/ImmutableMap$SerializedForm)
+ (source "ImmutableBiMap.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableBiMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/ImmutableBiMap"  "<**>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableBiMap$SerializedForm])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableBiMap])
+  (line 313)
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableMap$SerializedForm/<init> [object com/google/common/collect/ImmutableMap] )
+  (line 314)
+  (return-void )
+ )
+
+(method (attrs ) readResolve()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableBiMap$SerializedForm])
+  (line 316)
+  (new-instance v0 com/google/common/collect/ImmutableBiMap$Builder)
+  (invoke-direct {v0} com/google/common/collect/ImmutableBiMap$Builder/<init> )
+  (line 317)
+  (invoke-virtual {v1 v0} com/google/common/collect/ImmutableBiMap$SerializedForm/a [object com/google/common/collect/ImmutableMap$Builder] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

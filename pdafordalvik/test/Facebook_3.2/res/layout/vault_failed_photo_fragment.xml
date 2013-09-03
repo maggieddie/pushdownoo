@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/black_partial_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/light_gray_text_color" android:padding="@dimen/vault_photo_option_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vault_unable_to_sync_photo" />
+    <include layout="@layout/vault_linebreak" />
+    <TextView android:textSize="22.0sp" android:textColor="@drawable/solid_white" android:id="@id/vault_try_again" android:padding="@dimen/vault_photo_option_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vault_try_again" />
+    <include layout="@layout/vault_linebreak" />
+</LinearLayout>

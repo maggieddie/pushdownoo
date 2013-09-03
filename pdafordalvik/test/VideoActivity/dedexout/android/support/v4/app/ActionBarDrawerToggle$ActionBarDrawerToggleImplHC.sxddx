@@ -1,0 +1,59 @@
+(class (attrs ) android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC
+ (super java/lang/Object)
+ (source "ActionBarDrawerToggle.java")
+ (implements android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl)
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC])
+  (line 85)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/support/v4/app/ActionBarDrawerToggle$1] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC])
+  ; parameter[0] : v1 ([object android/support/v4/app/ActionBarDrawerToggle$1])
+  (line 85)
+  (invoke-direct {v0} android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getThemeUpIndicator([object android/app/Activity] )[object android/graphics/drawable/Drawable]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC])
+  ; parameter[0] : v2 ([object android/app/Activity])
+  (line 88)
+  (invoke-static {v2} android/support/v4/app/ActionBarDrawerToggleHoneycomb/getThemeUpIndicator [object android/app/Activity] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) setActionBarDescription([object java/lang/Object] [object android/app/Activity] int )[object java/lang/Object]
+  (limit registers 5)
+  ; this: v1 ([object android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/app/Activity])
+  ; parameter[2] : v4 (int)
+  (line 100)
+  (invoke-static {v2 v3 v4} android/support/v4/app/ActionBarDrawerToggleHoneycomb/setActionBarDescription [object java/lang/Object] [object android/app/Activity] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) setActionBarUpIndicator([object java/lang/Object] [object android/app/Activity] [object android/graphics/drawable/Drawable] int )[object java/lang/Object]
+  (limit registers 6)
+  ; this: v1 ([object android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object android/app/Activity])
+  ; parameter[2] : v4 ([object android/graphics/drawable/Drawable])
+  ; parameter[3] : v5 (int)
+  (line 94)
+  (invoke-static {v2 v3 v4 v5} android/support/v4/app/ActionBarDrawerToggleHoneycomb/setActionBarUpIndicator [object java/lang/Object] [object android/app/Activity] [object android/graphics/drawable/Drawable] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

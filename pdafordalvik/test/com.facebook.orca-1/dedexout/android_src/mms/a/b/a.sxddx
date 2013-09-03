@@ -1,0 +1,17 @@
+(class (attrs public abstract ) android_src/mms/a/b/a
+ (super android_src/mms/a/b/c)
+ (source "ElementParallelTimeContainerImpl.java")
+ (implements org/a/a/b/b)
+
+
+(method (attrs ) <init>([object org/a/a/b/g] )void
+  (limit registers 2)
+  ; this: v0 ([object android_src/mms/a/b/a])
+  ; parameter[0] : v1 ([object org/a/a/b/g])
+  (line 46)
+  (invoke-direct {v0 v1} android_src/mms/a/b/c/<init> [object org/a/a/b/g] )
+  (line 47)
+  (return-void )
+ )
+
+)

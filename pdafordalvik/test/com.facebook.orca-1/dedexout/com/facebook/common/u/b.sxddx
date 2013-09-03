@@ -1,0 +1,20 @@
+(class (attrs public abstract ) com/facebook/common/u/b
+ (super java/lang/Object)
+ (source "UriIntentBuilder.java")
+
+ (field (attrs private ) a [object com/facebook/common/u/c] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/u/b])
+  (line 25)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 31)
+  (new-instance v0 com/facebook/common/u/c)
+  (invoke-direct {v0} com/facebook/common/u/c/<init> )
+  (iput-object v0 v1 com/facebook/common/u/b.a [object com/facebook/common/u/c])
+  (line 94)
+  (return-void )
+ )
+
+)

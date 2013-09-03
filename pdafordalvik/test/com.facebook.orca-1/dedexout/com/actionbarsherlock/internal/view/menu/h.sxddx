@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/view/menu/h
+ (super java/lang/Object)
+ (source "MenuPresenter.java")
+
+
+(method (attrs public abstract ) a([object android/content/Context] [object com/actionbarsherlock/internal/view/menu/a] )void
+)
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/a] boolean )void
+)
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/a] [object com/actionbarsherlock/internal/view/menu/c] )boolean
+)
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/l] )boolean
+)
+
+(method (attrs public abstract ) b(boolean )void
+)
+
+)

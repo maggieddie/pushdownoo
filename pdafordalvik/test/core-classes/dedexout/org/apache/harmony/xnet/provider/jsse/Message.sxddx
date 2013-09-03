@@ -46,7 +46,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/xnet/provider/jsse/Message])
   (line 47)
-  (iget-quick v0 v1 org/apache/harmony/xnet/provider/jsse/Message.length int)
+  (iget-quick v0 v1 )
   (return v0)
 )
 

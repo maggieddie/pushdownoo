@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/jsonschema/SchemaAware
+ (super java/lang/Object)
+ (source "SchemaAware.java")
+
+
+(method (attrs public abstract ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+)
+
+)

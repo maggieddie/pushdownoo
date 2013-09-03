@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/black70a" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="8.0dip">
+        <TextView android:id="@id/carrier_bottom_banner_title" android:paddingRight="38.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/BottomBannerTitle" />
+        <TextView android:id="@id/carrier_bottom_banner_content" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/BottomBannerText" />
+    </LinearLayout>
+    <Button android:layout_gravity="top|right|center" android:id="@id/carrier_bottom_banner_close" android:background="@drawable/bottom_banner_close" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_margin="12.0dip" />
+</FrameLayout>

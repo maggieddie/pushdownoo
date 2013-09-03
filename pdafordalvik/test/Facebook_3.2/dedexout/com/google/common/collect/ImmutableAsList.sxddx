@@ -1,0 +1,57 @@
+(class (attrs final ) com/google/common/collect/ImmutableAsList
+ (super com/google/common/collect/RegularImmutableList)
+ (source "ImmutableAsList.java")
+
+ (field (attrs private final transient ) a [object com/google/common/collect/ImmutableCollection] )
+
+(method (attrs ) <init>([array [object java/lang/Object]] [object com/google/common/collect/ImmutableCollection] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(["  "Ljava/lang/Object;"  "Lcom/google/common/collect/ImmutableCollection"  "<TE;>;)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object com/google/common/collect/ImmutableAsList])
+  ; parameter[0] : v3 ([array [object java/lang/Object]])
+  ; parameter[1] : v4 ([object com/google/common/collect/ImmutableCollection])
+  (line 37)
+  (const/4 v0 0)
+  (array-length v1 v3)
+  (invoke-direct {v2 v3 v0 v1} com/google/common/collect/RegularImmutableList/<init> [array [object java/lang/Object]] int int )
+  (line 38)
+  (iput-object v4 v2 com/google/common/collect/ImmutableAsList.a [object com/google/common/collect/ImmutableCollection])
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs private ) readObject([object java/io/ObjectInputStream] )void
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/ImmutableAsList])
+  ; parameter[0] : v3 ([object java/io/ObjectInputStream])
+  (line 63)
+  (new-instance v0 java/io/InvalidObjectException)
+  (const-string v1 "Use SerializedForm")
+  (invoke-direct {v0 v1} java/io/InvalidObjectException/<init> [object java/lang/String] )
+  (throw v0)
+ )
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableAsList])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 44)
+  (iget-object v0 v1 com/google/common/collect/ImmutableAsList.a [object com/google/common/collect/ImmutableCollection])
+  (invoke-virtual {v0 v2} com/google/common/collect/ImmutableCollection/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs ) writeReplace()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableAsList])
+  (line 67)
+  (new-instance v0 com/google/common/collect/ImmutableAsList$SerializedForm)
+  (iget-object v1 v2 com/google/common/collect/ImmutableAsList.a [object com/google/common/collect/ImmutableCollection])
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableAsList$SerializedForm/<init> [object com/google/common/collect/ImmutableCollection] )
+  (return-object v0)
+)
+
+)

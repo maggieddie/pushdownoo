@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/row" android:background="@null" style="@style/ListRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_spacing">
+        <ImageView android:id="@id/user_image" android:layout_width="@dimen/user_image_size" android:layout_height="@dimen/user_image_size" android:scaleType="center" android:adjustViewBounds="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    </RelativeLayout>
+    <TextView android:textStyle="bold" android:textColor="@color/primary_text" android:gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/avatar" />
+    <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:gravity="center_vertical" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="3.0dip" android:singleLine="true" android:layout_toLeftOf="@id/time_item" android:layout_toRightOf="@id/name" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/time_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/username" android:layout_alignBottom="@id/username" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/reply_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/ic_tweet_attr_convo" />
+        <ImageView android:id="@id/photo_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/ic_tweet_attr_photo" />
+        <ImageView android:id="@id/media_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/ic_tweet_attr_video" />
+        <ImageView android:id="@id/summary_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/ic_tweet_attr_summary" />
+        <ImageView android:id="@id/geo_pin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/ic_tweet_attr_geo" />
+        <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:gravity="center_vertical" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/primary_text" android:id="@id/text_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/avatar" android:layout_below="@id/username" android:lineSpacingMultiplier="1.2" />
+    <TextView android:id="@id/pill" android:layout_toRightOf="@id/avatar" android:layout_below="@id/text_item" style="@style/Pill" />
+    <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:id="@id/retweeter_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_badge_retweet" android:drawablePadding="3.0dip" android:layout_toRightOf="@id/avatar" android:layout_below="@id/pill" />
+    <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:id="@id/promoted_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_badge_promoted" android:drawablePadding="3.0dip" android:layout_toRightOf="@id/avatar" android:layout_below="@id/pill" />
+    <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:id="@id/location_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/avatar" android:layout_below="@id/retweeter_item" />
+</RelativeLayout>

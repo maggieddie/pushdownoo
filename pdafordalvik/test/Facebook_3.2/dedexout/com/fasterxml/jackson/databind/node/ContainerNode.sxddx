@@ -1,0 +1,251 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/node/ContainerNode
+ (super com/fasterxml/jackson/databind/node/BaseJsonNode)
+ (source "ContainerNode.java")
+
+ (field (attrs protected final ) _nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory] )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/node/JsonNodeFactory] )void
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (line 27)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/node/BaseJsonNode/<init> )
+  (line 28)
+  (iput-object v1 v0 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (line 29)
+  (return-void )
+ )
+
+(method (attrs public final ) POJONode([object java/lang/Object] )[object com/fasterxml/jackson/databind/node/POJONode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 115)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/POJONode [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) arrayNode()[object com/fasterxml/jackson/databind/node/ArrayNode]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  (line 90)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0} com/fasterxml/jackson/databind/node/JsonNodeFactory/arrayNode )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) asText()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  (line 41)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public abstract ) asToken()[object com/fasterxml/jackson/core/JsonToken]
+)
+
+(method (attrs public final ) binaryNode([array byte] )[object com/fasterxml/jackson/databind/node/BinaryNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([array byte])
+  (line 112)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/binaryNode [array byte] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) binaryNode([array byte] int int )[object com/fasterxml/jackson/databind/node/BinaryNode]
+  (limit registers 5)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([array byte])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 113)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2 v3 v4} com/fasterxml/jackson/databind/node/JsonNodeFactory/binaryNode [array byte] int int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) booleanNode(boolean )[object com/fasterxml/jackson/databind/node/BooleanNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (boolean)
+  (line 100)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/booleanNode boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) findParent([object java/lang/String] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 16)
+  (invoke-virtual {v1 v2} com/fasterxml/jackson/databind/node/ContainerNode/findParent [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) findParent([object java/lang/String] )[object com/fasterxml/jackson/databind/node/ObjectNode]
+)
+
+(method (attrs public abstract ) findParents([object java/lang/String] [object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/JsonNode;"  ">;)"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/JsonNode;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) findValue([object java/lang/String] )[object com/fasterxml/jackson/databind/JsonNode]
+)
+
+(method (attrs public abstract ) findValues([object java/lang/String] [object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/JsonNode;"  ">;)"  "Ljava/util/List"  "<"  "Lcom/fasterxml/jackson/databind/JsonNode;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) findValuesAsText([object java/lang/String] [object java/util/List] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  "Ljava/util/List"  "<"  "Ljava/lang/String;"  ">;)"  "Ljava/util/List"  "<"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) get(int )[object com/fasterxml/jackson/databind/JsonNode]
+)
+
+(method (attrs public abstract ) get([object java/lang/String] )[object com/fasterxml/jackson/databind/JsonNode]
+)
+
+(method (attrs public ) isContainerNode()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  (line 35)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public final ) nullNode()[object com/fasterxml/jackson/databind/node/NullNode]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  (line 98)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0} com/fasterxml/jackson/databind/node/JsonNodeFactory/nullNode )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(byte )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (byte)
+  (line 102)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode byte )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(double )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (double)
+  (line 107)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2 v3} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode double )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(float )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (float)
+  (line 106)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode float )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(int )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (int)
+  (line 104)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(long )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (long)
+  (line 105)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2 v3} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode long )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode([object java/math/BigDecimal] )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([object java/math/BigDecimal])
+  (line 108)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode [object java/math/BigDecimal] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) numberNode(short )[object com/fasterxml/jackson/databind/node/NumericNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 (short)
+  (line 103)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/numberNode short )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) objectNode()[object com/fasterxml/jackson/databind/node/ObjectNode]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  (line 96)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0} com/fasterxml/jackson/databind/node/JsonNodeFactory/objectNode )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public abstract ) removeAll()[object com/fasterxml/jackson/databind/node/ContainerNode]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+)
+
+(method (attrs public abstract ) size()int
+)
+
+(method (attrs public final ) textNode([object java/lang/String] )[object com/fasterxml/jackson/databind/node/TextNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ContainerNode])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 110)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/ContainerNode._nodeFactory [object com/fasterxml/jackson/databind/node/JsonNodeFactory])
+  (invoke-virtual {v0 v2} com/fasterxml/jackson/databind/node/JsonNodeFactory/textNode [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

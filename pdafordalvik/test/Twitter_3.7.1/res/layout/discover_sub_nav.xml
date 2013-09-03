@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/activity_grid" android:background="@color/translucent_black" android:layout_width="fill_parent" android:layout_height="@dimen/discover_sub_nav_height">
+        <include layout="@layout/discover_activity_grid" />
+    </RelativeLayout>
+    <ImageView android:background="@drawable/bg_tweet_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/discover_sub_nav_height" android:contentDescription="null" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="bottom|left|center" android:id="@id/activity" android:background="@drawable/bg_discover_sub_nav" android:layout_width="0.0dip" android:layout_height="@dimen/discover_sub_nav_height" android:text="@string/activity" android:layout_weight="1.0" style="@style/DiscoverSubNavText" />
+        <FrameLayout android:background="@color/bg_list" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/trends_list" android:background="@color/translucent_black" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/discover_trend" />
+                <include layout="@layout/discover_trend" />
+                <include layout="@layout/discover_trend" />
+            </LinearLayout>
+            <ImageView android:background="@drawable/bg_tweet_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/discover_sub_nav_height" android:contentDescription="null" />
+            <TextView android:gravity="bottom|left|center" android:id="@id/trends" android:background="@drawable/bg_discover_sub_nav" android:layout_width="fill_parent" android:layout_height="@dimen/discover_sub_nav_height" android:text="@string/trends_title_worldwide" style="@style/DiscoverSubNavText" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

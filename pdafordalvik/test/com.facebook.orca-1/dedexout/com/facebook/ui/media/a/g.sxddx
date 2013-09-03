@@ -1,0 +1,38 @@
+(class (attrs ) com/facebook/ui/media/a/g
+ (super com/facebook/ui/media/a/c)
+ (source "MediaDownloader.java")
+
+ (field (attrs private final ) a [object java/io/InputStream] )
+
+(method (attrs ) <init>([object java/io/InputStream] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/ui/media/a/g])
+  ; parameter[0] : v2 ([object java/io/InputStream])
+  (line 108)
+  (sget-object v0 com/facebook/ui/media/a/d.SUCCESS [object com/facebook/ui/media/a/d])
+  (invoke-direct {v1 v0} com/facebook/ui/media/a/c/<init> [object com/facebook/ui/media/a/d] )
+  (line 109)
+  (iput-object v2 v1 com/facebook/ui/media/a/g.a [object java/io/InputStream])
+  (line 110)
+  (return-void )
+ )
+
+(method (attrs public ) b()[object java/io/InputStream]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/media/a/g])
+  (line 114)
+  (iget-object v0 v1 com/facebook/ui/media/a/g.a [object java/io/InputStream])
+  (return-object v0)
+)
+
+(method (attrs public ) c()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/media/a/g])
+  (line 119)
+  (iget-object v0 v1 com/facebook/ui/media/a/g.a [object java/io/InputStream])
+  (invoke-static {v0} com/google/common/b/c/a [object java/io/Closeable] )
+  (line 120)
+  (return-void )
+)
+
+)

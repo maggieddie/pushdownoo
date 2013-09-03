@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) com/google/common/d/a/u
+ (super java/lang/Object)
+ (source "ListeningExecutorService.java")
+ (implements java/util/concurrent/ExecutorService)
+
+
+(method (attrs public abstract ) b([object java/lang/Runnable] )[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Runnable;"  ")"  "Lcom/google/common/d/a/s"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) c([object java/util/concurrent/Callable] )[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Ljava/util/concurrent/Callable"  "<TT;>;)"  "Lcom/google/common/d/a/s"  "<TT;>;")
+  )
+)
+
+)

@@ -1,0 +1,24 @@
+(class (attrs final ) com/google/common/base/Ticker$1
+ (super com/google/common/base/Ticker)
+ (source "Ticker.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/Ticker$1])
+  (line 54)
+  (invoke-direct {v0} com/google/common/base/Ticker/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) read()long
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/base/Ticker$1])
+  (line 57)
+  (invoke-static {} com/google/common/base/Platform/systemNanoTime )
+  (nop )
+  (move-result-wide v0)
+  (return-wide v0)
+)
+
+)

@@ -1,0 +1,37 @@
+(class (attrs public ) com/facebook/orca/app/fr
+ (super java/lang/Object)
+ (source "OrcaLogBoundConnectionsInitializer.java")
+ (implements com/facebook/base/c)
+
+ (field (attrs private static final ) a [object java/lang/Class] )
+ (field (attrs private final ) b [object android/os/Handler] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 20)
+  (const-class v0 com/facebook/orca/app/fr)
+  (sput-object v0 com/facebook/orca/app/fr.a [object java/lang/Class])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/fr])
+  (line 24)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 25)
+  (new-instance v0 android/os/Handler)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (iput-object v0 v1 com/facebook/orca/app/fr.b [object android/os/Handler])
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/app/fr])
+  (line 33)
+  (return-void )
+)
+
+)

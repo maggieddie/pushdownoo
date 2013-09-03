@@ -1,0 +1,66 @@
+(class (attrs public ) com/facebook/orca/e/a
+ (super java/lang/Object)
+ (source "IsMessengerBugReporterEnabledProvider.java")
+ (implements javax/inject/a)
+
+ (field (attrs private static final ) a [object com/facebook/prefs/shared/ae] )
+ (field (attrs private final ) b [object com/facebook/config/a/d] )
+ (field (attrs private final ) c [object com/facebook/prefs/shared/d] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 18)
+  (const-string v0 "messenger_bug_reporter_android")
+  (invoke-static {v0} com/facebook/f/n/a [object java/lang/String] )
+  (move-result-object v0)
+  (sput-object v0 com/facebook/orca/e/a.a [object com/facebook/prefs/shared/ae])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/facebook/config/a/d] [object com/facebook/prefs/shared/d] )void
+  (annotation runtimeVisibility [object javax/inject/Inject]
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/e/a])
+  ; parameter[0] : v1 ([object com/facebook/config/a/d])
+  ; parameter[1] : v2 ([object com/facebook/prefs/shared/d])
+  (line 27)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 28)
+  (iput-object v1 v0 com/facebook/orca/e/a.b [object com/facebook/config/a/d])
+  (line 29)
+  (iput-object v2 v0 com/facebook/orca/e/a.c [object com/facebook/prefs/shared/d])
+  (line 30)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Boolean]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/e/a])
+  (const/4 v0 0)
+  (line 34)
+  (iget-object v1 v3 com/facebook/orca/e/a.b [object com/facebook/config/a/d])
+  (sget-object v2 com/facebook/config/a/d.MESSENGER [object com/facebook/config/a/d])
+  (if-ne v1 v2 l27edc8)
+  (iget-object v1 v3 com/facebook/orca/e/a.c [object com/facebook/prefs/shared/d])
+  (sget-object v2 com/facebook/orca/e/a.a [object com/facebook/prefs/shared/ae])
+  (invoke-interface {v1 v2 v0} com/facebook/prefs/shared/d/a [object com/facebook/prefs/shared/ae] boolean )
+  (move-result v1)
+  (if-eqz v1 l27edc8)
+  (const/4 v0 1)
+  (label l27edc8)
+  (invoke-static {v0} java/lang/Boolean/valueOf boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/e/a])
+  (line 16)
+  (invoke-virtual {v1} com/facebook/orca/e/a/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,90 @@
+(class (attrs public abstract ) org/andengine/util/adt/pool/PoolItem
+ (super java/lang/Object)
+ (source "PoolItem.java")
+
+ (field (attrs ) mParent [object org/andengine/util/adt/pool/Pool] )
+ (field (attrs ) mRecycled boolean )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 12)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 22)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 org/andengine/util/adt/pool/PoolItem.mRecycled boolean)
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs public ) getParent()[object org/andengine/util/adt/pool/Pool]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/adt/pool/Pool"  "<+"  "Lorg/andengine/util/adt/pool/PoolItem;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 33)
+  (iget-object v0 v1 org/andengine/util/adt/pool/PoolItem.mParent [object org/andengine/util/adt/pool/Pool])
+  (return-object v0)
+)
+
+(method (attrs public ) isFromPool([object org/andengine/util/adt/pool/Pool] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/pool/Pool"  "<+"  "Lorg/andengine/util/adt/pool/PoolItem;"  ">;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/util/adt/pool/PoolItem])
+  ; parameter[0] : v2 ([object org/andengine/util/adt/pool/Pool])
+  (line 41)
+  (iget-object v0 v1 org/andengine/util/adt/pool/PoolItem.mParent [object org/andengine/util/adt/pool/Pool])
+  (if-ne v2 v0 l6e3c4)
+  (const/4 v0 1)
+  (label l6e3c2)
+  (return v0)
+  (label l6e3c4)
+  (const/4 v0 0)
+  (goto l6e3c2)
+)
+
+(method (attrs public ) isRecycled()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 37)
+  (iget-boolean v0 v1 org/andengine/util/adt/pool/PoolItem.mRecycled boolean)
+  (return v0)
+)
+
+(method (attrs protected ) onObtain()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 58)
+  (return-void )
+)
+
+(method (attrs protected ) onRecycle()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 54)
+  (return-void )
+)
+
+(method (attrs public ) recycle()void
+  (limit registers 3)
+  ; this: v2 ([object org/andengine/util/adt/pool/PoolItem])
+  (line 61)
+  (iget-object v0 v2 org/andengine/util/adt/pool/PoolItem.mParent [object org/andengine/util/adt/pool/Pool])
+  (if-nez v0 l6e430)
+  (line 62)
+  (new-instance v0 java/lang/IllegalStateException)
+  (const-string v1 "Item already recycled!")
+  (invoke-direct {v0 v1} java/lang/IllegalStateException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l6e430)
+  (line 65)
+  (iget-object v0 v2 org/andengine/util/adt/pool/PoolItem.mParent [object org/andengine/util/adt/pool/Pool])
+  (invoke-virtual {v0 v2} org/andengine/util/adt/pool/Pool/recycle [object org/andengine/util/adt/pool/PoolItem] )
+  (line 66)
+  (return-void )
+)
+
+)

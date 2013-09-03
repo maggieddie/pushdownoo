@@ -1,0 +1,54 @@
+(class (attrs ) com/facebook/analytics/z
+ (super com/facebook/inject/d)
+ (source "AnalyticsClientModule.java")
+
+ (field (attrs final ) a [object com/facebook/analytics/f] )
+
+(method (attrs private ) <init>([object com/facebook/analytics/f] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/analytics/z])
+  ; parameter[0] : v1 ([object com/facebook/analytics/f])
+  (line 447)
+  (iput-object v1 v0 com/facebook/analytics/z.a [object com/facebook/analytics/f])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/analytics/f] [object com/facebook/analytics/g] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/analytics/z])
+  ; parameter[0] : v1 ([object com/facebook/analytics/f])
+  ; parameter[1] : v2 ([object com/facebook/analytics/g])
+  (line 447)
+  (invoke-direct {v0 v1} com/facebook/analytics/z/<init> [object com/facebook/analytics/f] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/util/concurrent/ExecutorService]
+  (limit registers 10)
+  ; this: v9 ([object com/facebook/analytics/z])
+  (line 451)
+  (new-instance v0 java/util/concurrent/ThreadPoolExecutor)
+  (const/4 v1 0)
+  (const/4 v2 1)
+  (const-wide/16 v3 5)
+  (sget-object v5 java/util/concurrent/TimeUnit.SECONDS [object java/util/concurrent/TimeUnit])
+  (new-instance v6 java/util/concurrent/LinkedBlockingQueue)
+  (invoke-direct {v6} java/util/concurrent/LinkedBlockingQueue/<init> )
+  (new-instance v7 com/facebook/common/executors/s)
+  (const-string v8 "AnalyticsThread-")
+  (invoke-direct {v7 v8} com/facebook/common/executors/s/<init> [object java/lang/String] )
+  (invoke-direct/range {v0 .. v7} java/util/concurrent/ThreadPoolExecutor/<init> int int long [object java/util/concurrent/TimeUnit] [object java/util/concurrent/BlockingQueue] [object java/util/concurrent/ThreadFactory] )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/z])
+  (line 447)
+  (invoke-virtual {v1} com/facebook/analytics/z/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

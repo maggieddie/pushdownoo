@@ -1,0 +1,85 @@
+(class (attrs final ) com/google/common/a/dj
+ (super java/lang/ref/WeakReference)
+ (source "CustomConcurrentHashMap.java")
+ (implements com/google/common/a/dd)
+
+ (field (attrs final ) a [object com/google/common/a/cm] )
+
+(method (attrs ) <init>([object java/lang/ref/ReferenceQueue] [object java/lang/Object] [object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/ref/ReferenceQueue"  "<TV;>;TV;"  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/a/dj])
+  ; parameter[0] : v1 ([object java/lang/ref/ReferenceQueue])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object com/google/common/a/cm])
+  (line 1743)
+  (invoke-direct {v0 v2 v1} java/lang/ref/WeakReference/<init> [object java/lang/Object] [object java/lang/ref/ReferenceQueue] )
+  (line 1744)
+  (iput-object v3 v0 com/google/common/a/dj.a [object com/google/common/a/cm])
+  (line 1745)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/dd"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dj])
+  (line 1749)
+  (iget-object v0 v1 com/google/common/a/dj.a [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/ref/ReferenceQueue] [object com/google/common/a/cm] )[object com/google/common/a/dd]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/dd"  "<TK;TV;>;)V")
+  )
+  (limit registers 5)
+  ; this: v2 ([object com/google/common/a/dj])
+  ; parameter[0] : v3 ([object java/lang/ref/ReferenceQueue])
+  ; parameter[1] : v4 ([object com/google/common/a/cm])
+  (line 1760)
+  (new-instance v0 com/google/common/a/dj)
+  (invoke-virtual {v2} com/google/common/a/dj/get )
+  (move-result-object v1)
+  (invoke-direct {v0 v3 v1 v4} com/google/common/a/dj/<init> [object java/lang/ref/ReferenceQueue] [object java/lang/Object] [object com/google/common/a/cm] )
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/google/common/a/dd] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/dd"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/dj])
+  ; parameter[0] : v1 ([object com/google/common/a/dd])
+  (line 1754)
+  (invoke-virtual {v0} com/google/common/a/dj/clear )
+  (line 1755)
+  (return-void )
+)
+
+(method (attrs public ) b()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dj])
+  (line 1765)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) c()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dj])
+  (line 1770)
+  (invoke-virtual {v1} com/google/common/a/dj/get )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

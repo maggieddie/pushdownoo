@@ -1,0 +1,14 @@
+(class (attrs public ) com/facebook/orca/chatheads/ChatHeadServiceMultiProcess
+ (super com/facebook/orca/chatheads/ChatHeadService)
+ (source "ChatHeadServiceMultiProcess.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/chatheads/ChatHeadServiceMultiProcess])
+  (line 8)
+  (invoke-direct {v0} com/facebook/orca/chatheads/ChatHeadService/<init> )
+  (return-void )
+ )
+
+)

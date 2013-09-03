@@ -1,0 +1,39 @@
+(class (attrs ) com/facebook/orca/login/ag
+ (super com/facebook/fbservice/ops/h)
+ (source "WildfireRegistrationOperation.java")
+
+ (field (attrs final ) a [object com/facebook/orca/login/af] )
+
+(method (attrs ) <init>([object com/facebook/orca/login/af] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/login/ag])
+  ; parameter[0] : v1 ([object com/facebook/orca/login/af])
+  (line 82)
+  (iput-object v1 v0 com/facebook/orca/login/ag.a [object com/facebook/orca/login/af])
+  (invoke-direct {v0} com/facebook/fbservice/ops/h/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/login/ag])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 85)
+  (iget-object v0 v1 com/facebook/orca/login/ag.a [object com/facebook/orca/login/af])
+  (invoke-static {v0 v2} com/facebook/orca/login/af/a [object com/facebook/orca/login/af] [object com/facebook/fbservice/service/OperationResult] )
+  (line 86)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/login/ag])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/ServiceException])
+  (line 90)
+  (iget-object v0 v1 com/facebook/orca/login/ag.a [object com/facebook/orca/login/af])
+  (invoke-static {v0 v2} com/facebook/orca/login/af/a [object com/facebook/orca/login/af] [object com/facebook/fbservice/service/ServiceException] )
+  (line 91)
+  (return-void )
+)
+
+)

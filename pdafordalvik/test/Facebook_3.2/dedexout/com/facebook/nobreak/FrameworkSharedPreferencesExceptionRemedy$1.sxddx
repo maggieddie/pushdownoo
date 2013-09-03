@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy$1
+ (super java/lang/Object)
+ (source "FrameworkSharedPreferencesExceptionRemedy.java")
+ (implements java/io/FileFilter)
+
+ (field (attrs final ) a [object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy] )
+
+(method (attrs ) <init>([object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy$1])
+  ; parameter[0] : v1 ([object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy])
+  (line 57)
+  (iput-object v1 v0 com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy$1.a [object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) accept([object java/io/File] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/nobreak/FrameworkSharedPreferencesExceptionRemedy$1])
+  ; parameter[0] : v3 ([object java/io/File])
+  (line 60)
+  (invoke-virtual {v3} java/io/File/getName )
+  (move-result-object v0)
+  (const-string v1 ".xml")
+  (invoke-virtual {v0 v1} java/lang/String/endsWith [object java/lang/String] )
+  (move-result v0)
+  (return v0)
+)
+
+)

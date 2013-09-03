@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s 千</item>
+        <item quantity="one">一千</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s 百万</item>
+        <item quantity="one">一百万</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s 十亿</item>
+        <item quantity="one">十亿</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d 小时前</item>
+        <item quantity="one">1小时前</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d 分钟前</item>
+        <item quantity="one">1分钟前</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d 小时内</item>
+        <item quantity="one">1小时内</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d 分钟内</item>
+        <item quantity="one">1分钟内</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">是否删除消息？</item>
+        <item quantity="one">是否删除消息？</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">删除这些消息的副本后，将无法恢复。</item>
+        <item quantity="one">删除此消息的副本后，将无法恢复。</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">删除消息</item>
+        <item quantity="one">删除消息</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">正在删除消息...</item>
+        <item quantity="one">正在删除消息...</item>
+    </plurals>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.timeline.collections.views.AboutCollectionItemView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.UrlImage android:id="@id/about_collection_item_icon" android:layout_width="@dimen/collection_about_item_icon_size" android:layout_height="@dimen/collection_about_item_icon_size" android:layout_marginLeft="@dimen/collection_item_horizontal_margin" android:layout_marginTop="@dimen/collection_item_vertical_margin" android:layout_marginBottom="@dimen/collection_item_vertical_margin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/about_collection_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/collection_item_start_middle_section_margin" android:layout_marginTop="@dimen/collection_item_vertical_margin" android:layout_marginRight="@dimen/collection_item_horizontal_margin" android:layout_marginBottom="@dimen/collection_item_vertical_margin" android:layout_toRightOf="@id/about_collection_item_icon">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/collection_about_item_title" android:gravity="left|center" android:id="@id/about_collection_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/collection_item_subtitle" android:gravity="left|center" android:id="@id/about_collection_item_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/collection_item_divider" android:background="@color/collections_frame" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/about_collection_text_container" />
+</com.facebook.timeline.collections.views.AboutCollectionItemView>

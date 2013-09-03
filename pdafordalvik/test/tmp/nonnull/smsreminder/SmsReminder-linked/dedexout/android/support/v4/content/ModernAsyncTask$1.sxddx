@@ -1,0 +1,43 @@
+(class (attrs final ) android/support/v4/content/ModernAsyncTask$1
+ (super java/lang/Object)
+ (source "ModernAsyncTask.java")
+ (implements java/util/concurrent/ThreadFactory)
+
+ (field (attrs private final ) mCount [object java/util/concurrent/atomic/AtomicInteger] )
+
+(method (attrs ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object android/support/v4/content/ModernAsyncTask$1])
+  (line 54)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 55)
+  (new-instance v0 java/util/concurrent/atomic/AtomicInteger)
+  (const/4 v1 1)
+  (invoke-direct {v0 v1} java/util/concurrent/atomic/AtomicInteger/<init> int )
+  (iput-object v0 v2 android/support/v4/content/ModernAsyncTask$1.mCount [object java/util/concurrent/atomic/AtomicInteger])
+  (return-void )
+ )
+
+(method (attrs public ) newThread([object java/lang/Runnable] )[object java/lang/Thread]
+  (limit registers 5)
+  ; this: v3 ([object android/support/v4/content/ModernAsyncTask$1])
+  ; parameter[0] : v4 ([object java/lang/Runnable])
+  (line 58)
+  (new-instance v0 java/lang/Thread)
+  (new-instance v1 java/lang/StringBuilder)
+  (invoke-direct {v1} java/lang/StringBuilder/<init> )
+  (const-string v2 "ModernAsyncTask #")
+  (invoke-virtual {v1 v2} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v1)
+  (iget-object v2 v3 android/support/v4/content/ModernAsyncTask$1.mCount [object java/util/concurrent/atomic/AtomicInteger])
+  (invoke-virtual {v2} java/util/concurrent/atomic/AtomicInteger/getAndIncrement )
+  (move-result v2)
+  (invoke-virtual {v1 v2} java/lang/StringBuilder/append int )
+  (move-result-object v1)
+  (invoke-virtual {v1} java/lang/StringBuilder/toString )
+  (move-result-object v1)
+  (invoke-direct {v0 v4 v1} java/lang/Thread/<init> [object java/lang/Runnable] [object java/lang/String] )
+  (return-object v0)
+)
+
+)

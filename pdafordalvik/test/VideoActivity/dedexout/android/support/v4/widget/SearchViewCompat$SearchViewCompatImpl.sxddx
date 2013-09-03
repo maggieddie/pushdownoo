@@ -1,0 +1,60 @@
+(interface (attrs abstract ) android/support/v4/widget/SearchViewCompat$SearchViewCompatImpl
+ (super java/lang/Object)
+ (source "SearchViewCompat.java")
+
+
+(method (attrs public abstract ) getQuery([object android/view/View] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) isIconified([object android/view/View] )boolean
+)
+
+(method (attrs public abstract ) isQueryRefinementEnabled([object android/view/View] )boolean
+)
+
+(method (attrs public abstract ) isSubmitButtonEnabled([object android/view/View] )boolean
+)
+
+(method (attrs public abstract ) newOnCloseListener([object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) newOnQueryTextListener([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) newSearchView([object android/content/Context] )[object android/view/View]
+)
+
+(method (attrs public abstract ) setIconified([object android/view/View] boolean )void
+)
+
+(method (attrs public abstract ) setImeOptions([object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setInputType([object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setMaxWidth([object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setOnCloseListener([object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) setOnQueryTextListener([object java/lang/Object] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) setQuery([object android/view/View] [object java/lang/CharSequence] boolean )void
+)
+
+(method (attrs public abstract ) setQueryHint([object android/view/View] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setQueryRefinementEnabled([object android/view/View] boolean )void
+)
+
+(method (attrs public abstract ) setSearchableInfo([object android/view/View] [object android/content/ComponentName] )void
+)
+
+(method (attrs public abstract ) setSubmitButtonEnabled([object android/view/View] boolean )void
+)
+
+)

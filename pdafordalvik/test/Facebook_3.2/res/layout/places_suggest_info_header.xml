@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/map" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/places_header_map_view" />
+        <ImageView android:layout_gravity="center" android:id="@id/static_pin_overlay" android:paddingBottom="@dimen/pin_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/orca_marker_red" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <EditText android:textColor="#ff545d6d" android:id="@id/place_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_name_hint" android:inputType="textCapWords|textAutoCorrect" />
+        <EditText android:textColor="#ff545d6d" android:id="@id/place_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_address" android:inputType="textCapWords|textAutoCorrect" />
+        <EditText android:textColor="#ff545d6d" android:id="@id/place_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_phone_number" android:inputType="phone" />
+    </LinearLayout>
+    <FrameLayout android:background="#fff7f8fb" android:layout_width="fill_parent" android:layout_height="32.0dip">
+        <View android:layout_gravity="top" android:background="@drawable/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff545d6d" android:layout_gravity="center_vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/places_categories" android:singleLine="true" android:textAllCaps="true" />
+        <View android:layout_gravity="bottom" android:background="@drawable/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+    </FrameLayout>
+</LinearLayout>

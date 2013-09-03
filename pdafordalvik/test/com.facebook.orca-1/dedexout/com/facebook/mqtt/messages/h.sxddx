@@ -1,0 +1,89 @@
+(class (attrs public ) com/facebook/mqtt/messages/h
+ (super java/lang/Object)
+ (source "FixedHeader.java")
+
+ (field (attrs private final ) a [object com/facebook/mqtt/messages/k] )
+ (field (attrs private final ) b boolean )
+ (field (attrs private final ) c int )
+ (field (attrs private final ) d boolean )
+ (field (attrs private final ) e int )
+
+(method (attrs ) <init>([object com/facebook/mqtt/messages/i] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  ; parameter[0] : v2 ([object com/facebook/mqtt/messages/i])
+  (line 16)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 17)
+  (invoke-virtual {v2} com/facebook/mqtt/messages/i/a )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/mqtt/messages/h.a [object com/facebook/mqtt/messages/k])
+  (line 18)
+  (invoke-virtual {v2} com/facebook/mqtt/messages/i/b )
+  (move-result v0)
+  (iput-boolean v0 v1 com/facebook/mqtt/messages/h.b boolean)
+  (line 19)
+  (invoke-virtual {v2} com/facebook/mqtt/messages/i/c )
+  (move-result v0)
+  (iput v0 v1 com/facebook/mqtt/messages/h.c int)
+  (line 20)
+  (invoke-virtual {v2} com/facebook/mqtt/messages/i/d )
+  (move-result v0)
+  (iput-boolean v0 v1 com/facebook/mqtt/messages/h.d boolean)
+  (line 21)
+  (invoke-virtual {v2} com/facebook/mqtt/messages/i/e )
+  (move-result v0)
+  (iput v0 v1 com/facebook/mqtt/messages/h.e int)
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public static ) newBuilder()[object com/facebook/mqtt/messages/i]
+  (limit registers 1)
+  (line 30)
+  (new-instance v0 com/facebook/mqtt/messages/i)
+  (invoke-direct {v0} com/facebook/mqtt/messages/i/<init> )
+  (return-object v0)
+ )
+
+(method (attrs public ) a()[object com/facebook/mqtt/messages/k]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  (line 39)
+  (iget-object v0 v1 com/facebook/mqtt/messages/h.a [object com/facebook/mqtt/messages/k])
+  (return-object v0)
+)
+
+(method (attrs public ) b()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  (line 48)
+  (iget-boolean v0 v1 com/facebook/mqtt/messages/h.b boolean)
+  (return v0)
+)
+
+(method (attrs public ) c()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  (line 57)
+  (iget v0 v1 com/facebook/mqtt/messages/h.c int)
+  (return v0)
+)
+
+(method (attrs public ) d()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  (line 66)
+  (iget-boolean v0 v1 com/facebook/mqtt/messages/h.d boolean)
+  (return v0)
+)
+
+(method (attrs public ) e()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/h])
+  (line 75)
+  (iget v0 v1 com/facebook/mqtt/messages/h.e int)
+  (return v0)
+)
+
+)

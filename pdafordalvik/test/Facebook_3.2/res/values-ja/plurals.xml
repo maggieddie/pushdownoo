@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d時間前</item>
+        <item quantity="one">1時間前</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d分前</item>
+        <item quantity="one">1分前</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d時間後</item>
+        <item quantity="one">1時間後</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d分後</item>
+        <item quantity="one">1分後</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">メッセージを削除しますか？</item>
+        <item quantity="one">メッセージを削除しますか？</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">これらのメッセージのコピーを削除すると、元に戻すことはできません。</item>
+        <item quantity="one">メッセージのコピーを削除すると、元に戻すことはできません。</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">メッセージを削除</item>
+        <item quantity="one">メッセージを削除</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">メッセージを削除中…</item>
+        <item quantity="one">メッセージを削除中…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">いいね！%d件</item>
+        <item quantity="one">いいね！%d件</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">コメント%d件</item>
+        <item quantity="one">コメント%d件</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">選択した%d件の写真を削除</item>
+        <item quantity="one">選択した写真を削除</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">選択した%d件の写真をデバイスから削除しますか？</item>
+        <item quantity="one">選択した写真をデバイスから削除しますか？</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d人がいいね！と言っています</item>
+        <item quantity="one">1人がいいね！と言っています</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">共通の友達%d人</item>
+        <item quantity="one">共通の友達1人</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">いいね！%,d件</item>
+        <item quantity="one">いいね！1件</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">コメント%,d件</item>
+        <item quantity="one">コメント1件</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">お知らせ%1$s件</item>
+        <item quantity="one">お知らせ1件</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s分前</item>
+        <item quantity="one">1分前</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s時間前</item>
+        <item quantity="one">1時間前</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">いいね！%s件</item>
+        <item quantity="one">いいね！%s件</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">コメント%s件</item>
+        <item quantity="one">コメント%s件</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">このスポットについて「いいね！」と言っています</item>
+        <item quantity="one">このスポットについて「いいね！」と言っています</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">チェックインしたことがあります。</item>
+        <item quantity="one">チェックインしたことができます</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">評価%1$d件</item>
+        <item quantity="one">評価1件</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">いいね！</item>
+        <item quantity="one">いいね！</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">チェックイン</item>
+        <item quantity="one">チェックイン</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">%1$d度、チェックインしたことがあります。</item>
+        <item quantity="one">1度チェックインしたことがあります。</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">いいね！%,d件</item>
+        <item quantity="one">いいね！1件</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">チェックイン%,d件</item>
+        <item quantity="one">チェックイン1件</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">話題にしている人%,d人</item>
+        <item quantity="one">話題にしている人1人</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$sさんと%2$sさんが使用しています</item>
+        <item quantity="one">%1$sさんが利用しています</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$sさんと%2$sさんがプレイしています</item>
+        <item quantity="one">%1$sさんがプレイしています</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">「いいね！」%d件</item>
+        <item quantity="one">いいね！1件</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">チェックイン%d件</item>
+        <item quantity="one">チェックイン1件</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">誕生日をむかえる友達%d人</item>
+        <item quantity="one">誕生日をむかえる友達1人</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d人がいいね！と言っています</item>
+        <item quantity="one">1人がいいね！と言っています</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">チェックイン%d件</item>
+        <item quantity="one">チェックイン1件</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">共通の友達%d人</item>
+        <item quantity="zero">共通の友達はいません</item>
+        <item quantity="one">共通の友達1人</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d人</item>
+        <item quantity="one">1人</item>
+    </plurals>
+</resources>

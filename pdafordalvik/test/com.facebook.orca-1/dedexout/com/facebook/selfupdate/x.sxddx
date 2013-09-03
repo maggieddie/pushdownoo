@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/selfupdate/x
+ (super com/facebook/inject/d)
+ (source "SelfUpdateModule.java")
+
+ (field (attrs final ) a [object com/facebook/selfupdate/u] )
+
+(method (attrs private ) <init>([object com/facebook/selfupdate/u] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/selfupdate/x])
+  ; parameter[0] : v1 ([object com/facebook/selfupdate/u])
+  (line 159)
+  (iput-object v1 v0 com/facebook/selfupdate/x.a [object com/facebook/selfupdate/u])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/selfupdate/u] [object com/facebook/selfupdate/v] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/selfupdate/x])
+  ; parameter[0] : v1 ([object com/facebook/selfupdate/u])
+  ; parameter[1] : v2 ([object com/facebook/selfupdate/v])
+  (line 159)
+  (invoke-direct {v0 v1} com/facebook/selfupdate/x/<init> [object com/facebook/selfupdate/u] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/selfupdate/f]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/selfupdate/x])
+  (line 163)
+  (new-instance v0 com/facebook/selfupdate/f)
+  (invoke-direct {v0} com/facebook/selfupdate/f/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/selfupdate/x])
+  (line 159)
+  (invoke-virtual {v1} com/facebook/selfupdate/x/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

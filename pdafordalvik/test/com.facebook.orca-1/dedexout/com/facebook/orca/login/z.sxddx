@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/orca/login/z
+ (super java/lang/Object)
+ (source "WildfireRegStartViewGroup.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/login/WildfireRegStartViewGroup] )
+
+(method (attrs ) <init>([object com/facebook/orca/login/WildfireRegStartViewGroup] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/login/z])
+  ; parameter[0] : v1 ([object com/facebook/orca/login/WildfireRegStartViewGroup])
+  (line 94)
+  (iput-object v1 v0 com/facebook/orca/login/z.a [object com/facebook/orca/login/WildfireRegStartViewGroup])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/login/z])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 97)
+  (iget-object v0 v1 com/facebook/orca/login/z.a [object com/facebook/orca/login/WildfireRegStartViewGroup])
+  (invoke-static {v0} com/facebook/orca/login/WildfireRegStartViewGroup/access$100 [object com/facebook/orca/login/WildfireRegStartViewGroup] )
+  (line 98)
+  (return-void )
+)
+
+)

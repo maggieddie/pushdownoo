@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d ч. назад</item>
+        <item quantity="one">1 час назад</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d мин. назад</item>
+        <item quantity="one">1 минуту назад</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">через %d часов</item>
+        <item quantity="one">Через 1 час</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Через %d мин.</item>
+        <item quantity="one">Через 1 минуту</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Удалить сообщения?</item>
+        <item quantity="one">Удалить сообщение?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Удаленные сообщения нельзя восстановить.</item>
+        <item quantity="one">Удаленное сообщение нельзя восстановить.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Удалить сообщения</item>
+        <item quantity="one">Удалить сообщение</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Удаление сообщений…</item>
+        <item quantity="one">Удаление сообщения…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">Отметки \"Мне нравится\": %d</item>
+        <item quantity="one">Нравится %d пользователям</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">Комментарии: %d</item>
+        <item quantity="one">%d комментариев</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">Удалить выбранные фото (%d)</item>
+        <item quantity="one">Удалить выбранное фото</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Вы действительно хотите удалить выбранные фото (%d) из своего устройства?</item>
+        <item quantity="one">Вы действительно хотите удалить выбранное фото из своего устройства?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d пользователям это понравилось</item>
+        <item quantity="one">1 пользователю это понравилось</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">Общих друзей: %d</item>
+        <item quantity="one">1 общий друг</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">Нравится %,d</item>
+        <item quantity="one">1 отметка \"Нравится\"</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">Комментарии: %,d</item>
+        <item quantity="one">1 комментарий</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">Уведомления: %1$s</item>
+        <item quantity="one">1 уведомление</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s МИН.</item>
+        <item quantity="one">1 МИН.</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s ЧАС.</item>
+        <item quantity="one">1 ЧАС</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">Отметки \"Мне нравится\": %s</item>
+        <item quantity="one">Нравится %s пользователям</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">Комментарии: %s</item>
+        <item quantity="one">%s комментариев</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">это Место нравится</item>
+        <item quantity="one">Это Место нравится</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">здесь побывали</item>
+        <item quantity="one">здесь побывал(а)</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">Количество оценок: %1$d</item>
+        <item quantity="one">1 оценка</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">отметки \"Нравится\"</item>
+        <item quantity="one">отметка \"Нравится\"</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">были здесь</item>
+        <item quantity="one">был(-а) здесь</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Вы здесь побывали %1$d раз.</item>
+        <item quantity="one">Вы здесь были один раз.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">Нравится %,d</item>
+        <item quantity="one">1 отметка \"Нравится\"</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">Здесь был %,d человек</item>
+        <item quantity="one">Здесь был 1 человек</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">Это обсуждают: %,d</item>
+        <item quantity="one">Это обсуждает 1 пользователь</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">Используют %1$s и %2$s</item>
+        <item quantity="one">%1$s использует это приложение</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">Играют %1$s и %2$s</item>
+        <item quantity="one">%1$s играет в эту игру</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">Отметки \"Мне нравится\": %d</item>
+        <item quantity="one">Нравится</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">Посещений: %d</item>
+        <item quantity="one">1 посещение</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">Дни рождения: %d</item>
+        <item quantity="one">1 день рождения</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d пользователям это понравилось</item>
+        <item quantity="one">1 пользователю это понравилось</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">Посещений: %d</item>
+        <item quantity="one">1 посещение</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">Общих друзей: %d</item>
+        <item quantity="zero">Нет общих друзей</item>
+        <item quantity="one">1 общий друг</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d человек(а)</item>
+        <item quantity="one">1 человек</item>
+    </plurals>
+</resources>

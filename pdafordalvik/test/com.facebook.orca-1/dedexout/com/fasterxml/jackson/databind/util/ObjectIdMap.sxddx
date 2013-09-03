@@ -1,0 +1,37 @@
+(class (attrs public ) com/fasterxml/jackson/databind/util/ObjectIdMap
+ (super java/util/IdentityHashMap)
+ (source "ObjectIdMap.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ObjectIdMap])
+  (line 14)
+  (const/16 v0 16)
+  (invoke-direct {v1 v0} java/util/IdentityHashMap/<init> int )
+  (line 15)
+  (return-void )
+ )
+
+(method (attrs public ) findId([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ObjectIdMap])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 31)
+  (invoke-virtual {v1 v2} com/fasterxml/jackson/databind/util/ObjectIdMap/get [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) insertId([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object com/fasterxml/jackson/databind/util/ObjectIdMap])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 36)
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/util/ObjectIdMap/put [object java/lang/Object] [object java/lang/Object] )
+  (line 37)
+  (return-void )
+)
+
+)

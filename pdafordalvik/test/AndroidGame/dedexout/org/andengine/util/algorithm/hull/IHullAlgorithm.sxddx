@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/andengine/util/algorithm/hull/IHullAlgorithm
+ (super java/lang/Object)
+ (source "IHullAlgorithm.java")
+
+
+(method (attrs public abstract ) computeHull([array float] int int int int )int
+)
+
+)

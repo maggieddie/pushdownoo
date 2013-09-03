@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) com/facebook/http/b/m
+ (super java/lang/Object)
+ (source "FbHttpClient.java")
+ (implements org/apache/http/client/HttpClient)
+
+
+(method (attrs public abstract ) a()[object org/apache/http/client/CookieStore]
+)
+
+)

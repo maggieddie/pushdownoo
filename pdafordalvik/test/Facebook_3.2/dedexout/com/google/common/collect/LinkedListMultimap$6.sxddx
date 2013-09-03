@@ -1,0 +1,116 @@
+(class (attrs ) com/google/common/collect/LinkedListMultimap$6
+ (super java/util/AbstractMap)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs ) a [object java/util/Set] )
+ (field (attrs final ) b [object com/google/common/collect/LinkedListMultimap] )
+
+(method (attrs ) <init>([object com/google/common/collect/LinkedListMultimap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v1 ([object com/google/common/collect/LinkedListMultimap])
+  (line 1039)
+  (iput-object v1 v0 com/google/common/collect/LinkedListMultimap$6.b [object com/google/common/collect/LinkedListMultimap])
+  (invoke-direct {v0} java/util/AbstractMap/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1058)
+  (iget-object v0 v2 com/google/common/collect/LinkedListMultimap$6.b [object com/google/common/collect/LinkedListMultimap])
+  (invoke-virtual {v0 v3} com/google/common/collect/LinkedListMultimap/b [object java/lang/Object] )
+  (move-result-object v0)
+  (line 1059)
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v1)
+  (if-eqz v1 l10b95a)
+  (const/4 v0 0)
+  (label l10b95a)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1063)
+  (iget-object v0 v2 com/google/common/collect/LinkedListMultimap$6.b [object com/google/common/collect/LinkedListMultimap])
+  (invoke-virtual {v0 v3} com/google/common/collect/LinkedListMultimap/a [object java/lang/Object] )
+  (move-result-object v0)
+  (line 1064)
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v1)
+  (if-eqz v1 l10b986)
+  (const/4 v0 0)
+  (label l10b986)
+  (return-object v0)
+)
+
+(method (attrs public ) containsKey([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1053)
+  (iget-object v0 v1 com/google/common/collect/LinkedListMultimap$6.b [object com/google/common/collect/LinkedListMultimap])
+  (invoke-virtual {v0 v2} com/google/common/collect/LinkedListMultimap/f [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/collect/LinkedListMultimap$6])
+  (line 1043)
+  (iget-object v0 v3 com/google/common/collect/LinkedListMultimap$6.a [object java/util/Set])
+  (line 1044)
+  (if-nez v0 l10b9d4)
+  (line 1045)
+  (new-instance v0 com/google/common/collect/LinkedListMultimap$AsMapEntries)
+  (iget-object v1 v3 com/google/common/collect/LinkedListMultimap$6.b [object com/google/common/collect/LinkedListMultimap])
+  (const/4 v2 0)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/LinkedListMultimap$AsMapEntries/<init> [object com/google/common/collect/LinkedListMultimap] [object com/google/common/collect/LinkedListMultimap$1] )
+  (iput-object v0 v3 com/google/common/collect/LinkedListMultimap$6.a [object java/util/Set])
+  (label l10b9d4)
+  (line 1047)
+  (return-object v0)
+)
+
+(method (attrs public ) get([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1039)
+  (invoke-virtual {v1 v2} com/google/common/collect/LinkedListMultimap$6/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/LinkedListMultimap$6])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 1039)
+  (invoke-virtual {v1 v2} com/google/common/collect/LinkedListMultimap$6/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

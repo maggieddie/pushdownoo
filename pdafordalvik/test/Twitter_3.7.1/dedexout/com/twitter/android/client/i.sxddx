@@ -1,0 +1,29 @@
+(class (attrs final ) com/twitter/android/client/i
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/twitter/android/client/b] )
+
+(method (attrs public ) <init>([object com/twitter/android/client/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/client/i])
+  ; parameter[0] : v1 ([object com/twitter/android/client/b])
+  (line 4415)
+  (iput-object v1 v0 com/twitter/android/client/i.a [object com/twitter/android/client/b])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 4416)
+  (return-void )
+ )
+
+(method (attrs public final ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/client/i])
+  (line 4419)
+  (iget-object v0 v1 com/twitter/android/client/i.a [object com/twitter/android/client/b])
+  (invoke-static {v0} com/twitter/android/client/b/a [object com/twitter/android/client/b] )
+  (line 4420)
+  (return-void )
+)
+
+)

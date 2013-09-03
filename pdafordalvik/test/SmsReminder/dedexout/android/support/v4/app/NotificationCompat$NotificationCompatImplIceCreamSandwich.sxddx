@@ -1,0 +1,38 @@
+(class (attrs ) android/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+ (implements android/support/v4/app/NotificationCompat$NotificationCompatImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich])
+  (line 102)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) build([object android/support/v4/app/NotificationCompat$Builder] )[object android/app/Notification]
+  (limit registers 15)
+  ; this: v13 ([object android/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich])
+  ; parameter[0] : v14 ([object android/support/v4/app/NotificationCompat$Builder])
+  (line 104)
+  (iget-object v0 v14 android/support/v4/app/NotificationCompat$Builder.mContext [object android/content/Context])
+  (iget-object v1 v14 android/support/v4/app/NotificationCompat$Builder.mNotification [object android/app/Notification])
+  (iget-object v2 v14 android/support/v4/app/NotificationCompat$Builder.mContentTitle [object java/lang/CharSequence])
+  (iget-object v3 v14 android/support/v4/app/NotificationCompat$Builder.mContentText [object java/lang/CharSequence])
+  (iget-object v4 v14 android/support/v4/app/NotificationCompat$Builder.mContentInfo [object java/lang/CharSequence])
+  (iget-object v5 v14 android/support/v4/app/NotificationCompat$Builder.mTickerView [object android/widget/RemoteViews])
+  (iget v6 v14 android/support/v4/app/NotificationCompat$Builder.mNumber int)
+  (iget-object v7 v14 android/support/v4/app/NotificationCompat$Builder.mContentIntent [object android/app/PendingIntent])
+  (iget-object v8 v14 android/support/v4/app/NotificationCompat$Builder.mFullScreenIntent [object android/app/PendingIntent])
+  (iget-object v9 v14 android/support/v4/app/NotificationCompat$Builder.mLargeIcon [object android/graphics/Bitmap])
+  (iget v10 v14 android/support/v4/app/NotificationCompat$Builder.mProgressMax int)
+  (iget v11 v14 android/support/v4/app/NotificationCompat$Builder.mProgress int)
+  (iget-boolean v12 v14 android/support/v4/app/NotificationCompat$Builder.mProgressIndeterminate boolean)
+  (invoke-static/range {v0 .. v12} android/support/v4/app/NotificationCompatIceCreamSandwich/add [object android/content/Context] [object android/app/Notification] [object java/lang/CharSequence] [object java/lang/CharSequence] [object java/lang/CharSequence] [object android/widget/RemoteViews] int [object android/app/PendingIntent] [object android/app/PendingIntent] [object android/graphics/Bitmap] int int boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/widget/tiles/h
+ (super com/facebook/inject/d)
+ (source "DefaultTilesModule.java")
+
+ (field (attrs final ) a [object com/facebook/widget/tiles/e] )
+
+(method (attrs private ) <init>([object com/facebook/widget/tiles/e] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/widget/tiles/h])
+  ; parameter[0] : v1 ([object com/facebook/widget/tiles/e])
+  (line 25)
+  (iput-object v1 v0 com/facebook/widget/tiles/h.a [object com/facebook/widget/tiles/e])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/widget/tiles/e] [object com/facebook/widget/tiles/f] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/widget/tiles/h])
+  ; parameter[0] : v1 ([object com/facebook/widget/tiles/e])
+  ; parameter[1] : v2 ([object com/facebook/widget/tiles/f])
+  (line 25)
+  (invoke-direct {v0 v1} com/facebook/widget/tiles/h/<init> [object com/facebook/widget/tiles/e] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/widget/tiles/b]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/widget/tiles/h])
+  (line 29)
+  (new-instance v2 com/facebook/widget/tiles/b)
+  (const-class v0 android/content/res/Resources)
+  (invoke-virtual {v3 v0} com/facebook/widget/tiles/h/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/res/Resources])
+  (const-class v1 com/facebook/widget/tiles/c)
+  (invoke-virtual {v3 v1} com/facebook/widget/tiles/h/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/widget/tiles/c])
+  (invoke-direct {v2 v0 v1} com/facebook/widget/tiles/b/<init> [object android/content/res/Resources] [object com/facebook/widget/tiles/c] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/tiles/h])
+  (line 25)
+  (invoke-virtual {v1} com/facebook/widget/tiles/h/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,39 @@
+(class (attrs ) com/facebook/selfupdate/m
+ (super java/lang/Object)
+ (source "SelfUpdateInstallActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/selfupdate/SelfUpdateInstallActivity] )
+
+(method (attrs ) <init>([object com/facebook/selfupdate/SelfUpdateInstallActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/selfupdate/m])
+  ; parameter[0] : v1 ([object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (line 134)
+  (iput-object v1 v0 com/facebook/selfupdate/m.a [object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/selfupdate/m])
+  ; parameter[0] : v4 ([object android/view/View])
+  (line 137)
+  (iget-object v0 v3 com/facebook/selfupdate/m.a [object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (invoke-static {v0} com/facebook/selfupdate/SelfUpdateInstallActivity/a [object com/facebook/selfupdate/SelfUpdateInstallActivity] )
+  (move-result-object v0)
+  (iget-object v1 v3 com/facebook/selfupdate/m.a [object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (sget-object v2 com/facebook/selfupdate/p.BUTTON_PRESS_REMIND [object com/facebook/selfupdate/p])
+  (invoke-virtual {v0 v1 v2} com/facebook/selfupdate/o/a [object java/lang/Object] [object com/facebook/selfupdate/p] )
+  (line 140)
+  (iget-object v0 v3 com/facebook/selfupdate/m.a [object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (invoke-static {v0} com/facebook/selfupdate/SelfUpdateInstallActivity/b [object com/facebook/selfupdate/SelfUpdateInstallActivity] )
+  (line 141)
+  (iget-object v0 v3 com/facebook/selfupdate/m.a [object com/facebook/selfupdate/SelfUpdateInstallActivity])
+  (invoke-virtual {v0} com/facebook/selfupdate/SelfUpdateInstallActivity/finish )
+  (line 142)
+  (return-void )
+)
+
+)

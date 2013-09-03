@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.timeline.units.TimelineScrubberView android:background="@drawable/timeline_section_header" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/timeline_section_header_text" android:id="@id/timeline_section_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@color/timeline_section_header_shadow" android:shadowDy="1.0" android:shadowRadius="0.01" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/timeline_sectiontitle_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+</com.facebook.timeline.units.TimelineScrubberView>

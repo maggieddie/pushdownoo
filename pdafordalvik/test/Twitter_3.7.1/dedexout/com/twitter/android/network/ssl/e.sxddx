@@ -1,0 +1,26 @@
+(class (attrs public final ) com/twitter/android/network/ssl/e
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public static final ) a [object java/util/Map] )
+ (field (attrs public static final ) b [array [object java/lang/String]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 15)
+  (new-instance v0 com/twitter/android/network/ssl/TwitterPins$1)
+  (invoke-direct {v0} com/twitter/android/network/ssl/TwitterPins$1/<init> )
+  (line 36)
+  (sput-object v0 com/twitter/android/network/ssl/e.a [object java/util/Map])
+  (invoke-interface {v0} java/util/Map/values )
+  (move-result-object v0)
+  (const/4 v1 0)
+  (new-array v1 v1 [array [object java/lang/String]])
+  (invoke-interface {v0 v1} java/util/Collection/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (check-cast v0 [array [object java/lang/String]])
+  (sput-object v0 com/twitter/android/network/ssl/e.b [array [object java/lang/String]])
+  (return-void )
+ )
+
+)

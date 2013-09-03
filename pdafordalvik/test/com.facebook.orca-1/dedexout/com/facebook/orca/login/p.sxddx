@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) com/facebook/orca/login/p
+ (super java/lang/Object)
+ (source "WildfireRegSmsCodeFragment.java")
+
+
+(method (attrs public abstract ) beginShowingProgress()void
+)
+
+(method (attrs public abstract ) setSmsCode([object java/lang/String] boolean )void
+)
+
+(method (attrs public abstract ) setSmsCodePrompt([object java/lang/String] )void
+)
+
+(method (attrs public abstract ) setSmsCodePromptResource(int )void
+)
+
+(method (attrs public abstract ) showSmsCodeError()void
+)
+
+(method (attrs public abstract ) stopShowingProgress()void
+)
+
+)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/feed_flyout_bubble" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="36.0dip" android:layout_marginBottom="32.0dip" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/feed_flyout_background" android:background="@drawable/ui_flyout_body_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="-6.0dip" android:layout_marginRight="-6.0dip">
+        <include layout="@layout/flyout_bubble_contents" />
+    </RelativeLayout>
+</RelativeLayout>

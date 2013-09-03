@@ -1,0 +1,46 @@
+(class (attrs ) com/google/common/collect/ImmutableMultimap$Values$1
+ (super com/google/common/collect/UnmodifiableIterator)
+ (source "ImmutableMultimap.java")
+
+ (field (attrs final ) a [object java/util/Iterator] )
+ (field (attrs final ) b [object com/google/common/collect/ImmutableMultimap$Values] )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableMultimap$Values] [object java/util/Iterator] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/ImmutableMultimap$Values$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableMultimap$Values])
+  ; parameter[1] : v2 ([object java/util/Iterator])
+  (line 579)
+  (iput-object v1 v0 com/google/common/collect/ImmutableMultimap$Values$1.b [object com/google/common/collect/ImmutableMultimap$Values])
+  (iput-object v2 v0 com/google/common/collect/ImmutableMultimap$Values$1.a [object java/util/Iterator])
+  (invoke-direct {v0} com/google/common/collect/UnmodifiableIterator/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableMultimap$Values$1])
+  (line 582)
+  (iget-object v0 v1 com/google/common/collect/ImmutableMultimap$Values$1.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableMultimap$Values$1])
+  (line 586)
+  (iget-object v0 v1 com/google/common/collect/ImmutableMultimap$Values$1.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (invoke-interface {v0} java/util/Map$Entry/getValue )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

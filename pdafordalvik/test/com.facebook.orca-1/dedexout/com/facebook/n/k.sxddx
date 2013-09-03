@@ -1,0 +1,39 @@
+(class (attrs public ) com/facebook/n/k
+ (super com/facebook/ui/b/e)
+ (source "SpringSystemFrameCallbackWrapper.java")
+
+ (field (attrs private ) a [object com/facebook/n/j] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/n/k])
+  (line 15)
+  (invoke-direct {v0} com/facebook/ui/b/e/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(long )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/n/k])
+  ; parameter[0] : v2 (long)
+  (line 32)
+  (iget-object v0 v1 com/facebook/n/k.a [object com/facebook/n/j])
+  (invoke-static {v0} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 33)
+  (iget-object v0 v1 com/facebook/n/k.a [object com/facebook/n/j])
+  (invoke-virtual {v0} com/facebook/n/j/c )
+  (line 34)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/n/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/n/k])
+  ; parameter[0] : v1 ([object com/facebook/n/j])
+  (line 24)
+  (iput-object v1 v0 com/facebook/n/k.a [object com/facebook/n/j])
+  (line 25)
+  (return-void )
+)
+
+)

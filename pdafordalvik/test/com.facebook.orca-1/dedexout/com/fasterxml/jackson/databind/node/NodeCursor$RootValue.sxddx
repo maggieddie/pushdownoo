@@ -1,0 +1,97 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/node/NodeCursor$RootValue
+ (super com/fasterxml/jackson/databind/node/NodeCursor)
+ (source "NodeCursor.java")
+
+ (field (attrs protected ) _done boolean )
+ (field (attrs protected ) _node [object com/fasterxml/jackson/databind/JsonNode] )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/JsonNode] [object com/fasterxml/jackson/databind/node/NodeCursor] )void
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/JsonNode])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/node/NodeCursor])
+  (const/4 v0 0)
+  (line 105)
+  (invoke-direct {v1 v0 v3} com/fasterxml/jackson/databind/node/NodeCursor/<init> int [object com/fasterxml/jackson/databind/node/NodeCursor] )
+  (line 102)
+  (iput-boolean v0 v1 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._done boolean)
+  (line 106)
+  (iput-object v2 v1 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._node [object com/fasterxml/jackson/databind/JsonNode])
+  (line 107)
+  (return-void )
+ )
+
+(method (attrs public ) currentHasChildren()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (line 131)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) currentNode()[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (line 129)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._node [object com/fasterxml/jackson/databind/JsonNode])
+  (return-object v0)
+)
+
+(method (attrs public ) endToken()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (line 127)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) getParent()[object com/fasterxml/jackson/core/JsonStreamContext]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (line 97)
+  (invoke-super {v1} com/fasterxml/jackson/databind/node/NodeCursor/getParent )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) nextToken()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (const/4 v0 0)
+  (line 116)
+  (iget-boolean v1 v2 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._done boolean)
+  (if-nez v1 l330bd6)
+  (line 117)
+  (const/4 v0 1)
+  (iput-boolean v0 v2 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._done boolean)
+  (line 118)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._node [object com/fasterxml/jackson/databind/JsonNode])
+  (invoke-virtual {v0} com/fasterxml/jackson/databind/JsonNode/asToken )
+  (move-result-object v0)
+  (label l330bd4)
+  (line 121)
+  (return-object v0)
+  (label l330bd6)
+  (line 120)
+  (iput-object v0 v2 com/fasterxml/jackson/databind/node/NodeCursor$RootValue._node [object com/fasterxml/jackson/databind/JsonNode])
+  (goto l330bd4)
+)
+
+(method (attrs public ) nextValue()[object com/fasterxml/jackson/core/JsonToken]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  (line 125)
+  (invoke-virtual {v1} com/fasterxml/jackson/databind/node/NodeCursor$RootValue/nextToken )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) overrideCurrentName([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/node/NodeCursor$RootValue])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 112)
+  (return-void )
+)
+
+)

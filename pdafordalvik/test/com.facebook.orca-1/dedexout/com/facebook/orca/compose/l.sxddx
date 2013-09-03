@@ -1,0 +1,69 @@
+(class (attrs ) com/facebook/orca/compose/l
+ (super com/facebook/orca/photos/b/i)
+ (source "ComposeAttachmentContainer.java")
+
+ (field (attrs final ) a [object com/facebook/orca/compose/ComposeAttachmentContainer] )
+
+(method (attrs private ) <init>([object com/facebook/orca/compose/ComposeAttachmentContainer] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/compose/l])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeAttachmentContainer])
+  (line 384)
+  (iput-object v1 v0 com/facebook/orca/compose/l.a [object com/facebook/orca/compose/ComposeAttachmentContainer])
+  (invoke-direct {v0} com/facebook/orca/photos/b/i/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/compose/ComposeAttachmentContainer] [object com/facebook/orca/compose/i] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/compose/l])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeAttachmentContainer])
+  ; parameter[1] : v2 ([object com/facebook/orca/compose/i])
+  (line 384)
+  (invoke-direct {v0 v1} com/facebook/orca/compose/l/<init> [object com/facebook/orca/compose/ComposeAttachmentContainer] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<"  "Lcom/facebook/orca/photos/b/v;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/compose/l])
+  (line 410)
+  (const-class v0 com/facebook/orca/photos/b/v)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/c/a/a] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<"  "Lcom/facebook/orca/photos/b/v;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/compose/l])
+  ; parameter[0] : v1 ([object com/facebook/c/a/a])
+  (line 384)
+  (check-cast v1 [object com/facebook/orca/photos/b/v])
+  (invoke-virtual {v0 v1} com/facebook/orca/compose/l/a [object com/facebook/orca/photos/b/v] )
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/orca/photos/b/v] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<"  "Lcom/facebook/orca/photos/b/v;"  ">;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/compose/l])
+  ; parameter[0] : v3 ([object com/facebook/orca/photos/b/v])
+  (line 389)
+  (iget-object v0 v2 com/facebook/orca/compose/l.a [object com/facebook/orca/compose/ComposeAttachmentContainer])
+  (invoke-static {v0} com/facebook/orca/compose/ComposeAttachmentContainer/c [object com/facebook/orca/compose/ComposeAttachmentContainer] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/orca/compose/m)
+  (invoke-direct {v1 v2 v3} com/facebook/orca/compose/m/<init> [object com/facebook/orca/compose/l] [object com/facebook/orca/photos/b/v] )
+  (invoke-interface {v0 v1} com/facebook/common/executors/a/b [object java/lang/Runnable] )
+  (line 406)
+  (return-void )
+)
+
+)

@@ -1,0 +1,25 @@
+(class (attrs public ) a/a/c
+ (super a/a/a)
+ (source "DifferentiationFailedException.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object a/a/c])
+  (line 73)
+  (invoke-direct {v0} a/a/a/<init> )
+  (line 74)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object a/a/c])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 77)
+  (invoke-direct {v0 v1} a/a/a/<init> [object java/lang/String] )
+  (line 78)
+  (return-void )
+ )
+
+)

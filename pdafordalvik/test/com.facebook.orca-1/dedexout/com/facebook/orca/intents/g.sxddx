@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/orca/intents/g
+ (super com/facebook/orca/threadlist/t)
+ (source "ShareLauncherActivity.java")
+
+ (field (attrs final ) a [object com/facebook/orca/intents/ShareLauncherActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/intents/ShareLauncherActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/intents/g])
+  ; parameter[0] : v1 ([object com/facebook/orca/intents/ShareLauncherActivity])
+  (line 54)
+  (iput-object v1 v0 com/facebook/orca/intents/g.a [object com/facebook/orca/intents/ShareLauncherActivity])
+  (invoke-direct {v0} com/facebook/orca/threadlist/t/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/intents/g])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 57)
+  (iget-object v0 v1 com/facebook/orca/intents/g.a [object com/facebook/orca/intents/ShareLauncherActivity])
+  (invoke-static {v0 v2} com/facebook/orca/intents/ShareLauncherActivity/a [object com/facebook/orca/intents/ShareLauncherActivity] [object java/lang/String] )
+  (line 58)
+  (return-void )
+)
+
+)

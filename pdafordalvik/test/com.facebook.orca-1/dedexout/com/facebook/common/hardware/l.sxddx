@@ -1,0 +1,14 @@
+(class (attrs public ) com/facebook/common/hardware/l
+ (super java/lang/Object)
+ (source "DeviceInfoSerializer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/common/hardware/l])
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

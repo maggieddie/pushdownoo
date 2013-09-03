@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:id="@id/compose_attachment_scroll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="74.0dip">
+        <LinearLayout android:id="@id/compose_attachments" android:paddingLeft="45.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+</merge>

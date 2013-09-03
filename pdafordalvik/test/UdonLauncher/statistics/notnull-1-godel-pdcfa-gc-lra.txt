@@ -1,0 +1,60 @@
+com/example/udonlauncher/MainActivity: 0.0
+com/example/udonlauncher/MainActivity$1: 0.0
+com/example/udonlauncher/Threading$StuffTask: 0.0
+com/example/udonlauncher/UpdatedDialog$1: 0.0
+com/example/udonlauncher/UdonApplication$1: 0.0
+com/example/udonlauncher/UdonLauncher$ActivityAdapter: 33.33333333333333
+com/example/udonlauncher/UdonLauncher$ActivityAdapter$ArrayFilter: 0.0
+com/example/udonlauncher/UdonPreferences$2: 0.0
+com/example/udonlauncher/UdonLauncher$ClickManager: 0.0
+com/example/udonlauncher/Threading$1: 0.0
+com/example/udonlauncher/Updater1$1: 0.0
+com/example/udonlauncher/AccessoryHandlerService: 40.0
+com/example/udonlauncher/AccessoryHandlerService$AccessoryHandler$1: 0.0
+com/example/udonlauncher/UdonLauncher$ListItem: 0.0
+com/example/udonlauncher/UdonLauncher$IconResizer: 66.66666666666666
+com/example/udonlauncher/LaunchCounter$StableArrayAdapter: 50.0
+com/example/udonlauncher/UdonApplication: 50.0
+com/example/udonlauncher/MainActivity$AccessoryFragment$1: 0.0
+com/example/udonlauncher/UdonApplication$PeriodicTask: 0.0
+com/example/udonlauncher/AccessoryHandlerService$LocalBinder: 0.0
+com/example/udonlauncher/MainActivity$AccessoryFragment: 0.0
+com/example/udonlauncher/AccessoryHandlerService$AccessoryHandler: 60.0
+com/example/udonlauncher/AccessoryHandlerService$1: 0.0
+com/example/udonlauncher/UpdatedDialog$2: 0.0
+com/example/udonlauncher/MainActivity$SectionsPagerAdapter: 0.0
+com/example/udonlauncher/MainActivity$2: 0.0
+com/example/udonlauncher/UdonLauncher: 0.0
+com/example/udonlauncher/UdonPreferences$1: 0.0
+The total average: 10.714285714285714
+ Any places of null ref during constructions? 
+ com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(68)
+FieldAssignStmt(v0,NonStaticFieldExp(v4,android/content/pm/ResolveInfo.activityInfo,(object android/content/pm/ActivityInfo)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(68)
+com/example/udonlauncher/AccessoryHandlerService:access$0LineStmt(29)
+FieldAssignStmt(v0,NonStaticFieldExp(v1,com/example/udonlauncher/AccessoryHandlerService.mUsbManager,(object android/hardware/usb/UsbManager)))@@@com/example/udonlauncher/AccessoryHandlerService$$access$0::LineStmt(29)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(67)
+InvokeStmt:android/content/pm/ResolveInfo/loadLabel(List(v3) , v4 , List((object android/content/pm/PackageManager)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(67)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(75)
+InvokeStmt:com/example/udonlauncher/UdonLauncher$IconResizer/createIconThumbnail(List(v1) , v5 , List((object android/graphics/drawable/Drawable)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(75)
+com/example/udonlauncher/UdonLauncher$IconResizer:<init>LineStmt(374)
+InvokeStmt:com/example/udonlauncher/UdonLauncher/getResources(List() , v6 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$<init>::LineStmt(374)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(77)
+FieldAssignStmt(v1,NonStaticFieldExp(v1,android/content/pm/ApplicationInfo.packageName,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(77)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(71)
+FieldAssignStmt(v1,NonStaticFieldExp(v1,android/content/pm/ActivityInfo.name,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(71)
+com/example/udonlauncher/UdonLauncher$ActivityAdapter:<init>LineStmt(216)
+InvokeStmt:com/example/udonlauncher/UdonLauncher/getSystemService(List(v0) , v2 , List((object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ActivityAdapter$$<init>::LineStmt(216)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(78)
+FieldAssignStmt(v1,NonStaticFieldExp(v0,android/content/pm/ComponentInfo.name,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(78)
+com/example/udonlauncher/UdonLauncher$ActivityAdapter:<init>LineStmt(219)
+InvokeStmt:com/example/udonlauncher/UdonLauncher/makeGridItems(List() , v2 , List())@@@com/example/udonlauncher/UdonLauncher$ActivityAdapter$$<init>::LineStmt(219)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(77)
+FieldAssignStmt(v1,NonStaticFieldExp(v0,android/content/pm/ComponentInfo.applicationInfo,(object android/content/pm/ApplicationInfo)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(77)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(71)
+FieldAssignStmt(v1,NonStaticFieldExp(v4,android/content/pm/ResolveInfo.activityInfo,(object android/content/pm/ActivityInfo)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(71)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(75)
+InvokeStmt:android/content/pm/ResolveInfo/loadIcon(List(v3) , v4 , List((object android/content/pm/PackageManager)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(75)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(69)
+FieldAssignStmt(v0,NonStaticFieldExp(v4,android/content/pm/ResolveInfo.serviceInfo,(object android/content/pm/ServiceInfo)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(69)
+com/example/udonlauncher/UdonLauncher$IconResizer:<init>LineStmt(375)
+InvokeStmt:android/content/res/Resources/getDimension(List(v1) , v0 , List(int))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$<init>::LineStmt(375)

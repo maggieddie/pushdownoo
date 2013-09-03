@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/deser/KeyDeserializers
+ (super java/lang/Object)
+ (source "KeyDeserializers.java")
+
+
+(method (attrs public abstract ) findKeyDeserializer([object com/fasterxml/jackson/databind/JavaType] [object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] )[object com/fasterxml/jackson/databind/KeyDeserializer]
+)
+
+)

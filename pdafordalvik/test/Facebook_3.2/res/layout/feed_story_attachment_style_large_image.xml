@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/feed_attachment_background_box" android:padding="@dimen/feed_attachment_large_image_padding" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_attachment_leftright_margins" android:layout_marginTop="@dimen/feed_story_element_separation_with_shadow" android:layout_marginRight="@dimen/feed_attachment_leftright_margins" android:layout_marginBottom="@dimen/feed_story_element_separation_with_shadow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/feed_story_attachment_large_image_contents" />
+</LinearLayout>

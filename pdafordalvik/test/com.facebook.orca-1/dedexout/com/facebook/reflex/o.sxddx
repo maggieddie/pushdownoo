@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/reflex/o
+ (super java/lang/Object)
+ (source "FragmentReflexActivity.java")
+ (implements android/view/ViewTreeObserver$OnPreDrawListener)
+
+ (field (attrs final ) a [object com/facebook/reflex/j] )
+ (field (attrs final ) b [object com/facebook/reflex/m] )
+
+(method (attrs ) <init>([object com/facebook/reflex/m] [object com/facebook/reflex/j] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/reflex/o])
+  ; parameter[0] : v1 ([object com/facebook/reflex/m])
+  ; parameter[1] : v2 ([object com/facebook/reflex/j])
+  (line 326)
+  (iput-object v1 v0 com/facebook/reflex/o.b [object com/facebook/reflex/m])
+  (iput-object v2 v0 com/facebook/reflex/o.a [object com/facebook/reflex/j])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onPreDraw()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/o])
+  (line 329)
+  (iget-object v0 v1 com/facebook/reflex/o.b [object com/facebook/reflex/m])
+  (invoke-static {v0} com/facebook/reflex/m/b [object com/facebook/reflex/m] )
+  (line 330)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

@@ -1,0 +1,33 @@
+(class (attrs public ) android_src/mms/transaction/MessagingNotification$OnDeletedReceiver
+ (super android/content/BroadcastReceiver)
+ (source "MessagingNotification.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android_src/mms/transaction/MessagingNotification$OnDeletedReceiver])
+  (line 99)
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object android_src/mms/transaction/MessagingNotification$OnDeletedReceiver])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 102)
+  (const/4 v0 2)
+  (invoke-static {v0} com/facebook/debug/log/BLog/b int )
+  (move-result v0)
+  (if-eqz v0 l79b14)
+  (line 103)
+  (const-string v0 "fb-mms:MessagingNotification")
+  (const-string v1 "[MessagingNotification] clear notification: mark all msgs seen")
+  (invoke-static {v0 v1} com/facebook/debug/log/BLog/b [object java/lang/String] [object java/lang/String] )
+  (label l79b14)
+  (line 107)
+  (return-void )
+)
+
+)

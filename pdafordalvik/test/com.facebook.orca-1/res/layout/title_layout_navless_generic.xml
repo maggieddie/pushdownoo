@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.OverlayLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@drawable/facebook_top_background" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="22.0sp" android:textColor="@drawable/solid_white" android:ellipsize="end" android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/title" android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:scaleType="center" android:singleLine="true" android:shadowColor="#66000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_weight="1.0" />
+        </LinearLayout>
+        <include layout="@layout/title_layout_highlights_generic" />
+    </LinearLayout>
+</com.facebook.widget.OverlayLayout>

@@ -53,7 +53,7 @@
   (new-instance v3 java/lang/Integer)
   (invoke-direct {v3 v6} java/lang/Integer/<init> int )
   (aput-object v3 v1 v2)
-  (invoke-virtual-quick {v0 v1} java/lang/reflect/Constructor/newInstance [array [object java/lang/Object]] )
+  (invoke-virtual-quick {v0 v1} vtable #0x25)
   (move-result-object v5)
   (check-cast v5 [object java/nio/MappedByteBuffer])
   (return-object v5)

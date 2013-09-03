@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) com/facebook/orca/threadlist/bm
+ (super java/lang/Object)
+ (source "ThreadListLoader.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/orca/threadlist/bo] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/orca/threadlist/bo] [object com/facebook/orca/threadlist/bn] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/orca/threadlist/bo] [object com/facebook/orca/threadlist/bq] )void
+)
+
+(method (attrs public abstract ) b([object com/facebook/orca/threadlist/bo] )void
+)
+
+(method (attrs public abstract ) b([object com/facebook/orca/threadlist/bo] [object com/facebook/orca/threadlist/bn] )void
+)
+
+)

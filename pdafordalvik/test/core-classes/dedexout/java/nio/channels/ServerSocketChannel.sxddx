@@ -22,7 +22,7 @@
   (invoke-static {} java/nio/channels/spi/SelectorProvider/provider )
   (nop )
   (move-result-object v0)
-  (invoke-virtual-quick {v0} java/nio/channels/spi/SelectorProvider/openServerSocketChannel )
+  (invoke-virtual-quick {v0} vtable #0xf)
   (move-result-object v0)
   (return-object v0)
  )

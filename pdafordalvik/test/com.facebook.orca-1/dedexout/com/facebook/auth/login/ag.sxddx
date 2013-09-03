@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/auth/login/ag
+ (super java/lang/Object)
+ (source "GenericLoginApprovalViewGroup.java")
+ (implements android/widget/TextView$OnEditorActionListener)
+
+ (field (attrs final ) a [object com/facebook/auth/login/GenericLoginApprovalViewGroup] )
+
+(method (attrs ) <init>([object com/facebook/auth/login/GenericLoginApprovalViewGroup] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/login/ag])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (line 61)
+  (iput-object v1 v0 com/facebook/auth/login/ag.a [object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onEditorAction([object android/widget/TextView] int [object android/view/KeyEvent] )boolean
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/auth/login/ag])
+  ; parameter[0] : v2 ([object android/widget/TextView])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 ([object android/view/KeyEvent])
+  (line 64)
+  (const/4 v0 2)
+  (if-ne v3 v0 l1957b0)
+  (line 65)
+  (iget-object v0 v1 com/facebook/auth/login/ag.a [object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (invoke-static {v0} com/facebook/auth/login/GenericLoginApprovalViewGroup/access$000 [object com/facebook/auth/login/GenericLoginApprovalViewGroup] )
+  (line 66)
+  (const/4 v0 1)
+  (label l1957ae)
+  (line 68)
+  (return v0)
+  (label l1957b0)
+  (const/4 v0 0)
+  (goto l1957ae)
+)
+
+)

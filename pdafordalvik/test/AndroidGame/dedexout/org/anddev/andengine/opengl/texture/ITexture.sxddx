@@ -1,0 +1,54 @@
+(interface (attrs public abstract ) org/anddev/andengine/opengl/texture/ITexture
+ (super java/lang/Object)
+ (source "ITexture.java")
+
+
+(method (attrs public abstract ) bind([object javax/microedition/khronos/opengles/GL10] )void
+)
+
+(method (attrs public abstract ) getHardwareTextureID()int
+)
+
+(method (attrs public abstract ) getHeight()int
+)
+
+(method (attrs public abstract ) getTextureOptions()[object org/anddev/andengine/opengl/texture/TextureOptions]
+)
+
+(method (attrs public abstract ) getTextureStateListener()[object org/anddev/andengine/opengl/texture/ITexture$ITextureStateListener]
+)
+
+(method (attrs public abstract ) getWidth()int
+)
+
+(method (attrs public abstract ) hasTextureStateListener()boolean
+)
+
+(method (attrs public abstract ) isLoadedToHardware()boolean
+)
+
+(method (attrs public abstract ) isUpdateOnHardwareNeeded()boolean
+)
+
+(method (attrs public abstract ) loadToHardware([object javax/microedition/khronos/opengles/GL10] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) reloadToHardware([object javax/microedition/khronos/opengles/GL10] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/io/IOException])
+  )
+)
+
+(method (attrs public abstract ) setLoadedToHardware(boolean )void
+)
+
+(method (attrs public abstract ) setUpdateOnHardwareNeeded(boolean )void
+)
+
+(method (attrs public abstract ) unloadFromHardware([object javax/microedition/khronos/opengles/GL10] )void
+)
+
+)

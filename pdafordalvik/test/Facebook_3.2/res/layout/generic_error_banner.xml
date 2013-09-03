@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:background="@drawable/feed_error_banner_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" />
+    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/error_banner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feed_connection_lost" />
+</merge>

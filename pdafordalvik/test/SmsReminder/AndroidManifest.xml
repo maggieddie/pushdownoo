@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="org.darpa.smsreminder"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="15" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon" android:debuggable="true">
+        <activity android:label="@string/app_name" android:name=".SmsReminderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".SmsAlarmReceiver" />
+        <activity android:label="@string/title_activity_alarm_viewer" android:name=".AlarmViewer" />
+        <activity android:label="@string/title_activity_alarm_details" android:name=".AlarmDetails" />
+        <activity android:label="@string/title_activity_settings" android:name=".SettingsActivity" />
+        <receiver android:name=".SmsReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

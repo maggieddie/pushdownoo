@@ -18,7 +18,7 @@
   ; parameter[0] : v2 ([object java/lang/Runnable])
   ; parameter[1] : v3 ([object java/util/concurrent/ThreadPoolExecutor])
   (line 1852)
-  (invoke-virtual-quick {v3} java/util/concurrent/ThreadPoolExecutor/isShutdown )
+  (invoke-virtual-quick {v3} vtable #0x13)
   (move-result v0)
   (if-nez v0 lf7aca)
   (line 1853)

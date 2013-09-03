@@ -1,0 +1,116 @@
+(class (attrs public abstract ) com/fasterxml/jackson/core/a
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs protected ) a int )
+ (field (attrs protected ) b int )
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/core/a])
+  (line 53)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) a()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/a])
+  (const/4 v0 1)
+  (line 71)
+  (iget v1 v2 com/fasterxml/jackson/core/a.a int)
+  (if-ne v1 v0 l63200)
+  (label l631fe)
+  (return v0)
+  (label l63200)
+  (const/4 v0 0)
+  (goto l631fe)
+)
+
+(method (attrs public final ) b()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/a])
+  (line 78)
+  (iget v0 v1 com/fasterxml/jackson/core/a.a int)
+  (if-nez v0 l63220)
+  (const/4 v0 1)
+  (label l6321e)
+  (return v0)
+  (label l63220)
+  (const/4 v0 0)
+  (goto l6321e)
+)
+
+(method (attrs public final ) c()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/core/a])
+  (line 84)
+  (iget v0 v2 com/fasterxml/jackson/core/a.a int)
+  (const/4 v1 2)
+  (if-ne v0 v1 l63242)
+  (const/4 v0 1)
+  (label l63240)
+  (return v0)
+  (label l63242)
+  (const/4 v0 0)
+  (goto l63240)
+)
+
+(method (attrs public final ) d()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/a])
+  (line 92)
+  (iget v0 v1 com/fasterxml/jackson/core/a.a int)
+  (packed-switch v0 0
+    ps6325c_63268 ; case 0
+    ps6325c_6326e ; case 1
+    ps6325c_63274 ; case 2
+    ps6325c_default) ; default
+  (label ps6325c_default)
+  (line 97)
+  (const-string v0 "?")
+  (label l63266)
+  (return-object v0)
+  (label ps6325c_63268)
+  (line 93)
+  (const-string v0 "ROOT")
+  (goto l63266)
+  (label ps6325c_6326e)
+  (line 94)
+  (const-string v0 "ARRAY")
+  (goto l63266)
+  (label ps6325c_63274)
+  (line 95)
+  (const-string v0 "OBJECT")
+  (goto l63266)
+  (line 92)
+  (label l6327a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public final ) e()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/a])
+  (line 105)
+  (iget v0 v1 com/fasterxml/jackson/core/a.b int)
+  (add-int/lit8 v0 v0 1)
+  (return v0)
+)
+
+(method (attrs public final ) f()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/core/a])
+  (line 113)
+  (iget v0 v1 com/fasterxml/jackson/core/a.b int)
+  (if-gez v0 l632c8)
+  (const/4 v0 0)
+  (label l632c6)
+  (return v0)
+  (label l632c8)
+  (iget v0 v1 com/fasterxml/jackson/core/a.b int)
+  (goto l632c6)
+)
+
+)

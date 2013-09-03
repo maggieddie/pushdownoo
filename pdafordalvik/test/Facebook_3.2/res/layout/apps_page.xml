@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/launchables_leftright_padding" android:paddingRight="@dimen/launchables_leftright_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.overscroll.ScrollView android:id="@id/launchables_apps_scroll_view" android:paddingLeft="@dimen/launchables_apps_panel_leftright_padding" android:paddingRight="@dimen/launchables_apps_panel_leftright_padding" android:scrollbars="none" android:fadingEdgeLength="@dimen/launchables_apps_panel_fading_edge_length" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:paddingTop="@dimen/launchables_apps_header_topbottom_padding" android:paddingBottom="@dimen/launchables_apps_header_topbottom_padding" android:layout_width="fill_parent" android:layout_height="@dimen/launchables_apps_header_height">
+                <include android:layout_gravity="top|center" android:id="@id/search_bar" layout="@layout/search_bar" />
+                <TextView android:textSize="18.0dip" android:layout_gravity="bottom|center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_apps" style="@style/white_text_with_shadow" />
+            </FrameLayout>
+            <com.facebook.dash.launchables.fragment.CellLayout android:id="@id/launchables_apps_cell_layout" android:paddingTop="@dimen/launchables_apps_panel_top_padding" android:paddingBottom="@dimen/launchables_apps_panel_bottom_padding" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+    </com.facebook.overscroll.ScrollView>
+</FrameLayout>

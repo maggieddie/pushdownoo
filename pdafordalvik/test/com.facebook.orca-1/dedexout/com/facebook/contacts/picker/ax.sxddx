@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/contacts/picker/ax
+ (super java/lang/Object)
+ (source "SearchableContactPickerView.java")
+ (implements com/facebook/widget/a/h)
+
+ (field (attrs final ) a [object com/facebook/contacts/picker/as] )
+
+(method (attrs ) <init>([object com/facebook/contacts/picker/as] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/ax])
+  ; parameter[0] : v1 ([object com/facebook/contacts/picker/as])
+  (line 139)
+  (iput-object v1 v0 com/facebook/contacts/picker/ax.a [object com/facebook/contacts/picker/as])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/picker/ax])
+  ; parameter[0] : v2 (int)
+  (line 142)
+  (iget-object v0 v1 com/facebook/contacts/picker/ax.a [object com/facebook/contacts/picker/as])
+  (invoke-static {v0 v2} com/facebook/contacts/picker/as/b [object com/facebook/contacts/picker/as] int )
+  (line 143)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/widget/a/j] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/picker/ax])
+  ; parameter[0] : v2 ([object com/facebook/widget/a/j])
+  (line 147)
+  (iget-object v0 v1 com/facebook/contacts/picker/ax.a [object com/facebook/contacts/picker/as])
+  (invoke-static {v0 v2} com/facebook/contacts/picker/as/a [object com/facebook/contacts/picker/as] [object com/facebook/widget/a/j] )
+  (line 148)
+  (return-void )
+)
+
+)

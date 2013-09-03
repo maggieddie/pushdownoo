@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/JsonSerializable
+ (super java/lang/Object)
+ (source "JsonSerializable.java")
+
+
+(method (attrs public abstract ) serialize([object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+)
+
+(method (attrs public abstract ) serializeWithType([object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/jsontype/TypeSerializer] )void
+)
+
+)

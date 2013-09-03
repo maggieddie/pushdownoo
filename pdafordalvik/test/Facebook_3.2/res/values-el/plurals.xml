@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">πριν από %d ώρες</item>
+        <item quantity="one">πριν από 1 ώρα</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">πριν από %d λεπτά</item>
+        <item quantity="one">πριν από 1 λεπτό</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">σε %d ώρες</item>
+        <item quantity="one">σε 1 ώρα</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">σε %d λεπτά</item>
+        <item quantity="one">σε 1 λεπτό</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Διαγραφή μηνυμάτων;</item>
+        <item quantity="one">Διαγραφή μηνύματος;</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Αφού διαγράψετε τα αντίγραφα αυτών των μηνυμάτων, δεν θα μπορείτε να τα επαναφέρετε.</item>
+        <item quantity="one">Αφού διαγράψετε το αντίγραφο του μηνύματος, δεν θα μπορείτε να το επαναφέρετε.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Διαγραφή μηνυμάτων</item>
+        <item quantity="one">Διαγραφή μηνύματος</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Διαγραφή μηνυμάτων…</item>
+        <item quantity="one">Διαγραφή μηνύματος…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">Αρέσει σε %d</item>
+        <item quantity="one">Αρέσει σε %d</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d σχόλια</item>
+        <item quantity="one">%d σχόλιο</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">Διαγραφή %d επιλεγμένων φωτογραφιών</item>
+        <item quantity="one">Διαγραφή επιλεγμένης φωτογραφίας</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Θέλετε σίγουρα να διαγράψετε τις %d επιλεγμένες φωτογραφίες από τη συσκευή σας;</item>
+        <item quantity="one">Θέλετε σίγουρα να διαγράψετε την επιλεγμένη φωτογραφία από τη συσκευή σας;</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">Αυτό αρέσει σε %d άτομα</item>
+        <item quantity="one">Αυτό αρέσει σε 1 άτομο</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">%d κοινοί φίλοι</item>
+        <item quantity="one">1 κοινός φίλος</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">Αρέσει σε %,d</item>
+        <item quantity="one">Αρέσει σε 1</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d σχόλια</item>
+        <item quantity="one">1 σχόλιο</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s ειδοποιήσεις</item>
+        <item quantity="one">1 ειδοποίηση</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s ΛΕΠΤΑ</item>
+        <item quantity="one">1 ΛΕΠΤΟ</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s ΩΡΕΣ</item>
+        <item quantity="one">1 ΩΡΑ</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">Αρέσει σε %s</item>
+        <item quantity="one">Αρέσει σε %s</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s σχόλια</item>
+        <item quantity="one">%s σχόλιο</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">δήλωσαν ότι τους αρέσει αυτή η τοποθεσία</item>
+        <item quantity="one">δήλωσε ότι του αρέσει αυτή η τοποθεσία</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">ήταν εδώ</item>
+        <item quantity="one">ήταν εδώ</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d αξιολογήσεις</item>
+        <item quantity="one">1 αξιολόγηση</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">δήλωσαν ότι τους αρέσει</item>
+        <item quantity="one">δήλωσε ότι του αρέσει</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">ήταν εδώ</item>
+        <item quantity="one">ήταν εδώ</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Ήσασταν εδώ %1$d φορές.</item>
+        <item quantity="one">Ήσασταν εδώ μία φορά.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">Αρέσει σε %,d</item>
+        <item quantity="one">Αρέσει σε 1</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d ήταν εδώ</item>
+        <item quantity="one">1 ήταν εδώ</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">"%,d μιλούν γι' αυτή τη Σελίδα"</item>
+        <item quantity="one">1 μιλάει για τη Σελίδα</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">Τη χρησιμοποιούν οι %1$s και %2$s</item>
+        <item quantity="one">Τη χρησιμοποιεί ο χρήστης %1$s</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">Παίζουν οι %1$s και %2$s</item>
+        <item quantity="one">Παίζει ο χρήστης %1$s</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">Αρέσει σε %d</item>
+        <item quantity="one">Αρέσει σε 1</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d επισκέψεις</item>
+        <item quantity="one">1 επίσκεψη</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d γενέθλια</item>
+        <item quantity="one">Ημερομηνία γέννησης</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">Αυτό αρέσει σε %d άτομα</item>
+        <item quantity="one">Αυτό αρέσει σε 1 άτομο</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d κοινοποιήσεις παρουσίας</item>
+        <item quantity="one">1 κοινοποίηση παρουσίας</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">%d κοινοί φίλοι</item>
+        <item quantity="zero">Κανένας κοινός φίλος</item>
+        <item quantity="one">1 κοινός φίλος</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d άτομα</item>
+        <item quantity="one">1 άτομο</item>
+    </plurals>
+</resources>

@@ -1,0 +1,61 @@
+(class (attrs ) android/support/v4/content/ModernAsyncTask$InternalHandler
+ (super android/os/Handler)
+ (source "ModernAsyncTask.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/content/ModernAsyncTask$InternalHandler])
+  (line 466)
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/support/v4/content/ModernAsyncTask$1] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/content/ModernAsyncTask$InternalHandler])
+  ; parameter[0] : v1 ([object android/support/v4/content/ModernAsyncTask$1])
+  (line 466)
+  (invoke-direct {v0} android/support/v4/content/ModernAsyncTask$InternalHandler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 5)
+  ; this: v3 ([object android/support/v4/content/ModernAsyncTask$InternalHandler])
+  ; parameter[0] : v4 ([object android/os/Message])
+  (line 470)
+  (iget-object v0 v4 android/os/Message.obj [object java/lang/Object])
+  (check-cast v0 [object android/support/v4/content/ModernAsyncTask$AsyncTaskResult])
+  (line 471)
+  (iget v1 v4 android/os/Message.what int)
+  (packed-switch v1 1
+    ps69244_6924c ; case 1
+    ps69244_69262 ; case 2
+    ps69244_default) ; default
+  (label l6924a)
+  (label ps69244_default)
+  (line 480)
+  (return-void )
+  (label ps69244_6924c)
+  (line 474)
+  (iget-object v1 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.a [object android/support/v4/content/ModernAsyncTask])
+  (iget-object v0 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.b [array [object java/lang/Object]])
+  (const/4 v2 0)
+  (aget-object v0 v0 v2)
+  (invoke-static {v1 v0} android/support/v4/content/ModernAsyncTask/c [object android/support/v4/content/ModernAsyncTask] [object java/lang/Object] )
+  (goto l6924a)
+  (label ps69244_69262)
+  (line 477)
+  (iget-object v1 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.a [object android/support/v4/content/ModernAsyncTask])
+  (iget-object v0 v0 android/support/v4/content/ModernAsyncTask$AsyncTaskResult.b [array [object java/lang/Object]])
+  (invoke-virtual {v1 v0} android/support/v4/content/ModernAsyncTask/b [array [object java/lang/Object]] )
+  (goto l6924a)
+  (line 471)
+  (label l69272)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

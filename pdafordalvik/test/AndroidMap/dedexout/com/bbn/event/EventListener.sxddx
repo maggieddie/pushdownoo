@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/bbn/event/EventListener
+ (super java/lang/Object)
+ (source "EventListener.java")
+
+
+(method (attrs public abstract ) eventFired([object com/bbn/event/Event] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+)
+
+)

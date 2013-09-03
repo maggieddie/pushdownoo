@@ -23,7 +23,7 @@
   (line 528)
   (check-cast v2 [object java/lang/reflect/Constructor])
   (check-cast v3 [object java/lang/reflect/Constructor])
-  (invoke-virtual-quick {v1 v2 v3} java/io/ObjectStreamClass$3/compare [object java/lang/reflect/Constructor] [object java/lang/reflect/Constructor] )
+  (invoke-virtual-quick {v1 v2 v3} vtable #0xc)
   (move-result v0)
   (return v0)
 )

@@ -1,0 +1,34 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector
+ (super com/fasterxml/jackson/databind/AnnotationIntrospector)
+ (source "NopAnnotationIntrospector.java")
+
+ (field (attrs public static final ) instance [object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 20)
+  (new-instance v0 com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector$1)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector$1/<init> )
+  (sput-object v0 com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector.instance [object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector])
+  (line 12)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/AnnotationIntrospector/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) version()[object com/fasterxml/jackson/core/Version]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector])
+  (line 29)
+  (invoke-static {} com/fasterxml/jackson/core/Version/unknownVersion )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

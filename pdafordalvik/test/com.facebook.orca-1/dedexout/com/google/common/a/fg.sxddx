@@ -1,0 +1,187 @@
+(class (attrs public ) com/google/common/a/fg
+ (super com/google/common/a/eo)
+ (source "ImmutableMultiset.java")
+
+ (field (attrs final ) a [object com/google/common/a/jf] )
+
+(method (attrs public ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/jf"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/fg])
+  (line 521)
+  (invoke-static {} com/google/common/a/gv/h )
+  (nop )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} com/google/common/a/fg/<init> [object com/google/common/a/jf] )
+  (line 522)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/google/common/a/jf] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/jf"  "<TE;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/fg])
+  ; parameter[0] : v1 ([object com/google/common/a/jf])
+  (line 524)
+  (invoke-direct {v0} com/google/common/a/eo/<init> )
+  (line 525)
+  (iput-object v1 v0 com/google/common/a/fg.a [object com/google/common/a/jf])
+  (line 526)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/em]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/fg])
+  (line 513)
+  (invoke-virtual {v1} com/google/common/a/fg/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Iterable] )[object com/google/common/a/eo]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/fg])
+  ; parameter[0] : v2 ([object java/lang/Iterable])
+  (line 513)
+  (invoke-virtual {v1 v2} com/google/common/a/fg/b [object java/lang/Iterable] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )[object com/google/common/a/eo]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/fg])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 513)
+  (invoke-virtual {v1 v2} com/google/common/a/fg/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([array [object java/lang/Object]] )[object com/google/common/a/eo]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/fg])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 513)
+  (invoke-virtual {v1 v2} com/google/common/a/fg/b [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] int )[object com/google/common/a/fg]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 5)
+  ; this: v2 ([object com/google/common/a/fg])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  ; parameter[1] : v4 (int)
+  (line 554)
+  (iget-object v0 v2 com/google/common/a/fg.a [object com/google/common/a/jf])
+  (invoke-static {v3} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-interface {v0 v1 v4} com/google/common/a/jf/a [object java/lang/Object] int )
+  (line 555)
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object com/google/common/a/fe]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TE;)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/fg])
+  (line 625)
+  (iget-object v0 v1 com/google/common/a/fg.a [object com/google/common/a/jf])
+  (invoke-static {v0} com/google/common/a/fe/a [object java/lang/Iterable] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Iterable] )[object com/google/common/a/fg]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TE;)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/google/common/a/fg])
+  ; parameter[0] : v4 ([object java/lang/Iterable])
+  (line 596)
+  (instance-of v0 v4 com/google/common/a/jf)
+  (if-eqz v0 l382a1c)
+  (line 597)
+  (invoke-static {v4} com/google/common/a/jh/b [object java/lang/Iterable] )
+  (move-result-object v0)
+  (line 598)
+  (invoke-interface {v0} com/google/common/a/jf/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/iterator )
+  (move-result-object v1)
+  (label l3829ec)
+  (invoke-interface {v1} java/util/Iterator/hasNext )
+  (move-result v0)
+  (if-eqz v0 l382a22)
+  (invoke-interface {v1} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object com/google/common/a/jg])
+  (line 599)
+  (invoke-interface {v0} com/google/common/a/jg/a )
+  (move-result-object v2)
+  (invoke-interface {v0} com/google/common/a/jg/b )
+  (move-result v0)
+  (invoke-virtual {v3 v2 v0} com/google/common/a/fg/a [object java/lang/Object] int )
+  (goto l3829ec)
+  (label l382a1c)
+  (line 602)
+  (invoke-super {v3 v4} com/google/common/a/eo/a [object java/lang/Iterable] )
+  (label l382a22)
+  (line 604)
+  (return-object v3)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object com/google/common/a/fg]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TE;)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/fg])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 536)
+  (iget-object v0 v2 com/google/common/a/fg.a [object com/google/common/a/jf])
+  (invoke-static {v3} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} com/google/common/a/jf/add [object java/lang/Object] )
+  (line 537)
+  (return-object v2)
+)
+
+(method (attrs public ) b([array [object java/lang/Object]] )[object com/google/common/a/fg]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TE;)"  "Lcom/google/common/a/fg"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/fg])
+  ; parameter[0] : v1 ([array [object java/lang/Object]])
+  (line 582)
+  (invoke-super {v0 v1} com/google/common/a/eo/a [array [object java/lang/Object]] )
+  (line 583)
+  (return-object v0)
+)
+
+)

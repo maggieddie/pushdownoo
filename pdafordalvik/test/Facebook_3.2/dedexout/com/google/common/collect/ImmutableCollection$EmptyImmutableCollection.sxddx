@@ -1,0 +1,131 @@
+(class (attrs ) com/google/common/collect/ImmutableCollection$EmptyImmutableCollection
+ (super com/google/common/collect/ImmutableCollection)
+ (source "ImmutableCollection.java")
+
+ (field (attrs private static final ) a [array [object java/lang/Object]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 192)
+  (const/4 v0 0)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (sput-object v0 com/google/common/collect/ImmutableCollection$EmptyImmutableCollection.a [array [object java/lang/Object]])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 173)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/google/common/collect/ImmutableCollection$1] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  ; parameter[0] : v1 ([object com/google/common/collect/ImmutableCollection$1])
+  (line 173)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection$EmptyImmutableCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 189)
+  (sget-object v0 com/google/common/collect/Iterators.a [object com/google/common/collect/UnmodifiableIterator])
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 210)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 185)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs ) i()[object com/google/common/collect/ImmutableList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/ImmutableList"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 206)
+  (invoke-static {} com/google/common/collect/ImmutableList/d )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 181)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 173)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection$EmptyImmutableCollection/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 177)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  (line 195)
+  (sget-object v0 com/google/common/collect/ImmutableCollection$EmptyImmutableCollection.a [array [object java/lang/Object]])
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/ImmutableCollection$EmptyImmutableCollection])
+  ; parameter[0] : v3 ([array [object java/lang/Object]])
+  (line 199)
+  (array-length v0 v3)
+  (if-lez v0 l1070b6)
+  (line 200)
+  (const/4 v0 0)
+  (const/4 v1 0)
+  (aput-object v1 v3 v0)
+  (label l1070b6)
+  (line 202)
+  (return-object v3)
+)
+
+)

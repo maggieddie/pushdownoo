@@ -1,0 +1,20 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$InboxStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) a [object java/util/ArrayList] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/app/NotificationCompat$InboxStyle])
+  (line 727)
+  (invoke-direct {v1} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 725)
+  (new-instance v0 java/util/ArrayList)
+  (invoke-direct {v0} java/util/ArrayList/<init> )
+  (iput-object v0 v1 android/support/v4/app/NotificationCompat$InboxStyle.a [object java/util/ArrayList])
+  (line 728)
+  (return-void )
+ )
+
+)

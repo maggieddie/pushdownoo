@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/core/TreeNode
+ (super java/lang/Object)
+ (source "TreeNode.java")
+
+
+(method (attrs public abstract ) asToken()[object com/fasterxml/jackson/core/JsonToken]
+)
+
+(method (attrs public abstract ) numberType()[object com/fasterxml/jackson/core/JsonParser$NumberType]
+)
+
+(method (attrs public abstract ) traverse()[object com/fasterxml/jackson/core/JsonParser]
+)
+
+)

@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/orca/notify/bf
+ (super java/lang/Object)
+ (source "OrcaNotificationManager.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/notify/bi] )
+ (field (attrs final ) b [object com/facebook/orca/notify/av] )
+
+(method (attrs ) <init>([object com/facebook/orca/notify/av] [object com/facebook/orca/notify/bi] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/notify/bf])
+  ; parameter[0] : v1 ([object com/facebook/orca/notify/av])
+  ; parameter[1] : v2 ([object com/facebook/orca/notify/bi])
+  (line 212)
+  (iput-object v1 v0 com/facebook/orca/notify/bf.b [object com/facebook/orca/notify/av])
+  (iput-object v2 v0 com/facebook/orca/notify/bf.a [object com/facebook/orca/notify/bi])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/notify/bf])
+  (line 215)
+  (iget-object v0 v2 com/facebook/orca/notify/bf.b [object com/facebook/orca/notify/av])
+  (iget-object v1 v2 com/facebook/orca/notify/bf.a [object com/facebook/orca/notify/bi])
+  (invoke-static {v0 v1} com/facebook/orca/notify/av/a [object com/facebook/orca/notify/av] [object com/facebook/orca/notify/bi] )
+  (line 216)
+  (return-void )
+)
+
+)

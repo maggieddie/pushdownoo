@@ -1,0 +1,37 @@
+java/io/WriteAbortedException: 100.0
+java/io/RandomAccessFile: 50.0
+java/io/EmulatedFieldsForLoading: 100.0
+java/io/FilterOutputStream: 100.0
+java/io/FileOutputStream: 59.999999999999986
+java/io/ObjectInputStream$1: 100.0
+java/io/PipedInputStream: 0.0
+java/io/InvalidClassException: 50.0
+java/io/PipedOutputStream: 50.0
+java/io/EmulatedFields$ObjectSlot: 0.0
+java/io/OutputStreamWriter: 58.33333333333332
+java/io/EmulatedFieldsForDumping: 100.0
+java/io/PrintWriter: 100.0
+java/io/PipedWriter: 50.0
+java/io/BufferedWriter: 100.0
+java/io/File: 100.0
+java/io/StringWriter: 100.0
+java/io/StringReader: 100.0
+java/io/PrintStream: 64.28571428571429
+java/io/FilePermission$1: 100.0
+java/io/EmulatedFields: 50.0
+java/io/BufferedReader: 100.0
+java/io/SequenceInputStream: 100.0
+java/io/FilterInputStream: 100.0
+java/io/FilePermissionCollection: 100.0
+java/io/StringBufferInputStream: 100.0
+java/io/InputStreamReader: 41.66666666666666
+java/io/SerializablePermission: 0.0
+java/io/FileInputStream: 50.0
+java/io/ObjectStreamField: 66.66666666666666
+java/io/ObjectInputStream: 35.0
+The total average: 71.80491551459292
+ Any places of null ref during constructions? 
+ java/io/OutputStreamWriter:<init>LineStmt(96)
+FieldAssignStmt(v1,NonStaticFieldExp(v3,java/io/OutputStreamWriter.encoder,(object java/nio/charset/CharsetEncoder)))@@@java/io/OutputStreamWriter$$<init>::LineStmt(96)
+java/io/ObjectInputStream:readStreamHeaderLineStmt(2402)
+FieldAssignStmt(v0,NonStaticFieldExp(v2,java/io/ObjectInputStream.input,(object java/io/DataInputStream)))@@@java/io/ObjectInputStream$$readStreamHeader::LineStmt(2402)

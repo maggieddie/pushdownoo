@@ -1,0 +1,31 @@
+(class (attrs public ) com/facebook/analytics/module/a
+ (super java/lang/Object)
+ (source "AnalyticsGatekeeperSetProvider.java")
+ (implements com/facebook/f/f)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/analytics/module/a])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/analytics/module/a])
+  (line 27)
+  (const-string v0 "android_analytics_periodic_device_status")
+  (const-string v1 "messenger_force_full_reliability_logging_android")
+  (const-string v2 "android_analytics_old_time_spent_logging")
+  (const-string v3 "android_analytics_time_spent_bit_array_logging")
+  (invoke-static {v0 v1 v2 v3} com/google/common/a/fi/a [object java/lang/Object] [object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

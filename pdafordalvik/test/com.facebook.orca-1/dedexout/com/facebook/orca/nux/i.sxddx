@@ -1,0 +1,46 @@
+(class (attrs public ) com/facebook/orca/nux/i
+ (super com/facebook/inject/d)
+ (source "ShouldSkipContactImportNuxProvider.java")
+
+ (field (attrs private final ) a [object javax/inject/a] )
+
+(method (attrs public ) <init>([object javax/inject/a] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljavax/inject/a"  "<"  "Ljava/lang/Boolean;"  ">;)V")
+  )
+  (annotation runtimeVisibility [object javax/inject/Inject]
+  )
+  (annotation runtimeVisibility param 1 [object com/facebook/orca/annotations/IsPartialAccount]
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/nux/i])
+  ; parameter[0] : v1 ([object javax/inject/a])
+  (line 20)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (line 21)
+  (iput-object v1 v0 com/facebook/orca/nux/i.a [object javax/inject/a])
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Boolean]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/nux/i])
+  (line 26)
+  (iget-object v0 v1 com/facebook/orca/nux/i.a [object javax/inject/a])
+  (invoke-interface {v0} javax/inject/a/b )
+  (move-result-object v0)
+  (check-cast v0 [object java/lang/Boolean])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/nux/i])
+  (line 14)
+  (invoke-virtual {v1} com/facebook/orca/nux/i/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

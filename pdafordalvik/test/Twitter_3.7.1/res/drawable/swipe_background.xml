@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/bg_list" />
+    <item>
+        <bitmap android:src="@drawable/bg_swipe_tile" android:tileMode="repeat" />
+    </item>
+    <item android:drawable="@drawable/bg_swipe_inner_shadow" />
+</layer-list>

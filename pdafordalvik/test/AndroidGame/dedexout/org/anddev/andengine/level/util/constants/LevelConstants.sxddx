@@ -1,0 +1,11 @@
+(interface (attrs public abstract ) org/anddev/andengine/level/util/constants/LevelConstants
+ (super java/lang/Object)
+ (source "LevelConstants.java")
+
+ (field (attrs public static final ) TAG_LEVEL [object java/lang/String] "level" )
+ (field (attrs public static final ) TAG_LEVEL_ATTRIBUTE_HEIGHT [object java/lang/String] "height" )
+ (field (attrs public static final ) TAG_LEVEL_ATTRIBUTE_NAME [object java/lang/String] "name" )
+ (field (attrs public static final ) TAG_LEVEL_ATTRIBUTE_UID [object java/lang/String] "uid" )
+ (field (attrs public static final ) TAG_LEVEL_ATTRIBUTE_WIDTH [object java/lang/String] "width" )
+
+)

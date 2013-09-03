@@ -1,0 +1,41 @@
+(class (attrs public ) com/facebook/ui/media/b/c
+ (super com/facebook/inject/b)
+ (source "MediaModule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/ui/media/b/c])
+  (line 17)
+  (invoke-direct {v0} com/facebook/inject/b/<init> )
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/ui/media/b/c])
+  (const/4 v2 0)
+  (line 21)
+  (const-class v0 com/facebook/ui/media/attachments/d)
+  (invoke-virtual {v3 v0} com/facebook/ui/media/b/c/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/ui/media/b/e)
+  (invoke-direct {v1 v3 v2} com/facebook/ui/media/b/e/<init> [object com/facebook/ui/media/b/c] [object com/facebook/ui/media/b/d] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/inject/a/g/a )
+  (line 24)
+  (const-class v0 com/facebook/ui/media/b/a)
+  (invoke-virtual {v3 v0} com/facebook/ui/media/b/c/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/ui/media/b/f)
+  (invoke-direct {v1 v3 v2} com/facebook/ui/media/b/f/<init> [object com/facebook/ui/media/b/c] [object com/facebook/ui/media/b/d] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/inject/a/g/a )
+  (line 27)
+  (return-void )
+)
+
+)

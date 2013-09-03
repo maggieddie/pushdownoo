@@ -1,0 +1,28 @@
+(class (attrs ) com/google/common/a/io
+ (super com/google/common/a/iq)
+ (source "Maps.java")
+
+ (field (attrs final ) a [object com/google/common/a/in] )
+
+(method (attrs ) <init>([object com/google/common/a/in] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/io])
+  ; parameter[0] : v1 ([object com/google/common/a/in])
+  (line 1484)
+  (iput-object v1 v0 com/google/common/a/io.a [object com/google/common/a/in])
+  (invoke-direct {v0} com/google/common/a/iq/<init> )
+  (return-void )
+ )
+
+(method (attrs ) a()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/io])
+  (line 1486)
+  (iget-object v0 v1 com/google/common/a/io.a [object com/google/common/a/in])
+  (return-object v0)
+)
+
+)

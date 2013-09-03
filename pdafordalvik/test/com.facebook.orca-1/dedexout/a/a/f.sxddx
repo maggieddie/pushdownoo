@@ -1,0 +1,26 @@
+(class (attrs public final ) a/a/f
+ (super a/a/e)
+ (source "Snake.java")
+
+
+(method (attrs public ) <init>(int int [object a/a/e] )void
+  (limit registers 4)
+  ; this: v0 ([object a/a/f])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object a/a/e])
+  (line 82)
+  (invoke-direct {v0 v1 v2 v3} a/a/e/<init> int int [object a/a/e] )
+  (line 83)
+  (return-void )
+ )
+
+(method (attrs public ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object a/a/f])
+  (line 90)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

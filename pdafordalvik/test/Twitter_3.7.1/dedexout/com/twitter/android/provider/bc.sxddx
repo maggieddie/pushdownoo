@@ -1,0 +1,19 @@
+(class (attrs final ) com/twitter/android/provider/bc
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public static final ) a [array [object java/lang/String]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 3)
+  (line 1243)
+  (const/4 v0 1)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (const/4 v1 0)
+  (const-string v2 "g_status_id")
+  (aput-object v2 v0 v1)
+  (sput-object v0 com/twitter/android/provider/bc.a [array [object java/lang/String]])
+  (return-void )
+ )
+
+)

@@ -1,0 +1,13 @@
+(interface (attrs public abstract annotation ) javax/annotation/meta/TypeQualifier
+ (super java/lang/Object)
+ (source "TypeQualifier.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) applicableTo()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

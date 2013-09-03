@@ -1,0 +1,17 @@
+(class (attrs public ) org/anddev/andengine/entity/particle/initializer/GravityInitializer
+ (super org/anddev/andengine/entity/particle/initializer/AccelerationInitializer)
+ (source "GravityInitializer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/anddev/andengine/entity/particle/initializer/GravityInitializer])
+  (line 26)
+  (const/4 v0 0)
+  (const v1 1092413450) ; 0x411ce80a)
+  (invoke-direct {v2 v0 v1} org/anddev/andengine/entity/particle/initializer/AccelerationInitializer/<init> float float )
+  (line 27)
+  (return-void )
+ )
+
+)

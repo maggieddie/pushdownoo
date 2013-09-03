@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/h/f
+ (super com/facebook/inject/d)
+ (source "LogControllerModule.java")
+
+ (field (attrs final ) a [object com/facebook/h/d] )
+
+(method (attrs private ) <init>([object com/facebook/h/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/h/f])
+  ; parameter[0] : v1 ([object com/facebook/h/d])
+  (line 33)
+  (iput-object v1 v0 com/facebook/h/f.a [object com/facebook/h/d])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/h/d] [object com/facebook/h/e] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/h/f])
+  ; parameter[0] : v1 ([object com/facebook/h/d])
+  ; parameter[1] : v2 ([object com/facebook/h/e])
+  (line 33)
+  (invoke-direct {v0 v1} com/facebook/h/f/<init> [object com/facebook/h/d] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/h/a]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/h/f])
+  (line 38)
+  (new-instance v2 com/facebook/h/a)
+  (const-class v0 com/facebook/prefs/shared/d)
+  (invoke-virtual {v5 v0} com/facebook/h/f/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/d])
+  (const-class v1 com/facebook/config/a/a)
+  (invoke-virtual {v5 v1} com/facebook/h/f/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/config/a/a])
+  (const-class v3 java/lang/Boolean)
+  (const-class v4 com/facebook/common/annotations/IsDebugLogsEnabled)
+  (invoke-virtual {v5 v3 v4} com/facebook/h/f/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v3)
+  (invoke-direct {v2 v0 v1 v3} com/facebook/h/a/<init> [object com/facebook/prefs/shared/d] [object com/facebook/config/a/a] [object javax/inject/a] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/h/f])
+  (line 33)
+  (invoke-virtual {v1} com/facebook/h/f/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

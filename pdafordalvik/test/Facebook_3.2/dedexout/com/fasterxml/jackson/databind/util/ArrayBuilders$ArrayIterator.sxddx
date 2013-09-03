@@ -1,0 +1,88 @@
+(class (attrs final ) com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator
+ (super java/lang/Object)
+ (source "ArrayBuilders.java")
+ (implements java/lang/Iterable)
+ (implements java/util/Iterator)
+
+ (field (attrs private final ) _array [array [object java/lang/Object]] )
+ (field (attrs private ) _index int )
+
+(method (attrs public ) <init>([array [object java/lang/Object]] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TT;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 286)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 287)
+  (iput-object v2 v1 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._array [array [object java/lang/Object]])
+  (line 288)
+  (const/4 v0 0)
+  (iput v0 v1 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._index int)
+  (line 289)
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator])
+  (line 293)
+  (iget v0 v2 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._index int)
+  (iget-object v1 v2 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._array [array [object java/lang/Object]])
+  (array-length v1 v1)
+  (if-ge v0 v1 le5512)
+  (const/4 v0 1)
+  (label le5510)
+  (return v0)
+  (label le5512)
+  (const/4 v0 0)
+  (goto le5510)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TT;>;")
+  )
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator])
+  (line 312)
+  (return-object v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator])
+  (line 299)
+  (iget v0 v3 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._index int)
+  (iget-object v1 v3 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._array [array [object java/lang/Object]])
+  (array-length v1 v1)
+  (if-lt v0 v1 le5556)
+  (line 300)
+  (new-instance v0 java/util/NoSuchElementException)
+  (invoke-direct {v0} java/util/NoSuchElementException/<init> )
+  (throw v0)
+  (label le5556)
+  (line 302)
+  (iget-object v0 v3 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._array [array [object java/lang/Object]])
+  (iget v1 v3 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._index int)
+  (add-int/lit8 v2 v1 1)
+  (iput v2 v3 com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator._index int)
+  (aget-object v0 v0 v1)
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$ArrayIterator])
+  (line 307)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+)

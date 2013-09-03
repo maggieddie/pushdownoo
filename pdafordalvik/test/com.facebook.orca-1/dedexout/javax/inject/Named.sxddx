@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/inject/Named
+ (super java/lang/Object)
+ (source "Named.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,78 @@
+(class (attrs public abstract ) com/google/common/a/o
+ (super com/google/common/a/mh)
+ (source "AbstractLinkedIterator.java")
+
+ (field (attrs private ) a [object java/lang/Object] )
+
+(method (attrs protected ) <init>([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/o])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 45)
+  (invoke-direct {v0} com/google/common/a/mh/<init> )
+  (line 46)
+  (iput-object v1 v0 com/google/common/a/o.a [object java/lang/Object])
+  (line 47)
+  (return-void )
+ )
+
+(method (attrs protected abstract ) a([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)TT;")
+  )
+)
+
+(method (attrs public final ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/o])
+  (line 59)
+  (iget-object v0 v1 com/google/common/a/o.a [object java/lang/Object])
+  (if-eqz v0 l396cd0)
+  (const/4 v0 1)
+  (label l396cce)
+  (return v0)
+  (label l396cd0)
+  (const/4 v0 0)
+  (goto l396cce)
+)
+
+(method (attrs public final ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/o])
+  (catchall  java/lang/Exception from l396cfc to l396d00 using l396d12)
+  (line 64)
+  (invoke-virtual {v2} com/google/common/a/o/hasNext )
+  (move-result v0)
+  (if-nez v0 l396cfc)
+  (line 65)
+  (new-instance v0 java/util/NoSuchElementException)
+  (invoke-direct {v0} java/util/NoSuchElementException/<init> )
+  (throw v0)
+  (label l396cfc)
+  (line 68)
+  (iget-object v0 v2 com/google/common/a/o.a [object java/lang/Object])
+  (label l396d00)
+  (line 70)
+  (iget-object v1 v2 com/google/common/a/o.a [object java/lang/Object])
+  (invoke-virtual {v2 v1} com/google/common/a/o/a [object java/lang/Object] )
+  (move-result-object v1)
+  (iput-object v1 v2 com/google/common/a/o.a [object java/lang/Object])
+  (return-object v0)
+  (label l396d12)
+  (move-exception v0)
+  (iget-object v1 v2 com/google/common/a/o.a [object java/lang/Object])
+  (invoke-virtual {v2 v1} com/google/common/a/o/a [object java/lang/Object] )
+  (move-result-object v1)
+  (iput-object v1 v2 com/google/common/a/o.a [object java/lang/Object])
+  (throw v0)
+)
+
+)

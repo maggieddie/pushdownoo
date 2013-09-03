@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="logger_levels">
+        <item>Default</item>
+        <item>Verbose</item>
+        <item>Debug</item>
+        <item>Info</item>
+        <item>Warn</item>
+        <item>Error</item>
+        <item>Assert</item>
+    </string-array>
+    <string-array name="logger_levels_values">
+        <item>-1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="web_server_tiers">
+        <item>Default</item>
+        <item>www.intern.facebook.com (ssl disabled)</item>
+        <item>www.dev.facebook.com (ssl disabled)</item>
+        <item>Sandbox (ssl disabled)</item>
+    </string-array>
+    <string-array name="web_server_tiers_values">
+        <item>default</item>
+        <item>intern</item>
+        <item>dev</item>
+        <item>sandbox</item>
+    </string-array>
+    <string-array name="mqtt_server_tiers">
+        <item>Default</item>
+        <item>Sandbox (ssl disabled)</item>
+    </string-array>
+    <string-array name="mqtt_server_tiers_values">
+        <item>default</item>
+        <item>sandbox</item>
+    </string-array>
+    <string-array name="upload_contacts_batch_sizes">
+        <item>Default</item>
+        <item>100</item>
+        <item>50</item>
+        <item>25</item>
+        <item>10</item>
+        <item>5</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="upload_contacts_batch_size_values">
+        <item>-1</item>
+        <item>100</item>
+        <item>50</item>
+        <item>25</item>
+        <item>10</item>
+        <item>5</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="voip_audio_modes">
+        <item>No override</item>
+        <item>NORMAL</item>
+        <item>IN_CALL</item>
+        <item>IN_COMMUNICATION</item>
+        <item>RINGTONE</item>
+    </string-array>
+    <string-array name="voip_audio_modes_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="voip_stream_types">
+        <item>No override</item>
+        <item>VOICE_CALL</item>
+        <item>MUSIC</item>
+        <item>ALARM</item>
+        <item>DTMF</item>
+        <item>NOTIFICATION</item>
+        <item>RING</item>
+        <item>SYSTEM</item>
+    </string-array>
+    <string-array name="voip_stream_types_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>3</item>
+        <item>4</item>
+        <item>8</item>
+        <item>5</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+</resources>

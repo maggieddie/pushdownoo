@@ -1,0 +1,178 @@
+(class (attrs ) android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl
+ (super java/lang/Object)
+ (source "SearchViewCompat.java")
+ (implements android/support/v4/widget/SearchViewCompat$SearchViewCompatImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  (line 53)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getQuery([object android/view/View] )[object java/lang/CharSequence]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 92)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) isIconified([object android/view/View] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 109)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) isQueryRefinementEnabled([object android/view/View] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 127)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) isSubmitButtonEnabled([object android/view/View] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 118)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) newOnCloseListener([object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat])
+  (line 83)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) newOnQueryTextListener([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat])
+  (line 74)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) newSearchView([object android/content/Context] )[object android/view/View]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 57)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) setIconified([object android/view/View] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (boolean)
+  (line 105)
+  (return-void )
+)
+
+(method (attrs public ) setImeOptions([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) setInputType([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 70)
+  (return-void )
+)
+
+(method (attrs public ) setMaxWidth([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 132)
+  (return-void )
+)
+
+(method (attrs public ) setOnCloseListener([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 88)
+  (return-void )
+)
+
+(method (attrs public ) setOnQueryTextListener([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 79)
+  (return-void )
+)
+
+(method (attrs public ) setQuery([object android/view/View] [object java/lang/CharSequence] boolean )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object java/lang/CharSequence])
+  ; parameter[2] : v3 (boolean)
+  (line 97)
+  (return-void )
+)
+
+(method (attrs public ) setQueryHint([object android/view/View] [object java/lang/CharSequence] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object java/lang/CharSequence])
+  (line 101)
+  (return-void )
+)
+
+(method (attrs public ) setQueryRefinementEnabled([object android/view/View] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (boolean)
+  (line 123)
+  (return-void )
+)
+
+(method (attrs public ) setSearchableInfo([object android/view/View] [object android/content/ComponentName] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object android/content/ComponentName])
+  (line 62)
+  (return-void )
+)
+
+(method (attrs public ) setSubmitButtonEnabled([object android/view/View] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (boolean)
+  (line 114)
+  (return-void )
+)
+
+)

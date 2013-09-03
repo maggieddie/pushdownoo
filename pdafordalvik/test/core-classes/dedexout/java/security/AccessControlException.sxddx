@@ -23,7 +23,7 @@
   (line 60)
   (invoke-direct {v0 v1} java/lang/SecurityException/<init> [object java/lang/String] )
   (line 61)
-  (iput-object-quick v2 v0 java/security/AccessControlException.perm [object java/security/Permission])
+  (iput-object-quick v2 v0 )
   (line 62)
   (return-void )
  )
@@ -32,7 +32,7 @@
   (limit registers 2)
   ; this: v1 ([object java/security/AccessControlException])
   (line 72)
-  (iget-object-quick v0 v1 java/security/AccessControlException.perm [object java/security/Permission])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

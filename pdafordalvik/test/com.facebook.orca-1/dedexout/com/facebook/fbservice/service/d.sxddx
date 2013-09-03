@@ -1,0 +1,28 @@
+(class (attrs public ) com/facebook/fbservice/service/d
+ (super java/lang/Object)
+ (source "BlueServiceGatekeeperSetProvider.java")
+ (implements com/facebook/f/f)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/fbservice/service/d])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/fi]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/fi"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/fbservice/service/d])
+  (line 16)
+  (const-string v0 "android_soft_error_on_orca_service_exceptions")
+  (invoke-static {v0} com/google/common/a/fi/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

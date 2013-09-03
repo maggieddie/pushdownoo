@@ -437,7 +437,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     	Map(curClsName -> (directFields.size, resCount))
     }else Map()
   }
-  
+ 
   
   
   /**
@@ -469,7 +469,18 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       }  
     }
     	buffer.append("the total average: " + avg/nonNullMap.size)
+    	
     }
+    
+    buffer.append("\n Any places of null ref during constructions? \n ")
+    	
+    	// for null ref during construction
+    	Thread.currentThread().asInstanceOf[AnalysisHelperThread].nullRefMap.foreach{
+    	  case (st, cnt) =>{
+    	    if(cnt > 0)
+    	      buffer.append(st.clsPath + ":" + st.methPath + st.lineNumber + "\n" + st + "\n")
+    	  }
+    	}
     
     
 
@@ -488,6 +499,52 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
         subfolder.createFile(failIfExists = false)
       }*/
       val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "notnull-") // or use opts.statsFilePath
+      val file = new File(path)
+      if (!file.exists()) {
+        file.createNewFile()
+      }
+      val writer = new FileWriter(file)
+
+      writer.write(buffer.toString)
+      writer.close()
+
+      println("Not null statistics dumped into: " + path)
+
+      path
+    
+  }
+  
+    def dumpForIntentInput(opts: AIOptions): String = {
+    import java.io._
+   
+    val buffer = new StringBuffer()
+  
+       Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foreach{
+        case((clsName, entryPoint), fieldMap) => {
+         
+           buffer.append("Class: "+ clsName + "\n" + "Entry Point: " + entryPoint)
+           buffer.append("\n")
+           fieldMap.foreach{
+             case (op, vals) => {
+                buffer.append("---Op: "+ op + "\n---" + "(Type, Set[String])\n")
+                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n" ))//buffer.append(v + "\n" ))
+                buffer.append("\n")
+             }
+           }
+        }
+      }
+    
+    
+
+    val stasticsDir = opts.statsDirName//opts.apkProjDir + File.separator + statisticsDirName
+    
+      val statDir = new Directory(new File(stasticsDir))
+      if (!statDir.exists) {
+        statDir.createDirectory(force = true)
+        statDir.createFile(failIfExists = false)
+      }
+    
+      val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "forIntentFuzzer-") // or use opts.statsFilePath
       val file = new File(path)
       if (!file.exists()) {
         file.createNewFile()
@@ -796,10 +853,6 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
               // compute for the current one
         	           val curClsSingleMap =  easyComputeNonNullAfterLinkedConstr (clsName, monoStore, clsDef.getDirectObjFields)
         	          val (total, nonCnt) =  curClsSingleMap(clsName)
-        	          if(clsName == "java/util/WeakHashMap"){
-        	            clsDef.getDirectObjFields.foreach(println)
-        	            println("NonNull #", nonCnt)
-        	          }
         	          listOfNonNullPercentage =  percent(nonCnt, total) :: listOfNonNullPercentage
         	            
         	           resultDSG :: res2  
@@ -870,6 +923,10 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     if(opts.doNotNullCheck) {
       
        dumpNonNullStatistic(opts, nonNullMap, avgNonNullMap)}
+    if(opts.forIntentFuzzer)
+    {
+      dumpForIntentInput(opts)
+    }
 
     val secondTime = (new java.util.Date()).getTime
     val delta = secondTime - firstTime

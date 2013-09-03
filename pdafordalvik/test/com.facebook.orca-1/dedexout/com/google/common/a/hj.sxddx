@@ -1,0 +1,50 @@
+(class (attrs ) com/google/common/a/hj
+ (super java/util/AbstractSet)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object com/google/common/a/hh] )
+
+(method (attrs ) <init>([object com/google/common/a/hh] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/hj])
+  ; parameter[0] : v1 ([object com/google/common/a/hh])
+  (line 783)
+  (iput-object v1 v0 com/google/common/a/hj.a [object com/google/common/a/hh])
+  (invoke-direct {v0} java/util/AbstractSet/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<"  "Lcom/google/common/a/jg"  "<TK;>;>;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/a/hj])
+  (line 789)
+  (new-instance v0 com/google/common/a/hg)
+  (iget-object v1 v3 com/google/common/a/hj.a [object com/google/common/a/hh])
+  (iget-object v1 v1 com/google/common/a/hh.a [object com/google/common/a/gw])
+  (const/4 v2 0)
+  (invoke-direct {v0 v1 v2} com/google/common/a/hg/<init> [object com/google/common/a/gw] [object com/google/common/a/gx] )
+  (line 790)
+  (new-instance v1 com/google/common/a/hk)
+  (invoke-direct {v1 v3 v0} com/google/common/a/hk/<init> [object com/google/common/a/hj] [object java/util/Iterator] )
+  (return-object v1)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/hj])
+  (line 785)
+  (iget-object v0 v1 com/google/common/a/hj.a [object com/google/common/a/hh])
+  (iget-object v0 v0 com/google/common/a/hh.a [object com/google/common/a/gw])
+  (invoke-static {v0} com/google/common/a/gw/d [object com/google/common/a/gw] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/google/common/a/jf/f )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

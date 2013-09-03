@@ -29,7 +29,7 @@
   (throw v0)
   (label l15821a)
   (line 45)
-  (iput-object-quick v3 v2 javax/crypto/spec/PSource.pSrcName [object java/lang/String])
+  (iput-object-quick v3 v2 )
   (line 46)
   (return-void )
  )
@@ -38,7 +38,7 @@
   (limit registers 2)
   ; this: v1 ([object javax/crypto/spec/PSource])
   (line 54)
-  (iget-object-quick v0 v1 javax/crypto/spec/PSource.pSrcName [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

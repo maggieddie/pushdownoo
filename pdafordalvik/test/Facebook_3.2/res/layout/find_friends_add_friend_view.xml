@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/find_friends_candidate_avatar" android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:cropToPadding="true" />
+    <LinearLayout android:id="@id/friend_candidate_unchecked" android:background="@color/find_friends_add_friend_black" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/plus" android:layout_width="32.0dip" android:layout_height="fill_parent" android:src="@drawable/find_friends_add_icon" android:scaleType="center" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/friend_candidate_checked" android:background="@color/find_friends_add_friend_green" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/checkmark" android:layout_width="32.0dip" android:layout_height="fill_parent" android:src="@drawable/find_friends_checkmark_icon" android:scaleType="center" />
+    </LinearLayout>
+    <TextView android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/friend_candidate_name" android:paddingLeft="32.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:maxLines="1" android:layout_alignParentBottom="true" />
+    <ProgressBar android:gravity="center" android:id="@id/find_friends_candidate_avatar_progress" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:alpha="1.0" style="@style/Theme.Facebook" />
+</RelativeLayout>

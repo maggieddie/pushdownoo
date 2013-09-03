@@ -1,0 +1,58 @@
+(class (attrs ) com/facebook/bugreporter/activity/tasklist/o
+ (super com/facebook/inject/d)
+ (source "TaskListModule.java")
+
+ (field (attrs final ) a [object com/facebook/bugreporter/activity/tasklist/j] )
+
+(method (attrs private ) <init>([object com/facebook/bugreporter/activity/tasklist/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/bugreporter/activity/tasklist/o])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/activity/tasklist/j])
+  (line 29)
+  (iput-object v1 v0 com/facebook/bugreporter/activity/tasklist/o.a [object com/facebook/bugreporter/activity/tasklist/j])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/bugreporter/activity/tasklist/j] [object com/facebook/bugreporter/activity/tasklist/k] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/bugreporter/activity/tasklist/o])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/activity/tasklist/j])
+  ; parameter[1] : v2 ([object com/facebook/bugreporter/activity/tasklist/k])
+  (line 29)
+  (invoke-direct {v0 v1} com/facebook/bugreporter/activity/tasklist/o/<init> [object com/facebook/bugreporter/activity/tasklist/j] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/bugreporter/activity/tasklist/c]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/bugreporter/activity/tasklist/o])
+  (line 33)
+  (new-instance v3 com/facebook/bugreporter/activity/tasklist/c)
+  (const-class v0 com/facebook/http/protocol/aq)
+  (invoke-virtual {v5 v0} com/facebook/bugreporter/activity/tasklist/o/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/http/protocol/aq])
+  (const-class v1 com/facebook/bugreporter/activity/tasklist/e)
+  (invoke-virtual {v5 v1} com/facebook/bugreporter/activity/tasklist/o/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/bugreporter/activity/tasklist/e])
+  (const-class v2 com/google/common/d/a/u)
+  (const-class v4 com/facebook/common/executors/DefaultExecutorService)
+  (invoke-virtual {v5 v2 v4} com/facebook/bugreporter/activity/tasklist/o/a [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/google/common/d/a/u])
+  (invoke-direct {v3 v0 v1 v2} com/facebook/bugreporter/activity/tasklist/c/<init> [object com/facebook/http/protocol/aq] [object com/facebook/bugreporter/activity/tasklist/e] [object com/google/common/d/a/u] )
+  (return-object v3)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/bugreporter/activity/tasklist/o])
+  (line 29)
+  (invoke-virtual {v1} com/facebook/bugreporter/activity/tasklist/o/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

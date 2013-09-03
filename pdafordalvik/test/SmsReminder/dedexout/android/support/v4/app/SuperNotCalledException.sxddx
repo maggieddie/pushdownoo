@@ -1,0 +1,16 @@
+(class (attrs final ) android/support/v4/app/SuperNotCalledException
+ (super android/util/AndroidRuntimeException)
+ (source "SuperNotCalledException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/SuperNotCalledException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 23)
+  (invoke-direct {v0 v1} android/util/AndroidRuntimeException/<init> [object java/lang/String] )
+  (line 24)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/standard_14pt_text_size" android:textColor="@color/product_name_text" android:textColorLink="@color/link_text" android:gravity="center_vertical" android:id="@id/form_header" android:paddingLeft="@dimen/form_item_horizontal_padding" android:paddingRight="@dimen/form_item_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:text="@string/alcohol_form_header" />
+    <include layout="@layout/section_divider" />
+    <include android:id="@id/loading_view" layout="@layout/loading_view" />
+    <ScrollView android:id="@id/layout_scroll" android:background="@color/generic_white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/form_item_horizontal_padding" android:paddingRight="@dimen/form_item_horizontal_padding" android:layout_width="fill_parent" android:layout_height="0.0px">
+            <TextView android:textSize="@dimen/standard_12pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_item_vertical_padding" android:text="@string/alcohol_age_section_header" />
+            <View android:background="@color/table_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="8.0dip" />
+            <TextView android:textSize="@dimen/standard_16pt_text_size" android:textColor="@color/product_name_text" android:id="@id/birthdate_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_item_vertical_padding" android:layout_marginBottom="@dimen/form_item_vertical_padding" android:text="@string/alcohol_birthdate_sentence" />
+            <TextView android:textSize="@dimen/standard_12pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_item_vertical_padding" android:text="@string/alcohol_address_section_header" />
+            <TextView android:textSize="@dimen/standard_12pt_text_size" android:textColor="@color/product_detail_text" android:id="@id/address_privacy_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/alcohol_info_privacy_text" />
+            <View android:background="@color/table_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="8.0dip" />
+            <RadioGroup android:orientation="vertical" android:id="@id/address_selection_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/standard_16pt_text_size" android:textColor="@color/product_name_text" android:gravity="center_vertical" android:id="@id/add_new_address" android:background="@drawable/standard_white_bg_with_hit" android:paddingTop="@dimen/form_item_vertical_padding" android:paddingBottom="@dimen/form_item_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_new_address" />
+            <include android:id="@id/add_new_address_divider" layout="@layout/section_divider" />
+            <include layout="@layout/address_entry_form" />
+            <TextView android:textSize="@dimen/standard_12pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_item_vertical_padding_and_half" android:text="@string/alcohol_help_section_header" />
+            <View android:background="@color/table_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="8.0dip" />
+            <TextView android:textSize="@dimen/standard_16pt_text_size" android:textColor="@color/product_name_text" android:gravity="center_vertical" android:id="@id/help_text" android:background="@drawable/standard_white_bg_with_hit" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:text="@string/alcohol_help_text" />
+            <View android:background="@color/section_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="4.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

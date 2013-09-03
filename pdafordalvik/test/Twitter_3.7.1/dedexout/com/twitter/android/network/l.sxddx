@@ -1,0 +1,40 @@
+(class (attrs public final ) com/twitter/android/network/l
+ (super com/twitter/android/network/d)
+ (source "Twttr")
+
+ (field (attrs private final ) f [object org/apache/http/client/methods/HttpPost] )
+ (field (attrs private final ) g [object com/twitter/android/network/a] )
+
+(method (attrs public ) <init>([object com/twitter/android/network/e] [object org/apache/http/client/methods/HttpPost] [object com/twitter/android/network/a] [object com/twitter/android/network/g] )void
+  (limit registers 5)
+  ; this: v0 ([object com/twitter/android/network/l])
+  ; parameter[0] : v1 ([object com/twitter/android/network/e])
+  ; parameter[1] : v2 ([object org/apache/http/client/methods/HttpPost])
+  ; parameter[2] : v3 ([object com/twitter/android/network/a])
+  ; parameter[3] : v4 ([object com/twitter/android/network/g])
+  (line 18)
+  (invoke-direct {v0 v1 v2 v4} com/twitter/android/network/d/<init> [object com/twitter/android/network/e] [object org/apache/http/client/methods/HttpRequestBase] [object com/twitter/android/network/g] )
+  (line 19)
+  (iput-object v2 v0 com/twitter/android/network/l.f [object org/apache/http/client/methods/HttpPost])
+  (line 20)
+  (iput-object v3 v0 com/twitter/android/network/l.g [object com/twitter/android/network/a])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs protected final ) a(long )void
+  (limit registers 6)
+  ; this: v3 ([object com/twitter/android/network/l])
+  ; parameter[0] : v4 (long)
+  (line 25)
+  (iget-object v0 v3 com/twitter/android/network/l.g [object com/twitter/android/network/a])
+  (iget-object v1 v3 com/twitter/android/network/l.f [object org/apache/http/client/methods/HttpPost])
+  (iget-object v2 v3 com/twitter/android/network/l.f [object org/apache/http/client/methods/HttpPost])
+  (invoke-virtual {v2} org/apache/http/client/methods/HttpPost/getEntity )
+  (move-result-object v2)
+  (invoke-virtual {v0 v1 v4 v5 v2} com/twitter/android/network/a/a [object org/apache/http/client/methods/HttpRequestBase] long [object org/apache/http/HttpEntity] )
+  (line 26)
+  (return-void )
+)
+
+)

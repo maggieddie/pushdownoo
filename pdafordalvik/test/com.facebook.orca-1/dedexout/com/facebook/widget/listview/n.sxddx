@@ -1,0 +1,47 @@
+(class (attrs public ) com/facebook/widget/listview/n
+ (super java/lang/Object)
+ (source "ScrollState.java")
+
+ (field (attrs private final ) a [object com/facebook/widget/listview/o] )
+ (field (attrs private final ) b [object com/google/common/a/ev] )
+
+(method (attrs public ) <init>([object com/facebook/widget/listview/o] [object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/widget/listview/o;"  "Ljava/util/Map"  "<"  "Ljava/lang/Long;"  "Ljava/lang/Integer;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/widget/listview/n])
+  ; parameter[0] : v2 ([object com/facebook/widget/listview/o])
+  ; parameter[1] : v3 ([object java/util/Map])
+  (line 28)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 29)
+  (iput-object v2 v1 com/facebook/widget/listview/n.a [object com/facebook/widget/listview/o])
+  (line 30)
+  (invoke-static {v3} com/google/common/a/ev/a [object java/util/Map] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/widget/listview/n.b [object com/google/common/a/ev])
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/widget/listview/o]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/listview/n])
+  (line 39)
+  (iget-object v0 v1 com/facebook/widget/listview/n.a [object com/facebook/widget/listview/o])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object com/google/common/a/ev]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/ev"  "<"  "Ljava/lang/Long;"  "Ljava/lang/Integer;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/listview/n])
+  (line 49)
+  (iget-object v0 v1 com/facebook/widget/listview/n.b [object com/google/common/a/ev])
+  (return-object v0)
+)
+
+)

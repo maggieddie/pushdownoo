@@ -1,0 +1,73 @@
+(class (attrs public ) com/facebook/http/protocol/l
+ (super java/lang/Object)
+ (source "ApiMethodRunnerParams.java")
+
+ (field (attrs private ) a [object com/facebook/http/protocol/h] )
+ (field (attrs private ) b [object org/apache/http/params/HttpParams] )
+ (field (attrs private ) c [object com/facebook/http/protocol/m] )
+ (field (attrs private ) d [object com/facebook/http/protocol/ah] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/l])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 41)
+  (sget-object v0 com/facebook/http/protocol/m.DEFAULT [object com/facebook/http/protocol/m])
+  (iput-object v0 v1 com/facebook/http/protocol/l.c [object com/facebook/http/protocol/m])
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/http/protocol/h]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/l])
+  (line 52)
+  (iget-object v0 v1 com/facebook/http/protocol/l.a [object com/facebook/http/protocol/h])
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/http/protocol/h] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/protocol/l])
+  ; parameter[0] : v1 ([object com/facebook/http/protocol/h])
+  (line 63)
+  (iput-object v1 v0 com/facebook/http/protocol/l.a [object com/facebook/http/protocol/h])
+  (line 64)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/http/protocol/m] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/protocol/l])
+  ; parameter[0] : v1 ([object com/facebook/http/protocol/m])
+  (line 93)
+  (iput-object v1 v0 com/facebook/http/protocol/l.c [object com/facebook/http/protocol/m])
+  (line 94)
+  (return-void )
+)
+
+(method (attrs public ) b()[object org/apache/http/params/HttpParams]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/l])
+  (line 74)
+  (iget-object v0 v1 com/facebook/http/protocol/l.b [object org/apache/http/params/HttpParams])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object com/facebook/http/protocol/m]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/l])
+  (line 101)
+  (iget-object v0 v1 com/facebook/http/protocol/l.c [object com/facebook/http/protocol/m])
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object com/facebook/http/protocol/ah]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/l])
+  (line 109)
+  (iget-object v0 v1 com/facebook/http/protocol/l.d [object com/facebook/http/protocol/ah])
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,15 @@
+(class (attrs public ) org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException
+ (super org/andengine/util/exception/AndEngineRuntimeException)
+ (source "IModifier.java")
+
+ (field (attrs private static final ) serialVersionUID long -1090788868); 0xbefbe1fc )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/util/modifier/IModifier$DeepCopyNotSupportedException])
+  (line 73)
+  (invoke-direct {v0} org/andengine/util/exception/AndEngineRuntimeException/<init> )
+  (return-void )
+ )
+
+)

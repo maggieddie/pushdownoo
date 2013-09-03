@@ -1,0 +1,35 @@
+(class (attrs public ) com/facebook/mqtt/messages/s
+ (super java/lang/Object)
+ (source "SubscribePayload.java")
+
+ (field (attrs private final ) a [object com/google/common/a/es] )
+
+(method (attrs public ) <init>([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lcom/facebook/mqtt/messages/SubscribeTopic;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/mqtt/messages/s])
+  ; parameter[0] : v2 ([object java/util/List])
+  (line 17)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (invoke-static {v2} com/google/common/a/es/a [object java/util/Collection] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/mqtt/messages/s.a [object com/google/common/a/es])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/mqtt/messages/SubscribeTopic;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/s])
+  (line 22)
+  (iget-object v0 v1 com/facebook/mqtt/messages/s.a [object com/google/common/a/es])
+  (return-object v0)
+)
+
+)

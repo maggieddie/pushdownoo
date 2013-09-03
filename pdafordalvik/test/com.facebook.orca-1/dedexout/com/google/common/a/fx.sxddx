@@ -1,0 +1,14 @@
+(class (attrs abstract ) com/google/common/a/fx
+ (super com/google/common/a/ev)
+ (source "ImmutableSortedMapFauxverideShim.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/fx])
+  (line 29)
+  (invoke-direct {v0} com/google/common/a/ev/<init> )
+  (return-void )
+ )
+
+)

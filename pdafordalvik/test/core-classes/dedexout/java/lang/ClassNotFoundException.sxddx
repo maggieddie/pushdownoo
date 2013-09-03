@@ -35,7 +35,7 @@
   (line 59)
   (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
   (line 60)
-  (iput-object-quick v2 v0 java/lang/ClassNotFoundException.ex [object java/lang/Throwable])
+  (iput-object-quick v2 v0 )
   (line 61)
   (return-void )
  )
@@ -44,7 +44,7 @@
   (limit registers 2)
   ; this: v1 ([object java/lang/ClassNotFoundException])
   (line 80)
-  (iget-object-quick v0 v1 java/lang/ClassNotFoundException.ex [object java/lang/Throwable])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -52,7 +52,7 @@
   (limit registers 2)
   ; this: v1 ([object java/lang/ClassNotFoundException])
   (line 69)
-  (iget-object-quick v0 v1 java/lang/ClassNotFoundException.ex [object java/lang/Throwable])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

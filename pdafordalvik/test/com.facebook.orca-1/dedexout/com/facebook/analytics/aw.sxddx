@@ -1,0 +1,29 @@
+(class (attrs public ) com/facebook/analytics/aw
+ (super com/facebook/inject/c)
+ (source "AnalyticsModule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/analytics/aw])
+  (line 13)
+  (invoke-direct {v0} com/facebook/inject/c/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/aw])
+  (line 17)
+  (new-instance v0 com/facebook/analytics/ay)
+  (invoke-direct {v0} com/facebook/analytics/ay/<init> )
+  (invoke-virtual {v1 v0} com/facebook/analytics/aw/a [object com/facebook/inject/ag] )
+  (line 18)
+  (new-instance v0 com/facebook/analytics/f)
+  (invoke-direct {v0} com/facebook/analytics/f/<init> )
+  (invoke-virtual {v1 v0} com/facebook/analytics/aw/a [object com/facebook/inject/ag] )
+  (line 19)
+  (return-void )
+)
+
+)

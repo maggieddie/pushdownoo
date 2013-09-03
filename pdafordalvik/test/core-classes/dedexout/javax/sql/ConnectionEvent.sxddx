@@ -24,7 +24,7 @@
   (line 60)
   (invoke-direct {v0 v1} java/util/EventObject/<init> [object java/lang/Object] )
   (line 61)
-  (iput-object-quick v2 v0 javax/sql/ConnectionEvent.ex [object java/sql/SQLException])
+  (iput-object-quick v2 v0 )
   (line 62)
   (return-void )
  )
@@ -33,7 +33,7 @@
   (limit registers 2)
   ; this: v1 ([object javax/sql/ConnectionEvent])
   (line 72)
-  (iget-object-quick v0 v1 javax/sql/ConnectionEvent.ex [object java/sql/SQLException])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

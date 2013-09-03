@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/title_layout" />
+        <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <com.facebook.widget.ExpandablePhoto android:id="@id/feed_expandable_photo_animation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.photos.photogallery.GalleryLauncher android:id="@id/gallery_launcher" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

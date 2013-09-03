@@ -1,0 +1,80 @@
+(class (attrs public abstract ) com/facebook/config/server/h
+ (super java/lang/Object)
+ (source "DelegatingPlatformAppHttpConfig.java")
+ (implements com/facebook/http/c/i)
+
+ (field (attrs private final ) a [object com/facebook/http/c/i] )
+
+(method (attrs public ) <init>([object com/facebook/http/c/i] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/config/server/h])
+  ; parameter[0] : v1 ([object com/facebook/http/c/i])
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 18)
+  (iput-object v1 v0 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object android/net/Uri$Builder]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 23)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object android/net/Uri$Builder]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 28)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object android/net/Uri$Builder]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 38)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object android/net/Uri$Builder]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 33)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/d )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) e()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 43)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/e )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) f()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/config/server/h])
+  (line 48)
+  (iget-object v0 v1 com/facebook/config/server/h.a [object com/facebook/http/c/i])
+  (invoke-interface {v0} com/facebook/http/c/i/f )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

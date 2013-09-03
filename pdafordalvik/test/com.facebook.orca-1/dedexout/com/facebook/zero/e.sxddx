@@ -1,0 +1,47 @@
+(class (attrs ) com/facebook/zero/e
+ (super com/facebook/inject/d)
+ (source "ZeroModule.java")
+
+ (field (attrs final ) a [object com/facebook/zero/c] )
+
+(method (attrs private ) <init>([object com/facebook/zero/c] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/zero/e])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  (line 178)
+  (iput-object v1 v0 com/facebook/zero/e.a [object com/facebook/zero/c])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/zero/c] [object com/facebook/zero/d] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/zero/e])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  ; parameter[1] : v2 ([object com/facebook/zero/d])
+  (line 178)
+  (invoke-direct {v0 v1} com/facebook/zero/e/<init> [object com/facebook/zero/c] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/fbservice/service/e]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/e])
+  (line 182)
+  (const-class v0 com/facebook/zero/protocol/c)
+  (invoke-virtual {v1 v0} com/facebook/zero/e/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/fbservice/service/e])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/e])
+  (line 178)
+  (invoke-virtual {v1} com/facebook/zero/e/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

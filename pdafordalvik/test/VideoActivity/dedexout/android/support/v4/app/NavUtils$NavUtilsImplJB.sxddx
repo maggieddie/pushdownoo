@@ -1,0 +1,81 @@
+(class (attrs ) android/support/v4/app/NavUtils$NavUtilsImplJB
+ (super android/support/v4/app/NavUtils$NavUtilsImplBase)
+ (source "NavUtils.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  (line 95)
+  (invoke-direct {v0} android/support/v4/app/NavUtils$NavUtilsImplBase/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getParentActivityIntent([object android/app/Activity] )[object android/content/Intent]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  ; parameter[0] : v2 ([object android/app/Activity])
+  (line 101)
+  (invoke-static {v2} android/support/v4/app/NavUtilsJB/getParentActivityIntent [object android/app/Activity] )
+  (move-result-object v0)
+  (line 102)
+  (if-nez v0 l4f874)
+  (line 103)
+  (invoke-virtual {v1 v2} android/support/v4/app/NavUtils$NavUtilsImplJB/superGetParentActivityIntent [object android/app/Activity] )
+  (move-result-object v0)
+  (label l4f874)
+  (line 105)
+  (return-object v0)
+)
+
+(method (attrs public ) getParentActivityName([object android/content/Context] [object android/content/pm/ActivityInfo] )[object java/lang/String]
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/pm/ActivityInfo])
+  (line 124)
+  (invoke-static {v3} android/support/v4/app/NavUtilsJB/getParentActivityName [object android/content/pm/ActivityInfo] )
+  (move-result-object v0)
+  (line 125)
+  (if-nez v0 l4f89c)
+  (line 126)
+  (invoke-super {v1 v2 v3} android/support/v4/app/NavUtils$NavUtilsImplBase/getParentActivityName [object android/content/Context] [object android/content/pm/ActivityInfo] )
+  (move-result-object v0)
+  (label l4f89c)
+  (line 128)
+  (return-object v0)
+)
+
+(method (attrs public ) navigateUpTo([object android/app/Activity] [object android/content/Intent] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  ; parameter[0] : v1 ([object android/app/Activity])
+  ; parameter[1] : v2 ([object android/content/Intent])
+  (line 119)
+  (invoke-static {v1 v2} android/support/v4/app/NavUtilsJB/navigateUpTo [object android/app/Activity] [object android/content/Intent] )
+  (line 120)
+  (return-void )
+)
+
+(method (attrs public ) shouldUpRecreateTask([object android/app/Activity] [object android/content/Intent] )boolean
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  ; parameter[0] : v2 ([object android/app/Activity])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 114)
+  (invoke-static {v2 v3} android/support/v4/app/NavUtilsJB/shouldUpRecreateTask [object android/app/Activity] [object android/content/Intent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs ) superGetParentActivityIntent([object android/app/Activity] )[object android/content/Intent]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/NavUtils$NavUtilsImplJB])
+  ; parameter[0] : v2 ([object android/app/Activity])
+  (line 109)
+  (invoke-super {v1 v2} android/support/v4/app/NavUtils$NavUtilsImplBase/getParentActivityIntent [object android/app/Activity] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

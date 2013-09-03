@@ -166,7 +166,7 @@
   (new-instance v0 org/bouncycastle/asn1/ASN1InputStream)
   (invoke-direct {v0 v1} org/bouncycastle/asn1/ASN1InputStream/<init> [array byte] )
   (line 90)
-  (invoke-virtual-quick {v0} org/bouncycastle/asn1/ASN1InputStream/readObject )
+  (invoke-virtual-quick {v0} vtable #0x17)
   (move-result-object v5)
   (return-object v5)
 )

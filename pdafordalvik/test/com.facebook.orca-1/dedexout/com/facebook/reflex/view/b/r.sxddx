@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) com/facebook/reflex/view/b/r
+ (super java/lang/Object)
+ (source "WidgetAwareView.java")
+
+
+(method (attrs public abstract ) d()boolean
+)
+
+(method (attrs public abstract ) e()void
+)
+
+(method (attrs public abstract ) f()[object android/view/View]
+)
+
+(method (attrs public abstract ) getBackingContent()[object com/facebook/reflex/d]
+)
+
+(method (attrs public abstract ) getBackingWidget()[object com/facebook/reflex/Widget]
+)
+
+(method (attrs public abstract ) getScrollOffsetX()int
+)
+
+(method (attrs public abstract ) getScrollOffsetY()int
+)
+
+)

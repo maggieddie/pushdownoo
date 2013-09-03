@@ -1,0 +1,22 @@
+(interface (attrs public abstract ) com/facebook/nobreak/CatchMeIfYouCan
+ (super java/lang/Object)
+ (source "CatchMeIfYouCan.java")
+ (implements java/lang/Thread$UncaughtExceptionHandler)
+
+
+(method (attrs public abstract ) a([object android/content/Context] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) a([object android/content/Intent] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/nobreak/ResetHandler] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/common/process/ProcessName] )boolean
+)
+
+(method (attrs public abstract ) b([object com/facebook/common/process/ProcessName] )void
+)
+
+)

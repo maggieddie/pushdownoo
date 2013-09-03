@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) com/facebook/webrtc/IWebrtcUiInterface
+ (super java/lang/Object)
+ (source "IWebrtcUiInterface.java")
+
+
+(method (attrs public abstract ) handleError(int )void
+)
+
+(method (attrs public abstract ) hideCallUI(int long boolean )void
+)
+
+(method (attrs public abstract ) showConnectionDetails(boolean [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) showOutdatedProtocolAlert(boolean long )void
+)
+
+(method (attrs public abstract ) switchToIncomingCallUI(long )void
+)
+
+(method (attrs public abstract ) switchToRingingUI()void
+)
+
+(method (attrs public abstract ) switchToStreamingUI()void
+)
+
+(method (attrs public abstract ) updateMuteState(boolean )void
+)
+
+)

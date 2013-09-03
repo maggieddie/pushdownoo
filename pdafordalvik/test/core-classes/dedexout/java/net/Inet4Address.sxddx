@@ -163,7 +163,7 @@
   ; this: v4 ([object java/net/Inet4Address])
   (const/4 v3 0)
   (line 140)
-  (invoke-virtual-quick {v4} java/net/Inet4Address/isMulticastAddress )
+  (invoke-virtual-quick {v4} vtable #0x17)
   (move-result v1)
   (if-nez v1 l14357e)
   (move v1 v3)

@@ -1,0 +1,45 @@
+(class (attrs final ) com/twitter/android/provider/bn
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public ) a [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/provider/bn])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 1864)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 1865)
+  (iput-object v1 v0 com/twitter/android/provider/bn.a [object java/lang/String])
+  (line 1866)
+  (return-void )
+ )
+
+(method (attrs public final ) equals([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/twitter/android/provider/bn])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 1870)
+  (check-cast v3 [object com/twitter/android/provider/bn])
+  (line 1871)
+  (iget-object v0 v2 com/twitter/android/provider/bn.a [object java/lang/String])
+  (iget-object v1 v3 com/twitter/android/provider/bn.a [object java/lang/String])
+  (invoke-virtual {v0 v1} java/lang/String/equalsIgnoreCase [object java/lang/String] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public final ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/provider/bn])
+  (line 1876)
+  (iget-object v0 v1 com/twitter/android/provider/bn.a [object java/lang/String])
+  (invoke-virtual {v0} java/lang/String/toLowerCase )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/String/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+)

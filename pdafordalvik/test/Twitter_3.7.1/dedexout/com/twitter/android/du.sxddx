@@ -1,0 +1,31 @@
+(class (attrs public final ) com/twitter/android/du
+ (super com/twitter/android/dw)
+ (source "Twttr")
+
+ (field (attrs ) a [object android/location/Location] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/twitter/android/du])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (const/4 v0 0)
+  (line 100)
+  (invoke-direct {v1 v2 v0 v0} com/twitter/android/dw/<init> [object java/lang/String] int int )
+  (line 101)
+  (return-void )
+ )
+
+(method (attrs public final ) a([object android/location/Location] )void
+  (limit registers 3)
+  ; this: v1 ([object com/twitter/android/du])
+  ; parameter[0] : v2 ([object android/location/Location])
+  (line 107)
+  (iput-object v2 v1 com/twitter/android/du.a [object android/location/Location])
+  (line 109)
+  (const/4 v0 0)
+  (iput-object v0 v1 com/twitter/android/du.l [object java/lang/String])
+  (line 110)
+  (return-void )
+)
+
+)

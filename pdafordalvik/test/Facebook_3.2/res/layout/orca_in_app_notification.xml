@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/orca_in_app_notification_background" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.user.tiles.UserTileView android:id="@id/notification_user_tile" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" orca:tileSize="34.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/notification_dismiss_button" android:layout_toRightOf="@id/notification_user_tile" android:layout_centerInParent="true">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/notification_title" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/in_app_notification_font_size_dp" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/notification_snippet" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <ImageButton android:id="@id/notification_dismiss_button" android:background="@drawable/notif_x" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="8.0dip" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:background="#ff6b6b6b" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" android:layout_alignParentTop="true" />
+    <View android:background="#ff6b6b6b" android:layout_width="@dimen/divider_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <View android:background="#ff101010" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" android:layout_alignParentBottom="true" />
+</RelativeLayout>

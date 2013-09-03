@@ -1,0 +1,23 @@
+(interface (attrs public abstract ) com/google/common/a/av
+ (super java/lang/Object)
+ (source "BiMap.java")
+ (implements java/util/Map)
+
+
+(method (attrs public abstract ) b()[object com/google/common/a/av]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/av"  "<TV;TK;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) put([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+)
+
+)

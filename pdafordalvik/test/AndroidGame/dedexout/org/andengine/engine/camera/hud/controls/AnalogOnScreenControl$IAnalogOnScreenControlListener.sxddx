@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/andengine/engine/camera/hud/controls/AnalogOnScreenControl$IAnalogOnScreenControlListener
+ (super java/lang/Object)
+ (source "AnalogOnScreenControl.java")
+ (implements org/andengine/engine/camera/hud/controls/BaseOnScreenControl$IOnScreenControlListener)
+
+
+(method (attrs public abstract ) onControlClick([object org/andengine/engine/camera/hud/controls/AnalogOnScreenControl] )void
+)
+
+)

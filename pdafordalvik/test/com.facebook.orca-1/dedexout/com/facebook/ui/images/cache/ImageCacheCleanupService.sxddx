@@ -1,0 +1,46 @@
+(class (attrs public ) com/facebook/ui/images/cache/ImageCacheCleanupService
+ (super android/app/IntentService)
+ (source "ImageCacheCleanupService.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/images/cache/ImageCacheCleanupService])
+  (line 23)
+  (const-string v0 "orca:ImageCacheCleanupService")
+  (invoke-direct {v1 v0} android/app/IntentService/<init> [object java/lang/String] )
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public static ) a([object android/content/Context] )void
+  (limit registers 4)
+  ; parameter[0] : v3 ([object android/content/Context])
+  (const/4 v2 0)
+  (line 31)
+  (new-instance v0 android/content/Intent)
+  (const-class v1 com/facebook/ui/images/cache/ImageCacheCleanupService)
+  (invoke-direct {v0 v3 v1} android/content/Intent/<init> [object android/content/Context] [object java/lang/Class] )
+  (line 32)
+  (invoke-static {v3 v2 v0 v2} android/app/PendingIntent/getService [object android/content/Context] int [object android/content/Intent] int )
+  (move-result-object v1)
+  (line 33)
+  (const-string v0 "alarm")
+  (invoke-virtual {v3 v0} android/content/Context/getSystemService [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object android/app/AlarmManager])
+  (line 34)
+  (invoke-virtual {v0 v1} android/app/AlarmManager/cancel [object android/app/PendingIntent] )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs protected ) onHandleIntent([object android/content/Intent] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/images/cache/ImageCacheCleanupService])
+  ; parameter[0] : v1 ([object android/content/Intent])
+  (line 28)
+  (return-void )
+)
+
+)

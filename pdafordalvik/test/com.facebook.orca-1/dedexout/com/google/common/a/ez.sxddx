@@ -1,0 +1,30 @@
+(class (attrs ) com/google/common/a/ez
+ (super com/google/common/a/x)
+ (source "ImmutableMultimap.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ez])
+  (line 120)
+  (new-instance v0 java/util/LinkedHashMap)
+  (invoke-direct {v0} java/util/LinkedHashMap/<init> )
+  (invoke-direct {v1 v0} com/google/common/a/x/<init> [object java/util/Map] )
+  (line 121)
+  (return-void )
+ )
+
+(method (attrs ) c()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ez])
+  (line 123)
+  (invoke-static {} com/google/common/a/hq/a )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

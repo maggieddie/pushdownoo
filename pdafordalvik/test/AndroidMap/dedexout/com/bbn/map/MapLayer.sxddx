@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/bbn/map/MapLayer
+ (super java/lang/Object)
+ (source "MapLayer.java")
+
+
+(method (attrs public abstract ) getAlpha()float
+)
+
+(method (attrs public abstract ) getMapGraphics([object com/bbn/map/MapView] [object com/bbn/geometry/Dimension] [object com/bbn/geometry/DimensionL] )[array [object com/bbn/map/MapGraphic]]
+)
+
+(method (attrs public abstract ) getProjection()[object com/bbn/map/Projection]
+)
+
+(method (attrs public abstract ) setProjection([object com/bbn/map/Projection] )void
+)
+
+)

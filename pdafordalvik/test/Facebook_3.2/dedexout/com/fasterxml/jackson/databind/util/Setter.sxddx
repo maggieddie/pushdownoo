@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/util/Setter
+ (super java/lang/Object)
+ (source "Setter.java")
+
+
+(method (attrs public abstract ) setValue([object java/lang/Object] [object java/lang/Object] )void
+)
+
+)

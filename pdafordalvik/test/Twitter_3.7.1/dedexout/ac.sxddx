@@ -1,0 +1,70 @@
+(class (attrs public abstract ) ac
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs protected final ) a [object java/lang/String] )
+ (field (attrs protected final ) b int )
+
+(method (attrs protected ) <init>([object java/lang/String] int )void
+  (limit registers 3)
+  ; this: v0 ([object ac])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 16)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 17)
+  (iput-object v1 v0 ac.a [object java/lang/String])
+  (line 18)
+  (iput v2 v0 ac.b int)
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public final ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object ac])
+  (line 21)
+  (iget-object v0 v1 ac.a [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public abstract ) a(int )boolean
+)
+
+(method (attrs public abstract ) a(int int )boolean
+)
+
+(method (attrs public abstract ) a([array int] int )boolean
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object ac])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 48)
+  (if-ne v2 v1 l3eb54)
+  (const/4 v0 1)
+  (label l3eb52)
+  (return v0)
+  (label l3eb54)
+  (const/4 v0 0)
+  (goto l3eb52)
+)
+
+(method (attrs public final ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object ac])
+  (line 43)
+  (iget v0 v1 ac.b int)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object ac])
+  (line 41)
+  (iget-object v0 v1 ac.a [object java/lang/String])
+  (return-object v0)
+)
+
+)

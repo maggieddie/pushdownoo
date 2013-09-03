@@ -1,0 +1,52 @@
+(class (attrs ) com/facebook/orca/threadview/upsell/e
+ (super java/lang/Object)
+ (source "MergedThreadsUpsellController.java")
+ (implements com/facebook/widget/c)
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/upsell/a] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/upsell/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/upsell/e])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/upsell/a])
+  (line 197)
+  (iput-object v1 v0 com/facebook/orca/threadview/upsell/e.a [object com/facebook/orca/threadview/upsell/a])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadview/upsell/e])
+  (line 202)
+  (iget-object v0 v1 com/facebook/orca/threadview/upsell/e.a [object com/facebook/orca/threadview/upsell/a])
+  (invoke-static {v0} com/facebook/orca/threadview/upsell/a/e [object com/facebook/orca/threadview/upsell/a] )
+  (line 203)
+  (return-void )
+)
+
+(method (attrs public ) b()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/threadview/upsell/e])
+  (line 207)
+  (iget-object v0 v3 com/facebook/orca/threadview/upsell/e.a [object com/facebook/orca/threadview/upsell/a])
+  (invoke-static {v0} com/facebook/orca/threadview/upsell/a/f [object com/facebook/orca/threadview/upsell/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/prefs/shared/d/b )
+  (move-result-object v0)
+  (sget-object v1 com/facebook/orca/prefs/n.l [object com/facebook/prefs/shared/ae])
+  (const/4 v2 1)
+  (invoke-interface {v0 v1 v2} com/facebook/prefs/shared/e/a [object com/facebook/prefs/shared/ae] boolean )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/prefs/shared/e/a )
+  (line 210)
+  (iget-object v0 v3 com/facebook/orca/threadview/upsell/e.a [object com/facebook/orca/threadview/upsell/a])
+  (invoke-static {v0} com/facebook/orca/threadview/upsell/a/e [object com/facebook/orca/threadview/upsell/a] )
+  (line 211)
+  (iget-object v0 v3 com/facebook/orca/threadview/upsell/e.a [object com/facebook/orca/threadview/upsell/a])
+  (invoke-static {v0} com/facebook/orca/threadview/upsell/a/g [object com/facebook/orca/threadview/upsell/a] )
+  (line 212)
+  (return-void )
+)
+
+)

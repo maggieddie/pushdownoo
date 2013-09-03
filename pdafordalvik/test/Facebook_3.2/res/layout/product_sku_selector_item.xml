@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/standard_12pt_text_size" android:textStyle="bold" android:textColor="@color/standard_section_header_text" android:ellipsize="end" android:id="@id/text_skus_header" android:paddingLeft="@dimen/standard_padding" android:paddingRight="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/generic_transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/layout_sku_1" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_sku_1_info" android:background="@drawable/cell" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/standard_padding" android:layout_marginRight="@dimen/standard_half_padding_and_a_half" android:layout_centerInParent="true">
+                <com.facebook.widget.UrlImage android:layout_gravity="top|center" android:id="@id/image_sku_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                        <TextView android:textSize="@dimen/standard_13pt_text_size" android:textStyle="bold" android:textColor="@color/standard_gray_3e4350" android:ellipsize="end" android:gravity="left" android:id="@id/text_sku_1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <FrameLayout android:id="@id/layout_sku1_price_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/price_tag_corner_negative_left_margin" android:layout_alignLeft="@id/layout_sku_1_info" android:layout_alignParentTop="true">
+                <include layout="@layout/product_sku_selector_price_tag" />
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_sku_2" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_sku_2_info" android:background="@drawable/cell" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/standard_half_padding_and_a_half" android:layout_marginRight="@dimen/standard_padding" android:layout_centerInParent="true">
+                <com.facebook.widget.UrlImage android:layout_gravity="top|center" android:id="@id/image_sku_2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                        <TextView android:textSize="@dimen/standard_13pt_text_size" android:textStyle="bold" android:textColor="@color/standard_gray_3e4350" android:ellipsize="end" android:gravity="left" android:id="@id/text_sku_2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="top|left|center" android:id="@id/layout_sku2_price_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/price_tag_corner_negative_left_margin" android:layout_alignLeft="@id/layout_sku_2_info" android:layout_alignParentTop="true">
+                <include layout="@layout/product_sku_selector_price_tag" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

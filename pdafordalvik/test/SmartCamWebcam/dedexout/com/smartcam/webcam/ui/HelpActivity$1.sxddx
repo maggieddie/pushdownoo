@@ -1,0 +1,30 @@
+(class (attrs ) com/smartcam/webcam/ui/HelpActivity$1
+ (super java/lang/Object)
+ (source "HelpActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object com/smartcam/webcam/ui/HelpActivity] )
+
+(method (attrs ) <init>([object com/smartcam/webcam/ui/HelpActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/smartcam/webcam/ui/HelpActivity$1])
+  ; parameter[0] : v1 ([object com/smartcam/webcam/ui/HelpActivity])
+  (line 1)
+  (iput-object v1 v0 com/smartcam/webcam/ui/HelpActivity$1.this$0 [object com/smartcam/webcam/ui/HelpActivity])
+  (line 37)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/smartcam/webcam/ui/HelpActivity$1])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 41)
+  (iget-object v0 v1 com/smartcam/webcam/ui/HelpActivity$1.this$0 [object com/smartcam/webcam/ui/HelpActivity])
+  (invoke-virtual {v0} com/smartcam/webcam/ui/HelpActivity/finish )
+  (line 42)
+  (return-void )
+)
+
+)

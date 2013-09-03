@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/contact_picker_invite_all" android:background="@color/divebar_contact_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/divebar_section_text" android:gravity="center_horizontal" android:id="@id/contact_picker_invite_all_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/divebar_invite_all_title" />
+    <TextView android:textSize="11.0sp" android:textColor="@color/divebar_section_text" android:gravity="center_horizontal" android:id="@id/contact_picker_invite_all_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/divebar_invite_all_subtitle" />
+    <LinearLayout android:layout_gravity="center" android:id="@id/contact_picker_invite_all_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <Button android:id="@id/contact_picker_invite_all_dismiss_button" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_marginBottom="1.0dip" android:text="@string/dialog_not_now" android:layout_weight="1.0" style="@style/OrcaContactPickerButtonSecondary" />
+        <Button android:id="@id/contact_picker_invite_all_invite_button" android:layout_width="0.0px" android:layout_height="fill_parent" android:text="@string/divebar_invite_all_button_label" android:layout_weight="1.0" style="@style/OrcaContactPickerButton" />
+    </LinearLayout>
+</LinearLayout>

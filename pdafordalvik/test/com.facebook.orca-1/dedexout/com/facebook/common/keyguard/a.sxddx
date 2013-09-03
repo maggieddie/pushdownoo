@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/common/keyguard/a
+ (super java/lang/Object)
+ (source "KeyguardPendingIntentActivity.java")
+ (implements com/facebook/c/b)
+
+ (field (attrs final ) a [object com/facebook/common/keyguard/KeyguardPendingIntentActivity] )
+
+(method (attrs ) <init>([object com/facebook/common/keyguard/KeyguardPendingIntentActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/keyguard/a])
+  ; parameter[0] : v1 ([object com/facebook/common/keyguard/KeyguardPendingIntentActivity])
+  (line 86)
+  (iput-object v1 v0 com/facebook/common/keyguard/a.a [object com/facebook/common/keyguard/KeyguardPendingIntentActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/content/Context] [object android/content/Intent] [object com/facebook/c/c] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/common/keyguard/a])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  ; parameter[2] : v4 ([object com/facebook/c/c])
+  (line 92)
+  (iget-object v0 v1 com/facebook/common/keyguard/a.a [object com/facebook/common/keyguard/KeyguardPendingIntentActivity])
+  (invoke-static {v0} com/facebook/common/keyguard/KeyguardPendingIntentActivity/a [object com/facebook/common/keyguard/KeyguardPendingIntentActivity] )
+  (line 93)
+  (return-void )
+)
+
+)

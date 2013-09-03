@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/orca/login/k
+ (super java/lang/Object)
+ (source "WildfireRegPhoneNumberViewGroup.java")
+ (implements android/widget/AdapterView$OnItemSelectedListener)
+
+ (field (attrs final ) a [object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup] )
+
+(method (attrs ) <init>([object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/login/k])
+  ; parameter[0] : v1 ([object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup])
+  (line 129)
+  (iput-object v1 v0 com/facebook/orca/login/k.a [object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onItemSelected([object android/widget/AdapterView] [object android/view/View] int long )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;"  "Landroid/view/View;"  "IJ)V")
+  )
+  (limit registers 7)
+  ; this: v1 ([object com/facebook/orca/login/k])
+  ; parameter[0] : v2 ([object android/widget/AdapterView])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (long)
+  (line 132)
+  (iget-object v0 v1 com/facebook/orca/login/k.a [object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup])
+  (invoke-static {v0} com/facebook/orca/login/WildfireRegPhoneNumberViewGroup/access$000 [object com/facebook/orca/login/WildfireRegPhoneNumberViewGroup] )
+  (line 133)
+  (return-void )
+)
+
+(method (attrs public ) onNothingSelected([object android/widget/AdapterView] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/widget/AdapterView"  "<*>;)V")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/orca/login/k])
+  ; parameter[0] : v4 ([object android/widget/AdapterView])
+  (line 138)
+  (invoke-static {} com/facebook/orca/login/WildfireRegPhoneNumberViewGroup/access$100 )
+  (nop )
+  (move-result-object v0)
+  (const-class v1 com/facebook/orca/login/WildfireRegPhoneNumberViewGroup)
+  (const-string v2 "No country selected, should never occur")
+  (invoke-static {v0 v1 v2} com/facebook/debug/log/b/a [object com/facebook/debug/log/l] [object java/lang/Class] [object java/lang/String] )
+  (line 142)
+  (return-void )
+)
+
+)

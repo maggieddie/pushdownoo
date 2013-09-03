@@ -104,7 +104,7 @@
   (line 76)
   (aget-object v2 v0 v1)
   (aget-object v3 v0 v1)
-  (invoke-virtual-quick {v4 v3} com/ibm/icu4jni/charset/CharsetProviderICU/charsetForName [object java/lang/String] )
+  (invoke-virtual-quick {v4 v3} vtable #0xb)
   (move-result-object v3)
   (invoke-interface {v5 v2 v3} java/util/Map/put [object java/lang/Object] [object java/lang/Object] )
   (label l1618d2)

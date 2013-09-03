@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/introspect/ClassIntrospector$MixInResolver
+ (super java/lang/Object)
+ (source "ClassIntrospector.java")
+
+
+(method (attrs public abstract ) findMixInClassFor([object java/lang/Class] )[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

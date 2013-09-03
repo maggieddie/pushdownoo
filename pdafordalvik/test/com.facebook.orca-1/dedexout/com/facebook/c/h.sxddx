@@ -1,0 +1,59 @@
+(class (attrs ) com/facebook/c/h
+ (super com/facebook/inject/d)
+ (source "ContentModule.java")
+
+ (field (attrs final ) a [object com/facebook/c/d] )
+
+(method (attrs private ) <init>([object com/facebook/c/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/c/h])
+  ; parameter[0] : v1 ([object com/facebook/c/d])
+  (line 47)
+  (iput-object v1 v0 com/facebook/c/h.a [object com/facebook/c/d])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/c/d] [object com/facebook/c/e] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/c/h])
+  ; parameter[0] : v1 ([object com/facebook/c/d])
+  ; parameter[1] : v2 ([object com/facebook/c/e])
+  (line 47)
+  (invoke-direct {v0 v1} com/facebook/c/h/<init> [object com/facebook/c/d] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/c/t]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/c/h])
+  (line 51)
+  (new-instance v2 com/facebook/c/t)
+  (invoke-virtual {v4} com/facebook/c/h/e )
+  (move-result-object v0)
+  (const-class v1 android/content/pm/PackageManager)
+  (invoke-interface {v0 v1} com/facebook/inject/ab/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/pm/PackageManager])
+  (invoke-virtual {v4} com/facebook/c/h/e )
+  (move-result-object v1)
+  (const-class v3 android/content/Context)
+  (invoke-interface {v1 v3} com/facebook/inject/ab/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object android/content/Context])
+  (invoke-virtual {v1} android/content/Context/getApplicationInfo )
+  (move-result-object v1)
+  (invoke-direct {v2 v0 v1} com/facebook/c/t/<init> [object android/content/pm/PackageManager] [object android/content/pm/ApplicationInfo] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/c/h])
+  (line 47)
+  (invoke-virtual {v1} com/facebook/c/h/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

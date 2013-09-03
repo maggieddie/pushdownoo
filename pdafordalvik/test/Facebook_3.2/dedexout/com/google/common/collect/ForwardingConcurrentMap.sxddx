@@ -1,0 +1,101 @@
+(class (attrs public abstract ) com/google/common/collect/ForwardingConcurrentMap
+ (super com/google/common/collect/ForwardingMap)
+ (source "ForwardingConcurrentMap.java")
+ (implements java/util/concurrent/ConcurrentMap)
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/ForwardingConcurrentMap])
+  (line 37)
+  (invoke-direct {v0} com/google/common/collect/ForwardingMap/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) a()[object java/util/Map]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  (line 32)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected abstract ) b()[object java/util/concurrent/ConcurrentMap]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/concurrent/ConcurrentMap"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  (line 32)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) putIfAbsent([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)TV;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 43)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2 v3} java/util/concurrent/ConcurrentMap/putIfAbsent [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 48)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2 v3} java/util/concurrent/ConcurrentMap/remove [object java/lang/Object] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) replace([object java/lang/Object] [object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 53)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2 v3} java/util/concurrent/ConcurrentMap/replace [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) replace([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;TV;)Z")
+  )
+  (limit registers 5)
+  ; this: v1 ([object com/google/common/collect/ForwardingConcurrentMap])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  ; parameter[2] : v4 ([object java/lang/Object])
+  (line 58)
+  (invoke-virtual {v1} com/google/common/collect/ForwardingConcurrentMap/b )
+  (move-result-object v0)
+  (invoke-interface {v0 v2 v3 v4} java/util/concurrent/ConcurrentMap/replace [object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

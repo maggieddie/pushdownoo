@@ -1,0 +1,80 @@
+(class (attrs public abstract ) com/fasterxml/jackson/core/type/ResolvedType
+ (super java/lang/Object)
+ (source "ResolvedType.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/core/type/ResolvedType])
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) containedType(int )[object com/fasterxml/jackson/core/type/ResolvedType]
+)
+
+(method (attrs public abstract ) containedTypeCount()int
+)
+
+(method (attrs public abstract ) containedTypeName(int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getContentType()[object com/fasterxml/jackson/core/type/ResolvedType]
+)
+
+(method (attrs public abstract ) getKeyType()[object com/fasterxml/jackson/core/type/ResolvedType]
+)
+
+(method (attrs public abstract ) getRawClass()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) hasGenericTypes()boolean
+)
+
+(method (attrs public abstract ) hasRawClass([object java/lang/Class] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)Z")
+  )
+)
+
+(method (attrs public abstract ) isAbstract()boolean
+)
+
+(method (attrs public abstract ) isArrayType()boolean
+)
+
+(method (attrs public abstract ) isCollectionLikeType()boolean
+)
+
+(method (attrs public abstract ) isConcrete()boolean
+)
+
+(method (attrs public abstract ) isContainerType()boolean
+)
+
+(method (attrs public abstract ) isEnumType()boolean
+)
+
+(method (attrs public abstract ) isFinal()boolean
+)
+
+(method (attrs public abstract ) isInterface()boolean
+)
+
+(method (attrs public abstract ) isMapLikeType()boolean
+)
+
+(method (attrs public abstract ) isPrimitive()boolean
+)
+
+(method (attrs public abstract ) isThrowable()boolean
+)
+
+(method (attrs public abstract ) toCanonical()[object java/lang/String]
+)
+
+)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:background="@color/feed_list_item_bg_color" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/timeline_prompt_button" android:background="@drawable/composer_single" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/timeline_prompt_text" android:id="@id/timeline_prompt_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:layout_marginBottom="17.0dip" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/timeline_prompt_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/timeline_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/timeline_prompt_count" android:background="@drawable/timeline_prompt_count_bg" android:paddingLeft="5.0dip" android:paddingTop="1.0dip" android:paddingRight="5.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_toLeftOf="@id/timeline_prompt_chevron" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</FrameLayout>

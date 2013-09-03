@@ -1,0 +1,21 @@
+(interface (attrs public abstract ) org/anddev/andengine/sensor/location/ILocationListener
+ (super java/lang/Object)
+ (source "ILocationListener.java")
+
+
+(method (attrs public abstract ) onLocationChanged([object android/location/Location] )void
+)
+
+(method (attrs public abstract ) onLocationLost()void
+)
+
+(method (attrs public abstract ) onLocationProviderDisabled()void
+)
+
+(method (attrs public abstract ) onLocationProviderEnabled()void
+)
+
+(method (attrs public abstract ) onLocationProviderStatusChanged([object org/anddev/andengine/sensor/location/LocationProviderStatus] [object android/os/Bundle] )void
+)
+
+)

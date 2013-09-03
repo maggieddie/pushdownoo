@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/push_notif_tooltip" android:layout_width="@dimen/timeline_page_notif_nux_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/page_timeline_notif_nux_text" android:id="@id/page_notif_setting_nux_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timeline_page_notif_nux_margin" android:layout_marginTop="@dimen/timeline_page_notif_nux_margin" android:layout_marginRight="@dimen/timeline_page_notif_nux_margin" android:text="@string/page_push_notif_nux_title" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/page_timeline_notif_nux_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timeline_page_notif_nux_margin" android:layout_marginTop="3.0dip" android:layout_marginRight="@dimen/timeline_page_notif_nux_margin" android:text="@string/page_push_notif_nux_body" android:layout_below="@id/page_notif_setting_nux_title" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="45.0dip" android:paddingBottom="40.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/page_push_notif_on" />
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/page_timeline_notif_nux_setting_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/page_push_notif_on" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:src="@drawable/page_push_notif_off" />
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/page_timeline_notif_nux_setting_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/page_push_notif_off" />
+    </LinearLayout>
+</RelativeLayout>

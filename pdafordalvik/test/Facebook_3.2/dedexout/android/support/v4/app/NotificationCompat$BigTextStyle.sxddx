@@ -1,0 +1,16 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$BigTextStyle
+ (super android/support/v4/app/NotificationCompat$Style)
+ (source "NotificationCompat.java")
+
+ (field (attrs ) a [object java/lang/CharSequence] )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$BigTextStyle])
+  (line 669)
+  (invoke-direct {v0} android/support/v4/app/NotificationCompat$Style/<init> )
+  (line 670)
+  (return-void )
+ )
+
+)

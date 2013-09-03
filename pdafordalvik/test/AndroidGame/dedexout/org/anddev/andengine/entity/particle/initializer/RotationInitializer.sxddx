@@ -1,0 +1,79 @@
+(class (attrs public ) org/anddev/andengine/entity/particle/initializer/RotationInitializer
+ (super org/anddev/andengine/entity/particle/initializer/BaseSingleValueInitializer)
+ (source "RotationInitializer.java")
+
+
+(method (attrs public ) <init>(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  ; parameter[0] : v1 (float)
+  (line 26)
+  (invoke-direct {v0 v1 v1} org/anddev/andengine/entity/particle/initializer/RotationInitializer/<init> float float )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) <init>(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 30)
+  (invoke-direct {v0 v1 v2} org/anddev/andengine/entity/particle/initializer/BaseSingleValueInitializer/<init> float float )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) getMaxRotation()float
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  (line 42)
+  (iget v0 v1 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMaxValue float)
+  (return v0)
+)
+
+(method (attrs public ) getMinRotation()float
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  (line 38)
+  (iget v0 v1 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMinValue float)
+  (return v0)
+)
+
+(method (attrs public ) onInitializeParticle([object org/anddev/andengine/entity/particle/Particle] float )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/particle/Particle])
+  ; parameter[1] : v2 (float)
+  (line 61)
+  (invoke-virtual {v1 v2} org/anddev/andengine/entity/particle/Particle/setRotation float )
+  (line 62)
+  (return-void )
+)
+
+(method (attrs public ) setRotation(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  ; parameter[0] : v1 (float)
+  (line 46)
+  (iput v1 v0 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMinValue float)
+  (line 47)
+  (iput v1 v0 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMaxValue float)
+  (line 48)
+  (return-void )
+)
+
+(method (attrs public ) setRotation(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/initializer/RotationInitializer])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 51)
+  (iput v1 v0 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMinValue float)
+  (line 52)
+  (iput v2 v0 org/anddev/andengine/entity/particle/initializer/RotationInitializer.mMaxValue float)
+  (line 53)
+  (return-void )
+)
+
+)

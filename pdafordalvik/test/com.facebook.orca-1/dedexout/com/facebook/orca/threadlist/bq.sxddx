@@ -1,0 +1,41 @@
+(class (attrs public ) com/facebook/orca/threadlist/bq
+ (super java/lang/Object)
+ (source "ThreadListLoader.java")
+
+ (field (attrs public final ) a [object com/facebook/orca/threads/ThreadsCollection] )
+ (field (attrs public final ) b long )
+ (field (attrs public final ) c long )
+ (field (attrs public final ) d [object com/facebook/fbservice/c/b] )
+
+(method (attrs public ) <init>([object com/facebook/orca/threads/ThreadsCollection] long long [object com/facebook/fbservice/c/b] )void
+  (limit registers 7)
+  ; this: v0 ([object com/facebook/orca/threadlist/bq])
+  ; parameter[0] : v1 ([object com/facebook/orca/threads/ThreadsCollection])
+  ; parameter[1] : v2 (long)
+  ; parameter[2] : v4 (long)
+  ; parameter[3] : v6 ([object com/facebook/fbservice/c/b])
+  (line 85)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 86)
+  (iput-object v1 v0 com/facebook/orca/threadlist/bq.a [object com/facebook/orca/threads/ThreadsCollection])
+  (line 87)
+  (iput-wide v2 v0 com/facebook/orca/threadlist/bq.b long)
+  (line 88)
+  (iput-wide v4 v0 com/facebook/orca/threadlist/bq.c long)
+  (line 89)
+  (iput-object v6 v0 com/facebook/orca/threadlist/bq.d [object com/facebook/fbservice/c/b])
+  (line 90)
+  (return-void )
+ )
+
+(method (attrs public ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/bq])
+  (line 93)
+  (iget-object v0 v1 com/facebook/orca/threadlist/bq.a [object com/facebook/orca/threads/ThreadsCollection])
+  (invoke-virtual {v0} com/facebook/orca/threads/ThreadsCollection/d )
+  (move-result v0)
+  (return v0)
+)
+
+)

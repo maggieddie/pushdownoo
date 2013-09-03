@@ -1,0 +1,35 @@
+(class (attrs ) com/facebook/orca/chatheads/ah
+ (super java/lang/Object)
+ (source "ChatHeadView.java")
+ (implements com/facebook/common/hardware/v)
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/ag] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/ag] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/ah])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/ag])
+  (line 83)
+  (iput-object v1 v0 com/facebook/orca/chatheads/ah.a [object com/facebook/orca/chatheads/ag])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/chatheads/ah])
+  (line 87)
+  (iget-object v0 v1 com/facebook/orca/chatheads/ah.a [object com/facebook/orca/chatheads/ag])
+  (invoke-static {v0} com/facebook/orca/chatheads/ag/a [object com/facebook/orca/chatheads/ag] )
+  (line 88)
+  (return-void )
+)
+
+(method (attrs public ) b()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/chatheads/ah])
+  (line 90)
+  (return-void )
+)
+
+)

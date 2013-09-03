@@ -1,0 +1,48 @@
+(class (attrs ) com/facebook/orca/app/cs
+ (super com/facebook/inject/d)
+ (source "MessagesModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/app/h] )
+
+(method (attrs private ) <init>([object com/facebook/orca/app/h] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/app/cs])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/h])
+  (line 2174)
+  (iput-object v1 v0 com/facebook/orca/app/cs.a [object com/facebook/orca/app/h])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/app/h] [object com/facebook/orca/app/i] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/app/cs])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/h])
+  ; parameter[1] : v2 ([object com/facebook/orca/app/i])
+  (line 2174)
+  (invoke-direct {v0 v1} com/facebook/orca/app/cs/<init> [object com/facebook/orca/app/h] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/q/h]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/app/cs])
+  (line 2178)
+  (new-instance v0 com/facebook/orca/q/h)
+  (const-class v1 java/util/Locale)
+  (invoke-virtual {v2 v1} com/facebook/orca/app/cs/b [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/facebook/orca/q/h/<init> [object javax/inject/a] )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/cs])
+  (line 2174)
+  (invoke-virtual {v1} com/facebook/orca/app/cs/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

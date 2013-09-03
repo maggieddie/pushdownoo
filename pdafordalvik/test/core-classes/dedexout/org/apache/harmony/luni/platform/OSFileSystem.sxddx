@@ -244,7 +244,7 @@
   (invoke-direct {v1 v3} java/io/FileNotFoundException/<init> [object java/lang/String] )
   (label l18c2b2)
   (line 248)
-  (invoke-virtual-quick {v0 v1} java/io/UnsupportedEncodingException/initCause [object java/lang/Throwable] )
+  (invoke-virtual-quick {v0 v1} vtable #0x10)
   (line 249)
   (new-instance v3 java/lang/AssertionError)
   (invoke-direct {v3 v0} java/lang/AssertionError/<init> [object java/lang/Object] )

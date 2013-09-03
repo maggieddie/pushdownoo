@@ -1,0 +1,44 @@
+(class (attrs ) com/facebook/orca/threadlist/l
+ (super java/lang/Object)
+ (source "PublisherButtonTextsExperiment.java")
+ (implements com/facebook/abtest/qe/d/c)
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/threadlist/l])
+  (line 29)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/threadlist/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/l])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/j])
+  (line 29)
+  (invoke-direct {v0} com/facebook/orca/threadlist/l/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/abtest/qe/data/QuickExperimentInfo] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadlist/l])
+  ; parameter[0] : v2 ([object com/facebook/abtest/qe/data/QuickExperimentInfo])
+  (line 29)
+  (invoke-virtual {v1 v2} com/facebook/orca/threadlist/l/b [object com/facebook/abtest/qe/data/QuickExperimentInfo] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object com/facebook/abtest/qe/data/QuickExperimentInfo] )[object com/facebook/orca/threadlist/k]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadlist/l])
+  ; parameter[0] : v2 ([object com/facebook/abtest/qe/data/QuickExperimentInfo])
+  (line 34)
+  (invoke-static {v2} com/facebook/orca/threadlist/i/a [object com/facebook/abtest/qe/data/QuickExperimentInfo] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

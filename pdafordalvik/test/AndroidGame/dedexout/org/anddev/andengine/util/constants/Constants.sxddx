@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/constants/Constants
+ (super java/lang/Object)
+ (source "Constants.java")
+
+ (field (attrs public static final ) DEBUGTAG [object java/lang/String] "AndEngine" )
+ (field (attrs public static final ) VERTEX_INDEX_X int 0); 0x0 )
+ (field (attrs public static final ) VERTEX_INDEX_Y int 1); 0x1 )
+
+)

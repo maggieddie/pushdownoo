@@ -1,0 +1,27 @@
+(class (attrs public ) com/facebook/mqtt/messages/b
+ (super java/lang/Object)
+ (source "ConnAckVariableHeader.java")
+
+ (field (attrs private final ) a byte )
+
+(method (attrs public ) <init>(byte )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/mqtt/messages/b])
+  ; parameter[0] : v1 (byte)
+  (line 17)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 18)
+  (iput-byte v1 v0 com/facebook/mqtt/messages/b.a byte)
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) a()byte
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/mqtt/messages/b])
+  (line 27)
+  (iget-byte v0 v1 com/facebook/mqtt/messages/b.a byte)
+  (return v0)
+)
+
+)

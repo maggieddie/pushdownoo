@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/orca/threadview/dy
+ (super android/view/GestureDetector$SimpleOnGestureListener)
+ (source "ZoomOverlay.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/dx] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/dx] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/dy])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/dx])
+  (line 22)
+  (iput-object v1 v0 com/facebook/orca/threadview/dy.a [object com/facebook/orca/threadview/dx])
+  (invoke-direct {v0} android/view/GestureDetector$SimpleOnGestureListener/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onDoubleTap([object android/view/MotionEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadview/dy])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  (line 25)
+  (iget-object v0 v1 com/facebook/orca/threadview/dy.a [object com/facebook/orca/threadview/dx])
+  (invoke-static {v0 v2} com/facebook/orca/threadview/dx/a [object com/facebook/orca/threadview/dx] [object android/view/MotionEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+)

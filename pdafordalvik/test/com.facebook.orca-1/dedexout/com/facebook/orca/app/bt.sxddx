@@ -1,0 +1,54 @@
+(class (attrs ) com/facebook/orca/app/bt
+ (super com/facebook/inject/d)
+ (source "MessagesModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/app/h] )
+
+(method (attrs private ) <init>([object com/facebook/orca/app/h] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/app/bt])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/h])
+  (line 1211)
+  (iput-object v1 v0 com/facebook/orca/app/bt.a [object com/facebook/orca/app/h])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/app/h] [object com/facebook/orca/app/i] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/app/bt])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/h])
+  ; parameter[1] : v2 ([object com/facebook/orca/app/i])
+  (line 1211)
+  (invoke-direct {v0 v1} com/facebook/orca/app/bt/<init> [object com/facebook/orca/app/h] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/messages/threads/ui/name/e]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/orca/app/bt])
+  (line 1216)
+  (new-instance v2 com/facebook/messages/threads/ui/name/e)
+  (const-class v0 android/content/res/Resources)
+  (invoke-virtual {v4 v0} com/facebook/orca/app/bt/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/res/Resources])
+  (const-class v1 com/facebook/messages/threads/ui/name/a)
+  (invoke-virtual {v4 v1} com/facebook/orca/app/bt/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/messages/threads/ui/name/a])
+  (sget-object v3 com/facebook/messages/threads/ui/name/d.USE_PARTICIPANTS_NAMES_ONLY [object com/facebook/messages/threads/ui/name/d])
+  (invoke-direct {v2 v0 v1 v3} com/facebook/messages/threads/ui/name/e/<init> [object android/content/res/Resources] [object com/facebook/messages/threads/ui/name/a] [object com/facebook/messages/threads/ui/name/d] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/app/bt])
+  (line 1211)
+  (invoke-virtual {v1} com/facebook/orca/app/bt/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

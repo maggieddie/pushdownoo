@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.tiles.ThreadTileView android:id="@id/thread_tile_img" android:background="@color/orca_white" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" orca:threadTileSize="64.0dip" />
+    <RelativeLayout android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_toRightOf="@id/thread_tile_img" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <com.facebook.orca.common.ui.widgets.FloatRightCustomLayout android:id="@id/thread_name_presence" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/thread_time" android:layout_alignParentLeft="true">
+            <com.facebook.messages.threads.ui.name.ThreadNameView android:id="@id/thread_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" orca:textColor="#ff464c59" orca:maxLines="1" orca:textStyle="bold" orca:minScaledTextSize="16" orca:maxScaledTextSize="16" orca:alignment="normal" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/thread_presence_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:scaleType="fitCenter" android:layout_alignBaseline="@id/thread_name" />
+        </com.facebook.orca.common.ui.widgets.FloatRightCustomLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#ff9eadce" android:id="@id/thread_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_alignBaseline="@id/thread_name_presence" android:layout_alignParentRight="true" />
+        <com.facebook.orca.common.ui.widgets.text.MultilineEllipsizeTextView android:id="@id/thread_last_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_toLeftOf="@id/thread_failed_icon" android:layout_below="@id/thread_name_presence" android:layout_alignParentLeft="true" android:layout_alignWithParentIfMissing="true" orca:textColor="#ff90949b" orca:maxLines="2" orca:minLines="2" orca:textSize="12.0sp" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/thread_failed_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/orca_thread_error" android:layout_alignTop="@id/thread_last_msg" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/thread_divider" android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</merge>

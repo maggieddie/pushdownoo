@@ -21,7 +21,7 @@
   (line 56)
   (invoke-direct {v0} java/io/IOException/<init> )
   (line 57)
-  (invoke-virtual-quick {v0 v1} java/util/InvalidPropertiesFormatException/initCause [object java/lang/Throwable] )
+  (invoke-virtual-quick {v0 v1} vtable #0x10)
   (line 58)
   (return-void )
  )

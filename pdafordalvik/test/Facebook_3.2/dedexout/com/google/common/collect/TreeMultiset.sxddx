@@ -1,0 +1,349 @@
+(class (attrs public final ) com/google/common/collect/TreeMultiset
+ (super com/google/common/collect/AbstractMapBasedMultiset)
+ (source "TreeMultiset.java")
+ (implements com/google/common/collect/SortedIterable)
+
+ (field (attrs private static final ) serialVersionUID long )
+ (field (attrs private final ) comparator [object java/util/Comparator] )
+
+(method (attrs private ) <init>()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Comparator"  "<-TE;>;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 128)
+  (invoke-static {} com/google/common/collect/Ordering/b )
+  (nop )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} com/google/common/collect/TreeMultiset/<init> [object java/util/Comparator] )
+  (line 129)
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object java/util/Comparator] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Comparator"  "<-TE;>;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v3 ([object java/util/Comparator])
+  (line 132)
+  (new-instance v1 java/util/TreeMap)
+  (invoke-static {v3} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Comparator])
+  (invoke-direct {v1 v0} java/util/TreeMap/<init> [object java/util/Comparator] )
+  (invoke-direct {v2 v1} com/google/common/collect/AbstractMapBasedMultiset/<init> [object java/util/Map] )
+  (line 133)
+  (iput-object v3 v2 com/google/common/collect/TreeMultiset.comparator [object java/util/Comparator])
+  (line 134)
+  (return-void )
+ )
+
+(method (attrs public static ) h()[object com/google/common/collect/TreeMultiset]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<E::"  "Ljava/lang/Comparable;"  ">()"  "Lcom/google/common/collect/TreeMultiset"  "<TE;>;")
+  )
+  (limit registers 1)
+  (line 73)
+  (new-instance v0 com/google/common/collect/TreeMultiset)
+  (invoke-direct {v0} com/google/common/collect/TreeMultiset/<init> )
+  (return-object v0)
+ )
+
+(method (attrs private ) readObject([object java/io/ObjectInputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectInputStream")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v3 ([object java/io/ObjectInputStream])
+  (line 258)
+  (invoke-virtual {v3} java/io/ObjectInputStream/defaultReadObject )
+  (line 260)
+  (invoke-virtual {v3} java/io/ObjectInputStream/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Comparator])
+  (line 262)
+  (new-instance v1 java/util/TreeMap)
+  (invoke-direct {v1 v0} java/util/TreeMap/<init> [object java/util/Comparator] )
+  (invoke-virtual {v2 v1} com/google/common/collect/TreeMultiset/a [object java/util/Map] )
+  (line 263)
+  (invoke-static {v2 v3} com/google/common/collect/Serialization/a [object com/google/common/collect/Multiset] [object java/io/ObjectInputStream] )
+  (line 264)
+  (return-void )
+ )
+
+(method (attrs private ) writeObject([object java/io/ObjectOutputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectOutputStream")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/io/ObjectOutputStream])
+  (line 250)
+  (invoke-virtual {v2} java/io/ObjectOutputStream/defaultWriteObject )
+  (line 251)
+  (invoke-virtual {v1} com/google/common/collect/TreeMultiset/i )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/SortedSet/comparator )
+  (move-result-object v0)
+  (invoke-virtual {v2 v0} java/io/ObjectOutputStream/writeObject [object java/lang/Object] )
+  (line 252)
+  (invoke-static {v1 v2} com/google/common/collect/Serialization/a [object com/google/common/collect/Multiset] [object java/io/ObjectOutputStream] )
+  (line 253)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)I")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (catch java/lang/NullPointerException from l115906 to l11590c using l115910)
+  (catch java/lang/ClassCastException from l115906 to l11590c using l115914)
+  (const/4 v0 0)
+  (label l115906)
+  (line 158)
+  (invoke-super {v2 v3} com/google/common/collect/AbstractMapBasedMultiset/a [object java/lang/Object] )
+  (label l11590c)
+  (move-result v0)
+  (label l11590e)
+  (line 162)
+  (return v0)
+  (label l115910)
+  (line 159)
+  (move-exception v1)
+  (goto l11590e)
+  (label l115914)
+  (line 161)
+  (move-exception v1)
+  (goto l11590e)
+)
+
+(method (attrs public ) a([object java/lang/Object] int )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)I")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 168)
+  (if-nez v2 l115946)
+  (line 169)
+  (iget-object v0 v1 com/google/common/collect/TreeMultiset.comparator [object java/util/Comparator])
+  (invoke-interface {v0 v2 v2} java/util/Comparator/compare [object java/lang/Object] [object java/lang/Object] )
+  (label l115946)
+  (line 171)
+  (invoke-super {v1 v2 v3} com/google/common/collect/AbstractMapBasedMultiset/a [object java/lang/Object] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) add([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/add [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) addAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/addAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] int )int
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 52)
+  (invoke-super {v1 v2 v3} com/google/common/collect/AbstractMapBasedMultiset/b [object java/lang/Object] int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) clear()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v0} com/google/common/collect/AbstractMapBasedMultiset/clear )
+  (return-void )
+)
+
+(method (attrs public ) comparator()[object java/util/Comparator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Comparator"  "<-TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 143)
+  (iget-object v0 v1 com/google/common/collect/TreeMultiset.comparator [object java/util/Comparator])
+  (return-object v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs ) e()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/TreeMultiset])
+  (line 175)
+  (new-instance v1 com/google/common/collect/TreeMultiset$SortedMapBasedElementSet)
+  (invoke-virtual {v2} com/google/common/collect/TreeMultiset/a )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/SortedMap])
+  (invoke-direct {v1 v2 v0} com/google/common/collect/TreeMultiset$SortedMapBasedElementSet/<init> [object com/google/common/collect/TreeMultiset] [object java/util/SortedMap] )
+  (return-object v1)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) f()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-virtual {v1} com/google/common/collect/TreeMultiset/i )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) i()[object java/util/SortedSet]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/SortedSet"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 153)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/f )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/SortedSet])
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 103)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/iterator )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/remove [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/removeAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 52)
+  (invoke-super {v1 v2} com/google/common/collect/AbstractMapBasedMultiset/retainAll [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/size )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/TreeMultiset])
+  (line 52)
+  (invoke-super {v1} com/google/common/collect/AbstractMapBasedMultiset/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

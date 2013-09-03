@@ -27,7 +27,7 @@
   (catch java/lang/CloneNotSupportedException from lbfd54 to lbfd5a using lbfd5e)
   (label lbfd54)
   (line 68)
-  (invoke-super-quick {v2} java/security/cert/PKIXCertPathChecker/clone )
+  (invoke-super-quick {v2} vtable #0x0)
   (label lbfd5a)
   (move-result-object v1)
   (return-object v1)

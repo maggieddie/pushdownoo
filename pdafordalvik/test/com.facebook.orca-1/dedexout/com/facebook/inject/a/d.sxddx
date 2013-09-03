@@ -1,0 +1,128 @@
+(class (attrs public ) com/facebook/inject/a/d
+ (super com/facebook/inject/a/h)
+ (source "LinkedBindingBuilderImpl.java")
+ (implements com/facebook/inject/a/c)
+
+
+(method (attrs public ) <init>([object com/facebook/inject/h] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/inject/h"  "<TT;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v1 ([object com/facebook/inject/h])
+  (line 24)
+  (invoke-direct {v0 v1} com/facebook/inject/a/h/<init> [object com/facebook/inject/h] )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/google/inject/a] )[object com/facebook/inject/a/g]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v3 ([object com/google/inject/a])
+  (line 48)
+  (iget-object v0 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (new-instance v1 com/facebook/inject/ar)
+  (invoke-direct {v1 v3} com/facebook/inject/ar/<init> [object com/google/inject/a] )
+  (invoke-virtual {v0 v1} com/facebook/inject/h/a [object javax/inject/a] )
+  (line 49)
+  (new-instance v0 com/facebook/inject/a/h)
+  (iget-object v1 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (invoke-direct {v0 v1} com/facebook/inject/a/h/<init> [object com/facebook/inject/h] )
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Class] [object java/lang/Class] )[object com/facebook/inject/a/g]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object java/lang/Class])
+  (line 37)
+  (invoke-static {v2 v3} com/google/inject/a/a [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v0)
+  (invoke-virtual {v1 v0} com/facebook/inject/a/d/a [object com/google/inject/a] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object javax/inject/a] )[object com/facebook/inject/a/g]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v3 ([object javax/inject/a])
+  (line 59)
+  (iget-object v0 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (invoke-virtual {v0 v3} com/facebook/inject/h/a [object javax/inject/a] )
+  (line 60)
+  (new-instance v0 com/facebook/inject/a/h)
+  (iget-object v1 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (invoke-direct {v0 v1} com/facebook/inject/a/h/<init> [object com/facebook/inject/h] )
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 54)
+  (iget-object v0 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (new-instance v1 com/facebook/inject/ac)
+  (invoke-direct {v1 v3} com/facebook/inject/ac/<init> [object java/lang/Object] )
+  (invoke-virtual {v0 v1} com/facebook/inject/h/a [object javax/inject/a] )
+  (line 55)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Class] )[object com/facebook/inject/a/g]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+TT;>;)"  "Lcom/facebook/inject/a/g;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v4 ([object java/lang/Class])
+  (line 29)
+  (iget-object v0 v3 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (new-instance v1 com/facebook/inject/ar)
+  (invoke-static {v4} com/google/inject/a/a [object java/lang/Class] )
+  (move-result-object v2)
+  (invoke-direct {v1 v2} com/facebook/inject/ar/<init> [object com/google/inject/a] )
+  (invoke-virtual {v0 v1} com/facebook/inject/h/a [object javax/inject/a] )
+  (line 30)
+  (new-instance v0 com/facebook/inject/a/h)
+  (iget-object v1 v3 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (invoke-direct {v0 v1} com/facebook/inject/a/h/<init> [object com/facebook/inject/h] )
+  (return-object v0)
+)
+
+(method (attrs public ) c([object java/lang/Class] )[object com/facebook/inject/a/g]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Ljavax/inject/a"  "<+TT;>;>;)"  "Lcom/facebook/inject/a/g;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/inject/a/d])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 65)
+  (iget-object v0 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (new-instance v1 com/facebook/inject/as)
+  (invoke-direct {v1 v3} com/facebook/inject/as/<init> [object java/lang/Class] )
+  (invoke-virtual {v0 v1} com/facebook/inject/h/a [object javax/inject/a] )
+  (line 66)
+  (new-instance v0 com/facebook/inject/a/h)
+  (iget-object v1 v2 com/facebook/inject/a/d.a [object com/facebook/inject/h])
+  (invoke-direct {v0 v1} com/facebook/inject/a/h/<init> [object com/facebook/inject/h] )
+  (return-object v0)
+)
+
+)

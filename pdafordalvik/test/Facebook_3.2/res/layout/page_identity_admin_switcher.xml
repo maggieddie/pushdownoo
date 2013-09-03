@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/page_identity_admin_switcher_to_admin" android:background="@drawable/page_identity_admin_switcher_button_bg" android:paddingBottom="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@id/page_identity_admin_switcher_to_admin_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_admin_switcher_tab_admin" style="@style/ChambrayText" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/page_identity_admin_switcher_separator" />
+    <LinearLayout android:gravity="center" android:id="@id/page_identity_admin_switcher_to_public" android:background="@drawable/page_identity_admin_switcher_button_bg" android:paddingBottom="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@id/page_identity_admin_switcher_to_public_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_admin_switcher_tab_public" style="@style/ChambrayText" />
+    </LinearLayout>
+</merge>

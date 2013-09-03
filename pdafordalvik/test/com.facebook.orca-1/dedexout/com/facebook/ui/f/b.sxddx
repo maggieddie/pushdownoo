@@ -1,0 +1,49 @@
+(class (attrs public ) com/facebook/ui/f/b
+ (super com/facebook/base/activity/a)
+ (source "AppMenuHandlerActivityListener.java")
+
+ (field (attrs private final ) a [object android/app/Activity] )
+ (field (attrs private final ) b [object com/facebook/ui/f/a] )
+
+(method (attrs public ) <init>([object android/app/Activity] [object com/facebook/ui/f/a] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/ui/f/b])
+  ; parameter[0] : v1 ([object android/app/Activity])
+  ; parameter[1] : v2 ([object com/facebook/ui/f/a])
+  (line 21)
+  (invoke-direct {v0} com/facebook/base/activity/a/<init> )
+  (line 22)
+  (iput-object v1 v0 com/facebook/ui/f/b.a [object android/app/Activity])
+  (line 23)
+  (iput-object v2 v0 com/facebook/ui/f/b.b [object com/facebook/ui/f/a])
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/view/Menu] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/ui/f/b])
+  ; parameter[0] : v3 ([object android/view/Menu])
+  (line 28)
+  (iget-object v0 v2 com/facebook/ui/f/b.a [object android/app/Activity])
+  (invoke-virtual {v0} android/app/Activity/getMenuInflater )
+  (move-result-object v0)
+  (line 29)
+  (iget-object v1 v2 com/facebook/ui/f/b.b [object com/facebook/ui/f/a])
+  (invoke-interface {v1 v3 v0} com/facebook/ui/f/a/a [object android/view/Menu] [object android/view/MenuInflater] )
+  (line 30)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/view/MenuItem] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/ui/f/b])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 34)
+  (iget-object v0 v1 com/facebook/ui/f/b.b [object com/facebook/ui/f/a])
+  (invoke-interface {v0 v2} com/facebook/ui/f/a/a [object android/view/MenuItem] )
+  (move-result v0)
+  (return v0)
+)
+
+)

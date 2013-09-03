@@ -1,0 +1,25 @@
+(class (attrs public final ) com/facebook/base/activity/b
+ (super java/lang/Object)
+ (source "ActivityImpressionUtils.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/activity/b])
+  (line 12)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public static ) a()[object java/lang/String]
+  (limit registers 1)
+  (line 17)
+  (invoke-static {} com/facebook/common/h/a/a )
+  (nop )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/util/UUID/toString )
+  (move-result-object v0)
+  (return-object v0)
+ )
+
+)

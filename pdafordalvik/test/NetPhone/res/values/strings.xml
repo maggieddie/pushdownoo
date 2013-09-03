@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Net Phone</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Net Phone</string>
+    <string name="contactAddress">SIP Address to contact</string>
+    <string name="talk">Talk</string>
+    <string name="dialerfrag_title">Dialer</string>
+    <string name="dialerfrag_call">Call</string>
+    <string name="dialerfrag_hangup">Hang up</string>
+    <string name="dialerfrag_edit">Hint: thetestcall@sip2sip.info</string>
+    <string name="nums">012345</string>
+    <string name="dialerfrag_contentdescription" />
+    <string name="contactsfrag_nocontacts">"You do not have any contacts.. That's kinda sad :("</string>
+    <string name="contactsfrag_image">Contact</string>
+    <string name="contactsfrag_search">Search</string>
+    <string name="call_action_missed_call">Missed call</string>
+    <string name="call_action_incoming_call">Incoming call</string>
+    <string name="call_action_outgoing_call">Outgoing call</string>
+    <string name="contactsfrag_title">Contacts</string>
+    <string name="no_sip_address">No SIP address</string>
+    <string name="alert_dialog_two_buttons_title">Do you want to call?</string>
+    <string name="callhistoryfrag_title">Call History</string>
+    <string name="callhistoryfrag_no_calls">No one has called you.</string>
+    <string name="no_account_settings">Please enter or update your SIP Account Settings.</string>
+    <string name="error_msg">Error</string>
+    <string name="contactsfrag_nosipaddress">This contact does not have a SIP Address. Would you like to add one?</string>
+    <string name="contactsfrag_want_to_call">Do you want to call</string>
+    <string name="contactsfrag_want_to_conference_call">Do you want have a conference call with</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="question_mark">\?</string>
+    <string name="check_connection">Please check internet connection.</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_registering" />
+    <string name="status_offline">Offline</string>
+    <string name="call_answer">Answer Call</string>
+    <string name="call_ignore">Ignore Call</string>
+    <string name="call_incoming_message">is calling, Do you want to answer</string>
+</resources>

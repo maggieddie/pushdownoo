@@ -1,0 +1,103 @@
+(class (attrs abstract ) com/google/common/collect/CustomConcurrentHashMap$Strength
+ (super java/lang/Enum)
+ (source "CustomConcurrentHashMap.java")
+
+ (field (attrs private static final ) $VALUES [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]] )
+ (field (attrs public static final ) SOFT [object com/google/common/collect/CustomConcurrentHashMap$Strength] )
+ (field (attrs public static final ) STRONG [object com/google/common/collect/CustomConcurrentHashMap$Strength] )
+ (field (attrs public static final ) WEAK [object com/google/common/collect/CustomConcurrentHashMap$Strength] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 5)
+  (const/4 v4 2)
+  (const/4 v3 1)
+  (const/4 v2 0)
+  (line 296)
+  (new-instance v0 com/google/common/collect/CustomConcurrentHashMap$Strength$1)
+  (const-string v1 "STRONG")
+  (invoke-direct {v0 v1 v2} com/google/common/collect/CustomConcurrentHashMap$Strength$1/<init> [object java/lang/String] int )
+  (sput-object v0 com/google/common/collect/CustomConcurrentHashMap$Strength.STRONG [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (line 309)
+  (new-instance v0 com/google/common/collect/CustomConcurrentHashMap$Strength$2)
+  (const-string v1 "SOFT")
+  (invoke-direct {v0 v1 v3} com/google/common/collect/CustomConcurrentHashMap$Strength$2/<init> [object java/lang/String] int )
+  (sput-object v0 com/google/common/collect/CustomConcurrentHashMap$Strength.SOFT [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (line 322)
+  (new-instance v0 com/google/common/collect/CustomConcurrentHashMap$Strength$3)
+  (const-string v1 "WEAK")
+  (invoke-direct {v0 v1 v4} com/google/common/collect/CustomConcurrentHashMap$Strength$3/<init> [object java/lang/String] int )
+  (sput-object v0 com/google/common/collect/CustomConcurrentHashMap$Strength.WEAK [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (line 290)
+  (const/4 v0 3)
+  (new-array v0 v0 [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]])
+  (sget-object v1 com/google/common/collect/CustomConcurrentHashMap$Strength.STRONG [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (aput-object v1 v0 v2)
+  (sget-object v1 com/google/common/collect/CustomConcurrentHashMap$Strength.SOFT [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (aput-object v1 v0 v3)
+  (sget-object v1 com/google/common/collect/CustomConcurrentHashMap$Strength.WEAK [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (aput-object v1 v0 v4)
+  (sput-object v0 com/google/common/collect/CustomConcurrentHashMap$Strength.$VALUES [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]])
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object java/lang/String] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 290)
+  (invoke-direct {v0 v1 v2} java/lang/Enum/<init> [object java/lang/String] int )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/lang/String] int [object com/google/common/collect/CustomConcurrentHashMap$1] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object com/google/common/collect/CustomConcurrentHashMap$1])
+  (line 290)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/CustomConcurrentHashMap$Strength/<init> [object java/lang/String] int )
+  (return-void )
+ )
+
+(method (attrs public static ) valueOf([object java/lang/String] )[object com/google/common/collect/CustomConcurrentHashMap$Strength]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 290)
+  (const-class v0 com/google/common/collect/CustomConcurrentHashMap$Strength)
+  (invoke-static {v0 v1} java/lang/Enum/valueOf [object java/lang/Class] [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object com/google/common/collect/CustomConcurrentHashMap$Strength])
+  (return-object v0)
+ )
+
+(method (attrs public static ) values()[array [object com/google/common/collect/CustomConcurrentHashMap$Strength]]
+  (limit registers 1)
+  (line 290)
+  (sget-object v0 com/google/common/collect/CustomConcurrentHashMap$Strength.$VALUES [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]])
+  (invoke-virtual {v0} [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]]/clone )
+  (move-result-object v0)
+  (check-cast v0 [array [object com/google/common/collect/CustomConcurrentHashMap$Strength]])
+  (return-object v0)
+ )
+
+(method (attrs abstract ) defaultEquivalence()[object com/google/common/base/Equivalence]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/base/Equivalence"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs abstract ) referenceValue([object com/google/common/collect/CustomConcurrentHashMap$Segment] [object com/google/common/collect/CustomConcurrentHashMap$ReferenceEntry] [object java/lang/Object] )[object com/google/common/collect/CustomConcurrentHashMap$ValueReference]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<K:"  "Ljava/lang/Object;"  "V:"  "Ljava/lang/Object;"  ">("  "Lcom/google/common/collect/CustomConcurrentHashMap$Segment"  "<TK;TV;>;"  "Lcom/google/common/collect/CustomConcurrentHashMap$ReferenceEntry"  "<TK;TV;>;TV;)"  "Lcom/google/common/collect/CustomConcurrentHashMap$ValueReference"  "<TK;TV;>;")
+  )
+)
+
+)

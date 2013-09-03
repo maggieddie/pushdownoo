@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/zero/w
+ (super com/facebook/inject/d)
+ (source "ZeroModule.java")
+
+ (field (attrs final ) a [object com/facebook/zero/c] )
+
+(method (attrs private ) <init>([object com/facebook/zero/c] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/zero/w])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  (line 306)
+  (iput-object v1 v0 com/facebook/zero/w.a [object com/facebook/zero/c])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/zero/c] [object com/facebook/zero/d] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/zero/w])
+  ; parameter[0] : v1 ([object com/facebook/zero/c])
+  ; parameter[1] : v2 ([object com/facebook/zero/d])
+  (line 306)
+  (invoke-direct {v0 v1} com/facebook/zero/w/<init> [object com/facebook/zero/c] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/zero/rewrite/f]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/zero/w])
+  (line 309)
+  (new-instance v1 com/facebook/zero/rewrite/f)
+  (const-class v0 com/facebook/zero/d/a)
+  (invoke-virtual {v4 v0} com/facebook/zero/w/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/zero/d/a])
+  (const-class v2 com/facebook/common/w/q)
+  (const-class v3 com/facebook/zero/annotations/IsUserCurrentlyZeroRated)
+  (invoke-virtual {v4 v2 v3} com/facebook/zero/w/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v2)
+  (invoke-direct {v1 v0 v2} com/facebook/zero/rewrite/f/<init> [object com/facebook/zero/d/a] [object javax/inject/a] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/w])
+  (line 306)
+  (invoke-virtual {v1} com/facebook/zero/w/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

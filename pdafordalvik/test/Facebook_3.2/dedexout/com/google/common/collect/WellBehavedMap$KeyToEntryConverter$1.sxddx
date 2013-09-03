@@ -1,0 +1,62 @@
+(class (attrs ) com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1
+ (super com/google/common/collect/AbstractMapEntry)
+ (source "WellBehavedMap.java")
+
+ (field (attrs final ) a [object java/lang/Object] )
+ (field (attrs final ) b [object com/google/common/collect/WellBehavedMap$KeyToEntryConverter] )
+
+(method (attrs ) <init>([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 74)
+  (iput-object v1 v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.b [object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  (iput-object v2 v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.a [object java/lang/Object])
+  (invoke-direct {v0} com/google/common/collect/AbstractMapEntry/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getKey()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1])
+  (line 76)
+  (iget-object v0 v1 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.a [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) getValue()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1])
+  (line 79)
+  (iget-object v0 v2 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.b [object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  (iget-object v0 v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter.a [object java/util/Map])
+  (iget-object v1 v2 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.a [object java/lang/Object])
+  (invoke-interface {v0 v1} java/util/Map/get [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) setValue([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)TV;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 82)
+  (iget-object v0 v2 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.b [object com/google/common/collect/WellBehavedMap$KeyToEntryConverter])
+  (iget-object v0 v0 com/google/common/collect/WellBehavedMap$KeyToEntryConverter.a [object java/util/Map])
+  (iget-object v1 v2 com/google/common/collect/WellBehavedMap$KeyToEntryConverter$1.a [object java/lang/Object])
+  (invoke-interface {v0 v1 v3} java/util/Map/put [object java/lang/Object] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

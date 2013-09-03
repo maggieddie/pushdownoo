@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) org/andengine/opengl/texture/atlas/buildable/builder/ITextureAtlasBuilder
+ (super java/lang/Object)
+ (source "ITextureAtlasBuilder.java")
+
+
+(method (attrs public abstract ) build([object org/andengine/opengl/texture/atlas/ITextureAtlas] [object java/util/ArrayList] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TA;"  "Ljava/util/ArrayList"  "<"  "Lorg/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlas$TextureAtlasSourceWithWithLocationCallback"  "<TT;>;>;)V")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object org/andengine/opengl/texture/atlas/buildable/builder/ITextureAtlasBuilder$TextureAtlasBuilderException])
+  )
+)
+
+)

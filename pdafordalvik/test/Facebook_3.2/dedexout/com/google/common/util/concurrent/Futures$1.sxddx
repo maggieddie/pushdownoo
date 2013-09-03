@@ -1,0 +1,67 @@
+(class (attrs final ) com/google/common/util/concurrent/Futures$1
+ (super java/lang/Object)
+ (source "Futures.java")
+ (implements com/google/common/util/concurrent/UninterruptibleFuture)
+
+ (field (attrs final ) a [object java/util/concurrent/Future] )
+
+(method (attrs public ) cancel(boolean )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/util/concurrent/Futures$1])
+  ; parameter[0] : v2 (boolean)
+  (line 87)
+  (iget-object v0 v1 com/google/common/util/concurrent/Futures$1.a [object java/util/concurrent/Future])
+  (invoke-interface {v0 v2} java/util/concurrent/Future/cancel boolean )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) get()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(J"  "Ljava/util/concurrent/TimeUnit;"  ")TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/util/concurrent/Futures$1])
+  (line 106)
+  (iget-object v0 v1 com/google/common/util/concurrent/Futures$1.a [object java/util/concurrent/Future])
+  (invoke-static {v0} com/google/common/util/concurrent/Uninterruptibles/a [object java/util/concurrent/Future] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) get(long [object java/util/concurrent/TimeUnit] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(J"  "Ljava/util/concurrent/TimeUnit;"  ")TV;")
+  )
+  (limit registers 5)
+  ; this: v1 ([object com/google/common/util/concurrent/Futures$1])
+  ; parameter[0] : v2 (long)
+  ; parameter[1] : v4 ([object java/util/concurrent/TimeUnit])
+  (line 101)
+  (iget-object v0 v1 com/google/common/util/concurrent/Futures$1.a [object java/util/concurrent/Future])
+  (invoke-static {v0 v2 v3 v4} com/google/common/util/concurrent/Uninterruptibles/a [object java/util/concurrent/Future] long [object java/util/concurrent/TimeUnit] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) isCancelled()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/util/concurrent/Futures$1])
+  (line 91)
+  (iget-object v0 v1 com/google/common/util/concurrent/Futures$1.a [object java/util/concurrent/Future])
+  (invoke-interface {v0} java/util/concurrent/Future/isCancelled )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isDone()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/util/concurrent/Futures$1])
+  (line 95)
+  (iget-object v0 v1 com/google/common/util/concurrent/Futures$1.a [object java/util/concurrent/Future])
+  (invoke-interface {v0} java/util/concurrent/Future/isDone )
+  (move-result v0)
+  (return v0)
+)
+
+)

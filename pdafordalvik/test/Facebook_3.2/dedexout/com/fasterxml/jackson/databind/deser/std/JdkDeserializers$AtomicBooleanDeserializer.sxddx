@@ -1,0 +1,39 @@
+(class (attrs public ) com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer
+ (super com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer)
+ (source "JdkDeserializers.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer])
+  (line 302)
+  (const-class v0 java/util/concurrent/atomic/AtomicBoolean)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer/<init> [object java/lang/Class] )
+  (return-void )
+ )
+
+(method (attrs public ) deserialize([object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )[object java/lang/Object]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  (line 299)
+  (invoke-virtual {v1 v2 v3} com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer/deserialize [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) deserialize([object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )[object java/util/concurrent/atomic/AtomicBoolean]
+  (limit registers 5)
+  ; this: v2 ([object com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  (line 309)
+  (new-instance v0 java/util/concurrent/atomic/AtomicBoolean)
+  (invoke-virtual {v2 v3 v4} com/fasterxml/jackson/databind/deser/std/JdkDeserializers$AtomicBooleanDeserializer/_parseBooleanPrimitive [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )
+  (move-result v1)
+  (invoke-direct {v0 v1} java/util/concurrent/atomic/AtomicBoolean/<init> boolean )
+  (return-object v0)
+)
+
+)

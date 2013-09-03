@@ -1,0 +1,77 @@
+(class (attrs ) com/google/common/a/gs
+ (super java/lang/Object)
+ (source "LinkedHashMultimap.java")
+ (implements java/util/Iterator)
+
+ (field (attrs ) a [object java/util/Map$Entry] )
+ (field (attrs final ) b [object java/util/Iterator] )
+ (field (attrs final ) c [object com/google/common/a/gr] )
+
+(method (attrs ) <init>([object com/google/common/a/gr] [object java/util/Iterator] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/gs])
+  ; parameter[0] : v1 ([object com/google/common/a/gr])
+  ; parameter[1] : v2 ([object java/util/Iterator])
+  (line 292)
+  (iput-object v1 v0 com/google/common/a/gs.c [object com/google/common/a/gr])
+  (iput-object v2 v0 com/google/common/a/gs.b [object java/util/Iterator])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/util/Map$Entry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map$Entry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gs])
+  (line 302)
+  (iget-object v0 v1 com/google/common/a/gs.b [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (iput-object v0 v1 com/google/common/a/gs.a [object java/util/Map$Entry])
+  (line 303)
+  (iget-object v0 v1 com/google/common/a/gs.a [object java/util/Map$Entry])
+  (return-object v0)
+)
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gs])
+  (line 297)
+  (iget-object v0 v1 com/google/common/a/gs.b [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gs])
+  (line 292)
+  (invoke-virtual {v1} com/google/common/a/gs/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/a/gs])
+  (line 309)
+  (iget-object v0 v3 com/google/common/a/gs.b [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/remove )
+  (line 310)
+  (iget-object v0 v3 com/google/common/a/gs.c [object com/google/common/a/gr])
+  (iget-object v1 v3 com/google/common/a/gs.a [object java/util/Map$Entry])
+  (invoke-interface {v1} java/util/Map$Entry/getKey )
+  (move-result-object v1)
+  (iget-object v2 v3 com/google/common/a/gs.a [object java/util/Map$Entry])
+  (invoke-interface {v2} java/util/Map$Entry/getValue )
+  (move-result-object v2)
+  (invoke-virtual {v0 v1 v2} com/google/common/a/gr/c [object java/lang/Object] [object java/lang/Object] )
+  (line 311)
+  (return-void )
+)
+
+)

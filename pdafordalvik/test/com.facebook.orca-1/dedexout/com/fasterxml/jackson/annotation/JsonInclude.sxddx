@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonInclude
+ (super java/lang/Object)
+ (source "JsonInclude.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object com/fasterxml/jackson/annotation/JsonInclude$Include]
+)
+
+)

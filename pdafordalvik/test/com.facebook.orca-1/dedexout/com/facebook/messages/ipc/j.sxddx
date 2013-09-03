@@ -1,0 +1,59 @@
+(class (attrs ) com/facebook/messages/ipc/j
+ (super com/facebook/inject/d)
+ (source "MessagesIpcModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/messages/ipc/j])
+  (line 40)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/messages/ipc/g] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/messages/ipc/j])
+  ; parameter[0] : v1 ([object com/facebook/messages/ipc/g])
+  (line 40)
+  (invoke-direct {v0} com/facebook/messages/ipc/j/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/messages/ipc/e]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/messages/ipc/j])
+  (line 45)
+  (new-instance v2 com/facebook/messages/ipc/e)
+  (const-class v0 android/content/Context)
+  (invoke-virtual {v5 v0} com/facebook/messages/ipc/j/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (const-class v1 java/lang/String)
+  (const-class v3 com/facebook/auth/annotations/LoggedInUserId)
+  (invoke-virtual {v5 v1 v3} com/facebook/messages/ipc/j/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v3)
+  (const-class v1 com/facebook/config/a/a)
+  (invoke-virtual {v5 v1} com/facebook/messages/ipc/j/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/config/a/a])
+  (invoke-virtual {v1} com/facebook/config/a/a/j )
+  (move-result-object v4)
+  (const-class v1 com/facebook/c/l)
+  (invoke-virtual {v5 v1} com/facebook/messages/ipc/j/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/c/l])
+  (invoke-direct {v2 v0 v3 v4 v1} com/facebook/messages/ipc/e/<init> [object android/content/Context] [object javax/inject/a] [object com/facebook/base/j] [object com/facebook/c/l] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/messages/ipc/j])
+  (line 40)
+  (invoke-virtual {v1} com/facebook/messages/ipc/j/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

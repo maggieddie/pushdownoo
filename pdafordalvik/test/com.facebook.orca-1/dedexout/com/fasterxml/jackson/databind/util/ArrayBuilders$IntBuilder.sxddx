@@ -1,0 +1,33 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/util/ArrayBuilders$IntBuilder
+ (super com/fasterxml/jackson/databind/util/PrimitiveArrayBuilder)
+ (source "ArrayBuilders.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$IntBuilder])
+  (line 112)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/util/PrimitiveArrayBuilder/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) _constructArray(int )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$IntBuilder])
+  ; parameter[0] : v2 (int)
+  (line 109)
+  (invoke-virtual {v1 v2} com/fasterxml/jackson/databind/util/ArrayBuilders$IntBuilder/_constructArray int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) _constructArray(int )[array int]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/ArrayBuilders$IntBuilder])
+  ; parameter[0] : v2 (int)
+  (line 114)
+  (new-array v0 v2 [array int])
+  (return-object v0)
+)
+
+)

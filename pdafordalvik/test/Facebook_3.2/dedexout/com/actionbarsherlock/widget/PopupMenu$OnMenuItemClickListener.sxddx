@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/actionbarsherlock/widget/PopupMenu$OnMenuItemClickListener
+ (super java/lang/Object)
+ (source "PopupMenu.java")
+
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/view/MenuItem] )boolean
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) com/facebook/bugreporter/activity/bugreport/c
+ (super com/facebook/widget/text/f)
+ (source "BugReportFragment.java")
+
+ (field (attrs final ) a [object com/facebook/bugreporter/activity/bugreport/BugReportFragment] )
+
+(method (attrs ) <init>([object com/facebook/bugreporter/activity/bugreport/BugReportFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/bugreporter/activity/bugreport/c])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/activity/bugreport/BugReportFragment])
+  (line 175)
+  (iput-object v1 v0 com/facebook/bugreporter/activity/bugreport/c.a [object com/facebook/bugreporter/activity/bugreport/BugReportFragment])
+  (invoke-direct {v0} com/facebook/widget/text/f/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/bugreporter/activity/bugreport/c])
+  (line 178)
+  (const-string v0 "http://m.facebook.com/about/privacy")
+  (invoke-static {v0} android/net/Uri/parse [object java/lang/String] )
+  (move-result-object v0)
+  (line 179)
+  (new-instance v1 android/content/Intent)
+  (const-string v2 "android.intent.action.VIEW")
+  (invoke-direct {v1 v2 v0} android/content/Intent/<init> [object java/lang/String] [object android/net/Uri] )
+  (line 180)
+  (iget-object v0 v3 com/facebook/bugreporter/activity/bugreport/c.a [object com/facebook/bugreporter/activity/bugreport/BugReportFragment])
+  (invoke-virtual {v0 v1} com/facebook/bugreporter/activity/bugreport/BugReportFragment/a [object android/content/Intent] )
+  (line 181)
+  (return-void )
+)
+
+)

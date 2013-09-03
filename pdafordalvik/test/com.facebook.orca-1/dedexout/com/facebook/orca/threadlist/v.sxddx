@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/orca/threadlist/v
+ (super com/facebook/orca/q/d)
+ (source "ThreadItemView.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadlist/u] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadlist/u] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/v])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/u])
+  (line 127)
+  (iput-object v1 v0 com/facebook/orca/threadlist/v.a [object com/facebook/orca/threadlist/u])
+  (invoke-direct {v0} com/facebook/orca/q/d/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/l/x] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadlist/v])
+  ; parameter[0] : v2 ([object com/facebook/l/x])
+  (line 130)
+  (iget-object v0 v1 com/facebook/orca/threadlist/v.a [object com/facebook/orca/threadlist/u])
+  (invoke-static {v0 v2} com/facebook/orca/threadlist/u/a [object com/facebook/orca/threadlist/u] [object com/facebook/l/x] )
+  (line 131)
+  (return-void )
+)
+
+)

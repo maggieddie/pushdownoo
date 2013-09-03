@@ -1,0 +1,45 @@
+(interface (attrs public abstract ) com/facebook/backgroundtasks/c
+ (super java/lang/Object)
+ (source "BackgroundTask.java")
+
+
+(method (attrs public abstract ) a()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;>;")
+  )
+)
+
+(method (attrs public abstract ) a([object com/facebook/backgroundtasks/q] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;>;")
+  )
+)
+
+(method (attrs public abstract ) b()boolean
+)
+
+(method (attrs public abstract ) c()[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/d/a/s"  "<"  "Lcom/facebook/backgroundtasks/b;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) f()[object java/lang/String]
+)
+
+(method (attrs public abstract ) g()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;>;")
+  )
+)
+
+(method (attrs public abstract ) h()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/lang/String;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) i()long
+)
+
+)

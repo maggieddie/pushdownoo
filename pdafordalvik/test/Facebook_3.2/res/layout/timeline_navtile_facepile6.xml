@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_1" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_2" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" android:layout_toRightOf="@id/timeline_facepile_1" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_3" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" android:layout_toRightOf="@id/timeline_facepile_2" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_4" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" android:layout_below="@id/timeline_facepile_1" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_5" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" android:layout_toRightOf="@id/timeline_facepile_4" android:layout_below="@id/timeline_facepile_2" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/timeline_facepile_6" android:layout_width="@dimen/timeline_navtile_halfheight" android:layout_height="@dimen/timeline_navtile_halfheight" android:layout_toRightOf="@id/timeline_facepile_5" android:layout_below="@id/timeline_facepile_3" style="@style/timeline_navtile_image" />
+</RelativeLayout>

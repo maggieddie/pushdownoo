@@ -1,0 +1,79 @@
+(class (attrs ) com/google/common/collect/SingletonImmutableMap$Values
+ (super com/google/common/collect/ImmutableCollection)
+ (source "SingletonImmutableMap.java")
+
+ (field (attrs final ) singleValue [object java/lang/Object] )
+
+(method (attrs ) <init>([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TV;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 107)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (line 108)
+  (iput-object v1 v0 com/google/common/collect/SingletonImmutableMap$Values.singleValue [object java/lang/Object])
+  (line 109)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  (line 125)
+  (iget-object v0 v1 com/google/common/collect/SingletonImmutableMap$Values.singleValue [object java/lang/Object])
+  (invoke-static {v0} com/google/common/collect/Iterators/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  (line 129)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 112)
+  (iget-object v0 v1 com/google/common/collect/SingletonImmutableMap$Values.singleValue [object java/lang/Object])
+  (invoke-virtual {v0 v2} java/lang/Object/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  (line 116)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  (line 103)
+  (invoke-virtual {v1} com/google/common/collect/SingletonImmutableMap$Values/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/SingletonImmutableMap$Values])
+  (line 121)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

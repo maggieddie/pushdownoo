@@ -1,0 +1,38 @@
+(class (attrs public ) com/facebook/debug/log/a
+ (super com/facebook/inject/c)
+ (source "AppLoggingModule.java")
+
+ (field (attrs private final ) a [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/debug/log/a])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 14)
+  (invoke-direct {v0} com/facebook/inject/c/<init> )
+  (line 15)
+  (iput-object v1 v0 com/facebook/debug/log/a.a [object java/lang/String])
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/debug/log/a])
+  (line 20)
+  (const-class v0 com/facebook/debug/log/h)
+  (invoke-virtual {v2 v0} com/facebook/debug/log/a/f [object java/lang/Class] )
+  (line 21)
+  (const-class v0 java/lang/String)
+  (invoke-virtual {v2 v0} com/facebook/debug/log/a/a [object java/lang/Class] )
+  (move-result-object v0)
+  (const-class v1 com/facebook/debug/log/AppLoggingPrefix)
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object java/lang/Class] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/facebook/debug/log/a.a [object java/lang/String])
+  (invoke-interface {v0 v1} com/facebook/inject/a/c/a [object java/lang/Object] )
+  (line 24)
+  (return-void )
+)
+
+)

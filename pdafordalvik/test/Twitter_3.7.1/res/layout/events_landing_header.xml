@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_list" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/top_header" android:layout_alignParentTop="true" layout="@layout/events_landing_header_top" />
+    <View android:id="@id/divider_middle" android:background="@color/event_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_thickness" android:layout_below="@id/top_header" />
+    <View android:id="@id/divider_middle_reflection" android:background="@color/event_divider_reflection" android:layout_width="fill_parent" android:layout_height="@dimen/divider_thickness" android:layout_below="@id/divider_middle" />
+    <View android:id="@id/divider_bottom" android:background="@color/bg_list" android:layout_width="fill_parent" android:layout_height="15.0dip" android:layout_below="@id/divider_middle_reflection" />
+</RelativeLayout>

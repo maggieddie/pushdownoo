@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/card_front_category_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/text_category_name" android:padding="@dimen/standard_padding" android:paddingLeft="@dimen/standard_half_padding" android:layout_width="@dimen/card_front_category_item_width" android:layout_height="fill_parent" android:maxLines="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

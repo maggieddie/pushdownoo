@@ -1,0 +1,44 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer
+ (super com/fasterxml/jackson/databind/deser/std/StdDeserializer)
+ (source "StdScalarDeserializer.java")
+
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/JavaType] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/JavaType])
+  (line 22)
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/deser/std/StdDeserializer/<init> [object com/fasterxml/jackson/databind/JavaType] )
+  (line 23)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer])
+  ; parameter[0] : v1 ([object java/lang/Class])
+  (line 18)
+  (invoke-direct {v0 v1} com/fasterxml/jackson/databind/deser/std/StdDeserializer/<init> [object java/lang/Class] )
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) deserializeWithType([object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] [object com/fasterxml/jackson/databind/jsontype/TypeDeserializer] )[object java/lang/Object]
+  (limit registers 5)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/std/StdScalarDeserializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/DeserializationContext])
+  ; parameter[2] : v4 ([object com/fasterxml/jackson/databind/jsontype/TypeDeserializer])
+  (line 30)
+  (invoke-virtual {v4 v2 v3} com/fasterxml/jackson/databind/jsontype/TypeDeserializer/deserializeTypedFromScalar [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/DeserializationContext] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

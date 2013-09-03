@@ -1,0 +1,29 @@
+(class (attrs ) android/support/v4/app/FragmentActivity$2
+ (super java/lang/Object)
+ (source "FragmentActivity.java")
+ (implements android/support/v4/app/FragmentContainer)
+
+ (field (attrs final ) a [object android/support/v4/app/FragmentActivity] )
+
+(method (attrs ) <init>([object android/support/v4/app/FragmentActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/FragmentActivity$2])
+  ; parameter[0] : v1 ([object android/support/v4/app/FragmentActivity])
+  (line 102)
+  (iput-object v1 v0 android/support/v4/app/FragmentActivity$2.a [object android/support/v4/app/FragmentActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(int )[object android/view/View]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/app/FragmentActivity$2])
+  ; parameter[0] : v2 (int)
+  (line 105)
+  (iget-object v0 v1 android/support/v4/app/FragmentActivity$2.a [object android/support/v4/app/FragmentActivity])
+  (invoke-virtual {v0 v2} android/support/v4/app/FragmentActivity/findViewById int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

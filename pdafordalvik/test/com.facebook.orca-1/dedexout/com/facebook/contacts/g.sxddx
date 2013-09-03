@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/contacts/g
+ (super com/facebook/inject/d)
+ (source "ContactsLibModule.java")
+
+ (field (attrs final ) a [object com/facebook/contacts/a] )
+
+(method (attrs private ) <init>([object com/facebook/contacts/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/g])
+  ; parameter[0] : v1 ([object com/facebook/contacts/a])
+  (line 440)
+  (iput-object v1 v0 com/facebook/contacts/g.a [object com/facebook/contacts/a])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/contacts/a] [object com/facebook/contacts/b] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/contacts/g])
+  ; parameter[0] : v1 ([object com/facebook/contacts/a])
+  ; parameter[1] : v2 ([object com/facebook/contacts/b])
+  (line 440)
+  (invoke-direct {v0 v1} com/facebook/contacts/g/<init> [object com/facebook/contacts/a] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/contacts/g/b]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/g])
+  (line 445)
+  (new-instance v0 com/facebook/contacts/g/b)
+  (invoke-direct {v0} com/facebook/contacts/g/b/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/g])
+  (line 440)
+  (invoke-virtual {v1} com/facebook/contacts/g/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

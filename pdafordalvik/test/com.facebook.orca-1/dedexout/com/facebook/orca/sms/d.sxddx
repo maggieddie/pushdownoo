@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/orca/sms/d
+ (super java/lang/Object)
+ (source "FetchMmsSmsThreadListResult.java")
+
+ (field (attrs private final ) a [object com/facebook/orca/threads/ThreadsCollection] )
+ (field (attrs private final ) b [object com/google/common/a/es] )
+
+(method (attrs ) <init>([object com/facebook/orca/threads/ThreadsCollection] [object com/google/common/a/es] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/orca/threads/ThreadsCollection;"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/user/User;"  ">;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/sms/d])
+  ; parameter[0] : v1 ([object com/facebook/orca/threads/ThreadsCollection])
+  ; parameter[1] : v2 ([object com/google/common/a/es])
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 15)
+  (iput-object v1 v0 com/facebook/orca/sms/d.a [object com/facebook/orca/threads/ThreadsCollection])
+  (line 16)
+  (iput-object v2 v0 com/facebook/orca/sms/d.b [object com/google/common/a/es])
+  (line 17)
+  (return-void )
+ )
+
+(method (attrs ) a()[object com/facebook/orca/threads/ThreadsCollection]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/sms/d])
+  (line 20)
+  (iget-object v0 v1 com/facebook/orca/sms/d.a [object com/facebook/orca/threads/ThreadsCollection])
+  (return-object v0)
+)
+
+(method (attrs ) b()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/user/User;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/sms/d])
+  (line 24)
+  (iget-object v0 v1 com/facebook/orca/sms/d.b [object com/google/common/a/es])
+  (return-object v0)
+)
+
+)

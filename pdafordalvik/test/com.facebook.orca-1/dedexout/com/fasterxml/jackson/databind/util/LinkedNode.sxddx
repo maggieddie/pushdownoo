@@ -1,0 +1,78 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/util/LinkedNode
+ (super java/lang/Object)
+ (source "LinkedNode.java")
+
+ (field (attrs final ) _next [object com/fasterxml/jackson/databind/util/LinkedNode] )
+ (field (attrs final ) _value [object java/lang/Object] )
+
+(method (attrs public ) <init>([object java/lang/Object] [object com/fasterxml/jackson/databind/util/LinkedNode] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lcom/fasterxml/jackson/databind/util/LinkedNode"  "<TT;>;)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/fasterxml/jackson/databind/util/LinkedNode])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/util/LinkedNode])
+  (line 16)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 17)
+  (iput-object v1 v0 com/fasterxml/jackson/databind/util/LinkedNode._value [object java/lang/Object])
+  (line 18)
+  (iput-object v2 v0 com/fasterxml/jackson/databind/util/LinkedNode._next [object com/fasterxml/jackson/databind/util/LinkedNode])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public static ) contains([object com/fasterxml/jackson/databind/util/LinkedNode] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<ST:"  "Ljava/lang/Object;"  ">("  "Lcom/fasterxml/jackson/databind/util/LinkedNode"  "<TST;>;TST;)Z")
+  )
+  (limit registers 3)
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/util/LinkedNode])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (label l341a9c)
+  (line 37)
+  (if-eqz v1 l341aba)
+  (line 38)
+  (invoke-virtual {v1} com/fasterxml/jackson/databind/util/LinkedNode/value )
+  (move-result-object v0)
+  (if-ne v0 v2 l341ab0)
+  (line 39)
+  (const/4 v0 1)
+  (label l341aae)
+  (line 43)
+  (return v0)
+  (label l341ab0)
+  (line 41)
+  (invoke-virtual {v1} com/fasterxml/jackson/databind/util/LinkedNode/next )
+  (move-result-object v1)
+  (goto l341a9c)
+  (label l341aba)
+  (line 43)
+  (const/4 v0 0)
+  (goto l341aae)
+ )
+
+(method (attrs public ) next()[object com/fasterxml/jackson/databind/util/LinkedNode]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/fasterxml/jackson/databind/util/LinkedNode"  "<TT;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/LinkedNode])
+  (line 21)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/util/LinkedNode._next [object com/fasterxml/jackson/databind/util/LinkedNode])
+  (return-object v0)
+)
+
+(method (attrs public ) value()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/util/LinkedNode])
+  (line 23)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/util/LinkedNode._value [object java/lang/Object])
+  (return-object v0)
+)
+
+)

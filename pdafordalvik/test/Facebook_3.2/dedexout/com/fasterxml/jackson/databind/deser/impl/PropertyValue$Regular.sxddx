@@ -1,0 +1,33 @@
+(class (attrs final ) com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular
+ (super com/fasterxml/jackson/databind/deser/impl/PropertyValue)
+ (source "PropertyValue.java")
+
+ (field (attrs final ) _property [object com/fasterxml/jackson/databind/deser/SettableBeanProperty] )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/deser/impl/PropertyValue] [object java/lang/Object] [object com/fasterxml/jackson/databind/deser/SettableBeanProperty] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/deser/SettableBeanProperty])
+  (line 54)
+  (invoke-direct {v0 v1 v2} com/fasterxml/jackson/databind/deser/impl/PropertyValue/<init> [object com/fasterxml/jackson/databind/deser/impl/PropertyValue] [object java/lang/Object] )
+  (line 55)
+  (iput-object v3 v0 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular._property [object com/fasterxml/jackson/databind/deser/SettableBeanProperty])
+  (line 56)
+  (return-void )
+ )
+
+(method (attrs public ) assign([object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v2 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (line 62)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular._property [object com/fasterxml/jackson/databind/deser/SettableBeanProperty])
+  (iget-object v1 v2 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Regular.value [object java/lang/Object])
+  (invoke-virtual {v0 v3 v1} com/fasterxml/jackson/databind/deser/SettableBeanProperty/set [object java/lang/Object] [object java/lang/Object] )
+  (line 63)
+  (return-void )
+)
+
+)

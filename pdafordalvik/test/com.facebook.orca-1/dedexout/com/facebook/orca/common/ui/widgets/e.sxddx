@@ -1,0 +1,50 @@
+(class (attrs public abstract ) com/facebook/orca/common/ui/widgets/e
+ (super com/facebook/widget/f)
+ (source "FavoritesDragSortListView.java")
+
+ (field (attrs ) a boolean )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/common/ui/widgets/e])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 35)
+  (invoke-direct {v1 v2} com/facebook/widget/f/<init> [object android/content/Context] )
+  (line 32)
+  (const/4 v0 1)
+  (iput-boolean v0 v1 com/facebook/orca/common/ui/widgets/e.a boolean)
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/orca/common/ui/widgets/e] boolean )void
+  (limit registers 2)
+  ; parameter[0] : v0 ([object com/facebook/orca/common/ui/widgets/e])
+  ; parameter[1] : v1 (boolean)
+  (line 30)
+  (invoke-direct {v0 v1} com/facebook/orca/common/ui/widgets/e/setCanConvert boolean )
+  (return-void )
+ )
+
+(method (attrs private ) setCanConvert(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/common/ui/widgets/e])
+  ; parameter[0] : v1 (boolean)
+  (line 60)
+  (iput-boolean v1 v0 com/facebook/orca/common/ui/widgets/e.a boolean)
+  (line 61)
+  (return-void )
+ )
+
+(method (attrs public ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/common/ui/widgets/e])
+  (line 56)
+  (iget-boolean v0 v1 com/facebook/orca/common/ui/widgets/e.a boolean)
+  (return v0)
+)
+
+(method (attrs public abstract ) getInnerRow()[object android/view/View]
+)
+
+)

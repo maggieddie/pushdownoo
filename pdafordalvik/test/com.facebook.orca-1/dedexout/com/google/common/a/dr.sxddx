@@ -1,0 +1,242 @@
+(class (attrs ) com/google/common/a/dr
+ (super com/google/common/a/fy)
+ (source "EmptyImmutableSortedSet.java")
+
+ (field (attrs private static final ) b [array [object java/lang/Object]] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 61)
+  (const/4 v0 0)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (sput-object v0 com/google/common/a/dr.b [array [object java/lang/Object]])
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/Comparator] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Comparator"  "<-TE;>;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/dr])
+  ; parameter[0] : v1 ([object java/util/Comparator])
+  (line 37)
+  (invoke-direct {v0 v1} com/google/common/a/fy/<init> [object java/util/Comparator] )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs ) a([object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;ZTE;Z)"  "Lcom/google/common/a/fy"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/dr])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 121)
+  (const/4 v0 15)
+  (return v0)
+)
+
+(method (attrs ) a([object java/lang/Object] boolean )[object com/google/common/a/fy]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;ZTE;Z)"  "Lcom/google/common/a/fy"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/dr])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (boolean)
+  (line 106)
+  (return-object v0)
+)
+
+(method (attrs ) a([object java/lang/Object] boolean [object java/lang/Object] boolean )[object com/google/common/a/fy]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;ZTE;Z)"  "Lcom/google/common/a/fy"  "<TE;>;")
+  )
+  (limit registers 5)
+  ; this: v0 ([object com/google/common/a/dr])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (boolean)
+  ; parameter[2] : v3 ([object java/lang/Object])
+  ; parameter[3] : v4 (boolean)
+  (line 112)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;ZTE;Z)"  "Lcom/google/common/a/fy"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 58)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs ) b([object java/lang/Object] boolean )[object com/google/common/a/fy]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;Z)"  "Lcom/google/common/a/fy"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/dr])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 (boolean)
+  (line 117)
+  (return-object v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/dr])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 50)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/dr])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 75)
+  (invoke-interface {v2} java/util/Collection/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/dr])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 79)
+  (instance-of v0 v2 java/util/Set)
+  (if-eqz v0 l37f092)
+  (line 80)
+  (check-cast v2 [object java/util/Set])
+  (line 81)
+  (invoke-interface {v2} java/util/Set/isEmpty )
+  (move-result v0)
+  (label l37f090)
+  (line 83)
+  (return v0)
+  (label l37f092)
+  (const/4 v0 0)
+  (goto l37f090)
+)
+
+(method (attrs public ) first()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 96)
+  (new-instance v0 java/util/NoSuchElementException)
+  (invoke-direct {v0} java/util/NoSuchElementException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) h_()[object com/google/common/a/mh]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/mh"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 54)
+  (invoke-static {} com/google/common/a/gg/a )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 87)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 46)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 33)
+  (invoke-virtual {v1} com/google/common/a/dr/h_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) last()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 101)
+  (new-instance v0 java/util/NoSuchElementException)
+  (invoke-direct {v0} java/util/NoSuchElementException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 42)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 64)
+  (sget-object v0 com/google/common/a/dr.b [array [object java/lang/Object]])
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/dr])
+  ; parameter[0] : v3 ([array [object java/lang/Object]])
+  (line 68)
+  (array-length v0 v3)
+  (if-lez v0 l37f17a)
+  (line 69)
+  (const/4 v0 0)
+  (const/4 v1 0)
+  (aput-object v1 v3 v0)
+  (label l37f17a)
+  (line 71)
+  (return-object v3)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/dr])
+  (line 91)
+  (const-string v0 "[]")
+  (return-object v0)
+)
+
+)

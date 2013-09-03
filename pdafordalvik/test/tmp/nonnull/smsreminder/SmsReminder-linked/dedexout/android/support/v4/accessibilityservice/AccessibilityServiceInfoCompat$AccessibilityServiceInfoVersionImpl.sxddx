@@ -1,0 +1,21 @@
+(interface (attrs abstract ) android/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
+ (super java/lang/Object)
+ (source "AccessibilityServiceInfoCompat.java")
+
+
+(method (attrs public abstract ) getCanRetrieveWindowContent([object android/accessibilityservice/AccessibilityServiceInfo] )boolean
+)
+
+(method (attrs public abstract ) getDescription([object android/accessibilityservice/AccessibilityServiceInfo] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getId([object android/accessibilityservice/AccessibilityServiceInfo] )[object java/lang/String]
+)
+
+(method (attrs public abstract ) getResolveInfo([object android/accessibilityservice/AccessibilityServiceInfo] )[object android/content/pm/ResolveInfo]
+)
+
+(method (attrs public abstract ) getSettingsActivityName([object android/accessibilityservice/AccessibilityServiceInfo] )[object java/lang/String]
+)
+
+)

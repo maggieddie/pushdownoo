@@ -12,7 +12,7 @@
   ; this: v0 ([object org/bouncycastle/asn1/BERInputStream$1])
   ; parameter[0] : v1 ([object org/bouncycastle/asn1/BERInputStream])
   (line 27)
-  (iput-object-quick v1 v0 org/bouncycastle/asn1/BERInputStream$1.this$0 [object org/bouncycastle/asn1/BERInputStream])
+  (iput-object-quick v1 v0 )
   (invoke-direct {v0} org/bouncycastle/asn1/DERObject/<init> )
   (return-void )
  )

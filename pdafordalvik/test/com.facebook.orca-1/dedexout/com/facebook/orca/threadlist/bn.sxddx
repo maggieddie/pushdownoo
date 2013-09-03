@@ -1,0 +1,23 @@
+(class (attrs public ) com/facebook/orca/threadlist/bn
+ (super java/lang/Object)
+ (source "ThreadListLoader.java")
+
+ (field (attrs public final ) a [object com/facebook/fbservice/service/ServiceException] )
+ (field (attrs public final ) b boolean )
+
+(method (attrs public ) <init>([object com/facebook/fbservice/service/ServiceException] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/threadlist/bn])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/ServiceException])
+  ; parameter[1] : v2 (boolean)
+  (line 104)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 105)
+  (iput-object v1 v0 com/facebook/orca/threadlist/bn.a [object com/facebook/fbservice/service/ServiceException])
+  (line 106)
+  (iput-boolean v2 v0 com/facebook/orca/threadlist/bn.b boolean)
+  (line 107)
+  (return-void )
+ )
+
+)

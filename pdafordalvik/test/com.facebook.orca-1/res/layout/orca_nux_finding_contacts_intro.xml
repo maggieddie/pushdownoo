@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:reflexAware="true" orca:reflexAndroidTouchMode="tap"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/NuxFindingContactsIntroContent">
+        <ImageView android:src="@drawable/orca_contact_icon" style="@style/NuxFindingContactsIntroHeader" />
+        <TextView android:id="@id/orca_nux_finding_contacts_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/orca_nux_finding_contacts_intro_title" style="@style/OrcaNuxTitle" />
+        <TextView android:id="@id/orca_nux_finding_contacts_intro_body" style="@style/NuxFindingContactsIntroBody" />
+        <com.facebook.widget.HorizontalOrVerticalViewGroup android:id="@id/orca_nux_finding_contacts_button_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" orca:childMargin="6.0dip">
+            <Button android:id="@id/orca_nux_finding_contacts_intro_skip_button" android:padding="3.0dip" android:layout_width="0.0px" android:layout_height="0.0px" android:text="@string/dialog_not_now" style="@style/OrcaNuxButton" />
+            <Button android:id="@id/orca_nux_finding_contacts_intro_find_contacts_button" android:padding="3.0dip" android:layout_width="0.0px" android:layout_height="0.0px" android:text="@string/orca_nux_finding_contacts_button_sync" style="@style/OrcaNuxButtonGreen" />
+        </com.facebook.widget.HorizontalOrVerticalViewGroup>
+    </LinearLayout>
+</ScrollView>

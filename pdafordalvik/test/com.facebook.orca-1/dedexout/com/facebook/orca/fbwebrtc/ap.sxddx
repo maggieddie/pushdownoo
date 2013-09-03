@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/orca/fbwebrtc/ap
+ (super com/facebook/inject/d)
+ (source "WebrtcModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/fbwebrtc/ai] )
+
+(method (attrs private ) <init>([object com/facebook/orca/fbwebrtc/ai] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/ap])
+  ; parameter[0] : v1 ([object com/facebook/orca/fbwebrtc/ai])
+  (line 175)
+  (iput-object v1 v0 com/facebook/orca/fbwebrtc/ap.a [object com/facebook/orca/fbwebrtc/ai])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/fbwebrtc/ai] [object com/facebook/orca/fbwebrtc/aj] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/fbwebrtc/ap])
+  ; parameter[0] : v1 ([object com/facebook/orca/fbwebrtc/ai])
+  ; parameter[1] : v2 ([object com/facebook/orca/fbwebrtc/aj])
+  (line 175)
+  (invoke-direct {v0 v1} com/facebook/orca/fbwebrtc/ap/<init> [object com/facebook/orca/fbwebrtc/ai] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/fbwebrtc/ae]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/fbwebrtc/ap])
+  (line 179)
+  (new-instance v1 com/facebook/orca/fbwebrtc/ae)
+  (const-class v0 com/facebook/analytics/av)
+  (invoke-virtual {v2 v0} com/facebook/orca/fbwebrtc/ap/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/analytics/av])
+  (invoke-direct {v1 v0} com/facebook/orca/fbwebrtc/ae/<init> [object com/facebook/analytics/av] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/fbwebrtc/ap])
+  (line 175)
+  (invoke-virtual {v1} com/facebook/orca/fbwebrtc/ap/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

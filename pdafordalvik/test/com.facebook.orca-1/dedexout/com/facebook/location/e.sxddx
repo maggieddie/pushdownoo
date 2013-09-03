@@ -1,0 +1,41 @@
+(class (attrs ) com/facebook/location/e
+ (super java/lang/Object)
+ (source "GeocodingExecutor.java")
+ (implements java/util/concurrent/Callable)
+
+ (field (attrs final ) a [object com/facebook/location/f] )
+ (field (attrs final ) b [object com/facebook/location/d] )
+
+(method (attrs ) <init>([object com/facebook/location/d] [object com/facebook/location/f] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/location/e])
+  ; parameter[0] : v1 ([object com/facebook/location/d])
+  ; parameter[1] : v2 ([object com/facebook/location/f])
+  (line 51)
+  (iput-object v1 v0 com/facebook/location/e.b [object com/facebook/location/d])
+  (iput-object v2 v0 com/facebook/location/e.a [object com/facebook/location/f])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/location/g]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/location/e])
+  (line 54)
+  (iget-object v0 v2 com/facebook/location/e.b [object com/facebook/location/d])
+  (iget-object v1 v2 com/facebook/location/e.a [object com/facebook/location/f])
+  (invoke-static {v0 v1} com/facebook/location/d/a [object com/facebook/location/d] [object com/facebook/location/f] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) call()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/location/e])
+  (line 51)
+  (invoke-virtual {v1} com/facebook/location/e/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

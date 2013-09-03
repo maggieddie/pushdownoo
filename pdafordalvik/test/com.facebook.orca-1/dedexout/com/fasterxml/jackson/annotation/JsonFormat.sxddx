@@ -1,0 +1,21 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonFormat
+ (super java/lang/Object)
+ (source "JsonFormat.java")
+ (implements java/lang/annotation/Annotation)
+
+ (field (attrs public static final ) DEFAULT_LOCALE [object java/lang/String] "##default" )
+ (field (attrs public static final ) DEFAULT_TIMEZONE [object java/lang/String] "##default" )
+
+(method (attrs public abstract ) locale()[object java/lang/String]
+)
+
+(method (attrs public abstract ) pattern()[object java/lang/String]
+)
+
+(method (attrs public abstract ) shape()[object com/fasterxml/jackson/annotation/JsonFormat$Shape]
+)
+
+(method (attrs public abstract ) timezone()[object java/lang/String]
+)
+
+)

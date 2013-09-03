@@ -1,0 +1,78 @@
+(class (attrs ) com/google/common/collect/Collections2$TransformedCollection
+ (super java/util/AbstractCollection)
+ (source "Collections2.java")
+
+ (field (attrs final ) a [object java/util/Collection] )
+ (field (attrs final ) b [object com/google/common/base/Function] )
+
+(method (attrs ) <init>([object java/util/Collection] [object com/google/common/base/Function] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<TF;>;"  "Lcom/google/common/base/Function"  "<-TF;+TT;>;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/Collections2$TransformedCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  ; parameter[1] : v3 ([object com/google/common/base/Function])
+  (line 270)
+  (invoke-direct {v1} java/util/AbstractCollection/<init> )
+  (line 271)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Collection])
+  (iput-object v0 v1 com/google/common/collect/Collections2$TransformedCollection.a [object java/util/Collection])
+  (line 272)
+  (invoke-static {v3} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object com/google/common/base/Function])
+  (iput-object v0 v1 com/google/common/collect/Collections2$TransformedCollection.b [object com/google/common/base/Function])
+  (line 273)
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Collections2$TransformedCollection])
+  (line 276)
+  (iget-object v0 v1 com/google/common/collect/Collections2$TransformedCollection.a [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/clear )
+  (line 277)
+  (return-void )
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Collections2$TransformedCollection])
+  (line 280)
+  (iget-object v0 v1 com/google/common/collect/Collections2$TransformedCollection.a [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TT;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/Collections2$TransformedCollection])
+  (line 284)
+  (iget-object v0 v2 com/google/common/collect/Collections2$TransformedCollection.a [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/iterator )
+  (move-result-object v0)
+  (iget-object v1 v2 com/google/common/collect/Collections2$TransformedCollection.b [object com/google/common/base/Function])
+  (invoke-static {v0 v1} com/google/common/collect/Iterators/a [object java/util/Iterator] [object com/google/common/base/Function] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Collections2$TransformedCollection])
+  (line 288)
+  (iget-object v0 v1 com/google/common/collect/Collections2$TransformedCollection.a [object java/util/Collection])
+  (invoke-interface {v0} java/util/Collection/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

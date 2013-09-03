@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/generic_white" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.UrlImage android:id="@id/ksimage_recipient_avatar" android:layout_width="@dimen/products_recipient_avatar_width" android:layout_height="@dimen/products_recipient_avatar_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/standard_14pt_text_size" android:textColor="@color/generic_black" android:ellipsize="end" android:id="@id/text_header" android:paddingLeft="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/ksimage_recipient_avatar" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="bottom" android:background="@color/generic_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/shadow_down" android:scaleType="fitXY" />
+</LinearLayout>

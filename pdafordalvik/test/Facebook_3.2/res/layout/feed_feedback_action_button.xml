@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/feed_feedback_action_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_feedback_button_spacer" />
+    <TextView android:id="@id/feed_feedback_action_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_feedback_button_spacer" android:layout_marginRight="@dimen/feed_feedback_button_spacer" style="@style/ufi_button_text" />
+</merge>

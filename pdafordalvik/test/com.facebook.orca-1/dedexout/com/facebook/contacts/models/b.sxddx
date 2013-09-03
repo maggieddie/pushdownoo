@@ -1,0 +1,442 @@
+(class (attrs public ) com/facebook/contacts/models/b
+ (super java/lang/Object)
+ (source "ContactBuilder.java")
+
+ (field (attrs private ) a [object java/lang/String] )
+ (field (attrs private ) b [object java/lang/String] )
+ (field (attrs private ) c [object java/lang/String] )
+ (field (attrs private ) d [object com/facebook/user/Name] )
+ (field (attrs private ) e [object java/lang/String] )
+ (field (attrs private ) f [object java/lang/String] )
+ (field (attrs private ) g [object java/lang/String] )
+ (field (attrs private ) h [object com/facebook/user/Name] )
+ (field (attrs private ) i [object java/lang/String] )
+ (field (attrs private ) j [object java/lang/String] )
+ (field (attrs private ) k [object java/lang/String] )
+ (field (attrs private ) l float )
+ (field (attrs private ) m [object java/lang/String] )
+ (field (attrs private ) n [object com/google/common/a/es] )
+ (field (attrs private ) o boolean )
+ (field (attrs private ) p [object com/facebook/common/w/q] )
+ (field (attrs private ) q boolean )
+ (field (attrs private ) r [object com/facebook/contacts/models/a/a] )
+ (field (attrs private ) s [object java/lang/String] )
+ (field (attrs private ) t [object com/google/common/a/es] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 38)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 32)
+  (sget-object v0 com/facebook/common/w/q.UNSET [object com/facebook/common/w/q])
+  (iput-object v0 v1 com/facebook/contacts/models/b.p [object com/facebook/common/w/q])
+  (line 39)
+  (invoke-static {} com/google/common/a/es/d )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/contacts/models/b.n [object com/google/common/a/es])
+  (line 40)
+  (invoke-static {} com/google/common/a/es/d )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/contacts/models/b.t [object com/google/common/a/es])
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs public ) a(float )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 (float)
+  (line 168)
+  (iput v1 v0 com/facebook/contacts/models/b.l float)
+  (line 169)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/common/w/q] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/facebook/common/w/q])
+  (line 204)
+  (iput-object v1 v0 com/facebook/contacts/models/b.p [object com/facebook/common/w/q])
+  (line 205)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/contacts/models/a/a] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/facebook/contacts/models/a/a])
+  (line 226)
+  (iput-object v1 v0 com/facebook/contacts/models/b.r [object com/facebook/contacts/models/a/a])
+  (line 227)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/user/Name] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/facebook/user/Name])
+  (line 96)
+  (iput-object v1 v0 com/facebook/contacts/models/b.d [object com/facebook/user/Name])
+  (line 97)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/google/common/a/es] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/google/common/a/es])
+  (line 186)
+  (iput-object v1 v0 com/facebook/contacts/models/b.n [object com/google/common/a/es])
+  (line 187)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 69)
+  (iput-object v1 v0 com/facebook/contacts/models/b.a [object java/lang/String])
+  (line 70)
+  (return-object v0)
+)
+
+(method (attrs public ) a(boolean )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 (boolean)
+  (line 195)
+  (iput-boolean v1 v0 com/facebook/contacts/models/b.o boolean)
+  (line 196)
+  (return-object v0)
+)
+
+(method (attrs public ) a()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;)"  "Lcom/facebook/contacts/models/b;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 74)
+  (iget-object v0 v1 com/facebook/contacts/models/b.a [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) b([object com/facebook/user/Name] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/facebook/user/Name])
+  (line 105)
+  (iput-object v1 v0 com/facebook/contacts/models/b.h [object com/facebook/user/Name])
+  (line 106)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 78)
+  (iput-object v1 v0 com/facebook/contacts/models/b.b [object java/lang/String])
+  (line 79)
+  (return-object v0)
+)
+
+(method (attrs public ) b(boolean )[object com/facebook/contacts/models/b]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 (boolean)
+  (line 213)
+  (iput-boolean v1 v0 com/facebook/contacts/models/b.q boolean)
+  (line 214)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 83)
+  (iget-object v0 v1 com/facebook/contacts/models/b.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) b([object com/google/common/a/es] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object com/google/common/a/es])
+  (line 246)
+  (iput-object v1 v0 com/facebook/contacts/models/b.t [object com/google/common/a/es])
+  (line 247)
+  (return-void )
+)
+
+(method (attrs public ) c([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 87)
+  (iput-object v1 v0 com/facebook/contacts/models/b.c [object java/lang/String])
+  (line 88)
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 92)
+  (iget-object v0 v1 com/facebook/contacts/models/b.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) d([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 114)
+  (iput-object v1 v0 com/facebook/contacts/models/b.e [object java/lang/String])
+  (line 115)
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object com/facebook/user/Name]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 101)
+  (iget-object v0 v1 com/facebook/contacts/models/b.d [object com/facebook/user/Name])
+  (return-object v0)
+)
+
+(method (attrs public ) e([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 141)
+  (iput-object v1 v0 com/facebook/contacts/models/b.i [object java/lang/String])
+  (line 142)
+  (return-object v0)
+)
+
+(method (attrs public ) e()[object com/facebook/user/Name]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 110)
+  (iget-object v0 v1 com/facebook/contacts/models/b.h [object com/facebook/user/Name])
+  (return-object v0)
+)
+
+(method (attrs public ) f([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 150)
+  (iput-object v1 v0 com/facebook/contacts/models/b.j [object java/lang/String])
+  (line 151)
+  (return-object v0)
+)
+
+(method (attrs public ) f()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 119)
+  (iget-object v0 v1 com/facebook/contacts/models/b.e [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) g([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 159)
+  (iput-object v1 v0 com/facebook/contacts/models/b.k [object java/lang/String])
+  (line 160)
+  (return-object v0)
+)
+
+(method (attrs public ) g()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 128)
+  (iget-object v0 v1 com/facebook/contacts/models/b.f [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) h([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 177)
+  (iput-object v1 v0 com/facebook/contacts/models/b.m [object java/lang/String])
+  (line 178)
+  (return-object v0)
+)
+
+(method (attrs public ) h()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 137)
+  (iget-object v0 v1 com/facebook/contacts/models/b.g [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) i([object java/lang/String] )[object com/facebook/contacts/models/b]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/models/b])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 237)
+  (iput-object v1 v0 com/facebook/contacts/models/b.s [object java/lang/String])
+  (line 238)
+  (return-object v0)
+)
+
+(method (attrs public ) i()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 146)
+  (iget-object v0 v1 com/facebook/contacts/models/b.i [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) j()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 155)
+  (iget-object v0 v1 com/facebook/contacts/models/b.j [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) k()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 164)
+  (iget-object v0 v1 com/facebook/contacts/models/b.k [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) l()float
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 173)
+  (iget v0 v1 com/facebook/contacts/models/b.l float)
+  (return v0)
+)
+
+(method (attrs public ) m()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 182)
+  (iget-object v0 v1 com/facebook/contacts/models/b.m [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) n()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/ContactPhone;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 191)
+  (iget-object v0 v1 com/facebook/contacts/models/b.n [object com/google/common/a/es])
+  (return-object v0)
+)
+
+(method (attrs public ) o()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 200)
+  (iget-boolean v0 v1 com/facebook/contacts/models/b.o boolean)
+  (return v0)
+)
+
+(method (attrs public ) p()[object com/facebook/common/w/q]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 209)
+  (iget-object v0 v1 com/facebook/contacts/models/b.p [object com/facebook/common/w/q])
+  (return-object v0)
+)
+
+(method (attrs public ) q()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 218)
+  (iget-boolean v0 v1 com/facebook/contacts/models/b.q boolean)
+  (return v0)
+)
+
+(method (attrs public ) r()[object com/facebook/contacts/models/a/a]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 222)
+  (iget-object v0 v1 com/facebook/contacts/models/b.r [object com/facebook/contacts/models/a/a])
+  (return-object v0)
+)
+
+(method (attrs public ) s()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 233)
+  (iget-object v0 v1 com/facebook/contacts/models/b.s [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) t()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Ljava/lang/String;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 242)
+  (iget-object v0 v1 com/facebook/contacts/models/b.t [object com/google/common/a/es])
+  (return-object v0)
+)
+
+(method (attrs public ) u()[object com/facebook/contacts/models/Contact]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/models/b])
+  (line 250)
+  (new-instance v0 com/facebook/contacts/models/Contact)
+  (invoke-direct {v0 v1} com/facebook/contacts/models/Contact/<init> [object com/facebook/contacts/models/b] )
+  (return-object v0)
+)
+
+)

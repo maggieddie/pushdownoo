@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) javax/annotation/concurrent/GuardedBy
+ (super java/lang/Object)
+ (source "GuardedBy.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

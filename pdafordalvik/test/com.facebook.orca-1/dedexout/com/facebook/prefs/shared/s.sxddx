@@ -1,0 +1,45 @@
+(class (attrs public final ) com/facebook/prefs/shared/s
+ (super com/facebook/inject/d)
+ (source "FbSharedPreferencesInitializerAutoProvider.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/prefs/shared/s])
+  (line 8)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/prefs/shared/r]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/prefs/shared/s])
+  (line 13)
+  (new-instance v1 com/facebook/prefs/shared/r)
+  (const-class v0 com/facebook/prefs/shared/j)
+  (invoke-virtual {v2 v0} com/facebook/prefs/shared/s/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/j])
+  (invoke-direct {v1 v0} com/facebook/prefs/shared/r/<init> [object com/facebook/prefs/shared/j] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/prefs/shared/s])
+  (line 8)
+  (invoke-virtual {v1} com/facebook/prefs/shared/s/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/prefs/shared/s])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 19)
+  (instance-of v0 v2 com/facebook/prefs/shared/s)
+  (return v0)
+)
+
+)

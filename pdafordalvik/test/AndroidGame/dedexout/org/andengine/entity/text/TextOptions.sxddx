@@ -1,0 +1,140 @@
+(class (attrs public ) org/andengine/entity/text/TextOptions
+ (super java/lang/Object)
+ (source "TextOptions.java")
+
+ (field (attrs ) mAutoWrap [object org/andengine/entity/text/AutoWrap] )
+ (field (attrs ) mAutoWrapWidth float )
+ (field (attrs ) mHorizontalAlign [object org/andengine/util/HorizontalAlign] )
+ (field (attrs ) mLeading float )
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object org/andengine/entity/text/TextOptions])
+  (const/4 v2 0)
+  (line 30)
+  (sget-object v0 org/andengine/entity/text/AutoWrap.NONE [object org/andengine/entity/text/AutoWrap])
+  (sget-object v1 org/andengine/util/HorizontalAlign.LEFT [object org/andengine/util/HorizontalAlign])
+  (invoke-direct {v3 v0 v2 v2 v1} org/andengine/entity/text/TextOptions/<init> [object org/andengine/entity/text/AutoWrap] float float [object org/andengine/util/HorizontalAlign] )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/text/AutoWrap] float )void
+  (limit registers 5)
+  ; this: v2 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v3 ([object org/andengine/entity/text/AutoWrap])
+  ; parameter[1] : v4 (float)
+  (line 38)
+  (const/4 v0 0)
+  (sget-object v1 org/andengine/util/HorizontalAlign.LEFT [object org/andengine/util/HorizontalAlign])
+  (invoke-direct {v2 v3 v4 v0 v1} org/andengine/entity/text/TextOptions/<init> [object org/andengine/entity/text/AutoWrap] float float [object org/andengine/util/HorizontalAlign] )
+  (line 39)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/entity/text/AutoWrap] float float [object org/andengine/util/HorizontalAlign] )void
+  (limit registers 5)
+  ; this: v0 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v1 ([object org/andengine/entity/text/AutoWrap])
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 ([object org/andengine/util/HorizontalAlign])
+  (line 41)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 42)
+  (iput-object v1 v0 org/andengine/entity/text/TextOptions.mAutoWrap [object org/andengine/entity/text/AutoWrap])
+  (line 43)
+  (iput v2 v0 org/andengine/entity/text/TextOptions.mAutoWrapWidth float)
+  (line 44)
+  (iput v3 v0 org/andengine/entity/text/TextOptions.mLeading float)
+  (line 45)
+  (iput-object v4 v0 org/andengine/entity/text/TextOptions.mHorizontalAlign [object org/andengine/util/HorizontalAlign])
+  (line 46)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object org/andengine/util/HorizontalAlign] )void
+  (limit registers 4)
+  ; this: v2 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v3 ([object org/andengine/util/HorizontalAlign])
+  (const/4 v1 0)
+  (line 34)
+  (sget-object v0 org/andengine/entity/text/AutoWrap.NONE [object org/andengine/entity/text/AutoWrap])
+  (invoke-direct {v2 v0 v1 v1 v3} org/andengine/entity/text/TextOptions/<init> [object org/andengine/entity/text/AutoWrap] float float [object org/andengine/util/HorizontalAlign] )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) getAutoWrap()[object org/andengine/entity/text/AutoWrap]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/text/TextOptions])
+  (line 53)
+  (iget-object v0 v1 org/andengine/entity/text/TextOptions.mAutoWrap [object org/andengine/entity/text/AutoWrap])
+  (return-object v0)
+)
+
+(method (attrs public ) getAutoWrapWidth()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/text/TextOptions])
+  (line 61)
+  (iget v0 v1 org/andengine/entity/text/TextOptions.mAutoWrapWidth float)
+  (return v0)
+)
+
+(method (attrs public ) getHorizontalAlign()[object org/andengine/util/HorizontalAlign]
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/text/TextOptions])
+  (line 77)
+  (iget-object v0 v1 org/andengine/entity/text/TextOptions.mHorizontalAlign [object org/andengine/util/HorizontalAlign])
+  (return-object v0)
+)
+
+(method (attrs public ) getLeading()float
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/entity/text/TextOptions])
+  (line 69)
+  (iget v0 v1 org/andengine/entity/text/TextOptions.mLeading float)
+  (return v0)
+)
+
+(method (attrs public ) setAutoWrap([object org/andengine/entity/text/AutoWrap] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v1 ([object org/andengine/entity/text/AutoWrap])
+  (line 57)
+  (iput-object v1 v0 org/andengine/entity/text/TextOptions.mAutoWrap [object org/andengine/entity/text/AutoWrap])
+  (line 58)
+  (return-void )
+)
+
+(method (attrs public ) setAutoWrapWidth(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v1 (float)
+  (line 65)
+  (iput v1 v0 org/andengine/entity/text/TextOptions.mAutoWrapWidth float)
+  (line 66)
+  (return-void )
+)
+
+(method (attrs public ) setHorizontalAlign([object org/andengine/util/HorizontalAlign] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v1 ([object org/andengine/util/HorizontalAlign])
+  (line 81)
+  (iput-object v1 v0 org/andengine/entity/text/TextOptions.mHorizontalAlign [object org/andengine/util/HorizontalAlign])
+  (line 82)
+  (return-void )
+)
+
+(method (attrs public ) setLeading(float )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/entity/text/TextOptions])
+  ; parameter[0] : v1 (float)
+  (line 73)
+  (iput v1 v0 org/andengine/entity/text/TextOptions.mLeading float)
+  (line 74)
+  (return-void )
+)
+
+)

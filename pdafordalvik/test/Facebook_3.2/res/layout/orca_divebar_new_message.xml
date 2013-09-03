@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/divebar_new_message_row" android:background="@color/divebar_new_message_row_backgroup" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/divebar_contact_name_text" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/divebar_compose_textview" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/thread_new_conversation_title" android:drawableLeft="@drawable/divebar_compose_icon" android:drawablePadding="10.0dip" android:layout_weight="1.0" />
+    <View android:id="@id/divebar_compose_divider" android:background="@color/divebar_header_separator" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+</LinearLayout>

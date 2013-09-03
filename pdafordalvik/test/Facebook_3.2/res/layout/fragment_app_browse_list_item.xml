@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/app_browse_card_container" android:background="@drawable/app_browse_list_item_background" android:padding="@dimen/appcenter_browse_list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.UrlImage android:gravity="center_horizontal" android:id="@id/application_logo" android:background="@drawable/appcenter_image_shadow" android:layout_width="@dimen/appcenter_banner_logo_width" android:layout_height="@dimen/appcenter_banner_logo_height" orca:shouldCacheOriginal="true" orca:scaleType="centerCrop" />
+        <TextView android:id="@id/app_name" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_browse_list_item_title_left_margin" android:text="@string/loading" android:layout_toRightOf="@id/application_logo" android:layout_alignTop="@id/application_logo" style="@style/appcenter_browse_list_item_title" />
+        <RatingBar android:id="@id/app_star_rating" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="3.3" android:stepSize="0.1" android:isIndicator="true" android:layout_toRightOf="@id/application_logo" android:layout_below="@id/app_name" android:layout_alignLeft="@id/app_name" style="@style/app_center_rating" />
+        <TextView android:id="@id/app_description" android:layout_width="190.0dip" android:layout_height="wrap_content" android:text="@string/loading" android:layout_toRightOf="@id/application_logo" android:layout_below="@id/app_star_rating" android:layout_alignLeft="@id/app_name" style="@style/appcenter_browse_list_item_text" />
+    </RelativeLayout>
+    <View android:background="@color/app_separator_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/app_browse_card_container" />
+</merge>

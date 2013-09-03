@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/open_full_view" android:orderInCategory="0" android:title="@string/menu_open_full_view" />
+    <item android:id="@id/refresh" android:orderInCategory="1" android:title="@string/menu_refresh" />
+</menu>

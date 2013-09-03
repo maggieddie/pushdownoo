@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/andengine/entity/IEntityMatcher
+ (super java/lang/Object)
+ (source "IEntityMatcher.java")
+ (implements org/andengine/util/IMatcher)
+
+
+(method (attrs public abstract ) matches([object org/andengine/entity/IEntity] )boolean
+)
+
+)

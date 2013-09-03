@@ -1,0 +1,17 @@
+(class (attrs public ) com/google/common/collect/ComputationException
+ (super java/lang/RuntimeException)
+ (source "ComputationException.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs public ) <init>([object java/lang/Throwable] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ComputationException])
+  ; parameter[0] : v1 ([object java/lang/Throwable])
+  (line 33)
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/Throwable] )
+  (line 34)
+  (return-void )
+ )
+
+)

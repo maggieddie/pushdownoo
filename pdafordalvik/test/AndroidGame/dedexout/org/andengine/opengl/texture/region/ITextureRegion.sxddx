@@ -1,0 +1,66 @@
+(interface (attrs public abstract ) org/andengine/opengl/texture/region/ITextureRegion
+ (super java/lang/Object)
+ (source "ITextureRegion.java")
+
+
+(method (attrs public abstract ) deepCopy()[object org/andengine/opengl/texture/region/ITextureRegion]
+)
+
+(method (attrs public abstract ) getHeight()float
+)
+
+(method (attrs public abstract ) getScale()float
+)
+
+(method (attrs public abstract ) getTexture()[object org/andengine/opengl/texture/ITexture]
+)
+
+(method (attrs public abstract ) getTextureX()float
+)
+
+(method (attrs public abstract ) getTextureY()float
+)
+
+(method (attrs public abstract ) getU()float
+)
+
+(method (attrs public abstract ) getU2()float
+)
+
+(method (attrs public abstract ) getV()float
+)
+
+(method (attrs public abstract ) getV2()float
+)
+
+(method (attrs public abstract ) getWidth()float
+)
+
+(method (attrs public abstract ) isRotated()boolean
+)
+
+(method (attrs public abstract ) isScaled()boolean
+)
+
+(method (attrs public abstract ) set(float float float float )void
+)
+
+(method (attrs public abstract ) setTextureHeight(float )void
+)
+
+(method (attrs public abstract ) setTexturePosition(float float )void
+)
+
+(method (attrs public abstract ) setTextureSize(float float )void
+)
+
+(method (attrs public abstract ) setTextureWidth(float )void
+)
+
+(method (attrs public abstract ) setTextureX(float )void
+)
+
+(method (attrs public abstract ) setTextureY(float )void
+)
+
+)

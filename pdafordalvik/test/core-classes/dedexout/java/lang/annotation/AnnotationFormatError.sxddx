@@ -38,7 +38,7 @@
   (return-void )
   (label l12bb06)
   (line 63)
-  (invoke-virtual-quick {v2} java/lang/Throwable/toString )
+  (invoke-virtual-quick {v2} vtable #0x7)
   (move-result-object v0)
   (goto l12bafe)
  )

@@ -1,0 +1,34 @@
+(class (attrs public ) com/sip/voip/net/frags/DialerFrag
+ (super android/app/Activity)
+ (source "DialerFrag.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/sip/voip/net/frags/DialerFrag])
+  (line 18)
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onCreate([object android/os/Bundle] )void
+  (limit registers 2)
+  ; this: v0 ([object com/sip/voip/net/frags/DialerFrag])
+  ; parameter[0] : v1 ([object android/os/Bundle])
+  (line 21)
+  (invoke-super {v0 v1} android/app/Activity/onCreate [object android/os/Bundle] )
+  (line 22)
+  (return-void )
+)
+
+(method (attrs public ) onSaveInstanceState([object android/os/Bundle] )void
+  (limit registers 2)
+  ; this: v0 ([object com/sip/voip/net/frags/DialerFrag])
+  ; parameter[0] : v1 ([object android/os/Bundle])
+  (line 27)
+  (invoke-super {v0 v1} android/app/Activity/onSaveInstanceState [object android/os/Bundle] )
+  (line 28)
+  (return-void )
+)
+
+)

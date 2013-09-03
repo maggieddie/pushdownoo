@@ -1,0 +1,65 @@
+(class (attrs final ) com/twitter/android/dp
+ (super android/content/AsyncQueryHandler)
+ (source "Twttr")
+
+ (field (attrs final ) a [object com/twitter/android/PostActivity] )
+
+(method (attrs public ) <init>([object com/twitter/android/PostActivity] [object android/content/Context] )void
+  (limit registers 4)
+  ; this: v1 ([object com/twitter/android/dp])
+  ; parameter[0] : v2 ([object com/twitter/android/PostActivity])
+  ; parameter[1] : v3 ([object android/content/Context])
+  (line 1885)
+  (iput-object v2 v1 com/twitter/android/dp.a [object com/twitter/android/PostActivity])
+  (line 1886)
+  (invoke-virtual {v3} android/content/Context/getContentResolver )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} android/content/AsyncQueryHandler/<init> [object android/content/ContentResolver] )
+  (line 1887)
+  (return-void )
+ )
+
+(method (attrs protected final ) onQueryComplete(int [object java/lang/Object] [object android/database/Cursor] )void
+  (limit registers 8)
+  ; this: v4 ([object com/twitter/android/dp])
+  ; parameter[0] : v5 (int)
+  ; parameter[1] : v6 ([object java/lang/Object])
+  ; parameter[2] : v7 ([object android/database/Cursor])
+  (line 1891)
+  (if-nez v7 la3c36)
+  (label la3c34)
+  (line 1905)
+  (return-void )
+  (label la3c36)
+  (line 1895)
+  (invoke-interface {v7} android/database/Cursor/moveToFirst )
+  (move-result v0)
+  (if-eqz v0 la3c48)
+  (line 1896)
+  (packed-switch v5 1
+    psa3c42_a3c50 ; case 1
+    psa3c42_default) ; default
+  (label la3c48)
+  (label psa3c42_default)
+  (line 1904)
+  (invoke-interface {v7} android/database/Cursor/close )
+  (goto la3c34)
+  (label psa3c42_a3c50)
+  (line 1898)
+  (iget-object v0 v4 com/twitter/android/dp.a [object com/twitter/android/PostActivity])
+  (const/4 v1 1)
+  (new-array v1 v1 [array [object com/twitter/android/provider/r]])
+  (const/4 v2 0)
+  (new-instance v3 com/twitter/android/provider/r)
+  (invoke-direct {v3 v7} com/twitter/android/provider/r/<init> [object android/database/Cursor] )
+  (aput-object v3 v1 v2)
+  (invoke-virtual {v0 v1} com/twitter/android/PostActivity/a [array [object android/os/Parcelable]] )
+  (goto la3c48)
+  (line 1896)
+  (label la3c72)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

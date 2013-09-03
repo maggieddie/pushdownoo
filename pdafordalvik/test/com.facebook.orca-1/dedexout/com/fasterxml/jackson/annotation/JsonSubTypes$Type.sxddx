@@ -1,0 +1,16 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonSubTypes$Type
+ (super java/lang/Object)
+ (source "JsonSubTypes.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) name()[object java/lang/String]
+)
+
+(method (attrs public abstract ) value()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

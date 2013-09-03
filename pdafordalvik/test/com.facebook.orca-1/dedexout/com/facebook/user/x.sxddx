@@ -1,0 +1,39 @@
+(class (attrs public ) com/facebook/user/x
+ (super com/facebook/inject/c)
+ (source "UserModule.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/user/x])
+  (line 16)
+  (invoke-direct {v0} com/facebook/inject/c/<init> )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/user/x])
+  (const/4 v2 0)
+  (line 20)
+  (const-class v0 com/facebook/user/ac)
+  (invoke-virtual {v3 v0} com/facebook/user/x/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/user/aa)
+  (invoke-direct {v1 v3 v2} com/facebook/user/aa/<init> [object com/facebook/user/x] [object com/facebook/user/y] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (line 22)
+  (const-class v0 com/facebook/user/a/h)
+  (invoke-virtual {v3 v0} com/facebook/user/x/a [object java/lang/Class] )
+  (move-result-object v0)
+  (new-instance v1 com/facebook/user/z)
+  (invoke-direct {v1 v3 v2} com/facebook/user/z/<init> [object com/facebook/user/x] [object com/facebook/user/y] )
+  (invoke-interface {v0 v1} com/facebook/inject/a/a/a [object javax/inject/a] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/inject/a/g/a )
+  (line 25)
+  (return-void )
+)
+
+)

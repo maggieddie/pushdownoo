@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/google/common/collect/Multiset$Entry
+ (super java/lang/Object)
+ (source "Multiset.java")
+
+
+(method (attrs public abstract ) a()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TE;")
+  )
+)
+
+(method (attrs public abstract ) b()int
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) com/facebook/orca/messageview/g
+ (super java/lang/Object)
+ (source "MessageViewFragment.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/messageview/MessageViewFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/messageview/MessageViewFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/messageview/g])
+  ; parameter[0] : v1 ([object com/facebook/orca/messageview/MessageViewFragment])
+  (line 251)
+  (iput-object v1 v0 com/facebook/orca/messageview/g.a [object com/facebook/orca/messageview/MessageViewFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/orca/messageview/g])
+  ; parameter[0] : v4 ([object android/view/View])
+  (line 254)
+  (iget-object v0 v3 com/facebook/orca/messageview/g.a [object com/facebook/orca/messageview/MessageViewFragment])
+  (invoke-static {v0} com/facebook/orca/messageview/MessageViewFragment/c [object com/facebook/orca/messageview/MessageViewFragment] )
+  (move-result-object v0)
+  (sget-object v1 com/facebook/zero/a/c.k [object com/facebook/prefs/shared/ae])
+  (iget-object v2 v3 com/facebook/orca/messageview/g.a [object com/facebook/orca/messageview/MessageViewFragment])
+  (invoke-virtual {v2} com/facebook/orca/messageview/MessageViewFragment/p )
+  (move-result-object v2)
+  (invoke-virtual {v0 v1 v2} com/facebook/zero/ui/l/a [object com/facebook/prefs/shared/ae] [object android/support/v4/app/q] )
+  (line 256)
+  (return-void )
+)
+
+)

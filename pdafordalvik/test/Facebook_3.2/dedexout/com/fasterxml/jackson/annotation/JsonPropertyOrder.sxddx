@@ -1,0 +1,13 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonPropertyOrder
+ (super java/lang/Object)
+ (source "JsonPropertyOrder.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) alphabetic()boolean
+)
+
+(method (attrs public abstract ) value()[array [object java/lang/String]]
+)
+
+)

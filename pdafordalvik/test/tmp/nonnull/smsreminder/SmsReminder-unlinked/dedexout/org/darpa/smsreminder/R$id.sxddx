@@ -1,0 +1,31 @@
+(class (attrs public final ) org/darpa/smsreminder/R$id
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) alarmTimePicker int 2131165199); 0x7f07000f )
+ (field (attrs public static final ) alarms_list_view int 2131165191); 0x7f070007 )
+ (field (attrs public static final ) btnSendSMS int 2131165197); 0x7f07000d )
+ (field (attrs public static final ) btnViewAlarms int 2131165198); 0x7f07000e )
+ (field (attrs public static final ) cancel_button int 2131165190); 0x7f070006 )
+ (field (attrs public static final ) date_time_view int 2131165187); 0x7f070003 )
+ (field (attrs public static final ) menu_settings int 2131165200); 0x7f070010 )
+ (field (attrs public static final ) message_view int 2131165189); 0x7f070005 )
+ (field (attrs public static final ) phone_number_view int 2131165185); 0x7f070001 )
+ (field (attrs public static final ) repeat_check_box int 2131165192); 0x7f070008 )
+ (field (attrs public static final ) repeat_delay_text int 2131165193); 0x7f070009 )
+ (field (attrs public static final ) save_button int 2131165194); 0x7f07000a )
+ (field (attrs public static final ) textView1 int 2131165184); 0x7f070000 )
+ (field (attrs public static final ) textView3 int 2131165186); 0x7f070002 )
+ (field (attrs public static final ) textView5 int 2131165188); 0x7f070004 )
+ (field (attrs public static final ) txtMessage int 2131165196); 0x7f07000c )
+ (field (attrs public static final ) txtPhoneNo int 2131165195); 0x7f07000b )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/darpa/smsreminder/R$id])
+  (line 23)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

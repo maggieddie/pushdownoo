@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/orca/f/v
+ (super com/facebook/fbservice/ops/ac)
+ (source "SendMessageManager.java")
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/orca/f/r] )
+
+(method (attrs ) <init>([object com/facebook/orca/f/r] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/f/v])
+  ; parameter[0] : v1 ([object com/facebook/orca/f/r])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 579)
+  (iput-object v1 v0 com/facebook/orca/f/v.b [object com/facebook/orca/f/r])
+  (iput-object v2 v0 com/facebook/orca/f/v.a [object java/lang/String])
+  (invoke-direct {v0} com/facebook/fbservice/ops/ac/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/f/v])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 582)
+  (iget-object v0 v1 com/facebook/orca/f/v.b [object com/facebook/orca/f/r])
+  (invoke-static {v0 v2} com/facebook/orca/f/r/a [object com/facebook/orca/f/r] [object com/facebook/fbservice/service/OperationResult] )
+  (line 583)
+  (return-void )
+)
+
+(method (attrs protected ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/f/v])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/ServiceException])
+  (line 587)
+  (iget-object v0 v2 com/facebook/orca/f/v.b [object com/facebook/orca/f/r])
+  (iget-object v1 v2 com/facebook/orca/f/v.a [object java/lang/String])
+  (invoke-virtual {v0 v1 v3} com/facebook/orca/f/r/a [object java/lang/String] [object com/facebook/fbservice/service/ServiceException] )
+  (line 588)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/f/v])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 579)
+  (check-cast v1 [object com/facebook/fbservice/service/OperationResult])
+  (invoke-virtual {v0 v1} com/facebook/orca/f/v/a [object com/facebook/fbservice/service/OperationResult] )
+  (return-void )
+)
+
+)

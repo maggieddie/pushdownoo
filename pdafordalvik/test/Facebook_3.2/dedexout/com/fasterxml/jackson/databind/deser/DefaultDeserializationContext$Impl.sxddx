@@ -1,0 +1,63 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl
+ (super com/fasterxml/jackson/databind/deser/DefaultDeserializationContext)
+ (source "DefaultDeserializationContext.java")
+
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl] [object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/InjectableValues] )void
+  (limit registers 5)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/DeserializationConfig])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[3] : v4 ([object com/fasterxml/jackson/databind/InjectableValues])
+  (line 216)
+  (invoke-direct {v0 v1 v2 v3 v4} com/fasterxml/jackson/databind/deser/DefaultDeserializationContext/<init> [object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext] [object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/InjectableValues] )
+  (line 217)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl] [object com/fasterxml/jackson/databind/deser/DeserializerFactory] )void
+  (limit registers 3)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/deser/DeserializerFactory])
+  (line 220)
+  (invoke-direct {v0 v1 v2} com/fasterxml/jackson/databind/deser/DefaultDeserializationContext/<init> [object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext] [object com/fasterxml/jackson/databind/deser/DeserializerFactory] )
+  (line 221)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/deser/DeserializerFactory] )void
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/deser/DeserializerFactory])
+  (line 211)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v0} com/fasterxml/jackson/databind/deser/DefaultDeserializationContext/<init> [object com/fasterxml/jackson/databind/deser/DeserializerFactory] [object com/fasterxml/jackson/databind/deser/DeserializerCache] )
+  (line 212)
+  (return-void )
+ )
+
+(method (attrs public ) createInstance([object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/InjectableValues] )[object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext]
+  (limit registers 5)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/DeserializationConfig])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/core/JsonParser])
+  ; parameter[2] : v4 ([object com/fasterxml/jackson/databind/InjectableValues])
+  (line 226)
+  (new-instance v0 com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl)
+  (invoke-direct {v0 v1 v2 v3 v4} com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl/<init> [object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl] [object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/core/JsonParser] [object com/fasterxml/jackson/databind/InjectableValues] )
+  (return-object v0)
+)
+
+(method (attrs public ) with([object com/fasterxml/jackson/databind/deser/DeserializerFactory] )[object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/deser/DeserializerFactory])
+  (line 231)
+  (new-instance v0 com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl)
+  (invoke-direct {v0 v1 v2} com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl/<init> [object com/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl] [object com/fasterxml/jackson/databind/deser/DeserializerFactory] )
+  (return-object v0)
+)
+
+)

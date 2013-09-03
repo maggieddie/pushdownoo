@@ -1,0 +1,43 @@
+(class (attrs public ) com/facebook/orca/auth/a
+ (super java/lang/Object)
+ (source "AutoLoginPushInitializerHook.java")
+ (implements com/facebook/auth/broadcast/c)
+
+ (field (attrs private static final ) a [object java/lang/Class] )
+ (field (attrs private ) b [object com/facebook/push/PushInitializer] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 15)
+  (const-class v0 com/facebook/orca/auth/a)
+  (sput-object v0 com/facebook/orca/auth/a.a [object java/lang/Class])
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/facebook/push/PushInitializer] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/auth/a])
+  ; parameter[0] : v1 ([object com/facebook/push/PushInitializer])
+  (line 19)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 20)
+  (iput-object v1 v0 com/facebook/orca/auth/a.b [object com/facebook/push/PushInitializer])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/auth/a])
+  (line 25)
+  (sget-object v0 com/facebook/orca/auth/a.a [object java/lang/Class])
+  (const-string v1 "reporting login on push initializer")
+  (invoke-static {v0 v1} com/facebook/debug/log/b/b [object java/lang/Class] [object java/lang/String] )
+  (line 28)
+  (iget-object v0 v2 com/facebook/orca/auth/a.b [object com/facebook/push/PushInitializer])
+  (invoke-virtual {v0} com/facebook/push/PushInitializer/i )
+  (line 29)
+  (return-void )
+)
+
+)

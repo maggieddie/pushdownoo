@@ -1,0 +1,30 @@
+(class (attrs ) com/facebook/orca/chatheads/dn
+ (super java/lang/Object)
+ (source "ChatThreadView.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/dh] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/dh] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/dn])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/dh])
+  (line 363)
+  (iput-object v1 v0 com/facebook/orca/chatheads/dn.a [object com/facebook/orca/chatheads/dh])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/chatheads/dn])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 366)
+  (iget-object v0 v2 com/facebook/orca/chatheads/dn.a [object com/facebook/orca/chatheads/dh])
+  (const-string v1 "click_popupspace")
+  (invoke-static {v0 v1} com/facebook/orca/chatheads/dh/a [object com/facebook/orca/chatheads/dh] [object java/lang/String] )
+  (line 367)
+  (return-void )
+)
+
+)

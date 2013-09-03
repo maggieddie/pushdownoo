@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/anddev/andengine/util/modifier/LoopModifier$ILoopModifierListener
+ (super java/lang/Object)
+ (source "LoopModifier.java")
+
+
+(method (attrs public abstract ) onLoopFinished([object org/anddev/andengine/util/modifier/LoopModifier] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/util/modifier/LoopModifier"  "<TT;>;II)V")
+  )
+)
+
+(method (attrs public abstract ) onLoopStarted([object org/anddev/andengine/util/modifier/LoopModifier] int int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/anddev/andengine/util/modifier/LoopModifier"  "<TT;>;II)V")
+  )
+)
+
+)

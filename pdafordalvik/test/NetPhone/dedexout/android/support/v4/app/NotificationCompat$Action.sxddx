@@ -1,0 +1,27 @@
+(class (attrs public ) android/support/v4/app/NotificationCompat$Action
+ (super java/lang/Object)
+ (source "NotificationCompat.java")
+
+ (field (attrs public ) actionIntent [object android/app/PendingIntent] )
+ (field (attrs public ) icon int )
+ (field (attrs public ) title [object java/lang/CharSequence] )
+
+(method (attrs public ) <init>(int [object java/lang/CharSequence] [object android/app/PendingIntent] )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/app/NotificationCompat$Action])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([object java/lang/CharSequence])
+  ; parameter[2] : v3 ([object android/app/PendingIntent])
+  (line 752)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 753)
+  (iput v1 v0 android/support/v4/app/NotificationCompat$Action.icon int)
+  (line 754)
+  (iput-object v2 v0 android/support/v4/app/NotificationCompat$Action.title [object java/lang/CharSequence])
+  (line 755)
+  (iput-object v3 v0 android/support/v4/app/NotificationCompat$Action.actionIntent [object android/app/PendingIntent])
+  (line 756)
+  (return-void )
+ )
+
+)

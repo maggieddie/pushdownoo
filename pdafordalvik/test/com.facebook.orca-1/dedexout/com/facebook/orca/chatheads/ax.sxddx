@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/chatheads/ax
+ (super java/lang/Object)
+ (source "ChatHeadWindowManager.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/al] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/al] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/ax])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/al])
+  (line 345)
+  (iput-object v1 v0 com/facebook/orca/chatheads/ax.a [object com/facebook/orca/chatheads/al])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/chatheads/ax])
+  (line 348)
+  (iget-object v0 v1 com/facebook/orca/chatheads/ax.a [object com/facebook/orca/chatheads/al])
+  (invoke-virtual {v0} com/facebook/orca/chatheads/al/e )
+  (move-result v0)
+  (if-nez v0 l244258)
+  (iget-object v0 v1 com/facebook/orca/chatheads/ax.a [object com/facebook/orca/chatheads/al])
+  (invoke-static {v0} com/facebook/orca/chatheads/al/l [object com/facebook/orca/chatheads/al] )
+  (move-result v0)
+  (if-nez v0 l24425a)
+  (label l244258)
+  (line 352)
+  (return-void )
+  (label l24425a)
+  (line 351)
+  (iget-object v0 v1 com/facebook/orca/chatheads/ax.a [object com/facebook/orca/chatheads/al])
+  (invoke-static {v0} com/facebook/orca/chatheads/al/m [object com/facebook/orca/chatheads/al] )
+  (goto l244258)
+)
+
+)

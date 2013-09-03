@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/permalink_comment_container_last" android:background="@drawable/feed_permalink_bg_bottom" android:paddingTop="@dimen/permalink_comments_padding_top" android:paddingBottom="@dimen/permalink_comments_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/permalink_contents_margin" android:layout_marginRight="@dimen/permalink_contents_margin">
+        <include layout="@layout/feed_permalink_comment_contents" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_below="@id/permalink_comment_container_last" />
+</merge>

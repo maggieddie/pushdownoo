@@ -1,0 +1,63 @@
+(class (attrs ) com/google/common/a/kf
+ (super com/google/common/a/mh)
+ (source "RegularImmutableMultiset.java")
+
+ (field (attrs final ) a [object java/util/Iterator] )
+ (field (attrs final ) b [object com/google/common/a/ke] )
+
+(method (attrs ) <init>([object com/google/common/a/ke] [object java/util/Iterator] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/kf])
+  ; parameter[0] : v1 ([object com/google/common/a/ke])
+  ; parameter[1] : v2 ([object java/util/Iterator])
+  (line 74)
+  (iput-object v1 v0 com/google/common/a/kf.b [object com/google/common/a/ke])
+  (iput-object v2 v0 com/google/common/a/kf.a [object java/util/Iterator])
+  (invoke-direct {v0} com/google/common/a/mh/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/jg]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/jg"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/kf])
+  (line 82)
+  (iget-object v0 v2 com/google/common/a/kf.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (line 83)
+  (invoke-interface {v0} java/util/Map$Entry/getKey )
+  (move-result-object v1)
+  (invoke-interface {v0} java/util/Map$Entry/getValue )
+  (move-result-object v0)
+  (check-cast v0 [object java/lang/Integer])
+  (invoke-virtual {v0} java/lang/Integer/intValue )
+  (move-result v0)
+  (invoke-static {v1 v0} com/google/common/a/jh/a [object java/lang/Object] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/kf])
+  (line 77)
+  (iget-object v0 v1 com/google/common/a/kf.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/kf])
+  (line 74)
+  (invoke-virtual {v1} com/google/common/a/kf/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

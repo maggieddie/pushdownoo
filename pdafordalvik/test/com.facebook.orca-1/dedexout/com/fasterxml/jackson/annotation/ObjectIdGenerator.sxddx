@@ -1,0 +1,48 @@
+(class (attrs public abstract ) com/fasterxml/jackson/annotation/ObjectIdGenerator
+ (super java/lang/Object)
+ (source "ObjectIdGenerator.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/annotation/ObjectIdGenerator])
+  (line 11)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 93)
+  (return-void )
+ )
+
+(method (attrs public abstract ) canUseFor([object com/fasterxml/jackson/annotation/ObjectIdGenerator] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/ObjectIdGenerator"  "<*>;)Z")
+  )
+)
+
+(method (attrs public abstract ) forScope([object java/lang/Class] )[object com/fasterxml/jackson/annotation/ObjectIdGenerator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Lcom/fasterxml/jackson/annotation/ObjectIdGenerator"  "<TT;>;")
+  )
+)
+
+(method (attrs public abstract ) generateId([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) getScope()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+(method (attrs public abstract ) key([object java/lang/Object] )[object com/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey]
+)
+
+(method (attrs public abstract ) newForSerialization([object java/lang/Object] )[object com/fasterxml/jackson/annotation/ObjectIdGenerator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Lcom/fasterxml/jackson/annotation/ObjectIdGenerator"  "<TT;>;")
+  )
+)
+
+)

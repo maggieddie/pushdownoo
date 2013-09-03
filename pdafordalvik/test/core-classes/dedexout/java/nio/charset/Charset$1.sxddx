@@ -25,7 +25,7 @@
   (limit registers 2)
   ; this: v1 ([object java/nio/charset/Charset$1])
   (line 149)
-  (invoke-virtual-quick {v1} java/nio/charset/Charset$1/run )
+  (invoke-virtual-quick {v1} vtable #0xb)
   (move-result-object v0)
   (return-object v0)
 )

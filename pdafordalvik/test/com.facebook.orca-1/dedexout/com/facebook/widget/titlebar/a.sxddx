@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) com/facebook/widget/titlebar/a
+ (super java/lang/Object)
+ (source "FbTitleBar.java")
+
+
+(method (attrs public abstract ) a(boolean )void
+)
+
+(method (attrs public abstract ) a()boolean
+)
+
+(method (attrs public abstract ) b()void
+)
+
+(method (attrs public abstract ) getTitleBarDivebarButtonOverlay()[object android/view/View]
+)
+
+(method (attrs public abstract ) setButtonSpecs([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lcom/facebook/widget/titlebar/d;"  ">;)V")
+  )
+)
+
+(method (attrs public abstract ) setCustomTitleView([object android/view/View] )void
+)
+
+(method (attrs public abstract ) setHasBackButton(boolean )void
+)
+
+(method (attrs public abstract ) setHasProgressBar(boolean )void
+)
+
+(method (attrs public abstract ) setOnToolbarButtonListener([object com/facebook/widget/titlebar/b] )void
+)
+
+(method (attrs public abstract ) setTitle(int )void
+)
+
+(method (attrs public abstract ) setTitle([object java/lang/String] )void
+)
+
+)

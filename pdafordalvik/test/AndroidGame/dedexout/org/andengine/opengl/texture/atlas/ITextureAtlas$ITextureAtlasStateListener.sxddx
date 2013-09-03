@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) org/andengine/opengl/texture/atlas/ITextureAtlas$ITextureAtlasStateListener
+ (super java/lang/Object)
+ (source "ITextureAtlas.java")
+ (implements org/andengine/opengl/texture/ITextureStateListener)
+
+
+(method (attrs public abstract ) onTextureAtlasSourceLoadExeption([object org/andengine/opengl/texture/atlas/ITextureAtlas] [object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource] [object java/lang/Throwable] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/opengl/texture/atlas/ITextureAtlas"  "<TT;>;TT;"  "Ljava/lang/Throwable;"  ")V")
+  )
+)
+
+(method (attrs public abstract ) onTextureAtlasSourceLoaded([object org/andengine/opengl/texture/atlas/ITextureAtlas] [object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/opengl/texture/atlas/ITextureAtlas"  "<TT;>;TT;)V")
+  )
+)
+
+)

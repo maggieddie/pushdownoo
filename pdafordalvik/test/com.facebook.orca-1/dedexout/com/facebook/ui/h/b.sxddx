@@ -1,0 +1,38 @@
+(class (attrs ) com/facebook/ui/h/b
+ (super com/facebook/base/a/f)
+ (source "BaseSplashScreenActivity.java")
+
+ (field (attrs final ) a [object com/facebook/ui/h/a] )
+
+(method (attrs ) <init>([object com/facebook/ui/h/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/h/b])
+  ; parameter[0] : v1 ([object com/facebook/ui/h/a])
+  (line 84)
+  (iput-object v1 v0 com/facebook/ui/h/b.a [object com/facebook/ui/h/a])
+  (invoke-direct {v0} com/facebook/base/a/f/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/ui/h/b])
+  (const/4 v2 0)
+  (line 87)
+  (iget-object v0 v3 com/facebook/ui/h/b.a [object com/facebook/ui/h/a])
+  (invoke-static {v0} com/facebook/ui/h/a/a [object com/facebook/ui/h/a] )
+  (line 88)
+  (iget-object v0 v3 com/facebook/ui/h/b.a [object com/facebook/ui/h/a])
+  (const/4 v1 15)
+  (invoke-virtual {v0 v1} com/facebook/ui/h/a/setResult int )
+  (line 89)
+  (iget-object v0 v3 com/facebook/ui/h/b.a [object com/facebook/ui/h/a])
+  (invoke-virtual {v0} com/facebook/ui/h/a/finish )
+  (line 90)
+  (iget-object v0 v3 com/facebook/ui/h/b.a [object com/facebook/ui/h/a])
+  (invoke-virtual {v0 v2 v2} com/facebook/ui/h/a/overridePendingTransition int int )
+  (line 91)
+  (return-void )
+)
+
+)

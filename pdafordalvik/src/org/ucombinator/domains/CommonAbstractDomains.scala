@@ -22,7 +22,7 @@ object CommonAbstractDomains {
   }
 */
     
-  
+  case class IntentExtraKeyTypeAndValue (keyType: String, keyVal: String)
   
   trait Addr extends PrimeHashable   {
     
@@ -100,6 +100,10 @@ object CommonAbstractDomains {
     override def hashCode() : Int = throw new Exception("hashCode not implemented")
     override def equals (a : Any) = (this compare a.asInstanceOf[Value]) == 0*/
   }
+  
+  
+  
+  
   
   case class TrueValue() extends Value
   case class FalseValue() extends Value

@@ -1,0 +1,31 @@
+(class (attrs ) android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2
+ (super java/lang/Object)
+ (source "SearchViewCompat.java")
+ (implements android/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge)
+
+ (field (attrs final ) this$0 [object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl] )
+ (field (attrs final ) val$listener [object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat] )
+
+(method (attrs ) <init>([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl] [object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2])
+  ; parameter[0] : v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  ; parameter[1] : v2 ([object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat])
+  (line 170)
+  (iput-object v1 v0 android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2.this$0 [object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  (iput-object v2 v0 android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2.val$listener [object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClose()boolean
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2])
+  (line 173)
+  (iget-object v0 v1 android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$2.val$listener [object android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat])
+  (invoke-virtual {v0} android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat/onClose )
+  (move-result v0)
+  (return v0)
+)
+
+)

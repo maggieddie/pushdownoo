@@ -1,0 +1,19 @@
+(class (attrs public ) com/facebook/sms/receiver/SmsLowPriBroadcastReceiver
+ (super com/facebook/c/k)
+ (source "SmsLowPriBroadcastReceiver.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/sms/receiver/SmsLowPriBroadcastReceiver])
+  (line 20)
+  (const-string v0 "android.provider.Telephony.SMS_RECEIVED")
+  (new-instance v1 com/facebook/sms/receiver/a)
+  (const-class v2 com/facebook/sms/annotation/LowPriHandler)
+  (invoke-direct {v1 v2} com/facebook/sms/receiver/a/<init> [object java/lang/Class] )
+  (invoke-direct {v3 v0 v1} com/facebook/c/k/<init> [object java/lang/String] [object com/facebook/c/b] )
+  (line 22)
+  (return-void )
+ )
+
+)

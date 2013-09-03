@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+        <TextView android:textSize="16.0sp" android:typeface="sans" android:textColor="@android:color/black" android:id="@id/task_name" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff7d7d7d" android:id="@id/task_description" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="2" />
+    </LinearLayout>
+    <View android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

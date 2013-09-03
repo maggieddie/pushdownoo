@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/orca/broadcast/c
+ (super java/lang/Object)
+ (source "BroadcastActivity.java")
+ (implements com/facebook/orca/broadcast/q)
+
+ (field (attrs final ) a [object com/facebook/orca/broadcast/BroadcastActivity] )
+
+(method (attrs ) <init>([object com/facebook/orca/broadcast/BroadcastActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/broadcast/c])
+  ; parameter[0] : v1 ([object com/facebook/orca/broadcast/BroadcastActivity])
+  (line 393)
+  (iput-object v1 v0 com/facebook/orca/broadcast/c.a [object com/facebook/orca/broadcast/BroadcastActivity])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/broadcast/c])
+  (line 396)
+  (iget-object v0 v2 com/facebook/orca/broadcast/c.a [object com/facebook/orca/broadcast/BroadcastActivity])
+  (sget-object v1 com/facebook/orca/broadcast/i.CONTACT_MULTIPICKER [object com/facebook/orca/broadcast/i])
+  (invoke-static {v0 v1} com/facebook/orca/broadcast/BroadcastActivity/a [object com/facebook/orca/broadcast/BroadcastActivity] [object com/facebook/orca/broadcast/i] )
+  (line 397)
+  (return-void )
+)
+
+)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="30.0dip">
+        <bitmap android:gravity="top|right|center" android:src="@drawable/orca_nux_laptop" />
+    </item>
+    <item android:top="30.0dip">
+        <bitmap android:gravity="bottom|left|center" android:src="@drawable/orca_nux_phone" />
+    </item>
+</layer-list>

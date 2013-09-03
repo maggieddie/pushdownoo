@@ -27,7 +27,7 @@
   (line 45)
   (invoke-direct {v0 v2} java/lang/RuntimeException/<init> [object java/lang/String] )
   (line 46)
-  (iput-quick v1 v0 org/w3c/dom/DOMException.code short)
+  (iput-quick v1 v0 )
   (line 47)
   (return-void )
  )

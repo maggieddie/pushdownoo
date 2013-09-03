@@ -1,0 +1,59 @@
+(class (attrs ) com/facebook/auth/d/p
+ (super com/facebook/inject/d)
+ (source "LoggedInUserAuthModule.java")
+
+ (field (attrs final ) a [object com/facebook/auth/d/b] )
+
+(method (attrs private ) <init>([object com/facebook/auth/d/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/d/p])
+  ; parameter[0] : v1 ([object com/facebook/auth/d/b])
+  (line 169)
+  (iput-object v1 v0 com/facebook/auth/d/p.a [object com/facebook/auth/d/b])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/auth/d/b] [object com/facebook/auth/d/c] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/auth/d/p])
+  ; parameter[0] : v1 ([object com/facebook/auth/d/b])
+  ; parameter[1] : v2 ([object com/facebook/auth/d/c])
+  (line 169)
+  (invoke-direct {v0 v1} com/facebook/auth/d/p/<init> [object com/facebook/auth/d/b] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/user/UserKey]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/auth/d/p])
+  (line 173)
+  (const-class v0 com/facebook/auth/viewercontext/ViewerContext)
+  (invoke-virtual {v3 v0} com/facebook/auth/d/p/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/auth/viewercontext/ViewerContext])
+  (line 174)
+  (if-eqz v0 l1992c6)
+  (new-instance v1 com/facebook/user/UserKey)
+  (sget-object v2 com/facebook/user/n.FACEBOOK [object com/facebook/user/n])
+  (invoke-virtual {v0} com/facebook/auth/viewercontext/ViewerContext/a )
+  (move-result-object v0)
+  (invoke-direct {v1 v2 v0} com/facebook/user/UserKey/<init> [object com/facebook/user/n] [object java/lang/String] )
+  (move-object v0 v1)
+  (label l1992c4)
+  (return-object v0)
+  (label l1992c6)
+  (const/4 v0 0)
+  (goto l1992c4)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/auth/d/p])
+  (line 169)
+  (invoke-virtual {v1} com/facebook/auth/d/p/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,23 @@
+(class (attrs public abstract ) com/facebook/common/hardware/ac
+ (super java/lang/Object)
+ (source "WakeLockHolder.java")
+
+ (field (attrs public final ) a [object com/facebook/common/hardware/q] )
+
+(method (attrs public ) <init>([object com/facebook/common/hardware/p] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/common/hardware/ac])
+  ; parameter[0] : v2 ([object com/facebook/common/hardware/p])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 15)
+  (const/4 v0 1)
+  (invoke-virtual {v2 v0 v3} com/facebook/common/hardware/p/a int [object java/lang/String] )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/common/hardware/ac.a [object com/facebook/common/hardware/q])
+  (line 16)
+  (return-void )
+ )
+
+)

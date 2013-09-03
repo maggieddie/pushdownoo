@@ -7,7 +7,7 @@
   (limit registers 1)
   (line 30)
   (const-class v0 org/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl)
-  (invoke-virtual-quick {v0} java/lang/Class/getClass )
+  (invoke-virtual-quick {v0} vtable #0x3)
   (line 31)
   (return-void )
  )

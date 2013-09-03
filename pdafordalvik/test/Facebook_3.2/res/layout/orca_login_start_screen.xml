@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/orca_login_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_splash" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/login_logo1_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/login_logo2_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/login_root" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_logo_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/login_main_group" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/login_logo1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/login_logo2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="top|center" android:orientation="vertical" android:id="@id/login_main_group" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/login" android:background="@drawable/orca_login_button_background" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:textColorLink="@android:color/white" android:gravity="center" android:linksClickable="true" android:id="@id/login_sso_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/login_bottom_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/login_main_group" android:layout_alignParentBottom="true">
+            <include layout="@layout/orca_login_help_button" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

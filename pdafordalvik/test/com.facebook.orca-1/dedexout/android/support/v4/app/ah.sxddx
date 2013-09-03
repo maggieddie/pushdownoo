@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) android/support/v4/app/ah
+ (super java/lang/Object)
+ (source "LoaderManager.java")
+
+
+(method (attrs public abstract ) a(int [object android/os/Bundle] )[object android/support/v4/a/c]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/a/c"  "<TD;>;TD;)V")
+  )
+)
+
+(method (attrs public abstract ) a([object android/support/v4/a/c] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/a/c"  "<TD;>;TD;)V")
+  )
+)
+
+(method (attrs public abstract ) a([object android/support/v4/a/c] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Landroid/support/v4/a/c"  "<TD;>;TD;)V")
+  )
+)
+
+)

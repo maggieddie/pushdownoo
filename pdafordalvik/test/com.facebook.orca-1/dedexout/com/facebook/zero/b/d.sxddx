@@ -1,0 +1,17 @@
+(class (attrs public ) com/facebook/zero/b/d
+ (super com/facebook/d/c/a)
+ (source "ZeroDbUtil.java")
+
+
+(method (attrs public ) <init>([object com/facebook/zero/b/a] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/zero/b/d])
+  ; parameter[0] : v2 ([object com/facebook/zero/b/a])
+  (line 13)
+  (const-string v0 "zero_rating_db_key_value_properties_table")
+  (invoke-direct {v1 v2 v0} com/facebook/d/c/a/<init> [object com/google/common/base/Supplier] [object java/lang/String] )
+  (line 14)
+  (return-void )
+ )
+
+)

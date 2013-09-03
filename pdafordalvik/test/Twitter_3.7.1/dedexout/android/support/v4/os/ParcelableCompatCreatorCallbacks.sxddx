@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) android/support/v4/os/ParcelableCompatCreatorCallbacks
+ (super java/lang/Object)
+ (source "Twttr")
+
+
+(method (attrs public abstract ) createFromParcel([object android/os/Parcel] [object java/lang/ClassLoader] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) newArray(int )[array [object java/lang/Object]]
+)
+
+)

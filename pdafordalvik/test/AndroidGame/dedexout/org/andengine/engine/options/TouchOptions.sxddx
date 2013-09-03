@@ -1,0 +1,57 @@
+(class (attrs public ) org/andengine/engine/options/TouchOptions
+ (super java/lang/Object)
+ (source "TouchOptions.java")
+
+ (field (attrs private static final ) TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT long 20); 0x14 )
+ (field (attrs private ) mNeedsMultiTouch boolean )
+ (field (attrs private ) mTouchEventIntervalMilliseconds long )
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object org/andengine/engine/options/TouchOptions])
+  (line 9)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 21)
+  (const-wide/16 v0 20)
+  (iput-wide v0 v2 org/andengine/engine/options/TouchOptions.mTouchEventIntervalMilliseconds long)
+  (line 9)
+  (return-void )
+ )
+
+(method (attrs public ) getTouchEventIntervalMilliseconds()long
+  (limit registers 3)
+  ; this: v2 ([object org/andengine/engine/options/TouchOptions])
+  (line 41)
+  (iget-wide v0 v2 org/andengine/engine/options/TouchOptions.mTouchEventIntervalMilliseconds long)
+  (return-wide v0)
+)
+
+(method (attrs public ) needsMultiTouch()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/engine/options/TouchOptions])
+  (line 32)
+  (iget-boolean v0 v1 org/andengine/engine/options/TouchOptions.mNeedsMultiTouch boolean)
+  (return v0)
+)
+
+(method (attrs public ) setNeedsMultiTouch(boolean )[object org/andengine/engine/options/TouchOptions]
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/engine/options/TouchOptions])
+  ; parameter[0] : v1 (boolean)
+  (line 36)
+  (iput-boolean v1 v0 org/andengine/engine/options/TouchOptions.mNeedsMultiTouch boolean)
+  (line 37)
+  (return-object v0)
+)
+
+(method (attrs public ) setTouchEventIntervalMilliseconds(long )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/engine/options/TouchOptions])
+  ; parameter[0] : v1 (long)
+  (line 45)
+  (iput-wide v1 v0 org/andengine/engine/options/TouchOptions.mTouchEventIntervalMilliseconds long)
+  (line 46)
+  (return-void )
+)
+
+)

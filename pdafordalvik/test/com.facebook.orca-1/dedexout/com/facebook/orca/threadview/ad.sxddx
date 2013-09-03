@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/orca/threadview/ad
+ (super java/lang/Object)
+ (source "MuteThreadWarningController.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/ac] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/ac] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/ad])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/ac])
+  (line 38)
+  (iput-object v1 v0 com/facebook/orca/threadview/ad.a [object com/facebook/orca/threadview/ac])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/threadview/ad])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 41)
+  (iget-object v0 v1 com/facebook/orca/threadview/ad.a [object com/facebook/orca/threadview/ac])
+  (invoke-static {v0} com/facebook/orca/threadview/ac/a [object com/facebook/orca/threadview/ac] )
+  (line 42)
+  (return-void )
+)
+
+)

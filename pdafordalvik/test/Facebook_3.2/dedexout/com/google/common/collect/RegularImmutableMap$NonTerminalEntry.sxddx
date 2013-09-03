@@ -1,0 +1,36 @@
+(class (attrs final ) com/google/common/collect/RegularImmutableMap$NonTerminalEntry
+ (super com/google/common/collect/ImmutableEntry)
+ (source "RegularImmutableMap.java")
+ (implements com/google/common/collect/RegularImmutableMap$LinkedEntry)
+
+ (field (attrs final ) next [object com/google/common/collect/RegularImmutableMap$LinkedEntry] )
+
+(method (attrs ) <init>([object java/lang/Object] [object java/lang/Object] [object com/google/common/collect/RegularImmutableMap$LinkedEntry] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;"  "Lcom/google/common/collect/RegularImmutableMap$LinkedEntry"  "<TK;TV;>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/collect/RegularImmutableMap$NonTerminalEntry])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object com/google/common/collect/RegularImmutableMap$LinkedEntry])
+  (line 116)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/ImmutableEntry/<init> [object java/lang/Object] [object java/lang/Object] )
+  (line 117)
+  (iput-object v3 v0 com/google/common/collect/RegularImmutableMap$NonTerminalEntry.next [object com/google/common/collect/RegularImmutableMap$LinkedEntry])
+  (line 118)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/collect/RegularImmutableMap$LinkedEntry]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/RegularImmutableMap$LinkedEntry"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$NonTerminalEntry])
+  (line 121)
+  (iget-object v0 v1 com/google/common/collect/RegularImmutableMap$NonTerminalEntry.next [object com/google/common/collect/RegularImmutableMap$LinkedEntry])
+  (return-object v0)
+)
+
+)

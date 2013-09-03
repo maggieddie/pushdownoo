@@ -1,0 +1,58 @@
+(class (attrs public ) com/facebook/orca/threadlist/FrameworkBasedThreadListActivity
+ (super com/facebook/base/activity/d)
+ (source "FrameworkBasedThreadListActivity.java")
+ (implements com/facebook/orca/activity/k)
+ (implements com/facebook/orca/threadlist/w)
+
+ (field (attrs private final ) p [object com/facebook/orca/threadlist/x] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/FrameworkBasedThreadListActivity])
+  (line 15)
+  (new-instance v0 com/facebook/orca/threadlist/x)
+  (invoke-direct {v0} com/facebook/orca/threadlist/x/<init> )
+  (invoke-direct {v1 v0} com/facebook/orca/threadlist/FrameworkBasedThreadListActivity/<init> [object com/facebook/orca/threadlist/x] )
+  (line 16)
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object com/facebook/orca/threadlist/x] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadlist/FrameworkBasedThreadListActivity])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadlist/x])
+  (line 19)
+  (invoke-direct {v0 v1} com/facebook/base/activity/d/<init> [object com/facebook/base/activity/l] )
+  (line 20)
+  (iput-object v1 v0 com/facebook/orca/threadlist/FrameworkBasedThreadListActivity.p [object com/facebook/orca/threadlist/x])
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/threadlist/x]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/FrameworkBasedThreadListActivity])
+  (line 25)
+  (iget-object v0 v1 com/facebook/orca/threadlist/FrameworkBasedThreadListActivity.p [object com/facebook/orca/threadlist/x])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object com/facebook/orca/common/ui/titlebar/a]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/FrameworkBasedThreadListActivity])
+  (line 34)
+  (iget-object v0 v1 com/facebook/orca/threadlist/FrameworkBasedThreadListActivity.p [object com/facebook/orca/threadlist/x])
+  (invoke-virtual {v0} com/facebook/orca/threadlist/x/c )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) c_()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadlist/FrameworkBasedThreadListActivity])
+  (line 30)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

@@ -1,0 +1,24 @@
+(interface (attrs public abstract ) com/facebook/orca/threadview/s
+ (super java/lang/Object)
+ (source "MessageItemView.java")
+
+
+(method (attrs public abstract ) a([object com/facebook/messages/model/share/Share] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/orca/threadview/aj] )void
+)
+
+(method (attrs public abstract ) a([object com/facebook/orca/threadview/aj] [object android/os/Parcelable] )void
+)
+
+(method (attrs public abstract ) a([object android/text/style/URLSpan] )boolean
+)
+
+(method (attrs public abstract ) b([object com/facebook/orca/threadview/aj] )boolean
+)
+
+(method (attrs public abstract ) c([object com/facebook/orca/threadview/aj] )void
+)
+
+)

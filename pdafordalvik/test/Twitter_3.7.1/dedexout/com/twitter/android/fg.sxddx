@@ -1,0 +1,31 @@
+(class (attrs final ) com/twitter/android/fg
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public ) a [object android/widget/TextView] )
+ (field (attrs public ) b [object android/widget/LinearLayout] )
+ (field (attrs public ) c [object java/lang/String] )
+
+(method (attrs public ) <init>([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/twitter/android/fg])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 163)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 164)
+  (const v0 2131165437) ; 0x7f0700fd)
+  (invoke-virtual {v2 v0} android/view/View/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/TextView])
+  (iput-object v0 v1 com/twitter/android/fg.a [object android/widget/TextView])
+  (line 165)
+  (const v0 2131165225) ; 0x7f070029)
+  (invoke-virtual {v2 v0} android/view/View/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object android/widget/LinearLayout])
+  (iput-object v0 v1 com/twitter/android/fg.b [object android/widget/LinearLayout])
+  (line 166)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,45 @@
+(class (attrs final ) com/google/common/d/a/k
+ (super java/lang/Object)
+ (source "Futures.java")
+ (implements com/google/common/base/Function)
+
+ (field (attrs final ) a [object com/google/common/base/Function] )
+
+(method (attrs ) <init>([object com/google/common/base/Function] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/d/a/k])
+  ; parameter[0] : v1 ([object com/google/common/base/Function])
+  (line 475)
+  (iput-object v1 v0 com/google/common/d/a/k.a [object com/google/common/base/Function])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TI;)"  "Lcom/google/common/d/a/s"  "<TO;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/d/a/k])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 477)
+  (iget-object v0 v1 com/google/common/d/a/k.a [object com/google/common/base/Function])
+  (invoke-interface {v0 v2} com/google/common/base/Function/apply [object java/lang/Object] )
+  (move-result-object v0)
+  (line 478)
+  (invoke-static {v0} com/google/common/d/a/i/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) apply([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/d/a/k])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 475)
+  (invoke-virtual {v1 v2} com/google/common/d/a/k/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

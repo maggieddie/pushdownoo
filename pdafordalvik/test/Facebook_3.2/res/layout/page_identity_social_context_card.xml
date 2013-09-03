@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RatingBar android:layout_gravity="center_horizontal" android:id="@id/page_identity_overall_rating" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="23.0dip" android:layout_marginTop="12.0dip" android:progressDrawable="@drawable/star_big_blue_composite" android:numStars="5" android:isIndicator="true" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/page_identity_total_raters" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" style="@style/ChambrayText.Light" />
+    <include android:id="@id/page_identity_ratings_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/page_card_divider" />
+    <com.facebook.pages.identity.ui.about.PageIdentityInsightsCardUnitView android:id="@id/page_identity_insights_card_unit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="58.0dip" />
+    <com.facebook.pages.identity.ui.facepile.SocialContextWithFacepileCardUnit android:id="@id/page_identity_friends_info_summary_unit" android:background="@drawable/page_identity_card_clickable_unit_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.pages.identity.ui.facepile.SocialContextWithFacepileCardUnit android:id="@id/page_identity_friends_here_now_unit" android:background="@drawable/page_identity_card_clickable_highlighted_unit_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/page_identity_top_recommendations_divider" android:visibility="gone" layout="@layout/page_card_divider" />
+    <com.facebook.pages.identity.recommendations.PageIdentityTopRecommendationsView android:id="@id/page_identity_top_recommendations" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/page_identity_recommendations_divider" android:visibility="gone" layout="@layout/page_card_divider" />
+    <RelativeLayout android:id="@id/page_identity_recommendations_unit" android:background="@drawable/page_identity_card_clickable_unit_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_all_recommendations" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ChambrayText" />
+        <ImageView android:id="@id/page_identity_chevron" android:background="@drawable/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,88 @@
+(class (attrs final ) com/google/common/a/ck
+ (super java/util/AbstractSet)
+ (source "CustomConcurrentHashMap.java")
+
+ (field (attrs final ) a [object com/google/common/a/bj] )
+
+(method (attrs ) <init>([object com/google/common/a/bj] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/ck])
+  ; parameter[0] : v1 ([object com/google/common/a/bj])
+  (line 3824)
+  (iput-object v1 v0 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-direct {v0} java/util/AbstractSet/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ck])
+  (line 3853)
+  (iget-object v0 v1 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/clear )
+  (line 3854)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ck])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 3843)
+  (iget-object v0 v1 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-virtual {v0 v2} com/google/common/a/bj/containsKey [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ck])
+  (line 3838)
+  (iget-object v0 v1 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TK;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/ck])
+  (line 3828)
+  (new-instance v0 com/google/common/a/cj)
+  (iget-object v1 v2 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-direct {v0 v1} com/google/common/a/cj/<init> [object com/google/common/a/bj] )
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ck])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 3848)
+  (iget-object v0 v1 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-virtual {v0 v2} com/google/common/a/bj/remove [object java/lang/Object] )
+  (move-result-object v0)
+  (if-eqz v0 l381b18)
+  (const/4 v0 1)
+  (label l381b16)
+  (return v0)
+  (label l381b18)
+  (const/4 v0 0)
+  (goto l381b16)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/ck])
+  (line 3833)
+  (iget-object v0 v1 com/google/common/a/ck.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

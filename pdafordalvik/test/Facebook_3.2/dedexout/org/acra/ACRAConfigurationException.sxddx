@@ -1,0 +1,17 @@
+(class (attrs public ) org/acra/ACRAConfigurationException
+ (super java/lang/Exception)
+ (source "ACRAConfigurationException.java")
+
+ (field (attrs private static final ) serialVersionUID long -1610680389); 0x9ffef7bb )
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object org/acra/ACRAConfigurationException])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 31)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 32)
+  (return-void )
+ )
+
+)

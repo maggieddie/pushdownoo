@@ -1,0 +1,319 @@
+(class (attrs abstract ) com/google/common/a/aq
+ (super java/util/AbstractCollection)
+ (source "AbstractMultiset.java")
+ (implements com/google/common/a/jf)
+
+ (field (attrs private transient ) a [object java/util/Set] )
+ (field (attrs private transient ) b [object java/util/Set] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/aq])
+  (line 47)
+  (invoke-direct {v0} java/util/AbstractCollection/<init> )
+  (line 171)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)I")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/google/common/a/aq])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 69)
+  (invoke-virtual {v3} com/google/common/a/aq/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/iterator )
+  (move-result-object v1)
+  (label l37ddf0)
+  (invoke-interface {v1} java/util/Iterator/hasNext )
+  (move-result v0)
+  (if-eqz v0 l37de26)
+  (invoke-interface {v1} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object com/google/common/a/jg])
+  (line 70)
+  (invoke-interface {v0} com/google/common/a/jg/a )
+  (move-result-object v2)
+  (invoke-static {v2 v4} com/google/common/base/Objects/equal [object java/lang/Object] [object java/lang/Object] )
+  (move-result v2)
+  (if-eqz v2 l37ddf0)
+  (line 71)
+  (invoke-interface {v0} com/google/common/a/jg/b )
+  (move-result v0)
+  (label l37de24)
+  (line 74)
+  (return v0)
+  (label l37de26)
+  (const/4 v0 0)
+  (goto l37de24)
+)
+
+(method (attrs public ) a([object java/lang/Object] int )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;I)I")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 86)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) add([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (const/4 v0 1)
+  (line 80)
+  (invoke-virtual {v1 v2 v0} com/google/common/a/aq/a [object java/lang/Object] int )
+  (line 81)
+  (return v0)
+)
+
+(method (attrs public ) addAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<+TE;>;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 117)
+  (invoke-static {v1 v2} com/google/common/a/jh/a [object com/google/common/a/jf] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] int )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Lcom/google/common/a/jg"  "<TE;>;>;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  (line 95)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) b()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Lcom/google/common/a/jg"  "<TE;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 167)
+  (iget-object v0 v1 com/google/common/a/aq.b [object java/util/Set])
+  (line 168)
+  (if-nez v0 l37dec0)
+  (invoke-virtual {v1} com/google/common/a/aq/g )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/a/aq.b [object java/util/Set])
+  (label l37dec0)
+  (return-object v0)
+)
+
+(method (attrs abstract ) c()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<"  "Lcom/google/common/a/jg"  "<TE;>;>;")
+  )
+)
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 129)
+  (invoke-virtual {v1} com/google/common/a/aq/c )
+  (move-result-object v0)
+  (invoke-static {v0} com/google/common/a/gg/f [object java/util/Iterator] )
+  (line 130)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 60)
+  (invoke-virtual {v1 v2} com/google/common/a/aq/a [object java/lang/Object] )
+  (move-result v0)
+  (if-lez v0 l37df04)
+  (const/4 v0 1)
+  (label l37df02)
+  (return v0)
+  (label l37df04)
+  (const/4 v0 0)
+  (goto l37df02)
+)
+
+(method (attrs abstract ) d()int
+)
+
+(method (attrs ) e()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 150)
+  (new-instance v0 com/google/common/a/ar)
+  (invoke-direct {v0 v1} com/google/common/a/ar/<init> [object com/google/common/a/aq] )
+  (return-object v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 199)
+  (invoke-static {v1 v2} com/google/common/a/jh/a [object com/google/common/a/jf] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) f()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 138)
+  (iget-object v0 v1 com/google/common/a/aq.a [object java/util/Set])
+  (line 139)
+  (if-nez v0 l37df64)
+  (line 140)
+  (invoke-virtual {v1} com/google/common/a/aq/e )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/a/aq.a [object java/util/Set])
+  (label l37df64)
+  (line 142)
+  (return-object v0)
+)
+
+(method (attrs ) g()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Lcom/google/common/a/jg"  "<TE;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 186)
+  (new-instance v0 com/google/common/a/as)
+  (invoke-direct {v0 v1} com/google/common/a/as/<init> [object com/google/common/a/aq] )
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 209)
+  (invoke-virtual {v1} com/google/common/a/aq/b )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/Object/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 56)
+  (invoke-virtual {v1} com/google/common/a/aq/b )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 64)
+  (invoke-static {v1} com/google/common/a/jh/a [object com/google/common/a/jf] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove([object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/aq])
+  ; parameter[0] : v3 ([object java/lang/Object])
+  (const/4 v0 1)
+  (line 90)
+  (invoke-virtual {v2 v3 v0} com/google/common/a/aq/b [object java/lang/Object] int )
+  (move-result v1)
+  (if-lez v1 l37e008)
+  (label l37e006)
+  (return v0)
+  (label l37e008)
+  (const/4 v0 0)
+  (goto l37e006)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 121)
+  (invoke-static {v1 v2} com/google/common/a/jh/b [object com/google/common/a/jf] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/aq])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 125)
+  (invoke-static {v1 v2} com/google/common/a/jh/c [object com/google/common/a/jf] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 52)
+  (invoke-static {v1} com/google/common/a/jh/b [object com/google/common/a/jf] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/aq])
+  (line 219)
+  (invoke-virtual {v1} com/google/common/a/aq/b )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/Object/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

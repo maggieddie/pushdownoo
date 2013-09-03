@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/ser/ResolvableSerializer
+ (super java/lang/Object)
+ (source "ResolvableSerializer.java")
+
+
+(method (attrs public abstract ) resolve([object com/fasterxml/jackson/databind/SerializerProvider] )void
+)
+
+)

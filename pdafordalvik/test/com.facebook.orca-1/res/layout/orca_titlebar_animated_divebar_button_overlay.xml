@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.MaskedFrameLayout android:id="@id/masked_frame_layout" android:visibility="gone" android:layout_width="@dimen/title_bar_height" android:layout_height="@dimen/title_bar_height" android:foreground="@drawable/orca_chat_head_overlay" orca:mask="@drawable/orca_chat_head_mask">
+        <com.facebook.user.tiles.UserTileView android:id="@id/user_tile_view" android:background="@color/orca_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/orca_chat_head_overlay" />
+    </com.facebook.widget.MaskedFrameLayout>
+    <ImageView android:layout_gravity="bottom|right|center" android:id="@id/green_dot" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_margin="5.0dip" android:src="@drawable/orca_titlebar_animated_divebar_button_overlay_badge_background_circle" />
+    <TextView android:textSize="11.5dip" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom|left|center" android:id="@id/divebar_button_badge_count" android:background="@drawable/divebar_overlay_button_badge" android:paddingLeft="2.0dip" android:paddingTop="0.5dip" android:paddingRight="2.0dip" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minWidth="13.0dip" android:singleLine="true" android:includeFontPadding="false" />
+</merge>

@@ -1,0 +1,98 @@
+(class (attrs public ) com/facebook/orca/dialog/j
+ (super java/lang/Object)
+ (source "MenuDialogParamsBuilder.java")
+
+ (field (attrs private ) a int )
+ (field (attrs private ) b [object java/lang/String] )
+ (field (attrs private ) c [object java/util/List] )
+ (field (attrs private ) d [object android/os/Parcelable] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 14)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 18)
+  (invoke-static {} com/google/common/a/hq/a )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/orca/dialog/j.c [object java/util/List])
+  (return-void )
+ )
+
+(method (attrs public ) a()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 22)
+  (iget v0 v1 com/facebook/orca/dialog/j.a int)
+  (return v0)
+)
+
+(method (attrs public ) a(int )[object com/facebook/orca/dialog/j]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/dialog/j])
+  ; parameter[0] : v1 (int)
+  (line 26)
+  (iput v1 v0 com/facebook/orca/dialog/j.a int)
+  (line 27)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object android/os/Parcelable] )[object com/facebook/orca/dialog/j]
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/dialog/j])
+  ; parameter[0] : v1 ([object android/os/Parcelable])
+  (line 58)
+  (iput-object v1 v0 com/facebook/orca/dialog/j.d [object android/os/Parcelable])
+  (line 59)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/orca/dialog/MenuDialogItem] )[object com/facebook/orca/dialog/j]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  ; parameter[0] : v2 ([object com/facebook/orca/dialog/MenuDialogItem])
+  (line 44)
+  (iget-object v0 v1 com/facebook/orca/dialog/j.c [object java/util/List])
+  (invoke-interface {v0 v2} java/util/List/add [object java/lang/Object] )
+  (line 45)
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 31)
+  (iget-object v0 v1 com/facebook/orca/dialog/j.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<"  "Lcom/facebook/orca/dialog/MenuDialogItem;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 40)
+  (iget-object v0 v1 com/facebook/orca/dialog/j.c [object java/util/List])
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object android/os/Parcelable]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 54)
+  (iget-object v0 v1 com/facebook/orca/dialog/j.d [object android/os/Parcelable])
+  (return-object v0)
+)
+
+(method (attrs public ) e()[object com/facebook/orca/dialog/MenuDialogParams]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/dialog/j])
+  (line 63)
+  (new-instance v0 com/facebook/orca/dialog/MenuDialogParams)
+  (invoke-direct {v0 v1} com/facebook/orca/dialog/MenuDialogParams/<init> [object com/facebook/orca/dialog/j] )
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,35 @@
+(class (attrs ) org/darpa/smsreminder/SmsReminderActivity$2
+ (super java/lang/Object)
+ (source "SmsReminderActivity.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) this$0 [object org/darpa/smsreminder/SmsReminderActivity] )
+
+(method (attrs ) <init>([object org/darpa/smsreminder/SmsReminderActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object org/darpa/smsreminder/SmsReminderActivity$2])
+  ; parameter[0] : v1 ([object org/darpa/smsreminder/SmsReminderActivity])
+  (line 1)
+  (iput-object v1 v0 org/darpa/smsreminder/SmsReminderActivity$2.this$0 [object org/darpa/smsreminder/SmsReminderActivity])
+  (line 160)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 5)
+  ; this: v3 ([object org/darpa/smsreminder/SmsReminderActivity$2])
+  ; parameter[0] : v4 ([object android/view/View])
+  (line 164)
+  (new-instance v0 android/content/Intent)
+  (iget-object v1 v3 org/darpa/smsreminder/SmsReminderActivity$2.this$0 [object org/darpa/smsreminder/SmsReminderActivity])
+  (const-class v2 org/darpa/smsreminder/AlarmViewer)
+  (invoke-direct {v0 v1 v2} android/content/Intent/<init> [object android/content/Context] [object java/lang/Class] )
+  (line 165)
+  (iget-object v1 v3 org/darpa/smsreminder/SmsReminderActivity$2.this$0 [object org/darpa/smsreminder/SmsReminderActivity])
+  (invoke-virtual {v1 v0} org/darpa/smsreminder/SmsReminderActivity/startActivity [object android/content/Intent] )
+  (line 166)
+  (return-void )
+)
+
+)

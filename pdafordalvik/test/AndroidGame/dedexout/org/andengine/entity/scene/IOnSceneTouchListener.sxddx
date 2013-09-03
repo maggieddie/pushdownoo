@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) org/andengine/entity/scene/IOnSceneTouchListener
+ (super java/lang/Object)
+ (source "IOnSceneTouchListener.java")
+
+
+(method (attrs public abstract ) onSceneTouchEvent([object org/andengine/entity/scene/Scene] [object org/andengine/input/touch/TouchEvent] )boolean
+)
+
+)

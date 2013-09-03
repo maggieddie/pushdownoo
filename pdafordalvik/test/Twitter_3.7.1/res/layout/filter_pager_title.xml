@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.Navbar android:id="@id/navbar" android:layout_alignParentTop="true" style="@style/Navbar.Filter">
+        <TextView android:id="@id/title" android:layout_marginRight="0.0dip" android:layout_alignParentLeft="false" style="@style/NavbarTitle" />
+        <TextView android:textSize="@dimen/font_size_default" android:ellipsize="end" android:id="@id/filter_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:layout_toLeftOf="@id/title_button_3" android:layout_toRightOf="@id/title" android:layout_alignBaseline="@id/title" />
+        <com.twitter.android.widget.ShadowTextView android:textColor="@color/confirm_btn_text" android:gravity="center_vertical" android:id="@id/title_button_3" android:background="@drawable/btn_filter_bg" android:focusable="true" android:clickable="true" android:text="@string/done" android:layout_alignParentRight="true" twitter:shadowRadius="0.5px" twitter:shadowDy="-1.0px" twitter:shadowColor="@color/confirm_btn_text_shadow" style="@style/TextTitleBtn" />
+    </com.twitter.android.widget.Navbar>
+</merge>

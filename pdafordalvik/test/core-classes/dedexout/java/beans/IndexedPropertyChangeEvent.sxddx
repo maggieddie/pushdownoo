@@ -16,7 +16,7 @@
   (line 54)
   (invoke-direct {v0 v1 v2 v3 v4} java/beans/PropertyChangeEvent/<init> [object java/lang/Object] [object java/lang/String] [object java/lang/Object] [object java/lang/Object] )
   (line 55)
-  (iput-quick v5 v0 java/beans/IndexedPropertyChangeEvent.index int)
+  (iput-quick v5 v0 )
   (line 56)
   (return-void )
  )
@@ -25,7 +25,7 @@
   (limit registers 2)
   ; this: v1 ([object java/beans/IndexedPropertyChangeEvent])
   (line 64)
-  (iget-quick v0 v1 java/beans/IndexedPropertyChangeEvent.index int)
+  (iget-quick v0 v1 )
   (return v0)
 )
 

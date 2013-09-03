@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.orca.nux.ThreadTitleNuxView android:id="@id/thread_title_nux" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:layout_anchorPosition="belowAnchor|alignWithLeftOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/titlebar_text_container" style="@style/ThreadTitleNuxLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto" />

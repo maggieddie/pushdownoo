@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/http/b/aa
+ (super com/facebook/inject/d)
+ (source "FbHttpModule.java")
+
+ (field (attrs final ) a [object com/facebook/http/b/w] )
+
+(method (attrs private ) <init>([object com/facebook/http/b/w] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/b/aa])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  (line 316)
+  (iput-object v1 v0 com/facebook/http/b/aa.a [object com/facebook/http/b/w])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/http/b/w] [object com/facebook/http/b/x] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/http/b/aa])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  ; parameter[1] : v2 ([object com/facebook/http/b/x])
+  (line 316)
+  (invoke-direct {v0 v1} com/facebook/http/b/aa/<init> [object com/facebook/http/b/w] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/http/protocol/s]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/http/b/aa])
+  (line 320)
+  (new-instance v1 com/facebook/http/protocol/s)
+  (const-class v0 com/fasterxml/jackson/databind/ObjectMapper)
+  (invoke-virtual {v2 v0} com/facebook/http/b/aa/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/fasterxml/jackson/databind/ObjectMapper])
+  (invoke-direct {v1 v0} com/facebook/http/protocol/s/<init> [object com/fasterxml/jackson/databind/ObjectMapper] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/b/aa])
+  (line 316)
+  (invoke-virtual {v1} com/facebook/http/b/aa/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

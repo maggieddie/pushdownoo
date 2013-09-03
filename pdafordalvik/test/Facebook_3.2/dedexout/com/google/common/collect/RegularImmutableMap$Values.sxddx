@@ -1,0 +1,77 @@
+(class (attrs ) com/google/common/collect/RegularImmutableMap$Values
+ (super com/google/common/collect/ImmutableCollection)
+ (source "RegularImmutableMap.java")
+
+ (field (attrs final ) map [object com/google/common/collect/RegularImmutableMap] )
+
+(method (attrs ) <init>([object com/google/common/collect/RegularImmutableMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/collect/RegularImmutableMap"  "<*TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/RegularImmutableMap$Values])
+  ; parameter[0] : v1 ([object com/google/common/collect/RegularImmutableMap])
+  (line 257)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (line 258)
+  (iput-object v1 v0 com/google/common/collect/RegularImmutableMap$Values.map [object com/google/common/collect/RegularImmutableMap])
+  (line 259)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/RegularImmutableMap$Values])
+  (line 267)
+  (new-instance v0 com/google/common/collect/RegularImmutableMap$Values$1)
+  (iget-object v1 v2 com/google/common/collect/RegularImmutableMap$Values.map [object com/google/common/collect/RegularImmutableMap])
+  (invoke-static {v1} com/google/common/collect/RegularImmutableMap/a [object com/google/common/collect/RegularImmutableMap] )
+  (move-result-object v1)
+  (array-length v1 v1)
+  (invoke-direct {v0 v2 v1} com/google/common/collect/RegularImmutableMap$Values$1/<init> [object com/google/common/collect/RegularImmutableMap$Values] int )
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$Values])
+  (line 279)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$Values])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 275)
+  (iget-object v0 v1 com/google/common/collect/RegularImmutableMap$Values.map [object com/google/common/collect/RegularImmutableMap])
+  (invoke-virtual {v0 v2} com/google/common/collect/RegularImmutableMap/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$Values])
+  (line 253)
+  (invoke-virtual {v1} com/google/common/collect/RegularImmutableMap$Values/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/RegularImmutableMap$Values])
+  (line 263)
+  (iget-object v0 v1 com/google/common/collect/RegularImmutableMap$Values.map [object com/google/common/collect/RegularImmutableMap])
+  (invoke-static {v0} com/google/common/collect/RegularImmutableMap/a [object com/google/common/collect/RegularImmutableMap] )
+  (move-result-object v0)
+  (array-length v0 v0)
+  (return v0)
+)
+
+)

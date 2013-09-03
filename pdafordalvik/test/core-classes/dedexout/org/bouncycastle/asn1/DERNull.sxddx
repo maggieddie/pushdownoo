@@ -37,7 +37,7 @@
   (line 28)
   (const/4 v0 5)
   (sget-object v1 org/bouncycastle/asn1/DERNull.zeroBytes [array byte])
-  (invoke-virtual-quick {v3 v0 v1} org/bouncycastle/asn1/DEROutputStream/writeEncoded int [array byte] )
+  (invoke-virtual-quick {v3 v0 v1} vtable #0x10)
   (line 29)
   (return-void )
 )

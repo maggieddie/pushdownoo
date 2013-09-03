@@ -19,7 +19,7 @@
   ; this: v1 ([object java/net/URLConnection$DefaultContentHandler])
   ; parameter[0] : v2 ([object java/net/URLConnection])
   (line 1053)
-  (invoke-virtual-quick {v2} java/net/URLConnection/getInputStream )
+  (invoke-virtual-quick {v2} vtable #0x20)
   (move-result-object v0)
   (return-object v0)
 )

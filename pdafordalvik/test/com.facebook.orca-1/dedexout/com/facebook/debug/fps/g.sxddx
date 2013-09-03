@@ -1,0 +1,52 @@
+(class (attrs ) com/facebook/debug/fps/g
+ (super com/facebook/inject/d)
+ (source "FPSModule.java")
+
+ (field (attrs final ) a [object com/facebook/debug/fps/d] )
+
+(method (attrs private ) <init>([object com/facebook/debug/fps/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/debug/fps/g])
+  ; parameter[0] : v1 ([object com/facebook/debug/fps/d])
+  (line 33)
+  (iput-object v1 v0 com/facebook/debug/fps/g.a [object com/facebook/debug/fps/d])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/debug/fps/d] [object com/facebook/debug/fps/e] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/debug/fps/g])
+  ; parameter[0] : v1 ([object com/facebook/debug/fps/d])
+  ; parameter[1] : v2 ([object com/facebook/debug/fps/e])
+  (line 33)
+  (invoke-direct {v0 v1} com/facebook/debug/fps/g/<init> [object com/facebook/debug/fps/d] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/debug/fps/a]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/debug/fps/g])
+  (line 36)
+  (new-instance v1 com/facebook/debug/fps/a)
+  (const-class v0 com/facebook/debug/fps/k)
+  (invoke-virtual {v3 v0} com/facebook/debug/fps/g/d [object java/lang/Class] )
+  (move-result-object v2)
+  (const-class v0 com/facebook/common/executors/a)
+  (invoke-virtual {v3 v0} com/facebook/debug/fps/g/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/common/executors/a])
+  (invoke-direct {v1 v2 v0} com/facebook/debug/fps/a/<init> [object javax/inject/a] [object com/facebook/common/executors/a] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/debug/fps/g])
+  (line 33)
+  (invoke-virtual {v1} com/facebook/debug/fps/g/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,148 @@
+(class (attrs abstract ) com/google/common/collect/ImmutableSet$TransformedImmutableSet
+ (super com/google/common/collect/ImmutableSet)
+ (source "ImmutableSet.java")
+
+ (field (attrs final ) hashCode int )
+ (field (attrs final ) source [array [object java/lang/Object]] )
+
+(method (attrs ) <init>([array [object java/lang/Object]] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TD;I)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  ; parameter[0] : v1 ([array [object java/lang/Object]])
+  ; parameter[1] : v2 (int)
+  (line 468)
+  (invoke-direct {v0} com/google/common/collect/ImmutableSet/<init> )
+  (line 469)
+  (iput-object v1 v0 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (line 470)
+  (iput v2 v0 com/google/common/collect/ImmutableSet$TransformedImmutableSet.hashCode int)
+  (line 471)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 485)
+  (new-instance v0 com/google/common/collect/ImmutableSet$TransformedImmutableSet$1)
+  (iget-object v1 v2 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (array-length v1 v1)
+  (invoke-direct {v0 v2 v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet$1/<init> [object com/google/common/collect/ImmutableSet$TransformedImmutableSet] int )
+  (return-object v0)
+)
+
+(method (attrs abstract ) a([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TD;)TE;")
+  )
+)
+
+(method (attrs ) c()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 517)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public final ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 513)
+  (iget v0 v1 com/google/common/collect/ImmutableSet$TransformedImmutableSet.hashCode int)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 481)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 464)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 477)
+  (iget-object v0 v1 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (array-length v0 v0)
+  (return v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  (line 493)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet/size )
+  (move-result v0)
+  (new-array v0 v0 [array [object java/lang/Object]])
+  (invoke-virtual {v1 v0} com/google/common/collect/ImmutableSet$TransformedImmutableSet/toArray [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/collect/ImmutableSet$TransformedImmutableSet])
+  ; parameter[0] : v3 ([array [object java/lang/Object]])
+  (line 497)
+  (invoke-virtual {v2} com/google/common/collect/ImmutableSet$TransformedImmutableSet/size )
+  (move-result v0)
+  (line 498)
+  (array-length v1 v3)
+  (if-ge v1 v0 l10839c)
+  (line 499)
+  (invoke-static {v3 v0} com/google/common/collect/ObjectArrays/a [array [object java/lang/Object]] int )
+  (move-result-object v3)
+  (label l108376)
+  (line 506)
+  (const/4 v0 0)
+  (label l108378)
+  (iget-object v1 v2 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (array-length v1 v1)
+  (if-ge v0 v1 l1083aa)
+  (line 507)
+  (iget-object v1 v2 com/google/common/collect/ImmutableSet$TransformedImmutableSet.source [array [object java/lang/Object]])
+  (aget-object v1 v1 v0)
+  (invoke-virtual {v2 v1} com/google/common/collect/ImmutableSet$TransformedImmutableSet/a [object java/lang/Object] )
+  (move-result-object v1)
+  (aput-object v1 v3 v0)
+  (line 506)
+  (add-int/lit8 v0 v0 1)
+  (goto l108378)
+  (label l10839c)
+  (line 500)
+  (array-length v1 v3)
+  (if-le v1 v0 l108376)
+  (line 501)
+  (const/4 v1 0)
+  (aput-object v1 v3 v0)
+  (goto l108376)
+  (label l1083aa)
+  (line 509)
+  (return-object v3)
+)
+
+)

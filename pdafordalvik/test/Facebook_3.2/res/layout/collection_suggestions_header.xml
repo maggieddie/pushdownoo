@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/collection_suggestions_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/collection_item_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/collection_item_horizontal_margin" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/collection_item_horizontal_margin" android:layout_marginBottom="6.0dip" android:text="@string/timeline_collections_suggestions" android:textAllCaps="true" />
+    <View android:background="@color/collections_frame" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

@@ -1,0 +1,550 @@
+(class (attrs final ) com/google/zxing/qrcode/decoder/FormatInformation
+ (super java/lang/Object)
+ (source "FormatInformation.java")
+
+ (field (attrs private static final ) a [array [array int]] )
+ (field (attrs private static final ) b [array int] )
+ (field (attrs private final ) c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel] )
+ (field (attrs private final ) d byte )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 5)
+  (const/16 v4 16)
+  (const/4 v3 2)
+  (line 34)
+  (const/16 v0 32)
+  (new-array v0 v0 [array [array int]])
+  (const/4 v1 0)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12015c)
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12016c)
+  (aput-object v2 v0 v1)
+  (new-array v1 v3 [array int])
+  (fill-array-data v1 l12017c)
+  (aput-object v1 v0 v3)
+  (const/4 v1 3)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12018c)
+  (aput-object v2 v0 v1)
+  (const/4 v1 4)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12019c)
+  (aput-object v2 v0 v1)
+  (const/4 v1 5)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201ac)
+  (aput-object v2 v0 v1)
+  (const/4 v1 6)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201bc)
+  (aput-object v2 v0 v1)
+  (const/4 v1 7)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201cc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 8)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201dc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 9)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201ec)
+  (aput-object v2 v0 v1)
+  (const/16 v1 10)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1201fc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 11)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12020c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 12)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12021c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 13)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12022c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 14)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12023c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 15)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12024c)
+  (aput-object v2 v0 v1)
+  (new-array v1 v3 [array int])
+  (fill-array-data v1 l12025c)
+  (aput-object v1 v0 v4)
+  (const/16 v1 17)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12026c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 18)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12027c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 19)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12028c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 20)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12029c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 21)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202ac)
+  (aput-object v2 v0 v1)
+  (const/16 v1 22)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202bc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 23)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202cc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 24)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202dc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 25)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202ec)
+  (aput-object v2 v0 v1)
+  (const/16 v1 26)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l1202fc)
+  (aput-object v2 v0 v1)
+  (const/16 v1 27)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12030c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 28)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12031c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 29)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12032c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 30)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12033c)
+  (aput-object v2 v0 v1)
+  (const/16 v1 31)
+  (new-array v2 v3 [array int])
+  (fill-array-data v2 l12034c)
+  (aput-object v2 v0 v1)
+  (sput-object v0 com/google/zxing/qrcode/decoder/FormatInformation.a [array [array int]])
+  (line 72)
+  (new-array v0 v4 [array int])
+  (fill-array-data v0 l12035c)
+  (sput-object v0 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (return-void )
+  (line 34)
+  (label l12015c)
+  (data-array
+    (0x12 0x54 0x00 0x00) ; #0
+    (0x00 0x00 0x00 0x00) ; #1
+  )
+  (label l12016c)
+  (data-array
+    (0x25 0x51 0x00 0x00) ; #0
+    (0x01 0x00 0x00 0x00) ; #1
+  )
+  (label l12017c)
+  (data-array
+    (0x7C 0x5E 0x00 0x00) ; #0
+    (0x02 0x00 0x00 0x00) ; #1
+  )
+  (label l12018c)
+  (data-array
+    (0x4B 0x5B 0x00 0x00) ; #0
+    (0x03 0x00 0x00 0x00) ; #1
+  )
+  (label l12019c)
+  (data-array
+    (0xF9 0x45 0x00 0x00) ; #0
+    (0x04 0x00 0x00 0x00) ; #1
+  )
+  (label l1201ac)
+  (data-array
+    (0xCE 0x40 0x00 0x00) ; #0
+    (0x05 0x00 0x00 0x00) ; #1
+  )
+  (label l1201bc)
+  (data-array
+    (0x97 0x4F 0x00 0x00) ; #0
+    (0x06 0x00 0x00 0x00) ; #1
+  )
+  (label l1201cc)
+  (data-array
+    (0xA0 0x4A 0x00 0x00) ; #0
+    (0x07 0x00 0x00 0x00) ; #1
+  )
+  (label l1201dc)
+  (data-array
+    (0xC4 0x77 0x00 0x00) ; #0
+    (0x08 0x00 0x00 0x00) ; #1
+  )
+  (label l1201ec)
+  (data-array
+    (0xF3 0x72 0x00 0x00) ; #0
+    (0x09 0x00 0x00 0x00) ; #1
+  )
+  (label l1201fc)
+  (data-array
+    (0xAA 0x7D 0x00 0x00) ; #0
+    (0x0A 0x00 0x00 0x00) ; #1
+  )
+  (label l12020c)
+  (data-array
+    (0x9D 0x78 0x00 0x00) ; #0
+    (0x0B 0x00 0x00 0x00) ; #1
+  )
+  (label l12021c)
+  (data-array
+    (0x2F 0x66 0x00 0x00) ; #0
+    (0x0C 0x00 0x00 0x00) ; #1
+  )
+  (label l12022c)
+  (data-array
+    (0x18 0x63 0x00 0x00) ; #0
+    (0x0D 0x00 0x00 0x00) ; #1
+  )
+  (label l12023c)
+  (data-array
+    (0x41 0x6C 0x00 0x00) ; #0
+    (0x0E 0x00 0x00 0x00) ; #1
+  )
+  (label l12024c)
+  (data-array
+    (0x76 0x69 0x00 0x00) ; #0
+    (0x0F 0x00 0x00 0x00) ; #1
+  )
+  (label l12025c)
+  (data-array
+    (0x89 0x16 0x00 0x00) ; #0
+    (0x10 0x00 0x00 0x00) ; #1
+  )
+  (label l12026c)
+  (data-array
+    (0xBE 0x13 0x00 0x00) ; #0
+    (0x11 0x00 0x00 0x00) ; #1
+  )
+  (label l12027c)
+  (data-array
+    (0xE7 0x1C 0x00 0x00) ; #0
+    (0x12 0x00 0x00 0x00) ; #1
+  )
+  (label l12028c)
+  (data-array
+    (0xD0 0x19 0x00 0x00) ; #0
+    (0x13 0x00 0x00 0x00) ; #1
+  )
+  (label l12029c)
+  (data-array
+    (0x62 0x07 0x00 0x00) ; #0
+    (0x14 0x00 0x00 0x00) ; #1
+  )
+  (label l1202ac)
+  (data-array
+    (0x55 0x02 0x00 0x00) ; #0
+    (0x15 0x00 0x00 0x00) ; #1
+  )
+  (label l1202bc)
+  (data-array
+    (0x0C 0x0D 0x00 0x00) ; #0
+    (0x16 0x00 0x00 0x00) ; #1
+  )
+  (label l1202cc)
+  (data-array
+    (0x3B 0x08 0x00 0x00) ; #0
+    (0x17 0x00 0x00 0x00) ; #1
+  )
+  (label l1202dc)
+  (data-array
+    (0x5F 0x35 0x00 0x00) ; #0
+    (0x18 0x00 0x00 0x00) ; #1
+  )
+  (label l1202ec)
+  (data-array
+    (0x68 0x30 0x00 0x00) ; #0
+    (0x19 0x00 0x00 0x00) ; #1
+  )
+  (label l1202fc)
+  (data-array
+    (0x31 0x3F 0x00 0x00) ; #0
+    (0x1A 0x00 0x00 0x00) ; #1
+  )
+  (label l12030c)
+  (data-array
+    (0x06 0x3A 0x00 0x00) ; #0
+    (0x1B 0x00 0x00 0x00) ; #1
+  )
+  (label l12031c)
+  (data-array
+    (0xB4 0x24 0x00 0x00) ; #0
+    (0x1C 0x00 0x00 0x00) ; #1
+  )
+  (label l12032c)
+  (data-array
+    (0x83 0x21 0x00 0x00) ; #0
+    (0x1D 0x00 0x00 0x00) ; #1
+  )
+  (label l12033c)
+  (data-array
+    (0xDA 0x2E 0x00 0x00) ; #0
+    (0x1E 0x00 0x00 0x00) ; #1
+  )
+  (label l12034c)
+  (data-array
+    (0xED 0x2B 0x00 0x00) ; #0
+    (0x1F 0x00 0x00 0x00) ; #1
+  )
+  (line 72)
+  (label l12035c)
+  (data-array
+    (0x00 0x00 0x00 0x00) ; #0
+    (0x01 0x00 0x00 0x00) ; #1
+    (0x01 0x00 0x00 0x00) ; #2
+    (0x02 0x00 0x00 0x00) ; #3
+    (0x01 0x00 0x00 0x00) ; #4
+    (0x02 0x00 0x00 0x00) ; #5
+    (0x02 0x00 0x00 0x00) ; #6
+    (0x03 0x00 0x00 0x00) ; #7
+    (0x01 0x00 0x00 0x00) ; #8
+    (0x02 0x00 0x00 0x00) ; #9
+    (0x02 0x00 0x00 0x00) ; #10
+    (0x03 0x00 0x00 0x00) ; #11
+    (0x02 0x00 0x00 0x00) ; #12
+    (0x03 0x00 0x00 0x00) ; #13
+    (0x03 0x00 0x00 0x00) ; #14
+    (0x04 0x00 0x00 0x00) ; #15
+  )
+ )
+
+(method (attrs private ) <init>(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/google/zxing/qrcode/decoder/FormatInformation])
+  ; parameter[0] : v2 (int)
+  (line 78)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 80)
+  (shr-int/lit8 v0 v2 3)
+  (and-int/lit8 v0 v0 3)
+  (invoke-static {v0} com/google/zxing/qrcode/decoder/ErrorCorrectionLevel/forBits int )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/zxing/qrcode/decoder/FormatInformation.c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel])
+  (line 82)
+  (and-int/lit8 v0 v2 7)
+  (int-to-byte v0 v0)
+  (iput-byte v0 v1 com/google/zxing/qrcode/decoder/FormatInformation.d byte)
+  (line 83)
+  (return-void )
+ )
+
+(method (attrs static ) a(int int )int
+  (limit registers 6)
+  ; parameter[0] : v4 (int)
+  ; parameter[1] : v5 (int)
+  (line 86)
+  (xor-int v0 v4 v5)
+  (line 88)
+  (sget-object v1 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (and-int/lit8 v2 v0 15)
+  (aget v1 v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 4)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 8)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 12)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 16)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 20)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v3 v0 24)
+  (and-int/lit8 v3 v3 15)
+  (aget v2 v2 v3)
+  (add-int/2addr v1 v2)
+  (sget-object v2 com/google/zxing/qrcode/decoder/FormatInformation.b [array int])
+  (ushr-int/lit8 v0 v0 28)
+  (and-int/lit8 v0 v0 15)
+  (aget v0 v2 v0)
+  (add-int/2addr v0 v1)
+  (return v0)
+ )
+
+(method (attrs static ) b(int int )[object com/google/zxing/qrcode/decoder/FormatInformation]
+  (limit registers 4)
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 106)
+  (invoke-static {v2 v3} com/google/zxing/qrcode/decoder/FormatInformation/c int int )
+  (move-result-object v0)
+  (line 107)
+  (if-eqz v0 l12049a)
+  (label l120498)
+  (line 113)
+  (return-object v0)
+  (label l12049a)
+  (xor-int/lit16 v0 v2 21522)
+  (xor-int/lit16 v1 v3 21522)
+  (invoke-static {v0 v1} com/google/zxing/qrcode/decoder/FormatInformation/c int int )
+  (move-result-object v0)
+  (goto l120498)
+ )
+
+(method (attrs private static ) c(int int )[object com/google/zxing/qrcode/decoder/FormatInformation]
+  (limit registers 13)
+  ; parameter[0] : v11 (int)
+  ; parameter[1] : v12 (int)
+  (const/4 v9 1)
+  (const/4 v4 0)
+  (line 119)
+  (const v0 2147483647) ; 0x7fffffff)
+  (line 121)
+  (sget-object v5 com/google/zxing/qrcode/decoder/FormatInformation.a [array [array int]])
+  (array-length v6 v5)
+  (move v3 v4)
+  (move v1 v4)
+  (label l1204d0)
+  (if-ge v3 v6 l120526)
+  (aget-object v7 v5 v3)
+  (line 122)
+  (aget v8 v7 v4)
+  (line 123)
+  (if-eq v8 v11 l1204e4)
+  (if-ne v8 v12 l1204f4)
+  (label l1204e4)
+  (line 125)
+  (new-instance v0 com/google/zxing/qrcode/decoder/FormatInformation)
+  (aget v1 v7 v9)
+  (invoke-direct {v0 v1} com/google/zxing/qrcode/decoder/FormatInformation/<init> int )
+  (label l1204f2)
+  (line 146)
+  (return-object v0)
+  (label l1204f4)
+  (line 127)
+  (invoke-static {v11 v8} com/google/zxing/qrcode/decoder/FormatInformation/a int int )
+  (move-result v2)
+  (line 128)
+  (if-ge v2 v0 l120540)
+  (line 129)
+  (aget v0 v7 v9)
+  (label l120504)
+  (line 132)
+  (if-eq v11 v12 l12053c)
+  (line 134)
+  (invoke-static {v12 v8} com/google/zxing/qrcode/decoder/FormatInformation/a int int )
+  (move-result v1)
+  (line 135)
+  (if-ge v1 v2 l12053c)
+  (line 136)
+  (aget v0 v7 v9)
+  (label l120518)
+  (line 121)
+  (add-int/lit8 v2 v3 1)
+  (move v3 v2)
+  (move v10 v0)
+  (move v0 v1)
+  (move v1 v10)
+  (goto l1204d0)
+  (label l120526)
+  (line 143)
+  (const/4 v2 3)
+  (if-gt v0 v2 l120538)
+  (line 144)
+  (new-instance v0 com/google/zxing/qrcode/decoder/FormatInformation)
+  (invoke-direct {v0 v1} com/google/zxing/qrcode/decoder/FormatInformation/<init> int )
+  (goto l1204f2)
+  (label l120538)
+  (line 146)
+  (const/4 v0 0)
+  (goto l1204f2)
+  (label l12053c)
+  (move v1 v2)
+  (goto l120518)
+  (label l120540)
+  (move v2 v0)
+  (move v0 v1)
+  (goto l120504)
+ )
+
+(method (attrs ) a()[object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel]
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/decoder/FormatInformation])
+  (line 150)
+  (iget-object v0 v1 com/google/zxing/qrcode/decoder/FormatInformation.c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel])
+  (return-object v0)
+)
+
+(method (attrs ) b()byte
+  (limit registers 2)
+  ; this: v1 ([object com/google/zxing/qrcode/decoder/FormatInformation])
+  (line 154)
+  (iget-byte v0 v1 com/google/zxing/qrcode/decoder/FormatInformation.d byte)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 5)
+  ; this: v3 ([object com/google/zxing/qrcode/decoder/FormatInformation])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (const/4 v0 0)
+  (line 164)
+  (instance-of v1 v4 com/google/zxing/qrcode/decoder/FormatInformation)
+  (if-nez v1 l120594)
+  (label l120592)
+  (line 168)
+  (return v0)
+  (label l120594)
+  (line 167)
+  (check-cast v4 [object com/google/zxing/qrcode/decoder/FormatInformation])
+  (line 168)
+  (iget-object v1 v3 com/google/zxing/qrcode/decoder/FormatInformation.c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel])
+  (iget-object v2 v4 com/google/zxing/qrcode/decoder/FormatInformation.c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel])
+  (if-ne v1 v2 l120592)
+  (iget-byte v1 v3 com/google/zxing/qrcode/decoder/FormatInformation.d byte)
+  (iget-byte v2 v4 com/google/zxing/qrcode/decoder/FormatInformation.d byte)
+  (if-ne v1 v2 l120592)
+  (const/4 v0 1)
+  (goto l120592)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 3)
+  ; this: v2 ([object com/google/zxing/qrcode/decoder/FormatInformation])
+  (line 159)
+  (iget-object v0 v2 com/google/zxing/qrcode/decoder/FormatInformation.c [object com/google/zxing/qrcode/decoder/ErrorCorrectionLevel])
+  (invoke-virtual {v0} com/google/zxing/qrcode/decoder/ErrorCorrectionLevel/ordinal )
+  (move-result v0)
+  (shl-int/lit8 v0 v0 3)
+  (iget-byte v1 v2 com/google/zxing/qrcode/decoder/FormatInformation.d byte)
+  (or-int/2addr v0 v1)
+  (return v0)
+)
+
+)

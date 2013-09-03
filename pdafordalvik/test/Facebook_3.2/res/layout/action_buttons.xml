@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.ResizableFontButton android:textSize="14.0sp" android:textColor="@drawable/solid_white" android:id="@id/primary_named_button" android:background="@drawable/global_top_button_right" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="55.0dip" android:shadowColor="#66000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+    <ImageButton android:id="@id/primary_action_button" android:background="@drawable/global_top_button_right" android:padding="5.0dip" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="fill_parent" android:src="@drawable/pa_comment" android:scaleType="center" />
+    <LinearLayout android:id="@id/primary_named_button_divider" android:background="#40000000" android:visibility="gone" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_alignLeft="@id/primary_named_button" />
+    <LinearLayout android:id="@id/primary_action_button_divider" android:background="#40000000" android:visibility="gone" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_alignLeft="@id/primary_action_button" />
+    <FrameLayout android:id="@id/orca_titlebar_divebar_button_overlay_view_holder" android:padding="5.0dip" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="fill_parent" />
+</RelativeLayout>

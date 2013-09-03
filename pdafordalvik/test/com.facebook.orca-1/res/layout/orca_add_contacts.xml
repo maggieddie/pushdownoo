@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.orca.common.ui.overlay.SwipableOverlayLayout android:id="@id/thread_view_fragment_host" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:hasProgressBar="false" orca:hasBackButton="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="220.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/orca_phone_unknown_contact" android:scaleType="centerCrop" />
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:layout_gravity="center_vertical" android:id="@id/phone_number_disp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" />
+        </LinearLayout>
+        <Button android:layout_gravity="center" android:id="@id/smsButton" android:background="@drawable/orca_button_blue" android:layout_width="295.0dip" android:layout_height="59.0dip" android:text="@string/send_invite" style="@style/OrcaBlueButton" />
+    </LinearLayout>
+</com.facebook.orca.common.ui.overlay.SwipableOverlayLayout>

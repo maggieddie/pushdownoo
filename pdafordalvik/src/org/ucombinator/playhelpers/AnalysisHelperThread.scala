@@ -16,11 +16,13 @@ import org.ucombinator.dalvik.cfa.cesk.StateSpace
 import org.ucombinator.dalvik.cfa.widening.DalvikWideningConfiguration
 import org.ucombinator.dalvik.cfa.widening.WideningHelperTrait
 import scala.util.matching.Regex
+import org.ucombinator.dalvik.syntax.FieldAssignStmt
 
 // changed to support cmd line
 class AnalysisHelperThread(params: Array[String]) extends Thread with WideningHelperTrait {
 
   import org.ucombinator.domains.CommonAbstractDomains._
+  
   
   var exculsiveLibPatterns : List[Regex]= List[Regex]() 
   
@@ -46,6 +48,10 @@ class AnalysisHelperThread(params: Array[String]) extends Thread with WideningHe
 
   var liveMap: ImmMap[StForEqual, Set[String]] = ImmMap()
   
+  var nullRefMap: Map[Stmt, Int] = Map.empty
+  
+  // for each class method, if they have intent processing fields mapping.
+  var receivingIntentProcessingMap : Map[(String, String), Map[String, Set[IntentExtraKeyTypeAndValue]]]= Map.empty
   // statistics
   var noOfEdges = 0
   var noOfStates = 0

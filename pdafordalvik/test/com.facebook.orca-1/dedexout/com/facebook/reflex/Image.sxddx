@@ -1,0 +1,91 @@
+(class (attrs public abstract ) com/facebook/reflex/Image
+ (super com/facebook/reflex/d)
+ (source "Image.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/Image])
+  (line 20)
+  (invoke-direct {v1} com/facebook/reflex/d/<init> )
+  (line 21)
+  (invoke-direct {v1} com/facebook/reflex/Image/initialize )
+  (move-result v0)
+  (invoke-virtual {v1 v0} com/facebook/reflex/Image/a int )
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs private native ) initialize()int
+ )
+
+(method (attrs private native ) nativeSetBitmap([object android/graphics/Bitmap] int int int )void
+ )
+
+(method (attrs protected ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/Image])
+  (line 27)
+  (const/4 v0 0)
+  (invoke-virtual {v1 v0} com/facebook/reflex/Image/a [object android/graphics/Bitmap] )
+  (line 28)
+  (return-void )
+)
+
+(method (attrs protected ) a([object android/graphics/Bitmap] )void
+  (limit registers 5)
+  ; this: v3 ([object com/facebook/reflex/Image])
+  ; parameter[0] : v4 ([object android/graphics/Bitmap])
+  (line 37)
+  (if-nez v4 l19d68e)
+  (label l19d68c)
+  (line 41)
+  (return-void )
+  (label l19d68e)
+  (line 40)
+  (invoke-virtual {v4} android/graphics/Bitmap/getWidth )
+  (move-result v0)
+  (invoke-virtual {v4} android/graphics/Bitmap/getHeight )
+  (move-result v1)
+  (sget-object v2 com/facebook/reflex/u.Unknown [object com/facebook/reflex/u])
+  (invoke-virtual {v3 v4 v0 v1 v2} com/facebook/reflex/Image/a [object android/graphics/Bitmap] int int [object com/facebook/reflex/u] )
+  (goto l19d68c)
+)
+
+(method (attrs protected ) a([object android/graphics/Bitmap] int int )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/reflex/Image])
+  ; parameter[0] : v2 ([object android/graphics/Bitmap])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 63)
+  (sget-object v0 com/facebook/reflex/u.Unknown [object com/facebook/reflex/u])
+  (invoke-virtual {v1 v2 v3 v4 v0} com/facebook/reflex/Image/a [object android/graphics/Bitmap] int int [object com/facebook/reflex/u] )
+  (line 64)
+  (return-void )
+)
+
+(method (attrs protected ) a([object android/graphics/Bitmap] int int [object com/facebook/reflex/u] )void
+  (limit registers 6)
+  ; this: v1 ([object com/facebook/reflex/Image])
+  ; parameter[0] : v2 ([object android/graphics/Bitmap])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object com/facebook/reflex/u])
+  (line 76)
+  (invoke-virtual {v1} com/facebook/reflex/Image/e )
+  (move-result v0)
+  (if-nez v0 l19d6ea)
+  (if-eqz v2 l19d6ea)
+  (label l19d6e8)
+  (line 80)
+  (return-void )
+  (label l19d6ea)
+  (line 79)
+  (invoke-virtual {v5} com/facebook/reflex/u/ordinal )
+  (move-result v0)
+  (invoke-direct {v1 v2 v3 v4 v0} com/facebook/reflex/Image/nativeSetBitmap [object android/graphics/Bitmap] int int int )
+  (goto l19d6e8)
+)
+
+)

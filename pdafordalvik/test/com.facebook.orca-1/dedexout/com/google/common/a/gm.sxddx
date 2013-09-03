@@ -1,0 +1,40 @@
+(class (attrs final ) com/google/common/a/gm
+ (super com/google/common/a/mh)
+ (source "Iterators.java")
+
+ (field (attrs final ) a [object java/util/Iterator] )
+
+(method (attrs ) <init>([object java/util/Iterator] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/gm])
+  ; parameter[0] : v1 ([object java/util/Iterator])
+  (line 117)
+  (iput-object v1 v0 com/google/common/a/gm.a [object java/util/Iterator])
+  (invoke-direct {v0} com/google/common/a/mh/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gm])
+  (line 120)
+  (iget-object v0 v1 com/google/common/a/gm.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/gm])
+  (line 124)
+  (iget-object v0 v1 com/google/common/a/gm.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,569 @@
+(class (attrs ) com/facebook/reflex/f
+ (super java/lang/Object)
+ (source "DelegatingFbFragmentReflexActivity.java")
+ (implements com/facebook/base/activity/n)
+
+ (field (attrs final ) a [object com/facebook/reflex/e] )
+
+(method (attrs ) <init>([object com/facebook/reflex/e] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/reflex/f])
+  ; parameter[0] : v1 ([object com/facebook/reflex/e])
+  (line 68)
+  (iput-object v1 v0 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a(int )[object android/app/Dialog]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  (line 152)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 204)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 88)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/a [object com/facebook/reflex/e] )
+  (line 89)
+  (return-void )
+)
+
+(method (attrs public ) a(int [object android/app/Dialog] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/app/Dialog])
+  (line 156)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3} com/facebook/reflex/e/a [object com/facebook/reflex/e] int [object android/app/Dialog] )
+  (line 157)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/content/Intent] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 92)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/content/Intent] )
+  (line 93)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/content/res/Configuration] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/content/res/Configuration])
+  (line 164)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/content/res/Configuration] )
+  (line 165)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 76)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/os/Bundle] )
+  (line 77)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/support/v4/app/Fragment] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/support/v4/app/Fragment])
+  (line 216)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/support/v4/app/Fragment] )
+  (line 217)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/ContextMenu])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 ([object android/view/ContextMenu$ContextMenuInfo])
+  (line 229)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3 v4} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )
+  (line 230)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/common/d/e] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object com/facebook/common/d/e])
+  (line 184)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object com/facebook/common/d/e] )
+  (line 185)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 200)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object java/lang/Object] [object java/lang/Object] )
+  (line 201)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/String] [object android/support/v4/app/Fragment] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object android/support/v4/app/Fragment])
+  (line 176)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object java/lang/String] [object android/support/v4/app/Fragment] )
+  (line 177)
+  (return-void )
+)
+
+(method (attrs public ) a(boolean )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (boolean)
+  (line 224)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] boolean )
+  (line 225)
+  (return-void )
+)
+
+(method (attrs public ) a(int [object android/view/KeyEvent] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/view/KeyEvent])
+  (line 136)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3} com/facebook/reflex/e/a [object com/facebook/reflex/e] int [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/KeyEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/KeyEvent])
+  (line 237)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/Menu] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/Menu])
+  (line 188)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/view/Menu] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/MenuItem] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 196)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/view/MenuItem] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object android/view/MotionEvent] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/MotionEvent])
+  (line 116)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object android/view/MotionEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) a([object java/lang/Exception] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object java/lang/Exception])
+  (line 124)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/a [object com/facebook/reflex/e] [object java/lang/Exception] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b(int )[object android/view/View]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  (line 172)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/b [object com/facebook/reflex/e] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 96)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/b [object com/facebook/reflex/e] )
+  (line 97)
+  (return-void )
+)
+
+(method (attrs public ) b([object android/content/Intent] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/content/Intent])
+  (line 261)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/b [object com/facebook/reflex/e] [object android/content/Intent] )
+  (line 262)
+  (return-void )
+)
+
+(method (attrs public ) b([object android/os/Bundle] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 80)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/b [object com/facebook/reflex/e] [object android/os/Bundle] )
+  (line 81)
+  (return-void )
+)
+
+(method (attrs public ) b(int [object android/view/KeyEvent] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object android/view/KeyEvent])
+  (line 140)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2 v3} com/facebook/reflex/e/b [object com/facebook/reflex/e] int [object android/view/KeyEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object android/view/Menu] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/Menu])
+  (line 192)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/b [object com/facebook/reflex/e] [object android/view/Menu] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object android/view/MenuItem] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Landroid/view/View;"  ">(I)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/view/MenuItem])
+  (line 233)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/b [object com/facebook/reflex/e] [object android/view/MenuItem] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) c()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 104)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/c [object com/facebook/reflex/e] )
+  (line 105)
+  (return-void )
+)
+
+(method (attrs public ) c(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  (line 245)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/c [object com/facebook/reflex/e] int )
+  (line 246)
+  (return-void )
+)
+
+(method (attrs public ) c([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 84)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/c [object com/facebook/reflex/e] [object android/os/Bundle] )
+  (line 85)
+  (return-void )
+)
+
+(method (attrs public ) d(int )[object java/lang/String]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  (line 253)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/d [object com/facebook/reflex/e] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 108)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/d [object com/facebook/reflex/e] )
+  (line 109)
+  (return-void )
+)
+
+(method (attrs public ) d([object android/os/Bundle] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 ([object android/os/Bundle])
+  (line 220)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/d [object com/facebook/reflex/e] [object android/os/Bundle] )
+  (line 221)
+  (return-void )
+)
+
+(method (attrs public ) e()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 112)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/e [object com/facebook/reflex/e] )
+  (line 113)
+  (return-void )
+)
+
+(method (attrs public ) e(int )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/f])
+  ; parameter[0] : v2 (int)
+  (line 265)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0 v2} com/facebook/reflex/e/e [object com/facebook/reflex/e] int )
+  (line 266)
+  (return-void )
+)
+
+(method (attrs public ) f()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 120)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/f [object com/facebook/reflex/e] )
+  (line 121)
+  (return-void )
+)
+
+(method (attrs public ) g()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 128)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/g [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) h()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 132)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/h [object com/facebook/reflex/e] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) i()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 144)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/i [object com/facebook/reflex/e] )
+  (line 145)
+  (return-void )
+)
+
+(method (attrs public ) j()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 148)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/j [object com/facebook/reflex/e] )
+  (line 149)
+  (return-void )
+)
+
+(method (attrs public ) k()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 160)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/k [object com/facebook/reflex/e] )
+  (line 161)
+  (return-void )
+)
+
+(method (attrs public ) l()[object com/facebook/inject/t]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 168)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/l [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) m()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 208)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/m [object com/facebook/reflex/e] )
+  (line 209)
+  (return-void )
+)
+
+(method (attrs public ) n()[object android/support/v4/app/q]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 212)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/n [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) o()[object android/view/Window]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 241)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/o [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) p()[object android/content/Intent]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 249)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/p [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) q()[object android/content/res/Resources]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 257)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/q [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) r()[object android/view/MenuInflater]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 269)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/r [object com/facebook/reflex/e] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) s()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/f])
+  (line 273)
+  (iget-object v0 v1 com/facebook/reflex/f.a [object com/facebook/reflex/e])
+  (invoke-static {v0} com/facebook/reflex/e/s [object com/facebook/reflex/e] )
+  (move-result v0)
+  (return v0)
+)
+
+)

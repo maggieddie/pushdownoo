@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) com/facebook/http/b/at
+ (super java/lang/Object)
+ (source "FbWrappedEntity.java")
+ (implements org/apache/http/HttpEntity)
+
+
+(method (attrs public abstract ) a()[object org/apache/http/HttpEntity]
+)
+
+)

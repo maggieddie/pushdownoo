@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.katana.activity.media.vault.VaultSyncScreenErrorBar android:gravity="center" android:id="@id/vault_error_banner" android:background="@drawable/feed_no_connection_background" android:layout_width="fill_parent" android:layout_height="@dimen/vault_sync_screen_header_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/vault_error_banner_image" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="5.0dip" android:scaleType="centerInside" />
+    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/vault_error_banner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feed_connection_lost" />
+</com.facebook.katana.activity.media.vault.VaultSyncScreenErrorBar>

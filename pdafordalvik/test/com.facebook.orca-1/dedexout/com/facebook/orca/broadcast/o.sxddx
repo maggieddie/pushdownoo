@@ -1,0 +1,80 @@
+(class (attrs ) com/facebook/orca/broadcast/o
+ (super com/facebook/orca/photos/picking/i)
+ (source "ComposeBroadcastFragment.java")
+
+ (field (attrs final ) a [object com/facebook/orca/broadcast/ComposeBroadcastFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/broadcast/ComposeBroadcastFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/broadcast/o])
+  ; parameter[0] : v1 ([object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (line 173)
+  (iput-object v1 v0 com/facebook/orca/broadcast/o.a [object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (invoke-direct {v0} com/facebook/orca/photos/picking/i/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/broadcast/o])
+  (line 187)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/ui/media/attachments/MediaResource] )void
+  (limit registers 6)
+  ; this: v4 ([object com/facebook/orca/broadcast/o])
+  ; parameter[0] : v5 ([object com/facebook/ui/media/attachments/MediaResource])
+  (line 176)
+  (if-nez v5 l2a1836)
+  (label l2a1834)
+  (line 183)
+  (return-void )
+  (label l2a1836)
+  (line 180)
+  (iget-object v0 v4 com/facebook/orca/broadcast/o.a [object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (invoke-static {v0} com/facebook/orca/broadcast/ComposeBroadcastFragment/c [object com/facebook/orca/broadcast/ComposeBroadcastFragment] )
+  (move-result-object v0)
+  (iget-object v1 v4 com/facebook/orca/broadcast/o.a [object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (invoke-static {v1} com/facebook/orca/broadcast/ComposeBroadcastFragment/g [object com/facebook/orca/broadcast/ComposeBroadcastFragment] )
+  (move-result-object v1)
+  (invoke-virtual {v1 v5} com/facebook/ui/media/attachments/d/b [object com/facebook/ui/media/attachments/MediaResource] )
+  (move-result-object v1)
+  (iget-object v2 v4 com/facebook/orca/broadcast/o.a [object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (invoke-static {v2} com/facebook/orca/broadcast/ComposeBroadcastFragment/h [object com/facebook/orca/broadcast/ComposeBroadcastFragment] )
+  (move-result-object v2)
+  (invoke-interface {v2} com/facebook/common/time/a/a )
+  (move-result-wide v2)
+  (invoke-static {v2 v3} java/lang/Long/toString long )
+  (move-result-object v2)
+  (invoke-virtual {v0 v1 v2} com/facebook/orca/compose/ComposeAttachmentContainer/a [object com/facebook/ui/media/attachments/a] [object java/lang/String] )
+  (goto l2a1834)
+)
+
+(method (attrs public ) b()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/broadcast/o])
+  (line 191)
+  (return-void )
+)
+
+(method (attrs public ) c()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/broadcast/o])
+  (line 195)
+  (return-void )
+)
+
+(method (attrs public ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/broadcast/o])
+  (line 199)
+  (iget-object v0 v1 com/facebook/orca/broadcast/o.a [object com/facebook/orca/broadcast/ComposeBroadcastFragment])
+  (invoke-static {v0} com/facebook/orca/broadcast/ComposeBroadcastFragment/c [object com/facebook/orca/broadcast/ComposeBroadcastFragment] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/facebook/orca/compose/ComposeAttachmentContainer/a )
+  (line 200)
+  (return-void )
+)
+
+)

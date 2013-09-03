@@ -1,0 +1,75 @@
+(class (attrs public ) com/facebook/orca/notify/ao
+ (super com/facebook/orca/notify/ai)
+ (source "NewBuildNotification.java")
+
+ (field (attrs private final ) b [object java/lang/String] )
+ (field (attrs private final ) c [object java/lang/String] )
+ (field (attrs private final ) d [object java/lang/String] )
+ (field (attrs private final ) e [object android/content/Intent] )
+ (field (attrs private ) f boolean )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/String] [object java/lang/String] [object android/content/Intent] )void
+  (limit registers 6)
+  ; this: v1 ([object com/facebook/orca/notify/ao])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 ([object java/lang/String])
+  ; parameter[2] : v4 ([object java/lang/String])
+  ; parameter[3] : v5 ([object android/content/Intent])
+  (line 21)
+  (sget-object v0 com/facebook/orca/notify/aj.NEW_BUILD [object com/facebook/orca/notify/aj])
+  (invoke-direct {v1 v0} com/facebook/orca/notify/ai/<init> [object com/facebook/orca/notify/aj] )
+  (line 22)
+  (iput-object v2 v1 com/facebook/orca/notify/ao.b [object java/lang/String])
+  (line 23)
+  (iput-object v3 v1 com/facebook/orca/notify/ao.c [object java/lang/String])
+  (line 24)
+  (iput-object v4 v1 com/facebook/orca/notify/ao.d [object java/lang/String])
+  (line 25)
+  (iput-object v5 v1 com/facebook/orca/notify/ao.e [object android/content/Intent])
+  (line 26)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/ao])
+  (line 29)
+  (iget-object v0 v1 com/facebook/orca/notify/ao.b [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) a(boolean )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/notify/ao])
+  ; parameter[0] : v1 (boolean)
+  (line 50)
+  (iput-boolean v1 v0 com/facebook/orca/notify/ao.f boolean)
+  (line 51)
+  (return-void )
+)
+
+(method (attrs public ) b()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/ao])
+  (line 33)
+  (iget-object v0 v1 com/facebook/orca/notify/ao.c [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/ao])
+  (line 37)
+  (iget-object v0 v1 com/facebook/orca/notify/ao.d [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public ) d()[object android/content/Intent]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/notify/ao])
+  (line 41)
+  (iget-object v0 v1 com/facebook/orca/notify/ao.e [object android/content/Intent])
+  (return-object v0)
+)
+
+)

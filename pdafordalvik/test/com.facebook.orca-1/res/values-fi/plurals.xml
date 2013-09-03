@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s tuhatta</item>
+        <item quantity="one">1 tuhatta</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s miljoonaa</item>
+        <item quantity="one">1 miljoonaa</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s miljardia</item>
+        <item quantity="one">1 miljardia</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d tuntia sitten</item>
+        <item quantity="one">1 tunti sitten</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d minuuttia sitten</item>
+        <item quantity="one">1 minuutti sitten</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d tunnin kuluttua</item>
+        <item quantity="one">1 tunnin kuluttua</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minuutin kuluttua</item>
+        <item quantity="one">1 minuutin kuluttua</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Poistetaanko viestit?</item>
+        <item quantity="one">Poistetaanko viesti?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Viestien poistamista ei voi perua.</item>
+        <item quantity="one">Viestin poistamista ei voi perua.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Poista viestit</item>
+        <item quantity="one">Poista viesti</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Poistetaan viestejä...</item>
+        <item quantity="one">Poistetaan viestiä...</item>
+    </plurals>
+</resources>

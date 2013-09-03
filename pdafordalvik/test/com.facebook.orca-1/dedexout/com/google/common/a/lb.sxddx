@@ -1,0 +1,28 @@
+(class (attrs final ) com/google/common/a/lb
+ (super com/google/common/a/kz)
+ (source "SortedLists.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/lb])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 154)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/a/kz/<init> [object java/lang/String] int [object com/google/common/a/ky] )
+  (return-void )
+ )
+
+(method (attrs public ) resultIndex(int )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<E:"  "Ljava/lang/Object;"  ">(I)I")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/lb])
+  ; parameter[0] : v1 (int)
+  (line 157)
+  (return v1)
+)
+
+)

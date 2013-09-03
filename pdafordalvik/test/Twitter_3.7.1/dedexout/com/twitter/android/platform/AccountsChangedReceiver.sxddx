@@ -1,0 +1,30 @@
+(class (attrs public ) com/twitter/android/platform/AccountsChangedReceiver
+ (super android/content/BroadcastReceiver)
+ (source "Twttr")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/twitter/android/platform/AccountsChangedReceiver])
+  (line 35)
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object com/twitter/android/platform/AccountsChangedReceiver])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 113)
+  (new-instance v0 com/twitter/android/platform/b)
+  (invoke-direct {v0 v3} com/twitter/android/platform/b/<init> [object android/content/Context] )
+  (const/4 v1 0)
+  (new-array v1 v1 [array [object java/lang/Void]])
+  (invoke-virtual {v0 v1} com/twitter/android/platform/b/execute [array [object java/lang/Object]] )
+  (line 114)
+  (return-void )
+)
+
+)

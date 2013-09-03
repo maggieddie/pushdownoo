@@ -1,0 +1,158 @@
+(class (attrs public ) com/twitter/android/WelcomeActivity
+ (super com/twitter/android/BaseActivity)
+ (source "Twttr")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/WelcomeActivity])
+  (line 20)
+  (const/4 v0 1)
+  (invoke-direct {v1 v0} com/twitter/android/BaseActivity/<init> boolean )
+  (line 21)
+  (return-void )
+ )
+
+(method (attrs public final ) a_(int )void
+  (limit registers 6)
+  ; this: v4 ([object com/twitter/android/WelcomeActivity])
+  ; parameter[0] : v5 (int)
+  (line 34)
+  (packed-switch v5 2131165286
+    ps85270_8527e ; case 2131165286
+    ps85270_default) ; default
+  (label ps85270_default)
+  (line 42)
+  (invoke-super {v4 v5} com/twitter/android/BaseActivity/a_ int )
+  (label l8527c)
+  (line 46)
+  (return-void )
+  (label ps85270_8527e)
+  (line 36)
+  (iget-object v0 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (iget-object v1 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (invoke-virtual {v1} com/twitter/android/client/b/a )
+  (move-result-wide v1)
+  (sget-object v3 com/twitter/android/service/ScribeEvent.aR [object com/twitter/android/service/ScribeEvent])
+  (invoke-virtual {v0 v1 v2 v3} com/twitter/android/client/b/a long [object com/twitter/android/service/ScribeEvent] )
+  (line 37)
+  (invoke-virtual {v4} com/twitter/android/WelcomeActivity/finish )
+  (goto l8527c)
+  (line 34)
+)
+
+(method (attrs public ) onBackPressed()void
+  (limit registers 5)
+  ; this: v4 ([object com/twitter/android/WelcomeActivity])
+  (line 89)
+  (invoke-super {v4} com/twitter/android/BaseActivity/onBackPressed )
+  (line 90)
+  (iget-object v0 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (iget-object v1 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (invoke-virtual {v1} com/twitter/android/client/b/a )
+  (move-result-wide v1)
+  (sget-object v3 com/twitter/android/service/ScribeEvent.aR [object com/twitter/android/service/ScribeEvent])
+  (invoke-virtual {v0 v1 v2 v3} com/twitter/android/client/b/a long [object com/twitter/android/service/ScribeEvent] )
+  (line 91)
+  (return-void )
+)
+
+(method (attrs public ) onClickHandler([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/twitter/android/WelcomeActivity])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 94)
+  (invoke-virtual {v2} android/view/View/getId )
+  (move-result v0)
+  (packed-switch v0 2131165388
+    ps852f8_85300 ; case 2131165388
+    ps852f8_default) ; default
+  (label l852fe)
+  (label ps852f8_default)
+  (line 100)
+  (return-void )
+  (label ps852f8_85300)
+  (line 96)
+  (const/4 v0 1)
+  (invoke-virtual {v1 v0} com/twitter/android/WelcomeActivity/showDialog int )
+  (goto l852fe)
+  (line 94)
+  (label l8530a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) onCreate([object android/os/Bundle] )void
+  (limit registers 6)
+  ; this: v4 ([object com/twitter/android/WelcomeActivity])
+  ; parameter[0] : v5 ([object android/os/Bundle])
+  (line 25)
+  (const v0 2130903192) ; 0x7f030098)
+  (invoke-super {v4 v5 v0} com/twitter/android/BaseActivity/a [object android/os/Bundle] int )
+  (line 27)
+  (if-nez v5 l85352)
+  (line 28)
+  (iget-object v0 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (iget-object v1 v4 com/twitter/android/WelcomeActivity.a [object com/twitter/android/client/b])
+  (invoke-virtual {v1} com/twitter/android/client/b/a )
+  (move-result-wide v1)
+  (sget-object v3 com/twitter/android/service/ScribeEvent.aP [object com/twitter/android/service/ScribeEvent])
+  (invoke-virtual {v0 v1 v2 v3} com/twitter/android/client/b/a long [object com/twitter/android/service/ScribeEvent] )
+  (label l85352)
+  (line 30)
+  (return-void )
+)
+
+(method (attrs protected ) onCreateDialog(int )[object android/app/Dialog]
+  (limit registers 5)
+  ; this: v3 ([object com/twitter/android/WelcomeActivity])
+  ; parameter[0] : v4 (int)
+  (line 55)
+  (packed-switch v4 1
+    ps85364_85374 ; case 1
+    ps85364_default) ; default
+  (label ps85364_default)
+  (line 84)
+  (invoke-super {v3 v4} com/twitter/android/BaseActivity/onCreateDialog int )
+  (move-result-object v0)
+  (label l85372)
+  (return-object v0)
+  (label ps85364_85374)
+  (line 57)
+  (new-instance v0 com/twitter/android/ic)
+  (invoke-direct {v0 v3} com/twitter/android/ic/<init> [object com/twitter/android/WelcomeActivity] )
+  (line 76)
+  (new-instance v1 android/app/AlertDialog$Builder)
+  (invoke-direct {v1 v3} android/app/AlertDialog$Builder/<init> [object android/content/Context] )
+  (const v2 2131427350) ; 0x7f0b0016)
+  (invoke-virtual {v1 v2} android/app/AlertDialog$Builder/setTitle int )
+  (move-result-object v1)
+  (const v2 2131427657) ; 0x7f0b0149)
+  (invoke-virtual {v1 v2} android/app/AlertDialog$Builder/setMessage int )
+  (move-result-object v1)
+  (const v2 2131427569) ; 0x7f0b00f1)
+  (invoke-virtual {v1 v2 v0} android/app/AlertDialog$Builder/setPositiveButton int [object android/content/DialogInterface$OnClickListener] )
+  (move-result-object v1)
+  (const v2 2131427652) ; 0x7f0b0144)
+  (invoke-virtual {v1 v2 v0} android/app/AlertDialog$Builder/setNegativeButton int [object android/content/DialogInterface$OnClickListener] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/AlertDialog$Builder/create )
+  (move-result-object v0)
+  (goto l85372)
+  (line 55)
+  (label l853ca)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) onSearchRequested()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/twitter/android/WelcomeActivity])
+  (line 50)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

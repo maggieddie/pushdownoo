@@ -1,0 +1,57 @@
+(class (attrs ) com/facebook/orca/contacts/picker/by
+ (super com/facebook/inject/d)
+ (source "MessagesContactPickerModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/picker/bi] )
+
+(method (attrs private ) <init>([object com/facebook/orca/contacts/picker/bi] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/by])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/bi])
+  (line 324)
+  (iput-object v1 v0 com/facebook/orca/contacts/picker/by.a [object com/facebook/orca/contacts/picker/bi])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/picker/bi] [object com/facebook/orca/contacts/picker/bj] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/by])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/bi])
+  ; parameter[1] : v2 ([object com/facebook/orca/contacts/picker/bj])
+  (line 324)
+  (invoke-direct {v0 v1} com/facebook/orca/contacts/picker/by/<init> [object com/facebook/orca/contacts/picker/bi] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/contacts/favorites/aa]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/orca/contacts/picker/by])
+  (line 329)
+  (new-instance v2 com/facebook/orca/contacts/favorites/aa)
+  (const-class v0 android/content/Context)
+  (invoke-virtual {v4 v0} com/facebook/orca/contacts/picker/by/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (const-class v1 com/facebook/contacts/picker/u)
+  (const-class v3 com/facebook/orca/annotations/ForFavoritePickerList)
+  (invoke-virtual {v4 v1 v3} com/facebook/orca/contacts/picker/by/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v3)
+  (const-class v1 android/view/LayoutInflater)
+  (invoke-virtual {v4 v1} com/facebook/orca/contacts/picker/by/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object android/view/LayoutInflater])
+  (invoke-direct {v2 v0 v3 v1} com/facebook/orca/contacts/favorites/aa/<init> [object android/content/Context] [object javax/inject/a] [object android/view/LayoutInflater] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/by])
+  (line 324)
+  (invoke-virtual {v1} com/facebook/orca/contacts/picker/by/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

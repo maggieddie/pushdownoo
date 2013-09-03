@@ -1,0 +1,25 @@
+(class (attrs public ) com/bbn/map/MapEvent
+ (super com/bbn/event/Event)
+ (source "MapEvent.java")
+
+ (field (attrs public static final ) LAYER_ADDED [object java/lang/String] "LAYER_ADDED" )
+ (field (attrs public static final ) LAYER_CHANGED [object java/lang/String] "LAYER_CHANGED" )
+ (field (attrs public static final ) LAYER_REMOVED [object java/lang/String] "LAYER_REMOVED" )
+ (field (attrs public static final ) PROJECTION_CHANGED [object java/lang/String] "PROJECTION_CHANGED" )
+ (field (attrs private ) dataObject [object java/lang/Object] )
+
+(method (attrs public ) <init>([object java/lang/String] [object java/lang/Object] [object com/bbn/map/MapView] )void
+  (limit registers 4)
+  ; this: v0 ([object com/bbn/map/MapEvent])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object com/bbn/map/MapView])
+  (line 18)
+  (invoke-direct {v0 v1 v3} com/bbn/event/Event/<init> [object java/lang/String] [object java/lang/Object] )
+  (line 19)
+  (iput-object v2 v0 com/bbn/map/MapEvent.dataObject [object java/lang/Object])
+  (line 20)
+  (return-void )
+ )
+
+)

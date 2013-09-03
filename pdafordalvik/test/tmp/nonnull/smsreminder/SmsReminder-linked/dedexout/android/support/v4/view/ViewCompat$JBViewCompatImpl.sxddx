@@ -1,0 +1,123 @@
+(class (attrs ) android/support/v4/view/ViewCompat$JBViewCompatImpl
+ (super android/support/v4/view/ViewCompat$ICSViewCompatImpl)
+ (source "ViewCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  (line 186)
+  (invoke-direct {v0} android/support/v4/view/ViewCompat$ICSViewCompatImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getAccessibilityNodeProvider([object android/view/View] )[object android/support/v4/view/accessibility/AccessibilityNodeProviderCompat]
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 221)
+  (invoke-static {v3} android/support/v4/view/ViewCompatJB/getAccessibilityNodeProvider [object android/view/View] )
+  (move-result-object v0)
+  (line 222)
+  (if-eqz v0 l27074)
+  (line 223)
+  (new-instance v1 android/support/v4/view/accessibility/AccessibilityNodeProviderCompat)
+  (invoke-direct {v1 v0} android/support/v4/view/accessibility/AccessibilityNodeProviderCompat/<init> [object java/lang/Object] )
+  (label l27072)
+  (line 225)
+  (return-object v1)
+  (label l27074)
+  (const/4 v1 0)
+  (goto l27072)
+)
+
+(method (attrs public ) getImportantForAccessibility([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 213)
+  (invoke-static {v2} android/support/v4/view/ViewCompatJB/getImportantForAccessibility [object android/view/View] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) hasTransientState([object android/view/View] )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 189)
+  (invoke-static {v2} android/support/v4/view/ViewCompatJB/hasTransientState [object android/view/View] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) postInvalidateOnAnimation([object android/view/View] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  (line 197)
+  (invoke-static {v1} android/support/v4/view/ViewCompatJB/postInvalidateOnAnimation [object android/view/View] )
+  (line 198)
+  (return-void )
+)
+
+(method (attrs public ) postInvalidateOnAnimation([object android/view/View] int int int int )void
+  (limit registers 6)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  ; parameter[4] : v5 (int)
+  (line 201)
+  (invoke-static {v1 v2 v3 v4 v5} android/support/v4/view/ViewCompatJB/postInvalidateOnAnimation [object android/view/View] int int int int )
+  (line 202)
+  (return-void )
+)
+
+(method (attrs public ) postOnAnimation([object android/view/View] [object java/lang/Runnable] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object java/lang/Runnable])
+  (line 205)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatJB/postOnAnimation [object android/view/View] [object java/lang/Runnable] )
+  (line 206)
+  (return-void )
+)
+
+(method (attrs public ) postOnAnimationDelayed([object android/view/View] [object java/lang/Runnable] long )void
+  (limit registers 5)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 ([object java/lang/Runnable])
+  ; parameter[2] : v3 (long)
+  (line 209)
+  (invoke-static {v1 v2 v3 v4} android/support/v4/view/ViewCompatJB/postOnAnimationDelayed [object android/view/View] [object java/lang/Runnable] long )
+  (line 210)
+  (return-void )
+)
+
+(method (attrs public ) setHasTransientState([object android/view/View] boolean )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (boolean)
+  (line 193)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatJB/setHasTransientState [object android/view/View] boolean )
+  (line 194)
+  (return-void )
+)
+
+(method (attrs public ) setImportantForAccessibility([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/view/ViewCompat$JBViewCompatImpl])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 217)
+  (invoke-static {v1 v2} android/support/v4/view/ViewCompatJB/setImportantForAccessibility [object android/view/View] int )
+  (line 218)
+  (return-void )
+)
+
+)

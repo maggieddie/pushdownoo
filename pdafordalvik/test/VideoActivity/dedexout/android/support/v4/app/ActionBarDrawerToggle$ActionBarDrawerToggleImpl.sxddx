@@ -1,0 +1,15 @@
+(interface (attrs abstract ) android/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl
+ (super java/lang/Object)
+ (source "ActionBarDrawerToggle.java")
+
+
+(method (attrs public abstract ) getThemeUpIndicator([object android/app/Activity] )[object android/graphics/drawable/Drawable]
+)
+
+(method (attrs public abstract ) setActionBarDescription([object java/lang/Object] [object android/app/Activity] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) setActionBarUpIndicator([object java/lang/Object] [object android/app/Activity] [object android/graphics/drawable/Drawable] int )[object java/lang/Object]
+)
+
+)

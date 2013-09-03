@@ -1,0 +1,53 @@
+(class (attrs public abstract ) com/facebook/base/broadcast/b
+ (super java/lang/Object)
+ (source "BaseFbBroadcastManager.java")
+ (implements com/facebook/base/broadcast/j)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/broadcast/b])
+  (line 26)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 129)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/base/broadcast/k]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/broadcast/b])
+  (line 163)
+  (new-instance v0 com/facebook/base/broadcast/d)
+  (invoke-direct {v0 v1} com/facebook/base/broadcast/d/<init> [object com/facebook/base/broadcast/b] )
+  (return-object v0)
+)
+
+(method (attrs protected abstract ) a([object android/content/BroadcastReceiver] )void
+)
+
+(method (attrs protected abstract ) a([object android/content/BroadcastReceiver] [object android/content/IntentFilter] [object android/os/Handler] )void
+)
+
+(method (attrs public ) a([object java/lang/String] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/broadcast/b])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 30)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (line 31)
+  (new-instance v0 android/content/Intent)
+  (invoke-direct {v0 v2} android/content/Intent/<init> [object java/lang/String] )
+  (invoke-virtual {v1 v0} com/facebook/base/broadcast/b/a [object android/content/Intent] )
+  (line 32)
+  (return-void )
+)
+
+(method (attrs protected ) b()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/broadcast/b])
+  (line 170)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

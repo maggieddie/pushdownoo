@@ -1,0 +1,39 @@
+(class (attrs ) com/facebook/orca/presence/e
+ (super java/lang/Object)
+ (source "MobilePresenceIconExperiment.java")
+ (implements com/facebook/abtest/qe/d/c)
+
+ (field (attrs final ) a [object com/facebook/orca/presence/d] )
+
+(method (attrs ) <init>([object com/facebook/orca/presence/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/presence/e])
+  ; parameter[0] : v1 ([object com/facebook/orca/presence/d])
+  (line 88)
+  (iput-object v1 v0 com/facebook/orca/presence/e.a [object com/facebook/orca/presence/d])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/abtest/qe/data/QuickExperimentInfo] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/presence/e])
+  ; parameter[0] : v2 ([object com/facebook/abtest/qe/data/QuickExperimentInfo])
+  (line 88)
+  (invoke-virtual {v1 v2} com/facebook/orca/presence/e/b [object com/facebook/abtest/qe/data/QuickExperimentInfo] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object com/facebook/abtest/qe/data/QuickExperimentInfo] )[object com/facebook/orca/presence/f]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/presence/e])
+  ; parameter[0] : v2 ([object com/facebook/abtest/qe/data/QuickExperimentInfo])
+  (line 92)
+  (iget-object v0 v1 com/facebook/orca/presence/e.a [object com/facebook/orca/presence/d])
+  (invoke-static {v0 v2} com/facebook/orca/presence/d/a [object com/facebook/orca/presence/d] [object com/facebook/abtest/qe/data/QuickExperimentInfo] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

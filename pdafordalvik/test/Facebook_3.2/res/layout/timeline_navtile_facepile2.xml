@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5" orca:scaleType="centerCrop" style="@style/timeline_navtile_image" />
+    <com.facebook.widget.UrlImage android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5" orca:scaleType="centerCrop" style="@style/timeline_navtile_image" />
+</LinearLayout>

@@ -1,0 +1,111 @@
+(interface (attrs public abstract ) com/google/common/collect/Multimap
+ (super java/lang/Object)
+ (source "Multimap.java")
+
+
+(method (attrs public abstract ) a([object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;TV;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) b()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) b([object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;"  "Ljava/util/Collection"  "<TV;>;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) c([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;"  "Ljava/lang/Iterable"  "<+TV;>;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) c([object java/lang/Object] [object java/lang/Iterable] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;"  "Ljava/lang/Iterable"  "<+TV;>;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) c([object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;"  "Ljava/lang/Iterable"  "<+TV;>;)Z")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) d()int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) d([object java/lang/Object] )[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  ")"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) e()boolean
+)
+
+(method (attrs public abstract ) f()void
+)
+
+(method (attrs public abstract ) f([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) g()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TK;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) h()[object com/google/common/collect/Multiset]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/Multiset"  "<TK;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs public abstract ) i()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+)
+
+)

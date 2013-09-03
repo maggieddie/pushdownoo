@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.katana.activity.media.crop.CropImageView android:id="@id/image" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.katana.activity.media.crop.CropRectView android:id="@id/cropping_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/bottom_buttons" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height">
+        <Button android:id="@id/button_accept_crop" android:background="@drawable/camera_review_accept_button" android:visibility="gone" android:layout_width="49.0dip" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageButton android:id="@id/button_crop_rotate" android:background="@drawable/clear" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="fill_parent" android:src="@drawable/rotate_button_states" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/button_reject_crop" android:background="@drawable/camera_review_reject_button" android:visibility="gone" android:layout_width="49.0dip" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

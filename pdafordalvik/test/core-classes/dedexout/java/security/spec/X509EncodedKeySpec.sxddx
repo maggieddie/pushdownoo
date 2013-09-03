@@ -17,7 +17,7 @@
   (limit registers 2)
   ; this: v1 ([object java/security/spec/X509EncodedKeySpec])
   (line 48)
-  (invoke-super-quick {v1} java/security/spec/X509EncodedKeySpec/getEncoded )
+  (invoke-super-quick {v1} vtable #0xb)
   (move-result-object v0)
   (return-object v0)
 )

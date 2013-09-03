@@ -722,8 +722,16 @@ abstract sealed class AbstractInvokeStmt(methPathStr: String, argRA: List[AExp],
   //apply method goes in there. But I don't like the analyzer types to be mixed in the front end here.
 }
 
-// invoke direct and invoke virtual
-case class InvokeStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp, tyStrs: List[String], nxt: Stmt, ls:Stmt, clsP: String, methP: String)
+// invoke  virtual
+case class InvokeStmt(
+    methPathStr: String, 
+    argRegAExp: List[AExp], 
+    objAExp: AExp, 
+    tyStrs: List[String], 
+    nxt: Stmt, 
+    ls:Stmt, 
+    clsP: String, 
+    methP: String)
   extends AbstractInvokeStmt(methPathStr, argRegAExp, tyStrs, clsP, methP) {
   var next = nxt
   var lineNumber = ls
@@ -1023,6 +1031,18 @@ case class DalvikClassDef(
     println("directObjectFields for clas: " + clsPath +  res2)
     res2
   }
+  
+  
+  // if no, then empty list; otherwise, singleton list
+  def getOnCreateMethodDefIfAny: List[MethodDef] = {
+     methods.foldLeft(List[MethodDef]())((res, md) => {
+       if(md.methodPath.contains("onCreate"))
+         md :: res
+         else
+           res
+     })
+    }
+   
   private def methodTable : Map [CompactMethodIndex, MethodDef] = {
     val entries: List[(CompactMethodIndex , MethodDef)] = methods map ((md:MethodDef) => 
       (new CompactMethodIndex(md.methodPath, md.argTypeList), md))
@@ -1251,7 +1271,7 @@ object DalvikClassDef {
         curClsDef.getClassConstrctorMethDef ::: res
      })
    }
-   
+  
      def getAllClInitStmts: List[Stmt] = {
      getAllClassConstructors.map(_.body)
      }
@@ -1517,9 +1537,52 @@ case class MethodDef(methPath: String, ats: List[String], rn: BigInt, atl: List[
   val body = bd
   var isEntryPoint: Boolean = false
   
+  //var intentProcessRelated = false
+
   
   var riskRank = -1
   // def riskRank_=(n : Int )
+  
+  
+  // precond: should be called after the isEntrypoint is set
+  def isIntentProcessingMethod : Boolean = {
+    //println("argTypeList: ", argTypeList)
+    
+  // inner func1
+    def containsIntentArg : Boolean = {
+      for(arg <- argTypeList){
+       // println("arg: ", arg)
+        if (arg.contains("android/content/Intent"))
+          return true
+      }
+      return false;
+    }
+
+    // inner func 2
+    def methodBodyContainsGetIntent : Boolean = {
+     
+      def containsGetIntent : Boolean = {
+        var tmp = body
+        var cond = false
+        while(tmp != StmtNil){
+        tmp match {
+          case InvokeStmt(mp, _, _, _, _, _, _, _) => {
+            if( mp.contains("getIntent"))
+              cond = true
+          }
+          case _ => {}
+        }
+        tmp = tmp.next
+      }
+        cond
+      }
+      
+      containsGetIntent
+      }
+   
+    containsIntentArg || methodBodyContainsGetIntent
+      
+  }
   
   def computeRiskRank :Int = {
     

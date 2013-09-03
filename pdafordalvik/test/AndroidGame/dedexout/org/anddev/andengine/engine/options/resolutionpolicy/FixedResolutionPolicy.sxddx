@@ -1,0 +1,37 @@
+(class (attrs public ) org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy
+ (super org/anddev/andengine/engine/options/resolutionpolicy/BaseResolutionPolicy)
+ (source "FixedResolutionPolicy.java")
+
+ (field (attrs private final ) mHeight int )
+ (field (attrs private final ) mWidth int )
+
+(method (attrs public ) <init>(int int )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 28)
+  (invoke-direct {v0} org/anddev/andengine/engine/options/resolutionpolicy/BaseResolutionPolicy/<init> )
+  (line 29)
+  (iput v1 v0 org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy.mWidth int)
+  (line 30)
+  (iput v2 v0 org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy.mHeight int)
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) onMeasure([object org/anddev/andengine/opengl/view/RenderSurfaceView] int int )void
+  (limit registers 6)
+  ; this: v2 ([object org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy])
+  ; parameter[0] : v3 ([object org/anddev/andengine/opengl/view/RenderSurfaceView])
+  ; parameter[1] : v4 (int)
+  ; parameter[2] : v5 (int)
+  (line 43)
+  (iget v0 v2 org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy.mWidth int)
+  (iget v1 v2 org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy.mHeight int)
+  (invoke-virtual {v3 v0 v1} org/anddev/andengine/opengl/view/RenderSurfaceView/setMeasuredDimensionProxy int int )
+  (line 44)
+  (return-void )
+)
+
+)

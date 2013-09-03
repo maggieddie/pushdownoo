@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#2a000000" />
+            <corners android:radius="4.0px" />
+            <size android:height="60.0px" android:width="156.0px" />
+        </shape>
+    </item>
+    <item android:left="3.0px" android:top="4.0px" android:right="3.0px" android:bottom="3.0px">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="3.0px" android:color="#0f000000" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+    <item android:left="2.0px" android:top="3.0px" android:right="2.0px" android:bottom="2.0px">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="3.0px" android:color="#0f000000" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+    <item android:left="1.0px" android:top="2.0px" android:right="1.0px">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="3.0px" android:color="#22000000" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="3.0px" android:color="#ff6a6a6a" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+</layer-list>

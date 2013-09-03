@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="12.0dip" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/ufiservices_flyout_profile_image_view" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:scaleType="center" android:layout_centerVertical="true" orca:placeholderSrc="@drawable/no_avatar" orca:loadResolutionDuringScroll="full_res" orca:scaleType="centerCrop" />
+    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/flyout_text_body_color" android:gravity="center_vertical" android:id="@id/ufiservices_flyout_profile_name_view" android:background="@drawable/ufiservices_generic_press_state_background_rounded" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/ufiservices_flyout_profile_image_view" android:layout_centerVertical="true" />
+</RelativeLayout>

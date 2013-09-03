@@ -1,0 +1,19 @@
+(class (attrs public ) com/facebook/common/hardware/ad
+ (super java/lang/Object)
+ (source "WifiDiagnosticsSerializer.java")
+
+ (field (attrs private final ) a [object android/net/wifi/WifiManager] )
+
+(method (attrs public ) <init>([object android/net/wifi/WifiManager] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/hardware/ad])
+  ; parameter[0] : v1 ([object android/net/wifi/WifiManager])
+  (line 23)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 24)
+  (iput-object v1 v0 com/facebook/common/hardware/ad.a [object android/net/wifi/WifiManager])
+  (line 25)
+  (return-void )
+ )
+
+)

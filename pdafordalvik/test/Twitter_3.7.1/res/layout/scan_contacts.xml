@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true">
+        <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/list_item_text" android:gravity="center_vertical" android:id="@id/scan_contacts" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/find_friends_title" android:onClick="onClickHandler" style="@style/ListRow" />
+    </com.twitter.android.widget.CardRowView>
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="24.0dip" android:text="@string/scan_contacts_desc" style="@style/ListFooter" />
+</merge>

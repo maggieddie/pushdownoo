@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) com/google/common/annotations/GwtIncompatible
+ (super java/lang/Object)
+ (source "GwtIncompatible.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+)

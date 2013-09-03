@@ -1,0 +1,19 @@
+(class (attrs final ) android/support/v4/app/FragmentActivity$NonConfigurationInstances
+ (super java/lang/Object)
+ (source "FragmentActivity.java")
+
+ (field (attrs ) activity [object java/lang/Object] )
+ (field (attrs ) children [object java/util/HashMap] )
+ (field (attrs ) custom [object java/lang/Object] )
+ (field (attrs ) fragments [object java/util/ArrayList] )
+ (field (attrs ) loaders [object android/support/v4/util/SparseArrayCompat] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/FragmentActivity$NonConfigurationInstances])
+  (line 114)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,42 @@
+(interface (attrs public abstract ) com/facebook/widget/animatablelistview/q
+ (super java/lang/Object)
+ (source "ItemBasedListAdapter.java")
+
+
+(method (attrs public abstract ) a()int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)Z")
+  )
+)
+
+(method (attrs public abstract ) a([object java/lang/Object] [object android/view/View] [object android/view/ViewGroup] )[object android/view/View]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)Z")
+  )
+)
+
+(method (attrs public abstract ) a([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)Z")
+  )
+)
+
+(method (attrs public abstract ) b([object java/lang/Object] )long
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)J")
+  )
+)
+
+(method (attrs public abstract ) b()boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)J")
+  )
+)
+
+(method (attrs public abstract ) c([object java/lang/Object] )int
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)I")
+  )
+)
+
+)

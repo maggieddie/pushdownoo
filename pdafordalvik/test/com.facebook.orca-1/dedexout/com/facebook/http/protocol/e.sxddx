@@ -1,0 +1,39 @@
+(class (attrs public ) com/facebook/http/protocol/e
+ (super java/io/IOException)
+ (source "ApiException.java")
+ (implements com/facebook/fbservice/c/c)
+
+ (field (attrs private final ) a [object com/facebook/http/protocol/ApiErrorResult] )
+
+(method (attrs public ) <init>([object com/facebook/http/protocol/ApiErrorResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/http/protocol/e])
+  ; parameter[0] : v2 ([object com/facebook/http/protocol/ApiErrorResult])
+  (line 17)
+  (invoke-virtual {v2} com/facebook/http/protocol/ApiErrorResult/b )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} java/io/IOException/<init> [object java/lang/String] )
+  (line 18)
+  (iput-object v2 v1 com/facebook/http/protocol/e.a [object com/facebook/http/protocol/ApiErrorResult])
+  (line 19)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object android/os/Parcelable]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/e])
+  (line 12)
+  (invoke-virtual {v1} com/facebook/http/protocol/e/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object com/facebook/http/protocol/ApiErrorResult]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/protocol/e])
+  (line 23)
+  (iget-object v0 v1 com/facebook/http/protocol/e.a [object com/facebook/http/protocol/ApiErrorResult])
+  (return-object v0)
+)
+
+)

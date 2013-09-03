@@ -1,0 +1,12 @@
+(interface (attrs abstract ) com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember
+ (super java/lang/Object)
+ (source "POJOPropertyBuilder.java")
+
+
+(method (attrs public abstract ) withMember([object com/fasterxml/jackson/databind/introspect/AnnotatedMember] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;"  ")TT;")
+  )
+)
+
+)

@@ -1,0 +1,17 @@
+(class (attrs public ) com/facebook/orca/g/y
+ (super com/facebook/d/c/a)
+ (source "DbThreadsPropertyUtil.java")
+
+
+(method (attrs ) <init>([object com/facebook/orca/g/aa] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/g/y])
+  ; parameter[0] : v2 ([object com/facebook/orca/g/aa])
+  (line 13)
+  (const-string v0 "properties")
+  (invoke-direct {v1 v2 v0} com/facebook/d/c/a/<init> [object com/google/common/base/Supplier] [object java/lang/String] )
+  (line 14)
+  (return-void )
+ )
+
+)

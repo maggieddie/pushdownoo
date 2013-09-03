@@ -1,0 +1,35 @@
+(class (attrs public final ) com/facebook/debug/log/l
+ (super java/lang/Object)
+ (source "WtfToken.java")
+
+ (field (attrs private final ) a [object com/facebook/common/p/a] )
+
+(method (attrs public ) <init>()void
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/debug/log/l])
+  (line 19)
+  (invoke-direct {v5} java/lang/Object/<init> )
+  (line 20)
+  (new-instance v0 com/facebook/common/p/a)
+  (invoke-static {} com/facebook/common/time/c/b )
+  (nop )
+  (move-result-object v1)
+  (const/4 v2 2)
+  (const-wide/32 v3 3600000) ; 0x36ee80)
+  (invoke-direct {v0 v1 v2 v3 v4} com/facebook/common/p/a/<init> [object com/facebook/common/time/a] int long )
+  (iput-object v0 v5 com/facebook/debug/log/l.a [object com/facebook/common/p/a])
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/debug/log/l])
+  (line 34)
+  (iget-object v0 v1 com/facebook/debug/log/l.a [object com/facebook/common/p/a])
+  (invoke-virtual {v0} com/facebook/common/p/a/a )
+  (move-result v0)
+  (return v0)
+)
+
+)

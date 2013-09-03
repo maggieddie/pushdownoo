@@ -1,0 +1,31 @@
+(class (attrs final ) com/google/common/collect/Iterators$11
+ (super com/google/common/collect/AbstractIndexedListIterator)
+ (source "Iterators.java")
+
+ (field (attrs final ) a [array [object java/lang/Object]] )
+
+(method (attrs ) <init>(int [array [object java/lang/Object]] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/collect/Iterators$11])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 ([array [object java/lang/Object]])
+  (line 1008)
+  (iput-object v2 v0 com/google/common/collect/Iterators$11.a [array [object java/lang/Object]])
+  (invoke-direct {v0 v1} com/google/common/collect/AbstractIndexedListIterator/<init> int )
+  (return-void )
+ )
+
+(method (attrs protected ) a(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/Iterators$11])
+  ; parameter[0] : v2 (int)
+  (line 1010)
+  (iget-object v0 v1 com/google/common/collect/Iterators$11.a [array [object java/lang/Object]])
+  (aget-object v0 v0 v2)
+  (return-object v0)
+)
+
+)

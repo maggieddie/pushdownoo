@@ -1,0 +1,57 @@
+(class (attrs final ) com/facebook/debug/d/c
+ (super com/facebook/common/o/c)
+ (source "TraceEvent.java")
+
+
+(method (attrs ) <init>([object java/lang/Class] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/debug/d/c])
+  ; parameter[0] : v1 ([object java/lang/Class])
+  (line 29)
+  (invoke-direct {v0 v1} com/facebook/common/o/c/<init> [object java/lang/Class] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/debug/d/c])
+  (line 29)
+  (invoke-virtual {v1} com/facebook/debug/d/c/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object com/facebook/debug/d/b] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/debug/d/c])
+  ; parameter[0] : v2 ([object com/facebook/debug/d/b])
+  (const/4 v0 0)
+  (line 37)
+  (invoke-static {v2 v0} com/facebook/debug/d/b/a [object com/facebook/debug/d/b] [object java/lang/String] )
+  (line 38)
+  (invoke-static {v2 v0} com/facebook/debug/d/b/b [object com/facebook/debug/d/b] [object java/lang/String] )
+  (line 39)
+  (return-void )
+)
+
+(method (attrs public ) b()[object com/facebook/debug/d/b]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/debug/d/c])
+  (line 32)
+  (new-instance v0 com/facebook/debug/d/b)
+  (const/4 v1 0)
+  (invoke-direct {v0 v1} com/facebook/debug/d/b/<init> [object com/facebook/debug/d/c] )
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/debug/d/c])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 29)
+  (check-cast v1 [object com/facebook/debug/d/b])
+  (invoke-virtual {v0 v1} com/facebook/debug/d/c/a [object com/facebook/debug/d/b] )
+  (return-void )
+)
+
+)

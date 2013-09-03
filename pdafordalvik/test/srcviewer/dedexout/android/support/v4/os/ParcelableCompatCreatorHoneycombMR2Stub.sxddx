@@ -1,0 +1,26 @@
+(class (attrs ) android/support/v4/os/ParcelableCompatCreatorHoneycombMR2Stub
+ (super java/lang/Object)
+ (source "ParcelableCompatHoneycombMR2.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/os/ParcelableCompatCreatorHoneycombMR2Stub])
+  (line 22)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) instantiate([object android/support/v4/os/ParcelableCompatCreatorCallbacks] )[object android/os/Parcelable$Creator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">("  "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks"  "<TT;>;)"  "Landroid/os/Parcelable$Creator"  "<TT;>;")
+  )
+  (limit registers 2)
+  ; parameter[0] : v1 ([object android/support/v4/os/ParcelableCompatCreatorCallbacks])
+  (line 24)
+  (new-instance v0 android/support/v4/os/ParcelableCompatCreatorHoneycombMR2)
+  (invoke-direct {v0 v1} android/support/v4/os/ParcelableCompatCreatorHoneycombMR2/<init> [object android/support/v4/os/ParcelableCompatCreatorCallbacks] )
+  (return-object v0)
+ )
+
+)

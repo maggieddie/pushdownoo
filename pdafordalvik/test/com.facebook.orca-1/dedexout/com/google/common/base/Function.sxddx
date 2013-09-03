@@ -1,0 +1,14 @@
+(interface (attrs public abstract ) com/google/common/base/Function
+ (super java/lang/Object)
+ (source "Function.java")
+
+
+(method (attrs public abstract ) apply([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TF;)TT;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+)

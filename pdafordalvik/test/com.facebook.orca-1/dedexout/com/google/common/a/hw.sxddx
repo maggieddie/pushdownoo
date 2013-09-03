@@ -1,0 +1,30 @@
+(interface (attrs public abstract ) com/google/common/a/hw
+ (super java/lang/Object)
+ (source "MapDifference.java")
+
+
+(method (attrs public abstract ) a()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) b()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) c()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;TV;>;")
+  )
+)
+
+(method (attrs public abstract ) d()[object java/util/Map]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Map"  "<TK;"  "Lcom/google/common/a/hx"  "<TV;>;>;")
+  )
+)
+
+)

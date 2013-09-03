@@ -1,0 +1,48 @@
+(class (attrs public ) com/bbn/map/MouseableRectangle
+ (super com/bbn/map/MouseableObject)
+ (source "MouseableRectangle.java")
+
+ (field (attrs private ) r [object android/graphics/Rect] )
+
+(method (attrs public ) <init>([object java/lang/Object] int int int int )void
+  (limit registers 7)
+  ; this: v1 ([object com/bbn/map/MouseableRectangle])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (int)
+  ; parameter[4] : v6 (int)
+  (line 16)
+  (invoke-direct {v1 v2 v3 v4} com/bbn/map/MouseableObject/<init> [object java/lang/Object] int int )
+  (line 17)
+  (new-instance v0 android/graphics/Rect)
+  (invoke-direct {v0 v3 v4 v5 v6} android/graphics/Rect/<init> int int int int )
+  (iput-object v0 v1 com/bbn/map/MouseableRectangle.r [object android/graphics/Rect])
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) containsPoint(int int )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/bbn/map/MouseableRectangle])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 22)
+  (iget-object v0 v1 com/bbn/map/MouseableRectangle.r [object android/graphics/Rect])
+  (invoke-virtual {v0 v2 v3} android/graphics/Rect/contains int int )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) onClick([object android/view/View] int int )boolean
+  (limit registers 5)
+  ; this: v1 ([object com/bbn/map/MouseableRectangle])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 25)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

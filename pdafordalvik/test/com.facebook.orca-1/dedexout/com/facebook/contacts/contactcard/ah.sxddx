@@ -1,0 +1,37 @@
+(class (attrs ) com/facebook/contacts/contactcard/ah
+ (super java/lang/Object)
+ (source "GroupContactCardFragment.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/contacts/contactcard/GroupContactCardFragment] )
+
+(method (attrs ) <init>([object com/facebook/contacts/contactcard/GroupContactCardFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/contactcard/ah])
+  ; parameter[0] : v1 ([object com/facebook/contacts/contactcard/GroupContactCardFragment])
+  (line 111)
+  (iput-object v1 v0 com/facebook/contacts/contactcard/ah.a [object com/facebook/contacts/contactcard/GroupContactCardFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/contactcard/ah])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 114)
+  (iget-object v0 v1 com/facebook/contacts/contactcard/ah.a [object com/facebook/contacts/contactcard/GroupContactCardFragment])
+  (invoke-static {v0} com/facebook/contacts/contactcard/GroupContactCardFragment/a [object com/facebook/contacts/contactcard/GroupContactCardFragment] )
+  (move-result-object v0)
+  (if-eqz v0 l188a06)
+  (line 115)
+  (iget-object v0 v1 com/facebook/contacts/contactcard/ah.a [object com/facebook/contacts/contactcard/GroupContactCardFragment])
+  (invoke-static {v0} com/facebook/contacts/contactcard/GroupContactCardFragment/a [object com/facebook/contacts/contactcard/GroupContactCardFragment] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/contacts/contactcard/ai/f )
+  (label l188a06)
+  (line 117)
+  (return-void )
+)
+
+)

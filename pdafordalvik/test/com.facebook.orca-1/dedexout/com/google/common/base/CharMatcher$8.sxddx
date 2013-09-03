@@ -1,0 +1,88 @@
+(class (attrs final ) com/google/common/base/CharMatcher$8
+ (super com/google/common/base/CharMatcher)
+ (source "CharMatcher.java")
+
+ (field (attrs final ) val$match char )
+
+(method (attrs ) <init>(char )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/base/CharMatcher$8])
+  ; parameter[0] : v1 (char)
+  (line 394)
+  (iput-char v1 v0 com/google/common/base/CharMatcher$8.val$match char)
+  (invoke-direct {v0} com/google/common/base/CharMatcher/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) apply([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$8])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 394)
+  (check-cast v2 [object java/lang/Character])
+  (invoke-super {v1 v2} com/google/common/base/CharMatcher/apply [object java/lang/Character] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) matches(char )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$8])
+  ; parameter[0] : v2 (char)
+  (line 396)
+  (iget-char v0 v1 com/google/common/base/CharMatcher$8.val$match char)
+  (if-ne v2 v0 l37c4e0)
+  (const/4 v0 1)
+  (label l37c4de)
+  (return v0)
+  (label l37c4e0)
+  (const/4 v0 0)
+  (goto l37c4de)
+)
+
+(method (attrs public ) negate()[object com/google/common/base/CharMatcher]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/base/CharMatcher$8])
+  (line 412)
+  (iget-char v0 v1 com/google/common/base/CharMatcher$8.val$match char)
+  (invoke-static {v0} com/google/common/base/CharMatcher$8/isNot char )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) or([object com/google/common/base/CharMatcher] )[object com/google/common/base/CharMatcher]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$8])
+  ; parameter[0] : v2 ([object com/google/common/base/CharMatcher])
+  (line 408)
+  (iget-char v0 v1 com/google/common/base/CharMatcher$8.val$match char)
+  (invoke-virtual {v2 v0} com/google/common/base/CharMatcher/matches char )
+  (move-result v0)
+  (if-eqz v0 l37c526)
+  (label l37c524)
+  (return-object v2)
+  (label l37c526)
+  (invoke-super {v1 v2} com/google/common/base/CharMatcher/or [object com/google/common/base/CharMatcher] )
+  (move-result-object v2)
+  (goto l37c524)
+)
+
+(method (attrs public ) precomputed()[object com/google/common/base/CharMatcher]
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/base/CharMatcher$8])
+  (line 420)
+  (return-object v0)
+)
+
+(method (attrs ) setBits([object com/google/common/base/CharMatcher$LookupTable] )void
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/base/CharMatcher$8])
+  ; parameter[0] : v2 ([object com/google/common/base/CharMatcher$LookupTable])
+  (line 416)
+  (iget-char v0 v1 com/google/common/base/CharMatcher$8.val$match char)
+  (invoke-virtual {v2 v0} com/google/common/base/CharMatcher$LookupTable/set char )
+  (line 417)
+  (return-void )
+)
+
+)

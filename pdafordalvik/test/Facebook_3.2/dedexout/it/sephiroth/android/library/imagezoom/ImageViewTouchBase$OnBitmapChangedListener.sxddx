@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) it/sephiroth/android/library/imagezoom/ImageViewTouchBase$OnBitmapChangedListener
+ (super java/lang/Object)
+ (source "ImageViewTouchBase.java")
+
+
+(method (attrs public abstract ) a([object android/graphics/drawable/Drawable] )void
+)
+
+)

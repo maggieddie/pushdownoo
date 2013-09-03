@@ -1,0 +1,85 @@
+(class (attrs final ) com/google/common/a/cp
+ (super com/google/common/a/co)
+ (source "CustomConcurrentHashMap.java")
+ (implements com/google/common/a/cm)
+
+ (field (attrs ) d [object com/google/common/a/cm] )
+ (field (attrs ) e [object com/google/common/a/cm] )
+
+(method (attrs ) <init>([object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/ref/ReferenceQueue"  "<TK;>;TK;I"  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (annotation runtimeVisibility param 4 [object javax/annotation/Nullable]
+  )
+  (limit registers 6)
+  ; this: v1 ([object com/google/common/a/cp])
+  ; parameter[0] : v2 ([object java/lang/ref/ReferenceQueue])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 ([object com/google/common/a/cm])
+  (line 1369)
+  (invoke-direct {v1 v2 v3 v4 v5} com/google/common/a/co/<init> [object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/a/cm] )
+  (line 1374)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/a/cp.d [object com/google/common/a/cm])
+  (line 1387)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/a/cp.e [object com/google/common/a/cm])
+  (line 1370)
+  (return-void )
+ )
+
+(method (attrs public ) getNextEvictable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cp])
+  (line 1379)
+  (iget-object v0 v1 com/google/common/a/cp.d [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) getPreviousEvictable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cp])
+  (line 1392)
+  (iget-object v0 v1 com/google/common/a/cp.e [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) setNextEvictable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cp])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1384)
+  (iput-object v1 v0 com/google/common/a/cp.d [object com/google/common/a/cm])
+  (line 1385)
+  (return-void )
+)
+
+(method (attrs public ) setPreviousEvictable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cp])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1397)
+  (iput-object v1 v0 com/google/common/a/cp.e [object com/google/common/a/cm])
+  (line 1398)
+  (return-void )
+)
+
+)

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/header_lbl" android:background="@drawable/notepad_yellow" android:layout_width="fill_parent" android:layout_height="30.0px" android:text="Note" class="com.tdizz.snote.keyboardnotes.NoteEdit$NoteHeader"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <view android:gravity="top|left|center" android:id="@id/edit_note" android:background="@drawable/notepad_yellow" android:scrollbars="vertical" android:fadingEdge="vertical" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" class="com.tdizz.snote.keyboardnotes.NoteEdit$LinedEditText"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+(interface (attrs abstract ) android/support/v4/view/MenuItemCompat$MenuVersionImpl
+ (super java/lang/Object)
+ (source "MenuItemCompat.java")
+
+
+(method (attrs public abstract ) setActionView([object android/view/MenuItem] [object android/view/View] )[object android/view/MenuItem]
+)
+
+(method (attrs public abstract ) setShowAsAction([object android/view/MenuItem] int )boolean
+)
+
+)

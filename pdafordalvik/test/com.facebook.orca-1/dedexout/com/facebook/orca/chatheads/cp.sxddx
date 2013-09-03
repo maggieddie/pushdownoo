@@ -1,0 +1,50 @@
+(class (attrs ) com/facebook/orca/chatheads/cp
+ (super com/facebook/inject/d)
+ (source "ChatHeadsModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/cn] )
+
+(method (attrs private ) <init>([object com/facebook/orca/chatheads/cn] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/cp])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/cn])
+  (line 250)
+  (iput-object v1 v0 com/facebook/orca/chatheads/cp.a [object com/facebook/orca/chatheads/cn])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/cn] [object com/facebook/orca/chatheads/co] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/chatheads/cp])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/cn])
+  ; parameter[1] : v2 ([object com/facebook/orca/chatheads/co])
+  (line 250)
+  (invoke-direct {v0 v1} com/facebook/orca/chatheads/cp/<init> [object com/facebook/orca/chatheads/cn] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/f/a]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/chatheads/cp])
+  (line 254)
+  (new-instance v1 com/facebook/orca/f/a)
+  (const-class v0 com/facebook/i/a/a/f)
+  (const-class v2 com/facebook/messages/ipc/peer/MessageNotificationPeer)
+  (invoke-virtual {v3 v0 v2} com/facebook/orca/chatheads/cp/a [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/i/a/a/f])
+  (invoke-direct {v1 v0} com/facebook/orca/f/a/<init> [object com/facebook/i/a/a/f] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/chatheads/cp])
+  (line 250)
+  (invoke-virtual {v1} com/facebook/orca/chatheads/cp/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

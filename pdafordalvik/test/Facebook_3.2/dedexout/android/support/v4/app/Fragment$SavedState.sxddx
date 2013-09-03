@@ -1,0 +1,61 @@
+(class (attrs public ) android/support/v4/app/Fragment$SavedState
+ (super java/lang/Object)
+ (source "Fragment.java")
+ (implements android/os/Parcelable)
+
+ (field (attrs public static final ) CREATOR [object android/os/Parcelable$Creator] )
+ (field (attrs final ) a [object android/os/Bundle] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 333)
+  (new-instance v0 android/support/v4/app/Fragment$SavedState$1)
+  (invoke-direct {v0} android/support/v4/app/Fragment$SavedState$1/<init> )
+  (sput-object v0 android/support/v4/app/Fragment$SavedState.CREATOR [object android/os/Parcelable$Creator])
+  (return-void )
+ )
+
+(method (attrs ) <init>([object android/os/Parcel] [object java/lang/ClassLoader] )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 ([object java/lang/ClassLoader])
+  (line 316)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 317)
+  (invoke-virtual {v2} android/os/Parcel/readBundle )
+  (move-result-object v0)
+  (iput-object v0 v1 android/support/v4/app/Fragment$SavedState.a [object android/os/Bundle])
+  (line 318)
+  (if-eqz v3 l5ec64)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.a [object android/os/Bundle])
+  (if-eqz v0 l5ec64)
+  (line 319)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.a [object android/os/Bundle])
+  (invoke-virtual {v0 v3} android/os/Bundle/setClassLoader [object java/lang/ClassLoader] )
+  (label l5ec64)
+  (line 321)
+  (return-void )
+ )
+
+(method (attrs public ) describeContents()int
+  (limit registers 2)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  (line 325)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) writeToParcel([object android/os/Parcel] int )void
+  (limit registers 4)
+  ; this: v1 ([object android/support/v4/app/Fragment$SavedState])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  ; parameter[1] : v3 (int)
+  (line 330)
+  (iget-object v0 v1 android/support/v4/app/Fragment$SavedState.a [object android/os/Bundle])
+  (invoke-virtual {v2 v0} android/os/Parcel/writeBundle [object android/os/Bundle] )
+  (line 331)
+  (return-void )
+)
+
+)

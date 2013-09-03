@@ -1,0 +1,16 @@
+(class (attrs public ) com/facebook/common/u/e
+ (super java/lang/RuntimeException)
+ (source "UriTemplateMap.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/common/u/e])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 380)
+  (invoke-direct {v0 v1} java/lang/RuntimeException/<init> [object java/lang/String] )
+  (line 381)
+  (return-void )
+ )
+
+)

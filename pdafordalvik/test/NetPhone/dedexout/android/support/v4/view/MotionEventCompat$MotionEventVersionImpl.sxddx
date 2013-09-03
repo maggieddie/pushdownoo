@@ -1,0 +1,18 @@
+(interface (attrs abstract ) android/support/v4/view/MotionEventCompat$MotionEventVersionImpl
+ (super java/lang/Object)
+ (source "MotionEventCompat.java")
+
+
+(method (attrs public abstract ) findPointerIndex([object android/view/MotionEvent] int )int
+)
+
+(method (attrs public abstract ) getPointerId([object android/view/MotionEvent] int )int
+)
+
+(method (attrs public abstract ) getX([object android/view/MotionEvent] int )float
+)
+
+(method (attrs public abstract ) getY([object android/view/MotionEvent] int )float
+)
+
+)

@@ -1,0 +1,65 @@
+(class (attrs public ) com/facebook/http/b/f
+ (super java/lang/Object)
+ (source "DefaultOpenConnectionEventListener.java")
+ (implements com/facebook/http/b/aw)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 7)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 11)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/io/IOException] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/b/f])
+  ; parameter[0] : v1 ([object java/io/IOException])
+  (line 35)
+  (return-void )
+)
+
+(method (attrs public ) b()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 15)
+  (return-void )
+)
+
+(method (attrs public ) c()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 19)
+  (return-void )
+)
+
+(method (attrs public ) d()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 23)
+  (return-void )
+)
+
+(method (attrs public ) e()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 27)
+  (return-void )
+)
+
+(method (attrs public ) f()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/http/b/f])
+  (line 31)
+  (return-void )
+)
+
+)

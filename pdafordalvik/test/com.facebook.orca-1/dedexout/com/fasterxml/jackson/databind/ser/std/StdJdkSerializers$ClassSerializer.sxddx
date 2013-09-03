@@ -1,0 +1,61 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdScalarSerializer)
+ (source "StdJdkSerializers.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer])
+  (line 179)
+  (const-class v0 java/lang/Class)
+  (const/4 v1 0)
+  (invoke-direct {v2 v0 v1} com/fasterxml/jackson/databind/ser/std/StdScalarSerializer/<init> [object java/lang/Class] boolean )
+  (return-void )
+ )
+
+(method (attrs public ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 5)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v4 ([object java/lang/reflect/Type])
+  (line 191)
+  (const-string v0 "string")
+  (const/4 v1 1)
+  (invoke-virtual {v2 v0 v1} com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer/createSchemaNode [object java/lang/String] boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) serialize([object java/lang/Class] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Lcom/fasterxml/jackson/databind/SerializerProvider;"  ")V")
+  )
+  (limit registers 5)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer])
+  ; parameter[0] : v2 ([object java/lang/Class])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v4 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 185)
+  (invoke-virtual {v2} java/lang/Class/getName )
+  (move-result-object v0)
+  (invoke-virtual {v3 v0} com/fasterxml/jackson/core/JsonGenerator/writeString [object java/lang/String] )
+  (line 186)
+  (return-void )
+)
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Lcom/fasterxml/jackson/databind/SerializerProvider;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 176)
+  (check-cast v1 [object java/lang/Class])
+  (invoke-virtual {v0 v1 v2 v3} com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$ClassSerializer/serialize [object java/lang/Class] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (return-void )
+)
+
+)

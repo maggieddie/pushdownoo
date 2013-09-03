@@ -1,0 +1,17 @@
+(class (attrs ) com/facebook/orca/app/ec
+ (super com/google/inject/f)
+ (source "MessengerAppModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/app/eb] )
+
+(method (attrs ) <init>([object com/facebook/orca/app/eb] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/app/ec])
+  ; parameter[0] : v1 ([object com/facebook/orca/app/eb])
+  (line 329)
+  (iput-object v1 v0 com/facebook/orca/app/ec.a [object com/facebook/orca/app/eb])
+  (invoke-direct {v0} com/google/inject/f/<init> )
+  (return-void )
+ )
+
+)

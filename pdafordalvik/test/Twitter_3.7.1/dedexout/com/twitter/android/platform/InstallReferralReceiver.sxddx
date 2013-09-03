@@ -1,0 +1,35 @@
+(class (attrs public ) com/twitter/android/platform/InstallReferralReceiver
+ (super android/content/BroadcastReceiver)
+ (source "Twttr")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/twitter/android/platform/InstallReferralReceiver])
+  (line 25)
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 7)
+  ; this: v4 ([object com/twitter/android/platform/InstallReferralReceiver])
+  ; parameter[0] : v5 ([object android/content/Context])
+  ; parameter[1] : v6 ([object android/content/Intent])
+  (line 101)
+  (new-instance v0 com/twitter/android/platform/g)
+  (invoke-direct {v0 v5} com/twitter/android/platform/g/<init> [object android/content/Context] )
+  (const/4 v1 1)
+  (new-array v1 v1 [array [object java/lang/String]])
+  (const/4 v2 0)
+  (const-string v3 "referrer")
+  (invoke-virtual {v6 v3} android/content/Intent/getStringExtra [object java/lang/String] )
+  (move-result-object v3)
+  (aput-object v3 v1 v2)
+  (invoke-virtual {v0 v1} com/twitter/android/platform/g/execute [array [object java/lang/Object]] )
+  (line 102)
+  (return-void )
+)
+
+)

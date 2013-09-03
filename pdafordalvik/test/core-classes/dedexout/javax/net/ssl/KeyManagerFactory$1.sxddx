@@ -16,7 +16,7 @@
   (limit registers 2)
   ; this: v1 ([object javax/net/ssl/KeyManagerFactory$1])
   (line 56)
-  (invoke-virtual-quick {v1} javax/net/ssl/KeyManagerFactory$1/run )
+  (invoke-virtual-quick {v1} vtable #0xc)
   (move-result-object v0)
   (return-object v0)
 )

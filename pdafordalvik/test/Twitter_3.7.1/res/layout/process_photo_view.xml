@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:background="@color/solid_black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/process_photo" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+        <LinearLayout android:orientation="vertical" android:background="@color/translucent_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include android:id="@id/actionbar_divider" layout="@layout/gallery_divider" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/actionbar" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <ImageButton android:id="@id/reply" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gallery_action_reply" android:layout_weight="0.2" />
+                <ImageButton android:id="@id/retweet" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gallery_action_rt_off" android:layout_weight="0.2" />
+                <ImageButton android:id="@id/favorite" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gallery_action_fave_off" android:layout_weight="0.2" />
+                <ImageButton android:id="@id/share" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gallery_action_share" android:layout_weight="0.2" />
+                <ImageButton android:id="@id/delete" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gallery_action_delete" android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

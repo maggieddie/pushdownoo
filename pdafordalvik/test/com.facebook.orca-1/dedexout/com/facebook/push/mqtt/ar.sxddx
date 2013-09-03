@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/push/mqtt/ar
+ (super java/lang/Object)
+ (source "MqttOperationManager.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/push/mqtt/ap] )
+ (field (attrs final ) b [object com/facebook/push/mqtt/aq] )
+
+(method (attrs ) <init>([object com/facebook/push/mqtt/aq] [object com/facebook/push/mqtt/ap] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/push/mqtt/ar])
+  ; parameter[0] : v1 ([object com/facebook/push/mqtt/aq])
+  ; parameter[1] : v2 ([object com/facebook/push/mqtt/ap])
+  (line 88)
+  (iput-object v1 v0 com/facebook/push/mqtt/ar.b [object com/facebook/push/mqtt/aq])
+  (iput-object v2 v0 com/facebook/push/mqtt/ar.a [object com/facebook/push/mqtt/ap])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/push/mqtt/ar])
+  (line 91)
+  (iget-object v0 v2 com/facebook/push/mqtt/ar.b [object com/facebook/push/mqtt/aq])
+  (iget-object v1 v2 com/facebook/push/mqtt/ar.a [object com/facebook/push/mqtt/ap])
+  (invoke-static {v0 v1} com/facebook/push/mqtt/aq/a [object com/facebook/push/mqtt/aq] [object com/facebook/push/mqtt/ap] )
+  (line 92)
+  (return-void )
+)
+
+)

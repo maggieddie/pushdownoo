@@ -1,0 +1,116 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/jsontype/TypeSerializer
+ (super java/lang/Object)
+ (source "TypeSerializer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  (line 20)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) forProperty([object com/fasterxml/jackson/databind/BeanProperty] )[object com/fasterxml/jackson/databind/jsontype/TypeSerializer]
+)
+
+(method (attrs public abstract ) getPropertyName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getTypeIdResolver()[object com/fasterxml/jackson/databind/jsontype/TypeIdResolver]
+)
+
+(method (attrs public abstract ) getTypeInclusion()[object com/fasterxml/jackson/annotation/JsonTypeInfo$As]
+)
+
+(method (attrs public abstract ) writeCustomTypePrefixForArray([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeCustomTypePrefixForObject([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeCustomTypePrefixForScalar([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeCustomTypeSuffixForArray([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeCustomTypeSuffixForObject([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeCustomTypeSuffixForScalar([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/String] )void
+)
+
+(method (attrs public abstract ) writeTypePrefixForArray([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+)
+
+(method (attrs public ) writeTypePrefixForArray([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object java/lang/Class])
+  (line 172)
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/jsontype/TypeSerializer/writeTypePrefixForArray [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 173)
+  (return-void )
+)
+
+(method (attrs public abstract ) writeTypePrefixForObject([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+)
+
+(method (attrs public ) writeTypePrefixForObject([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object java/lang/Class])
+  (line 160)
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/jsontype/TypeSerializer/writeTypePrefixForObject [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 161)
+  (return-void )
+)
+
+(method (attrs public abstract ) writeTypePrefixForScalar([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+)
+
+(method (attrs public ) writeTypePrefixForScalar([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Ljava/lang/Class"  "<*>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object java/lang/Class])
+  (line 148)
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/jsontype/TypeSerializer/writeTypePrefixForScalar [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 149)
+  (return-void )
+)
+
+(method (attrs public abstract ) writeTypeSuffixForArray([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+)
+
+(method (attrs public abstract ) writeTypeSuffixForObject([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+)
+
+(method (attrs public abstract ) writeTypeSuffixForScalar([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )void
+)
+
+)

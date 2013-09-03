@@ -1,0 +1,12 @@
+(class (attrs public final ) com/facebook/phonenumbers/Phonemetadata$PhoneNumberDesc$Builder
+ (super com/facebook/phonenumbers/Phonemetadata$PhoneNumberDesc)
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/phonenumbers/Phonemetadata$PhoneNumberDesc$Builder])
+  (invoke-direct {v0} com/facebook/phonenumbers/Phonemetadata$PhoneNumberDesc/<init> )
+  (return-void )
+ )
+
+)

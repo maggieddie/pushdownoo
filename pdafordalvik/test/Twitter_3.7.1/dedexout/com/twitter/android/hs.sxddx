@@ -1,0 +1,21 @@
+(class (attrs public final ) com/twitter/android/hs
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public final ) a [object com/twitter/android/widget/UserView] )
+ (field (attrs public ) b long )
+ (field (attrs public ) c [object java/lang/String] )
+
+(method (attrs public ) <init>([object com/twitter/android/widget/UserView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/hs])
+  ; parameter[0] : v1 ([object com/twitter/android/widget/UserView])
+  (line 14)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 15)
+  (iput-object v1 v0 com/twitter/android/hs.a [object com/twitter/android/widget/UserView])
+  (line 16)
+  (return-void )
+ )
+
+)

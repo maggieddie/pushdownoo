@@ -1,0 +1,27 @@
+(class (attrs public ) com/facebook/bugreporter/aa
+ (super java/lang/Object)
+ (source "FbAppInfoFetcher.java")
+
+ (field (attrs public final ) a [object java/lang/String] )
+ (field (attrs public final ) b int )
+ (field (attrs public final ) c [object com/facebook/common/l/a] )
+
+(method (attrs ) <init>([object java/lang/String] int [object com/facebook/common/l/a] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/bugreporter/aa])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 ([object com/facebook/common/l/a])
+  (line 81)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 82)
+  (iput-object v1 v0 com/facebook/bugreporter/aa.a [object java/lang/String])
+  (line 83)
+  (iput v2 v0 com/facebook/bugreporter/aa.b int)
+  (line 84)
+  (iput-object v3 v0 com/facebook/bugreporter/aa.c [object com/facebook/common/l/a])
+  (line 85)
+  (return-void )
+ )
+
+)

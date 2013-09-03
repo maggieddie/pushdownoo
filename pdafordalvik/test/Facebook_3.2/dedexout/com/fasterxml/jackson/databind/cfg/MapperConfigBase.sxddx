@@ -1,0 +1,362 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/cfg/MapperConfigBase
+ (super com/fasterxml/jackson/databind/cfg/MapperConfig)
+ (source "MapperConfigBase.java")
+
+ (field (attrs private static final ) DEFAULT_MAPPER_FEATURES int )
+ (field (attrs protected final ) _mixInAnnotations [object java/util/Map] )
+ (field (attrs protected final ) _rootName [object java/lang/String] )
+ (field (attrs protected final ) _subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver] )
+ (field (attrs protected final ) _view [object java/lang/Class] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 24)
+  (const-class v0 com/fasterxml/jackson/databind/MapperFeature)
+  (invoke-static {v0} com/fasterxml/jackson/databind/cfg/MapperConfigBase/collectFeatureDefaults [object java/lang/Class] )
+  (move-result v0)
+  (sput v0 com/fasterxml/jackson/databind/cfg/MapperConfigBase.DEFAULT_MAPPER_FEATURES int)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/BaseSettings] [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver] [object java/util/Map] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/databind/cfg/BaseSettings])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  ; parameter[2] : v5 ([object java/util/Map])
+  (const/4 v1 0)
+  (line 72)
+  (sget v0 com/fasterxml/jackson/databind/cfg/MapperConfigBase.DEFAULT_MAPPER_FEATURES int)
+  (invoke-direct {v2 v3 v0} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/BaseSettings] int )
+  (line 73)
+  (iput-object v5 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 74)
+  (iput-object v4 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 75)
+  (iput-object v1 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 76)
+  (iput-object v1 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 77)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  (line 85)
+  (invoke-direct {v1 v2} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/MapperConfig] )
+  (line 86)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 87)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 88)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 89)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 90)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[1] : v3 (int)
+  (line 103)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._base [object com/fasterxml/jackson/databind/cfg/BaseSettings])
+  (invoke-direct {v1 v0 v3} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/BaseSettings] int )
+  (line 104)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 105)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 106)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 107)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 108)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] [object com/fasterxml/jackson/databind/cfg/BaseSettings] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/cfg/BaseSettings])
+  (line 94)
+  (iget v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mapperFeatures int)
+  (invoke-direct {v1 v3 v0} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/BaseSettings] int )
+  (line 95)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 96)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 97)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 98)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 99)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 111)
+  (invoke-direct {v1 v2} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/MapperConfig] )
+  (line 112)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 113)
+  (iput-object v3 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 114)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 115)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 116)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] [object java/lang/Class] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[1] : v3 ([object java/lang/Class])
+  (line 128)
+  (invoke-direct {v1 v2} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/MapperConfig] )
+  (line 129)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 130)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 131)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 132)
+  (iput-object v3 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 133)
+  (return-void )
+ )
+
+(method (attrs protected ) <init>([object com/fasterxml/jackson/databind/cfg/MapperConfigBase] [object java/lang/String] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/cfg/MapperConfigBase"  "<TCFG;TT;>;"  "Ljava/lang/String;"  ")V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[1] : v3 ([object java/lang/String])
+  (line 119)
+  (invoke-direct {v1 v2} com/fasterxml/jackson/databind/cfg/MapperConfig/<init> [object com/fasterxml/jackson/databind/cfg/MapperConfig] )
+  (line 120)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (line 121)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (line 122)
+  (iput-object v3 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (line 123)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (iput-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (line 124)
+  (return-void )
+ )
+
+(method (attrs public final ) findMixInClassFor([object java/lang/Class] )[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)"  "Ljava/lang/Class"  "<*>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 307)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (if-nez v0 la77f4)
+  (const/4 v0 0)
+  (label la77f2)
+  (return-object v0)
+  (label la77f4)
+  (iget-object v0 v2 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (new-instance v1 com/fasterxml/jackson/databind/type/ClassKey)
+  (invoke-direct {v1 v3} com/fasterxml/jackson/databind/type/ClassKey/<init> [object java/lang/Class] )
+  (invoke-interface {v0 v1} java/util/Map/get [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object java/lang/Class])
+  (goto la77f2)
+)
+
+(method (attrs public final ) getActiveView()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  (line 292)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._view [object java/lang/Class])
+  (return-object v0)
+)
+
+(method (attrs public final ) getRootName()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  (line 288)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._rootName [object java/lang/String])
+  (return-object v0)
+)
+
+(method (attrs public final ) getSubtypeResolver()[object com/fasterxml/jackson/databind/jsontype/SubtypeResolver]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  (line 284)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._subtypeResolver [object com/fasterxml/jackson/databind/jsontype/SubtypeResolver])
+  (return-object v0)
+)
+
+(method (attrs public final ) mixInCount()int
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/cfg/MapperConfigBase])
+  (line 311)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (if-nez v0 la7874)
+  (const/4 v0 0)
+  (label la7872)
+  (return v0)
+  (label la7874)
+  (iget-object v0 v1 com/fasterxml/jackson/databind/cfg/MapperConfigBase._mixInAnnotations [object java/util/Map])
+  (invoke-interface {v0} java/util/Map/size )
+  (move-result v0)
+  (goto la7872)
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/AnnotationIntrospector] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/PropertyNamingStrategy] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/cfg/HandlerInstantiator] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/introspect/ClassIntrospector] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/introspect/VisibilityChecker] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/jsontype/SubtypeResolver] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/jsontype/TypeResolverBuilder] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object com/fasterxml/jackson/databind/type/TypeFactory] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object java/text/DateFormat] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object java/util/Locale] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) with([object java/util/TimeZone] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/TimeZone;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withAppendedAnnotationIntrospector([object com/fasterxml/jackson/databind/AnnotationIntrospector] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/AnnotationIntrospector;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withInsertedAnnotationIntrospector([object com/fasterxml/jackson/databind/AnnotationIntrospector] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/AnnotationIntrospector;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withRootName([object java/lang/String] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/String;"  ")TT;")
+  )
+)
+
+(method (attrs public abstract ) withView([object java/lang/Class] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<*>;)TT;")
+  )
+)
+
+(method (attrs public abstract ) withVisibility([object com/fasterxml/jackson/annotation/PropertyAccessor] [object com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility] )[object com/fasterxml/jackson/databind/cfg/MapperConfigBase]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"  "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"  ")TT;")
+  )
+)
+
+)

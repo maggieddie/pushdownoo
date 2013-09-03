@@ -12,7 +12,7 @@
   (line 264)
   (invoke-direct {v0} java/util/concurrent/atomic/AtomicReference/<init> )
   (line 265)
-  (iput-object-quick v1 v0 java/util/concurrent/Exchanger$Node.item [object java/lang/Object])
+  (iput-object-quick v1 v0 )
   (line 266)
   (return-void )
  )

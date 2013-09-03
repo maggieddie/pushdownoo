@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/clear_view" android:background="@drawable/appwidget_small_bg" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/widget_loading" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_title_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/widget_clear_content" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-8.0dip" android:layout_marginBottom="-8.0dip" android:src="@drawable/ic_twitter_logo_small_default" />
+</LinearLayout>

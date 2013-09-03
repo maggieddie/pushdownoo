@@ -1,0 +1,13 @@
+(interface (attrs public abstract annotation ) javax/annotation/Syntax
+ (super java/lang/Object)
+ (source "Syntax.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()[object java/lang/String]
+)
+
+(method (attrs public abstract ) when()[object javax/annotation/meta/a]
+)
+
+)

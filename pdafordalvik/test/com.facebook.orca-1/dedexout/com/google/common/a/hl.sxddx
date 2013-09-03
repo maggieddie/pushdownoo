@@ -1,0 +1,47 @@
+(class (attrs ) com/google/common/a/hl
+ (super com/google/common/a/ji)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object java/lang/Object] )
+ (field (attrs final ) b [object com/google/common/a/hk] )
+
+(method (attrs ) <init>([object com/google/common/a/hk] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/hl])
+  ; parameter[0] : v1 ([object com/google/common/a/hk])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 798)
+  (iput-object v1 v0 com/google/common/a/hl.b [object com/google/common/a/hk])
+  (iput-object v2 v0 com/google/common/a/hl.a [object java/lang/Object])
+  (invoke-direct {v0} com/google/common/a/ji/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/hl])
+  (line 801)
+  (iget-object v0 v1 com/google/common/a/hl.a [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) b()int
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/hl])
+  (line 805)
+  (iget-object v0 v2 com/google/common/a/hl.b [object com/google/common/a/hk])
+  (iget-object v0 v0 com/google/common/a/hk.b [object com/google/common/a/hj])
+  (iget-object v0 v0 com/google/common/a/hj.a [object com/google/common/a/hh])
+  (iget-object v0 v0 com/google/common/a/hh.a [object com/google/common/a/gw])
+  (invoke-static {v0} com/google/common/a/gw/d [object com/google/common/a/gw] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/google/common/a/hl.a [object java/lang/Object])
+  (invoke-interface {v0 v1} com/google/common/a/jf/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

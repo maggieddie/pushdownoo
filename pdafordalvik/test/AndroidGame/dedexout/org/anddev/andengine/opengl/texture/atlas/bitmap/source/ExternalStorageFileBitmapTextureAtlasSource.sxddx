@@ -1,0 +1,21 @@
+(class (attrs public ) org/anddev/andengine/opengl/texture/atlas/bitmap/source/ExternalStorageFileBitmapTextureAtlasSource
+ (super org/anddev/andengine/opengl/texture/atlas/bitmap/source/FileBitmapTextureAtlasSource)
+ (source "ExternalStorageFileBitmapTextureAtlasSource.java")
+
+
+(method (attrs public ) <init>([object android/content/Context] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v2 ([object org/anddev/andengine/opengl/texture/atlas/bitmap/source/ExternalStorageFileBitmapTextureAtlasSource])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object java/lang/String])
+  (line 30)
+  (new-instance v0 java/io/File)
+  (invoke-static {v3 v4} org/anddev/andengine/util/FileUtils/getAbsolutePathOnExternalStorage [object android/content/Context] [object java/lang/String] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} java/io/File/<init> [object java/lang/String] )
+  (invoke-direct {v2 v0} org/anddev/andengine/opengl/texture/atlas/bitmap/source/FileBitmapTextureAtlasSource/<init> [object java/io/File] )
+  (line 31)
+  (return-void )
+ )
+
+)

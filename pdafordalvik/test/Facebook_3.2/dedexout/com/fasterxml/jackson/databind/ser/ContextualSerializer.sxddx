@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/ser/ContextualSerializer
+ (super java/lang/Object)
+ (source "ContextualSerializer.java")
+
+
+(method (attrs public abstract ) createContextual([object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/BeanProperty] )[object com/fasterxml/jackson/databind/JsonSerializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/SerializerProvider;"  "Lcom/fasterxml/jackson/databind/BeanProperty;"  ")"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<*>;")
+  )
+)
+
+)

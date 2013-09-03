@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layerSettings" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffaaaaaa" android:background="@drawable/textlines" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Layer Settings" />
+        <LinearLayout android:orientation="vertical" android:id="@id/selectedRegions" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textColor="#ffaaaaaa" android:background="@drawable/textlines" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Downloaded Regions" />
+        <LinearLayout android:orientation="vertical" android:id="@id/downloadedRegions" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

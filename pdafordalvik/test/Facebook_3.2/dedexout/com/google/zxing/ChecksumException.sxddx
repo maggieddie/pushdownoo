@@ -1,0 +1,32 @@
+(class (attrs public final ) com/google/zxing/ChecksumException
+ (super com/google/zxing/ReaderException)
+ (source "ChecksumException.java")
+
+ (field (attrs private static final ) a [object com/google/zxing/ChecksumException] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 27)
+  (new-instance v0 com/google/zxing/ChecksumException)
+  (invoke-direct {v0} com/google/zxing/ChecksumException/<init> )
+  (sput-object v0 com/google/zxing/ChecksumException.a [object com/google/zxing/ChecksumException])
+  (return-void )
+ )
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/zxing/ChecksumException])
+  (line 29)
+  (invoke-direct {v0} com/google/zxing/ReaderException/<init> )
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public static ) a()[object com/google/zxing/ChecksumException]
+  (limit registers 1)
+  (line 34)
+  (sget-object v0 com/google/zxing/ChecksumException.a [object com/google/zxing/ChecksumException])
+  (return-object v0)
+ )
+
+)

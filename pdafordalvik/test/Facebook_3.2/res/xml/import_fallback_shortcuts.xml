@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:launchables="http://schemas.android.com/apk/res-auto">
+    <shortcut launchables:launchables_intent_action="android.intent.action.VIEW" launchables:launchables_intent_extra_data="tel:" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MESSAGING" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_BROWSER" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_EMAIL" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CONTACTS" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CALENDAR" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MAPS" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.media.action.IMAGE_CAPTURE" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_GALLERY" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MARKET" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MUSIC" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_class_name="@string/launchables_class_name_fb4a" launchables:launchables_container="@integer/launchables_container_shortcuts" launchables:launchables_is_internal="true" />
+    <shortcut launchables:launchables_class_name="com.facebook.orca.auth.StartScreenActivity" launchables:launchables_package_name="com.facebook.orca" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_class_name="com.instagram.android.activity.MainTabActivity" launchables:launchables_package_name="com.instagram.android" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_class_name="com.google.android.googlequicksearchbox.SearchActivity" launchables:launchables_package_name="com.google.android.googlequicksearchbox" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CALCULATOR" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+    <shortcut launchables:launchables_class_name="com.android.settings.Settings" launchables:launchables_package_name="com.android.settings" launchables:launchables_container="@integer/launchables_container_shortcuts" />
+</shortcuts>

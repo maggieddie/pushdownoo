@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/popup_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/jewel_messenger_promotion_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/white" android:gravity="top" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginTop="6.0dip" android:text="@string/messenger_jewel_promotion_title" android:singleLine="true" />
+        <TextView android:textSize="13.0dip" android:textColor="@color/white" android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginBottom="6.0dip" android:text="@string/messenger_jewel_promotion_message" android:singleLine="true" />
+    </LinearLayout>
+    <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="@drawable/solid_white" android:id="@id/install_messenger_promotion_button" android:background="@drawable/button_new_blue" android:paddingTop="-1.0dip" android:focusable="true" android:layout_width="85.0dip" android:layout_height="34.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="4.0dip" android:text="@string/messenger_jewel_promotion_button" android:shadowColor="#7f000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+</LinearLayout>

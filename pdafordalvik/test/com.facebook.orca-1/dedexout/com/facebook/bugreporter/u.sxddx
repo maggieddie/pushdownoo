@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/bugreporter/u
+ (super com/facebook/inject/d)
+ (source "BugReporterModule.java")
+
+ (field (attrs final ) a [object com/facebook/bugreporter/o] )
+
+(method (attrs private ) <init>([object com/facebook/bugreporter/o] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/bugreporter/u])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/o])
+  (line 134)
+  (iput-object v1 v0 com/facebook/bugreporter/u.a [object com/facebook/bugreporter/o])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/bugreporter/o] [object com/facebook/bugreporter/p] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/bugreporter/u])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/o])
+  ; parameter[1] : v2 ([object com/facebook/bugreporter/p])
+  (line 134)
+  (invoke-direct {v0 v1} com/facebook/bugreporter/u/<init> [object com/facebook/bugreporter/o] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/bugreporter/z]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/bugreporter/u])
+  (line 138)
+  (new-instance v2 com/facebook/bugreporter/z)
+  (const-class v0 android/content/pm/PackageManager)
+  (invoke-virtual {v3 v0} com/facebook/bugreporter/u/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/pm/PackageManager])
+  (const-class v1 com/facebook/common/l/b)
+  (invoke-virtual {v3 v1} com/facebook/bugreporter/u/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/common/l/b])
+  (invoke-direct {v2 v0 v1} com/facebook/bugreporter/z/<init> [object android/content/pm/PackageManager] [object com/facebook/common/l/b] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/bugreporter/u])
+  (line 134)
+  (invoke-virtual {v1} com/facebook/bugreporter/u/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

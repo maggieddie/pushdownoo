@@ -45,7 +45,7 @@
   (monitor-enter v0)
   (label lffe92)
   (line 838)
-  (invoke-virtual-quick {v3} java/io/ObjectOutputStream/defaultWriteObject )
+  (invoke-virtual-quick {v3} vtable #0x12)
   (line 839)
   (monitor-exit v0)
   (line 840)

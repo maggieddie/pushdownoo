@@ -1,0 +1,30 @@
+(class (attrs ) com/google/common/a/ah
+ (super com/google/common/a/am)
+ (source "AbstractMultimap.java")
+ (implements java/util/RandomAccess)
+
+ (field (attrs final ) a [object com/google/common/a/x] )
+
+(method (attrs ) <init>([object com/google/common/a/x] [object java/lang/Object] [object java/util/List] [object com/google/common/a/ak] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TK;"  "Ljava/util/List"  "<TV;>;"  "Lcom/google/common/a/x"  "<TK;TV;>.com/google/common/a/ak;)V")
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 4 [object javax/annotation/Nullable]
+  )
+  (limit registers 5)
+  ; this: v0 ([object com/google/common/a/ah])
+  ; parameter[0] : v1 ([object com/google/common/a/x])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/util/List])
+  ; parameter[3] : v4 ([object com/google/common/a/ak])
+  (line 857)
+  (iput-object v1 v0 com/google/common/a/ah.a [object com/google/common/a/x])
+  (line 858)
+  (invoke-direct {v0 v1 v2 v3 v4} com/google/common/a/am/<init> [object com/google/common/a/x] [object java/lang/Object] [object java/util/List] [object com/google/common/a/ak] )
+  (line 859)
+  (return-void )
+ )
+
+)

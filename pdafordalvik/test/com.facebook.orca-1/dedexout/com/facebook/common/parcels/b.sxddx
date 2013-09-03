@@ -1,0 +1,62 @@
+(class (attrs final ) com/facebook/common/parcels/b
+ (super java/lang/Object)
+ (source "ParcelableBoolean.java")
+ (implements android/os/Parcelable$Creator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/common/parcels/b])
+  (line 32)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/os/Parcel] )[object com/facebook/common/parcels/ParcelableBoolean]
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/common/parcels/b])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 36)
+  (new-instance v1 com/facebook/common/parcels/ParcelableBoolean)
+  (invoke-virtual {v3} android/os/Parcel/readInt )
+  (move-result v0)
+  (if-eqz v0 l2e9e92)
+  (const/4 v0 1)
+  (label l2e9e8a)
+  (invoke-direct {v1 v0} com/facebook/common/parcels/ParcelableBoolean/<init> boolean )
+  (return-object v1)
+  (label l2e9e92)
+  (const/4 v0 0)
+  (goto l2e9e8a)
+)
+
+(method (attrs public ) a(int )[array [object com/facebook/common/parcels/ParcelableBoolean]]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/parcels/b])
+  ; parameter[0] : v2 (int)
+  (line 41)
+  (new-array v0 v2 [array [object com/facebook/common/parcels/ParcelableBoolean]])
+  (return-object v0)
+)
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/parcels/b])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 32)
+  (invoke-virtual {v1 v2} com/facebook/common/parcels/b/a [object android/os/Parcel] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/common/parcels/b])
+  ; parameter[0] : v2 (int)
+  (line 32)
+  (invoke-virtual {v1 v2} com/facebook/common/parcels/b/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

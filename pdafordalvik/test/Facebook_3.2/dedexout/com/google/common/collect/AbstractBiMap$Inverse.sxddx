@@ -1,0 +1,103 @@
+(class (attrs ) com/google/common/collect/AbstractBiMap$Inverse
+ (super com/google/common/collect/AbstractBiMap)
+ (source "AbstractBiMap.java")
+
+ (field (attrs private static final ) serialVersionUID long )
+
+(method (attrs private ) <init>([object java/util/Map] [object com/google/common/collect/AbstractBiMap] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<TK;TV;>;"  "Lcom/google/common/collect/AbstractBiMap"  "<TV;TK;>;)V")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  ; parameter[0] : v2 ([object java/util/Map])
+  ; parameter[1] : v3 ([object com/google/common/collect/AbstractBiMap])
+  (line 374)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} com/google/common/collect/AbstractBiMap/<init> [object java/util/Map] [object com/google/common/collect/AbstractBiMap] [object com/google/common/collect/AbstractBiMap$1] )
+  (line 375)
+  (return-void )
+ )
+
+(method (attrs ) <init>([object java/util/Map] [object com/google/common/collect/AbstractBiMap] [object com/google/common/collect/AbstractBiMap$1] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Map"  "<TK;TV;>;"  "Lcom/google/common/collect/AbstractBiMap"  "<TV;TK;>;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  ; parameter[0] : v1 ([object java/util/Map])
+  ; parameter[1] : v2 ([object com/google/common/collect/AbstractBiMap])
+  ; parameter[2] : v3 ([object com/google/common/collect/AbstractBiMap$1])
+  (line 372)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/AbstractBiMap$Inverse/<init> [object java/util/Map] [object com/google/common/collect/AbstractBiMap] )
+  (return-void )
+ )
+
+(method (attrs private ) readObject([object java/io/ObjectInputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectInputStream")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  ; parameter[0] : v2 ([object java/io/ObjectInputStream])
+  (line 399)
+  (invoke-virtual {v2} java/io/ObjectInputStream/defaultReadObject )
+  (line 400)
+  (invoke-virtual {v2} java/io/ObjectInputStream/readObject )
+  (move-result-object v0)
+  (check-cast v0 [object com/google/common/collect/AbstractBiMap])
+  (invoke-virtual {v1 v0} com/google/common/collect/AbstractBiMap$Inverse/a [object com/google/common/collect/AbstractBiMap] )
+  (line 401)
+  (return-void )
+ )
+
+(method (attrs private ) writeObject([object java/io/ObjectOutputStream] )void
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "java.io.ObjectOuputStream")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  ; parameter[0] : v2 ([object java/io/ObjectOutputStream])
+  (line 391)
+  (invoke-virtual {v2} java/io/ObjectOutputStream/defaultWriteObject )
+  (line 392)
+  (invoke-virtual {v1} com/google/common/collect/AbstractBiMap$Inverse/b )
+  (move-result-object v0)
+  (invoke-virtual {v2 v0} java/io/ObjectOutputStream/writeObject [object java/lang/Object] )
+  (line 393)
+  (return-void )
+ )
+
+(method (attrs protected ) c()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  (line 372)
+  (invoke-super {v1} com/google/common/collect/AbstractBiMap/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) readResolve()[object java/lang/Object]
+  (annotation buildVisibility [object com/google/common/annotations/GwtIncompatible]
+    (value [object java/lang/String] "Not needed in the emulated source.")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  (line 405)
+  (invoke-virtual {v1} com/google/common/collect/AbstractBiMap$Inverse/b )
+  (move-result-object v0)
+  (invoke-interface {v0} com/google/common/collect/BiMap/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) values()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/AbstractBiMap$Inverse])
+  (line 372)
+  (invoke-super {v1} com/google/common/collect/AbstractBiMap/d )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

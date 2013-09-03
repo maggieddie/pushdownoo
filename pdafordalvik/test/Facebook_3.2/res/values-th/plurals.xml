@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d ชั่วโมงที่แล้ว</item>
+        <item quantity="one">1 ชั่วโมงที่แล้ว</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d นาทีที่แล้ว</item>
+        <item quantity="one">1 นาทีที่แล้ว</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d ชั่วโมงจากนี้</item>
+        <item quantity="one">1 ชั่วโมงจากนี้</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d นาทีจากนี้</item>
+        <item quantity="one">1 นาทีจากนี้</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">ลบข้อความหรือไม่?</item>
+        <item quantity="one">ลบข้อความหรือไม่?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">เมื่อคุณลบสำเนาการสนทนาเหล่านี้แล้ว จะไม่สามารถเรียกคืนได้</item>
+        <item quantity="one">เมื่อคุณลบสำเนาการสนทนาแล้ว จะไม่สามารถเรียกคืนได้</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">ลบข้อความ</item>
+        <item quantity="one">ลบข้อความ</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">กำลังลบข้อความ…</item>
+        <item quantity="one">กำลังลบข้อความ…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d ถูกใจ</item>
+        <item quantity="one">%d ถูกใจ</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d ความคิดเห็น</item>
+        <item quantity="one">%d ความคิดเห็น</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">ลบรูปภาพ %d รูปที่เลือก</item>
+        <item quantity="one">ลบรูปภาพที่เลือก</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">คุณแน่ใจหรือไม่ว่าคุณต้องการลบรูปภาพ %d รูปที่เลือกออกจากอุปกรณ์ของคุณ</item>
+        <item quantity="one">คุณแน่ใจหรือไม่ว่าคุณต้องการลบรูปภาพที่เลือกออกจากอุปกรณ์ของคุณ</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d คนถูกใจสิ่งนี้</item>
+        <item quantity="one">1 คนถูกใจสิ่งนี้</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">มีเพื่อนร่วมกัน %d คน</item>
+        <item quantity="one">มีเพื่อนร่วมกัน 1 คน</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">%,d ถูกใจ</item>
+        <item quantity="one">1 ถูกใจ</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d ความคิดเห็น</item>
+        <item quantity="one">1 ความคิดเห็น</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s การแจ้งเตือน</item>
+        <item quantity="one">1 การแจ้งเตือน</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s นาที</item>
+        <item quantity="one">1 นาที</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s ชั่วโมง</item>
+        <item quantity="one">1 ชั่วโมง</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s ถูกใจ</item>
+        <item quantity="one">%s ถูกใจ</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s ความคิดเห็น</item>
+        <item quantity="one">%s ความคิดเห็น</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">ถูกใจสถานที่นี้</item>
+        <item quantity="one">ถูกใจสถานที่นี้</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">เคยมาที่นี่</item>
+        <item quantity="one">เคยมาที่นี่</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d คะแนน</item>
+        <item quantity="one">1 คะแนน</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">คนถูกใจ</item>
+        <item quantity="one">คนถูกใจ</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">คนเคยมาที่นี่</item>
+        <item quantity="one">คนเคยมาที่นี่</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">คุณเคยมาที่นี่ %1$d ครั้ง</item>
+        <item quantity="one">คุณยังไม่เคยมาที่นี่</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">%,d ถูกใจ</item>
+        <item quantity="one">1 ถูกใจ</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d คนได้มาที่นี่</item>
+        <item quantity="one">1 คนได้มาที่นี่</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">%,d คนกำลังพูดถึงสิ่งนี้</item>
+        <item quantity="one">1 คนกำลังพูดถึงสิ่งนี้</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$s และ %2$s ใช้แอพนี้</item>
+        <item quantity="one">%1$s ใช้แอพนี้</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$s และ %2$s เล่นเกมนี้</item>
+        <item quantity="one">%1$s เล่นเกมนี้</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">%d ถูกใจ</item>
+        <item quantity="one">1 ถูกใจ</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d คนเคยมาที่นี่</item>
+        <item quantity="one">1 คนเคยมาที่นี่</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d วันเกิด</item>
+        <item quantity="one">1 วันเกิด</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d คนถูกใจสิ่งนี้</item>
+        <item quantity="one">1 คนถูกใจสิ่งนี้</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d เช็คอิน</item>
+        <item quantity="one">1 เช็คอิน</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">มีเพื่อนร่วมกัน %d คน</item>
+        <item quantity="zero">ไม่มีเพื่อนร่วมกัน</item>
+        <item quantity="one">มีเพื่อนร่วมกัน 1 คน</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d คน</item>
+        <item quantity="one">1 คน</item>
+    </plurals>
+</resources>

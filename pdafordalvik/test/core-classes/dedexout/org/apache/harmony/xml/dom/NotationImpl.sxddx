@@ -24,7 +24,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/xml/dom/NotationImpl])
   (line 48)
-  (iget-object-quick v0 v1 org/apache/harmony/xml/dom/NotationImpl.notationName [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -40,7 +40,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/xml/dom/NotationImpl])
   (line 57)
-  (iget-object-quick v0 v1 org/apache/harmony/xml/dom/NotationImpl.publicID [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 
@@ -48,7 +48,7 @@
   (limit registers 2)
   ; this: v1 ([object org/apache/harmony/xml/dom/NotationImpl])
   (line 61)
-  (iget-object-quick v0 v1 org/apache/harmony/xml/dom/NotationImpl.systemID [object java/lang/String])
+  (iget-object-quick v0 v1 )
   (return-object v0)
 )
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/divebar_contacts_uploader_learn_more_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="@string/divebar_contacts_uploader_learn_more_title" style="@style/DivebarContactsUploaderLearnMoreNuxTitle" />
+        <TextView android:text="@string/divebar_contacts_uploader_learn_more_text" style="@style/DivebarContactsUploaderLearnMoreNuxText" />
+        <ImageView android:src="@drawable/orca_contact_icon" style="@style/DivebarContactsUploaderLearnMoreNuxImage" />
+        <com.facebook.widget.HorizontalOrVerticalViewGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" orca:childMargin="8.0dip">
+            <Button android:id="@id/divebar_contacts_uploader_learn_more_not_now_button" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="@string/divebar_contacts_uploader_learn_more_not_now" style="@style/DivebarContactsUploaderLearnMoreNuxButtonSecondary" />
+            <Button android:id="@id/divebar_contacts_uploader_learn_more_sync_contacts_button" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="@string/divebar_contacts_uploader_learn_more_sync_contacts" style="@style/DivebarContactsUploaderLearnMoreNuxButton" />
+        </com.facebook.widget.HorizontalOrVerticalViewGroup>
+        <TextView android:text="@string/divebar_contacts_uploader_learn_more_tos" style="@style/DivebarContactsUploaderLearnMoreNuxTextSmall" />
+    </LinearLayout>
+</ScrollView>

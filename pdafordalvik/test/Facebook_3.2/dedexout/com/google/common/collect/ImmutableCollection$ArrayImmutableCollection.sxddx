@@ -1,0 +1,94 @@
+(class (attrs ) com/google/common/collect/ImmutableCollection$ArrayImmutableCollection
+ (super com/google/common/collect/ImmutableCollection)
+ (source "ImmutableCollection.java")
+
+ (field (attrs private final ) elements [array [object java/lang/Object]] )
+
+(method (attrs ) <init>([array [object java/lang/Object]] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "([TE;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  ; parameter[0] : v1 ([array [object java/lang/Object]])
+  (line 221)
+  (invoke-direct {v0} com/google/common/collect/ImmutableCollection/<init> )
+  (line 222)
+  (iput-object v1 v0 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (line 223)
+  (return-void )
+ )
+
+(method (attrs public ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 235)
+  (iget-object v0 v1 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (invoke-static {v0} com/google/common/collect/Iterators/a [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) a()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 244)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs ) i()[object com/google/common/collect/ImmutableList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/ImmutableList"  "<TE;>;")
+  )
+  (limit registers 4)
+  ; this: v3 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 239)
+  (iget-object v0 v3 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (array-length v0 v0)
+  (const/4 v1 1)
+  (if-ne v0 v1 l106e8e)
+  (new-instance v0 com/google/common/collect/SingletonImmutableList)
+  (iget-object v1 v3 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (const/4 v2 0)
+  (aget-object v1 v1 v2)
+  (invoke-direct {v0 v1} com/google/common/collect/SingletonImmutableList/<init> [object java/lang/Object] )
+  (label l106e8c)
+  (return-object v0)
+  (label l106e8e)
+  (new-instance v0 com/google/common/collect/RegularImmutableList)
+  (iget-object v1 v3 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (invoke-direct {v0 v1} com/google/common/collect/RegularImmutableList/<init> [array [object java/lang/Object]] )
+  (goto l106e8c)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 231)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 217)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection$ArrayImmutableCollection/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection$ArrayImmutableCollection])
+  (line 227)
+  (iget-object v0 v1 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection.elements [array [object java/lang/Object]])
+  (array-length v0 v0)
+  (return v0)
+)
+
+)

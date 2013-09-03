@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/orca/stickers/az
+ (super com/facebook/inject/d)
+ (source "StickersModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/stickers/as] )
+
+(method (attrs private ) <init>([object com/facebook/orca/stickers/as] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/stickers/az])
+  ; parameter[0] : v1 ([object com/facebook/orca/stickers/as])
+  (line 85)
+  (iput-object v1 v0 com/facebook/orca/stickers/az.a [object com/facebook/orca/stickers/as])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/stickers/as] [object com/facebook/orca/stickers/at] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/stickers/az])
+  ; parameter[0] : v1 ([object com/facebook/orca/stickers/as])
+  ; parameter[1] : v2 ([object com/facebook/orca/stickers/at])
+  (line 85)
+  (invoke-direct {v0 v1} com/facebook/orca/stickers/az/<init> [object com/facebook/orca/stickers/as] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/stickers/m]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/stickers/az])
+  (line 89)
+  (new-instance v1 com/facebook/orca/stickers/m)
+  (const-class v0 com/facebook/analytics/av)
+  (invoke-virtual {v2 v0} com/facebook/orca/stickers/az/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/analytics/av])
+  (invoke-direct {v1 v0} com/facebook/orca/stickers/m/<init> [object com/facebook/analytics/av] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/stickers/az])
+  (line 85)
+  (invoke-virtual {v1} com/facebook/orca/stickers/az/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

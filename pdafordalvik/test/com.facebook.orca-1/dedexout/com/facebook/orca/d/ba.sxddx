@@ -1,0 +1,41 @@
+(class (attrs ) com/facebook/orca/d/ba
+ (super java/lang/Object)
+ (source "FetchAudioExecutor.java")
+ (implements java/util/concurrent/Callable)
+
+ (field (attrs final ) a [object com/facebook/orca/d/bc] )
+ (field (attrs final ) b [object com/facebook/orca/d/az] )
+
+(method (attrs ) <init>([object com/facebook/orca/d/az] [object com/facebook/orca/d/bc] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/d/ba])
+  ; parameter[0] : v1 ([object com/facebook/orca/d/az])
+  ; parameter[1] : v2 ([object com/facebook/orca/d/bc])
+  (line 62)
+  (iput-object v1 v0 com/facebook/orca/d/ba.b [object com/facebook/orca/d/az])
+  (iput-object v2 v0 com/facebook/orca/d/ba.a [object com/facebook/orca/d/bc])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object android/net/Uri]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/d/ba])
+  (line 65)
+  (iget-object v0 v2 com/facebook/orca/d/ba.b [object com/facebook/orca/d/az])
+  (iget-object v1 v2 com/facebook/orca/d/ba.a [object com/facebook/orca/d/bc])
+  (invoke-static {v0 v1} com/facebook/orca/d/az/a [object com/facebook/orca/d/az] [object com/facebook/orca/d/bc] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) call()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/d/ba])
+  (line 62)
+  (invoke-virtual {v1} com/facebook/orca/d/ba/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

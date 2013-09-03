@@ -1,0 +1,33 @@
+(class (attrs ) com/facebook/orca/chatheads/cj
+ (super java/lang/Object)
+ (source "ChatHeadsInitializer.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/ch] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/ch] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/chatheads/cj])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/ch])
+  (line 71)
+  (iput-object v1 v0 com/facebook/orca/chatheads/cj.a [object com/facebook/orca/chatheads/ch])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/chatheads/cj])
+  (line 74)
+  (iget-object v0 v2 com/facebook/orca/chatheads/cj.a [object com/facebook/orca/chatheads/ch])
+  (invoke-static {v0} com/facebook/orca/chatheads/ch/e [object com/facebook/orca/chatheads/ch] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/facebook/orca/chatheads/cj.a [object com/facebook/orca/chatheads/ch])
+  (invoke-static {v1} com/facebook/orca/chatheads/ch/d [object com/facebook/orca/chatheads/ch] )
+  (move-result-object v1)
+  (invoke-interface {v0 v1} com/facebook/prefs/shared/d/a [object com/facebook/prefs/shared/f] )
+  (line 76)
+  (return-void )
+)
+
+)

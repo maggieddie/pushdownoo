@@ -1,0 +1,44 @@
+(class (attrs ) com/sip/voip/net/phone/Phone$4$1
+ (super java/util/TimerTask)
+ (source "Phone.java")
+
+ (field (attrs final ) this$1 [object com/sip/voip/net/phone/Phone$4] )
+ (field (attrs private final ) val$tv [object android/widget/TextView] )
+
+(method (attrs ) <init>([object com/sip/voip/net/phone/Phone$4] [object android/widget/TextView] )void
+  (limit registers 3)
+  ; this: v0 ([object com/sip/voip/net/phone/Phone$4$1])
+  ; parameter[0] : v1 ([object com/sip/voip/net/phone/Phone$4])
+  ; parameter[1] : v2 ([object android/widget/TextView])
+  (line 1)
+  (iput-object v1 v0 com/sip/voip/net/phone/Phone$4$1.this$1 [object com/sip/voip/net/phone/Phone$4])
+  (iput-object v2 v0 com/sip/voip/net/phone/Phone$4$1.val$tv [object android/widget/TextView])
+  (line 388)
+  (invoke-direct {v0} java/util/TimerTask/<init> )
+  (return-void )
+ )
+
+(method (attrs static ) access$0([object com/sip/voip/net/phone/Phone$4$1] )[object com/sip/voip/net/phone/Phone$4]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/sip/voip/net/phone/Phone$4$1])
+  (line 388)
+  (iget-object v0 v1 com/sip/voip/net/phone/Phone$4$1.this$1 [object com/sip/voip/net/phone/Phone$4])
+  (return-object v0)
+ )
+
+(method (attrs public ) run()void
+  (limit registers 4)
+  ; this: v3 ([object com/sip/voip/net/phone/Phone$4$1])
+  (line 391)
+  (iget-object v0 v3 com/sip/voip/net/phone/Phone$4$1.this$1 [object com/sip/voip/net/phone/Phone$4])
+  (invoke-static {v0} com/sip/voip/net/phone/Phone$4/access$0 [object com/sip/voip/net/phone/Phone$4] )
+  (move-result-object v0)
+  (new-instance v1 com/sip/voip/net/phone/Phone$4$1$1)
+  (iget-object v2 v3 com/sip/voip/net/phone/Phone$4$1.val$tv [object android/widget/TextView])
+  (invoke-direct {v1 v3 v2} com/sip/voip/net/phone/Phone$4$1$1/<init> [object com/sip/voip/net/phone/Phone$4$1] [object android/widget/TextView] )
+  (invoke-virtual {v0 v1} com/sip/voip/net/phone/Phone/runOnUiThread [object java/lang/Runnable] )
+  (line 404)
+  (return-void )
+)
+
+)

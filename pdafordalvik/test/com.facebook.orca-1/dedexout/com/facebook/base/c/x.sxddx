@@ -1,0 +1,48 @@
+(class (attrs ) com/facebook/base/c/x
+ (super com/facebook/inject/d)
+ (source "FbBaseModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/c/x])
+  (line 1005)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/base/c/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/c/x])
+  ; parameter[0] : v1 ([object com/facebook/base/c/b])
+  (line 1005)
+  (invoke-direct {v0} com/facebook/base/c/x/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/c/l]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/base/c/x])
+  (line 1011)
+  (const-class v0 com/facebook/config/a/a)
+  (invoke-virtual {v2 v0} com/facebook/base/c/x/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/config/a/a])
+  (invoke-virtual {v0} com/facebook/config/a/a/j )
+  (move-result-object v0)
+  (line 1012)
+  (new-instance v1 com/facebook/c/l)
+  (invoke-direct {v1 v0} com/facebook/c/l/<init> [object com/facebook/base/j] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/c/x])
+  (line 1005)
+  (invoke-virtual {v1} com/facebook/base/c/x/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,136 @@
+(class (attrs public ) com/facebook/orca/contacts/divebar/am
+ (super java/lang/Object)
+ (source "DivebarLoader.java")
+
+ (field (attrs private final ) a [object java/util/EnumSet] )
+ (field (attrs private final ) b int )
+ (field (attrs private final ) c int )
+ (field (attrs private final ) d long )
+ (field (attrs private final ) e boolean )
+
+(method (attrs public ) <init>([object java/util/EnumSet] int int long boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/EnumSet"  "<"  "Lcom/facebook/orca/contacts/divebar/al;"  ">;IIJZ)V")
+  )
+  (limit registers 7)
+  ; this: v0 ([object com/facebook/orca/contacts/divebar/am])
+  ; parameter[0] : v1 ([object java/util/EnumSet])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (long)
+  ; parameter[4] : v6 (boolean)
+  (line 229)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 230)
+  (iput-object v1 v0 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (line 231)
+  (iput v2 v0 com/facebook/orca/contacts/divebar/am.b int)
+  (line 232)
+  (iput v3 v0 com/facebook/orca/contacts/divebar/am.c int)
+  (line 233)
+  (iput-wide v4 v0 com/facebook/orca/contacts/divebar/am.d long)
+  (line 234)
+  (iput-boolean v6 v0 com/facebook/orca/contacts/divebar/am.e boolean)
+  (line 235)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/orca/contacts/divebar/am] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/divebar/am])
+  (line 216)
+  (iget v0 v1 com/facebook/orca/contacts/divebar/am.b int)
+  (return v0)
+ )
+
+(method (attrs static ) b([object com/facebook/orca/contacts/divebar/am] )int
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/divebar/am])
+  (line 216)
+  (iget v0 v1 com/facebook/orca/contacts/divebar/am.c int)
+  (return v0)
+ )
+
+(method (attrs static ) c([object com/facebook/orca/contacts/divebar/am] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 216)
+  (iget-wide v0 v2 com/facebook/orca/contacts/divebar/am.d long)
+  (return-wide v0)
+ )
+
+(method (attrs public ) a()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 238)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.FAVORITE_FRIENDS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 242)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.TOP_FRIENDS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) c()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/divebar/am])
+  (line 250)
+  (iget-boolean v0 v1 com/facebook/orca/contacts/divebar/am.e boolean)
+  (return v0)
+)
+
+(method (attrs public ) d()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 254)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.ONLINE_FRIENDS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) e()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 259)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.MOBILE_FRIENDS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) f()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 263)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.OTHER_CONTACTS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) g()boolean
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/am])
+  (line 267)
+  (iget-object v0 v2 com/facebook/orca/contacts/divebar/am.a [object java/util/EnumSet])
+  (sget-object v1 com/facebook/orca/contacts/divebar/al.TOP_GROUPS [object com/facebook/orca/contacts/divebar/al])
+  (invoke-virtual {v0 v1} java/util/EnumSet/contains [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

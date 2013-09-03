@@ -1,0 +1,55 @@
+(class (attrs ) com/facebook/fbservice/b/d
+ (super com/facebook/inject/d)
+ (source "BlueServiceModule.java")
+
+ (field (attrs final ) a [object com/facebook/fbservice/b/a] )
+
+(method (attrs private ) <init>([object com/facebook/fbservice/b/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/b/d])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/b/a])
+  (line 63)
+  (iput-object v1 v0 com/facebook/fbservice/b/d.a [object com/facebook/fbservice/b/a])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/fbservice/b/a] [object com/facebook/fbservice/b/b] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/fbservice/b/d])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/b/a])
+  ; parameter[1] : v2 ([object com/facebook/fbservice/b/b])
+  (line 63)
+  (invoke-direct {v0 v1} com/facebook/fbservice/b/d/<init> [object com/facebook/fbservice/b/a] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/fbservice/service/o]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/fbservice/b/d])
+  (line 68)
+  (new-instance v2 com/facebook/fbservice/service/o)
+  (invoke-virtual {v3} com/facebook/fbservice/b/d/e )
+  (move-result-object v0)
+  (const-class v1 android/content/Context)
+  (invoke-interface {v0 v1} com/facebook/inject/ab/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (const-class v1 com/facebook/fbservice/service/p)
+  (invoke-virtual {v3 v1} com/facebook/fbservice/b/d/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/fbservice/service/p])
+  (invoke-direct {v2 v0 v1} com/facebook/fbservice/service/o/<init> [object android/content/Context] [object com/facebook/fbservice/service/p] )
+  (return-object v2)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/fbservice/b/d])
+  (line 63)
+  (invoke-virtual {v1} com/facebook/fbservice/b/d/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

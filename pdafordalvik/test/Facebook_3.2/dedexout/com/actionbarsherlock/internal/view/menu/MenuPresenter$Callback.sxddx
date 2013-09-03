@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/actionbarsherlock/internal/view/menu/MenuPresenter$Callback
+ (super java/lang/Object)
+ (source "MenuPresenter.java")
+
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/MenuBuilder] boolean )void
+)
+
+(method (attrs public abstract ) a([object com/actionbarsherlock/internal/view/menu/MenuBuilder] )boolean
+)
+
+)

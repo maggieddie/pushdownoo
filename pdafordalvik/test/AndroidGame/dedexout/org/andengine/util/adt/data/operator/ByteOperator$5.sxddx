@@ -1,0 +1,33 @@
+(class (attrs ) org/andengine/util/adt/data/operator/ByteOperator$5
+ (super org/andengine/util/adt/data/operator/ByteOperator)
+ (source "ByteOperator.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/ByteOperator$5])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 38)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} org/andengine/util/adt/data/operator/ByteOperator/<init> [object java/lang/String] int [object org/andengine/util/adt/data/operator/ByteOperator] )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) check(byte byte )boolean
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/ByteOperator$5])
+  ; parameter[0] : v2 (byte)
+  ; parameter[1] : v3 (byte)
+  (line 41)
+  (if-le v2 v3 l86d84)
+  (const/4 v0 1)
+  (label l86d82)
+  (return v0)
+  (label l86d84)
+  (const/4 v0 0)
+  (goto l86d82)
+)
+
+)

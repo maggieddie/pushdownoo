@@ -1,0 +1,66 @@
+(class (attrs final ) com/facebook/orca/camera/c
+ (super java/lang/Enum)
+ (source "BitmapManager.java")
+
+ (field (attrs private static final ) $VALUES [array [object com/facebook/orca/camera/c]] )
+ (field (attrs public static final ) ALLOW [object com/facebook/orca/camera/c] )
+ (field (attrs public static final ) CANCEL [object com/facebook/orca/camera/c] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 4)
+  (const/4 v3 1)
+  (const/4 v2 0)
+  (line 39)
+  (new-instance v0 com/facebook/orca/camera/c)
+  (const-string v1 "CANCEL")
+  (invoke-direct {v0 v1 v2} com/facebook/orca/camera/c/<init> [object java/lang/String] int )
+  (sput-object v0 com/facebook/orca/camera/c.CANCEL [object com/facebook/orca/camera/c])
+  (new-instance v0 com/facebook/orca/camera/c)
+  (const-string v1 "ALLOW")
+  (invoke-direct {v0 v1 v3} com/facebook/orca/camera/c/<init> [object java/lang/String] int )
+  (sput-object v0 com/facebook/orca/camera/c.ALLOW [object com/facebook/orca/camera/c])
+  (const/4 v0 2)
+  (new-array v0 v0 [array [object com/facebook/orca/camera/c]])
+  (sget-object v1 com/facebook/orca/camera/c.CANCEL [object com/facebook/orca/camera/c])
+  (aput-object v1 v0 v2)
+  (sget-object v1 com/facebook/orca/camera/c.ALLOW [object com/facebook/orca/camera/c])
+  (aput-object v1 v0 v3)
+  (sput-object v0 com/facebook/orca/camera/c.$VALUES [array [object com/facebook/orca/camera/c]])
+  (return-void )
+ )
+
+(method (attrs private ) <init>([object java/lang/String] int )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/camera/c])
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 (int)
+  (line 39)
+  (invoke-direct {v0 v1 v2} java/lang/Enum/<init> [object java/lang/String] int )
+  (return-void )
+ )
+
+(method (attrs public static ) valueOf([object java/lang/String] )[object com/facebook/orca/camera/c]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 39)
+  (const-class v0 com/facebook/orca/camera/c)
+  (invoke-static {v0 v1} java/lang/Enum/valueOf [object java/lang/Class] [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/orca/camera/c])
+  (return-object v0)
+ )
+
+(method (attrs public static ) values()[array [object com/facebook/orca/camera/c]]
+  (limit registers 1)
+  (line 39)
+  (sget-object v0 com/facebook/orca/camera/c.$VALUES [array [object com/facebook/orca/camera/c]])
+  (invoke-virtual {v0} [array [object com/facebook/orca/camera/c]]/clone )
+  (move-result-object v0)
+  (check-cast v0 [array [object com/facebook/orca/camera/c]])
+  (return-object v0)
+ )
+
+)

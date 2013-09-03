@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.images.UrlImage android:id="@id/share_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/share_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:minHeight="50.0dip" android:layout_toRightOf="@id/share_image" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true">
+        <com.facebook.orca.share.ShareViewName android:id="@id/share_name" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:includeFontPadding="false" orca:textColor="@android:color/black" orca:textStyle="bold" orca:textSize="14.0dip" />
+        <TextView android:textSize="10.0dip" android:textColor="#ff333333" android:id="@id/share_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/link_share_description_grey" android:id="@id/share_property1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/link_share_description_grey" android:id="@id/share_property2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/link_share_description_grey" android:id="@id/share_property3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/link_share_description_grey" android:id="@id/share_description" android:layout_width="wrap_content" android:layout_height="15.0dip" />
+    </LinearLayout>
+</merge>

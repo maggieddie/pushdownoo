@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/orca/emoji/v
+ (super com/facebook/inject/d)
+ (source "EmojiModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/emoji/s] )
+
+(method (attrs private ) <init>([object com/facebook/orca/emoji/s] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/emoji/v])
+  ; parameter[0] : v1 ([object com/facebook/orca/emoji/s])
+  (line 39)
+  (iput-object v1 v0 com/facebook/orca/emoji/v.a [object com/facebook/orca/emoji/s])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/emoji/s] [object com/facebook/orca/emoji/t] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/emoji/v])
+  ; parameter[0] : v1 ([object com/facebook/orca/emoji/s])
+  ; parameter[1] : v2 ([object com/facebook/orca/emoji/t])
+  (line 39)
+  (invoke-direct {v0 v1} com/facebook/orca/emoji/v/<init> [object com/facebook/orca/emoji/s] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/orca/emoji/aa]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/v])
+  (line 43)
+  (new-instance v0 com/facebook/orca/emoji/aa)
+  (invoke-direct {v0} com/facebook/orca/emoji/aa/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/emoji/v])
+  (line 39)
+  (invoke-virtual {v1} com/facebook/orca/emoji/v/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

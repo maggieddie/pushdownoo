@@ -338,7 +338,7 @@
   ; this: v3 ([object java/awt/font/TextAttribute])
   (line 72)
   (sget-object v1 java/awt/font/TextAttribute.attrMap [object java/util/Map])
-  (invoke-virtual-quick {v3} java/awt/font/TextAttribute/getName )
+  (invoke-virtual-quick {v3} vtable #0xb)
   (move-result-object v2)
   (invoke-interface {v1 v2} java/util/Map/get [object java/lang/Object] )
   (move-result-object v0)

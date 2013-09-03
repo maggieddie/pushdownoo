@@ -1,0 +1,28 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/BeanProperty
+ (super java/lang/Object)
+ (source "BeanProperty.java")
+ (implements com/fasterxml/jackson/databind/util/Named)
+
+
+(method (attrs public abstract ) getAnnotation([object java/lang/Class] )[object java/lang/annotation/Annotation]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<A::"  "Ljava/lang/annotation/Annotation;"  ">("  "Ljava/lang/Class"  "<TA;>;)TA;")
+  )
+)
+
+(method (attrs public abstract ) getContextAnnotation([object java/lang/Class] )[object java/lang/annotation/Annotation]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<A::"  "Ljava/lang/annotation/Annotation;"  ">("  "Ljava/lang/Class"  "<TA;>;)TA;")
+  )
+)
+
+(method (attrs public abstract ) getMember()[object com/fasterxml/jackson/databind/introspect/AnnotatedMember]
+)
+
+(method (attrs public abstract ) getName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) getType()[object com/fasterxml/jackson/databind/JavaType]
+)
+
+)

@@ -1,0 +1,23 @@
+(class (attrs public ) com/wilers/Wifinder/SharedUtilities
+ (super java/lang/Object)
+ (source "SharedUtilities.java")
+
+ (field (attrs public static ) isRunningInEmulator boolean )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 5)
+  (const/4 v0 0)
+  (sput-boolean v0 com/wilers/Wifinder/SharedUtilities.isRunningInEmulator boolean)
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/wilers/Wifinder/SharedUtilities])
+  (line 3)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

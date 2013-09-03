@@ -1,0 +1,27 @@
+(class (attrs ) com/facebook/orca/threadview/at
+ (super com/facebook/widget/text/f)
+ (source "SmsUpsellController.java")
+
+ (field (attrs final ) a [object com/facebook/orca/threadview/aq] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/aq] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/threadview/at])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/aq])
+  (line 60)
+  (iput-object v1 v0 com/facebook/orca/threadview/at.a [object com/facebook/orca/threadview/aq])
+  (invoke-direct {v0} com/facebook/widget/text/f/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/threadview/at])
+  (line 63)
+  (iget-object v0 v1 com/facebook/orca/threadview/at.a [object com/facebook/orca/threadview/aq])
+  (invoke-static {v0} com/facebook/orca/threadview/aq/b [object com/facebook/orca/threadview/aq] )
+  (line 64)
+  (return-void )
+)
+
+)

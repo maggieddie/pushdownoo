@@ -1,0 +1,71 @@
+(class (attrs final ) com/google/common/a/de
+ (super java/util/AbstractCollection)
+ (source "CustomConcurrentHashMap.java")
+
+ (field (attrs final ) a [object com/google/common/a/bj] )
+
+(method (attrs ) <init>([object com/google/common/a/bj] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/de])
+  ; parameter[0] : v1 ([object com/google/common/a/bj])
+  (line 3857)
+  (iput-object v1 v0 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-direct {v0} java/util/AbstractCollection/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/de])
+  (line 3881)
+  (iget-object v0 v1 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/clear )
+  (line 3882)
+  (return-void )
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/de])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 3876)
+  (iget-object v0 v1 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-virtual {v0 v2} com/google/common/a/bj/containsValue [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/de])
+  (line 3871)
+  (iget-object v0 v1 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Iterator"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/de])
+  (line 3861)
+  (new-instance v0 com/google/common/a/dc)
+  (iget-object v1 v2 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-direct {v0 v1} com/google/common/a/dc/<init> [object com/google/common/a/bj] )
+  (return-object v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/de])
+  (line 3866)
+  (iget-object v0 v1 com/google/common/a/de.a [object com/google/common/a/bj])
+  (invoke-virtual {v0} com/google/common/a/bj/size )
+  (move-result v0)
+  (return v0)
+)
+
+)

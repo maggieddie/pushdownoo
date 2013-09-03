@@ -1,0 +1,38 @@
+(class (attrs ) android/support/v4/app/TaskStackBuilder$TaskStackBuilderImplHoneycomb
+ (super java/lang/Object)
+ (source "TaskStackBuilder.java")
+ (implements android/support/v4/app/TaskStackBuilder$TaskStackBuilderImpl)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/app/TaskStackBuilder$TaskStackBuilderImplHoneycomb])
+  (line 86)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) getPendingIntent([object android/content/Context] [array [object android/content/Intent]] int int [object android/os/Bundle] )[object android/app/PendingIntent]
+  (limit registers 9)
+  ; this: v3 ([object android/support/v4/app/TaskStackBuilder$TaskStackBuilderImplHoneycomb])
+  ; parameter[0] : v4 ([object android/content/Context])
+  ; parameter[1] : v5 ([array [object android/content/Intent]])
+  ; parameter[2] : v6 (int)
+  ; parameter[3] : v7 (int)
+  ; parameter[4] : v8 ([object android/os/Bundle])
+  (const/4 v2 0)
+  (line 89)
+  (new-instance v0 android/content/Intent)
+  (aget-object v1 v5 v2)
+  (invoke-direct {v0 v1} android/content/Intent/<init> [object android/content/Intent] )
+  (const v1 268484608) ; 0x1000c000)
+  (invoke-virtual {v0 v1} android/content/Intent/addFlags int )
+  (move-result-object v0)
+  (aput-object v0 v5 v2)
+  (line 92)
+  (invoke-static {v4 v6 v5 v7} android/support/v4/app/TaskStackBuilderHoneycomb/getActivitiesPendingIntent [object android/content/Context] int [array [object android/content/Intent]] int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

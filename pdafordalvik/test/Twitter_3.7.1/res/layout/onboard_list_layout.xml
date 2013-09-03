@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.android.widget.Navbar android:id="@id/navbar" style="@style/Navbar.Signup">
+        <TextView android:id="@id/title" style="@style/NavbarTitle" />
+        <Button android:id="@id/title_button_3" android:background="@drawable/btn_signup_titlebar_active" android:text="@string/done" android:layout_alignParentRight="true" style="@style/TextTitleBtn" />
+    </com.twitter.android.widget.Navbar>
+    <RelativeLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+</LinearLayout>

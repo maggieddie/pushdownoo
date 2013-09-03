@@ -1,0 +1,17 @@
+(class (attrs public ) com/facebook/analytics/c/e
+ (super com/facebook/d/c/a)
+ (source "AnalyticsPropertyUtil.java")
+
+
+(method (attrs public ) <init>([object com/facebook/analytics/c/a] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/analytics/c/e])
+  ; parameter[0] : v2 ([object com/facebook/analytics/c/a])
+  (line 13)
+  (const-string v0 "analytics_db_properties")
+  (invoke-direct {v1 v2 v0} com/facebook/d/c/a/<init> [object com/google/common/base/Supplier] [object java/lang/String] )
+  (line 14)
+  (return-void )
+ )
+
+)

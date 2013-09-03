@@ -1,0 +1,33 @@
+(class (attrs ) com/facebook/orca/threadview/cj
+ (super java/lang/Object)
+ (source "ThreadViewImageAttachmentView.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/orca/attachments/ImageAttachmentData] )
+ (field (attrs final ) b [object com/facebook/orca/threadview/ThreadViewImageAttachmentView] )
+
+(method (attrs ) <init>([object com/facebook/orca/threadview/ThreadViewImageAttachmentView] [object com/facebook/orca/attachments/ImageAttachmentData] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/threadview/cj])
+  ; parameter[0] : v1 ([object com/facebook/orca/threadview/ThreadViewImageAttachmentView])
+  ; parameter[1] : v2 ([object com/facebook/orca/attachments/ImageAttachmentData])
+  (line 239)
+  (iput-object v1 v0 com/facebook/orca/threadview/cj.b [object com/facebook/orca/threadview/ThreadViewImageAttachmentView])
+  (iput-object v2 v0 com/facebook/orca/threadview/cj.a [object com/facebook/orca/attachments/ImageAttachmentData])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/threadview/cj])
+  ; parameter[0] : v3 ([object android/view/View])
+  (line 242)
+  (iget-object v0 v2 com/facebook/orca/threadview/cj.b [object com/facebook/orca/threadview/ThreadViewImageAttachmentView])
+  (iget-object v1 v2 com/facebook/orca/threadview/cj.a [object com/facebook/orca/attachments/ImageAttachmentData])
+  (invoke-static {v0 v1} com/facebook/orca/threadview/ThreadViewImageAttachmentView/a [object com/facebook/orca/threadview/ThreadViewImageAttachmentView] [object com/facebook/orca/attachments/ImageAttachmentData] )
+  (line 243)
+  (return-void )
+)
+
+)

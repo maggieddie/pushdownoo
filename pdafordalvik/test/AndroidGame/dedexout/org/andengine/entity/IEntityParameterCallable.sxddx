@@ -1,0 +1,10 @@
+(interface (attrs public abstract ) org/andengine/entity/IEntityParameterCallable
+ (super java/lang/Object)
+ (source "IEntityParameterCallable.java")
+ (implements org/andengine/util/call/ParameterCallable)
+
+
+(method (attrs public abstract ) call([object org/andengine/entity/IEntity] )void
+)
+
+)

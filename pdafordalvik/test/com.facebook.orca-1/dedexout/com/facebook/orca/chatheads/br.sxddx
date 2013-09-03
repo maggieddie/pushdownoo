@@ -1,0 +1,18 @@
+(interface (attrs abstract ) com/facebook/orca/chatheads/br
+ (super java/lang/Object)
+ (source "ChatHeadWindowManager.java")
+
+
+(method (attrs public abstract ) a(int )[object android/graphics/PointF]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lcom/facebook/orca/chatheads/ef;"  ">;)"  "Lcom/google/common/d/a/s"  "<"  "Ljava/util/List"  "<"  "Ljava/lang/Void;"  ">;>;")
+  )
+)
+
+(method (attrs public abstract ) a([object java/util/List] )[object com/google/common/d/a/s]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lcom/facebook/orca/chatheads/ef;"  ">;)"  "Lcom/google/common/d/a/s"  "<"  "Ljava/util/List"  "<"  "Ljava/lang/Void;"  ">;>;")
+  )
+)
+
+)

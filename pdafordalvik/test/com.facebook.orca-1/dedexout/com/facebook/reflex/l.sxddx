@@ -1,0 +1,42 @@
+(class (attrs ) com/facebook/reflex/l
+ (super android/support/v4/app/bb)
+ (source "FragmentReflexActivity.java")
+
+ (field (attrs final ) a [object com/facebook/reflex/j] )
+
+(method (attrs ) <init>([object com/facebook/reflex/j] [object android/view/ViewGroup] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/reflex/l])
+  ; parameter[0] : v1 ([object com/facebook/reflex/j])
+  ; parameter[1] : v2 ([object android/view/ViewGroup])
+  (line 131)
+  (iput-object v1 v0 com/facebook/reflex/l.a [object com/facebook/reflex/j])
+  (invoke-direct {v0 v2} android/support/v4/app/bb/<init> [object android/view/ViewGroup] )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/support/v4/app/Fragment] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/l])
+  ; parameter[0] : v2 ([object android/support/v4/app/Fragment])
+  (line 134)
+  (iget-object v0 v1 com/facebook/reflex/l.a [object com/facebook/reflex/j])
+  (invoke-virtual {v0 v2} com/facebook/reflex/j/a [object android/support/v4/app/Fragment] )
+  (line 135)
+  (return-void )
+)
+
+(method (attrs public ) a([object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/reflex/l])
+  ; parameter[0] : v2 ([object android/view/ContextMenu])
+  ; parameter[1] : v3 ([object android/view/View])
+  ; parameter[2] : v4 ([object android/view/ContextMenu$ContextMenuInfo])
+  (line 139)
+  (iget-object v0 v1 com/facebook/reflex/l.a [object com/facebook/reflex/j])
+  (invoke-virtual {v0 v2 v3 v4} com/facebook/reflex/j/onCreateContextMenu [object android/view/ContextMenu] [object android/view/View] [object android/view/ContextMenu$ContextMenuInfo] )
+  (line 140)
+  (return-void )
+)
+
+)

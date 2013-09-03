@@ -1,0 +1,50 @@
+(class (attrs ) com/facebook/orca/contacts/divebar/ah
+ (super com/facebook/fbservice/ops/ac)
+ (source "DivebarLoader.java")
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/divebar/ad] )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/divebar/ad] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/divebar/ah])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/divebar/ad])
+  (line 361)
+  (iput-object v1 v0 com/facebook/orca/contacts/divebar/ah.a [object com/facebook/orca/contacts/divebar/ad])
+  (invoke-direct {v0} com/facebook/fbservice/ops/ac/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/contacts/divebar/ah])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 364)
+  (iget-object v0 v1 com/facebook/orca/contacts/divebar/ah.a [object com/facebook/orca/contacts/divebar/ad])
+  (invoke-static {v0 v2} com/facebook/orca/contacts/divebar/ad/a [object com/facebook/orca/contacts/divebar/ad] [object com/facebook/fbservice/service/OperationResult] )
+  (line 365)
+  (return-void )
+)
+
+(method (attrs protected ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/contacts/divebar/ah])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/ServiceException])
+  (line 369)
+  (const-string v0 "orca:FriendListsLoader")
+  (const-string v1 "SYNC_TOP_LAST_ACTIVE error")
+  (invoke-static {v0 v1 v3} com/facebook/debug/log/b/a [object java/lang/String] [object java/lang/String] [object java/lang/Throwable] )
+  (line 370)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/divebar/ah])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 361)
+  (check-cast v1 [object com/facebook/fbservice/service/OperationResult])
+  (invoke-virtual {v0 v1} com/facebook/orca/contacts/divebar/ah/a [object com/facebook/fbservice/service/OperationResult] )
+  (return-void )
+)
+
+)

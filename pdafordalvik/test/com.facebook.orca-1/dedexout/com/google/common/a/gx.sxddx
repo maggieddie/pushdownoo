@@ -1,0 +1,78 @@
+(class (attrs ) com/google/common/a/gx
+ (super java/util/AbstractSequentialList)
+ (source "LinkedListMultimap.java")
+
+ (field (attrs final ) a [object java/lang/Object] )
+ (field (attrs final ) b [object com/google/common/a/gw] )
+
+(method (attrs ) <init>([object com/google/common/a/gw] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/gx])
+  ; parameter[0] : v1 ([object com/google/common/a/gw])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 658)
+  (iput-object v1 v0 com/google/common/a/gx.b [object com/google/common/a/gw])
+  (iput-object v2 v0 com/google/common/a/gx.a [object java/lang/Object])
+  (invoke-direct {v0} java/util/AbstractSequentialList/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) listIterator(int )[object java/util/ListIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)"  "Ljava/util/ListIterator"  "<TV;>;")
+  )
+  (limit registers 5)
+  ; this: v3 ([object com/google/common/a/gx])
+  ; parameter[0] : v4 (int)
+  (line 663)
+  (new-instance v0 com/google/common/a/ho)
+  (iget-object v1 v3 com/google/common/a/gx.b [object com/google/common/a/gw])
+  (iget-object v2 v3 com/google/common/a/gx.a [object java/lang/Object])
+  (invoke-direct {v0 v1 v2 v4} com/google/common/a/ho/<init> [object com/google/common/a/gw] [object java/lang/Object] int )
+  (return-object v0)
+)
+
+(method (attrs public ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/gx])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 666)
+  (invoke-virtual {v1} com/google/common/a/gx/iterator )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/a/gg/a [object java/util/Iterator] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/gx])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 669)
+  (invoke-virtual {v1} com/google/common/a/gx/iterator )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/a/gg/b [object java/util/Iterator] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) size()int
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/gx])
+  (line 660)
+  (iget-object v0 v2 com/google/common/a/gx.b [object com/google/common/a/gw])
+  (invoke-static {v0} com/google/common/a/gw/d [object com/google/common/a/gw] )
+  (move-result-object v0)
+  (iget-object v1 v2 com/google/common/a/gx.a [object java/lang/Object])
+  (invoke-interface {v0 v1} com/google/common/a/jf/a [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+)

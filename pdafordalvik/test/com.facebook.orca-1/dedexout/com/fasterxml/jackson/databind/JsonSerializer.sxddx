@@ -1,0 +1,112 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/JsonSerializer
+ (super java/lang/Object)
+ (source "JsonSerializer.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 42)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 187)
+  (return-void )
+ )
+
+(method (attrs public ) handledType()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<TT;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 151)
+  (const/4 v0 0)
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 163)
+  (if-nez v2 l3185dc)
+  (const/4 v0 1)
+  (label l3185da)
+  (return v0)
+  (label l3185dc)
+  (const/4 v0 0)
+  (goto l3185da)
+)
+
+(method (attrs public ) isUnwrappingSerializer()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 75)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public abstract ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Lcom/fasterxml/jackson/databind/SerializerProvider;"  ")V")
+  )
+)
+
+(method (attrs public ) serializeWithType([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/jsontype/TypeSerializer] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;"  "Lcom/fasterxml/jackson/core/JsonGenerator;"  "Lcom/fasterxml/jackson/databind/SerializerProvider;"  "Lcom/fasterxml/jackson/databind/jsontype/TypeSerializer;"  ")V")
+  )
+  (limit registers 9)
+  ; this: v4 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  ; parameter[0] : v5 ([object java/lang/Object])
+  ; parameter[1] : v6 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v7 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[3] : v8 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  (line 127)
+  (invoke-virtual {v4} com/fasterxml/jackson/databind/JsonSerializer/handledType )
+  (move-result-object v0)
+  (line 128)
+  (if-nez v0 l318618)
+  (line 129)
+  (invoke-virtual {v5} java/lang/Object/getClass )
+  (move-result-object v0)
+  (label l318618)
+  (line 131)
+  (new-instance v1 java/lang/UnsupportedOperationException)
+  (new-instance v2 java/lang/StringBuilder)
+  (invoke-direct {v2} java/lang/StringBuilder/<init> )
+  (const-string v3 "Type id handling not implemented for type ")
+  (invoke-virtual {v2 v3} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v2)
+  (invoke-virtual {v0} java/lang/Class/getName )
+  (move-result-object v0)
+  (invoke-virtual {v2 v0} java/lang/StringBuilder/append [object java/lang/String] )
+  (move-result-object v0)
+  (invoke-virtual {v0} java/lang/StringBuilder/toString )
+  (move-result-object v0)
+  (invoke-direct {v1 v0} java/lang/UnsupportedOperationException/<init> [object java/lang/String] )
+  (throw v1)
+)
+
+(method (attrs public ) unwrappingSerializer([object com/fasterxml/jackson/databind/util/NameTransformer] )[object com/fasterxml/jackson/databind/JsonSerializer]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/fasterxml/jackson/databind/util/NameTransformer;"  ")"  "Lcom/fasterxml/jackson/databind/JsonSerializer"  "<TT;>;")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/util/NameTransformer])
+  (line 65)
+  (return-object v0)
+)
+
+(method (attrs public ) usesObjectId()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/JsonSerializer])
+  (line 171)
+  (const/4 v0 0)
+  (return v0)
+)
+
+)

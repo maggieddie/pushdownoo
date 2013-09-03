@@ -1,0 +1,42 @@
+(class (attrs final ) com/twitter/android/service/q
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/twitter/android/service/TwitterService] )
+ (field (attrs private final ) b [object android/content/Intent] )
+ (field (attrs private final ) c int )
+
+(method (attrs public ) <init>([object com/twitter/android/service/TwitterService] [object android/content/Intent] int )void
+  (limit registers 4)
+  ; this: v0 ([object com/twitter/android/service/q])
+  ; parameter[0] : v1 ([object com/twitter/android/service/TwitterService])
+  ; parameter[1] : v2 ([object android/content/Intent])
+  ; parameter[2] : v3 (int)
+  (line 528)
+  (iput-object v1 v0 com/twitter/android/service/q.a [object com/twitter/android/service/TwitterService])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 529)
+  (iput-object v2 v0 com/twitter/android/service/q.b [object android/content/Intent])
+  (line 530)
+  (iput v3 v0 com/twitter/android/service/q.c int)
+  (line 531)
+  (return-void )
+ )
+
+(method (attrs public final ) run()void
+  (limit registers 4)
+  ; this: v3 ([object com/twitter/android/service/q])
+  (line 534)
+  (const/16 v0 10)
+  (invoke-static {v0} android/os/Process/setThreadPriority int )
+  (line 535)
+  (iget-object v0 v3 com/twitter/android/service/q.a [object com/twitter/android/service/TwitterService])
+  (iget-object v1 v3 com/twitter/android/service/q.b [object android/content/Intent])
+  (iget v2 v3 com/twitter/android/service/q.c int)
+  (invoke-virtual {v0 v1 v2} com/twitter/android/service/TwitterService/a [object android/content/Intent] int )
+  (line 536)
+  (return-void )
+)
+
+)

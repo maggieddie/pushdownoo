@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/ui/c/e
+ (super java/lang/Object)
+ (source "DiskUsageUtil.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/ui/c/d] )
+
+(method (attrs ) <init>([object com/facebook/ui/c/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/c/e])
+  ; parameter[0] : v1 ([object com/facebook/ui/c/d])
+  (line 78)
+  (iput-object v1 v0 com/facebook/ui/c/e.a [object com/facebook/ui/c/d])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/ui/c/e])
+  (line 81)
+  (iget-object v0 v2 com/facebook/ui/c/e.a [object com/facebook/ui/c/d])
+  (invoke-static {v0} com/facebook/ui/c/d/a [object com/facebook/ui/c/d] )
+  (move-result-object v0)
+  (sget v1 com/facebook/o.low_disk_space_warning_message int)
+  (invoke-static {v0 v1} com/facebook/ui/i/g/a [object android/content/Context] int )
+  (line 83)
+  (return-void )
+)
+
+)

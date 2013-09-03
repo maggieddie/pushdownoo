@@ -1,0 +1,43 @@
+(class (attrs ) com/facebook/base/broadcast/p
+ (super android/content/BroadcastReceiver)
+ (source "SafeBroadcastReceiver.java")
+
+ (field (attrs final ) a [object com/facebook/base/broadcast/o] )
+
+(method (attrs ) <init>([object com/facebook/base/broadcast/o] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/broadcast/p])
+  ; parameter[0] : v1 ([object com/facebook/base/broadcast/o])
+  (line 33)
+  (iput-object v1 v0 com/facebook/base/broadcast/p.a [object com/facebook/base/broadcast/o])
+  (invoke-direct {v0} android/content/BroadcastReceiver/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onReceive([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/base/broadcast/p])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 36)
+  (iget-object v0 v2 com/facebook/base/broadcast/p.a [object com/facebook/base/broadcast/o])
+  (invoke-static {v0} com/facebook/base/broadcast/o/a [object com/facebook/base/broadcast/o] )
+  (move-result v0)
+  (if-nez v0 l169c74)
+  (line 37)
+  (invoke-static {} com/facebook/base/broadcast/o/b )
+  (nop )
+  (move-result-object v0)
+  (const-string v1 "Called onReceive after it was unregistered.")
+  (invoke-static {v0 v1} com/facebook/debug/log/b/e [object java/lang/Class] [object java/lang/String] )
+  (label l169c72)
+  (line 41)
+  (return-void )
+  (label l169c74)
+  (line 40)
+  (iget-object v0 v2 com/facebook/base/broadcast/p.a [object com/facebook/base/broadcast/o])
+  (invoke-virtual {v0 v3 v4} com/facebook/base/broadcast/o/a [object android/content/Context] [object android/content/Intent] )
+  (goto l169c72)
+)
+
+)

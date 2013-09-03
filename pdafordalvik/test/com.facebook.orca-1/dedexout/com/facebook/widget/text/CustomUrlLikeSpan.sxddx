@@ -1,0 +1,42 @@
+(class (attrs public ) com/facebook/widget/text/CustomUrlLikeSpan
+ (super android/text/style/URLSpan)
+ (source "CustomUrlLikeSpan.java")
+
+ (field (attrs private ) a [object com/facebook/widget/text/f] )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/widget/text/CustomUrlLikeSpan])
+  (line 24)
+  (const-string v0 "about:blank")
+  (invoke-direct {v1 v0} android/text/style/URLSpan/<init> [object java/lang/String] )
+  (line 25)
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/widget/text/f] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/widget/text/CustomUrlLikeSpan])
+  ; parameter[0] : v1 ([object com/facebook/widget/text/f])
+  (line 32)
+  (iput-object v1 v0 com/facebook/widget/text/CustomUrlLikeSpan.a [object com/facebook/widget/text/f])
+  (line 33)
+  (return-void )
+)
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/text/CustomUrlLikeSpan])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 37)
+  (iget-object v0 v1 com/facebook/widget/text/CustomUrlLikeSpan.a [object com/facebook/widget/text/f])
+  (if-eqz v0 l301ade)
+  (line 38)
+  (iget-object v0 v1 com/facebook/widget/text/CustomUrlLikeSpan.a [object com/facebook/widget/text/f])
+  (invoke-virtual {v0} com/facebook/widget/text/f/a )
+  (label l301ade)
+  (line 40)
+  (return-void )
+)
+
+)

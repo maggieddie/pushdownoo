@@ -1,0 +1,91 @@
+(class (attrs abstract ) com/google/common/collect/Maps$ImprovedAbstractMap
+ (super java/util/AbstractMap)
+ (source "Maps.java")
+
+ (field (attrs private ) a [object java/util/Set] )
+ (field (attrs private ) b [object java/util/Set] )
+ (field (attrs private ) c [object java/util/Collection] )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/Maps$ImprovedAbstractMap])
+  (line 1461)
+  (invoke-direct {v0} java/util/AbstractMap/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) a()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+)
+
+(method (attrs public ) entrySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<"  "Ljava/util/Map$Entry"  "<TK;TV;>;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Maps$ImprovedAbstractMap])
+  (line 1472)
+  (iget-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.a [object java/util/Set])
+  (line 1473)
+  (if-nez v0 l10eadc)
+  (line 1474)
+  (invoke-virtual {v1} com/google/common/collect/Maps$ImprovedAbstractMap/a )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.a [object java/util/Set])
+  (label l10eadc)
+  (line 1476)
+  (return-object v0)
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Maps$ImprovedAbstractMap])
+  (line 1515)
+  (invoke-virtual {v1} com/google/common/collect/Maps$ImprovedAbstractMap/entrySet )
+  (move-result-object v0)
+  (invoke-interface {v0} java/util/Set/isEmpty )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) keySet()[object java/util/Set]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Set"  "<TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Maps$ImprovedAbstractMap])
+  (line 1482)
+  (iget-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.b [object java/util/Set])
+  (line 1483)
+  (if-nez v0 l10eb2a)
+  (line 1484)
+  (new-instance v0 com/google/common/collect/Maps$ImprovedAbstractMap$1)
+  (invoke-direct {v0 v1} com/google/common/collect/Maps$ImprovedAbstractMap$1/<init> [object com/google/common/collect/Maps$ImprovedAbstractMap] )
+  (iput-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.b [object java/util/Set])
+  (label l10eb2a)
+  (line 1490)
+  (return-object v0)
+)
+
+(method (attrs public ) values()[object java/util/Collection]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/Collection"  "<TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/Maps$ImprovedAbstractMap])
+  (line 1496)
+  (iget-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.c [object java/util/Collection])
+  (line 1497)
+  (if-nez v0 l10eb52)
+  (line 1498)
+  (new-instance v0 com/google/common/collect/Maps$ImprovedAbstractMap$2)
+  (invoke-direct {v0 v1} com/google/common/collect/Maps$ImprovedAbstractMap$2/<init> [object com/google/common/collect/Maps$ImprovedAbstractMap] )
+  (iput-object v0 v1 com/google/common/collect/Maps$ImprovedAbstractMap.c [object java/util/Collection])
+  (label l10eb52)
+  (line 1504)
+  (return-object v0)
+)
+
+)

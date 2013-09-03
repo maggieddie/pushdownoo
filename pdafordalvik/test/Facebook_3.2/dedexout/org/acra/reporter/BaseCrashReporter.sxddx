@@ -1,0 +1,270 @@
+(class (attrs public ) org/acra/reporter/BaseCrashReporter
+ (super java/lang/Object)
+ (source "BaseCrashReporter.java")
+ (implements org/acra/reporter/ReportsCrashes)
+
+ (field (attrs protected ) mApplication [object android/app/Application] )
+
+(method (attrs public ) <init>([object android/app/Application] )void
+  (limit registers 4)
+  ; this: v2 ([object org/acra/reporter/BaseCrashReporter])
+  ; parameter[0] : v3 ([object android/app/Application])
+  (line 15)
+  (invoke-direct {v2} java/lang/Object/<init> )
+  (line 16)
+  (if-nez v3 l86ad2)
+  (line 17)
+  (new-instance v0 java/lang/IllegalArgumentException)
+  (const-string v1 "Application cannot be null")
+  (invoke-direct {v0 v1} java/lang/IllegalArgumentException/<init> [object java/lang/String] )
+  (throw v0)
+  (label l86ad2)
+  (line 19)
+  (iput-object v3 v2 org/acra/reporter/BaseCrashReporter.mApplication [object android/app/Application])
+  (line 20)
+  (return-void )
+ )
+
+(method (attrs public ) additionalDropBoxTags()[array [object java/lang/String]]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 99)
+  (const/4 v0 0)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (line 100)
+  (return-object v0)
+)
+
+(method (attrs public ) checkSSLCertsOnCrashReport()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 157)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) customReportContent()[array [object org/acra/ReportField]]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 131)
+  (const/4 v0 0)
+  (new-array v0 v0 [array [object org/acra/ReportField]])
+  (line 132)
+  (return-object v0)
+)
+
+(method (attrs public ) deleteUnapprovedReportsOnApplicationStart()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 142)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) dropboxCollectionMinutes()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 105)
+  (const/4 v0 5)
+  (return v0)
+)
+
+(method (attrs public ) forceCloseDialogAfterToast()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 152)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) formKey()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 24)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public ) formPostFormat()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 126)
+  (const-string v0 "ACRA-NULL-STRING")
+  (return-object v0)
+)
+
+(method (attrs public ) formUri()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 29)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public ) formUriBasicAuthLogin()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 116)
+  (const-string v0 "ACRA-NULL-STRING")
+  (return-object v0)
+)
+
+(method (attrs public ) formUriBasicAuthPassword()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 121)
+  (const-string v0 "ACRA-NULL-STRING")
+  (return-object v0)
+)
+
+(method (attrs public ) getApplication()[object android/app/Application]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 162)
+  (iget-object v0 v1 org/acra/reporter/BaseCrashReporter.mApplication [object android/app/Application])
+  (return-object v0)
+)
+
+(method (attrs public ) includeDropBoxSystemTags()boolean
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 94)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) logcatArguments()[array [object java/lang/String]]
+  (limit registers 4)
+  ; this: v3 ([object org/acra/reporter/BaseCrashReporter])
+  (line 110)
+  (const/4 v0 4)
+  (new-array v0 v0 [array [object java/lang/String]])
+  (const/4 v1 0)
+  (const-string v2 "-t")
+  (aput-object v2 v0 v1)
+  (const/4 v1 1)
+  (const-string v2 "200")
+  (aput-object v2 v0 v1)
+  (const/4 v1 2)
+  (const-string v2 "-v")
+  (aput-object v2 v0 v1)
+  (const/4 v1 3)
+  (const-string v2 "time")
+  (aput-object v2 v0 v1)
+  (line 111)
+  (return-object v0)
+)
+
+(method (attrs public ) mailTo()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 137)
+  (const-string v0 "")
+  (return-object v0)
+)
+
+(method (attrs public ) mode()[object org/acra/ReportingInteractionMode]
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 34)
+  (sget-object v0 org/acra/ReportingInteractionMode.SILENT [object org/acra/ReportingInteractionMode])
+  (return-object v0)
+)
+
+(method (attrs public ) resDialogCommentPrompt()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 39)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resDialogEmailPrompt()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 44)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resDialogIcon()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 49)
+  (const v0 17301543) ; 0x1080027)
+  (return v0)
+)
+
+(method (attrs public ) resDialogOkToast()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 54)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resDialogText()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 59)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resDialogTitle()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 64)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resNotifIcon()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 69)
+  (const v0 17301624) ; 0x1080078)
+  (return v0)
+)
+
+(method (attrs public ) resNotifText()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 74)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resNotifTickerText()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 79)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resNotifTitle()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 84)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) resToastText()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 89)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) socketTimeout()int
+  (limit registers 2)
+  ; this: v1 ([object org/acra/reporter/BaseCrashReporter])
+  (line 147)
+  (const/16 v0 3000)
+  (return v0)
+)
+
+)

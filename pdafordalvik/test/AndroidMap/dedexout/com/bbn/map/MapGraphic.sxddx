@@ -1,0 +1,27 @@
+(interface (attrs public abstract ) com/bbn/map/MapGraphic
+ (super java/lang/Object)
+ (source "MapGraphic.java")
+
+
+(method (attrs public abstract ) draw([object com/bbn/map/MapView] [object android/graphics/Canvas] float float float float [object android/graphics/Paint] )void
+)
+
+(method (attrs public abstract ) getCenterOfRotation()[object android/graphics/PointF]
+)
+
+(method (attrs public abstract ) getHeight()float
+)
+
+(method (attrs public abstract ) getLocation()[object android/graphics/PointF]
+)
+
+(method (attrs public abstract ) getWidth()float
+)
+
+(method (attrs public abstract ) rotateWithCanvas()boolean
+)
+
+(method (attrs public abstract ) scaleWithCanvas()boolean
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs abstract ) android/support/v4/content/FileProvider$PathStrategy
+ (super java/lang/Object)
+ (source "FileProvider.java")
+
+
+(method (attrs public abstract ) getFileForUri([object android/net/Uri] )[object java/io/File]
+)
+
+(method (attrs public abstract ) getUriForFile([object java/io/File] )[object android/net/Uri]
+)
+
+)

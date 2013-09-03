@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>4 hours</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>From people you follow</item>
+        <item>From anyone</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Interactions</item>
+        <item>Mentions</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Read tweets from your timeline.</item>
+        <item>See who you follow.</item>
+        <item>Post Tweets for you.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>See your Twitter password.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Edit profile</item>
+        <item>Settings</item>
+        <item>Help</item>
+    </string-array>
+    <string-array name="refresh_interval_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>240</item>
+    </string-array>
+    <string-array name="notif_settings_values">
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="font_sizes">
+        <item>13 pt</item>
+        <item>14 pt</item>
+        <item>15 pt</item>
+        <item>16 pt</item>
+        <item>17 pt</item>
+        <item>18 pt</item>
+        <item>19 pt</item>
+        <item>20 pt</item>
+    </string-array>
+    <string-array name="font_sizes_values">
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <array name="list_labels">
+        <item>@string/profile_tab_title_timeline</item>
+        <item>@string/tab_title_people</item>
+    </array>
+    <array name="search_labels">
+        <item>@string/search_label</item>
+        <item>@string/tab_title_people</item>
+    </array>
+    <array name="change_or_remove_photo_options">
+        <item>@string/profile_take_photo</item>
+        <item>@string/profile_choose_existing_photo</item>
+        <item>@string/profile_remove_header</item>
+    </array>
+    <array name="change_photo_options">
+        <item>@string/profile_take_photo</item>
+        <item>@string/profile_choose_existing_photo</item>
+    </array>
+</resources>

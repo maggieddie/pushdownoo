@@ -1,0 +1,14 @@
+(class (attrs public abstract ) com/facebook/orca/photos/b/i
+ (super com/facebook/c/a/c)
+ (source "PhotoUploadEventSubscriber.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/photos/b/i])
+  (line 11)
+  (invoke-direct {v0} com/facebook/c/a/c/<init> )
+  (return-void )
+ )
+
+)

@@ -1,0 +1,66 @@
+com/example/udonlauncher/MainActivity: 0.0
+com/example/udonlauncher/MainActivity$1: 100.0
+com/example/udonlauncher/Threading$StuffTask: 100.0
+com/example/udonlauncher/UpdatedDialog$1: 100.0
+com/example/udonlauncher/UdonApplication$1: 100.0
+com/example/udonlauncher/UdonLauncher$ActivityAdapter: 66.66666666666666
+com/example/udonlauncher/UdonLauncher$ActivityAdapter$ArrayFilter: 100.0
+com/example/udonlauncher/UdonPreferences$2: 100.0
+com/example/udonlauncher/UdonLauncher$ClickManager: 100.0
+com/example/udonlauncher/Threading$1: 100.0
+com/example/udonlauncher/Updater1$1: 100.0
+com/example/udonlauncher/AccessoryHandlerService: 40.0
+com/example/udonlauncher/AccessoryHandlerService$AccessoryHandler$1: 100.0
+com/example/udonlauncher/UdonLauncher$ListItem: 33.33333333333333
+com/example/udonlauncher/UdonLauncher$IconResizer: 100.0
+com/example/udonlauncher/LaunchCounter$StableArrayAdapter: 100.0
+com/example/udonlauncher/UdonApplication: 50.0
+com/example/udonlauncher/MainActivity$AccessoryFragment$1: 100.0
+com/example/udonlauncher/UdonApplication$PeriodicTask: 100.0
+com/example/udonlauncher/AccessoryHandlerService$LocalBinder: 100.0
+com/example/udonlauncher/MainActivity$AccessoryFragment: 100.0
+com/example/udonlauncher/AccessoryHandlerService$AccessoryHandler: 100.0
+com/example/udonlauncher/AccessoryHandlerService$1: 100.0
+com/example/udonlauncher/UpdatedDialog$2: 100.0
+com/example/udonlauncher/MainActivity$SectionsPagerAdapter: 100.0
+com/example/udonlauncher/MainActivity$2: 100.0
+com/example/udonlauncher/UdonLauncher: 0.0
+com/example/udonlauncher/UdonPreferences$1: 100.0
+The total average: 85.35714285714286
+ Any places of null ref during constructions? 
+ com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(424)
+InvokeStmt:android/graphics/Canvas/setBitmap(List(v7) , v1 , List((object android/graphics/Bitmap)))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(424)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(384)
+InvokeStmt:android/graphics/drawable/Drawable/getIntrinsicHeight(List() , v15 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(384)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(71)
+FieldAssignStmt(v1,NonStaticFieldExp(v1,android/content/pm/ActivityInfo.name,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(71)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(430)
+InvokeStmt:android/graphics/drawable/Drawable/setBounds(List(v11) , v15 , List((object android/graphics/Rect)))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(430)
+com/example/udonlauncher/UdonLauncher:makeGridItemsLineStmt(349)
+InvokeStmt:android/content/pm/PackageManager/queryIntentActivities(List(v6, v7) , v5 , List((object android/content/Intent), int))@@@com/example/udonlauncher/UdonLauncher$$makeGridItems::LineStmt(349)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(432)
+InvokeStmt:android/graphics/Canvas/setBitmap(List(v13) , v1 , List((object android/graphics/Bitmap)))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(432)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(75)
+InvokeStmt:com/example/udonlauncher/UdonLauncher$IconResizer/createIconThumbnail(List(v1) , v5 , List((object android/graphics/drawable/Drawable)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(75)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(77)
+FieldAssignStmt(v1,NonStaticFieldExp(v0,android/content/pm/ComponentInfo.applicationInfo,(object android/content/pm/ApplicationInfo)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(77)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(428)
+InvokeStmt:android/graphics/drawable/Drawable/setBounds(List(v9, v10, v11, v12) , v15 , List(int, int, int, int))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(428)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(383)
+InvokeStmt:android/graphics/drawable/Drawable/getIntrinsicWidth(List() , v15 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(383)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(431)
+InvokeStmt:com/example/udonlauncher/UdonLauncher/getResources(List() , v11 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(431)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(425)
+InvokeStmt:android/graphics/Rect/set(List(v12) , v11 , List((object android/graphics/Rect)))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(425)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(429)
+InvokeStmt:android/graphics/drawable/Drawable/draw(List(v1) , v15 , List((object android/graphics/Canvas)))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(429)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(78)
+FieldAssignStmt(v1,NonStaticFieldExp(v0,android/content/pm/ComponentInfo.name,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(78)
+com/example/udonlauncher/UdonLauncher$ListItem:<init>LineStmt(77)
+FieldAssignStmt(v1,NonStaticFieldExp(v1,android/content/pm/ApplicationInfo.packageName,(object java/lang/String)))@@@com/example/udonlauncher/UdonLauncher$ListItem$$<init>::LineStmt(77)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(425)
+InvokeStmt:android/graphics/drawable/Drawable/getBounds(List() , v15 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(425)
+com/example/udonlauncher/UdonLauncher$IconResizer:createIconThumbnailLineStmt(402)
+InvokeStmt:android/graphics/drawable/Drawable/getOpacity(List() , v15 , List())@@@com/example/udonlauncher/UdonLauncher$IconResizer$$createIconThumbnail::LineStmt(402)
+com/example/udonlauncher/UdonLauncher$IconResizer:<init>LineStmt(375)
+InvokeStmt:android/content/res/Resources/getDimension(List(v1) , v0 , List(int))@@@com/example/udonlauncher/UdonLauncher$IconResizer$$<init>::LineStmt(375)

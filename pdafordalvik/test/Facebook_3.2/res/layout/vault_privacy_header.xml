@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.katana.activity.media.vault.VaultSyncScreenPrivacyBar android:id="@id/sync_header" android:background="@drawable/publisher_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/vault_sync_screen_header_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/lock_icon" android:paddingLeft="@dimen/vault_sync_screen_header_image_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/vault_lock" android:scaleType="center" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/vault_sync_privacy_header_text" android:paddingLeft="@dimen/vault_sync_screen_header_text_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/vault_sync_privacy_header_text" android:layout_toLeftOf="@id/vault_icon_layout" android:layout_toRightOf="@id/lock_icon" style="@style/publisher_button_text" />
+    <FrameLayout android:gravity="right" android:layout_gravity="right" android:id="@id/vault_icon_layout" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/vault_refresh_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/vault_refresh_button" />
+        <ImageView android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/refreshing_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/vault_spinner" />
+    </FrameLayout>
+</com.facebook.katana.activity.media.vault.VaultSyncScreenPrivacyBar>

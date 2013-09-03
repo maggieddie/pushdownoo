@@ -1,0 +1,15 @@
+(interface (attrs public abstract ) com/facebook/orca/login/w
+ (super java/lang/Object)
+ (source "WildfireRegStartFragment.java")
+
+
+(method (attrs public abstract ) beginShowingProgress()void
+)
+
+(method (attrs public abstract ) showStartPage(boolean )void
+)
+
+(method (attrs public abstract ) stopShowingProgress()void
+)
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract ) org/andengine/entity/sprite/batch/vbo/ISpriteBatchVertexBufferObject
+ (super java/lang/Object)
+ (source "ISpriteBatchVertexBufferObject.java")
+ (implements org/andengine/opengl/vbo/IVertexBufferObject)
+
+
+(method (attrs public abstract ) addWithPackedColor([object org/andengine/opengl/texture/region/ITextureRegion] float float float float float )void
+)
+
+(method (attrs public abstract ) addWithPackedColor([object org/andengine/opengl/texture/region/ITextureRegion] float float float float float float float float float )void
+)
+
+(method (attrs public abstract ) getBufferDataOffset()int
+)
+
+(method (attrs public abstract ) setBufferDataOffset(int )void
+)
+
+)

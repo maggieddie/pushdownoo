@@ -1,0 +1,25 @@
+(class (attrs public ) com/example/udonlauncher/AccessoryHandlerService$LocalBinder
+ (super android/os/Binder)
+ (source "AccessoryHandlerService.java")
+
+ (field (attrs final ) this$0 [object com/example/udonlauncher/AccessoryHandlerService] )
+
+(method (attrs public ) <init>([object com/example/udonlauncher/AccessoryHandlerService] )void
+  (limit registers 2)
+  ; this: v0 ([object com/example/udonlauncher/AccessoryHandlerService$LocalBinder])
+  ; parameter[0] : v1 ([object com/example/udonlauncher/AccessoryHandlerService])
+  (line 63)
+  (iput-object v1 v0 com/example/udonlauncher/AccessoryHandlerService$LocalBinder.this$0 [object com/example/udonlauncher/AccessoryHandlerService])
+  (invoke-direct {v0} android/os/Binder/<init> )
+  (return-void )
+ )
+
+(method (attrs ) getService()[object com/example/udonlauncher/AccessoryHandlerService]
+  (limit registers 2)
+  ; this: v1 ([object com/example/udonlauncher/AccessoryHandlerService$LocalBinder])
+  (line 65)
+  (iget-object v0 v1 com/example/udonlauncher/AccessoryHandlerService$LocalBinder.this$0 [object com/example/udonlauncher/AccessoryHandlerService])
+  (return-object v0)
+)
+
+)

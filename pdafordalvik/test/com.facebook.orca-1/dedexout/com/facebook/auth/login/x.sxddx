@@ -1,0 +1,33 @@
+(class (attrs ) com/facebook/auth/login/x
+ (super com/facebook/base/broadcast/q)
+ (source "AuthenticatedActivityHelper.java")
+
+ (field (attrs final ) a [object com/facebook/auth/login/w] )
+
+(method (attrs ) <init>([object com/facebook/auth/login/w] [object android/content/Context] [object android/content/IntentFilter] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/auth/login/x])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/w])
+  ; parameter[1] : v2 ([object android/content/Context])
+  ; parameter[2] : v3 ([object android/content/IntentFilter])
+  (line 67)
+  (iput-object v1 v0 com/facebook/auth/login/x.a [object com/facebook/auth/login/w])
+  (invoke-direct {v0 v2 v3} com/facebook/base/broadcast/q/<init> [object android/content/Context] [object android/content/IntentFilter] )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/auth/login/x])
+  ; parameter[0] : v2 ([object android/content/Context])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 70)
+  (iget-object v0 v1 com/facebook/auth/login/x.a [object com/facebook/auth/login/w])
+  (invoke-static {v0} com/facebook/auth/login/w/a [object com/facebook/auth/login/w] )
+  (move-result-object v0)
+  (invoke-virtual {v0} android/app/Activity/finish )
+  (line 71)
+  (return-void )
+)
+
+)

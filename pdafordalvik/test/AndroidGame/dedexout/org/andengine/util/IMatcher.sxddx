@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) org/andengine/util/IMatcher
+ (super java/lang/Object)
+ (source "IMatcher.java")
+
+
+(method (attrs public abstract ) matches([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)Z")
+  )
+)
+
+)

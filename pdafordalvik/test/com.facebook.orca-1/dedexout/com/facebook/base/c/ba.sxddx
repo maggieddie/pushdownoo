@@ -1,0 +1,49 @@
+(class (attrs ) com/facebook/base/c/ba
+ (super com/facebook/inject/d)
+ (source "FbBaseModule.java")
+
+ (field (attrs final ) a [object com/facebook/base/c/a] )
+
+(method (attrs private ) <init>([object com/facebook/base/c/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/c/ba])
+  ; parameter[0] : v1 ([object com/facebook/base/c/a])
+  (line 987)
+  (iput-object v1 v0 com/facebook/base/c/ba.a [object com/facebook/base/c/a])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/base/c/a] [object com/facebook/base/c/b] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/base/c/ba])
+  ; parameter[0] : v1 ([object com/facebook/base/c/a])
+  ; parameter[1] : v2 ([object com/facebook/base/c/b])
+  (line 987)
+  (invoke-direct {v0 v1} com/facebook/base/c/ba/<init> [object com/facebook/base/c/a] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/common/e/o]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/base/c/ba])
+  (line 991)
+  (new-instance v0 com/facebook/common/e/o)
+  (const-class v1 com/facebook/common/w/q)
+  (const-class v2 com/facebook/auth/annotations/IsMeUserAnEmployee)
+  (invoke-virtual {v3 v1 v2} com/facebook/base/c/ba/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/facebook/common/e/o/<init> [object javax/inject/a] )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/c/ba])
+  (line 987)
+  (invoke-virtual {v1} com/facebook/base/c/ba/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

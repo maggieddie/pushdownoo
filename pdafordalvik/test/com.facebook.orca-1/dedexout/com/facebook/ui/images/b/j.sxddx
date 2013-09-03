@@ -1,0 +1,52 @@
+(class (attrs ) com/facebook/ui/images/b/j
+ (super java/lang/Object)
+ (source "FetchImageExecutor.java")
+ (implements com/google/common/d/a/h)
+
+ (field (attrs final ) a [object com/facebook/ui/images/b/i] )
+
+(method (attrs ) <init>([object com/facebook/ui/images/b/i] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/images/b/j])
+  ; parameter[0] : v1 ([object com/facebook/ui/images/b/i])
+  (line 101)
+  (iput-object v1 v0 com/facebook/ui/images/b/j.a [object com/facebook/ui/images/b/i])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/ui/images/b/r] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/ui/images/b/j])
+  ; parameter[0] : v2 ([object com/facebook/ui/images/b/r])
+  (line 104)
+  (iget-object v0 v1 com/facebook/ui/images/b/j.a [object com/facebook/ui/images/b/i])
+  (iget-object v0 v0 com/facebook/ui/images/b/i.b [object com/google/common/d/a/ab])
+  (invoke-virtual {v0 v2} com/google/common/d/a/ab/a_ [object java/lang/Object] )
+  (line 105)
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/images/b/j])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 101)
+  (check-cast v1 [object com/facebook/ui/images/b/r])
+  (invoke-virtual {v0 v1} com/facebook/ui/images/b/j/a [object com/facebook/ui/images/b/r] )
+  (return-void )
+)
+
+(method (attrs public ) a([object java/lang/Throwable] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/ui/images/b/j])
+  ; parameter[0] : v2 ([object java/lang/Throwable])
+  (line 109)
+  (iget-object v0 v1 com/facebook/ui/images/b/j.a [object com/facebook/ui/images/b/i])
+  (iget-object v0 v0 com/facebook/ui/images/b/i.b [object com/google/common/d/a/ab])
+  (invoke-virtual {v0 v2} com/google/common/d/a/ab/a_ [object java/lang/Throwable] )
+  (line 110)
+  (return-void )
+)
+
+)

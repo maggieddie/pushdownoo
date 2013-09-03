@@ -1,0 +1,15 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl
+ (super java/lang/Object)
+ (source "AccessibilityEventCompat.java")
+
+
+(method (attrs public abstract ) appendRecord([object android/view/accessibility/AccessibilityEvent] [object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) getRecord([object android/view/accessibility/AccessibilityEvent] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getRecordCount([object android/view/accessibility/AccessibilityEvent] )int
+)
+
+)

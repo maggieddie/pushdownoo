@@ -1,0 +1,47 @@
+(class (attrs ) com/facebook/fbservice/ops/u
+ (super com/facebook/fbservice/service/aa)
+ (source "DefaultBlueServiceOperationFactory.java")
+
+ (field (attrs final ) a [object com/facebook/fbservice/ops/r] )
+
+(method (attrs ) <init>([object com/facebook/fbservice/ops/r] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/ops/u])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/ops/r])
+  (line 509)
+  (iput-object v1 v0 com/facebook/fbservice/ops/u.a [object com/facebook/fbservice/ops/r])
+  (invoke-direct {v0} com/facebook/fbservice/service/aa/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/fbservice/ops/u])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/OperationResult])
+  (line 513)
+  (iget-object v0 v2 com/facebook/fbservice/ops/u.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0} com/facebook/fbservice/ops/r/h [object com/facebook/fbservice/ops/r] )
+  (move-result v0)
+  (if-nez v0 l1492c8)
+  (line 514)
+  (iget-object v0 v2 com/facebook/fbservice/ops/u.a [object com/facebook/fbservice/ops/r])
+  (new-instance v1 com/facebook/fbservice/ops/v)
+  (invoke-direct {v1 v2 v3} com/facebook/fbservice/ops/v/<init> [object com/facebook/fbservice/ops/u] [object com/facebook/fbservice/service/OperationResult] )
+  (invoke-static {v0 v1} com/facebook/fbservice/ops/r/a [object com/facebook/fbservice/ops/r] [object java/lang/Runnable] )
+  (label l1492c8)
+  (line 523)
+  (return-void )
+)
+
+(method (attrs public ) b([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/fbservice/ops/u])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 527)
+  (iget-object v0 v1 com/facebook/fbservice/ops/u.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0 v2} com/facebook/fbservice/ops/r/b [object com/facebook/fbservice/ops/r] [object com/facebook/fbservice/service/OperationResult] )
+  (line 528)
+  (return-void )
+)
+
+)

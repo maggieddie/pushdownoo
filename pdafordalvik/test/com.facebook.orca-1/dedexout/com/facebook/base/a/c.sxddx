@@ -1,0 +1,33 @@
+(class (attrs public ) com/facebook/base/a/c
+ (super java/lang/Object)
+ (source "AppInitCompleteInitializer.java")
+ (implements com/facebook/base/d)
+
+ (field (attrs private final ) a [object com/facebook/base/a/d] )
+
+(method (attrs public ) <init>([object com/facebook/base/a/d] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/base/a/c])
+  ; parameter[0] : v2 ([object com/facebook/base/a/d])
+  (line 20)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 21)
+  (invoke-static {v2} com/google/common/base/Preconditions/checkNotNull [object java/lang/Object] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/base/a/d])
+  (iput-object v0 v1 com/facebook/base/a/c.a [object com/facebook/base/a/d])
+  (line 22)
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/c])
+  (line 26)
+  (iget-object v0 v1 com/facebook/base/a/c.a [object com/facebook/base/a/d])
+  (invoke-virtual {v0} com/facebook/base/a/d/a )
+  (line 27)
+  (return-void )
+)
+
+)

@@ -1,0 +1,42 @@
+(class (attrs public abstract ) org/andengine/ui/activity/LayoutGameActivity
+ (super org/andengine/ui/activity/BaseGameActivity)
+ (source "LayoutGameActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/ui/activity/LayoutGameActivity])
+  (line 12)
+  (invoke-direct {v0} org/andengine/ui/activity/BaseGameActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) getLayoutID()int
+)
+
+(method (attrs protected abstract ) getRenderSurfaceViewID()int
+)
+
+(method (attrs protected ) onSetContentView()void
+  (limit registers 3)
+  ; this: v2 ([object org/andengine/ui/activity/LayoutGameActivity])
+  (line 38)
+  (invoke-virtual {v2} org/andengine/ui/activity/LayoutGameActivity/getLayoutID )
+  (move-result v0)
+  (invoke-super {v2 v0} org/andengine/ui/activity/BaseGameActivity/setContentView int )
+  (line 40)
+  (invoke-virtual {v2} org/andengine/ui/activity/LayoutGameActivity/getRenderSurfaceViewID )
+  (move-result v0)
+  (invoke-virtual {v2 v0} org/andengine/ui/activity/LayoutGameActivity/findViewById int )
+  (move-result-object v0)
+  (check-cast v0 [object org/andengine/opengl/view/RenderSurfaceView])
+  (iput-object v0 v2 org/andengine/ui/activity/LayoutGameActivity.mRenderSurfaceView [object org/andengine/opengl/view/RenderSurfaceView])
+  (line 42)
+  (iget-object v0 v2 org/andengine/ui/activity/LayoutGameActivity.mRenderSurfaceView [object org/andengine/opengl/view/RenderSurfaceView])
+  (iget-object v1 v2 org/andengine/ui/activity/LayoutGameActivity.mEngine [object org/andengine/engine/Engine])
+  (invoke-virtual {v0 v1 v2} org/andengine/opengl/view/RenderSurfaceView/setRenderer [object org/andengine/engine/Engine] [object org/andengine/opengl/view/IRendererListener] )
+  (line 43)
+  (return-void )
+)
+
+)

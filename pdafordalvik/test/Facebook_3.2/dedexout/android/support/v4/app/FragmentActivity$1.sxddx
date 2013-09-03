@@ -1,0 +1,59 @@
+(class (attrs ) android/support/v4/app/FragmentActivity$1
+ (super android/os/Handler)
+ (source "FragmentActivity.java")
+
+ (field (attrs final ) a [object android/support/v4/app/FragmentActivity] )
+
+(method (attrs ) <init>([object android/support/v4/app/FragmentActivity] )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/app/FragmentActivity$1])
+  ; parameter[0] : v1 ([object android/support/v4/app/FragmentActivity])
+  (line 81)
+  (iput-object v1 v0 android/support/v4/app/FragmentActivity$1.a [object android/support/v4/app/FragmentActivity])
+  (invoke-direct {v0} android/os/Handler/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 4)
+  ; this: v2 ([object android/support/v4/app/FragmentActivity$1])
+  ; parameter[0] : v3 ([object android/os/Message])
+  (line 84)
+  (iget v0 v3 android/os/Message.what int)
+  (packed-switch v0 1
+    ps5ecc8_5ecd6 ; case 1
+    ps5ecc8_5ecf0 ; case 2
+    ps5ecc8_default) ; default
+  (label ps5ecc8_default)
+  (line 95)
+  (invoke-super {v2 v3} android/os/Handler/handleMessage [object android/os/Message] )
+  (label l5ecd4)
+  (line 97)
+  (return-void )
+  (label ps5ecc8_5ecd6)
+  (line 86)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.a [object android/support/v4/app/FragmentActivity])
+  (iget-boolean v0 v0 android/support/v4/app/FragmentActivity.g boolean)
+  (if-eqz v0 l5ecd4)
+  (line 87)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.a [object android/support/v4/app/FragmentActivity])
+  (const/4 v1 0)
+  (invoke-virtual {v0 v1} android/support/v4/app/FragmentActivity/a boolean )
+  (goto l5ecd4)
+  (label ps5ecc8_5ecf0)
+  (line 91)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.a [object android/support/v4/app/FragmentActivity])
+  (invoke-virtual {v0} android/support/v4/app/FragmentActivity/w_ )
+  (line 92)
+  (iget-object v0 v2 android/support/v4/app/FragmentActivity$1.a [object android/support/v4/app/FragmentActivity])
+  (iget-object v0 v0 android/support/v4/app/FragmentActivity.b [object android/support/v4/app/FragmentManagerImpl])
+  (invoke-virtual {v0} android/support/v4/app/FragmentManagerImpl/h )
+  (goto l5ecd4)
+  (line 84)
+  (label l5ed0a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

@@ -1,0 +1,17 @@
+(class (attrs public abstract ) com/facebook/base/a/f
+ (super java/lang/Object)
+ (source "AppInitLock.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/a/f])
+  (line 21)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) a()void
+)
+
+)

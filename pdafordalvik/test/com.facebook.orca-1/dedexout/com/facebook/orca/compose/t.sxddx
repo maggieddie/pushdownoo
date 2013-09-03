@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/compose/t
+ (super java/lang/Object)
+ (source "ComposeFragment.java")
+ (implements com/facebook/orca/chatheads/c)
+
+ (field (attrs final ) a [object java/lang/String] )
+ (field (attrs final ) b [object com/facebook/orca/compose/ComposeFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/compose/ComposeFragment] [object java/lang/String] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/compose/t])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeFragment])
+  ; parameter[1] : v2 ([object java/lang/String])
+  (line 1297)
+  (iput-object v1 v0 com/facebook/orca/compose/t.b [object com/facebook/orca/compose/ComposeFragment])
+  (iput-object v2 v0 com/facebook/orca/compose/t.a [object java/lang/String])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()void
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/orca/compose/t])
+  (line 1300)
+  (new-instance v0 android/content/Intent)
+  (iget-object v1 v3 com/facebook/orca/compose/t.a [object java/lang/String])
+  (invoke-direct {v0 v1} android/content/Intent/<init> [object java/lang/String] )
+  (line 1301)
+  (iget-object v1 v3 com/facebook/orca/compose/t.b [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v1} com/facebook/orca/compose/ComposeFragment/H [object com/facebook/orca/compose/ComposeFragment] )
+  (move-result-object v1)
+  (iget-object v2 v3 com/facebook/orca/compose/t.b [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-virtual {v2} com/facebook/orca/compose/ComposeFragment/n )
+  (move-result-object v2)
+  (invoke-virtual {v1 v0 v2} com/facebook/c/s/b [object android/content/Intent] [object android/content/Context] )
+  (line 1302)
+  (return-void )
+)
+
+)

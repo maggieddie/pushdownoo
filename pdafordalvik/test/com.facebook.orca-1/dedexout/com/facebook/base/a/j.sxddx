@@ -1,0 +1,113 @@
+(class (attrs public abstract ) com/facebook/base/a/j
+ (super android/app/Application)
+ (source "DelegatingApplication.java")
+
+ (field (attrs private ) a [object com/facebook/base/a/i] )
+ (field (attrs private final ) b [object com/facebook/common/l/h] )
+
+(method (attrs protected ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/j])
+  (line 22)
+  (invoke-direct {v1} android/app/Application/<init> )
+  (line 23)
+  (new-instance v0 com/facebook/common/l/h)
+  (invoke-direct {v0 v1} com/facebook/common/l/h/<init> [object android/content/Context] )
+  (iput-object v0 v1 com/facebook/base/a/j.b [object com/facebook/common/l/h])
+  (line 24)
+  (return-void )
+ )
+
+(method (attrs private synchronized ) d()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/j])
+  (catchall  java/lang/Exception from l1692ae to l1692c2 using l1692c6)
+  (line 34)
+  (monitor-enter v1)
+  (label l1692ae)
+  (iget-object v0 v1 com/facebook/base/a/j.a [object com/facebook/base/a/i])
+  (if-nez v0 l1692c2)
+  (line 35)
+  (invoke-virtual {v1} com/facebook/base/a/j/a )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/base/a/j.a [object com/facebook/base/a/i])
+  (label l1692c2)
+  (line 37)
+  (monitor-exit v1)
+  (return-void )
+  (label l1692c6)
+  (line 34)
+  (move-exception v0)
+  (monitor-exit v1)
+  (throw v0)
+ )
+
+(method (attrs protected abstract ) a()[object com/facebook/base/a/i]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+)
+
+(method (attrs protected ) attachBaseContext([object android/content/Context] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/a/j])
+  ; parameter[0] : v1 ([object android/content/Context])
+  (line 59)
+  (invoke-super {v0 v1} android/app/Application/attachBaseContext [object android/content/Context] )
+  (line 61)
+  (invoke-virtual {v0} com/facebook/base/a/j/b )
+  (line 62)
+  (invoke-direct {v0} com/facebook/base/a/j/d )
+  (line 63)
+  (return-void )
+)
+
+(method (attrs protected ) b()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/a/j])
+  (line 45)
+  (return-void )
+)
+
+(method (attrs protected ) c()[object com/facebook/base/a/i]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/j])
+  (line 53)
+  (invoke-direct {v1} com/facebook/base/a/j/d )
+  (line 54)
+  (iget-object v0 v1 com/facebook/base/a/j.a [object com/facebook/base/a/i])
+  (return-object v0)
+)
+
+(method (attrs public ) onCreate()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/j])
+  (line 67)
+  (invoke-super {v1} android/app/Application/onCreate )
+  (line 68)
+  (invoke-direct {v1} com/facebook/base/a/j/d )
+  (line 69)
+  (iget-object v0 v1 com/facebook/base/a/j.a [object com/facebook/base/a/i])
+  (invoke-interface {v0} com/facebook/base/a/i/c )
+  (line 70)
+  (return-void )
+)
+
+(method (attrs public ) onLowMemory()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/a/j])
+  (line 74)
+  (invoke-super {v1} android/app/Application/onLowMemory )
+  (line 75)
+  (invoke-direct {v1} com/facebook/base/a/j/d )
+  (line 76)
+  (iget-object v0 v1 com/facebook/base/a/j.a [object com/facebook/base/a/i])
+  (invoke-interface {v0} com/facebook/base/a/i/e )
+  (line 77)
+  (return-void )
+)
+
+)

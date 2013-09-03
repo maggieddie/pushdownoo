@@ -1,0 +1,41 @@
+(class (attrs public ) org/anddev/andengine/entity/particle/modifier/RotationModifier
+ (super org/anddev/andengine/entity/particle/modifier/BaseSingleValueSpanModifier)
+ (source "RotationModifier.java")
+
+
+(method (attrs public ) <init>(float float float float )void
+  (limit registers 5)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/modifier/RotationModifier])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  ; parameter[3] : v4 (float)
+  (line 26)
+  (invoke-direct {v0 v1 v2 v3 v4} org/anddev/andengine/entity/particle/modifier/BaseSingleValueSpanModifier/<init> float float float float )
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs protected ) onSetInitialValue([object org/anddev/andengine/entity/particle/Particle] float )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/modifier/RotationModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/particle/Particle])
+  ; parameter[1] : v2 (float)
+  (line 39)
+  (invoke-virtual {v1 v2} org/anddev/andengine/entity/particle/Particle/setRotation float )
+  (line 40)
+  (return-void )
+)
+
+(method (attrs protected ) onSetValue([object org/anddev/andengine/entity/particle/Particle] float )void
+  (limit registers 3)
+  ; this: v0 ([object org/anddev/andengine/entity/particle/modifier/RotationModifier])
+  ; parameter[0] : v1 ([object org/anddev/andengine/entity/particle/Particle])
+  ; parameter[1] : v2 (float)
+  (line 44)
+  (invoke-virtual {v1 v2} org/anddev/andengine/entity/particle/Particle/setRotation float )
+  (line 45)
+  (return-void )
+)
+
+)

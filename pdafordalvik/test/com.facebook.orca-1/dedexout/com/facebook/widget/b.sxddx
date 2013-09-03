@@ -1,0 +1,37 @@
+(class (attrs ) com/facebook/widget/b
+ (super java/lang/Object)
+ (source "ConfirmationView.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/widget/ConfirmationView] )
+
+(method (attrs ) <init>([object com/facebook/widget/ConfirmationView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/widget/b])
+  ; parameter[0] : v1 ([object com/facebook/widget/ConfirmationView])
+  (line 69)
+  (iput-object v1 v0 com/facebook/widget/b.a [object com/facebook/widget/ConfirmationView])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/widget/b])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 72)
+  (iget-object v0 v1 com/facebook/widget/b.a [object com/facebook/widget/ConfirmationView])
+  (invoke-static {v0} com/facebook/widget/ConfirmationView/a [object com/facebook/widget/ConfirmationView] )
+  (move-result-object v0)
+  (if-eqz v0 l2f974e)
+  (line 73)
+  (iget-object v0 v1 com/facebook/widget/b.a [object com/facebook/widget/ConfirmationView])
+  (invoke-static {v0} com/facebook/widget/ConfirmationView/a [object com/facebook/widget/ConfirmationView] )
+  (move-result-object v0)
+  (invoke-interface {v0} com/facebook/widget/c/b )
+  (label l2f974e)
+  (line 75)
+  (return-void )
+)
+
+)

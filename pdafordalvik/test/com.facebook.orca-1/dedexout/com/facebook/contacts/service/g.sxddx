@@ -1,0 +1,47 @@
+(class (attrs ) com/facebook/contacts/service/g
+ (super com/facebook/inject/d)
+ (source "ContactsServiceModule.java")
+
+ (field (attrs final ) a [object com/facebook/contacts/service/d] )
+
+(method (attrs private ) <init>([object com/facebook/contacts/service/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/service/g])
+  ; parameter[0] : v1 ([object com/facebook/contacts/service/d])
+  (line 75)
+  (iput-object v1 v0 com/facebook/contacts/service/g.a [object com/facebook/contacts/service/d])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/contacts/service/d] [object com/facebook/contacts/service/e] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/contacts/service/g])
+  ; parameter[0] : v1 ([object com/facebook/contacts/service/d])
+  ; parameter[1] : v2 ([object com/facebook/contacts/service/e])
+  (line 75)
+  (invoke-direct {v0 v1} com/facebook/contacts/service/g/<init> [object com/facebook/contacts/service/d] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/fbservice/service/e]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/service/g])
+  (line 80)
+  (const-class v0 com/facebook/contacts/service/b)
+  (invoke-virtual {v1 v0} com/facebook/contacts/service/g/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/fbservice/service/e])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/service/g])
+  (line 75)
+  (invoke-virtual {v1} com/facebook/contacts/service/g/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,46 @@
+(interface (attrs public abstract ) com/android/internal/widget/ILockSettings
+ (super java/lang/Object)
+ (source "ILockSettings.java")
+ (implements android/os/IInterface)
+
+
+(method (attrs public abstract ) a([object java/lang/String] long int )void
+)
+
+(method (attrs public abstract ) a([object java/lang/String] [object java/lang/String] int )void
+)
+
+(method (attrs public abstract ) a([object java/lang/String] boolean int )void
+)
+
+(method (attrs public abstract ) a([array byte] int )void
+)
+
+(method (attrs public abstract ) a(int )boolean
+)
+
+(method (attrs public abstract ) b([object java/lang/String] long int )long
+)
+
+(method (attrs public abstract ) b([object java/lang/String] [object java/lang/String] int )[object java/lang/String]
+)
+
+(method (attrs public abstract ) b(int )boolean
+)
+
+(method (attrs public abstract ) b([object java/lang/String] boolean int )boolean
+)
+
+(method (attrs public abstract ) b([array byte] int )boolean
+)
+
+(method (attrs public abstract ) c(int )void
+)
+
+(method (attrs public abstract ) c([array byte] int )void
+)
+
+(method (attrs public abstract ) d([array byte] int )boolean
+)
+
+)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dash_login_root" android:background="@drawable/dash_login_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.facebook.dash.fragment.login.DashFB4ALoginFragment" android:id="@id/dash_fb4a_login_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <fragment android:name="com.facebook.dash.fragment.login.DashStandaloneLoginFragment" android:id="@id/dash_standalone_login_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <fragment android:name="com.facebook.dash.launchables.fragment.LaunchablesFragment" android:id="@id/login_launchables_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <FrameLayout android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/dash_login_bauble" layout="@layout/bauble" />
+    </FrameLayout>
+</FrameLayout>

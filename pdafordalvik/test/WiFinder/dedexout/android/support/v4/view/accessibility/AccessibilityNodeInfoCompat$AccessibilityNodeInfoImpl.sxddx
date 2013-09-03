@@ -1,0 +1,189 @@
+(interface (attrs abstract ) android/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl
+ (super java/lang/Object)
+ (source "AccessibilityNodeInfoCompat.java")
+
+
+(method (attrs public abstract ) addAction([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) addChild([object java/lang/Object] [object android/view/View] )void
+)
+
+(method (attrs public abstract ) addChild([object java/lang/Object] [object android/view/View] int )void
+)
+
+(method (attrs public abstract ) findAccessibilityNodeInfosByText([object java/lang/Object] [object java/lang/String] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Object;"  "Ljava/lang/String;"  ")"  "Ljava/util/List"  "<"  "Ljava/lang/Object;"  ">;")
+  )
+)
+
+(method (attrs public abstract ) findFocus([object java/lang/Object] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) focusSearch([object java/lang/Object] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getActions([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getBoundsInParent([object java/lang/Object] [object android/graphics/Rect] )void
+)
+
+(method (attrs public abstract ) getBoundsInScreen([object java/lang/Object] [object android/graphics/Rect] )void
+)
+
+(method (attrs public abstract ) getChild([object java/lang/Object] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getChildCount([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getClassName([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getContentDescription([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getMovementGranularities([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) getPackageName([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getParent([object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) getText([object java/lang/Object] )[object java/lang/CharSequence]
+)
+
+(method (attrs public abstract ) getWindowId([object java/lang/Object] )int
+)
+
+(method (attrs public abstract ) isAccessibilityFocused([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isCheckable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isChecked([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isClickable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isEnabled([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isFocusable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isFocused([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isLongClickable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isPassword([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isScrollable([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isSelected([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) isVisibleToUser([object java/lang/Object] )boolean
+)
+
+(method (attrs public abstract ) obtain()[object java/lang/Object]
+)
+
+(method (attrs public abstract ) obtain([object android/view/View] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) obtain([object android/view/View] int )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) obtain([object java/lang/Object] )[object java/lang/Object]
+)
+
+(method (attrs public abstract ) performAction([object java/lang/Object] int )boolean
+)
+
+(method (attrs public abstract ) performAction([object java/lang/Object] int [object android/os/Bundle] )boolean
+)
+
+(method (attrs public abstract ) recycle([object java/lang/Object] )void
+)
+
+(method (attrs public abstract ) setAccessibilityFocused([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setBoundsInParent([object java/lang/Object] [object android/graphics/Rect] )void
+)
+
+(method (attrs public abstract ) setBoundsInScreen([object java/lang/Object] [object android/graphics/Rect] )void
+)
+
+(method (attrs public abstract ) setCheckable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setChecked([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setClassName([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setClickable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setContentDescription([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setEnabled([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setFocusable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setFocused([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setLongClickable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setMovementGranularities([object java/lang/Object] int )void
+)
+
+(method (attrs public abstract ) setPackageName([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setParent([object java/lang/Object] [object android/view/View] )void
+)
+
+(method (attrs public abstract ) setParent([object java/lang/Object] [object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setPassword([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setScrollable([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setSelected([object java/lang/Object] boolean )void
+)
+
+(method (attrs public abstract ) setSource([object java/lang/Object] [object android/view/View] )void
+)
+
+(method (attrs public abstract ) setSource([object java/lang/Object] [object android/view/View] int )void
+)
+
+(method (attrs public abstract ) setText([object java/lang/Object] [object java/lang/CharSequence] )void
+)
+
+(method (attrs public abstract ) setVisibleToUser([object java/lang/Object] boolean )void
+)
+
+)

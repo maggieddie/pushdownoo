@@ -1,0 +1,47 @@
+(class (attrs ) android/support/v4/content/ModernAsyncTask$2
+ (super android/support/v4/content/ModernAsyncTask$WorkerRunnable)
+ (source "ModernAsyncTask.java")
+
+ (field (attrs final ) this$0 [object android/support/v4/content/ModernAsyncTask] )
+
+(method (attrs ) <init>([object android/support/v4/content/ModernAsyncTask] )void
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/content/ModernAsyncTask$2])
+  ; parameter[0] : v2 ([object android/support/v4/content/ModernAsyncTask])
+  (line 118)
+  (iput-object v2 v1 android/support/v4/content/ModernAsyncTask$2.this$0 [object android/support/v4/content/ModernAsyncTask])
+  (const/4 v0 0)
+  (invoke-direct {v1 v0} android/support/v4/content/ModernAsyncTask$WorkerRunnable/<init> [object android/support/v4/content/ModernAsyncTask$1] )
+  (return-void )
+ )
+
+(method (attrs public ) call()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TResult;")
+  )
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 4)
+  ; this: v3 ([object android/support/v4/content/ModernAsyncTask$2])
+  (line 120)
+  (iget-object v0 v3 android/support/v4/content/ModernAsyncTask$2.this$0 [object android/support/v4/content/ModernAsyncTask])
+  (invoke-static {v0} android/support/v4/content/ModernAsyncTask/access$200 [object android/support/v4/content/ModernAsyncTask] )
+  (move-result-object v0)
+  (const/4 v1 1)
+  (invoke-virtual {v0 v1} java/util/concurrent/atomic/AtomicBoolean/set boolean )
+  (line 122)
+  (const/16 v0 10)
+  (invoke-static {v0} android/os/Process/setThreadPriority int )
+  (line 123)
+  (iget-object v0 v3 android/support/v4/content/ModernAsyncTask$2.this$0 [object android/support/v4/content/ModernAsyncTask])
+  (iget-object v1 v3 android/support/v4/content/ModernAsyncTask$2.this$0 [object android/support/v4/content/ModernAsyncTask])
+  (iget-object v2 v3 android/support/v4/content/ModernAsyncTask$2.mParams [array [object java/lang/Object]])
+  (invoke-virtual {v1 v2} android/support/v4/content/ModernAsyncTask/doInBackground [array [object java/lang/Object]] )
+  (move-result-object v1)
+  (invoke-static {v0 v1} android/support/v4/content/ModernAsyncTask/access$300 [object android/support/v4/content/ModernAsyncTask] [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

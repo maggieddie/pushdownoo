@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/bugreporter/activity/tasklist/n
+ (super com/facebook/inject/d)
+ (source "TaskListModule.java")
+
+ (field (attrs final ) a [object com/facebook/bugreporter/activity/tasklist/j] )
+
+(method (attrs private ) <init>([object com/facebook/bugreporter/activity/tasklist/j] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/bugreporter/activity/tasklist/n])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/activity/tasklist/j])
+  (line 41)
+  (iput-object v1 v0 com/facebook/bugreporter/activity/tasklist/n.a [object com/facebook/bugreporter/activity/tasklist/j])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/bugreporter/activity/tasklist/j] [object com/facebook/bugreporter/activity/tasklist/k] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/bugreporter/activity/tasklist/n])
+  ; parameter[0] : v1 ([object com/facebook/bugreporter/activity/tasklist/j])
+  ; parameter[1] : v2 ([object com/facebook/bugreporter/activity/tasklist/k])
+  (line 41)
+  (invoke-direct {v0 v1} com/facebook/bugreporter/activity/tasklist/n/<init> [object com/facebook/bugreporter/activity/tasklist/j] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/bugreporter/activity/tasklist/e]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/bugreporter/activity/tasklist/n])
+  (line 45)
+  (new-instance v0 com/facebook/bugreporter/activity/tasklist/e)
+  (invoke-direct {v0} com/facebook/bugreporter/activity/tasklist/e/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/bugreporter/activity/tasklist/n])
+  (line 41)
+  (invoke-virtual {v1} com/facebook/bugreporter/activity/tasklist/n/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

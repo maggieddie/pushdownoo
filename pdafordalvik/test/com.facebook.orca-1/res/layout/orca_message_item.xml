@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.text.BetterTextView android:textSize="12.0sp" android:textColor="#ff656668" android:ellipsize="end" android:id="@id/message_left_bubble_sender_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="3.0dip" android:singleLine="true" android:includeFontPadding="false" />
+    <FrameLayout android:id="@id/message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.user.tiles.UserTileView android:layout_gravity="top|left|center" android:id="@id/message_user_tile" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="7.0dip" orca:tileSize="35.0dip" />
+        <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/message_bubble_container" android:background="@drawable/orca_convo_bubble_white_button" android:focusable="true" android:clickable="true" android:longClickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/message_item_view_left_margin" android:layout_marginRight="@dimen/message_item_view_right_margin">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/orca_message_text_size" android:textColor="#ff333333" android:gravity="top|left|center" android:layout_gravity="top|left|center" android:id="@id/message_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:bufferType="spannable" android:singleLine="false" android:includeFontPadding="true" orca:minimallyWide="true" orca:maximallyWideThreshold="20.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

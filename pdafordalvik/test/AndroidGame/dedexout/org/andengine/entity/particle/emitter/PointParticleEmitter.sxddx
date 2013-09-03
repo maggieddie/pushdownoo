@@ -1,0 +1,33 @@
+(class (attrs public ) org/andengine/entity/particle/emitter/PointParticleEmitter
+ (super org/andengine/entity/particle/emitter/BaseParticleEmitter)
+ (source "PointParticleEmitter.java")
+
+
+(method (attrs public ) <init>(float float )void
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/entity/particle/emitter/PointParticleEmitter])
+  ; parameter[0] : v1 (float)
+  ; parameter[1] : v2 (float)
+  (line 27)
+  (invoke-direct {v0 v1 v2} org/andengine/entity/particle/emitter/BaseParticleEmitter/<init> float float )
+  (line 28)
+  (return-void )
+ )
+
+(method (attrs public ) getPositionOffset([array float] )void
+  (limit registers 4)
+  ; this: v2 ([object org/andengine/entity/particle/emitter/PointParticleEmitter])
+  ; parameter[0] : v3 ([array float])
+  (line 40)
+  (const/4 v0 0)
+  (iget v1 v2 org/andengine/entity/particle/emitter/PointParticleEmitter.mCenterX float)
+  (aput v1 v3 v0)
+  (line 41)
+  (const/4 v0 1)
+  (iget v1 v2 org/andengine/entity/particle/emitter/PointParticleEmitter.mCenterY float)
+  (aput v1 v3 v0)
+  (line 42)
+  (return-void )
+)
+
+)

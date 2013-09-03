@@ -1,0 +1,13 @@
+(interface (attrs public abstract ) com/facebook/analytics/cd
+ (super java/lang/Object)
+ (source "IAnalyticsService.java")
+ (implements android/os/IInterface)
+
+
+(method (attrs public abstract ) a([object java/util/List] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/List"  "<"  "Lcom/facebook/analytics/AnalyticsServiceEvent;"  ">;)V")
+  )
+)
+
+)

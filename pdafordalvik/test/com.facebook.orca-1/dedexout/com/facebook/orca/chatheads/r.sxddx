@@ -1,0 +1,40 @@
+(class (attrs ) com/facebook/orca/chatheads/r
+ (super com/facebook/base/broadcast/q)
+ (source "ChatHeadService.java")
+
+ (field (attrs final ) a [object com/facebook/orca/chatheads/ChatHeadService] )
+
+(method (attrs ) <init>([object com/facebook/orca/chatheads/ChatHeadService] [object android/content/Context] [object android/content/IntentFilter] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/orca/chatheads/r])
+  ; parameter[0] : v1 ([object com/facebook/orca/chatheads/ChatHeadService])
+  ; parameter[1] : v2 ([object android/content/Context])
+  ; parameter[2] : v3 ([object android/content/IntentFilter])
+  (line 207)
+  (iput-object v1 v0 com/facebook/orca/chatheads/r.a [object com/facebook/orca/chatheads/ChatHeadService])
+  (invoke-direct {v0 v2 v3} com/facebook/base/broadcast/q/<init> [object android/content/Context] [object android/content/IntentFilter] )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/content/Context] [object android/content/Intent] )void
+  (limit registers 5)
+  ; this: v2 ([object com/facebook/orca/chatheads/r])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 ([object android/content/Intent])
+  (line 210)
+  (invoke-virtual {v4} android/content/Intent/getAction )
+  (move-result-object v0)
+  (line 211)
+  (const-string v1 "com.facebook.orca.login.AuthStateMachineMonitor.LOGOUT_COMPLETE")
+  (invoke-virtual {v0 v1} java/lang/String/equals [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l23836e)
+  (line 212)
+  (iget-object v0 v2 com/facebook/orca/chatheads/r.a [object com/facebook/orca/chatheads/ChatHeadService])
+  (invoke-static {v0} com/facebook/orca/chatheads/ChatHeadService/e [object com/facebook/orca/chatheads/ChatHeadService] )
+  (label l23836e)
+  (line 214)
+  (return-void )
+)
+
+)

@@ -1,0 +1,51 @@
+(class (attrs public ) com/facebook/zero/c/b
+ (super android/preference/Preference)
+ (source "ClearZeroRatingPreference.java")
+
+ (field (attrs private final ) a [object com/facebook/zero/d/a] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/zero/c/b])
+  ; parameter[0] : v3 ([object android/content/Context])
+  (line 20)
+  (invoke-direct {v2 v3} android/preference/Preference/<init> [object android/content/Context] )
+  (line 22)
+  (invoke-static {v3} com/facebook/inject/t/a [object android/content/Context] )
+  (move-result-object v0)
+  (line 23)
+  (const-class v1 com/facebook/zero/d/a)
+  (invoke-virtual {v0 v1} com/facebook/inject/t/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/zero/d/a])
+  (iput-object v0 v2 com/facebook/zero/c/b.a [object com/facebook/zero/d/a])
+  (line 25)
+  (new-instance v0 com/facebook/zero/c/c)
+  (invoke-direct {v0 v2} com/facebook/zero/c/c/<init> [object com/facebook/zero/c/b] )
+  (invoke-virtual {v2 v0} com/facebook/zero/c/b/setOnPreferenceClickListener [object android/preference/Preference$OnPreferenceClickListener] )
+  (line 33)
+  (sget v0 com/facebook/o.preference_zero_rating_clear_preferences int)
+  (invoke-virtual {v2 v0} com/facebook/zero/c/b/setTitle int )
+  (line 34)
+  (return-void )
+ )
+
+(method (attrs private ) a()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/zero/c/b])
+  (line 37)
+  (iget-object v0 v1 com/facebook/zero/c/b.a [object com/facebook/zero/d/a])
+  (invoke-virtual {v0} com/facebook/zero/d/a/b )
+  (line 38)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/zero/c/b] )void
+  (limit registers 1)
+  ; parameter[0] : v0 ([object com/facebook/zero/c/b])
+  (line 15)
+  (invoke-direct {v0} com/facebook/zero/c/b/a )
+  (return-void )
+ )
+
+)

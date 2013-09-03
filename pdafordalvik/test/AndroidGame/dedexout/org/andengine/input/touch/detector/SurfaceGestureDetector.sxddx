@@ -1,0 +1,74 @@
+(class (attrs public abstract ) org/andengine/input/touch/detector/SurfaceGestureDetector
+ (super org/andengine/input/touch/detector/BaseDetector)
+ (source "SurfaceGestureDetector.java")
+
+ (field (attrs private static final ) SWIPE_MIN_DISTANCE_DEFAULT float 120.0 )
+ (field (attrs private final ) mGestureDetector [object android/view/GestureDetector] )
+
+(method (attrs public ) <init>([object android/content/Context] )void
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/input/touch/detector/SurfaceGestureDetector])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 36)
+  (const/high16 v0 17136)
+  (invoke-direct {v1 v2 v0} org/andengine/input/touch/detector/SurfaceGestureDetector/<init> [object android/content/Context] float )
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object android/content/Context] float )void
+  (limit registers 5)
+  ; this: v2 ([object org/andengine/input/touch/detector/SurfaceGestureDetector])
+  ; parameter[0] : v3 ([object android/content/Context])
+  ; parameter[1] : v4 (float)
+  (line 39)
+  (invoke-direct {v2} org/andengine/input/touch/detector/BaseDetector/<init> )
+  (line 40)
+  (new-instance v0 android/view/GestureDetector)
+  (new-instance v1 org/andengine/input/touch/detector/SurfaceGestureDetector$InnerOnGestureDetectorListener)
+  (invoke-direct {v1 v2 v4} org/andengine/input/touch/detector/SurfaceGestureDetector$InnerOnGestureDetectorListener/<init> [object org/andengine/input/touch/detector/SurfaceGestureDetector] float )
+  (invoke-direct {v0 v3 v1} android/view/GestureDetector/<init> [object android/content/Context] [object android/view/GestureDetector$OnGestureListener] )
+  (iput-object v0 v2 org/andengine/input/touch/detector/SurfaceGestureDetector.mGestureDetector [object android/view/GestureDetector])
+  (line 41)
+  (return-void )
+ )
+
+(method (attrs protected abstract ) onDoubleTap()boolean
+)
+
+(method (attrs public ) onManagedTouchEvent([object org/andengine/input/touch/TouchEvent] )boolean
+  (limit registers 4)
+  ; this: v2 ([object org/andengine/input/touch/detector/SurfaceGestureDetector])
+  ; parameter[0] : v3 ([object org/andengine/input/touch/TouchEvent])
+  (line 65)
+  (iget-object v0 v2 org/andengine/input/touch/detector/SurfaceGestureDetector.mGestureDetector [object android/view/GestureDetector])
+  (invoke-virtual {v3} org/andengine/input/touch/TouchEvent/getMotionEvent )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} android/view/GestureDetector/onTouchEvent [object android/view/MotionEvent] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs protected abstract ) onSingleTap()boolean
+)
+
+(method (attrs protected abstract ) onSwipeDown()boolean
+)
+
+(method (attrs protected abstract ) onSwipeLeft()boolean
+)
+
+(method (attrs protected abstract ) onSwipeRight()boolean
+)
+
+(method (attrs protected abstract ) onSwipeUp()boolean
+)
+
+(method (attrs public ) reset()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/input/touch/detector/SurfaceGestureDetector])
+  (line 61)
+  (return-void )
+)
+
+)

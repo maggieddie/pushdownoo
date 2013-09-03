@@ -80,7 +80,7 @@
   (move-result-object v0)
   (label lde4b6)
   (line 82)
-  (invoke-virtual-quick {v5 v0} java/util/LinkedHashSet/add [object java/lang/Object] )
+  (invoke-virtual-quick {v5 v0} vtable #0xb)
   (goto lde4a2)
   (label lde4be)
   (line 79)

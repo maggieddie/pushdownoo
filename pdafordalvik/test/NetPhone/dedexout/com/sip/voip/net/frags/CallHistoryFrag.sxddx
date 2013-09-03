@@ -1,0 +1,43 @@
+(class (attrs public ) com/sip/voip/net/frags/CallHistoryFrag
+ (super android/app/Activity)
+ (source "CallHistoryFrag.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/sip/voip/net/frags/CallHistoryFrag])
+  (line 35)
+  (invoke-direct {v0} android/app/Activity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onCreate([object android/os/Bundle] )void
+  (limit registers 6)
+  ; this: v4 ([object com/sip/voip/net/frags/CallHistoryFrag])
+  ; parameter[0] : v5 ([object android/os/Bundle])
+  (const v3 16908290) ; 0x1020002)
+  (line 39)
+  (invoke-super {v4 v5} android/app/Activity/onCreate [object android/os/Bundle] )
+  (line 41)
+  (invoke-virtual {v4} com/sip/voip/net/frags/CallHistoryFrag/getFragmentManager )
+  (move-result-object v0)
+  (line 43)
+  (invoke-virtual {v0 v3} android/app/FragmentManager/findFragmentById int )
+  (move-result-object v2)
+  (if-nez v2 l2b40c)
+  (line 44)
+  (new-instance v1 com/sip/voip/net/frags/CallHistoryFrag$CallListFragment)
+  (invoke-direct {v1} com/sip/voip/net/frags/CallHistoryFrag$CallListFragment/<init> )
+  (label l2b3f6)
+  (line 45)
+  (invoke-virtual {v0} android/app/FragmentManager/beginTransaction )
+  (move-result-object v2)
+  (invoke-virtual {v2 v3 v1} android/app/FragmentTransaction/add int [object android/app/Fragment] )
+  (move-result-object v2)
+  (invoke-virtual {v2} android/app/FragmentTransaction/commit )
+  (label l2b40c)
+  (line 47)
+  (return-void )
+)
+
+)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout style="@style/ListRow">
+        <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/list_item_text" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/browse_slug_title" style="@style/InsetText" />
+        <TextView android:textSize="@dimen/font_size_default" android:textColor="@color/list_item_secondary_text" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/browse_slug_subtitle" android:layout_below="@id/title" style="@style/InsetText" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

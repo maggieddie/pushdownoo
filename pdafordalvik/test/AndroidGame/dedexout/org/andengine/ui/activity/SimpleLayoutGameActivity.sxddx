@@ -1,0 +1,71 @@
+(class (attrs public abstract ) org/andengine/ui/activity/SimpleLayoutGameActivity
+ (super org/andengine/ui/activity/LayoutGameActivity)
+ (source "SimpleLayoutGameActivity.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/andengine/ui/activity/SimpleLayoutGameActivity])
+  (line 15)
+  (invoke-direct {v0} org/andengine/ui/activity/LayoutGameActivity/<init> )
+  (return-void )
+ )
+
+(method (attrs protected abstract ) onCreateResources()void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public final ) onCreateResources([object org/andengine/ui/IGameInterface$OnCreateResourcesCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/ui/activity/SimpleLayoutGameActivity])
+  ; parameter[0] : v1 ([object org/andengine/ui/IGameInterface$OnCreateResourcesCallback])
+  (line 41)
+  (invoke-virtual {v0} org/andengine/ui/activity/SimpleLayoutGameActivity/onCreateResources )
+  (line 43)
+  (invoke-interface {v1} org/andengine/ui/IGameInterface$OnCreateResourcesCallback/onCreateResourcesFinished )
+  (line 44)
+  (return-void )
+)
+
+(method (attrs protected abstract ) onCreateScene()[object org/andengine/entity/scene/Scene]
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+)
+
+(method (attrs public final ) onCreateScene([object org/andengine/ui/IGameInterface$OnCreateSceneCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/ui/activity/SimpleLayoutGameActivity])
+  ; parameter[0] : v2 ([object org/andengine/ui/IGameInterface$OnCreateSceneCallback])
+  (line 48)
+  (invoke-virtual {v1} org/andengine/ui/activity/SimpleLayoutGameActivity/onCreateScene )
+  (move-result-object v0)
+  (line 50)
+  (invoke-interface {v2 v0} org/andengine/ui/IGameInterface$OnCreateSceneCallback/onCreateSceneFinished [object org/andengine/entity/scene/Scene] )
+  (line 51)
+  (return-void )
+)
+
+(method (attrs public final ) onPopulateScene([object org/andengine/entity/scene/Scene] [object org/andengine/ui/IGameInterface$OnPopulateSceneCallback] )void
+  (annotation systemVisibility [object dalvik/annotation/Throws]
+    (value [array [object java/lang/String]] [object java/lang/Exception])
+  )
+  (limit registers 3)
+  ; this: v0 ([object org/andengine/ui/activity/SimpleLayoutGameActivity])
+  ; parameter[0] : v1 ([object org/andengine/entity/scene/Scene])
+  ; parameter[1] : v2 ([object org/andengine/ui/IGameInterface$OnPopulateSceneCallback])
+  (line 55)
+  (invoke-interface {v2} org/andengine/ui/IGameInterface$OnPopulateSceneCallback/onPopulateSceneFinished )
+  (line 56)
+  (return-void )
+)
+
+)

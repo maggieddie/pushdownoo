@@ -1,0 +1,45 @@
+(class (attrs ) com/facebook/orca/contacts/picker/cd
+ (super com/facebook/inject/d)
+ (source "MessagesContactPickerModule.java")
+
+ (field (attrs final ) a [object com/facebook/orca/contacts/picker/bi] )
+
+(method (attrs private ) <init>([object com/facebook/orca/contacts/picker/bi] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/cd])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/bi])
+  (line 241)
+  (iput-object v1 v0 com/facebook/orca/contacts/picker/cd.a [object com/facebook/orca/contacts/picker/bi])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/orca/contacts/picker/bi] [object com/facebook/orca/contacts/picker/bj] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/orca/contacts/picker/cd])
+  ; parameter[0] : v1 ([object com/facebook/orca/contacts/picker/bi])
+  ; parameter[1] : v2 ([object com/facebook/orca/contacts/picker/bj])
+  (line 241)
+  (invoke-direct {v0 v1} com/facebook/orca/contacts/picker/cd/<init> [object com/facebook/orca/contacts/picker/bi] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/contacts/a/e]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/cd])
+  (line 245)
+  (new-instance v0 com/facebook/contacts/a/e)
+  (invoke-direct {v0} com/facebook/contacts/a/e/<init> )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/contacts/picker/cd])
+  (line 241)
+  (invoke-virtual {v1} com/facebook/orca/contacts/picker/cd/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

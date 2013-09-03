@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/message_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="18.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="right|center" android:id="@id/receipt_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="5.0dip" android:scaleType="centerInside" />
+    <com.facebook.orca.common.ui.widgets.text.RowReceiptTextView android:layout_gravity="right|center" android:id="@id/receipt_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" orca:textColor="#ff9ca0a7" orca:maxLines="1" orca:textStyle="normal" orca:minScaledTextSize="11" orca:maxScaledTextSize="11" orca:alignment="normal" />
+</LinearLayout>

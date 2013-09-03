@@ -1,0 +1,51 @@
+(class (attrs public ) com/facebook/contacts/contactslist/g
+ (super java/lang/Object)
+ (source "ContactsListLoader.java")
+
+ (field (attrs private final ) a [object com/google/common/a/es] )
+ (field (attrs private final ) b boolean )
+
+(method (attrs public ) <init>([object com/google/common/a/es] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/Contact;"  ">;Z)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/contacts/contactslist/g])
+  ; parameter[0] : v2 ([object com/google/common/a/es])
+  (line 34)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v0} com/facebook/contacts/contactslist/g/<init> [object com/google/common/a/es] boolean )
+  (line 35)
+  (return-void )
+ )
+
+(method (attrs public ) <init>([object com/google/common/a/es] boolean )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/Contact;"  ">;Z)V")
+  )
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/contacts/contactslist/g])
+  ; parameter[0] : v1 ([object com/google/common/a/es])
+  ; parameter[1] : v2 (boolean)
+  (line 28)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 29)
+  (iput-object v1 v0 com/facebook/contacts/contactslist/g.a [object com/google/common/a/es])
+  (line 30)
+  (iput-boolean v2 v0 com/facebook/contacts/contactslist/g.b boolean)
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/google/common/a/es]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/models/Contact;"  ">;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/contacts/contactslist/g])
+  (line 38)
+  (iget-object v0 v1 com/facebook/contacts/contactslist/g.a [object com/google/common/a/es])
+  (return-object v0)
+)
+
+)

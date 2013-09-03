@@ -1,0 +1,51 @@
+(class (attrs ) com/facebook/contacts/contactcard/n
+ (super com/facebook/fbservice/ops/ac)
+ (source "ContactCardFragment.java")
+
+ (field (attrs final ) a [object com/facebook/contacts/contactcard/ContactCardFragment] )
+
+(method (attrs ) <init>([object com/facebook/contacts/contactcard/ContactCardFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/contactcard/n])
+  ; parameter[0] : v1 ([object com/facebook/contacts/contactcard/ContactCardFragment])
+  (line 1144)
+  (iput-object v1 v0 com/facebook/contacts/contactcard/n.a [object com/facebook/contacts/contactcard/ContactCardFragment])
+  (invoke-direct {v0} com/facebook/fbservice/ops/ac/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/contacts/contactcard/n])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/OperationResult])
+  (line 1148)
+  (iget-object v0 v2 com/facebook/contacts/contactcard/n.a [object com/facebook/contacts/contactcard/ContactCardFragment])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/contacts/contactcard/ContactCardFragment/d [object com/facebook/contacts/contactcard/ContactCardFragment] [object com/google/common/d/a/s] )
+  (line 1149)
+  (return-void )
+)
+
+(method (attrs protected ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/contacts/contactcard/n])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/ServiceException])
+  (line 1153)
+  (iget-object v0 v2 com/facebook/contacts/contactcard/n.a [object com/facebook/contacts/contactcard/ContactCardFragment])
+  (const/4 v1 0)
+  (invoke-static {v0 v1} com/facebook/contacts/contactcard/ContactCardFragment/d [object com/facebook/contacts/contactcard/ContactCardFragment] [object com/google/common/d/a/s] )
+  (line 1154)
+  (return-void )
+)
+
+(method (attrs public ) b([object java/lang/Object] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/contactcard/n])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 1144)
+  (check-cast v1 [object com/facebook/fbservice/service/OperationResult])
+  (invoke-virtual {v0 v1} com/facebook/contacts/contactcard/n/a [object com/facebook/fbservice/service/OperationResult] )
+  (return-void )
+)
+
+)

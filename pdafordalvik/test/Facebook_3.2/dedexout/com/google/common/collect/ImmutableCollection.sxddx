@@ -1,0 +1,271 @@
+(class (attrs public abstract ) com/google/common/collect/ImmutableCollection
+ (super java/lang/Object)
+ (source "ImmutableCollection.java")
+ (implements java/io/Serializable)
+ (implements java/util/Collection)
+
+ (field (attrs static final ) c [object com/google/common/collect/ImmutableCollection] )
+ (field (attrs private transient ) a [object com/google/common/collect/ImmutableList] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 2)
+  (line 44)
+  (new-instance v0 com/google/common/collect/ImmutableCollection$EmptyImmutableCollection)
+  (const/4 v1 0)
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableCollection$EmptyImmutableCollection/<init> [object com/google/common/collect/ImmutableCollection$1] )
+  (sput-object v0 com/google/common/collect/ImmutableCollection.c [object com/google/common/collect/ImmutableCollection])
+  (return-void )
+ )
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/collect/ImmutableCollection])
+  (line 47)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) I_()[object com/google/common/collect/UnmodifiableIterator]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/UnmodifiableIterator"  "<TE;>;")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+)
+
+(method (attrs abstract ) a()boolean
+)
+
+(method (attrs public final ) add([object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TE;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 91)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public final ) addAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<+TE;>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 111)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public final ) clear()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 141)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) contains([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 67)
+  (if-eqz v2 l102558)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection/I_ )
+  (move-result-object v0)
+  (invoke-static {v0 v2} com/google/common/collect/Iterators/a [object java/util/Iterator] [object java/lang/Object] )
+  (move-result v0)
+  (if-eqz v0 l102558)
+  (const/4 v0 1)
+  (label l102556)
+  (return v0)
+  (label l102558)
+  (const/4 v0 0)
+  (goto l102556)
+)
+
+(method (attrs public ) containsAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 72)
+  (invoke-static {v1 v2} com/google/common/collect/Collections2/a [object java/util/Collection] [object java/util/Collection] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) h()[object com/google/common/collect/ImmutableList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/ImmutableList"  "<TE;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 156)
+  (iget-object v0 v1 com/google/common/collect/ImmutableCollection.a [object com/google/common/collect/ImmutableList])
+  (line 157)
+  (if-nez v0 l10259c)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection/i )
+  (move-result-object v0)
+  (iput-object v0 v1 com/google/common/collect/ImmutableCollection.a [object com/google/common/collect/ImmutableList])
+  (label l10259c)
+  (return-object v0)
+)
+
+(method (attrs ) i()[object com/google/common/collect/ImmutableList]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/collect/ImmutableList"  "<TE;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableCollection])
+  (line 161)
+  (invoke-virtual {v2} com/google/common/collect/ImmutableCollection/size )
+  (move-result v0)
+  (packed-switch v0 0
+    ps1025b8_1025d2 ; case 0
+    ps1025b8_1025dc ; case 1
+    ps1025b8_default) ; default
+  (label ps1025b8_default)
+  (line 167)
+  (new-instance v0 com/google/common/collect/ImmutableAsList)
+  (invoke-virtual {v2} com/google/common/collect/ImmutableCollection/toArray )
+  (move-result-object v1)
+  (invoke-direct {v0 v1 v2} com/google/common/collect/ImmutableAsList/<init> [array [object java/lang/Object]] [object com/google/common/collect/ImmutableCollection] )
+  (label l1025d0)
+  (return-object v0)
+  (label ps1025b8_1025d2)
+  (line 163)
+  (invoke-static {} com/google/common/collect/ImmutableList/d )
+  (nop )
+  (move-result-object v0)
+  (goto l1025d0)
+  (label ps1025b8_1025dc)
+  (line 165)
+  (invoke-virtual {v2} com/google/common/collect/ImmutableCollection/I_ )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/google/common/collect/UnmodifiableIterator/next )
+  (move-result-object v0)
+  (invoke-static {v0} com/google/common/collect/ImmutableList/a [object java/lang/Object] )
+  (move-result-object v0)
+  (goto l1025d0)
+  (line 161)
+  (label l1025f6)
+  (data-array
+    0x00 0x00
+  )
+)
+
+(method (attrs public ) isEmpty()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 77)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection/size )
+  (move-result v0)
+  (if-nez v0 l102628)
+  (const/4 v0 1)
+  (label l102626)
+  (return v0)
+  (label l102628)
+  (const/4 v0 0)
+  (goto l102626)
+)
+
+(method (attrs public ) iterator()[object java/util/Iterator]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 40)
+  (invoke-virtual {v1} com/google/common/collect/ImmutableCollection/I_ )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public final ) remove([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 101)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public final ) removeAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 121)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public final ) retainAll([object java/util/Collection] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/util/Collection"  "<*>;)Z")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([object java/util/Collection])
+  (line 131)
+  (new-instance v0 java/lang/UnsupportedOperationException)
+  (invoke-direct {v0} java/lang/UnsupportedOperationException/<init> )
+  (throw v0)
+)
+
+(method (attrs public ) toArray()[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 57)
+  (invoke-static {v1} com/google/common/collect/ObjectArrays/a [object java/util/Collection] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toArray([array [object java/lang/Object]] )[array [object java/lang/Object]]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Ljava/lang/Object;"  ">([TT;)[TT;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  ; parameter[0] : v2 ([array [object java/lang/Object]])
+  (line 62)
+  (invoke-static {v1 v2} com/google/common/collect/ObjectArrays/a [object java/util/Collection] [array [object java/lang/Object]] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/collect/ImmutableCollection])
+  (line 81)
+  (invoke-static {v1} com/google/common/collect/Collections2/a [object java/util/Collection] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs ) writeReplace()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableCollection])
+  (line 266)
+  (new-instance v0 com/google/common/collect/ImmutableCollection$SerializedForm)
+  (invoke-virtual {v2} com/google/common/collect/ImmutableCollection/toArray )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableCollection$SerializedForm/<init> [array [object java/lang/Object]] )
+  (return-object v0)
+)
+
+)

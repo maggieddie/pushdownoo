@@ -1,0 +1,7 @@
+(interface (attrs public abstract annotation ) com/facebook/common/init/NeedsHighPriorityInitOnBackgroundThread
+ (super java/lang/Object)
+ (source "NeedsHighPriorityInitOnBackgroundThread.java")
+ (implements java/lang/annotation/Annotation)
+
+
+)

@@ -1,0 +1,55 @@
+(class (attrs public final ) com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdScalarSerializer)
+ (source "StdJdkSerializers.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer])
+  (line 108)
+  (const-class v0 java/util/concurrent/atomic/AtomicLong)
+  (const/4 v1 0)
+  (invoke-direct {v2 v0 v1} com/fasterxml/jackson/databind/ser/std/StdScalarSerializer/<init> [object java/lang/Class] boolean )
+  (return-void )
+ )
+
+(method (attrs public ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 5)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer])
+  ; parameter[0] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v4 ([object java/lang/reflect/Type])
+  (line 120)
+  (const-string v0 "integer")
+  (const/4 v1 1)
+  (invoke-virtual {v2 v0 v1} com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer/createSchemaNode [object java/lang/String] boolean )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 105)
+  (check-cast v1 [object java/util/concurrent/atomic/AtomicLong])
+  (invoke-virtual {v0 v1 v2 v3} com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer/serialize [object java/util/concurrent/atomic/AtomicLong] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (return-void )
+)
+
+(method (attrs public ) serialize([object java/util/concurrent/atomic/AtomicLong] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 6)
+  ; this: v2 ([object com/fasterxml/jackson/databind/ser/std/StdJdkSerializers$AtomicLongSerializer])
+  ; parameter[0] : v3 ([object java/util/concurrent/atomic/AtomicLong])
+  ; parameter[1] : v4 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v5 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 114)
+  (invoke-virtual {v3} java/util/concurrent/atomic/AtomicLong/get )
+  (move-result-wide v0)
+  (invoke-virtual {v4 v0 v1} com/fasterxml/jackson/core/JsonGenerator/writeNumber long )
+  (line 115)
+  (return-void )
+)
+
+)

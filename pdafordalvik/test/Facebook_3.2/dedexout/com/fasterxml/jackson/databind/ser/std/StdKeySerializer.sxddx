@@ -1,0 +1,60 @@
+(class (attrs public ) com/fasterxml/jackson/databind/ser/std/StdKeySerializer
+ (super com/fasterxml/jackson/databind/ser/std/StdSerializer)
+ (source "StdKeySerializer.java")
+
+ (field (attrs static final ) instace [object com/fasterxml/jackson/databind/ser/std/StdKeySerializer] )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 22)
+  (new-instance v0 com/fasterxml/jackson/databind/ser/std/StdKeySerializer)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/ser/std/StdKeySerializer/<init> )
+  (sput-object v0 com/fasterxml/jackson/databind/ser/std/StdKeySerializer.instace [object com/fasterxml/jackson/databind/ser/std/StdKeySerializer])
+  (return-void )
+ )
+
+(method (attrs public ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializer])
+  (line 24)
+  (const-class v0 java/lang/Object)
+  (invoke-direct {v1 v0} com/fasterxml/jackson/databind/ser/std/StdSerializer/<init> [object java/lang/Class] )
+  (return-void )
+ )
+
+(method (attrs public ) getSchema([object com/fasterxml/jackson/databind/SerializerProvider] [object java/lang/reflect/Type] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 4)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializer])
+  ; parameter[0] : v2 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[1] : v3 ([object java/lang/reflect/Type])
+  (line 41)
+  (const-string v0 "string")
+  (invoke-virtual {v1 v0} com/fasterxml/jackson/databind/ser/std/StdKeySerializer/createSchemaNode [object java/lang/String] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) serialize([object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )void
+  (limit registers 5)
+  ; this: v1 ([object com/fasterxml/jackson/databind/ser/std/StdKeySerializer])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[2] : v4 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  (line 30)
+  (instance-of v0 v2 java/util/Date)
+  (if-eqz v0 le0f88)
+  (line 31)
+  (check-cast v2 [object java/util/Date])
+  (invoke-virtual {v4 v2 v3} com/fasterxml/jackson/databind/SerializerProvider/defaultSerializeDateKey [object java/util/Date] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (label le0f86)
+  (line 35)
+  (return-void )
+  (label le0f88)
+  (line 33)
+  (invoke-virtual {v2} java/lang/Object/toString )
+  (move-result-object v0)
+  (invoke-virtual {v3 v0} com/fasterxml/jackson/core/JsonGenerator/writeFieldName [object java/lang/String] )
+  (goto le0f86)
+)
+
+)

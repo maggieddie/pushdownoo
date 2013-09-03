@@ -1,0 +1,46 @@
+(class (attrs ) com/facebook/reflex/ad
+ (super com/facebook/inject/d)
+ (source "ReflexModule.java")
+
+ (field (attrs final ) a [object com/facebook/reflex/z] )
+
+(method (attrs private ) <init>([object com/facebook/reflex/z] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/reflex/ad])
+  ; parameter[0] : v1 ([object com/facebook/reflex/z])
+  (line 52)
+  (iput-object v1 v0 com/facebook/reflex/ad.a [object com/facebook/reflex/z])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/reflex/z] [object com/facebook/reflex/aa] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/reflex/ad])
+  ; parameter[0] : v1 ([object com/facebook/reflex/z])
+  ; parameter[1] : v2 ([object com/facebook/reflex/aa])
+  (line 52)
+  (invoke-direct {v0 v1} com/facebook/reflex/ad/<init> [object com/facebook/reflex/z] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/reflex/Transaction]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/ad])
+  (line 55)
+  (invoke-static {} com/facebook/reflex/Transaction/a )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/reflex/ad])
+  (line 52)
+  (invoke-virtual {v1} com/facebook/reflex/ad/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

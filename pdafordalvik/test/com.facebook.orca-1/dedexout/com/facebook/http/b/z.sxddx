@@ -1,0 +1,52 @@
+(class (attrs ) com/facebook/http/b/z
+ (super com/facebook/inject/d)
+ (source "FbHttpModule.java")
+
+ (field (attrs final ) a [object com/facebook/http/b/w] )
+
+(method (attrs private ) <init>([object com/facebook/http/b/w] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/b/z])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  (line 305)
+  (iput-object v1 v0 com/facebook/http/b/z.a [object com/facebook/http/b/w])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/http/b/w] [object com/facebook/http/b/x] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/http/b/z])
+  ; parameter[0] : v1 ([object com/facebook/http/b/w])
+  ; parameter[1] : v2 ([object com/facebook/http/b/x])
+  (line 305)
+  (invoke-direct {v0 v1} com/facebook/http/b/z/<init> [object com/facebook/http/b/w] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/http/protocol/q]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/http/b/z])
+  (line 309)
+  (new-instance v0 com/facebook/http/protocol/q)
+  (const-class v1 java/util/Locale)
+  (invoke-virtual {v4 v1} com/facebook/http/b/z/b [object java/lang/Class] )
+  (move-result-object v1)
+  (const-class v2 java/lang/String)
+  (const-class v3 com/facebook/common/hardware/PhoneIsoCountryCode)
+  (invoke-virtual {v4 v2 v3} com/facebook/http/b/z/b [object java/lang/Class] [object java/lang/Class] )
+  (move-result-object v2)
+  (invoke-direct {v0 v1 v2} com/facebook/http/protocol/q/<init> [object javax/inject/a] [object javax/inject/a] )
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/http/b/z])
+  (line 305)
+  (invoke-virtual {v1} com/facebook/http/b/z/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

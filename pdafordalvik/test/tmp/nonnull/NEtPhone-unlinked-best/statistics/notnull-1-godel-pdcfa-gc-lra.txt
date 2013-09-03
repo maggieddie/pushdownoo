@@ -1,0 +1,39 @@
+com/sip/voip/net/frags/ContactsFrag$MyAlertDialogFragment$2: 100.0
+com/sip/voip/net/phone/Phone$4$1$1: 100.0
+com/sip/voip/net/util/ContactCallHistory: 100.0
+com/sip/voip/net/frags/ContactsFrag$ContactLoader: 0.0
+com/sip/voip/net/phone/Phone$4$1: 100.0
+com/sip/voip/net/phone/Phone$3: 100.0
+com/sip/voip/net/phone/Phone$ConferenceCallAPIs: 33.33333333333333
+com/sip/voip/net/frags/ContactsFrag$ContactListAdapter: 100.0
+com/sip/voip/net/frags/ContactsFrag$MyAlertDialogFragment$3: 100.0
+com/sip/voip/net/frags/CallHistoryFrag$CallListFragment: 0.0
+com/sip/voip/net/util/ContactDataAccess: 60.0
+com/sip/voip/net/frags/CallHistoryFrag$CallListAdapter: 100.0
+com/sip/voip/net/phone/Phone$4: 100.0
+com/sip/voip/net/phone/Phone$TabListener: 80.0
+com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$MyAlertDialogFragment$1: 100.0
+com/sip/voip/net/phone/Phone$AsyncInitManager: 100.0
+com/sip/voip/net/frags/ContactsFrag$MyAlertDialogFragment$1: 100.0
+com/sip/voip/net/phone/Phone$5: 100.0
+com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$1: 100.0
+com/sip/voip/net/frags/CallHistoryFrag$ContactLoader: 0.0
+com/sip/voip/net/phone/Phone$6: 100.0
+com/sip/voip/net/phone/Phone: 8.333333333333332
+com/sip/voip/net/phone/Phone$2: 100.0
+com/sip/voip/net/frags/ContactsFrag$ContactListFragment: 0.0
+com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$MyAlertDialogFragment$2: 100.0
+com/sip/voip/net/phone/Phone$1: 100.0
+com/sip/voip/net/util/ContactModel: 50.0
+The total average: 75.24691358024691
+ Any places of null ref during constructions? 
+ com/sip/voip/net/phone/Phone$TabListener:<init>LineStmt(621)
+InvokeStmt:android/app/FragmentTransaction/commit(List() , v0 , List())@@@com/sip/voip/net/phone/Phone$TabListener$$<init>::LineStmt(621)
+com/sip/voip/net/phone/Phone$TabListener:<init>LineStmt(619)
+InvokeStmt:android/app/FragmentManager/beginTransaction(List() , v1 , List())@@@com/sip/voip/net/phone/Phone$TabListener$$<init>::LineStmt(619)
+com/sip/voip/net/phone/Phone$TabListener:<init>LineStmt(615)
+InvokeStmt:android/app/FragmentManager/findFragmentByTag(List(v2) , v1 , List((object java/lang/String)))@@@com/sip/voip/net/phone/Phone$TabListener$$<init>::LineStmt(615)
+com/sip/voip/net/phone/Phone$TabListener:<init>LineStmt(617)
+InvokeStmt:android/app/Fragment/isDetached(List() , v1 , List())@@@com/sip/voip/net/phone/Phone$TabListener$$<init>::LineStmt(617)
+com/sip/voip/net/phone/Phone$TabListener:<init>LineStmt(620)
+InvokeStmt:android/app/FragmentTransaction/detach(List(v1) , v0 , List((object android/app/Fragment)))@@@com/sip/voip/net/phone/Phone$TabListener$$<init>::LineStmt(620)

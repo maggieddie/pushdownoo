@@ -1,0 +1,33 @@
+(class (attrs ) org/andengine/util/adt/data/operator/IntOperator$2
+ (super org/andengine/util/adt/data/operator/IntOperator)
+ (source "IntOperator.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/IntOperator$2])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 20)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} org/andengine/util/adt/data/operator/IntOperator/<init> [object java/lang/String] int [object org/andengine/util/adt/data/operator/IntOperator] )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) check(int int )boolean
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/util/adt/data/operator/IntOperator$2])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  (line 23)
+  (if-eq v2 v3 l8724c)
+  (const/4 v0 1)
+  (label l8724a)
+  (return v0)
+  (label l8724c)
+  (const/4 v0 0)
+  (goto l8724a)
+)
+
+)

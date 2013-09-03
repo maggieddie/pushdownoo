@@ -1,0 +1,38 @@
+(class (attrs final ) com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any
+ (super com/fasterxml/jackson/databind/deser/impl/PropertyValue)
+ (source "PropertyValue.java")
+
+ (field (attrs final ) _property [object com/fasterxml/jackson/databind/deser/SettableAnyProperty] )
+ (field (attrs final ) _propertyName [object java/lang/String] )
+
+(method (attrs public ) <init>([object com/fasterxml/jackson/databind/deser/impl/PropertyValue] [object java/lang/Object] [object com/fasterxml/jackson/databind/deser/SettableAnyProperty] [object java/lang/String] )void
+  (limit registers 5)
+  ; this: v0 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/deser/SettableAnyProperty])
+  ; parameter[3] : v4 ([object java/lang/String])
+  (line 82)
+  (invoke-direct {v0 v1 v2} com/fasterxml/jackson/databind/deser/impl/PropertyValue/<init> [object com/fasterxml/jackson/databind/deser/impl/PropertyValue] [object java/lang/Object] )
+  (line 83)
+  (iput-object v3 v0 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any._property [object com/fasterxml/jackson/databind/deser/SettableAnyProperty])
+  (line 84)
+  (iput-object v4 v0 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any._propertyName [object java/lang/String])
+  (line 85)
+  (return-void )
+ )
+
+(method (attrs public ) assign([object java/lang/Object] )void
+  (limit registers 5)
+  ; this: v3 ([object com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any])
+  ; parameter[0] : v4 ([object java/lang/Object])
+  (line 91)
+  (iget-object v0 v3 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any._property [object com/fasterxml/jackson/databind/deser/SettableAnyProperty])
+  (iget-object v1 v3 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any._propertyName [object java/lang/String])
+  (iget-object v2 v3 com/fasterxml/jackson/databind/deser/impl/PropertyValue$Any.value [object java/lang/Object])
+  (invoke-virtual {v0 v4 v1 v2} com/fasterxml/jackson/databind/deser/SettableAnyProperty/set [object java/lang/Object] [object java/lang/String] [object java/lang/Object] )
+  (line 92)
+  (return-void )
+)
+
+)

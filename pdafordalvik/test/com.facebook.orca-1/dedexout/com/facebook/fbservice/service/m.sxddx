@@ -1,0 +1,136 @@
+(class (attrs ) com/facebook/fbservice/service/m
+ (super java/lang/Object)
+ (source "BlueServiceQueue.java")
+
+ (field (attrs private final ) a [object com/facebook/fbservice/service/ac] )
+ (field (attrs private final ) b long )
+ (field (attrs private ) c long )
+ (field (attrs private ) d long )
+ (field (attrs private ) e [object com/google/common/d/a/s] )
+ (field (attrs private ) f [object com/facebook/fbservice/service/OperationResult] )
+ (field (attrs private ) g [object java/util/List] )
+ (field (attrs private ) h [object com/facebook/fbservice/service/g] )
+
+(method (attrs ) <init>([object com/facebook/fbservice/service/ac] long )void
+  (limit registers 5)
+  ; this: v1 ([object com/facebook/fbservice/service/m])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/ac])
+  ; parameter[1] : v3 (long)
+  (line 75)
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 72)
+  (invoke-static {} com/google/common/a/hq/a )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v1 com/facebook/fbservice/service/m.g [object java/util/List])
+  (line 76)
+  (iput-object v2 v1 com/facebook/fbservice/service/m.a [object com/facebook/fbservice/service/ac])
+  (line 77)
+  (iput-wide v3 v1 com/facebook/fbservice/service/m.b long)
+  (line 78)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] long )long
+  (limit registers 3)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 (long)
+  (line 65)
+  (iput-wide v1 v0 com/facebook/fbservice/service/m.c long)
+  (return-wide v1)
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] [object com/facebook/fbservice/service/OperationResult] )[object com/facebook/fbservice/service/OperationResult]
+  (limit registers 2)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 ([object com/facebook/fbservice/service/OperationResult])
+  (line 65)
+  (iput-object v1 v0 com/facebook/fbservice/service/m.f [object com/facebook/fbservice/service/OperationResult])
+  (return-object v1)
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] [object com/facebook/fbservice/service/g] )[object com/facebook/fbservice/service/g]
+  (limit registers 2)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 ([object com/facebook/fbservice/service/g])
+  (line 65)
+  (iput-object v1 v0 com/facebook/fbservice/service/m.h [object com/facebook/fbservice/service/g])
+  (return-object v1)
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] )[object com/google/common/d/a/s]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-object v0 v1 com/facebook/fbservice/service/m.e [object com/google/common/d/a/s])
+  (return-object v0)
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] [object com/google/common/d/a/s] )[object com/google/common/d/a/s]
+  (limit registers 2)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 ([object com/google/common/d/a/s])
+  (line 65)
+  (iput-object v1 v0 com/facebook/fbservice/service/m.e [object com/google/common/d/a/s])
+  (return-object v1)
+ )
+
+(method (attrs static ) a([object com/facebook/fbservice/service/m] [object java/util/List] )[object java/util/List]
+  (limit registers 2)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 ([object java/util/List])
+  (line 65)
+  (iput-object v1 v0 com/facebook/fbservice/service/m.g [object java/util/List])
+  (return-object v1)
+ )
+
+(method (attrs static ) b([object com/facebook/fbservice/service/m] long )long
+  (limit registers 3)
+  ; parameter[0] : v0 ([object com/facebook/fbservice/service/m])
+  ; parameter[1] : v1 (long)
+  (line 65)
+  (iput-wide v1 v0 com/facebook/fbservice/service/m.d long)
+  (return-wide v1)
+ )
+
+(method (attrs static ) b([object com/facebook/fbservice/service/m] )[object com/facebook/fbservice/service/g]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-object v0 v1 com/facebook/fbservice/service/m.h [object com/facebook/fbservice/service/g])
+  (return-object v0)
+ )
+
+(method (attrs static ) c([object com/facebook/fbservice/service/m] )long
+  (limit registers 3)
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-wide v0 v2 com/facebook/fbservice/service/m.d long)
+  (return-wide v0)
+ )
+
+(method (attrs static ) d([object com/facebook/fbservice/service/m] )[object com/facebook/fbservice/service/ac]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-object v0 v1 com/facebook/fbservice/service/m.a [object com/facebook/fbservice/service/ac])
+  (return-object v0)
+ )
+
+(method (attrs static ) e([object com/facebook/fbservice/service/m] )[object java/util/List]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-object v0 v1 com/facebook/fbservice/service/m.g [object java/util/List])
+  (return-object v0)
+ )
+
+(method (attrs static ) f([object com/facebook/fbservice/service/m] )[object com/facebook/fbservice/service/OperationResult]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/m])
+  (line 65)
+  (iget-object v0 v1 com/facebook/fbservice/service/m.f [object com/facebook/fbservice/service/OperationResult])
+  (return-object v0)
+ )
+
+)

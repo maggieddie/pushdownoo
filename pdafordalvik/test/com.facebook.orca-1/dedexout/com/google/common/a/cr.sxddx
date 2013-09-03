@@ -1,0 +1,167 @@
+(class (attrs final ) com/google/common/a/cr
+ (super com/google/common/a/co)
+ (source "CustomConcurrentHashMap.java")
+ (implements com/google/common/a/cm)
+
+ (field (attrs volatile ) d long )
+ (field (attrs ) e [object com/google/common/a/cm] )
+ (field (attrs ) f [object com/google/common/a/cm] )
+ (field (attrs ) g [object com/google/common/a/cm] )
+ (field (attrs ) h [object com/google/common/a/cm] )
+
+(method (attrs ) <init>([object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/ref/ReferenceQueue"  "<TK;>;TK;I"  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (annotation runtimeVisibility param 4 [object javax/annotation/Nullable]
+  )
+  (limit registers 7)
+  ; this: v2 ([object com/google/common/a/cr])
+  ; parameter[0] : v3 ([object java/lang/ref/ReferenceQueue])
+  ; parameter[1] : v4 ([object java/lang/Object])
+  ; parameter[2] : v5 (int)
+  ; parameter[3] : v6 ([object com/google/common/a/cm])
+  (line 1405)
+  (invoke-direct {v2 v3 v4 v5 v6} com/google/common/a/co/<init> [object java/lang/ref/ReferenceQueue] [object java/lang/Object] int [object com/google/common/a/cm] )
+  (line 1410)
+  (const-wide v0 9223372036854775807) ; 0x7fffffffffffffff)
+  (iput-wide v0 v2 com/google/common/a/cr.d long)
+  (line 1422)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v2 com/google/common/a/cr.e [object com/google/common/a/cm])
+  (line 1435)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v2 com/google/common/a/cr.f [object com/google/common/a/cm])
+  (line 1450)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v2 com/google/common/a/cr.g [object com/google/common/a/cm])
+  (line 1463)
+  (invoke-static {} com/google/common/a/bj/h )
+  (nop )
+  (move-result-object v0)
+  (iput-object v0 v2 com/google/common/a/cr.h [object com/google/common/a/cm])
+  (line 1406)
+  (return-void )
+ )
+
+(method (attrs public ) getExpirationTime()long
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/cr])
+  (line 1414)
+  (iget-wide v0 v2 com/google/common/a/cr.d long)
+  (return-wide v0)
+)
+
+(method (attrs public ) getNextEvictable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cr])
+  (line 1455)
+  (iget-object v0 v1 com/google/common/a/cr.g [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) getNextExpirable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cr])
+  (line 1427)
+  (iget-object v0 v1 com/google/common/a/cr.e [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) getPreviousEvictable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cr])
+  (line 1468)
+  (iget-object v0 v1 com/google/common/a/cr.h [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) getPreviousExpirable()[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/cr])
+  (line 1440)
+  (iget-object v0 v1 com/google/common/a/cr.f [object com/google/common/a/cm])
+  (return-object v0)
+)
+
+(method (attrs public ) setExpirationTime(long )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/cr])
+  ; parameter[0] : v1 (long)
+  (line 1419)
+  (iput-wide v1 v0 com/google/common/a/cr.d long)
+  (line 1420)
+  (return-void )
+)
+
+(method (attrs public ) setNextEvictable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cr])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1460)
+  (iput-object v1 v0 com/google/common/a/cr.g [object com/google/common/a/cm])
+  (line 1461)
+  (return-void )
+)
+
+(method (attrs public ) setNextExpirable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cr])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1432)
+  (iput-object v1 v0 com/google/common/a/cr.e [object com/google/common/a/cm])
+  (line 1433)
+  (return-void )
+)
+
+(method (attrs public ) setPreviousEvictable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cr])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1473)
+  (iput-object v1 v0 com/google/common/a/cr.h [object com/google/common/a/cm])
+  (line 1474)
+  (return-void )
+)
+
+(method (attrs public ) setPreviousExpirable([object com/google/common/a/cm] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/cr])
+  ; parameter[0] : v1 ([object com/google/common/a/cm])
+  (line 1445)
+  (iput-object v1 v0 com/google/common/a/cr.f [object com/google/common/a/cm])
+  (line 1446)
+  (return-void )
+)
+
+)

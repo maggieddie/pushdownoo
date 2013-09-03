@@ -1,0 +1,18 @@
+(class (attrs ) com/facebook/common/a/f
+ (super java/lang/Object)
+ (source "DeferredHandler.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs ) a [object java/lang/Runnable] )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/a/f])
+  (line 72)
+  (iget-object v0 v1 com/facebook/common/a/f.a [object java/lang/Runnable])
+  (invoke-interface {v0} java/lang/Runnable/run )
+  (line 73)
+  (return-void )
+)
+
+)

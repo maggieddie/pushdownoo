@@ -1,0 +1,59 @@
+(class (attrs public final ) com/google/common/io/CountingOutputStream
+ (super java/io/FilterOutputStream)
+ (source "CountingOutputStream.java")
+
+ (field (attrs private ) a long )
+
+(method (attrs public ) <init>([object java/io/OutputStream] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/io/CountingOutputStream])
+  ; parameter[0] : v1 ([object java/io/OutputStream])
+  (line 42)
+  (invoke-direct {v0 v1} java/io/FilterOutputStream/<init> [object java/io/OutputStream] )
+  (line 43)
+  (return-void )
+ )
+
+(method (attrs public ) a()long
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/io/CountingOutputStream])
+  (line 47)
+  (iget-wide v0 v2 com/google/common/io/CountingOutputStream.a long)
+  (return-wide v0)
+)
+
+(method (attrs public ) write(int )void
+  (limit registers 6)
+  ; this: v4 ([object com/google/common/io/CountingOutputStream])
+  ; parameter[0] : v5 (int)
+  (line 56)
+  (iget-object v0 v4 com/google/common/io/CountingOutputStream.out [object java/io/OutputStream])
+  (invoke-virtual {v0 v5} java/io/OutputStream/write int )
+  (line 57)
+  (iget-wide v0 v4 com/google/common/io/CountingOutputStream.a long)
+  (const-wide/16 v2 1)
+  (add-long/2addr v0 v2)
+  (iput-wide v0 v4 com/google/common/io/CountingOutputStream.a long)
+  (line 58)
+  (return-void )
+)
+
+(method (attrs public ) write([array byte] int int )void
+  (limit registers 8)
+  ; this: v4 ([object com/google/common/io/CountingOutputStream])
+  ; parameter[0] : v5 ([array byte])
+  ; parameter[1] : v6 (int)
+  ; parameter[2] : v7 (int)
+  (line 51)
+  (iget-object v0 v4 com/google/common/io/CountingOutputStream.out [object java/io/OutputStream])
+  (invoke-virtual {v0 v5 v6 v7} java/io/OutputStream/write [array byte] int int )
+  (line 52)
+  (iget-wide v0 v4 com/google/common/io/CountingOutputStream.a long)
+  (int-to-long v2 v7)
+  (add-long/2addr v0 v2)
+  (iput-wide v0 v4 com/google/common/io/CountingOutputStream.a long)
+  (line 53)
+  (return-void )
+)
+
+)

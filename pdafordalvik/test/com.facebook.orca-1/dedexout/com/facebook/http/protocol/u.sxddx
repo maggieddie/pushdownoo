@@ -1,0 +1,16 @@
+(class (attrs public ) com/facebook/http/protocol/u
+ (super java/lang/Exception)
+ (source "AuthTokenNullException.java")
+
+
+(method (attrs public ) <init>([object java/lang/String] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/http/protocol/u])
+  ; parameter[0] : v1 ([object java/lang/String])
+  (line 12)
+  (invoke-direct {v0 v1} java/lang/Exception/<init> [object java/lang/String] )
+  (line 13)
+  (return-void )
+ )
+
+)

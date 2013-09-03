@@ -1,0 +1,47 @@
+(class (attrs ) com/facebook/auth/login/aw
+ (super com/facebook/inject/d)
+ (source "LoginModule.java")
+
+ (field (attrs final ) a [object com/facebook/auth/login/ap] )
+
+(method (attrs private ) <init>([object com/facebook/auth/login/ap] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/login/aw])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/ap])
+  (line 173)
+  (iput-object v1 v0 com/facebook/auth/login/aw.a [object com/facebook/auth/login/ap])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/auth/login/ap] [object com/facebook/auth/login/aq] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/auth/login/aw])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/ap])
+  ; parameter[1] : v2 ([object com/facebook/auth/login/aq])
+  (line 173)
+  (invoke-direct {v0 v1} com/facebook/auth/login/aw/<init> [object com/facebook/auth/login/ap] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/fbservice/service/e]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/auth/login/aw])
+  (line 176)
+  (const-class v0 com/facebook/auth/login/s)
+  (invoke-virtual {v1 v0} com/facebook/auth/login/aw/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/fbservice/service/e])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/auth/login/aw])
+  (line 173)
+  (invoke-virtual {v1} com/facebook/auth/login/aw/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

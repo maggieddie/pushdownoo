@@ -1,0 +1,53 @@
+(class (attrs ) com/facebook/nux/g
+ (super com/facebook/inject/d)
+ (source "NuxModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/nux/g])
+  (line 90)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/nux/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/nux/g])
+  ; parameter[0] : v1 ([object com/facebook/nux/b])
+  (line 90)
+  (invoke-direct {v0} com/facebook/nux/g/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/nux/status/j]
+  (limit registers 5)
+  ; this: v4 ([object com/facebook/nux/g])
+  (line 95)
+  (new-instance v3 com/facebook/nux/status/j)
+  (const-class v0 com/facebook/prefs/shared/d)
+  (invoke-virtual {v4 v0} com/facebook/nux/g/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/prefs/shared/d])
+  (const-class v1 com/fasterxml/jackson/databind/ObjectMapper)
+  (invoke-virtual {v4 v1} com/facebook/nux/g/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/fasterxml/jackson/databind/ObjectMapper])
+  (const-class v2 com/facebook/common/time/a)
+  (invoke-virtual {v4 v2} com/facebook/nux/g/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/facebook/common/time/a])
+  (invoke-direct {v3 v0 v1 v2} com/facebook/nux/status/j/<init> [object com/facebook/prefs/shared/d] [object com/fasterxml/jackson/databind/ObjectMapper] [object com/facebook/common/time/a] )
+  (return-object v3)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/nux/g])
+  (line 90)
+  (invoke-virtual {v1} com/facebook/nux/g/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

@@ -1,0 +1,54 @@
+(class (attrs final ) com/google/common/a/lk
+ (super java/lang/Object)
+ (source "StandardTable.java")
+ (implements java/util/Iterator)
+
+ (field (attrs final ) a [object java/util/Iterator] )
+
+(method (attrs ) <init>([object java/util/Iterator] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/a/lk])
+  ; parameter[0] : v1 ([object java/util/Iterator])
+  (line 1167)
+  (iput-object v1 v0 com/google/common/a/lk.a [object java/util/Iterator])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) hasNext()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/lk])
+  (line 1169)
+  (iget-object v0 v1 com/google/common/a/lk.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/hasNext )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) next()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TK;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/lk])
+  (line 1172)
+  (iget-object v0 v1 com/google/common/a/lk.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/next )
+  (move-result-object v0)
+  (check-cast v0 [object java/util/Map$Entry])
+  (invoke-interface {v0} java/util/Map$Entry/getKey )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) remove()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/lk])
+  (line 1175)
+  (iget-object v0 v1 com/google/common/a/lk.a [object java/util/Iterator])
+  (invoke-interface {v0} java/util/Iterator/remove )
+  (line 1176)
+  (return-void )
+)
+
+)

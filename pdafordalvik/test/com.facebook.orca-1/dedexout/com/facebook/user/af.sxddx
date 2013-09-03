@@ -1,0 +1,17 @@
+(class (attrs ) com/facebook/user/af
+ (super com/fasterxml/jackson/core/type/TypeReference)
+ (source "UserSerialization.java")
+
+ (field (attrs final ) a [object com/facebook/user/ac] )
+
+(method (attrs ) <init>([object com/facebook/user/ac] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/user/af])
+  ; parameter[0] : v1 ([object com/facebook/user/ac])
+  (line 439)
+  (iput-object v1 v0 com/facebook/user/af.a [object com/facebook/user/ac])
+  (invoke-direct {v0} com/fasterxml/jackson/core/type/TypeReference/<init> )
+  (return-void )
+ )
+
+)

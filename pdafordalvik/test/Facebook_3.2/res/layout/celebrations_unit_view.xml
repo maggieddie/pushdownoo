@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/feed_story_item_generic_background" android:paddingBottom="@dimen/feed_attachment_leftright_margins" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/feed_story_dark_gray_text_color" android:gravity="left|center" android:id="@id/feed_birthdays_title" android:paddingLeft="@dimen/feed_attachment_leftright_margins" android:layout_width="fill_parent" android:layout_height="28.0dip" android:layout_marginLeft="@dimen/feed_story_margin" android:layout_marginTop="8.0dip" android:layout_marginRight="@dimen/feed_story_margin" />
+    <View android:id="@id/celebrations_feed_unit_footer_divider" android:background="@color/feed_feedback_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" android:layout_marginLeft="@dimen/feed_story_margin" android:layout_marginRight="@dimen/feed_story_margin" android:layout_marginBottom="@dimen/feed_attachment_leftright_margins" />
+    <com.facebook.feed.ui.ListViewFriendlyViewPager android:gravity="center_horizontal" android:id="@id/celebrations_pager" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="212.0dip" android:layout_marginTop="4.0dip" />
+</LinearLayout>

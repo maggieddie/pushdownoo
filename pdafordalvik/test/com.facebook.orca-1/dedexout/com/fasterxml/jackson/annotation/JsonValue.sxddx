@@ -1,0 +1,10 @@
+(interface (attrs public abstract annotation ) com/fasterxml/jackson/annotation/JsonValue
+ (super java/lang/Object)
+ (source "JsonValue.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) value()boolean
+)
+
+)

@@ -1,0 +1,47 @@
+(class (attrs ) android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl
+ (super android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl)
+ (source "SearchViewCompat.java")
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  (line 53)
+  (invoke-direct {v0} android/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) newOnQueryTextListener([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  ; parameter[0] : v2 ([object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat])
+  (line 62)
+  (new-instance v0 android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$1)
+  (invoke-direct {v0 v1 v2} android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl$1/<init> [object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl] [object android/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat] )
+  (invoke-static {v0} android/support/v4/widget/SearchViewCompatHoneycomb/newOnQueryTextListener [object android/support/v4/widget/SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newSearchView([object android/content/Context] )[object android/view/View]
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  ; parameter[0] : v2 ([object android/content/Context])
+  (line 57)
+  (invoke-static {v2} android/support/v4/widget/SearchViewCompatHoneycomb/newSearchView [object android/content/Context] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) setOnQueryTextListener([object java/lang/Object] [object java/lang/Object] )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  (line 77)
+  (invoke-static {v1 v2} android/support/v4/widget/SearchViewCompatHoneycomb/setOnQueryTextListener [object java/lang/Object] [object java/lang/Object] )
+  (line 78)
+  (return-void )
+)
+
+)

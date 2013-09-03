@@ -40,7 +40,7 @@
   (const/16 v3 24)
   (const/16 v2 16)
   (line 21)
-  (invoke-super-quick {v4 v5} org/bouncycastle/crypto/generators/DESedeKeyGenerator/init [object org/bouncycastle/crypto/KeyGenerationParameters] )
+  (invoke-super-quick {v4 v5} vtable #0xc)
   (line 23)
   (iget-quick v0 v4 )
   (if-eqz v0 l20582a)

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <include layout="@layout/filter_crop_view_title" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/filter_actionbar" android:background="@drawable/bg_filters_toolbar_tile" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/rotate" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icn_filters_rotate_default" android:layout_weight="0.2" />
+        <ImageButton android:id="@id/change_ar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_filter_constrain_off" android:layout_weight="0.2" />
+    </LinearLayout>
+    <com.twitter.android.widget.CroppableImageView android:id="@id/image" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/filter_actionbar" android:layout_below="@id/navbar" twitter:cropRectPadding="10.0dip" twitter:cropRectStrokeColor="@color/solid_white" twitter:cropShadowColor="#99000000" />
+</RelativeLayout>

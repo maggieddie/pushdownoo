@@ -16,8 +16,8 @@
   (line 26)
   (invoke-direct-empty {v0} java/lang/Object/<init> )
   (line 27)
-  (iput-object-quick v1 v0 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.reference [object java/lang/Object])
-  (iput-quick v2 v0 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.bit boolean)
+  (iput-object-quick v1 v0 )
+  (iput-quick v2 v0 )
   (line 28)
   (return-void )
  )
@@ -26,7 +26,7 @@
   (limit registers 2)
   ; parameter[0] : v1 ([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair])
   (line 23)
-  (iget-object-quick v0 v1 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.reference [object java/lang/Object])
+  (iget-object-quick v0 v1 )
   (return-object v0)
  )
 
@@ -34,7 +34,7 @@
   (limit registers 2)
   ; parameter[0] : v1 ([object java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair])
   (line 23)
-  (iget-quick v0 v1 java/util/concurrent/atomic/AtomicMarkableReference$ReferenceBooleanPair.bit boolean)
+  (iget-quick v0 v1 )
   (return v0)
  )
 

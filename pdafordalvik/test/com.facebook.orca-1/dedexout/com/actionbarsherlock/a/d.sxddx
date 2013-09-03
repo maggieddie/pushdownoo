@@ -1,0 +1,34 @@
+(interface (attrs public abstract ) com/actionbarsherlock/a/d
+ (super java/lang/Object)
+ (source "SubMenu.java")
+ (implements com/actionbarsherlock/a/a)
+
+
+(method (attrs public abstract ) b([object android/graphics/drawable/Drawable] )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) b([object android/view/View] )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) c([object android/graphics/drawable/Drawable] )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) d([object java/lang/CharSequence] )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) k(int )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) l(int )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) m(int )[object com/actionbarsherlock/a/d]
+)
+
+(method (attrs public abstract ) m()void
+)
+
+(method (attrs public abstract ) q()[object com/actionbarsherlock/a/b]
+)
+
+)

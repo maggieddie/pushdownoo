@@ -1,0 +1,32 @@
+(class (attrs ) com/facebook/orca/compose/u
+ (super com/facebook/fbservice/ops/l)
+ (source "ComposeFragment.java")
+
+ (field (attrs final ) a [object com/facebook/orca/compose/ComposeFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/compose/ComposeFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/compose/u])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeFragment])
+  (line 1411)
+  (iput-object v1 v0 com/facebook/orca/compose/u.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-direct {v0} com/facebook/fbservice/ops/l/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/compose/u])
+  ; parameter[0] : v3 ([object com/facebook/fbservice/service/OperationResult])
+  (line 1414)
+  (invoke-virtual {v3} com/facebook/fbservice/service/OperationResult/i )
+  (move-result-object v0)
+  (check-cast v0 [object android/location/Location])
+  (line 1415)
+  (iget-object v1 v2 com/facebook/orca/compose/u.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v1 v0} com/facebook/orca/compose/ComposeFragment/a [object com/facebook/orca/compose/ComposeFragment] [object android/location/Location] )
+  (line 1416)
+  (return-void )
+)
+
+)

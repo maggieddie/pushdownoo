@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 minuto</item>
+        <item>10 minuto</item>
+        <item>15 minuto</item>
+        <item>30 minuto</item>
+        <item>1 oras</item>
+        <item>2 oras</item>
+        <item>4 oras</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>Galing sa mga tao na iyong sinusundan</item>
+        <item>Mula kung kanino man</item>
+        <item>I-off</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Mga Pakikipag-ugnayan</item>
+        <item>Mga Banggit</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Magbasa ng mga tweet mula sa iyong timeline.</item>
+        <item>Tignan kung sinu-sino ang iyong mga sinusundan.</item>
+        <item>Mag-post ng mga Tweet para sa iyo.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Tingnan ang iyong Twitter password.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Baguhin ang profile</item>
+        <item>Mga Setting</item>
+        <item>Tulong</item>
+    </string-array>
+</resources>

@@ -1,0 +1,32 @@
+(class (attrs final ) com/twitter/android/client/h
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements android/app/SearchManager$OnCancelListener)
+
+ (field (attrs final ) a [object com/twitter/android/client/b] )
+
+(method (attrs ) <init>([object com/twitter/android/client/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/client/h])
+  ; parameter[0] : v1 ([object com/twitter/android/client/b])
+  (line 4426)
+  (iput-object v1 v0 com/twitter/android/client/h.a [object com/twitter/android/client/b])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public final ) onCancel()void
+  (limit registers 5)
+  ; this: v4 ([object com/twitter/android/client/h])
+  (line 4428)
+  (iget-object v0 v4 com/twitter/android/client/h.a [object com/twitter/android/client/b])
+  (iget-object v1 v4 com/twitter/android/client/h.a [object com/twitter/android/client/b])
+  (invoke-virtual {v1} com/twitter/android/client/b/a )
+  (move-result-wide v1)
+  (sget-object v3 com/twitter/android/service/ScribeEvent.dB [object com/twitter/android/service/ScribeEvent])
+  (invoke-virtual {v0 v1 v2 v3} com/twitter/android/client/b/a long [object com/twitter/android/service/ScribeEvent] )
+  (line 4429)
+  (return-void )
+)
+
+)

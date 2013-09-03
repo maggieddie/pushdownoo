@@ -27,7 +27,7 @@
   (if-eqz v0 l96534)
   (line 44)
   (sget-object v1 java/nio/charset/spi/CharsetProvider.CONSTRUCT_PERM [object java/lang/RuntimePermission])
-  (invoke-virtual-quick {v0 v1} java/lang/SecurityManager/checkPermission [object java/security/Permission] )
+  (invoke-virtual-quick {v0 v1} vtable #0x1c)
   (label l96534)
   (line 45)
   (return-void )

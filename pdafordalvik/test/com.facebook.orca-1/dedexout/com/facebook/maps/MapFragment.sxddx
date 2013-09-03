@@ -1,0 +1,15 @@
+(class (attrs public abstract ) com/facebook/maps/MapFragment
+ (super com/facebook/base/fragment/FbFragment)
+ (source "MapFragment.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/maps/MapFragment])
+  (line 18)
+  (invoke-direct {v0} com/facebook/base/fragment/FbFragment/<init> )
+  (line 164)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,19 @@
+(interface (attrs public abstract annotation ) com/facebook/common/json/jsonmirror/JMAutogen$DynamicKeyDictType
+ (super java/lang/Object)
+ (source "JMAutogen.java")
+ (implements java/lang/annotation/Annotation)
+
+
+(method (attrs public abstract ) a()boolean
+)
+
+(method (attrs public abstract ) jsonFieldName()[object java/lang/String]
+)
+
+(method (attrs public abstract ) valueElementType()[object java/lang/Class]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/lang/Class"  "<*>;")
+  )
+)
+
+)

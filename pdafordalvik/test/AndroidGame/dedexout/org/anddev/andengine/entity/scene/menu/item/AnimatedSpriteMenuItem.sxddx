@@ -1,0 +1,44 @@
+(class (attrs public ) org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem
+ (super org/anddev/andengine/entity/sprite/AnimatedSprite)
+ (source "AnimatedSpriteMenuItem.java")
+ (implements org/anddev/andengine/entity/scene/menu/item/IMenuItem)
+
+ (field (attrs private final ) mID int )
+
+(method (attrs public ) <init>(int [object org/anddev/andengine/opengl/texture/region/TiledTextureRegion] )void
+  (limit registers 4)
+  ; this: v1 ([object org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 ([object org/anddev/andengine/opengl/texture/region/TiledTextureRegion])
+  (const/4 v0 0)
+  (line 29)
+  (invoke-direct {v1 v0 v0 v3} org/anddev/andengine/entity/sprite/AnimatedSprite/<init> float float [object org/anddev/andengine/opengl/texture/region/TiledTextureRegion] )
+  (line 30)
+  (iput v2 v1 org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem.mID int)
+  (line 31)
+  (return-void )
+ )
+
+(method (attrs public ) getID()int
+  (limit registers 2)
+  ; this: v1 ([object org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem])
+  (line 39)
+  (iget v0 v1 org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem.mID int)
+  (return v0)
+)
+
+(method (attrs public ) onSelected()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem])
+  (line 53)
+  (return-void )
+)
+
+(method (attrs public ) onUnselected()void
+  (limit registers 1)
+  ; this: v0 ([object org/anddev/andengine/entity/scene/menu/item/AnimatedSpriteMenuItem])
+  (line 58)
+  (return-void )
+)
+
+)

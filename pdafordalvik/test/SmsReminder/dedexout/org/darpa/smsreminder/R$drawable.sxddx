@@ -1,0 +1,17 @@
+(class (attrs public final ) org/darpa/smsreminder/R$drawable
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) ic_action_search int 2130837504); 0x7f020000 )
+ (field (attrs public static final ) ic_launcher int 2130837505); 0x7f020001 )
+ (field (attrs public static final ) icon int 2130837506); 0x7f020002 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object org/darpa/smsreminder/R$drawable])
+  (line 18)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

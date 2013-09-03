@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.UrlImage android:layout_gravity="center" android:id="@id/timeline_byline_fragment_icon" android:layout_width="@dimen/timeline_byline_fragment_icon_size" android:layout_height="@dimen/timeline_byline_fragment_icon_size" android:layout_marginRight="5.0dip" />
+    <TextView android:textSize="@dimen/timeline_byline_fragment_text_size" android:textColor="@color/timeline_profile_header_text" android:ellipsize="end" android:id="@id/timeline_byline_fragment_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+(interface (attrs public abstract ) com/fasterxml/jackson/databind/deser/ResolvableDeserializer
+ (super java/lang/Object)
+ (source "ResolvableDeserializer.java")
+
+
+(method (attrs public abstract ) resolve([object com/fasterxml/jackson/databind/DeserializationContext] )void
+)
+
+)

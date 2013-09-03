@@ -1,0 +1,52 @@
+(class (attrs ) org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1
+ (super java/lang/Object)
+ (source "BuildableTextureAtlasTextureRegionFactory.java")
+ (implements org/andengine/util/call/Callback)
+
+ (field (attrs private final ) val$textureRegion [object org/andengine/opengl/texture/region/TextureRegion] )
+
+(method (attrs ) <init>([object org/andengine/opengl/texture/region/TextureRegion] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1])
+  ; parameter[0] : v1 ([object org/andengine/opengl/texture/region/TextureRegion])
+  (line 1)
+  (iput-object v1 v0 org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1.val$textureRegion [object org/andengine/opengl/texture/region/TextureRegion])
+  (line 54)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onCallback([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 1)
+  (check-cast v1 [object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource])
+  (invoke-virtual {v0 v1} org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1/onCallback [object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource] )
+  (return-void )
+)
+
+(method (attrs public ) onCallback([object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TT;)V")
+  )
+  (limit registers 5)
+  ; this: v3 ([object org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1])
+  ; parameter[0] : v4 ([object org/andengine/opengl/texture/atlas/source/ITextureAtlasSource])
+  (line 57)
+  (iget-object v0 v3 org/andengine/opengl/texture/atlas/buildable/BuildableTextureAtlasTextureRegionFactory$1.val$textureRegion [object org/andengine/opengl/texture/region/TextureRegion])
+  (invoke-interface {v4} org/andengine/opengl/texture/atlas/source/ITextureAtlasSource/getTextureX )
+  (move-result v1)
+  (int-to-float v1 v1)
+  (invoke-interface {v4} org/andengine/opengl/texture/atlas/source/ITextureAtlasSource/getTextureY )
+  (move-result v2)
+  (int-to-float v2 v2)
+  (invoke-virtual {v0 v1 v2} org/andengine/opengl/texture/region/TextureRegion/setTexturePosition float float )
+  (line 58)
+  (return-void )
+)
+
+)

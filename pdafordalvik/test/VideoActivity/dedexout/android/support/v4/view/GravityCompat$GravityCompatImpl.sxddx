@@ -1,0 +1,18 @@
+(interface (attrs abstract ) android/support/v4/view/GravityCompat$GravityCompatImpl
+ (super java/lang/Object)
+ (source "GravityCompat.java")
+
+
+(method (attrs public abstract ) apply(int int int [object android/graphics/Rect] int int [object android/graphics/Rect] int )void
+)
+
+(method (attrs public abstract ) apply(int int int [object android/graphics/Rect] [object android/graphics/Rect] int )void
+)
+
+(method (attrs public abstract ) applyDisplay(int [object android/graphics/Rect] [object android/graphics/Rect] int )void
+)
+
+(method (attrs public abstract ) getAbsoluteGravity(int int )int
+)
+
+)

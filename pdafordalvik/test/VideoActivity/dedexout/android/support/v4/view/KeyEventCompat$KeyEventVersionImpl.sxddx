@@ -1,0 +1,21 @@
+(interface (attrs abstract ) android/support/v4/view/KeyEventCompat$KeyEventVersionImpl
+ (super java/lang/Object)
+ (source "KeyEventCompat.java")
+
+
+(method (attrs public abstract ) isTracking([object android/view/KeyEvent] )boolean
+)
+
+(method (attrs public abstract ) metaStateHasModifiers(int int )boolean
+)
+
+(method (attrs public abstract ) metaStateHasNoModifiers(int )boolean
+)
+
+(method (attrs public abstract ) normalizeMetaState(int )int
+)
+
+(method (attrs public abstract ) startTracking([object android/view/KeyEvent] )void
+)
+
+)

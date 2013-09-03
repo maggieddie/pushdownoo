@@ -1,0 +1,14 @@
+(class (attrs public abstract ) com/fasterxml/jackson/annotation/ObjectIdGenerators$None
+ (super com/fasterxml/jackson/annotation/ObjectIdGenerator)
+ (source "ObjectIdGenerators.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/annotation/ObjectIdGenerators$None])
+  (line 52)
+  (invoke-direct {v0} com/fasterxml/jackson/annotation/ObjectIdGenerator/<init> )
+  (return-void )
+ )
+
+)

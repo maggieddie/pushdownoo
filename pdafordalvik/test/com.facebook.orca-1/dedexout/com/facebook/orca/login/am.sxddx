@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/orca/login/am
+ (super java/lang/Object)
+ (source "WildfireSmsRequestOperation.java")
+
+
+(method (attrs public abstract ) Q()void
+)
+
+(method (attrs public abstract ) a([object com/facebook/fbservice/service/ServiceException] )void
+)
+
+)

@@ -1,0 +1,38 @@
+(class (attrs public final ) com/aviary/android/feather/library/log/LoggerFactory
+ (super java/lang/Object)
+ (source "Twttr")
+
+ (field (attrs public static ) a boolean )
+
+(method (attrs static ) <clinit>()void
+  (limit registers 1)
+  (line 16)
+  (const/4 v0 0)
+  (sput-boolean v0 com/aviary/android/feather/library/log/LoggerFactory.a boolean)
+  (line 10)
+  (return-void )
+ )
+
+(method (attrs public static ) a([object java/lang/String] [object com/aviary/android/feather/library/log/LoggerFactory$LoggerType] )[object com/aviary/android/feather/library/log/c]
+  (limit registers 3)
+  ; parameter[0] : v1 ([object java/lang/String])
+  ; parameter[1] : v2 ([object com/aviary/android/feather/library/log/LoggerFactory$LoggerType])
+  (line 112)
+  (sget-boolean v0 com/aviary/android/feather/library/log/LoggerFactory.a boolean)
+  (if-eqz v0 l5f150)
+  (line 113)
+  (sget-object v0 com/aviary/android/feather/library/log/LoggerFactory$LoggerType.a [object com/aviary/android/feather/library/log/LoggerFactory$LoggerType])
+  (if-ne v2 v0 l5f150)
+  (line 114)
+  (new-instance v0 com/aviary/android/feather/library/log/b)
+  (invoke-direct {v0 v1} com/aviary/android/feather/library/log/b/<init> [object java/lang/String] )
+  (label l5f14e)
+  (line 117)
+  (return-object v0)
+  (label l5f150)
+  (new-instance v0 com/aviary/android/feather/library/log/d)
+  (invoke-direct {v0 v1} com/aviary/android/feather/library/log/d/<init> [object java/lang/String] )
+  (goto l5f14e)
+ )
+
+)

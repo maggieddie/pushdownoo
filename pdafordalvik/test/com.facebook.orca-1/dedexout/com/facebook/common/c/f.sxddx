@@ -1,0 +1,43 @@
+(class (attrs public ) com/facebook/common/c/f
+ (super java/lang/Object)
+ (source "LogFile.java")
+
+ (field (attrs private final ) a [object java/io/File] )
+ (field (attrs private final ) b [object java/util/Date] )
+ (field (attrs private final ) c [object java/lang/String] )
+
+(method (attrs public ) <init>([object java/io/File] [object java/util/Date] [object java/lang/String] )void
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/common/c/f])
+  ; parameter[0] : v1 ([object java/io/File])
+  ; parameter[1] : v2 ([object java/util/Date])
+  ; parameter[2] : v3 ([object java/lang/String])
+  (line 23)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 24)
+  (iput-object v1 v0 com/facebook/common/c/f.a [object java/io/File])
+  (line 25)
+  (iput-object v2 v0 com/facebook/common/c/f.b [object java/util/Date])
+  (line 26)
+  (iput-object v3 v0 com/facebook/common/c/f.c [object java/lang/String])
+  (line 27)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/io/File]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/c/f])
+  (line 30)
+  (iget-object v0 v1 com/facebook/common/c/f.a [object java/io/File])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/util/Date]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/common/c/f])
+  (line 34)
+  (iget-object v0 v1 com/facebook/common/c/f.b [object java/util/Date])
+  (return-object v0)
+)
+
+)

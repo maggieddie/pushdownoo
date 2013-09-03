@@ -1,0 +1,31 @@
+(class (attrs public abstract ) com/facebook/contacts/picker/b
+ (super android/widget/BaseAdapter)
+ (source "BaseContactPickerListAdapter.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/contacts/picker/b])
+  (line 12)
+  (invoke-direct {v0} android/widget/BaseAdapter/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/contacts/picker/ContactPickerColorScheme] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/picker/ad;"  ">;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/contacts/picker/b])
+  ; parameter[0] : v1 ([object com/facebook/contacts/picker/ContactPickerColorScheme])
+  (line 27)
+  (return-void )
+)
+
+(method (attrs public abstract ) a([object com/google/common/a/es] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/es"  "<"  "Lcom/facebook/contacts/picker/ad;"  ">;)V")
+  )
+)
+
+)

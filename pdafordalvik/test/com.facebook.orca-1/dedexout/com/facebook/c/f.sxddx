@@ -1,0 +1,51 @@
+(class (attrs ) com/facebook/c/f
+ (super com/facebook/inject/d)
+ (source "ContentModule.java")
+
+ (field (attrs final ) a [object com/facebook/c/d] )
+
+(method (attrs private ) <init>([object com/facebook/c/d] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/c/f])
+  ; parameter[0] : v1 ([object com/facebook/c/d])
+  (line 57)
+  (iput-object v1 v0 com/facebook/c/f.a [object com/facebook/c/d])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/c/d] [object com/facebook/c/e] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/c/f])
+  ; parameter[0] : v1 ([object com/facebook/c/d])
+  ; parameter[1] : v2 ([object com/facebook/c/e])
+  (line 57)
+  (invoke-direct {v0 v1} com/facebook/c/f/<init> [object com/facebook/c/d] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/c/j]
+  (limit registers 4)
+  ; this: v3 ([object com/facebook/c/f])
+  (line 62)
+  (new-instance v1 com/facebook/c/j)
+  (invoke-virtual {v3} com/facebook/c/f/e )
+  (move-result-object v0)
+  (const-class v2 android/content/Context)
+  (invoke-interface {v0 v2} com/facebook/inject/ab/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object android/content/Context])
+  (invoke-direct {v1 v0} com/facebook/c/j/<init> [object android/content/Context] )
+  (return-object v1)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/c/f])
+  (line 57)
+  (invoke-virtual {v1} com/facebook/c/f/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

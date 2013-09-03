@@ -1,0 +1,32 @@
+(class (attrs ) org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher$4
+ (super org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher)
+ (source "ConfigChooser.java")
+
+
+(method (attrs ) <init>([object java/lang/String] int )void
+  (limit registers 4)
+  ; this: v1 ([object org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher$4])
+  ; parameter[0] : v2 ([object java/lang/String])
+  ; parameter[1] : v3 (int)
+  (line 282)
+  (const/4 v0 0)
+  (invoke-direct {v1 v2 v3 v0} org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher/<init> [object java/lang/String] int [object org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher] )
+  (line 1)
+  (return-void )
+ )
+
+(method (attrs public ) matches(int int int int int int )boolean
+  (limit registers 8)
+  ; this: v1 ([object org/andengine/opengl/view/ConfigChooser$ConfigChooserMatcher$4])
+  ; parameter[0] : v2 (int)
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  ; parameter[3] : v5 (int)
+  ; parameter[4] : v6 (int)
+  ; parameter[5] : v7 (int)
+  (line 285)
+  (const/4 v0 1)
+  (return v0)
+)
+
+)

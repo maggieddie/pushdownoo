@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s (na) libo</item>
+        <item quantity="one">1 thousand</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s (na) milyon</item>
+        <item quantity="one">1 million</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s (na) bilyon</item>
+        <item quantity="one">1 billion</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d (na) oras ang nakalipas</item>
+        <item quantity="one">1 oras ang nakalipas</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d (na) minuto ang nakalipas</item>
+        <item quantity="one">1 minuto ang nakalipas</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d (na) oras mula ngayon</item>
+        <item quantity="one">1 oras mula ngayon</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d (na) minuto mula ngayon</item>
+        <item quantity="one">1 minuto mula ngayon</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">I-delete ang Mga Mensahe?</item>
+        <item quantity="one">I-delete ang Mensahe?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Sa sandaling na-delete mo ang iyong kopya ng mga mensaheng ito, hindi ito maa-undo.</item>
+        <item quantity="one">Sa sandaling na-delete mo ang iyong kopya ng mensahe, hindi ito maa-undo.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">I-delete ang Mga Mensahe</item>
+        <item quantity="one">I-delete ang Mensahe</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Dini-delete ang mga mensahe…</item>
+        <item quantity="one">Dini-delete ang mensahe…</item>
+    </plurals>
+</resources>

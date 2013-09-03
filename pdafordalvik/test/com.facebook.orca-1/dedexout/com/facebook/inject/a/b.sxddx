@@ -1,0 +1,44 @@
+(class (attrs public ) com/facebook/inject/a/b
+ (super com/facebook/inject/a/d)
+ (source "AnnotatedBindingBuilderImpl.java")
+ (implements com/facebook/inject/a/a)
+
+
+(method (attrs public ) <init>([object com/facebook/inject/h] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/inject/h"  "<TT;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/inject/a/b])
+  ; parameter[0] : v1 ([object com/facebook/inject/h])
+  (line 17)
+  (invoke-direct {v0 v1} com/facebook/inject/a/d/<init> [object com/facebook/inject/h] )
+  (line 18)
+  (return-void )
+ )
+
+(method (attrs public ) a([object java/lang/Class] )[object com/facebook/inject/a/c]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Ljava/lang/Class"  "<+"  "Ljava/lang/annotation/Annotation;"  ">;)"  "Lcom/facebook/inject/a/c"  "<TT;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/inject/a/b])
+  ; parameter[0] : v3 ([object java/lang/Class])
+  (line 22)
+  (iget-object v0 v2 com/facebook/inject/a/b.a [object com/facebook/inject/h])
+  (iget-object v1 v2 com/facebook/inject/a/b.a [object com/facebook/inject/h])
+  (invoke-virtual {v1} com/facebook/inject/h/a )
+  (move-result-object v1)
+  (invoke-virtual {v1} com/google/inject/a/a )
+  (move-result-object v1)
+  (invoke-static {v1 v3} com/google/inject/a/a [object com/google/inject/f] [object java/lang/Class] )
+  (move-result-object v1)
+  (invoke-virtual {v0 v1} com/facebook/inject/h/a [object com/google/inject/a] )
+  (line 23)
+  (new-instance v0 com/facebook/inject/a/d)
+  (iget-object v1 v2 com/facebook/inject/a/b.a [object com/facebook/inject/h])
+  (invoke-direct {v0 v1} com/facebook/inject/a/d/<init> [object com/facebook/inject/h] )
+  (return-object v0)
+)
+
+)

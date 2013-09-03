@@ -1,0 +1,131 @@
+(class (attrs public abstract ) android/support/v4/widget/ViewDragHelper$Callback
+ (super java/lang/Object)
+ (source "ViewDragHelper.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  (line 148)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) clampViewPositionHorizontal([object android/view/View] int int )int
+  (limit registers 5)
+  ; this: v1 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 304)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) clampViewPositionVertical([object android/view/View] int int )int
+  (limit registers 5)
+  ; this: v1 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v2 ([object android/view/View])
+  ; parameter[1] : v3 (int)
+  ; parameter[2] : v4 (int)
+  (line 319)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getOrderedChildIndex(int )int
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 (int)
+  (line 249)
+  (return v1)
+)
+
+(method (attrs public ) getViewHorizontalDragRange([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 260)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) getViewVerticalDragRange([object android/view/View] )int
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 271)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) onEdgeDragStarted(int int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 240)
+  (return-void )
+)
+
+(method (attrs public ) onEdgeLock(int )boolean
+  (limit registers 3)
+  ; this: v1 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v2 (int)
+  (line 226)
+  (const/4 v0 0)
+  (return v0)
+)
+
+(method (attrs public ) onEdgeTouched(int int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 (int)
+  ; parameter[1] : v2 (int)
+  (line 214)
+  (return-void )
+)
+
+(method (attrs public ) onViewCaptured([object android/view/View] int )void
+  (limit registers 3)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  (line 181)
+  (return-void )
+)
+
+(method (attrs public ) onViewDragStateChanged(int )void
+  (limit registers 2)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 (int)
+  (line 159)
+  (return-void )
+)
+
+(method (attrs public ) onViewPositionChanged([object android/view/View] int int int int )void
+  (limit registers 6)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  ; parameter[3] : v4 (int)
+  ; parameter[4] : v5 (int)
+  (line 170)
+  (return-void )
+)
+
+(method (attrs public ) onViewReleased([object android/view/View] float float )void
+  (limit registers 4)
+  ; this: v0 ([object android/support/v4/widget/ViewDragHelper$Callback])
+  ; parameter[0] : v1 ([object android/view/View])
+  ; parameter[1] : v2 (float)
+  ; parameter[2] : v3 (float)
+  (line 201)
+  (return-void )
+)
+
+(method (attrs public abstract ) tryCaptureView([object android/view/View] int )boolean
+)
+
+)

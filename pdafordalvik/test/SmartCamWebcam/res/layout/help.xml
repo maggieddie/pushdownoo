@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/help_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:myapp="http://schemas.android.com/apk/res/com.smartcam.webcam">
+        <com.admob.android.ads.AdView android:id="@id/ad" android:layout_width="fill_parent" android:layout_height="wrap_content" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+    </LinearLayout>
+    <WebView android:id="@id/help_contents" android:fadingEdge="vertical" android:fadingEdgeLength="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/help_button_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:layout_weight="0.0">
+        <Button android:id="@id/back_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/button_back" android:layout_weight="0.5" />
+        <Button android:id="@id/done_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/button_done" android:layout_weight="0.5" />
+    </LinearLayout>
+</LinearLayout>

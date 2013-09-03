@@ -1,0 +1,40 @@
+(class (attrs ) com/google/common/collect/ImmutableCollection$SerializedForm
+ (super java/lang/Object)
+ (source "ImmutableCollection.java")
+ (implements java/io/Serializable)
+
+ (field (attrs private static final ) serialVersionUID long )
+ (field (attrs final ) elements [array [object java/lang/Object]] )
+
+(method (attrs ) <init>([array [object java/lang/Object]] )void
+  (limit registers 2)
+  ; this: v0 ([object com/google/common/collect/ImmutableCollection$SerializedForm])
+  ; parameter[0] : v1 ([array [object java/lang/Object]])
+  (line 254)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 255)
+  (iput-object v1 v0 com/google/common/collect/ImmutableCollection$SerializedForm.elements [array [object java/lang/Object]])
+  (line 256)
+  (return-void )
+ )
+
+(method (attrs ) readResolve()[object java/lang/Object]
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/collect/ImmutableCollection$SerializedForm])
+  (line 258)
+  (iget-object v0 v2 com/google/common/collect/ImmutableCollection$SerializedForm.elements [array [object java/lang/Object]])
+  (array-length v0 v0)
+  (if-nez v0 l1070f4)
+  (sget-object v0 com/google/common/collect/ImmutableCollection.c [object com/google/common/collect/ImmutableCollection])
+  (label l1070f2)
+  (return-object v0)
+  (label l1070f4)
+  (new-instance v0 com/google/common/collect/ImmutableCollection$ArrayImmutableCollection)
+  (iget-object v1 v2 com/google/common/collect/ImmutableCollection$SerializedForm.elements [array [object java/lang/Object]])
+  (invoke-static {v1} com/google/common/collect/Platform/a [array [object java/lang/Object]] )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/google/common/collect/ImmutableCollection$ArrayImmutableCollection/<init> [array [object java/lang/Object]] )
+  (goto l1070f2)
+)
+
+)

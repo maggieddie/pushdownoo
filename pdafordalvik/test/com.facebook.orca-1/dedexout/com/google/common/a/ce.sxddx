@@ -1,0 +1,51 @@
+(class (attrs ) com/google/common/a/ce
+ (super com/google/common/a/o)
+ (source "CustomConcurrentHashMap.java")
+
+ (field (attrs final ) a [object com/google/common/a/cc] )
+
+(method (attrs ) <init>([object com/google/common/a/cc] [object com/google/common/a/cm] )void
+  (limit registers 3)
+  ; this: v0 ([object com/google/common/a/ce])
+  ; parameter[0] : v1 ([object com/google/common/a/cc])
+  ; parameter[1] : v2 ([object com/google/common/a/cm])
+  (line 3263)
+  (iput-object v1 v0 com/google/common/a/ce.a [object com/google/common/a/cc])
+  (invoke-direct {v0 v2} com/google/common/a/o/<init> [object java/lang/Object] )
+  (return-void )
+ )
+
+(method (attrs protected ) a([object com/google/common/a/cm] )[object com/google/common/a/cm]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 4)
+  ; this: v2 ([object com/google/common/a/ce])
+  ; parameter[0] : v3 ([object com/google/common/a/cm])
+  (line 3266)
+  (invoke-interface {v3} com/google/common/a/cm/getNextEvictable )
+  (move-result-object v0)
+  (line 3267)
+  (iget-object v1 v2 com/google/common/a/ce.a [object com/google/common/a/cc])
+  (iget-object v1 v1 com/google/common/a/cc.a [object com/google/common/a/cm])
+  (if-ne v0 v1 l38c5c6)
+  (const/4 v0 0)
+  (label l38c5c6)
+  (return-object v0)
+)
+
+(method (attrs protected ) a([object java/lang/Object] )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/google/common/a/cm"  "<TK;TV;>;)"  "Lcom/google/common/a/cm"  "<TK;TV;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/ce])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 3263)
+  (check-cast v2 [object com/google/common/a/cm])
+  (invoke-virtual {v1 v2} com/google/common/a/ce/a [object com/google/common/a/cm] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

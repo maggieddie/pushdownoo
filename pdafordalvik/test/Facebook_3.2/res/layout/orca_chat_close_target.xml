@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="bottom" android:id="@id/background" android:background="@drawable/orca_chat_actions_background" android:layout_width="fill_parent" android:layout_height="164.0dip" android:layerType="hardware" />
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/close_bauble" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/close_bauble_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/orca_chat_close_base" android:antialias="true" android:dither="true" />
+        <ImageView android:layout_gravity="center" android:id="@id/close_bauble_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/orca_chat_close_icon" />
+    </FrameLayout>
+</merge>

@@ -1,0 +1,70 @@
+(class (attrs final ) com/google/common/a/mb
+ (super com/google/common/a/ma)
+ (source "Tables.java")
+ (implements java/io/Serializable)
+
+ (field (attrs private final ) a [object java/lang/Object] )
+ (field (attrs private final ) b [object java/lang/Object] )
+ (field (attrs private final ) c [object java/lang/Object] )
+
+(method (attrs ) <init>([object java/lang/Object] [object java/lang/Object] [object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(TR;TC;TV;)V")
+  )
+  (annotation runtimeVisibility param 1 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 2 [object javax/annotation/Nullable]
+  )
+  (annotation runtimeVisibility param 3 [object javax/annotation/Nullable]
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/a/mb])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  ; parameter[1] : v2 ([object java/lang/Object])
+  ; parameter[2] : v3 ([object java/lang/Object])
+  (line 70)
+  (invoke-direct {v0} com/google/common/a/ma/<init> )
+  (line 71)
+  (iput-object v1 v0 com/google/common/a/mb.a [object java/lang/Object])
+  (line 72)
+  (iput-object v2 v0 com/google/common/a/mb.b [object java/lang/Object])
+  (line 73)
+  (iput-object v3 v0 com/google/common/a/mb.c [object java/lang/Object])
+  (line 74)
+  (return-void )
+ )
+
+(method (attrs public ) a()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TR;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/mb])
+  (line 78)
+  (iget-object v0 v1 com/google/common/a/mb.a [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TC;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/mb])
+  (line 82)
+  (iget-object v0 v1 com/google/common/a/mb.b [object java/lang/Object])
+  (return-object v0)
+)
+
+(method (attrs public ) c()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()TV;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/mb])
+  (line 86)
+  (iget-object v0 v1 com/google/common/a/mb.c [object java/lang/Object])
+  (return-object v0)
+)
+
+)

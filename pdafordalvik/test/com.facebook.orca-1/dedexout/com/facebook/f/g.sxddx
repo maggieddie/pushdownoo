@@ -1,0 +1,64 @@
+(class (attrs public ) com/facebook/f/g
+ (super com/facebook/config/background/a)
+ (source "GkConfigurationComponent.java")
+
+ (field (attrs private final ) a [object com/facebook/prefs/shared/d] )
+ (field (attrs private final ) b [object com/facebook/f/a] )
+ (field (attrs private final ) c [object java/util/Set] )
+
+(method (attrs public ) <init>([object com/facebook/prefs/shared/d] [object com/facebook/f/a] [object java/util/Set] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lcom/facebook/prefs/shared/d;"  "Lcom/facebook/f/a;"  "Ljava/util/Set"  "<"  "Lcom/facebook/f/f;"  ">;)V")
+  )
+  (limit registers 4)
+  ; this: v0 ([object com/facebook/f/g])
+  ; parameter[0] : v1 ([object com/facebook/prefs/shared/d])
+  ; parameter[1] : v2 ([object com/facebook/f/a])
+  ; parameter[2] : v3 ([object java/util/Set])
+  (line 32)
+  (invoke-direct {v0} com/facebook/config/background/a/<init> )
+  (line 33)
+  (iput-object v1 v0 com/facebook/f/g.a [object com/facebook/prefs/shared/d])
+  (line 34)
+  (iput-object v2 v0 com/facebook/f/g.b [object com/facebook/f/a])
+  (line 35)
+  (iput-object v3 v0 com/facebook/f/g.c [object java/util/Set])
+  (line 36)
+  (return-void )
+ )
+
+(method (attrs static ) a([object com/facebook/f/g] )[object java/util/Set]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/f/g])
+  (line 23)
+  (iget-object v0 v1 com/facebook/f/g.c [object java/util/Set])
+  (return-object v0)
+ )
+
+(method (attrs static ) b([object com/facebook/f/g] )[object com/facebook/f/a]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/f/g])
+  (line 23)
+  (iget-object v0 v1 com/facebook/f/g.b [object com/facebook/f/a])
+  (return-object v0)
+ )
+
+(method (attrs static ) c([object com/facebook/f/g] )[object com/facebook/prefs/shared/d]
+  (limit registers 2)
+  ; parameter[0] : v1 ([object com/facebook/f/g])
+  (line 23)
+  (iget-object v0 v1 com/facebook/f/g.a [object com/facebook/prefs/shared/d])
+  (return-object v0)
+ )
+
+(method (attrs public ) a()[object com/facebook/http/protocol/v]
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/f/g])
+  (line 40)
+  (new-instance v0 com/facebook/f/i)
+  (const/4 v1 0)
+  (invoke-direct {v0 v2 v1} com/facebook/f/i/<init> [object com/facebook/f/g] [object com/facebook/f/h] )
+  (return-object v0)
+)
+
+)

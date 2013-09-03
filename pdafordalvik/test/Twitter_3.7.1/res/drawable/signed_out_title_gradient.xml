@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:id="@id/signed_out_gradient" android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/clear" android:endColor="@color/solid_black" android:angle="90.0" android:type="linear" android:centerX="0.0" android:centerY="0.0" />
+</shape>

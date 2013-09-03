@@ -1,0 +1,55 @@
+(class (attrs final ) com/facebook/orca/server/z
+ (super java/lang/Object)
+ (source "FetchThreadListParams.java")
+ (implements android/os/Parcelable$Creator)
+
+
+(method (attrs ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/orca/server/z])
+  (line 92)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object android/os/Parcel] )[object com/facebook/orca/server/FetchThreadListParams]
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/server/z])
+  ; parameter[0] : v3 ([object android/os/Parcel])
+  (line 94)
+  (new-instance v0 com/facebook/orca/server/FetchThreadListParams)
+  (const/4 v1 0)
+  (invoke-direct {v0 v3 v1} com/facebook/orca/server/FetchThreadListParams/<init> [object android/os/Parcel] [object com/facebook/orca/server/z] )
+  (return-object v0)
+)
+
+(method (attrs public ) a(int )[array [object com/facebook/orca/server/FetchThreadListParams]]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/server/z])
+  ; parameter[0] : v2 (int)
+  (line 98)
+  (new-array v0 v2 [array [object com/facebook/orca/server/FetchThreadListParams]])
+  (return-object v0)
+)
+
+(method (attrs public ) createFromParcel([object android/os/Parcel] )[object java/lang/Object]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/server/z])
+  ; parameter[0] : v2 ([object android/os/Parcel])
+  (line 92)
+  (invoke-virtual {v1 v2} com/facebook/orca/server/z/a [object android/os/Parcel] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) newArray(int )[array [object java/lang/Object]]
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/server/z])
+  ; parameter[0] : v2 (int)
+  (line 92)
+  (invoke-virtual {v1 v2} com/facebook/orca/server/z/a int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

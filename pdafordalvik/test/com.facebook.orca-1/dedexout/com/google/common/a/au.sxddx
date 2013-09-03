@@ -1,0 +1,227 @@
+(class (attrs public final ) com/google/common/a/au
+ (super com/google/common/a/p)
+ (source "ArrayListMultimap.java")
+
+ (field (attrs transient ) a int )
+
+(method (attrs private ) <init>()void
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 103)
+  (new-instance v0 java/util/HashMap)
+  (invoke-direct {v0} java/util/HashMap/<init> )
+  (invoke-direct {v1 v0} com/google/common/a/p/<init> [object java/util/Map] )
+  (line 104)
+  (const/16 v0 10)
+  (iput v0 v1 com/google/common/a/au.a int)
+  (line 105)
+  (return-void )
+ )
+
+(method (attrs ) a()[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v2 ([object com/google/common/a/au])
+  (line 126)
+  (new-instance v0 java/util/ArrayList)
+  (iget v1 v2 com/google/common/a/au.a int)
+  (invoke-direct {v0 v1} java/util/ArrayList/<init> int )
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<TV;>;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2} com/google/common/a/p/a [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Iterable] )[object java/util/List]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<TV;>;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Iterable])
+  (line 62)
+  (invoke-super {v1 v2 v3} com/google/common/a/p/a [object java/lang/Object] [object java/lang/Iterable] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) a([object java/lang/Object] [object java/lang/Object] )boolean
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Ljava/util/List"  "<TV;>;")
+  )
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2 v3} com/google/common/a/p/a [object java/lang/Object] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] )[object java/util/List]
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2} com/google/common/a/p/b [object java/lang/Object] )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/util/Map]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/b )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b([object java/lang/Object] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2 v3} com/google/common/a/p/b [object java/lang/Object] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs ) c()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-virtual {v1} com/google/common/a/au/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) c([object java/lang/Object] [object java/lang/Iterable] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Iterable])
+  (line 62)
+  (invoke-super {v1 v2 v3} com/google/common/a/p/c [object java/lang/Object] [object java/lang/Iterable] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) c([object java/lang/Object] [object java/lang/Object] )boolean
+  (limit registers 4)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  ; parameter[1] : v3 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2 v3} com/google/common/a/p/c [object java/lang/Object] [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) d()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/d )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) e()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/e )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) equals([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2} com/google/common/a/p/equals [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) f()void
+  (limit registers 1)
+  ; this: v0 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v0} com/google/common/a/p/f )
+  (return-void )
+)
+
+(method (attrs public ) f([object java/lang/Object] )boolean
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/a/au])
+  ; parameter[0] : v2 ([object java/lang/Object])
+  (line 62)
+  (invoke-super {v1 v2} com/google/common/a/p/f [object java/lang/Object] )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) g()[object java/util/Set]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/g )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) h()[object com/google/common/a/jf]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/h )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) hashCode()int
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/hashCode )
+  (move-result v0)
+  (return v0)
+)
+
+(method (attrs public ) i()[object java/util/Collection]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/i )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/google/common/a/au])
+  (line 62)
+  (invoke-super {v1} com/google/common/a/p/toString )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

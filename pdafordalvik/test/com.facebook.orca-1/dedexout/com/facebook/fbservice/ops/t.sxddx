@@ -1,0 +1,28 @@
+(class (attrs ) com/facebook/fbservice/ops/t
+ (super java/lang/Object)
+ (source "DefaultBlueServiceOperationFactory.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/fbservice/ops/r] )
+
+(method (attrs ) <init>([object com/facebook/fbservice/ops/r] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/fbservice/ops/t])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/ops/r])
+  (line 412)
+  (iput-object v1 v0 com/facebook/fbservice/ops/t.a [object com/facebook/fbservice/ops/r])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/fbservice/ops/t])
+  (line 415)
+  (iget-object v0 v1 com/facebook/fbservice/ops/t.a [object com/facebook/fbservice/ops/r])
+  (invoke-static {v0} com/facebook/fbservice/ops/r/g [object com/facebook/fbservice/ops/r] )
+  (line 416)
+  (return-void )
+)
+
+)

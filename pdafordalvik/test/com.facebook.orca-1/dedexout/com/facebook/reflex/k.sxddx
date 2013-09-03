@@ -1,0 +1,31 @@
+(class (attrs ) com/facebook/reflex/k
+ (super android/view/View)
+ (source "FragmentReflexActivity.java")
+
+ (field (attrs final ) a [object com/facebook/reflex/j] )
+
+(method (attrs ) <init>([object com/facebook/reflex/j] [object android/content/Context] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/reflex/k])
+  ; parameter[0] : v1 ([object com/facebook/reflex/j])
+  ; parameter[1] : v2 ([object android/content/Context])
+  (line 114)
+  (iput-object v1 v0 com/facebook/reflex/k.a [object com/facebook/reflex/j])
+  (invoke-direct {v0 v2} android/view/View/<init> [object android/content/Context] )
+  (return-void )
+ )
+
+(method (attrs protected ) onDraw([object android/graphics/Canvas] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/reflex/k])
+  ; parameter[0] : v2 ([object android/graphics/Canvas])
+  (line 117)
+  (iget-object v0 v1 com/facebook/reflex/k.a [object com/facebook/reflex/j])
+  (invoke-static {v0} com/facebook/reflex/j/a [object com/facebook/reflex/j] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/facebook/reflex/view/b/p/b )
+  (line 118)
+  (return-void )
+)
+
+)

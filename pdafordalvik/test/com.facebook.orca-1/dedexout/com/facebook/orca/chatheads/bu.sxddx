@@ -1,0 +1,64 @@
+(class (attrs ) com/facebook/orca/chatheads/bu
+ (super android/os/Handler)
+ (source "ChatHeadWindowManager.java")
+
+ (field (attrs private final ) a [object java/lang/ref/WeakReference] )
+
+(method (attrs public ) <init>([object com/facebook/orca/chatheads/al] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/chatheads/bu])
+  ; parameter[0] : v2 ([object com/facebook/orca/chatheads/al])
+  (line 3235)
+  (invoke-direct {v1} android/os/Handler/<init> )
+  (line 3236)
+  (new-instance v0 java/lang/ref/WeakReference)
+  (invoke-direct {v0 v2} java/lang/ref/WeakReference/<init> [object java/lang/Object] )
+  (iput-object v0 v1 com/facebook/orca/chatheads/bu.a [object java/lang/ref/WeakReference])
+  (line 3238)
+  (return-void )
+ )
+
+(method (attrs public ) handleMessage([object android/os/Message] )void
+  (limit registers 4)
+  ; this: v2 ([object com/facebook/orca/chatheads/bu])
+  ; parameter[0] : v3 ([object android/os/Message])
+  (line 3242)
+  (iget-object v0 v2 com/facebook/orca/chatheads/bu.a [object java/lang/ref/WeakReference])
+  (invoke-virtual {v0} java/lang/ref/WeakReference/get )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/orca/chatheads/al])
+  (line 3243)
+  (if-nez v0 l243976)
+  (label l243974)
+  (line 3260)
+  (return-void )
+  (label l243976)
+  (line 3247)
+  (iget v1 v3 android/os/Message.what int)
+  (packed-switch v1 10
+    ps24397a_243982 ; case 10
+    ps24397a_24398a ; case 11
+    ps24397a_243992 ; case 12
+    ps24397a_default) ; default
+  (label ps24397a_default)
+  (goto l243974)
+  (label ps24397a_243982)
+  (line 3249)
+  (invoke-static {v0} com/facebook/orca/chatheads/al/O [object com/facebook/orca/chatheads/al] )
+  (goto l243974)
+  (label ps24397a_24398a)
+  (line 3253)
+  (invoke-static {v0} com/facebook/orca/chatheads/al/P [object com/facebook/orca/chatheads/al] )
+  (goto l243974)
+  (label ps24397a_243992)
+  (line 3257)
+  (invoke-static {v0} com/facebook/orca/chatheads/al/Q [object com/facebook/orca/chatheads/al] )
+  (goto l243974)
+  (line 3247)
+  (label l24399a)
+  (data-array
+    0x00 0x00
+  )
+)
+
+)

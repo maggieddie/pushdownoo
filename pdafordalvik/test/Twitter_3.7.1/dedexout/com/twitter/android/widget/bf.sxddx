@@ -1,0 +1,30 @@
+(class (attrs final ) com/twitter/android/widget/bf
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/twitter/android/widget/TweetView] )
+
+(method (attrs public ) <init>([object com/twitter/android/widget/TweetView] )void
+  (limit registers 2)
+  ; this: v0 ([object com/twitter/android/widget/bf])
+  ; parameter[0] : v1 ([object com/twitter/android/widget/TweetView])
+  (line 2097)
+  (iput-object v1 v0 com/twitter/android/widget/bf.a [object com/twitter/android/widget/TweetView])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (line 2098)
+  (return-void )
+ )
+
+(method (attrs public final ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/twitter/android/widget/bf])
+  (line 2101)
+  (iget-object v0 v2 com/twitter/android/widget/bf.a [object com/twitter/android/widget/TweetView])
+  (const/4 v1 1)
+  (invoke-virtual {v0 v1} com/twitter/android/widget/TweetView/c boolean )
+  (line 2102)
+  (return-void )
+)
+
+)

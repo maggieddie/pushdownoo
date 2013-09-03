@@ -1,0 +1,29 @@
+(class (attrs ) com/facebook/auth/login/af
+ (super java/lang/Object)
+ (source "GenericLoginApprovalViewGroup.java")
+ (implements android/view/View$OnClickListener)
+
+ (field (attrs final ) a [object com/facebook/auth/login/GenericLoginApprovalViewGroup] )
+
+(method (attrs ) <init>([object com/facebook/auth/login/GenericLoginApprovalViewGroup] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/auth/login/af])
+  ; parameter[0] : v1 ([object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (line 55)
+  (iput-object v1 v0 com/facebook/auth/login/af.a [object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onClick([object android/view/View] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/auth/login/af])
+  ; parameter[0] : v2 ([object android/view/View])
+  (line 58)
+  (iget-object v0 v1 com/facebook/auth/login/af.a [object com/facebook/auth/login/GenericLoginApprovalViewGroup])
+  (invoke-static {v0} com/facebook/auth/login/GenericLoginApprovalViewGroup/access$000 [object com/facebook/auth/login/GenericLoginApprovalViewGroup] )
+  (line 59)
+  (return-void )
+)
+
+)

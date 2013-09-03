@@ -1,0 +1,26 @@
+(class (attrs public final ) com/facebook/m
+ (super java/lang/Object)
+ (source "R.java")
+
+ (field (attrs public static final ) divebar_nearby_friends_row_title int 2131427335); 0x7f0b0007 )
+ (field (attrs public static final ) message_delete_confirm_msg int 2131427337); 0x7f0b0009 )
+ (field (attrs public static final ) message_delete_confirm_ok_button int 2131427338); 0x7f0b000a )
+ (field (attrs public static final ) message_delete_confirm_title int 2131427336); 0x7f0b0008 )
+ (field (attrs public static final ) message_delete_progress int 2131427339); 0x7f0b000b )
+ (field (attrs public static final ) num_billion_long int 2131427330); 0x7f0b0002 )
+ (field (attrs public static final ) num_million_long int 2131427329); 0x7f0b0001 )
+ (field (attrs public static final ) num_thousand_long int 2131427328); 0x7f0b0000 )
+ (field (attrs public static final ) time_hours_ago int 2131427331); 0x7f0b0003 )
+ (field (attrs public static final ) time_in_x_hours int 2131427333); 0x7f0b0005 )
+ (field (attrs public static final ) time_in_x_minutes int 2131427334); 0x7f0b0006 )
+ (field (attrs public static final ) time_minutes_ago int 2131427332); 0x7f0b0004 )
+
+(method (attrs public ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/m])
+  (line 4248)
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+)

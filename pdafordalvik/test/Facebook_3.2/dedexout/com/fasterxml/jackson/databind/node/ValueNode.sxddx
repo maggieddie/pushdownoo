@@ -1,0 +1,82 @@
+(class (attrs public abstract ) com/fasterxml/jackson/databind/node/ValueNode
+ (super com/fasterxml/jackson/databind/node/BaseJsonNode)
+ (source "ValueNode.java")
+
+
+(method (attrs protected ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  (line 19)
+  (invoke-direct {v0} com/fasterxml/jackson/databind/node/BaseJsonNode/<init> )
+  (return-void )
+ )
+
+(method (attrs public abstract ) asToken()[object com/fasterxml/jackson/core/JsonToken]
+)
+
+(method (attrs public ) deepCopy()[object com/fasterxml/jackson/databind/JsonNode]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "<T:"  "Lcom/fasterxml/jackson/databind/JsonNode;"  ">()TT;")
+  )
+  (limit registers 1)
+  ; this: v0 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  (line 26)
+  (return-object v0)
+)
+
+(method (attrs public ) isValueNode()boolean
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  (line 28)
+  (const/4 v0 1)
+  (return v0)
+)
+
+(method (attrs public ) path(int )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  ; parameter[0] : v2 (int)
+  (line 52)
+  (invoke-static {} com/fasterxml/jackson/databind/node/MissingNode/getInstance )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) path([object java/lang/String] )[object com/fasterxml/jackson/databind/JsonNode]
+  (limit registers 3)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  ; parameter[0] : v2 ([object java/lang/String])
+  (line 49)
+  (invoke-static {} com/fasterxml/jackson/databind/node/MissingNode/getInstance )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) serializeWithType([object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] [object com/fasterxml/jackson/databind/jsontype/TypeSerializer] )void
+  (limit registers 4)
+  ; this: v0 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  ; parameter[0] : v1 ([object com/fasterxml/jackson/core/JsonGenerator])
+  ; parameter[1] : v2 ([object com/fasterxml/jackson/databind/SerializerProvider])
+  ; parameter[2] : v3 ([object com/fasterxml/jackson/databind/jsontype/TypeSerializer])
+  (line 37)
+  (invoke-virtual {v3 v0 v1} com/fasterxml/jackson/databind/jsontype/TypeSerializer/writeTypePrefixForScalar [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 38)
+  (invoke-virtual {v0 v1 v2} com/fasterxml/jackson/databind/node/ValueNode/serialize [object com/fasterxml/jackson/core/JsonGenerator] [object com/fasterxml/jackson/databind/SerializerProvider] )
+  (line 39)
+  (invoke-virtual {v3 v0 v1} com/fasterxml/jackson/databind/jsontype/TypeSerializer/writeTypeSuffixForScalar [object java/lang/Object] [object com/fasterxml/jackson/core/JsonGenerator] )
+  (line 40)
+  (return-void )
+)
+
+(method (attrs public ) toString()[object java/lang/String]
+  (limit registers 2)
+  ; this: v1 ([object com/fasterxml/jackson/databind/node/ValueNode])
+  (line 61)
+  (invoke-virtual {v1} com/fasterxml/jackson/databind/node/ValueNode/asText )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

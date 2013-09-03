@@ -1,0 +1,27 @@
+(class (attrs ) com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$1
+ (super android/net/sip/SipAudioCall$Listener)
+ (source "IncomingCallReceiver.java")
+
+ (field (attrs final ) this$0 [object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver] )
+
+(method (attrs ) <init>([object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver] )void
+  (limit registers 2)
+  ; this: v0 ([object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$1])
+  ; parameter[0] : v1 ([object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver])
+  (line 1)
+  (iput-object v1 v0 com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$1.this$0 [object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver])
+  (line 40)
+  (invoke-direct {v0} android/net/sip/SipAudioCall$Listener/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) onRinging([object android/net/sip/SipAudioCall] [object android/net/sip/SipProfile] )void
+  (limit registers 3)
+  ; this: v0 ([object com/sip/voip/net/BroadcastReceiver/IncomingCallReceiver$1])
+  ; parameter[0] : v1 ([object android/net/sip/SipAudioCall])
+  ; parameter[1] : v2 ([object android/net/sip/SipProfile])
+  (line 47)
+  (return-void )
+)
+
+)

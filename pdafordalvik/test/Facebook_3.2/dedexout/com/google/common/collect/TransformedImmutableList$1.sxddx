@@ -1,0 +1,33 @@
+(class (attrs ) com/google/common/collect/TransformedImmutableList$1
+ (super com/google/common/collect/AbstractIndexedListIterator)
+ (source "TransformedImmutableList.java")
+
+ (field (attrs final ) a [object com/google/common/collect/TransformedImmutableList] )
+
+(method (attrs ) <init>([object com/google/common/collect/TransformedImmutableList] int int )void
+  (limit registers 4)
+  ; this: v0 ([object com/google/common/collect/TransformedImmutableList$1])
+  ; parameter[0] : v1 ([object com/google/common/collect/TransformedImmutableList])
+  ; parameter[1] : v2 (int)
+  ; parameter[2] : v3 (int)
+  (line 82)
+  (iput-object v1 v0 com/google/common/collect/TransformedImmutableList$1.a [object com/google/common/collect/TransformedImmutableList])
+  (invoke-direct {v0 v2 v3} com/google/common/collect/AbstractIndexedListIterator/<init> int int )
+  (return-void )
+ )
+
+(method (attrs protected ) a(int )[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "(I)TE;")
+  )
+  (limit registers 3)
+  ; this: v1 ([object com/google/common/collect/TransformedImmutableList$1])
+  ; parameter[0] : v2 (int)
+  (line 84)
+  (iget-object v0 v1 com/google/common/collect/TransformedImmutableList$1.a [object com/google/common/collect/TransformedImmutableList])
+  (invoke-virtual {v0 v2} com/google/common/collect/TransformedImmutableList/get int )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

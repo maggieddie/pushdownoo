@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) com/facebook/contacts/contactcard/af
+ (super java/lang/Object)
+ (source "EntrySectionView.java")
+
+
+(method (attrs public abstract ) a()void
+)
+
+(method (attrs public abstract ) a([object com/facebook/contacts/models/entry/Entry] )void
+)
+
+(method (attrs public abstract ) b()void
+)
+
+(method (attrs public abstract ) b([object com/facebook/contacts/models/entry/Entry] )void
+)
+
+)

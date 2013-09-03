@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/List" />
+    <ProgressBar android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_spacing" android:indeterminate="true" style="?android:attr/progressBarStyleSmall" />
+    <RelativeLayout android:layout_height="wrap_content" style="@style/Toolbar">
+        <Button android:id="@id/add_account" android:layout_width="@dimen/toolbar_button_width" android:layout_height="wrap_content" android:text="@string/add_account" android:layout_centerInParent="true" android:onClick="onClickHandler" />
+        <Button android:id="@id/settings" android:layout_width="@dimen/toolbar_button_width" android:layout_height="wrap_content" android:text="@string/manage_accounts" android:layout_centerInParent="true" android:onClick="onClickHandler" />
+    </RelativeLayout>
+</LinearLayout>

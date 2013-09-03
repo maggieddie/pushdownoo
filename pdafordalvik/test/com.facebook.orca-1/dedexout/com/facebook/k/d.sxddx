@@ -1,0 +1,42 @@
+(class (attrs final ) com/facebook/k/d
+ (super java/lang/Object)
+ (source "NetworkActivityFbHttpClientObserver.java")
+ (implements org/apache/http/HttpRequestInterceptor)
+
+ (field (attrs final ) a [object com/facebook/k/b] )
+
+(method (attrs private ) <init>([object com/facebook/k/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/k/d])
+  ; parameter[0] : v1 ([object com/facebook/k/b])
+  (line 34)
+  (iput-object v1 v0 com/facebook/k/d.a [object com/facebook/k/b])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/k/b] [object com/facebook/k/c] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/k/d])
+  ; parameter[0] : v1 ([object com/facebook/k/b])
+  ; parameter[1] : v2 ([object com/facebook/k/c])
+  (line 34)
+  (invoke-direct {v0 v1} com/facebook/k/d/<init> [object com/facebook/k/b] )
+  (return-void )
+ )
+
+(method (attrs public ) process([object org/apache/http/HttpRequest] [object org/apache/http/protocol/HttpContext] )void
+  (limit registers 4)
+  ; this: v1 ([object com/facebook/k/d])
+  ; parameter[0] : v2 ([object org/apache/http/HttpRequest])
+  ; parameter[1] : v3 ([object org/apache/http/protocol/HttpContext])
+  (line 40)
+  (iget-object v0 v1 com/facebook/k/d.a [object com/facebook/k/b])
+  (invoke-static {v0} com/facebook/k/b/a [object com/facebook/k/b] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/facebook/k/a/a )
+  (line 41)
+  (return-void )
+)
+
+)

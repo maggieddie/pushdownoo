@@ -17,7 +17,7 @@
   (limit registers 1)
   ; this: v0 ([object java/util/concurrent/Executors$FinalizableDelegatedExecutorService])
   (line 643)
-  (invoke-super-quick {v0} java/util/concurrent/Executors$FinalizableDelegatedExecutorService/shutdown )
+  (invoke-super-quick {v0} vtable #0x15)
   (line 644)
   (return-void )
 )

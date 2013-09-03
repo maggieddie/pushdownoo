@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/ui_flyout_body_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:timeline="http://schemas.android.com/apk/res-auto/com.facebook.timeline.ui">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:color="@color/timeline_dialog_background">
+            <Button android:id="@id/unsubscribe_button" android:text="@string/timeline_unsubscribe" style="@style/friend_menu_item_button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

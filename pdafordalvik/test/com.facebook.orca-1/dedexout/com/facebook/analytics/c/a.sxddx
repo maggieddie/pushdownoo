@@ -1,0 +1,40 @@
+(class (attrs public ) com/facebook/analytics/c/a
+ (super com/facebook/d/d/a)
+ (source "AnalyticsDatabaseSupplier.java")
+
+ (field (attrs private final ) a [object com/facebook/analytics/c/d] )
+
+(method (attrs public ) <init>([object android/content/Context] [object com/facebook/common/executors/a] [object com/facebook/d/b/a] [object com/facebook/analytics/c/d] )void
+  (limit registers 12)
+  ; this: v7 ([object com/facebook/analytics/c/a])
+  ; parameter[0] : v8 ([object android/content/Context])
+  ; parameter[1] : v9 ([object com/facebook/common/executors/a])
+  ; parameter[2] : v10 ([object com/facebook/d/b/a])
+  ; parameter[3] : v11 ([object com/facebook/analytics/c/d])
+  (line 28)
+  (invoke-static {v11} com/google/common/a/es/a [object java/lang/Object] )
+  (move-result-object v4)
+  (const-string v5 "analytics_db2")
+  (invoke-static {} com/google/common/a/es/d )
+  (nop )
+  (move-result-object v6)
+  (move-object v0 v7)
+  (move-object v1 v8)
+  (move-object v2 v9)
+  (move-object v3 v10)
+  (invoke-direct/range {v0 .. v6} com/facebook/d/d/a/<init> [object android/content/Context] [object com/facebook/common/executors/a] [object com/facebook/d/b/a] [object com/google/common/a/es] [object java/lang/String] [object com/google/common/a/es] )
+  (line 36)
+  (iput-object v11 v7 com/facebook/analytics/c/a.a [object com/facebook/analytics/c/d])
+  (line 37)
+  (return-void )
+ )
+
+(method (attrs protected ) a()int
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/analytics/c/a])
+  (line 45)
+  (const v0 51200) ; 0xc800)
+  (return v0)
+)
+
+)

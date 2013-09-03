@@ -1,0 +1,73 @@
+(class (attrs ) org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1
+ (super org/andengine/util/adt/pool/GenericPool)
+ (source "LRUCache.java")
+
+ (field (attrs final ) this$1 [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue] )
+
+(method (attrs ) <init>([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue] )void
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1])
+  ; parameter[0] : v1 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue])
+  (line 1)
+  (iput-object v1 v0 org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1.this$1 [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue])
+  (line 208)
+  (invoke-direct {v0} org/andengine/util/adt/pool/GenericPool/<init> )
+  (return-void )
+ )
+
+(method (attrs protected ) onAllocatePoolItem()[object java/lang/Object]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode"  "<TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1])
+  (line 1)
+  (invoke-virtual {v1} org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1/onAllocatePoolItem )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs protected ) onAllocatePoolItem()[object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode]
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "()"  "Lorg/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode"  "<TK;>;")
+  )
+  (limit registers 2)
+  ; this: v1 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1])
+  (line 211)
+  (new-instance v0 org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode)
+  (invoke-direct {v0} org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode/<init> )
+  (return-object v0)
+)
+
+(method (attrs protected ) onHandleRecycleItem([object java/lang/Object] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode"  "<TK;>;)V")
+  )
+  (limit registers 2)
+  ; this: v0 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1])
+  ; parameter[0] : v1 ([object java/lang/Object])
+  (line 1)
+  (check-cast v1 [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode])
+  (invoke-virtual {v0 v1} org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1/onHandleRecycleItem [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode] )
+  (return-void )
+)
+
+(method (attrs protected ) onHandleRecycleItem([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode] )void
+  (annotation systemVisibility [object dalvik/annotation/Signature]
+    (value [array [object java/lang/String]] "("  "Lorg/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode"  "<TK;>;)V")
+  )
+  (limit registers 3)
+  ; this: v1 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueue$1])
+  ; parameter[0] : v2 ([object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode])
+  (const/4 v0 0)
+  (line 216)
+  (iput-object v0 v2 org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode.mKey [object java/lang/Object])
+  (line 217)
+  (iput-object v0 v2 org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode.mPrevious [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode])
+  (line 218)
+  (iput-object v0 v2 org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode.mNext [object org/andengine/util/adt/cache/LRUCache$LRUCacheQueueNode])
+  (line 219)
+  (return-void )
+)
+
+)

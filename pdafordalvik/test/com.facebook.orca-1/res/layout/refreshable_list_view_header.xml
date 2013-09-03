@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.refreshablelistview.RefreshableListViewCustomCenteringContainer android:id="@id/pull_to_refresh_action_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="42.0dip">
+        <com.facebook.reflex.view.ContainerView android:gravity="center" android:id="@id/pull_to_refresh_image_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="57.0dip" android:layout_height="42.0dip">
+            <ImageView android:layout_width="37.0dip" android:layout_height="42.0dip" android:src="@drawable/orca_pull_to_refresh_arrow" />
+        </com.facebook.reflex.view.ContainerView>
+        <LinearLayout android:orientation="vertical" android:id="@id/pull_to_refresh_text_and_date_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center" android:id="@id/pull_to_refresh_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff6d8099" android:gravity="center" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_pull" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pull_to_refresh_pull_label" android:shadowColor="#e5ffffff" android:shadowDy="1.0" android:shadowRadius="1.0" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff6d8099" android:gravity="center" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_release" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pull_to_refresh_release_label" android:shadowColor="#e5ffffff" android:shadowDy="1.0" android:shadowRadius="1.0" />
+            </FrameLayout>
+            <TextView android:textSize="12.0sp" android:textColor="#ff6d8099" android:gravity="center" android:layout_gravity="center" android:id="@id/pull_to_refresh_last_loaded_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#e5ffffff" android:shadowDy="1.0" android:shadowRadius="1.0" />
+        </LinearLayout>
+    </com.facebook.widget.refreshablelistview.RefreshableListViewCustomCenteringContainer>
+    <com.facebook.widget.refreshablelistview.RefreshableListViewCustomCenteringContainer android:id="@id/pull_to_refresh_refresh_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="42.0dip">
+        <ProgressBar android:id="@id/pull_to_refresh_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="24.0dip" android:maxHeight="24.0dip" android:indeterminate="true" android:minWidth="24.0dip" android:minHeight="24.0dip" />
+        <LinearLayout android:id="@id/pull_to_refresh_text_refreshing_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff6d8099" android:gravity="center" android:id="@id/pull_to_refresh_text_refreshing" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/pull_to_refresh_refreshing_label" android:shadowColor="#e5ffffff" android:shadowDy="1.0" android:shadowRadius="1.0" />
+        </LinearLayout>
+    </com.facebook.widget.refreshablelistview.RefreshableListViewCustomCenteringContainer>
+</LinearLayout>

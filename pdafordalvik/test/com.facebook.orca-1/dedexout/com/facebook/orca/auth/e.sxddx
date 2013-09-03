@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/orca/auth/e
+ (super com/facebook/fbservice/ops/h)
+ (source "UpgradeScreenOrcaFragment.java")
+
+ (field (attrs final ) a [object com/facebook/orca/auth/UpgradeScreenOrcaFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/auth/UpgradeScreenOrcaFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/auth/e])
+  ; parameter[0] : v1 ([object com/facebook/orca/auth/UpgradeScreenOrcaFragment])
+  (line 55)
+  (iput-object v1 v0 com/facebook/orca/auth/e.a [object com/facebook/orca/auth/UpgradeScreenOrcaFragment])
+  (invoke-direct {v0} com/facebook/fbservice/ops/h/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a([object com/facebook/fbservice/service/OperationResult] )void
+  (limit registers 3)
+  ; this: v1 ([object com/facebook/orca/auth/e])
+  ; parameter[0] : v2 ([object com/facebook/fbservice/service/OperationResult])
+  (line 58)
+  (iget-object v0 v1 com/facebook/orca/auth/e.a [object com/facebook/orca/auth/UpgradeScreenOrcaFragment])
+  (invoke-static {v0} com/facebook/orca/auth/UpgradeScreenOrcaFragment/a [object com/facebook/orca/auth/UpgradeScreenOrcaFragment] )
+  (line 59)
+  (return-void )
+)
+
+(method (attrs public ) a([object com/facebook/fbservice/service/ServiceException] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/auth/e])
+  ; parameter[0] : v1 ([object com/facebook/fbservice/service/ServiceException])
+  (line 63)
+  (return-void )
+)
+
+)

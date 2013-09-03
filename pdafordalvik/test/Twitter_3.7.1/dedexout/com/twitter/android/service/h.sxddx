@@ -1,0 +1,41 @@
+(class (attrs final ) com/twitter/android/service/h
+ (super java/lang/Object)
+ (source "Twttr")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/twitter/android/service/ImageProcessorService] )
+ (field (attrs private final ) b [object com/twitter/android/service/r] )
+ (field (attrs private final ) c [object android/content/Intent] )
+
+(method (attrs public ) <init>([object com/twitter/android/service/ImageProcessorService] [object android/content/Intent] )void
+  (limit registers 4)
+  ; this: v1 ([object com/twitter/android/service/h])
+  ; parameter[0] : v2 ([object com/twitter/android/service/ImageProcessorService])
+  ; parameter[1] : v3 ([object android/content/Intent])
+  (line 161)
+  (iput-object v2 v1 com/twitter/android/service/h.a [object com/twitter/android/service/ImageProcessorService])
+  (invoke-direct {v1} java/lang/Object/<init> )
+  (line 162)
+  (const-string v0 "callback")
+  (invoke-virtual {v3 v0} android/content/Intent/getParcelableExtra [object java/lang/String] )
+  (move-result-object v0)
+  (check-cast v0 [object com/twitter/android/service/r])
+  (iput-object v0 v1 com/twitter/android/service/h.b [object com/twitter/android/service/r])
+  (line 163)
+  (iput-object v3 v1 com/twitter/android/service/h.c [object android/content/Intent])
+  (line 164)
+  (return-void )
+ )
+
+(method (attrs public final ) run()void
+  (limit registers 3)
+  ; this: v2 ([object com/twitter/android/service/h])
+  (line 167)
+  (iget-object v0 v2 com/twitter/android/service/h.b [object com/twitter/android/service/r])
+  (iget-object v1 v2 com/twitter/android/service/h.c [object android/content/Intent])
+  (invoke-virtual {v0 v1} com/twitter/android/service/r/a [object android/content/Intent] )
+  (line 168)
+  (return-void )
+)
+
+)

@@ -1,0 +1,12 @@
+(interface (attrs public abstract ) com/facebook/webrtc/IWebrtcSignalingMessageInterface
+ (super java/lang/Object)
+ (source "IWebrtcSignalingMessageInterface.java")
+
+
+(method (attrs public abstract ) sendToPeer(long long [object java/lang/String] )boolean
+)
+
+(method (attrs public abstract ) sendToSelf(long [object java/lang/String] )boolean
+)
+
+)

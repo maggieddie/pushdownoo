@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dash_debug_stream_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:id="@id/dash_stream_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.dash.ui.DashStreamDebugView android:id="@id/dash_stream_debug_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ListView android:id="@id/dash_stream_debug_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.dash.ui.DashStreamDebugView>
+</LinearLayout>

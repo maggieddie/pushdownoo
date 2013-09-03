@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.orca.attachments.AudioPlayerBubbleView android:id="@id/audio_player_bubble_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.orca.attachments.ClipProgressLayout android:id="@id/audio_player_highlighted_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.orca.attachments.AudioPlayerBubbleView android:id="@id/audio_player_bubble_highlighted" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.facebook.orca.attachments.ClipProgressLayout>
+</merge>

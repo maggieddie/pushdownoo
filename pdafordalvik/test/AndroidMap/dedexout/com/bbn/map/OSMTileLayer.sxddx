@@ -1,0 +1,72 @@
+(class (attrs public ) com/bbn/map/OSMTileLayer
+ (super com/bbn/map/RemoteMercatorTileLayer)
+ (source "OSMTileLayer.java")
+ (implements com/bbn/map/MapLayer)
+
+
+(method (attrs public ) <init>([object com/bbn/map/TileCache] )void
+  (limit registers 4)
+  ; this: v2 ([object com/bbn/map/OSMTileLayer])
+  ; parameter[0] : v3 ([object com/bbn/map/TileCache])
+  (line 10)
+  (invoke-direct {v2 v3} com/bbn/map/RemoteMercatorTileLayer/<init> [object com/bbn/map/TileCache] )
+  (line 11)
+  (new-instance v0 com/bbn/map/OSMRequestFactory)
+  (invoke-static {} com/bbn/map/OSMTileLayer/getOSMBasePath )
+  (nop )
+  (move-result-object v1)
+  (invoke-direct {v0 v1} com/bbn/map/OSMRequestFactory/<init> [object java/lang/String] )
+  (invoke-virtual {v3 v0} com/bbn/map/TileCache/registerRequestFactory [object com/bbn/map/RequestFactory] )
+  (move-result v0)
+  (iput v0 v2 com/bbn/map/OSMTileLayer.layerToken int)
+  (line 12)
+  (return-void )
+ )
+
+(method (attrs private static ) getOSMBasePath()[object java/lang/String]
+  (limit registers 1)
+  (line 15)
+  (const-string v0 "http://tile.openstreetmap.org/")
+  (return-object v0)
+ )
+
+(method (attrs public ) getNumTilesAcross(int )int
+  (limit registers 6)
+  ; this: v4 ([object com/bbn/map/OSMTileLayer])
+  ; parameter[0] : v5 (int)
+  (line 30)
+  (const-wide/high16 v0 16384)
+  (int-to-double v2 v5)
+  (invoke-static {v0 v1 v2 v3} java/lang/Math/pow double double )
+  (move-result-wide v0)
+  (double-to-int v0 v0)
+  (return v0)
+)
+
+(method (attrs public ) getTileRequest(int int int )[object com/bbn/map/TileRequest]
+  (limit registers 10)
+  ; this: v6 ([object com/bbn/map/OSMTileLayer])
+  ; parameter[0] : v7 (int)
+  ; parameter[1] : v8 (int)
+  ; parameter[2] : v9 (int)
+  (line 20)
+  (new-instance v0 com/bbn/map/DefaultTileRequest)
+  (invoke-virtual {v6} com/bbn/map/OSMTileLayer/getTileCache )
+  (move-result-object v1)
+  (iget v2 v6 com/bbn/map/OSMTileLayer.layerToken int)
+  (move v3 v8)
+  (move v4 v9)
+  (move v5 v7)
+  (invoke-direct/range {v0 .. v5} com/bbn/map/DefaultTileRequest/<init> [object com/bbn/map/TileCache] int int int int )
+  (return-object v0)
+)
+
+(method (attrs public ) getTileSize()int
+  (limit registers 2)
+  ; this: v1 ([object com/bbn/map/OSMTileLayer])
+  (line 25)
+  (const/16 v0 256)
+  (return v0)
+)
+
+)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_list" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.android.widget.RefreshableListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/List.Refreshable.Card" />
+    <RelativeLayout android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/list_empty_text" layout="@layout/empty_msg" />
+        <ProgressBar android:id="@id/list_empty_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_spacing" android:indeterminate="true" android:layout_centerHorizontal="true" style="?android:attr/progressBarStyleSmall" />
+    </RelativeLayout>
+</RelativeLayout>

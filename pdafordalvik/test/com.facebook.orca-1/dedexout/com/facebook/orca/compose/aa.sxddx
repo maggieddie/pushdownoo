@@ -1,0 +1,36 @@
+(class (attrs ) com/facebook/orca/compose/aa
+ (super java/lang/Object)
+ (source "ComposeFragment.java")
+ (implements java/lang/Runnable)
+
+ (field (attrs final ) a [object com/facebook/orca/compose/ComposeFragment] )
+
+(method (attrs ) <init>([object com/facebook/orca/compose/ComposeFragment] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/orca/compose/aa])
+  ; parameter[0] : v1 ([object com/facebook/orca/compose/ComposeFragment])
+  (line 2228)
+  (iput-object v1 v0 com/facebook/orca/compose/aa.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-direct {v0} java/lang/Object/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) run()void
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/orca/compose/aa])
+  (line 2231)
+  (iget-object v0 v1 com/facebook/orca/compose/aa.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v0} com/facebook/orca/compose/ComposeFragment/K [object com/facebook/orca/compose/ComposeFragment] )
+  (move-result-object v0)
+  (if-eqz v0 l2a2076)
+  (line 2232)
+  (iget-object v0 v1 com/facebook/orca/compose/aa.a [object com/facebook/orca/compose/ComposeFragment])
+  (invoke-static {v0} com/facebook/orca/compose/ComposeFragment/K [object com/facebook/orca/compose/ComposeFragment] )
+  (move-result-object v0)
+  (invoke-virtual {v0} com/facebook/orca/compose/al/a )
+  (label l2a2076)
+  (line 2234)
+  (return-void )
+)
+
+)

@@ -1,0 +1,42 @@
+(class (attrs ) com/facebook/base/c/bb
+ (super com/facebook/inject/d)
+ (source "FbBaseModule.java")
+
+
+(method (attrs private ) <init>()void
+  (limit registers 1)
+  ; this: v0 ([object com/facebook/base/c/bb])
+  (line 693)
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/base/c/b] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/base/c/bb])
+  ; parameter[0] : v1 ([object com/facebook/base/c/b])
+  (line 693)
+  (invoke-direct {v0} com/facebook/base/c/bb/<init> )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/common/time/c]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/c/bb])
+  (line 697)
+  (invoke-static {} com/facebook/common/time/c/b )
+  (nop )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/base/c/bb])
+  (line 693)
+  (invoke-virtual {v1} com/facebook/base/c/bb/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

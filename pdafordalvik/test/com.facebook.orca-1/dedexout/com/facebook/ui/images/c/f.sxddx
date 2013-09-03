@@ -1,0 +1,61 @@
+(class (attrs ) com/facebook/ui/images/c/f
+ (super com/facebook/inject/d)
+ (source "ImageModule.java")
+
+ (field (attrs final ) a [object com/facebook/ui/images/c/a] )
+
+(method (attrs private ) <init>([object com/facebook/ui/images/c/a] )void
+  (limit registers 2)
+  ; this: v0 ([object com/facebook/ui/images/c/f])
+  ; parameter[0] : v1 ([object com/facebook/ui/images/c/a])
+  (line 154)
+  (iput-object v1 v0 com/facebook/ui/images/c/f.a [object com/facebook/ui/images/c/a])
+  (invoke-direct {v0} com/facebook/inject/d/<init> )
+  (return-void )
+ )
+
+(method (attrs ) <init>([object com/facebook/ui/images/c/a] [object com/facebook/ui/images/c/b] )void
+  (limit registers 3)
+  ; this: v0 ([object com/facebook/ui/images/c/f])
+  ; parameter[0] : v1 ([object com/facebook/ui/images/c/a])
+  ; parameter[1] : v2 ([object com/facebook/ui/images/c/b])
+  (line 154)
+  (invoke-direct {v0 v1} com/facebook/ui/images/c/f/<init> [object com/facebook/ui/images/c/a] )
+  (return-void )
+ )
+
+(method (attrs public ) a()[object com/facebook/ui/images/b/h]
+  (limit registers 6)
+  ; this: v5 ([object com/facebook/ui/images/c/f])
+  (line 158)
+  (new-instance v4 com/facebook/ui/images/b/h)
+  (const-class v0 com/facebook/ui/images/cache/a)
+  (invoke-virtual {v5 v0} com/facebook/ui/images/c/f/a [object java/lang/Class] )
+  (move-result-object v0)
+  (check-cast v0 [object com/facebook/ui/images/cache/a])
+  (const-class v1 com/facebook/common/executors/n)
+  (invoke-virtual {v5 v1} com/facebook/ui/images/c/f/a [object java/lang/Class] )
+  (move-result-object v1)
+  (check-cast v1 [object com/facebook/common/executors/n])
+  (const-class v2 com/facebook/ui/images/b/a)
+  (invoke-virtual {v5 v2} com/facebook/ui/images/c/f/a [object java/lang/Class] )
+  (move-result-object v2)
+  (check-cast v2 [object com/facebook/ui/images/b/l])
+  (const-class v3 com/facebook/ui/images/b/e)
+  (invoke-virtual {v5 v3} com/facebook/ui/images/c/f/a [object java/lang/Class] )
+  (move-result-object v3)
+  (check-cast v3 [object com/facebook/ui/images/b/e])
+  (invoke-direct {v4 v0 v1 v2 v3} com/facebook/ui/images/b/h/<init> [object com/facebook/ui/images/cache/a] [object com/facebook/common/executors/n] [object com/facebook/ui/images/b/l] [object com/facebook/ui/images/b/e] )
+  (return-object v4)
+)
+
+(method (attrs public ) b()[object java/lang/Object]
+  (limit registers 2)
+  ; this: v1 ([object com/facebook/ui/images/c/f])
+  (line 154)
+  (invoke-virtual {v1} com/facebook/ui/images/c/f/a )
+  (move-result-object v0)
+  (return-object v0)
+)
+
+)

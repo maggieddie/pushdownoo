@@ -1,0 +1,18 @@
+(class (attrs public ) com/facebook/push/c2dm/C2DMRegistrar$LocalBroadcastReceiver
+ (super com/facebook/c/k)
+ (source "C2DMRegistrar.java")
+
+
+(method (attrs public ) <init>()void
+  (limit registers 3)
+  ; this: v2 ([object com/facebook/push/c2dm/C2DMRegistrar$LocalBroadcastReceiver])
+  (line 381)
+  (const-string v0 "com.facebook.orca.push.ACTION_ALARM")
+  (new-instance v1 com/facebook/push/c2dm/p)
+  (invoke-direct {v1} com/facebook/push/c2dm/p/<init> )
+  (invoke-direct {v2 v0 v1} com/facebook/c/k/<init> [object java/lang/String] [object com/facebook/c/b] )
+  (line 390)
+  (return-void )
+ )
+
+)

@@ -1,0 +1,18 @@
+(interface (attrs public abstract ) org/anddev/andengine/entity/modifier/PathModifier$IPathModifierListener
+ (super java/lang/Object)
+ (source "PathModifier.java")
+
+
+(method (attrs public abstract ) onPathFinished([object org/anddev/andengine/entity/modifier/PathModifier] [object org/anddev/andengine/entity/IEntity] )void
+)
+
+(method (attrs public abstract ) onPathStarted([object org/anddev/andengine/entity/modifier/PathModifier] [object org/anddev/andengine/entity/IEntity] )void
+)
+
+(method (attrs public abstract ) onPathWaypointFinished([object org/anddev/andengine/entity/modifier/PathModifier] [object org/anddev/andengine/entity/IEntity] int )void
+)
+
+(method (attrs public abstract ) onPathWaypointStarted([object org/anddev/andengine/entity/modifier/PathModifier] [object org/anddev/andengine/entity/IEntity] int )void
+)
+
+)

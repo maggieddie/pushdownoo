@@ -18,7 +18,7 @@
   ; parameter[0] : v3 ([object org/apache/harmony/security/asn1/BerInputStream])
   (line 258)
   (new-instance v0 org/apache/harmony/security/x501/Name)
-  (iget-object-quick v2 v3 org/apache/harmony/security/asn1/BerInputStream.content [object java/lang/Object])
+  (iget-object-quick v2 v3 )
   (check-cast v2 [object java/util/List])
   (const/4 v1 0)
   (invoke-direct {v0 v2 v1} org/apache/harmony/security/x501/Name/<init> [object java/util/List] [object org/apache/harmony/security/x501/Name$1] )
