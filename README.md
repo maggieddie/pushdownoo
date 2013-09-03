@@ -13,7 +13,7 @@ The reason didn't move to 2.10:
 
 ### Graphviz 
 
-For converting to svg dyck state graph.
+For converting to svg dyck state graph. (It will get choke on large dot files)
 
 ## Compile
 
@@ -32,3 +32,6 @@ Still in `pdafordalvik` folder
 	e.g.
 	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --dump-graph ./test/Bookworm.apk
 	
+### For Intent Fuzzer
+
+	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --for-intent-fuzzer ./test/SmsReminder.apk
