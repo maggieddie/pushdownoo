@@ -11,6 +11,8 @@ The reason didn't move to 2.10:
 * Code changes such as case class must have parameters
 * Scala 2.9.1 works perfectly with Play 2.0.4
 
+### JVM -- compiled successfully on jre.1.6.0.24. (not 1.7)
+
 ### Graphviz 
 
 For converting to svg dyck state graph. (It will get choke on large dot files)
