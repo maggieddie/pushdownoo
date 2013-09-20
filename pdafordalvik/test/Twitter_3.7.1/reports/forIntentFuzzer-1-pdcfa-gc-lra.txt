@@ -1,0 +1,230 @@
+Class: com/twitter/android/PostActivity
+Entry Point: onActivityResult
+---Op: getData
+---(Type, Set[String])
+
+Class: com/twitter/android/MessagesActivity
+Entry Point: onCreate
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/SULActivity
+Entry Point: onCreate
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/TweetSettingsActivity
+Entry Point: onCreate
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/WidgetSettingsActivity
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getInt, Set(appWidgetId))
+
+Class: com/twitter/android/ListTabActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/InviteActivity
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getIntArray, Set(follow_flow))
+
+Class: com/twitter/android/service/ScribeService
+Entry Point: onHandleIntent
+---Op: getByteArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/TweetFragment
+Entry Point: onActivityResult
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/PostActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/AccountsDialogActivity
+Entry Point: onActivityResult
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/NotificationSettingsActivity
+Entry Point: onActivityResult
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/EditProfileActivity
+Entry Point: onActivityResult
+---Op: getData
+---(Type, Set[String])
+
+Class: com/twitter/android/ListTabActivity
+Entry Point: onActivityResult
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/LoginActivity
+Entry Point: onCreate
+---Op: getData
+---(Type, Set[String])
+
+Class: com/twitter/android/HomeActivity
+Entry Point: onCreate
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/platform/PushService
+Entry Point: onHandleIntent
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/UsersFragment
+Entry Point: onActivityResult
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ListCreateEditActivity
+Entry Point: onClickHandler
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ProfileFragment
+Entry Point: onActivityResult
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ProfileActivity
+Entry Point: onCreate
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/twitter/android/TimelineActivity
+Entry Point: onCreate
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/MessagesThreadActivity
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getBoolean, Set(show_link_hint))
+
+Class: com/twitter/android/FollowActivity
+Entry Point: onCreate
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/UrlInterpreterActivity
+Entry Point: onActivityResult
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ActivityDetailActivity
+Entry Point: onCreate
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/DiscoverFragment
+Entry Point: onActivityResult
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/EditProfileActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ActivityDetailFragment
+Entry Point: onActivityResult
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/platform/InstallReferralReceiver
+Entry Point: onReceive
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/platform/RemoveRawContactsService
+Entry Point: onHandleIntent
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/GalleryActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/WebViewActivity
+Entry Point: onCreate
+---Op: getData
+---(Type, Set[String])
+
+Class: com/twitter/android/SearchQueriesActivity
+Entry Point: onCreate
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/UsersActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/client/WidgetService
+Entry Point: onHandleIntent
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/twitter/android/MessagesThreadActivity
+Entry Point: onActivityResult
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/service/ImageProcessorService
+Entry Point: onHandleIntent
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ListsActivity
+Entry Point: onCreate
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/twitter/android/AuthorizeAppActivity
+Entry Point: onCreate
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/LoginActivity
+Entry Point: onResume
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/twitter/android/EventActivity
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getString, Set(state_tag))
+(android/os/Bundle/getParcelable, Set(state_mediator))
+
+Class: com/twitter/android/EventActivity
+Entry Point: onOptionsItemSelected
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ListCreateEditActivity
+Entry Point: onCreate
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/twitter/android/ListTabActivity
+Entry Point: onOptionsItemSelected
+---Op: getIntExtra
+---(Type, Set[String])
+

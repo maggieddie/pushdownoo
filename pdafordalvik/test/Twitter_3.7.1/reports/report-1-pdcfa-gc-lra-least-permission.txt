@@ -1,0 +1,53 @@
+*****************************************
+*					*
+*	Least Permission Report		*
+*					*
+*****************************************
+
+
+Permissions the app asked for (ASKED):
+com.twitter.android.permission.C2D_MESSAGE
+android.permission.READ_SYNC_SETTINGS
+android.permission.ACCESS_NETWORK_STATE
+com.google.android.c2dm.permission.RECEIVE
+android.permission.ACCESS_FINE_LOCATION
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.WRITE_CONTACTS
+android.permission.READ_CONTACTS
+android.permission.WRITE_SYNC_SETTINGS
+com.twitter.android.permission.AUTH_APP
+android.permission.GET_ACCOUNTS
+android.permission.AUTHENTICATE_ACCOUNTS
+android.permission.WAKE_LOCK
+android.permission.READ_PROFILE
+com.twitter.android.permission.READ_DATA
+android.permission.INTERNET
+android.permission.USE_CREDENTIALS
+android.permission.VIBRATE
+com.twitter.android.permission.RESTRICTED
+android.permission.MANAGE_ACCOUNTS
+Permissions detected by Anadroid:
+
+android.permission.GET_ACCOUNTS
+android.permission.AUTHENTICATE_ACCOUNTS
+android.permission.INTERNET
+android.permission.WAKE_LOCK
+Vulnerabilities:
+
+	ASKED >= USED	
+com.twitter.android.permission.C2D_MESSAGE
+android.permission.READ_SYNC_SETTINGS
+android.permission.ACCESS_NETWORK_STATE
+com.google.android.c2dm.permission.RECEIVE
+android.permission.ACCESS_FINE_LOCATION
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.WRITE_CONTACTS
+android.permission.READ_CONTACTS
+android.permission.WRITE_SYNC_SETTINGS
+com.twitter.android.permission.AUTH_APP
+android.permission.READ_PROFILE
+com.twitter.android.permission.READ_DATA
+android.permission.USE_CREDENTIALS
+android.permission.VIBRATE
+com.twitter.android.permission.RESTRICTED
+android.permission.MANAGE_ACCOUNTS
