@@ -221,8 +221,8 @@ trait DyckStateGraphMachinery extends StateSpace {
         sss1.contains(pe.target)
       })
 
-      println("in aco: possibleEdges2 = possibleNewedges ", possibleEdges.size)
-      println("in aco: after filter out, larger: ", possibleNewEdges.size)
+     // println("in aco: possibleEdges2 = possibleNewedges ", possibleEdges.size)
+      //println("in aco: after filter out, larger: ", possibleNewEdges.size)
       val ss2 = epsNextStates2.filter((spv) => {
         val curStateEqualentStates = helper.getEpsPredStates(spv)
         !spv.weakerThanAny(curStateEqualentStates, subsumption)
@@ -261,13 +261,13 @@ trait DyckStateGraphMachinery extends StateSpace {
   }
 
   private def decideNewNodesEdgesToVisit(newStates: Set[ControlState], ss: Set[ControlState], newEdges: Edges, subsumption: Boolean): (Set[ControlState], Edges) = {
-    println("--before aco ----" + newStates.size + " " + newEdges.size)
+   // println("--before aco ----" + newStates.size + " " + newEdges.size)
     if (aggresiveCutOff) {
       val weakerStates = getWeakerStates(newStates, ss, subsumption)
       val weakerEdges = filterWeakerEdges(weakerStates, newEdges)
       val newNewStates = newStates -- weakerStates // we are not going to explore weaker states 
       val newNewEdges = newEdges -- weakerEdges
-      println("--after aco ----" + newNewStates.size + " " + newNewEdges.size)
+     // println("--after aco ----" + newNewStates.size + " " + newNewEdges.size)
       (newNewStates, newNewEdges)
     } else {
 
@@ -281,7 +281,7 @@ trait DyckStateGraphMachinery extends StateSpace {
         vt.getCurSt
       })
       
-      println("has duplicated states?")
+     // println("has duplicated states?")
       newToVisitStatements.foreach(println)
   }
   /**
@@ -317,9 +317,9 @@ trait DyckStateGraphMachinery extends StateSpace {
         nodes ++ obtainedStates
       } else obtainedStates)
 
-       println("before --ee edges: ", noSwitchesEdges.size)
+     //  println("before --ee edges: ", noSwitchesEdges.size)
       
-       println("new states0 : ", newStates0.size)
+     //  println("new states0 : ", newStates0.size)
    
        val newStates = newStates0 -- ss
        
@@ -328,8 +328,8 @@ trait DyckStateGraphMachinery extends StateSpace {
        }
          )
        
-            println("filter out states new state -- ss ", newStates0.size- newStates.size)
-            println("filter out states new state using weaker than any ss", newStatesSubSumption.size)
+    //        println("filter out states new state -- ss ", newStates0.size- newStates.size)
+      //      println("filter out states new state using weaker than any ss", newStatesSubSumption.size)
      //  printOutStates(newStates0)
        
       val sss = ss.filter((siii) => {
@@ -337,34 +337,50 @@ trait DyckStateGraphMachinery extends StateSpace {
       })
        
       
-      println("duplicated statesment, not counting hte entire states between newStates0 and dcg", sss.size)
+    //  println("duplicated statesment, not counting hte entire states between newStates0 and dcg", sss.size) 
+      val newEdges = noSwitchesEdges -- ee 
       
-      
-      val newEdges = noSwitchesEdges -- ee
-      
-      
-      
-      println("new edges size", newEdges.size)
-     
-      
-        
-      val filteredStatesPossileVisits = newStates.filter {
+       val filteredStatesPossileVisits = 
+       if (aggresiveCutOff) {
+         newStates.filter {
         spvs =>
           {
             helper.getEpsNextStates(spvs).isEmpty
            // !spvs.weakerThanAny(helper.getEpsSuccsKeys, true) // strict equality in this case
           }
       }
-     
-        println("filter out in next ECG states: ", filteredStatesPossileVisits.size)
-        
-      // and get the actual tovisit  edges
-      val possibleNewEdges = newEdges.filter(pe => {
+       }
+       else{
+         newStates
+       }
+        val possibleNewEdges  =
+        if(aggresiveCutOff) {
+          newEdges.filter(pe => {
         filteredStatesPossileVisits.contains(pe.target)
           //pe.target.weakerThanAny(filteredStatesPossileVisits, true)
       })
+        }else
+        {
+          newEdges
+        }
+      
+//      val filteredStatesPossileVisits = newStates.filter {
+//        spvs =>
+//          {
+//            helper.getEpsNextStates(spvs).isEmpty
+//           // !spvs.weakerThanAny(helper.getEpsSuccsKeys, true) // strict equality in this case
+//          }
+//      }
+//     
+//     //   println("filter out in next ECG states: ", filteredStatesPossileVisits.size)
+//        
+//      // and get the actual tovisit  edges
+//      val possibleNewEdges = newEdges.filter(pe => {
+//        filteredStatesPossileVisits.contains(pe.target)
+//          //pe.target.weakerThanAny(filteredStatesPossileVisits, true)
+//      })
 
-      println("after filtering out ecg next, edge: ", possibleNewEdges.size)
+    //  println("after filtering out ecg next, edge: ", possibleNewEdges.size)
       // update the ECG
       helper.update(possibleNewEdges)
  
@@ -376,10 +392,20 @@ trait DyckStateGraphMachinery extends StateSpace {
       val storeSS = getStoreSensitiveStates(ss) 
 
       // get epsnext based on the filtered new states
-      val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {  
+       val epsNewNexts = 
+      if(aggresiveCutOff){
+        filteredStatesPossileVisits.flatMap(s => {  
         val news = helper.getEpsNextStates(s) 
         news
-      })
+      }) 
+      }
+      else {
+        filteredStatesPossileVisits
+      }
+     /* val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {  
+        val news = helper.getEpsNextStates(s) 
+        news
+      }) */
       
       //println("epsnext new states: ", epsNewNexts.size)
 
@@ -411,7 +437,7 @@ trait DyckStateGraphMachinery extends StateSpace {
 
       val shouldProceed = cond1 || cond2 || cond3
 
-      println("condition: " + cond1.toString() + "|" + cond2.toString() + "|" + cond3.toString())
+  //    println("condition: " + cond1.toString() + "|" + cond2.toString() + "|" + cond3.toString())
 
       println("DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/"
         + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " +

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <Preference android:persistent="false" android:title="@string/settings_notif_timeline_title" android:key="notif_tweets" android:defaultValue="false" />
+    <com.twitter.android.widget.CheckBoxListPreference android:persistent="false" android:entries="@array/mention_notif" android:title="@string/settings_notif_mentions_title" android:key="notif_mentions_choice" android:defaultValue="0" android:entryValues="@array/notif_settings_values" twitter:offValue="0" />
+    <com.twitter.android.widget.CheckBoxListPreference android:persistent="false" android:entries="@array/mention_notif" android:title="@string/settings_notif_retweets_title" android:key="notif_retweets_choice" android:defaultValue="0" android:entryValues="@array/notif_settings_values" twitter:offValue="0" />
+    <com.twitter.android.widget.CheckBoxListPreference android:persistent="false" android:entries="@array/mention_notif" android:title="@string/settings_notif_favorites_title" android:key="notif_favorites_choice" android:defaultValue="0" android:entryValues="@array/notif_settings_values" twitter:offValue="0" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/settings_notif_follows_title" android:key="notif_follows" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/settings_notif_direct_messages_title" android:key="notif_direct_messages" android:defaultValue="true" />
+</PreferenceScreen>

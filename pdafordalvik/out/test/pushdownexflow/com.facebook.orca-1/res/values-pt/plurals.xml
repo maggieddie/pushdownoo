@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s mil</item>
+        <item quantity="one">mil</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s milhões</item>
+        <item quantity="one">1 milhão</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s bilhões</item>
+        <item quantity="one">1 bilhão</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">há %d horas</item>
+        <item quantity="one">há 1 hora</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">há %d minutos</item>
+        <item quantity="one">há 1 minuto</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Daqui %d horas</item>
+        <item quantity="one">Daqui 1 hora</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Daqui %d minutos</item>
+        <item quantity="one">Daqui 1 minuto</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Excluir mensagens?</item>
+        <item quantity="one">Excluir mensagem?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Assim que excluir sua cópia destas mensagens, a ação não poderá ser desfeita.</item>
+        <item quantity="one">Assim que excluir sua cópia da mensagem, a ação não poderá ser desfeita.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Excluir mensagens</item>
+        <item quantity="one">Excluir mensagem</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Excluindo mensagens…</item>
+        <item quantity="one">Excluindo mensagem…</item>
+    </plurals>
+</resources>

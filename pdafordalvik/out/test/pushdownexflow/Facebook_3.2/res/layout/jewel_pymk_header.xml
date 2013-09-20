@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/jewel_row_title_color" android:gravity="center" android:id="@id/pymk_text_header" android:background="@drawable/pymk_header_bar" android:layout_width="fill_parent" android:layout_height="26.0dip" android:text="@string/requests_people_you_may_know" android:layout_centerHorizontal="true" />
+    <View android:id="@id/people_you_may_know_header_divider" android:background="@drawable/pymk_head_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListRow">
+        <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:gravity="left" android:id="@id/requester" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.twitter.android.widget.ShadowTextView android:gravity="center" android:id="@id/action_button" android:background="@drawable/btn_accept_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/protected_follower_request_accept" android:drawableLeft="@drawable/btn_accept_text" android:drawablePadding="@dimen/standard_spacing" android:layout_below="@id/requester" style="@style/Button.Btn.Follow" />
+        <com.twitter.android.widget.ShadowTextView android:gravity="center" android:id="@id/action_button_deny" android:background="@drawable/btn_deny_text_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/standard_spacing" android:text="@string/protected_follower_request_deny" android:drawableLeft="@drawable/btn_deny_text" android:drawablePadding="@dimen/standard_spacing" android:layout_toRightOf="@id/action_button" android:layout_below="@id/requester" style="@style/Button.Btn.Follow" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

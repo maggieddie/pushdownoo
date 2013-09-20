@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s tusinde</item>
+        <item quantity="one">1 tusind</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s million</item>
+        <item quantity="one">1 million</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s milliarder</item>
+        <item quantity="one">1 milliard</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">for %d timer siden</item>
+        <item quantity="one">for 1 time siden</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">for %d minutter siden</item>
+        <item quantity="one">for 1 minut siden</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">om %d timer</item>
+        <item quantity="one">om 1 time</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">om %d minutter</item>
+        <item quantity="one">om 1 minut</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Slet beskeder?</item>
+        <item quantity="one">Slet besked?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Når du først har slettet dit eksemplar af disse beskeder, kan det ikke fortrydes.</item>
+        <item quantity="one">Når du først har slettet dit eksemplar af beskeden, kan det ikke fortrydes.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Slet beskeder</item>
+        <item quantity="one">Slet besked</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Sletter beskeder…</item>
+        <item quantity="one">Sletter besked…</item>
+    </plurals>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@color/vault_light_blue_background" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@drawable/dark_gray_text_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/vault_optin_title" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/vault_optin_image" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="35.0dip">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/vault_optin_phone" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/vault_optin_network" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/vault_optin_computer" />
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/dark_gray_text_color" android:gravity="center" android:id="@id/optin_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Button android:textSize="@dimen/vault_optin_btn_text_size" android:textStyle="bold" android:textColor="@drawable/solid_white" android:gravity="center_horizontal" android:id="@id/optin_button" android:background="@drawable/button_blue_background" android:paddingLeft="@dimen/vault_optin_btn_horizontal_padding" android:paddingTop="@dimen/vault_optin_btn_vertical_padding" android:paddingRight="@dimen/vault_optin_btn_horizontal_padding" android:paddingBottom="@dimen/vault_optin_btn_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/vault_optin_sync_photos_btn" android:drawableLeft="@drawable/vault_nux_flyout_lock" android:drawablePadding="10.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/dark_gray_text_color" android:gravity="center" android:id="@id/optin_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginBottom="20.0dip" android:text="@string/vault_optin_footer" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton android:id="@id/optin_help_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/vault_nux_help_button" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -142,7 +142,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
     AnalysisScope.parseInExclusiveLibNames
     
      //parse in s-expressioned dalvik 
-     parseDalvikSExprs(opts) 
+    parseDalvikSExprs(opts) 
     
     if(! opts.doNotNullCheck) {
        // parse in security related files
@@ -151,14 +151,15 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
      // read JVm report
      APISpecs.readInReport
       
-      // preanalysis for the risk ranking happens before expensive analysis!!!
-      RiskAnalysis.computeAndSetOverallRisk
-      RiskAnalysis.dumpPreRiskRanking(opts) 
+     if(!opts.forIntentFuzzer) {
+    	 // preanalysis for the risk ranking happens before expensive analysis!!!
+    	 RiskAnalysis.computeAndSetOverallRisk
+      	RiskAnalysis.dumpPreRiskRanking(opts) 
+     }
      
     } else {
      // buildInitEntries(opts)
-    }
-      
+    } 
     processDalvik(opts)
     	
     def runLRAOnUnlinkedInitEntryPointStmts(initEntryPointStmts : List[Stmt], runner: PDCFAAnalysisRunner) {
@@ -175,7 +176,8 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
 
     // for each of the resinits, we run the runLRAOnListSts
     def doPreAnalysis(initEns: List[Stmt], resInits: List[Stmt], runner: PDCFAAnalysisRunner, opts:AIOptions) {
-      println("start lra for inits...")
+      
+      println("Live register analysis started...")
 
       if(opts.unlinkedNonNull){
         println("do lra for unlinked notnull")
@@ -199,14 +201,14 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
     			  runner.runLRAOnListSts(lstSts) 
     		  }
      	 }  */
+        if(opts.verbose){
      	 println("lra on rest  inits...") 
+        }
      	 initEns.foreach(runner.runLRAEntryBodies(_, opts)) 
-     	 runner.runLRAOnAllMethods 
-      
+     	 runner.runLRAOnAllMethods  
       	} 
       
-      println("Done with LRA preanalysis!")
-    //   Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.foreach(println)
+      println(" Live register analysis done!") 
       
     }
 

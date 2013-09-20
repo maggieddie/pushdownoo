@@ -760,19 +760,18 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].curThreadStartTime = firstTime
     // val firstHelper = new NewDSGHelper
     //var toStopEntryExploration = false
-    val dsgs =
-      
-      if (!opts.doNotNullCheck) { 
+    val dsgs = 
+      if (!opts.doNotNullCheck) { // normal 
         println("All the entry points starts : *****************", entryStmts.length)
         entryStmts.foreach((entryStmt) =>
           CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println))
 
         println("All the entry points ends*****************")
 
-        val firstHelper = new NewDSGHelper
+       // val firstHelper = new NewDSGHelper
         var toStopEntryExploration = false
         entryStmts.foldLeft(List[DSG]())((res, entryStmt) => {
-
+        	val firstHelper = new NewDSGHelper
           println("--------- explore the entry--------" + entryStmt.next)
           //CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println)
 
@@ -795,8 +794,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       
     /** Unlike entry point saturation, we will run init methods class by class
    * and collect correspondent statistics 
-   */
-  
+   */ 
       else {
         
         if(opts.unlinkedNonNull){
@@ -872,8 +870,10 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
            
         }
         else{
-        println(">>>>> Doing Non-nullability Checking LINKED(mainly for Android cores)")
-
+          if(opts.verbose) {
+        	  println(">>>>> Doing Non-nullability Checking LINKED(mainly for Android cores)")
+          }
+          
         var toStopEntryExploration = false 
       //  val firstHelper = new NewDSGHelper
         
@@ -884,13 +884,15 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
          val firstHelper = new NewDSGHelper
 
          if(NonNullUtils.shouldNotAnalyze(clsDef)){
-           println("no analyzeing ", clsDef.className)
+           if(opts.verbose)
+        	   println("no analyzeing ", clsDef.className)
            res
          }else {
           clsDef.linkedInitEntryStmt match {
             case Some(initEntry) => {
               
               val entryStmt = initEntry.asInstanceOf[InitEntryPointStmt]
+              if(opts.verbose)
                println("explore init:::: entryStmt", entryStmt)
               val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore, inheritedPStore, firstHelper)
               if (!toStopEntryExploration && toStop == "stop") toStopEntryExploration = true
@@ -906,7 +908,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
               
               // monovariant stores after linked construcotds's exploration
               val monoStore = getMonovariantStore(resultDSG.nodes, storee)
-              println("the store in one class", monoStore)
+            //  println("the store in one class", monoStore)
               
               // compute for the current one
               nonNullMap ++= easyComputeNonNullAfterLinkedConstr (clsName, monoStore, clsDef.getDirectObjFields)//computeNonNull(monoStore)
@@ -920,9 +922,9 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       }
       }
     
-    if(opts.doNotNullCheck) {
-      
+    if(opts.doNotNullCheck) { 
        dumpNonNullStatistic(opts, nonNullMap, avgNonNullMap)}
+    
     if(opts.forIntentFuzzer)
     {
       dumpForIntentInput(opts)
@@ -942,7 +944,8 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       println("Dyck State Graph computed.")
     }
 
-    dumpSecurityReport(opts, dsgs)
+    if(!opts.forIntentFuzzer && !opts.doNotNullCheck)
+    	dumpSecurityReport(opts, dsgs)
 
     // dumpRiskRanking(opts, dsgs)
 
@@ -980,10 +983,16 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       interrupted,
       entryStmts.length,
       exploredcCnt)
-    println("explored entrypoints: " + exploredcCnt)
+      
+      if(opts.verbose) 
+    	  println("explored entrypoints: " + exploredcCnt)
+    	  
     dumpStatisticsNew(opts, analysisStatistics)
-    DalInformationFlow.dumpPermReport(opts)
-    dumpHeatMap(opts)
+    
+    if(opts.doNotNullCheck || opts.forIntentFuzzer ) {
+    	DalInformationFlow.dumpPermReport(opts)
+    	dumpHeatMap(opts)
+    }
 
     val reportTar = "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar.gz"
 

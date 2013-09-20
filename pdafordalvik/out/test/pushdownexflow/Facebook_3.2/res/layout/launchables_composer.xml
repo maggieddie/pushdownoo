@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.launchables.fragment.LaunchablesComposer android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/launchables_composer_leftright_padding" android:paddingRight="@dimen/launchables_composer_leftright_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:id="@id/composer_status" android:paddingTop="@dimen/launchables_composer_button_top_padding" android:paddingBottom="@dimen/launchables_composer_button_bottom_padding" android:layout_width="0.0dip" android:layout_height="@dimen/launchables_composer_height" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="34.0dip" android:src="@drawable/composer_icon_status" />
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/composer_button_status" style="@style/composer_button" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/composer_photo" android:paddingTop="@dimen/launchables_composer_button_top_padding" android:paddingBottom="@dimen/launchables_composer_button_bottom_padding" android:layout_width="0.0dip" android:layout_height="@dimen/launchables_composer_height" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="34.0dip" android:src="@drawable/composer_icon_photo" />
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/composer_button_photo" style="@style/composer_button" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/composer_checkin" android:paddingTop="@dimen/launchables_composer_button_top_padding" android:paddingBottom="@dimen/launchables_composer_button_bottom_padding" android:layout_width="0.0dip" android:layout_height="@dimen/launchables_composer_height" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="34.0dip" android:src="@drawable/composer_icon_checkin" />
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/composer_button_checkin" style="@style/composer_button" />
+        </LinearLayout>
+    </LinearLayout>
+</com.facebook.dash.launchables.fragment.LaunchablesComposer>

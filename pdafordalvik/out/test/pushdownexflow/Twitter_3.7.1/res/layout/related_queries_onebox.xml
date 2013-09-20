@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/onebox_related_queries" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListRow">
+        <TextView android:ellipsize="end" android:id="@id/related_queries" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

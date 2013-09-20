@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 นาที</item>
+        <item>10 นาที</item>
+        <item>15 นาที</item>
+        <item>30 นาที</item>
+        <item>1 ชั่วโมง</item>
+        <item>2 ชั่วโมง</item>
+        <item>4 ชั่วโมง</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>จากผู้คนที่คุณติดตาม</item>
+        <item>จากใครก็ได้</item>
+        <item>ปิด</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>การโต้ตอบ</item>
+        <item>การพูดถึง</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>อ่านทวีตจากลําดับเหตุการณ์ของคุณ</item>
+        <item>ดูว่าคุณติดตามใครบ้าง</item>
+        <item>โพสทวีตสําหรับคุณ</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>ดูรหัสผ่านทวิตเตอร์ของคุณ</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>แก้ไขข้อมูลส่วนตัว</item>
+        <item>การตั้งค่า</item>
+        <item>ช่วยเหลือ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dash_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/dash_loading_spinner" android:visibility="gone" android:layout_width="@dimen/feed_story_loading_spinner_dim" android:layout_height="@dimen/feed_story_loading_spinner_dim" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/white_spinner_indeterminate" android:indeterminateDuration="1500" />
+    <com.facebook.dash.ui.DashPagerContainerView android:id="@id/story_pager_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+    <com.facebook.dash.ui.DashEmptyStoryView android:gravity="center" android:id="@id/empty_story_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+    <com.facebook.dash.ui.DashClockView android:name="com.facebook.dash.ui.DashClockView" android:id="@id/dash_clock_view" android:layout_width="fill_parent" android:layout_height="85.0dip" />
+    <fragment android:name="com.facebook.dash.fragment.NotificationsFragment" android:id="@id/notifications_fragment" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.dash.ui.ScrimView android:id="@id/dash_scrim" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/dash_zoom_out_bauble_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/dash_bauble" layout="@layout/bauble" />
+    </FrameLayout>
+    <include android:id="@id/dash_debug_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dash_debug_view" />
+    <include layout="@layout/doubletap_like_view" />
+</FrameLayout>

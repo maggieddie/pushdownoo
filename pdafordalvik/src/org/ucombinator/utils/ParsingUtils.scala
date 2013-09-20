@@ -386,7 +386,7 @@ object ParsingUtils {
   def transFormBody(bd: Stmt, exnHandler: ExceptionHandlers, annot: List[String], clsP:  String, methP: String): Stmt = {
     bd match {
       case StmtNil => {
-        println("This is the empty method body")
+        //println("This is the empty method body")
          val fkeReturnStmt = new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, clsP, methP) 
         fkeReturnStmt
       }

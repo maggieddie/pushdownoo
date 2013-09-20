@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient android:startColor="@color/page_identity_pressed_card_unit_bg" android:endColor="@android:color/white" android:angle="270.0" />
+            <corners android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" />
+        </shape>
+    </item>
+</selector>

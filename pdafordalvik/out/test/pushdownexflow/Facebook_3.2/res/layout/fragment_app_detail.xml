@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:appcenter="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/app_detail_body" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.facebook.appcenter.ui.AppDetailInfoCardView android:id="@id/app_detail_info_card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_standard_padding" android:layout_marginTop="@dimen/appcenter_standard_padding" android:layout_marginRight="@dimen/appcenter_standard_padding" android:layout_marginBottom="@dimen/appcenter_standard_padding" appcenter:item_width_percentage="@integer/appcenter_detail_screenshot_width_percentage" />
+            <com.facebook.appcenter.ui.gdp.AppDetailInlineGDPView android:id="@id/app_detail_inline_gdp_view" android:background="@drawable/appcenter_detail_info_box" android:paddingTop="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_standard_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_small_padding" android:layout_marginRight="@dimen/appcenter_small_padding" android:layout_marginBottom="@dimen/appcenter_standard_padding" />
+            <com.facebook.appcenter.ui.AppDetailFriendsAndDescriptionCardView android:id="@id/app_detail_friends_and_description_card_view" android:background="@drawable/appcenter_detail_info_box" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_small_padding" android:layout_marginRight="@dimen/appcenter_small_padding" android:layout_marginBottom="@dimen/appcenter_standard_padding" />
+            <com.facebook.appcenter.ui.AppDetailScreenshotGalleryView android:id="@id/app_detail_screenshot_gallery_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/appcenter_standard_padding" />
+            <TextView android:id="@id/similar_apps_description_textview" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.HorizontalImageGallery android:id="@id/similar_apps_gallery" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" appcenter:left_item_width_percentage="10" appcenter:support_vertical_scrolling="false" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/app_detail_error_view" layout="@layout/generic_error_view" />
+    <com.facebook.widget.listview.EmptyListViewItem android:layout_gravity="center_vertical" android:id="@id/empty_item_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

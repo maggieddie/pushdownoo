@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/thread_unread_image" android:layout_width="10.0dip" android:layout_height="20.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/thread_tile_img" android:visibility="visible" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/orca_blue_plus" android:scaleType="centerInside" android:layout_toRightOf="@id/thread_unread_image" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/thread_tile_img" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/dark_orca_blue" android:ellipsize="end" android:id="@id/thread_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/thread_list_default_new_thread_list_item_text" android:singleLine="true" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</RelativeLayout>

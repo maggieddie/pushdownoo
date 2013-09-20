@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%dsn</item>
+        <item quantity="one">1sn</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%ddk</item>
+        <item quantity="one">1dk</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">1 gün</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_summary_on">
+        <item quantity="other">%d kişiden</item>
+        <item quantity="one">1 kişiden</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d kişi</item>
+        <item quantity="one">1 kişi</item>
+    </plurals>
+    <plurals name="social_fav_and_retweets_count">
+        <item quantity="other">%1$s favori ve %2$s retweet</item>
+        <item quantity="one">%1$s favori ve 1 retweet</item>
+    </plurals>
+    <plurals name="social_retweet_and_favs_count">
+        <item quantity="other">%1$s retweet ve %2$s favori</item>
+        <item quantity="one">%1$s retweet ve 1 favori</item>
+    </plurals>
+    <plurals name="social_fav_count">
+        <item quantity="other">%1$s favori</item>
+        <item quantity="one">1 favori</item>
+    </plurals>
+    <plurals name="social_retweet_count">
+        <item quantity="other">%1$s retweet</item>
+        <item quantity="one">1 retweet</item>
+    </plurals>
+</resources>

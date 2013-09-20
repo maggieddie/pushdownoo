@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <include android:id="@id/navbar" layout="@layout/navbar" />
+    <ProgressBar android:layout_gravity="top|center" android:id="@id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_spacing" android:indeterminate="true" style="?android:attr/progressBarStyleSmall" />
+    <RelativeLayout android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/segment_control" />
+        <com.twitter.android.widget.SegmentedControl android:id="@id/segment_control" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" twitter:segmentLabels="@array/list_labels" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/orca_nux_callout_top_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ThreadTitleNuxPadding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/sms_nux_thread_view" style="@style/OrcaNuxLeftAlignedText" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="17.0sp" android:id="@id/sms_nux_thread_more_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:text="@string/sms_nux_more_button" android:layout_weight="1.0" style="@style/OrcaNuxButtonSecondary" />
+        <Button android:textSize="17.0sp" android:id="@id/sms_nux_thread_okay_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sms_nux_ok_button" android:layout_weight="1.0" style="@style/OrcaNuxButton" />
+    </LinearLayout>
+</LinearLayout>

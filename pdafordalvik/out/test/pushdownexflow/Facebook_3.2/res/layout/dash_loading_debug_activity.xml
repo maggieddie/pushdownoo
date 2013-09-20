@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dash_loading_stream_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:id="@id/loading_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Loading" />
+        <Button android:id="@id/refresh_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Force Refresh" />
+        <Button android:id="@id/delete_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete all data" />
+        <Button android:id="@id/clear_image_cache_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear image cache" />
+    </LinearLayout>
+    <TextView android:id="@id/loading_status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/dash_loading_debug_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

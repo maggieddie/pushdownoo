@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">för %d timmar sedan</item>
+        <item quantity="one">för 1 timme sedan</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">för %d minuter sedan</item>
+        <item quantity="one">för en minut sedan</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d timmar från och med nu</item>
+        <item quantity="one">1 timme från och med nu</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minuter från och med nu</item>
+        <item quantity="one">1 minut från och med nu</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Ta bort meddelanden?</item>
+        <item quantity="one">Ta bort meddelande?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Om du tar bort din kopia av dessa meddelanden går det inte att ångra sedan.</item>
+        <item quantity="one">Om du tar bort din kopia av meddelandet går det inte att ångra sedan.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Ta bort meddelanden</item>
+        <item quantity="one">Ta bort meddelande</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Tar bort meddelanden…</item>
+        <item quantity="one">Tar bort meddelande…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d gillar</item>
+        <item quantity="one">%d gilla-markering</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d Kommentarer</item>
+        <item quantity="one">%d kommentar</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">Ta bort %d valda foton</item>
+        <item quantity="one">Ta bort valt foto</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Vill du ta bort de %d valda fotona från din enhet?</item>
+        <item quantity="one">Vill du ta bort det valda fotot från din enhet?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d personer gillar detta</item>
+        <item quantity="one">1 person gillar detta</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">%d gemensamma vänner</item>
+        <item quantity="one">1 gemensam vän</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">%,d gillar detta</item>
+        <item quantity="one">1 gillar detta</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d kommentarer</item>
+        <item quantity="one">1 kommentar</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s aviseringar</item>
+        <item quantity="one">1 avisering</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s MIN</item>
+        <item quantity="one">1 MIN</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s TIM</item>
+        <item quantity="one">1 TIM</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s gillar</item>
+        <item quantity="one">%s gilla-markering</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s Kommentarer</item>
+        <item quantity="one">%s kommentar</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">gillar den här platsen</item>
+        <item quantity="one">gillar den här platsen</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">har varit här</item>
+        <item quantity="one">har varit här</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d betyg</item>
+        <item quantity="one">1 betyg</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">som gillar</item>
+        <item quantity="one">som gillar</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">har varit här</item>
+        <item quantity="one">har varit här</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Du har varit här %1$d gånger.</item>
+        <item quantity="one">Du har varit här en gång.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">%,d gilla-markeringar</item>
+        <item quantity="one">1 gilla-markering</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d har varit här</item>
+        <item quantity="one">1 har varit här</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">%,d pratar om detta</item>
+        <item quantity="one">1 pratar om detta</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$s och %2$s använder detta</item>
+        <item quantity="one">%1$s använder detta</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$s och %2$s spelar detta</item>
+        <item quantity="one">%1$s spelar detta</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">%d som gillar</item>
+        <item quantity="one">1 gilla-markering</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d besök</item>
+        <item quantity="one">1 besök</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d födelsedagar</item>
+        <item quantity="one">1 födelsedag</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d personer gillar detta</item>
+        <item quantity="one">1 person gillar detta</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d incheckningar</item>
+        <item quantity="one">1 incheckning</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">%d gemensamma vänner</item>
+        <item quantity="zero">Inga gemensamma vänner.</item>
+        <item quantity="one">1 gemensam vän</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d personer</item>
+        <item quantity="one">1 person</item>
+    </plurals>
+</resources>

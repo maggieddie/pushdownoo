@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vc_category">
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="@string/vc_enabled_title" android:key="enabled" android:summary="@string/vc_enabled_summary" android:defaultValue="true" />
+        <EditTextPreference android:layout="@layout/preference_child" android:singleLine="true" android:title="@string/vc_check_uri_title" android:key="check_uri" android:summary="@string/vc_check_uri_summary" android:dependency="enabled" android:defaultValue="@string/version_file_url" />
+    </PreferenceCategory>
+</PreferenceScreen>

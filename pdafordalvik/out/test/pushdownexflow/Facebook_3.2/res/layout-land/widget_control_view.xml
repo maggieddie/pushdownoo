@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/control_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:id="@id/controlwidget_composer_button" android:background="@drawable/bg_left_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:background="@drawable/ic_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="top" android:background="@drawable/publisher_gradient_bg" android:layout_width="@dimen/one_px" android:layout_height="48.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/one_px" android:layout_height="33.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/controlwidget_photo_button" android:background="@drawable/bg_middle_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:gravity="center" android:background="@drawable/ic_photo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="top" android:background="@drawable/publisher_gradient_bg" android:layout_width="@dimen/one_px" android:layout_height="48.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:background="@color/publisher_vertical_divider" android:layout_width="@dimen/one_px" android:layout_height="33.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/controlwidget_checkin_button" android:background="@drawable/bg_right_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:gravity="center" android:background="@drawable/ic_checkin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

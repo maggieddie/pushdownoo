@@ -1,0 +1,20 @@
+Class: org/darpa/smsreminder/SmsReceiver
+Entry Point: onReceive
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/get, Set(pdus))
+
+Class: org/darpa/smsreminder/AlarmDetails
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getInt, Set())
+
+Class: org/darpa/smsreminder/SmsAlarmReceiver
+Entry Point: onStart
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getCharSequence, Set(phone_number))
+(android/os/Bundle/getCharSequence, Set(message))
+(android/os/Bundle/getInt, Set(alarm_id))
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:typeface="sans" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/category_name" android:paddingLeft="10.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="48.0dip" android:singleLine="true" />
+    <View android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

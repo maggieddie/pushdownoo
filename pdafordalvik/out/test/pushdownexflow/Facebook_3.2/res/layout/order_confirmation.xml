@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/generic_black" android:id="@id/text_header" android:background="@color/order_confirmation_header_background" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/order_confirmation_header_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/cell" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_padding">
+        <TextView android:textSize="@dimen/standard_14pt_text_size" android:textColor="@color/generic_black" android:id="@id/text_gift_info" android:paddingBottom="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/generic_white" android:gravity="center" android:id="@id/button_pay_now" android:background="@drawable/button_blue" android:padding="@dimen/standard_half_padding" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" android:layout_marginBottom="@dimen/standard_double_padding" android:text="@string/order_confirmation_button_pay_now" />
+        <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/order_confirmation_view_profile" android:gravity="center" android:id="@id/button_view_profile" android:background="@drawable/button_light" android:padding="@dimen/standard_half_padding" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" />
+    </LinearLayout>
+</LinearLayout>

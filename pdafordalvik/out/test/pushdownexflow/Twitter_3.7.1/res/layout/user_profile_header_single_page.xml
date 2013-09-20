@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.OverlayImageView android:id="@id/profile_image" android:background="@drawable/bg_header_avatar" android:padding="5.0dip" android:layout_width="96.0dip" android:layout_height="96.0dip" android:adjustViewBounds="true" android:layout_centerHorizontal="true" twitter:overlayDrawable="@drawable/ic_avatar_overlay" />
+    <LinearLayout android:id="@id/name_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/profile_image" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/font_size_xxlarge" android:id="@id/name" style="@style/ProfileText.Bold" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/icon_spacing" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/username_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/name_container" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/font_size_xlarge" android:id="@id/user_name" style="@style/ProfileText" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/solid_white" android:layout_gravity="center_vertical" android:id="@id/follows_you" android:background="@drawable/bg_follows_you" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/friendship_follows_yes" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColorLink="@color/solid_white" android:ellipsize="none" android:gravity="center" android:id="@id/user_bio" android:paddingLeft="@dimen/card_inset" android:paddingRight="@dimen/card_inset" android:visibility="gone" android:layout_marginTop="7.0dip" android:maxLines="3" android:singleLine="false" android:layout_below="@id/username_container" android:layout_centerHorizontal="true" style="@style/ProfileText" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/card_inset" android:paddingRight="@dimen/card_inset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_below="@id/user_bio" android:layout_centerHorizontal="true">
+        <TextView android:id="@id/user_location" android:visibility="gone" style="@style/ProfileText" />
+        <TextView android:textSize="@dimen/font_size_xxlarge" android:textStyle="bold" android:gravity="top" android:id="@id/separator" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:visibility="gone" android:text="." style="@style/ProfileText" />
+        <TextView android:id="@id/user_url" android:visibility="gone" style="@style/ProfileText.Bold" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.Navbar android:id="@id/navbar" style="@style/Navbar">
+        <TextView android:id="@id/title" style="@style/NavbarTitle" />
+    </com.twitter.android.widget.Navbar>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/toolbar" android:layout_below="@id/navbar">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.twitter.android.widget.CardRowView android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onClickHandler" twitter:single="true" twitter:cardStyle="top">
+                <include layout="@layout/edit_profile_change_header" />
+            </com.twitter.android.widget.CardRowView>
+            <com.twitter.android.widget.CardRowView android:id="@id/avatar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_container" android:onClick="onClickHandler" twitter:single="true" twitter:cardStyle="middle">
+                <include layout="@layout/edit_profile_change_avatar" />
+            </com.twitter.android.widget.CardRowView>
+            <com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/avatar_container" twitter:single="true">
+                <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:padding="@dimen/list_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/profile_name_title" style="@style/Profile.Title" />
+                    <EditText android:id="@id/edit_name" android:hint="@string/profile_name_hint" android:maxLength="@integer/full_name_max_length" style="@style/Profile" />
+                    <TextView android:text="@string/profile_url_title" style="@style/Profile.Title" />
+                    <EditText android:id="@id/edit_web_url" style="@style/Profile" />
+                    <TextView android:text="@string/profile_location_title" style="@style/Profile.Title" />
+                    <EditText android:id="@id/edit_location" style="@style/Profile" />
+                    <TextView android:text="@string/profile_description_title" style="@style/Profile.Title" />
+                    <EditText android:id="@id/edit_bio" style="@style/Profile" />
+                </LinearLayout>
+            </com.twitter.android.widget.CardRowView>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:id="@id/toolbar" android:layout_alignParentBottom="true" style="@style/Toolbar">
+        <Button android:id="@id/save_profile_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/save" android:layout_weight="0.5" android:onClick="onClickHandler" style="@style/Button" />
+        <Button android:id="@id/cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/cancel" android:layout_weight="0.5" android:onClick="onClickHandler" style="@style/Button" />
+    </LinearLayout>
+</RelativeLayout>

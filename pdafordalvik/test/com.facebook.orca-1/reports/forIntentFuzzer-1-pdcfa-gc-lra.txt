@@ -1,0 +1,72 @@
+Class: android_src/mms/g/m
+Entry Point: onReceive
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/facebook/push/mqtt/MqttReceiver
+Entry Point: onHandleIntent
+---Op: getByteArrayExtra
+---(Type, Set[String])
+
+Class: com/facebook/push/fbpushdata/FbPushDataHandlerService
+Entry Point: onHandleIntent
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/facebook/push/mqtt/s
+Entry Point: onReceive
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/facebook/selfupdate/SelfUpdateFetchService
+Entry Point: onHandleIntent
+---Op: getBooleanArrayExtra
+---(Type, Set[String])
+
+Class: com/facebook/c/q
+Entry Point: onReceive
+---Op: getAction
+---(Type, Set[String])
+
+Class: android_src/mms/transaction/u
+Entry Point: onReceive
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/facebook/orca/nux/l
+Entry Point: onReceive
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/facebook/push/c2dm/C2DMService
+Entry Point: onHandleIntent
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/facebook/orca/sms/v
+Entry Point: onReceive
+---Op: getIntExtra
+---(Type, Set[String])
+
+Class: com/facebook/vvm/datasms/DataSmsBroadcastReceiver
+Entry Point: a
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/get, Set(pdus))
+
+Class: com/facebook/auth/broadcast/SsoLoginBroadcastReceiver
+Entry Point: onReceive
+---Op: getAction
+---(Type, Set[String])
+
+Class: com/facebook/auth/broadcast/a
+Entry Point: a
+---Op: getStringExtra
+---(Type, Set[String])
+
+Class: com/facebook/maps/d
+Entry Point: onCreate
+---Op: getExtras
+---(Type, Set[String])
+(android/os/Bundle/getString, Set(API_KEY))
+

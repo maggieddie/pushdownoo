@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.Navbar android:id="@id/navbar" android:background="@null" style="?attr/navbarStyle">
+        <Button android:textColor="@color/primary_text" android:id="@id/title_button_2" android:background="@drawable/btn_bg" android:text="@string/cancel" android:shadowColor="@color/solid_white" android:layout_alignParentLeft="true" style="@style/TextTitleBtn" />
+        <TextView android:textColor="@color/secondary_text" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_spacing" android:shadowColor="@color/solid_white" android:layout_toLeftOf="@id/title_button_3" android:layout_centerVertical="true" style="@style/InsetText.CharCount" />
+        <com.twitter.android.widget.ShadowTextView android:enabled="false" android:textColor="@color/confirm_btn_text" android:gravity="center_vertical" android:id="@id/title_button_3" android:background="@drawable/btn_confirm_bg" android:focusable="true" android:clickable="true" android:text="@string/post_tweet" android:layout_alignParentRight="true" twitter:shadowRadius="0.5px" twitter:shadowDy="-1.0px" twitter:shadowColor="@color/confirm_btn_text_shadow" style="@style/TextTitleBtn" />
+    </com.twitter.android.widget.Navbar>
+    <FrameLayout android:id="@id/text_content" android:background="@drawable/bg_dialog_textarea" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/standard_spacing" android:layout_marginRight="@dimen/standard_spacing" android:layout_above="@id/post_button_bar" android:layout_below="@id/navbar" android:onClick="onClickHandler">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip">
+                <RelativeLayout android:id="@id/account_row" android:padding="@dimen/standard_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onClickHandler">
+                    <ImageView android:id="@id/account_image" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="centerInside" />
+                    <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/primary_text" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/standard_spacing" android:singleLine="true" android:layout_toRightOf="@id/account_image" android:layout_centerVertical="true" style="@style/InsetText" />
+                </RelativeLayout>
+                <ImageView android:id="@id/divider" android:background="@drawable/list_rule" android:layout_width="fill_parent" android:layout_height="@dimen/divider_thickness" android:layout_below="@id/account_row" />
+                <LinearLayout android:orientation="horizontal" android:padding="@dimen/standard_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/divider">
+                    <MultiAutoCompleteTextView android:textSize="@dimen/font_size_large" android:textColor="@android:color/black" android:gravity="top|left|center" android:id="@id/edit" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:completionThreshold="1" android:layout_weight="1.0" android:lineSpacingMultiplier="1.2" android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage" android:imeOptions="flagNoEnterAction" android:contentDescription="@string/edit_new_tweet">
+                        <requestFocus />
+                    </MultiAutoCompleteTextView>
+                    <RelativeLayout android:layout_gravity="bottom" android:id="@id/photo_layout" android:visibility="gone" android:layout_width="@dimen/photo_attachment_size" android:layout_height="@dimen/photo_attachment_size" android:layout_marginLeft="@dimen/standard_spacing">
+                        <com.twitter.android.widget.OverlayImageView android:id="@id/photo" android:layout_width="@dimen/photo_attachment_size" android:layout_height="@dimen/photo_attachment_size" android:scaleType="centerInside" android:onClick="onClickHandler" twitter:overlayDrawable="@drawable/image_overlay" />
+                        <ProgressBar android:id="@id/photo_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" style="?android:attr/progressBarStyleSmall" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+    <LinearLayout android:id="@id/post_button_bar" android:paddingLeft="@dimen/standard_spacing" android:paddingRight="@dimen/standard_spacing" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_alignParentBottom="true">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_spacing" android:src="@drawable/ic_dialog_camera" android:layout_weight="0.2" android:onClick="onClickHandler" android:contentDescription="@string/button_action_camera" style="@style/Button.Btn" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/gallery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_spacing" android:src="@drawable/ic_dialog_photo" android:layout_weight="0.2" android:onClick="onClickHandler" android:contentDescription="@string/button_action_photo" style="@style/Button.Btn" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/add_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_spacing" android:src="@drawable/ic_dialog_at" android:layout_weight="0.2" android:onClick="onClickHandler" android:contentDescription="@string/button_action_at" style="@style/Button.Btn" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_dialog_geo" android:layout_weight="0.2" android:onClick="onClickHandler" android:contentDescription="@string/button_action_geo" style="@style/Button.Btn" />
+    </LinearLayout>
+</RelativeLayout>

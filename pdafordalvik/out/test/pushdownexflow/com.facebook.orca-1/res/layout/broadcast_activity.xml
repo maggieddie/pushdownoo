@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.OverlayLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:hasProgressBar="false" orca:hasBackButton="true" />
+        <FrameLayout android:id="@id/broadcast_content_container" android:background="@color/thread_view_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <fragment android:name="com.facebook.orca.broadcast.ComposeBroadcastFragment" android:tag="composeBroadcastFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</com.facebook.widget.OverlayLayout>

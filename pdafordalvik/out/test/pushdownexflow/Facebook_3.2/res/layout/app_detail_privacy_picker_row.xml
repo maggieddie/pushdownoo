@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@color/privacy_picker_background_blue" android:padding="@dimen/appcenter_small_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/privacy_option_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    <TextView android:id="@id/privacy_option_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appcenter_privacy_option_label_padding" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/privacy_option_check_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app_center_privacy_option_check_mark" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

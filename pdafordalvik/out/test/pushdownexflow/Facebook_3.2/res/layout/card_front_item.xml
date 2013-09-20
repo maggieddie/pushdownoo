@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/card_front_item_padding" android:paddingRight="@dimen/card_front_item_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:layout_gravity="center" android:id="@id/urlimage_image" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:placeholderSrc="@drawable/card_placeholder_thumb" fb:adjustViewBounds="true" fb:placeHolderScaleType="fitXY" fb:scaleType="fitCenter" />
+</FrameLayout>

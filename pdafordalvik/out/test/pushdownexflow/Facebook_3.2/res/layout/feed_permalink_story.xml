@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:paddingTop="4.0dip" android:paddingBottom="@dimen/one_px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.feed.ui.StoryContentView android:id="@id/feed_story_contents" android:background="@drawable/feed_permalink_story_background" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/feed_permalink_story_divider" android:background="@color/permalink_divider" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

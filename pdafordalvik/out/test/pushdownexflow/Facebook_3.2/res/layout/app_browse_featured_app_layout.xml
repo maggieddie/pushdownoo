@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.UrlImage android:id="@id/banner_image" android:background="@drawable/appcenter_image_shadow" android:padding="0.0dip" android:focusable="true" android:clickable="false" android:layout_width="@dimen/appcenter_banner_logo_width" android:layout_height="@dimen/appcenter_banner_logo_height" />
+    <View android:background="#2c000000" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <View android:background="#2cffffff" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+    <View android:background="@drawable/app_browse_featured_app_background_top" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentTop="true" />
+    <View android:background="@drawable/app_browse_featured_app_background_bottom" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

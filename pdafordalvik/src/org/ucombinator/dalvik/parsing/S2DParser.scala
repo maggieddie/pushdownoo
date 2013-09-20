@@ -36,7 +36,7 @@ class S2DParser {
         // should get the Analysis Scope.
         //if(clsClsStr.startsWith("android/support/v4")) {
         if (AnalysisScope.isExclusive(clsClsStr)) {
-          println("oh yeah, filter out ", clsClsStr)
+          //println("oh yeah, filter out ", clsClsStr)
          //  System.err.println("No more pasing ")
           None
         } else {
@@ -46,7 +46,7 @@ class S2DParser {
           val dvcd = new DalvikClassDef(clsClsStr, clsAttrStrings, supSn, flds, meths, interfaceNames, interfaces)
         //  println("cur class: " + clsClsStr + " super:" + supSn)
           dvcd.registerClass(clsClsStr)
-          println("done parsing file: " + clsClsStr)
+        //  println("done parsing file: " + clsClsStr)
           // Debug.prntDebugInfo("one class test", DalvikClassDef.forName(clsClsStr))
           Some(dvcd)
         }
@@ -288,7 +288,7 @@ class S2DParser {
   private def parseBodyMap(sl: List[SExp], clsPath: String, methPath: String): Stmt = {
 // if is just empty body, then return empty stmt
     if (sl.isEmpty) {
-       println("This is the empty method body")
+      // println("This is the empty method body")
          val fkeReturnStmt = new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, clsPath, methPath) 
         fkeReturnStmt
     }

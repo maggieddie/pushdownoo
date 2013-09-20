@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/zero_modal_background" android:paddingLeft="14.0dip" android:paddingTop="20.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="18.0dip" android:text="@string/zero_generic_extra_data_charges_dialog_title" />
+    <TextView android:textSize="16.0sp" android:textColor="#ffb5b5b5" android:id="@id/dialog_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="18.0dip" android:text="@string/zero_voip_call_incoming_dialog_content" />
+    <include layout="@layout/orca_incoming_call_buttons" />
+</LinearLayout>

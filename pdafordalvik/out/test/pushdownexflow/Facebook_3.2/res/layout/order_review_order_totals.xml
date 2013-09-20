@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/header_divider_color" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_order_totals" android:background="@drawable/order_review_order_totals_border" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/order_review_cost_totals_layout">
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textStyle="bold" android:textColor="@color/order_review_cell_title_color" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_cost_totals_total" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textStyle="bold" android:textColor="@color/order_review_cell_title_color" android:gravity="right" android:id="@id/text_order_total_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/cell_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/order_review_cost_totals_layout">
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textColor="@color/order_review_cell_title_color" android:gravity="left" android:id="@id/text_order_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_cost_totals_subtotal" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textColor="@color/order_review_cell_title_color" android:gravity="right" android:id="@id/text_order_subtotal_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textColor="@color/order_review_cell_title_color" android:gravity="left" android:id="@id/text_order_shipping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_cost_totals_shipping" android:layout_below="@id/text_order_subtotal" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textColor="@color/order_review_cell_title_color" android:gravity="right" android:id="@id/text_order_shipping_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/text_order_subtotal_value" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View android:id="@id/divider_discount_block" android:background="@color/cell_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:id="@id/layout_order_totals_discount" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/order_review_cost_totals_layout">
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textStyle="bold" android:textColor="@color/order_review_cell_title_color" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_cost_totals_discount" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textStyle="bold" android:textColor="@color/order_review_cell_title_color" android:gravity="right" android:id="@id/text_order_discount_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading_view" layout="@layout/loading_view" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="3.0px" android:top="3.0px" android:right="3.0px" android:bottom="3.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#ff66738c" android:endColor="#ff313d59" android:angle="270.0" />
+            <corners android:radius="4.0px" />
+            <size android:height="54.0px" android:width="75.0px" />
+        </shape>
+    </item>
+    <item android:left="4.0px" android:top="4.0px" android:right="4.0px" android:bottom="4.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#ffa1b4db" android:endColor="#ff708eca" android:angle="270.0" />
+            <corners android:radius="4.0px" />
+            <size android:height="54.0px" android:width="75.0px" />
+        </shape>
+    </item>
+    <item android:left="4.0px" android:top="52.0px" android:right="4.0px" android:bottom="4.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#ff6b8ac2" android:endColor="#ff4a5d86" android:angle="270.0" />
+            <corners android:bottomLeftRadius="4.0px" android:bottomRightRadius="4.0px" />
+        </shape>
+    </item>
+    <item android:left="4.0px" android:top="4.0px" android:right="97.0px" android:bottom="4.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#33000000" android:endColor="#00000000" android:angle="0.0" />
+            <corners android:topLeftRadius="4.0px" android:bottomLeftRadius="4.0px" />
+        </shape>
+    </item>
+    <item android:left="97.0px" android:top="4.0px" android:right="4.0px" android:bottom="4.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#33000000" android:endColor="#00000000" android:angle="180.0" />
+            <corners android:topRightRadius="4.0px" android:bottomRightRadius="4.0px" />
+        </shape>
+    </item>
+    <item android:left="4.0px" android:top="3.0px" android:right="4.0px" android:bottom="54.0px">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#99ffffff" android:endColor="#00ffffff" android:angle="270.0" />
+            <corners android:topLeftRadius="4.0px" android:topRightRadius="4.0px" />
+        </shape>
+    </item>
+</layer-list>

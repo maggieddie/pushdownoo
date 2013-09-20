@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/contact_card_scroll_view" android:background="@color/message_list_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.contacts.contactcard.NameConversationView android:id="@id/name_conversation_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" style="@style/ContactCardSectionRoot" />
+        <com.facebook.contacts.contactcard.ConversationSettingsView android:id="@id/conversation_settings_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" />
+        <com.facebook.contacts.contactcard.GroupMembersSectionView android:id="@id/group_members_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" />
+        <com.facebook.contacts.contactcard.MapSectionView android:id="@id/map_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" />
+        <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/group_contact_card_leave_conversation" android:background="@drawable/orca_button_blue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:text="@string/thread_view_details_leave" />
+    </LinearLayout>
+</ScrollView>

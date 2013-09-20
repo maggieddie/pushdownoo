@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.ui.BaubleSatelliteButton android:layout_width="100.0dip" android:layout_height="150.0dip" android:layout_marginBottom="38.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layerType="hardware"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/bauble_button_label_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layerType="hardware" style="@style/bauble_button_label_style" />
+    <ImageView android:id="@id/bauble_button_image_view" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</com.facebook.dash.ui.BaubleSatelliteButton>

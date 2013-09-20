@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/ufiservices_flyout_divider_view" android:background="@color/ufiservices_flyout_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" android:layout_marginRight="12.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginRight="5.0dip">
+        <com.facebook.widget.UrlImage android:id="@id/ufiservices_flyout_profile_image_view" android:layout_width="@dimen/ufiservices_likers_profile_image_size" android:layout_height="@dimen/ufiservices_likers_profile_image_size" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="center" android:layout_centerVertical="true" orca:placeholderSrc="@drawable/no_avatar" orca:loadResolutionDuringScroll="full_res" orca:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toLeftOf="@id/ufiservices_flyout_profile_button_view" android:layout_toRightOf="@id/ufiservices_flyout_profile_image_view" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/flyout_text_body_color" android:id="@id/ufiservices_flyout_profile_name_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/ufiservices_story_dark_gray_text_color" android:id="@id/ufiservices_flyout_profile_extra_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageButton android:gravity="center_vertical" android:id="@id/ufiservices_flyout_profile_button_view" android:background="@drawable/ufiservices_flyout_friending_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ufiservices_flyout_add_friend_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

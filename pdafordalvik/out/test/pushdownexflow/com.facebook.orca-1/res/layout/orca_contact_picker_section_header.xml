@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/contact_picker_section_header" android:background="@color/default_contacts_section_background" android:layout_width="fill_parent" android:layout_height="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/default_contacts_section_text" android:layout_gravity="center_vertical" android:id="@id/contact_picker_section_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+    <View android:layout_gravity="bottom" android:background="@drawable/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+</FrameLayout>

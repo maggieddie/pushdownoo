@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.orca.common.ui.widgets.FloatRightCustomLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.messages.threads.ui.name.ThreadNameView android:id="@id/thread_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" orca:textColor="@android:color/white" orca:maxLines="2" orca:minScaledTextSize="14" orca:maxScaledTextSize="18" orca:alignment="normal" />
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/thread_title_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="2.0dip" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+    </com.facebook.orca.common.ui.widgets.FloatRightCustomLayout>
+    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffa2aecc" android:gravity="left" android:id="@id/thread_title_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" />
+</LinearLayout>

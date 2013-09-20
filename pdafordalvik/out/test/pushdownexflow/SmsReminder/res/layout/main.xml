@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/phone_number_label" />
+    <EditText android:id="@id/txtPhoneNo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="phone" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/message_label" />
+    <EditText android:gravity="top" android:id="@id/txtMessage" android:layout_width="fill_parent" android:layout_height="50.0dip" android:inputType="textLongMessage" />
+    <Button android:id="@id/btnSendSMS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/send_button_label" />
+    <Button android:id="@id/btnViewAlarms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/view_alarms_label" />
+    <TimePicker android:id="@id/alarmTimePicker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

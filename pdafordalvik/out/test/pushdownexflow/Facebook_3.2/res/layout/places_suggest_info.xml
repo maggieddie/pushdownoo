@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title_layout_navless" />
+    <ListView android:id="@id/place_category_list" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="#ffffffff" android:divider="#ffededed" android:dividerHeight="@dimen/one_px" />
+</LinearLayout>

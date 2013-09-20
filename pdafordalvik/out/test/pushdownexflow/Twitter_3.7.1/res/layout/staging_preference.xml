@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="vertical" android:id="@id/staging_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RadioButton android:id="@id/enable_prod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enable Production" />
+        <RadioButton android:id="@id/enable_staging" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enable Staging" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:text="Example: https://api-staging148.smf1.twitter.com/1" />
+        <EditText android:enabled="false" android:id="@id/api_staging_machine" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="40.0dip" android:hint="https://api-staging148.smf1.twitter.com/1" android:inputType="textUri" />
+    </RadioGroup>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/validation_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Validating..." />
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@android:style/Widget.ProgressBar.Small" />
+    </LinearLayout>
+</FrameLayout>

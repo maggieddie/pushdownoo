@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_price_tag" android:paddingTop="@dimen/standard_padding_and_a_half" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image_price_tag_corner" android:paddingLeft="@dimen/products_arrow_corner_left_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/price_tag_corner" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/standard_12pt_text_size" android:textColor="@color/generic_white" android:gravity="center_vertical" android:id="@id/text_product_price" android:background="@drawable/price_tag" android:paddingLeft="@dimen/standard_half_padding" android:paddingRight="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/products_arrow_corner_bottom_padding" android:drawablePadding="0.0px" android:layout_below="@id/image_price_tag_corner" android:layout_alignParentLeft="true" />
+</RelativeLayout>

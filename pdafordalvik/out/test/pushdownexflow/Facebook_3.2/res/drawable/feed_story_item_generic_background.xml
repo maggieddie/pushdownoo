@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/feed_list_item_bg_color" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/feed_story_bg" android:left="10.0dip" android:top="@dimen/feed_story_bg_inset_top_bottom" android:right="10.0dip" android:bottom="@dimen/feed_story_bg_inset_top_bottom" />
+    <item android:id="@id/feed_story_freshness_overlay">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/transparent" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WidgetBackground">
+        <item name="android:background">@drawable/widget_bg</item>
+    </style>
+    <style name="WidgetBackgroundMessage">
+        <item name="android:background">@drawable/widget_bg_message</item>
+    </style>
+    <style name="Text" />
+    <style name="Text.Loading" parent="@style/Text">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="Text.WidgetTextSerif" parent="@style/Text">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="Text.WidgetTextSans" parent="@style/Text">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="Text.WidgetTextMonospace" parent="@style/Text">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

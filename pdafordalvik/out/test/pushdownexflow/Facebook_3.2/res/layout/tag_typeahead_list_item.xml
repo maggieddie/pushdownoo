@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.UrlImage android:id="@id/tag_typeahead_list_item_url_image" android:padding="5.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tag_typeahead_list_item_text_view" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/tag_typeahead_list_item_url_image" android:layout_centerVertical="true" />
+</RelativeLayout>

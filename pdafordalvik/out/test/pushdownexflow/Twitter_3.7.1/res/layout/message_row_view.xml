@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.android.widget.TweetView android:id="@id/message" android:background="@drawable/list_row_background" style="@style/ListRow.Tweet"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</com.twitter.android.widget.CardRowView>

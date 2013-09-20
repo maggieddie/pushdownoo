@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/camera_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/preview_padding_bar" android:background="@color/camera_gray_bar" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+    <View android:id="@id/preview_padding_side_1" android:background="@color/padding_bar" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentBottom="true" />
+    <View android:id="@id/preview_padding_side_2" android:background="@color/padding_bar" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/camera_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/picture_menu" android:layout_toRightOf="@id/preview_padding_bar" android:layout_above="@id/preview_padding_side_1" android:layout_below="@id/preview_padding_side_2">
+        <ImageView android:id="@id/camera_button_flash" android:background="@drawable/camera_flash_selector" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+        <ImageView android:id="@id/camera_button_switch_camera" android:background="@drawable/camera_switch_button_selector" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" />
+        <View android:background="@color/camera_borders_and_dividers" android:layout_width="0.6600001dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:alpha="0.2" />
+        <include layout="@layout/focus_indicator" />
+        <com.facebook.camera.views.ShutterView android:id="@id/shutter" android:background="@color/camera_shutter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/picture_menu" android:background="@color/camera_gray_bar" android:layout_width="106.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <RelativeLayout android:id="@id/layout_gallery_button" android:background="@drawable/camera_menu_button_background" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/camera_gallery_image" android:background="@drawable/camera_gallery_icon_inactive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <View android:background="@color/camera_borders_and_dividers" android:layout_width="74.0dip" android:layout_height="0.6600001dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/photo_camera_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/camera_button_activity_photo_capture" android:background="@drawable/camera_photo_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/camera_button_activity_video_capture" android:background="@drawable/camera_video_button_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/photo_video_selector" android:background="@drawable/camera_menu_button_background" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+            <View android:background="@color/camera_borders_and_dividers" android:layout_width="74.0dip" android:layout_height="0.6600001dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/select_video" android:background="@drawable/camera_icon_active" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textOn="" android:textOff="" android:layout_centerInParent="true" android:alpha="0.4" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/gallery_picker_dialog" android:background="@color/black_partial_transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.camera.views.RotateLayout android:id="@id/camera_rotateable_gallery_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/gallery_options" android:layout_width="200.0dip" android:layout_height="200.0dip" android:layout_centerInParent="true">
+                <TextView android:textColor="@color/dark_gray_text_color" android:gravity="center" android:background="@drawable/camera_menu_button_background" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/camera_gallery_dialog_title" />
+                <View android:background="@color/camera_borders_and_dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <Button android:textColor="@drawable/solid_white" android:gravity="center" android:id="@id/photo_gallery_option" android:background="@drawable/camera_menu_button_background" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/camera_gallery_photo_option" />
+                <View android:background="@color/camera_borders_and_dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <Button android:textColor="@drawable/solid_white" android:gravity="center" android:id="@id/video_gallery_option" android:background="@drawable/camera_menu_button_background" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/camera_gallery_video_option" />
+                <View android:background="@color/camera_borders_and_dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </LinearLayout>
+        </com.facebook.camera.views.RotateLayout>
+    </RelativeLayout>
+</RelativeLayout>

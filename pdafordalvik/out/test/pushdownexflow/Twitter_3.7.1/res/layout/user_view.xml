@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/user_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/action_button" style="@style/ActionButton" />
+        <include layout="@layout/user_info" />
+    </RelativeLayout>
+    <include layout="@layout/user_promoted_info" />
+</merge>

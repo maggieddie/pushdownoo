@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/list_products" android:background="@color/generic_background" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="#00000000" android:dividerHeight="@dimen/standard_padding" />
+    <FrameLayout android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading_view" layout="@layout/loading_view" />
+        <TextView android:textSize="@dimen/standard_16pt_text_size" android:textColor="@color/standard_gray_6b6b68" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/text_no_results" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/standard_padding" android:text="@string/products_no_products_found" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout style="@style/ListRow">
+        <ImageView android:id="@id/chevron" style="@style/Chevron.RTL" />
+        <ImageView android:id="@id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/chevron" />
+        <TextView android:id="@id/count" android:layout_toRightOf="@id/chevron" style="@style/SimpleRowViewCount" />
+        <TextView android:id="@id/title" style="@style/SimpleRowViewTitle.RTL" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

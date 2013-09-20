@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d minit</item>
+        <item quantity="one">1 minit</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">1 jam</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dh</item>
+        <item quantity="one">1h</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_summary_on">
+        <item quantity="other">Daripada %d orang</item>
+        <item quantity="one">Daripada 1 orang</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d orang</item>
+        <item quantity="one">1 orang</item>
+    </plurals>
+    <plurals name="social_fav_and_retweets_count">
+        <item quantity="other">%1$s kegemaran dan %2$s tweet semula</item>
+        <item quantity="one">%1$s kegemaran dan 1 tweet semula</item>
+    </plurals>
+    <plurals name="social_retweet_and_favs_count">
+        <item quantity="other">%1$s tweet semula dan %2$s kegemaran</item>
+        <item quantity="one">%1$s tweet semula dan 1 kegemaran</item>
+    </plurals>
+    <plurals name="social_fav_count">
+        <item quantity="other">%1$s kegemaran</item>
+        <item quantity="one">1 kegemaran</item>
+    </plurals>
+    <plurals name="social_retweet_count">
+        <item quantity="other">%1$s tweet semula</item>
+        <item quantity="one">1 tweet semula</item>
+    </plurals>
+</resources>

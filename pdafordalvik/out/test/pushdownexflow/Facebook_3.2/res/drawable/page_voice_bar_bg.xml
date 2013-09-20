@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/page_voice_bar_bottom_border" />
+        </shape>
+    </item>
+    <item android:bottom="1.0dip">
+        <shape>
+            <gradient android:startColor="@color/page_voice_bar_gradient_from" android:endColor="@color/page_voice_bar_gradient_to" android:angle="-90.0" />
+        </shape>
+    </item>
+</layer-list>

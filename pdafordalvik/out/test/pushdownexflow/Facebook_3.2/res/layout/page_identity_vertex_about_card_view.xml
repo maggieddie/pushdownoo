@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/page_identity_vertex_about_description_container" android:background="@drawable/page_identity_card_clickable_unit_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/page_identity_vertex_about_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/page_identity_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/page_identity_vertex_about_chevron">
+        <com.facebook.pages.identity.ui.text.TextWithEntitiesView android:ellipsize="end" android:id="@id/page_identity_vertex_about_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="6" style="@style/ChambrayText.Large" />
+        <RelativeLayout android:id="@id/page_identity_vertex_about_attributions_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayText" />
+    </LinearLayout>
+</RelativeLayout>

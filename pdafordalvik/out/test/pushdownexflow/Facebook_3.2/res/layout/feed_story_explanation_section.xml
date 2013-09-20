@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:paddingLeft="@dimen/feed_story_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/feed_story_dark_gray_text_color" android:orientation="horizontal" android:paddingTop="11.5dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feed_explanation_ncpp" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/feed_story_explanation_menu_button" android:paddingLeft="24.0dip" android:paddingTop="@dimen/feed_story_upper_right_button_padding" android:paddingRight="@dimen/feed_story_upper_right_button_padding" android:paddingBottom="11.5dip" android:visibility="gone" android:layout_width="@dimen/feed_story_menu_button_size" android:layout_height="@dimen/feed_story_menu_button_size" android:src="@drawable/feed_story_vertical_ellipsis" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/feed_substory_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+</merge>

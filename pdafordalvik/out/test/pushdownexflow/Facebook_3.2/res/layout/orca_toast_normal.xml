@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/orca_normal_sheet_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/toast_top_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/notification_greyish_dark" android:gravity="center" android:id="@id/anchorable_toast_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <View android:id="@id/toast_bottom_divider" android:background="@drawable/orca_normal_sheet_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Vor %d Stunden</item>
+        <item quantity="one">Vor 1 Stunde</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Vor %d Minuten</item>
+        <item quantity="one">Vor 1 Minute</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">In %d Stunden</item>
+        <item quantity="one">In 1 Stunde</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">In %d Minuten</item>
+        <item quantity="one">In 1 Minute</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Nachrichten löschen?</item>
+        <item quantity="one">Nachricht löschen?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Das Löschen deiner Kopien dieser Nachrichten kann nicht rückgängig gemacht werden.</item>
+        <item quantity="one">Das Löschen deiner Kopie dieser Nachricht kann nicht rückgängig gemacht werden.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Nachrichten löschen</item>
+        <item quantity="one">Nachricht löschen</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Nachrichten werden gelöscht …</item>
+        <item quantity="one">Nachricht wird gelöscht …</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d „Gefällt mir“-Angaben</item>
+        <item quantity="one">%d „Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d Kommentare</item>
+        <item quantity="one">%d Kommentar</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">%d ausgewählte Fotos löschen</item>
+        <item quantity="one">Ausgewähltes Foto löschen</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">Möchtest du wirklich die %d ausgewählten Fotos von deinem Gerät löschen?</item>
+        <item quantity="one">Möchtest du wirklich das ausgewählte Foto von deinem Gerät löschen?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d Personen gefällt das</item>
+        <item quantity="one">1 Person gefällt das</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">%d gemeinsame Freunde</item>
+        <item quantity="one">1 gemeinsame/r FreundIn</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">%,d „Gefällt mir“-Angaben</item>
+        <item quantity="one">1 „Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d Kommentare</item>
+        <item quantity="one">1 Kommentar</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s Benachrichtigungen</item>
+        <item quantity="one">1 Benachrichtigung</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s MIN</item>
+        <item quantity="one">1 MIN</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s STD</item>
+        <item quantity="one">1 STD</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s „Gefällt mir“-Angaben</item>
+        <item quantity="one">%s „Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s Kommentare</item>
+        <item quantity="one">%s Kommentar</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">gefällt dieser Ort</item>
+        <item quantity="one">gefällt dieser Ort</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">waren hier</item>
+        <item quantity="one">war hier</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d Bewertungen</item>
+        <item quantity="one">1 Bewertung</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">„Gefällt mir“-Angaben</item>
+        <item quantity="one">„Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">waren hier</item>
+        <item quantity="one">war hier</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Du warst hier %1$d Mal.</item>
+        <item quantity="one">Du warst ein Mal hier.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">%,d „Gefällt mir“-Angaben</item>
+        <item quantity="one">1 „Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d Personen waren hier</item>
+        <item quantity="one">1 Person war hier</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">%,d Personen sprechen darüber</item>
+        <item quantity="one">1 Person spricht darüber</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$s und %2$s verwenden das</item>
+        <item quantity="one">%1$s verwendet das</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$s und %2$s spielen das</item>
+        <item quantity="one">%1$s spielt das</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">%d „Gefällt mir“-Angaben</item>
+        <item quantity="one">1 „Gefällt mir“-Angabe</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d Besuche</item>
+        <item quantity="one">1 Besuch</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d Geburtstage</item>
+        <item quantity="one">1 Geburtstag</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d Personen gefällt das</item>
+        <item quantity="one">1 Person gefällt das</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d Besuche</item>
+        <item quantity="one">1 Besuch</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">%d gemeinsame Freunde</item>
+        <item quantity="zero">Keine gemeinsamen Freunde</item>
+        <item quantity="one">1 gemeinsame/r FreundIn</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d Personen</item>
+        <item quantity="one">1 Person</item>
+    </plurals>
+</resources>

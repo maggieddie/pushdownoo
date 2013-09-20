@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="*" android:shrinkColumns="*"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+        <Button android:id="@id/nearby_category_nearby" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_default_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_restaurants" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_restaurants_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_coffee" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_coffee_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_nightlife" android:layout_width="0.0dip" android:drawableTop="@drawable/nearby_icon_nightlife_selector" android:layout_weight="1.0" style="@style/category_icon" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+        <Button android:id="@id/nearby_category_outdoor" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_outdoors_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_arts" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_arts_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_hotels" android:layout_width="0.0dip" android:layout_marginRight="1.0dip" android:drawableTop="@drawable/nearby_icon_hotels_selector" android:layout_weight="1.0" style="@style/category_icon" />
+        <Button android:id="@id/nearby_category_shopping" android:layout_width="0.0dip" android:drawableTop="@drawable/nearby_icon_shopping_selector" android:layout_weight="1.0" style="@style/category_icon" />
+    </TableRow>
+</TableLayout>

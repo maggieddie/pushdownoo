@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/orca_compose_attachment_item_width" android:layout_height="@dimen/orca_compose_attachment_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="bottom|left|center" android:layout_width="@dimen/orca_compose_attachment_item_image_width_height" android:layout_height="@dimen/orca_compose_attachment_item_image_width_height">
+        <com.facebook.widget.images.UrlImage android:id="@id/composer_attachment_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:isUsedWithUploadProgress="true" />
+        <View android:id="@id/multipicker_cover" android:background="@drawable/multipicker_cover_transition" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <View android:layout_gravity="top|right|center" android:id="@id/composer_attachment_item_remove" android:background="@drawable/orca_composer_attachment_remove_button" android:clickable="true" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" />
+</FrameLayout>

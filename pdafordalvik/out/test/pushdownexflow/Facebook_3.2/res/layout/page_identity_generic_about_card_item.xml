@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/page_identity_generic_about_card_short_item_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" style="@style/ChambrayText.Large" />
+    <TextView android:ellipsize="end" android:id="@id/page_identity_generic_about_card_short_item_value" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="3.0" style="@style/ChambrayText.Large.Dark" />
+</LinearLayout>

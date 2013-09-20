@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_number" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/phone_number_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView1" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <TextView android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/date_time" android:layout_below="@id/phone_number_view" android:layout_alignParentLeft="true" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/date_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView3" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <TextView android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/message" android:layout_below="@id/date_time_view" android:layout_alignParentLeft="true" />
+    <TextView android:id="@id/message_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView5" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel_button" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

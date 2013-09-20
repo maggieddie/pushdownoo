@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fortune pour Android:</string>
+    <string name="app_name_prefix">Fortune pour Android:</string>
+    <string name="about_comments">Le populaire Fortune pour Android: montrez une adage, probablement intéressant, mais en tout cas choisi par hasard.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">Fortune pour Android sur Launchpad</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/?lang=fr</string>
+    <string name="about_backup">Pour afficher des informations sur cette app, vous devez installer OI About. Voir http://www.openintents.org/ ou le marché.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">"Vous ne semblez pas possédez l'application Android Market. Annulé."</string>
+    <string name="market_description_short">Le très célèbre Fortune, maintenant sur Android: affichage aléatoire, assurément intéressant, adages, citations, paroles, blagues, textes, ...</string>
+    <string name="menu_preferences">Préférences</string>
+    <string name="menu_about">"Sur la Fortune de l'Androïde"</string>
+    <string name="menu_refresh">Rafraichir les cookies</string>
+    <string name="menu_get_more_cookies">Obtenir plus de Cookies</string>
+    <string name="menu_send">Envoyer en tant que texte</string>
+    <string name="menu_web_search">Recherche Sur Web</string>
+    <string name="menu_feedback">Donnez vos commentaires</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Envoyer via :</string>
+    <string name="chooser_web_search_action">Rechercher sur le Web via :</string>
+    <string name="preferences_activity_name">"Préférences d'Android's Fortune"</string>
+    <string name="resources">Ressources</string>
+    <string name="title_cp_equal">Egalité des chances entre les cookies</string>
+    <string name="summary_cp_equal">"Que la chance qu'un cookie est affiché à partir d'un fichier cookie spécial est égale entre les fichiers de cookies, quel que soit la taille des fichiers cookie."</string>
+    <string name="title_ep_folder">Dossier contenant les cookies</string>
+    <string name="summary_ep_folder">Entrez dans le dossier où vous avez stocké vos fichiers de cookies.</string>
+    <string name="dialog_title_ep_folder">Entrez le dossier contenant les fichiers de cookies</string>
+    <string name="title_ps_files">Les fichiers de cookies</string>
+    <string name="summary_ps_files">Sélectionnez les fichiers de cookies pour être utilisé à partir du dossier ci-dessus (ne comprennent les fichiers .num).</string>
+    <string name="summary_ps_files_warning">"ATTENTION : Certains fichiers sélectionnés n'ont pas de fichier .num associé ! Cliquez ici et changez la sélection."</string>
+    <string name="in_app_display">Afficher</string>
+    <string name="title_lp_font">Style de police</string>
+    <string name="summary_lp_font">Monospace peut être utile pour ascii-art cookies.</string>
+    <string name="dialog_title_lp_font">Changer le style de police</string>
+    <string name="title_ep_fontsize">Taille de la police</string>
+    <string name="summary_ep_fontsize">Taille de police en points.</string>
+    <string name="dialog_title_ep_fontsize">Changer la taille de la police</string>
+    <string name="title_cp_wrap">Habillage de texte</string>
+    <string name="summary_cp_wrap">"Adapter le texte cookie sur l'écran. Désactiver pour afficher correctement les textes mis en forme avec cookie sauts de ligne et ascii-art."</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Style de police</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Changer le style de police du widget</string>
+    <string name="title_ep_widget_period">Période de mise à jour du widget</string>
+    <string name="summary_ep_widget_period">Période en minutes entre les rafraîchissements du widget</string>
+    <string name="dialog_title_ep_widget_period">Changer la période de rafraîchissement du widget</string>
+    <string name="notifications">Notifications</string>
+    <string name="title_cp_notif_boot">Notification au démarrage</string>
+    <string name="summary_cp_notif_boot">Suggérer un cookie au démarrage du système.</string>
+    <string name="title_cp_notif_time">Notifications périodiques</string>
+    <string name="summary_cp_notif_time">Suggérez des cookies à des intervalles de temps.</string>
+    <string name="title_ep_time">Lapse de temps</string>
+    <string name="summary_ep_time">Durée en minutes entre deux notifications.</string>
+    <string name="dialog_title_ep_time">Changer le lapse de temps</string>
+    <string name="dialog_title_num">Créer un fichier .num ?</string>
+    <string name="dialog_message_num_warning">"Certains des fichiers sélectionnés n'ont pas de fichier .num associé. Devrais-je essayer de générer le fichier .num ?"</string>
+    <string name="no_cookie_files">"Aucun fichier de cookies n'est configuré. Veuillez ouvrir les préférences et sélectionner les fichiers de cookies.
+
+Voir : http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Ceci n'est pas un cookie de fortune !)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune Cookie (fichiers cookie diseurs de bonne aventure)</string>
+    <string name="dialog_install">"Veuillez patienter pendant l'installation du fichier d'exemples…"</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Fortune du jour</string>
+    <string name="widget_loading">"Chargement d'un cookie…"</string>
+    <string name="widget_error">Aucun fichier de cookie configuré, ou Fortune pour Android à été fermé en raison de mémoire libre insuffisante ou réinstallé. Touchez pour ouvrir Fortune pour Android!</string>
+    <string name="widget_dialog_activity_name">"Choisir l'opération :"</string>
+    <string name="label_b_refresh">Actualiser</string>
+    <string name="label_b_show_cookie">Montrer la fortune du jour</string>
+    <string name="label_b_cancel">Annuler</string>
+    <string name="error_no_file_name">"Vous n'avez précisé aucun nom de fichier."</string>
+    <string name="error_arg_twice">Un argument a été adoptée à deux reprises.</string>
+    <string name="error_num_file_exists">Soudain, le fichier .num qui aurait été créé existe déjà.</string>
+    <string name="error_no_valid_cookie_file">"Le fichier choisi n'est pas un fichier cookie valable."</string>
+    <string name="error_file_not_exists_or_no_num">"Ou le fichier cookie n'existe pas, ou un fichier .num ne lui a pas été associé."</string>
+    <string name="error_no_write_perms">"Vous n'avez pas le droit d'écrire."</string>
+    <string name="toast_read_cookie_failed">La lecture du cookie a échoué.</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Etes vous sûr que la carte SD est bien montée?"</string>
+    <string name="toast_read_cookie_failed_internal">"Une erreur interne s'est produite lors de la lecture du cookie (rapportez ce bug s'il vous plaît):"</string>
+    <string name="toast_generation_num_failed">La création du fichier .num a échoué.</string>
+    <string name="toast_not_a_dir">"Le dossier spécifié (ci-dessus dans les préférences) n'est pas un répertoire:"</string>
+    <string name="toast_selected_file_lost">Un fichier préalablement sélectionné ne se trouve plus:</string>
+    <string name="toast_value_invalid">"La valeur donnée n'est pas valide. Mettre à :"</string>
+    <string name="toast_widget_period_short">Une valeur inférieure à 60 minutes pourrait avoir un effet négatif sur les performances et la tenue de la batterie.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune vérifie les mises à jour de préférences"</string>
+    <string name="title_ps_versioncheck">Vérification de mises à jour</string>
+    <string name="summary_ps_versioncheck">Contrôle automatique des mises à jour.</string>
+    <string name="vc_notify_ticker">"Mise à jour d'application"</string>
+    <string name="vc_notify_title">Application mise à jour</string>
+    <string name="vc_notify_message">"Téléchargement d'une nouvelle version"</string>
+    <string name="vc_category">Vérification de mise à jour</string>
+    <string name="vc_enabled_title">Active</string>
+    <string name="vc_enabled_summary">"Que ce soit pour l'application de vérification des mises à jour est activé ou non."</string>
+    <string name="vc_confirm_title">"Confirmer la mise à jours d'Android's Fortune"</string>
+    <string name="vc_confirm_text">Souhaitez-vous mettre à jour cette application vers une version plus récente?</string>
+    <string name="vc_confirm_stop">"Ne pas m'avertir de cette mise à jour"</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">URI pour vérification</string>
+    <string name="vc_check_uri_summary">"L'URI qui sera vérifié pour les mises à jour d'applications."</string>
+    <string name="about_translators">Launchpad Contributions: Abdessamad Derraz https://launchpad.net/~derraz Alexis Vabre https://launchpad.net/~figure8labs Damton https://launchpad.net/~damien-beucher Elizabeth https://launchpad.net/~dutertre-eliz Florent (LSc) https://launchpad.net/~lorkscorguar Francois Magimel https://launchpad.net/~linkid Francois Thunus https://launchpad.net/~thunus François Blondel https://launchpad.net/~francoisblondel François Tissandier https://launchpad.net/~baloo Ptitphysik https://launchpad.net/~amalpeyre SteelStyle https://launchpad.net/~steelstyle Steve Dodier https://launchpad.net/~sidi pafnow https://launchpad.net/~pafnow pjv https://launchpad.net/~pjv</string>
+</resources>

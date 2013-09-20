@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/no_connection_connect_icon" />
+    <TextView android:textSize="24.0sp" android:textColor="@color/error_message_title" android:gravity="center" android:id="@id/faceweb_error_retry_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/generic_connection_lost" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:src="@drawable/no_connection_retry_icon" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/error_message_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/generic_tap_to_retry" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/timeline_navitem_tile" android:layout_width="@dimen/timeline_navtile_width" android:layout_height="@dimen/timeline_navtile_height" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip">
+            <View android:id="@id/timeline_navitem_pressed" android:background="@drawable/darken_pressed_state" android:clickable="true" android:layout_width="@dimen/timeline_navtile_width" android:layout_height="@dimen/timeline_navtile_height" />
+        </FrameLayout>
+        <ImageView android:layout_width="@dimen/timeline_navtile_border_height" android:layout_height="@dimen/timeline_navtile_border_width" android:src="@drawable/timeline_navtile" />
+    </FrameLayout>
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/timeline_profile_header_text" android:ellipsize="end" android:gravity="center" android:id="@id/timeline_navitem_text" android:layout_width="fill_parent" android:layout_height="28.0dip" android:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer android:id="@id/timeline_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.BetterListView android:id="@android:id/list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/white" android:divider="@color/feed_list_item_bg_color" android:dividerHeight="0.0dip" />
+    </com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer>
+    <include layout="@layout/feed_empty_layout" />
+    <include layout="@layout/feed_error_view" />
+    <com.facebook.feed.ui.GenericErrorBanner android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" />
+</RelativeLayout>

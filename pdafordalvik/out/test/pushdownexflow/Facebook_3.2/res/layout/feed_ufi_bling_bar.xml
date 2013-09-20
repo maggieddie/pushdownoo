@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/feed_feedback_bling_bar" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/feed_feedback_bling_bar_container" android:background="@drawable/feed_generic_press_state_background_rounded" android:paddingLeft="@dimen/feed_bling_bar_padding" android:paddingRight="@dimen/feed_bling_bar_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="@dimen/feed_bling_bar_height">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/feed_story_light_gray_text_color" android:id="@id/feed_feedback_likers_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/feed_story_light_gray_text_color" android:id="@id/feed_feedback_bling_bar_bullet" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ufiservices_separator" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/feed_story_light_gray_text_color" android:id="@id/feed_feedback_commenters_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <View android:id="@id/feed_bling_bar_dummy_expand_view" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 perc</item>
+        <item>10 perc</item>
+        <item>15 perc</item>
+        <item>30 perc</item>
+        <item>1 óra</item>
+        <item>2 óra</item>
+        <item>4 óra</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>Azoktól, akiket követsz</item>
+        <item>Bárkitől</item>
+        <item>Ki</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Események</item>
+        <item>Említések</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Tweetek olvasása az idővonaladról.</item>
+        <item>Nézd, hogy kiket követsz.</item>
+        <item>Tweetek küldése neked</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Nézd meg Twitter jelszavadat</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Profil szerkesztése</item>
+        <item>Beállítások</item>
+        <item>Segítség</item>
+    </string-array>
+</resources>

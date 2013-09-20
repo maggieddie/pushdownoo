@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/timeline_byline_fragment_text_size" android:textColor="@color/timeline_name_text" android:id="@id/page_timeline_byline_category" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/timeline_byline_fragment_text_size" android:textColor="@color/page_timeline_byline_text" android:id="@id/page_timeline_byline_about" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

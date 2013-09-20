@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/inline_gdp_collapsed_view" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColorLink="@color/inline_gdp_highlight_blue" android:id="@id/inline_gdp_important_required_permission_summary_in_collapsed_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/inline_gdp_complete_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColorLink="@color/inline_gdp_highlight_blue" android:id="@id/inline_gdp_important_required_permission_summary_in_complete_view" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/inline_gdp_unimportant_required_read_permission_list" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.appcenter.ui.gdp.AppDetailPrivacyPickerView android:id="@id/inline_gdp_privacy_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.appcenter.ui.gdp.AppDetailInlineGDPTosAndPrivacyView android:id="@id/inline_gdp_tos_and_privacy" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingTop="@dimen/appcenter_small_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

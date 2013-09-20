@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/timeline_collection_plus_button" android:background="@drawable/feed_app_collection_button_selector" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/feed_timeline_app_collection_button_size" android:layout_height="@dimen/feed_timeline_app_collection_button_size" android:src="@drawable/feed_app_collection_button_checkmark_selector" android:scaleType="centerInside" />
+    <ImageView android:id="@id/timeline_collection_checkmark" android:visibility="gone" android:layout_width="@dimen/feed_timeline_app_collection_button_size" android:layout_height="@dimen/feed_timeline_app_collection_button_size" android:src="@drawable/feed_app_collection_button_checkmark" android:scaleType="centerInside" android:contentDescription="@string/accessibility_feed_app_collection_member" />
+</merge>

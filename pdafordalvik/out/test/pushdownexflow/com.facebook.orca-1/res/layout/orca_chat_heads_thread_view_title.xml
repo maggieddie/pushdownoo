@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/orca_chat_titlebar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.orca.common.ui.widgets.FloatRightCustomLayout android:layout_gravity="center" android:id="@id/thread_name_presence" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="41.0dip" android:layout_marginRight="41.0dip">
+        <com.facebook.messages.threads.ui.name.ThreadNameView android:layout_gravity="center_vertical" android:id="@id/thread_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" orca:textColor="#ff000000" orca:maxLines="2" orca:textStyle="bold" orca:minScaledTextSize="14" orca:maxScaledTextSize="18" />
+        <com.facebook.orca.presence.PresenceIndicatorView android:layout_gravity="center_vertical" android:id="@id/thread_title_presence_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="1.0dip" orca:textColor="#ffd6d8db" orca:chatStyle="true" />
+    </com.facebook.orca.common.ui.widgets.FloatRightCustomLayout>
+    <ProgressBar android:layout_gravity="left|center" android:id="@id/thread_title_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+    <View android:layout_gravity="bottom" android:id="@id/bottom_divider" android:background="@color/chat_thread_view_divider" android:layout_width="fill_parent" android:layout_height="@dimen/chat_thread_compose_divider_width" />
+    <ImageView android:layout_gravity="right" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="41.0dip" android:src="@drawable/orca_chat_heads_vertical_divider" android:scaleType="center" />
+    <com.actionbarsherlock.widget.IcsImageButton android:layout_gravity="right" android:id="@id/popup_menu_button" android:background="@null" android:layout_width="41.0dip" android:layout_height="fill_parent" android:src="@drawable/orca_chat_heads_menu_button" android:scaleType="center" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:hasProgressBar="false" orca:hasBackButton="true" />
+    <com.facebook.widget.listview.BetterListView android:id="@id/hidden_entry_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/white" android:divider="@drawable/transparent_drawable" />
+</LinearLayout>

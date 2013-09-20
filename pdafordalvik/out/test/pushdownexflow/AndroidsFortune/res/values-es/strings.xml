@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">La bien conocida Fortuna para Android: muestra un adagio al azar, ojalá sea interesante.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune en Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Para ver información acerca de esta aplicación necesita instalar OI About. Visite http://www.openintents.org/ o el Android Market.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">No parece que tenga la aplicación de Android Market instalada. Ignorando.</string>
+    <string name="market_description_short">The well-known Fortune, now for Android: print random, hopefully interesting, adages, quotes, sayings, aphorisms, jokes, texts, ...</string>
+    <string name="menu_preferences">Preferencias</string>
+    <string name="menu_about">"Acerca de Android's Fortune"</string>
+    <string name="menu_refresh">Recargar galleta</string>
+    <string name="menu_get_more_cookies">Cargar más galletas</string>
+    <string name="menu_send">Enviar como texto</string>
+    <string name="menu_web_search">Buscar en la red</string>
+    <string name="menu_feedback">Dar retroalimentación</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Mandar vía:</string>
+    <string name="chooser_web_search_action">Buscar en la red vía:</string>
+    <string name="preferences_activity_name">"Preferencias de Android's Fortune"</string>
+    <string name="resources">Recursos</string>
+    <string name="title_cp_equal">Igual probabilidad entre los archivos de galletas</string>
+    <string name="summary_cp_equal">Si la probabilidad de que una galleta sea mostrada desde un archivo de galleta particular es igual entre los archivos, sin importar el tamaño de éstos.</string>
+    <string name="title_ep_folder">Carpeta contenedora de los archivos de galletas</string>
+    <string name="summary_ep_folder">Ingrese el directorio en el que se encuentran sus archivos de galleta.</string>
+    <string name="dialog_title_ep_folder">Ingrese el directorio que contiene los archivos de galleta.</string>
+    <string name="title_ps_files">Archivos de galleta</string>
+    <string name="summary_ps_files">Seleccione los archivos de galleta que se usarán del directorio mencionado arriba (no incluya archivos .num).</string>
+    <string name="summary_ps_files_warning">ATENCIÓN: ¡Algunos de los archivos seleccionados no tienen un archivo .num asociado! Pulse aquí y cambie la selección.</string>
+    <string name="in_app_display">Pantalla</string>
+    <string name="title_lp_font">Estilo de la tipografía</string>
+    <string name="summary_lp_font">Mono-espaciado puede ser útil para galletas de arte ASCII</string>
+    <string name="dialog_title_lp_font">Cambiar el estilo de la tipografía</string>
+    <string name="title_ep_fontsize">Tamaño de la tipografía</string>
+    <string name="summary_ep_fontsize">Tamaño de la tipografía en puntos.</string>
+    <string name="dialog_title_ep_fontsize">Cambiar el tamaño de la tipografía</string>
+    <string name="title_cp_wrap">Ajustar texto</string>
+    <string name="summary_cp_wrap">Ajusta el texto de la galleta en la pantalla. Desactive para ver correctamente los textos formateados con saltos de línea y arte ASCII.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Estilo de la tipografía</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Change the widget font style</string>
+    <string name="title_ep_widget_period">Widget update period</string>
+    <string name="summary_ep_widget_period">Time period in minutes in between widget refreshes.</string>
+    <string name="dialog_title_ep_widget_period">Change widget update period</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="title_cp_notif_boot">Notificación al iniciar</string>
+    <string name="summary_cp_notif_boot">Sugerir una galleta en el inicio del sistema.</string>
+    <string name="title_cp_notif_time">Notificaciones periodicamente</string>
+    <string name="summary_cp_notif_time">Sugerir galletas a intervalos de tiempo.</string>
+    <string name="title_ep_time">Periodo de tiempo</string>
+    <string name="summary_ep_time">Período de tiempo en minutos entre cada notificación.</string>
+    <string name="dialog_title_ep_time">Cambiar el periodo de tiempo</string>
+    <string name="dialog_title_num">Crear archivos .num?</string>
+    <string name="dialog_message_num_warning">¡Algunos de los archivos seleccionados no tienen asociado un archivo .num! ¿Tratar de generar los archivos .num?</string>
+    <string name="no_cookie_files">"Non hai arquivos de galleta configurados. Por favor, abra as preferencias e elixa algún arquivo de galleta
+
+Vea: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(¡Esta non é unha galleta da fortuna!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Galleta de la fortuna</string>
+    <string name="dialog_install">Favor de esperar mientras se instala el archivo de la galleta de ejemplo</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Galleta de la fortuna</string>
+    <string name="widget_loading">Cargando una galleta...</string>
+    <string name="widget_error">"No cookie files configured, or Android's Fortune closed due to too little free memory or reinstall. Tap to open Android's Fortune!"</string>
+    <string name="widget_dialog_activity_name">Elija la operación:</string>
+    <string name="label_b_refresh">Actualizar</string>
+    <string name="label_b_show_cookie">Mostrar galleta</string>
+    <string name="label_b_cancel">Cancelar</string>
+    <string name="error_no_file_name">Un nombre de archivo no fué especificado.</string>
+    <string name="error_arg_twice">Un argumento fué dado dos veces.</string>
+    <string name="error_num_file_exists">El archivo .num que se iba a crear enseguida ya existe.</string>
+    <string name="error_no_valid_cookie_file">El archivo seleccionado no es un archivo de galleta válido.</string>
+    <string name="error_file_not_exists_or_no_num">O el archivo de galleta no exsite o no tiene un archivo .num asociado a él:</string>
+    <string name="error_no_write_perms">No tiene permisos de escritura.</string>
+    <string name="toast_read_cookie_failed">Fallo al leer la galleta:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Are you sure you have the SD card mounted?"</string>
+    <string name="toast_read_cookie_failed_internal">Un error interno ocurrió al leer la galleta (por favor, reporte el fallo):</string>
+    <string name="toast_generation_num_failed">Falló la creación del archivo .num:</string>
+    <string name="toast_not_a_dir">El directorio especificado (arriba en las preferencias) no es un directorio válido:</string>
+    <string name="toast_selected_file_lost">Un archivo que fué seleccionado previamente ya no existe:</string>
+    <string name="toast_value_invalid">The entered value is invalid. Set to:</string>
+    <string name="toast_widget_period_short">A period shorter than 60 minutes might negatively affect performance and battery life.</string>
+    <string name="versioncheck_preferences_activity_name">Preferencias de Comprobación de Actualizaciones del Androide de la Fortuna</string>
+    <string name="title_ps_versioncheck">Comprobando actualizaciones</string>
+    <string name="summary_ps_versioncheck">Autocomprobación de actualizaciones.</string>
+    <string name="vc_notify_ticker">Actualización de la aplicación</string>
+    <string name="vc_notify_title">Aplicación actualizada</string>
+    <string name="vc_notify_message">Descargar una nueva versión.</string>
+    <string name="vc_category">Comprobando actualizaciones</string>
+    <string name="vc_enabled_title">Activado</string>
+    <string name="vc_enabled_summary">Si la comprobación de actualizaciones de la aplicación está activada o no.</string>
+    <string name="vc_confirm_title">Confirmar actualización del Androide de la Fortuna</string>
+    <string name="vc_confirm_text">¿Desea Ud. actualizar esta aplicación a la versión más reciente?</string>
+    <string name="vc_confirm_stop">No volver a notificar de esta actualización</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Revisar URI</string>
+    <string name="vc_check_uri_summary">La dirección que será usada para actulalizar aplicaciones.</string>
+    <string name="about_translators">Launchpad Contributions: Antonio Maldonado https://launchpad.net/~a.m. Dante Díaz https://launchpad.net/~dante David A Páez https://launchpad.net/~orlsend DiegoJ https://launchpad.net/~diegojromerolopez Eugenio M. Vigo https://launchpad.net/~evigo Feder Sáiz https://launchpad.net/~federsaiz-deactivatedaccount Federico Vera https://launchpad.net/~fedevera Paco Molinero https://launchpad.net/~franciscomol Víctor Hermida Prada https://launchpad.net/~hermida-prada acidrums4 https://launchpad.net/~acidrums4 pjv https://launchpad.net/~pjv</string>
+</resources>

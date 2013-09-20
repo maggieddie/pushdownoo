@@ -1,0 +1,19 @@
+*****************************************
+*					*
+*	Least Permission Report		*
+*					*
+*****************************************
+
+
+Permissions the app asked for (ASKED):
+android.permission.SEND_SMS
+android.permission.RECEIVE_SMS
+android.permission.WRITE_INTERNAL_STORAGE
+Permissions detected by Anadroid:
+
+android.permission.SEND_SMS
+Vulnerabilities:
+
+	ASKED >= USED	
+android.permission.RECEIVE_SMS
+android.permission.WRITE_INTERNAL_STORAGE

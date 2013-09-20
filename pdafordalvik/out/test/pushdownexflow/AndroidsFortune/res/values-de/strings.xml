@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Androids Fortune</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Das bekannte Fortune für Android: zeigt ein zufälliges, hoffentlich interessantes Sprichwort.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune bei Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Um Infos zu dieser Anwendung zu sehen muß OI About installiert sein. Siehe http://www.openintents.org/ oder (Google) the Market.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Es scheint, dass sie die Android Market App nicht installiert haben. Ignoriert.</string>
+    <string name="market_description_short">Das bekannte Fortune, jetzt für Android: zeigt zufällige, hoffentlich interessante, Sprichwörter, Redensarten, Aphorismen, Witze, Texte, ...</string>
+    <string name="menu_preferences">Einstellungen</string>
+    <string name="menu_about">"Über Android's Fortune"</string>
+    <string name="menu_refresh">Cookie aktualisieren</string>
+    <string name="menu_get_more_cookies">Mehr Cookies anfordern</string>
+    <string name="menu_send">Als SMS senden</string>
+    <string name="menu_web_search">Im Web suchen</string>
+    <string name="menu_feedback">Rückmeldung liefern</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Senden via:</string>
+    <string name="chooser_web_search_action">Suche im Wev via:</string>
+    <string name="preferences_activity_name">"Einstellungen für Android's Fortune"</string>
+    <string name="resources">Quellen</string>
+    <string name="title_cp_equal">Den Unterschied zwischen Cookies vergleichen</string>
+    <string name="summary_cp_equal">Die Chance, dass ein Cookie aus einer bestimmten Datei angezeigt wird, ist unabhängig von der Größe der Cookie-Dateien gleich.</string>
+    <string name="title_ep_folder">Ordner mit Cookiedateien</string>
+    <string name="summary_ep_folder">Bitte wählen Sie den Ordner, in dem sich Ihre Cookie-Dateien befinden aus.</string>
+    <string name="dialog_title_ep_folder">Wählen Sie den Ordner, der die Cookie-Dateien enthält</string>
+    <string name="title_ps_files">Cookie-Dateien</string>
+    <string name="summary_ps_files">Wähle die zu benutzenden Cookie-Dateien aus dem oberen Ordner (lasse die .num Dateien aus)</string>
+    <string name="summary_ps_files_warning">ACHTUNG: Einige der ausgewählten Dateien sind nicht mit einer .num-Datei verbunden! Klicke hier um die Auswahl zu ändern.</string>
+    <string name="in_app_display">Anzeige</string>
+    <string name="title_lp_font">Schriftart</string>
+    <string name="summary_lp_font">Monospace kann hilfreich bei ASCII-artigen Cokies sein.</string>
+    <string name="dialog_title_lp_font">Schriftart ändern</string>
+    <string name="title_ep_fontsize">Schriftgrad</string>
+    <string name="summary_ep_fontsize">Schriftgröße in Punkten</string>
+    <string name="dialog_title_ep_fontsize">Schriftgrad ändern</string>
+    <string name="title_cp_wrap">Text umbrechen</string>
+    <string name="summary_cp_wrap">Passt den Text des Cookies an den Bildschirm an. Deaktiviere dies, um den Cookie Text formatiert mit Zeilenumbrüchen und in ASCII-Zeichensatz anzuzeigen.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Schriftart</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Schriftart des Widgets verändern</string>
+    <string name="title_ep_widget_period">Widget Updateperiode</string>
+    <string name="summary_ep_widget_period">Zeitspanne in Minuten, in der sich das Widget auffrischt.</string>
+    <string name="dialog_title_ep_widget_period">Widget Updateperiode verändern</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="title_cp_notif_boot">Benachrichtignung beim Start</string>
+    <string name="summary_cp_notif_boot">Schlage beim Systemstart ein Cookie vor.</string>
+    <string name="title_cp_notif_time">Regelmäßige Benachrichtigungen</string>
+    <string name="summary_cp_notif_time">Regelmäßige Vorschläge aktivieren.</string>
+    <string name="title_ep_time">Zeitabstand</string>
+    <string name="summary_ep_time">Zeitspanne in Minuten zwischen den Benachrichtigungen.</string>
+    <string name="dialog_title_ep_time">Zeitabstand ändern</string>
+    <string name="dialog_title_num">.num-Dateien erstellen?</string>
+    <string name="dialog_message_num_warning">Einige der ausgewählten Dateien sind nicht mit einer .num-Datei verbunden. Soll ich versuchen, die .num-Dateien zu erstellen?</string>
+    <string name="no_cookie_files">"Es wurden keine Cookie Dateien konfigueriert. Bitte öffne die Einstellungen und wähle ein paar Cookies Dateien aus.
+
+Info:http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Das ist kein zukünftiges Cookie!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune-Cookie</string>
+    <string name="dialog_install">Bitte warten, während die Beispiel-Cookie-Datei installiert wird...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Glückskeks</string>
+    <string name="widget_loading">Lade einen Keks...</string>
+    <string name="widget_error">"Es wurden keine Cookie Dateien konfigueriert oder Android's Fortune wurde wegen zu wenig freiem Speicher geschlossen oder installiere neu. Tippe um Android's Fortune zu öffnen!"</string>
+    <string name="widget_dialog_activity_name">Wähle Operation:</string>
+    <string name="label_b_refresh">Aktualisieren</string>
+    <string name="label_b_show_cookie">Keks zeigen</string>
+    <string name="label_b_cancel">Abbrechen</string>
+    <string name="error_no_file_name">Dateiname wurde nicht angegeben.</string>
+    <string name="error_arg_twice">Ein Argument wurde doppelt übergeben.</string>
+    <string name="error_num_file_exists">Eine .num-Datei, die erstellt werden sollte existiert plötzlich schon.</string>
+    <string name="error_no_valid_cookie_file">Die ausgewählte Datei ist keine gültige Cookiedatei.</string>
+    <string name="error_file_not_exists_or_no_num">Entweder die Cookiedatei existiert nicht oder ist mit keiner .num-Datei verbunden.</string>
+    <string name="error_no_write_perms">Du hast keinen Schreibzugriff</string>
+    <string name="toast_read_cookie_failed">Fehler beim Lesen des Cookies:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Sind Sie sicher, dass Sie die SD-Karte eingebunden haben?"</string>
+    <string name="toast_read_cookie_failed_internal">Ein interner Fehler trat beim Lesen des Cookies auf(bitte melde diesen Fehler):</string>
+    <string name="toast_generation_num_failed">Fehler beim Erstellen der .num-Datei:</string>
+    <string name="toast_not_a_dir">Der ausgewählte Ordner (oben in den Einstellungen) ist kein Verzeichnis:</string>
+    <string name="toast_selected_file_lost">Eine vorher ausgewählte Datei kann nicht mehr gefunden werden:</string>
+    <string name="toast_value_invalid">Der eingegebene Wert ist nicht korrekt. Verwende:</string>
+    <string name="toast_widget_period_short">Eine Zeitspanne, die geringer ist als 60 Minuten könnte die Performance negativ beeinträchtigen und die Batterielebensdauer verkürzen.</string>
+    <string name="versioncheck_preferences_activity_name">"Einstellungen für Android's Fortune Update Überprüfung"</string>
+    <string name="title_ps_versioncheck">auf Updates prüfen</string>
+    <string name="summary_ps_versioncheck">automatisches Prüfen auf Updates</string>
+    <string name="vc_notify_ticker">Programmupdate</string>
+    <string name="vc_notify_title">Anwendung aktualisiert.</string>
+    <string name="vc_notify_message">Eine neue Version runterladen</string>
+    <string name="vc_category">Update Überprüfung</string>
+    <string name="vc_enabled_title">Aktiviert</string>
+    <string name="vc_enabled_summary">prüfen von Anwendungsupdates oder nicht.</string>
+    <string name="vc_confirm_title">"Bestätige Android's Fortune Update"</string>
+    <string name="vc_confirm_text">Möchten sie diese Anwendung auf die neuste Version aktualisieren?</string>
+    <string name="vc_confirm_stop">Benachrichtige mich nicht noch einmal über dieses Update.</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">URI prüfen</string>
+    <string name="vc_check_uri_summary">Die URI, unter der nach Programmupdates gesucht wird.</string>
+    <string name="about_translators">Launchpad Contributions: Creative Arts Technologies https://launchpad.net/~info-catmedia Erik Hahn https://launchpad.net/~ehahn Gregon https://launchpad.net/~eugen-sarychev Jan-Christoph Borchardt https://launchpad.net/~jancborchardt Lukas B</string>
+</resources>

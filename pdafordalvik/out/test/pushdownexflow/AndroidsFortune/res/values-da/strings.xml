@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Lykke"</string>
+    <string name="app_name_prefix">"Android's Lykke:"</string>
+    <string name="about_comments">Den velkendte Lykke for Android: Print et tilfældig og forhåbligt lykkebringende råd.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Lykke i Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">For at se information om dette program skal du installere OI About. Læs nærmere på http://www.openintents.org/</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Du har ikke installeret Android Market app. Ignorerer.</string>
+    <string name="market_description_short">Den kendte Lykke, nu til Android: Skriv tilfældige, forhåbentlig interessante, visdomsord, citater, ordsprog, principper, vittigheder, tekster, ...</string>
+    <string name="menu_preferences">Indstillinger</string>
+    <string name="menu_about">"Om Android's Lykkekager"</string>
+    <string name="menu_refresh">Opdater kagerne</string>
+    <string name="menu_get_more_cookies">Hent flere kager</string>
+    <string name="menu_send">Send som tekst</string>
+    <string name="menu_web_search">Søg på nettet</string>
+    <string name="menu_feedback">Giv tilbagemelding</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Send via:</string>
+    <string name="chooser_web_search_action">Søg på nettet via:</string>
+    <string name="preferences_activity_name">"Android's Lykkekage Indstillinger"</string>
+    <string name="resources">Ressourcer</string>
+    <string name="title_cp_equal">Lige store muligheder for kage filerne</string>
+    <string name="summary_cp_equal">Der er lige store muligheder for at lykkekager fra forskellige filer vises, uanset kagefilernes størrelse.</string>
+    <string name="title_ep_folder">Mapper der indeholder lykkekage filer</string>
+    <string name="summary_ep_folder">Angiv et katalog hvor du har gemt dine kagefiler.</string>
+    <string name="dialog_title_ep_folder">Angiv et katalog der indeholder kagefiler</string>
+    <string name="title_ps_files">Lykkekage filer</string>
+    <string name="summary_ps_files">Vælg de kagefiler du vil bruge fra kataloget (inkluder ikke .num filer).</string>
+    <string name="summary_ps_files_warning">ADVARSEL: Nogle af de valgte filer er ikke associeret med en .num fil ! Klik her og juster valget.</string>
+    <string name="in_app_display">Vis</string>
+    <string name="title_lp_font">Skrifttype</string>
+    <string name="summary_lp_font">Samme størrelse på alle bogstaver kan være godt hvis kagerne indeholder ascii-art billeder.</string>
+    <string name="dialog_title_lp_font">Ændre skrifttype</string>
+    <string name="title_ep_fontsize">Skriftstørrelse</string>
+    <string name="summary_ep_fontsize">Tekststørrelse i punkter</string>
+    <string name="dialog_title_ep_fontsize">Ændre skriftsstørrelse</string>
+    <string name="title_cp_wrap">Ombryd tekst</string>
+    <string name="summary_cp_wrap">Tilpas kageteksten så den kan vises på skærmen. Slå fra hvis kagetekst er formateret med tvungen ny linie og ascii-art billeder.</string>
+    <string name="widget_display">Kontrol</string>
+    <string name="title_lp_widget_font">Skrifttype</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Ændr kontrollens skrifttypestil</string>
+    <string name="title_ep_widget_period">Kontrollens opdateringsinterval</string>
+    <string name="summary_ep_widget_period">Interval i minutter mellem kontrolopdateringer.</string>
+    <string name="dialog_title_ep_widget_period">Ret widget opdateringsinterval</string>
+    <string name="notifications">Meddelelse</string>
+    <string name="title_cp_notif_boot">Meddelelse ved opstart</string>
+    <string name="summary_cp_notif_boot">Foreslå en lykkekage når systemet starter</string>
+    <string name="title_cp_notif_time">Periodiske meddelelser</string>
+    <string name="summary_cp_notif_time">Foreslå lykkekager med bestemte tidsintervaller.</string>
+    <string name="title_ep_time">Tidsperiode</string>
+    <string name="summary_ep_time">Tidsperiode i minutter mellem meddelelserne.</string>
+    <string name="dialog_title_ep_time">Ændre tidsperiode</string>
+    <string name="dialog_title_num">Opret .num filer?</string>
+    <string name="dialog_message_num_warning">Nogle af de valgte filer er ikke associeret med en .num fil. Skal jeg forsøge at oprette en .num fil ?</string>
+    <string name="no_cookie_files">"Du har ikke konfigureret nogle kagefiler. Du skal angive nogle i indstillinger.n
+See: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(This is not a fortune cookie!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Lykke kage</string>
+    <string name="dialog_install">Vent venligst mens prøve kagefilen installeres...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Lykkesmåkage</string>
+    <string name="widget_loading">Henter en småkage...</string>
+    <string name="widget_error">"No cookie files configured, or Android's Fortune closed due to too little free memory or reinstall. Tap to open Android's Fortune!"</string>
+    <string name="widget_dialog_activity_name">Vælg handling:</string>
+    <string name="label_b_refresh">Opdater</string>
+    <string name="label_b_show_cookie">Show cookie</string>
+    <string name="label_b_cancel">Annullér</string>
+    <string name="error_no_file_name">Et filnavn blev ikke angivet.</string>
+    <string name="error_arg_twice">Samme argument er sendt to gange.</string>
+    <string name="error_num_file_exists">.num filen som skulle oprettes eksisterer pludseligt.</string>
+    <string name="error_no_valid_cookie_file">Den valgte fil var ikke en gyldig kagefil.</string>
+    <string name="error_file_not_exists_or_no_num">Enten eksisterer kagefilen ikke eller den er ikke associeret med en .num fil:</string>
+    <string name="error_no_write_perms">Du har ikke ret til at skrive til filen.</string>
+    <string name="toast_read_cookie_failed">Læsning af kagefilen mislykkedes:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Are you sure you have the SD card mounted?"</string>
+    <string name="toast_read_cookie_failed_internal">En intern fejl opstod under læsning af kagefilen (rapporter venligst fejlen):</string>
+    <string name="toast_generation_num_failed">Oprettelse af .num fil mislykkedes:</string>
+    <string name="toast_not_a_dir">Den specificerede mappe (ovenfor i indstillinger) er ikke et gyldigt katalog:</string>
+    <string name="toast_selected_file_lost">En tidligere valgt fil findes ikke længere:</string>
+    <string name="toast_value_invalid">Den indtastede værdi er ugyldig. Sat til:</string>
+    <string name="toast_widget_period_short">Et interval under 60 minutter kan påvirke batterilevetiden i negativ retning.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Lykkekageopdatering tjekker indstillinger"</string>
+    <string name="title_ps_versioncheck">Opdateringskontrol</string>
+    <string name="summary_ps_versioncheck">Tjekker automatisk omd der er opdateringer.</string>
+    <string name="vc_notify_ticker">Programopdatering</string>
+    <string name="vc_notify_title">Program opdateret</string>
+    <string name="vc_notify_message">Download en ny version.</string>
+    <string name="vc_category">Tjekker opdatering</string>
+    <string name="vc_enabled_title">Aktiveret</string>
+    <string name="vc_enabled_summary">Om tjek for opdatering er slået til eller ej.</string>
+    <string name="vc_confirm_title">Bekræft at Androids lykkekager opdateres</string>
+    <string name="vc_confirm_text">Vil du gerne opdatere til seneste version?</string>
+    <string name="vc_confirm_stop">Informér mig ikke igen om denne opdatering</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Tjek URL</string>
+    <string name="vc_check_uri_summary">URL en som tjekkes for programopdateringer.</string>
+    <string name="about_translators">Launchpad Contributions: Joe Hansen https://launchpad.net/~joedalton2 nanker https://launchpad.net/~nanker peso https://launchpad.net/~peer-sommerlund pjv https://launchpad.net/~pjv</string>
+</resources>

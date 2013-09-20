@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="6" android:versionName="G1.6.2" android:installLocation="auto" package="com.ATsolution.KBbank"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application android:theme="@android:style/Theme.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:label="@string/app_name" android:name=".UI.CIntro" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CMainMenu" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CTwoDepthMenu" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name=".UI.CThreeDepthMenu" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CTransferYegum" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CTotalDeposit" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name=".UI.COftenAccnt" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CWebView" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CRegister" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.COtherRegister" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".UI.CAuDiscard" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.CDirectNew" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CHelp" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CNoAuth" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CFetchAu" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CLoginAu" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CServiceJoin" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CNotice" android:screenOrientation="portrait" android:configChanges="keyboard|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CUserNotice" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CAuManage" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CChangePass" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CAuSelCerti" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CVersionConfirm" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CCallCenter" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CFarmMain" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CFarmSetting" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CFarmSendTwitter" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CFarmIconSetting" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CSaveDeposit" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CFarmDetailTrans" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CFarmNameSetting" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CFarmApply" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CFarmHelp" android:screenOrientation="portrait" />
+        <activity android:label="N-Filter" android:name="com.nshc.nfilter.NFilterNum" android:screenOrientation="portrait" />
+        <activity android:label="N-Filter" android:name="com.nshc.nfilter.NFilterChar" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CIssueCerti" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CExportCerti" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.CFarmProfileSetting" android:screenOrientation="portrait" />
+        <activity android:name=".UI.CSchemeRecieveActivity" android:screenOrientation="portrait" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="kbbank" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-sdk android:minSdkVersion="6" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+</manifest>

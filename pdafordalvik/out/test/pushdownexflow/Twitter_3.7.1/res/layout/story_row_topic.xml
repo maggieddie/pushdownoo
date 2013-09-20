@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.StoryView android:id="@id/story_topic" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListRow">
+        <com.twitter.android.widget.OverlayImageView android:id="@id/story_image" android:background="@color/solid_white" android:layout_width="fill_parent" android:layout_height="170.0dip" android:scaleType="centerCrop" twitter:overlayDrawable="@drawable/image_overlay" />
+        <TextView android:id="@id/story_query" android:layout_width="fill_parent" android:layout_marginTop="@dimen/standard_spacing" android:layout_below="@id/story_image" style="@style/Story.Byline" />
+        <TextView android:id="@id/story_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/text_single_line_height" android:layout_marginTop="@dimen/standard_spacing" android:singleLine="true" android:layout_below="@id/story_image" style="@style/Byline" />
+    </RelativeLayout>
+</com.twitter.android.widget.StoryView>

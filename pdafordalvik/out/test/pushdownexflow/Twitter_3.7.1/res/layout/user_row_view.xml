@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.UserView android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:promotedDrawable="@drawable/ic_badge_promoted" twitter:politicalDrawable="@drawable/ic_badge_gov" twitter:defaultProfileImageDrawable="@drawable/ic_no_profile_photo_sm"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout style="@style/ListRow">
+        <include layout="@layout/user_view" />
+    </RelativeLayout>
+</com.twitter.android.widget.UserView>

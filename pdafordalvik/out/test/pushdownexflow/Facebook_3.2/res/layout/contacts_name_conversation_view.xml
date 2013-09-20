@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_card_thread_name_and_tile" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/thread_view_details_item_thread_tile_container" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true">
+        <com.facebook.widget.UrlImage android:id="@id/thread_view_details_item_thread_tile" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:placeHolderScaleType="centerInside" orca:scaleType="fitCenter" />
+        <ImageView android:id="@id/thread_view_details_item_thread_tile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/dark_orca_blue" android:id="@id/thread_view_details_item_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:hint="@string/thread_view_set_thread_name_hint" android:singleLine="true" android:layout_toRightOf="@id/thread_view_details_item_thread_tile_container" android:layout_centerVertical="true" />
+</RelativeLayout>

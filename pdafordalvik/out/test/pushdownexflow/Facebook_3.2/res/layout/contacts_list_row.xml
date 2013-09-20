@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.user.tiles.UserTileView android:id="@id/contact_user_tile_image" android:visibility="visible" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" orca:tileSize="60.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="0.0dip" android:layout_toLeftOf="@id/contact_indicator" android:layout_toRightOf="@id/contact_user_tile_image" android:layout_centerVertical="true">
+        <TextView android:textSize="15.0sp" android:textColor="@color/default_contacts_contact_name_text" android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/default_contacts_contact_status_text" android:id="@id/contact_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+    <ImageView android:id="@id/contact_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

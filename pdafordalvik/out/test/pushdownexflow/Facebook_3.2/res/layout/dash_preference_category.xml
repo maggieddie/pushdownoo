@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/dash_preference_category_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dash.ui.HelveticaNeueTextView android:textSize="11.0sp" android:textStyle="bold" android:id="@android:id/title" android:background="@android:color/transparent" android:paddingLeft="11.0dip" android:paddingTop="6.5dip" android:paddingRight="8.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Theme.Facebook.Dash.Preferences.TextAppearance" />
+</LinearLayout>

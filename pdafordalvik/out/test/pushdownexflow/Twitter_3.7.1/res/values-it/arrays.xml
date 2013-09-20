@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 minuti</item>
+        <item>10 minuti</item>
+        <item>15 minuti</item>
+        <item>30 minuti</item>
+        <item>1 ora</item>
+        <item>2 ore</item>
+        <item>4 ore</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>Dalle persone che segui</item>
+        <item>Da chiunque</item>
+        <item>Disattivate</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Interazioni</item>
+        <item>Menzioni</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Leggere i Tweet dalla tua cronologia.</item>
+        <item>Guarda chi segui.</item>
+        <item>Pubblica Tweet per te.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Vedere la tua password di Twitter.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Modifica profilo</item>
+        <item>Impostazioni</item>
+        <item>Aiuto</item>
+    </string-array>
+</resources>

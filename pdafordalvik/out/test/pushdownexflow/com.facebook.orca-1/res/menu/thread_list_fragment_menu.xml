@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/send_message" android:orderInCategory="10" />
+    <item android:id="@id/create_group" android:orderInCategory="10" />
+    <item android:id="@id/broadcast" android:orderInCategory="10" />
+    <item android:icon="@drawable/orca_ic_menu_refresh" android:id="@id/refresh" android:orderInCategory="200" android:title="@string/menu_refresh" />
+</menu>

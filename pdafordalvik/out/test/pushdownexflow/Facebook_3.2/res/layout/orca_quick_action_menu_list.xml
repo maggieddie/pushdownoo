@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/orca_titlebar_menu" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cacheColorHint="@android:color/white" android:divider="#ffedeff4" android:dividerHeight="1.0dip" style="@style/Theme.Orca.ListView" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/grid_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/grid" android:padding="8.0dip" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="8.0dip" android:verticalSpacing="8.0dip" android:stretchMode="columnWidth" android:columnWidth="72.0dip" android:numColumns="auto_fit" android:rowHeight="72.0dip" />
+    <include layout="@layout/empty_layout" />
+</FrameLayout>

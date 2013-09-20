@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:appcenter="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/app_browse_body" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.BetterListView android:id="@id/app_browse_card_list" android:fadingEdge="none" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cacheColorHint="@color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/browse_top_part" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.HorizontalImageGallery android:id="@id/featured_apps_gallery" android:layout_width="fill_parent" android:layout_height="@dimen/appcenter_featured_apps_height" appcenter:left_item_width_percentage="10" appcenter:support_vertical_scrolling="false" />
+            <RelativeLayout android:id="@id/publisher_buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.appcenter.ui.AppBrowseCategoryFilterView android:id="@id/appcenter_filter_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:id="@id/appcenter_filter_bar_border" android:background="@color/app_separator_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/appcenter_filter_bar" />
+                <ImageView android:id="@id/publisher_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/appcenter_filter_bar_shadow" android:scaleType="fitXY" android:layout_below="@id/appcenter_filter_bar_border" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <include android:id="@id/app_browse_error_view" layout="@layout/generic_error_view" />
+    <com.facebook.widget.listview.EmptyListViewItem android:layout_gravity="center_vertical" android:id="@id/browse_empty_item_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 dakika</item>
+        <item>10 dakika</item>
+        <item>15 dakika</item>
+        <item>30 dakika</item>
+        <item>1 saat</item>
+        <item>2 saat</item>
+        <item>4 saat</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>Takip ettiğin kişilerden</item>
+        <item>Herkesten</item>
+        <item>Kapalı</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Etkileşimler</item>
+        <item>Bahsedenler</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Zaman akışındaki tweetleri okumak.</item>
+        <item>Kimi takip ettiğini görmek.</item>
+        <item>Senin adına Tweet göndermek.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Twitter şifreni görmek.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Profili düzenle</item>
+        <item>Ayarlar</item>
+        <item>Yardım</item>
+    </string-array>
+</resources>

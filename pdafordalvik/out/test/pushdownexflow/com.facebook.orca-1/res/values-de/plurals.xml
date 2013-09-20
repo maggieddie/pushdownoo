@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s Tausend</item>
+        <item quantity="one">1 Tausend</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s Millionen</item>
+        <item quantity="one">1 Million</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s Milliarde</item>
+        <item quantity="one">1 Milliarde</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Vor %d Stunden</item>
+        <item quantity="one">Vor 1 Stunde</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Vor %d Minuten</item>
+        <item quantity="one">Vor 1 Minute</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">In %d Stunden</item>
+        <item quantity="one">In 1 Stunde</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">In %d Minuten</item>
+        <item quantity="one">In 1 Minute</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Nachrichten löschen?</item>
+        <item quantity="one">Nachricht löschen?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Das Löschen deiner Kopien dieser Nachrichten kann nicht rückgängig gemacht werden.</item>
+        <item quantity="one">Das Löschen deiner Kopie dieser Nachricht kann nicht rückgängig gemacht werden.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Nachrichten löschen</item>
+        <item quantity="one">Nachricht löschen</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Nachrichten werden gelöscht ...</item>
+        <item quantity="one">Nachricht wird gelöscht ...</item>
+    </plurals>
+</resources>

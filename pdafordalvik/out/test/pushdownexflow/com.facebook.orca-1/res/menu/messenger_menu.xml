@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_preferences" android:id="@id/preferences" android:orderInCategory="100" android:title="@string/menu_preferences" />
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help" android:orderInCategory="310" android:title="@string/menu_help" />
+    <item android:icon="@drawable/orca_ic_menu_bug" android:id="@id/report_bug" android:orderInCategory="320" android:title="@string/bug_report_button_title" />
+    <item android:id="@id/internal" android:orderInCategory="500" android:title="Internal">
+        <menu>
+            <item android:icon="@drawable/orca_ic_menu_bug" android:id="@id/send_log_menu_item" android:title="@string/debug_log_send" />
+            <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/force_crash_menu_item" android:title="@string/debug_force_crash" />
+        </menu>
+    </item>
+</menu>

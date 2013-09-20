@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/page_timeline_navtile_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_likes" weight="1"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/timeline_navtile_count_text" android:gravity="center" android:id="@id/timeline_navtile_likes" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" weight="1" />
+</LinearLayout>

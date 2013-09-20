@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_thousand_long">
+        <item quantity="other">%1$s duizend</item>
+        <item quantity="one">1 duizend</item>
+    </plurals>
+    <plurals name="num_million_long">
+        <item quantity="other">%1$s miljoen</item>
+        <item quantity="one">1 miljoen</item>
+    </plurals>
+    <plurals name="num_billion_long">
+        <item quantity="other">%1$s miljard</item>
+        <item quantity="one">1 miljard</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d uur geleden</item>
+        <item quantity="one">1 uur geleden</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d minuten geleden</item>
+        <item quantity="one">1 minuut geleden</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d uur vanaf nu</item>
+        <item quantity="one">1 uur vanaf nu</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minuten vanaf nu</item>
+        <item quantity="one">1 minuut vanaf nu</item>
+    </plurals>
+    <plurals name="divebar_nearby_friends_row_title">
+        <item quantity="other">%d blank string</item>
+        <item quantity="one">%d blank string</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Berichten verwijderen?</item>
+        <item quantity="one">Bericht verwijderen?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Wanneer je jouw exemplaar van deze berichten verwijdert, kun je dit niet ongedaan maken.</item>
+        <item quantity="one">Wanneer je jouw exemplaar van het bericht verwijdert, kun je dit niet ongedaan maken.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Berichten verwijderen</item>
+        <item quantity="one">Bericht verwijderen</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Berichten verwijderen…</item>
+        <item quantity="one">Bericht verwijderen…</item>
+    </plurals>
+</resources>

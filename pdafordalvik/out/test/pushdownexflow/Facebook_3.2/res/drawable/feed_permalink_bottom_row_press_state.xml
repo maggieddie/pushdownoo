@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/feed_permalink_bg_bottom" />
+    <item android:drawable="@drawable/feed_press_state_rounded_rect" android:left="@dimen/feed_feedback_press_state_padding" android:top="@dimen/feed_feedback_press_state_padding" android:right="@dimen/feed_feedback_press_state_padding" android:bottom="@dimen/feed_feedback_press_state_padding" />
+</layer-list>

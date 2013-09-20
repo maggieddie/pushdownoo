@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="140" android:versionName="1.4.0" package="com.smartcam.webcam"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk android:minSdkVersion="8" />
+    <application android:label="@string/app_name" android:icon="@drawable/smartcam">
+        <service android:name="com.smartcam.webcam.comm.CommService" android:exported="true" />
+        <activity android:label="@string/app_name" android:name="com.smartcam.webcam.ui.SmartCamActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.smartcam.webcam.ui.HelpActivity" android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/settings_name" android:name="com.smartcam.webcam.ui.SettingsActivity" android:screenOrientation="user" />
+        <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="xxxxxxxxxxxxxxx" />
+    </application>
+</manifest>

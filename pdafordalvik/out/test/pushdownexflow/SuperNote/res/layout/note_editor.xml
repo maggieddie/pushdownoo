@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:textSize="22.0sp" android:gravity="top" android:id="@id/note" android:background="@android:color/transparent" android:padding="5.0dip" android:scrollbars="vertical" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:capitalize="sentences" class="com.tdizz.snote.keypadnotes.NoteEditor$LinedEditText"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

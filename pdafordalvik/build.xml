@@ -42,7 +42,7 @@
     
     <property name="compiler.debug" value="on"/>
     <property name="compiler.generate.no.warnings" value="off"/>
-    <property name="compiler.args" value=""/>
+    <property name="compiler.args" value="-J -Xss1024M"/>
     <property name="compiler.max.memory" value="256m"/>
     <patternset id="ignored.files">
         <exclude name="**/CVS/**"/>
@@ -217,7 +217,7 @@
         <javac destdir="${pushdownexflow.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}"
             memorymaximumsize="${compiler.max.memory}" fork="true"
             executable="${module.jdk.bin.pushdownexflow}/javac">
-            <compilerarg line="${compiler.args.pushdownexflow}"/>
+            <compilerarg   value="-J -Xss1024M"/>  <!--line="${compiler.args.pushdownexflow}"/>-->
             <bootclasspath refid="pushdownexflow.module.bootclasspath"/>
             <classpath>
                 <pathelement location="${pushdownexflow.output.dir}"/>
@@ -246,7 +246,7 @@
         <javac destdir="${pushdownexflow.testoutput.dir}" debug="${compiler.debug}"
             nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true"
             executable="${module.jdk.bin.pushdownexflow}/javac">
-            <compilerarg line="${compiler.args.pushdownexflow}"/>
+            <compilerarg   value="-J -Xss1024M"/>  <!--line="${compiler.args.pushdownexflow}"/>-->
             <bootclasspath refid="pushdownexflow.module.bootclasspath"/>
             <classpath>
                 <pathelement location="${pushdownexflow.testoutput.dir}"/>

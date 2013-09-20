@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.launchables.fragment.LaunchablesContainer android:id="@id/launchables_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/delete_bar" android:layout_width="fill_parent" android:layout_height="@dimen/delete_bar_height" layout="@layout/delete_bar" />
+    <FrameLayout android:id="@id/launchables_menu" android:paddingBottom="@dimen/launchables_topbottom_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/launchables_content" android:paddingLeft="@dimen/launchables_leftright_padding" android:paddingRight="@dimen/launchables_leftright_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/launchables_composer_container" android:layout_width="fill_parent" android:layout_height="@dimen/launchables_composer_height">
+                <include android:id="@id/launchables_composer" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/launchables_composer_height" android:layout_marginBottom="@dimen/launchables_composer_bottom_margin" layout="@layout/launchables_composer" />
+            </FrameLayout>
+        </LinearLayout>
+        <include android:id="@id/pages_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/pages_indicator_height" android:layout_marginTop="@dimen/pages_indicator_top_margin" layout="@layout/launchables_page_indicator" />
+        <com.facebook.dash.launchables.fragment.LaunchablesPager android:id="@id/launchables_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/launchables_loading_spinner" android:layout_width="33.0dip" android:layout_height="33.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/white_spinner_indeterminate" android:indeterminateDuration="1500" />
+</com.facebook.dash.launchables.fragment.LaunchablesContainer>

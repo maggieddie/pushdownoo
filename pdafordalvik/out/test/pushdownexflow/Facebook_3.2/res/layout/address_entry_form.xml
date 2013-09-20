@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/address_entry_form" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/address_name" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_name_placeholder" android:inputType="textPersonName|textCapWords" android:imeOptions="actionNext" style="@style/form_text_field" />
+    <EditText android:id="@id/address_street" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_street_placeholder" android:inputType="textPostalAddress|textCapWords" android:imeOptions="actionNext" style="@style/form_text_field" />
+    <EditText android:id="@id/address_street2" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_street2_placeholder" android:inputType="textCapWords" android:imeOptions="actionNext" style="@style/form_text_field" />
+    <EditText android:id="@id/address_city" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_city_placeholder" android:inputType="textCapWords" android:imeOptions="actionNext" style="@style/form_text_field" />
+    <EditText android:id="@id/address_state" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_state_placeholder" android:maxLength="2" android:inputType="textCapCharacters" android:imeOptions="actionNext" style="@style/form_text_field" />
+    <EditText android:id="@id/address_zipcode" android:layout_width="fill_parent" android:layout_height="@dimen/form_item_height" android:hint="@string/address_zipcode_placeholder" android:inputType="number" style="@style/form_text_field" />
+</LinearLayout>

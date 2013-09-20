@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Android hakkında bilinen en iyi Fal: rastgele, ilginç olduğu umulan özdeyişler yazdırması.</string>
+    <string name="about_copyright">Telif Hakkı © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune Launchpad'de"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Bu uygulama hakkında bilgi görüntülemek için OI About yüklemelisiniz. Bakınız http://www.openintents.org/ veya Ticari.</string>
+    <string name="link_about_dialog">ticari://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Görünüşe bakılırsa sizde Ticari Android uygulaması yüklü değil. Yoksayılıyor.</string>
+    <string name="market_description_short">Artık Android hakkında bilinen en iyi Fal: rastgele yazdırdığı, ilginç olduğu umulan, özdeyişler, alıntılar, söylemler, atasözleri, şakalar, metinler, ...</string>
+    <string name="menu_preferences">Tercihler</string>
+    <string name="menu_about">"Android's Fortune Hakkında"</string>
+    <string name="menu_refresh">Kurabiyeyi Yenile</string>
+    <string name="menu_get_more_cookies">Daha Fazla Kurabiye Al</string>
+    <string name="menu_send">Metin Olarak Gönder</string>
+    <string name="menu_web_search">Webde Ara</string>
+    <string name="menu_feedback">Geri Bildirimde Bulun</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Aracılığıyla gönder:</string>
+    <string name="chooser_web_search_action">Aracılığıyla webde ara:</string>
+    <string name="preferences_activity_name">"Android's Fortune Tercihleri"</string>
+    <string name="resources">Kaynaklar</string>
+    <string name="title_cp_equal">Kurabiye dosyalarında şanslar eşit</string>
+    <string name="summary_cp_equal">Kurabiyeler, kurabiye dosyalarının boyutlarına bakılmaksızın eşit şartlar altında gösterilir.</string>
+    <string name="title_ep_folder">Kurabiye dosyalarını içeren klasör</string>
+    <string name="summary_ep_folder">Kurabiye dosyalarını depoladığınız klasörü girin.</string>
+    <string name="dialog_title_ep_folder">Kurabiye dosyalarını içeren klasörü girin</string>
+    <string name="title_ps_files">Kurabiye dosyaları</string>
+    <string name="summary_ps_files">Yukarıdaki klasörden kullanılacak kurabiye dosyalarını seçin (.num dosyalarını içermeyin)</string>
+    <string name="summary_ps_files_warning">UYARI: Seçilen dosyalardan bazıları .num dosyası ile bağlantılı değil! Buraya tıklayarak seçilenleri değiştirin.</string>
+    <string name="in_app_display">Görünüm</string>
+    <string name="title_lp_font">Yazıtipi biçimi</string>
+    <string name="summary_lp_font">Tekgenişlikli yazıtipleri ascii-sanatı kurabiyeleri için kullanışlı olabilir.</string>
+    <string name="dialog_title_lp_font">Yazıtipi biçimini değiştir</string>
+    <string name="title_ep_fontsize">Yazıtipi boyutu</string>
+    <string name="summary_ep_fontsize">Nokta olarak yazıtipi boyutu.</string>
+    <string name="dialog_title_ep_fontsize">Yazıtipi boyutunu değiştir</string>
+    <string name="title_cp_wrap">Metin kaydırma</string>
+    <string name="summary_cp_wrap">Kurabiye metnini ekrana sıkıştırır. Kurabiye metinlerini biçimlendirilmiş satır aralıklı ve ascii-sanatıyla düzgün olarak görüntülemek için etkinleştirmemelisiniz.</string>
+    <string name="widget_display">Parçacık</string>
+    <string name="title_lp_widget_font">Yazıtipi biçimi</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Parçacık yazıtipi biçimini değiştir</string>
+    <string name="title_ep_widget_period">Parçacık güncelleme periyodu</string>
+    <string name="summary_ep_widget_period">Parçacık yenilemeleri arasındaki dakika olarak zaman aralığı.</string>
+    <string name="dialog_title_ep_widget_period">Parçacık güncelleme periyodunu değiştir</string>
+    <string name="notifications">Bildiriler</string>
+    <string name="title_cp_notif_boot">Başlangıçta bildirim</string>
+    <string name="summary_cp_notif_boot">Sistem başlatıldığında kurabiye öner.</string>
+    <string name="title_cp_notif_time">Düzenli bildirimler</string>
+    <string name="summary_cp_notif_time">Zaman aralıklarıyla kurabiye öner.</string>
+    <string name="title_ep_time">Zaman aralığı</string>
+    <string name="summary_ep_time">Bildirimler arasındaki dakika olarak zaman aralığı.</string>
+    <string name="dialog_title_ep_time">Zaman aralığını değiştir</string>
+    <string name="dialog_title_num">.num dosyası oluşturulsun mu?</string>
+    <string name="dialog_message_num_warning">Seçilen dosyalardan bazıları .num dosyasıyla bağlantılı değil. .num dosyalarını oluşturmayı deneyeyim mi?</string>
+    <string name="no_cookie_files">"Yapılandırılan bir kurabiye dosyası yok. Lütfen tercihleri açıp kurabiye dosyası seçin. n
+Bakınız: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Bu fal kurabiyesi değildir!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fal Kurabiyesi</string>
+    <string name="dialog_install">Lütfen örnek kurabiye dosyası yüklenirken bekleyiniz...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Fal kurabiyesi</string>
+    <string name="widget_loading">Kurabiye yükleniyor...</string>
+    <string name="widget_error">"Yapılandırılan bir kurabiye dosyası yok, veya Android's Fortune belleğindeki boş yerin bitmesine veya tekrar yüklenmesine az kaldı. Android's Fortune açmak için basın!"</string>
+    <string name="widget_dialog_activity_name">İşlem seçin:</string>
+    <string name="label_b_refresh">Yenile</string>
+    <string name="label_b_show_cookie">Kurabiyeyi göster</string>
+    <string name="label_b_cancel">İptal</string>
+    <string name="error_no_file_name">Dosya adı belirtilmedi.</string>
+    <string name="error_arg_twice">Argüman iki kere geçti.</string>
+    <string name="error_num_file_exists">Oluşturulan .num dosyası zaten mevcut.</string>
+    <string name="error_no_valid_cookie_file">Seçilen dosya geçerli bir kurabiye dosyası değil.</string>
+    <string name="error_file_not_exists_or_no_num">Ya kurabiye dosyası yok veya .num dosyası ile bağlantısı yok:</string>
+    <string name="error_no_write_perms">Yazma iznine sahip değilsiniz.</string>
+    <string name="toast_read_cookie_failed">Kurabiye okuma başarısız:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+SD kartınızın takıldığına emin misiniz?"</string>
+    <string name="toast_read_cookie_failed_internal">Kurabiye dosyasını okurken dahili bir hata oluştu (lütfen hatayı rapor edin):</string>
+    <string name="toast_generation_num_failed">.num dosyası oluşturulması başarısız:</string>
+    <string name="toast_not_a_dir">Belirtilen klasör (yukarıda tercihlerde) geçerli bir dizin değil:</string>
+    <string name="toast_selected_file_lost">Önceden seçilen dosya artık bulunmuyor:</string>
+    <string name="toast_value_invalid">Girilen değer geçersiz. Buna ayarla:</string>
+    <string name="toast_widget_period_short">60 dakikadan kısa olan zaman performansı ve pil ömrünü negatif yönde etkileyebilir.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune Güncelleme Denetleme Tercihleri"</string>
+    <string name="title_ps_versioncheck">Güncellemeler denetleniyor</string>
+    <string name="summary_ps_versioncheck">Güncellemeler denetlenme için otomatikleştirilmiş.</string>
+    <string name="vc_notify_ticker">Uygulama Güncellemesi</string>
+    <string name="vc_notify_title">Uygulama Güncellendi</string>
+    <string name="vc_notify_message">Yeni sürümü indir.</string>
+    <string name="vc_category">Güncellemeler Denetleniyor</string>
+    <string name="vc_enabled_title">Etkinleştirildi</string>
+    <string name="vc_enabled_summary">Uygulama güncellemelerin etkinliği denetleniyor.</string>
+    <string name="vc_confirm_title">"Android's Fortune Güncellemesini Onayla"</string>
+    <string name="vc_confirm_text">Bu uygulamanın yeni sürümünü güncelleştirmek ister misiniz?</string>
+    <string name="vc_confirm_stop">Bu güncelleme için beni bir daha uyarma</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">"URI'yi Denetle"</string>
+    <string name="vc_check_uri_summary">Uygulama güncellemeleri için denetlenecek URI.</string>
+    <string name="about_translators">Launchpad Contributions: Angel Spy https://launchpad.net/~dilara.ekinci</string>
+</resources>

@@ -329,10 +329,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     val fp = pf.path // path.getAbsolutePath();
     val sexp = SExp.parseAllIn(fp)
 
-    if (opts.verbose) {
-      // System.err.println("Input program in S-expression Form:")
-      //  System.out.println(sexp)
-      System.out.println("\n")
+    if (opts.verbose) { 
     } 
 
     S2DParser(sexp);

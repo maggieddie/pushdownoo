@@ -78,6 +78,7 @@ object RunAnalysis {
     --simple-graph         			if the graph is dumped, distinct natural numbers are displayed on its nodes instead of actual configurations
     --interrupt-after n    			interrupts the analysis after n states computed (default = off)
     --interrupt-after-time n(min) 	interrupts the analysis after n minutes (default = off)
+    --for-intent-fuzzer				specialized static analysis for intent fuzzer
     --help                 			print this message
     --verbose              			print additional information on the analysis and results
     filePath               			path to an IR folder to be analysed

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.tiles.ThreadTileView android:id="@id/contact_group_tile_image" android:background="@color/divebar_contact_background" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" orca:threadTileSize="48.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="0.0dip" android:layout_toRightOf="@id/contact_group_tile_image" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <com.facebook.messages.threads.ui.name.ThreadNameView android:id="@id/group_name" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:textColor="@color/default_contacts_contact_name_text" orca:maxLines="1" orca:minScaledTextSize="15" orca:maxScaledTextSize="15" orca:alignment="normal" />
+        <com.facebook.messages.threads.ui.name.ThreadNameView android:id="@id/group_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" orca:textColor="@color/default_contacts_contact_status_text" orca:maxLines="1" orca:minScaledTextSize="12" orca:maxScaledTextSize="12" orca:alignment="normal" orca:nameOption="useParticipantsNamesOnly" />
+    </LinearLayout>
+    <View android:id="@id/contact_divider" android:background="@drawable/default_separator_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/title_layout_navless" />
+        <TextView android:textSize="48.0sp" android:textColor="@drawable/text_color" android:gravity="center_horizontal" android:id="@id/login_approvals_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="23435" />
+        <TextView android:textSize="13.0sp" android:textColor="@drawable/text_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/code_generator_code_refresh" />
+    </LinearLayout>
+    <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/text_color" android:gravity="center" android:layout_gravity="bottom" android:id="@id/code_generator_not_working" android:background="@drawable/code_generator_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="10.0dip" android:text="@string/code_generator_code_not_working_title" />
+    <com.facebook.katana.view.FacebookProgressCircleView android:layout_gravity="center" android:id="@id/code_generator_timer" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="75.0dip" android:color="@color/black" />
+</FrameLayout>

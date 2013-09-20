@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="15.0dip" android:maxLines="1" android:ems="25" android:scrollHorizontally="true" android:capitalize="sentences" android:autoText="true" />
+    <Button android:layout_gravity="right" android:id="@id/ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_ok" android:onClick="onClickOk" />
+</LinearLayout>

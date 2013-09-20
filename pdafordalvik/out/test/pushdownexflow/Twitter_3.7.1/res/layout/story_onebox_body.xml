@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListRow">
+        <include android:id="@id/story_header" layout="@layout/story_onebox_header" />
+        <RelativeLayout android:id="@id/story_user_inner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/story_header">
+            <include layout="@layout/story_news" />
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

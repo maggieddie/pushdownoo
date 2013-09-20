@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Het alombekende Fortune, nu ook voor Android: drukt een willekeurig, hopelijk interessant, spreekwoord af.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune op Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Om de informatie over deze app te kunnen bekijken moet OI About geïnstalleerd zijn. Ga naar http://www.openintents.org/ of de Market.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">Het lijkt erop dat je de Android Market applicatie niet geïnstalleerd hebt. Negeren.</string>
+    <string name="market_description_short">De alom-bekende Fortune, nu voor Android: geeft willekeurige, hopelijk interessante, adages, quotes, gezegden, amorphismen, grappen, teksten, ... weer</string>
+    <string name="menu_preferences">Voorkeuren</string>
+    <string name="menu_about">"Over Android's Fortune"</string>
+    <string name="menu_refresh">Ververs Cookie</string>
+    <string name="menu_get_more_cookies">Zoek Meer Cookies</string>
+    <string name="menu_send">Stuur Als Tekst</string>
+    <string name="menu_web_search">Zoek Op Het Web</string>
+    <string name="menu_feedback">Geef Feedback</string>
+    <string name="menu_copy">Kopieer naar Klembord</string>
+    <string name="menu_share_app">Deel App met Vrienden</string>
+    <string name="chooser_send_action">Stuur via:</string>
+    <string name="chooser_web_search_action">Zoek het web via:</string>
+    <string name="preferences_activity_name">"Android's Fortune voorkeuren"</string>
+    <string name="resources">Bronnen</string>
+    <string name="title_cp_equal">Gelijke kansen over cookie-bestanden heen</string>
+    <string name="summary_cp_equal">Of de kans dat een cookie weergegeven wordt uit een bepaald cookie-bestand gelijk is over alle cookie-bestanden, ook al verschillen de cookie-bestanden in grootte.</string>
+    <string name="title_ep_folder">Map met cookie-bestanden</string>
+    <string name="summary_ep_folder">Vul de map in waar je de cookie-bestanden hebt opgeslagen.</string>
+    <string name="dialog_title_ep_folder">Vul de map met de cookie-bestanden in</string>
+    <string name="title_ps_files">Cookie-bestanden</string>
+    <string name="summary_ps_files">Selecteer de cookie-bestanden uit de bovenstaande map om gebruikt te worden (uitgezonderd .num-bestanden)</string>
+    <string name="summary_ps_files_warning">WAARSCHUWING: Enkele geselecteerde bestanden hebben geen geassocieerde .num-bestanden! Klik hier en verander de selectie.</string>
+    <string name="in_app_display">Weergave</string>
+    <string name="title_lp_font">Lettertypestijl</string>
+    <string name="summary_lp_font">Monospace kan nuttig zijn voor ascii-kunst-cookies.</string>
+    <string name="dialog_title_lp_font">Verander de lettertypestijl</string>
+    <string name="title_ep_fontsize">Lettertypegrootte</string>
+    <string name="summary_ep_fontsize">Lettertypegrootte in punten.</string>
+    <string name="dialog_title_ep_fontsize">Verander de lettertypegrootte</string>
+    <string name="title_cp_wrap">Compacte tekstbreedte</string>
+    <string name="summary_cp_wrap">Zorgt dat de cookie-tekst op het scherm past. Schakel uit om cookie-teksten die geformateerd zijn met lijnafbrekingen, alsook ascii-kunst, correct weer te geven.</string>
+    <string name="widget_display">Widget</string>
+    <string name="title_lp_widget_font">Lettertypestijl</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Wijzig de lettertypestijl van het widget</string>
+    <string name="title_ep_widget_period">Widget update-interval</string>
+    <string name="summary_ep_widget_period">Tijdsinterval in minuten tussen widget vernieuwingen.</string>
+    <string name="dialog_title_ep_widget_period">Wijzig het update-interval van het widget</string>
+    <string name="notifications">Meldingen</string>
+    <string name="title_cp_notif_boot">Melding bij start</string>
+    <string name="summary_cp_notif_boot">Suggereer een cookie bij de systeemstart.</string>
+    <string name="title_cp_notif_time">Periodieke meldingen</string>
+    <string name="summary_cp_notif_time">Suggereer cookies om de zoveel tijd.</string>
+    <string name="title_ep_time">Tijdsinterval</string>
+    <string name="summary_ep_time">Tijdsinterval tussen meldingen in minuten.</string>
+    <string name="dialog_title_ep_time">Verander tijdsinterval van de meldingen</string>
+    <string name="dialog_title_num">.num-Bestanden aanmaken?</string>
+    <string name="dialog_message_num_warning">Enkele geselecteerde bestanden hebben geen geassocieerde .num-bestanden. Zal ik proberen de .num-bestanden aan te maken?</string>
+    <string name="no_cookie_files">"Er zijn geen cookie-bestanden geconfigureerd. Open a.u.b. de voorkeuren en selecteer enkele cookie-bestanden.
+
+Zie ook: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Dit is trouwens geen fortune cookie!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune Cookie</string>
+    <string name="dialog_install">Even geduld AUB gedurende de installatie van het voorbeeld cookie bestand...</string>
+    <string name="toast_copied_to_clipboard">De tekst van het cookie werd gekopieerd naar het klembord. Je kan deze nu eender waar plakken.</string>
+    <string name="template_share_app">"Probeer deze gelukskoekjesapplicatie voor Android die ik vond.
+
+Zoek in de Android Market op 'Android's Fortune' of surf naar http://market.android.com/search?q=pname:net.lp.androidsfortune in de browser van de telefoon."</string>
+    <string name="template_share_app_subject">"Probeer deze gelukskoekjesapplicatie voor Android die ik vond: Android's Fortune"</string>
+    <string name="widget_name">Gelukskoekje</string>
+    <string name="widget_loading">Een koekje aan het laden...</string>
+    <string name="widget_error">"Geen koekjes bestand geconfigureerd, of Android's Fortune sloot af vanwege te weinig vrij geheugen of herinstallatie. Tap om Android's Fortune te openen!"</string>
+    <string name="widget_dialog_activity_name">Kies actie:</string>
+    <string name="label_b_refresh">Vernieuwen</string>
+    <string name="label_b_show_cookie">Koekje weergeven</string>
+    <string name="label_b_cancel">Annuleren</string>
+    <string name="error_no_file_name">Er was geen bestandsnaam opgegeven.</string>
+    <string name="error_arg_twice">Een argument werd twee keer meegegeven.</string>
+    <string name="error_num_file_exists">Het .num-bestand dat zou aangemaakt worden bestaat plots al.</string>
+    <string name="error_no_valid_cookie_file">Het geselecteerd bestand is geen geldig cookie-bestand.</string>
+    <string name="error_file_not_exists_or_no_num">Ofwel bestaat het cookie-bestand niet, ofwel heeft het geen geassocieerd .num-bestand:</string>
+    <string name="error_no_write_perms">U heeft geen schrijfpermissies.</string>
+    <string name="toast_read_cookie_failed">Het lezen van de cookie is gefaald:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Ben je zeker dat je de SD card gemount hebt?"</string>
+    <string name="toast_read_cookie_failed_internal">Een interne fout is opgetreden tijdens het lezen van de cookie (rapporteer de bug a.u.b.):</string>
+    <string name="toast_generation_num_failed">Aanmaken van het .num-bestand is gefaald:</string>
+    <string name="toast_not_a_dir">De opgegeven map (bovenstaande in de voorkeuren) is geen geldige map:</string>
+    <string name="toast_selected_file_lost">Een bestand dat voorheen geselecteerd was kan niet langer gevonden worden:</string>
+    <string name="toast_value_invalid">De ingegeven waarde is ongeldig. Zet naar:</string>
+    <string name="toast_widget_period_short">Een interval korter dan 60 minuten kan een negatieve invloed hebben op de performantie en de autonomie van de batterij.</string>
+    <string name="versioncheck_preferences_activity_name">"Android's Fortune voorkeuren voor het controleren op updates"</string>
+    <string name="title_ps_versioncheck">Controles op updates</string>
+    <string name="summary_ps_versioncheck">Geautomatiseerde controles op updates.</string>
+    <string name="vc_notify_ticker">Applicatie update</string>
+    <string name="vc_notify_title">Applicatie geüpdatet</string>
+    <string name="vc_notify_message">Download een nieuwe versie.</string>
+    <string name="vc_category">Controles op updates</string>
+    <string name="vc_enabled_title">Aan/uit</string>
+    <string name="vc_enabled_summary">Of het controleren van app updates aan staat of niet.</string>
+    <string name="vc_confirm_title">"Bevestig de update van Android's Fortune"</string>
+    <string name="vc_confirm_text">Wilt u de applicatie updaten naar de nieuwste versie?</string>
+    <string name="vc_confirm_stop">Breng me niet meer op de hoogte van updates.</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">Controle-URI</string>
+    <string name="vc_check_uri_summary">De URI waarlangs gecontroleerd zal worden op app updates.</string>
+    <string name="about_translators">Launchpad Contributions: DraxterNL https://launchpad.net/~addict26 Wander https://launchpad.net/~simslim Yentl https://launchpad.net/~yentlvt pjv https://launchpad.net/~pjjjjv pjv https://launchpad.net/~pjv</string>
+</resources>

@@ -62,6 +62,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       k:Kont,
       stForEqual: StForEqual) : Set[Conf] ={
     
+  //  println("st:", ivkS)
    
         val possibleValues = atomEval(objAexp, fp, s)
         val objVals = filterObjValues(possibleValues,s)
@@ -200,7 +201,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       val argSecurityVals = argExpStrs.map((argRegStr) => {storeLookup(pst, fp.offset(argRegStr))}) 
      
       //println(isEntryApply)
-    if (!isEntryApply) {
+    if (!isEntryApply) { // normal aplpy
        
       val argVals = argsRegExps map (atomEval(_, fp, s))
       
@@ -240,28 +241,35 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
           //the property of the arguments are propagated to formal parameters
           val newPStore2 = storeUpdate(newPStore, List((thisRegAddr, pv))) 
           
-          val newState = (PartialState(buildStForEqual(theNext ), newFP, newStore2,   newPStore2,
+          val newState = //(PartialState(buildStForEqual(theNext ), newFP, newStore2,   newPStore2,
+             // kptr, tp), funk :: k)
+          
+            // intra-procedrual: old fp and continuation
+           if( Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural)   {
+             (PartialState(buildStForEqual(callerNxtSt ), fp, newStore2,   newPStore2,
+              kptr, tp),  k)
+           }
+          // inter-procedrual
+           else{
+             (PartialState(buildStForEqual(theNext ), newFP, newStore2,   newPStore2,
               kptr, tp), funk :: k)
-          Set(newState)
+           }
+        	   Set(newState)
         }
+        
         case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore,  newPStore, 
             kptr, tp), funk :: k))
       }
 
     } else { // if it is entry apply,  no need to propagate the security property
       
-      val argVals = argsTopVal
-      //println("argVals")
-     // argVals.foreach(println)
+      val argVals = argsTopVal 
       val startingIndex = regsNum - argVals.length
       val formalRegStrOffsets = List.range(startingIndex, regsNum) map (StringUtils.constrRegStr)
       val formalRegOffsetAddrs = formalRegStrOffsets map (newFP.offset(_))
       val bindings = formalRegOffsetAddrs.zip(argVals)
       val newStore = storeUpdate(s, bindings) 
-      
-      //println("binding: ")
-     // bindings.foreach(println)
-      
+       
       val propertyBindings = formalRegOffsetAddrs.zip(argSecurityVals)
       val newPStore = storeUpdate(pstMoveResult, propertyBindings)
        val pv = 
@@ -536,7 +544,14 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
     val  branches  = stmtSSE.foldLeft(Set[Conf]())((res, ss) => {
       res ++ Set((PartialState(buildStForEqual(ss ), fp, s, pst, kptr, t), k))
     })
-    branches ++ Set((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, t), k))
+    
+     if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+       Set((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, t), k))
+     }
+     else{
+        branches ++ Set((PartialState(buildStForEqual(nxt ), fp, s, pst, kptr, t), k))
+     }
+   
   }
 
   def handleFieldAssign(fieldS: FieldAssignStmt, s: Store, pst: PropertyStore, nxt: Stmt, fp: FramePointer, kptr: KAddr, tp: Time, k: Kont): Set[Conf] = {

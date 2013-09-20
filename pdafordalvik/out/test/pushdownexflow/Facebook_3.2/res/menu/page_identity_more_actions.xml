@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/page_identity_message_menu_item" android:title="@string/page_identity_action_message" />
+    <item android:id="@id/page_identity_follow_menu_item" android:title="@string/page_identity_action_follow" />
+    <item android:id="@id/page_identity_share_menu_item" android:title="@string/page_identity_action_share" />
+    <item android:id="@id/page_identity_copy_link_menu_item" android:title="@string/page_identity_action_copy_link" />
+    <item android:id="@id/page_identity_suggest_edit_menu_item" android:title="@string/page_identity_action_suggest_edit" />
+    <item android:id="@id/page_identity_report_generic_menu_item" android:title="@string/page_identity_action_report" />
+    <item android:id="@id/page_identity_report_place_menu_item" android:title="@string/page_identity_action_report">
+        <menu>
+            <item android:id="@id/page_identity_inappropriate_content_menu_item" android:title="@string/page_identity_action_inappropriate_content" />
+            <item android:id="@id/page_identity_not_public_menu_item" android:title="@string/page_identity_action_not_public_place" />
+            <item android:id="@id/page_identity_closed_menu_item" android:title="@string/page_identity_action_closed" />
+            <item android:id="@id/page_identity_incorrect_info_menu_item" android:title="@string/page_identity_action_info_incorrect" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.TabIndicator android:background="@drawable/bg_tab_item" android:layout_width="0.0dip" android:layout_height="@dimen/tabbar_height" android:layout_margin="0.0px" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/new_indicator" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_glow" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font_size_xsmall" android:textStyle="bold" android:textColor="@color/tab_item_title" android:id="@id/title" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:shadowColor="@color/solid_black" android:shadowDy="-1.0" android:shadowRadius="0.5" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_centerHorizontal="true" />
+</com.twitter.android.widget.TabIndicator>

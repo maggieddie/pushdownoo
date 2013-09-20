@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/feed_attachment_background_box" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/pymk_suggestion_image" android:layout_width="@dimen/pymk_swipe_feed_unit_image_size" android:layout_height="@dimen/pymk_swipe_feed_unit_image_size" android:scaleType="fitXY" orca:placeholderSrc="@drawable/no_avatar" orca:loadResolutionDuringScroll="full_res" />
+    <RelativeLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/pymk_suggestion_vertical_divider" android:layout_centerVertical="true">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/feed_story_blue_text_color" android:id="@id/pymk_suggestion_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:singleLine="true" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/feed_story_dark_gray_text_color" android:id="@id/pymk_suggestion_extra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <View android:id="@id/pymk_suggestion_vertical_divider" android:background="@color/light_grey" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/pymk_suggestion_action_icon" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/pymk_suggestion_action_icon" android:layout_width="35.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/feed_glyph_add_friend" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

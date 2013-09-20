@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/generic_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/itunes_item_padding_double" android:paddingTop="@dimen/itunes_item_padding" android:paddingRight="@dimen/itunes_item_padding_double" android:paddingBottom="@dimen/itunes_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image_search" android:paddingRight="@dimen/itunes_item_padding_double" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_search" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/image_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clear_text_box" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <EditText android:textSize="@dimen/standard_18pt_text_size" android:textColor="@color/product_name_text" android:textColorHint="@color/itunes_recommendation_search_hint_text" android:id="@id/edit_text_search_query" android:background="@color/generic_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="@dimen/itunes_item_padding_double" android:layout_toLeftOf="@id/image_clear" android:layout_toRightOf="@id/image_search" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:paddingLeft="@dimen/itunes_item_padding_double" android:paddingRight="@dimen/itunes_item_padding_double" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/itunes_content_divider" android:dividerHeight="1.0dip" />
+        <FrameLayout android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:layout_gravity="center" android:id="@id/loading_view" layout="@layout/loading_view" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="top" android:background="@color/generic_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/shadow_down" android:scaleType="fitXY" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/bright_red_warning_color" android:gravity="center_vertical" android:id="@id/global_alert_message" android:padding="18.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip" android:text="@string/thread_notifications_global_disabled" style="@style/Theme.Orca.ClickableRow"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

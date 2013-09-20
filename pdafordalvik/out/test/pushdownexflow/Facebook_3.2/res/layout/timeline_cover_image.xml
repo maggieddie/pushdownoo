@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/timeline_cover_pic" android:background="@drawable/timeline_cover_image_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:placeholderSrc="@drawable/timeline_cover_image_bg" orca:retainImageDuringUpdate="true" />
+    <View android:id="@id/timeline_cover_photo_pressed" android:background="@drawable/darken_pressed_state" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/timeline_cover_pic" android:layout_alignBottom="@id/timeline_cover_pic" android:contentDescription="@string/accessibility_cover_photo" />
+    <View android:background="@color/timeline_cover_photo_border" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</merge>

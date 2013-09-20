@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/tag_bubble" android:background="@drawable/btn_tag" android:paddingLeft="@dimen/removable_tag_left_padding" android:paddingTop="@dimen/removable_tag_vertical_padding" android:paddingRight="@dimen/removable_tag_right_padding" android:paddingBottom="@dimen/removable_tag_vertical_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/tag_text" android:paddingRight="@dimen/removable_tag_middle_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_tag_suggestion" android:maxLines="1" />
+    <View android:layout_gravity="center_vertical" android:id="@id/tag_remove" android:background="@drawable/camera_review_reject_button" android:layout_width="@dimen/tag_remove_x_image_width" android:layout_height="@dimen/tag_remove_x_image_height" />
+</LinearLayout>

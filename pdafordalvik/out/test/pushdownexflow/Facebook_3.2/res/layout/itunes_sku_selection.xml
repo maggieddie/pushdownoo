@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/generic_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/layout_header" layout="@layout/product_sku_selector_header" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/itunes_item_padding_double" android:paddingRight="@dimen/itunes_item_padding_double" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:gravity="bottom" android:id="@id/text_amount_header" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_header_height" android:text="@string/itunes_sku_selector_amount_header" />
+            <View android:background="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_divider_height" android:layout_marginBottom="@dimen/itunes_item_padding" />
+            <com.facebook.gifts.lib.widget.QuadOptionSelector android:id="@id/quad_option_selector" android:paddingBottom="@dimen/standard_double_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:gravity="bottom" android:id="@id/text_recommend_list_header" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_header_height" android:text="@string/itunes_sku_selector_recommend_list_header" />
+            <View android:background="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_divider_height" android:layout_marginBottom="@dimen/itunes_item_padding" />
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_recommend_list" android:background="@color/generic_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/standard_padding" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

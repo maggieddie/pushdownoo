@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/solid_white" android:paddingLeft="@dimen/list_row_padding" android:paddingRight="@dimen/list_row_padding" android:paddingBottom="@dimen/list_row_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/divider" android:layout_marginTop="6.0dip" android:layout_marginBottom="10.0dip" style="@style/HorizontalRule" />
+    <TextView android:textSize="@dimen/font_size_large" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Story.Title" />
+    <TextView android:id="@id/author" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MediaByline" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image" android:background="@color/bg_image" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginLeft="@dimen/standard_spacing" android:layout_marginTop="@dimen/standard_spacing" android:layout_alignParentRight="true" />
+        <TextView android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/image" style="@style/MediaDescription" />
+    </RelativeLayout>
+    <include android:id="@id/site_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" layout="@layout/site_user" />
+</LinearLayout>

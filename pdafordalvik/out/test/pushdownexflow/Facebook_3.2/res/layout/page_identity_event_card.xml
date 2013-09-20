@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/page_identity_event_cover_photo_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.UrlImage android:id="@id/page_identity_event_cover_photo" android:layout_width="fill_parent" android:layout_height="@dimen/page_identity_event_cover_photo_height" orca:shouldShowLoadingAnimation="true" />
+        <View android:id="@id/page_identity_event_cover_photo_pressed_overlay" android:background="@drawable/page_identity_photo_pressed_state" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/page_identity_event_info_container" android:background="@drawable/page_identity_card_clickable_unit_background" android:paddingLeft="14.0dip" android:paddingTop="8.0dip" android:paddingRight="18.0dip" android:paddingBottom="14.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingRight="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:id="@id/page_identity_event_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ChambrayText.Large.Dark" />
+            <RelativeLayout android:id="@id/page_identity_event_privacy_scope_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <com.facebook.widget.UrlImage android:id="@id/page_identity_event_privacy_scope_icon" android:layout_width="@dimen/page_identity_event_bylines_icon_size" android:layout_height="@dimen/page_identity_event_bylines_icon_size" android:src="@drawable/page_identity_social_context_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/page_identity_event_privacy_scope" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/page_identity_event_privacy_scope_icon" style="@style/ChambrayText" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/page_identity_event_time_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <ImageView android:id="@id/page_identity_event_time_icon" android:layout_width="@dimen/page_identity_event_bylines_icon_size" android:layout_height="@dimen/page_identity_event_bylines_icon_size" android:src="@drawable/page_identity_time_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/page_identity_event_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/page_identity_event_time_icon" style="@style/ChambrayText" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/page_identity_event_social_context_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <ImageView android:id="@id/page_identity_event_social_context_icon" android:layout_width="@dimen/page_identity_event_bylines_icon_size" android:layout_height="@dimen/page_identity_event_bylines_icon_size" android:src="@drawable/page_identity_social_context_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <com.facebook.pages.identity.ui.text.TextWithEntitiesView android:id="@id/page_identity_event_social_context" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/page_identity_event_social_context_icon" style="@style/ChambrayText" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView android:background="@drawable/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

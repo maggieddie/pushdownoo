@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_mylocation" android:id="@id/centerOnLocation" android:title="Center on Location" />
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/search" android:title="Search" />
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/clearGPS" android:title="Clear GPS Track" />
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/prefs" android:title="Settings" />
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.photos.photogallery.PhotoGallery android:id="@id/photo_gallery" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.photos.photogallery.tagging.TaggingInterface android:id="@id/tagging_interface" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.photos.photogallery.tagging.TagTypeahead android:id="@id/tag_typeahead" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.widget.PhotoToggleButton android:id="@id/add_tag_button" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:uncheckedImage="@drawable/icon_add_tag_normal" app:checkedImage="@drawable/icon_add_tag_highlight" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/position_text" android:padding="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_centerHorizontal="true" style="@style/PhotoTextShadow" />
+    <com.facebook.widget.PhotoToggleButton android:id="@id/select_button" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" app:uncheckedImage="@drawable/icon_checkmark_normal" app:checkedImage="@drawable/icon_checkmark_highlight" />
+    <com.facebook.photos.photogallery.tagging.TaggingInstructions android:id="@id/tagging_instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

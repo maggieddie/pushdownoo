@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dash.launchables.view.SearchBar android:orientation="horizontal" android:background="@drawable/launchables_search" android:layout_width="fill_parent" android:layout_height="@dimen/search_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/search_button" android:background="@drawable/transparent" android:padding="@dimen/search_bar_button_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/search_button" android:scaleType="fitStart" android:adjustViewBounds="true" android:layout_weight="1.0" />
+    <ImageButton android:id="@id/voice_button" android:background="@drawable/transparent" android:padding="@dimen/search_bar_button_padding" android:layout_width="@dimen/search_bar_voice_button_width" android:layout_height="fill_parent" android:src="@drawable/voice_button" android:scaleType="fitEnd" android:adjustViewBounds="true" />
+</com.facebook.dash.launchables.view.SearchBar>

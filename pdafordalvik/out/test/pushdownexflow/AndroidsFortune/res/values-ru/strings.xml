@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Android's Fortune"</string>
+    <string name="app_name_prefix">"Android's Fortune:"</string>
+    <string name="about_comments">Знаменитый Fortune для Android: выводит случайное, надеюсь интересное, изречение.</string>
+    <string name="about_copyright">Copyright © 2008-2010 pjv, Rishabh Manocha</string>
+    <string name="about_website_label">"Android's Fortune на Launchpad"</string>
+    <string name="about_website_url">https://launchpad.net/androidsfortune</string>
+    <string name="about_feedback">http://androidsfortune.uservoice.com/</string>
+    <string name="about_backup">Для просмотра информации об этом приложении вам требуется установить OI About. Посетите http://www.openintents.org/ или Market.</string>
+    <string name="link_about_dialog">market://search?q=pname:org.openintents.about</string>
+    <string name="market_backup">По всей видимости, Android Market не установлен. Игнорирование.</string>
+    <string name="market_description_short">Знаменитый Fortune теперь и на Android: выводит случайные, надеюсь интересные, изречения, цитаты, афоризмы, шутки, тексты, ...</string>
+    <string name="menu_preferences">Настройки</string>
+    <string name="menu_about">"О Android's Fortune"</string>
+    <string name="menu_refresh">Обновить Cookie</string>
+    <string name="menu_get_more_cookies">Получить больше Cookies</string>
+    <string name="menu_send">Отправить как текст</string>
+    <string name="menu_web_search">Искать в интернете</string>
+    <string name="menu_feedback">Оставить отзыв</string>
+    <string name="menu_copy">Copy To Clipboard</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="chooser_send_action">Отправить через:</string>
+    <string name="chooser_web_search_action">Искать в интернете через:</string>
+    <string name="preferences_activity_name">"Настройки Android's Fortune"</string>
+    <string name="resources">Ресурсы</string>
+    <string name="title_cp_equal">Равные шансы между cookie файлами</string>
+    <string name="summary_cp_equal">Вероятность, что cookie будет показан из определенного cookie файла равна между всеми cookie файлами, независимо от размера файла cookie.</string>
+    <string name="title_ep_folder">Папка, содержащая cookie</string>
+    <string name="summary_ep_folder">Выберите папку для хранения cookie файлов.</string>
+    <string name="dialog_title_ep_folder">Выберите папку для хранения cookie файлов.</string>
+    <string name="title_ps_files">Cookie файлы</string>
+    <string name="summary_ps_files">Выберите cookie для использования из указанной папки (не включая .num файлы).</string>
+    <string name="summary_ps_files_warning">ВНИМАНИЕ: Некоторые из выбранных файлов не имеют связанных .num файлов! Щелкните здесь чтобы изменить свой выбор.</string>
+    <string name="in_app_display">Отображение</string>
+    <string name="title_lp_font">Стиль шрифта</string>
+    <string name="summary_lp_font">Моноширинность может быть полезна для ascii-арт cookies.</string>
+    <string name="dialog_title_lp_font">Изменить стиль шрифта</string>
+    <string name="title_ep_fontsize">Размер шрифта</string>
+    <string name="summary_ep_fontsize">Размер шрифта в точках.</string>
+    <string name="dialog_title_ep_fontsize">Изменить размер шрифта</string>
+    <string name="title_cp_wrap">Переносить по словам</string>
+    <string name="summary_cp_wrap">Размещает текст cookie по ширине экрана. Отключите для корректного показа текста с переносами и ascii-арта.</string>
+    <string name="widget_display">Виджет</string>
+    <string name="title_lp_widget_font">Стиль шрифта</string>
+    <string name="summary_lp_widget_font" />
+    <string name="dialog_title_lp_widget_font">Изменить стиль шрифта виджета</string>
+    <string name="title_ep_widget_period">Период обновления виджета</string>
+    <string name="summary_ep_widget_period">Временной промежуток в минутах между обновлениями виджета.</string>
+    <string name="dialog_title_ep_widget_period">Изменить период обновления виджета</string>
+    <string name="notifications">Уведомления</string>
+    <string name="title_cp_notif_boot">Уведомление при запуске</string>
+    <string name="summary_cp_notif_boot">Предложить cookie при запуске системы.</string>
+    <string name="title_cp_notif_time">Периодические уведомления</string>
+    <string name="summary_cp_notif_time">Предлагать cookies через промежутки времени.</string>
+    <string name="title_ep_time">Промежуток времени</string>
+    <string name="summary_ep_time">Промежуток времени между уведомлениями.</string>
+    <string name="dialog_title_ep_time">Изменить промежуток времени</string>
+    <string name="dialog_title_num">Создать .num файлы?</string>
+    <string name="dialog_message_num_warning">Некоторые из выбранных фалов не имеют связанных .num файлов. Попробовать создать .num файлы?</string>
+    <string name="no_cookie_files">"Cookie файлы не настроены. Пожалуйста, откройте настройки и выберите cookie файлы.
+
+Смотрите: http://code.google.com/p/androidsfortune/wiki/Help 
+
+(Это не fortune cookie!)"</string>
+    <string name="more_cookies_uri">http://code.google.com/p/androidsfortune/wiki/Help</string>
+    <string name="status_bar_notification_title">Fortune Cookie</string>
+    <string name="dialog_install">Пожалуйста, дождитесь окончания установки примера cookie файла...</string>
+    <string name="toast_copied_to_clipboard">The cookie text has been copied to the clipboard. You can now paste it elsewhere.</string>
+    <string name="template_share_app">"Try this fortune cookie Android app I found.
+
+Search in the Android Market for 'Android's Fortune' or open http://market.android.com/search?q=pname:net.lp.androidsfortune in your phone's browser."</string>
+    <string name="template_share_app_subject">"Try this fortune cookie Android app I found: Android's Fortune"</string>
+    <string name="widget_name">Fortune cookie</string>
+    <string name="widget_loading">Загружается cookie...</string>
+    <string name="widget_error">"Файлы cookie не настроены, или Android's Fortune закрыт из-за недостатка свободной памяти. Нажмите для открытия Android's Fortune!"</string>
+    <string name="widget_dialog_activity_name">Выберите операцию:</string>
+    <string name="label_b_refresh">Обновить</string>
+    <string name="label_b_show_cookie">Показать cookie</string>
+    <string name="label_b_cancel">Отмена</string>
+    <string name="error_no_file_name">Имя файла не указано.</string>
+    <string name="error_arg_twice">Аргумент пройден дважды.</string>
+    <string name="error_num_file_exists">.num файл, который должен был быть создан, уже присутствует.</string>
+    <string name="error_no_valid_cookie_file">Выбранный файл не является корректным cookie файлом.</string>
+    <string name="error_file_not_exists_or_no_num">Cookie файл не существует или не имеет связанного .num файла:</string>
+    <string name="error_no_write_perms">Вы не имеете прав на запись.</string>
+    <string name="toast_read_cookie_failed">Не удалось прочитать cookie:</string>
+    <string name="toast_read_cookie_failed_suggestion">"
+Вы уверены в том, что карты SD вставлена?"</string>
+    <string name="toast_read_cookie_failed_internal">При чтении cookie произошла внутренняя ошибка (пожалуйста, сообщите о ней):</string>
+    <string name="toast_generation_num_failed">Создание .num файла не удалось:</string>
+    <string name="toast_not_a_dir">Указанная в настройках папка не корректна:</string>
+    <string name="toast_selected_file_lost">Файл, выбранный ранее, не найден:</string>
+    <string name="toast_value_invalid">Введенное значение некорректно. Установлено на:</string>
+    <string name="toast_widget_period_short">Промежуток короче 60 минут может негативно сказаться на производительности и расходе заряда батареи.</string>
+    <string name="versioncheck_preferences_activity_name">"Настройка проверки обновлений Android's Fortune"</string>
+    <string name="title_ps_versioncheck">Проверка обновлений</string>
+    <string name="summary_ps_versioncheck">Автоматическая проверка обновлений.</string>
+    <string name="vc_notify_ticker">Обновление приложения</string>
+    <string name="vc_notify_title">Приложение обновлено</string>
+    <string name="vc_notify_message">Скачать новую версию.</string>
+    <string name="vc_category">Проверка обновлений</string>
+    <string name="vc_enabled_title">Включена</string>
+    <string name="vc_enabled_summary">Включена ли проверка обновлений программы.</string>
+    <string name="vc_confirm_title">"Подтвердите обновление Android's Fortune"</string>
+    <string name="vc_confirm_text">Желаете ли вы обновить приложение до последней версии?</string>
+    <string name="vc_confirm_stop">Не сообщать мне больше об этом обновлении</string>
+    <string name="version_file_url">http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40</string>
+    <string name="vc_check_uri_title">URI проверки</string>
+    <string name="vc_check_uri_summary">URI, который будет проверен на наличие обновлений приложения.</string>
+    <string name="about_translators">Launchpad Contributions: Andrey Kulakov https://launchpad.net/~grcool Gregon https://launchpad.net/~eugen-sarychev pjv https://launchpad.net/~pjv</string>
+</resources>

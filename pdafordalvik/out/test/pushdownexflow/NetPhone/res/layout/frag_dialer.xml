@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="200.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@string/dialerfrag_contentdescription" />
+    <EditText android:id="@id/autocomplete_calls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/dialerfrag_edit" />
+    <TextView android:id="@id/call_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginRight="45.0dip" android:text="" />
+    <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginRight="16.0dip" android:text="@string/dialerfrag_call" android:layout_toLeftOf="@id/imageView1" android:layout_below="@id/autocomplete_calls" android:onClick="makeCall" />
+    <Button android:id="@id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialerfrag_hangup" android:layout_alignBaseline="@id/button1" android:layout_alignLeft="@id/imageView1" android:layout_alignBottom="@id/button1" android:onClick="hangUp" />
+</RelativeLayout>

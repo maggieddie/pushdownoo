@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/launchable_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="150.0dip">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/dash_fb4a_login_logo" android:layout_width="fill_parent" android:layout_height="@dimen/fb_home_logo_scaled_height" android:layout_marginBottom="@dimen/fb_home_logo_botton_margin" android:src="@drawable/logo_facebook_home_text" android:layout_centerHorizontal="true" android:contentDescription="@string/dash_login_logo_description" />
+            <FrameLayout android:id="@id/disclosure_text_container" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/dash_login_disclosure_text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dash_login_disclosure_text1" style="@style/disclosure_text" />
+                </FrameLayout>
+                <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/dash_login_disclosure_text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dash_login_disclosure_text2" style="@style/disclosure_text" />
+                </FrameLayout>
+                <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center" android:id="@id/dash_login_disclosure_text3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dash_login_disclosure_text3" style="@style/disclosure_text" />
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout android:paddingLeft="@dimen/fb4a_login_widget_padding" android:paddingRight="@dimen/fb4a_login_widget_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/dash_fb4a_login_button" android:text="@string/dash_login_button_label" style="@style/fb4a_login_button" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <com.facebook.widget.FlowLayout android:gravity="center" android:layout_gravity="bottom|center" android:paddingLeft="@dimen/fb4a_login_widget_padding" android:paddingRight="@dimen/fb4a_login_widget_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" flowlayout:verticalSpacing="-7.0dip">
+        <TextView android:id="@id/terms_of_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/terms_of_service" style="@style/disclosure_links_link" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" style="@style/disclosure_links_text" />
+        <TextView android:id="@id/data_use_policy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_use_policy" style="@style/disclosure_links_link" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" style="@style/disclosure_links_text" />
+        <TextView android:id="@id/cookies" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cookies" style="@style/disclosure_links_link" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" style="@style/disclosure_links_text" />
+        <TextView android:id="@id/learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_more" style="@style/disclosure_links_link" />
+    </com.facebook.widget.FlowLayout>
+</FrameLayout>

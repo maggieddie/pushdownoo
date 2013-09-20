@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/launchables_leftright_padding" android:paddingRight="@dimen/launchables_leftright_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dash.launchables.fragment.CellLayout android:id="@id/cell_layout" android:background="@drawable/launchables_panel" android:paddingLeft="@dimen/launchables_shortcuts_panel_leftright_padding" android:paddingTop="@dimen/launchables_shortcuts_panel_top_padding" android:paddingRight="@dimen/launchables_shortcuts_panel_leftright_padding" android:paddingBottom="@dimen/launchables_shortcuts_panel_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <FrameLayout android:id="@id/shortcuts_composer_container" android:layout_width="fill_parent" android:layout_height="@dimen/launchables_composer_height" android:layout_above="@id/cell_layout" />
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d分</item>
+        <item quantity="one">1分</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d時間</item>
+        <item quantity="one">1時間</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d日</item>
+        <item quantity="one">1日</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_summary_on">
+        <item quantity="other">%d人のユーザーから</item>
+        <item quantity="one">1人から</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d人</item>
+        <item quantity="one">1人</item>
+    </plurals>
+    <plurals name="social_fav_and_retweets_count">
+        <item quantity="other">%1$s件のお気に入り %2$s人がリツイート</item>
+        <item quantity="one">%1$s お気に入り 1 リツイート</item>
+    </plurals>
+    <plurals name="social_retweet_and_favs_count">
+        <item quantity="other">%1$s人がリツイート %2$s件のお気に入り</item>
+        <item quantity="one">%1$s人がリツイート 1 お気に入り</item>
+    </plurals>
+    <plurals name="social_fav_count">
+        <item quantity="other">%1$s件のお気に入り</item>
+        <item quantity="one">1件のお気に入り</item>
+    </plurals>
+    <plurals name="social_retweet_count">
+        <item quantity="other">%1$s リツイート</item>
+        <item quantity="one">1人がリツイート</item>
+    </plurals>
+</resources>

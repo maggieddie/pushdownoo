@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/megaphone_facepile_1" android:layout_width="@dimen/megaphone_facepile_width" android:layout_height="@dimen/megaphone_facepile_height" android:layout_marginLeft="@dimen/megaphone_facepile_left_margin" style="@style/megaphone_facepile_image" />
+    <com.facebook.widget.UrlImage android:id="@id/megaphone_facepile_2" android:layout_width="@dimen/megaphone_facepile_width" android:layout_height="@dimen/megaphone_facepile_height" android:layout_marginLeft="@dimen/megaphone_facepile_margin_width" android:layout_toRightOf="@id/megaphone_facepile_1" style="@style/megaphone_facepile_image" />
+</RelativeLayout>

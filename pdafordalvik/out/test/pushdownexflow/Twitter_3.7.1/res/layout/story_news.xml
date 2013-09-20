@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/story_image" android:layout_width="@dimen/user_image_size" android:layout_height="@dimen/user_image_size" android:layout_marginLeft="@dimen/standard_spacing" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:id="@id/story_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/story_image" android:layout_alignParentLeft="true" style="@style/Story.Title" />
+    <TextView android:id="@id/story_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/story_image" android:layout_below="@id/story_title" android:layout_alignParentLeft="true" android:lineSpacingExtra="1.0sp" style="@style/Story" />
+    <TextView android:id="@id/story_url" android:layout_width="fill_parent" android:layout_toLeftOf="@id/story_image" android:layout_below="@id/story_description" style="@style/Story.Byline" />
+    <TextView android:id="@id/story_query" android:layout_width="fill_parent" android:layout_below="@id/story_url" style="@style/Story.Byline" />
+</merge>

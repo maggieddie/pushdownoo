@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/upsell_contact_wrapper" android:background="@color/confirmation_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.user.tiles.UserTileView android:id="@id/upsell_contact_image" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="8.0dip" orca:tileSize="50.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/confirmation_text_color" android:id="@id/upsell_contact_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:text="@string/merged_thread_upsell_intro_blurb" android:layout_toRightOf="@id/upsell_contact_image" />
+    <ImageButton android:id="@id/upsell_learn_more_arrow_button" android:background="@drawable/orca_learn_more_arrow" android:clickable="true" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="8.0dip" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

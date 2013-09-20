@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/page_indicator_spacer_width" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/page_indicator_on" android:visibility="gone" android:layout_width="@dimen/page_indicator_icon_size" android:layout_height="@dimen/page_indicator_icon_size" android:src="@drawable/page_dot_active" android:scaleType="centerInside" />
+        <ImageView android:id="@id/page_indicator_off" android:layout_width="@dimen/page_indicator_icon_size" android:layout_height="@dimen/page_indicator_icon_size" android:src="@drawable/page_dot_inactive" android:scaleType="centerInside" />
+    </FrameLayout>
+    <View android:layout_width="@dimen/page_indicator_spacer_width" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/tag_vertical" android:paddingLeft="@dimen/standard_half_padding" android:paddingTop="@dimen/share_gift_choice_tag_content_top_padding" android:paddingRight="@dimen/standard_half_padding" android:paddingBottom="@dimen/standard_half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_vertical" android:background="@color/standard_gray_e9e9e9" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/standard_10pt_text_size" android:textColor="@color/standard_gray_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_choice_tag_for" />
+        <View android:layout_gravity="center_vertical" android:background="@color/standard_gray_e9e9e9" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/standard_11pt_text_size" android:textStyle="bold" android:textColor="@color/generic_black" android:layout_gravity="center_horizontal" android:id="@id/text_recipient_name" android:paddingBottom="@dimen/standard_half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_vertical" android:background="@color/standard_gray_e9e9e9" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/standard_10pt_text_size" android:textColor="@color/standard_gray_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_choice_tag_from" />
+        <View android:layout_gravity="center_vertical" android:background="@color/standard_gray_e9e9e9" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/standard_11pt_text_size" android:textStyle="bold" android:textColor="@color/generic_black" android:layout_gravity="center_horizontal" android:id="@id/text_sender_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

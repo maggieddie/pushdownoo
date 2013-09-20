@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.OverlayLayout android:id="@id/thread_view_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/messages_popup_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="top|left|center" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="79.0dip" android:baselineAligned="true">
+            <com.facebook.orca.threadview.ThreadTitleView android:layout_gravity="top|left|center" android:id="@id/thread_title_view" android:layout_width="fill_parent" android:layout_height="@dimen/chat_title_bar_height" android:layout_marginLeft="-7.0dip" android:layout_marginRight="-7.0dip" orca:chatStyle="true" />
+            <FrameLayout android:layout_gravity="top|left|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/chat_title_bar_height">
+                <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <View android:layout_gravity="top|left|center" android:id="@id/drag_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+        </FrameLayout>
+        <ImageView android:layout_gravity="top|left|center" android:id="@id/messages_popup_nub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nub_vertical_offset" android:src="@drawable/orca_chat_nub" />
+        <View android:id="@id/dummy_focus_elt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    </FrameLayout>
+    <com.facebook.orca.compose.LocationNuxView android:id="@id/compose_location_nux" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-5.0dip" android:layout_marginBottom="-20.0dip" orca:layout_anchorPosition="aboveAnchor|alignWithRightOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/messages_compose" />
+    <com.facebook.orca.compose.LocationDisabledNuxView android:id="@id/compose_location_disabled_nux" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-5.0dip" android:layout_marginBottom="-20.0dip" orca:layout_anchorPosition="aboveAnchor|alignWithRightOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/messages_compose" />
+</com.facebook.widget.OverlayLayout>

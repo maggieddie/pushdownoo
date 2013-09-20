@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/page_card_divider" />
+    <RelativeLayout android:background="@drawable/page_identity_card_clickable_unit_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <com.facebook.widget.UrlImage android:id="@id/page_identity_profile_pic" android:layout_width="@dimen/page_identity_user_pic_size" android:layout_height="@dimen/page_identity_user_pic_size" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" orca:placeholderSrc="@android:color/white" />
+        <ImageView android:id="@id/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/page_identity_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/page_identity_chevron" android:layout_toRightOf="@id/page_identity_profile_pic" android:layout_centerVertical="true">
+            <TextView android:ellipsize="end" android:id="@id/page_identity_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/ChambrayText.Large.Bold" />
+            <TextView android:ellipsize="end" android:id="@id/page_identity_street" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/ChambrayText.Large" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

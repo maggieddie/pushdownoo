@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:background="@drawable/ansible_recapture_megaphone_background_portrait" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/ansible_megaphone_behind_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/ansible_home_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/ansible_home_logo" />
+        <TextView android:textSize="@dimen/ansible_recapture_megaphone_content_text_size" android:textColor="@color/solid_white" android:textColorHighlight="#88d5d5d5" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ansible_megaphone_content" android:layout_width="275.0dip" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/ansible_recapture_megaphone_content" android:maxLines="2" android:shadowColor="@color/sixty_percent_transparent_black" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="4.0" />
+        <Button android:textSize="@dimen/ansible_recapture_megaphone_content_text_size" android:textStyle="bold" android:textColor="@color/solid_white" android:id="@id/ansible_megaphone_finish_setup_button" android:background="@drawable/custom_megaphone_action_button" android:layout_width="wrap_content" android:layout_height="37.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="18.0dip" android:text="@string/ansible_recapture_megaphone_button_finish_setup" android:maxLines="1" />
+    </LinearLayout>
+</FrameLayout>

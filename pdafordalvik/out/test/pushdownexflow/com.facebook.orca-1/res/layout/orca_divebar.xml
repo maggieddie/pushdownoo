@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.touch.SwipableLinearLayout android:orientation="horizontal" android:id="@id/divebar_container" android:background="@null" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/empty" android:background="@android:color/transparent" android:layout_width="@dimen/divebar_left_margin_width" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/orca_diverbar_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:padding="0.0dip" android:layout_width="8.0dip" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:src="@drawable/orca_divebar_shadow" android:scaleType="fitXY" fb:reflexAware="true" />
+    </FrameLayout>
+</com.facebook.ui.touch.SwipableLinearLayout>

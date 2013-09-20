@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_widget_content_title" android:order="1">
+        <com.twitter.android.widget.RadioButtonPreference android:persistent="false" android:title="@string/home_timeline" android:key="widget_content_tweets" android:defaultValue="true" />
+        <com.twitter.android.widget.RadioButtonPreference android:persistent="false" android:title="@string/home_mentions" android:key="widget_content_mentions" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

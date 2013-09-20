@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/menu_search_result_save" android:title="@string/menu_save_search" />
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_search_result_delete" android:title="@string/menu_delete_search" />
+</menu>

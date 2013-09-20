@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.OverlayLayout android:id="@id/create_thread_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:title="@string/thread_new_conversation_title" orca:navless="true" />
+        <com.facebook.widget.OverlayLayout android:id="@id/thread_thread_audio_bar_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.facebook.orca.common.ui.widgets.CreateThreadCustomLayout android:id="@id/create_thread_layout" android:background="#ffeceef1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <fragment android:name="com.facebook.orca.contacts.picker.ContactMultipickerFragment" android:id="@id/suggestions_multipicker_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/orca_composer_top_divider" android:layout_width="fill_parent" android:layout_height="7.0dip" />
+                    <fragment android:name="com.facebook.orca.compose.ComposeFragment" android:id="@id/create_thread_compose" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.facebook.orca.common.ui.widgets.CreateThreadCustomLayout>
+        </com.facebook.widget.OverlayLayout>
+    </LinearLayout>
+    <com.facebook.orca.compose.LocationNuxView android:id="@id/compose_location_nux" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-20.0dip" orca:layout_anchorPosition="aboveAnchor|alignWithRightOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/create_thread_compose" />
+    <com.facebook.orca.compose.LocationDisabledNuxView android:id="@id/compose_location_disabled_nux" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-20.0dip" orca:layout_anchorPosition="aboveAnchor|alignWithRightOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/create_thread_compose" />
+</com.facebook.widget.OverlayLayout>

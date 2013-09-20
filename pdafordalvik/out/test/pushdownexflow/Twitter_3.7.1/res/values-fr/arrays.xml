@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>Toutes les 5 minutes</item>
+        <item>Toutes les 10 minutes</item>
+        <item>Toutes les 15 minutes</item>
+        <item>Toutes les 30 minutes</item>
+        <item>Toutes les heures</item>
+        <item>Toutes les 2 heures</item>
+        <item>Toutes les 4 heures</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>De personnes que vous suivez</item>
+        <item>"De n'importe qui"</item>
+        <item>Désactivé</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>Interactions</item>
+        <item>Mentions</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>Lire les Tweets de votre fil.</item>
+        <item>Voir vos abonnements.</item>
+        <item>Postez des Tweets pour vous.</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>Voir votre mot de passe Twitter.</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>Éditer le profil</item>
+        <item>Paramètres</item>
+        <item>Aide</item>
+    </string-array>
+</resources>

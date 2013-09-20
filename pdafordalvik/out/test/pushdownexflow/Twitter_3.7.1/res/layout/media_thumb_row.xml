@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:single="true" twitter:strokeWidth="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <com.twitter.android.widget.HorizontalListView android:id="@id/photo_list" android:minHeight="@dimen/media_thumbnail_size" twitter:dividerWidth="@dimen/list_row_padding" twitter:edgePadding="@dimen/list_row_padding" style="@style/ListRow.Photorail" />
+</com.twitter.android.widget.CardRowView>

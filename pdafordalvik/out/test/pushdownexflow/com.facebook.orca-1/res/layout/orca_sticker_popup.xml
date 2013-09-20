@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/composer_popup_arrow_above" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="111.0dip" android:src="@drawable/orca_attachments_arrow" />
+    <LinearLayout android:orientation="vertical" android:id="@id/composer_popup_content_container" android:background="@color/emoji_attachment_popup_background_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.orca.emoji.TabbedPageView android:id="@id/tabbed_page_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" orca:emptyMessage="@string/sticker_popup_empty" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|right|center" android:id="@id/composer_popup_arrow_below" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="113.0dip" android:src="@drawable/orca_attachments_arrow_reversed" />
+</LinearLayout>

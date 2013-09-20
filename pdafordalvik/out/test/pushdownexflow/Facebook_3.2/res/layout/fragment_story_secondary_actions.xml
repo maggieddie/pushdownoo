@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/secondary_actions_bubble" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/secondary_actions_background" android:background="@drawable/secondary_actions_menu_bg" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:layout_alignParentRight="true">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/secondary_actions_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@color/feed_story_secondary_actions_menu_divider" android:dividerHeight="1.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/feed_text_body_color" android:gravity="center_vertical" android:id="@id/mark_as_spam_button" android:background="@drawable/feed_generic_press_state_background_rounded" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:minHeight="48.0dip" android:text="@string/feed_permalink_report" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

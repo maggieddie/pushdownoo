@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/friends_using_textview" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingTop="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_standard_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:color="@color/appcenter_description_text_color" />
+    <View android:id="@id/friends_using_separator" android:background="@color/app_separator_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:id="@id/app_short_description_textview" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingTop="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_standard_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:color="@color/appcenter_description_text_color" />
+    <TextView android:id="@id/app_detailed_description_textview" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingTop="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_standard_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:color="@color/appcenter_description_text_color" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/thread_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/dummy_focus_elt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.0" />
+    <com.facebook.orca.contacts.picker.MultipickerCustomLayout android:id="@id/multipicker_custom_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.facebook.orca.contacts.picker.ContactPickerFragment" android:id="@id/multipicker_contact_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/suggestions_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.widget.listview.BetterListView android:id="@id/suggestions_contacts_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/thread_view_background" />
+            <View android:id="@id/multipicker_cover" android:background="@drawable/multipicker_cover_transition" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </com.facebook.orca.contacts.picker.MultipickerCustomLayout>
+</LinearLayout>

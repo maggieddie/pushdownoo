@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/contact_card_scroll_view" android:background="@color/message_list_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.contacts.contactcard.HeaderView android:id="@id/contact_header_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" />
+        <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/contact_card_add_contact" android:background="@drawable/orca_button_blue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="14.0dip" android:text="@string/contact_card_add_contact" />
+        <com.facebook.widget.listview.EmptyListViewItem android:id="@id/contact_card_empty_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/contact_card_content_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.contacts.contactcard.ConversationSettingsView android:id="@id/conversation_settings_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" />
+            <FrameLayout android:id="@id/contact_card_view_timeline_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" style="@style/ContactCardSectionRoot">
+                <com.facebook.contacts.contactcard.entry.LabelValueRowView android:id="@id/contact_card_view_timeline_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/contact_card_voip_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" style="@style/ContactCardSectionRoot">
+                <com.facebook.contacts.contactcard.entry.LabelValueRowView android:id="@id/contact_card_voip_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <com.facebook.contacts.contactcard.EntrySectionView android:id="@id/contact_entry_section_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.contacts.contactcard.MapSectionView android:id="@id/map_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" />
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/contact_card_view_in_address_book" android:background="@drawable/orca_button_blue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="8.0dip" android:text="@string/contact_card_view_in_address_book" />
+            <FrameLayout android:id="@id/contact_card_block_user_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" style="@style/ContactCardSectionRoot">
+                <com.facebook.contacts.contactcard.entry.LabelValueRowView android:id="@id/contact_card_block_user_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

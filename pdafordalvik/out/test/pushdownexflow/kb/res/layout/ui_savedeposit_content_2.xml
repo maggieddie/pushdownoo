@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/Farm_Font_Color_a" android:gravity="center_horizontal" android:id="@id/txt_farm_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="내 농장설정 하기" />
+        </LinearLayout>
+        <ScrollView android:scrollbarStyle="outsideInset" android:orientation="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="true">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.659973sp" android:textColor="@color/Farm_Font_Color_a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="20.0dip" android:text="아이콘 적립" />
+                        <ImageView android:gravity="right|center" android:id="@id/page1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="130.0dip" android:layout_marginTop="28.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/icon_farm_page" android:layout_toLeftOf="@id/page2" />
+                        <ImageView android:gravity="right|center" android:id="@id/page2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/icon_farm_page_r" android:layout_toLeftOf="@id/page3" />
+                        <ImageView android:gravity="right|center" android:id="@id/page3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginRight="26.0dip" android:src="@drawable/icon_farm_page" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="6.659973dip" android:layout_marginRight="26.0dip">
+                        <TextView android:textColor="@color/Font_Normal_Color" android:gravity="top|left|center" android:id="@id/txtSaveDeposit1" android:background="@drawable/box_farm_1" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <TextView android:textSize="15.0sp" android:textColor="@color/Font_Normal_Color" android:gravity="left" android:id="@id/EditBox_1_TV" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="출금 계좌번호" />
+                            <Button android:textSize="19.0sp" android:textColor="@color/Font_Normal_Color" android:gravity="left|center" android:id="@id/EditBox_1_BTN" android:background="@drawable/farm_menu_item2_btn" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.659973dip" android:text="출금계좌를 선택해 주세요" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/Font_Normal_Color" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="적립금액" />
+                        <EditText android:textSize="18.659973sp" android:textColor="@color/Farm_Font_Color_f" android:gravity="left|center" android:id="@id/btn_save_deposit_money" android:background="@drawable/btn_farm_amount" android:paddingLeft="8.0dip" android:paddingRight="28.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.659973dip" android:text="" android:singleLine="true" android:maxLength="7" android:numeric="integer" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/Font_Normal_Color" android:gravity="left" android:id="@id/EditBox2_TV" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="계좌 비밀번호" />
+                        <EditText android:textSize="18.659973sp" android:textColor="@color/Farm_Font_Color_f" android:gravity="left|center" android:id="@id/EditBox_2_ET" android:background="@drawable/btn_farm_password" android:paddingLeft="10.0dip" android:paddingRight="28.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.659973dip" android:text="" android:maxLines="1" android:password="true" android:maxLength="4" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+                        <Button android:layout_gravity="center" android:id="@id/Yegum_1_Next_Button" android:background="@drawable/farm_ok_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" />
+                        <Button android:layout_gravity="center" android:id="@id/Yegum_1_Cancel_Button" android:background="@drawable/farm_cancel_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

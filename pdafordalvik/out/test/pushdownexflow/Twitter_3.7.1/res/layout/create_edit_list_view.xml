@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/navbar" layout="@layout/navbar" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/list_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:hint="@string/create_edit_list_name_hint" android:inputType="textCapSentences|textAutoCorrect" />
+            <EditText android:gravity="top" android:id="@id/list_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:hint="@string/create_edit_list_description_hint" android:minLines="3" android:inputType="textCapSentences|textAutoCorrect|textMultiLine" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/create_edit_list_privacy_separator_text" android:shadowColor="@color/section_shadow_color" android:shadowRadius="2.0" style="?android:attr/listSeparatorTextViewStyle" />
+            <Spinner android:id="@id/list_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="5.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout style="@style/Toolbar">
+        <Button android:id="@id/create_edit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/save" android:layout_weight="0.5" android:onClick="onClickHandler" style="@style/Button" />
+        <Button android:id="@id/cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/cancel" android:layout_weight="0.5" android:onClick="onClickHandler" style="@style/Button" />
+    </LinearLayout>
+</LinearLayout>

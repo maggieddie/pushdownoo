@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/view_note_edit" android:orderInCategory="1" android:title="@string/edit" android:showAsAction="always|withText" />
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/view_note_send" android:orderInCategory="2" android:title="@string/send" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/view_note_delete" android:orderInCategory="3" android:title="@string/delete" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menuPrefs" android:orderInCategory="4" android:title="@string/menuPrefs" android:showAsAction="withText" />
+</menu>

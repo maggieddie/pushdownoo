@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="18" android:versionName="1.1.9" android:installLocation="internalOnly" package="net.lp.androidsfortune"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="15" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <application android:label="@string/app_name" android:icon="@drawable/cookie" android:backupAgent=".BackupAgent">
+        <meta-data android:name="org.openintents.updatechecker.UPDATE_URL" android:value="@string/version_file_url" />
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAI90mHI0z9z31Q-ZZ_zsoptr03CzIagSAv-4UiNw" />
+        <activity android:label="@string/app_name" android:name=".FortuneActivity" android:launchMode="singleTask" android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/preferences_activity_name" android:name=".PreferencesActivity" android:launchMode="standard" android:screenOrientation="sensor" />
+        <activity android:label="@string/versioncheck_preferences_activity_name" android:name=".versioncheck.VersioncheckPreferencesActivity" android:launchMode="singleTask" android:screenOrientation="sensor">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="net.lp.androidsfortune.SHOW_VC_PREFERENCES" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Dialog" android:label="@string/widget_dialog_activity_name" android:name=".WidgetDialogActivity" android:launchMode="singleInstance" android:screenOrientation="sensor">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="net.lp.androidsfortune.SHOW_WIDGET_DIALOG" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <service android:label="@string/app_name" android:name=".NotifyingService" />
+        <receiver android:label="@string/app_name" android:name="BroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/app_name" android:name=".WidgetBroadcastReceiver$WidgetService" />
+        <receiver android:label="@string/widget_name" android:name=".WidgetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+        </receiver>
+        <activity android:label="@string/app_name" android:name=".FileSelector" android:launchMode="standard" android:screenOrientation="sensor">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.PICK" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/vc_confirm_title" android:name=".versioncheck.VersioncheckActivity" android:launchMode="singleTask" android:screenOrientation="sensor" />
+        <receiver android:name=".versioncheck.VersioncheckBroadcastReceiver">
+            <intent-filter>
+                <action android:name="net.lp.androidsfortune.VEECHECK_RESCHEDULE_CHECKS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="net.lp.androidsfortune.VEECHECK_CONSIDER_CHECK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".versioncheck.VersioncheckService">
+            <intent-filter>
+                <action android:name="net.lp.androidsfortune.VEECHECK_PERFORM_CHECK" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.analytics.AnalyticsReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

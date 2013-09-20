@@ -18,7 +18,7 @@ class AIOptions {
   var flatPolicy = "m"
   var analysis = "flat"
   var analysisType = AnalysisType.PDCFA
-  var verbose = true
+  var verbose = false
   var dumpStatistics = true
   var simplifyGraph = false
   var dummy = false
@@ -51,7 +51,7 @@ class AIOptions {
  // for intent fuzzer
   var forIntentFuzzer = false
   
-  
+  var intraprocedural = false
   
   var doRegex = false
   var regex: Regex = null
@@ -227,13 +227,18 @@ object AIOptions {
          opts.initTopNull = true
         }
         parse(rest, opts)
-      }
+      } 
        
-       // this option should be after the above two
        case "--for-intent-fuzzer" :: rest => {
     	   opts.forIntentFuzzer = true
     	   parse(rest, opts)
       } 
+       
+       case  "--intraprocedural" :: rest =>{
+         opts.intraprocedural = true
+         parse(rest, opts)
+       }
+     
        
       case "--analysis" :: a :: rest => {
         opts.analysis = a

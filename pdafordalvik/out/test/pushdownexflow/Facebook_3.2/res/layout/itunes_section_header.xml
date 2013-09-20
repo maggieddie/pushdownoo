@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/product_detail_text" android:gravity="bottom" android:id="@id/text_section_header" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_header_height" />
+    <View android:background="@color/product_detail_text" android:layout_width="fill_parent" android:layout_height="@dimen/itunes_section_divider_height" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/titlebarcontainer" layout="@layout/title_layout_navless" />
+    <LinearLayout android:orientation="vertical" android:id="@id/feed_composer_body" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/action_bar" android:layout_below="@id/titlebarcontainer">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <RelativeLayout android:id="@id/feed_comment_wrapper" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip">
+                <com.facebook.katana.ui.ComposerEditText android:textSize="@dimen/input_text_size" android:textColor="#ff000000" android:gravity="top" android:id="@id/feed_comment_text" android:background="@drawable/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/stream_comment_hint" android:inputType="textCapSentences|textAutoCorrect|textMultiLine" android:imeOptions="actionDone|flagNoFullscreen" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

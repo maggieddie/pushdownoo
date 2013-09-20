@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <fragment android:name="com.facebook.orca.stickers.StickerStoreFragment" android:id="@id/sticker_store_fragment" android:tag="storeFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

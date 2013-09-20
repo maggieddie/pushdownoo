@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_edit_list" android:id="@id/menu_edit_list" android:title="@string/lists_edit_list" />
+    <item android:icon="@drawable/ic_menu_delete_list" android:id="@id/menu_delete_list" android:title="@string/lists_delete_list" />
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/menu_follow_list" android:title="@string/follow" />
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_unfollow_list" android:title="@string/lists_unfollow" />
+</menu>

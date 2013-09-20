@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center_horizontal" android:id="@id/phone_country_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enter_phone_number_country_label" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/facebook_blue" android:ellipsize="end" android:gravity="right" android:id="@id/phone_country_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:lines="1" android:singleLine="true" android:layout_toLeftOf="@id/phone_intl_dialing_country_chevron" android:layout_toRightOf="@id/phone_country_label" />
+    <ImageView android:id="@id/phone_intl_dialing_country_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/orca_confirm_phone_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

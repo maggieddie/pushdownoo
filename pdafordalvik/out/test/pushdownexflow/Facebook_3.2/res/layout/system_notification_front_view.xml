@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/system_notification_view" android:background="@drawable/notification_panel" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.RoundedBitmapView android:id="@id/system_notif_icon" android:padding="0.5dip" android:layout_width="@dimen/notification_profile_pic_width" android:layout_height="@dimen/notification_profile_pic_height" fb:isTopLeftRounded="true" fb:isBottomLeftRounded="true" fb:cornerRadius="@dimen/notification_corner_radius" fb:foregroundDrawable="@drawable/notif_profile_photo_highlights" fb:scaling="center" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.dash.ui.HelveticaNeueTextView android:textStyle="bold" android:textColor="@color/notification_text_color" android:ellipsize="end" android:id="@id/system_notif_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/notification_text" />
+        <com.facebook.dash.ui.HelveticaNeueTextView android:textColor="@color/notification_text_color" android:ellipsize="end" android:id="@id/system_notif_text2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/notification_text" />
+        <com.facebook.dash.ui.HelveticaNeueTextView android:textColor="@color/notification_text_color" android:ellipsize="end" android:id="@id/system_notif_text3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/notification_text" />
+    </LinearLayout>
+</LinearLayout>

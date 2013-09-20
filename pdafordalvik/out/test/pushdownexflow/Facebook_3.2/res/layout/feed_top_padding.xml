@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/feed_top_padding_ptr_spacer" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/publisher_height" />
+    <View android:id="@id/feed_top_padding_first_story_spacer" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_element_separation_without_shadow" />
+</LinearLayout>

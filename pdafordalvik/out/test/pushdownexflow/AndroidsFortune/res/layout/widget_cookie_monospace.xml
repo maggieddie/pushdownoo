@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget" android:focusable="true" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WidgetBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:autoLink="web" android:id="@id/cookie" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingMultiplier="0.9" style="@style/Text.WidgetTextMonospace" />
+    <ImageView android:id="@id/watermark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/cookie_matte" android:minWidth="30.0dip" android:minHeight="30.0dip" android:layout_below="@id/cookie" />
+</RelativeLayout>

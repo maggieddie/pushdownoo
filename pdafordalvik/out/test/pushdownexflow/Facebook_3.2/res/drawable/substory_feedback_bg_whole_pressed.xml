@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/feed_press_state_background_color" />
+    <stroke android:width="@dimen/feed_substory_feedback_border_width" android:color="@color/feed_substory_feedback_border_color" />
+    <corners android:radius="@dimen/two_dp" />
+</shape>

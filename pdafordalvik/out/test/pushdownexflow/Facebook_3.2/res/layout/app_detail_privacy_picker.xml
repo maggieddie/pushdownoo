@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/inline_gdp_important_required_permission_summary" android:paddingLeft="@dimen/appcenter_standard_padding" android:paddingRight="@dimen/appcenter_standard_padding" android:paddingBottom="@dimen/appcenter_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/appcenter_privacy_picker_who_can_see" />
+    <LinearLayout android:orientation="vertical" android:id="@id/inline_gdp_privacy_option_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

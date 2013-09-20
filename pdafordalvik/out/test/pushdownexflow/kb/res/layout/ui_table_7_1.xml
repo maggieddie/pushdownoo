@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/box_review_top" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/box_review_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview1" android:paddingLeft="10.0dip" android:layout_width="74.0dip" android:layout_height="wrap_content" android:text="@string/AccountName" android:maxLines="1" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/box_review_lineicon" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview2" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/box_review_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview3" android:paddingLeft="10.0dip" android:layout_width="74.0dip" android:layout_height="wrap_content" android:text="@string/AccountNumber" android:maxLines="1" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/box_review_lineicon" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview4" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/box_review_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview5" android:paddingLeft="10.0dip" android:layout_width="74.0dip" android:layout_height="wrap_content" android:text="@string/ExpireDay" android:maxLines="1" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/box_review_lineicon" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview6" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/box_review_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview7" android:paddingLeft="10.0dip" android:layout_width="74.0dip" android:layout_height="wrap_content" android:text="@string/LastTimes" android:maxLines="1" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/box_review_lineicon" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview8" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/box_review_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview9" android:paddingLeft="10.0dip" android:layout_width="74.0dip" android:layout_height="wrap_content" android:text="@string/LastSum" android:maxLines="1" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/box_review_lineicon" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/Font_Normal_Color" android:id="@id/table_7_1_textview10" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/box_review_bottom" />
+</LinearLayout>

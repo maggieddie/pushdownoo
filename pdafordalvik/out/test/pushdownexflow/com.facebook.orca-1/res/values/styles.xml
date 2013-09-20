@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KeyguardPendingIntent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="QuickExperimentSettingsListHeader" parent="@android:attr/listSeparatorTextViewStyle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:background">#ffcccccc</item>
+        <item name="android:paddingLeft">12.0px</item>
+        <item name="android:paddingTop">6.0px</item>
+        <item name="android:paddingBottom">6.0px</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Theme.QuickExperimentSettings" parent="@android:style/Theme">
+        <item name="android:listSeparatorTextViewStyle">@style/QuickExperimentSettingsListHeader</item>
+    </style>
+    <style name="Theme.OrcaDialog" parent="@android:style/Theme">
+        <item name="android:windowBackground">@drawable/orca_panel_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+    <style name="Theme.Orca" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.OrcaTransparent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.Orca.Preferences" parent="@android:style/Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Orca.ClickableRow" parent="@android:style/Theme">
+        <item name="android:background">@android:drawable/list_selector_background</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="Theme.FacebookDark" parent="@android:style/Theme.Black">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="FbProgressHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">@drawable/fb_progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/fb_progress_horizontal</item>
+    </style>
+    <style name="FbProgressHorizontal.Inverse" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">@drawable/fb_progress_indeterminate_horizontal_inverse</item>
+        <item name="android:progressDrawable">@drawable/fb_progress_horizontal_inverse</item>
+    </style>
+    <style name="NotificationText">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="NotificationTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="HomeActivityTheme" parent="@style/Theme.FacebookDark">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    <style name="Widget" />
+    <style name="Widget.Sherlock.ListPopupWindow" parent="@style/Widget">
+        <item name="android:dropDownSelector">@drawable/abs__list_selector_holo_dark</item>
+        <item name="android:popupBackground">@drawable/abs__menu_dropdown_panel_holo_dark</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:dropDownHorizontalOffset">0.0dip</item>
+        <item name="android:dropDownVerticalOffset">0.0dip</item>
+    </style>
+    <style name="Widget.Sherlock.Light.ListPopupWindow" parent="@style/Widget">
+        <item name="android:dropDownSelector">@drawable/abs__list_selector_holo_light</item>
+        <item name="android:popupBackground">@drawable/abs__menu_dropdown_panel_holo_light</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:dropDownHorizontalOffset">0.0dip</item>
+        <item name="android:dropDownVerticalOffset">0.0dip</item>
+    </style>
+    <style name="Widget.Sherlock.PopupMenu" parent="@style/Widget.Sherlock.ListPopupWindow" />
+    <style name="Widget.Sherlock.Light.PopupMenu" parent="@style/Widget.Sherlock.Light.ListPopupWindow" />
+    <style name="Widget.Sherlock.Button.Small" parent="@style/Widget">
+        <item name="android:textAppearance">?textAppearanceSmall</item>
+        <item name="android:textColor">@color/abs__primary_text_holo_dark</item>
+        <item name="android:minWidth">48.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
+    <style name="Widget.Sherlock.Light.Button.Small" parent="@style/Widget">
+        <item name="android:textAppearance">?textAppearanceSmall</item>
+        <item name="android:textColor">@color/abs__primary_text_holo_light</item>
+        <item name="android:minWidth">48.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
+    <style name="Sherlock.__Widget.Holo.ListView" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@drawable/abs__list_selector_holo_dark</item>
+        <item name="android:divider">@drawable/abs__list_divider_holo_dark</item>
+    </style>
+    <style name="Widget.Sherlock.ListView.DropDown" parent="@style/Sherlock.__Widget.Holo.ListView" />
+    <style name="Widget.Sherlock.Light.ListView.DropDown" parent="@style/Sherlock.__Widget.Holo.ListView">
+        <item name="android:listSelector">@drawable/abs__list_selector_holo_light</item>
+        <item name="android:divider">@drawable/abs__list_divider_holo_light</item>
+    </style>
+    <style name="Sherlock.__Widget.Holo.DropDownItem" parent="@style/Widget">
+        <item name="android:textAppearance">@style/TextAppearance.Sherlock.Widget.DropDownItem</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+    </style>
+    <style name="Widget.Sherlock.DropDownItem.Spinner" parent="@style/Sherlock.__Widget.Holo.DropDownItem" />
+    <style name="Widget.Sherlock.Light.DropDownItem.Spinner" parent="@style/Sherlock.__Widget.Holo.DropDownItem" />
+    <style name="Widget.Sherlock.PopupWindow.ActionMode" parent="@style/Widget" />
+    <style name="Widget.Sherlock.Light.PopupWindow.ActionMode" parent="@style/Widget">
+        <item name="android:popupBackground">@android:color/white</item>
+    </style>
+    <style name="DialogWindowTitle.Sherlock" parent="@style/Widget">
+        <item name="android:textAppearance">@style/TextAppearance.Sherlock.DialogWindowTitle</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:minHeight">@dimen/abs__alert_dialog_title_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="DialogWindowTitle.Sherlock.Light" parent="@style/Widget">
+        <item name="android:textAppearance">@style/TextAppearance.Sherlock.Light.DialogWindowTitle</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:minHeight">@dimen/abs__alert_dialog_title_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu" parent="@style/Widget">
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu.Large" parent="@style/TextAppearance.Sherlock.Widget.PopupMenu">
+        <item name="android:textSize">18.0sp</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Sherlock.Widget.PopupMenu.Large" />
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu.Small" parent="@style/TextAppearance.Sherlock.Widget.PopupMenu">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Sherlock.Widget.PopupMenu.Small" />
+    <style name="TextAppearance.Sherlock.Widget.TextView.SpinnerItem" parent="@style/Widget">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Widget.DropDownItem" parent="@style/Widget">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?textColorPrimaryDisableOnly</item>
+    </style>
+    <style name="TextAppearance.Sherlock.DialogWindowTitle" parent="@style/Widget">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@color/abs__holo_blue_light</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Light.DialogWindowTitle" parent="@style/Widget">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@color/abs__holo_blue_light</item>
+    </style>
+    <style name="Sherlock.__TextAppearance.Small" parent="@style/Widget">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Sherlock.Small" parent="@style/Sherlock.__TextAppearance.Small" />
+    <style name="TextAppearance.Sherlock.Light.Small" parent="@style/TextAppearance.Sherlock.Small" />
+    <style name="TextAppearance.Sherlock.Widget.DropDownHint" parent="@style/Widget">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+    <style name="Sherlock.__Theme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Sherlock.__Theme.Light" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Sherlock.__Theme.DarkActionBar" parent="@style/Theme.Sherlock.Light" />
+    <style name="Sherlock.__Theme.Dialog" parent="@android:style/Theme.Dialog" />
+    <style name="Theme.Sherlock" parent="@style/Sherlock.__Theme">
+        <item name="android:dropDownHintAppearance">@style/TextAppearance.Sherlock.Widget.DropDownHint</item>
+        <item name="buttonStyleSmall">@style/Widget.Sherlock.Button.Small</item>
+        <item name="selectableItemBackground">@drawable/abs__item_background_holo_dark</item>
+        <item name="windowContentOverlay">@null</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.Sherlock.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.Sherlock.Widget.PopupMenu.Small</item>
+        <item name="textAppearanceSmall">@style/TextAppearance.Sherlock.Small</item>
+        <item name="textColorPrimary">@color/abs__primary_text_holo_dark</item>
+        <item name="textColorPrimaryDisableOnly">@color/abs__primary_text_disable_only_holo_dark</item>
+        <item name="textColorPrimaryInverse">@color/abs__primary_text_holo_light</item>
+        <item name="dividerVertical">@drawable/abs__list_divider_holo_dark</item>
+        <item name="dropDownListViewStyle">@style/Widget.Sherlock.ListView.DropDown</item>
+        <item name="popupMenuStyle">@style/Widget.Sherlock.PopupMenu</item>
+        <item name="dropdownListPreferredItemHeight">48.0dip</item>
+        <item name="listPopupWindowStyle">@style/Widget.Sherlock.ListPopupWindow</item>
+        <item name="activatedBackgroundIndicator">@drawable/abs__activated_background_holo_dark</item>
+    </style>
+    <style name="Theme.Sherlock.Light" parent="@style/Sherlock.__Theme.Light">
+        <item name="android:dropDownHintAppearance">@style/TextAppearance.Sherlock.Widget.DropDownHint</item>
+        <item name="buttonStyleSmall">@style/Widget.Sherlock.Light.Button.Small</item>
+        <item name="selectableItemBackground">@drawable/abs__item_background_holo_light</item>
+        <item name="windowContentOverlay">@null</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.Sherlock.Light.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.Sherlock.Light.Widget.PopupMenu.Small</item>
+        <item name="textAppearanceSmall">@style/TextAppearance.Sherlock.Light.Small</item>
+        <item name="textColorPrimary">@color/abs__primary_text_holo_light</item>
+        <item name="textColorPrimaryDisableOnly">@color/abs__primary_text_disable_only_holo_light</item>
+        <item name="textColorPrimaryInverse">@color/abs__primary_text_holo_dark</item>
+        <item name="dividerVertical">@drawable/abs__list_divider_holo_light</item>
+        <item name="dropDownListViewStyle">@style/Widget.Sherlock.Light.ListView.DropDown</item>
+        <item name="popupMenuStyle">@style/Widget.Sherlock.Light.PopupMenu</item>
+        <item name="dropdownListPreferredItemHeight">48.0dip</item>
+        <item name="listPopupWindowStyle">@style/Widget.Sherlock.Light.ListPopupWindow</item>
+        <item name="activatedBackgroundIndicator">@drawable/abs__activated_background_holo_light</item>
+    </style>
+    <style name="ButtonTextShadow">
+        <item name="android:shadowColor">#cd000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <style name="ZeroModalDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="ZeroDarkButton">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/zero_button_dark</item>
+        <item name="android:paddingLeft">15.0sp</item>
+        <item name="android:paddingRight">15.0sp</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="ZeroBlueButton">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/zero_button_blue</item>
+        <item name="android:paddingLeft">15.0sp</item>
+        <item name="android:paddingRight">15.0sp</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="BottomBannerText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey80</item>
+        <item name="android:textColorLink">@color/grey93</item>
+    </style>
+    <style name="BottomBannerTitle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="UrlImageProgressHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">10.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/url_image_progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/url_image_progress_horizontal</item>
+        <item name="android:minHeight">10.0dip</item>
+    </style>
+    <style name="OrcaDarkButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/orca_white</item>
+        <item name="android:background">@drawable/orca_button_dark_background</item>
+        <item name="android:paddingLeft">15.0sp</item>
+        <item name="android:paddingRight">15.0sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaContactPickerButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/orca_white</item>
+        <item name="android:background">@drawable/orca_button_blue</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaContactPickerButtonSecondary" parent="@style/OrcaContactPickerButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff727681</item>
+        <item name="android:background">@drawable/orca_button_grey</item>
+        <item name="android:shadowColor">#fffafafb</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaNuxButton">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/orca_white</item>
+        <item name="android:background">@drawable/orca_button_blue</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaBlueButton">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/orca_white</item>
+        <item name="android:background">@drawable/orca_button_blue</item>
+        <item name="android:shadowColor">#ff496191</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaNuxButtonSecondary" parent="@style/OrcaNuxButton">
+        <item name="android:textColor">#ff727681</item>
+        <item name="android:background">@drawable/orca_button_grey</item>
+        <item name="android:shadowColor">#fffafafb</item>
+    </style>
+    <style name="OrcaNuxButtonGreen" parent="@style/OrcaNuxButton">
+        <item name="android:background">@drawable/orca_button_green</item>
+        <item name="android:shadowColor">#ff30774f</item>
+    </style>
+    <style name="OrcaNuxText">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxEms">15</item>
+        <item name="android:lineSpacingExtra">4.0sp</item>
+    </style>
+    <style name="OrcaNuxLeftAlignedText" parent="@style/OrcaNuxText">
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="OrcaNuxTitle">
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:textSize">23.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff222222</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="NuxIntroLayout">
+        <item name="android:layout_marginLeft">-5.0dip</item>
+        <item name="android:layout_marginTop">-5.0dip</item>
+        <item name="android:layout_marginRight">-5.0dip</item>
+        <item name="android:layout_marginBottom">-5.0dip</item>
+    </style>
+    <style name="NuxIntroPadding">
+        <item name="android:paddingLeft">40.0dip</item>
+        <item name="android:paddingTop">50.0dip</item>
+        <item name="android:paddingRight">40.0dip</item>
+        <item name="android:paddingBottom">50.0dip</item>
+    </style>
+    <style name="NuxDiveBarButtonLayout">
+        <item name="android:layout_marginLeft">-12.0dip</item>
+        <item name="android:layout_marginTop">-25.0dip</item>
+        <item name="android:layout_marginRight">-12.0dip</item>
+        <item name="android:layout_marginBottom">30.0dip</item>
+    </style>
+    <style name="ThreadTitleNuxLayout">
+        <item name="android:layout_marginLeft">-45.0dip</item>
+        <item name="android:layout_marginTop">-35.0dip</item>
+        <item name="android:layout_marginRight">35.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+    </style>
+    <style name="ThreadTitleNuxPadding">
+        <item name="android:paddingLeft">45.0dip</item>
+        <item name="android:paddingTop">60.0dip</item>
+        <item name="android:paddingRight">45.0dip</item>
+        <item name="android:paddingBottom">45.0dip</item>
+    </style>
+    <style name="ContactCardSectionLabel">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/light_orca_blue</item>
+        <item name="android:paddingLeft">3.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="ContactCardSectionRoot">
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">@drawable/contacts_section_overlay</item>
+    </style>
+    <style name="NuxFindingContactsIntro">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">14.0dip</item>
+        <item name="android:layout_marginTop">60.0dip</item>
+        <item name="android:layout_marginRight">14.0dip</item>
+        <item name="android:layout_marginBottom">20.0dip</item>
+    </style>
+    <style name="NuxFindingContactsIntroContent">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">14.0dip</item>
+        <item name="android:layout_marginTop">14.0dip</item>
+        <item name="android:layout_marginRight">14.0dip</item>
+        <item name="android:layout_marginBottom">14.0dip</item>
+    </style>
+    <style name="NuxFindingContactsIntroHeader">
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="NuxFindingContactsIntroTitleSmall" parent="@style/OrcaNuxTitle">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="NuxFindingContactsIntroBody" parent="@style/OrcaNuxText">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20.0dip</item>
+    </style>
+    <style name="NuxFindingContacts">
+        <item name="android:layout_marginTop">28.0dip</item>
+    </style>
+    <style name="NuxFindingContactsTitle" parent="@style/OrcaNuxTitle">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+    <style name="NuxFindingContactsBody" parent="@style/OrcaNuxText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+    </style>
+    <style name="NuxFindingContactsProgress" parent="@style/FbProgressHorizontal">
+        <item name="android:layout_marginTop">12.0dip</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxTitle" parent="@style/OrcaNuxTitle">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@color/divebar_contacts_uploader_learn_more_title</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16.0dip</item>
+        <item name="android:layout_marginBottom">16.0dip</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/divebar_contacts_uploader_learn_more_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxTextSmall" parent="@style/DivebarContactsUploaderLearnMoreNuxText">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxImage">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32.0dip</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxButtonSecondary" parent="@style/OrcaNuxButtonSecondary">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="DivebarContactsUploaderLearnMoreNuxButton" parent="@style/OrcaNuxButton">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="publisher_button_text">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff6c6f77</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="NuxLearnMoreText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nux_text</item>
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="OrcaFindingContactsFailedButton">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/dark_grey</item>
+        <item name="android:layout_width">0.0px</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="OrcaVoiceClipsTooltipText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="OrcaVoiceClipsTooltipTextHoverOff">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="OrcaVoiceClipsTooltipNuxText">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff888888</item>
+    </style>
+    <style name="OrcaChatHeadsPopupMenu" parent="@style/Widget.Sherlock.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/orca_chat_heads_popup_menu</item>
+    </style>
+    <style name="ChatHeadTextBubble_Mask_RightOrigin">
+        <item name="android:foreground">@drawable/orca_chat_notification_bubble</item>
+        <item name="mask">@drawable/orca_chat_notification_bubble_mask</item>
+    </style>
+    <style name="ChatHeadTextBubble_Mask_LeftOrigin">
+        <item name="android:foreground">@drawable/orca_chat_notification_bubble_right</item>
+        <item name="mask">@drawable/orca_chat_notification_bubble_mask_right</item>
+    </style>
+    <style name="ChatHeadTextBubble_MultilineEllipsizeTextView">
+        <item name="android:background">@drawable/orca_chat_notification_bubble_gradient</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="textColor">#ffffffff</item>
+        <item name="maxLines">2</item>
+        <item name="minLines">1</item>
+        <item name="textStyle">bold</item>
+        <item name="textSize">15.0sp</item>
+        <item name="maxWidth">180.0dip</item>
+        <item name="includeFontPadding">true</item>
+        <item name="shadowDx">0.0</item>
+        <item name="shadowDy">-1.0</item>
+        <item name="shadowRadius">0.25</item>
+        <item name="shadowColor">#ff000000</item>
+    </style>
+    <style name="ChatHeadTextBubble_MultilineEllipsizeTextView.RightOrigin" parent="@style/ChatHeadTextBubble_MultilineEllipsizeTextView">
+        <item name="android:paddingRight">18.0dip</item>
+    </style>
+    <style name="ChatHeadTextBubble_MultilineEllipsizeTextView.LeftOrigin" parent="@style/ChatHeadTextBubble_MultilineEllipsizeTextView">
+        <item name="android:paddingLeft">18.0dip</item>
+    </style>
+    <style name="Theme.Orca.ChatHeadsBase" parent="@style/Theme.Orca">
+        <item name="android:dropDownHintAppearance">@style/TextAppearance.Sherlock.Widget.DropDownHint</item>
+        <item name="buttonStyleSmall">@style/Widget.Sherlock.Light.Button.Small</item>
+        <item name="selectableItemBackground">@drawable/abs__item_background_holo_light</item>
+        <item name="windowContentOverlay">@null</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.Sherlock.Light.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.Sherlock.Light.Widget.PopupMenu.Small</item>
+        <item name="textAppearanceSmall">@style/TextAppearance.Sherlock.Light.Small</item>
+        <item name="textColorPrimary">@color/abs__primary_text_holo_light</item>
+        <item name="textColorPrimaryDisableOnly">@color/abs__primary_text_disable_only_holo_light</item>
+        <item name="textColorPrimaryInverse">@color/abs__primary_text_holo_dark</item>
+        <item name="dividerVertical">@drawable/abs__list_divider_holo_light</item>
+        <item name="dropDownListViewStyle">@style/Widget.Sherlock.Light.ListView.DropDown</item>
+        <item name="popupMenuStyle">@style/OrcaChatHeadsPopupMenu</item>
+        <item name="dropdownListPreferredItemHeight">48.0dip</item>
+        <item name="listPopupWindowStyle">@style/Widget.Sherlock.Light.ListPopupWindow</item>
+        <item name="activatedBackgroundIndicator">@drawable/abs__activated_background_holo_light</item>
+        <item name="chatHeadTextBubbleLeftOriginMaskStyle">@style/ChatHeadTextBubble_Mask_LeftOrigin</item>
+        <item name="chatHeadTextBubbleLeftOriginTextStyle">@style/ChatHeadTextBubble_MultilineEllipsizeTextView.LeftOrigin</item>
+        <item name="chatHeadTextBubbleRightOriginMaskStyle">@style/ChatHeadTextBubble_Mask_RightOrigin</item>
+        <item name="chatHeadTextBubbleRightOriginTextStyle">@style/ChatHeadTextBubble_MultilineEllipsizeTextView.RightOrigin</item>
+        <item name="messageComposerTheme">@style/Theme.Orca.ChatHeadsBase.MessageComposer</item>
+    </style>
+    <style name="Theme.Orca.ChatHeads" parent="@style/Theme.Orca.ChatHeadsBase">
+        <item name="fontFamily">helvetica_neue</item>
+    </style>
+    <style name="Theme.Orca.MessageComposer" parent="@style/Theme.Orca">
+        <item name="messageComposerBackground">@color/composer_background</item>
+    </style>
+    <style name="Theme.Orca.ChatHeadsBase.MessageComposer" parent="@style/Theme.Orca.ChatHeadsBase">
+        <item name="messageComposerBackground">@drawable/orca_chat_composer_background</item>
+    </style>
+</resources>

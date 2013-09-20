@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_farm_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/farm_proFile_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.659973dip" android:layout_marginTop="30.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_farm_title_2" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/farm_menu_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ui_farm_menu_title" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="@color/Farm_Font_Color_b" android:gravity="center_horizontal" android:paddingLeft="90.0dip" android:paddingTop="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="프로필사진 설정">
+                <requestFocus />
+            </TextView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/farm_name_setting_account" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="20.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="@color/Farm_Font_Color_a" android:gravity="left" android:id="@id/txt_farm_profile_setting_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="계좌선택" />
+                <Button android:textSize="18.659973sp" android:textColor="@color/Black" android:gravity="left|center" android:id="@id/btn_farm_profile_setting_account" android:background="@drawable/farm_menu_item2_btn" android:paddingLeft="10.659973dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.659973dip">
+                <Button android:id="@id/confirm_profile_send" android:background="@drawable/farm_ok_short_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_centerInParent="true" />
+                <Button android:id="@id/cancel_profile_send" android:background="@drawable/farm_cancel_short_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.75dip" android:layout_centerInParent="true" />
+                <Button android:id="@id/profile_image_attach" android:background="@drawable/farm_img_attach_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.75dip" android:layout_centerInParent="true" />
+            </LinearLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="left" android:id="@id/imageView" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="136.5dip" android:layout_marginTop="14.5dip" />
+                <ImageView android:layout_gravity="left" android:id="@id/farm_main_title_profile" android:background="@drawable/bg_farm_main_title_0" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.3299866dip" android:layout_marginTop="6.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

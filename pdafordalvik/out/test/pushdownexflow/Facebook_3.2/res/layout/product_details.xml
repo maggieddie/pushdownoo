@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/product_details_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.gifts.lib.widget.SkipFreeScrollView android:id="@id/layout_scroll" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/generic_white" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/standard_16pt_text_size" android:textStyle="bold" android:textColor="@color/generic_black" android:ellipsize="end" android:layout_gravity="left" android:id="@id/text_product_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/standard_14pt_text_size" android:textColor="@color/standard_gray_808080" android:ellipsize="end" android:layout_gravity="left" android:id="@id/text_product_sku_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <View android:background="@color/standard_gray_divider_dadada" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <FrameLayout android:id="@id/layout_image_gallery" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v4.view.ViewPager android:gravity="center" android:layout_gravity="center" android:id="@id/ksgallery_product_images" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/price_label" />
+                <com.facebook.gifts.lib.widget.PagerDotsIndicator android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/pager_dots_indicator" android:paddingBottom="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <ImageView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/shadow_down" android:scaleType="fitXY" />
+            <FrameLayout android:layout_gravity="bottom" android:padding="@dimen/standard_padding_and_a_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/generic_white" android:ellipsize="end" android:gravity="center" android:id="@id/button_give_gift" android:background="@drawable/button_blue" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" android:text="@string/product_details_view_give_gift_button_text" android:singleLine="true" />
+                <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/generic_white" android:ellipsize="end" android:gravity="center" android:id="@id/button_remove" android:background="@drawable/button_blue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" android:text="@string/product_order_details_remove_product" android:singleLine="true" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/standard_padding_and_a_half" android:paddingRight="@dimen/standard_padding_and_a_half" android:paddingBottom="@dimen/standard_padding_and_a_half" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <FrameLayout android:id="@id/frame_extra_details" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:id="@id/frame_description" android:background="@drawable/cell" android:paddingLeft="@dimen/standard_padding_and_a_half" android:paddingTop="@dimen/standard_double_padding" android:paddingRight="@dimen/standard_padding_and_a_half" android:paddingBottom="@dimen/standard_double_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/standard_padding_and_a_half">
+                    <TextView android:textSize="@dimen/standard_14pt_text_size" android:textStyle="bold" android:textColor="@color/standard_gray_141823" android:id="@id/text_description_header" android:paddingBottom="@dimen/standard_padding_and_a_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/product_details_description_section_header" android:layout_alignParentTop="true" />
+                    <WebView android:id="@id/web_product_description" android:background="@color/generic_transparent" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/text_description_header" />
+                    <ImageView android:id="@id/image_white_gradient" android:layout_width="fill_parent" android:layout_height="35.0dip" android:src="@drawable/white_gradient" android:scaleType="fitXY" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <include android:id="@id/layout_recommended_products" layout="@layout/product_details_recommended_products" />
+                <FrameLayout android:layout_gravity="bottom" android:paddingTop="@dimen/standard_padding_and_a_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:textSize="@dimen/standard_button_text_size" android:textStyle="bold" android:textColor="@color/standard_gray_4e5665" android:ellipsize="end" android:gravity="center" android:id="@id/button_see_all_gifts" android:background="@drawable/button_light" android:layout_width="fill_parent" android:layout_height="@dimen/standard_button_height" android:text="@string/product_details_see_all_gifts_button" android:singleLine="true" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.facebook.gifts.lib.widget.SkipFreeScrollView>
+    <FrameLayout android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading_view" layout="@layout/loading_view" />
+    </FrameLayout>
+</FrameLayout>

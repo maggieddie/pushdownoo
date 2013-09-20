@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/page_admin_view_timeline_button" android:background="@drawable/page_identity_card_clickable_unit_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_view_timeline" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ChambrayText.Large.Dark.Bold" />
+        <ImageView android:background="@drawable/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include android:id="@id/page_admin_timeline_card_divider" android:visibility="gone" layout="@layout/page_card_divider" />
+    <RelativeLayout android:id="@id/page_admin_view_post_by_others_button" android:background="@drawable/page_identity_card_clickable_unit_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_posts_by_others" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ChambrayText.Large.Dark.Bold" />
+        <ImageView android:background="@drawable/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

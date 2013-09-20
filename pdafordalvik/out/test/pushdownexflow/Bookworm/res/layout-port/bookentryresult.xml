@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/book_bgrnd_noheader_textarea" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/bookentrytitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:maxLines="3" style="@style/subtitleblack" />
+    <ImageView android:id="@id/bookentrycover" android:layout_width="120.0dip" android:layout_height="150.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" />
+    <TextView android:gravity="center_horizontal" android:id="@id/bookentryauthors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" style="@style/blackmed" />
+    <Button android:id="@id/bookentryaddbutton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/btnAddBook" style="@style/black" />
+    <TextView android:gravity="center_horizontal" android:id="@id/bookentrywarndupe" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/msgWarnDupe" style="@style/blacksmall" />
+</LinearLayout>

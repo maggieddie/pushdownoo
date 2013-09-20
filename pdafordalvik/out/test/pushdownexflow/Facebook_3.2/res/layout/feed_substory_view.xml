@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/feed_substory_divider" android:background="@color/feed_substory_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+    <com.facebook.feed.ui.StoryContentView android:layout_gravity="center_horizontal" android:id="@id/feed_story_contents" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/feed_substory_bottom_padding" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+</LinearLayout>

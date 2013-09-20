@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/page_identity_explanation_area" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <com.facebook.widget.UrlImage android:id="@id/page_identity_viewer_profile_pic" android:layout_width="@dimen/page_identity_user_pic_size" android:layout_height="@dimen/page_identity_user_pic_size" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/page_identity_viewer_profile_pic" android:layout_centerVertical="true">
+            <RatingBar android:id="@id/page_identity_viewer_already_rated_rating_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="13.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="3.0dip" android:progressDrawable="@drawable/star_small_blue_composite" android:numStars="5" android:isIndicator="true" />
+            <TextView android:id="@id/page_identity_viewer_number_of_visits_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" style="@style/ChambrayText" />
+            <TextView android:id="@id/page_identity_rate_callout_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_rate_callout" style="@style/ChambrayText" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/page_identity_rate_page_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/page_identity_explanation_area" android:layout_alignParentLeft="true">
+        <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" layout="@layout/page_card_divider" />
+        <com.facebook.pages.identity.ui.ratingbar.AnimatedRatingBar android:id="@id/page_identity_rate_page_rating_bar" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" orca:activeStarDrawable="@drawable/star_huge_blue" orca:inactiveStarDrawable="@drawable/star_huge_empty" orca:numStars="5" orca:horizontalStarPadding="4.0dip" />
+        <ImageView android:id="@id/page_identity_privacy_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chambray_standard_padding" android:src="@drawable/page_identity_rating_privacy_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/page_identity_rating_nux" android:background="@drawable/page_identity_nux_dialog_point_down_right" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginRight="-5.0dip" android:layout_marginBottom="35.0dip" android:layout_alignRight="@id/page_identity_rate_page_container" android:layout_alignBottom="@id/page_identity_rate_page_container">
+        <TextView android:gravity="center_horizontal" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_rating_nux" style="@style/shadowedWhiteText" />
+    </FrameLayout>
+</RelativeLayout>

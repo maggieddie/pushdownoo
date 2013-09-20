@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.MaskedFrameLayout android:id="@id/left_origin_mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="hardware" style="?chatHeadTextBubbleLeftOriginMaskStyle"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.facebook.orca.common.ui.widgets.text.MultilineEllipsizeTextView android:id="@id/left_origin_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?chatHeadTextBubbleLeftOriginTextStyle" />
+    </com.facebook.widget.MaskedFrameLayout>
+    <com.facebook.widget.MaskedFrameLayout android:id="@id/right_origin_mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="hardware" style="?chatHeadTextBubbleRightOriginMaskStyle"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.facebook.orca.common.ui.widgets.text.MultilineEllipsizeTextView android:id="@id/right_origin_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?chatHeadTextBubbleRightOriginTextStyle" />
+    </com.facebook.widget.MaskedFrameLayout>
+</merge>

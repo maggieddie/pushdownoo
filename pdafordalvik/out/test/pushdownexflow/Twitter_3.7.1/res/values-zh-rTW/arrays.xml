@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_intervals">
+        <item>5 分鐘</item>
+        <item>10 分鐘</item>
+        <item>15 分鐘</item>
+        <item>30 分鐘</item>
+        <item>1 小時</item>
+        <item>2 小時</item>
+        <item>4 小時</item>
+    </string-array>
+    <string-array name="mention_notif">
+        <item>來自你跟隨的使用者</item>
+        <item>來自任何人</item>
+        <item>關閉</item>
+    </string-array>
+    <string-array name="connect_labels">
+        <item>互動</item>
+        <item>提及</item>
+    </string-array>
+    <string-array name="authorize_app_allowed_list">
+        <item>從你的時間軸上讀取推文。</item>
+        <item>看看誰跟隨了你。</item>
+        <item>為你發佈推文。</item>
+    </string-array>
+    <string-array name="authorize_app_denied_list">
+        <item>查看您的 Twitter 密碼。</item>
+    </string-array>
+    <string-array name="profile_options">
+        <item>編輯個人檔案</item>
+        <item>設定</item>
+        <item>幫助</item>
+    </string-array>
+</resources>

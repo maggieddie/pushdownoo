@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/feed_permalink_middle_row_press_state" />
+    <item android:drawable="@drawable/feed_permalink_bg_middle" />
+</selector>

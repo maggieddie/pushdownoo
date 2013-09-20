@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.UrlImage android:id="@id/timeline_navtile_map_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/timeline_navtile_image" />
+    <ImageView android:id="@id/timeline_navtile_globe" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/timeline_map_tab_globe" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/timeline_navtile_halfheight" android:src="@drawable/timeline_places_pin" />
+</FrameLayout>

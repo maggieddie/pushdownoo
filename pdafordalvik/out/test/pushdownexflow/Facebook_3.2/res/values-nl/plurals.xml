@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d uur geleden</item>
+        <item quantity="one">1 uur geleden</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d minuten geleden</item>
+        <item quantity="one">1 minuut geleden</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d uur vanaf nu</item>
+        <item quantity="one">1 uur vanaf nu</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minuten vanaf nu</item>
+        <item quantity="one">1 minuut vanaf nu</item>
+    </plurals>
+    <plurals name="message_delete_confirm_title">
+        <item quantity="other">Berichten verwijderen?</item>
+        <item quantity="one">Bericht verwijderen?</item>
+    </plurals>
+    <plurals name="message_delete_confirm_msg">
+        <item quantity="other">Wanneer je jouw exemplaar van deze berichten verwijdert, kun je dit niet ongedaan maken.</item>
+        <item quantity="one">Wanneer je jouw exemplaar van het bericht verwijdert, kun je dit niet ongedaan maken.</item>
+    </plurals>
+    <plurals name="message_delete_confirm_ok_button">
+        <item quantity="other">Berichten verwijderen</item>
+        <item quantity="one">Bericht verwijderen</item>
+    </plurals>
+    <plurals name="message_delete_progress">
+        <item quantity="other">Berichten verwijderen…</item>
+        <item quantity="one">Bericht verwijderen…</item>
+    </plurals>
+    <plurals name="photo_num_likes">
+        <item quantity="other">%d vind-ik-leuks</item>
+        <item quantity="one">%d vind-ik-leuk</item>
+    </plurals>
+    <plurals name="photo_num_comments">
+        <item quantity="other">%d reacties</item>
+        <item quantity="one">%d reactie</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_title">
+        <item quantity="other">"%d geselecteerde foto's verwijderen"</item>
+        <item quantity="one">Geselecteerde foto verwijderen</item>
+    </plurals>
+    <plurals name="grid_delete_dialog_text">
+        <item quantity="other">"Weet je zeker dat je de %d geselecteerde foto's van je apparaat wilt verwijderen?"</item>
+        <item quantity="one">Weet je zeker dat je de geselecteerde foto van je apparaat wilt verwijderen?</item>
+    </plurals>
+    <plurals name="feed_plural_likes">
+        <item quantity="other">%d personen vinden dit leuk</item>
+        <item quantity="one">1 persoon vindt dit leuk</item>
+    </plurals>
+    <plurals name="feed_pymk_plural_mutual_friends">
+        <item quantity="other">%d gemeenschappelijke vrienden</item>
+        <item quantity="one">1 gemeenschappelijke vriend</item>
+    </plurals>
+    <plurals name="feed_feedback_likes_plural">
+        <item quantity="other">%,d personen vinden dit leuk</item>
+        <item quantity="one">1 vind-ik-leuk</item>
+    </plurals>
+    <plurals name="feed_feedback_comments_plural">
+        <item quantity="other">%,d reacties</item>
+        <item quantity="one">1 reactie</item>
+    </plurals>
+    <plurals name="notification_aggregated_count">
+        <item quantity="other">%1$s meldingen</item>
+        <item quantity="one">1 melding</item>
+    </plurals>
+    <plurals name="elapsed_time_min">
+        <item quantity="other">%1$s MIN</item>
+        <item quantity="one">1 MIN</item>
+    </plurals>
+    <plurals name="elapsed_time_hr">
+        <item quantity="other">%1$s UUR</item>
+        <item quantity="one">1 UUR</item>
+    </plurals>
+    <plurals name="ufi_num_likes">
+        <item quantity="other">%s vind-ik-leuks</item>
+        <item quantity="one">%s vind-ik-leuk</item>
+    </plurals>
+    <plurals name="ufi_num_comments">
+        <item quantity="other">%s reacties</item>
+        <item quantity="one">%s reactie</item>
+    </plurals>
+    <plurals name="page_identity_friends_like_phrase">
+        <item quantity="other">vinden deze plaats leuk</item>
+        <item quantity="one">vindt deze plaats leuk</item>
+    </plurals>
+    <plurals name="page_identity_friends_visited_phrase">
+        <item quantity="other">zijn hier geweest</item>
+        <item quantity="one">is hier geweest</item>
+    </plurals>
+    <plurals name="page_identity_total_raters">
+        <item quantity="other">%1$d beoordelingen</item>
+        <item quantity="one">1 beoordeling</item>
+    </plurals>
+    <plurals name="page_identity_likes">
+        <item quantity="other">vind-ik-leuks</item>
+        <item quantity="one">vind-ik-leuk</item>
+    </plurals>
+    <plurals name="page_identity_visits">
+        <item quantity="other">waren hier</item>
+        <item quantity="one">was hier</item>
+    </plurals>
+    <plurals name="page_identity_viewer_visits_amount">
+        <item quantity="other">Je bent hier %1$d keer geweest.</item>
+        <item quantity="one">Je bent hier één keer geweest.</item>
+    </plurals>
+    <plurals name="timeline_page_likes">
+        <item quantity="other">%,d vind-ik-leuks</item>
+        <item quantity="one">1 vind-ik-leuk</item>
+    </plurals>
+    <plurals name="timeline_page_visits">
+        <item quantity="other">%,d waren hier</item>
+        <item quantity="one">1 persoon was hier</item>
+    </plurals>
+    <plurals name="timeline_page_talking_about">
+        <item quantity="other">%,d personen praten hierover</item>
+        <item quantity="one">1 persoon praat hierover</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_using">
+        <item quantity="other">%1$s en %2$s gebruiken dit</item>
+        <item quantity="one">%1$s gebruikt dit</item>
+    </plurals>
+    <plurals name="appcenter_plural_friends_playing">
+        <item quantity="other">%1$s en %2$s spelen dit</item>
+        <item quantity="one">%1$s speelt dit</item>
+    </plurals>
+    <plurals name="nearby_likes">
+        <item quantity="other">%d vind-ik-leuks</item>
+        <item quantity="one">1 vind-ik-leuk</item>
+    </plurals>
+    <plurals name="nearby_visits">
+        <item quantity="other">%d bezoeken</item>
+        <item quantity="one">1 bezoek</item>
+    </plurals>
+    <plurals name="birthday_count">
+        <item quantity="other">%d verjaardagen</item>
+        <item quantity="one">1 verjaardag</item>
+    </plurals>
+    <plurals name="profile_info_num_likes">
+        <item quantity="other">%d personen vinden dit leuk</item>
+        <item quantity="one">1 persoon vindt dit leuk</item>
+    </plurals>
+    <plurals name="profile_info_num_checkins">
+        <item quantity="other">%d check-ins</item>
+        <item quantity="one">1 check-in</item>
+    </plurals>
+    <plurals name="requests_mutual_friends">
+        <item quantity="other">%d gemeenschappelijke vrienden</item>
+        <item quantity="zero">Geen gemeenschappelijke vrienden</item>
+        <item quantity="one">1 gemeenschappelijke vriend</item>
+    </plurals>
+    <plurals name="x_people">
+        <item quantity="other">%d personen</item>
+        <item quantity="one">1 persoon</item>
+    </plurals>
+</resources>
