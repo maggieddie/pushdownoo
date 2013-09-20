@@ -141,8 +141,11 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
      */
     AnalysisScope.parseInExclusiveLibNames
     
+    println("Parsing the disassembled bytecode")
      //parse in s-expressioned dalvik 
     parseDalvikSExprs(opts) 
+    
+    println("Parsing done.")
     
     if(! opts.doNotNullCheck) {
        // parse in security related files

@@ -15,7 +15,7 @@ public class SExpStyleCodeGenerator implements CodeGenerator {
       Integer ci = classIterator.next();
       int classidx = ci.intValue();
       String className = dexClassDefsBlock.getClassNameOnly( classidx );
-      System.out.println( "Processing "+className );
+     // System.out.println( "Processing "+className );
       if( dump != null ) {
         dump.println( "--------------------------------------" );
         dump.println( "Class: "+className );

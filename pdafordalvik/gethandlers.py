@@ -22,8 +22,8 @@ def fil(f):
 def build_abspath( cur_p, fnames):
     xmls = filter(fil,fnames)
     if xmls:
-        print "in build_path"
-        print xmls
+        #print "in build_path"
+        #print xmls
         return map (lambda(x): os.path.join(cur_p, x), xmls)
 
 def getAllXmlFiles():
@@ -31,7 +31,7 @@ def getAllXmlFiles():
     for cur_p, dir, fnames in os.walk(cur_path):
         xmls = build_abspath(cur_p, fnames) #filter(fil, fnames)
         if xmls:
-            print xmls
+            #print xmls
             xml_files.extend(xmls)
     return xml_files
             
@@ -52,11 +52,11 @@ def getHandlers():
 #    of.write(')')
                         
     
-print "processing all xml files"
-print getAllXmlFiles()
+#print "processing all xml files"
+#print getAllXmlFiles()
 print "finished getting all xml files"
 getHandlers()
-print "finished processingx"
+print "finished processing"
 
 of.close()
 

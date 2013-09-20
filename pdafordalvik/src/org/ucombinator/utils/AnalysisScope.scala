@@ -38,7 +38,7 @@ object AnalysisScope {
 
     val classLines = File(strFilePath).lines.toList.filter(_.trim() != "")
     val deduplicateClsLines = classLines.toSet.toList
-    deduplicateClsLines.foreach(println)
+    //deduplicateClsLines.foreach(println)
 
     val res = 
     deduplicateClsLines.foldLeft(List[Regex]())((res, line) => {
