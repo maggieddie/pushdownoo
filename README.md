@@ -36,4 +36,4 @@ Still in `pdafordalvik` folder
 	
 ### For Intent Fuzzer
 
-	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --for-intent-fuzzer ./test/SmsReminder.apk
+	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --for-intent-fuzzer --intraprocedural ./test/Twitter_3.7.1.apk
