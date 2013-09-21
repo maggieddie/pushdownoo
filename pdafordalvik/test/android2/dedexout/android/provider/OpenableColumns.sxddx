@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) android/provider/OpenableColumns
- (super java/lang/Object)
- (source "OpenableColumns.java")
-
- (field (attrs public static final ) DISPLAY_NAME [object java/lang/String] "_display_name" )
- (field (attrs public static final ) SIZE [object java/lang/String] "_size" )
-
-)

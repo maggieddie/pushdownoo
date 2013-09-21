@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/global_top_background_new" android:layout_width="fill_parent" android:layout_height="48.0dip">
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mondobar_jewel_friends_on" android:scaleType="center" />
-        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/requests_title" android:shadowColor="#7f000000" android:shadowDx="0.0" android:shadowDy="-1.0" android:shadowRadius="1.0" />
-    </LinearLayout>
-    <fragment android:name="com.facebook.katana.friendrequests.FriendRequestsFragment" android:id="@id/requests_view_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</LinearLayout>

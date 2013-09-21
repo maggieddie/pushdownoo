@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:paddingLeft="@dimen/dash_story_padding_left" android:paddingRight="@dimen/dash_story_padding_right" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.dash.ui.StoryImageView android:layout_gravity="top" android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <View android:layout_gravity="top" android:id="@id/dash_edge" android:background="@drawable/dash_edge_square" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <include layout="@layout/caption_part" />
-    <com.facebook.dash.ui.ufi.UFIView android:layout_gravity="bottom" android:id="@id/ufi_view" android:layout_width="fill_parent" android:layout_height="@dimen/ufi_view_height" />
-    <com.facebook.dash.analytics.performance.PerfStubView android:id="@id/perf_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</FrameLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/button_holder" android:layout_width="36.0dip" android:layout_height="48.0dip" android:layout_marginLeft="@dimen/ufiservice_flyout_margin_left" android:layout_centerVertical="true">
-        <ImageView android:id="@id/ufiservices_flyout_more_comments_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ufiservices_flyout_load_more_icon" android:layout_centerInParent="true" />
-        <ProgressBar android:id="@id/ufiservices_flyout_more_comments_spinner" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerInParent="true" />
-    </RelativeLayout>
-    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/flyout_text_body_color" android:id="@id/ufiservices_flyout_more_comments_text" android:background="@drawable/ufiservices_generic_press_state_background_rounded" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/ufiservices_load_previous_comments" android:cursorVisible="false" android:layout_toRightOf="@id/button_holder" android:layout_centerVertical="true" />
-</merge>

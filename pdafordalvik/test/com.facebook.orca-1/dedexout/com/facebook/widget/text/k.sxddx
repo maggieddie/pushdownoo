@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/widget/text/k
- (super java/lang/Object)
- (source "UrlSpanLinkHook.java")
-
-
-(method (attrs public abstract ) a([object android/text/style/URLSpan] [object android/widget/TextView] )boolean
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/net/URLStreamHandlerFactory
- (super java/lang/Object)
- (source "URLStreamHandlerFactory.java")
-
-
-(method (attrs public abstract ) createURLStreamHandler([object java/lang/String] )[object java/net/URLStreamHandler]
-)
-
-)

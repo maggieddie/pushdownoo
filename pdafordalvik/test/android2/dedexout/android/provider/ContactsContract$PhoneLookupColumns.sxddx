@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/provider/ContactsContract$PhoneLookupColumns
- (super java/lang/Object)
- (source "ContactsContract.java")
-
- (field (attrs public static final ) LABEL [object java/lang/String] "label" )
- (field (attrs public static final ) NUMBER [object java/lang/String] "number" )
- (field (attrs public static final ) TYPE [object java/lang/String] "type" )
-
-)

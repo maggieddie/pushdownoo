@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/photo_caption_gradient" android:background="@drawable/caption_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/caption_gradient_length" />
-    <com.facebook.overscroll.ScrollView android:gravity="top" android:id="@id/message_wrapper" android:padding="0.0dip" android:fadingEdgeLength="37.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="14.0dip" android:layout_marginBottom="@dimen/ufi_bar_height">
-        <com.facebook.dash.ui.TextViewWithBugFix android:textColorHighlight="@android:color/transparent" android:id="@id/message_text_view" android:paddingLeft="@dimen/caption_message_padding_left" android:paddingTop="@dimen/caption_message_padding_top" android:paddingRight="@dimen/caption_message_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/sixty_percent_transparent_black" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="2.0" style="@style/caption_message_text" />
-    </com.facebook.overscroll.ScrollView>
-</merge>

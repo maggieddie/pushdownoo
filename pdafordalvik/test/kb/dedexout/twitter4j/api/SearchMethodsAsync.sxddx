@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) twitter4j/api/SearchMethodsAsync
- (super java/lang/Object)
- (source "SearchMethodsAsync.java")
-
-
-(method (attrs public abstract ) search([object twitter4j/Query] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/MenuItem$OnMenuItemClickListener
- (super java/lang/Object)
- (source "MenuItem.java")
-
-
-(method (attrs public abstract ) onMenuItemClick([object android/view/MenuItem] )boolean
-)
-
-)

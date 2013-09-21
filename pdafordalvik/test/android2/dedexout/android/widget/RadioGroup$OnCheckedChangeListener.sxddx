@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/RadioGroup$OnCheckedChangeListener
- (super java/lang/Object)
- (source "RadioGroup.java")
-
-
-(method (attrs public abstract ) onCheckedChanged([object android/widget/RadioGroup] int )void
-)
-
-)

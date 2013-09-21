@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) android/provider/BaseColumns
- (super java/lang/Object)
- (source "BaseColumns.java")
-
- (field (attrs public static final ) _COUNT [object java/lang/String] "_count" )
- (field (attrs public static final ) _ID [object java/lang/String] "_id" )
-
-)

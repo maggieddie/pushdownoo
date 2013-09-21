@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/CompoundButton$OnCheckedChangeListener
- (super java/lang/Object)
- (source "CompoundButton.java")
-
-
-(method (attrs public abstract ) onCheckedChanged([object android/widget/CompoundButton] boolean )void
-)
-
-)

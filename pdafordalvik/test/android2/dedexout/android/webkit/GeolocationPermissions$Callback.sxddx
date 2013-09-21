@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/webkit/GeolocationPermissions$Callback
- (super java/lang/Object)
- (source "GeolocationPermissions.java")
-
-
-(method (attrs public abstract ) invoke([object java/lang/String] boolean boolean )void
-)
-
-)

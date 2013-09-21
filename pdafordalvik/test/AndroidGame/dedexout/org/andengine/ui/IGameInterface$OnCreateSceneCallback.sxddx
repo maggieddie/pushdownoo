@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/andengine/ui/IGameInterface$OnCreateSceneCallback
- (super java/lang/Object)
- (source "IGameInterface.java")
-
-
-(method (attrs public abstract ) onCreateSceneFinished([object org/andengine/entity/scene/Scene] )void
-)
-
-)

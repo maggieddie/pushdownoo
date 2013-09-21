@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/creative_pyml_unit_container" android:background="@drawable/feed_story_item_generic_background" android:paddingLeft="@dimen/feed_story_margin" android:paddingTop="8.0dip" android:paddingRight="@dimen/feed_story_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/feed_story_dark_gray_text_color" android:gravity="center_vertical" android:id="@id/creative_pyml_unit_title" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/feed_explanation_pyml" android:includeFontPadding="false" />
-    <View android:id="@id/creative_pyml_horizontal_divider" android:background="@color/feed_substory_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
-    <com.facebook.feed.ui.ego.CreativePagesYouMayLikeFeedUnitItemView android:orientation="vertical" android:id="@id/creative_pyml_item" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/one_px" />
-</com.facebook.widget.CustomLinearLayout>

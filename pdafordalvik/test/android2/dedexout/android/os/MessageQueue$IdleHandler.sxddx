@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/os/MessageQueue$IdleHandler
- (super java/lang/Object)
- (source "MessageQueue.java")
-
-
-(method (attrs public abstract ) queueIdle()boolean
-)
-
-)

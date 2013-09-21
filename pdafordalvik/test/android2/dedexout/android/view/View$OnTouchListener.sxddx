@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/View$OnTouchListener
- (super java/lang/Object)
- (source "View.java")
-
-
-(method (attrs public abstract ) onTouch([object android/view/View] [object android/view/MotionEvent] )boolean
-)
-
-)

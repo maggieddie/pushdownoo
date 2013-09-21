@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/app/DatePickerDialog$OnDateSetListener
- (super java/lang/Object)
- (source "DatePickerDialog.java")
-
-
-(method (attrs public abstract ) onDateSet([object android/widget/DatePicker] int int int )void
-)
-
-)

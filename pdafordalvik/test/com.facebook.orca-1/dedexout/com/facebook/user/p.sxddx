@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/user/p
- (super java/lang/Object)
- (source "UserCache.java")
-
-
-(method (attrs public abstract ) a([object com/facebook/user/UserKey] )[object com/facebook/user/User]
-)
-
-)

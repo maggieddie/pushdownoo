@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/content/DialogInterface$OnShowListener
- (super java/lang/Object)
- (source "DialogInterface.java")
-
-
-(method (attrs public abstract ) onShow([object android/content/DialogInterface] )void
-)
-
-)

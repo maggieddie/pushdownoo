@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/bbn/map/RequestFactory
- (super java/lang/Object)
- (source "RequestFactory.java")
-
-
-(method (attrs public abstract ) createURL(int int int int )[object java/lang/String]
-)
-
-)

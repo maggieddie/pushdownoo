@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/text/Html$TagHandler
- (super java/lang/Object)
- (source "Html.java")
-
-
-(method (attrs public abstract ) handleTag(boolean [object java/lang/String] [object android/text/Editable] [object org/xml/sax/XMLReader] )void
-)
-
-)

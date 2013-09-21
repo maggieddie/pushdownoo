@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/DatePicker$OnDateChangedListener
- (super java/lang/Object)
- (source "DatePicker.java")
-
-
-(method (attrs public abstract ) onDateChanged([object android/widget/DatePicker] int int int )void
-)
-
-)

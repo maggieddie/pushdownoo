@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.facebook.orca.common.ui.overlay.SwipableOverlayLayout android:id="@id/thread_view_fragment_host" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.facebook.orca.common.ui.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:hasProgressBar="false" orca:hasBackButton="true" />
-        <fragment android:name="com.facebook.orca.threadview.ThreadViewFragment" android:id="@id/thread_view_fragment" android:tag="threadViewFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    </LinearLayout>
-</com.facebook.orca.common.ui.overlay.SwipableOverlayLayout>

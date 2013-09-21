@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/database/sqlite/SQLiteDatabase$CursorFactory
- (super java/lang/Object)
- (source "SQLiteDatabase.java")
-
-
-(method (attrs public abstract ) newCursor([object android/database/sqlite/SQLiteDatabase] [object android/database/sqlite/SQLiteCursorDriver] [object java/lang/String] [object android/database/sqlite/SQLiteQuery] )[object android/database/Cursor]
-)
-
-)

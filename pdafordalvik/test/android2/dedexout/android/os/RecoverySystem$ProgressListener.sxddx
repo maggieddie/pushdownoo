@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/os/RecoverySystem$ProgressListener
- (super java/lang/Object)
- (source "RecoverySystem.java")
-
-
-(method (attrs public abstract ) onProgress(int )void
-)
-
-)

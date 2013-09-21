@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/page_identity_timeline_button" android:background="@drawable/page_identity_action_sheet_button_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_view_timeline" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/PageIdentityButtonCardText" />
-    <ImageView android:background="@drawable/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</RelativeLayout>

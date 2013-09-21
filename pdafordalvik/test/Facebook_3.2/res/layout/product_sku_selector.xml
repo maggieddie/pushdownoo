@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@color/generic_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:layout_gravity="center_horizontal" android:id="@id/list_skus" android:background="@color/generic_background" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/generic_transparent" android:cacheColorHint="@color/generic_transparent" android:divider="@color/generic_transparent" android:dividerHeight="@dimen/standard_padding_and_a_half" />
-    <View android:layout_gravity="top" android:background="@drawable/dropdown_dropshadow" android:layout_width="fill_parent" android:layout_height="@dimen/dropshadow_height" />
-</FrameLayout>

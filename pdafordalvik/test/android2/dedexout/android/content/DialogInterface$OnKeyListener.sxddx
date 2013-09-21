@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/content/DialogInterface$OnKeyListener
- (super java/lang/Object)
- (source "DialogInterface.java")
-
-
-(method (attrs public abstract ) onKey([object android/content/DialogInterface] int [object android/view/KeyEvent] )boolean
-)
-
-)

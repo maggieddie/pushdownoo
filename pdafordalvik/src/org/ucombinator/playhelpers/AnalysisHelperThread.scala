@@ -51,7 +51,7 @@ class AnalysisHelperThread(params: Array[String]) extends Thread with WideningHe
   var nullRefMap: Map[Stmt, Int] = Map.empty
   
   // for each class method, if they have intent processing fields mapping.
-  var receivingIntentProcessingMap : Map[(String, String), Map[String, Set[IntentExtraKeyTypeAndValue]]]= Map.empty
+  var receivingIntentProcessingMap : Map[(String, String, Stmt), Map[String, Set[IntentExtraKeyTypeAndValue]]]= Map.empty
   // statistics
   var noOfEdges = 0
   var noOfStates = 0

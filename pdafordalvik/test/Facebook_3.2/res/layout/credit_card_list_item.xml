@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/standard_white_bg_with_hit" android:paddingTop="@dimen/standard_padding" android:paddingBottom="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/image_credit_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="@dimen/standard_16pt_text_size" android:id="@id/text_credit_card_info" android:paddingLeft="@dimen/standard_padding_and_a_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_credit_card" android:layout_centerVertical="true" />
-</RelativeLayout>

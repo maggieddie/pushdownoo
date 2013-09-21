@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) javax/microedition/khronos/egl/EGL11
- (super java/lang/Object)
- (source "EGL11.java")
- (implements javax/microedition/khronos/egl/EGL10)
-
- (field (attrs public static final ) EGL_CONTEXT_LOST int 12302); 0x300e )
-
-)

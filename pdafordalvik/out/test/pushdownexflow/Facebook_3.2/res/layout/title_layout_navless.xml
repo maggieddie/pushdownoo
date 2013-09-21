@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.facebook.widget.overlay.OverlayLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
-    <com.facebook.katana.ui.Fb4aTitleBar android:id="@id/titlebar" android:background="@drawable/global_top_background_new" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height" orca:hasJewel="false" orca:hasLaunchButton="false"
-      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto" />
-</com.facebook.widget.overlay.OverlayLayout>

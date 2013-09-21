@@ -58,6 +58,7 @@ import org.ucombinator.domains.StandardDomains
 import org.ucombinator.domains.CommonAbstractDomains.Store
 import org.ucombinator.domains.CommonAbstractDomains.Value
 import org.ucombinator.utils.NonNullUtils
+import org.ucombinator.domains.CommonAbstractDomains.IntentExtraKeyTypeAndValue
 //import org.ucombinator.utils.NonNullCheckUtils
 
 class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
@@ -318,21 +319,14 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
   private def computeCountForCurrentClass(clsName: String, clsDef: DalvikClassDef, store: Store) : Int = {
     val dataMap = store.getMap
     val curFields  = clsDef.fields
-     
-    println("clsName: ", clsName)
+    
     val allNonNullFieldsCountsForCurrentClass = 
     dataMap.map {
       case (k, v) => {
         val avs = v.toList 
-        //get objects values
         val avsWithObjVs = avs.toSet.filter(_.isInstanceOf[ObjectValue])
-        //println("avsWithObjVs: ", avsWithObjVs)
         val avsWithObjVs2 = avsWithObjVs.map(_.asInstanceOf[ObjectValue])
-       //  println("avsWithObjVs2: ", avsWithObjVs2)
-       // still possible multiple, but they are with the same class Name
         val avsWithObjVs3 = avsWithObjVs2.filter(_.clsName==clsName)
-        // println("avsWithObjVs3: ", avsWithObjVs3)
-        // we will get the biggest non empty set
         val countsForTheSameClass : Set[Int] = avsWithObjVs3.map {
           av => {
              val avov = av.asInstanceOf[ObjectValue]
@@ -350,7 +344,6 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
         if(!countsForTheSameClass.isEmpty)
         	countsForTheSameClass.max
         else {
-         // println("countsForTheSmaeClass!!")
           0 
         }
       }
@@ -514,21 +507,45 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     
   }
   
+  
     def dumpForIntentInput(opts: AIOptions): String = {
     import java.io._
    
     val buffer = new StringBuffer()
   
-       Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foreach{
-        case((clsName, entryPoint), fieldMap) => {
+    val summarizeMap =  
+      Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foldLeft(Map[String, Map[String,   Set[IntentExtraKeyTypeAndValue]]]())((res, kv)=>{
+        val (clsName, entryPoint, stmt) = kv._1
+        val fieldMap = kv._2
+        val newKey = clsName+"/"+entryPoint
+        if(res.contains(clsName+"/"+entryPoint)){
+          val newMap = fieldMap ++ res(newKey)
+          res + (newKey ->  newMap)
+        }else {
+           res + (newKey -> fieldMap)
+        }
+      }) 
+    
+   Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foreach{
+        case(newKey, fieldMap) => {
          
-           buffer.append("Class: "+ clsName + "\n" + "Entry Point: " + entryPoint)
+          
+           if(!fieldMap.isEmpty) {
+              buffer.append("Method: ", newKey)
            buffer.append("\n")
            fieldMap.foreach{
              case (op, vals) => {
-                buffer.append("---Op: "+ op + "\n---" + "(Type, Set[String])\n")
+               if(op.contains("getExtras")) {
+                  buffer.append("---Op: "+ op + "\n---" + "(Key Type, Key Values)\n")
                 vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n" ))//buffer.append(v + "\n" ))
                 buffer.append("\n")
+               }
+               else{
+                  buffer.append("---Op: "+ op + "\n---" + "(Return Type, Args Values)\n")
+                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n" ))//buffer.append(v + "\n" ))
+                buffer.append("\n")
+               }
+             }
              }
            }
         }

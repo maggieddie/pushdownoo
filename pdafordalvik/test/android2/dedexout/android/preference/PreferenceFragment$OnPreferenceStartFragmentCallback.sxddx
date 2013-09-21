@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/preference/PreferenceFragment$OnPreferenceStartFragmentCallback
- (super java/lang/Object)
- (source "PreferenceFragment.java")
-
-
-(method (attrs public abstract ) onPreferenceStartFragment([object android/preference/PreferenceFragment] [object android/preference/Preference] )boolean
-)
-
-)

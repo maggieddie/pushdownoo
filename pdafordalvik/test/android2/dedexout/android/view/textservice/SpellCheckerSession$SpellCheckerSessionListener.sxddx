@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/textservice/SpellCheckerSession$SpellCheckerSessionListener
- (super java/lang/Object)
- (source "SpellCheckerSession.java")
-
-
-(method (attrs public abstract ) onGetSuggestions([array [object android/view/textservice/SuggestionsInfo]] )void
-)
-
-)

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip">
-        <EditText android:textSize="16.0sp" android:id="@id/schedule_date" android:paddingLeft="12.0dip" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:cursorVisible="false" android:lines="1" android:layout_weight="60.0" android:inputType="none" style="@android:style/Widget.Holo.Light.Spinner" />
-        <EditText android:textSize="16.0sp" android:id="@id/schedule_time" android:paddingLeft="12.0dip" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:cursorVisible="false" android:lines="1" android:layout_weight="40.0" android:inputType="none" style="@android:style/Widget.Holo.Light.Spinner" />
-    </LinearLayout>
-</LinearLayout>

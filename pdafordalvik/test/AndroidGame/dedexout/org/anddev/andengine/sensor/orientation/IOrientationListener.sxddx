@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/sensor/orientation/IOrientationListener
- (super java/lang/Object)
- (source "IOrientationListener.java")
-
-
-(method (attrs public abstract ) onOrientationChanged([object org/anddev/andengine/sensor/orientation/OrientationData] )void
-)
-
-)

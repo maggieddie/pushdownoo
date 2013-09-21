@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/drm/DrmManagerClient$OnErrorListener
- (super java/lang/Object)
- (source "DrmManagerClient.java")
-
-
-(method (attrs public abstract ) onError([object android/drm/DrmManagerClient] [object android/drm/DrmErrorEvent] )void
-)
-
-)

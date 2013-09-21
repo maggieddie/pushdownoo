@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/gesture/GestureOverlayView$OnGesturePerformedListener
- (super java/lang/Object)
- (source "GestureOverlayView.java")
-
-
-(method (attrs public abstract ) onGesturePerformed([object android/gesture/GestureOverlayView] [object android/gesture/Gesture] )void
-)
-
-)

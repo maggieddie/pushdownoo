@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/apache/http/auth/AuthSchemeFactory
- (super java/lang/Object)
- (source "AuthSchemeFactory.java")
-
-
-(method (attrs public abstract ) newInstance([object org/apache/http/params/HttpParams] )[object org/apache/http/auth/AuthScheme]
-)
-
-)

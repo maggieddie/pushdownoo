@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/bbn/event/EventDispatcherContext
- (super java/lang/Object)
- (source "EventDispatcherContext.java")
-
-
-(method (attrs public abstract ) getEventDispatcher()[object com/bbn/event/EventDispatcher]
-)
-
-)

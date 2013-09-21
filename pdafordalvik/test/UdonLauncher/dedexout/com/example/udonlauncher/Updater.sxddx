@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/example/udonlauncher/Updater
- (super java/lang/Object)
- (source "Updater.java")
-
-
-(method (attrs public abstract ) update([object com/example/udonlauncher/UdonLauncher] )void
-)
-
-)

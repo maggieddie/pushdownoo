@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/TimePicker$OnTimeChangedListener
- (super java/lang/Object)
- (source "TimePicker.java")
-
-
-(method (attrs public abstract ) onTimeChanged([object android/widget/TimePicker] int int )void
-)
-
-)

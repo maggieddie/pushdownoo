@@ -3,9 +3,9 @@ import org.ucombinator.playhelpers.AnalysisHelperThread
 import org.ucombinator.domains.CommonAbstractDomains.Value
 import org.ucombinator.domains.CommonAbstractDomains.D
 import org.ucombinator.domains.CommonAbstractDomains.IntentExtraKeyTypeAndValue
- 
 import org.ucombinator.domains.CommonAbstractDomains.Store
 import org.ucombinator.domains.CommonAbstractDomains.StringLit
+import org.ucombinator.dalvik.syntax.Stmt
 
 object ForIntentFuzzerUtil {
   
@@ -54,86 +54,155 @@ object ForIntentFuzzerUtil {
 		 mp =="android/content/Intent/getPackage"
   }
      
-     def decideIntentFields(mp: String, clsPath: String, enclosingMethPath: String, argVal: Set[String]) {
+     private def argTVsToMap(argVals: Set[(String, Set[String])], keyOp: String) :  Map[String, Set[IntentExtraKeyTypeAndValue]] = {
+       argVals.foldLeft(Map[String, Set[IntentExtraKeyTypeAndValue]]())((res, tyVals) => {
+         val typ = tyVals._1
+         val valsStr = tyVals._2.toString
+         val oneEntryValue = new IntentExtraKeyTypeAndValue(typ, valsStr)
+         res + (keyOp -> Set( oneEntryValue))
+       })
+     }
+     
+     def decideIntentFields(mp: String, clsPath: String, enclosingMethPath: String, stmt: Stmt, argVal: Set[(String, Set[String])]) {
        mp match {
          case "android/content/Intent/getAction" => {
-            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getAction"->Set()))
+           val res = 
+             argTVsToMap(argVal, "getAction")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
          }
          // This is the thing the fuzzer needs! 
          case "android/content/Intent/getExtras" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getExtras"->Set())) 
+           
+           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getExtras"->Set())) 
          }
           case "android/content/Intent/getStringExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getStringExtra"->Set())) 
+            val res = 
+             argTVsToMap(argVal, "getStringExtra")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getStringExtra"->Set())) 
          }
          
          case "android/content/Intent/getBooleanArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getBooleanArrayExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getBooleanArrayExtra")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getBooleanArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getBooleanExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getBooleanArrayExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getBooleanExtra")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getBooleanArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getByteArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getByteArrayExtra"->Set())) 
+             val res = 
+             argTVsToMap(argVal, "getByteArrayExtra")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getByteArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getByteExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getByteExtra"->Set())) 
+            val res = 
+             argTVsToMap(argVal, "getByteExtra")
+            Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getByteExtra"->Set())) 
          }
          
          case "android/content/Intent/getCharArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getCharArrayExtra"->Set())) 
+         val res = 
+             argTVsToMap(argVal, "getCharArrayExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getCharArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getCharExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getCharExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getCharArrayExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getCharExtra"->Set())) 
          }
          
          case "android/content/Intent/getCharSequenceArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getCharSequenceArrayExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getCharSequenceArrayExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getCharSequenceArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getCharSequenceArrayListExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getCharSequenceArrayListExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getCharSequenceArrayListExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+         //  Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getCharSequenceArrayListExtra"->Set())) 
          }
           case "android/content/Intent/getCharSequenceExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getCharSequenceExtra"->Set())) 
+            val res = 
+             argTVsToMap(argVal, "getCharSequenceExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getCharSequenceExtra"->Set())) 
          }
             case "android/content/Intent/getDoubleArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getDoubleArrayExtra"->Set())) 
+              val res = 
+             argTVsToMap(argVal, "getDoubleArrayExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getDoubleArrayExtra"->Set())) 
          }
              case "android/content/Intent/getIntArrayListExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getIntArrayListExtra"->Set())) 
+               val res = 
+             argTVsToMap(argVal, "getIntArrayListExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+           //Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getIntArrayListExtra"->Set())) 
          }
               
          case "android/content/Intent/getDoubleExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getDoubleExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getDoubleExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getDoubleExtra"->Set())) 
          }
          
           case "android/content/Intent/getIntExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getIntExtra"->Set())) 
+            val res = 
+             argTVsToMap(argVal, "getIntExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getIntExtra"->Set())) 
          }
           
         
            case "android/content/Intent/getFloatArrayExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getFloatArrayExtra"->Set())) 
+             val res = 
+             argTVsToMap(argVal, "getFloatArrayExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+         //  Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getFloatArrayExtra"->Set())) 
          }
          
          case "android/content/Intent/getFloatExtra" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getFloatExtra"->Set())) 
+           val res = 
+             argTVsToMap(argVal, "getFloatExtra")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+         //  Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getFloatExtra"->Set())) 
          }
          case "android/content/Intent/getPackage" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getPackage"->Set()))
+           val res = 
+             argTVsToMap(argVal, "getPackage")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+         //  Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getPackage"->Set()))
            
          }
          case "android/content/Intent/getData" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getData"->Set()))
+           val res = 
+             argTVsToMap(argVal, "getData")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+          // Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getData"->Set()))
          }
          
          case "android/content/Intent/getType" => {
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath) -> Map("getType"->Set()))
+           val res = 
+             argTVsToMap(argVal, "getType")
+             Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> res)
+        //   Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += ((clsPath, enclosingMethPath, stmt) -> Map("getType"->Set()))
          }
          
          //for getExtras, getBundleExtra usually don't use the several APIs?
@@ -171,12 +240,12 @@ object ForIntentFuzzerUtil {
       "android/os/Bundle/getStringArray" | 
       "android/os/Bundle/getStringArrayList"
       => {
-    	  var extraKeyValueTypeMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.getOrElse((clsPath, enclosingMethPath), Map("getExtras" -> Set()))
+    	  var extraKeyValueTypeMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.getOrElse((clsPath, enclosingMethPath, stmt), Map("getExtras" -> Set()))
     	  var keyVaues = extraKeyValueTypeMap.getOrElse("getExtras", Set.empty[IntentExtraKeyTypeAndValue]).asInstanceOf[Set[IntentExtraKeyTypeAndValue]]
     	  val extraKeyValueTypeMap2 = Map("getExtras" -> (keyVaues + new IntentExtraKeyTypeAndValue(mp, argVal.toString)))
     	  //=  keyVaues + new IntentExtraKeyValueAndType(mp, argVal.toString)
     	  Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap += 
-    	    ((clsPath, enclosingMethPath) -> extraKeyValueTypeMap2)
+    	    ((clsPath, enclosingMethPath, stmt) -> extraKeyValueTypeMap2)
        }
       
          case _ => {

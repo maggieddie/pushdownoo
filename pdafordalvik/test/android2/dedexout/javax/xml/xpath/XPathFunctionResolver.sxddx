@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) javax/xml/xpath/XPathFunctionResolver
- (super java/lang/Object)
- (source "XPathFunctionResolver.java")
-
-
-(method (attrs public abstract ) resolveFunction([object javax/xml/namespace/QName] int )[object javax/xml/xpath/XPathFunction]
-)
-
-)

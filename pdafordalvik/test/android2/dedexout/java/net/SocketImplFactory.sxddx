@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/net/SocketImplFactory
- (super java/lang/Object)
- (source "SocketImplFactory.java")
-
-
-(method (attrs public abstract ) createSocketImpl()[object java/net/SocketImpl]
-)
-
-)

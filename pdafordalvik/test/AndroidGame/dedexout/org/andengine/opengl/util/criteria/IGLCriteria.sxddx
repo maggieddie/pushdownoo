@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/andengine/opengl/util/criteria/IGLCriteria
- (super java/lang/Object)
- (source "IGLCriteria.java")
-
-
-(method (attrs public abstract ) isMet([object org/andengine/opengl/util/GLState] )boolean
-)
-
-)

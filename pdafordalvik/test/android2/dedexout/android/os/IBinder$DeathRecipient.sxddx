@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/os/IBinder$DeathRecipient
- (super java/lang/Object)
- (source "IBinder.java")
-
-
-(method (attrs public abstract ) binderDied()void
-)
-
-)

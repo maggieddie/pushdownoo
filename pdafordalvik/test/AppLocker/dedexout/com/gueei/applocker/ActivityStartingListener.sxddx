@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/gueei/applocker/ActivityStartingListener
- (super java/lang/Object)
- (source "ActivityStartingListener.java")
-
-
-(method (attrs public abstract ) onActivityStarting([object java/lang/String] [object java/lang/String] )void
-)
-
-)

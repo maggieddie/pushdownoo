@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@drawable/book_bgrnd" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:gravity="left" android:id="@id/splashtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="5.0dip" android:text="@string/app_name" style="@style/titlegold" />
-    <ImageView android:gravity="left" android:id="@id/splashlogo" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/books200" android:layout_below="@id/splashtitle" />
-    <TextView android:gravity="bottom|right|center" android:id="@id/splashtap" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/msgTapToBegin" android:layout_toRightOf="@id/splashlogo" style="@style/whitebold" />
-</RelativeLayout>

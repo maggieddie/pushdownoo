@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/security/interfaces/RSAKey
- (super java/lang/Object)
- (source "RSAKey.java")
-
-
-(method (attrs public abstract ) getModulus()[object java/math/BigInteger]
-)
-
-)

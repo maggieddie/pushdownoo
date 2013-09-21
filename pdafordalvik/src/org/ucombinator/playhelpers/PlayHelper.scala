@@ -406,8 +406,8 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
     constrParams = constrParams ::: List(apkPath)
 
     val res = constrParams.toArray
-    println("the result is !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>>>>>>>>>>>>>>>>>>>>>>>>: ")
-    constrParams.foreach(println)
+   // println("the result is !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>>>>>>>>>>>>>>>>>>>>>>>>: ")
+   // constrParams.foreach(println)
     res
     
   }

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:layout_gravity="center_vertical" android:id="@id/jewel_button_image" android:background="@android:color/transparent" android:layout_width="50.0dip" android:layout_height="wrap_content" android:scaleType="centerInside" />
-    <TextView android:textSize="12.0sp" android:textColor="@drawable/solid_white" android:id="@id/jewel_button_count" android:background="@drawable/mondobar_jewel_badge" android:paddingLeft="2.0dip" android:paddingTop="0.0dip" android:paddingRight="2.0dip" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:layout_alignTop="@id/jewel_button_image" android:layout_alignRight="@id/jewel_button_image" />
-</merge>

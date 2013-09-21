@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/andengine/engine/handler/collision/ICollisionCallback
- (super java/lang/Object)
- (source "ICollisionCallback.java")
-
-
-(method (attrs public abstract ) onCollision([object org/andengine/entity/shape/IShape] [object org/andengine/entity/shape/IShape] )boolean
-)
-
-)

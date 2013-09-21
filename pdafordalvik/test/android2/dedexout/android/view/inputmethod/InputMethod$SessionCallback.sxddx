@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/inputmethod/InputMethod$SessionCallback
- (super java/lang/Object)
- (source "InputMethod.java")
-
-
-(method (attrs public abstract ) sessionCreated([object android/view/inputmethod/InputMethodSession] )void
-)
-
-)

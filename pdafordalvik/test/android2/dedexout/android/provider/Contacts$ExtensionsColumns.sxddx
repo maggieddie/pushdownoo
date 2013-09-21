@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) android/provider/Contacts$ExtensionsColumns
- (super java/lang/Object)
- (source "Contacts.java")
-
- (field (attrs public static final ) NAME [object java/lang/String] "name" )
- (field (attrs public static final ) VALUE [object java/lang/String] "value" )
-
-)

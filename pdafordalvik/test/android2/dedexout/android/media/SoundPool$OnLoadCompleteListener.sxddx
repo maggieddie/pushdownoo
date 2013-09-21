@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/SoundPool$OnLoadCompleteListener
- (super java/lang/Object)
- (source "SoundPool.java")
-
-
-(method (attrs public abstract ) onLoadComplete([object android/media/SoundPool] int int )void
-)
-
-)

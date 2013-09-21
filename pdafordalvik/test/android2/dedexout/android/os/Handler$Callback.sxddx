@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/os/Handler$Callback
- (super java/lang/Object)
- (source "Handler.java")
-
-
-(method (attrs public abstract ) handleMessage([object android/os/Message] )boolean
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/audiofx/Virtualizer$OnParameterChangeListener
- (super java/lang/Object)
- (source "Virtualizer.java")
-
-
-(method (attrs public abstract ) onParameterChange([object android/media/audiofx/Virtualizer] int int short )void
-)
-
-)

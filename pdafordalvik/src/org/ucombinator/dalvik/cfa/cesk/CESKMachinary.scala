@@ -378,6 +378,49 @@ trait CESKMachinary extends StateSpace {// with DalvikVMRelated {
      }
    }
    
+   def getTypeAndValForArgs(tyStrs: List[String], argVals: List[D], store:Store) : Set[(String, Set[String])] = {
+     println("args: ", tyStrs)
+     val argValsList = argVals.map((argVald) => argVald.toList.toSet)
+     val typeVals = tyStrs.zip(argValsList)
+     typeVals.foldLeft(Set[(String, Set[String])]())((res, vs) => {
+       
+      val innerRes = 
+       vs._2.foldLeft(Set[(String, Set[String])]())((res2, v) => {
+       v match {
+      
+        case av =>{
+         av match{
+           case ObjectValue(op, clsName) => {
+             if(clsName == "java/lang/String"){
+               val stringAddr = op.offset("value")
+               val resStrLits = storeLookup(store, stringAddr)
+               val resStrLits2  = resStrLits.toSet.filter((resStr) =>{
+                 resStr match{
+                   case StringLit(str) =>  true
+                   case _=>  false
+                 }
+               })
+               val resStrss =resStrLits2.map(_.asInstanceOf[StringLit]).map((strlit) => strlit.str)
+              res2 ++ Set(( vs._1, resStrss))
+             }else res
+           }
+           case TrueValue() => {Set(("bool", Set("true"))) ++ res2}
+           case FalseValue() => {  res2 ++ Set(("bool", Set("false")))}
+           case BoolTop => {Set(("bool", Set("top"))) ++ res2}
+           
+           case NumLit(bi) => Set((vs._1, Set(bi.toString))) ++ res2
+           case NumTop => Set((vs._1, Set("Numeric Top"))) ++ res2
+           case _ => {res2}
+         }    }
+        
+      //  case _ => {throw new Exception("@getTypeAndValsForArgs: not a pair")}
+       }
+     })
+     
+     innerRes ++ res
+     })
+   }
+   
     def getPossibleStrings(vals : D, store: Store) : Set[String] = {
        vals.toSet.foldLeft(Set[String]())((res, v) => {
          v match{

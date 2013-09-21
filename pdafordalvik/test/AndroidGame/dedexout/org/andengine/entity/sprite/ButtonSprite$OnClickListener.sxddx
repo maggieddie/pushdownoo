@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/andengine/entity/sprite/ButtonSprite$OnClickListener
- (super java/lang/Object)
- (source "ButtonSprite.java")
-
-
-(method (attrs public abstract ) onClick([object org/andengine/entity/sprite/ButtonSprite] float float )void
-)
-
-)

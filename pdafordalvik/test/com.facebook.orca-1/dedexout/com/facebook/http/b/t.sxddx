@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/http/b/t
- (super java/lang/Object)
- (source "FbHttpClientObserver.java")
-
-
-(method (attrs public abstract ) a([object org/apache/http/protocol/HttpRequestInterceptorList] [object org/apache/http/protocol/HttpResponseInterceptorList] )void
-)
-
-)

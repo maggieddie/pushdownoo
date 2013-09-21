@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/FilterQueryProvider
- (super java/lang/Object)
- (source "FilterQueryProvider.java")
-
-
-(method (attrs public abstract ) runQuery([object java/lang/CharSequence] )[object android/database/Cursor]
-)
-
-)

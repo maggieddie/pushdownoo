@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/solid_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.facebook.katana.view.SquareImageView android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.facebook.widget.PhotoToggleButton android:id="@id/check_icon" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" app:uncheckedImage="@drawable/icon_checkmark_small_normal" app:checkedImage="@drawable/icon_checkmark_small_highlight" />
-    <ImageView android:id="@id/video_play_icon" android:background="@drawable/picker_play_video" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
-</RelativeLayout>

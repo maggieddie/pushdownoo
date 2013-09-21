@@ -62,7 +62,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       k:Kont,
       stForEqual: StForEqual) : Set[Conf] ={
     
-  //  println("st:", ivkS)
+    println("st:", ivkS)
    
         val possibleValues = atomEval(objAexp, fp, s)
         val objVals = filterObjValues(possibleValues,s)
@@ -80,15 +80,16 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
          
          if(argVals.length > 0) {
            val objVal = argVals.head
-           val strKeys = getPossibleStrings(objVal, s)
+          val strKeys = getPossibleStrings(objVal, s)
            //println("....argVal; ", argVals.head)
-            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, strKeys)
+          val argTypeVals = getTypeAndValForArgs(tyStrs.tail, argVals,s)
+            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, ivkS, argTypeVals)
          }
          
          else{
            // empty domain
-          // println("....empty val")
-            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, Set[String]())
+           println("....empty val", ivkS)
+            ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, ivkS, Set[(String, Set[String])]())
          }
         
        }
@@ -129,10 +130,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
            
               resolvedMethds match {
                 case Nil => {
-                  // Continue -- fake successors
-                   if(methPath == "android/view/MenuItem/getItemId" && invokeType == "interface"){
-                     println("invoke-interface's next is" + realN)
-                   }
+                  // Continue -- fake successors 
                   stateSet + ((PartialState(buildStForEqual(realN), fp, s, pst, kptr, tp), k))
                 }
                 case hd :: tl => {
@@ -257,8 +255,16 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
         	   Set(newState)
         }
         
-        case None => Set((PartialState(buildStForEqual(theNext ), newFP, newStore,  newPStore, 
+        case None => { //static methods invocation!!!
+           if( Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural)   {
+             Set((PartialState(buildStForEqual(callerNxtSt ), fp, newStore,  newPStore, 
+            kptr, tp),   k))
+           }else{
+             Set((PartialState(buildStForEqual(theNext ), newFP, newStore,  newPStore, 
             kptr, tp), funk :: k))
+           }
+          
+        }
       }
 
     } else { // if it is entry apply,  no need to propagate the security property
@@ -330,8 +336,8 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
           Set(newState)
         }
       case "check-cast" => {
-      //  println("checkCast!!!", stForEqual)
-       // println("checkCAstNExt: ", nxt)
+       // println("checkCast!!!", stForEqual)
+        //println("checkCAstNExt: ", nxt)
         if (aExps.length == 1) {
           aExps.head match {
             case se @ RegisterExp(_) => {

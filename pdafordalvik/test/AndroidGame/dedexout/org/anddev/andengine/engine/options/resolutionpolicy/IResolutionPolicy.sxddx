@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/engine/options/resolutionpolicy/IResolutionPolicy
- (super java/lang/Object)
- (source "IResolutionPolicy.java")
-
-
-(method (attrs public abstract ) onMeasure([object org/anddev/andengine/opengl/view/RenderSurfaceView] int int )void
-)
-
-)

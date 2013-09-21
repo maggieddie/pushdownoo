@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/sax/StartElementListener
- (super java/lang/Object)
- (source "StartElementListener.java")
-
-
-(method (attrs public abstract ) start([object org/xml/sax/Attributes] )void
-)
-
-)

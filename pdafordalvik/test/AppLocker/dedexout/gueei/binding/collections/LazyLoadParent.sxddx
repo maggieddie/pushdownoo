@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) gueei/binding/collections/LazyLoadParent
- (super java/lang/Object)
- (source "LazyLoadParent.java")
-
-
-(method (attrs public abstract ) onLoadChildren([object android/content/Context] )void
-)
-
-)

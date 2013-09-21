@@ -79,6 +79,7 @@ object RunAnalysis {
     --interrupt-after n    			interrupts the analysis after n states computed (default = off)
     --interrupt-after-time n(min) 	interrupts the analysis after n minutes (default = off)
     --for-intent-fuzzer				specialized static analysis for intent fuzzer
+    --intraprocedural				intra-procedrual analysis, fast, imprecise, may suffice in some cases, such as fuzzer
     --help                 			print this message
     --verbose              			print additional information on the analysis and results
     filePath               			path to an IR folder to be analysed

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@android:color/transparent" android:paddingTop="@dimen/bookmark_padding_top" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/one_px"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/bookmark_item_label" android:paddingBottom="5.0dip" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_alignParentLeft="true" style="@style/bookmark_divider_text" />
-    <View android:background="@color/bookmark_divider_thin" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentBottom="true" />
-</RelativeLayout>

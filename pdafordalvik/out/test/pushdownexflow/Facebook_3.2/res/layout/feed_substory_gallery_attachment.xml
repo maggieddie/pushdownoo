@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge android:id="@id/feed_substory_gallery_attachment_view" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.feed.ui.attachments.StoryAttachmentsSection android:orientation="vertical" android:id="@id/feed_substory_attachments" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/feed_story_attachment_padding" />
-    <View android:id="@id/feed_substory_gallery_attachment_bling_bar_placeholder_view" android:layout_width="fill_parent" android:layout_height="@dimen/feed_bling_bar_height" />
-    <View android:id="@id/feed_substory_gallery_attachment_bling_bar_divider" android:background="@color/feed_story_attachment_feedback_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_attachment_border_width" android:layout_marginLeft="@dimen/feed_story_attachment_padding" android:layout_marginRight="@dimen/feed_story_attachment_padding" />
-    <com.facebook.feed.ui.footer.AttachmentFeedbackView android:orientation="vertical" android:id="@id/feed_substory_gallery_attachment_feedback_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</merge>

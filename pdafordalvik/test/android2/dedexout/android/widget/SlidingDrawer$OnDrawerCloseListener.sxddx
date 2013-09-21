@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/SlidingDrawer$OnDrawerCloseListener
- (super java/lang/Object)
- (source "SlidingDrawer.java")
-
-
-(method (attrs public abstract ) onDrawerClosed()void
-)
-
-)

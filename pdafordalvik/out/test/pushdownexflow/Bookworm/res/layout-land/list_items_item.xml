@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/list_items_item_image" android:background="@drawable/border1" android:layout_width="54.0dip" android:layout_height="70.0dip" android:layout_marginRight="10.0dip" android:minWidth="54.0dip" android:minHeight="70.0dip" />
-    <TextView android:ellipsize="end" android:id="@id/list_items_item_text1" android:layout_width="340.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_toRightOf="@id/list_items_item_image" style="@style/whitemed" />
-    <TextView android:ellipsize="end" android:id="@id/list_items_item_text2" android:layout_width="340.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_toRightOf="@id/list_items_item_image" android:layout_below="@id/list_items_item_text1" style="@style/greytiny" />
-    <CheckBox android:enabled="false" android:gravity="right" android:id="@id/list_items_item_read_status" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="3.0dip" android:layout_toRightOf="@id/list_items_item_text2" />
-    <ImageView android:gravity="right" android:id="@id/list_items_item_rating_image" android:layout_width="50.0dip" android:layout_height="8.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" android:layout_toRightOf="@id/list_items_item_text2" android:layout_below="@id/list_items_item_read_status" />
-</RelativeLayout>

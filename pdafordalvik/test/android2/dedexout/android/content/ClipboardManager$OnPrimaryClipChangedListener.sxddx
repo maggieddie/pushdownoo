@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/content/ClipboardManager$OnPrimaryClipChangedListener
- (super java/lang/Object)
- (source "ClipboardManager.java")
-
-
-(method (attrs public abstract ) onPrimaryClipChanged()void
-)
-
-)

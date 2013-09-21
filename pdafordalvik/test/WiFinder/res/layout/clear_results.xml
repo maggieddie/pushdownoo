@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="@color/WiFinderOrange" android:id="@id/clear_label" android:layout_width="300.0dip" android:layout_height="fill_parent" android:text="@string/clear_confirm_label" />
-    <Button android:id="@id/backbutton" android:background="@drawable/ic_launcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/scan_again" />
-</LinearLayout>

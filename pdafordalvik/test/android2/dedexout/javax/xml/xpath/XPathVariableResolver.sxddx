@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) javax/xml/xpath/XPathVariableResolver
- (super java/lang/Object)
- (source "XPathVariableResolver.java")
-
-
-(method (attrs public abstract ) resolveVariable([object javax/xml/namespace/QName] )[object java/lang/Object]
-)
-
-)

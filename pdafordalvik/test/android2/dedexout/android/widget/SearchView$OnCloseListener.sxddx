@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/SearchView$OnCloseListener
- (super java/lang/Object)
- (source "SearchView.java")
-
-
-(method (attrs public abstract ) onClose()boolean
-)
-
-)

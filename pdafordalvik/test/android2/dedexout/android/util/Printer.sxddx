@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/util/Printer
- (super java/lang/Object)
- (source "Printer.java")
-
-
-(method (attrs public abstract ) println([object java/lang/String] )void
-)
-
-)

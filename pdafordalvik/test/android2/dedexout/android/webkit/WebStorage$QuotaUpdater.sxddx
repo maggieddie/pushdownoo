@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/webkit/WebStorage$QuotaUpdater
- (super java/lang/Object)
- (source "WebStorage.java")
-
-
-(method (attrs public abstract ) updateQuota(long )void
-)
-
-)

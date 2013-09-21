@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/View$OnKeyListener
- (super java/lang/Object)
- (source "View.java")
-
-
-(method (attrs public abstract ) onKey([object android/view/View] int [object android/view/KeyEvent] )boolean
-)
-
-)

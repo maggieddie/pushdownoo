@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/webkit/WebChromeClient$CustomViewCallback
- (super java/lang/Object)
- (source "WebChromeClient.java")
-
-
-(method (attrs public abstract ) onCustomViewHidden()void
-)
-
-)

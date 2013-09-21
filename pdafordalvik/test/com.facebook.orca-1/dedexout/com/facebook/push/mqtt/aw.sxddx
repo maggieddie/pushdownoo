@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/push/mqtt/aw
- (super java/lang/Object)
- (source "MqttPushHandler.java")
-
-
-(method (attrs public abstract ) a([object java/lang/String] [array byte] )void
-)
-
-)

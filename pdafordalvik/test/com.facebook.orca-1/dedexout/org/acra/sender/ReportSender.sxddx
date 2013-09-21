@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/acra/sender/ReportSender
- (super java/lang/Object)
- (source "ReportSender.java")
-
-
-(method (attrs public abstract ) send([object org/acra/CrashReportData] )void
-)
-
-)

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/section_title_container" android:background="@color/collections_frame" android:paddingLeft="@dimen/collection_frame_horizontal_padding" android:paddingTop="@dimen/collection_section_header_vertical_padding_when_divider" android:paddingBottom="@dimen/collection_section_header_vertical_padding_when_divider" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.widget.UrlImage android:layout_gravity="center_vertical" android:id="@id/section_title_icon" android:layout_width="@dimen/collections_section_header_icon_size" android:layout_height="@dimen/collections_section_header_icon_size" android:layout_marginRight="5.0dip" />
-    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/section_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/collection_frame_horizontal_padding" />
-</LinearLayout>

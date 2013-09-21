@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/content/DialogInterface$OnCancelListener
- (super java/lang/Object)
- (source "DialogInterface.java")
-
-
-(method (attrs public abstract ) onCancel([object android/content/DialogInterface] )void
-)
-
-)

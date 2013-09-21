@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.facebook.dash.ui.BaubleCenterButton android:id="@id/bauble_center_button" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_marginBottom="-10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
-    <com.facebook.widget.MaskedFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" orca:mask="@drawable/bauble_mask">
-        <com.facebook.widget.UrlImage android:layout_gravity="center" android:id="@id/bauble_profile_image_view" android:layout_width="70.0dip" android:layout_height="70.0dip" scaleType="centerCrop" />
-    </com.facebook.widget.MaskedFrameLayout>
-    <ImageView android:layout_gravity="center" android:id="@id/bauble_style" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bauble_style" />
-    <ImageView android:layout_gravity="center" android:id="@id/bauble_style_active" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bauble_shadow_grown" android:alpha="0.0" />
-</com.facebook.dash.ui.BaubleCenterButton>

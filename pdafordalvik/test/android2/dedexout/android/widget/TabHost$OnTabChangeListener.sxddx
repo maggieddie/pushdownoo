@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/TabHost$OnTabChangeListener
- (super java/lang/Object)
- (source "TabHost.java")
-
-
-(method (attrs public abstract ) onTabChanged([object java/lang/String] )void
-)
-
-)

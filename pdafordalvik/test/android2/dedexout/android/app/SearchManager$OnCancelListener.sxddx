@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/app/SearchManager$OnCancelListener
- (super java/lang/Object)
- (source "SearchManager.java")
-
-
-(method (attrs public abstract ) onCancel()void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/Chronometer$OnChronometerTickListener
- (super java/lang/Object)
- (source "Chronometer.java")
-
-
-(method (attrs public abstract ) onChronometerTick([object android/widget/Chronometer] )void
-)
-
-)

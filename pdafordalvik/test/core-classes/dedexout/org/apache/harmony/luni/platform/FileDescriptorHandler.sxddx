@@ -1,9 +1,0 @@
-(interface (attrs public abstract synchronized ) org/apache/harmony/luni/platform/FileDescriptorHandler
- (super java/lang/Object)
- (source "FileDescriptorHandler.java")
-
-
-(method (attrs public abstract ) getFD()[object java/io/FileDescriptor]
-)
-
-)

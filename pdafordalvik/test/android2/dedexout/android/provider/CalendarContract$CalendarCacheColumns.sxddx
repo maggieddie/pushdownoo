@@ -1,8 +1,0 @@
-(interface (attrs public abstract ) android/provider/CalendarContract$CalendarCacheColumns
- (super java/lang/Object)
- (source "CalendarContract.java")
-
- (field (attrs public static final ) KEY [object java/lang/String] "key" )
- (field (attrs public static final ) VALUE [object java/lang/String] "value" )
-
-)

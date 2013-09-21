@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/util/logging/Filter
- (super java/lang/Object)
- (source "Filter.java")
-
-
-(method (attrs public abstract ) isLoggable([object java/util/logging/LogRecord] )boolean
-)
-
-)

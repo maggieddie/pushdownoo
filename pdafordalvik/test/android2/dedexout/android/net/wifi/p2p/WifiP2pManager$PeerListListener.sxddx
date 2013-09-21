@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/net/wifi/p2p/WifiP2pManager$PeerListListener
- (super java/lang/Object)
- (source "WifiP2pManager.java")
-
-
-(method (attrs public abstract ) onPeersAvailable([object android/net/wifi/p2p/WifiP2pDeviceList] )void
-)
-
-)

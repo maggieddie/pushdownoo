@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditTextPreference android:name="SIP Username" android:title="Enter Username" android:key="name_pref" android:summary="Username for your SIP Account" android:defaultValue="" />
-    <EditTextPreference android:name="SIP Domain" android:hint="Hint: domainname.TLD" android:title="Enter Domain" android:key="domain_pref" android:summary="Domain for your SIP Account" android:defaultValue="" />
-    <EditTextPreference android:name="Outbound proxy" android:hint="Hint: proxy.domain.TLD" android:title="Enter Outbound domain" android:key="outbound_pref" android:summary="Domain for the outbound proxy" android:defaultValue="" />
-    <EditTextPreference android:name="SIP Password" android:password="true" android:title="Enter Password" android:key="pass_pref" android:summary="Password for your SIP Account" android:defaultValue="" />
-</PreferenceScreen>

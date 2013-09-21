@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/net/DatagramSocketImplFactory
- (super java/lang/Object)
- (source "DatagramSocketImplFactory.java")
-
-
-(method (attrs public abstract ) createDatagramSocketImpl()[object java/net/DatagramSocketImpl]
-)
-
-)

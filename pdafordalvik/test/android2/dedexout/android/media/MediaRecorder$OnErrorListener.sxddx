@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/MediaRecorder$OnErrorListener
- (super java/lang/Object)
- (source "MediaRecorder.java")
-
-
-(method (attrs public abstract ) onError([object android/media/MediaRecorder] int int )void
-)
-
-)

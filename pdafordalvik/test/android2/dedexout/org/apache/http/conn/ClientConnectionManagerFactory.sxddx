@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/apache/http/conn/ClientConnectionManagerFactory
- (super java/lang/Object)
- (source "ClientConnectionManagerFactory.java")
-
-
-(method (attrs public abstract ) newInstance([object org/apache/http/params/HttpParams] [object org/apache/http/conn/scheme/SchemeRegistry] )[object org/apache/http/conn/ClientConnectionManager]
-)
-
-)

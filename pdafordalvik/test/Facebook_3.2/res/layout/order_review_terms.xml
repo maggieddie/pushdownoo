@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/order_review_terms_text_size" android:textColor="@color/order_review_terms_apply_link_text_color" android:id="@id/text_terms_apply_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_terms_apply_link" android:singleLine="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
-    <TextView android:textSize="@dimen/order_review_terms_text_size" android:textColor="@color/order_review_terms_text_color" android:id="@id/text_terms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_review_terms" android:layout_toLeftOf="@id/text_terms_apply_link" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
-    <TextView android:textSize="@dimen/order_review_terms_text_size" android:textColor="@color/order_review_terms_text_color" android:id="@id/text_terms_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_padding_and_a_half" android:layout_below="@id/text_terms" android:layout_alignParentLeft="true" />
-</RelativeLayout>

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/text/util/Linkify$TransformFilter
- (super java/lang/Object)
- (source "Linkify.java")
-
-
-(method (attrs public abstract ) transformUrl([object java/util/regex/Matcher] [object java/lang/String] )[object java/lang/String]
-)
-
-)

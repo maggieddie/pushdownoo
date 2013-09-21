@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/util/concurrent/Executor
- (super java/lang/Object)
- (source "Executor.java")
-
-
-(method (attrs public abstract ) execute([object java/lang/Runnable] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract synchronized ) SQLite/BusyHandler
- (super java/lang/Object)
- (source "BusyHandler.java")
-
-
-(method (attrs public abstract ) busy([object java/lang/String] int )boolean
-)
-
-)

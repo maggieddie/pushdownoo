@@ -1,9 +1,0 @@
-(interface (attrs public abstract synchronized ) javax/net/ssl/HostnameVerifier
- (super java/lang/Object)
- (source "HostnameVerifier.java")
-
-
-(method (attrs public abstract ) verify([object java/lang/String] [object javax/net/ssl/SSLSession] )boolean
-)
-
-)

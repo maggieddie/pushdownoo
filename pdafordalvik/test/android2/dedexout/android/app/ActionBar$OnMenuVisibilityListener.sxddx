@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/app/ActionBar$OnMenuVisibilityListener
- (super java/lang/Object)
- (source "ActionBar.java")
-
-
-(method (attrs public abstract ) onMenuVisibilityChanged(boolean )void
-)
-
-)

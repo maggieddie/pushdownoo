@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/page_identity_card_clickable_unit_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.widget.UrlImage android:id="@id/page_identity_friend_image" android:padding="4.0dip" android:layout_width="@dimen/page_identity_user_pic_size" android:layout_height="@dimen/page_identity_user_pic_size" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
-    <TextView android:textSize="16.0sp" android:typeface="sans" android:textStyle="bold" android:id="@id/page_identity_friend_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/page_identity_friend_image" android:layout_centerVertical="true" />
-</RelativeLayout>

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/text/InputFilter
- (super java/lang/Object)
- (source "InputFilter.java")
-
-
-(method (attrs public abstract ) filter([object java/lang/CharSequence] int int [object android/text/Spanned] int int )[object java/lang/CharSequence]
-)
-
-)

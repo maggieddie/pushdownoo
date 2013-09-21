@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/MediaPlayer$OnVideoSizeChangedListener
- (super java/lang/Object)
- (source "MediaPlayer.java")
-
-
-(method (attrs public abstract ) onVideoSizeChanged([object android/media/MediaPlayer] int int )void
-)
-
-)

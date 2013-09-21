@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/view/ViewStub$OnInflateListener
- (super java/lang/Object)
- (source "ViewStub.java")
-
-
-(method (attrs public abstract ) onInflate([object android/view/ViewStub] [object android/view/View] )void
-)
-
-)

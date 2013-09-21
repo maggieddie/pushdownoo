@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/acra/util/HttpConnectionProvider
- (super java/lang/Object)
- (source "HttpConnectionProvider.java")
-
-
-(method (attrs public abstract ) getConnection([object java/net/URL] )[object java/net/HttpURLConnection]
-)
-
-)

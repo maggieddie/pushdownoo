@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/AbsListView$SelectionBoundsAdjuster
- (super java/lang/Object)
- (source "AbsListView.java")
-
-
-(method (attrs public abstract ) adjustListItemSelectionBounds([object android/graphics/Rect] )void
-)
-
-)

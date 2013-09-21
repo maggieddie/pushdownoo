@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/Filter$FilterListener
- (super java/lang/Object)
- (source "Filter.java")
-
-
-(method (attrs public abstract ) onFilterComplete(int )void
-)
-
-)

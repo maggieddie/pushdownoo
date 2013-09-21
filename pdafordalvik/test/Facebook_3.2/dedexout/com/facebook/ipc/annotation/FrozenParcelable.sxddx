@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/ipc/annotation/FrozenParcelable
- (super java/lang/Object)
- (source "FrozenParcelable.java")
-
-
-(method (attrs public abstract ) a([object android/os/Parcel] int )void
-)
-
-)

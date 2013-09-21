@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/effect/EffectUpdateListener
- (super java/lang/Object)
- (source "EffectUpdateListener.java")
-
-
-(method (attrs public abstract ) onEffectUpdated([object android/media/effect/Effect] [object java/lang/Object] )void
-)
-
-)

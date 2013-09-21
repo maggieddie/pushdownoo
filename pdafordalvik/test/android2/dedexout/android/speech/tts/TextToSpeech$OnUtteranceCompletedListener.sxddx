@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/speech/tts/TextToSpeech$OnUtteranceCompletedListener
- (super java/lang/Object)
- (source "TextToSpeech.java")
-
-
-(method (attrs public abstract ) onUtteranceCompleted([object java/lang/String] )void
-)
-
-)

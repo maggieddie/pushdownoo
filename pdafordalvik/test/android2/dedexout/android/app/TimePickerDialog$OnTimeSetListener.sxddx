@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/app/TimePickerDialog$OnTimeSetListener
- (super java/lang/Object)
- (source "TimePickerDialog.java")
-
-
-(method (attrs public abstract ) onTimeSet([object android/widget/TimePicker] int int )void
-)
-
-)

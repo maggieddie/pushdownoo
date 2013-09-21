@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/hardware/Camera$ShutterCallback
- (super java/lang/Object)
- (source "Camera.java")
-
-
-(method (attrs public abstract ) onShutter()void
-)
-
-)

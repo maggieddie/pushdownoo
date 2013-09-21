@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/preference/PreferenceManager$OnActivityDestroyListener
- (super java/lang/Object)
- (source "PreferenceManager.java")
-
-
-(method (attrs public abstract ) onActivityDestroy()void
-)
-
-)

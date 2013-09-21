@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/activityRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="vertical" android:id="@id/mainlayout" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/sipLabel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-</FrameLayout>

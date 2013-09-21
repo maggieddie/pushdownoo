@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/widget/NumberPicker$OnValueChangeListener
- (super java/lang/Object)
- (source "NumberPicker.java")
-
-
-(method (attrs public abstract ) onValueChange([object android/widget/NumberPicker] int int )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs abstract ) android/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImpl
- (super java/lang/Object)
- (source "SlidingPaneLayout.java")
-
-
-(method (attrs public abstract ) invalidateChildRegion([object android/support/v4/widget/SlidingPaneLayout] [object android/view/View] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/nfc/NfcAdapter$CreateNdefMessageCallback
- (super java/lang/Object)
- (source "NfcAdapter.java")
-
-
-(method (attrs public abstract ) createNdefMessage([object android/nfc/NfcEvent] )[object android/nfc/NdefMessage]
-)
-
-)

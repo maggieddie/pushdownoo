@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
-    <com.facebook.widget.BetterListView android:id="@id/profile_list_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:cacheColorHint="@android:color/white" android:divider="@null" android:dividerHeight="0.0dip" />
-    <com.facebook.feed.ui.GenericErrorBanner android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" android:layout_alignParentTop="true" />
-</RelativeLayout>

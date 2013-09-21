@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/sensor/accelerometer/IAccelerometerListener
- (super java/lang/Object)
- (source "IAccelerometerListener.java")
-
-
-(method (attrs public abstract ) onAccelerometerChanged([object org/anddev/andengine/sensor/accelerometer/AccelerometerData] )void
-)
-
-)

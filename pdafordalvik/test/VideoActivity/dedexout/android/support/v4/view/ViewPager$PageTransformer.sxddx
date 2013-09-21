@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/support/v4/view/ViewPager$PageTransformer
- (super java/lang/Object)
- (source "ViewPager.java")
-
-
-(method (attrs public abstract ) transformPage([object android/view/View] float )void
-)
-
-)

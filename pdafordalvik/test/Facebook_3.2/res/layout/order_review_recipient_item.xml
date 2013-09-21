@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="@dimen/standard_padding" android:paddingBottom="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.widget.UrlImage android:id="@id/urlimage_recipient_avatar" android:layout_width="@dimen/order_review_gift_details_image_size" android:layout_height="@dimen/order_review_gift_details_image_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/standard_padding_and_a_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/urlimage_recipient_avatar" android:layout_centerVertical="true">
-        <TextView android:textSize="@dimen/order_review_cell_title_text_size" android:textColor="@color/order_review_cell_title_color" android:ellipsize="end" android:id="@id/text_recipient_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
-        <TextView android:textSize="@dimen/order_review_cell_subinfo_text_size" android:textColor="@color/order_review_cell_subinfo_color" android:id="@id/text_share_on_timeline" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    </LinearLayout>
-</RelativeLayout>

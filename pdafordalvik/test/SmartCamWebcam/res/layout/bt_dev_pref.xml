@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/btDevLbl" android:paddingLeft="5.0px" android:paddingTop="5.0px" android:paddingRight="5.0px" android:paddingBottom="5.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bt_dev_lbl" />
-    <EditText android:linksClickable="false" android:id="@id/btDevEditText" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cursorVisible="false" android:editable="false" android:drawableRight="@drawable/btsearch" android:drawablePadding="6.0px" android:soundEffectsEnabled="false" />
-    <TextView android:id="@id/btDevPressLbl" android:paddingLeft="5.0px" android:paddingTop="5.0px" android:paddingRight="5.0px" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bt_dev_press_lbl" />
-</LinearLayout>

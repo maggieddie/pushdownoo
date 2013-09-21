@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/apache/http/cookie/CookieSpecFactory
- (super java/lang/Object)
- (source "CookieSpecFactory.java")
-
-
-(method (attrs public abstract ) newInstance([object org/apache/http/params/HttpParams] )[object org/apache/http/cookie/CookieSpec]
-)
-
-)

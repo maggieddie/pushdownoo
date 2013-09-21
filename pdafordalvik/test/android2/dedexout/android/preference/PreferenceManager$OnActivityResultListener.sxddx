@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/preference/PreferenceManager$OnActivityResultListener
- (super java/lang/Object)
- (source "PreferenceManager.java")
-
-
-(method (attrs public abstract ) onActivityResult(int int [object android/content/Intent] )boolean
-)
-
-)

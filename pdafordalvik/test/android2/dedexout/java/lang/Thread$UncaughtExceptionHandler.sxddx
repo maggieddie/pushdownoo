@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/lang/Thread$UncaughtExceptionHandler
- (super java/lang/Object)
- (source "Thread.java")
-
-
-(method (attrs public abstract ) uncaughtException([object java/lang/Thread] [object java/lang/Throwable] )void
-)
-
-)

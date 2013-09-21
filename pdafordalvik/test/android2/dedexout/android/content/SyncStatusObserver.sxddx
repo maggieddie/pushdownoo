@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/content/SyncStatusObserver
- (super java/lang/Object)
- (source "SyncStatusObserver.java")
-
-
-(method (attrs public abstract ) onStatusChanged(int )void
-)
-
-)

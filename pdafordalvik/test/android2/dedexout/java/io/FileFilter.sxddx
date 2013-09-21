@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/io/FileFilter
- (super java/lang/Object)
- (source "FileFilter.java")
-
-
-(method (attrs public abstract ) accept([object java/io/File] )boolean
-)
-
-)

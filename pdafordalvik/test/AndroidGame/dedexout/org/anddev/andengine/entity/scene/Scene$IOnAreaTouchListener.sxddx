@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) org/anddev/andengine/entity/scene/Scene$IOnAreaTouchListener
- (super java/lang/Object)
- (source "Scene.java")
-
-
-(method (attrs public abstract ) onAreaTouched([object org/anddev/andengine/input/touch/TouchEvent] [object org/anddev/andengine/entity/scene/Scene$ITouchArea] float float )boolean
-)
-
-)

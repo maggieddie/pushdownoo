@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/animation/ValueAnimator$AnimatorUpdateListener
- (super java/lang/Object)
- (source "ValueAnimator.java")
-
-
-(method (attrs public abstract ) onAnimationUpdate([object android/animation/ValueAnimator] )void
-)
-
-)

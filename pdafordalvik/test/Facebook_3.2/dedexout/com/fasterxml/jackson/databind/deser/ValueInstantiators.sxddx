@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/fasterxml/jackson/databind/deser/ValueInstantiators
- (super java/lang/Object)
- (source "ValueInstantiators.java")
-
-
-(method (attrs public abstract ) findValueInstantiator([object com/fasterxml/jackson/databind/DeserializationConfig] [object com/fasterxml/jackson/databind/BeanDescription] [object com/fasterxml/jackson/databind/deser/ValueInstantiator] )[object com/fasterxml/jackson/databind/deser/ValueInstantiator]
-)
-
-)

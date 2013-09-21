@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/preference/PreferenceManager$OnActivityStopListener
- (super java/lang/Object)
- (source "PreferenceManager.java")
-
-
-(method (attrs public abstract ) onActivityStop()void
-)
-
-)

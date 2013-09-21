@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/http/b/au
- (super java/lang/Object)
- (source "IFbHttpErrorReporter.java")
-
-
-(method (attrs public abstract ) a([object com/facebook/http/b/av] [object java/io/IOException] [object org/apache/http/HttpRequest] [object org/apache/http/protocol/HttpContext] )void
-)
-
-)

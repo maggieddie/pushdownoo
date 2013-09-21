@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/collection_outer_frame" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.timeline.collections.views.CollectionTitleBarView android:id="@id/collection_title_bar" android:background="@color/white" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/collections_collection_header_height" />
-    <View android:id="@id/list_collection_item_divider" android:background="@color/collections_frame" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-</LinearLayout>

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/audiofx/AudioEffect$OnControlStatusChangeListener
- (super java/lang/Object)
- (source "AudioEffect.java")
-
-
-(method (attrs public abstract ) onControlStatusChange([object android/media/audiofx/AudioEffect] boolean )void
-)
-
-)

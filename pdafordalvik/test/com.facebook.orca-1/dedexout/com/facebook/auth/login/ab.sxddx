@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) com/facebook/auth/login/ab
- (super java/lang/Object)
- (source "FirstPartySsoFragment.java")
-
-
-(method (attrs public abstract ) setSsoSessionInfo([object com/facebook/auth/credentials/b] )void
-)
-
-)

@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) java/security/interfaces/DSAKey
- (super java/lang/Object)
- (source "DSAKey.java")
-
-
-(method (attrs public abstract ) getParams()[object java/security/interfaces/DSAParams]
-)
-
-)

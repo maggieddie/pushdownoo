@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/media/MediaPlayer$OnInfoListener
- (super java/lang/Object)
- (source "MediaPlayer.java")
-
-
-(method (attrs public abstract ) onInfo([object android/media/MediaPlayer] int int )boolean
-)
-
-)
