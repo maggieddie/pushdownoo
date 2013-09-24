@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.twitter.android.widget.Navbar style="?attr/navbarStyle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/title" android:layout_toLeftOf="@id/title_button_2" style="@style/NavbarTitle" />
-    <ImageButton android:id="@id/title_button_2" android:src="@drawable/ic_title_search" android:layout_toLeftOf="@id/title_button_3" android:contentDescription="@string/button_search" style="@style/IconTitleBtn" />
-    <ImageButton android:id="@id/title_button_3" android:src="@drawable/ic_title_tweet" android:layout_alignParentRight="true" android:contentDescription="@string/button_new_tweet" style="@style/IconTitleBtn" />
-</com.twitter.android.widget.Navbar>

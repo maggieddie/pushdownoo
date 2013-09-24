@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/secondary_text" android:gravity="center" android:id="@id/refresh_text" android:paddingLeft="@dimen/standard_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="@string/refresh_pull_down" android:shadowColor="@color/solid_white" android:shadowDy="1.0" android:shadowRadius="0.5" />
-    <ProgressBar android:id="@id/refresh_loading" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="30.0dip" android:layout_alignParentLeft="true" style="?android:attr/progressBarStyleSmall" />
-    <ImageView android:id="@id/refresh_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="14.0dip" android:src="@drawable/ic_pull_arrow" android:scaleType="center" android:layout_alignParentLeft="true" />
-    <View android:id="@id/refresh_divider" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginTop="@dimen/standard_spacing" android:layout_alignParentBottom="true" />
-</merge>

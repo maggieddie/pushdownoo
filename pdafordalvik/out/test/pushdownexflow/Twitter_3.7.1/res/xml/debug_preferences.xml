@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Debug">
-        <com.twitter.android.widget.StagingUrlPreference android:title="Set staging server" android:positiveButtonText="Apply changes" />
-        <com.twitter.android.widget.LocalePreference android:title="Set locale" android:positiveButtonText="Apply changes" />
-    </PreferenceCategory>
-</PreferenceScreen>

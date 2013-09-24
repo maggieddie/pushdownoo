@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/tweet_stats" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/stat_divider" layout="@layout/divider" />
-    <LinearLayout android:layout_below="@id/stat_divider" style="@style/TweetStats.RTL">
-        <com.twitter.android.widget.TweetStatView android:id="@id/favorites_stat" style="@style/TweetFavStat.RTL" />
-        <com.twitter.android.widget.TweetStatView android:id="@id/retweets_stat" style="@style/TweetRetweetStat.RTL" />
-    </LinearLayout>
-</RelativeLayout>

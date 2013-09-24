@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/solid_white" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.twitter.android.widget.OverlayImageView android:layout_gravity="center_horizontal" android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
-    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/Story.Title" />
-    <TextView android:id="@id/author" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/MediaByline" />
-    <TextView android:id="@id/desc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MediaDescription" />
-    <include android:id="@id/site_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" layout="@layout/site_user" />
-</LinearLayout>

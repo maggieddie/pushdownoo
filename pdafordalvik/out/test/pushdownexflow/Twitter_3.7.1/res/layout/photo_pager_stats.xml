@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_below="@id/stat_divider" style="@style/TweetStats"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
-    <com.twitter.android.widget.TweetStatView android:id="@id/retweets_stat" twitter:valueTextColor="@color/list_item_secondary_text" style="@style/TweetRetweetStat" />
-    <com.twitter.android.widget.TweetStatView android:id="@id/favorites_stat" twitter:valueTextColor="@color/list_item_secondary_text" style="@style/TweetFavStat" />
-</LinearLayout>

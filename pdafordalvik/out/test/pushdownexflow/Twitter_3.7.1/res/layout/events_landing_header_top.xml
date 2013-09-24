@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/event_header_background" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/event_image" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="@dimen/event_header_image" android:layout_height="@dimen/event_header_image" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="@dimen/font_size_default" android:textColor="#ff333333" android:id="@id/event_text" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/event_image" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-</RelativeLayout>

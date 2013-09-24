@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/site_user_image" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="4.0dip" android:scaleType="centerInside" />
-    <TextView android:textStyle="bold" android:id="@id/site_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/site_user_image" style="@style/MediaByline" />
-    <TextView android:id="@id/site_user_screen_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_toRightOf="@id/site_user_name" android:layout_alignBaseline="@id/site_user_name" style="@style/MediaByline" />
-</RelativeLayout>
