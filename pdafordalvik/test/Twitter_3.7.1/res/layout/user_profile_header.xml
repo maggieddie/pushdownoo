@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/profile_indicators_margin_bottom">
-        <ImageView android:id="@id/left_pip" android:paddingLeft="@dimen/profile_indicators_outer_padding" android:paddingTop="@dimen/profile_indicators_padding_top" android:paddingRight="@dimen/profile_indicators_inner_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pip_on" />
-        <ImageView android:id="@id/right_pip" android:paddingLeft="@dimen/profile_indicators_inner_padding" android:paddingTop="@dimen/profile_indicators_padding_top" android:paddingRight="@dimen/profile_indicators_outer_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pip_off" />
-    </LinearLayout>
-</merge>

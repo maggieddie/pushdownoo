@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:background="@drawable/list_row_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" />
-        <TextView android:textSize="@dimen/font_size_small" android:textStyle="bold" android:textColor="@color/primary_text" android:gravity="center" android:id="@id/gap_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tap_to_load_tweets" android:layout_centerInParent="true" style="@style/InsetText" />
-        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleSmall" />
-    </RelativeLayout>
-</com.twitter.android.widget.CardRowView>

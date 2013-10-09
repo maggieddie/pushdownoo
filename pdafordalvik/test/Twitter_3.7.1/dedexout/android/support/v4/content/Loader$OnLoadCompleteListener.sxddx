@@ -1,9 +1,0 @@
-(interface (attrs public abstract ) android/support/v4/content/Loader$OnLoadCompleteListener
- (super java/lang/Object)
- (source "Twttr")
-
-
-(method (attrs public abstract ) onLoadComplete([object android/support/v4/content/Loader] [object java/lang/Object] )void
-)
-
-)

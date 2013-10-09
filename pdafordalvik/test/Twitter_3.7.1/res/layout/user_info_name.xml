@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@id/name_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/list_item_text" android:id="@id/name_item" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/protected_item" android:paddingLeft="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_locked" />
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/verified_item" android:paddingLeft="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_verified" />
-</LinearLayout>

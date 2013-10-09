@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:duplicateParentState="true" style="@style/ListRow"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/header_image" android:background="@drawable/bg_profile_empty" android:layout_alignParentRight="true" style="@style/ChangePhotoImage" />
-    <TextView android:id="@id/change_header_image" android:duplicateParentState="true" android:layout_marginRight="@dimen/image_margin_right" android:text="@string/profile_change_header" android:layout_toLeftOf="@id/header_image" style="@style/ChangePhotoText" />
-    <ImageView android:duplicateParentState="true" style="@style/Chevron.RTL" />
-</RelativeLayout>

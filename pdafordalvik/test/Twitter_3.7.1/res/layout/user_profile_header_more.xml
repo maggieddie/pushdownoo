@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/card_inset" android:paddingRight="@dimen/card_inset" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColorLink="@color/solid_white" android:ellipsize="none" android:gravity="center" android:id="@id/user_bio" android:visibility="gone" android:maxLines="4" android:singleLine="false" style="@style/ProfileText" />
-    <TextView android:id="@id/user_location" android:visibility="gone" android:layout_marginTop="4.0dip" style="@style/ProfileText" />
-    <TextView android:id="@id/user_url" android:visibility="gone" android:layout_marginTop="4.0dip" style="@style/ProfileText.Bold" />
-</LinearLayout>

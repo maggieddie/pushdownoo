@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/activity_1" android:src="@drawable/ic_activity_block_placeholder_1" style="@style/DiscoverUserImage" />
-    <ImageView android:id="@id/activity_2" android:src="@drawable/ic_activity_block_placeholder_2" android:layout_toRightOf="@id/activity_3" android:layout_below="@id/activity_4" style="@style/DiscoverUserImage" />
-    <ImageView android:id="@id/activity_3" android:src="@drawable/ic_activity_block_placeholder_3" android:layout_below="@id/activity_1" style="@style/DiscoverUserImage" />
-    <ImageView android:id="@id/activity_4" android:src="@drawable/ic_activity_block_placeholder_4" android:layout_toRightOf="@id/activity_1" style="@style/DiscoverUserImage" />
-</merge>
