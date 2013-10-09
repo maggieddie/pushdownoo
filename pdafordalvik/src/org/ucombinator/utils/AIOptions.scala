@@ -77,8 +77,6 @@ class AIOptions {
 
 object AIOptions {
 
- // var noOfEdges = 0
-  //var noOfStates = 0
   var debugInfo: Boolean = false
   
    def parseInApk(filePath0: String, doNotNull: Boolean): (String, String)  = {
@@ -87,29 +85,27 @@ object AIOptions {
     println("filePath", filePath)
       val lst = filePath.split("/").toList
       val plen = lst.length
-      println("LST", lst)
-      
-      /*val fileName = lst(plen-1)
-        println(fileName)
-      val lst2 = fileName.split("\\.").toList
-      val plen2 = lst2.length
-      val fileFoldnerName = lst2(plen2-2) */
-      
-      val fileFoldnerName = filePath.split("\\.apk").toList.head 
-      
+   
+      val fileParts = filePath.split("\\.apk").toList
+      val fileFoldnerName = fileParts.head 
+    
       println("Project Name to Analyzer::::::::::::: "+ fileFoldnerName)
+      val parts = fileFoldnerName.split("/").toList
+      val l = parts.length
+      val fileName = 
+      if( l>0)
+    	  parts(l-1).replace(" ", "-")
+      else  println("WARNING: not geting APK file NAme!")
+      println("fileName", fileName)
       
       val pathToScript0  = lst.dropRight(1).foldLeft("")((res, s) => {res + s + "/"})
       val pathToScript = pathToScript0.replace(" ", "-")
       println("pathToScript", pathToScript)
      val getIRCmdStr = if(doNotNull) {
-         "/usr/bin/python ./getIR.py" + " " + "--donull" + " " + pathToScript
+         "/usr/bin/python ./getIR.py" + " " + "--donull" + " " + pathToScript + " " + fileName
        } else{
-         "/usr/bin/python ./getIR.py" + " " + "--nonull" +  " " +  pathToScript
-       }//"/usr/bin/python ./getIR.py" + " " +  pathToScript
-    // val et: ExtractIRHelperThread = new ExtractIRHelperThread(getIRCmdStr)
-    //  IRExtractHelper.parseThread = et
-     // et.start() 
+         "/usr/bin/python ./getIR.py" + " " + "--nonull" +  " " +  pathToScript + " " + fileName
+       }
       
       getIRCmdStr !
       
@@ -290,8 +286,7 @@ object AIOptions {
       // and so that the notnull can check if it is true or not
      // because it will decide whether to let the disassembler to load the memory consuming odex dependencies!
       case fileName :: rest => {
-         val fileName0 = fileName.replace(" ", "-")
-         println("fileName0", fileName0) 
+         val fileName0 = fileName.replace(" ", "-") 
          val (irFolder, profolder) = 
             if(opts.doNotNullCheck) parseInApk(fileName0, true)
             else parseInApk(fileName0, false)

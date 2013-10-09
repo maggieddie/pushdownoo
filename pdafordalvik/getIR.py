@@ -8,6 +8,7 @@ CURFOLD=os.getcwd()
 
 DONULL= sys.argv[1]
 APK_SRC=  sys.argv[2] #"apks"
+SPECIFIED_APK = sys.argv[3]
 APK_TOOL =  "../apktool/apktool"
 JDex2Sex_CP= os.path.join(os.getcwd(),'../jdex2sex/bin')
 
@@ -35,7 +36,8 @@ DOT_PATH  = "/usr/local/bin/dot"
 
 def apkfil(f):
     p1, pext = os.path.splitext(f)
-    return pext == ".apk"
+    return pext == ".apk" and p1 == SPECIFIED_APK
+
 def dotfil(f):
     p1, pext = os.path.splitext(f)
     return pext == ".dot"
@@ -92,12 +94,16 @@ def run():
     print APK_TOOL
     print SEXP_OUT
     print APK_SRC
-    
+    print "NULL"
+    print DONULL
+    print "APKS"
+    print SPECIFIED_APK
     for cur_p0, dir, fnames0 in os.walk(APK_SRC):
-        print "fnames"
-        print fnames0
+        # print "fnames"
+        #print fnames0
 
-        fnames = fnames0 #map(lambda(x):x.replace(" ", "-"), fnames0)
+        fnames = map(lambda(x):x.replace(" ", "-"), fnames0) #fnames0
+        print fnames
         
         print cur_p0
         cur_p = cur_p0.replace(" ", "-")
