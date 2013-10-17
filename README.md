@@ -15,18 +15,23 @@ The reason didn't move to 2.10:
 
 ### Graphviz 
 
-For converting to svg dyck state graph. (It will get choke on large dot files)
+For converting to svg dyck state graph. (It will get choked on large dot files)
 
 ## Compile
 
 	cd pdafordalvik
 	ant compile
 	ant jar
-	
+
+### Note that the subproject jdex2sex should be compiled too. To do so:
+
+    	 cd jdex2sex
+	 make clean
+	 make compile
+	 
 
 ## Run
 Still in `pdafordalvik` folder
-	
 	
 
 	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis [--k <number>] [--gc] [--lra] [--aco] [--godel] [--dump-graph] [--interrupt-after <number-of-states>] [--interrupt-after-time <number of minutes>] path/to/your/filename.apk
@@ -37,3 +42,7 @@ Still in `pdafordalvik` folder
 ### For Intent Fuzzer
 
 	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --for-intent-fuzzer --intraprocedural ./test/Twitter_3.7.1.apk
+
+#### In case of large apps, please use JVM options (before -jar) to increase run time heap/stack like this (or larger):
+     	-XX:MaxPermSize=512m -Xms512m  -Xmx1024M -Xss512m
+	

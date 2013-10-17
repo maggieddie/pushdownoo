@@ -1,6 +1,6 @@
 DDX=java -cp bin hu.uw.pallergabor.dedexer.Dedexer 
 
-all: test
+all: bin
 
 bin: src
 	mkdir -p bin
