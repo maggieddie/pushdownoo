@@ -91,36 +91,31 @@ trait DalvikVMRelated {
      val deduplicateClsLines = permLines.toSet.toList 
 	   deduplicateClsLines
 	 }
-  
+
   /**
    * will get the entry points from:
    * 1. from the implemented and overritten methods
    * 2. from the ones parsed from layout xml files
-   */ 
-  
-  private def parseInAndroidKnowledge(opts: AIOptions) : (List[String], List[String], List[String]) = {
-     val classPath  =  "android-knowledge" + File.separator + "classes.txt"
-     val entryMethPath = "android-knowledge" + File.separator + "callbacks.txt"
-     val xmlMethNames = opts.apkProjDir + File.separator + "handlers.txt" 
-     
-   //  println("the fxml d[ath: " +xmlMethNames)
-     val classLines =  File(classPath).lines.toList.filter(_ != "")
-     val deduplicateClsLines = classLines.toSet.toList
-     val entryMethLines = File(entryMethPath).lines.toList.filter(_ != "")
-     val dedupMethLines = entryMethLines.toSet.toList
-     
-    
-     
-     val handlerEntryFile = File(xmlMethNames)
-    
-   
-       val deduplicateHandlerEntries = handlerEntryFile.lines.toList.filter(_ != "").toSet.toList
-       //println("FOund entries from xmml file"+ deduplicateHandlerEntries)
-       
-     
+   */
+
+  private def parseInAndroidKnowledge(opts: AIOptions): (List[String], List[String], List[String]) = {
+    val classPath = "android-knowledge" + File.separator + "classes.txt"
+    val entryMethPath = "android-knowledge" + File.separator + "callbacks.txt"
+    val xmlMethNames = opts.apkProjDir + File.separator + "handlers.txt"
+
+    val classLines = File(classPath).lines.toList.filter(_ != "")
+    val deduplicateClsLines = classLines.toSet.toList
+    val entryMethLines = File(entryMethPath).lines.toList.filter(_ != "")
+    val dedupMethLines = entryMethLines.toSet.toList
+
+    val handlerEntryFile = File(xmlMethNames)
+    if (!handlerEntryFile.exists)
+      (deduplicateClsLines, entryMethLines, List())
+    else {
+      val deduplicateHandlerEntries = handlerEntryFile.lines.toList.filter(_ != "").toSet.toList
       Thread.currentThread().asInstanceOf[AnalysisHelperThread].declaredPerms = getDeclaredPerms(opts)
-      
-       (deduplicateClsLines, entryMethLines, deduplicateHandlerEntries)
+      (deduplicateClsLines, entryMethLines, deduplicateHandlerEntries)
+    }
   }
   
   /**

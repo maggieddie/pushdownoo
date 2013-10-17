@@ -18,7 +18,7 @@ class AIOptions {
   var flatPolicy = "m"
   var analysis = "flat"
   var analysisType = AnalysisType.PDCFA
-  var verbose = false
+  var verbose = true
   var dumpStatistics = true
   var simplifyGraph = false
   var dummy = false
