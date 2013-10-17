@@ -12,12 +12,12 @@ public class Dedexer {
     public static void main( String args[] ) {
         Dedexer dedexer = new Dedexer();
         dedexer.run( args );
-        //dedexer.run_gui();
+        //dedexer.run_gui();   
         
     }
 
     public void run_gui(){
-    	String sourceFile = "./core-classes.dex";
+    	String sourceFile = "./classes.dex";
     	 String targetDir = "./res";
          String depsDir = null;
          boolean debugMode = false;

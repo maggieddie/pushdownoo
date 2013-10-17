@@ -14,10 +14,21 @@ public class StaticCharacter {
 			+ DexStringIdsBlock.escapeString( instance.toString() )+
 				"'";*/
 			
-			return 	//"'"+
-			"#\\" // transformed to racket char format
-		+ DexStringIdsBlock.escapeString( instance.toString() ) ;//+
-			//"'";
+			String ss = instance.toString();
+			if(ss.length() == 1){
+				if(ss.charAt(0) == '\"'){
+				return "#\\\"";
+				}else 
+					return 	//"'"+
+					"#\\" // transformed to racket char format
+				+ DexStringIdsBlock.escapeString( ss) ;//+
+			} else{
+				return 	//"'"+
+				"#\\" // transformed to racket char format
+			+ DexStringIdsBlock.escapeString( ss) ;//+
+				//"'";
+			}
+			
 		}
 
 		private Character instance;

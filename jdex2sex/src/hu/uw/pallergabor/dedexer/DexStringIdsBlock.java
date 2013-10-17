@@ -46,6 +46,64 @@ public class DexStringIdsBlock extends DexParser {
 
     public static String escapeString( String input ) {
 	StringBuffer b = new StringBuffer();
+	
+	
+	if(input.length() == 1){
+		//System.out.println("input length is 1");
+		char c = input.charAt(0);
+		int ci = (int)c;
+		if(ci == 32) {
+			b.append("\\ "); 
+			return new String( b );	
+		}
+		else if(ci == 38){
+			b.append("\\&"); 
+			return new String( b );	}
+//		}else if(c == '\"') {
+//			b.append("\\\""); 
+//			return new String( b );	
+//		}
+		else if(c == 60) {
+			b.append("\\<");
+
+			return new String( b );	}
+		else if(c == 62) {
+			b.append("\\>"); 
+			return new String( b );	}
+		else if( ci == 0 ){
+			b.append( "\\0" );
+		return new String( b );	}
+		else 
+		if( ci == 7 ) {
+			b.append( "\\a" );
+		return new String( b );	}
+		else 
+		if( ci == 8 ){
+			b.append( "\\b" );
+		return new String( b );	}
+		else
+		if( ci == 9 ){
+			b.append( "\\t" );
+			return new String( b );	}
+		else
+		if( ci == 12 ) {
+			b.append( "\\f" );
+			return new String( b );	}
+		else
+		if( ci == 10 ) {
+			b.append( "\\n" );
+			return new String( b );	}
+		else
+		if( ci == 13 ) {
+			b.append( "\\r" );
+			return new String( b );	}
+//		}else if( ci == 39) {
+//			b.append("\\\'"); 
+//			return new String( b );	
+//		}
+	}
+	
+	 
 	for( int i = 0 ; i < input.length() ; ++i ) {
 		char c = input.charAt( i );
 		int ci = (int)c;
@@ -56,7 +114,22 @@ public class DexStringIdsBlock extends DexParser {
 			b.append( "\\\"" );
 		else
 		if( ci >= 32 && ci <= 127 )
-			b.append( c );
+//			if(ci == 32) {
+//			//	System.out.println("YAY GOT A SPACE!");
+//				b.append("\\ ");
+//			}
+//			else
+//				if(ci==38)
+//					b.append("\\&");
+//				else
+//					if(ci == 60)
+//						b.append("\\<");
+//					else
+//						if(ci==62)
+//							b.append("\\>");
+//			else 
+				 
+				b.append( c );
 		else
 		if( ci == 0 )
 			b.append( "\\0" );
@@ -78,7 +151,8 @@ public class DexStringIdsBlock extends DexParser {
 		else
 		if( ci == 13 )
 			b.append( "\\r" );
-		else {
+		else 
+		{
 		  	b.append( "\\u" );
 		   	b.append( HEXCHAR.charAt( ( ci & 0xF000 ) >> 12 ) );
 		   	b.append( HEXCHAR.charAt( ( ci & 0x0F00 ) >>  8 ) );
@@ -93,5 +167,6 @@ public class DexStringIdsBlock extends DexParser {
     private DexPointerBlock     dexPointerBlock = null;
     private DexSignatureBlock   dexSignatureBlock;
     private static final String HEXCHAR = "0123456789ABCDEF";
+    
 }
 
