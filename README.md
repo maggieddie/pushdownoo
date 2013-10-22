@@ -11,7 +11,10 @@ The reason didn't move to 2.10:
 * Code changes such as case class must have parameters
 * Scala 2.9.1 works perfectly with Play 2.0.4
 
-### JVM -- compiled successfully on jre.1.6.0.24. (not 1.7)
+### JVM -- compiled successfully on
+    OpenJDK Runtime Environment (IcedTea6 1.11.5) (6b24-1.11.5-0ubuntu1~12.04.1)
+
+##### Old version can be compiled sucessfully in JDK 1.6, but not for the recent analyzer version (due to stack overflow compilation error)
 
 ### Graphviz 
 
