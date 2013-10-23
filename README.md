@@ -14,9 +14,9 @@ The reason didn't move to 2.10:
 
 ### JVM -- compiled successfully on the following options:
 
-#### OpenJDK Runtime Environment (IcedTea6 1.11.5) (6b24-1.11.5-0ubuntu1~12.04.1). 
+####1. OpenJDK Runtime Environment (IcedTea6 1.11.5) (6b24-1.11.5-0ubuntu1~12.04.1). 
 
-#### If you are on Mac, use JDK 6 or 7 later (Since compiling openJDK in mac is complicated and prone to fail).
+####2. If you are on Mac, use JDK 6 or 7 later (Since compiling openJDK in mac is complicated and prone to fail).
 *However*, the default sbt configuration needs to be changed.
 
 Change  the sbt file in:
@@ -25,9 +25,9 @@ Change  the sbt file in:
 
 to the following lines:
 
-   #!/bin/sh
-   test -f ~/.sbtconfig && . ~/.sbtconfig
-   exec java -Xmx1024M -Xss2G  ${SBT_OPTS} -jar /usr/local/Cellar/sbt/0.13.0/libexec/sbt-launch.jar "$@"
+       #!/bin/sh
+       test -f ~/.sbtconfig && . ~/.sbtconfig
+       exec java -Xmx1024M -Xss2G  ${SBT_OPTS} -jar /usr/local/Cellar/sbt/0.13.0/libexec/sbt-launch.jar "$@"
 
 (You can change the stack size to 1024M or smaller)
 In this way, no stackoverflow compilation error using the native JRE on Mac.
