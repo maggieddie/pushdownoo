@@ -1,6 +1,7 @@
+
 # Pushdown OO (Version extracted from APAC second delievery)
 
-This is just analytic engine without play framework. 
+This is just analytic engine without `play` framework. 
 
 ## Environment
 
@@ -11,10 +12,23 @@ The reason didn't move to 2.10:
 * Code changes such as case class must have parameters
 * Scala 2.9.1 works perfectly with Play 2.0.4
 
-### JVM -- compiled successfully on
-    OpenJDK Runtime Environment (IcedTea6 1.11.5) (6b24-1.11.5-0ubuntu1~12.04.1)
+### JVM -- compiled successfully on the following options:
 
-##### Old version can be compiled sucessfully in JDK 1.6, but not for the recent analyzer version (due to stack overflow compilation error)
+#### OpenJDK Runtime Environment (IcedTea6 1.11.5) (6b24-1.11.5-0ubuntu1~12.04.1). 
+
+#### If you are on Mac, use JDK 6 or 7 later (Since compiling openJDK in mac is complicated and prone to fail).
+*However*, the default sbt configuration needs to be changed.
+
+Change  the sbt file in:
+   /usr/local/bin/sbt
+to the following lines:
+   #!/bin/sh
+   test -f ~/.sbtconfig && . ~/.sbtconfig
+   exec java -Xmx1024M -Xss2G  ${SBT_OPTS} -jar /usr/local/Cellar/sbt/0.13.0/libexec/sbt-launch.jar "$@"
+
+(You can change the stack size to 1024M or smaller)
+
+In this way, no stackoverflow compilation error using the native JRE on Mac.
 
 ### Graphviz 
 
@@ -47,5 +61,5 @@ Still in `pdafordalvik` folder
 	java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAnalysis  --k 1 --gc --lra --aco --godel --for-intent-fuzzer --intraprocedural ./test/Twitter_3.7.1.apk
 
 #### In case of large apps, please use JVM options (before -jar) to increase run time heap/stack like this (or larger):
-     	-XX:MaxPermSize=512m -Xms512m  -Xmx1024M -Xss512m
+     	-XX:MaxPermSize=512m -Xms512m  -Xmx1024M -Xss1024m
 	
