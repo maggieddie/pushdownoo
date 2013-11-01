@@ -34,16 +34,29 @@ public class SExpHelpers {
     else if (javaType.equals("V"))
       type = "void";
     
-    else if (javaType.startsWith("L"))
-      type = "[object " + javaType.substring(1,javaType.length()-1) + "]" ;
+    else if (javaType.startsWith("L")) {
+    	String[] splited = javaType.split(" ");
+    	if(splited.length >= 2) {
+    		 type =  javaType ;
+    	}
+    	else {
+    	type = "[object " + javaType.substring(1,javaType.length()-1) + "]" ;}
+//    	if(javaType.length() > 2 && javaType.charAt(1) != 'L') {
+//    		 type = "[object " + javaType + "]" ;
+//    	}
+//    		 else {
+//    			 type = "[object " + javaType.substring(1,javaType.length()-1) + "]" ;
+//    		 }
+    }
+    
     // suposed to be the normal instance not starting with L, so no need to do any change(?)
-    else if (javaType.startsWith("[object"))
+    else if (javaType.startsWith("[object")) {
     	 type =  javaType ;
+    }
+    	
     
     else if (javaType.startsWith("[")) {
       type = "[array " + LTypeToSXType(javaType.substring(1)) + "]" ;}
-    	
-    
     
     return type ;
   } 

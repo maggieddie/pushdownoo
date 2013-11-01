@@ -1165,7 +1165,7 @@ currentOutput.println();
       Object o = dap.getAnnotationElementValue( 
           type,
           annotationIdx,n,k );
-      System.out.println(" o "  + o.getClass());
+      //System.out.println(" o "  + o.getClass());
       ps.println( "    ("+
           parmName +
           " "+

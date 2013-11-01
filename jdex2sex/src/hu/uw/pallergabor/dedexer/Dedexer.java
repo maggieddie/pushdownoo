@@ -12,7 +12,7 @@ public class Dedexer {
     public static void main( String args[] ) {
         Dedexer dedexer = new Dedexer();
         dedexer.run( args );
-        //dedexer.run_gui();   
+       //dedexer.run_gui();   
         
     }
 

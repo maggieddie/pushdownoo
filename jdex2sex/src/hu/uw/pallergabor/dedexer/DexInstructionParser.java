@@ -910,8 +910,6 @@ public class DexInstructionParser extends DexParser {
                 affectedRegisters[1] = reg2;
                 
                 String fieldPath = dexFieldIdsBlock.getField( fieldidx );
-               // System.out.println("fieldOath in TWOREGSFIELD_WRITE " + fieldPath);
-                //System.out.println(instrText);
                 instrText.append( "v"+reg1+" v"+reg2+" "+
                 		SExpHelpers.LTypeToSXType(fieldPath ));
             }
