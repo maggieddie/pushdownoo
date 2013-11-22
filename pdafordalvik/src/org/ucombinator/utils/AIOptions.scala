@@ -72,6 +72,11 @@ class AIOptions {
     
     var clsRiskRankingReportPath = ""
    var methRiskRankingReportPath = ""
+   var obranches = false
+   var brNum = 0
+   var brCutoff = 0
+   
+   var printPaths = false
     
 }
 
@@ -227,11 +232,25 @@ object AIOptions {
        
        case "--for-intent-fuzzer" :: rest => {
     	   opts.forIntentFuzzer = true
+    	   opts.printPaths = true
     	   parse(rest, opts)
       } 
        
        case  "--intraprocedural" :: rest =>{
          opts.intraprocedural = true
+         opts.obranches = true
+         parse(rest, opts)
+       }
+       
+       case "--obranches" :: cut:: rest => {
+    	  opts.obranches = true
+    	  opts.brCutoff = Integer.parseInt(cut)
+    	 
+         parse(rest, opts)
+       }
+       
+       case "--dump-paths" :: rest =>{
+         opts.printPaths = true
          parse(rest, opts)
        }
      
@@ -267,9 +286,7 @@ object AIOptions {
         opts.interruptAfterTime = Integer.parseInt(v) * 60 *1000
         parse(rest, opts)
       }
-      
-     
-      
+       
       case "--regex" :: str :: rest =>{
         opts.doRegex= true
         opts.regex = str.r

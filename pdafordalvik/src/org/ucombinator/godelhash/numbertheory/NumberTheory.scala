@@ -31,9 +31,6 @@ trait PrimeTable[A] {
     p
   }
 
-  /**
-   * This should be thread safe, isn'tit???
-   */
   private var primeOf : HashMap[A, BigInt] = new HashMap[A, BigInt]
   private var objectOf : HashMap[BigInt, A] = new HashMap[BigInt, A]
 
@@ -48,6 +45,8 @@ trait PrimeTable[A] {
     }
   }
 }
+
+
 
 
 /**

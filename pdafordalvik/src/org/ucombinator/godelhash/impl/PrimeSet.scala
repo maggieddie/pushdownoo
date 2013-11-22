@@ -12,7 +12,8 @@ import org.ucombinator.godelhash.numbertheory.PrimeHashable;
  class PrimeSet[A <% PrimeHashable  ] 
 (val comp : BigInt, val members : Set[A]) {
   
-   implicit def primeFromBigInt(bi : BigInt) : PrimeHashable = (new PrimeHashable {
+   implicit def primeFromBigInt(bi : BigInt) : PrimeHashable = 
+     (new PrimeHashable {
     val primeHash = bi
   })
   

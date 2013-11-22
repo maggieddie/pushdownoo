@@ -252,13 +252,28 @@ object CommonUtils {
     val cfa = opts.analysisType match {
       case AnalysisType.KCFA => "-cfa"
       case AnalysisType.PDCFA => "-pdcfa"
-    }
-    
+    } 
     val arity = if (opts.dummy) "dummy" else opts.k.toString
     val gc = if (opts.gc) "-gc" else ""
     val lrv = if(opts.doLRA) "-lra" else "" 
     val godel = if(opts.godel) "-godel" else ""
     prefix + arity + godel + cfa + gc + lrv + ".txt"
+  }
+
+  def getDumpFileName2(opts: AIOptions, prefix: String, ft: String): String = {
+    val cfa = opts.analysisType match {
+      case AnalysisType.KCFA => "-cfa"
+      case AnalysisType.PDCFA => "-pdcfa"
+    }
+    val arity = if (opts.dummy) "dummy" else opts.k.toString
+    val gc = if (opts.gc) "-gc" else ""
+    val lrv = if (opts.doLRA) "-lra" else ""
+    val godel = if (opts.godel) "-godel" else ""
+
+    if (ft == "html")
+      prefix + arity + godel + cfa + gc + lrv + ".html"
+    else
+      prefix + arity + godel + cfa + gc + lrv + ".txt"
   }
 
 // stupid methods duplicates, should be replaced with getDumpFileName

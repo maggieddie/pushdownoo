@@ -143,16 +143,6 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     (VarPointsTo(totalPointTp, totalPtCardi), ThrowPointsTo(totalThrows, totalTc))
   }
 
-  /* private def incNoEdges(explored: Int) {
-   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
- }
- 
- 
- 
- private def incNoStates(explored:Int) {
-   Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates += explored
- }*/
-
   private def incTime(explored: Int) {
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
   }
@@ -286,297 +276,285 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       List()
     }
   }
-  
-  /***
+
+  /**
+   * *
    * For NonNUllability
-   * 
+   *
    */
-  
+
   /**
    * proper fields: defined as espcially private object type, that is supposed to be initialized in the class
    * what about currently all declared type? NOTE: It should be consistent with the initObjec
    * currently, the initObject is initiazed non-static fields to be empty set.
-   *  
+   *
    */
-  private def getProperFields(fieldDefs: List[FieldDef]) : List[String] = {
-    
+  private def getProperFields(fieldDefs: List[FieldDef]): List[String] = {
+
     fieldDefs.foldLeft(List[String]())((res, fd) => {
       val ft = fd.ft
       val attrs = fd.atrs
       val strO = StringUtils.getTypeFromObjectWrapper(ft)
-      if(strO != ft //&& !attrs.contains("static")
-          )  {// we found something the actual object type string, {
+      if (strO != ft //&& !attrs.contains("static")
+      ) { // we found something the actual object type string, {
         fd.fieldPath :: res
-      }
-      else res
-        
+      } else res
+
     })
   }
   /**
    * computeNonNull helper: to explore the store and find field offset with values of nonnull
    * nonnull is judeged based on empty set or not.
    */
-  private def computeCountForCurrentClass(clsName: String, clsDef: DalvikClassDef, store: Store) : Int = {
+  private def computeCountForCurrentClass(clsName: String, clsDef: DalvikClassDef, store: Store): Int = {
     val dataMap = store.getMap
-    val curFields  = clsDef.fields
-    
-    val allNonNullFieldsCountsForCurrentClass = 
-    dataMap.map {
-      case (k, v) => {
-        val avs = v.toList 
-        val avsWithObjVs = avs.toSet.filter(_.isInstanceOf[ObjectValue])
-        val avsWithObjVs2 = avsWithObjVs.map(_.asInstanceOf[ObjectValue])
-        val avsWithObjVs3 = avsWithObjVs2.filter(_.clsName==clsName)
-        val countsForTheSameClass : Set[Int] = avsWithObjVs3.map {
-          av => {
-             val avov = av.asInstanceOf[ObjectValue]
-            val op  = avov.op
-            val curClsName = avov.className 
-            if(curClsName == clsName){
-              val objFieldOffSets =  getProperFields(curFields).map(op.offset(_))
-              val objFieldVals =  objFieldOffSets.map((fa) => {
-                storeLookup(store, fa)
-              })
-               objFieldVals.filter(!_.isEmpty).size
-            } else 0
-        }
-        } 
-        if(!countsForTheSameClass.isEmpty)
-        	countsForTheSameClass.max
-        else {
-          0 
+    val curFields = clsDef.fields
+
+    val allNonNullFieldsCountsForCurrentClass =
+      dataMap.map {
+        case (k, v) => {
+          val avs = v.toList
+          val avsWithObjVs = avs.toSet.filter(_.isInstanceOf[ObjectValue])
+          val avsWithObjVs2 = avsWithObjVs.map(_.asInstanceOf[ObjectValue])
+          val avsWithObjVs3 = avsWithObjVs2.filter(_.clsName == clsName)
+          val countsForTheSameClass: Set[Int] = avsWithObjVs3.map {
+            av =>
+              {
+                val avov = av.asInstanceOf[ObjectValue]
+                val op = avov.op
+                val curClsName = avov.className
+                if (curClsName == clsName) {
+                  val objFieldOffSets = getProperFields(curFields).map(op.offset(_))
+                  val objFieldVals = objFieldOffSets.map((fa) => {
+                    storeLookup(store, fa)
+                  })
+                  objFieldVals.filter(!_.isEmpty).size
+                } else 0
+              }
+          }
+          if (!countsForTheSameClass.isEmpty)
+            countsForTheSameClass.max
+          else {
+            0
+          }
         }
       }
-    } 
-    
-    
-    if(!allNonNullFieldsCountsForCurrentClass.isEmpty) 
-     allNonNullFieldsCountsForCurrentClass.max 	
+
+    if (!allNonNullFieldsCountsForCurrentClass.isEmpty)
+      allNonNullFieldsCountsForCurrentClass.max
     else {
       //println("allNonNullfielddsCountForCurrentClass is empty1!!")
-      0 
+      0
     }
   }
-  
-  private def percent(num1: Int, num2: Int) : Double = ( num1.toDouble/  num2.toDouble) * 100
-  
+
+  private def percent(num1: Int, num2: Int): Double = (num1.toDouble / num2.toDouble) * 100
+
   /**
-   * after constructors, 
+   * after constructors,
    */
-  
-  def computeNonNull(monoStore: Store) : Map[String, (Int, Int)] = {
-   
-     Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(Map[String, (Int, Int)]())((res, clsDefEntry) => {
-     val clsName = clsDefEntry._1
-     val clsDef: DalvikClassDef = clsDefEntry._2
-     
-     var nonNullFieldCount = computeCountForCurrentClass(clsName, clsDef, monoStore)
-     println(nonNullFieldCount)
-     res + (clsName -> (clsDef.getDirectObjFields.size, nonNullFieldCount))
-     }) 
-  }
-  
-  
-  private def fieldAddrsWithoutDupFieldCount(fas: Set[FieldAddr]) : Int = {
-   
-    val resMap = 
-    fas.foldLeft(Map[String, FieldAddr]())((res, fs) => {
-      res + (fs.offset -> fs)
+
+  def computeNonNull(monoStore: Store): Map[String, (Int, Int)] = {
+
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(Map[String, (Int, Int)]())((res, clsDefEntry) => {
+      val clsName = clsDefEntry._1
+      val clsDef: DalvikClassDef = clsDefEntry._2
+
+      var nonNullFieldCount = computeCountForCurrentClass(clsName, clsDef, monoStore)
+      println(nonNullFieldCount)
+      res + (clsName -> (clsDef.getDirectObjFields.size, nonNullFieldCount))
     })
-    
+  }
+
+  private def fieldAddrsWithoutDupFieldCount(fas: Set[FieldAddr]): Int = {
+
+    val resMap =
+      fas.foldLeft(Map[String, FieldAddr]())((res, fs) => {
+        res + (fs.offset -> fs)
+      })
+
     resMap.size
   }
-  
+
   // the return type is just to be consistent with the computNonNull
-  def easyComputeNonNullAfterLinkedConstr(curClsName: String, monoStore: Store, directFields: List[String]) : Map[String, (Int, Int)] = {
+  def easyComputeNonNullAfterLinkedConstr(curClsName: String, monoStore: Store, directFields: List[String]): Map[String, (Int, Int)] = {
     // any fieldaddress of with current class name in the OP?
-   println("curClass: " + curClsName + " the nonstatic fields" )
+    println("curClass: " + curClsName + " the nonstatic fields")
     directFields.foreach(println)
-    val fieldOffsetAddrsWithcurClsNameInOp = monoStore.getMap.foldLeft(List[FieldAddr]()) ((res, kv) => {
+    val fieldOffsetAddrsWithcurClsNameInOp = monoStore.getMap.foldLeft(List[FieldAddr]())((res, kv) => {
       val fa = kv._1
       val vals = kv._2
-      
+
       fa match {
-        case fai@FieldAddr(op, fieldPath) => {
-        //  println("the field Path", fieldPath) 
-          if(op.clsName == curClsName && directFields.contains(fieldPath)) 
-            {
-           // println("fieldPath passed: ", fieldPath)
-        	  fai::res
-            }  else res
+        case fai @ FieldAddr(op, fieldPath) => {
+          //  println("the field Path", fieldPath) 
+          if (op.clsName == curClsName && directFields.contains(fieldPath)) {
+            // println("fieldPath passed: ", fieldPath)
+            fai :: res
+          } else res
         }
         case _ => res
       }
-    }) 
-    // look up then in the store to count how many of them are nonnull object typw
-    val fieldOffsetAddrsWithObjVals = fieldOffsetAddrsWithcurClsNameInOp.filter( (fa) => {
-      val vals = monoStore.getOrElse(fa)
-   //   println("vals: ")   
-     // vals.toSet.foreach(println)
-      
-      val fvs =  filterAbsObjAndStringTop(vals.toSet)
-      
-     // println("after filter: " + fvs.size)
-     // fvs.foreach(println)
-       !vals.isEmpty && ! fvs.isEmpty  //filterAbsObjValues(vals.toSet).isEmpty
     })
-    
+    // look up then in the store to count how many of them are nonnull object typw
+    val fieldOffsetAddrsWithObjVals = fieldOffsetAddrsWithcurClsNameInOp.filter((fa) => {
+      val vals = monoStore.getOrElse(fa)
+      //   println("vals: ")   
+      // vals.toSet.foreach(println)
+
+      val fvs = filterAbsObjAndStringTop(vals.toSet)
+
+      // println("after filter: " + fvs.size)
+      // fvs.foreach(println)
+      !vals.isEmpty && !fvs.isEmpty //filterAbsObjValues(vals.toSet).isEmpty
+    })
+
     println("clsName: fieldoffsetwithobjs: " + curClsName)
-    println("nonnull computed: "+ fieldOffsetAddrsWithObjVals.size + fieldOffsetAddrsWithObjVals)
-    
-    val resCount =  fieldAddrsWithoutDupFieldCount(fieldOffsetAddrsWithObjVals.toSet)
+    println("nonnull computed: " + fieldOffsetAddrsWithObjVals.size + fieldOffsetAddrsWithObjVals)
+
+    val resCount = fieldAddrsWithoutDupFieldCount(fieldOffsetAddrsWithObjVals.toSet)
     println("final count is ", resCount)
-    if(directFields.size > 0) {
-    	Map(curClsName -> (directFields.size, resCount))
-    }else Map()
+    if (directFields.size > 0) {
+      Map(curClsName -> (directFields.size, resCount))
+    } else Map()
   }
- 
-  
-  
+
   /**
    * dump the statistics.
    */
-  
+
   def dumpNonNullStatistic(opts: AIOptions, nonNullMap: Map[String, (Int, Int)], avgNonNullMap: Map[String, Double]): String = {
     import java.io._
-   
+
     val buffer = new StringBuffer()
-     var avg = 0.0
-    if(opts.unlinkedNonNull){
-      avgNonNullMap.foreach{
-        case(clsName, percentage) => {
-         
-           buffer.append(clsName + ": " + percentage)
-           buffer.append("\n")
-           avg = avg + percentage
+    var avg = 0.0
+    if (opts.unlinkedNonNull) {
+      avgNonNullMap.foreach {
+        case (clsName, percentage) => {
+
+          buffer.append(clsName + ": " + percentage)
+          buffer.append("\n")
+          avg = avg + percentage
         }
       }
-      buffer.append("The total average: " + avg/avgNonNullMap.size)
-    }else{ 
-    	nonNullMap.foreach {
-    	case (clsName, (total, nonNullCount)) => {
-    	  val per = percent(nonNullCount, total) 
-        buffer.append(clsName + " " + "(" + nonNullCount  + "/" + total + "=" +per + ")")
-        buffer.append("\n")
-        avg += per
-      }  
-    }
-    	buffer.append("the total average: " + avg/nonNullMap.size)
-    	
-    }
-    
-    buffer.append("\n Any places of null ref during constructions? \n ")
-    	
-    	// for null ref during construction
-    	Thread.currentThread().asInstanceOf[AnalysisHelperThread].nullRefMap.foreach{
-    	  case (st, cnt) =>{
-    	    if(cnt > 0)
-    	      buffer.append(st.clsPath + ":" + st.methPath + st.lineNumber + "\n" + st + "\n")
-    	  }
-    	}
-    
-    
-
-    val stasticsDir = opts.statsDirName//opts.apkProjDir + File.separator + statisticsDirName
-    
-      val statDir = new Directory(new File(stasticsDir))
-      if (!statDir.exists) {
-        statDir.createDirectory(force = true)
-        statDir.createFile(failIfExists = false)
+      buffer.append("The total average: " + avg / avgNonNullMap.size)
+    } else {
+      nonNullMap.foreach {
+        case (clsName, (total, nonNullCount)) => {
+          val per = percent(nonNullCount, total)
+          buffer.append(clsName + " " + "(" + nonNullCount + "/" + total + "=" + per + ")")
+          buffer.append("\n")
+          avg += per
+        }
       }
+      buffer.append("the total average: " + avg / nonNullMap.size)
 
-     /* val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
+    }
+
+    buffer.append("\n Any places of null ref during constructions? \n ")
+
+    // for null ref during construction
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].nullRefMap.foreach {
+      case (st, cnt) => {
+        if (cnt > 0)
+          buffer.append(st.clsPath + ":" + st.methPath + st.lineNumber + "\n" + st + "\n")
+      }
+    }
+
+    val stasticsDir = opts.statsDirName //opts.apkProjDir + File.separator + statisticsDirName
+
+    val statDir = new Directory(new File(stasticsDir))
+    if (!statDir.exists) {
+      statDir.createDirectory(force = true)
+      statDir.createFile(failIfExists = false)
+    }
+
+    /* val subfolderPath = statisticsDirName + File.separator + StringUtils.trimFileName(opts.sexprDir)
       val subfolder = new Directory(new File(subfolderPath))
       if (!subfolder.exists) {
         subfolder.createDirectory(force = true)
         subfolder.createFile(failIfExists = false)
       }*/
-      val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "notnull-") // or use opts.statsFilePath
-      val file = new File(path)
-      if (!file.exists()) {
-        file.createNewFile()
-      }
-      val writer = new FileWriter(file)
+    val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "notnull-") // or use opts.statsFilePath
+    val file = new File(path)
+    if (!file.exists()) {
+      file.createNewFile()
+    }
+    val writer = new FileWriter(file)
 
-      writer.write(buffer.toString)
-      writer.close()
+    writer.write(buffer.toString)
+    writer.close()
 
-      println("Not null statistics dumped into: " + path)
+    println("Not null statistics dumped into: " + path)
 
-      path
-    
+    path
+
   }
-  
-  
-    def dumpForIntentInput(opts: AIOptions): String = {
+
+ 
+  def dumpForIntentInput(opts: AIOptions): String = {
     import java.io._
-   
+
     val buffer = new StringBuffer()
-  
-    val summarizeMap =  
-      Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foldLeft(Map[String, Map[String,   Set[IntentExtraKeyTypeAndValue]]]())((res, kv)=>{
+
+    val summarizeMap =
+      Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foldLeft(Map[String, Map[String, Set[IntentExtraKeyTypeAndValue]]]())((res, kv) => {
         val (clsName, entryPoint, stmt) = kv._1
         val fieldMap = kv._2
-        val newKey = clsName+"/"+entryPoint
-        if(res.contains(clsName+"/"+entryPoint)){
+        val newKey = clsName + "/" + entryPoint
+        if (res.contains(clsName + "/" + entryPoint)) {
           val newMap = fieldMap ++ res(newKey)
-          res + (newKey ->  newMap)
-        }else {
-           res + (newKey -> fieldMap)
+          res + (newKey -> newMap)
+        } else {
+          res + (newKey -> fieldMap)
         }
-      }) 
-    
-   Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foreach{
-        case(newKey, fieldMap) => {
-         
-          
-           if(!fieldMap.isEmpty) {
-              buffer.append("Method: ", newKey)
-           buffer.append("\n")
-           fieldMap.foreach{
-             case (op, vals) => {
-               if(op.contains("getExtras")) {
-                  buffer.append("---Op: "+ op + "\n---" + "(Key Type, Key Values)\n")
-                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n" ))//buffer.append(v + "\n" ))
+      })
+
+    Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.foreach {
+      case (newKey, fieldMap) => {
+        if (!fieldMap.isEmpty) {
+          buffer.append("Method: ", newKey)
+          buffer.append("\n")
+          fieldMap.foreach {
+            case (op, vals) => {
+              if (op.contains("getExtras")) {
+                buffer.append("---Op: " + op + "\n---" + "(Key Type, Key Values)\n")
+                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n")) //buffer.append(v + "\n" ))
                 buffer.append("\n")
-               }
-               else{
-                  buffer.append("---Op: "+ op + "\n---" + "(Return Type, Args Values)\n")
-                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n" ))//buffer.append(v + "\n" ))
+              } else {
+                buffer.append("---Op: " + op + "\n---" + "(Return Type, Args Values)\n")
+                vals.foreach((v) => buffer.append("(" + v.keyType + ", " + v.keyVal + ")" + "\n")) //buffer.append(v + "\n" ))
                 buffer.append("\n")
-               }
-             }
-             }
-           }
+              }
+            }
+          }
         }
       }
-    
-    
+    }
 
-    val stasticsDir = opts.statsDirName//opts.apkProjDir + File.separator + statisticsDirName
-    
-      val statDir = new Directory(new File(stasticsDir))
-      if (!statDir.exists) {
-        statDir.createDirectory(force = true)
-        statDir.createFile(failIfExists = false)
-      }
-    
-      val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "forIntentFuzzer-") // or use opts.statsFilePath
-      val file = new File(path)
-      if (!file.exists()) {
-        file.createNewFile()
-      }
-      val writer = new FileWriter(file)
+    val stasticsDir = opts.statsDirName //opts.apkProjDir + File.separator + statisticsDirName
 
-      writer.write(buffer.toString)
-      writer.close()
+    val statDir = new Directory(new File(stasticsDir))
+    if (!statDir.exists) {
+      statDir.createDirectory(force = true)
+      statDir.createFile(failIfExists = false)
+    }
 
-      println("Not null statistics dumped into: " + path)
+    val path = stasticsDir + File.separator + CommonUtils.getDumpFileName(opts, "forIntentFuzzer-") // or use opts.statsFilePath
+    val file = new File(path)
+    if (!file.exists()) {
+      file.createNewFile()
+    }
+    val writer = new FileWriter(file)
 
-      path
-    
+    writer.write(buffer.toString)
+    writer.close()
+
+    println("Flow-insensive output for fuzzer dumped into: " + path)
+
+    path
+
   }
-  
 
   def dumpRiskRanking(opts: AIOptions, dsgs: List[DSG]) {
     def colorColumn(cnt: Int, buffer: StringBuffer, value: String, colorStr: String) {
@@ -669,10 +647,6 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
 
   }
 
- 
-  
-  
-
   def dumpSecurityReport(opts: AIOptions, dsgs: List[DSG]) {
 
     var buffer = new StringBuffer()
@@ -749,13 +723,93 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     path
 
   }
+  
+  
+  def dumpDataFlowForFuzzer(opts: AIOptions, dsgs: List[DSG]) {
+
+    var buffer = new StringBuffer()
+
+    buffer.append("<html> <head> <title> Data Flow Information </title> </head> <h2> Data Flow Information  </h2><body>  \n")
+    
+    buffer.append("</br>")
+
+    dsgs.foreach((dsg) => {
+      buffer.append("")
+      val edges = dsg.edges
+      for (Edge(s, g, s1) <- edges if s != s1) {
+        val srcOrSinkSt = s.sourceOrSinkState
+        val taintSt = s.taintedState
+        var regexMatchS = false
+        var regexMatchS1 = false
+        if (opts.regex ne null) {
+          regexMatchS = s.matchRegex(opts.regex)
+          regexMatchS1 = s1.matchRegex(opts.regex)
+        }
+
+        val srcOrSinkSt1 = s1.sourceOrSinkState
+        val taintSt1 = s1.taintedState
+
+        val entryPointStmt = getEntryPointStmt(s)
+        val entryPointStmt1 = getEntryPointStmt(s1)
+
+        val stO = s.getCurSt
+        val st1 = s1.getCurSt
+
+        stO match {
+            case Some(stq) => { 
+              buffer.append(stq.oldStyleSt)
+            }
+            case None => {
+              buffer.append("None")
+            }
+          }
+          buffer.append("</br>") 
+          st1 match {
+            case Some(stq) => { 
+              buffer.append(stq.oldStyleSt.methPath)
+            }
+            case None => {
+              buffer.append("None")
+            }
+          }
+          buffer.append("</br>") 
+      } 
+      buffer.append("ONe DSG end")
+      buffer.append("</br>")
+      buffer.append("</br>")
+    }) 
+
+     buffer.append(" </body></html>")
+    val stasticsDir = opts.statsDirName //opts.apkProjDir + File.separator + statisticsDirName
+
+    val statDir = new Directory(new File(stasticsDir))
+    if (!statDir.exists) {
+      statDir.createDirectory(force = true)
+      statDir.createFile(failIfExists = false)
+    }
+  
+    val path = stasticsDir + File.separator + CommonUtils.getDumpFileName2(opts, "cfg-in-text-", "html") // or use opts.statsFilePath
+    val file = new File(path)
+    if (!file.exists()) {
+      file.createNewFile()
+    }
+    val writer = new FileWriter(file)
+
+    writer.write(buffer.toString)
+    writer.close()
+
+    println(" data flow information  dumped into: " + path)
+
+    path
+
+  }
 
   /**
    * Run Pushdown Control Flow Analysis
    * @param opts analysis options
    * @param list of linked lsit of initentrypoint -> entry-statement->entrypoints
    */
-  def runPDCFA(opts: AIOptions, entryStmts: List[Stmt] ) {
+  def runPDCFA(opts: AIOptions, entryStmts: List[Stmt]) {
 
     // import org.ucombinator.domains.CommonAbstractDomains._
 
@@ -770,14 +824,14 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     // var inheirtedPStore: PSharedStore = Map.empty
 
     var exploredcCnt = 0
-    var nonNullMap = Map[String, (Int, Int)] ()
+    var nonNullMap = Map[String, (Int, Int)]()
     var avgNonNullMap = Map[String, Double]()
-    
+
     val firstTime = (new java.util.Date()).getTime
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].curThreadStartTime = firstTime
     // val firstHelper = new NewDSGHelper
     //var toStopEntryExploration = false
-    val dsgs = 
+    val dsgs =
       if (!opts.doNotNullCheck) { // normal 
         println("All the entry points starts : *****************", entryStmts.length)
         entryStmts.foreach((entryStmt) =>
@@ -785,10 +839,10 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
 
         println("All the entry points ends*****************")
 
-       // val firstHelper = new NewDSGHelper
+        // val firstHelper = new NewDSGHelper
         var toStopEntryExploration = false
         entryStmts.foldLeft(List[DSG]())((res, entryStmt) => {
-        	val firstHelper = new NewDSGHelper
+          val firstHelper = new NewDSGHelper
           println("--------- explore the entry--------" + entryStmt.next)
           //CommonUtils.flattenLinkedStmt(List())(entryStmt).foreach(println)
 
@@ -807,144 +861,140 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
           }
           resultDSG :: res
         })
-      } 
-      
-    /** Unlike entry point saturation, we will run init methods class by class
+      } /** Unlike entry point saturation, we will run init methods class by class
    * and collect correspondent statistics 
-   */ 
-      else {
-        
-        if(opts.unlinkedNonNull){
-           var toStopEntryExploration = false 
+   */ else { 
+        if (opts.unlinkedNonNull) {
+          var toStopEntryExploration = false
           //  val firstHelper = new NewDSGHelper
           println(">>>>> Doing Non-nullability  Checking UNLINKED(mainly for Android cores)")
-           Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[DSG]())((res, clsDefEntry) => {
-              //val firstHelper = new NewDSGHelper
-             var listOfNonNullPercentage = List[Double]() 
-             
-        	   val clsName = clsDefEntry._1
-        	   val clsDef: DalvikClassDef = clsDefEntry._2
-        	    
-        	   val allInitsForCurCls = clsDef.unlinkedInitEntryPoints
-        	    
-             if(  NonNullUtils.shouldNotAnalyze(clsDef)){
-               println("no analyzeing ", clsDef.className)
-               res
-             }
-             
-             else {
-        	   val resAllInitsDSGs = 
-        	      
-        	    	  allInitsForCurCls.foldLeft(List[DSG]())((res2, ai) => { 
-        	    		  ai match {
-        	        case entryStmt@InitEntryPointStmt(_,_,_,_,_,_,_,_)=>{
-        	          val firstHelper = new NewDSGHelper
-        	          
-        	           var (inheritedStore0: Store, inheritedPStore0: Store) =
-        	        	   if (opts.godel) {
-        	        		   (GodelDomains.botStore, GodelDomains.botStore)
-        	        	   } else {
-        	        		   (StandardDomains.botStore, StandardDomains.botStore)
-        	        	   }
+          Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[DSG]())((res, clsDefEntry) => {
+            //val firstHelper = new NewDSGHelper
+            var listOfNonNullPercentage = List[Double]()
 
-        	           //val entryStmt = ai.asInstanceOf[InitEntryPointStmt]
-        	          println("explore init:::: entryStmt", entryStmt)
-        	           val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore0, inheritedPStore0, firstHelper)
-        	           if (!toStopEntryExploration && toStop == "stop") toStopEntryExploration = true
-               
-        	           println(  StringUtils.trimFileName(opts.sexprDir) + ", " + " " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates + "  " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + " \n")
+            val clsName = clsDefEntry._1
+            val clsDef: DalvikClassDef = clsDefEntry._2
 
-        	           //inheritedPStore = storee
-        	          // inheritedPStore = pstoree
+            val allInitsForCurCls = clsDef.unlinkedInitEntryPoints
 
-        	           if (!toStopEntryExploration) {
-        	        	   exploredcCnt += 1
-        	           } 
-              
-        	           // monovariant stores after linked construcotds's exploration
-        	           val monoStore = getMonovariantStore(resultDSG.nodes, storee)
-        	           //println("the store in one class", monoStore)
-              
-              // compute for the current one
-        	           val curClsSingleMap =  easyComputeNonNullAfterLinkedConstr (clsName, monoStore, clsDef.getDirectObjFields)
-        	          val (total, nonCnt) =  curClsSingleMap(clsName)
-        	          listOfNonNullPercentage =  percent(nonCnt, total) :: listOfNonNullPercentage
-        	            
-        	           resultDSG :: res2  
-        	        }
-        	        case StmtNil => res2
-           
-        	      }})  // inits separately explored.
-        	      //computet the average
-        	 
-        	      val avgNonNullPercentage = listOfNonNullPercentage.sum/listOfNonNullPercentage.length
-        	      if(listOfNonNullPercentage.length > 0) {
-        	    	  avgNonNullMap += (clsName -> avgNonNullPercentage)
-        	      }
-        	      resAllInitsDSGs ::: res
-           }
-           })
-           
-        }
-        else{
-          if(opts.verbose) {
-        	  println(">>>>> Doing Non-nullability Checking LINKED(mainly for Android cores)")
-          }
-          
-        var toStopEntryExploration = false 
-      //  val firstHelper = new NewDSGHelper
-        
-        Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[DSG]())((res, clsDefEntry) => {
-          val clsName = clsDefEntry._1
-          val clsDef: DalvikClassDef = clsDefEntry._2
-          // each exploration will have new helper
-         val firstHelper = new NewDSGHelper
+            if (NonNullUtils.shouldNotAnalyze(clsDef)) {
+              println("no analyzeing ", clsDef.className)
+              res
+            } else {
+              val resAllInitsDSGs =
 
-         if(NonNullUtils.shouldNotAnalyze(clsDef)){
-           if(opts.verbose)
-        	   println("no analyzeing ", clsDef.className)
-           res
-         }else {
-          clsDef.linkedInitEntryStmt match {
-            case Some(initEntry) => {
-              
-              val entryStmt = initEntry.asInstanceOf[InitEntryPointStmt]
-              if(opts.verbose)
-               println("explore init:::: entryStmt", entryStmt)
-              val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore, inheritedPStore, firstHelper)
-              if (!toStopEntryExploration && toStop == "stop") toStopEntryExploration = true
-               
-              println(  StringUtils.trimFileName(opts.sexprDir) + ", " + " " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates + "  " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + " \n")
+                allInitsForCurCls.foldLeft(List[DSG]())((res2, ai) => {
+                  ai match {
+                    case entryStmt @ InitEntryPointStmt(_, _, _, _, _, _, _, _) => {
+                      val firstHelper = new NewDSGHelper
 
-              inheritedPStore = storee
-              inheritedPStore = pstoree
+                      var (inheritedStore0: Store, inheritedPStore0: Store) =
+                        if (opts.godel) {
+                          (GodelDomains.botStore, GodelDomains.botStore)
+                        } else {
+                          (StandardDomains.botStore, StandardDomains.botStore)
+                        }
 
-              if (!toStopEntryExploration) {
-                exploredcCnt += 1
-              } 
-              
-              // monovariant stores after linked construcotds's exploration
-              val monoStore = getMonovariantStore(resultDSG.nodes, storee)
-            //  println("the store in one class", monoStore)
-              
-              // compute for the current one
-              nonNullMap ++= easyComputeNonNullAfterLinkedConstr (clsName, monoStore, clsDef.getDirectObjFields)//computeNonNull(monoStore)
-              
-              resultDSG :: res
+                      //val entryStmt = ai.asInstanceOf[InitEntryPointStmt]
+                      println("explore init:::: entryStmt", entryStmt)
+                      val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore0, inheritedPStore0, firstHelper)
+                      if (!toStopEntryExploration && toStop == "stop") toStopEntryExploration = true
+
+                      println(StringUtils.trimFileName(opts.sexprDir) + ", " + " " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates + "  " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + " \n")
+
+                      //inheritedPStore = storee
+                      // inheritedPStore = pstoree
+
+                      if (!toStopEntryExploration) {
+                        exploredcCnt += 1
+                      }
+
+                      // monovariant stores after linked construcotds's exploration
+                      val monoStore = getMonovariantStore(resultDSG.nodes, storee)
+                      //println("the store in one class", monoStore)
+
+                      // compute for the current one
+                      val curClsSingleMap = easyComputeNonNullAfterLinkedConstr(clsName, monoStore, clsDef.getDirectObjFields)
+                      val (total, nonCnt) = curClsSingleMap(clsName)
+                      listOfNonNullPercentage = percent(nonCnt, total) :: listOfNonNullPercentage
+
+                      resultDSG :: res2
+                    }
+                    case StmtNil => res2
+
+                  }
+                }) // inits separately explored.
+              //computet the average
+
+              val avgNonNullPercentage = listOfNonNullPercentage.sum / listOfNonNullPercentage.length
+              if (listOfNonNullPercentage.length > 0) {
+                avgNonNullMap += (clsName -> avgNonNullPercentage)
+              }
+              resAllInitsDSGs ::: res
             }
-            case None => res
+          })
+
+        } else {
+          if (opts.verbose) {
+            println(">>>>> Doing Non-nullability Checking LINKED(mainly for Android cores)")
           }
+
+          var toStopEntryExploration = false
+
+          Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable.foldLeft(List[DSG]())((res, clsDefEntry) => {
+            val clsName = clsDefEntry._1
+            val clsDef: DalvikClassDef = clsDefEntry._2
+            // each exploration will have new helper
+            val firstHelper = new NewDSGHelper
+
+            if (NonNullUtils.shouldNotAnalyze(clsDef)) {
+              if (opts.verbose)
+                println("no analyzeing ", clsDef.className)
+              res
+            } else {
+              clsDef.linkedInitEntryStmt match {
+                case Some(initEntry) => {
+
+                  val entryStmt = initEntry.asInstanceOf[InitEntryPointStmt]
+                  if (opts.verbose)
+                    println("explore init:::: entryStmt", entryStmt)
+                  val (resultDSG, storee, pstoree, toStop) = evaluateDSG(entryStmt, entryStmt.methPath, inheritedStore, inheritedPStore, firstHelper)
+                  if (!toStopEntryExploration && toStop == "stop") toStopEntryExploration = true
+
+                  println(StringUtils.trimFileName(opts.sexprDir) + ", " + " " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfStates + "  " + Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + " \n")
+
+                  inheritedPStore = storee
+                  inheritedPStore = pstoree
+
+                  if (!toStopEntryExploration) {
+                    exploredcCnt += 1
+                  }
+
+                  // monovariant stores after linked construcotds's exploration
+                  val monoStore = getMonovariantStore(resultDSG.nodes, storee)
+                  //  println("the store in one class", monoStore)
+
+                  // compute for the current one
+                  nonNullMap ++= easyComputeNonNullAfterLinkedConstr(clsName, monoStore, clsDef.getDirectObjFields) //computeNonNull(monoStore)
+
+                  resultDSG :: res
+                }
+                case None => res
+              }
+            }
+          })
         }
-        }) 
       }
-      }
-    
-    if(opts.doNotNullCheck) { 
-       dumpNonNullStatistic(opts, nonNullMap, avgNonNullMap)}
-    
-    if(opts.forIntentFuzzer)
-    {
+
+    if (opts.doNotNullCheck) {
+      dumpNonNullStatistic(opts, nonNullMap, avgNonNullMap)
+    }
+
+    if (opts.forIntentFuzzer) {
       dumpForIntentInput(opts)
+       val path = getGraphParentFolder(opts)
+      dumpPathsWithIntentsRelated(opts, dsgs)
+     // dumpDataFlowForFuzzer(opts,dsgs)
     }
 
     val secondTime = (new java.util.Date()).getTime
@@ -961,12 +1011,17 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       println("Dyck State Graph computed.")
     }
 
-    if(!opts.forIntentFuzzer && !opts.doNotNullCheck)
-    	dumpSecurityReport(opts, dsgs)
+    if (!opts.forIntentFuzzer && !opts.doNotNullCheck) {
+      dumpSecurityReport(opts, dsgs)
+    }
 
-    // dumpRiskRanking(opts, dsgs)
+    if (opts.printPaths) {
+      val path = getGraphParentFolder(opts)
+      dumpSimplePaths(opts, dsgs)
+      println()
+    }
 
-    if (opts.verbose && opts.dumpGraph) {
+    if (opts.dumpGraph) {
       val path = getGraphParentFolder(opts)
 
       val res = prettyPrintDSGs(dsgs, path, opts)
@@ -1000,15 +1055,15 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       interrupted,
       entryStmts.length,
       exploredcCnt)
-      
-      if(opts.verbose) 
-    	  println("explored entrypoints: " + exploredcCnt)
-    	  
+
+    if (opts.verbose)
+      println("explored entrypoints: " + exploredcCnt)
+
     dumpStatisticsNew(opts, analysisStatistics)
-    
-    if(opts.doNotNullCheck || opts.forIntentFuzzer ) {
-    	DalInformationFlow.dumpPermReport(opts)
-    	dumpHeatMap(opts)
+
+    if (opts.doNotNullCheck || opts.forIntentFuzzer) {
+      DalInformationFlow.dumpPermReport(opts)
+      dumpHeatMap(opts)
     }
 
     val reportTar = "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar.gz"

@@ -270,7 +270,6 @@ trait DyckStateGraphMachinery extends StateSpace {
      // println("--after aco ----" + newNewStates.size + " " + newNewEdges.size)
       (newNewStates, newNewEdges)
     } else {
-
       (newStates, newEdges)
     }
   }
@@ -292,9 +291,7 @@ trait DyckStateGraphMachinery extends StateSpace {
     case DSG(ss, ee, s0) => {
 
       // ECG contains all the previously explored states. 
-      // and so, let's test the membership in the preds and nexts for each of the newly created states 
-      // val toVisitNew =  helper.filterNewStatesInECG(toVisit)
-
+      // and so, let's test the membership in the preds and nexts for each of the newly created states  
       val newNodesEdgesStores: Set[(S, Edge, SharedStore, PSharedStore)] =
         // Measure.measureTime("new states and stores:::") {
         for {
@@ -303,10 +300,8 @@ trait DyckStateGraphMachinery extends StateSpace {
           possibleFrames = helper.getPossibleStackFrames(s)
           (g, s1, littleStore, littlePStore) <- step(s, kont, possibleFrames, store, pStore)
         } yield (s1, Edge(s, g, s1), littleStore, littlePStore)
-      //  }
-
-      val (obtainedStates, obtainedEdges, obtainedStores, obtainedPStores) = unzip4Components(newNodesEdgesStores)
-
+      //  } 
+      val (obtainedStates, obtainedEdges, obtainedStores, obtainedPStores) = unzip4Components(newNodesEdgesStores) 
       // Transform switch edges to pairs of push/pop edges
       val noSwitchesEdges: Edges = if (canHaveSwitchFrames) processSwitchEdges(obtainedEdges) else obtainedEdges
       // Collect new states after decoupling switches
@@ -316,43 +311,30 @@ trait DyckStateGraphMachinery extends StateSpace {
         }
         nodes ++ obtainedStates
       } else obtainedStates)
-
-     //  println("before --ee edges: ", noSwitchesEdges.size)
-      
-     //  println("new states0 : ", newStates0.size)
    
        val newStates = newStates0 -- ss
-       
-       val newStatesSubSumption = newStates0.filter((s0) => {
-         s0.weakerThanAny(ss, true)
-       }
-         )
-       
-    //        println("filter out states new state -- ss ", newStates0.size- newStates.size)
-      //      println("filter out states new state using weaker than any ss", newStatesSubSumption.size)
-     //  printOutStates(newStates0)
-       
-      val sss = ss.filter((siii) => {
-         newStates0.map(_.getCurSt).contains(siii.getCurSt)
-      })
-       
-      
-    //  println("duplicated statesment, not counting hte entire states between newStates0 and dcg", sss.size) 
+   
       val newEdges = noSwitchesEdges -- ee 
       
-       val filteredStatesPossileVisits = 
-       if (aggresiveCutOff) {
+       val filteredStatesPossileVisits2 = 
+    //   if (aggresiveCutOff) {
          newStates.filter {
         spvs =>
           {
-            helper.getEpsNextStates(spvs).isEmpty
-           // !spvs.weakerThanAny(helper.getEpsSuccsKeys, true) // strict equality in this case
+            //helper.getEpsNextStates(spvs).isEmpty
+            !spvs.weakerThanAny(helper.getEpsSuccsKeys, false) || (!spvs.weakerThanAny(helper.getEpsPredKeys, false))// strict equality in this case
           }
       }
-       }
-       else{
-         newStates
-       }
+    //   }
+      // else{
+       //  newStates
+      // }
+        
+         val filteredStatesPossileVisits =  filteredStatesPossileVisits2
+      
+        println("newStates Size:" + newStates.size)
+        println("filetered out Size 2: " + filteredStatesPossileVisits2.size)
+       // println("filetered out between " + filteredStatesPossileVisits.size)
         val possibleNewEdges  =
         if(aggresiveCutOff) {
           newEdges.filter(pe => {
@@ -379,50 +361,41 @@ trait DyckStateGraphMachinery extends StateSpace {
 //        filteredStatesPossileVisits.contains(pe.target)
 //          //pe.target.weakerThanAny(filteredStatesPossileVisits, true)
 //      })
-
-    //  println("after filtering out ecg next, edge: ", possibleNewEdges.size)
-      // update the ECG
-      helper.update(possibleNewEdges)
  
-     // helper.printEpsNexts
-
+      // update the ECG
+      helper.update(possibleNewEdges)  
       val newStore: SharedStore = obtainedStores.foldLeft(store)(_ join _) //++ _) 
-      val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ join _) //++ _)
-
+      val newPStore: PSharedStore = obtainedPStores.foldLeft(pStore)(_ join _) //++ _) 
       val storeSS = getStoreSensitiveStates(ss) 
 
-      // get epsnext based on the filtered new states
+      // get ECG nexts based on the filtered new states
        val epsNewNexts = 
-      if(aggresiveCutOff){
+     // if(aggresiveCutOff){
         filteredStatesPossileVisits.flatMap(s => {  
         val news = helper.getEpsNextStates(s) 
         news
       }) 
-      }
-      else {
-        filteredStatesPossileVisits
-      }
-     /* val epsNewNexts = filteredStatesPossileVisits.flatMap(s => {  
-        val news = helper.getEpsNextStates(s) 
-        news
-      }) */
       
-      //println("epsnext new states: ", epsNewNexts.size)
-
-      val (newToVisit, newEdges2) = 
+      // new to Visit has widened (filtered) weaker states
+      val (newToVisit2, newEdges2) = 
         getStatesIfAco(helper, filteredStatesPossileVisits //newStates
         , possibleNewEdges, //newEdges,  
           epsNewNexts,
           true) //}
 
-     
+          val newToVisit = //newToVisit2 -- ss
+               newToVisit2.foldLeft(Set[S]())((res, spsv) => {
+           if(!spsv.weakerThanAny(ss, false))
+               res + spsv
+           else res
+         }) 
           
     //  println("after aco, new states ", newToVisit.size)
      // println("after aco, new edges: ", newEdges2.size)
-      val ss1: Nodes = ss ++ filteredStatesPossileVisits + // newStates + 
+      val ss1: Nodes = ss ++ newStates//filteredStatesPossileVisits + // newStates + 
         s0
 
-      val ee1 = (ee ++ possibleNewEdges)
+      val ee1 = (ee ++ newEdges)//possibleNewEdges)
       //newEdges)
 
       incNoEdges(possibleNewEdges.size)
@@ -436,8 +409,6 @@ trait DyckStateGraphMachinery extends StateSpace {
       val cond3 = !newPStore.isSubsumedBy(pStore) //!partialOrderStoreCompare(newPStore, pStore)
 
       val shouldProceed = cond1 || cond2 || cond3
-
-  //    println("condition: " + cond1.toString() + "|" + cond2.toString() + "|" + cond3.toString())
 
       println("DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/"
         + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " +
@@ -456,6 +427,7 @@ trait DyckStateGraphMachinery extends StateSpace {
     private val topFrames: MMap[S, Set[Frame]] = new MHashMap
 
     def getEpsSuccsKeys = epsSuccs.keySet.toSet
+    def getEpsPredKeys = epsPreds.keySet.toSet
 
     def printEpsNexts {
       //  epsSuccs.foreach(println)

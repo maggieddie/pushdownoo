@@ -145,7 +145,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
      //parse in s-expressioned dalvik 
     parseDalvikSExprs(opts) 
     
-    println("Parsing done.")
+    println("Parsing done.\n")
     
     if(! opts.doNotNullCheck) {
        // parse in security related files
@@ -211,7 +211,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
      	 runner.runLRAOnAllMethods  
       	} 
       
-      println(" Live register analysis done!") 
+      println(" Live register analysis done! \n") 
       
     }
 

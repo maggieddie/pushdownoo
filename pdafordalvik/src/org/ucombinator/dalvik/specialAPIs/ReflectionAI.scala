@@ -42,9 +42,9 @@ trait ReflectionAI extends StateSpace with CESKMachinary{
      val classObjVals = filterClassObjVals(objVals, s)
      Debug.prntDebugInfo("the filtered class object is.length " + invokS.toString() , classObjVals.toList.length)
     
-     // the argument gotta be of length 1
+     // TODO: forName(String name, boolean initialize, ClassLoader loader)
      if(argRegExps.length != 1) {
-       throw new CESKException("the length of the argument of class forName is not 1")
+       Set(((PartialState(StForEqual(realN, realN.next,realN.clsPath, realN.methPath, realN.lineNumber), fp, s, pst, kptr, tp), k)))
      }else {
        val argVals = atomEval( argRegExps.head, fp, s)
        val strVals = filterStrObjVals(filterObjValues(argVals, s), s)

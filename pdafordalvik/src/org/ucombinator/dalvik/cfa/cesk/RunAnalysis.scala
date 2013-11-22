@@ -80,6 +80,7 @@ object RunAnalysis {
     --interrupt-after-time n(min) 	interrupts the analysis after n minutes (default = off)
     --for-intent-fuzzer				specialized static analysis for intent fuzzer
     --intraprocedural				intra-procedrual analysis, fast, imprecise, may suffice in some cases, such as fuzzer
+    ----dump-paths 					prints out all the possible reachable paths. Each paths will have limited state information presented. It is for intent fuzzer to exrtact flows that involes intent operations. It is also preferrable when the graph representation is too big
     --help                 			print this message
     --verbose              			print additional information on the analysis and results
     filePath               			path to an IR folder to be analysed

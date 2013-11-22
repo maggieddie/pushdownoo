@@ -379,7 +379,7 @@ trait CESKMachinary extends StateSpace {// with DalvikVMRelated {
    }
    
    def getTypeAndValForArgs(tyStrs: List[String], argVals: List[D], store:Store) : Set[(String, Set[String])] = {
-     println("args: ", tyStrs)
+     println("getTypeAndValForArgs args: ", tyStrs)
      val argValsList = argVals.map((argVald) => argVald.toList.toSet)
      val typeVals = tyStrs.zip(argValsList)
      typeVals.foldLeft(Set[(String, Set[String])]())((res, vs) => {

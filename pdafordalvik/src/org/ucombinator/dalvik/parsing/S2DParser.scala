@@ -37,7 +37,7 @@ class S2DParser {
         //if(clsClsStr.startsWith("android/support/v4")) {
         if (AnalysisScope.isExclusive(clsClsStr)) {
           //println("oh yeah, filter out ", clsClsStr)
-         //  System.err.println("No more pasing ")
+           //System.err.println("No more pasing ")
           None
         } else {
           val supSn = CommonUtils.TestSNRet(parseSuperOrSource(supercons))

@@ -115,8 +115,6 @@ class SExpParser extends RegexParsers {
     case "[" ~ sxl ~ "]" => sxl 
   }
     
-
-  // not sure about this
   private def keyword: Parser[SExp] =
     regex(new Regex("([#][:][^; \\t\\r\\n()',`\"]+)")) ^^ {
       case s => SKeyword.from(s.substring(2))

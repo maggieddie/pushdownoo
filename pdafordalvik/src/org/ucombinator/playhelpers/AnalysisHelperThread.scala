@@ -52,6 +52,8 @@ class AnalysisHelperThread(params: Array[String]) extends Thread with WideningHe
   
   // for each class method, if they have intent processing fields mapping.
   var receivingIntentProcessingMap : Map[(String, String, Stmt), Map[String, Set[IntentExtraKeyTypeAndValue]]]= Map.empty
+  
+  var reachablePaths : Set[List[Int]]= Set[List[Int]]()
   // statistics
   var noOfEdges = 0
   var noOfStates = 0

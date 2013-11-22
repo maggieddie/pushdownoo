@@ -54,7 +54,7 @@ object ForIntentFuzzerUtil {
 		 mp =="android/content/Intent/getPackage"
   }
      
-     private def argTVsToMap(argVals: Set[(String, Set[String])], keyOp: String) :  Map[String, Set[IntentExtraKeyTypeAndValue]] = {
+     def argTVsToMap(argVals: Set[(String, Set[String])], keyOp: String) :  Map[String, Set[IntentExtraKeyTypeAndValue]] = {
        argVals.foldLeft(Map[String, Set[IntentExtraKeyTypeAndValue]]())((res, tyVals) => {
          val typ = tyVals._1
          val valsStr = tyVals._2.toString
@@ -240,6 +240,7 @@ object ForIntentFuzzerUtil {
       "android/os/Bundle/getStringArray" | 
       "android/os/Bundle/getStringArrayList"
       => {
+        println("to fill the getExtra map???")
     	  var extraKeyValueTypeMap = Thread.currentThread().asInstanceOf[AnalysisHelperThread].receivingIntentProcessingMap.getOrElse((clsPath, enclosingMethPath, stmt), Map("getExtras" -> Set()))
     	  var keyVaues = extraKeyValueTypeMap.getOrElse("getExtras", Set.empty[IntentExtraKeyTypeAndValue]).asInstanceOf[Set[IntentExtraKeyTypeAndValue]]
     	  val extraKeyValueTypeMap2 = Map("getExtras" -> (keyVaues + new IntentExtraKeyTypeAndValue(mp, argVal.toString)))
@@ -249,10 +250,10 @@ object ForIntentFuzzerUtil {
        }
       
          case _ => {
-           
          } 
      }
      }
-     
+
+    
     
 }

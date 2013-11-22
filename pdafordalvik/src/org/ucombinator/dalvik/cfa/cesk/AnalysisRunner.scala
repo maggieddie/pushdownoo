@@ -252,18 +252,34 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
         statDir.createFile(failIfExists = false)
       } 
     
+    
       val path = opts.statsPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
       
       println("the statistics path is: ", path)
         
       val file = new File(path)
+      
+      val lst = path.split("/").toList
+      val apkName = lst(2)
+      val statFileName = lst(lst.length-1)
+      val file2 = new File("./test/" + apkName + "_" + 
+          Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +statFileName )
+      
+      if(!file2.exists()) {
+         file2.createNewFile()
+      }
       if (!file.exists()) {
         file.createNewFile()
       }
       val writer = new FileWriter(file)
 
+      val writer2 = new FileWriter(file2, true)
+      
       writer.write(buffer.toString)
       writer.close()
+      
+      writer2.write(buffer.toString())
+      writer2.close()
 
       println("Statistics dumped into: " + path)
 
