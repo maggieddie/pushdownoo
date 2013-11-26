@@ -991,7 +991,7 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     }
 
     if (opts.forIntentFuzzer) {
-      dumpForIntentInput(opts)
+      //dumpForIntentInput(opts)
        val path = getGraphParentFolder(opts)
       dumpPathsWithIntentsRelated(opts, dsgs)
      // dumpDataFlowForFuzzer(opts,dsgs)

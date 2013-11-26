@@ -76,6 +76,8 @@ class AIOptions {
    var brNum = 0
    var brCutoff = 0
    
+   var exception = false
+   
    var printPaths = false
     
 }
@@ -246,6 +248,11 @@ object AIOptions {
     	  opts.obranches = true
     	  opts.brCutoff = Integer.parseInt(cut)
     	 
+         parse(rest, opts)
+       }
+       
+        case "--exceptions" ::  rest => {
+    	  opts.exception = true
          parse(rest, opts)
        }
        
