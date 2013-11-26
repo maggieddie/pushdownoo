@@ -253,6 +253,7 @@ object AIOptions {
        
         case "--exceptions" ::  rest => {
     	  opts.exception = true
+    	//  opts.intraprocedural = false
          parse(rest, opts)
        }
        

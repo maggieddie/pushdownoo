@@ -401,9 +401,9 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
         val tp = tick(t, List(popHS))
         if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception 
-            || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural ){
+            ){
           Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), k)) // exception analysis rule
-        }else {
+        }else { //if exception does not open
            Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, tp), kk))
         }
       }
@@ -418,8 +418,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val tp = tick(t, List(pushHS))
         val pushHandlerFrame = new HandleFrame(pushHS.typeString, pushHS.className, pushHS.label)
 
-        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
 
           val normalState = Set((PartialState(buildStForEqual(realN), fp, s, pst, kptr, tp), pushHandlerFrame :: k))
 
@@ -489,10 +488,9 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       case c @ (ps @ PartialState(st@StForEqual(retS @ ReturnStmt(resultAe, nxt, ls, clsP, metP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), kk@(hf@HandleFrame(handlerType, clsName, lbl) :: k)) => {
         // 	Debug.prntDebugInfo("@@ ReturnStmt with top frame is HandleFrame!: ", retS)
     	  updateHeatMap(st)
-    	  if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+    	  if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
     		  Set((ps, k))  
-    	  }else{ //if exception or not intraprocedural on, there would be no push handler pushed anyway. this case will not happen
+    	  }else{ //if exception or not intraprocedural on, there would be no push handler pushed anyway. this case will not be matched
     	     val curN = retS.next
              val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
              Set((PartialState(buildStForEqual(realN ), fp, s, pst, kptr, t), kk))
@@ -511,8 +509,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         val liveRegs =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.getOrElse(buildStForEqual(nxss), Set())
        // println(lss + clsPP + methPP)
           Statistics.recordThrowPointsTo(stq, objVals.toSet.map(_.toString))
-          if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+          if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
         	  thrownUncaughtExnStates(objVals.toSet.map(_.asInstanceOf[AbstractObjectValue]), s, pst, fp, kptr, tp, clsP, metP, liveRegs)
           }
           else{
@@ -523,13 +520,12 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       }
 
       case c @ (ps @ PartialState(stq@StForEqual(tS @ ThrowStmt(exn, nxt, ls, clsP, metP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), kk@(FNKFrame(_, _) :: k)) => {
-       //println("ThrowStmt fnk on top")
+ 
         updateHeatMap(stq)
         val exnVals = atomEval(exn, fp, s)
         val objVals = filterAbsObjValues(exnVals,s)
          Statistics.recordThrowPointsTo(stq, objVals.toSet.map(_.toString))
-          if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+          if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
         	  Set((ps, k))
           }
          else{
@@ -543,11 +539,8 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       case c @ (ps @ PartialState(stq@StForEqual(tS @ ThrowStmt(exn, nxt, ls, clsP, metP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), kk@(hf @ HandleFrame(handlerType, clsName, lbl) :: k)) => {
     	  updateHeatMap(stq)
       // println("@ThrowStmt: ", tS)
-        Debug.prntDebugInfo("belong to line: ", tS.lineNumber)
         val curN = tS.next
-        Debug.prntDebugInfo("CurNext is: ", curN)
         val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
-        Debug.prntDebugInfo("RealNext is: ", realN)
         val tp = tick(t, List(tS))
         val exnRegExp = getRegExp(exn, "Throw Statement: Register Expression expected. Found: ")
         val exnVals = atomEval(exnRegExp, fp, s)
@@ -555,8 +548,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       
         Statistics.recordThrowPointsTo(stq, objVals.toSet.map(_.toString))
         //handleNormalThrownStmtdef(tS, objVals.map(_.asInstanceOf[Value]), s, realN, fp, kptr, tp, k)
-         if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+         if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
         	 handleNormalThrownStmt(ps, handlerType, clsName, lbl, tS, objVals.toSet.map(_.asInstanceOf[Value]), s, pst, nxt, fp, kptr, t, k)
          }else{
             val curN = tS.next
@@ -575,8 +567,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       case c @ (ps @ PartialState(stq @ StForEqual(itS @ InjectThrownStmt(exnValues, nxt, ls, clsP, methP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), kk @ (FNKFrame(_, _) :: k)) => {
         updateHeatMap(stq)
         Statistics.recordThrowPointsTo(stq, exnValues.toSet.map(_.toString))
-        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
           Set((ps, k))
         } else {
           val curN = itS.next
@@ -589,8 +580,7 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
        updateHeatMap(stq)
         val tp = tick(List(tS), t)
         val nextLiveRegs =  Thread.currentThread().asInstanceOf[AnalysisHelperThread].liveMap.getOrElse(buildStForEqual(nxss), Set())
-        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
         	thrownUncaughtExnStates(exnVals.toSet.map(_.asInstanceOf[AbstractObjectValue]), s, pst, fp, kptr, tp, clsP, methP, nextLiveRegs)
         }else {
           val curN = tS.next
@@ -607,26 +597,22 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
       case c @ (ps @ PartialState(stq@StForEqual(itS @ InjectThrownStmt(exnValues, nxt, ls, clsP, methP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), kk@( hf @ HandleFrame(handlerType, clsName, lbl) :: k)) => {
         updateHeatMap(stq)
         Statistics.recordThrowPointsTo(stq, exnValues.toSet.map(_.toString))
-        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception
-          || !Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.intraprocedural) {
+        if (Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.exception) {
         	handleNormalThrownStmt(ps, handlerType, clsName, lbl, itS, itS.exnValues.toSet, s, pst, nxt, fp, kptr, t, k)
         }else {
           val curN = stq.nextSt
           val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
           Set((PartialState(buildStForEqual(realN), fp, s, pst, kptr, t), kk))
         }
-        
         // handleInjectExnStmt(itS, s, nxt, fp, kptr, t, k)
       }
 
       case c @ (PartialState(stq@StForEqual(eS @ EntryPointInvokeStmt(en, objRegStr, nxt, ls, clsP, methP), nxss, lss, clsPP, methPP), fp, s, pst, kptr, t), k) => {
     	  stq
-        // Debug.prntDebugInfo("belong to line: ", eS.lineNumber)
     	  updateHeatMap(stq)
         val curN = eS.next
         val realN = CommonUtils.findNextStmtNotLineOrLabel(curN)
         val argTypeList = en.argTypes
-        Debug.prntDebugInfo("@@EntryPointInvokeStmt: the argLength ", argTypeList.length)
         val methP = eS.entr.methodPath
         // gotta get the instance register
         val curObjAddrOffset = fp.offset(objRegStr)
@@ -638,11 +624,8 @@ trait StackCESKMachinary extends CESKMachinary with TransitionHandlers {
         
         if (curObjVals.isEmpty) {
        
-          throw new StackCESKException("the entry point invoke statmt can't find its instance object to invoke on!!!" + eS)
+          throw new StackCESKException("the entry point invoke statement can't find its instance object to invoke on!!!" + eS)
         } else {
-        ///  println("**************** Current EntryPointInvoke Statement is: ", eS)
-         // println("********* numbers of objects:", curObjVals.toList.length)
-       
           curObjVals.toList.foldLeft(Set[Conf]())((res, curObjValv)=>{
             val curObjVal = curObjValv.asInstanceOf[ObjectValue]
             val absValues =  argTypeList.map(typeToTopValue(_, curObjVal.op, s)) 

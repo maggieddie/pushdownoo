@@ -83,6 +83,7 @@ object RunAnalysis {
     ----dump-paths 					prints out all the possible reachable paths. Each paths will have limited state information presented. It is for intent fuzzer to exrtact flows that involes intent operations. It is also preferrable when the graph representation is too big
     --help                 			print this message
     --verbose              			print additional information on the analysis and results
+    --exceptions					turn on exception flow analysis as well (default = off)
     filePath               			path to an IR folder to be analysed
     """)
 

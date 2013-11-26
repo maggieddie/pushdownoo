@@ -215,24 +215,23 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     
     buffer.append("Control states: " + numStates + "\n")
     buffer.append("Transitions / DSG edges: " + numEdges + "\n")
-    buffer.append("Total amount of VarPointsto entries, and the mean: " +
+    buffer.append("Total amount of VarPointsto entries | the mean: " +
       varPointsTo.totalCardi + " | " + Math.ceil(meanRegular) + "\n")
 
-       val (totalCardi, mean) = Statistics.totalAndMeanThrowPointsTo
-    buffer.append("Total amount of ThrowPointsto entries, and the mean: " +
-      totalCardi + " | " + mean + "\n")
+//       val (totalCardi, mean) = Statistics.totalAndMeanThrowPointsTo
+//    buffer.append("Total amount of ThrowPointsto entries | the mean: " +
+//      totalCardi + " | " + mean + "\n")
       
-    //  buffer.append("Total amount of ThrowPointsto entries, and the mean: " +
-     // throwPointsTo.totalCardi + " | " + Math.ceil(meanThrown) + "\n")
+      buffer.append("Total amount of ThrowPointsto entries, and the mean: " +
+      throwPointsTo.totalCardi + " | " + Math.ceil(meanThrown) + "\n")
 
     val (methCardies, meanObjs) = Statistics.totalAndMeanCallObjs
     buffer.append("Total amount of invoking objects, and the mean: " +
-      // throwPointsTo.totalEntries + " | " + Math.ceil(meanThrown) + "\n")
+     //  throwPointsTo.totalEntries + " | " + Math.ceil(meanThrown) + "\n"
       methCardies + " | " + Math.ceil(meanObjs) + "\n")
 
     val (cardiecs, meanec) = Statistics.totalAndAverageEclinks
     buffer.append(" E-C Links: " +
-      // throwPointsTo.totalEntries + " | " + Math.ceil(meanThrown) + "\n")
       cardiecs + " | " + meanec + "\n")
 
     buffer.append("Analysis run for: " + analysisTime + " milliseconds\n")

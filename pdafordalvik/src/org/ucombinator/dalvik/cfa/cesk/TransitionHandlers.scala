@@ -72,10 +72,7 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
        // for intent fuzzer
        if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.forIntentFuzzer){
         val argVals = argRegExps map (atomEval(_, fp, s))
-         println("For Fuzzer method class Path: ", ivkS)
-         println("argRegExps", argRegExps)
-         println("argvals****, ", argVals)
-         
+        
          if(argVals.length > 0) {
            val objVal = argVals.head
           val strKeys = getPossibleStrings(objVal, s)
@@ -87,7 +84,6 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
          
          else{
            // empty domain
-           println("....empty val", ivkS)
           // setIntentOpsInfoInState(pstate, methPath, stForEqual.clsPath, stForEqual.methPath, ivkS, Set[(String, Set[String])]())
             ForIntentFuzzerUtil.decideIntentFields(methPath, stForEqual.clsPath, stForEqual.methPath, ivkS, Set[(String, Set[String])]())
             //println("pstate intent info: ",pstate.intentRelatedInfo )
