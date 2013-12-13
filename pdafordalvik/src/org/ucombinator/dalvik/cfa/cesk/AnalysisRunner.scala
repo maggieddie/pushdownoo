@@ -233,6 +233,9 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     val (cardiecs, meanec) = Statistics.totalAndAverageEclinks
     buffer.append(" E-C Links: " +
       cardiecs + " | " + meanec + "\n")
+      
+        buffer.append("reached methods:" +
+      Statistics.reachableMethodCalls +  "\n")
 
     buffer.append("Analysis run for: " + analysisTime + " milliseconds\n")
     if (truncated) {
@@ -261,8 +264,17 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
       val lst = path.split("/").toList
       val apkName = lst(2)
       val statFileName = lst(lst.length-1)
-      val file2 = new File("./test/" + apkName + "_" + 
+      
+       var file2Path = "./test/"
+    //  val file2 = new File("./test/" + apkName + "_" + 
+     val list = stasticsDir.split("/").toList
+     if(!list.isEmpty){
+       file2Path = list.head
+     }
+        
+      val file2 = new File(file2Path+  apkName + "_" + 
           Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +statFileName )
+      
       
       if(!file2.exists()) {
          file2.createNewFile()

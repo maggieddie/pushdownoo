@@ -76,7 +76,7 @@ extends CESKMachinary with  RawStringLibsAI with ReflectionAI with ExceptionHand
          if(isMoveResultS) { // the next is move result, pass the joined properties to the returned result
          //  val newPStore = pStoreUpdate(pst, List((fp.offset(targetRegister.toString), argPropertyValues)))
             val newPStore = storeUpdate(pst, List((fp.offset("ret"), argPropertyValues)))
-            println("re assigned is", fp.offset("ret"))
+          //  println("re assigned is", fp.offset("ret"))
            newPStore
          }
          else  pst

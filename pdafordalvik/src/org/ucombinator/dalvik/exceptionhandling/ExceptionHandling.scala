@@ -456,9 +456,7 @@ trait ExceptionHandling extends StateSpace with CESKMachinary with StmtForEqual 
                    handlerStO match {
                    case Some(st) => {
                       val realN = CommonUtils.findNextStmtNotLineOrLabel(st)
-                      
                       Statistics.recordEC(buildStForEqual(ijt),buildStForEqual(realN ) )
-                      
                       val newStore = storeUpdate(s, List((fp.offset("exn"), exnValue)))
                       Set((PartialState(buildStForEqual(realN ), fp, newStore, pst, kptr, tp), k))
                    }

@@ -985,6 +985,8 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
           })
         }
       }
+     val secondTime = (new java.util.Date()).getTime
+    val delta = secondTime - firstTime
 
     if (opts.doNotNullCheck) {
       dumpNonNullStatistic(opts, nonNullMap, avgNonNullMap)
@@ -997,17 +999,12 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
      // dumpDataFlowForFuzzer(opts,dsgs)
     }
 
-    val secondTime = (new java.util.Date()).getTime
-    val delta = secondTime - firstTime
-
-    println()
+    if (opts.verbose) {
+       println()
     println("The analysis has taken " + (
       if (delta / 1000 < 1) "less than one second."
       else if (delta / 1000 == 1) "1 second."
       else delta / 1000 + " seconds."))
-
-    if (opts.verbose) {
-      println()
       println("Pushdown analysis finished.")
     }
 

@@ -89,8 +89,6 @@ trait IPDSMachinery extends StateSpace with PDCFAGarbageCollector{
     for {
       (q1, k_new) <- confs
       g = decideStackAction(k, k_new)
-      
-     
     } yield (g, q1)
   }
 

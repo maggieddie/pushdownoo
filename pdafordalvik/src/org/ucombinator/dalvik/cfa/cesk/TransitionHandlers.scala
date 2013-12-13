@@ -62,13 +62,10 @@ ExternalLibCallsHandler with ExceptionHandling with StmtForEqual{
       k:Kont,
       stForEqual: StForEqual,
       pstate : PartialState ) : Set[Conf] ={
-    
-    //println("st:", ivkS)
-   
         val possibleValues = atomEval(objAexp, fp, s)
         val objVals = filterObjValues(possibleValues,s)
        Statistics.recordCallObjs(buildStForEqual(ivkS), objVals.toList.map(_.toString))
-          
+       Statistics.countReachableMethodCalls(objVals.toList)
        // for intent fuzzer
        if(Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.forIntentFuzzer){
         val argVals = argRegExps map (atomEval(_, fp, s))

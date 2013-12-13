@@ -123,14 +123,17 @@ class S2DParser {
           // The method match!!
           case _ =>
             val methDef = parseMethod(hd, clsP)
-            parseClassBody(fields, methDef  :: methods, interfaceNames, implmentedInterfaces)(tl, clsP)
+            if(methDef.isEmpty){
+               parseClassBody(fields, methods, interfaceNames, implmentedInterfaces)(tl, clsP)
+            }else
+            	parseClassBody(fields, methDef.head :: methods, interfaceNames, implmentedInterfaces)(tl, clsP)
           //fields
         }
       }
     }
   }
 
-  private def parseMethod(sx: SExp, clsP: String): MethodDef = {
+  private def parseMethod(sx: SExp, clsP: String): List[MethodDef] = {
     sx match {
       // method head, not yet throws? later
       case SMethod :+: attrs :+: (methodName: SName) :+: formalTypes :+: (retType: SExp) :+: body => {
@@ -143,9 +146,13 @@ class S2DParser {
         val (regLimit, rest2) = getRegLimitsFromList(rest1)
         val (handlerLst, rest3) = (getCatchHandlers(rest2, List()), rest2)
         val stmt = parseBodyMap(rest3, clsP, methName)//parseBodyTailRecursion(List(), rest)//parseBody(rest)
-        //val stmtTransformed = ParsingUtils.transFormBody(stmt, ExceptionHandlers(handlerLst), throwAnnotations, clsP, methName) 
-        MethodDef(StringUtils.getDistinctMethodOrFieldPath(clsP,methName, "meth"), attrList, regLimit, formalTys, retTyStr, stmt, //stmtTransformed,  
-            ExceptionHandlers(handlerLst), throwAnnotations)
+        val stmtTransformed = ParsingUtils.transFormBody(stmt, ExceptionHandlers(handlerLst), throwAnnotations, clsP, methName) 
+        if(stmtTransformed.isEmpty){
+          List()
+        }
+        else 
+          List(MethodDef(StringUtils.getDistinctMethodOrFieldPath(clsP,methName, "meth"), attrList, regLimit, formalTys, retTyStr, stmtTransformed.head, //stmt  
+            ExceptionHandlers(handlerLst), throwAnnotations))
       }
       //case other cases- let it fail
     }

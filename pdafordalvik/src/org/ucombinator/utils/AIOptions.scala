@@ -18,7 +18,7 @@ class AIOptions {
   var flatPolicy = "m"
   var analysis = "flat"
   var analysisType = AnalysisType.PDCFA
-  var verbose = true
+  var verbose = false
   var dumpStatistics = true
   var simplifyGraph = false
   var dummy = false
@@ -332,6 +332,5 @@ object AIOptions {
     parse(args.toList, opts)
     opts
   }
- 
 }
 

@@ -110,7 +110,7 @@ trait DyckStateGraphMachinery extends StateSpace {
         (next, helper, store, pStore, "during")
       } else if ((interrupt && (noEdgesExplored > interruptAfter || next.edges.size > interruptAfter)) ||
         (timeInterrupt && timePassed(curTime) > interruptAfterTime)) { //next.edges.size > interruptAfter){
-        println("no of edges explored: " + noEdgesExplored)
+        //println("no of edges explored: " + noEdgesExplored)
         (next, helper, store, pStore, "stop") //ce
       } else {
         val (next2, helper2, goAgain, newToVisit, newStore, newPStore) = iterateDSG(next, helper, statesToVisit, store, pStore)
@@ -332,8 +332,8 @@ trait DyckStateGraphMachinery extends StateSpace {
         
          val filteredStatesPossileVisits =  filteredStatesPossileVisits2
       
-        println("newStates Size:" + newStates.size)
-        println("filetered out Size 2: " + filteredStatesPossileVisits2.size)
+     //   println("newStates Size:" + newStates.size)
+        //println("filetered out Size 2: " + filteredStatesPossileVisits2.size)
        // println("filetered out between " + filteredStatesPossileVisits.size)
         val possibleNewEdges  =
         if(aggresiveCutOff) {
@@ -410,9 +410,10 @@ trait DyckStateGraphMachinery extends StateSpace {
 
       val shouldProceed = cond1 || cond2 || cond3
 
-      println("DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/"
+     /* println("DSG: Nodes explored " + noEdgesExplored + " newEdges/possiblenew/newEdges2: " + newEdges.toList.length + "/" + possibleNewEdges.size + "/"
         + newEdges2.toList.length + " Possible toVisit States/filtertovisit/REALvisit states " +
-        (newStates ++ epsNewNexts).toList.length + "/" + (filteredStatesPossileVisits ++ epsNewNexts).toList.length + "/" + newToVisit.toList.length + " \n")
+        (newStates ++ epsNewNexts).toList.length + "/" + (filteredStatesPossileVisits ++ epsNewNexts).toList.length + "/" + newToVisit.toList.length + " \n")*/
+      println("DSG Iteration..# to visit: " + newToVisit.toList.length)
       (DSG(ss1, ee1, s0), helper, shouldProceed, newToVisit, newStore, newPStore) //newStore)
 
     }

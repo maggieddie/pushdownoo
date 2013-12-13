@@ -224,7 +224,6 @@ object ParsingUtils {
 
   def extractsLabelStmts(fst: Stmt): List[LabelStmt] = {
     val flattenedList = CommonUtils.flattenLinkedStmt(List())(fst)
-
         val smts = flattenedList filter ((s: Stmt) => {
       s match {
         case LabelStmt(_, _,_, _, _) => true
@@ -293,9 +292,6 @@ object ParsingUtils {
       else 
          PushHandlerStmt(c.typeStr, c.exceptionType, c.using, false, List(), List(),  StmtNil, StmtNil,clsP,methP)
     })
-    Debug.prntDebugInfo("fake push handler", res1.length)
-  //  val res2 = genLinked(List())(res1)
-  //  res2 map (_.asInstanceOf[PushHandlerStmt])
     
     val res2 = CommonUtils.linkedListWrapper(List())(res1)
     
@@ -311,6 +307,7 @@ object ParsingUtils {
   }
 
   def genPopHandlerStmts(catches: List[CatchStmt], clsP: String, methP: String): Option[List[Stmt]]= {
+    
     val res1 = catches map ((c: CatchStmt) => PopHandlerStmt(c.exceptionType, StmtNil, StmtNil, clsP, methP))
    // val res2 = genLinked(List())(res1)
    // res2 map (_.asInstanceOf[PopHandlerStmt])
@@ -361,8 +358,8 @@ object ParsingUtils {
          LineStmt("-" + sn.toString(), StmtNil, StmtNil, ln.clsPath, ln.methPath)
        }
        case _ => {
-         println("lnis")
-         println(ln) 
+         //println("lnis")
+         //println(ln) 
          throw new Exception("@genSeriLnForPopHandler: Not a LineStmt")}
      }
   }
@@ -383,18 +380,21 @@ object ParsingUtils {
     })
   }
 
-  def transFormBody(bd: Stmt, exnHandler: ExceptionHandlers, annot: List[String], clsP:  String, methP: String): Stmt = {
+  def transFormBody(bd: Stmt, exnHandler: ExceptionHandlers, annot: List[String], clsP:  String, methP: String): List[Stmt] = {
+    
     bd match {
       case StmtNil => {
         //println("This is the empty method body")
          val fkeReturnStmt = new ReturnStmt(RegisterExp(SName.from("")), StmtNil, StmtNil, clsP, methP) 
-        fkeReturnStmt
+        //fkeReturnStmt
+         List()
       }
       case _ => {
+       // println("in transformbody: starting body non stmtnil", bd)
         var flattendList = CommonUtils.flattenLinkedStmt(List())(bd)
-        Debug.prntDebugInfo("Before transforming the method, length", flattendList.length)
-        var lblStmts = extractsLabelStmts(bd)
-        Debug.prntDebugInfo("total label stmts: ", lblStmts.length)
+        //println("Before transforming the method, length", flattendList.length)
+        //var lblStmts = extractsLabelStmts(bd)
+       // println("total label stmts: ", lblStmts.length)
         var catchStmts = extractCatchStmts(bd).reverse // fxi the order
         val startToCatches = bldStartingOrEndingLblCatches(catchStmts, true)
         val endToCatches = bldStartingOrEndingLblCatches(catchStmts, false)
@@ -405,11 +405,18 @@ object ParsingUtils {
         Debug.prntDebugInfo("Starting Labels", startingkeys)
         val endkeys = endToCatches.keySet
         Debug.prntDebugInfo("Ending Labels", endkeys)
-        var res: Stmt = StmtNil
+        var res: List[Stmt] = List()
 
+        if(startingkeys.isEmpty || endkeys.isEmpty){
+         List(bd)
+        }
+        
+        else{
+          
+          
         for (stl <- startingkeys) {
           flattendList = CommonUtils.flattenLinkedStmt(List())(bd)
-          Debug.prntDebugInfo("in for starting key", flattendList.length)
+          //println("in for starting key", flattendList.length)
            Debug.prntDebugInfo("current label starting key", stl)
           val lblIndx = flattendList.indexOf(stl)
            Debug.prntDebugInfo("cur index", lblIndx)
@@ -422,36 +429,44 @@ object ParsingUtils {
           Debug.prntDebugInfo("catch handler", catchHandlers)
           val pushHandStmtsOl = genPushHandlerStmts(catchHandlers, exnHandler, annot, clsP, methP)
 
+         
           pushHandStmtsOl match {
             case Some(pushHandStmts) => {
-                Debug.prntDebugInfo("lnked push handlers", pushHandStmts)
+           //  println("The catch handlers are: ", pushHandStmts.length)
+         // pushHandStmts.foreach(println)
+         // println("----END----")
               stl.next = pushHandStmts.head
               Stmt.updateLabelWith(stl.label, stl)
               val oldLast = pushHandStmts.last
+             // println("oldLast is StmtNil," , oldLast)
               val secondLast = pushHandStmts(pushHandStmts.indexOf(oldLast) -1) // because there is one more StmtNil generated as the last
+              
+            //  println("secondLast is:", secondLast)
               secondLast.next = nxtLblSt
               flattendList = CommonUtils.flattenLinkedStmt(List())(bd)
-              Debug.prntDebugInfo("After inserting starting label", flattendList.length)
+            //  println("After inserting starting label", flattendList.length)
               //PushHandlerStmt(clsName: String, lbl: String, nxt: Stmt)
-              res = bd
+              res = List(bd)
             }
-            case None => res
+            case None => res = List(bd)//res
           }
          
         }
+        
         for (stl <- endkeys) {
           val catchHandlers = endToCatches get stl match {
             case Some(l) => l
           }
-          Debug.prntDebugInfo("catch Handler length: ", catchHandlers)
+        //  println("catch Handler length: ", catchHandlers)
           val pphtsol = genPopHandlerStmts(catchHandlers, clsP, methP)
           pphtsol match {
             case Some(pphts) => {
               val curLblInx = flattendList.indexOf(stl)
+              //println("Next Stmt: " , stl.next)
               val prevInx = curLblInx - 1
               val prvStmt = flattendList(prevInx)
-             Debug.prntDebugInfo("After gen catch Handler length: " + stl, pphts)  
-             
+            // println("After gen catch Handler length: " + stl, pphts)  
+            
               // impossible for two label stmt sticks together,
               // so no need to change Stmt.labeltable.
               prvStmt.next = pphts.head
@@ -462,19 +477,25 @@ object ParsingUtils {
               // secondLast.lineNumber = stl.lineNumber 
                // should be stl's predecessor's linenumber actually
                setPopHandlerLn(pphts, stl)
+               
                //
               secondLast.next = stl
-                Debug.prntDebugInfo("secondlast pop's next ",secondLast.next)
+              // println("To CATCH: ")
+           //  pphts.foreach(println)
+             //println("TO END ____")
+               // println("secondlast pop's next ",secondLast.next)
               flattendList = CommonUtils.flattenLinkedStmt(List())(bd)
-              Debug.prntDebugInfo("After inserting END label", flattendList.length)
-              res = bd
+              //println("After inserting END label", flattendList.length)
+             // flattendList.foreach(println)
+              //println("IS there any StmtNIl in the Middle")
+              res = List(bd)
             }
-            case None => res
+            case None => res = List(bd)
           }
-
         }
-        
+        //println("res: ",   CommonUtils.flattenLinkedStmt(List())(res))
         res
+        }
       }
     }
 
