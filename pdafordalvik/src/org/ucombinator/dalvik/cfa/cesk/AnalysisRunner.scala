@@ -269,7 +269,7 @@ abstract class AnalysisRunner(opts: AIOptions) extends FancyOutput
     //  val file2 = new File("./test/" + apkName + "_" + 
      val list = stasticsDir.split("/").toList
      if(!list.isEmpty){
-       file2Path = list.head
+       file2Path = list.head + "/" + list(1) + "/"
      }
         
       val file2 = new File(file2Path+  apkName + "_" + 

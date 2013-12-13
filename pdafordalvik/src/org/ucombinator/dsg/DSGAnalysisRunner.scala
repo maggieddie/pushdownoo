@@ -306,7 +306,16 @@ trait DSGAnalysisRunner {
       val lst = graphFolderPath.split("/").toList
       val apkName = lst(2)
       val statFileName = lst(lst.length-1)
-      val file = new File("./test/" + apkName + "_" + 
+        
+        var file2Path = "./test/"
+    //  val file2 = new File("./test/" + apkName + "_" + 
+     val list = opts.statsDirName.split("/").toList
+     if(!list.isEmpty){
+       file2Path = list.head + "/" + list(1) + "/"
+     }
+    println("fiel2Path: >>>>>", file2Path)
+      
+      val file = new File(file2Path + apkName + "_" + 
           Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +  statFileName + "_paths")
       
       if(!file.exists()) {
@@ -326,7 +335,15 @@ trait DSGAnalysisRunner {
       val lst = graphFolderPath.split("/").toList
       val apkName = lst(2)
       val statFileName = lst(lst.length-1)
-      val file = new File("./test/" + apkName + "_" + 
+      
+        var file2Path = "./test/"
+    //  val file2 = new File("./test/" + apkName + "_" + 
+     val list = opts.statsDirName.split("/").toList
+     if(!list.isEmpty){
+       file2Path = list.head + "/" + list(1) + "/"
+     }
+      
+      val file = new File(file2Path + apkName + "_" + 
           Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +  statFileName + "_pathsWithIntentRelated" )
       if(!file.exists()) {
          file.createNewFile()
