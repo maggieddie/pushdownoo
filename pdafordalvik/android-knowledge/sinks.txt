@@ -148,3 +148,9 @@ android/database/sqlite/SQLiteDatabase/compileStatement database
 android/database/sqlite/SQLiteQueryBuilder/appendWhere database
 android/database/sqlite/SQLiteQueryBuilder/clearBindings database
 android/database/sqlite/SQLiteQueryBuilder/executeInsert database
+android/os/Message/obtain network
+android/os/Handler/sendMessage network
+java/net/DatagramPacket<init> network
+java/net/DatagramPacket/getData network
+java/net/DatagramPacket/getAddress network
+java/net/DatagramPacket/getPort network
