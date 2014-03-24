@@ -10,9 +10,13 @@ import scala.collection.mutable.Stack
 import org.ucombinator.playhelpers.AnalysisHelperThread
 import org.ucombinator.domains.CommonAbstractDomains.IntentExtraKeyTypeAndValue
 import org.ucombinator.dalvik.syntax.Stmt
+import org.ucombinator.dalvik.syntax.StForEqual
+import org.ucombinator.dalvik.vmrelated.DalvikVMRelated
+import org.ucombinator.dalvik.syntax.StmtNil
+import scala.util.matching.Regex
 
 
-trait DSGAnalysisRunner {
+trait DSGAnalysisRunner extends DalvikVMRelated{
   self: FancyOutput with DyckStateGraphMachinery =>
 
   import org.ucombinator.utils.StringUtils._
@@ -131,6 +135,122 @@ trait DSGAnalysisRunner {
        }
      }
    }
+   
+      def getEntryPointStmt(state: S): Stmt = {
+    state match {
+      case ps @ PartialState(st, fp, s, pst, kptr, t) => {
+        st match {
+          case (stq @ StForEqual(eS @ EntryPointInvokeStmt(en, objRegStr, nxt, ls, clsP, methP), nxss, lss, clsPP, methPP)) => {
+            eS
+          }
+          case _ => StmtNil
+        }
+
+      }
+      case _ => StmtNil
+    }
+  }
+       def appendSecurityText(buffer: StringBuffer,
+    srcOrSinkSt: Boolean,
+    taintSt: Boolean,
+    matchRegex: Boolean,
+    stO: Option[StForEqual],
+    state: S,
+    regex: Regex,
+    entryStmt: Stmt): StringBuffer = {
+
+    if (entryStmt != StmtNil) {
+      buffer.append("<tr ><td bgcolor=")
+
+      buffer.append("#FFF6FA")
+      buffer.append(">")
+      stO match {
+        case Some(stq) => {
+          buffer.append(stq.oldStyleSt)
+        }
+        case None => {
+          buffer.append("None")
+        }
+      }
+
+      buffer.append("</td> <td >")
+      buffer.append("Trigger(entry-points)")
+      buffer.append(" </td> </tr>")
+    }
+
+    if (srcOrSinkSt) {
+      buffer.append("<tr ><td bgcolor=")
+
+      buffer.append("#FFB2D8")
+      buffer.append(">")
+      stO match {
+        case Some(stq) => {
+          buffer.append(stq.oldStyleSt)
+        }
+        case None => {
+          buffer.append("None")
+        }
+      }
+
+      buffer.append("</td> <td >")
+      buffer.append(state.taintKind)
+      buffer.append(" </td> </tr>")
+    } else if (taintSt) {
+      buffer.append("<tr ><td bgcolor=")
+
+      buffer.append("#FFCCE5")
+      buffer.append(">")
+      stO match {
+        case Some(stq) => {
+          buffer.append(stq.oldStyleSt)
+        }
+        case None => {
+          buffer.append("None")
+        }
+      }
+    } else if (matchRegex) {
+      buffer.append("<tr ><td bgcolor=")
+
+      buffer.append("#FFC3E1")
+      buffer.append(">")
+      stO match {
+        case Some(stq) => {
+          buffer.append(stq.oldStyleSt)
+        }
+        case None => {
+          buffer.append("None")
+        }
+      }
+
+      buffer.append("</td> <td >")
+      buffer.append("Regex Matched")
+      buffer.append(regex.toString)
+      buffer.append(" </td> </tr>")
+    }
+    buffer
+  }
+
+   
+  def printTaintInfor(buffer: StringBuffer, s: S, opts: AIOptions){
+    val srcOrSinkSt = s.sourceOrSinkState
+        val taintSt = s.taintedState
+        var regexMatchS = false
+        var regexMatchS1 = false
+        if (opts.regex ne null) {
+          regexMatchS = s.matchRegex(opts.regex)
+        }
+        val entryPointStmt = getEntryPointStmt(s)
+
+        val stO = s.getCurSt
+
+        appendSecurityText(buffer,
+          srcOrSinkSt,
+          taintSt,
+          regexMatchS,
+          stO,
+          s,
+          opts.regex, entryPointStmt)
+  }
 
   def prettyPrintOneDSGDirectPath(directPath: Set[List[Int]], map: Map[Int, S], opts: AIOptions, forIntentFuzzer: Boolean): String = {
     val buf = new StringBuffer()
@@ -139,13 +259,22 @@ trait DSGAnalysisRunner {
     if (!forIntentFuzzer) {
       directPath.foreach {
         case ps => {
+         //  buf.append("\n\nNEW PATH STARTS!!\n")
           val ite = ps.iterator
           while (ite.hasNext) {
-            buf.append(ite.next())
-            if (ite.hasNext)
-              buf.append("->")
+            val numS = ite.next()
+            val state = if (map.contains(numS)) {
+              Some(map(numS))
+            } else None
+            state match{
+              case Some(st) => {
+                printTaintInfor(buf, st, opts)
+              }
+              case None => {
+                
+              }
+            }
           }
-          buf.append("\n\n")
         }
       }
     } else {
@@ -210,25 +339,38 @@ trait DSGAnalysisRunner {
     	buffer.append(" All reachable paths that has intent operations: ")
     	buffer.append("\n\n")
     }else {
-      buffer.append(" All reachable paths: ")
-    	buffer.append("\n\n")
+     
+    buffer.append("<html> <head> <title> Security Report </title> </head> <h2> Security Report  </h2><body> <table>\n")
+    buffer.append("<tr ><td bgcolor=")
+    buffer.append("#FFF6FA")
+    buffer.append(">")
+    buffer.append("<b>Context format: Statement@@@ClassName$$Methodname::LineNumber</b>")
+    buffer.append("</td> <td >")
+    buffer.append("Property")
+    buffer.append(" </td> </tr>")
+    buffer.append("</br>")
     }
     
     val (paths2, map) = flowPathsEachDSGDirectPaths(dsgs)//flowPathsEachDSG(dsgs)
        println("Path exploration on the analysed graph returns")
     var list: List[String] = List() 
     val pathSize = Thread.currentThread().asInstanceOf[AnalysisHelperThread].reachablePaths.size
-    println("size ", pathSize)
+   // println("size ", pathSize)
      var records : Map[List[Int], Boolean]= Map.empty
     list = prettyPrintOneDSGDirectPath( 
         Thread.currentThread().asInstanceOf[AnalysisHelperThread].reachablePaths, 
         map ,opts, forIntentFuzzer) :: list
   
-    //println("List: ", list)
+      if(forIntentFuzzer){
     buffer.append(list.distinct.mkString(""))
     buffer.append("\n") 
    // println("path print finished")
     buffer.toString
+      }
+      else{
+         buffer.append(list.distinct.mkString(""))
+        buffer.append("</table></body></html>").toString
+      }
     
     
   }
@@ -306,16 +448,7 @@ trait DSGAnalysisRunner {
       val lst = graphFolderPath.split("/").toList
       val apkName = lst(2)
       val statFileName = lst(lst.length-1)
-        
-        var file2Path = "./test/"
-    //  val file2 = new File("./test/" + apkName + "_" + 
-     val list = opts.statsDirName.split("/").toList
-     if(!list.isEmpty){
-       file2Path = list.head + "/" + list(1) + "/"
-     }
-    println("fiel2Path: >>>>>", file2Path)
-      
-      val file = new File(file2Path + apkName + "_" + 
+      val file = new File("./test/" + apkName + "_" + 
           Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +  statFileName + "_paths")
       
       if(!file.exists()) {
@@ -335,15 +468,7 @@ trait DSGAnalysisRunner {
       val lst = graphFolderPath.split("/").toList
       val apkName = lst(2)
       val statFileName = lst(lst.length-1)
-      
-        var file2Path = "./test/"
-    //  val file2 = new File("./test/" + apkName + "_" + 
-     val list = opts.statsDirName.split("/").toList
-     if(!list.isEmpty){
-       file2Path = list.head + "/" + list(1) + "/"
-     }
-      
-      val file = new File(file2Path + apkName + "_" + 
+      val file = new File("./test/" + apkName + "_" + 
           Thread.currentThread().asInstanceOf[AnalysisHelperThread].gopts.brCutoff + "_" +  statFileName + "_pathsWithIntentRelated" )
       if(!file.exists()) {
          file.createNewFile()
@@ -384,7 +509,7 @@ trait DSGAnalysisRunner {
     writer.close()
     
     // first tar dot file
-        val graphZipCmdDot=   "/usr/bin/python ./pytar.py" + " " + opts.graphDirName + " graph.tar.gz"
+        val graphZipCmdDot=   "/usr/bin/python ./pytar.py" + " " + opts.graphDirName + " graph.tar"
        
     graphZipCmdDot !
     
@@ -398,11 +523,11 @@ trait DSGAnalysisRunner {
     
     // zip the graph folder
    // val graphZipCmd = "cd " + opts.graphDirName + " && " + "tar -zcvf graph.tar.gz ./* "
-      val graphZipCmd =   "/usr/bin/python ./pytar.py" + " " + opts.graphDirName + " graph.tar.gz"
+      val graphZipCmd =   "/usr/bin/python ./pytar.py" + " " + opts.graphDirName + " graph.tar"
        
     graphZipCmd !
     
-    val allTarCmd = "/usr/bin/python ./pytar.py" + " " + opts.apkProjDir + " all.tar.gz"
+    val allTarCmd = "/usr/bin/python ./pytar.py" + " " + opts.apkProjDir + " all.tar"
      
       allTarCmd !
     
@@ -726,6 +851,11 @@ trait DSGAnalysisRunner {
 
     if (nextStateIndexes.isEmpty) {
       Thread.currentThread().asInstanceOf[AnalysisHelperThread].reachablePaths += currentPath
+       
+      println("One paht found!" + dsg.s0.getCurSt)
+      currentPath.foreach(println)
+      println("---")
+     
     } else {
 
       nextStateIndexes.foreach {

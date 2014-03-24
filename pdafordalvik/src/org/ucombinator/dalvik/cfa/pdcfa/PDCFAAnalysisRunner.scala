@@ -147,100 +147,8 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges = Thread.currentThread().asInstanceOf[AnalysisHelperThread].noOfEdges + explored
   }
 
-  private def appendSecurityText(buffer: StringBuffer,
-    srcOrSinkSt: Boolean,
-    taintSt: Boolean,
-    matchRegex: Boolean,
-    stO: Option[StForEqual],
-    state: S,
-    regex: Regex,
-    entryStmt: Stmt): StringBuffer = {
+  
 
-    if (entryStmt != StmtNil) {
-      buffer.append("<tr ><td bgcolor=")
-
-      buffer.append("#FFF6FA")
-      buffer.append(">")
-      stO match {
-        case Some(stq) => {
-          buffer.append(stq.oldStyleSt)
-        }
-        case None => {
-          buffer.append("None")
-        }
-      }
-
-      buffer.append("</td> <td >")
-      buffer.append("Trigger(entry-points)")
-      buffer.append(" </td> </tr>")
-    }
-
-    if (srcOrSinkSt) {
-      buffer.append("<tr ><td bgcolor=")
-
-      buffer.append("#FFB2D8")
-      buffer.append(">")
-      stO match {
-        case Some(stq) => {
-          buffer.append(stq.oldStyleSt)
-        }
-        case None => {
-          buffer.append("None")
-        }
-      }
-
-      buffer.append("</td> <td >")
-      buffer.append(state.taintKind)
-      buffer.append(" </td> </tr>")
-    } else if (taintSt) {
-      buffer.append("<tr ><td bgcolor=")
-
-      buffer.append("#FFCCE5")
-      buffer.append(">")
-      stO match {
-        case Some(stq) => {
-          buffer.append(stq.oldStyleSt)
-        }
-        case None => {
-          buffer.append("None")
-        }
-      }
-    } else if (matchRegex) {
-      buffer.append("<tr ><td bgcolor=")
-
-      buffer.append("#FFC3E1")
-      buffer.append(">")
-      stO match {
-        case Some(stq) => {
-          buffer.append(stq.oldStyleSt)
-        }
-        case None => {
-          buffer.append("None")
-        }
-      }
-
-      buffer.append("</td> <td >")
-      buffer.append("Regex Matched")
-      buffer.append(regex.toString)
-      buffer.append(" </td> </tr>")
-    }
-    buffer
-  }
-
-  private def getEntryPointStmt(state: S): Stmt = {
-    state match {
-      case ps @ PartialState(st, fp, s, pst, kptr, t) => {
-        st match {
-          case (stq @ StForEqual(eS @ EntryPointInvokeStmt(en, objRegStr, nxt, ls, clsP, methP), nxss, lss, clsPP, methPP)) => {
-            eS
-          }
-          case _ => StmtNil
-        }
-
-      }
-      case _ => StmtNil
-    }
-  }
 
   def sortingRankings(rawNodes: List[S]): List[S] = {
     val rawNodes0 = rawNodes.filter((rn) => {
@@ -646,6 +554,31 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     path
 
   }
+  
+   def dumpSecurityReport2(opts: AIOptions, resultsDSG: List[DSG]) {
+    import java.io._
+    val graphFolderPath = getGraphParentFolder(opts) //
+    val reportDirName = opts.permReportsDirName //opts.apkProjDir + File.separator + statisticsDirName
+
+    val secuDir = new Directory(new File(reportDirName))
+    if (!secuDir.exists) {
+      secuDir.createDirectory(force = true)
+      secuDir.createFile(failIfExists = false)
+    }
+
+    val path = opts.securityReportPath //stasticsDir + File.separator + CommonUtils.getStatisticsDumpFileName(opts) // or use opts.statsFilePath
+    val file = new File(path)
+    if (!file.exists()) {
+      file.createNewFile()
+    }
+    val writer = new FileWriter(file)
+ println("filtering the security sensitive paths... " )
+    writer.write(prettyPrintPaths(resultsDSG, graphFolderPath, opts, false))
+    writer.close()
+
+    println("Security dumped into: " + path)
+    path
+  }
 
   def dumpSecurityReport(opts: AIOptions, dsgs: List[DSG]) {
 
@@ -1008,29 +941,9 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
       println("Pushdown analysis finished.")
     }
 
-    if (!opts.forIntentFuzzer && !opts.doNotNullCheck) {
-      dumpSecurityReport(opts, dsgs)
-    }
+   
 
-    if (opts.printPaths) {
-      val path = getGraphParentFolder(opts)
-      dumpSimplePaths(opts, dsgs)
-      println()
-    }
-
-    if (opts.dumpGraph) {
-      val path = getGraphParentFolder(opts)
-
-      val res = prettyPrintDSGs(dsgs, path, opts)
-      println()
-      if (!opts.simplifyGraph && res.contains("Final")) {
-        if (opts.verbose) {
-          println("Has final state.\n")
-        }
-      } else if (!opts.simplifyGraph) {
-        println("Warning: no final state!\n")
-      }
-    }
+    
 
     println()
     println("Computing statistics")
@@ -1056,16 +969,36 @@ class PDCFAAnalysisRunner(opts: AIOptions) extends DalvikCFARunner(opts)
     if (opts.verbose)
       println("explored entrypoints: " + exploredcCnt)
 
-    dumpStatisticsNew(opts, analysisStatistics)
-
-    if (opts.doNotNullCheck || opts.forIntentFuzzer) {
-      DalInformationFlow.dumpPermReport(opts)
-      dumpHeatMap(opts)
+    if (opts.printPaths) {
+      val path = getGraphParentFolder(opts)
+      dumpSimplePaths(opts, dsgs)
+      println()
     }
 
-    val reportTar = "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar.gz"
+//    if (opts.dumpGraph) {
+//      val path = getGraphParentFolder(opts)
+//
+//      val res = prettyPrintDSGs(dsgs, path, opts)
+//      println()
+//      if (!opts.simplifyGraph && res.contains("Final")) {
+//        if (opts.verbose) {
+//          println("Has final state.\n")
+//        }
+//      } else if (!opts.simplifyGraph) {
+//        println("Warning: no final state!\n")
+//      }
+//    }
+    
+    
+    dumpStatisticsNew(opts, analysisStatistics)
+     DalInformationFlow.dumpPermReport(opts)
+     
+    if (!opts.forIntentFuzzer && !opts.doNotNullCheck) {
+      dumpSecurityReport(opts, dsgs)
+    }
 
-    reportTar !
+  //  val reportTar = "/usr/bin/python ./pyreporttar.py" + " " + opts.permReportsDirName + " reports.tar"
+   // reportTar !
 
     if (opts.dumpGraph) {
       println()

@@ -466,6 +466,29 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
     }
   }
   
+  def isConst: Boolean = {
+      import CommonSSymbols._;
+    rhExp match {
+      case AutomicOpExp(opCode, aExps @ _*) => {
+        opCode match{
+          case SConstString | SConst4 | 
+          SConst16 |
+          SConst |
+          SConstHigh16 | 
+          SConstWide32  |
+          SConstWide | 
+          SConstWideHigh16  |
+          SConstString |
+          SConstStringJumbo | 
+          SConstClass
+           => true 
+          case _ => false;
+        }
+      }
+      case _ =>  false;
+    }
+  }
+  
   private def getSuitableRefStrsSet: Set[String] = {
     rhExp match {
       case re@RegisterExp(sv) => { // should be move-result
@@ -496,13 +519,15 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
     */
    def sourceOrSink : Int = {
      val (isConstStr, aExps) = isConstString
+     
+     val isConstStmt= isConst
     
-     if(isConstStr){ 
+     if(isConstStr ){ 
         if (aExps.length == 1) {
           aExps.head match { 
             case se @ StringLitExp(_) => {
              val   constStr = se.strLit
-             if(DalInformationFlow.isSensitiveStr(constStr))
+             if(DalInformationFlow.isSensitiveStr(constStr) )
                1 
                else 0
             }
@@ -511,13 +536,16 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
         }
         else throw new Exception("@sourceOrSink@AssignmentStmt: string statement has more than aexp: " + this)
      }
-     else 0
+     else if(isConstStmt){
+       1
+     }else 0
    }
    
    
    def taintKind  = {
      val (isConstStr, aExps) = isConstString
-    
+     val isConstStmt= isConst 
+     
      if(isConstStr){
         if (aExps.length == 1) {
           aExps.head match { 
@@ -529,7 +557,9 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
         }
         else throw new Exception("@sourceOrSink@AssignmentStmt: string statement has more than aexp: " + this)
      }
-     else Set[String]()
+     else if(isConstStmt) {
+       Set("tobedetermined")
+     } else Set[String]()
    }
 
 }
