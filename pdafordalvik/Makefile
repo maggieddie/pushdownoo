@@ -1,5 +1,5 @@
 compile:
-	ant compile
+	export ANT_OPTS="-Xmx1024M -Xss1G"; ant compile
 	ant jar
 
 run-batik:
