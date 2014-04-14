@@ -123,6 +123,19 @@ object StringUtils {
     }
   }
   
+  /// add this temparily
+  def getFileNameFromClassPath(clsPath:String) : String = {
+    
+      val classPath = 
+        if(clsPath.contains("$")) clsPath.split("\\$").toList.first
+      
+      else clsPath 
+      
+      classPath.split("\\/").toList.last + ".java"
+      
+      
+  }
+  
   // if nothig found, then will return original string
   def getTypeFromObjectWrapper(str: String) : String = {
     val objectRP = """\(object [^\s]+\)""".r
@@ -238,5 +251,10 @@ object StringUtils {
      })
      resList.contains(true)
    } 
+   
+   def classPathInDotFormat(clsPath : String) : String = {
+     clsPath.replaceAll("\\/" , "\\.")
+     
+   }
   	
 }

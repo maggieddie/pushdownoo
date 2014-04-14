@@ -553,6 +553,23 @@ object CommonUtils {
        rankingSum
   }
    
+  
+  def getValue(s: String): Int = s match {
+  	case "inf" => Integer.MAX_VALUE 
+  	case Int(x) => x
+  	case _ => throw new Exception("not a number in getValue method")
+  }
+  
+  
+  def getStringFromSet(strSet: Set[String]) : String = {
+    val strBuffer = new StringBuffer()
+    
+    strSet.foreach(
+        str =>  {strBuffer.append(str + " ")})
+    strBuffer.toString()
+  }
+  
+  
       
    
   

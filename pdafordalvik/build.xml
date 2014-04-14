@@ -132,6 +132,7 @@
         <pathelement location="${basedir}/lib/scala-compiler.jar"/>
         <pathelement location="${basedir}/lib/scala-library.jar"/>
 	<pathelement location="${basedir}/lib/commons-lang3-3.1.jar"/>
+	<pathelement location="${basedir}/lib/spray-json_2.9.2-1.2.3.jar"/>
     </path>
     
     <!-- ScalaTest Utility -->
@@ -368,7 +369,8 @@
             <zipfileset includes="**/*.class" src="lib/scala-library.jar"/>
             <zipfileset includes="**/*.class" src="lib/scala-compiler.jar"/>
 	    <zipfileset includes="**/*.class" src="lib/commons-lang3-3.1.jar"/>
-            <manifest>
+	    <zipfileset includes="**/*.class" src="lib/spray-json_2.9.2-1.2.3.jar"/>
+	    <manifest>
                 <attribute name="Main-Class" value="org.ucombinator.dalvik.cfa.cesk.RunAnalysis"/>
             </manifest>
         </jar>

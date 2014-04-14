@@ -7,6 +7,16 @@ import scala.tools.nsc.io.Directory
 import java.io.File
 import java.io.FileWriter
 import org.ucombinator.dalvik.syntax.Stmt
+import models.JsonOutputForMethod
+import org.ucombinator.dalvik.syntax.LineStmt
+import org.ucombinator.utils.CommonUtils
+import models.SourceLocationInfo
+import spray.json._
+import DefaultJsonProtocol._
+
+import org.ucombinator.dalvik.syntax._
+
+
 
 object RiskAnalysis {
    def Desc[T : Ordering] = implicitly[Ordering[T]].reverse
@@ -75,6 +85,8 @@ object RiskAnalysis {
        res::: List((md.riskRank, md.methodPath, md.getAllTaintKinds))  
       })
    }
+   
+  
    
     def getStmtRisk : List[(Int, String, String, String, Set[String],String)] = {
       val clsTbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable
@@ -163,10 +175,183 @@ object RiskAnalysis {
       writer.write(buffer.toString)
       writer.close()
 
-      println("Clas Risk Ranking report dumped to: " + path)
+      println("Class Risk Ranking report dumped to: " + path)
       path
      
   }
+   
+   // extract the information to print out.
+   // the statement should be those with risk ranks, either source or sink
+   def  getStmtInfo(st: Stmt) : (String, String) = {
+     st match {
+      case   aas@AssignAExpStmt (lhReg, rhExp, nxt, ls , clsP, methP) => {
+        if(aas.isConst) {
+          ("", aas.getConstVals)
+        }else ("", "") // not const asignaexpstmt
+      }
+      case  ids@InvokeDirectStmt(methoPath, _, _, _, _, _, _, _) 
+      => {ids.getClassPathAndMethodName}
+      case iis@ InvokeInterfaceStmt (_, _, _, _, _, _, _, _) 
+      => {iis.getClassPathAndMethodName}
+       
+      case iss@InvokeSuperStmt(_, argRegAExp, objAExp, tyStrs, nxt, ls, clsP, methP) => {iss.getClassPathAndMethodName}
+      case  iss@InvokeStaticStmt(_, _, _, _, _, _, _) => {iss.getClassPathAndMethodName}
+      case is@InvokeStmt(_, _, _, _, _, _, _, _) => {is.getClassPathAndMethodName}
+       // case field update/reference
+      case _ =>   ("","")
+     }
+   
+  }
+   
+    def getJsonOutput: List[JsonOutputForMethod] = {
+     import org.ucombinator.utils.Int._
+    // import org.ucombinator.utils.CommonUtils._
+     
+      val clsTbl = Thread.currentThread().asInstanceOf[AnalysisHelperThread].classTable
+      
+      //get all the methods
+      val allMethods = clsTbl.foldLeft(List[(String,MethodDef)]())((res, kv)=> {
+        val clsDef = kv._2
+        
+        res ++ clsDef.methods.map((md) => {(clsDef.className, md)})
+      })
+      
+      val allMethods2 = allMethods.filter((rec)=> {
+        val md  = rec._2
+        md.riskRank > 0})
+        
+      val allMethods3 = allMethods2.sortBy( _._2.riskRank)(Desc)
+      
+      allMethods3.foldLeft(List[JsonOutputForMethod]())((res, rec) =>{ 
+        /**
+         * riskScore: Integer,
+		methodName: String,
+		fileName: String,
+		className: String,
+		shortDesc: String,
+		longDesc: String,
+		startLineNo: Integer,
+		endLineNo:Integer,
+		startCol: Integer
+         */
+        val clsName = rec._1
+        val md = rec._2
+        
+        val lnStmts = md.getFlattenedBodyStmts.filter(
+           (stmt)=> stmt match  {
+          case ls@LineStmt(lnstr , nxt, ln, clsP, methP ) => {
+           true
+          } case _ => false
+        })
+        
+        val lnNo = if(!lnStmts.isEmpty) {
+          val fst =  lnStmts.first
+          CommonUtils.getValue(fst.asInstanceOf[LineStmt].lnstr)
+        } else 0
+        
+        val fileName = StringUtils.getFileNameFromClassPath(clsName)
+     
+        val methSouceLocation = new SourceLocationInfo(md.riskRank, 
+         StringUtils.getMethNameFromMethPath(md.methodPath),
+         fileName,
+        StringUtils.classPathInDotFormat( clsName),
+         CommonUtils.getStringFromSet(md.getAllTaintKinds), "",
+         lnNo,
+         0,
+         0
+         )
+        
+        val stmtsInMethod = md.getFlattenedBodyStmts
+         val allStmt2 = stmtsInMethod.filter(st => {st.riskRanking > 0})
+         val allStmt3 = allStmt2.sortBy {
+         	case st => -st.riskRanking
+      }
+        
+       val stmtSourceInfoList =  allStmt3.foldLeft(List[SourceLocationInfo]())((resSt, st) =>{  
+           val lnSt = st.lineNumber
+           
+           val lnNO = lnSt match {
+             case StmtNil => 0
+             case _ => CommonUtils.getValue(lnSt.asInstanceOf[LineStmt].lnstr)
+           }
+             
+          val (fld1, fld2) = getStmtInfo(st)
+          
+            
+           val newStSrcLocInfo = new SourceLocationInfo(st.riskRanking, 
+               fld2, // no need method name, or value in general
+               st.toString(),// no need, file name
+               fld1, //class name
+               CommonUtils.getStringFromSet(st.taintKind), // shortscre
+               "",
+               lnNO,
+               0,0
+               )
+           
+        resSt ::: List(newStSrcLocInfo)  
+      })
+        
+       res::: List(new JsonOutputForMethod(methSouceLocation, stmtSourceInfoList))  
+      })
+    
+   }
+    
+    def dumpJsonOutput(opts:AIOptions) {
+      
+      val lstJsonMethod   = getJsonOutput
+      
+     val annotations = JsArray((lstJsonMethod map {
+       (jsMethStmts) => {
+         val methLevel = jsMethStmts.methodLevel
+         val statms  = jsMethStmts.stmts
+         
+          JsObject("risk_score" -> JsNumber(methLevel.riskScore),
+                    "method" -> JsString(methLevel.methodName),
+                    "file_name" -> JsString(methLevel.fileName),
+                    "class_name" -> JsString(methLevel.className),
+                    "short_description" -> JsString(methLevel.shortDesc),
+                    "long_description" -> JsString(methLevel.longDesc),
+                    "start_line" -> JsNumber(methLevel.startLineNo),
+                    "start_col" -> JsNumber(methLevel.startCol),
+                    "sub_annotations" -> 
+                    JsArray(statms.map((stmt) => {
+                      JsObject("start_line" -> JsNumber(stmt.startLineNo),
+                    		  "end_line" -> JsNumber(stmt.endLineNo),
+                    		  "start_col" -> JsNumber(stmt.startCol),
+                    		  "method" -> JsString(stmt.methodName),
+                    		  "class_name" -> JsString(stmt.className),
+                    		  "risk_score" -> JsNumber(stmt.riskScore),
+                    		  "description" -> JsString(stmt.shortDesc))
+                    }).toList))}}).toList)
+      
+      
+      // file
+    val reportDirName = opts.permReportsDirName //opts.apkProjDir + File.separator + statisticsDirName 
+ 
+    val secuDir = new Directory(new File(reportDirName))
+    if (!secuDir.exists) {
+      secuDir.createDirectory(force = true)
+      secuDir.createFile(failIfExists = false)
+    }
+
+      val path = opts.apkProjDir + File.separator + "reports" + File.separator + "riskrank.json" // or use opts.statsFilePath
+     
+      
+      val file = new File(path)
+      if (!file.exists()) {
+        file.createNewFile()
+      }
+      val writer = new FileWriter(file)
+
+      writer.write( JsObject("annotations" -> annotations).prettyPrint)
+      writer.close()
+
+      println("json risk rank report dumped to: " + path)
+      path
+    }
+   
+   
+  
    
    def dumpMethRiskRanking(opts: AIOptions) {  
     

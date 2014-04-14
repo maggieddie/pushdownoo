@@ -466,6 +466,62 @@ case class AssignAExpStmt(lhReg: AExp, rhExp: AExp, nxt: Stmt, ls : Stmt, clsP: 
     }
   }
   
+  
+  def getConstVals :String = {
+    /**
+     *  case i: SInt => new IntExp(i)
+      case t: SText => new StringLitExp(t)
+      case b: SBoolean => new BooleanExp(b)
+      case c: SChar => new CharLitExp(c)
+     */
+    import CommonSSymbols._;
+    rhExp match {
+      case AutomicOpExp(opCode, aExps @ _*) => {
+        opCode match{
+          case SConstString | SConst4 | 
+          SConst16 |
+          SConst |
+          SConstHigh16 | 
+          SConstWide32  |
+          SConstWide | 
+          SConstWideHigh16  |
+          SConstString |
+          SConstStringJumbo | 
+          SConstClass
+           => {
+             val valueExps = aExps.map((aexp) => {
+               aexp match {
+               case  ie@IntExp(i) => {i.toString}
+               case  se@StringLitExp(t) => {t.toString}
+               case  BooleanExp(b) => {b.toString}
+               case  CharLitExp(c) =>{c.toString}
+              // case  VoidExp => "void"
+               case _ => {
+                 "non-val"
+               }
+             }})
+             val buf = new StringBuffer();
+             var i =0;
+            val valExps2 = valueExps.dropRight(1)
+            val lastExpStr = valueExps.last
+               
+             valExps2.foreach((str) => {buf.append(str + " ")})
+             buf.append(lastExpStr)
+             buf.toString()
+           }
+        
+          case _ => { ""
+            
+          }
+        }
+      }
+      case _ =>  { ""
+        
+      }
+    }
+    
+  }
+  
   def isConst: Boolean = {
       import CommonSSymbols._;
     rhExp match {
@@ -748,8 +804,16 @@ abstract sealed class AbstractInvokeStmt(methPathStr: String, argRA: List[AExp],
   def methPPath: String = methPathStr
   def argumentRegAExp: List[AExp] = argRA
   def argTypes: List[String] = tyStrs
-  
+ 
   //apply method goes in there. But I don't like the analyzer types to be mixed in the front end here.
+  
+  // mostly just to get the class name and method name for framework or library APIs
+  def getClassPathAndMethodName : (String, String) = {
+    val pathInSlash = StringUtils.getClassPathFromMethPath(methPathStr)
+    val classPathInDot = StringUtils.classPathInDotFormat(pathInSlash)
+    val methodName = methPathStr.split("\\/").toList.last
+    (classPathInDot, methodName)
+  }
 }
 
 // invoke  virtual
@@ -787,7 +851,14 @@ case class InvokeStmt(
   }
 }
 
-case class InvokeSuperStmt(methPathStr: String, argRegAExp: List[AExp], objAExp: AExp, tyStrs: List[String], nxt: Stmt, ls:Stmt, clsP: String, methP: String)
+case class InvokeSuperStmt(methPathStr: String, 
+    argRegAExp: List[AExp], 
+    objAExp: AExp, 
+    tyStrs: List[String], 
+    nxt: Stmt, 
+    ls:Stmt, 
+    clsP: String, 
+    methP: String)
   extends AbstractInvokeStmt(methPathStr, argRegAExp, tyStrs, clsP, methP) {
   var next = nxt
   var lineNumber = ls

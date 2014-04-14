@@ -158,6 +158,7 @@ object PlayHelper extends ParserHelper with DalvikVMRelated {//with NonNullCheck
     	 // preanalysis for the risk ranking happens before expensive analysis!!!
     	 RiskAnalysis.computeAndSetOverallRisk
       	RiskAnalysis.dumpPreRiskRanking(opts) 
+      	RiskAnalysis.dumpJsonOutput(opts)
      }
      
     } else {
