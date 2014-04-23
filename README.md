@@ -22,7 +22,7 @@ The reason didn't move to 2.10:
 	export ANT_OPTS="-Xmx2048M -Xms2048M -Xss512M -XX:MaxPermSize=512m
 
 	
-*NOTE*, the default sbt configuration needs to be changed.
+*NOTE*. If you compile the project using sbt, the default sbt configuration needs to be changed.
 
 Change  the sbt file:
 
