@@ -1,4 +1,3 @@
-
 # Pushdown OO (Version extracted from APAC second delievery)
 
 This is just analytic engine *without* `play` framework. 
@@ -18,6 +17,11 @@ The reason didn't move to 2.10:
 
 ##### If you are on Mac, use JDK 6 or 7 later (Compiling openJDK on Mac is complicated and prone to fail).
 
+### In case you encounter compilation StackOverflow Error, please change ant default options. On Mac (64bits), you can modify your ~/.bash_profile as follows:
+
+	export ANT_OPTS="-Xmx2048M -Xms2048M -Xss512M -XX:MaxPermSize=512m
+
+	
 *NOTE*, the default sbt configuration needs to be changed.
 
 Change  the sbt file:
