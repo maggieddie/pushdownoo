@@ -259,7 +259,7 @@
         </javac>
     </target>
     
-    <target name="compile.module.pushdownexflow.test" depends="compile.module.pushdownexflow.production"
+    <target name="compile.module.pushdownexflow.test" depends=ß"compile.module.pushdownexflow.production"
         description="compile module pushdownexflow; test classes" unless="skip.tests">
         <mkdir dir="${pushdownexflow.testoutput.dir}"/>
         
