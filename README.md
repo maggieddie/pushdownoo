@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
 =======
->>>>>>> ae920811954e8fa2f0109261cf9f14e8ebe99e9a
 # Pushdown OO (Version extracted from APAC second delievery)
 
 This is just analytic engine *without* `play` framework. 
@@ -21,8 +18,8 @@ The reason didn't move to 2.10:
 
 ##### If you are on Mac, use JDK 6 or 7 later (Compiling openJDK on Mac is complicated and prone to fail).
 
-<<<<<<< HEAD
 *NOTE*, the default sbt configuration needs to be changed.
+
 =======
 ### In case you encounter compilation StackOverflow Error, please change ant default options. On Mac (64bits), you can modify your ~/.bash_profile as follows:
 
@@ -30,7 +27,7 @@ The reason didn't move to 2.10:
 
 	
 *NOTE*. If you compile the project using sbt, the default sbt configuration needs to be changed.
->>>>>>> ae920811954e8fa2f0109261cf9f14e8ebe99e9a
+
 
 Change  the sbt file:
 
@@ -98,8 +95,7 @@ java -jar artifacts/PushdownOO_Exflow.jar org.ucombinator.dalvik.cfa.cesk.RunAna
 
 ### For DaCapo benchmark evaluation
 * The benchmark apks locates in benchmark-dacapo-apks
-<<<<<<< HEAD
 * During analysis, `--obranches [number]` for branch optimization to termiate fast safely.
 =======
 * During analysis, `--obranches [number]` for branch optimization to termiate fast safely.
->>>>>>> ae920811954e8fa2f0109261cf9f14e8ebe99e9a
+
